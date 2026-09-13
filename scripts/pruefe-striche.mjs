@@ -51,7 +51,11 @@ const strict = args.includes('--strict');
 let markePfad = null;
 const mi = args.indexOf('--marke');
 if (mi !== -1) markePfad = args[mi + 1];
-const pfade = args.filter((a, i) => !a.startsWith('--') && i !== mi + 1);
+/* Ohne --marke ist mi = -1, also mi + 1 = 0: ein naives i !== mi + 1 würde
+   dann das ERSTE Pfadargument verschlucken. Deshalb der Index nur, wenn
+   --marke wirklich vorkommt. */
+const markeIndex = mi === -1 ? -1 : mi + 1;
+const pfade = args.filter((a, i) => !a.startsWith('--') && i !== markeIndex);
 
 const STANDARD_PFADE = ['src', 'content', 'app', 'pages', 'components'];
 const wurzeln = (pfade.length ? pfade : STANDARD_PFADE).filter(existsSync);
@@ -129,6 +133,13 @@ for (const wurzel of wurzeln) {
     const rel = relative(process.cwd(), datei);
     const zeilen = inhalt.split('\n');
     const istCss = CSS_ENDUNGEN.has(extname(datei));
+    /*
+      Blockkommentar-Zustand ueber Zeilen hinweg verfolgen. Ein Praefix-Test je
+      Zeile reicht nicht: ein /* ... *​/-Block ohne fuehrende Sternchen sieht in
+      der Mitte wie normaler Code aus. Genau daran meldete das Skript den
+      Kommentar, der erklaert, warum hyphens: auto verboten ist.
+    */
+    let imBlock = false;
 
     zeilen.forEach((zeile, i) => {
       const nr = i + 1;
@@ -147,8 +158,20 @@ for (const wurzel of wurzeln) {
         (ort ? fehler : warnungen).push(befund);
       }
 
-      /* 2 hyphens: auto */
-      if (istCss && /hyphens\s*:\s*(auto|manual)/i.test(zeile) && !/hyphens\s*:\s*none/i.test(zeile)) {
+      /*
+        2 hyphens: auto
+
+        Kommentarzeilen ausnehmen. Sonst meldet das Skript genau den Kommentar,
+        der erklaert, warum hyphens: auto verboten ist — ein Fehlalarm, der die
+        Regel unglaubwuerdig macht.
+      */
+      const startetBlock = zeile.includes('/*') && !zeile.includes('*/');
+      const istKommentar = imBlock
+        || /^\s*(\/\*|\*|\/\/|<!--)/.test(zeile)
+        || (zeile.includes('/*') && zeile.indexOf('/*') < zeile.search(/hyphens/i));
+      if (startetBlock) imBlock = true;
+      else if (imBlock && zeile.includes('*/')) imBlock = false;
+      if (istCss && !istKommentar && /hyphens\s*:\s*(auto|manual)/i.test(zeile) && !/hyphens\s*:\s*none/i.test(zeile)) {
         fehler.push({
           datei: rel, zeile: nr, auszug: zeile.trim().slice(0, 110),
           meldung: 'hyphens: auto trennt deutsche Komposita mitten im Wort',

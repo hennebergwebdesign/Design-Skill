@@ -13,7 +13,7 @@ Regeln zuerst:
 
 ## LocalBusiness (regionaler Dienstleister)
 
-Für Handwerk, Praxen, Kanzleien, Gastronomie — alles mit Ladenlokal oder Einzugsgebiet.
+Für Handwerk, Praxen, Kanzleien, Gastronomie: alles mit Ladenlokal oder Einzugsgebiet.
 `@type` auf den spezifischsten passenden Untertyp setzen (`Dentist`, `Plumber`,
 `LegalService`, `Restaurant`, `HomeAndConstructionBusiness` …).
 
@@ -46,7 +46,7 @@ Für Handwerk, Praxen, Kanzleien, Gastronomie — alles mit Ladenlokal oder Einz
       "closes": "17:00"
     }
   ],
-  "priceRange": "[[FEHLT: z. B. €€ — oder weglassen]]",
+  "priceRange": "[[FEHLT: z. B. €€, oder weglassen]]",
   "sameAs": [
     "[[FEHLT: Google-Unternehmensprofil, LinkedIn, Instagram …]]"
   ]
@@ -79,7 +79,7 @@ Google-Unternehmensprofil **wortgleich** sein. Abweichungen kosten lokales Ranki
 
 ### Bewertung an der Organisation
 
-Nur ergänzen, wenn die Werte belegt und auf der Seite sichtbar sind — mit Stand:
+Nur ergänzen, wenn die Werte belegt und auf der Seite sichtbar sind, mit Stand:
 
 ```json
 "aggregateRating": {
@@ -144,7 +144,7 @@ derselben Quelle wie die sichtbare FAQ-Sektion, nicht aus einer zweiten Liste.
 }
 ```
 
-Das letzte Element trägt kein `item` — es ist die aktuelle Seite.
+Das letzte Element trägt kein `item`: es ist die aktuelle Seite.
 
 ## WebSite (Suchfeld in den Ergebnissen)
 
@@ -183,7 +183,7 @@ Nur sinnvoll, wenn die Seite wirklich eine Suche hat.
 ## Product
 
 Nur bei echtem Produktverkauf. **Produktbewertungen nur, wenn sie sich auf das Produkt
-beziehen** — eine Shopbewertung gehört an die Organisation, siehe oben.
+beziehen**: eine Shopbewertung gehört an die Organisation, siehe oben.
 
 ```json
 {

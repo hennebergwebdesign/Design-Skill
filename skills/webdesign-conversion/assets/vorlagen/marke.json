@@ -151,7 +151,7 @@
     "cta_primaer": "[[FEHLT: EIN Text, wörtlich, auf der ganzen Seite gleich]]",
     "cta_sekundaer": "[[FEHLT]]",
     "gedankenstriche_verboten": true,
-    "$striche_hinweis": "– und — sind auf der ganzen Seite verboten. Ersatz: Doppelpunkt, Komma oder zwei Sätze. Der echte Bindestrich im Kompositum bleibt erlaubt.",
+    "$striche_hinweis": "– und: sind auf der ganzen Seite verboten. Ersatz: Doppelpunkt, Komma oder zwei Sätze. Der echte Bindestrich im Kompositum bleibt erlaubt.",
     "verbotene_woerter": [
       "Lösung",
       "innovativ",

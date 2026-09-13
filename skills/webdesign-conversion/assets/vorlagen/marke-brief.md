@@ -1,11 +1,11 @@
-# Markenbrief — [KUNDE]
+# Markenbrief: [KUNDE]
 
 Diese Datei ist die einzige Quelle für alles, was projektspezifisch ist: Zielgruppe, Problem,
 Versprechen, Beweise, Tonfall. `marke.json` daneben hält die maschinenlesbaren Werte
 (Farbrollen, Schriften, Motion-Profil, Icon-Profil, Sprachprofil).
 
 **Regel:** Wird beim Bauen eine Entscheidung getroffen, die hier nicht steht, gehört sie
-hierher — sonst dreht die nächste Sitzung sie zurück. Fehlt eine Angabe, steht
+hierher, sonst dreht die nächste Sitzung sie zurück. Fehlt eine Angabe, steht
 `[[FEHLT: …]]`, niemals ein plausibel klingender Erfindungswert.
 
 Stand: [DATUM] · Bearbeitet von: [NAME]
@@ -18,7 +18,7 @@ Was verkauft, vermittelt oder besetzt dieses Unternehmen, in einem Satz ohne Adj
 
 > [[FEHLT: ein Satz, was das Unternehmen tatsächlich tut]]
 
-**Was am Gegenstand selbst bildwürdig ist** — Material, Prozess, Werkzeug, Ergebnis. Daraus
+**Was am Gegenstand selbst bildwürdig ist:** Material, Prozess, Werkzeug, Ergebnis. Daraus
 kommt die visuelle Handschrift, nicht aus einer Stilkarte (siehe `10-visuelle-richtung.md`).
 
 > [[FEHLT: 3–5 konkrete Dinge, die man fotografieren oder zeichnen könnte]]
@@ -67,7 +67,7 @@ Jeder Einwand, der real vor einer Anfrage kommt, mit der Antwort, die auf die Se
 | „Woher weiß ich, dass das funktioniert" | [[FEHLT]] | |
 | [[FEHLT: branchenspezifisch]] | [[FEHLT]] | |
 
-## 5 Beweise — nur mit Quelle
+## 5 Beweise: nur mit Quelle
 
 Kein Eintrag ohne Belegspalte. Ein Eintrag ohne Beleg wird gestrichen, nicht geschätzt.
 Siehe die harte Grenze in `SKILL.md`: erfundene Belege sind nach § 5 UWG angreifbar.
@@ -87,7 +87,7 @@ Diese Angaben gehören zusätzlich in `marke.json`, damit Prüfskripte sie lesen
 
 | Feld | Wert |
 |---|---|
-| Anrede | ☐ Sie ☐ du — **eine** Entscheidung, durchgezogen bis in Fehlermeldungen und Bestätigungsmails |
+| Anrede | ☐ Sie ☐ du: **eine** Entscheidung, durchgezogen bis in Fehlermeldungen und Bestätigungsmails |
 | Tonfall in drei Adjektiven | [[FEHLT]] |
 | Primär-CTA-Text, wörtlich | [[FEHLT]] |
 | Sekundär-CTA-Text, wörtlich | [[FEHLT]] |
@@ -118,7 +118,7 @@ Erst füllen, nachdem Durchgang 1 und 2 aus `10-visuelle-richtung.md` gelaufen s
 2. [[FEHLT]]
 3. [[FEHLT]]
 
-**Was ich verworfen habe und warum** — die Zeile, die verhindert, dass die nächste Sitzung
+**Was ich verworfen habe und warum:** die Zeile, die verhindert, dass die nächste Sitzung
 die Schablone zurückholt:
 
 > [[FEHLT]]
@@ -137,7 +137,7 @@ Ableitung in `17-icons-eigenes-system.md`. Strichstärke folgt der Schrift, Radi
 
 | Feld | Wert |
 |---|---|
-| Eigenes Set nötig für | [[FEHLT: welche Icons — meist die Leistungssektion]] |
+| Eigenes Set nötig für | [[FEHLT: welche Icons: meist die Leistungssektion]] |
 | Systemicons aus Bibliothek | [[FEHLT: welche]] |
 | Stil | ☐ Linie ☐ Fläche ☐ gemischt |
 | Strichstärke | [[FEHLT]] px auf 24er Raster |

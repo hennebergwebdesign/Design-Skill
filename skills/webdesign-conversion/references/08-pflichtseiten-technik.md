@@ -1,7 +1,7 @@
 # Pflichtseiten und technische Basisdateien
 
 Diese Dateien entstehen **am Anfang** des Projekts, nicht am Ende. Am Ende werden sie
-vergessen oder halbherzig nachgeschoben — und genau sie fallen beim ersten Search-Console-
+vergessen oder halbherzig nachgeschoben, und genau sie fallen beim ersten Search-Console-
 Bericht und bei der ersten Abmahnwelle auf.
 
 ## Vollständigkeitsliste
@@ -17,9 +17,9 @@ Bericht und bei der ersten Abmahnwelle auf.
 | `sitemap.xsl` | optional, empfohlen | `../assets/vorlagen/sitemap.xsl` |
 | `_headers` / Security-Header | ja | `../assets/vorlagen/_headers` |
 | `_redirects` / 301-Tabelle | bei jedem Relaunch | siehe unten |
-| `favicon.svg`, `apple-touch-icon.png` | ja | — |
-| OG-Bild 1200 × 630 | ja | — |
-| `/agb`, `/widerruf` | bei Verkauf an Verbraucher | — |
+| `favicon.svg`, `apple-touch-icon.png` | ja |: |
+| OG-Bild 1200 × 630 | ja |: |
+| `/agb`, `/widerruf` | bei Verkauf an Verbraucher |: |
 
 ## Die 404-Seite
 
@@ -32,7 +32,7 @@ Eine 404-Seite ist kein Fehlerbildschirm, sondern die letzte Chance, den Besuche
   Hosts prüfen: Cloudflare Pages und Netlify liefern `404.html` korrekt aus, manche
   SPA-Konfigurationen mit Catch-All-Rewrite nicht.
 - Sie trägt dieselbe Navigation, denselben Kopf und Fuß wie die übrige Seite.
-- Sie erklärt in einem Satz, was passiert ist — im Tonfall der Marke, ohne Entschuldigungs-
+- Sie erklärt in einem Satz, was passiert ist: im Tonfall der Marke, ohne Entschuldigungs-
   arie.
 - Sie bietet **konkrete Wege weiter**: Startseite, wichtigste Leistungsseite, Kontakt, ggf.
   Suche. Keine Sackgasse, keine externen Links.
@@ -43,7 +43,7 @@ Eine 404-Seite ist kein Fehlerbildschirm, sondern die letzte Chance, den Besuche
 Humor, der die Ratlosigkeit verlängert, automatische Weiterleitung nach X Sekunden (nimmt
 die Kontrolle und verwirrt Screenreader).
 
-Vorlage: `../assets/vorlagen/404.astro` (Astro) — das Muster lässt sich direkt auf Next.js
+Vorlage: `../assets/vorlagen/404.astro` für Astro. Das Muster lässt sich direkt auf Next.js
 (`app/not-found.tsx`) oder eine statische `404.html` übertragen.
 
 ## robots.txt
@@ -65,7 +65,7 @@ Regeln:
   Lösung: `robots.txt` zur Bauzeit erzeugen und die Domain aus der Konfiguration ziehen
   (siehe Vorlage `../assets/vorlagen/robots.txt.ts`).
 - **`Disallow` ist keine Zugriffssperre** und kein `noindex`. Eine per `Disallow` gesperrte
-  Seite kann trotzdem im Index landen, wenn sie verlinkt ist — dann sogar ohne Snippet.
+  Seite kann trotzdem im Index landen, wenn sie verlinkt ist, dann sogar ohne Snippet.
   Wer eine Seite aus dem Index halten will, nutzt `noindex` und lässt sie crawlen.
 - Interne Bereiche, Vorschau-Umgebungen und Staging-Domains gehören zusätzlich per
   HTTP-Auth oder `X-Robots-Tag: noindex` geschützt.
@@ -103,7 +103,7 @@ verloren und Besucher aus alten Links, Mails und Verzeichnissen landen im Nichts
 3. Umsetzen: `public/_redirects` (Cloudflare Pages, Netlify), `next.config.js` → `redirects()`,
    `.htaccess` (Apache), `nginx.conf`, oder Redirect-Plugin (WordPress).
 4. Nach dem Livegang stichprobenhaft prüfen: Status muss 301 sein, nicht 302, und das Ziel
-   direkt erreichbar — keine Kette 301 → 301 → 200.
+   direkt erreichbar: keine Kette 301 → 301 → 200.
 
 ```
 # public/_redirects (Cloudflare Pages / Netlify)
@@ -139,7 +139,7 @@ Eine Domain, eine Schreibweise. Alles andere wird per 301 dorthin geleitet:
 
 - `http://` → `https://`
 - `beispiel.de` → `www.beispiel.de` (oder umgekehrt, eine Entscheidung, konsequent)
-- `/pfad/` und `/pfad` — eine Variante wählen
+- `/pfad/` und `/pfad`: eine Variante wählen
 - Großschreibung in Pfaden vermeiden
 
 Zusätzlich trägt jede Seite eine selbstreferenzierende, absolute `<link rel="canonical">`.
@@ -148,4 +148,4 @@ Zusätzlich trägt jede Seite eine selbstreferenzierende, absolute `<link rel="c
 
 Vorschau-Deployments (`*.pages.dev`, `*.vercel.app`, Staging-Domains) sind eine
 zuverlässige Quelle für Duplicate Content. Absichern über HTTP-Basic-Auth oder
-`X-Robots-Tag: noindex` für die gesamte Vorschau-Domain — nicht über `robots.txt`, siehe oben.
+`X-Robots-Tag: noindex` für die gesamte Vorschau-Domain: nicht über `robots.txt`, siehe oben.

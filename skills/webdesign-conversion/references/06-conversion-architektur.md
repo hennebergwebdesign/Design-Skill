@@ -2,9 +2,9 @@
 
 Conversion-Architektur ist das System, das Besucher zu Handlungen bewegt. Klare
 Positionierung, stimmiges Design, schnelle Seite, Barrierefreiheit und SEO-Grundlagen sind
-da — aber ohne Conversion-Architektur wird aus keinem Besucher eine Anfrage.
+da, aber ohne Conversion-Architektur wird aus keinem Besucher eine Anfrage.
 
-## Schritt 6.1 — Die CTA-Hierarchie
+## Schritt 6.1: Die CTA-Hierarchie
 
 Nicht alle Calls-to-Action sind gleich wichtig. Drei Ebenen:
 
@@ -30,14 +30,14 @@ Nicht alle Calls-to-Action sind gleich wichtig. Drei Ebenen:
   im Header, „Jetzt anfragen" im Hero und „Kontakt aufnehmen" im Footer sind für den
   Besucher drei verschiedene Angebote.
 - Der CTA sagt, was passiert: „Termin buchen", nicht „Absenden". Die Aktion behält ihren
-  Namen durch den gesamten Ablauf — der Button „Veröffentlichen" erzeugt die Meldung
+  Namen durch den gesamten Ablauf: der Button „Veröffentlichen" erzeugt die Meldung
   „Veröffentlicht".
 - Auf Mobilgeräten gehört der Primär-CTA in einen festen Balken am unteren Rand, sichtbar
   ab dem Ende des Heldenbereichs.
 - Exit-Intent nur auf dem Desktop (es gibt keinen Mauszeiger auf dem Handy), nur einmal je
   Sitzung, mit sichtbarem Schließen, tastaturbedienbar und mit Fokusfalle.
 
-## Schritt 6.2 — Das 10-Sekunden-Formular
+## Schritt 6.2: Das 10-Sekunden-Formular
 
 Lange Kontaktformulare töten Conversions. Menschen sind faul und geben ungern private Daten
 heraus.
@@ -62,7 +62,7 @@ Daten eingibt, hat eine deutlich geringere Hemmschwelle.
 **Ziel:** dem Lead jede Ausrede nehmen, sich nicht einzutragen.
 
 **Wichtig:** Das gilt für das allgemeine Kontaktformular. Für gezielte Projektanfragen ist
-eine Vorqualifizierung mit den richtigen Fragen sinnvoll — aber auch dort gilt: je weniger
+eine Vorqualifizierung mit den richtigen Fragen sinnvoll, aber auch dort gilt: je weniger
 Aufwand für den Lead, desto besser. Mehrstufige Formulare (ein Schritt je Bildschirm, mit
 Fortschrittsanzeige) konvertieren bei vielen Feldern besser als ein langes Formular.
 
@@ -74,7 +74,7 @@ Fortschrittsanzeige) konvertieren bei vielen Feldern besser als ein langes Formu
 - **Serverseitige Validierung** mit feldbezogenen Fehlern, nicht nur clientseitig.
 - **Vier sichtbare Zustände:** Ruhe, Senden, Erfolg, Fehler. Im Erfolgsfall ersetzt die
   Bestätigung das Formular. Im Fehlerfall steht ein alternativer Kontaktweg daneben
-  (Telefon, E-Mail) — ein Fehler ohne Ausweg ist ein verlorener Lead.
+  (Telefon, E-Mail): ein Fehler ohne Ausweg ist ein verlorener Lead.
 - **Doppelte Mail:** interne Benachrichtigung und Bestätigung an die absendende Person.
 - **Datensparsamkeit:** Was nicht gespeichert werden muss, wird nicht gespeichert. Wird
   doch gespeichert, steht das mit Zweck, Rechtsgrundlage und Löschfrist in der
@@ -83,10 +83,10 @@ Fortschrittsanzeige) konvertieren bei vielen Feldern besser als ein langes Formu
   interne Übersicht, Mail-HTML), müssen escaped werden. Ein `<script>` im Namensfeld ist
   der Standardweg zu gespeichertem XSS.
 
-## Schritt 6.3 — Trust-Elemente strategisch platzieren
+## Schritt 6.3: Trust-Elemente strategisch platzieren
 
 Wer behauptet, die perfekte Lösung zu bieten, ohne einen einzigen Beweis zu liefern, erntet
-Skepsis — und 40–60 % weniger Conversions.
+Skepsis, und 40–60 % weniger Conversions.
 
 **Die sechs wichtigsten Trust-Elemente:**
 
@@ -94,18 +94,18 @@ Skepsis — und 40–60 % weniger Conversions.
 2. **Referenzen/Case Studies** mit Ausgangslage, Vorgehen und Ergebnis
 3. **Zahlen** (Projekte, Jahre, Kunden, messbare Ergebnisse)
 4. **Logos** von Kunden, Partnern, Presse
-5. **Bewertungen** von Google, Trustpilot, ProvenExpert — mit Schnitt, Anzahl und Datum
+5. **Bewertungen** von Google, Trustpilot, ProvenExpert, mit Schnitt, Anzahl und Datum
 6. **Zertifikate, Auszeichnungen, Mitgliedschaften**
 
 **Wo platzieren:** Die Startseite trägt so viele Trust-Elemente wie möglich. Auf Unterseiten
-und der Kontaktseite dürfen sie sich wiederholen — sie **sollen** öfter als einmal
+und der Kontaktseite dürfen sie sich wiederholen: sie **sollen** öfter als einmal
 vorkommen, weil nicht jeder Besucher die komplette Seite ansieht.
 
 ### Regeln für Trust-Elemente
 
 - **Keine erfundenen Belege.** Kein Fantasiename unter einem Zitat, keine ausgedachte
   Bewertungszahl, kein Logo ohne Nutzungsrecht. Das ist nicht nur unredlich, sondern nach
-  § 5 UWG abmahnfähig — und bei Bewertungen inzwischen ausdrücklich geregelt.
+  § 5 UWG abmahnfähig, und bei Bewertungen inzwischen ausdrücklich geregelt.
 - **Stand dazuschreiben.** Bewertungszahlen wachsen. „4,4 von 5 bei 780 Bewertungen, Stand
   10.09.2026" ist überprüfbar, eine nackte Zahl nicht.
 - **Eine belegte Quelle groß ist mehr wert als vier Kacheln, von denen drei leer sind.**
@@ -119,21 +119,21 @@ vorkommen, weil nicht jeder Besucher die komplette Seite ansieht.
   gesetzt verschwindet ein Hochformat-Logo als schmaler Streifen neben einer breiten
   Wortmarke. Faktor aus dem Seitenverhältnis rechnen und deckeln.
 
-## Schritt 6.4 — Der Aufbau der „Über uns"-Seite
+## Schritt 6.4: Der Aufbau der „Über uns"-Seite
 
 Die „Über uns"-Seite ist nicht dafür da, die Firmengeschichte zu erzählen. Sie ist dafür da,
 noch mehr Vertrauen aufzubauen.
 
 **Die Formel, sechs Schritte:**
 
-1. **Problem adressieren** (2–3 Sätze) — „Wir kennen das Problem: Du hast eine Website, aber
+1. **Problem adressieren** (2–3 Sätze): „Wir kennen das Problem: Du hast eine Website, aber
    sie bringt keine Anfragen …"
-2. **Lösung anbieten** (4–5 Sätze) — „Deshalb haben wir … gegründet. Nach 350+ Projekten
+2. **Lösung anbieten** (4–5 Sätze): „Deshalb haben wir … gegründet. Nach 350+ Projekten
    haben wir ein System entwickelt, das …"
-3. **Proof zeigen** (3–4 Bulletpoints) — warum ihr der richtige Ansprechpartner seid
-4. **Team präsentieren** (Fotos + kurze Beschreibung) — Menschen kaufen von Menschen
-5. **Unternehmenserfolge/-geschichte** — deutlich machen, dass ihr etabliert seid
-6. **CTA** — „Jetzt kostenloses Strategiegespräch buchen"
+3. **Proof zeigen** (3–4 Bulletpoints): warum ihr der richtige Ansprechpartner seid
+4. **Team präsentieren** (Fotos + kurze Beschreibung): Menschen kaufen von Menschen
+5. **Unternehmenserfolge/-geschichte:** deutlich machen, dass ihr etabliert seid
+6. **CTA:** „Jetzt kostenloses Strategiegespräch buchen"
 
 Features beschreiben, was etwas ist. Benefits beschreiben, was der Kunde davon hat: „Du
 bekommst einen festen Ansprechpartner" statt „Wir arbeiten mit festen Zuständigkeiten".

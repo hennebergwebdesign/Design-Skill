@@ -3,7 +3,7 @@
   Gebrandete Sitemap-Ansicht.
 
   Warum: Eine Sitemap ist für Crawler gedacht, wird aber regelmäßig von Menschen
-  geöffnet — vom Kunden, von Mitbewerbern, von einem selbst beim Prüfen. Ohne
+  geöffnet: vom Kunden, von Mitbewerbern, von einem selbst beim Prüfen. Ohne
   Stylesheet steht dort nackte XML-Liste.
 
   Für Suchmaschinen ändert sich nichts: die xml-stylesheet-Verarbeitungsanweisung

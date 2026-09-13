@@ -124,7 +124,7 @@ runden Knopf minimal rechts von der Mitte, sonst wirkt es links angelehnt.
   als einer, der "Leistungen ansehen" liest.
 
   Trägt das Icon die EINZIGE Information (ein Knopf ohne Text), braucht es ein
-  Textlabel — als .sr-only-Text oder aria-label am Knopf, NICHT als <title> im
+  Textlabel: als .sr-only-Text oder aria-label am Knopf, NICHT als <title> im
   SVG: <title> wird von Screenreadern unterschiedlich behandelt und ist als
   einziger Träger unzuverlässig.
 */
@@ -173,9 +173,9 @@ optimiert und mit Cache-Header versehen sein (`assets/vorlagen/_headers`).
   Ein Icon, das von 24 auf 48 px skaliert wird, hat danach 4px Strich statt 2px
   und wirkt plump. Zwei Wege:
 
-  a) Die Strichstärke mitrechnen — der richtige Weg, weil das Icon bei jeder
+  a) Die Strichstärke mitrechnen: der richtige Weg, weil das Icon bei jeder
      Größe die Strichstärke des Sets behält.
-  b) vector-effect: non-scaling-stroke — hält den Strich auf GERÄTEpixeln
+  b) vector-effect mit non-scaling-stroke hält den Strich auf GERÄTEpixeln
      konstant. Klingt richtig, ist es aber selten: bei 200% Browserzoom bleibt
      der Strich dann hauchdünn, während alles andere wächst. Nur für technische
      Zeichnungen, nie für UI-Icons.

@@ -4,7 +4,7 @@
 */
 @import './tokens.css';
 
-/* Schriften selbst hosten — spart DNS, Verbindung und die Datenschutzdiskussion.
+/* Schriften selbst hosten: spart DNS, Verbindung und die Datenschutzdiskussion.
    Nur die wirklich benutzten Schnitte ausliefern. */
 @font-face {
   font-family: 'Outfit'; font-style: normal; font-weight: 700; font-display: swap;
@@ -79,7 +79,7 @@ p, li, dd, dt, figcaption, th, td, label {
 p { margin: 0 0 var(--raum-4); max-width: var(--breite-text); }
 p:last-child { margin-bottom: 0; }
 
-/* Links tragen die dunkle Markenstufe — die Markenfarbe selbst reißt als Text AA */
+/* Links tragen die dunkle Markenstufe: die Markenfarbe selbst reißt als Text AA */
 a { color: var(--farbe-marke-text); text-underline-offset: 0.15em; }
 a:not(.btn) { padding-block: 0.2rem; }   /* vergrößert das Ziel ohne Layoutänderung */
 a:hover { color: var(--farbe-marke-700); }
@@ -110,7 +110,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 }
 .sprunglink:focus { top: var(--raum-4); }
 
-/* Ein Container für alles — kein max-width in jeder Sektion einzeln */
+/* Ein Container für alles: kein max-width in jeder Sektion einzeln */
 .inhalt {
   width: min(100% - 2 * var(--rand-seite), var(--breite-inhalt));
   margin-inline: auto;
@@ -123,7 +123,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 @media (min-width: 1100px) { .raster { grid-template-columns: repeat(var(--spalten, 2), minmax(0, 1fr)); } }
 
 /*
-  CONTAINER QUERIES — die Bahn meldet sich an, die Komponente fragt sie.
+  CONTAINER QUERIES: die Bahn meldet sich an, die Komponente fragt sie.
 
   Eine Karte weiß nicht, ob sie in einer dreispaltigen Sektion, in einer Sidebar
   oder in einem Dialog steht. Ein @media in der Karte behauptet, sie wüsste es.
@@ -144,7 +144,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .raster { container-type: inline-size; container-name: bahn; }
 
 /* Intrinsisches Raster ohne einen einzigen Haltepunkt: bricht selbst um.
-   min(18rem, 100%) ist die Notbremse — ohne sie erzwingt 18rem bei 320px
+   min(18rem, 100%) ist die Notbremse, ohne sie erzwingt 18rem bei 320px
    Viewport horizontalen Überlauf. Für UNBEKANNT viele gleichartige Elemente
    (Blogliste, Logos). Für eine feste gestaltete Anzahl bleibt .raster richtig,
    weil dort die Spaltenzahl eine Designentscheidung ist. */
@@ -201,7 +201,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 /* Hervorhebung einzelner Wörter in Überschriften.
    Bewusst NUR Farbe, kein Balken und kein Unterstrich: die Hervorhebung steht in
    fast jeder Sektionsüberschrift, ein Balken je Titel wäre Lärm.
-   Ausgezeichnet wird mit <em>, weil die Betonung semantisch stimmt — die Optik
+   Ausgezeichnet wird mit <em>, weil die Betonung semantisch stimmt: die Optik
    läuft über die Farbe, nicht über Kursive. */
 .hebung { color: var(--farbe-marke-text); font-style: normal; }
 .sektion--dunkel .hebung { color: var(--farbe-marke-300); }
@@ -214,7 +214,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
    :hover am ersten Fingertipp hängen und die Karte stünde angehoben, bis
    woanders getippt wird.
 
-   Bewegt werden nur transform und box-shadow — nichts, was Layout neu rechnet.
+   Bewegt werden nur transform und box-shadow: nichts, was Layout neu rechnet.
    Wer Bewegung reduziert, bekommt trotzdem eine Rückmeldung: der Schatten
    bleibt, das Anheben entfällt. */
 @media (hover: hover) {
@@ -244,7 +244,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 
 /* Entwicklungsmarkierung für Texte, die noch mit dem Kunden abzustimmen sind.
    Erscheint nie in Produktion, weil das Attribut vor dem Livegang entfernt wird
-   — und solange es da ist, ist es nicht zu übersehen. */
+  , und solange es da ist, ist es nicht zu übersehen. */
 [data-copy-vorschlag] {
   outline: 2px dashed var(--farbe-fehler);
   outline-offset: -2px;
@@ -258,7 +258,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 }
 
 /*
-  HELDENHÖHE — svh, nicht vh und nicht dvh.
+  HELDENHÖHE: svh, nicht vh und nicht dvh.
 
   vh entspricht auf Mobil lvh und wird von der Adressleiste beschnitten.
   dvh wächst und schrumpft beim Scrollen, wenn die Adressleiste ein- und
@@ -307,7 +307,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 }
 
 /*
-  SCROLL-DRIVEN EINBLENDUNG — ohne JavaScript, ohne IntersectionObserver.
+  SCROLL-DRIVEN EINBLENDUNG, ohne JavaScript, ohne IntersectionObserver.
 
   Der Anfangszustand steht IN den Keyframes, nicht als Regel am Element. Wer
   opacity: 0 außerhalb des @supports-Blocks setzt, macht Inhalt in Browsern ohne

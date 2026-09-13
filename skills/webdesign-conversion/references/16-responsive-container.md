@@ -90,7 +90,7 @@ Komponenten nach Fensterbreite zu bauen.
 ```css
 /*
   Der Container muss sich ANMELDEN. Ohne container-type fragt @container
-  ins Leere und die Regel greift nie — der häufigste Fehler beim Einstieg.
+  ins Leere und die Regel greift nie: der häufigste Fehler beim Einstieg.
 
   inline-size = nur die Breite wird beobachtet. Das ist fast immer richtig:
   container-type: size verlangt eine feste Höhe und bricht Inhalt, der wächst.
@@ -199,7 +199,7 @@ und Sprungziele brauchen `scroll-padding-top` in Höhe der gesamten sticky Grupp
 Drei Wege, in dieser Reihenfolge:
 
 ```css
-/* a) Scrollbehälter — immer richtig, immer erlaubt.
+/* a) Scrollbehälter: immer richtig, immer erlaubt.
       tabindex macht ihn tastaturscrollbar, role und aria-label machen
       ihn für Screenreader als Region auffindbar. Ohne das ist eine
       scrollende Tabelle für Tastaturnutzer nicht erreichbar. */
@@ -278,7 +278,7 @@ node scripts/pruefe-breakpoints.mjs http://localhost:4321
 Das Skript rendert acht Größen (die fünf Breakpoints plus 1366 × 768, 1440 × 720 und
 320 px), legt Screenshots ab und meldet drei Dinge automatisch:
 
-- **horizontaler Überlauf** (`scrollWidth > innerWidth`) — findet die Fälle, die man auf dem
+- **horizontaler Überlauf** (`scrollWidth > innerWidth`): findet die Fälle, die man auf dem
   eigenen Monitor nie sieht
 - **Elemente breiter als der Viewport**, mit Selektor
 - **Touchziele unter 44 × 44 px**, siehe `04-barrierefreiheit-bfsg.md`

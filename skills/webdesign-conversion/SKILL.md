@@ -1,10 +1,10 @@
 ---
 name: webdesign-conversion
-description: Vollständiges System für conversion-orientiertes Webdesign im DACH-Raum. Deckt Strategie und Positionierung, Design und UX, Technik und Performance, Barrierefreiheit (BFSG/WCAG 2.2 AA), SEO, Conversion-Architektur, Motion mit GSAP, Komponenten mit shadcn/ui sowie den rechtlichen und technischen Pflichtaufbau ab (Impressum, Datenschutzerklärung, Consent, 404-Seite, robots.txt, Sitemap, Weiterleitungen, Security-Header). Nutze diesen Skill beim Planen, Bauen, Überarbeiten oder Prüfen einer Website oder Landingpage, bei Fragen zu Ladezeit, Above the Fold, CTA, Formularen, Trust-Elementen, Meta-Titeln, interner Verlinkung, Designtokens, Animationen oder Rechtstexten.
+description: Vollständiges System für conversion-orientiertes Webdesign im DACH-Raum. Deckt Homepages, Landingpages und Recruiting-Funnel ab: Strategie und Positionierung, Design und UX, Spacing und Rhythmus, Responsive Design mit Container Queries, Technik und Performance, Barrierefreiheit (BFSG/WCAG 2.2 AA), SEO, Conversion-Architektur, Copywriting, eigene Icon-Systeme, Motion mit GSAP und CSS sowie den rechtlichen und technischen Pflichtaufbau (Impressum, Datenschutzerklärung, Consent, 404-Seite, robots.txt, Sitemap, Weiterleitungen, Security-Header). Nutze diesen Skill beim Planen, Bauen, Überarbeiten oder Prüfen einer Website, Landingpage, Karriereseite oder Stellenanzeige, bei Fragen zu Ladezeit, Above the Fold, CTA, Formularen, Trust-Elementen, Abständen, Breakpoints, Meta-Titeln, interner Verlinkung, Designtokens, Icons, SVG, Animationen, Headlines, Buttontexten, Bewerberdaten, AGG oder Rechtstexten.
 license: MIT
 metadata:
   author: Henneberg Webdesign
-  version: 1.0.0
+  version: 2.0.0
 ---
 
 # Webdesign Conversion System
@@ -16,6 +16,36 @@ rechtssicher ist und technisch trägt.
 **Kernsatz für jede Entscheidung:** Design ohne Strategie ist Dekoration. Technik ohne
 Conversion-Logik ist eine schöne Sackgasse. Erst wenn alle sechs Bereiche ineinandergreifen,
 arbeitet die Seite.
+
+## Zuerst: welcher Typ
+
+Drei Produkttypen, drei verschiedene Regelwerke. **Bei jedem neuen Projekt zuerst das
+passende Playbook lesen**, es führt durch alle Phasen und verweist auf die Referenzen.
+
+| Typ | Playbook | Der entscheidende Unterschied |
+|---|---|---|
+| **Homepage** | `playbooks/homepage.md` | Navigation ist Pflicht, mehrere Zielgruppen, SEO trägt |
+| **Landingpage** | `playbooks/landingpage.md` | **keine** Navigation, ein Ziel, Message-Match zur Anzeige |
+| **Recruiting Funnel** | `playbooks/recruiting-funnel.md` | mehrstufig, mobil zuerst, AGG und Bewerberdatenschutz |
+
+Bei einem Audit einer bestehenden Seite: `assets/checklisten/conversion-audit.md`.
+
+## Der Markenbrief als einzige Quelle
+
+Bevor gestaltet wird, entsteht **eine** Datei pro Projekt. Sie speist Design, Motion, Icons
+und Copy gemeinsam.
+
+```
+assets/vorlagen/marke-brief.md   Prosa: Zielgruppe, Problem, USP, Einwände, Beweise
+assets/vorlagen/marke.json       maschinenlesbar: Farbrollen, Schriften, Motion, Icons, Sprache
+```
+
+Das ist der Grund, warum bei maschinell gebauten Seiten Design, Animation und Text selten
+zusammenpassen: sie kommen aus vier getrennten Entscheidungen statt aus einer Datei. Die
+Icon-Strichstärke erbt aus derselben Quelle wie die Motion-Kurve und der Anredeton.
+
+**Was beim Bauen entschieden wird und dort nicht steht, gehört dorthin.** Sonst dreht die
+nächste Sitzung es zurück.
 
 ## Die sechs Bereiche
 
@@ -39,35 +69,65 @@ Strategie  →  Struktur  →  Copy  →  Design  →  Bau  →  Test  →  Laun
 ```
 
 Wer mit Design anfängt, baut Dekoration. Wer mit Technik anfängt, baut eine
-Anfragenmaschine ohne Anfragen. Der komplette Ablauf mit Artefakten je Phase steht in
-`references/00-fahrplan.md` — **bei jedem neuen Projekt zuerst lesen.**
+Anfragenmaschine ohne Anfragen. Der Ablauf mit Artefakten je Phase steht in
+`references/00-fahrplan.md`.
 
 ## Wann welche Referenz
 
-Lies gezielt nach, statt alles zu laden:
+Lies gezielt nach, statt alles zu laden.
+
+**Strategie und Text**
 
 | Aufgabe | Referenz |
 |---------|----------|
-| Neues Projekt, Kickoff, Angebot | `00-fahrplan.md`, dann `01-strategie-positionierung.md` |
-| Zielgruppe, USP, Einwände, Angebotstext | `01-strategie-positionierung.md` |
-| Hero, Navigation, Seitenaufbau, Layout | `02-design-ux.md` |
-| Ladezeit, Bilder, Caching, Breakpoints | `03-technik-performance.md` |
+| Neues Projekt, Kickoff, Angebot | `00-fahrplan.md`, dann das Playbook |
+| Zielgruppe, USP, Einwände | `01-strategie-positionierung.md` |
+| Headlines, Buttontexte, Fehlermeldungen, Angebot, Einwände, Deutsch | `12-copywriting.md` |
+| CTA, Formulare, Trust, Über-uns-Seite | `06-conversion-architektur.md` |
+| Stellenanzeige, Karriereseite, EVP, AGG, Bewerberdaten | `19-recruiting-funnel.md` |
+
+**Gestaltung**
+
+| Aufgabe | Referenz |
+|---------|----------|
+| Hero, Navigation, Seitenaufbau, F-Pattern | `02-design-ux.md` |
+| Visuelle Richtung, Tokens, Typografie, Anti-Schablone | `10-visuelle-richtung.md` |
+| Abstände, Rhythmus, Hierarchie durch Spacing | `15-spacing-rhythmus.md` |
+| Breakpoints, Container Queries, svh/dvh, Responsive-Szenarien | `16-responsive-container.md` |
+| Eigenes Icon-Set, SVG, Favicon | `17-icons-eigenes-system.md` |
+| Motion-Handschrift, Motion-Tokens, Scroll-Animation in CSS | `18-motion-handschrift.md` |
+| GSAP, ScrollTrigger, Timelines, Performance | `09-motion-gsap.md` |
+| React- und Next-Komponenten, shadcn/ui | `11-komponenten-shadcn.md` |
+
+**Technik, Recht, Messung**
+
+| Aufgabe | Referenz |
+|---------|----------|
+| Ladezeit, Bilder, Caching, Schriften | `03-technik-performance.md` |
 | Kontrast, Tastatur, Alt-Texte, BFSG-Pflicht | `04-barrierefreiheit-bfsg.md` |
 | Keywords, URLs, Meta, interne Links, JSON-LD | `05-seo-sichtbarkeit.md` |
-| CTA, Formulare, Trust, Über-uns-Seite | `06-conversion-architektur.md` |
 | Impressum, Datenschutz, Consent, Auftragsverarbeitung | `07-recht-dsgvo.md` |
 | 404, robots.txt, Sitemap, Redirects, Header | `08-pflichtseiten-technik.md` |
-| Animationen, Scroll-Effekte, GSAP | `09-motion-gsap.md` |
-| Visuelle Richtung, Tokens, Typografie, Stile | `10-visuelle-richtung.md` |
-| React/Next-Komponenten, shadcn/ui | `11-komponenten-shadcn.md` |
-| Headlines, Buttontexte, Fehlermeldungen | `12-copywriting.md` |
 | GA4, Heatmaps, Conversion-Ziele, A/B | `13-messung-optimierung.md` |
 | Astro-Projekt aufsetzen, Dateistruktur | `14-projektstruktur-astro.md` |
-| Audit einer bestehenden Seite | `assets/checklisten/conversion-audit.md` |
 | Kurz vor dem Livegang | `assets/checklisten/pre-launch.md` |
 
-Fertige Vorlagen (Rechtstexte, robots.txt, Sitemap-Stylesheet, Tokens, Meta-Head, JSON-LD,
-404-Seite, Security-Header) liegen in `assets/vorlagen/`.
+Fertige Vorlagen (Markenbrief, Rechtstexte, Bewerber-Datenschutz, robots.txt,
+Sitemap-Stylesheet, Tokens, globale Basis, Meta-Head, JSON-LD samt JobPosting, 404-Seite,
+Security-Header) liegen in `assets/vorlagen/`.
+
+## Prüfskripte
+
+„Prüfen statt behaupten" braucht Werkzeug, sonst wird die Checkbox abgehakt statt geprüft.
+Alle Skripte laufen ohne Abhängigkeiten außer Node, das Breakpoint-Skript braucht Playwright.
+
+```bash
+node scripts/pruefe-striche.mjs       # Gedankenstriche, hyphens: auto, verbotene Wörter
+node scripts/pruefe-tokens.mjs        # hartcodierte Farb-, Abstands- und Schriftwerte
+node scripts/pruefe-kontrast.mjs      # Kontrastwerte der Rollen-Tokens
+node scripts/pruefe-platzhalter.mjs   # [[FEHLT]] und data-copy-vorschlag vor dem Livegang
+node scripts/pruefe-breakpoints.mjs http://localhost:4321 --bilder
+```
 
 ## Sieben Fehler, die Geld kosten
 
@@ -113,31 +173,40 @@ Diese Regeln gelten immer und werden nicht wegdiskutiert:
   zwei Sätze. Der Bereichsstrich bei Zahlen („10–12 Uhr") und der echte Bindestrich im
   Kompositum („E-Mail-Adresse") bleiben erlaubt. Geprüft mit
   `scripts/pruefe-striche.mjs`, Begründung in `references/12-copywriting.md`.
+- **Keine Silbentrennung.** `hyphens: auto` trennt deutsche Komposita mitten im Wort und
+  gehört nicht auf eine Verkaufsseite.
 - **Keine erfundenen Zahlen.** Keine Kundenstimmen, Bewertungen, Zertifikate, Preise,
   Lieferzeiten oder Referenzen ohne Beleg. Fehlt ein Wert, steht dort ein sichtbarer
   Platzhalter `[[FEHLT: …]]`, niemals ein plausibel klingender Erfindungswert. Unechte
   Verknappung („nur noch 3 verfügbar") ohne echten Bestand ist eine Irreführung nach
   § 5 UWG.
+- **Kein Wert ohne Token.** Keine rohe Farbe, kein hartcodierter Abstand, keine feste
+  Schriftgröße im Komponentencode. Eine optisch begründete Abweichung bekommt einen
+  Kommentar mit dem Wort „bewusst", sonst ist es ein Befund.
 - **Kein Drittanbieter-Skript, kein externes Medium ohne Einwilligung.** Consent blockiert
   echt, nicht kosmetisch (siehe `references/07-recht-dsgvo.md`).
 - **Rechtstexte sind Entwürfe**, keine Rechtsberatung. Sie gehen vor dem Livegang zur
-  Prüfung. Das steht auch so in der Übergabe.
+  Prüfung. Das steht auch so in der Übergabe. Für Stellenanzeigen gilt das verschärft: ein
+  AGG-Verstoß ist unmittelbar entschädigungspflichtig.
 - **Bei `prefers-reduced-motion: reduce`** entfällt jede nicht ausgelöste Bewegung. Die
   Seite bleibt vollständig nutzbar und vollständig lesbar ohne JavaScript.
 
 ## Arbeitsweise
 
 1. **Erst verstehen, dann bauen.** Ohne Zielgruppe, Kernproblem und USP wird nichts
-   gestaltet. Fehlen die Angaben, frage sie ab — mit der Formel aus Bereich 1, nicht mit
-   einem leeren Fragebogen.
+   gestaltet. Fehlen die Angaben, frage sie ab, mit der Formel aus Bereich 1 und nicht mit
+   einem leeren Fragebogen. Die Antworten gehen in `marke-brief.md`, nicht in den Chat.
 2. **Plan vor Code.** Bei neuem Design zuerst ein kompaktes Tokensystem (Farben, Schrift,
    Layoutidee, Prinzipien) entwerfen und gegen den Brief prüfen. Liest sich ein Teil wie
    der Standard, den du für jede beliebige Seite produzieren würdest, ersetze ihn und sage
    warum. Details in `references/10-visuelle-richtung.md`.
-3. **Jede Regel bekommt einen Grund.** Im Projekt-`CLAUDE.md` steht nicht nur, wie etwas
+3. **Eine Handschrift, vier Ausdrucksformen.** Palette, Spacing, Icons und Motion kommen aus
+   derselben Entscheidung. Ein Icon-Set mit fremder Strichstärke oder eine Motion-Kurve ohne
+   Bezug zur Marke verrät die Schablone genauso wie eine Standardfarbe.
+4. **Jede Regel bekommt einen Grund.** Im Projekt-`CLAUDE.md` steht nicht nur, wie etwas
    gebaut ist, sondern warum. Das verhindert, dass die nächste Sitzung es zurückdreht.
-4. **Prüfen statt behaupten.** Vor jeder Fertigmeldung: Build grün, `astro check`/`tsc`
-   ohne Befund, Tastaturdurchlauf, Kontrolle auf 375 px und 1440 px, Kontrastprüfung der
-   geänderten Flächen. Was nicht geprüft wurde, wird als ungeprüft benannt.
-5. **Ehrlich über Lücken.** Offene Punkte kommen in eine sichtbare Liste, nicht in eine
-   Fußnote.
+5. **Prüfen statt behaupten.** Vor jeder Fertigmeldung: Build grün, `astro check`/`tsc`
+   ohne Befund, die Prüfskripte gelaufen, Tastaturdurchlauf, Kontrolle auf 375 px und
+   1440 px. Was nicht geprüft wurde, wird als ungeprüft benannt.
+6. **Ehrlich über Lücken.** Offene Punkte kommen in eine sichtbare Liste, nicht in eine
+   Fußnote. `scripts/pruefe-platzhalter.mjs` findet, was noch offen ist.

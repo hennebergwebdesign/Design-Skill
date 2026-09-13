@@ -8,7 +8,7 @@ genau diesem Auftrag gehören.
 ## Erst den Gegenstand verstehen
 
 Steht im Briefing nicht, worum es geht, klär das zuerst: **ein konkretes Thema, die Zielgruppe
-und die primäre Aufgabe der Seite** — als Vorschlag formuliert, nicht als Fragebogen.
+und die primäre Aufgabe der Seite**: als Vorschlag formuliert, nicht als Fragebogen.
 
 Aus der Branche, dem Material, dem Vokabular der Zielgruppe kommen die eigentlichen
 Entscheidungen. Eine Seite für einen Dachdecker sieht anders aus als eine für eine
@@ -17,7 +17,7 @@ nicht im Entwurf sieht, hat die Schablone gebaut.
 
 ## Zwei Durchgänge, nicht einer
 
-**Durchgang 1 — Plan.** Ein kompaktes Tokensystem in vier Punkten:
+**Durchgang 1: Plan.** Ein kompaktes Tokensystem in vier Punkten:
 
 - **Farbe:** 4–6 benannte Hex-Werte mit Rolle. Nicht mehr.
 - **Typografie:** die Schriften und ihre Rollen. Eine Familie reicht oft; bei zweien müssen
@@ -26,11 +26,11 @@ nicht im Entwurf sieht, hat die Schablone gebaut.
   (links, zentriert, Blocksatz).
 - **Prinzipien:** drei Sätze dazu, was diese Seite einzigartig macht.
 
-**Durchgang 2 — Prüfung gegen den Brief.** Lies den Plan noch einmal. Liest sich ein Teil
-davon wie das, was du für jede beliebige Seite dieser Art produzieren würdest — ersetze ihn
+**Durchgang 2: Prüfung gegen den Brief.** Lies den Plan noch einmal. Liest sich ein Teil
+davon wie das, was du für jede beliebige Seite dieser Art produzieren würdest: ersetze ihn
 und schreibe dazu, was du geändert hast und warum. Erst danach Code.
 
-Wo der Brief eine Richtung festlegt, gilt der Brief — auch wenn er genau einen der unten
+Wo der Brief eine Richtung festlegt, gilt der Brief, auch wenn er genau einen der unten
 genannten Standards verlangt.
 
 ## Die Standards, die man erkennt
@@ -57,11 +57,11 @@ und diszipliniert. Streiche eine Verzierung, die dem Auftrag nicht dient.
 
 - **Eine Markenfarbe**, dazu eine Rampe von hell bis dunkel (5–9 Stufen). Die Rampe entsteht
   nicht durch Aufhellen mit Weiß, sondern durch gezielte Kontrolle von Helligkeit und
-  Sättigung — OKLCH ist dafür das bessere Werkzeug als HSL.
+  Sättigung: OKLCH ist dafür das bessere Werkzeug als HSL.
 - **Ein neutraler Dunkelton** für Text und dunkle Flächen. Kein reines Schwarz, aber auch
-  kein getöntes Fast-Schwarz als Manier — wenn getönt, dann erkennbar zur Marke passend.
+  kein getöntes Fast-Schwarz als Manier, wenn getönt, dann erkennbar zur Marke passend.
 - **Zwei bis drei Flächenfarben:** Weiß, eine getönte helle Fläche, eine dunkle Sektion.
-- **Semantik:** Erfolg, Fehler, Warnung — abgeleitet aus derselben Logik, nicht aus Bootstrap.
+- **Semantik:** Erfolg, Fehler, Warnung: abgeleitet aus derselben Logik, nicht aus Bootstrap.
 
 ### Rollen statt Werte
 
@@ -85,19 +85,19 @@ Details und Beispielwerte: `04-barrierefreiheit-bfsg.md`.
 
 Nur bauen, wenn er gepflegt wird. Ein halber Dunkelmodus ist schlechter als keiner. Wenn:
 über dieselben Rollen-Tokens, nicht über `dark:`-Überschreibungen in jeder Komponente.
-Flächen im Dunkelmodus werden nicht invertiert, sondern neu bestimmt — reines Schwarz auf
+Flächen im Dunkelmodus werden nicht invertiert, sondern neu bestimmt: reines Schwarz auf
 OLED erzeugt harte Kanten, und Schatten funktionieren dort nicht, dort trennen Flächenhelligkeiten.
 
 ## Typografie
 
 Typografie trägt die Persönlichkeit der Seite. Eine Familie reicht; bei zwei müssen sie
-klar unterscheidbar sein — nicht zwei Grotesken, die man verwechselt.
+klar unterscheidbar sein: nicht zwei Grotesken, die man verwechselt.
 
 - **Bewusst wählen**, nicht die Familie, zu der man ohnehin greift.
 - **Zeilenlänge unter 80 Zeichen.** Serifen vertragen etwas mehr und brauchen dann mehr
   Zeilenhöhe als Groteske.
 - **Skala mit `clamp()`, kleinste Stufe 14 px.** Eine einzige Kurve von 320 bis 1920 lässt
-  Schriften zwischen 768 und 1200 px zu schnell wachsen — dort wird die Heldenüberschrift
+  Schriften zwischen 768 und 1200 px zu schnell wachsen: dort wird die Heldenüberschrift
   vierzeilig und der Heldenbereich höher als das Fenster. Zwei Stufen (bis 1200 px eine
   Kurve mit Deckel, darüber die großen Grade) lösen das.
 - Ist eine Schrift Bildelement (Headline, Signet), wird die Satzform selbst Teil der
@@ -110,11 +110,11 @@ klar unterscheidbar sein — nicht zwei Grotesken, die man verwechselt.
 - ein typografisches Label über jedem Inhaltsblock, das nichts hinzufügt
 
 Wenn eine Hervorhebung in Überschriften zum System gehört, dann konsequent und in **einer**
-Form — Farbe **oder** Balken **oder** Unterstrich, nie mehrere. Semantisch `<em>` mit
+Form: Farbe **oder** Balken **oder** Unterstrich, nie mehrere. Semantisch `<em>` mit
 `font-style: normal`, wenn die Betonung stimmt, die Optik aber über Farbe läuft.
 
 **Lizenz prüfen.** Eine kommerzielle Schrift (Moderat, Söhne, GT-Familien …) ist ohne
-Lizenz nicht einsetzbar — auch nicht „erstmal für den Entwurf". Freie Alternative wählen
+Lizenz nicht einsetzbar, auch nicht „erstmal für den Entwurf". Freie Alternative wählen
 oder Lizenz einholen; der Tausch verschiebt später jede Zeilenlänge.
 
 ## Tokensystem
@@ -133,7 +133,7 @@ Form             → Radien, Schatten, Dauer, Kurve
 mit einem eigenen Wert, fehlt entweder ein Token oder die Komponente irrt sich.
 
 **Haltepunkte als Kommentar dokumentieren.** Custom Properties gelten nicht in Media
-Queries — die Werte stehen also mehrfach im Code. Ein Kommentarblock in der Tokendatei, der
+Queries: die Werte stehen also mehrfach im Code. Ein Kommentarblock in der Tokendatei, der
 die Haltepunkte samt Bedeutung nennt, verhindert, dass jede Sektion eigene erfindet.
 
 ## Stilrichtungen als Startpunkt
