@@ -122,6 +122,70 @@ button, input, select, textarea { font: inherit; color: inherit; }
 @media (min-width: 640px)  { .raster { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (min-width: 1100px) { .raster { grid-template-columns: repeat(var(--spalten, 2), minmax(0, 1fr)); } }
 
+/*
+  CONTAINER QUERIES — die Bahn meldet sich an, die Komponente fragt sie.
+
+  Eine Karte weiß nicht, ob sie in einer dreispaltigen Sektion, in einer Sidebar
+  oder in einem Dialog steht. Ein @media in der Karte behauptet, sie wüsste es.
+  Bei 1440px Fensterbreite in einer 320px breiten Sidebar ist die Behauptung
+  falsch. Deshalb ist der Eskalationspfad:
+
+      intrinsisches CSS  →  Container Queries  →  Media Queries (zuletzt)
+
+  inline-size statt size: size verlangt eine feste Höhe und bricht Inhalt,
+  der wächst. Die Breite reicht für praktisch jeden Fall.
+
+  ACHTUNG: container-type erzeugt einen neuen Containing Block. Ein
+  position:absolute-Kind orientiert sich danach an der Bahn, nicht am
+  Seitenkörper. Dieselbe Ursache wie beim Off-Canvas-Panel in einem
+  transformierten Element. Siehe 16-responsive-container.md.
+*/
+.bahn { container-type: inline-size; }
+.raster { container-type: inline-size; container-name: bahn; }
+
+/* Intrinsisches Raster ohne einen einzigen Haltepunkt: bricht selbst um.
+   min(18rem, 100%) ist die Notbremse — ohne sie erzwingt 18rem bei 320px
+   Viewport horizontalen Überlauf. Für UNBEKANNT viele gleichartige Elemente
+   (Blogliste, Logos). Für eine feste gestaltete Anzahl bleibt .raster richtig,
+   weil dort die Spaltenzahl eine Designentscheidung ist. */
+.raster--auto {
+  display: grid;
+  gap: var(--raum-spalte);
+  grid-template-columns: repeat(auto-fit, minmax(min(18rem, 100%), 1fr));
+}
+
+/*
+  VERTIKALER FLUSS für Inhaltsbereiche mit wechselnden Elementen
+  (Blog, Leistungsdetail, Rechtstext).
+
+  Der Eulen-Selektor zeigt auf das VERHÄLTNIS zweier Elemente, nicht auf eine
+  Position. Deshalb braucht er keine :last-child-Ausnahme.
+
+  Die zweite und dritte Regel sind die wichtigen: eine Überschrift gehört zu
+  dem, was UNTER ihr steht, und nicht zu dem, was über ihr kam. Das falsch zu
+  haben ist der häufigste Spacing-Fehler in langen Texten.
+*/
+.fluss > * + * { margin-block-start: var(--fluss-raum, var(--raum-6)); }
+.fluss > * + :is(h2, h3) { margin-block-start: var(--raum-12); }
+.fluss > :is(h2, h3) + * { margin-block-start: var(--raum-3); }
+.fluss > p { max-width: var(--breite-text); }
+
+/*
+  Scrollbehälter für Tabellen und andere zu breite Inhalte.
+
+  tabindex="0" und role="region" mit aria-label gehören ins Markup, nicht
+  hierher: ohne sie ist eine scrollende Tabelle für Tastaturnutzer nicht
+  erreichbar. min-width: 0 verhindert, dass die max-content-Breite des Inhalts
+  durch das Grid-Elternteil bricht.
+*/
+.scrollrahmen { overflow-x: auto; min-width: 0; }
+.scrollrahmen:focus-visible { outline: 3px solid var(--farbe-fokus); outline-offset: 2px; }
+
+/* Grid- und Flex-Kinder mit überlaufendem Inhalt (Marquee, Tabelle, pre).
+   Das voreingestellte min-width: auto lässt sonst die max-content-Breite durch
+   und erzeugt horizontalen Überlauf auf der GANZEN Seite. */
+.raster > *, .bahn > * { min-width: 0; }
+
 /* Sektionsrhythmus */
 .sektion      { padding-block: var(--raum-sektion); }
 .sektion--eng { padding-block: var(--raum-sektion-eng); }
@@ -191,4 +255,21 @@ button, input, select, textarea { font: inherit; color: inherit; }
   position: absolute; inset-block-start: 0; inset-inline-start: 0;
   background: var(--farbe-fehler); color: #fff;
   font-size: 0.75rem; padding: 0.25rem 0.5rem; z-index: 50;
+}
+
+/*
+  HELDENHÖHE — svh, nicht vh und nicht dvh.
+
+  vh entspricht auf Mobil lvh und wird von der Adressleiste beschnitten.
+  dvh wächst und schrumpft beim Scrollen, wenn die Adressleiste ein- und
+  ausfährt: jedes Element mit 100dvh springt dabei sichtbar. dvh ist richtig
+  für ein Off-Canvas-Panel, falsch für alles, was beim Scrollen sichtbar ist.
+
+  Die zweite Bedingung fragt die FENSTERHÖHE ab. Ein 13-Zoll-Notebook mit
+  1440x720 braucht andere Behandlung als ein 1440x1080-Monitor: dort erzwingt
+  100svh entweder eine große Lücke oder Beschnitt der CTAs.
+*/
+.held { min-height: 100svh; }
+@media (min-width: 861px) and (min-height: 800px) {
+  .held { min-height: auto; padding-block-start: 12vh; }
 }
