@@ -99,6 +99,15 @@ Der Grund ist nicht Geschmack, sondern Aufmerksamkeit: Bewegung zieht den Blick.
 konkurrierende Bewegungen auf einem Bildschirm heben sich gegenseitig auf, und der Besucher
 sieht keine von beiden.
 
+### Pflicht: mindestens ein individueller Custom-Abschnitt
+
+Jedes Projekt braucht **einen** Abschnitt, der nicht aus einer Bibliothek austauschbarer
+Sektionen stammt, sondern für genau dieses Unternehmen gebaut ist: die Tabelle oben zeigt,
+wo er sitzt. Er trägt den einen orchestrierten Moment, die individuelle Bewegungssignatur
+aus diesem Kapitel und, wo passend, einen aus der Marke abgeleiteten Farbverlauf statt eines
+generischen Verlaufs als Deko (siehe „Aufbau einer Palette" in `10-visuelle-richtung.md`).
+Kein Projekt liefert nur die Standardsektionen aus dem Baukasten ohne diesen einen Abschnitt.
+
 ## Scroll-driven Animations: kein JavaScript nötig
 
 Seit 2024 in Chromium und Safari, seit 2025 breit verfügbar. Für Einblendungen beim Scrollen

@@ -39,6 +39,19 @@ Beides liest sich sofort generiert. Deshalb gilt als harte Grenze:
 - **Der echte Bindestrich im Kompositum bleibt erlaubt**, wo die Rechtschreibung ihn
   verlangt: „E-Mail-Adresse", „Leckage-Ortung", „Web-App".
 
+### Auch nicht vorangestellt: Kicker und Eyebrow-Labels
+
+Dieselbe Regel gilt für das kleine Label über der Headline (Kicker, Eyebrow, Vorspann):
+kein Strich davor, egal ob als Textzeichen oder als dekoratives Linien-Element im Markup.
+
+> „— Was wir machen" über „Acht Gewerke, ein Ansprechpartner"
+
+ist derselbe Fehler wie ein Gedankenstrich in der Headline selbst, nur eine Zeile höher, und
+fällt unter dasselbe Muster „Schablonen-Chrome" aus `10-visuelle-richtung.md`. Ein
+Kicker-Label steht entweder ohne jedes Präfix, oder das Präfix ist ein bewusst gestaltetes
+Element, das zur Marke gehört (ein farbiger Punkt, ein kurzer Balken in Akzentfarbe), nie ein
+Strich- oder Bindestrich-Zeichen.
+
 ### Der Ersatz macht den Text besser, nicht nur regelkonform
 
 | Statt | Besser | Warum |

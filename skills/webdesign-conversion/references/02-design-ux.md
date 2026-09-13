@@ -32,10 +32,25 @@ Nachher, ein Screenshot des Resultats, das fertige Werk, die laufende Anlage: da
 
 ### Höhe des Heldenbereichs
 
-`min-height: 100svh` erzwingt auf niedrigen Fenstern (13"/14"-Notebooks) entweder eine große
-Lücke oder Beschnitt. Besser: ab mittleren Desktopbreiten `min-height: auto` plus ein
-vh-basiertes `padding-block-start`. Dann richtet sich der Bereich am Inhalt aus und ein Stück
-der nächsten Sektion bleibt sichtbar: das ist zugleich der beste Scroll-Anreiz.
+**Projektstandard: der Heldenbereich liegt auf jeder Breite und jeder Fensterhöhe bei 100 %
+der sichtbaren Bildschirmhöhe.** `min-height: 100svh` ist die Basis (kleinster Viewport,
+Browserleisten eingeblendet, kein Sprung während des Scrollens). Details zu `svh`/`dvh` und
+den acht Standard-Breiten in `16-responsive-container.md`.
+
+Das reißt auf niedrigen Fenstern (13"/14"-Notebooks, ~720 px Fensterhöhe) leicht in eine
+Lücke oder in Beschnitt, wenn der Inhalt selbst starr bleibt. Deshalb passt sich der
+**Inhalt** an, nicht der Container:
+
+- Headline-, Abstands- und Bildgrößen im Heldenbereich an die Fensterhöhe koppeln
+  (`clamp()` mit einer `vh`-Komponente, oder eine `@media (max-height: 750px)`-Anpassung der
+  Innenabstände), statt eine einzige feste Größe zu erzwingen.
+- Above the Fold bleibt die Priorität: Passt bei geringer Fensterhöhe nicht mehr alles auf
+  den ersten Bildschirm, weicht die niedrigste Priorität (z. B. die Trust-Leiste) knapp unter
+  die Falz, nie der Heldenbereich selbst wird verkleinert oder auf `min-height: auto`
+  zurückgestuft.
+- Ein Stück der nächsten Sektion als Scroll-Anreiz kommt über einen kleinen negativen
+  Rand-Trick oder eine sichtbare Kante am unteren Ende des Heldenbereichs, nicht darüber,
+  dass der Heldenbereich selbst kürzer als der Viewport ist.
 
 ## Schritt 2.2: F-Pattern und Navigation
 
@@ -129,8 +144,11 @@ der Umbruch.
 
 ### Hover und Zustände
 
-Zwei globale Klassen statt einer Regel je Sektion: eine hebt Karten um 4 px an und vertieft
-den Schatten, eine zoomt das Bild in einem `overflow: hidden`-Kasten auf 1,04.
+**Jede Kachel bekommt einen Hover-Effekt, das ist keine Kür.** Leistungs-, Team-, Referenz-
+und Prozesskacheln müssen auf `:hover` und `:focus-visible` sichtbar reagieren, sonst wirkt
+die Seite statisch und unfertig. Zwei globale Klassen statt einer Regel je Sektion: eine hebt
+Karten um 4 px an und vertieft den Schatten, eine zoomt das Bild in einem
+`overflow: hidden`-Kasten auf 1,04.
 
 Drei Regeln dazu, jede mit Grund:
 

@@ -61,6 +61,10 @@ und diszipliniert. Streiche eine Verzierung, die dem Auftrag nicht dient.
 - **Ein neutraler Dunkelton** für Text und dunkle Flächen. Kein reines Schwarz, aber auch
   kein getöntes Fast-Schwarz als Manier, wenn getönt, dann erkennbar zur Marke passend.
 - **Zwei bis drei Flächenfarben:** Weiß, eine getönte helle Fläche, eine dunkle Sektion.
+- **Mindestens ein individueller Verlauf, aus der Markenfarbe abgeleitet**, nicht aus einem
+  generischen „Glass/Gradient"-Preset kopiert. Er gehört in den einen Custom-Abschnitt aus
+  `18-motion-handschrift.md`, nicht auf jede Karte verteilt: Sparsamkeit mit Mut gilt auch
+  hier.
 - **Semantik:** Erfolg, Fehler, Warnung: abgeleitet aus derselben Logik, nicht aus Bootstrap.
 
 ### Rollen statt Werte

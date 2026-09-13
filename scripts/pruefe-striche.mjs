@@ -14,8 +14,8 @@
 
   WAS GEPRÜFT WIRD
     1. Halbgeviertstrich (–, U+2013) und Geviertstrich (—, U+2014) im Textinhalt.
-       In Überschriften, Buttons und Links ist der Befund ein FEHLER,
-       im Fließtext eine WARNUNG.
+       In Überschriften, Buttons, Links und Kicker-/Eyebrow-Labels ist der Befund
+       ein FEHLER, im Fließtext eine WARNUNG.
     2. hyphens: auto im CSS — trennt deutsche Komposita mitten im Wort
        ("Ethy-len", "Verschmut-zung").
     3. Verbotene Wörter aus marke.json → sprache.verbotene_woerter.
@@ -111,6 +111,7 @@ const HART = [
   { re: /<a\b[^>]*>/i, was: 'Link' },
   { re: /\b(title|headline|subheadline|ueberschrift|titel|cta|buttontext|label|alt|aria-label)\s*[:=]/i, was: 'Titel- oder Buttonfeld' },
   { re: /^\s{0,3}#{1,6}\s/, was: 'Markdown-Überschrift' },
+  { re: /class\s*=\s*["'][^"']*\b(kicker|eyebrow|overline|vorspann|ueberzeile)\b/i, was: 'Kicker- oder Eyebrow-Label' },
 ];
 
 function kontext(zeile) {

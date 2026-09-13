@@ -169,12 +169,29 @@ Diese Regeln gelten immer und werden nicht wegdiskutiert:
   werden nie entfernt, nur gestaltet.
 - **Ladezeit unter 2 Sekunden**, LCP unter 2,5 s, CLS unter 0,1.
 - **Keine Gedankenstriche im Seitentext.** Kein `–` und kein `—` in Headlines,
-  Subheadlines, Buttons, Links, Alt-Texten oder Fließtext. Ersatz: Doppelpunkt, Komma oder
-  zwei Sätze. Der Bereichsstrich bei Zahlen („10–12 Uhr") und der echte Bindestrich im
+  Subheadlines, Buttons, Links, Alt-Texten oder Fließtext. Das gilt auch **vorangestellt**:
+  kein Strich, kein Bindestrich und kein dekoratives Strich-Element vor einer Headline,
+  Subheadline oder einem Kicker-/Eyebrow-Label (das „— Was wir machen" über einer
+  Überschrift). Ersatz: Doppelpunkt, Komma, zwei Sätze oder das Label steht einfach ohne
+  Strich davor. Der Bereichsstrich bei Zahlen („10–12 Uhr") und der echte Bindestrich im
   Kompositum („E-Mail-Adresse") bleiben erlaubt. Geprüft mit
   `scripts/pruefe-striche.mjs`, Begründung in `references/12-copywriting.md`.
 - **Keine Silbentrennung.** `hyphens: auto` trennt deutsche Komposita mitten im Wort und
   gehört nicht auf eine Verkaufsseite.
+- **Heldenbereich immer auf voller Bildschirmhöhe.** Auf jeder Breite und jeder Fensterhöhe
+  liegt der Heldenbereich bei 100 % der sichtbaren Höhe (`100svh`, siehe `02-design-ux.md`
+  und `16-responsive-container.md`), keine Ausnahme für kurze Laptop-Fenster. Passt sich an:
+  der Inhalt darin, nie der Container.
+- **Kacheln und Karten bekommen immer einen Hover-Effekt.** Leistungs-, Team-, Referenz- und
+  Prozesskacheln reagieren sichtbar auf `:hover`/`:focus-visible` (Anheben, Zoom, Farb- oder
+  Randwechsel), abgeschaltet bei `prefers-reduced-motion: reduce`. Details in
+  `02-design-ux.md`.
+- **Jedes Projekt bekommt eine eigene Handschrift, keine Wiederverwendung von Sektion zu
+  Sektion.** Dazu gehören: mindestens ein individueller Farbverlauf oder eine individuelle
+  visuelle Eigenschaft, die aus der Marke abgeleitet ist (nicht aus einer Bibliothek
+  kopiert), eine eigene Bewegungssignatur (siehe `18-motion-handschrift.md`) und mindestens
+  ein Custom- oder Animationsabschnitt, der für genau dieses Unternehmen gebaut ist, keine
+  generische Sektion aus dem Baukasten.
 - **Keine erfundenen Zahlen.** Keine Kundenstimmen, Bewertungen, Zertifikate, Preise,
   Lieferzeiten oder Referenzen ohne Beleg. Fehlt ein Wert, steht dort ein sichtbarer
   Platzhalter `[[FEHLT: …]]`, niemals ein plausibel klingender Erfindungswert. Unechte
