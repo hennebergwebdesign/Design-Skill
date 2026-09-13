@@ -202,3 +202,135 @@ beziehen** — eine Shopbewertung gehört an die Organisation, siehe oben.
   }
 }
 ```
+
+## JobPosting
+
+Für Google for Jobs. In Deutschland seit 2019 aktiv; eine bezahlte Variante gibt es hier
+nicht, der organische Weg über strukturierte Daten ist der einzige Kanal.
+
+**Der häufigste Fehler:** `title` enthält den ganzen Seitentitel. Google braucht den reinen
+Jobtitel. Also `"Elektriker"`, nicht `"Elektriker (m/w/d) gesucht in Dachau | Firma GmbH"`.
+
+Pflichtfelder sind `title`, `description`, `datePosted`, `hiringOrganization` und
+`jobLocation`. Ohne sie erscheint die Anzeige nicht. Alles Weitere ist empfohlen, und
+`validThrough` sowie `baseSalary` sind in der Praxis entscheidend.
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "JobPosting",
+
+  "title": "[[NUR DER JOBTITEL, z. B. Elektriker]]",
+  "description": "<p>[[VOLLSTÄNDIGE BESCHREIBUNG ALS HTML]]</p><ul><li>[[AUFGABE]]</li></ul>",
+  "datePosted": "[[JJJJ-MM-TT]]",
+  "validThrough": "[[JJJJ-MM-TTT00:00:00+01:00]]",
+
+  "identifier": {
+    "@type": "PropertyValue",
+    "name": "[[FIRMA]]",
+    "value": "[[INTERNE STELLENNUMMER]]"
+  },
+
+  "hiringOrganization": {
+    "@type": "Organization",
+    "name": "[[FIRMA]]",
+    "sameAs": "https://www.beispiel.de",
+    "logo": "https://www.beispiel.de/images/logo.png"
+  },
+
+  "jobLocation": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "[[STRASSE UND HAUSNUMMER]]",
+      "addressLocality": "[[ORT]]",
+      "postalCode": "[[PLZ]]",
+      "addressRegion": "[[BUNDESLAND]]",
+      "addressCountry": "DE"
+    }
+  },
+
+  "employmentType": "FULL_TIME",
+
+  "baseSalary": {
+    "@type": "MonetaryAmount",
+    "currency": "EUR",
+    "value": {
+      "@type": "QuantitativeValue",
+      "minValue": 3400,
+      "maxValue": 4100,
+      "unitText": "MONTH"
+    }
+  },
+
+  "directApply": true
+}
+```
+
+### `employmentType`
+
+`FULL_TIME`, `PART_TIME`, `CONTRACTOR`, `TEMPORARY`, `INTERN`, `VOLUNTEER`, `PER_DIEM`,
+`OTHER`. Mehrere gehen als Array. Eine Ausbildungsstelle ist im deutschen Sinn am ehesten
+`FULL_TIME` plus `INTERN`, kein eigener Wert.
+
+### Remote und Hybrid
+
+Bei vollständig remote entfällt `jobLocation` **nicht**, sondern kommt zusätzlich zu
+`jobLocationType`, und die Regionen, aus denen bewerbbar ist, gehören dazu:
+
+```json
+{
+  "jobLocationType": "TELECOMMUTE",
+  "applicantLocationRequirements": {
+    "@type": "Country",
+    "name": "DE"
+  }
+}
+```
+
+Bei **hybrid** wird `jobLocationType` weggelassen und nur `jobLocation` gesetzt: der Ort ist
+real, die Anwesenheit nur reduziert. Wer hier `TELECOMMUTE` setzt, erscheint in
+Remote-Filtern und enttäuscht Bewerber.
+
+### `baseSalary`
+
+Bei einem Festbetrag statt einer Spanne:
+
+```json
+{
+  "value": { "@type": "QuantitativeValue", "value": 3800, "unitText": "MONTH" }
+}
+```
+
+`unitText` kennt `HOUR`, `DAY`, `WEEK`, `MONTH`, `YEAR`. Für deutsche Angaben ist `MONTH`
+oder `YEAR` üblich; bei Stundenlohn `HOUR`, dann aber ohne Wochenstunden ist die Angabe
+unvollständig und gehört in die `description`.
+
+**Keine erfundene Gehaltsangabe.** Die harte Grenze aus `SKILL.md` gilt: Fehlt ein
+freigegebener Wert, bleibt das Feld weg und der Punkt steht als `[[FEHLT: Gehaltsspanne]]`
+in der Liste offener Punkte. Eine falsche Gehaltsangabe in strukturierten Daten ist
+zugleich eine irreführende Angabe.
+
+### Abgelaufene Anzeigen aktiv entfernen
+
+Eine besetzte Stelle, die online bleibt, ist ein Ranking-Risiko und ärgert Bewerber. Drei
+zulässige Wege:
+
+1. `validThrough` auf ein Datum in der Vergangenheit setzen
+2. die URL mit **404** oder **410** beantworten
+3. das `JobPosting`-Markup von der Seite entfernen
+
+Für schnelles Entfernen ist die Indexing API der Weg, nicht die Sitemap.
+
+**Konsistenz beachten:** Wird die Stellenseite nach dem Besetzen auf `noindex` gesetzt, muss
+sie aus der Sitemap verschwinden. Sonst meldet die Search Console „Übermittelte URL als
+noindex gekennzeichnet", siehe `../../references/08-pflichtseiten-technik.md`.
+
+### Prüfen
+
+- Rich Results Test von Google für jede Stellenseite einzeln
+- Search Console, Bericht zu Stellenangeboten, nach dem Livegang
+- Nach dem Besetzen: prüfen, dass die Anzeige wirklich verschwunden ist
+
+Weitere Regeln zum Funnel, zu AGG und zu Bewerberdaten:
+`../../references/19-recruiting-funnel.md`.
