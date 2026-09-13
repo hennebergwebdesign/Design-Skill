@@ -47,7 +47,11 @@ const nurFarbe = args.includes('--nur-farbe');
 let markePfad = null;
 const mi = args.indexOf('--marke');
 if (mi !== -1) markePfad = args[mi + 1];
-const pfade = args.filter((a, i) => !a.startsWith('--') && i !== mi + 1);
+/* Ohne --marke ist mi = -1, also mi + 1 = 0: ein naives i !== mi + 1 würde
+   dann das ERSTE Pfadargument verschlucken. Deshalb der Index nur, wenn
+   --marke wirklich vorkommt. */
+const markeIndex = mi === -1 ? -1 : mi + 1;
+const pfade = args.filter((a, i) => !a.startsWith('--') && i !== markeIndex);
 
 const STANDARD_PFADE = ['src', 'app', 'components', 'pages'];
 const wurzeln = (pfade.length ? pfade : STANDARD_PFADE).filter(existsSync);

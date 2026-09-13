@@ -36,7 +36,7 @@ eingeschätzt. Was nicht geprüft wurde, wird als ungeprüft an den Kunden über
 - [ ] Kein Bild über 200 KB (Hero: 500 KB), alles als WebP/AVIF
 - [ ] Jedes `<img>` hat `width` und `height`
 - [ ] Schriften selbst gehostet, nur benutzte Schnitte, zwei per Preload angekündigt
-- [ ] Fünf Breakpoints geprüft: 375, 768, 1024, 1440, 1920 px — zusätzlich 1366 × 768
+- [ ] Fünf Breakpoints geprüft: 375, 768, 1024, 1440, 1920 px: zusätzlich 1366 × 768
 - [ ] Keine horizontale Scrollleiste auf keiner Breite
 - [ ] Seite bleibt ohne JavaScript lesbar und bedienbar
 - [ ] Cache-Header gesetzt, Security-Header gesetzt

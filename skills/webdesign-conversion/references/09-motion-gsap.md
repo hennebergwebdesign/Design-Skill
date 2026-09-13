@@ -8,12 +8,12 @@ wo sie hingehört. Alles andere ist Lärm.
 - **Bewegung, die auf eine Handlung antwortet** (öffnen, ausklappen, bestätigen), ist fast
   immer willkommen.
 - **Nicht ausgelöste Bewegung** ist sparsam und gezielt einzusetzen. Ein einziger
-  orchestrierter Moment — eine Ladesequenz, eine Enthüllung — wirkt stärker als Effekte
-  überall.
+  orchestrierter Moment, etwa eine Ladesequenz oder eine Enthüllung, wirkt stärker als
+  Effekte überall.
 - Eine Fade-and-slide-up-Einblendung an jeder Sektion plus Hover-Transition an jeder Karte
   ist der generische Standard und liest sich als maschinell erzeugt.
 - **Bei `prefers-reduced-motion: reduce` entfällt jede nicht ausgelöste Bewegung.** Die Seite
-  bleibt vollständig — nichts bleibt unsichtbar, nichts bleibt verschoben.
+  bleibt vollständig: nichts bleibt unsichtbar, nichts bleibt verschoben.
 - Die Seite ist **ohne JavaScript vollständig lesbar und bedienbar**. Animation ist eine
   Schicht darüber, kein Träger von Inhalt.
 
@@ -36,8 +36,8 @@ Webflow Interactions.
 ## Kern-API
 
 ```js
-gsap.to(ziel, vars)              // vom Ist-Zustand zu vars — der Normalfall
-gsap.from(ziel, vars)            // von vars zum Ist-Zustand — gut für Auftritte
+gsap.to(ziel, vars)              // vom Ist-Zustand zu vars: der Normalfall
+gsap.from(ziel, vars)            // von vars zum Ist-Zustand: gut für Auftritte
 gsap.fromTo(ziel, von, nach)     // beides explizit, liest nichts aus dem DOM
 gsap.set(ziel, vars)             // sofort, ohne Dauer
 ```
@@ -68,7 +68,7 @@ auch für Screenreader und Klicks weg.
 
 ## Reduzierte Bewegung sauber behandeln
 
-`gsap.matchMedia()` ist der Weg, nicht ein `if` am Anfang — es räumt beim Wechsel auf:
+`gsap.matchMedia()` ist der Weg, nicht ein `if` am Anfang. Es räumt beim Wechsel auf:
 
 ```js
 const mm = gsap.matchMedia();
@@ -106,7 +106,7 @@ gsap.from('.karte', {
 | `markers` | nur in der Entwicklung |
 | `toggleActions` | `"play none none none"` (Standard) bis `"play reverse play reverse"` |
 
-`ScrollTrigger.batch()` fasst Callbacks vieler Elemente zusammen — die bessere Wahl
+`ScrollTrigger.batch()` fasst Callbacks vieler Elemente zusammen: die bessere Wahl
 gegenüber vielen Einzel-Triggern für dieselbe Listenanimation.
 
 ### Drei Fallen, die in echten Projekten Zeit gekostet haben
@@ -114,7 +114,7 @@ gegenüber vielen Einzel-Triggern für dieselbe Listenanimation.
 1. **`gsap.from()` mit `once: true` braucht ein Aufräumen.** `ScrollTrigger.refresh()` setzt
    `from()`-Animationen kurz auf den Anfangswert zurück, um die natürliche Höhe zu messen,
    und stellt sie danach wieder her. Ein Trigger mit `once: true` ist dann schon abgeräumt
-   und stellt nichts mehr zurück — Karten bleiben dauerhaft 24 px zu tief, Balken bleiben
+   und stellt nichts mehr zurück: Karten bleiben dauerhaft 24 px zu tief, Balken bleiben
    auf `scaleX: 0` unsichtbar. Deshalb: am Ende jeder solchen Animation die Startwerte
    explizit zurücksetzen (`gsap.set(...)` oder `clearProps`).
 2. **Ein gepinntes Element in einem Grid pinnt nur seine eigene Zeile.** Die Bahn muss
@@ -136,7 +136,7 @@ Scroll-Animation. Wenn, dann richtig:
   Aussage trägt; (2) läuft JavaScript, ist Bewegung erlaubt und meldet das Video
   `loadeddata`, wird auf die Scroll-Fassung umgeschaltet; (3) geht dabei etwas schief,
   bleibt Ebene 1 stehen.
-- **Welcher Textblock hervorgehoben wird, wird gemessen, nicht gerechnet** — der Block,
+- **Welcher Textblock hervorgehoben wird, wird gemessen, nicht gerechnet:** der Block,
   dessen Mitte der Bezugslinie am nächsten liegt. Eine feste Formel aus dem Scrollfortschritt
   läuft bei jeder Layoutänderung aus dem Takt.
 
@@ -144,7 +144,7 @@ Scroll-Animation. Wenn, dann richtig:
 
 - **Nur `transform` und `opacity` animieren** (`x`, `y`, `scale`, `rotation`). Diese laufen
   auf dem Compositor, ohne Layout und meist ohne Paint.
-- **Nicht animieren:** `width`, `height`, `top`, `left`, `margin`, `padding` — jedes davon
+- **Nicht animieren:** `width`, `height`, `top`, `left`, `margin`, `padding`: jedes davon
   löst Layout aus.
 - `will-change: transform` **nur** auf Elementen, die wirklich animieren, nie vorsorglich.
 - `stagger` statt vieler Einzel-Tweens mit manuellen Delays.

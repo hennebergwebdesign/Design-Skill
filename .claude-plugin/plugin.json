@@ -1,7 +1,7 @@
 {
   "name": "webdesign-conversion",
-  "description": "Conversion-orientiertes Webdesign für den DACH-Raum: Strategie, Design, Performance, Barrierefreiheit (BFSG/WCAG 2.2 AA), SEO, Conversion-Architektur, Motion mit GSAP, shadcn/ui sowie der komplette rechtliche und technische Pflichtaufbau (Impressum, Datenschutz, Consent, 404, robots.txt, Sitemap, Redirects, Security-Header).",
-  "version": "1.0.0",
+  "description": "Conversion-orientiertes Webdesign für den DACH-Raum: Homepages, Landingpages und Recruiting-Funnel. Strategie, Design, Spacing, Responsive mit Container Queries, Performance, Barrierefreiheit (BFSG/WCAG 2.2 AA), SEO, Conversion-Architektur, Copywriting, eigene Icon-Systeme, Motion mit GSAP und CSS sowie der komplette rechtliche und technische Pflichtaufbau (Impressum, Datenschutz, Bewerberdatenschutz, Consent, 404, robots.txt, Sitemap, Redirects, Security-Header). Mit Prüfskripten für Gedankenstriche, Tokens, Kontrast und Breakpoints.",
+  "version": "2.0.0",
   "author": {
     "name": "Henneberg Webdesign"
   },
@@ -10,17 +10,29 @@
     "webdesign",
     "conversion",
     "landingpage",
+    "recruiting",
+    "stellenanzeige",
+    "karriereseite",
+    "copywriting",
     "seo",
     "barrierefreiheit",
     "bfsg",
     "wcag",
     "dsgvo",
+    "agg",
     "impressum",
     "datenschutz",
     "astro",
     "gsap",
     "shadcn",
     "performance",
-    "ux"
+    "ux",
+    "spacing",
+    "responsive",
+    "container-queries",
+    "icons",
+    "svg",
+    "animation",
+    "designtokens"
   ]
 }

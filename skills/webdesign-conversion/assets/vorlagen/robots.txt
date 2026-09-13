@@ -1,9 +1,9 @@
-# robots.txt — Vorlage
+# robots.txt: Vorlage
 #
 # Die Sitemap-Adresse MUSS absolut sein und auf die echte Domain zeigen.
 # Häufigster Fehler: eine hart kodierte Vorschaudomain (*.pages.dev), die nach dem
 # Livegang stehen bleibt. Wenn das Framework es erlaubt, diese Datei zur Bauzeit
-# erzeugen und die Domain aus der Konfiguration ziehen — siehe robots.txt.ts.
+# erzeugen und die Domain aus der Konfiguration ziehen: siehe robots.txt.ts.
 #
 # Merke: Disallow ist KEIN noindex. Eine per Disallow gesperrte Seite kann trotzdem
 # im Index landen, wenn sie verlinkt ist. Wer eine Seite aus dem Index halten will,

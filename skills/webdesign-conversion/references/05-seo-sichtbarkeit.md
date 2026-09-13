@@ -1,7 +1,7 @@
 # Bereich 5: SEO & Sichtbarkeit
 
 Die beste Website bringt nichts, wenn sie niemand findet. Jeden Tag suchen Menschen nach
-genau dem, was du anbietest — und finden die Konkurrenz. Nicht weil die besser ist, sondern
+genau dem, was du anbietest, und finden die Konkurrenz. Nicht weil die besser ist, sondern
 weil sie sichtbar ist.
 
 Schwerpunkt hier: **OnPage-SEO**, also alles, was direkt auf der Website umsetzbar ist. Vier
@@ -12,7 +12,7 @@ Maßnahmen sorgen dafür, dass Google die Seite **versteht**, **indexiert** und 
 3. Meta-Titel & Meta-Beschreibung
 4. Interne Verlinkung
 
-## Schritt 5.1 — Keyword-Recherche
+## Schritt 5.1: Keyword-Recherche
 
 Keywords sind die Suchbegriffe, die Kunden bei Google eingeben. Google vergleicht die Wörter
 auf der Seite mit dem, was gesucht wird.
@@ -21,8 +21,8 @@ auf der Seite mit dem, was gesucht wird.
 
 | | Beispiel Hausverwaltung Karlsruhe |
 |---|---|
-| **Schlecht** | „Hausverwaltung" (33.000 Suchen/Monat) — zu allgemein, zu umkämpft, viele Suchen ohne Kaufabsicht |
-| **Gut** | „Sondereigentumsverwaltung Karlsruhe" (10 Suchen/Monat) — wenig Konkurrenz, hochqualifizierte Kunden |
+| **Schlecht** | „Hausverwaltung" (33.000 Suchen/Monat): zu allgemein, zu umkämpft, viele Suchen ohne Kaufabsicht |
+| **Gut** | „Sondereigentumsverwaltung Karlsruhe" (10 Suchen/Monat): wenig Konkurrenz, hochqualifizierte Kunden |
 
 Lieber 10 perfekt passende Kunden als 1.000 unpassende Besucher.
 
@@ -34,7 +34,7 @@ Lieber 10 perfekt passende Kunden als 1.000 unpassende Besucher.
   transaktional (Kontakt, Angebot), navigational (Marke). Eine Leistungsseite, die wie ein
   Ratgeber geschrieben ist, rankt für nichts richtig.
 - **Lokales SEO:** bei regionalen Dienstleistungen gehört der Ort in Titel, H1, URL und
-  Text — und ein gepflegtes Google-Unternehmensprofil mit identischen NAP-Daten (Name,
+  Text, und ein gepflegtes Google-Unternehmensprofil mit identischen NAP-Daten (Name,
   Adresse, Telefon) wie im Impressum.
 - **Longtail zuerst.** Kleine, spezifische Begriffe bringen früher Ergebnisse als Kopfbegriffe.
 
@@ -50,18 +50,18 @@ Besser:   „Sie suchen einen Physiotherapeuten in Dachau? Wir helfen Ihnen bei
 
 Unnatürliche Häufung wird abgestraft. Sprich die Sprache der Zielgruppe.
 
-## Schritt 5.2 — URL-Struktur
+## Schritt 5.2: URL-Struktur
 
 Google liest die URL, bevor es den Inhalt liest. Menschen sehen sie in den Suchergebnissen:
 eine klare URL schafft Vertrauen, eine kryptische wirkt unseriös.
 
 **Die vier Regeln:**
 
-1. **Kurz und prägnant** — Faustregel maximal 3–5 Wörter.
-2. **Keyword einbauen** — das Haupt-Keyword steht in der URL.
-3. **Bindestriche statt Unterstriche** — Google erkennt Bindestriche als Worttrenner,
+1. **Kurz und prägnant:** Faustregel maximal 3–5 Wörter.
+2. **Keyword einbauen:** das Haupt-Keyword steht in der URL.
+3. **Bindestriche statt Unterstriche:** Google erkennt Bindestriche als Worttrenner,
    Unterstriche nicht.
-4. **Keine Umlaute, keine Sonderzeichen** — Umlaute werden in kryptische Zeichen umgewandelt
+4. **Keine Umlaute, keine Sonderzeichen:** Umlaute werden in kryptische Zeichen umgewandelt
    (`ü` → `%C3%BC`). Also `rueckenschmerzen`, nicht `rückenschmerzen`.
 
 ```
@@ -90,7 +90,7 @@ erstellt aus der alten Sitemap und den Top-Seiten der Search Console. Umsetzung 
 Hosting in `public/_redirects`, `.htaccess` oder der Serverkonfiguration. Vorlage und
 Details: `08-pflichtseiten-technik.md`.
 
-## Schritt 5.3 — Meta-Titel & Meta-Beschreibung
+## Schritt 5.3: Meta-Titel & Meta-Beschreibung
 
 Bei Google ist der blaue/lila Link der **Meta-Titel**, der graue Text darunter die
 **Meta-Beschreibung**. Beide zusammen sind die Schaufensterwerbung. Eine schlechte
@@ -129,7 +129,7 @@ Keyword einbauen (hilft, ist nicht zwingend).
 `../assets/vorlagen/head-meta.html`). In WordPress über Yoast SEO oder Rank Math, Felder
 „SEO-Titel" und „Meta-Beschreibung".
 
-## Schritt 5.4 — Interne Verlinkung
+## Schritt 5.4: Interne Verlinkung
 
 Google ist ein Crawler, der Links von Seite zu Seite folgt. Gut verlinkte Seiten werden
 gefunden, verstanden und ranken besser. Nicht verlinkte Seiten werden nicht indexiert.
@@ -155,7 +155,7 @@ Unterseiten auf verwandte Unterseiten, von der Startseite auf die wichtigsten Se
 | `robots.txt` | vorhanden, erlaubt das Crawlen, nennt die Sitemap-Adresse |
 | `sitemap.xml` | automatisch erzeugt, enthält **nur** indexierbare Seiten |
 | Canonical | jede Seite hat eine absolute, selbstreferenzierende `<link rel="canonical">` |
-| `noindex` | für Rechtstexte, Dankeseiten, interne Bereiche — und diese Seiten **nicht** in der Sitemap |
+| `noindex` | für Rechtstexte, Dankeseiten, interne Bereiche, und diese Seiten **nicht** in der Sitemap |
 | Strukturierte Daten | JSON-LD: Organization/LocalBusiness, Service, FAQPage, BreadcrumbList |
 | Open Graph | Titel, Beschreibung, absolutes Bild 1200 × 630 |
 | HTTPS | erzwungen, keine Mixed-Content-Warnungen |
@@ -183,4 +183,4 @@ Fertige JSON-LD-Bausteine: `../assets/vorlagen/jsonld-bausteine.md`.
 
 Backlinks, Content-Cluster, digitale PR und technische Großbaustellen (Log-Analyse,
 Crawl-Budget) sind OffPage- beziehungsweise Fortgeschrittenenthemen. Ohne sauberes OnPage
-bringen sie nichts — mit sauberem OnPage sind sie der nächste Schritt.
+bringen sie nichts, mit sauberem OnPage sind sie der nächste Schritt.

@@ -1,6 +1,6 @@
 # Consent: Referenzimplementierung
 
-Ein Banner, das nichts blockiert, ist wertlos — die Daten sind bereits geflossen, bevor
+Ein Banner, das nichts blockiert, ist wertlos: die Daten sind bereits geflossen, bevor
 jemand klickt. Dieses Muster blockiert echt.
 
 Rechtliche Anforderungen: siehe `../../references/07-recht-dsgvo.md`.
@@ -19,7 +19,7 @@ Entscheidungen für den Besucher, nicht mehr Rechtssicherheit.
 | `medien` | Externe Medien | Lädt Videos von [[Anbieter]]. Dabei werden Daten an [[Anbieter]] übertragen. |
 
 **Das Banner wird nur gerendert, wenn es wirklich etwas zu entscheiden gibt.** Läuft kein
-einwilligungspflichtiger Dienst, erscheint kein Banner — und im Footer kein Link
+einwilligungspflichtiger Dienst, erscheint kein Banner, und im Footer kein Link
 „Cookie-Einstellungen". Ein Banner ohne blockierten Dienst ist reine Belästigung.
 
 ## Markup: geparkte Skripte und Einbettungen
@@ -133,7 +133,7 @@ Beim Laden der Seite: `const z = lesen(); if (z) anwenden(z.kategorien); else ba
 
 ## Anforderungen an die Oberfläche
 
-- **„Alle ablehnen" ist gleichrangig zu „Alle akzeptieren"** — gleiche Ebene, vergleichbare
+- **„Alle ablehnen" ist gleichrangig zu „Alle akzeptieren":** gleiche Ebene, vergleichbare
   Gestaltung, vergleichbare Größe. Ein grauer Textlink neben einem bunten Button ist es nicht.
 - **Keine Vorauswahl.** Alle Schalter außer „Notwendig" stehen auf aus.
 - **Drei Wege:** Alle akzeptieren / Nur notwendige / Einstellungen (granular).
@@ -148,7 +148,7 @@ Beim Laden der Seite: `const z = lesen(); if (z) anwenden(z.kategorien); else ba
 
 1. Browserdaten löschen, Netzwerk-Tab öffnen, Seite laden.
 2. **Ohne Entscheidung dürfen null Anfragen an den Drittanbieter gehen.** Nach Domain
-   filtern (`googletagmanager.com`, `youtube.com`, …) — die Liste muss leer sein.
+   filtern (`googletagmanager.com`, `youtube.com`, …): die Liste muss leer sein.
 3. „Alle akzeptieren" klicken. Jetzt erscheinen die Anfragen.
 4. Seite neu laden: Entscheidung wird erinnert, das Banner bleibt weg.
 5. Über den Footer-Link widerrufen, neu laden: Anfragen wieder weg.

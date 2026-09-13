@@ -1,11 +1,11 @@
 # Bereich 2: Design & User Experience
 
-Die Seite muss nicht schön aussehen, sie muss funktionieren — und dabei einen hochwertigen,
+Die Seite muss nicht schön aussehen, sie muss funktionieren, und dabei einen hochwertigen,
 professionellen Eindruck vermitteln. Schafft das Design das nicht, ist der erste Eindruck
 negativ und die Absprungrate hoch. Der Satz dazu: sie muss dem Fisch schmecken, nicht dem
 Angler.
 
-## Schritt 2.1 — Above the Fold entscheidet
+## Schritt 2.1: Above the Fold entscheidet
 
 Above the Fold ist alles, was ohne Scrollen sichtbar ist. Hier fällt die Entscheidung in
 3–5 Sekunden.
@@ -23,23 +23,23 @@ Above the Fold ist alles, was ohne Scrollen sichtbar ist. Hier fällt die Entsch
 |---|---|
 | **Headline** | Zielgruppe + Problem + Lösung |
 | **Subheadline** | Wie + konkretes Ergebnis |
-| **Visual** | Bild oder Video, das das Ergebnis zeigt — nicht das Gebäude, nicht das Team beim Händeschütteln |
+| **Visual** | Bild oder Video, das das Ergebnis zeigt: nicht das Gebäude, nicht das Team beim Händeschütteln |
 | **CTA** | eine klare Handlungsaufforderung |
 | **Trust** | Kundenlogos, Bewertungen, Zahlen |
 
 Ein Stock-Foto eines lachenden Teams am Konferenztisch zeigt kein Ergebnis. Ein Vorher-
-Nachher, ein Screenshot des Resultats, das fertige Werk, die laufende Anlage — das zeigt eins.
+Nachher, ein Screenshot des Resultats, das fertige Werk, die laufende Anlage: das zeigt eins.
 
 ### Höhe des Heldenbereichs
 
 `min-height: 100svh` erzwingt auf niedrigen Fenstern (13"/14"-Notebooks) entweder eine große
 Lücke oder Beschnitt. Besser: ab mittleren Desktopbreiten `min-height: auto` plus ein
 vh-basiertes `padding-block-start`. Dann richtet sich der Bereich am Inhalt aus und ein Stück
-der nächsten Sektion bleibt sichtbar — das ist zugleich der beste Scroll-Anreiz.
+der nächsten Sektion bleibt sichtbar: das ist zugleich der beste Scroll-Anreiz.
 
-## Schritt 2.2 — F-Pattern und Navigation
+## Schritt 2.2: F-Pattern und Navigation
 
-Besucher lesen nicht, sie scannen — im F-Muster: erste Zeile links nach rechts, zweite Zeile
+Besucher lesen nicht, sie scannen im F-Muster: erste Zeile links nach rechts, zweite Zeile
 links nach rechts, danach nur noch links hinunter.
 
 **So geht es richtig:**
@@ -73,12 +73,12 @@ Kontakt/CTA.
 4. Sprungziele brauchen `scroll-padding-top` in Höhe der gesamten sticky Gruppe, sonst
    verschwindet die Zielüberschrift darunter.
 
-## Schritt 2.3 — Die 3-Klick-Regel
+## Schritt 2.3: Die 3-Klick-Regel
 
 Jede wichtige Information ist in maximal drei Klicks erreichbar. Jeder zusätzliche Klick
 kostet 20–30 % der Besucher.
 
-**Der Test — wie viele Klicks braucht es, um …**
+**Der Test: wie viele Klicks braucht es, um …**
 
 - eine Anfrage zu stellen?
 - Referenzen zu sehen?
@@ -98,7 +98,7 @@ Mehr als drei → Problem.
 - Ein Rasterhelfer statt Haltepunkte in jeder Sektion: eine Spalte mobil, zwei ab 640 px,
   die Zielspaltenzahl ab 1100 px über eine Custom Property.
 - Grid-Elemente, die überlaufenden Inhalt enthalten (Marquee, lange Tabellen), brauchen
-  `min-width: 0` — das voreingestellte `min-width: auto` lässt sonst die `max-content`-Breite
+  `min-width: 0`: das voreingestellte `min-width: auto` lässt sonst die `max-content`-Breite
   durch.
 
 ### Abstände
@@ -111,7 +111,7 @@ zwischen Handy und Desktop nichts:
 --raum-sektion-eng: clamp(2.25rem, 1.25rem + 4vw, 4rem);
 ```
 
-### Deutscher Textumbruch — keine Silbentrennung
+### Deutscher Textumbruch: keine Silbentrennung
 
 `hyphens: auto` trennt lange deutsche Komposita an fast jeder Spaltenkante mitten im Wort
 („Ethy-len", „Verschmut-zung"). Das gehört nicht auf eine Verkaufsseite.
@@ -136,14 +136,14 @@ Drei Regeln dazu, jede mit Grund:
 
 - Beide hängen an `@media (hover: hover)`. Auf Touch bliebe `:hover` am ersten Tipp hängen
   und die Karte stünde angehoben, bis woanders getippt wird.
-- Bewegt werden nur `transform` und `box-shadow` — nichts, was Layout neu rechnet. Rahmen
+- Bewegt werden nur `transform` und `box-shadow`: nichts, was Layout neu rechnet. Rahmen
   liegen schon im Ruhezustand durchsichtig an, sonst ruckt der Text im Moment des Zeigens.
 - Bei `prefers-reduced-motion: reduce` entfällt das Anheben, der Schatten bleibt. Es gibt
   weiter eine Rückmeldung, nur ohne Bewegung.
 
 ### Bilder
 
-- Bilder unter der Falz mit `loading="lazy"` — außer auf kurzen Landingpages, wo alles sofort
+- Bilder unter der Falz mit `loading="lazy"`: außer auf kurzen Landingpages, wo alles sofort
   geladen werden soll; dann `loading="eager"` plus `fetchpriority="low"` unterhalb des
   Heldenbereichs und `fetchpriority="high"` plus `<link rel="preload">` für das Heldenbild.
 - `width` und `height` immer setzen, sonst springt das Layout (CLS).
@@ -154,7 +154,7 @@ Drei Regeln dazu, jede mit Grund:
 ## Häufige Design-Tells, die es zu vermeiden gilt
 
 Generische, „KI-gemachte" Seiten clustern um wenige Muster. Jedes davon ist für manche
-Briefings legitim — als Voreinstellung statt als Entscheidung sind sie ein Problem:
+Briefings legitim. Als Voreinstellung statt als Entscheidung sind sie ein Problem:
 
 - cremefarbener Hintergrund plus hochkontrastige Serifen-Display plus Terrakotta-Akzent
 - fast schwarzer Hintergrund mit einem grellen Neon-Akzent
@@ -165,7 +165,7 @@ Briefings legitim — als Voreinstellung statt als Entscheidung sind sie ein Pro
 - ein einzelnes hervorgehobenes Wort in jeder Headline
 - nummerierte Marker 01 / 02 / 03 für Inhalte, die keine Reihenfolge haben
 
-Strukturelemente — Rahmen, Linien, Nummern, Labels — kodieren Information. Nummerierte
+Strukturelemente wie Rahmen, Linien, Nummern und Labels kodieren Information. Nummerierte
 Marker sind richtig, wenn der Inhalt wirklich eine Abfolge ist (Prozess, Zeitleiste), sonst
 sind sie Dekoration.
 

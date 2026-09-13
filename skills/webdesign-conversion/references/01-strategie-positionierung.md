@@ -7,14 +7,14 @@ ohne Strategie ist nur Dekoration.
 Eine Website ohne klare Positionierung ist wie ein Verkäufer, der nicht weiß, wen er
 anspricht, welches Problem er löst und warum man ihm vertrauen sollte.
 
-## Schritt 1.1 — Zielgruppe schärfen
+## Schritt 1.1: Zielgruppe schärfen
 
 Breite Zielgruppen erzeugen schwache Conversion. Je genauer sich jemand angesprochen fühlt,
 desto höher die Abschlussquote.
 
 **Formel:**
 
-> Wir helfen **[konkrete Zielgruppe]**, **[konkretes Problem]** zu lösen — ohne
+> Wir helfen **[konkrete Zielgruppe]**, **[konkretes Problem]** zu lösen, ohne
 > **[größter Einwand]**.
 
 ### Beispiele
@@ -34,16 +34,16 @@ benannte Angst. Was die linke gemeinsam hat: nichts davon.
 - Erkennt sich die Zielgruppe an einer Formulierung wieder, die sie selbst benutzt?
 - Schließt der Satz jemanden aus? Wenn nicht, spricht er niemanden an.
 
-## Schritt 1.2 — Klarer USP
+## Schritt 1.2: Klarer USP
 
 Der USP ist nicht „beste Qualität" oder „langjährige Erfahrung". Er beantwortet genau eine
 Frage: **Warum DU und nicht Anbieter X, Y oder Z?**
 
-**Formel — drei Bausteine:**
+**Formel: drei Bausteine:**
 
-1. **Ergebnis** — was bekommt der Kunde konkret?
-2. **Methode** — wie erreichst du dieses Ergebnis?
-3. **Sicherheit** — warum ist es risikoarm?
+1. **Ergebnis:** was bekommt der Kunde konkret?
+2. **Methode:** wie erreichst du dieses Ergebnis?
+3. **Sicherheit:** warum ist es risikoarm?
 
 ### Beispiel Dachdecker
 
@@ -51,7 +51,7 @@ Frage: **Warum DU und nicht Anbieter X, Y oder Z?**
 
 *Nachher:* „Wir beheben für Gewerbebetriebe mit Flachdächern undichte Stellen und
 Feuchtigkeitsschäden, indem wir zuerst per Leckage-Ortung die Ursache eindeutig finden, dann
-die Abdichtung abschnittsweise und planbar erneuern und alles dokumentieren — ohne
+die Abdichtung abschnittsweise und planbar erneuern und alles dokumentieren, ohne
 Betriebsausfall und Baustellenchaos."
 
 Ergebnis: undichte Stellen behoben. Methode: Leckage-Ortung, abschnittsweise Erneuerung,
@@ -62,9 +62,9 @@ Dokumentation. Sicherheit: kein Betriebsausfall, kein Chaos.
 Diese Wörter tragen keine Information und gehören ersetzt, nicht gestrichen: kompetent,
 professionell, zuverlässig, individuell, maßgeschneidert, ganzheitlich, innovativ, hochwertig,
 langjährige Erfahrung, Qualität, Kundenzufriedenheit. Jedes davon lässt sich durch eine
-überprüfbare Aussage ersetzen — eine Zahl, ein Verfahren, eine Garantie, ein Zeitraum.
+überprüfbare Aussage ersetzen: eine Zahl, ein Verfahren, eine Garantie, ein Zeitraum.
 
-## Schritt 1.3 — Einwände vorwegnehmen
+## Schritt 1.3: Einwände vorwegnehmen
 
 Jeder potenzielle Kunde hat dieselben Fragen im Kopf:
 
@@ -73,7 +73,7 @@ Jeder potenzielle Kunde hat dieselben Fragen im Kopf:
 - Passt das jetzt überhaupt?
 
 Diese Einwände gehören auf die Website, nicht ins Erstgespräch. Wer sie erst im Gespräch
-beantwortet, bezahlt jedes Mal mit Zeit — und verliert jeden, der nie anruft.
+beantwortet, bezahlt jedes Mal mit Zeit, und verliert jeden, der nie anruft.
 
 **Bestes Format:** ein separates FAQ mit zehn relevanten Fragen. Zusätzlich wandern die
 drei stärksten Einwände direkt in die passenden Sektionen (Preis zum Angebot, Kompetenz zum
@@ -83,7 +83,7 @@ Beweis, Timing zum Prozess).
 
 Der Preiseinwand ist selten eine Preisfrage, meist eine Kontrollfrage. Das Muster:
 
-> Willst du die Sanierung planen — oder später den Notfall bezahlen?
+> Willst du die Sanierung planen, oder später den Notfall bezahlen?
 >
 > Während du abwartest, passiert im Hintergrund genau das Teure:
 > - Feuchtigkeit zieht weiter ins Dachpaket

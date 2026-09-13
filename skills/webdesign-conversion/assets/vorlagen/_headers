@@ -1,4 +1,4 @@
-# _headers — Cloudflare Pages / Netlify
+# _headers: Cloudflare Pages / Netlify
 #
 # Cache-Regeln zuerst, dann die Sicherheits-Header für alles.
 # Reihenfolge der Blöcke ist egal, die Spezifität des Pfads entscheidet.

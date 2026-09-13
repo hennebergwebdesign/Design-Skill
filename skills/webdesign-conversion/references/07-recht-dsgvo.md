@@ -33,10 +33,10 @@ Hinweise zur Praxis:
 - Die **OS-Plattform der EU wurde zum 20.07.2025 eingestellt.** Ein Link darauf ist
   veraltet; einige Muster tragen ihn noch. Die Angabe zur Teilnahmebereitschaft nach § 36
   VSBG bleibt davon unberührt.
-- Das Impressum ist von **jeder Seite aus mit einem Klick** erreichbar und heißt „Impressum"
-  — nicht „Legal" oder „Über uns".
+- Das Impressum ist von **jeder Seite aus mit einem Klick** erreichbar und heißt „Impressum",
+  nicht „Legal" oder „Über uns".
 - **Nicht** in die Sitemap aufnehmen, wenn es `noindex` trägt.
-- Bildnachweise gehören nicht zwingend ins Impressum, aber irgendwohin — Lizenzbedingungen
+- Bildnachweise gehören nicht zwingend ins Impressum, aber irgendwohin: Lizenzbedingungen
   vieler Bildquellen verlangen sie.
 
 Vorlage: `../assets/vorlagen/impressum.md`.
@@ -44,7 +44,7 @@ Vorlage: `../assets/vorlagen/impressum.md`.
 ## Datenschutzerklärung
 
 **Rechtsgrundlage:** Art. 13 DSGVO. Sie muss die tatsächlich eingesetzten Dienste
-beschreiben — nicht ein Muster mit 40 Diensten, von denen 38 nicht laufen. Das ist der
+beschreiben: nicht ein Muster mit 40 Diensten, von denen 38 nicht laufen. Das ist der
 häufigste Fehler in Generator-Texten und in der Sache eine Falschangabe.
 
 **Aufbau, der sich bewährt hat:**
@@ -52,12 +52,12 @@ häufigste Fehler in Generator-Texten und in der Sache eine Falschangabe.
 1. Verantwortliche Stelle (und Datenschutzbeauftragter, falls bestellt)
 2. Hosting und Serverprotokolle (Logdaten, Zweck, Speicherdauer, Auftragsverarbeitung)
 3. Kontaktformular (Felder, Zweck, Rechtsgrundlage, Empfänger, Speicherdauer)
-4. Versanddienstleister (z. B. Resend, Brevo) — eigener Unterpunkt mit Serverstandort
-5. Spamschutz (z. B. Cloudflare Turnstile) — Rechtsgrundlage berechtigtes Interesse
+4. Versanddienstleister (z. B. Resend, Brevo): eigener Unterpunkt mit Serverstandort
+5. Spamschutz (z. B. Cloudflare Turnstile): Rechtsgrundlage berechtigtes Interesse
 6. Schriften (lokal gehostet → kein Drittkontakt; das ist ausdrücklich zu erwähnen)
-7. Karten, Videos, Einbettungen — jeweils mit Anbieter, Datenübermittlung, Einwilligung
+7. Karten, Videos, Einbettungen: jeweils mit Anbieter, Datenübermittlung, Einwilligung
 8. Einwilligungsverwaltung (welches Tool, welche Kategorien, Speicherdauer, Widerruf)
-9. Statistik und Marketing (Analytics, Pixel, Tag Manager) — nur mit Einwilligung
+9. Statistik und Marketing (Analytics, Pixel, Tag Manager): nur mit Einwilligung
 10. Rechte der betroffenen Person (Auskunft, Berichtigung, Löschung, Einschränkung,
     Datenübertragbarkeit, Widerspruch, Beschwerde bei der Aufsichtsbehörde)
 11. Stand des Dokuments
@@ -70,7 +70,7 @@ Vorlage: `../assets/vorlagen/datenschutz.md`.
 ## Consent: was wirklich verlangt ist
 
 **§ 25 TDDDG** (früher TTDSG) verlangt eine Einwilligung für jeden Zugriff auf
-Endgeräte-Informationen, der nicht **unbedingt erforderlich** ist — unabhängig davon, ob
+Endgeräte-Informationen, der nicht **unbedingt erforderlich** ist: unabhängig davon, ob
 personenbezogene Daten verarbeitet werden. Das trifft auch `localStorage` und ähnliche
 Speicher, nicht nur Cookies.
 
@@ -82,12 +82,12 @@ Karten von Drittanbietern, extern geladene Schriften, A/B-Testing-Tools, Heatmap
 
 ### Anforderungen an das Banner
 
-- **Ablehnen ist genauso einfach wie Zustimmen** — gleichrangig, auf derselben Ebene, in
+- **Ablehnen ist genauso einfach wie Zustimmen:** gleichrangig, auf derselben Ebene, in
   vergleichbarer Gestaltung. Ein grauer Textlink neben einem großen bunten Button ist nicht
   gleichrangig.
 - **Keine Vorauswahl.** Alle nicht notwendigen Kategorien stehen auf aus.
 - **Keine Nutzungssperre** („Cookie-Wall") ohne gleichwertige Alternative.
-- **Widerruf jederzeit** und genauso leicht wie die Erteilung — ein dauerhaft erreichbarer
+- **Widerruf jederzeit** und genauso leicht wie die Erteilung: ein dauerhaft erreichbarer
   Link „Cookie-Einstellungen" im Footer.
 - **Granular:** Kategorien einzeln wählbar, nicht nur alles oder nichts.
 - **Dokumentiert:** Zeitpunkt, Version und Umfang der Einwilligung werden gespeichert.
@@ -95,7 +95,7 @@ Karten von Drittanbietern, extern geladene Schriften, A/B-Testing-Tools, Heatmap
 
 ### Blockierung muss echt sein
 
-Ein Banner, das nichts blockiert, ist wertlos — die Daten sind bereits geflossen, bevor
+Ein Banner, das nichts blockiert, ist wertlos: die Daten sind bereits geflossen, bevor
 jemand klickt. Das Muster, das trägt:
 
 ```html

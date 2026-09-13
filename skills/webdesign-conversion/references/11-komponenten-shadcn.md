@@ -1,7 +1,7 @@
 # Komponenten mit shadcn/ui (React, Next.js)
 
 Gilt für React-Projekte mit einer `components.json`. Für Astro-Projekte ohne React gilt
-stattdessen `14-projektstruktur-astro.md` — die Kompositionsregeln unten sind trotzdem
+stattdessen `14-projektstruktur-astro.md`: die Kompositionsregeln unten sind trotzdem
 übertragbar.
 
 ## Grundsätze
@@ -11,7 +11,7 @@ stattdessen `14-projektstruktur-astro.md` — die Kompositionsregeln unten sind 
 2. **Komponieren statt neu erfinden.** Eine Einstellungsseite ist Tabs + Card +
    Formularfelder. Ein Dashboard ist Sidebar + Card + Chart + Table.
 3. **Eingebaute Varianten vor eigenem Styling:** `variant="outline"`, `size="sm"`.
-4. **Semantische Farben.** `bg-primary`, `text-muted-foreground` — nie `bg-blue-500`.
+4. **Semantische Farben.** `bg-primary`, `text-muted-foreground`: nie `bg-blue-500`.
 
 Alle CLI-Befehle mit dem Paketmanager des Projekts ausführen: `npx`, `pnpm dlx` oder
 `bunx --bun`, je nach `packageManager`.
@@ -26,11 +26,11 @@ Die wichtigsten Felder:
 
 | Feld | Bedeutung |
 |---|---|
-| `aliases` | tatsächliches Importpräfix (`@/`, `~/`, `@workspace/ui/components`) — nie hart kodieren |
+| `aliases` | tatsächliches Importpräfix (`@/`, `~/`, `@workspace/ui/components`): nie hart kodieren |
 | `isRSC` | bei `true` brauchen Komponenten mit `useState`, `useEffect`, Event-Handlern oder Browser-APIs `"use client"` |
 | `tailwindVersion` | `v4` nutzt `@theme inline`, `v3` die `tailwind.config.js` |
-| `tailwindCssFile` | die globale CSS-Datei mit den Variablen — immer diese bearbeiten, nie eine neue anlegen |
-| `base` | `radix` oder `base` — bestimmt `asChild` vs. `render` und die verfügbaren Props |
+| `tailwindCssFile` | die globale CSS-Datei mit den Variablen: immer diese bearbeiten, nie eine neue anlegen |
+| `base` | `radix` oder `base`: bestimmt `asChild` vs. `render` und die verfügbaren Props |
 | `iconLibrary` | bestimmt die Icon-Importe. Nie `lucide-react` annehmen |
 | `framework` | Next App Router, Vite SPA, Astro … |
 | `resolvedPaths` | wohin Dateien wirklich geschrieben werden |
@@ -47,7 +47,7 @@ Die wichtigsten Felder:
 - **`truncate`** statt `overflow-hidden text-ellipsis whitespace-nowrap`.
 - **Keine manuellen `dark:`-Farbüberschreibungen.** Semantische Tokens benutzen.
 - **`cn()` für bedingte Klassen**, keine Template-Literal-Ternaries.
-- **Kein manuelles `z-index`** auf Overlay-Komponenten — Dialog, Sheet, Popover regeln ihre
+- **Kein manuelles `z-index`** auf Overlay-Komponenten: Dialog, Sheet, Popover regeln ihre
   Stapelung selbst.
 
 ### Formulare
@@ -65,7 +65,7 @@ Die wichtigsten Felder:
 
 - **Items gehören in ihre Group:** `SelectItem` → `SelectGroup`, `DropdownMenuItem` →
   `DropdownMenuGroup`, `CommandItem` → `CommandGroup`.
-- **Eigene Trigger** über `asChild` (Radix) bzw. `render` (Base) — je nach `base`-Feld.
+- **Eigene Trigger** über `asChild` (Radix) bzw. `render` (Base): je nach `base`-Feld.
 - **Dialog, Sheet und Drawer brauchen immer einen Titel** (`DialogTitle` …), notfalls mit
   `className="sr-only"`.
 - **Card vollständig komponieren:** `CardHeader`/`CardTitle`/`CardDescription`/`CardContent`/
@@ -84,7 +84,7 @@ je nach Projektbasis.
 ### Icons
 
 - In Buttons über `data-icon="inline-start"` / `data-icon="inline-end"`.
-- **Keine Größenklassen an Icons innerhalb von Komponenten** — die Komponente regelt das
+- **Keine Größenklassen an Icons innerhalb von Komponenten:** die Komponente regelt das
   per CSS. Kein `size-4`.
 - Icons als Objekte übergeben (`icon={CheckIcon}`), nicht als String-Schlüssel.
 - Emoji sind keine Icons.

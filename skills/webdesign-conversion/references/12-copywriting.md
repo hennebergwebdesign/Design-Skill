@@ -69,10 +69,10 @@ aber das ist eine CSS-Frage, keine Textfrage.
 
 ### Headline-Muster, die tragen
 
-- **Frage nach dem Problem** — „Rückenschmerzen, die immer wiederkommen?"
-- **Ergebnis mit Zeitraum** — „Rückenschmerzen weg in 6 Wochen"
-- **Negativ-USP** — „Sanieren, ohne die Produktion anzuhalten"
-- **Zielgruppe direkt** — „Für Gewerbebetriebe mit Flachdach"
+- **Frage nach dem Problem:** „Rückenschmerzen, die immer wiederkommen?"
+- **Ergebnis mit Zeitraum:** „Rückenschmerzen weg in 6 Wochen"
+- **Negativ-USP:** „Sanieren, ohne die Produktion anzuhalten"
+- **Zielgruppe direkt:** „Für Gewerbebetriebe mit Flachdach"
 
 **Nicht:** „Herzlich willkommen", „Ihr Partner für …", „Wir über uns", „Qualität seit 1987",
 „Innovative Lösungen für Ihren Erfolg".
@@ -92,7 +92,7 @@ Der Primär-CTA behält seinen Text über die ganze Seite (siehe `06-conversion-
 
 ## Fehler und Leere als Wegweiser
 
-Fehlermeldungen erklären, **was passiert ist und wie es weitergeht** — in der Stimme der
+Fehlermeldungen erklären, **was passiert ist und wie es weitergeht:** in der Stimme der
 Oberfläche, nicht als Person. Sie entschuldigen sich nicht und sie bleiben nie vage.
 
 | Statt | Besser |
@@ -103,6 +103,206 @@ Oberfläche, nicht als Person. Sie entschuldigen sich nicht und sie bleiben nie 
 
 Ein leerer Zustand ist eine Einladung zum Handeln, keine Stimmung. „Noch keine Anfragen.
 Teilen Sie den Link, um die erste zu bekommen" statt „Hier ist es noch leer".
+
+## Die Botschaftshierarchie
+
+Eine Seite trägt genau **eine** Kernbotschaft. Alles andere stützt sie. Wer das nicht
+festlegt, schreibt fünf gleich laute Aussagen, und der Besucher merkt sich keine.
+
+```
+Kernbotschaft         ein Satz, der den Nutzen trägt
+  ↓
+Drei Stützen          je eine Aussage, die die Kernbotschaft glaubhaft macht
+  ↓
+Je Stütze ein Beweis  Zahl, Referenz, Zitat oder Bild, mit Quelle
+```
+
+**Die Prüfung:** Deck die Seite ab und frag jemanden, was hängengeblieben ist. Kommt die
+Kernbotschaft nicht, ist sie nicht die Kernbotschaft, sondern eine von fünf.
+
+### Der Bogen, der auf jeder Verkaufsseite trägt
+
+Nicht als Schema abarbeiten, sondern als Prüfung, ob etwas fehlt:
+
+| Schritt | Frage, die der Besucher stellt | Wo es steht |
+|---|---|---|
+| 1 Er hat ein Problem | „Kennen die mein Problem?" | Held, Problemsektion |
+| 2 Es kostet ihn etwas | „Was passiert, wenn ich nichts tue?" | Problemsektion |
+| 3 Es gibt einen Weg | „Wie läuft das?" | Lösung, Ablauf |
+| 4 Der Weg funktioniert | „Bei wem hat das geklappt?" | Beweis, Referenzen |
+| 5 Er schafft das | „Ist das aufwendig für mich?" | Ablauf, Angebot |
+| 6 Der nächste Schritt ist klein | „Was passiert, wenn ich klicke?" | CTA |
+
+**Der am häufigsten fehlende Schritt ist 2.** Ohne die Kosten des Nichthandelns ist jede
+Lösung nur ein Angebot unter vielen. Mit ihnen ist sie eine Antwort.
+
+**Der am häufigsten überladene Schritt ist 6.** Der CTA macht den nächsten Schritt klein, er
+verkauft nicht den ganzen Vertrag.
+
+## Das Angebot formulieren
+
+Ein Angebot ist nicht „unsere Leistung". Es ist das, was der Kunde bekommt, in seiner
+Rechnung.
+
+| Baustein | Frage | Beispiel |
+|---|---|---|
+| **Ergebnis** | Was ist danach anders? | „Sie wissen, wo das Dach undicht ist, mit Protokoll." |
+| **Weg dorthin** | Was passiert konkret? | „Thermografie und Feuchtemessung, ein Termin, 3 Stunden." |
+| **Zeit** | Wie lange? | „Ergebnis innerhalb von 48 Stunden." |
+| **Preis** | Was kostet es? | „890 € netto pauschal, unabhängig von der Dachfläche." |
+| **Risiko** | Was, wenn nicht? | „Finden wir keine Ursache, zahlen Sie die Hälfte." |
+
+**Der Preis gehört dazu, wenn er möglich ist.** „Preis auf Anfrage" filtert nicht nur
+schlechte Leads aus, sondern auch gute. Eine Spanne, ein Startpreis oder eine
+Beispielrechnung ist besser als keine Angabe (`06-conversion-architektur.md`).
+
+**Die Risikoumkehr ist der stärkste Baustein und der, bei dem am meisten schiefgeht.** Sie
+muss echt und einlösbar sein. Eine Garantie, die der Kunde nicht halten kann oder will, ist
+schlimmer als keine.
+
+### Die Grenze zur Irreführung
+
+Verkaufspsychologie liefert Werkzeuge, und einige davon sind in Deutschland rechtswidrig oder
+grenzwertig. Diese Grenze gilt unabhängig davon, was ein Marketingratgeber empfiehlt:
+
+| Werkzeug | Erlaubt, wenn | Verboten |
+|---|---|---|
+| Verknappung | Bestand oder Kapazität echt sind und stimmen | erfundene Stückzahlen, Dauerzähler, ein „nur heute", das jeden Tag steht |
+| Dringlichkeit | die Frist echt ist (Aktionsende, Kontingent) | Countdown, der beim Neuladen zurückspringt |
+| Sozialer Beweis | Zahlen und Stimmen belegt und freigegeben sind | erfundene Kundenstimmen, gekaufte Bewertungen, Fantasienamen |
+| Autorität | Zertifikat, Mitgliedschaft oder Auszeichnung vorliegt | Siegel ohne Nutzungsrecht, „ausgezeichnet" ohne Auszeichnung |
+| Preisanker | der Vergleichspreis real verlangt wurde | Streichpreis, der nie gegolten hat |
+
+Unechte Verknappung und erfundene Bewertungen sind Irreführungen nach § 5 UWG, bei
+Bewertungen inzwischen ausdrücklich geregelt. Das ist abmahnfähig, und es fliegt auf.
+
+**Die Haltung dahinter:** Diese Werkzeuge sind nicht deshalb erlaubt, weil sie wirken,
+sondern nur dann, wenn sie wahr sind. Ein Beweis, der stimmt, wirkt ohnehin stärker als einer,
+der erfunden ist, weil er Rückfragen übersteht.
+
+## Einwände beantworten, nicht umgehen
+
+Die fünf Einwände aus `../assets/vorlagen/marke-brief.md` Abschnitt 4 gehören auf die Seite,
+und zwar dort, wo sie entstehen, nicht gesammelt am Ende.
+
+| Einwand | Wo die Antwort steht | Form |
+|---|---|---|
+| „Zu teuer" | direkt neben dem Preis | Was enthalten ist, was der Vergleich kostet |
+| „Keine Zeit jetzt" | in der Problemsektion | Was das Warten kostet |
+| „Machen wir selbst" | im Ablauf | Wo es üblicherweise scheitert, ohne Häme |
+| „Funktioniert das?" | im Beweis | Ein belegter Fall, nicht drei behauptete |
+| „Was, wenn es schiefgeht?" | am CTA | Risikoumkehr oder Ausstieg |
+
+**Einen Einwand offen zu benennen wirkt stärker, als ihn zu umgehen.** „Wir sind nicht die
+günstigsten" schafft Glaubwürdigkeit für alles, was danach kommt. Das ist derselbe Mechanismus
+wie beim Negativ-USP.
+
+**Die FAQ ist nicht die Restrampe für Einwände.** Sie beantwortet Fragen, die vor dem Kauf
+wirklich gestellt werden. Ein Einwand, der die Kaufentscheidung blockiert, gehört in die
+Sektion, in der er entsteht.
+
+## Deutsch: sechs Eigenheiten, die Texte schwer machen
+
+Zusätzlich zu den Grundregeln, und für deutsche Verkaufstexte besonders relevant.
+
+### 1 Nominalstil auflösen
+
+Das Hauptproblem deutscher Unternehmenstexte. Substantivierte Verben machen Sätze lang und
+leer.
+
+| Statt | Besser |
+|---|---|
+| „Die Durchführung der Sanierung erfolgt in drei Schritten." | „Wir sanieren in drei Schritten." |
+| „Zur Optimierung Ihrer Ladezeit nehmen wir eine Analyse vor." | „Wir messen Ihre Ladezeit und machen sie schneller." |
+| „Nach Eingang Ihrer Anfrage erfolgt eine Kontaktaufnahme." | „Wir rufen Sie an, meist am nächsten Werktag." |
+
+**Die Erkennung:** Wörter auf `-ung`, `-heit`, `-keit`, `-nis`, `-tion`. Mehr als eines pro
+Satz ist ein Befund.
+
+### 2 Passiv aktivieren
+
+„Ihre Daten werden verarbeitet" verschweigt, wer handelt. Auf einer Verkaufsseite ist das
+immer ein Verlust, in Rechtstexten manchmal nötig.
+
+### 3 Behördendeutsch streichen
+
+```
+diesbezüglich · seitens · im Rahmen von · zeitnah · gegebenenfalls
+in Bezug auf · nach Rücksprache · vorbehaltlich · im Vorfeld
+```
+
+Jedes davon hat eine kürzere Entsprechung. „Zeitnah" heißt entweder „morgen", oder es heißt
+nichts.
+
+### 4 Komposita nicht überziehen
+
+Deutsch kann beliebig zusammensetzen, und genau das macht Texte unlesbar.
+„Kundenzufriedenheitsbefragungsergebnis" ist grammatisch korrekt und praktisch unbrauchbar.
+
+**Faustregel: maximal zwei Glieder.** Bei drei oder mehr auflösen: „das Ergebnis der
+Kundenbefragung".
+
+Das hat auch einen technischen Grund: lange Komposita sprengen schmale Spalten, und
+Silbentrennung ist verboten. Ein zu langes Kompositum ist deshalb ein Layoutproblem, nicht
+nur ein Stilproblem.
+
+**Durchkopplung beachten**, wo zusammengesetzt wird: „Website-Optimierung" oder
+„Websiteoptimierung", nicht „Website Optimierung".
+
+### 5 Anglizismen nur, wenn die Zielgruppe sie benutzt
+
+Nicht die Branche entscheidet, sondern die Zielgruppe. Ein Softwareentwickler sagt
+„Deployment". Ein Dachdecker sagt nicht „Roof Performance Audit". Die Frage aus
+`../assets/vorlagen/marke-brief.md` Abschnitt 2 („wie er die Sache selbst nennt")
+beantwortet das.
+
+### 6 Gendern: eine Entscheidung, konsequent
+
+Wie bei du oder Sie: eine Entscheidung, durch alles durchgezogen, im Markenbrief
+festgehalten.
+
+| Variante | Vorteil | Nachteil |
+|---|---|---|
+| Neutrale Formulierung („das Team", „Fachkräfte", „wer sich bewirbt") | funktioniert in jedem Screenreader, niemand stößt sich daran | nicht immer möglich |
+| Doppelform („Mitarbeiterinnen und Mitarbeiter") | eindeutig, korrekt | lang, in Headlines schwer |
+| Sonderzeichen (`:`, `*`, `_`) | kurz | Screenreader lesen es je nach Programm unterschiedlich vor |
+
+**Empfehlung: neutrale Formulierung zuerst versuchen.** Sie löst das Problem ohne
+Nebenwirkung und liest sich meist besser. Wo sie nicht geht, die Doppelform.
+
+**In Stellenanzeigen ist es keine Stilfrage, sondern Recht.** Eine nicht geschlechtsneutrale
+Bezeichnung ohne „(m/w/d)" begründet eine Vermutung nach dem AGG, siehe
+`19-recruiting-funnel.md`.
+
+## Verständlichkeit messen, nicht schätzen
+
+Zwei Maße, die für deutsche Texte etwas aussagen:
+
+| Maß | Zielwert | Warum |
+|---|---|---|
+| **Satzlänge im Schnitt** | unter 15 Wörtern | über 20 sinkt das Verständnis messbar |
+| **Anteil Sätze über 25 Wörter** | unter 10 % | ein einzelner langer Satz ist Rhythmus, viele sind eine Wand |
+
+**Die schnellste Prüfung ist das Vorlesen.** Wo man Luft holen muss, gehört ein Punkt. Wo man
+stolpert, steht ein Nominalstil oder ein Kompositum.
+
+**Die Zielgruppe entscheidet über das Niveau, nicht der Durchschnitt.** Ein Fachtext für
+Ingenieure darf Fachbegriffe benutzen. Er darf sie nur nicht in Schachtelsätze verpacken.
+
+## Die Copy-Überarbeitung in drei Durchgängen
+
+Der erste Entwurf ist nie die Copy. Der Ablauf, der funktioniert:
+
+1. **Inhalt.** Steht alles da, was der Bogen braucht? Fehlt Schritt 2 oder 5? Ist jeder
+   Beweis belegt oder als `[[FEHLT]]` markiert?
+2. **Kürzen.** Jeden Satz einmal ansehen: Trägt er etwas, das kein anderer trägt?
+   Erfahrungswert ist ein Drittel weniger Text ohne Informationsverlust. Nominalstil und
+   Behördendeutsch fallen in diesem Durchgang.
+3. **Klang.** Laut vorlesen. Satzlängen variieren, Gedankenstriche entfernen, Anrede prüfen,
+   Primär-CTA-Text überall gleich.
+
+**Erst danach ins Layout.** Copy, die im Layout entsteht, passt sich dem Platz an statt der
+Aussage, und dann steht dort ein Satz, weil er in zwei Zeilen passt.
 
 ## Struktur langer Texte
 
@@ -117,7 +317,7 @@ Teilen Sie den Link, um die erste zu bekommen" statt „Hier ist es noch leer".
 
 ## Duzen oder siezen
 
-Eine Entscheidung, konsequent durchgezogen — inklusive Formularhinweisen,
+Eine Entscheidung, konsequent durchgezogen, inklusive Formularhinweisen,
 Fehlermeldungen, Bestätigungsmails und Rechtstexten, soweit dort möglich. Der häufigste
 Bruch entsteht in Systemtexten, die jemand anders geschrieben hat.
 
@@ -128,7 +328,7 @@ Endkundenmarken und DTC eher „du". Im Zweifel beim Kunden erfragen, nicht rate
 
 Kein Zitat ohne Quelle, keine Bewertung ohne Beleg, keine Zahl ohne Rechenweg, keine
 Referenz ohne Freigabe. Fehlt etwas, steht `[[FEHLT: …]]` im Text und der Punkt in der Liste
-offener Punkte. Eine erfundene Kundenstimme ist nach § 5 UWG angreifbar — und sie fliegt
+offener Punkte. Eine erfundene Kundenstimme ist nach § 5 UWG angreifbar, und sie fliegt
 spätestens auf, wenn jemand den Namen sucht.
 
 Für Texte, die als Vorschlag entstehen und noch abgestimmt werden müssen, hilft eine

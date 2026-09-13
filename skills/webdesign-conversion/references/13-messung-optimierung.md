@@ -17,7 +17,7 @@ andere ist Zwischenschritt.
 | Qualität | Anteil passender Anfragen, Abschlussquote | Kommen die richtigen? |
 
 Die letzte Zeile ist die wichtigste und die, die fast nie gemessen wird. 100 Anfragen, von
-denen 5 passen, sind schlechter als 20, von denen 12 passen — und nur der Kunde selbst kann
+denen 5 passen, sind schlechter als 20, von denen 12 passen, und nur der Kunde selbst kann
 das rückmelden. Deshalb gehört ein einfacher Rückkanal ins Projekt: eine Spalte im CRM, ein
 monatlicher Anruf, irgendetwas.
 
@@ -33,7 +33,7 @@ monatlicher Anruf, irgendetwas.
 | Serverlogs | Fehler, Bots, Statuscodes | nein |
 
 Für viele kleine Dienstleisterseiten reicht Search Console plus ein cookieloses Analytics
-völlig aus — und spart die Consent-Diskussion. Das ist eine Empfehlung wert, bevor GA4
+völlig aus, und spart die Consent-Diskussion. Das ist eine Empfehlung wert, bevor GA4
 eingerichtet wird.
 
 ## GA4 einrichten, das Minimum
@@ -42,7 +42,7 @@ eingerichtet wird.
    `security_storage`, mit `wait_for_update`. Siehe `07-recht-dsgvo.md`.
 2. **Conversion-Ereignisse** definieren, nicht die Standardereignisse feiern:
    - `formular_gesendet` (mit Parameter: welches Formular)
-   - `cta_klick` (mit Parameter: Position — Header, Hero, Angebot, Mobilbalken)
+   - `cta_klick` (mit Parameter: Position: Header, Hero, Angebot, Mobilbalken)
    - `telefon_klick`, `mail_klick`
    - `terminbuchung` bei externem Buchungstool
 3. **Als Schlüsselereignis markieren**, sonst taucht es in keinem Bericht auf.
@@ -80,7 +80,7 @@ Trust-Elemente → Formular → Sektionsreihenfolge → Inhalt → Performance.
 ## A/B-Tests, ehrlich betrachtet
 
 Ein A/B-Test braucht Volumen. Bei 300 Besuchern im Monat und 8 Anfragen ist ein Test
-statistisch wertlos — dort wird nacheinander geändert und über mehrere Monate verglichen,
+statistisch wertlos: dort wird nacheinander geändert und über mehrere Monate verglichen,
 mit dem Wissen, dass Saison und Quelle mitreden.
 
 Ab etwa 1.000 relevanten Sitzungen und 50 Conversions pro Variante und Monat lohnt ein

@@ -1,11 +1,11 @@
 # Bereich 4: Barrierefreiheit
 
 Barrierefreiheit bedeutet, dass die Website für ALLE nutzbar ist, unabhängig von körperlichen
-oder kognitiven Einschränkungen — Seh- und Hörbehinderungen, motorische und kognitive
+oder kognitiven Einschränkungen: Seh- und Hörbehinderungen, motorische und kognitive
 Einschränkungen.
 
 **Die Zahl:** 15–20 % der Bevölkerung haben eine Form von Behinderung. Eine nicht barrierefreie
-Website schließt möglicherweise jeden fünften Besucher aus — zusätzlich zum rechtlichen Risiko.
+Website schließt möglicherweise jeden fünften Besucher aus: zusätzlich zum rechtlichen Risiko.
 
 ## Barrierefreiheitsstärkungsgesetz (BFSG)
 
@@ -27,7 +27,7 @@ Dienstleistung angefragt wird, kann bereits darunter fallen.
 
 **Ausnahme Kleinstunternehmen:** Dienstleistungen von Unternehmen mit weniger als 10
 Beschäftigten **und** höchstens 2 Mio. € Jahresumsatz sind ausgenommen. Die Ausnahme gilt
-für Dienstleistungen, nicht für Produkte — und sie ist im Zweifel anwaltlich zu klären, nicht
+für Dienstleistungen, nicht für Produkte, und sie ist im Zweifel anwaltlich zu klären, nicht
 über den Daumen.
 
 **Mögliche Konsequenzen:** Bußgelder bis 100.000 €, Abmahnungen (Kosten im vierstelligen
@@ -36,7 +36,7 @@ Bereich), Unterlassungsklagen mit Gerichtskosten, individueller Schadensersatz.
 **Maßstab ist die Praxis:** EN 301 549, die auf WCAG 2.1/2.2 Level AA verweist. Wer AA
 erfüllt, erfüllt den Kern.
 
-## Schritt 4.1 — Kontrast-Check
+## Schritt 4.1: Kontrast-Check
 
 Graue Schrift auf weißem Grund sieht „modern" aus. Für Menschen mit Sehschwäche ist es Text
 im Nebel.
@@ -66,14 +66,14 @@ ein Markengrün `#6acc9a` erreicht auf Weiß nur 1,96:1. Daraus folgt:
   nie weiß.
 - Für Text auf hellen Flächen braucht die Farbrampe eine **eigene dunkle Stufe**, etwa
   `#356a4f` mit 6,31:1. Diese Stufe trägt Links, Kicker, Haken und Zahlen.
-- Der **Fokusring** auf hellen Flächen ist dunkel, nicht markenfarbig — sonst reißt er
+- Der **Fokusring** auf hellen Flächen ist dunkel, nicht markenfarbig, sonst reißt er
   WCAG 1.4.11. In dunklen Sektionen wird er auf die Markenfarbe umgeschaltet, dort stimmt
   der Kontrast wieder.
 
 Diese drei Sätze gehören als Kommentar in die Tokendatei, sonst dreht die nächste Sitzung
 sie zurück.
 
-## Schritt 4.2 — Alt-Texte
+## Schritt 4.2: Alt-Texte
 
 „Alt" = Alternative: eine Textbeschreibung des Bildes im HTML, für sehende Besucher
 unsichtbar. Screenreader lesen sie vor. Drei Gründe:
@@ -101,7 +101,7 @@ Regeln:
   („Illustration: …"). Das ist keine Formalie, sondern verhindert, dass eine Darstellung als
   Produktbeleg gelesen wird.
 
-## Schritt 4.3 — Tastatur-Navigation
+## Schritt 4.3: Tastatur-Navigation
 
 Nicht jeder kann eine Maus bedienen. Menschen mit motorischen Einschränkungen (Parkinson,
 MS, Arthritis, Lähmungen) navigieren ausschließlich mit der Tastatur; die Tab-Taste ist ihre
@@ -144,7 +144,7 @@ Dazu gehören:
 
 ## Weitere AA-Punkte, die regelmäßig durchfallen
 
-- **Sichtbare Labels** an jedem Feld. Ein Platzhalter ist kein Label — er verschwindet beim
+- **Sichtbare Labels** an jedem Feld. Ein Platzhalter ist kein Label: er verschwindet beim
   Tippen.
 - **Fehlermeldungen am Feld**, nicht nur oben; verknüpft über `aria-describedby`, Zustand
   über `aria-invalid`.
@@ -152,7 +152,7 @@ Dazu gehören:
 - **Sprache ausgezeichnet**: `<html lang="de">`, fremdsprachige Passagen mit eigenem `lang`.
 - **Landmarks**: `header`, `nav`, `main`, `footer`, `aside` statt `div`-Wüste.
 - **Icon-only Buttons** brauchen einen zugänglichen Namen (`aria-label` oder `.sr-only`-Text).
-- **Information nie nur über Farbe** transportieren — rot allein ist kein Fehlerhinweis.
+- **Information nie nur über Farbe** transportieren: rot allein ist kein Fehlerhinweis.
 - **Zoom bis 200 %** ohne Informationsverlust, kein `user-scalable=no`.
 - **Videos** mit Untertiteln, Audio mit Transkript.
 - **Bewegung respektieren**: `prefers-reduced-motion: reduce` schaltet nicht ausgelöste

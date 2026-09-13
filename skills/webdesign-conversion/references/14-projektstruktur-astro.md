@@ -46,7 +46,7 @@ projekt/
 └─ scripts/                    ← Prüf- und Hilfsskripte (responsive-check, Bildpipeline)
 ```
 
-## `CLAUDE.md` — das wichtigste Dokument
+## `CLAUDE.md`: das wichtigste Dokument
 
 Nicht eine Beschreibung, **was** gebaut ist, sondern **warum**. Das ist der Unterschied
 zwischen einer Datei, die hilft, und einer, die jede Sitzung neu ignoriert wird.
@@ -55,17 +55,17 @@ Bewährte Gliederung:
 
 ```markdown
 # Projektname
-## Kunde und Ziel          – wer, für wen, primäre und sekundäre Conversion
-## Stack und Befehle       – Technik, alle Befehle zum Kopieren, Fallstricke
-## Deployment und Bindings – Hoster, Buildbefehl, Ausgabeverzeichnis, Variablen
-## Seitenstruktur          – Tabelle Pfad → Zweck, Sprungziele
-## Designsystem            – Farben mit Herkunft und Kontrastwerten, Schrift, Maß
-## Komponenten             – je Datei ein Satz: was sie tut und warum so
+## Kunde und Ziel: wer, für wen, primäre und sekundäre Conversion
+## Stack und Befehle: Technik, alle Befehle zum Kopieren, Fallstricke
+## Deployment und Bindings: Hoster, Buildbefehl, Ausgabeverzeichnis, Variablen
+## Seitenstruktur: Tabelle Pfad → Zweck, Sprungziele
+## Designsystem: Farben mit Herkunft und Kontrastwerten, Schrift, Maß
+## Komponenten: je Datei ein Satz: was sie tut und warum so
 ## Formulare und Datenfluss
-## Umgebungsvariablen      – was passiert, wenn sie fehlt
+## Umgebungsvariablen: was passiert, wenn sie fehlt
 ## Consent und Dienste
-## Offene Punkte           – jede Lücke, sichtbar
-## Änderungsverlauf        – was, warum, wie geprüft
+## Offene Punkte: jede Lücke, sichtbar
+## Änderungsverlauf: was, warum, wie geprüft
 ```
 
 Zwei Regeln, die den Unterschied machen:
@@ -123,7 +123,7 @@ Für Formularempfang und API-Zugriffe mit Schlüsseln. Zwei Bauformen, je nach Z
 
 - **Cloudflare Pages Functions** (`functions/api/*.ts`): Einstieg `onRequestPost`,
   Variablen aus `context.env`, Astros Schutz gegen Cross-Site-Anfragen greift dort **nicht**
-  — eine eigene Origin-Prüfung ersetzt ihn.
+ : eine eigene Origin-Prüfung ersetzt ihn.
 - **Astro-Serverrouten** (`src/pages/api/*.ts` mit `prerender = false`, Adapter nötig):
   Einstieg `POST`, Variablen über `import.meta.env` bzw. `cloudflare:workers`.
 
@@ -136,7 +136,7 @@ Escaping bei jeder Rückgabe.
 - **Dynamisch per `innerHTML` erzeugte Elemente bekommen kein Scoping-Attribut.** Astros
   `data-astro-cid-…` landet nur auf Markup, das zur Bauzeit existiert. Selektoren, die
   dynamisch erzeugte Knoten treffen, gehören vollständig in `:global()`. Der Fehler fällt
-  optisch oft nicht auf, weil der Block-Fallback zufällig lesbar bleibt — prüfbar nur über
+  optisch oft nicht auf, weil der Block-Fallback zufällig lesbar bleibt: prüfbar nur über
   `getComputedStyle().display`.
 - **Jede Ausgabe von Nutzereingaben escapen.** Name, Adresse, Artikelbezeichnung in einem
   Template-Literal sind der direkte Weg zu gespeichertem XSS.
@@ -164,5 +164,5 @@ genau die Fehler, die ein Screenshot nicht zeigt.
 
 `public/images/BILDER.md` führt je Motiv: Herkunft, Rechteinhaber, Freigabestatus, Verwendung
 und Besonderheiten (eingebrannter Text, KI-generiert). Vor dem Livegang ist diese Datei die
-Checkliste für die Bildrechte — und sie verhindert, dass eine KI-Illustration versehentlich
+Checkliste für die Bildrechte, und sie verhindert, dass eine KI-Illustration versehentlich
 als Produktbeleg durchgeht.

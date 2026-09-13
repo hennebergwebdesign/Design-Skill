@@ -1,7 +1,7 @@
-# Impressum — Entwurfsvorlage
+# Impressum: Entwurfsvorlage
 
 > **Kein Rechtsrat.** Dieser Entwurf ersetzt keine anwaltliche Prüfung. Vor dem Livegang
-> prüfen lassen. Alle `[[FEHLT: …]]` und `[[BESTÄTIGEN: …]]` müssen ersetzt sein —
+> prüfen lassen. Alle `[[FEHLT: …]]` und `[[BESTÄTIGEN: …]]` müssen ersetzt sein:
 > niemals durch plausibel klingende Erfindungswerte.
 
 **Seiteneigenschaften:** `noindex`, nicht in der Sitemap, von jeder Seite aus mit einem
@@ -28,7 +28,7 @@ Telefon: [[FEHLT: Telefonnummer]]
 E-Mail: [[FEHLT: E-Mail-Adresse]]
 
 > Pflicht ist die E-Mail-Adresse **und** ein zweiter Weg zur schnellen elektronischen
-> Kontaktaufnahme — Telefon oder ein Kontaktformular, das innerhalb kurzer Zeit beantwortet
+> Kontaktaufnahme: Telefon oder ein Kontaktformular, das innerhalb kurzer Zeit beantwortet
 > wird.
 
 ## Registereintrag
@@ -81,7 +81,7 @@ Verbraucherschlichtungsstelle teilzunehmen.
 > stattdessen die zuständige Stelle mit Anschrift und Website zu nennen.
 >
 > **Hinweis:** Die OS-Plattform der Europäischen Kommission wurde zum 20.07.2025
-> eingestellt. Ein Link darauf ist veraltet und gehört nicht mehr in den Text — viele
+> eingestellt. Ein Link darauf ist veraltet und gehört nicht mehr in den Text: viele
 > Generatormuster führen ihn noch.
 
 ## Bildnachweise

@@ -1,4 +1,4 @@
-# Datenschutzerklärung — Entwurfsvorlage
+# Datenschutzerklärung: Entwurfsvorlage
 
 > **Kein Rechtsrat.** Entwurf, vor dem Livegang anwaltlich prüfen lassen.
 >
@@ -24,7 +24,7 @@ Verantwortlich für die Datenverarbeitung auf dieser Website ist:
 E-Mail: [[FEHLT: E-Mail]]
 Telefon: [[FEHLT: Telefon]]
 
-Datenschutzbeauftragte(r): [[FEHLT: Name und Kontakt — oder diesen Punkt streichen, wenn
+Datenschutzbeauftragte(r): [[FEHLT: Name und Kontakt, oder diesen Punkt streichen, wenn
 keine Bestellpflicht besteht]]
 
 ## 2. Hosting und Serverprotokolle
@@ -32,7 +32,7 @@ keine Bestellpflicht besteht]]
 Diese Website wird bei [[FEHLT: Hoster, z. B. Cloudflare, Inc.]] gehostet. Beim Aufruf
 werden automatisch Informationen in Serverprotokollen gespeichert:
 
-- IP-Adresse (gekürzt / vollständig — [[BESTÄTIGEN]])
+- IP-Adresse (gekürzt / vollständig: [[BESTÄTIGEN]])
 - Datum und Uhrzeit des Zugriffs
 - aufgerufene Seite und übertragene Datenmenge
 - Referrer-URL
@@ -61,7 +61,7 @@ gelöscht, spätestens nach X Monaten."]]
 Für den Versand der Formularnachricht und der Eingangsbestätigung setzen wir
 [[FEHLT: Anbieter, Sitz]] ein. Dabei werden die Formulardaten an diesen Anbieter übermittelt.
 **Rechtsgrundlage:** Art. 6 Abs. 1 lit. b bzw. lit. f DSGVO.
-**Drittlandübermittlung:** [[BESTÄTIGEN: Serverstandort, Grundlage — z. B.
+**Drittlandübermittlung:** [[BESTÄTIGEN: Serverstandort, Grundlage: z. B.
 EU-Standardvertragsklauseln]].
 **Auftragsverarbeitung:** Vertrag nach Art. 28 DSGVO. [[BESTÄTIGEN]]
 
@@ -99,7 +99,7 @@ Verarbeitung bleibt unberührt.
 
 ## 6. Statistik und Reichweitenmessung
 
-[[FEHLT: nur ausfüllen, wenn wirklich eingesetzt — sonst diesen Abschnitt löschen]]
+[[FEHLT: nur ausfüllen, wenn wirklich eingesetzt, sonst diesen Abschnitt löschen]]
 
 Nach Ihrer Einwilligung setzen wir [[FEHLT: z. B. Google Analytics 4 über den Google Tag
 Manager, Google Ireland Limited]] ein.
@@ -108,7 +108,7 @@ Manager, Google Ireland Limited]] ein.
 **Rechtsgrundlage:** Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG (Einwilligung).
 **Verarbeitete Daten:** [[FEHLT: z. B. gekürzte IP-Adresse, Geräte- und Browserdaten,
 aufgerufene Seiten, Verweildauer, Kennungen in Cookies]].
-**Drittlandübermittlung:** [[BESTÄTIGEN: USA, Grundlage — Angemessenheitsbeschluss / SCC]].
+**Drittlandübermittlung:** [[BESTÄTIGEN: USA, Grundlage: Angemessenheitsbeschluss / SCC]].
 **Speicherdauer:** [[FEHLT: z. B. 14 Monate]].
 
 Ohne Ihre Einwilligung wird dieser Dienst **nicht geladen**.
@@ -127,7 +127,7 @@ Bis dahin sehen Sie eine Vorschau ohne Verbindung zum Anbieter.
 ## 8. Bewertungen
 
 [[FEHLT: nur ausfüllen, wenn eingesetzt. Wenn Bewertungen serverseitig abgerufen und
-zwischengespeichert werden, entsteht KEIN Browserkontakt zum Anbieter — das ist ausdrücklich
+zwischengespeichert werden, entsteht KEIN Browserkontakt zum Anbieter: das ist ausdrücklich
 zu erwähnen, weil es ein relevanter Unterschied ist.]]
 
 ## 9. Ihre Rechte

@@ -11,12 +11,12 @@ Eine Zahl, die man sich merken muss: **2 Sekunden.** Das ist die maximale Ladeze
 
 Zielwerte für die Core Web Vitals: **LCP < 2,5 s**, **CLS < 0,1**, **INP < 200 ms**.
 
-## Schritt 3.1 — Die 2-Sekunden-Regel
+## Schritt 3.1: Die 2-Sekunden-Regel
 
 Die häufigste Einzelursache: ein 5-MB-Foto, hochgeladen, „weil es so schön hochauflösend
 ist". Niemand sieht den Unterschied zwischen 5 MB und 200 KB auf einer Website.
 
-## Schritt 3.2 — Bildoptimierung
+## Schritt 3.2: Bildoptimierung
 
 Jedes Bild auf der Seite:
 
@@ -33,7 +33,7 @@ Werkzeuge: TinyPNG, ImageOptim, `sharp` im Build, `squoosh`. In Astro erledigt
 Wahrnehmung, kostet aber Encodierzeit. Für Fotos AVIF, für Logos und Flächen SVG, für
 Screenshots mit Text WebP (AVIF verwischt feine Schrift stärker).
 
-## Schritt 3.3 — Caching
+## Schritt 3.3: Caching
 
 Beim ersten Besuch wird die Seite im Browser gespeichert, beim zweiten lädt sie sofort.
 Ohne Caching ist jeder Besuch ein kompletter Neuaufbau, mit Caching sind es rund 0,5 s.
@@ -44,7 +44,7 @@ Vorlage: `../assets/vorlagen/_headers`.
 
 **WordPress:** WP Rocket oder W3 Total Cache; zusätzlich Objektcache und ein CDN.
 
-## Schritt 3.4 — Die fünf Breakpoints
+## Schritt 3.4: Die fünf Breakpoints
 
 | Breite | Gerät |
 |---|---|
@@ -57,7 +57,7 @@ Vorlage: `../assets/vorlagen/_headers`.
 **Der Test:** Seite öffnen, F12, „Toggle Device Toolbar", alle fünf durchgehen. Sieht es
 überall gut aus? Sind Buttons klickbar? Texte lesbar? Elemente sichtbar? Wenn nicht: fix it.
 
-Zusätzlich prüfen: **1366 × 768** — die häufigste Notebookauflösung und die Breite, an der
+Zusätzlich prüfen: **1366 × 768**, die häufigste Notebookauflösung und die Breite, an der
 zu großzügige `clamp()`-Kurven zuerst auffallen. Und **niedrige Fensterhöhen**: ein
 Heldenbereich mit `100svh` bei 720 px Fensterhöhe schneidet gern die CTAs ab.
 
@@ -70,7 +70,7 @@ Touchziele mindestens **44 × 44 px** mit mindestens 8 px Abstand.
 - Nur die wirklich benutzten Schnitte ausliefern, `font-display: swap`.
 - Die zwei wichtigsten Schnitte per `<link rel="preload" as="font" crossorigin>` ankündigen.
 - Variable Fonts, wenn mehr als drei Schnitte einer Familie gebraucht werden.
-- `size-adjust` nutzen, wenn die Fallback-Schrift deutlich anders läuft — das reduziert den
+- `size-adjust` nutzen, wenn die Fallback-Schrift deutlich anders läuft: das reduziert den
   Sprung beim Schriftwechsel.
 
 ## JavaScript

@@ -10,7 +10,7 @@ Vor dem ersten Blick auf die Seite:
 - Wer ist die Zielgruppe? Was ist die primäre Conversion?
 - Wie viele qualifizierte Anfragen kamen letzte Woche, letzten Monat, letztes Jahr über
   die Seite? (Die ehrliche Antwort ist meistens der eigentliche Auftrag.)
-- Woher kommt der Traffic — organisch, bezahlt, direkt, Empfehlung?
+- Woher kommt der Traffic: organisch, bezahlt, direkt, Empfehlung?
 - Gibt es Analytics-Zugang, Search Console, Heatmap?
 
 ## Durchgang 1: die sieben teuren Fehler
@@ -23,7 +23,7 @@ Schnellprüfung in 15 Minuten, gibt sofort die Grobrichtung.
 | 2 | Unsichtbare Zielgruppe | Steht irgendwo, für wen das Angebot ist? Könnte ein Wettbewerber denselben Text nutzen? |
 | 3 | Mobile-Desaster | Auf einem echten Telefon öffnen. Bedienbar? Buttons erreichbar? Text lesbar? |
 | 4 | Ladezeit | PageSpeed Insights mobil. Über 3 s = akuter Befund |
-| 5 | Keine Trust-Elemente | Referenzen, Zahlen, Bewertungen, Logos — oder nur Behauptungen? |
+| 5 | Keine Trust-Elemente | Referenzen, Zahlen, Bewertungen, Logos, oder nur Behauptungen? |
 | 6 | Formular | Wie viele Felder? Mehr als 5 = Befund |
 | 7 | Kein klarer CTA | Wie viele verschiedene Handlungsaufforderungen gibt es? Welche ist die wichtigste? |
 
