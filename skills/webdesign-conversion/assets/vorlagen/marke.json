@@ -17,6 +17,31 @@
     "sprache": "de-DE"
   },
 
+  "herkunft": {
+    "$kommentar": [
+      "Woher Farbe, Schrift und Layoutidee tatsächlich kommen, damit spätere Sitzungen",
+      "nachvollziehen koennen, was Kontinuitaet ist und was neu entschieden wurde.",
+      "bestehende_marke: 20-markenextraktion-bestandsseite.md. referenzen: 22-premium-designquellen.md."
+    ],
+    "bestehende_marke": {
+      "quelle": null,
+      "$quelle_hinweis": "URL der alten Seite, oder 'nur Print/Logo-Datei', oder null wenn keine Vormarke existiert",
+      "geprueft_am": null,
+      "logo_uebernommen": null,
+      "farbe_uebernommen": null,
+      "schrift_uebernommen": null,
+      "abweichungen_begruendung": "[[FEHLT: was bewusst geändert wurde und warum]]"
+    },
+    "referenzen": [
+      {
+        "quelle": null,
+        "$quelle_erlaubt": ["awwwards", "dribbble", "land-book", "recent.design", "21st.dev"],
+        "link": null,
+        "uebernommen": "[[FEHLT: welches Prinzip, nicht welches Layout 1:1]]"
+      }
+    ]
+  },
+
   "farbe": {
     "$kommentar": [
       "rampe = die Palette, rollen = die Schnittstelle. Komponenten greifen NUR auf rollen zu.",

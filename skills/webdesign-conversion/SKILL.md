@@ -1,6 +1,6 @@
 ---
 name: webdesign-conversion
-description: Vollständiges System für conversion-orientiertes Webdesign im DACH-Raum. Deckt Homepages, Landingpages und Recruiting-Funnel ab: Strategie und Positionierung, Design und UX, Spacing und Rhythmus, Responsive Design mit Container Queries, Technik und Performance, Barrierefreiheit (BFSG/WCAG 2.2 AA), SEO, Conversion-Architektur, Copywriting, eigene Icon-Systeme, Motion mit GSAP und CSS sowie den rechtlichen und technischen Pflichtaufbau (Impressum, Datenschutzerklärung, Consent, 404-Seite, robots.txt, Sitemap, Weiterleitungen, Security-Header). Nutze diesen Skill beim Planen, Bauen, Überarbeiten oder Prüfen einer Website, Landingpage, Karriereseite oder Stellenanzeige, bei Fragen zu Ladezeit, Above the Fold, CTA, Formularen, Trust-Elementen, Abständen, Breakpoints, Meta-Titeln, interner Verlinkung, Designtokens, Icons, SVG, Animationen, Headlines, Buttontexten, Bewerberdaten, AGG oder Rechtstexten.
+description: Vollständiges System für conversion-orientiertes Webdesign im DACH-Raum. Deckt Homepages, Landingpages und Recruiting-Funnel ab: Strategie und Positionierung, Design und UX, Spacing und Rhythmus, Responsive Design mit Container Queries, Technik und Performance, Barrierefreiheit (BFSG/WCAG 2.2 AA), SEO, Conversion-Architektur, Copywriting, eigene Icon-Systeme, Motion mit GSAP und CSS, Marken-/CI-Extraktion aus bestehenden Seiten (Logo, Farben, Schrift), Referenzrecherche auf Premium-Designquellen (Awwwards, Dribbble, Land-book, recent.design, 21st.dev), Bildhintergründe und visuelle Sektionshierarchie sowie den rechtlichen und technischen Pflichtaufbau (Impressum, Datenschutzerklärung, Consent, 404-Seite, robots.txt, Sitemap, Weiterleitungen, Security-Header). Nutze diesen Skill beim Planen, Bauen, Überarbeiten oder Prüfen einer Website, Landingpage, Karriereseite oder Stellenanzeige, bei Fragen zu Ladezeit, Above the Fold, CTA, Formularen, Trust-Elementen, Abständen, Breakpoints, Meta-Titeln, interner Verlinkung, Designtokens, Icons, SVG, Animationen, Headlines, Buttontexten, Bewerberdaten, AGG, Markenübernahme aus einer bestehenden Website oder Rechtstexten.
 license: MIT
 metadata:
   author: Henneberg Webdesign
@@ -98,6 +98,9 @@ Lies gezielt nach, statt alles zu laden.
 | Motion-Handschrift, Motion-Tokens, Scroll-Animation in CSS | `18-motion-handschrift.md` |
 | GSAP, ScrollTrigger, Timelines, Performance | `09-motion-gsap.md` |
 | React- und Next-Komponenten, shadcn/ui | `11-komponenten-shadcn.md` |
+| Marke/CI aus bestehender Seite auslesen (Logo, Farben, Schrift) | `20-markenextraktion-bestandsseite.md` |
+| Bildhintergründe, Sektionstrennung, visuelle Hierarchie | `21-sektionshintergruende-hierarchie.md` |
+| Referenzrecherche vor dem Entwurf: Awwwards, Dribbble, Land-book, recent.design, 21st.dev | `22-premium-designquellen.md` |
 
 **Technik, Recht, Messung**
 
@@ -192,6 +195,19 @@ Diese Regeln gelten immer und werden nicht wegdiskutiert:
   kopiert), eine eigene Bewegungssignatur (siehe `18-motion-handschrift.md`) und mindestens
   ein Custom- oder Animationsabschnitt, der für genau dieses Unternehmen gebaut ist, keine
   generische Sektion aus dem Baukasten.
+- **Existiert bereits eine Marke oder eine alte Seite, wird sie zuerst ausgelesen, nicht
+  ignoriert.** Logo, Farben, Schrift und Formsprache kommen vor dem Neuentwurf auf den Tisch,
+  geprüft und bewusst fortgeschrieben oder bewusst verworfen, nie stillschweigend ersetzt.
+  Siehe `references/20-markenextraktion-bestandsseite.md`.
+- **Vor dem Tokensystem-Plan steht eine Referenzrecherche auf mindestens einer
+  Premium-Designquelle** (Awwwards, Dribbble, Land-book, recent.design, 21st.dev), damit der
+  Plan an echten aktuellen Premium-Beispielen entsteht, nicht am ersten Einfall. Siehe
+  `references/22-premium-designquellen.md`.
+- **Jede Sektion braucht entweder einen Bildhintergrund an den entscheidenden Stellen
+  (mindestens Held und der eine Custom-Abschnitt) oder eine erkennbare Trennung zur
+  Nachbarsektion**, per Flächenfarbwechsel oder, wo Sektionen zusammengehören, per
+  typografischer und räumlicher Hierarchie. Keine Folge von Sektionen auf identischer
+  Fläche ohne jede Abstufung. Siehe `references/21-sektionshintergruende-hierarchie.md`.
 - **Keine erfundenen Zahlen.** Keine Kundenstimmen, Bewertungen, Zertifikate, Preise,
   Lieferzeiten oder Referenzen ohne Beleg. Fehlt ein Wert, steht dort ein sichtbarer
   Platzhalter `[[FEHLT: …]]`, niemals ein plausibel klingender Erfindungswert. Unechte
@@ -213,10 +229,14 @@ Diese Regeln gelten immer und werden nicht wegdiskutiert:
 1. **Erst verstehen, dann bauen.** Ohne Zielgruppe, Kernproblem und USP wird nichts
    gestaltet. Fehlen die Angaben, frage sie ab, mit der Formel aus Bereich 1 und nicht mit
    einem leeren Fragebogen. Die Antworten gehen in `marke-brief.md`, nicht in den Chat.
-2. **Plan vor Code.** Bei neuem Design zuerst ein kompaktes Tokensystem (Farben, Schrift,
-   Layoutidee, Prinzipien) entwerfen und gegen den Brief prüfen. Liest sich ein Teil wie
-   der Standard, den du für jede beliebige Seite produzieren würdest, ersetze ihn und sage
-   warum. Details in `references/10-visuelle-richtung.md`.
+   Existiert bereits eine Marke oder eine alte Seite, wird sie in diesem Schritt ausgelesen,
+   siehe `references/20-markenextraktion-bestandsseite.md`.
+2. **Referenz vor Plan, Plan vor Code.** Erst mindestens eine Premium-Designquelle nach
+   Branche und Stilrichtung durchsuchen (`references/22-premium-designquellen.md`), dann ein
+   kompaktes Tokensystem (Farben, Schrift, Layoutidee, Prinzipien) entwerfen und gegen den
+   Brief prüfen. Liest sich ein Teil wie der Standard, den du für jede beliebige Seite
+   produzieren würdest, ersetze ihn und sage warum. Details in
+   `references/10-visuelle-richtung.md`.
 3. **Eine Handschrift, vier Ausdrucksformen.** Palette, Spacing, Icons und Motion kommen aus
    derselben Entscheidung. Ein Icon-Set mit fremder Strichstärke oder eine Motion-Kurve ohne
    Bezug zur Marke verrät die Schablone genauso wie eine Standardfarbe.
