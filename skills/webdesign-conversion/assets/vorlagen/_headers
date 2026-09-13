@@ -1,0 +1,41 @@
+# _headers — Cloudflare Pages / Netlify
+#
+# Cache-Regeln zuerst, dann die Sicherheits-Header für alles.
+# Reihenfolge der Blöcke ist egal, die Spezifität des Pfads entscheidet.
+
+# Gehashte Build-Assets: der Dateiname ändert sich bei jeder Änderung,
+# deshalb darf der Browser sie ein Jahr lang unverändert behalten.
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Selbst gehostete Schriften ändern sich praktisch nie.
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Bilder und Videos: eine Woche. Lange genug für wiederkehrende Besuche,
+# kurz genug, um einen Austausch ohne Dateinamenwechsel durchzubekommen.
+/images/*
+  Cache-Control: public, max-age=604800
+
+/videos/*
+  Cache-Control: public, max-age=604800
+
+# Das XSL-Stylesheet der Sitemap braucht den richtigen Typ, sonst zeigt der
+# Browser weiterhin nacktes XML.
+/sitemap.xsl
+  Content-Type: application/xslt+xml; charset=utf-8
+
+# Sicherheits-Header für alles.
+#
+# CSP fehlt hier bewusst: sie ist der wirksamste Header und der, der eine Seite
+# am schnellsten zerlegt. Vorgehen: erst Content-Security-Policy-Report-Only
+# mitlaufen lassen, Verstöße sammeln, dann scharf schalten.
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), interest-cohort=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains

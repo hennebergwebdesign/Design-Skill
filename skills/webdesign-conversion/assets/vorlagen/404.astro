@@ -1,0 +1,50 @@
+---
+/**
+ * 404-Seite — Vorlage (Astro)
+ *
+ * Anforderungen, die diese Datei erfüllt:
+ *  - liefert wirklich HTTP 404 (bei statischem Hosting über die Datei 404.html,
+ *    die Astro daraus baut). Prüfen: curl -I https://domain/gibtesnicht
+ *  - trägt Kopf, Fuß und Navigation der übrigen Seite
+ *  - erklärt in einem Satz, was passiert ist, ohne Entschuldigungsarie
+ *  - bietet konkrete Wege weiter, nur intern, keine Sackgasse
+ *  - trägt noindex
+ *  - keine automatische Weiterleitung nach X Sekunden
+ *
+ * Für Next.js App Router: dieselbe Struktur in app/not-found.tsx.
+ */
+import Base from '../layouts/Base.astro';
+import Button from '../components/ui/Button.astro';
+---
+<Base
+  titel="Seite nicht gefunden | [[FEHLT: Markenname]]"
+  beschreibung="Diese Seite gibt es nicht. Hier geht es weiter."
+  noindex
+>
+  <section class="sektion">
+    <div class="inhalt text-mitte">
+      <p class="text-leise">Fehler 404</p>
+      <h1>Diese Seite gibt es nicht.</h1>
+      <p>
+        Die Adresse existiert nicht oder wurde verschoben.
+        Diese Wege führen weiter:
+      </p>
+
+      <div class="ausweg">
+        <Button href="/" variante="haupt">Zur Startseite</Button>
+        <Button href="/leistungen" variante="zweit">Leistungen</Button>
+        <Button href="/kontakt" variante="zweit">Kontakt</Button>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .ausweg {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--raum-3);
+    justify-content: center;
+    margin-top: var(--raum-8);
+  }
+</style>

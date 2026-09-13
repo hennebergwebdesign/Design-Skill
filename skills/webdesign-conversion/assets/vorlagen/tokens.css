@@ -1,0 +1,197 @@
+/*
+  Designtokens — kommentierte Vorlage.
+
+  REGEL: Kein Farb- oder Größenwert im Komponentencode ohne Token. Kommt eine
+  Komponente mit einem eigenen Wert, fehlt entweder ein Token oder die Komponente
+  irrt sich.
+
+  AUFBAU:
+    Farbrampe  → Rollen → Flächen/Text/Rahmen/Fokus/Semantik
+    Typografie → Familien, Zeilenhöhen, Skala (clamp, zwei Stufen)
+    Raum       → feste Skala + fließende Rhythmen
+    Layout     → Breiten, Ränder, Kopfhöhe
+    Form       → Radien, Schatten, Dauer, Kurve
+
+  Die Beispielwerte sind eine grüne Marke. Ersetzen — aber die KOMMENTARE behalten,
+  sie erklären, warum die Struktur so ist.
+*/
+
+:root {
+  /* ---------------------------------------------------------------------
+     FARBRAMPE
+     Die Rampe entsteht nicht durch Aufhellen mit Weiß, sondern durch
+     kontrollierte Helligkeit und Sättigung. OKLCH ist dafür das bessere
+     Werkzeug als HSL.
+     --------------------------------------------------------------------- */
+  --farbe-marke-50:  #d5f1e3;
+  --farbe-marke-100: #c9eddb;
+  --farbe-marke-200: #b2e4ca;
+  --farbe-marke-300: #9adcba;
+  --farbe-marke-400: #82d4aa;
+  --farbe-marke-500: #6acc9a;   /* die Markenfarbe selbst */
+  --farbe-marke-600: #59ab81;
+  --farbe-marke-700: #488b69;
+  /*
+    ZUSÄTZLICHE DUNKLE STUFE — die wichtigste Zeile dieser Datei.
+
+    #6acc9a erreicht auf Weiß nur 1,96:1. Die Markenfarbe ist damit eine
+    FLÄCHENFARBE, keine Textfarbe. Auch #488b69 reicht mit 4,06:1 nicht für
+    Fließtext. Deshalb ist die Rampe um eine Stufe verlängert:
+    #356a4f erreicht 6,31:1 und ist die EINZIGE Markenstufe, die als Text auf
+    hellen Flächen erlaubt ist. Sie trägt Links, Kicker, Haken und Zahlen.
+  */
+  --farbe-marke-750: #356a4f;
+
+  /* ---------------------------------------------------------------------
+     ROLLEN — Komponenten greifen NUR hierauf zu, nie auf die Rampe.
+     --------------------------------------------------------------------- */
+  --farbe-marke:        var(--farbe-marke-500);
+  --farbe-marke-hell:   var(--farbe-marke-50);
+  --farbe-marke-text:   var(--farbe-marke-750);
+
+  /* Primäre Handlung: Markenfläche mit dunklem Text (9,18:1), nie weißer Text. */
+  --farbe-akzent:       var(--farbe-marke-500);
+  --farbe-akzent-auf:   #151717;
+  --farbe-akzent-hover: var(--farbe-marke-300);   /* wird HELLER beim Zeigen */
+  --farbe-akzent-aktiv: var(--farbe-marke-600);
+
+  /* Flächen */
+  --farbe-flaeche:        #ffffff;
+  --farbe-flaeche-alt:    #f5fbf8;   /* getönte helle Fläche für abwechselnde Sektionen */
+  --farbe-flaeche-dunkel: #151717;   /* neutraler Dunkelton, kein getöntes Markenschwarz */
+
+  /* Text */
+  --farbe-text:               #151717;
+  --farbe-text-leise:         #5c6360;   /* auf Weiß 6,0:1 — geprüft, nicht geschätzt */
+  --farbe-text-invers:        #f6f7f6;
+  --farbe-text-invers-leise:  rgba(246, 247, 246, 0.72);
+
+  --farbe-rahmen:       #e3e8e5;
+  --farbe-rahmen-stark: #cecece;
+
+  /* Semantik */
+  --farbe-erfolg:      var(--farbe-marke-750);
+  --farbe-fehler:      #b52b2b;
+  --farbe-fehler-hell: #db5a5a;
+  --farbe-warnung:     #9a6700;
+
+  /*
+    FOKUSRING — auf hellen Flächen dunkel.
+    Die Markenfarbe würde hier 1,96:1 erreichen und WCAG 1.4.11 reißen.
+    Dunkle Sektionen schalten ihn unten auf die Markenfarbe um (dort 9,18:1).
+  */
+  --farbe-fokus: #151717;
+
+  /* ---------------------------------------------------------------------
+     TYPOGRAFIE
+     --------------------------------------------------------------------- */
+  --schrift-text:    'Instrument Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --schrift-display: 'Outfit', var(--schrift-text);
+
+  --zeilenhoehe-eng:    1.08;   /* große Überschriften */
+  --zeilenhoehe-mittel: 1.3;    /* kleine Überschriften, Buttons */
+  --zeilenhoehe-normal: 1.6;    /* Fließtext */
+
+  /*
+    TYPOSKALA, ZWEI STUFEN.
+
+    Diese Kurven sind für 320–1200 px gebaut und deckeln dort. Der Block am Ende
+    der Datei hebt die Deckel ab 1200 px an.
+
+    Grund: Eine einzige clamp-Kurve von 320 bis 1920 lässt die Schriften zwischen
+    768 und 1200 px zu schnell wachsen. Dort wird die Heldenüberschrift vierzeilig
+    und der Heldenbereich höher als das Fenster. Mit zwei Stufen bleibt die Zeile
+    auf Tablet und kleinem Laptop bei drei Zeilen, und die großen Grade stehen
+    erst auf echtem Desktop zur Verfügung.
+  */
+  --text-xs:   clamp(0.875rem, 0.86rem + 0.06vw, 0.9375rem);  /* 14 px ist die kleinste erlaubte Stufe */
+  --text-sm:   clamp(0.875rem, 0.85rem + 0.13vw, 0.95rem);
+  --text-base: clamp(1rem, 0.97rem + 0.15vw, 1.0625rem);
+  --text-lg:   clamp(1.0625rem, 1rem + 0.3vw, 1.25rem);
+  --text-h4:   clamp(1.125rem, 1.03rem + 0.48vw, 1.4rem);
+  --text-h3:   clamp(1.375rem, 1.15rem + 1.1vw, 1.9rem);
+  --text-h2:   clamp(1.75rem, 1.28rem + 2.35vw, 2.5rem);
+  --text-h1:   clamp(2.125rem, 1.29rem + 4.2vw, 3.25rem);
+  --text-zahl: clamp(2rem, 1.5rem + 2.5vw, 3.25rem);
+
+  /* ---------------------------------------------------------------------
+     RAUM
+     --------------------------------------------------------------------- */
+  --raum-1: 0.25rem;  --raum-2: 0.5rem;   --raum-3: 0.75rem;
+  --raum-4: 1rem;     --raum-6: 1.5rem;   --raum-8: 2rem;
+  --raum-12: 3rem;    --raum-16: 4rem;    --raum-24: 6rem;
+  --raum-32: 8rem;
+
+  /*
+    FLIESSENDER RHYTHMUS statt fester Abstände mit Umschaltpunkt.
+    Mit Umschaltpunkt springt das Layout an genau einer Breite; fließend
+    wächst es mit.
+  */
+  --raum-sektion:     clamp(3rem, 1.4rem + 6.4vw, 6rem);
+  --raum-sektion-eng: clamp(2.25rem, 1.25rem + 4vw, 4rem);
+  --raum-block:       clamp(2rem, 1.2rem + 3.2vw, 4rem);
+  --raum-spalte:      clamp(1.5rem, 0.9rem + 2.4vw, 3rem);
+
+  /* ---------------------------------------------------------------------
+     LAYOUT
+
+     HALTEPUNKTE DES PROJEKTS — als Kommentar, weil Custom Properties in
+     Media Queries NICHT gelten. Die Werte stehen also mehrfach im Code; diese
+     Liste verhindert, dass jede Sektion eigene erfindet.
+
+       480 px   kleines Handy
+       640 px   großes Handy, ab hier zweispaltige Karten
+       861 px   Umschaltpunkt Menü und Mobilbalken, ab hier Desktopnavigation
+       1100 px  kleiner Laptop, ab hier volle Zweispaltigkeit
+       1200 px  Desktop, ab hier die große Typostufe
+     --------------------------------------------------------------------- */
+  --breite-inhalt: 1200px;
+  --breite-text:   64ch;       /* unter 80 Zeichen Zeilenlänge */
+  --rand-seite:    clamp(1.125rem, 0.6rem + 2.4vw, 3rem);
+  --hoehe-kopf:    clamp(3.75rem, 3.2rem + 2vw, 4.5rem);
+  --hoehe-topleiste: 2.25rem;
+  /*
+    Gesamthöhe der sticky Gruppe. Jede Stelle, die Abstand dazu braucht
+    (Sprungziele über scroll-padding-top, sticky Bühnen, Kartenstapel), rechnet
+    mit DIESEM Token, nicht nur mit --hoehe-kopf.
+  */
+  --hoehe-kopf-gruppe: calc(var(--hoehe-topleiste) + var(--hoehe-kopf));
+
+  /* ---------------------------------------------------------------------
+     FORM
+     --------------------------------------------------------------------- */
+  --radius-s: 0.5rem;
+  --radius-m: 1rem;
+  --radius-l: 1.75rem;
+  --radius-pille: 999px;
+
+  --schatten-weich: 0 1px 2px rgba(21, 23, 23, 0.06), 0 8px 24px rgba(21, 23, 23, 0.08);
+  --schatten-hoch:  0 12px 40px rgba(21, 23, 23, 0.16);
+
+  --dauer-schnell: 0.2s;
+  --dauer-normal:  0.4s;
+  --kurve: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/*
+  Zweite Typostufe ab echtem Desktop. Erst hier dürfen die Schriften über die auf
+  Tablet nötigen Deckel hinauswachsen.
+*/
+@media (min-width: 1200px) {
+  :root {
+    --text-h4:   clamp(1.4rem, 1.1rem + 0.5vw, 1.6rem);
+    --text-h3:   clamp(1.9rem, 1.4rem + 0.8vw, 2.1rem);
+    --text-h2:   clamp(2.5rem, 1.6rem + 1.5vw, 3rem);
+    --text-h1:   clamp(3.25rem, 0.75rem + 4.2vw, 4.25rem);
+    --text-zahl: clamp(3.25rem, 2.4rem + 1.4vw, 3.8rem);
+  }
+}
+
+/*
+  Dunkle Sektionen und der Fuß schalten den Fokusring auf die Markenfarbe um:
+  auf #151717 erreicht sie 9,18:1, dort stimmt der Kontrast wieder.
+*/
+.sektion--dunkel,
+.fuss {
+  --farbe-fokus: var(--farbe-marke-500);
+}
