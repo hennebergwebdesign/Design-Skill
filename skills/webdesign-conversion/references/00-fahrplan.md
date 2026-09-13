@@ -20,6 +20,10 @@ Anzeigenbudget, sondern hat den Fehler eine Etage tiefer.
 **Artefakte:** Zielgruppenformel, USP-Formel, Einwandliste, Wettbewerbsblick, primäre und
 sekundäre Conversion. Siehe `01-strategie-positionierung.md`.
 
+**Existiert bereits eine Marke oder eine alte Seite**, wird sie in diesem Schritt ausgelesen:
+Logo, Farben, Schrift, Formsprache, siehe `20-markenextraktion-bestandsseite.md`. Das
+Ergebnis geht in `marke-brief.md` Abschnitt 7 und `marke.json` unter `herkunft`.
+
 **Abbruchkriterium:** Ohne diese vier Antworten wird nicht weitergearbeitet. Eine erfundene
 Zielgruppe ist schlimmer als keine, weil sie sich durch jede spätere Entscheidung zieht.
 
@@ -52,9 +56,15 @@ Liste offener Punkte.
 
 **Ziel:** Ein Tokensystem und ein Layoutkonzept, die zu genau diesem Kunden gehören.
 
+**Vor dem ersten Durchgang:** Referenzrecherche auf mindestens einer Premium-Designquelle
+(Awwwards, Dribbble, Land-book, recent.design, 21st.dev), 2–3 passende Referenzen notiert,
+siehe `22-premium-designquellen.md`.
+
 Zwei Durchgänge: erst Plan (4–6 Farben mit Namen und Hex, Schriften mit Rollen,
 Layoutkonzept in einem Satz plus ASCII-Skizze, drei Prinzipien), dann Prüfung gegen den
-Brief, dann erst Code. Siehe `10-visuelle-richtung.md`.
+Brief, dann erst Code. Siehe `10-visuelle-richtung.md`. Bildhintergründe und die Trennung
+oder Hierarchie zwischen Sektionen werden Teil des Plans, nicht Nachgedanke beim Bauen,
+siehe `21-sektionshintergruende-hierarchie.md`.
 
 ## 5 Bau
 

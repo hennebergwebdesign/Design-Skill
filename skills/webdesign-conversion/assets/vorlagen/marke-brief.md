@@ -106,6 +106,25 @@ Ihr Partner für · Herzlich willkommen · Wir über uns · Qualität seit
 
 ## 7 Visuelle Richtung
 
+**Bestehende Marke/CI**, falls vorhanden. Ableitung in
+`20-markenextraktion-bestandsseite.md`, ausgefüllt vor Durchgang 1.
+
+| Feld | Wert | Übernommen / bewusst geändert, weil … |
+|---|---|---|
+| Quelle (URL oder „nur Print/Logo") | [[FEHLT]] | |
+| Logo | [[FEHLT]] | |
+| Primärfarbe(n) | [[FEHLT]] | |
+| Schrift | [[FEHLT]] | |
+| Formsprache/Ton | [[FEHLT]] | |
+
+**Referenzen aus Premium-Designquellen**, siehe `22-premium-designquellen.md`. Vor Durchgang
+1 recherchiert, nicht danach als Nachgedanke:
+
+| Quelle | Link | Was übernommen wird |
+|---|---|---|
+| [[FEHLT: Awwwards/Dribbble/Land-book/recent.design/21st.dev]] | [[FEHLT]] | [[FEHLT]] |
+| [[FEHLT]] | [[FEHLT]] | [[FEHLT]] |
+
 Erst füllen, nachdem Durchgang 1 und 2 aus `10-visuelle-richtung.md` gelaufen sind.
 
 **Layoutkonzept in einem Satz Prosa:**
