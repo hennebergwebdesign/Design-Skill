@@ -9,8 +9,10 @@
     Farbrampe  → Rollen → Flächen/Text/Rahmen/Fokus/Semantik
     Typografie → Familien, Zeilenhöhen, Skala (clamp, zwei Stufen)
     Raum       → feste Skala + fließende Rhythmen
-    Layout     → Breiten, Ränder, Kopfhöhe
-    Form       → Radien, Schatten, Dauer, Kurve
+    Layout     → Breiten, Ränder, Kopfhöhe, Haltepunktliste
+    Form       → Radien, Schatten
+    Bewegung   → fünf Dauern, drei Kurven mit Bedeutung, Amplituden
+    Icons      → Raster, Strichstärke, Radius, Größen
 
   Die Beispielwerte sind eine grüne Marke. Ersetzen — aber die KOMMENTARE behalten,
   sie erklären, warum die Struktur so ist.
@@ -168,9 +170,73 @@
   --schatten-weich: 0 1px 2px rgba(21, 23, 23, 0.06), 0 8px 24px rgba(21, 23, 23, 0.08);
   --schatten-hoch:  0 12px 40px rgba(21, 23, 23, 0.16);
 
-  --dauer-schnell: 0.2s;
-  --dauer-normal:  0.4s;
-  --kurve: cubic-bezier(0.22, 1, 0.36, 1);
+  /* ---------------------------------------------------------------------
+     BEWEGUNG
+
+     Fünf Dauern statt zwei, weil Dauer der DISTANZ und der FLÄCHE folgt.
+     Ein Fokusring, der 0.4s braucht, fühlt sich kaputt an. Ein Off-Canvas-
+     Panel, das in 0.2s einfährt, wirkt hektisch.
+
+     Ableitung der Handschrift je Marke: 18-motion-handschrift.md.
+     --------------------------------------------------------------------- */
+  --dauer-sofort:  0.12s;   /* Zustandsfarbe, Fokusring, Haken in einer Checkbox */
+  --dauer-schnell: 0.2s;    /* Hover, Verschiebungen unter 8 px */
+  --dauer-normal:  0.4s;    /* Akkordeon, Karte anheben, Bild zoomen */
+  --dauer-lang:    0.6s;    /* Off-Canvas-Panel, Dialog, große Flächen */
+  --dauer-sequenz: 0.9s;    /* orchestrierte Heldensequenz, Gesamtlaufzeit */
+
+  /*
+    DREI KURVEN MIT BEDEUTUNG, nicht eine für alles.
+
+    eintritt  stark dezeleriert — das Element LANDET
+    austritt  akzeleriert       — das Element GEHT WEG und blockiert nicht
+    wechsel   symmetrisch       — keine Richtung, also keine Betonung
+
+    --kurve bleibt als Alias auf eintritt, damit bestehender Code weiter läuft.
+  */
+  --kurve-eintritt: cubic-bezier(0.22, 1, 0.36, 1);
+  --kurve-austritt: cubic-bezier(0.4, 0, 1, 1);
+  --kurve-wechsel:  cubic-bezier(0.4, 0, 0.2, 1);
+  --kurve: var(--kurve-eintritt);
+
+  /*
+    AUSTRITTE SIND KÜRZER ALS EINTRITTE, etwa 60 bis 70 %.
+
+    Ein Menü, das genauso lang schließt wie es öffnet, fühlt sich träge an: der
+    Nutzer hat sich schon entschieden, das Warten ist reine Verzögerung. Das ist
+    einer der wenigen Motion-Werte, den fast jedes Projekt gleich braucht, und
+    einer der häufigsten ungesehenen Fehler.
+  */
+  --dauer-aus-normal: 0.26s;   /* zu --dauer-normal */
+  --dauer-aus-lang:   0.4s;    /* zu --dauer-lang */
+
+  /* Amplitude: wie weit ein Element beim Auftritt reist. Klein bei präzisen
+     Marken, groß bei verspielten. Siehe die Profiltabelle in 18. */
+  --weg-klein:  8px;
+  --weg-normal: 16px;
+  --weg-gross:  24px;
+
+  /* ---------------------------------------------------------------------
+     ICONS
+
+     Die Strichstärke folgt dem Gewicht der Display-Schrift, nicht dem Zufall:
+     ein Icon mit 1.5px Strich neben einer Headline in 700 wirkt verloren.
+
+       300–400  → 1.5px      500–600  → 1.75px
+       700+     → 2px        sehr fett → 2.25px oder Flächenicons
+
+     Der Eckenradius im Icon ist NICHT derselbe Wert wie im Layout: eine Karte
+     mit 16px Radius bedeutet für ein 24px-Icon etwa 2px. Proportional zur
+     Fläche, nicht absolut.
+
+     Ableitung: 17-icons-eigenes-system.md.
+     --------------------------------------------------------------------- */
+  --icon-raster:        24;       /* viewBox, einheitlich für das ganze Set */
+  --icon-strich:        2px;      /* passt zu Outfit 700 */
+  --icon-radius:        2px;
+  --icon-groesse:       1.5rem;   /* 24px, Standarddarstellung */
+  --icon-groesse-klein: 1.25rem;  /* 20px, in Buttons und Formularen */
+  --icon-groesse-gross: 3rem;     /* 48px, Leistungssektion — eigene Fassung zeichnen */
 }
 
 /*

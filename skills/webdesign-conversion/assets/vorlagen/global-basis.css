@@ -273,3 +273,60 @@ button, input, select, textarea { font: inherit; color: inherit; }
 @media (min-width: 861px) and (min-height: 800px) {
   .held { min-height: auto; padding-block-start: 12vh; }
 }
+
+/*
+  GESTUFTE REDUZIERTE BEWEGUNG.
+
+  prefers-reduced-motion: reduce heißt nicht "keine Rückmeldung", sondern "keine
+  vestibulär auslösende Bewegung". Der Unterschied ist wichtig: ein Akkordeon,
+  das ohne jede Animation aufspringt, wirkt wie ein Fehler.
+
+  Deshalb KEIN pauschales
+      * { animation: none !important; transition: none !important }
+  Das killt auch Deckkraft- und Farbübergänge und lässt jeden Zustandswechsel
+  sprunghaft aussehen.
+
+  Erlaubt bleiben: opacity, background-color, border-color, color, box-shadow.
+  Es entfallen: translate, scale, rotate, Parallaxe, Pinning, scrollgebundene
+  Bewegung, Autoplay-Karussell und Marquee.
+
+  Siehe 18-motion-handschrift.md.
+*/
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0ms !important;
+    scroll-behavior: auto !important;
+  }
+  /* Rückmeldung erhalten, nur kurz und ohne Bewegung. */
+  a, button, input, select, textarea, summary, .btn, .hebt, [data-zustand] {
+    transition-property: opacity, background-color, border-color, color, box-shadow !important;
+    transition-duration: 0.15s !important;
+  }
+}
+
+/*
+  SCROLL-DRIVEN EINBLENDUNG — ohne JavaScript, ohne IntersectionObserver.
+
+  Der Anfangszustand steht IN den Keyframes, nicht als Regel am Element. Wer
+  opacity: 0 außerhalb des @supports-Blocks setzt, macht Inhalt in Browsern ohne
+  Unterstützung dauerhaft unsichtbar. Das ist der häufigste Fehler bei diesem
+  Muster und verstößt gegen die harte Grenze aus SKILL.md.
+
+  Sparsam einsetzen: eine Einblendung an JEDER Sektion liest sich als maschinell
+  erzeugt (09-motion-gsap.md). Ein data-anim-gruppe je Seite reicht.
+*/
+@keyframes auf-einblenden {
+  from { opacity: 0; transform: translateY(var(--weg-normal)); }
+  to   { opacity: 1; transform: none; }
+}
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    [data-anim='auf'] {
+      animation: auf-einblenden linear both;
+      animation-timeline: view();
+      animation-range: entry 20% entry 60%;
+    }
+  }
+}
