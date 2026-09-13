@@ -1,0 +1,26 @@
+{
+  "name": "webdesign-conversion",
+  "description": "Conversion-orientiertes Webdesign für den DACH-Raum: Strategie, Design, Performance, Barrierefreiheit (BFSG/WCAG 2.2 AA), SEO, Conversion-Architektur, Motion mit GSAP, shadcn/ui sowie der komplette rechtliche und technische Pflichtaufbau (Impressum, Datenschutz, Consent, 404, robots.txt, Sitemap, Redirects, Security-Header).",
+  "version": "1.0.0",
+  "author": {
+    "name": "Henneberg Webdesign"
+  },
+  "license": "MIT",
+  "keywords": [
+    "webdesign",
+    "conversion",
+    "landingpage",
+    "seo",
+    "barrierefreiheit",
+    "bfsg",
+    "wcag",
+    "dsgvo",
+    "impressum",
+    "datenschutz",
+    "astro",
+    "gsap",
+    "shadcn",
+    "performance",
+    "ux"
+  ]
+}

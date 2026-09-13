@@ -1,0 +1,107 @@
+<!--
+  Head-Vorlage: SEO, Open Graph, Schriften, Consent-Default.
+
+  Astro: als src/layouts/Base.astro mit Props titel, beschreibung, ogBild, noindex,
+  vorladeBild. Next.js App Router: über die Metadata-API, die Reihenfolge bleibt gleich.
+
+  Die Domain kommt IMMER aus einer Variablen (PUBLIC_SITE_URL), nie als hart kodierter
+  String — sie steuert canonical, Open Graph, Sitemap und robots.txt gleichzeitig.
+-->
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Titel: max. 60 Zeichen, Keyword vorn, Benefit rein, keine Floskeln -->
+    <title>{titel}</title>
+    <!-- Beschreibung: max. 160 Zeichen, 3 Benefits mit ✓, CTA am Ende -->
+    <meta name="description" content={beschreibung} />
+
+    <!-- Absolut und selbstreferenzierend -->
+    <link rel="canonical" href={kanonisch} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+
+    <meta name="theme-color" content="#151717" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <!-- Die zwei wichtigsten Schnitte vorladen, mehr nicht -->
+    <link rel="preload" href="/fonts/display-700.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/text-400.woff2" as="font" type="font/woff2" crossorigin />
+
+    <!--
+      Das Heldenbild ist das größte Element über der Falz. Ohne Vorladen findet der
+      Browser es erst, wenn das Stylesheet steht und das Markup geparst ist; mit
+      Vorladen läuft es parallel zu beidem.
+    -->
+    {vorladeBild && <link rel="preload" href={vorladeBild} as="image" fetchpriority="high" />}
+
+    <!-- Open Graph: Bild absolut, 1200 × 630 -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="[[FEHLT: Markenname]]" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:title" content={titel} />
+    <meta property="og:description" content={beschreibung} />
+    <meta property="og:url" content={kanonisch} />
+    <meta property="og:image" content={ogAbsolut} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={titel} />
+    <meta name="twitter:description" content={beschreibung} />
+    <meta name="twitter:image" content={ogAbsolut} />
+
+    <!-- Seitenspezifisches: JSON-LD, zusätzliche Preloads -->
+    <slot name="kopf" />
+
+    <!--
+      Consent Mode Default MUSS vor dem GTM-Skript stehen, sonst feuert der Tag Manager
+      vor der Entscheidung. Das GTM-Skript selbst ist als text/plain geparkt und wird
+      erst nach der Einwilligung durch ein echtes Skript ersetzt.
+    -->
+    {gtmId && (
+      <>
+        <script is:inline>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){ dataLayer.push(arguments); }
+          gtag('consent', 'default', {
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied',
+            analytics_storage: 'denied',
+            functionality_storage: 'denied',
+            personalization_storage: 'denied',
+            security_storage: 'granted',
+            wait_for_update: 500,
+          });
+        </script>
+        <script is:inline type="text/plain" data-consent="statistik"
+                data-src={`https://www.googletagmanager.com/gtm.js?id=${gtmId}`}></script>
+      </>
+    )}
+  </head>
+
+  <body>
+    <!-- Erstes fokussierbares Element, bei Fokus sichtbar -->
+    <a class="sprunglink" href="#hauptinhalt">Zum Inhalt springen</a>
+
+    <div class="kopf-gruppe" data-kopf-gruppe>
+      <!-- Topbar (optional) + Header -->
+    </div>
+
+    <!-- Off-Canvas-Menü als GESCHWISTER der Kopfgruppe, nicht als Kind:
+         ein Element mit aktivem transform wird zum Containing Block für
+         position: fixed und das Panel springt während der Ein-/Ausfahrt weg. -->
+    <!-- <MobilNav /> -->
+
+    <main id="hauptinhalt" tabindex="-1">
+      <slot />
+    </main>
+
+    <!-- <Footer /> mit Links: Impressum, Datenschutz, Cookie-Einstellungen -->
+    <!-- <ConsentBanner /> -->
+  </body>
+</html>
