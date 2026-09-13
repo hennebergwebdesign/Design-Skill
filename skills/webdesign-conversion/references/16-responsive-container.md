@@ -170,20 +170,22 @@ springt dabei. Für einen Heldenbereich ist das sichtbar und störend. `dvh` ist
 ein Off-Canvas-Panel, das den Bildschirm füllen soll, und falsch für alles, was während des
 Scrollens sichtbar ist.
 
-**Und die Regel aus `02-design-ux.md` gilt weiter:** `min-height: 100svh` am Heldenbereich
-erzwingt auf 13-Zoll-Notebooks (etwa 720 px Fensterhöhe) entweder eine Lücke oder Beschnitt.
-Besser ab mittleren Desktopbreiten `min-height: auto` plus vh-basiertes
-`padding-block-start`.
+**Projektstandard, siehe `02-design-ux.md`:** der Heldenbereich bleibt auf **jeder** Breite
+und Fensterhöhe bei voller Bildschirmhöhe, keine Rückstufung auf `min-height: auto` ab
+mittleren Desktopbreiten.
 
 ```css
 .held { min-height: 100svh; }
-@media (min-width: 861px) and (min-height: 800px) {
-  .held { min-height: auto; padding-block-start: 12vh; }
+@media (max-height: 750px) {
+  .held { padding-block: clamp(1.5rem, 4vh, 3rem); }
+  .held__bild { max-height: 40vh; }
 }
 ```
 
-Die zweite Bedingung ist der Punkt: **auch die Fensterhöhe abfragen.** Ein
-Breitbild-Notebook mit 1440 × 720 braucht andere Behandlung als ein 1440 × 1080-Monitor.
+Die zweite Regel ist der Punkt: **auch die Fensterhöhe abfragen**, aber um den Innenabstand
+und die Bildgröße zu verkleinern, nicht um den Heldenbereich selbst zu verkürzen. Ein
+Breitbild-Notebook mit 1440 × 720 braucht kompakteren Innenabstand als ein
+1440 × 1080-Monitor, bleibt aber bei 100 % Höhe.
 
 ## Acht Szenarien, die immer weh tun
 
