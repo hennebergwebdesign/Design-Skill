@@ -101,9 +101,13 @@ Beschreibung kostet 50–70 % der Klicks, selbst bei Top-Rankings.
 **Formel:** `[Hauptkeyword] – [Benefit/USP] | [Standort/Marke]`
 
 Beispiele:
-- „Physiotherapie Dachau – Rückenschmerzen weg in 6 Wochen"
-- „Steuerberater München Freelancer – Spare bis zu 8.400 € im Jahr"
-- „Zahnarzt Berlin Mitte – Termin in 24h, auch samstags"
+- „Physiotherapie Dachau | Rückenschmerzen weg in 6 Wochen"
+- „Steuerberater München Freelancer | Spare bis zu 8.400 € im Jahr"
+- „Zahnarzt Berlin Mitte | Termin in 24h, auch samstags"
+
+**Trenner ist der senkrechte Strich `|` oder der Doppelpunkt, nie ein Gedankenstrich.**
+Der Meta-Titel ist Seitentext, für ihn gilt die Strichregel aus `12-copywriting.md`.
+
 
 Regeln: maximal **60 Zeichen**, Keyword am Anfang, Benefit oder USP rein, keine Floskeln
 („Herzlich willkommen …"). Jeder Titel auf der Domain ist einmalig.

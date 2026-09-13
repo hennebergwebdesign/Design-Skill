@@ -21,9 +21,9 @@ desto höher die Abschlussquote.
 
 | Vorher (unbrauchbar) | Nachher |
 |---|---|
-| „Ihre Orthopäden in Bochum." | „Wir helfen Menschen mit wiederkehrenden Rückenschmerzen, die Ursache klar abzuklären und einen Plan zu bekommen — ohne ‚schonen und abwarten' und ohne Dauer-Schmerzmittel." |
-| „Wir bieten Flachdach-Lösungen für Ihr Unternehmen." | „Wir helfen Gewerbebetrieben mit Flachdächern, Feuchtigkeitsschäden zu vermeiden und die Abdichtung zu erneuern — ohne Produktionsausfall und ohne ständige Nachbesserungen." |
-| „Wir sind Ihr kompetenter Ansprechpartner im Familienrecht." | „Wir unterstützen Selbstständige in Scheidungssituationen, Vermögen und Firma zu schützen — ohne Rosenkrieg und ohne jahrelange Auseinandersetzungen." |
+| „Ihre Orthopäden in Bochum." | „Wir helfen Menschen mit wiederkehrenden Rückenschmerzen, die Ursache klar abzuklären und einen Plan zu bekommen: ohne ‚schonen und abwarten', ohne Dauer-Schmerzmittel." |
+| „Wir bieten Flachdach-Lösungen für Ihr Unternehmen." | „Wir helfen Gewerbebetrieben mit Flachdächern, Feuchtigkeitsschäden zu vermeiden und die Abdichtung zu erneuern: ohne Produktionsausfall, ohne ständige Nachbesserungen." |
+| „Wir sind Ihr kompetenter Ansprechpartner im Familienrecht." | „Wir unterstützen Selbstständige in Scheidungssituationen, Vermögen und Firma zu schützen: ohne Rosenkrieg, ohne jahrelange Auseinandersetzungen." |
 
 Was die rechte Spalte gemeinsam hat: eine benannte Gruppe, ein benanntes Problem, eine
 benannte Angst. Was die linke gemeinsam hat: nichts davon.
