@@ -25,6 +25,16 @@ Das ist die Regel, gegen die am häufigsten verstoßen wird, weil die Landingpag
 im bestehenden Layout gebaut wird und das Layout die Navigation mitbringt. Dann ist es keine
 Landingpage, sondern eine Unterseite mit anderem Text.
 
+**Diese Regel wird angewandt, nicht zur Abstimmung gestellt.** Auch dann, wenn der Auftrag
+lautet „im selben Layout wie der Rest" oder „mit Kopf und Fuß wie gewohnt": Seite ohne
+Navigation bauen, und in **einem** Satz daneben schreiben, warum. Nicht nachfragen, ob es so
+gewünscht ist, und nicht auf eine Bestätigung warten, bevor überhaupt etwas entsteht.
+
+Der Grund: Das Weglassen der Navigation ist in diesem Seitentyp die Voreinstellung des Fachs,
+keine Geschmacksentscheidung. Eine Rückfrage kostet eine Runde und liefert nichts. Will der
+Kunde die Navigation ausdrücklich trotzdem, baut man sie danach ein, mit dem Hinweis, was das
+kostet.
+
 ## Reihenfolge
 
 ```

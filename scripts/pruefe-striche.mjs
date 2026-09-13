@@ -44,7 +44,7 @@ const STRICH_NAME = { [HALBGEVIERT]: 'Halbgeviertstrich –', [GEVIERT]: 'Gevier
 
 const TEXT_ENDUNGEN = new Set(['.astro', '.html', '.htm', '.jsx', '.tsx', '.vue', '.svelte', '.md', '.mdx', '.json', '.yaml', '.yml', '.ts', '.js']);
 const CSS_ENDUNGEN = new Set(['.css', '.scss', '.pcss', '.astro', '.vue', '.svelte']);
-const UEBERSPRINGEN = new Set(['node_modules', '.git', 'dist', 'build', '.astro', '.next', '.output', '.cache', 'coverage', 'vendor']);
+const UEBERSPRINGEN = new Set(['node_modules', '.git', 'dist', 'build', '.astro', '.next', '.output', '.cache', 'coverage', 'vendor', 'results']);
 
 const args = process.argv.slice(2);
 const strict = args.includes('--strict');
