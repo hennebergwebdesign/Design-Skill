@@ -20,6 +20,45 @@ Copy kann eine Gestaltung genauso schablonenhaft wirken lassen wie das Layout se
 - **Gesprochener Ton:** einfache Verben, normale Groß-/Kleinschreibung, kein Füllwerk,
   angepasst an Marke und Publikum.
 
+## Keine Gedankenstriche
+
+Der Gedankenstrich als Satzzeichen ist das stärkste Erkennungsmerkmal maschinell
+geschriebener Texte, im Deutschen noch deutlicher als im Englischen:
+
+> „Schnelle Websites — die auch Anfragen bringen"
+> „Ihr Partner für Sanierung – zuverlässig, termingerecht, sauber"
+
+Beides liest sich sofort generiert. Deshalb gilt als harte Grenze:
+
+- **Kein Halbgeviertstrich (–) und kein Geviertstrich (—) in Headlines, Subheadlines,
+  Buttontexten, Linktexten, Alt-Texten und `aria-label`.** Dort ist der Befund ein Fehler.
+- **Im Fließtext ebenfalls nicht** als Einschub oder Gedankenpause. Ein Einschub mit
+  Strichen ist fast immer ein Satz, der zu viel gleichzeitig will.
+- **Erlaubt bleibt der Bereichsstrich** bei Zahlen: „10–12 Uhr", „5–7 Tage", „2013–2026".
+  Das ist Typografie, keine Rhetorik.
+- **Der echte Bindestrich im Kompositum bleibt erlaubt**, wo die Rechtschreibung ihn
+  verlangt: „E-Mail-Adresse", „Leckage-Ortung", „Web-App".
+
+### Der Ersatz macht den Text besser, nicht nur regelkonform
+
+| Statt | Besser | Warum |
+|---|---|---|
+| „Flachdach sanieren — ohne Produktionsstopp" | „Flachdach sanieren, ohne Produktionsstopp" | das Komma trägt denselben Bruch |
+| „Leckage-Ortung in 48 Stunden – dokumentiert" | „Leckage-Ortung in 48 Stunden: dokumentiert" | der Doppelpunkt hat eine Richtung, der Strich nicht |
+| „Wir prüfen das Dach — und finden die Ursache" | „Wir prüfen das Dach. Und finden die Ursache." | zwei Sätze, doppelte Betonung |
+| „Unsere Leistung — Ihr Vorteil" | „Unsere Leistung, Ihr Vorteil" | der Strich war nur Dekoration |
+
+**Der Doppelpunkt ist in Headlines meist der richtige Ersatz**, weil er eine Richtung hat:
+links die Behauptung, rechts der Beweis. Der Gedankenstrich kann beides und entscheidet
+sich für nichts.
+
+Geprüft wird das nicht per Auge, sondern mit `scripts/pruefe-striche.mjs`. Eine Regel ohne
+Prüfung wird in der dritten Sitzung zurückgedreht.
+
+Zur Silbentrennung am Zeilenende siehe `02-design-ux.md` und
+`../assets/vorlagen/global-basis.css`: `hyphens: auto` ist aus demselben Grund verboten,
+aber das ist eine CSS-Frage, keine Textfrage.
+
 ## Above the Fold
 
 | Element | Formel | Beispiel |
@@ -62,8 +101,8 @@ Oberfläche, nicht als Person. Sie entschuldigen sich nicht und sie bleiben nie 
 | „Ungültige Eingabe." | „Diese E-Mail-Adresse fehlt ein @. Bitte prüfen." |
 | „Leider ist etwas schiefgelaufen. Wir entschuldigen uns!" | „Das Formular ist gerade nicht erreichbar. Rufen Sie uns an: 0123 456789" |
 
-Ein leerer Zustand ist eine Einladung zum Handeln, keine Stimmung. „Noch keine Anfragen —
-teilen Sie den Link, um die erste zu bekommen" statt „Hier ist es noch leer".
+Ein leerer Zustand ist eine Einladung zum Handeln, keine Stimmung. „Noch keine Anfragen.
+Teilen Sie den Link, um die erste zu bekommen" statt „Hier ist es noch leer".
 
 ## Struktur langer Texte
 

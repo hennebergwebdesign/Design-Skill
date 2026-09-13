@@ -1,0 +1,194 @@
+{
+  "$kommentar": [
+    "Maschinenlesbarer Teil des Markenbriefs. Die Prosa steht in marke-brief.md.",
+    "Diese Datei ist die EINZIGE Quelle für Farbrollen, Schriften, Motion, Icons und Sprache.",
+    "Aus ihr leiten ab: tokens.css, das Icon-Set, die Motion-Kurven und jede Copy-Prüfung.",
+    "Genau deshalb passen bei KI-gebauten Seiten Design, Animation und Text selten zusammen:",
+    "sie kommen aus vier getrennten Entscheidungen statt aus einer Datei.",
+    "Regel: Was hier nicht steht, darf im Komponentencode nicht als Wert auftauchen.",
+    "Alle Werte unten sind Beispiele einer grünen Marke. Ersetzen, Struktur behalten."
+  ],
+
+  "projekt": {
+    "kunde": "[KUNDE]",
+    "typ": "homepage",
+    "$typ_erlaubt": ["homepage", "landingpage", "recruiting-funnel"],
+    "stand": "JJJJ-MM-TT",
+    "sprache": "de-DE"
+  },
+
+  "farbe": {
+    "$kommentar": [
+      "rampe = die Palette, rollen = die Schnittstelle. Komponenten greifen NUR auf rollen zu.",
+      "marke_text ist die einzige Markenstufe, die als Text auf hellen Flächen erlaubt ist.",
+      "Eine helle gesättigte Markenfarbe ist eine FLÄCHENFARBE, keine Textfarbe."
+    ],
+    "rampe": {
+      "marke-50": "#d5f1e3",
+      "marke-100": "#c9eddb",
+      "marke-200": "#b2e4ca",
+      "marke-300": "#9adcba",
+      "marke-400": "#82d4aa",
+      "marke-500": "#6acc9a",
+      "marke-600": "#59ab81",
+      "marke-700": "#488b69",
+      "marke-750": "#356a4f"
+    },
+    "rollen": {
+      "marke": "marke-500",
+      "marke_hell": "marke-50",
+      "marke_text": "marke-750",
+      "akzent": "marke-500",
+      "akzent_auf": "#151717",
+      "flaeche": "#ffffff",
+      "flaeche_alt": "#f5fbf8",
+      "flaeche_dunkel": "#151717",
+      "text": "#151717",
+      "text_leise": "#5c6360",
+      "rahmen": "#e3e8e5",
+      "fokus": "#151717",
+      "erfolg": "marke-750",
+      "fehler": "#b52b2b",
+      "warnung": "#9a6700"
+    },
+    "geprueft": {
+      "$kommentar": "Von scripts/pruefe-kontrast.mjs gesetzt. Nicht per Hand pflegen.",
+      "stand": null,
+      "verstoesse": null
+    }
+  },
+
+  "typografie": {
+    "text": {
+      "familie": "Instrument Sans",
+      "lizenz": "OFL, selbst gehostet",
+      "schnitte": [400, 600]
+    },
+    "display": {
+      "familie": "Outfit",
+      "lizenz": "OFL, selbst gehostet",
+      "schnitte": [700]
+    },
+    "$lizenz_warnung": "Kommerzielle Schrift ohne Lizenz ist nicht einsetzbar, auch nicht für den Entwurf. Der spätere Tausch verschiebt jede Zeilenlänge.",
+    "strichstaerke_display": 700,
+    "$strichstaerke_hinweis": "Speist die Icon-Strichstärke unten. Eine fette Display-Schrift verträgt 2px, eine leichte nur 1.5px."
+  },
+
+  "raum": {
+    "$kommentar": "Basis 4px. Die Sprünge müssen groß werden, sonst sieht niemand den Unterschied. Siehe 15-spacing-rhythmus.md.",
+    "basis": 4,
+    "skala": [4, 8, 12, 16, 24, 32, 48, 64, 96, 128],
+    "rhythmus": {
+      "sektion": "clamp(3rem, 1.4rem + 6.4vw, 6rem)",
+      "block": "clamp(2rem, 1.2rem + 3.2vw, 4rem)",
+      "spalte": "clamp(1.5rem, 0.9rem + 2.4vw, 3rem)"
+    }
+  },
+
+  "layout": {
+    "breite_inhalt": "1200px",
+    "breite_text": "64ch",
+    "haltepunkte": {
+      "$kommentar": "Nur dokumentierend. Custom Properties gelten nicht in Media Queries, die Werte stehen im CSS mehrfach. Diese Liste verhindert, dass jede Sektion eigene erfindet.",
+      "480": "kleines Handy",
+      "640": "großes Handy, ab hier zweispaltige Karten",
+      "861": "Umschaltpunkt Menü und Mobilbalken",
+      "1100": "kleiner Laptop, volle Zweispaltigkeit",
+      "1200": "Desktop, große Typostufe"
+    },
+    "container_queries": true,
+    "$container_hinweis": "Komponenten reagieren auf ihren Container, nicht auf den Viewport. Media Queries sind die letzte Eskalationsstufe, siehe 16-responsive-container.md."
+  },
+
+  "motion": {
+    "$kommentar": [
+      "Drei Kurven mit Bedeutung, nicht eine für alles.",
+      "Austritte sind IMMER kürzer als Eintritte. Sonst fühlt sich die Oberfläche träge an.",
+      "Ableitung der Handschrift aus der Marke: 18-motion-handschrift.md."
+    ],
+    "handschrift": "[[FEHLT: drei Sätze, wie Bewegung bei dieser Marke klingt]]",
+    "profil": "praezise",
+    "$profil_erlaubt": ["praezise", "weich", "verspielt", "zurueckhaltend"],
+    "dauer": {
+      "sofort": 0.12,
+      "schnell": 0.2,
+      "normal": 0.4,
+      "lang": 0.6,
+      "sequenz": 0.9
+    },
+    "kurve": {
+      "eintritt": "cubic-bezier(0.22, 1, 0.36, 1)",
+      "austritt": "cubic-bezier(0.4, 0, 1, 1)",
+      "wechsel": "cubic-bezier(0.4, 0, 0.2, 1)"
+    },
+    "overshoot_erlaubt": false,
+    "signatur_moment": "[[FEHLT: die EINE Stelle, an der orchestriert wird]]",
+    "reduzierte_bewegung": "gestuft",
+    "$reduziert_hinweis": "gestuft = bei reduce bleibt Opazität, Bewegung entfällt. Besser als der harte Schnitt, weil Rückmeldung erhalten bleibt."
+  },
+
+  "icons": {
+    "$kommentar": "Ein Icon-Set wird abgeleitet, nicht ausgewählt. Siehe 17-icons-eigenes-system.md.",
+    "eigenes_set_fuer": ["[[FEHLT: meist die Leistungssektion]]"],
+    "bibliothek": "lucide",
+    "$bibliothek_hinweis": "Systemicons (Menü, Schließen, Pfeil, Haken) kommen aus der Bibliothek. Eigene Icons nur dort, wo man den Unterschied sieht.",
+    "raster": 24,
+    "sicherheitsrand": 2,
+    "stil": "linie",
+    "$stil_erlaubt": ["linie", "flaeche", "gemischt"],
+    "strichstaerke": 2,
+    "kappen": "rund",
+    "$kappen_erlaubt": ["rund", "kantig"],
+    "ecken": "rund",
+    "eckenradius": 2
+  },
+
+  "sprache": {
+    "$kommentar": "Gelesen von scripts/pruefe-striche.mjs. Die Verbotsliste ist der wirksamste Copy-Hebel, weil sie projektspezifisch ist.",
+    "anrede": "Sie",
+    "$anrede_erlaubt": ["Sie", "du"],
+    "ton": ["sachlich", "direkt", "handwerklich"],
+    "cta_primaer": "[[FEHLT: EIN Text, wörtlich, auf der ganzen Seite gleich]]",
+    "cta_sekundaer": "[[FEHLT]]",
+    "gedankenstriche_verboten": true,
+    "$striche_hinweis": "– und — sind auf der ganzen Seite verboten. Ersatz: Doppelpunkt, Komma oder zwei Sätze. Der echte Bindestrich im Kompositum bleibt erlaubt.",
+    "verbotene_woerter": [
+      "Lösung",
+      "innovativ",
+      "ganzheitlich",
+      "maßgeschneidert",
+      "Synergie",
+      "Ihr Partner für",
+      "Herzlich willkommen",
+      "Wir über uns",
+      "Qualität seit",
+      "zukunftssicher",
+      "aus einer Hand"
+    ]
+  },
+
+  "beweise": {
+    "$kommentar": "Kein Eintrag ohne quelle. Ein Eintrag ohne quelle wird gestrichen, nicht geschätzt (§ 5 UWG).",
+    "eintraege": [
+      {
+        "art": "bewertung",
+        "wert": null,
+        "quelle": null,
+        "stand": null,
+        "freigabe": false
+      }
+    ]
+  },
+
+  "recruiting": {
+    "$kommentar": "Nur bei typ = recruiting-funnel füllen. Siehe 19-recruiting-funnel.md.",
+    "aktiv": false,
+    "evp": "[[FEHLT: für wen + welches Arbeitsleben + welcher Beweis]]",
+    "ats": null,
+    "$ats_erlaubt": ["personio", "recruitee", "softgarden", "join", "eigen", null],
+    "ats_auftragsverarbeitung": false,
+    "loeschfrist_bewerberdaten_monate": 6,
+    "talentpool_einwilligung": false,
+    "agg_geprueft": false
+  }
+}

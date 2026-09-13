@@ -108,6 +108,11 @@ Diese Regeln gelten immer und werden nicht wegdiskutiert:
 - **Jede Funktion ist mit der Tastatur bedienbar**, mit sichtbarem Fokusring. Fokusringe
   werden nie entfernt, nur gestaltet.
 - **Ladezeit unter 2 Sekunden**, LCP unter 2,5 s, CLS unter 0,1.
+- **Keine Gedankenstriche im Seitentext.** Kein `–` und kein `—` in Headlines,
+  Subheadlines, Buttons, Links, Alt-Texten oder Fließtext. Ersatz: Doppelpunkt, Komma oder
+  zwei Sätze. Der Bereichsstrich bei Zahlen („10–12 Uhr") und der echte Bindestrich im
+  Kompositum („E-Mail-Adresse") bleiben erlaubt. Geprüft mit
+  `scripts/pruefe-striche.mjs`, Begründung in `references/12-copywriting.md`.
 - **Keine erfundenen Zahlen.** Keine Kundenstimmen, Bewertungen, Zertifikate, Preise,
   Lieferzeiten oder Referenzen ohne Beleg. Fehlt ein Wert, steht dort ein sichtbarer
   Platzhalter `[[FEHLT: …]]`, niemals ein plausibel klingender Erfindungswert. Unechte
