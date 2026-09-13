@@ -38,7 +38,7 @@ import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
 import { join, extname, relative, basename } from 'node:path';
 
 const ENDUNGEN = new Set(['.css', '.scss', '.pcss', '.astro', '.vue', '.svelte', '.jsx', '.tsx']);
-const UEBERSPRINGEN = new Set(['node_modules', '.git', 'dist', 'build', '.astro', '.next', '.output', '.cache', 'coverage', 'vendor']);
+const UEBERSPRINGEN = new Set(['node_modules', '.git', 'dist', 'build', '.astro', '.next', '.output', '.cache', 'coverage', 'vendor', 'results']);
 /* Diese Dateien DÜRFEN rohe Werte enthalten: sie definieren die Tokens. */
 const AUSGENOMMEN = new Set(['tokens.css', 'global-basis.css', 'global.css', 'reset.css', 'theme.css']);
 

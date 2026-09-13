@@ -101,6 +101,41 @@ Danach greift der Skill automatisch, sobald es um Website, Landingpage, Conversi
 Ladezeit, Barrierefreiheit, SEO oder Rechtstexte geht. Direkt aufrufen geht auch:
 `/webdesign-conversion`.
 
+## Prüfen
+
+Fünf Skripte, weil eine Regel ohne Prüfung in der dritten Sitzung zurückgedreht wird. Alle
+laufen ohne Abhängigkeiten außer Node; nur das Breakpoint-Skript braucht Playwright.
+
+```bash
+node scripts/pruefe-striche.mjs       # Gedankenstriche, hyphens: auto, verbotene Wörter
+node scripts/pruefe-tokens.mjs        # hartcodierte Farb-, Abstands- und Schriftwerte
+node scripts/pruefe-kontrast.mjs      # rechnet die Kontrastwerte der Rollen-Tokens nach
+node scripts/pruefe-platzhalter.mjs --launch   # [[FEHLT]] und data-copy-vorschlag
+node scripts/pruefe-breakpoints.mjs http://localhost:4321 --bilder
+```
+
+`pruefe-breakpoints.mjs` rendert acht Größen (die fünf Breakpoints plus 320 px, 1366 × 768 und
+1440 × 720) und meldet horizontalen Überlauf mit dem Selektor des äußersten Verursachers, zu
+kleine Touchziele, Schrift unter 14 px und Bilder ohne Maße.
+
+## Eval-Suite
+
+`evals/` prüft mit `claude plugin eval`, ob der Skill seine eigenen Regeln tatsächlich
+durchsetzt, und zwar im Vergleich zu einem Lauf **ohne** Skill.
+
+```bash
+claude plugin eval .
+```
+
+Gemessen (zwei Läufe je Arm): beim Gedankenstrich-Fall setzt das Modell ohne Skill in jedem
+Lauf einen Halbgeviertstrich in deutsche Headlines und mit Skill in keinem (Δ +0.50). Beim
+Landingpage-Fall übernimmt es ohne Skill zuverlässig die Hauptnavigation der bestehenden Seite
+(Δ +0.75).
+
+Die Suite hat dabei schon einen echten Fehler gefunden: das Landingpage-Playbook war so
+formuliert, dass das Modell die Navigationsregel erkannte, dann aber um Erlaubnis fragte statt
+zu liefern. Details in `evals/README.md`.
+
 ## Quell-Skills nachinstallieren
 
 Dieser Skill ist eine Destillation. Wer die volle Tiefe braucht: die komplette
