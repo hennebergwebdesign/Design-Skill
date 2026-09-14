@@ -112,7 +112,7 @@ richtig und für drei falsch. Bei drei Stellen sind drei Seiten besser, weil jed
 EVP tragen kann und eigenständig ranken kann (`05-seo-sichtbarkeit.md`).
 
 **Keine Navigation auf der Funnel-Seite.** Dieselbe Regel wie bei Landingpages
-(`playbooks/landingpage.md`): jeder Weg heraus ist ein Abbruch. Eine Ausnahme ist der Link
+(`../playbooks/landingpage.md`): jeder Weg heraus ist ein Abbruch. Eine Ausnahme ist der Link
 zum Impressum und zur Datenschutzerklärung, die rechtlich erreichbar bleiben müssen
 (`07-recht-dsgvo.md`).
 

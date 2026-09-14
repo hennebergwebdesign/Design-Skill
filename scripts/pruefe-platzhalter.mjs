@@ -58,7 +58,9 @@ const MUSTER = [
     tipp: 'Wert einsetzen, oder das Element entfernen. Kein Erfindungswert.' },
   { re: /\[\[\s*BEST(?:Ä|AE)TIGEN\s*:?([^\]]*)\]\]/gi, art: 'BESTÄTIGEN', hart: true,
     tipp: 'Vom Kunden bestätigen lassen und eintragen.' },
-  { re: /\[\[(?![\s]*(?:FEHLT|BEST))([^\]]+)\]\]/g, art: 'Platzhalter', hart: true,
+  /* Verlangt Leerzeichen, Doppelpunkt oder Grossbuchstabe im Inneren. Sonst schlaegt die
+     Regel bei TOML-Tabellen wie [[kv_namespaces]] in einem wrangler.toml-Beispiel an. */
+  { re: /\[\[(?![\s]*(?:FEHLT|BEST))(?=[^\]]*(?:[\s:]|[A-ZÄÖÜ]))([^\]]+)\]\]/g, art: 'Platzhalter', hart: true,
     tipp: 'Platzhalter auflösen.' },
   { re: /data-copy-vorschlag/g,               art: 'Copy-Vorschlag', hart: true,
     tipp: 'Text mit dem Kunden abstimmen, dann das Attribut entfernen. Es ist auf der Seite sichtbar.' },

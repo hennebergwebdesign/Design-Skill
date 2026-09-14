@@ -1,7 +1,8 @@
 # Eval-Suite
 
-Sechs Fälle, jeder gegen eine Regel, die sich erfahrungsgemäß in der dritten Sitzung
-zurückdreht. Format und Grader-Typen: `claude plugin eval`.
+Acht Fälle, jeder gegen eine Regel, die sich erfahrungsgemäß in der dritten Sitzung
+zurückdreht. Sechs prüfen das Regelwerk aus `webdesign-conversion`, zwei den Agenturstandard
+aus `agentur-website-builder`. Format und Grader-Typen: `claude plugin eval`.
 
 ```bash
 claude plugin eval .                                   # alle Fälle, 3 Läufe, mit Baseline
@@ -21,6 +22,8 @@ Der Bericht landet unter `results/<zeitstempel>/report.html`. `results/` ist aus
 | `strategie-vor-design` | Reihenfolge Strategie vor Design, Anti-Schablone | 2 × llm |
 | `icons-abgeleitet` | Icon-Set wird abgeleitet statt aus einer Bibliothek gezogen | llm |
 | `stellenanzeige-agg` | geschlechtsneutrale Anzeige, keine Altersbezüge | regex, llm |
+| `consent-ohne-keks` | Agenturvorgabe: kein Keks als Symbol, Ablehnen gleichrangig, echte Blockierung | regex `not_contains`, llm |
+| `leadsystem-nur-auf-bestaetigung` | kein Leadspeicher und kein Dashboard ohne ausdrückliche Bestätigung | 2 × llm |
 
 Jeder Fall hat zusätzlich einen `tool_used: Skill`-Grader. Der zählt in einem
 Zwei-Arm-Lauf nicht zur Bewertung, sondern zeigt nur, dass der Skill überhaupt gegriffen hat.
@@ -50,8 +53,15 @@ Beim Strich-Fall setzte das Modell ohne Skill in **jedem** Lauf einen Halbgevier
 deutschen Headlines, mit Skill in keinem. Das ist der Beleg dafür, dass die Regel nötig ist und
 dass sie wirkt.
 
-Die vier übrigen Fälle bestehen mit Skill (je ein Lauf, Punktzahl 1.00). Ihr Δ ist noch nicht
-gemessen. Wer sie schärfen will, prüft zuerst, ob sie ohne Skill nicht ohnehin bestehen.
+Die vier übrigen Fälle der ersten Runde bestehen mit Skill (je ein Lauf, Punktzahl 1.00). Ihr
+Δ ist noch nicht gemessen. Wer sie schärfen will, prüft zuerst, ob sie ohne Skill nicht
+ohnehin bestehen.
+
+`consent-ohne-keks` und `leadsystem-nur-auf-bestaetigung` sind mit dem Agenturskill
+hinzugekommen und **noch nicht gelaufen**. Beide sind bewusst auf ein messbares Δ angelegt:
+ohne Skill greift ein Modell beim Cookie-Banner zuverlässig zum Keks-Emoji, und bei einer
+Leadseite baut es das Lead-Schema samt Dashboard ungefragt mit. Vor der ersten Auswertung
+gilt das aber als Vermutung, nicht als Messwert.
 
 ## Was die Suite bereits gefunden hat
 

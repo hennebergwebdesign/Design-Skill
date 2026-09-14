@@ -51,6 +51,30 @@ strukturierte Daten geprüft.
 
 **Das bleibt trotzdem keine Rechtsberatung.** Vor dem Einsatz anwaltlich prüfen lassen.
 
+### In Version 3.0 zusätzlich eingeflossen
+
+| Quelle | Was daraus eingeflossen ist |
+|---|---|
+| **Agentur-Lieferstandard von That's it. Marketing / VFDESIGN LTD** | Der komplette Skill `agentur-website-builder`: der Phasenablauf von der Analyse bis zur Übergabe, die festen Stackvorgaben (Astro auf Cloudflare Pages, Resend, Turnstile, D1, Google Places, Consent im Eigenbau), die Intake-Fragenkataloge mit Auslösern, der Umgang mit gelieferter Kundencopy, das Format des Abschlussberichts und die einsatzfertigen Vorlagen für Consent-Banner, Formularroute, Mailtemplate und Bewertungsabruf |
+
+Beim Zusammenführen wurden die Inhalte des Agenturskills, die das Regelwerk bereits
+abdeckte, nicht doppelt abgelegt, sondern durch Verweise ersetzt: Conversion-Framework,
+Designsystem und Typografie, SEO und Barrierefreiheit, GSAP-Regeln, die rechtlichen
+Consent-Anforderungen und die Copywriting-Handwerkslehre stehen weiterhin nur in
+`webdesign-conversion`. Aus dem Agenturskill übernommen wurde alles, was dort neu war.
+
+Drei Dinge wurden dabei bewusst korrigiert statt übernommen:
+
+- Das Honigtopffeld der Formularvorlage hieß `firma` und kollidierte damit mit dem echten
+  optionalen Feld „Firmenname". Es heißt jetzt `webadresse`.
+- Die Turnstile-Prüfung ließ ohne gesetztes Geheimnis jede Anfrage durch, auch in der
+  Produktion. Sie fällt jetzt außerhalb der lokalen Entwicklung zu.
+- Die Formularroute hatte keine Origin-Prüfung, obwohl Astros eigener Schutz in Cloudflare
+  Pages Functions nicht greift. Sie ist ergänzt.
+
+Die beiden Skripte `relaunch-inventory.mjs` und `deslop-check.mjs` waren im Agenturskill
+beschrieben, aber nicht vorhanden. Sie sind für dieses Repository neu geschrieben.
+
 ## Inhaltliche Grundlage
 
 **Website-Conversion-Playbook 2026** (That's it. Marketing, Victor & Tim): das

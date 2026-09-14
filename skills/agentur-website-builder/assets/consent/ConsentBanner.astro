@@ -1,0 +1,138 @@
+---
+/**
+ * Consent Banner, Vorlage. Kopieren nach src/components/ConsentBanner.astro.
+ *
+ * Regeln:
+ *  - kein Keks als Symbol, das Symbol kommt aus dem Branding des Kunden
+ *  - Ablehnen ist genauso prominent wie Annehmen
+ *  - alle optionalen Kategorien starten abgelehnt
+ *  - Footer bekommt einen Link mit data-consent-oeffnen
+ *  - laeuft kein einwilligungspflichtiger Dienst, wird diese Komponente nicht eingebunden
+ */
+---
+
+<div id="consent" class="consent" role="dialog" aria-modal="false" aria-labelledby="consent-titel" hidden>
+  <div class="consent__box">
+    <h2 id="consent-titel" class="consent__titel">Datenschutzeinstellungen</h2>
+    <p class="consent__text">
+      Wir setzen notwendige Technik ein, damit diese Seite funktioniert. Zusätzliche Dienste
+      nutzen wir nur mit deiner Einwilligung. Du kannst deine Auswahl jederzeit über den Footer ändern.
+      <a href="/datenschutz">Datenschutzerklärung</a>
+    </p>
+
+    <div class="consent__details" hidden data-consent-details>
+      <div data-consent-liste><!-- Kategorien werden per Skript aus KATEGORIEN erzeugt --></div>
+      <button type="button" class="btn btn--haupt" data-consent-speichern>Auswahl speichern</button>
+    </div>
+
+    <div class="consent__aktionen">
+      <button type="button" class="btn btn--geist" data-consent-einstellungen aria-expanded="false" aria-controls="consent-details">Einstellungen</button>
+      <button type="button" class="btn btn--zweit" data-consent-ablehnen>Nur notwendige</button>
+      <button type="button" class="btn btn--haupt" data-consent-annehmen>Alle annehmen</button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .consent {
+    position: fixed;
+    inset-block-end: var(--raum-4);
+    inset-inline: var(--raum-4);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+  }
+  .consent[hidden] { display: none; }
+  .consent__box {
+    background: var(--farbe-flaeche);
+    color: var(--farbe-text);
+    border: 1px solid var(--farbe-rahmen);
+    border-radius: var(--radius-l);
+    box-shadow: var(--schatten-hoch);
+    padding: var(--raum-6);
+    max-width: 44rem;
+    width: 100%;
+  }
+  .consent__titel { font-size: var(--text-h4); margin: 0 0 var(--raum-2); }
+  .consent__text { font-size: var(--text-sm); line-height: var(--zeilenhoehe-normal); margin: 0 0 var(--raum-4); }
+  .consent__details { margin-block-end: var(--raum-4); }
+  .consent__details[hidden] { display: none; }
+  .consent__aktionen { display: flex; flex-wrap: wrap; gap: var(--raum-2); }
+  /* Ablehnen und Annehmen bewusst gleich gross und gleich sichtbar */
+  .consent__aktionen .btn--zweit,
+  .consent__aktionen .btn--haupt { flex: 1 1 12rem; }
+  .consent__aktionen .btn--geist { flex: 0 0 auto; }
+  .consent__kategorie { display: flex; gap: var(--raum-3); padding: var(--raum-3) 0; border-block-start: 1px solid var(--farbe-rahmen); }
+  @media (max-width: 480px) {
+    .consent { inset-inline: 0; inset-block-end: 0; }
+    .consent__box { border-radius: var(--radius-l) var(--radius-l) 0 0; }
+    .consent__aktionen .btn { flex: 1 1 100%; }
+  }
+</style>
+
+<script>
+  import { KATEGORIEN, init, alleAnnehmen, alleAblehnen, speichern, lesen } from '../scripts/consent';
+  import type { Kategorie } from '../scripts/consent';
+
+  const banner = document.getElementById('consent')!;
+  const details = banner.querySelector<HTMLElement>('[data-consent-details]')!;
+  const liste = banner.querySelector<HTMLElement>('[data-consent-liste]')!;
+  const schalter = banner.querySelector<HTMLButtonElement>('[data-consent-einstellungen]')!;
+
+  details.id = 'consent-details';
+
+  liste.innerHTML = KATEGORIEN.map(
+    (k) => `
+    <label class="consent__kategorie">
+      <input type="checkbox" name="${k.id}" />
+      <span><strong>${k.titel}</strong><br /><span class="consent__text">${k.text}</span></span>
+    </label>`
+  ).join('');
+
+  const felder = () => Array.from(liste.querySelectorAll<HTMLInputElement>('input'));
+  const zeigen = () => banner.removeAttribute('hidden');
+  const schliessen = () => banner.setAttribute('hidden', '');
+
+  function felderSetzen() {
+    const zustand = lesen();
+    felder().forEach((feld) => {
+      feld.checked = zustand ? Boolean(zustand.kategorien[feld.name as Kategorie]) : false;
+    });
+  }
+
+  function detailsOeffnen(offen: boolean) {
+    details.toggleAttribute('hidden', !offen);
+    schalter.setAttribute('aria-expanded', String(offen));
+    if (offen) felderSetzen();
+  }
+
+  if (init()) zeigen();
+
+  schalter.addEventListener('click', () => detailsOeffnen(details.hasAttribute('hidden')));
+
+  banner.querySelector('[data-consent-speichern]')!.addEventListener('click', () => {
+    const auswahl = Object.fromEntries(felder().map((f) => [f.name, f.checked])) as Record<Kategorie, boolean>;
+    speichern(auswahl);
+    schliessen();
+  });
+
+  banner.querySelector('[data-consent-annehmen]')!.addEventListener('click', () => {
+    alleAnnehmen();
+    schliessen();
+  });
+
+  banner.querySelector('[data-consent-ablehnen]')!.addEventListener('click', () => {
+    alleAblehnen();
+    schliessen();
+  });
+
+  // Footerlink "Cookie Einstellungen": oeffnet das Banner samt Kategorien erneut.
+  document.querySelectorAll('[data-consent-oeffnen]').forEach((el) =>
+    el.addEventListener('click', (e) => {
+      e.preventDefault();
+      zeigen();
+      detailsOeffnen(true);
+      felder()[0]?.focus();
+    })
+  );
+</script>

@@ -5,6 +5,11 @@ jemand klickt. Dieses Muster blockiert echt.
 
 Rechtliche Anforderungen: siehe `../../references/07-recht-dsgvo.md`.
 
+Einsatzfertige Dateien zum Kopieren, mit Astro-Komponente und Agenturvorgaben (kein Keks als
+Symbol, Ablehnen gleich prominent, Neuladen bei Zurücknahme):
+`../../../agentur-website-builder/assets/consent/` sowie
+`../../../agentur-website-builder/references/consent-und-dienste.md`.
+
 ## Kategorien
 
 Vier Kategorien reichen für die meisten Unternehmensseiten. Mehr Kategorien heißen mehr

@@ -7,8 +7,8 @@
     {
       "name": "webdesign-conversion",
       "source": "./",
-      "description": "Conversion-orientiertes Webdesign: Playbooks für Homepage, Landingpage und Recruiting-Funnel, sechs Bereiche von der Positionierung bis zur Messung, Markenbrief als Projektquelle, Vorlagen für Rechtstexte, Tokens und JSON-LD, dazu Prüfskripte und Checklisten."
+      "description": "Zwei Skills, die zusammengehören. webdesign-conversion: Playbooks für Homepage, Landingpage und Recruiting-Funnel, sechs Bereiche von der Positionierung bis zur Messung, Markenbrief als Projektquelle, Vorlagen für Rechtstexte, Tokens und JSON-LD. agentur-website-builder: der Bauablauf von der Analyse bis zur Übergabe mit Astro und Cloudflare Pages, Formularen über Resend, eigenem Consent Banner, Google Bewertungen und optionalem Leadsystem. Dazu Prüfskripte, Checklisten und eine Eval-Suite."
     }
   ],
-  "description": "Skills von Henneberg Webdesign für conversion-orientiertes Webdesign im DACH-Raum: Homepages, Landingpages und Recruiting-Funnel, von der Positionierung bis zur Messung, mit Rechtstexten, Designtokens und Prüfskripten."
+  "description": "Skills von Henneberg Webdesign für conversion-orientiertes Webdesign im DACH-Raum: Homepages, Landingpages und Recruiting-Funnel, von der Positionierung bis zur Messung, mit Rechtstexten, Designtokens, Prüfskripten und einem vollständigen Bauablauf für Astro auf Cloudflare Pages."
 }
