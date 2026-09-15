@@ -5,6 +5,46 @@ Fallstricke stehen in `../../webdesign-conversion/references/14-projektstruktur-
 Dieses Kapitel ergänzt, was im Agenturprojekt festgeschrieben ist: Runtime, Cloudflare
 Bindings, Umgebungsvariablen, Git und Performancebudget.
 
+## Standardstack ohne Rückfrage
+
+Astro mit statischem Build auf Cloudflare Pages ist der Standard für jedes neue
+Agenturprojekt, siehe die Tabelle „Feste Agenturvorgaben" in `../SKILL.md`. Das ist keine
+Wahl im Einzelfall, sondern eine bereits getroffene Entscheidung der Agentur: nicht fragen,
+ob Next.js, ein anderes Framework oder ein anderer Hoster gewünscht ist. Nur zwei Fälle
+weichen davon ab, und beide ergeben sich aus dem bestehenden Repository, nie aus einer
+Rückfrage:
+
+* Es liegt bereits eine `astro.config.*` vor: bestehende Struktur übernehmen, nicht neu
+  aufsetzen.
+* Der Kunde bringt einen bestehenden React- oder Next-Stack mit, siehe SKILL.md.
+
+Findet sich in Phase 1 weder eine `astro.config.*` noch ein anderer bestehender Stack, wird
+sofort nach dem Muster unten ein neues Astro-Projekt mit Cloudflare-Adapter angelegt, ohne
+das im Chat zur Wahl zu stellen.
+
+## Neues Projekt anlegen
+
+Im leeren oder fast leeren Repository, mit pnpm:
+
+```bash
+pnpm create astro@latest . -- --template minimal --typescript strict --no-install --no-git
+pnpm add @astrojs/cloudflare @astrojs/sitemap
+pnpm add -D wrangler
+```
+
+Bestehende Ordner wie `.git`, `.claude/` oder eine bereits vorhandene `CLAUDE.md` bleiben
+unangetastet, `--no-install --no-git` verhindert, dass das Gerüst sie überschreibt oder ein
+zweites Git-Repository anlegt. Direkt danach:
+
+1. `astro.config.mjs` nach dem Muster in „Astro Konfiguration" unten anlegen, mit dem
+   Cloudflare-Adapter.
+2. `wrangler.toml` nach dem Muster in „Build und Deployment" unten anlegen.
+3. `.nvmrc` mit `24` und `packageManager`/`engines` in der `package.json` setzen, siehe
+   „Runtime".
+4. `.env.example` nach „Umgebungsvariablen" anlegen.
+5. Mit der Dateistruktur aus
+   `../../webdesign-conversion/references/14-projektstruktur-astro.md` weiterarbeiten.
+
 ## Runtime
 
 Neue Projekte: Node 24 LTS und pnpm. Festschreiben in `.nvmrc`, in `engines` und in
