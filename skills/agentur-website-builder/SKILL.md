@@ -4,7 +4,7 @@ description: Baut komplette Kundenwebsites mit Astro und Cloudflare Pages nach A
 license: Proprietär, That's it. Marketing / VFDESIGN LTD
 metadata:
   author: That's it. Marketing / Henneberg Webdesign
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Agentur Website Builder
@@ -97,7 +97,10 @@ Bevor irgendetwas gefragt wird:
 
 1. Repository lesen. Gibt es schon eine `astro.config.*`, ein `package.json`, eine
    Lockdatei, ein Designsystem, eine `CLAUDE.md`? Bestehende Strukturen werden respektiert,
-   nicht überschrieben.
+   nicht überschrieben. Fehlt eine `astro.config.*` und liegt kein anderer bestehender Stack
+   vor, wird ohne Rückfrage ein neues Astro-Projekt mit Cloudflare-Adapter angelegt, siehe
+   „Standardstack ohne Rückfrage" in `references/stack-und-deployment.md`. Cloudflare Pages
+   Astro ist der Standardfall dieses Skills, keine Option unter mehreren.
 2. Alle gelieferten Materialien auswerten: Designentwurf aus Claude Design, Screenshots,
    Linktree, Copydokumente, Logos, Bilder im Repo.
 3. Bei einer Überarbeitung die alte Seite abrufen und inventarisieren: Seitenstruktur, URLs,
