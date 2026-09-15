@@ -119,6 +119,12 @@ Diese Punkte haben einen Grund. Wer sie ändert, ändert damit auch den Grund.
 
 ## Änderungsverlauf
 
+- **15.09.2026, Version 3.1.0** Cloudflare Pages Astro als Standardstack ohne Rückfrage
+  festgeschrieben. Bisher stand nur in der Tabelle „Feste Agenturvorgaben", was der Stack
+  ist, aber nicht, was passiert, wenn Phase 1 kein bestehendes Projekt vorfindet. Neuer
+  Abschnitt „Standardstack ohne Rückfrage" mit Gerüstbefehlen (`pnpm create astro@latest`,
+  Cloudflare-Adapter, Sitemap, Wrangler) in `agentur-website-builder/references/stack-und-deployment.md`,
+  Verweis darauf in Phase 1 der `SKILL.md` ergänzt.
 - **14.09.2026, Version 3.0.0** Zweiter Skill `agentur-website-builder` aufgenommen und mit
   dem Regelwerk verzahnt: Phasenablauf, Agenturstack, neun Referenzen, fünf einsatzfertige
   Codevorlagen für Consent, Formular, Mail und Bewertungen. Doppelte Inhalte durch Verweise
