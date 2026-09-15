@@ -107,6 +107,25 @@ klar unterscheidbar sein: nicht zwei Grotesken, die man verwechselt.
 - Ist eine Schrift Bildelement (Headline, Signet), wird die Satzform selbst Teil der
   Gestaltung, nicht neutraler Transportweg.
 
+### Die Schriftwahl, in dieser Reihenfolge
+
+1. **Steht eine Schrift im Branding des Kunden, wird sie genutzt.** Auch Inter, Roboto oder
+   Open Sans. Ein bestehendes Corporate Design schlägt jede Geschmacksfrage. Woher die
+   bestehende Schrift kommt und wie sie ausgelesen wird:
+   `20-markenextraktion-bestandsseite.md`.
+2. **Ohne Vorgabe sind Inter, Roboto, Open Sans, Poppins, Montserrat und Lato gesperrt.**
+   Nicht weil sie schlecht wären, sondern weil sie der Grund sind, warum Seiten
+   austauschbar wirken. Sie sind die typografische Entsprechung der Schablonen weiter oben.
+3. **Ohne Vorgabe zwei Kandidaten vorschlagen**, jeweils mit einem Satz Begründung, die sich
+   auf Branche und Zielgruppe bezieht, nicht auf Geschmack. Beispiel: eine Schrift mit hoher
+   x-Höhe und offenen Punzen für einen Handwerksbetrieb mit älterer Zielgruppe.
+4. **Höchstens zwei Familien**, eine für Fließtext, eine für Überschriften. Eine dritte nur,
+   wenn das Design sie eindeutig verlangt.
+5. **Immer selbst hosten** aus `public/fonts/`, WOFF2, nur die genutzten Schnitte,
+   `@font-face` mit `font-display: swap` und passendem `size-adjust`, damit der Wechsel
+   nicht springt. Nie über ein fremdes CDN: das ist eine Verbindung zu einem Drittserver und
+   damit einwilligungspflichtig, siehe `07-recht-dsgvo.md`.
+
 **Drei typografische Voreinstellungen vermeiden:**
 
 - ein einzelnes hervorgehobenes Wort in der Headline (kursiv, fett oder andersfarbig)

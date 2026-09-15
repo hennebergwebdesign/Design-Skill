@@ -1,9 +1,21 @@
 # Webdesign Conversion Skill
 
-Ein zusammengeführter Claude-Skill für conversion-orientiertes Webdesign im DACH-Raum.
-Er vereint mehrere öffentliche Design- und Animations-Skills mit dem
+Zwei Claude-Skills in einem Plugin, für conversion-orientiertes Webdesign im DACH-Raum.
+
+| Skill | Rolle |
+|---|---|
+| **`webdesign-conversion`** | das Regelwerk: was gut ist und warum. Strategie, Design, Technik, Barrierefreiheit, SEO, Conversion, Recht |
+| **`agentur-website-builder`** | der Lieferablauf: wie eine Kundenseite tatsächlich entsteht, von der Analyse bis zur Übergabe |
+
+Das Regelwerk vereint mehrere öffentliche Design- und Animations-Skills mit dem
 Website-Conversion-Playbook, den rechtlichen Pflichten (DSGVO, DDG, BFSG) und den
-Hausstandards aus produktiven Astro-Projekten.
+Hausstandards aus produktiven Astro-Projekten. Der Bauablauf setzt darauf auf und schreibt
+den Agenturstack fest: Astro auf Cloudflare Pages, Formulare über Resend und Turnstile,
+eigenes Consent Banner, Google Bewertungen, optional ein Leadsystem mit Dashboard.
+
+Beide gehören zusammen. Der Bauablauf verweist an jeder inhaltlichen Stelle in das
+Regelwerk, statt es zu wiederholen. Wer nur einen der beiden Ordner in ein Projekt kopiert,
+verliert diese Verweise.
 
 ## Was drin ist
 
@@ -29,47 +41,79 @@ ausgewählt: Strichstärke folgt dem Gewicht der Display-Schrift, Ecken folgen d
 Tokens, Formensprache folgt dem Gegenstand. Motion bekommt fünf Dauern und drei benannte
 Kurven statt zwei Werte, und Austritte sind kürzer als Eintritte.
 
+**Ein Lieferablauf in sieben Phasen.** Projektskills installieren, analysieren, gesammelt
+rückfragen, Umsetzungskonzept zur Freigabe, bauen in einer Reihenfolge, die Nacharbeit spart,
+prüfen mit Werkzeug, übergeben mit Abschlussbericht. Der häufigste Grund für eine Seite, die
+nachgearbeitet werden muss, ist nicht fehlendes Wissen, sondern eine übersprungene Phase.
+
+**Fester Agenturstack statt Entscheidung pro Projekt.** Astro auf Cloudflare Pages,
+Formulare über Resend mit Turnstile, Honigtopf, Zeitfeld und Rate Limit, eigenes Consent
+Banner mit echter Skriptblockierung, Google Bewertungen serverseitig über die Places API mit
+KV-Cache, optional ein Leadsystem auf D1 mit schlankem Dashboard. Zu jedem Punkt liegt
+einsatzfertiger Code bei, keine Beschreibung.
+
 **Prüfskripte statt Checkboxen.** Eine Regel ohne Prüfung wird in der dritten Sitzung
 zurückgedreht. Fünf Skripte prüfen Gedankenstriche, Tokens, Kontrast, Platzhalter und acht
-Bildschirmgrößen samt horizontalem Überlauf.
+Bildschirmgrößen samt horizontalem Überlauf. Zwei weitere beschaffen das Relaunch-Inventar
+und bewerten selbst formulierte Texte auf generischen KI-Klang.
 
 **Vorlagen zum Übernehmen** statt Beschreibungen zum Nachbauen.
 
 ```
-skills/webdesign-conversion/
-├─ SKILL.md                         Einstieg, Typwahl, sechs Bereiche, harte Grenzen
-├─ playbooks/
-│  ├─ homepage.md                   vollständige Unternehmenswebsite
-│  ├─ landingpage.md                eine Seite, ein Ziel, keine Navigation
-│  └─ recruiting-funnel.md          mehrstufig, mobil zuerst, AGG und Bewerberdaten
-├─ references/
-│  ├─ 00-fahrplan.md                Strategie → Struktur → Copy → Design → Bau → Test → Launch
-│  ├─ 01-strategie-positionierung.md  Zielgruppenformel, USP-Formel, Einwände
-│  ├─ 02-design-ux.md               Above the Fold, F-Pattern, 3-Klick-Regel, Layout
-│  ├─ 03-technik-performance.md     2-Sekunden-Regel, Bilder, Caching, fünf Breakpoints
-│  ├─ 04-barrierefreiheit-bfsg.md   BFSG, Kontrast, Alt-Texte, Tastatur, WCAG 2.2 AA
-│  ├─ 05-seo-sichtbarkeit.md        Keywords, URLs, Meta, interne Links, JSON-LD
-│  ├─ 06-conversion-architektur.md  CTA-Hierarchie, 10-Sekunden-Formular, Trust, Über uns
-│  ├─ 07-recht-dsgvo.md             Impressum, Datenschutz, Consent, Auftragsverarbeitung
-│  ├─ 08-pflichtseiten-technik.md   404, robots.txt, Sitemap, Redirects, Header
-│  ├─ 09-motion-gsap.md             GSAP, ScrollTrigger, reduzierte Bewegung, Performance
-│  ├─ 10-visuelle-richtung.md       Tokens, Typografie, Stilrichtungen, Anti-Schablone
-│  ├─ 11-komponenten-shadcn.md      shadcn/ui-Regeln für React und Next.js
-│  ├─ 12-copywriting.md             Botschaftshierarchie, Angebot, Einwände, Deutsch, Striche
-│  ├─ 13-messung-optimierung.md     GA4, Heatmaps, monatlicher Review, A/B
-│  ├─ 14-projektstruktur-astro.md   Referenzstack, CLAUDE.md, Fallstricke
-│  ├─ 15-spacing-rhythmus.md        Abstand als Hierarchiesignal, drei Rhythmus-Ebenen
-│  ├─ 16-responsive-container.md    Eskalationspfad, Container Queries, svh/dvh, acht Szenarien
-│  ├─ 17-icons-eigenes-system.md    Icon-Set ableiten, 24er Raster, optische Korrektur
-│  ├─ 18-motion-handschrift.md      Motion-Tokens, vier Profile, Scroll-Animation in CSS
-│  └─ 19-recruiting-funnel.md       EVP, Funnel-Stufen, AGG, Bewerberdaten, JobPosting
-└─ assets/
-   ├─ vorlagen/                     marke.json, marke-brief.md, impressum.md, datenschutz.md,
-   │                                datenschutz-bewerber.md, consent-muster.md,
-   │                                robots.txt(.ts), sitemap.xsl, _headers, 404.astro,
-   │                                tokens.css, global-basis.css, head-meta.html,
-   │                                jsonld-bausteine.md
-   └─ checklisten/                  pre-launch.md, conversion-audit.md
+skills/
+├─ webdesign-conversion/            das Regelwerk
+│  ├─ SKILL.md                      Einstieg, Typwahl, sechs Bereiche, harte Grenzen
+│  ├─ playbooks/
+│  │  ├─ homepage.md                vollständige Unternehmenswebsite
+│  │  ├─ landingpage.md             eine Seite, ein Ziel, keine Navigation
+│  │  └─ recruiting-funnel.md       mehrstufig, mobil zuerst, AGG und Bewerberdaten
+│  ├─ references/
+│  │  ├─ 00-fahrplan.md             Strategie → Struktur → Copy → Design → Bau → Test → Launch
+│  │  ├─ 01-strategie-positionierung.md  Zielgruppenformel, USP-Formel, Einwände
+│  │  ├─ 02-design-ux.md            Above the Fold, F-Pattern, 3-Klick-Regel, Layout
+│  │  ├─ 03-technik-performance.md  2-Sekunden-Regel, Bilder, Caching, fünf Breakpoints
+│  │  ├─ 04-barrierefreiheit-bfsg.md  BFSG, Kontrast, Alt-Texte, Tastatur, WCAG 2.2 AA
+│  │  ├─ 05-seo-sichtbarkeit.md     Keywords, URLs, Meta, interne Links, JSON-LD
+│  │  ├─ 06-conversion-architektur.md  CTA-Hierarchie, 10-Sekunden-Formular, Trust, Über uns
+│  │  ├─ 07-recht-dsgvo.md          Impressum, Datenschutz, Consent, Auftragsverarbeitung
+│  │  ├─ 08-pflichtseiten-technik.md  404, robots.txt, Sitemap, Redirects, Header
+│  │  ├─ 09-motion-gsap.md          GSAP, ScrollTrigger, reduzierte Bewegung, Performance
+│  │  ├─ 10-visuelle-richtung.md    Tokens, Typografie, Schriftwahl, Anti-Schablone
+│  │  ├─ 11-komponenten-shadcn.md   shadcn/ui-Regeln für React und Next.js
+│  │  ├─ 12-copywriting.md          Botschaftshierarchie, Angebot, Einwände, Deutsch, Striche
+│  │  ├─ 13-messung-optimierung.md  GA4, Heatmaps, monatlicher Review, A/B
+│  │  ├─ 14-projektstruktur-astro.md  Referenzstack, CLAUDE.md, Fallstricke
+│  │  ├─ 15-spacing-rhythmus.md     Abstand als Hierarchiesignal, drei Rhythmus-Ebenen
+│  │  ├─ 16-responsive-container.md Eskalationspfad, Container Queries, svh/dvh
+│  │  ├─ 17-icons-eigenes-system.md Icon-Set ableiten, 24er Raster, optische Korrektur
+│  │  ├─ 18-motion-handschrift.md   Motion-Tokens, vier Profile, Scroll-Animation in CSS
+│  │  ├─ 19-recruiting-funnel.md    EVP, Funnel-Stufen, AGG, Bewerberdaten, JobPosting
+│  │  ├─ 20-markenextraktion-bestandsseite.md  Logo, Farben, Schrift aus der alten Seite
+│  │  ├─ 21-sektionshintergruende-hierarchie.md  Bildgrund, Trennung, Abstufung
+│  │  └─ 22-premium-designquellen.md  Awwwards, Dribbble, Land-book, recent.design, 21st.dev
+│  └─ assets/
+│     ├─ vorlagen/                  marke.json, marke-brief.md, impressum.md, datenschutz.md,
+│     │                             datenschutz-bewerber.md, consent-muster.md,
+│     │                             robots.txt(.ts), sitemap.xsl, _headers, 404.astro,
+│     │                             tokens.css, global-basis.css, head-meta.html,
+│     │                             jsonld-bausteine.md
+│     └─ checklisten/               pre-launch.md, conversion-audit.md
+└─ agentur-website-builder/         der Lieferablauf
+   ├─ SKILL.md                      Phasen 0 bis 6, feste Agenturvorgaben, Definition of Done
+   ├─ references/
+   │  ├─ intake-und-entscheidungen.md  Projektart, Relaunch-Inventar, Bilder, Fragenkatalog
+   │  ├─ stack-und-deployment.md    Node, Astro, wrangler.toml, Variablen, Git, Budget
+   │  ├─ referenzen-und-auswahl.md  Rangfolge der Quellen, Ausgangsliste, Seitenaufbau
+   │  ├─ copy-im-kundenprojekt.md   gelieferte Texte, Copy-Vorschläge kennzeichnen
+   │  ├─ formulare-und-resend.md    Serverroute, Honigtopf, Turnstile, Rate Limit, Zustände
+   │  ├─ leadsystem-dashboard.md    D1-Schema, Dashboard, Anmeldung, Löschfrist
+   │  ├─ consent-und-dienste.md     Eigenbau, fünf Kategorien, Consent Mode, Dienstekatalog
+   │  ├─ google-bewertungen.md      Places API serverseitig, KV-Cache, Darstellung
+   │  └─ qa-und-abnahme.md          Prüfablauf in acht Schritten, Abschlussbericht
+   └─ assets/
+      ├─ consent/                   ConsentBanner.astro, consent.ts
+      ├─ forms/                     kontakt-route.ts, mail-template.ts
+      └─ reviews/                   bewertungen-route.ts
 
 scripts/
 ├─ pruefe-striche.mjs               Gedankenstriche, hyphens: auto, verbotene Wörter
@@ -77,6 +121,8 @@ scripts/
 ├─ pruefe-kontrast.mjs              Kontrastwerte der Rollen-Tokens
 ├─ pruefe-platzhalter.mjs           [[FEHLT]] und data-copy-vorschlag vor dem Livegang
 ├─ pruefe-breakpoints.mjs           acht Größen, Überlauf, Touchziele, Schriftgröße, CLS
+├─ relaunch-inventory.mjs           Bestandsaufnahme der alten Kundenseite vor dem Relaunch
+├─ deslop-check.mjs                 selbst formulierte Copy auf generischen KI-Klang prüfen
 └─ install-quellskills.sh           Quell-Skills zusätzlich installieren
 ```
 
@@ -92,14 +138,18 @@ scripts/
 
 ### Direkt in ein Projekt kopieren
 
+Immer beide Ordner, sonst brechen die Querverweise zwischen ihnen:
+
 ```bash
 mkdir -p .claude/skills
 cp -r /pfad/zu/Design-Skill/skills/webdesign-conversion .claude/skills/
+cp -r /pfad/zu/Design-Skill/skills/agentur-website-builder .claude/skills/
 ```
 
-Danach greift der Skill automatisch, sobald es um Website, Landingpage, Conversion,
-Ladezeit, Barrierefreiheit, SEO oder Rechtstexte geht. Direkt aufrufen geht auch:
-`/webdesign-conversion`.
+Danach greifen die Skills automatisch, sobald es um Website, Landingpage, Conversion,
+Ladezeit, Barrierefreiheit, SEO oder Rechtstexte geht, und der Bauablauf zusätzlich, sobald
+tatsächlich gebaut, überarbeitet oder relauncht wird. Direkt aufrufen geht auch:
+`/webdesign-conversion` und `/agentur-website-builder`.
 
 ## Prüfen
 
@@ -118,6 +168,24 @@ node scripts/pruefe-breakpoints.mjs http://localhost:4321 --bilder
 1440 × 720) und meldet horizontalen Überlauf mit dem Selektor des äußersten Verursachers, zu
 kleine Touchziele, Schrift unter 14 px und Bilder ohne Maße.
 
+Dazu zwei Werkzeuge, die kein Ergebnis prüfen, sondern Material beschaffen und Texte
+bewerten:
+
+```bash
+node scripts/relaunch-inventory.mjs https://alte-kundenseite.de
+node scripts/deslop-check.mjs src/components/sektionen/Hero.astro
+node scripts/deslop-check.mjs --text "Wir begleiten Sie ganzheitlich."
+```
+
+`relaunch-inventory.mjs` liest Sitemap oder interne Links, legt Seitenliste, Texte,
+Rechtstext-Kandidaten und einen Weiterleitungsentwurf in `.relaunch-inventory/` ab. Mit
+gesetztem `FIRECRAWL_API_KEY` läuft es über die Firecrawl API und erreicht auch Seiten, die
+erst im Browser rendern, ohne Schlüssel über den eingebauten Crawler.
+
+`deslop-check.mjs` bewertet fünf Kriterien und gibt eine Punktzahl von 0 bis 5: Floskeln,
+Nominalstil, leere Superlative, fehlende Belege und die Dreierfigur. Er gilt für **eigene**
+Textvorschläge. Gelieferte Kundentexte werden nicht geprüft und nicht umgeschrieben.
+
 ## Eval-Suite
 
 `evals/` prüft mit `claude plugin eval`, ob der Skill seine eigenen Regeln tatsächlich
@@ -135,6 +203,10 @@ Landingpage-Fall übernimmt es ohne Skill zuverlässig die Hauptnavigation der b
 Die Suite hat dabei schon einen echten Fehler gefunden: das Landingpage-Playbook war so
 formuliert, dass das Modell die Navigationsregel erkannte, dann aber um Erlaubnis fragte statt
 zu liefern. Details in `evals/README.md`.
+
+Acht Fälle insgesamt, davon zwei für den Agenturstandard: `consent-ohne-keks` und
+`leadsystem-nur-auf-bestaetigung`. Diese beiden sind neu und noch nicht gelaufen, ihr Δ ist
+damit eine Vermutung und kein Messwert.
 
 ## Quell-Skills nachinstallieren
 
@@ -170,6 +242,9 @@ Volltextsuchen aus. In einem shadcn-Projekt bringt die shadcn-CLI ihren Skill se
    echte Bindestriche im Kompositum bleiben erlaubt.
 8. **Eine Handschrift, vier Ausdrucksformen.** Palette, Spacing, Icons und Motion kommen aus
    derselben Entscheidung.
+9. **Der Bauablauf ist Teil des Standards, nicht Beiwerk.** Analyse vor Rückfrage, Rückfrage
+   vor Konzept, Konzept vor Code, Prüfung vor Fertigmeldung. Wer das überspringt, liefert
+   Nacharbeit statt einer Seite.
 
 ## Rechtlicher Hinweis
 
@@ -184,4 +259,10 @@ Siehe [CREDITS.md](CREDITS.md).
 
 ## Lizenz
 
-MIT.
+`webdesign-conversion`, die Prüfskripte und die Eval-Suite stehen unter MIT.
+
+`agentur-website-builder` bildet den internen Lieferstandard von That's it. Marketing ab und
+steht unter der Lizenz, die in seiner `SKILL.md` genannt ist. Wer das Plugin öffentlich
+weitergibt und diesen Teil nicht mitveröffentlichen will, entfernt den Ordner
+`skills/agentur-website-builder/`. Das Regelwerk bleibt dann für sich lauffähig, nur die
+Verweise aus dem Bauablauf entfallen mit ihm.

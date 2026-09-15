@@ -1,0 +1,166 @@
+# Referenzen und Seitenaufbau
+
+Wo recherchiert wird, steht in
+`../../webdesign-conversion/references/22-premium-designquellen.md`: Awwwards, Dribbble,
+Land-book, recent.design, 21st.dev, und wofür jede Quelle taugt. Dieses Kapitel regelt, was
+aus einer Referenz übernommen werden darf, welche Quelle im Projekt überhaupt gilt und
+welche Sektionsreihenfolge den Ausgangspunkt bildet.
+
+## Wie Referenzwebsites genutzt werden
+
+Referenzen sind eine Quelle für **Prinzipien**, nicht eine Vorlage zum Abzeichnen. Aus einer
+Referenz wird abgeleitet, warum etwas funktioniert: wie viel Weißraum eine Aussage bekommt,
+in welcher Reihenfolge Vertrauen aufgebaut wird, wie ruhig eine Navigation sein darf, wie
+ein Beweis unmittelbar auf ein Versprechen folgt.
+
+Nicht übernommen werden:
+
+* Texte, Claims, Überschriften oder Formulierungen
+* Logos, Wortmarken, Icons, Illustrationen, Fotos und andere Markenassets
+* charakteristische Layoutkombinationen, die als Handschrift einer Marke erkennbar sind
+* ganze Sektionen samt Aufbau, Bildsprache und Rhythmus
+
+Der Prüfstein ist einfach: Würde jemand, der die Referenz kennt, die neue Seite als deren
+Kopie erkennen, ist die Grenze überschritten. Übernommen wird das Prinzip, nicht die
+Ausführung. Alles Sichtbare entsteht aus dem Branding und dem Material des Kunden.
+
+## Rangfolge der Quellen
+
+Vor jeder Referenzarbeit klären, welche Quelle das Projekt überhaupt hat. Die höhere Stufe
+schlägt immer die niedrigere:
+
+1. **Vollständiges Design liegt vor**, etwa aus Claude Design, Figma oder als
+   Screenshotstrecke. Dann ist das Design die Quelle. Referenzwebsites werden nicht mehr
+   herangezogen, außer für Fragen, die das Design offen lässt, typischerweise Zustände,
+   leere Zustände, Fehlerfälle und Verhalten auf kleinen Geräten.
+2. **Der Nutzer nennt eigene Referenzen für dieses Projekt.** Dann gelten diese, auch wenn
+   sie der Ausgangsliste widersprechen. Nicht stillschweigend um Seiten aus der Liste
+   ergänzen. Wenn eine zusätzliche Referenz sinnvoll erscheint, vorschlagen und begründen.
+3. **Weder Design noch eigene Referenzen.** Erst dann greift die Ausgangsliste unten,
+   ergänzt um eigene Recherche in der Branche des Kunden auf den Premium-Designquellen.
+
+Wenn unklar ist, auf welcher Stufe das Projekt steht, einmal nachfragen. Das ist billiger
+als eine visuelle Richtung, die am Ende verworfen wird.
+
+Auch auf Stufe 1 bleibt die Marke des Kunden die erste Quelle: eine bestehende Seite wird
+vor dem Neuentwurf ausgelesen, siehe
+`../../webdesign-conversion/references/20-markenextraktion-bestandsseite.md`.
+
+## Auswahl pro Projekt
+
+Im Umsetzungskonzept jeweils benennen und in einem Satz begründen:
+
+1. **eine Referenz für Conversion und Informationsarchitektur**, also Reihenfolge der
+   Argumente, Platzierung der Handlungsaufforderungen, Umgang mit Einwänden
+2. **eine Referenz für die visuelle Richtung**, also Farbgefühl, Typografiehaltung,
+   Bildsprache, Dichte
+3. **optional eine Referenz für Interaktion und Motion**
+
+Mehr als drei Referenzen führen zu einem Flickenteppich. Wenn der Kunde selbst eine Seite
+nennt, die ihm gefällt, wird sie mit aufgenommen und derselben Regel unterworfen.
+
+Vor der Nutzung die Referenz tatsächlich ansehen und die drei bis fünf Prinzipien benennen,
+die übernommen werden, dazu das, was bewusst nicht übernommen wird. Eine Referenz, die nur
+als Name im Konzept steht, hat nichts beigetragen.
+
+## Ausgangsliste
+
+Diese Liste kommt nur auf Stufe 3 der Rangfolge zum Einsatz. Sie beschreibt Richtungen,
+keine Vorgaben, und ist bewusst nicht vollständig. Die Gruppen sind ein Einstiegsraster,
+keine feste Zuordnung: eine Seite aus der Softwaregruppe kann für einen Handwerksbetrieb
+genau die richtige Argumentationsstruktur liefern. Es ist ausdrücklich erwünscht,
+projektbezogen weiter zu recherchieren, besonders in der Branche des Kunden.
+
+Klarheit, Struktur und Vertrauensaufbau im geschäftlichen Umfeld:
+`stripe.com/de`, `linear.app`, `mercury.com`, `vestris.ai`
+
+Dienstleister, Handwerk und lokale Anbieter, also der häufigste Kundentyp der Agentur:
+`comradeweb.com`, `metriccivil.ca`, `alliancemoving.com`, `hhjtrialattorneys.com`,
+`coffee-tech.com`, `beetogreen.com/en`
+
+Produkt und Softwareanbieter, stark in Struktur und Argumentationsaufbau:
+`brand.ai`, `showit.com`, `luffu.com`, `pop.site`, `trymira.com`, `cofactr.com`,
+`carcompany.ai`, `amp.framer.media`, `voltaskai.endover.ee/en`
+
+Marke, Atmosphäre und Produktinszenierung:
+`bynd.com/eu`, `onewhale.io`, `wattspet.com`, `rideradian.com`, `wegems.co`, `designbell.io`
+
+Ruhe, Nähe und Dienstleistung am Menschen:
+`become-a-yogi.com`, `kalmmoments.com`, `tropica.framer.website`
+
+Verein, Community und Organisation:
+`hadi-community.de`, `iwcf.org`
+
+Fallbeispiele und Referenzdarstellung, nützlich für die Case Study Sektion:
+`showcase.nixtio.com/cases/board`, `xnrgyclub.com`
+
+Eine Adresse aus dieser Liste kann offline sein oder sich verändert haben. Was sich nicht
+abrufen lässt, wird nicht aus der Erinnerung beschrieben, sondern ersetzt.
+
+## Vorrang der Conversion
+
+Gestaltung dient dem Ziel der Seite, nicht umgekehrt. Daraus folgen harte Regeln:
+
+* Die primäre Handlung ist zu jedem Zeitpunkt sichtbar oder in einem Schritt erreichbar.
+* Animationen dürfen Inhalte, Navigation, Formulare oder Handlungsaufforderungen weder
+  verzögern noch verbergen. Ein Element, das erst nach dem Scrollen erscheint, muss auch
+  ohne JavaScript vorhanden und lesbar sein.
+* Kein Eingangsbildschirm, kein Ladebalken zur Inszenierung, keine Sektion, die erst nach
+  einer Animation bedienbar wird.
+* Bei Zielkonflikt zwischen Wirkung und Verständlichkeit gewinnt die Verständlichkeit. Die
+  Abwägung im Abschlussbericht in einem Satz nennen.
+
+Landingpages bekommen einen fokussierten Pfad mit einer Handlung und keine Navigation, siehe
+`../../webdesign-conversion/playbooks/landingpage.md`. Unternehmenshomepages dürfen mehrere
+Nutzerwege anbieten, etwa Leistungen, Karriere und Kontakt, definieren aber trotzdem genau
+eine primäre Conversion, die überall gleich benannt wird.
+
+## Universeller Aufbau: Unternehmenshomepage
+
+Als Ausgangsstruktur, nicht als Zwang. Abweichungen sind erlaubt, wenn das Material sie
+verlangt, und werden begründet. Die knappere Variante für B2B Dienstleister steht in
+`../../webdesign-conversion/references/00-fahrplan.md` Schritt 2.
+
+1. Navigation mit primärer Handlungsaufforderung
+2. Hero mit Zielgruppe, Ergebnis und Handlungsaufforderung, auf voller Bildschirmhöhe
+3. unmittelbarer Vertrauensbeweis
+4. Problem oder Ausgangslage
+5. zentrale Leistungen oder Lösung
+6. konkreter Ablauf
+7. Ergebnis und Nutzen
+8. Referenzen oder Fallbeispiele
+9. Differenzierung, also warum dieser Anbieter
+10. Kundenstimmen und Kennzahlen
+11. Einwandbehandlung oder häufige Fragen
+12. abschließende Handlungsaufforderung
+13. Footer mit Kontakt, Navigation und Rechtstexten
+
+## Universeller Aufbau: Landingpage
+
+1. präziser Hero
+2. Haupt Handlungsaufforderung oder kurzes Formular
+3. Vertrauenselemente direkt darunter
+4. Problem und gewünschtes Ergebnis
+5. Lösung mit konkreten Vorteilen
+6. Ablauf
+7. Beweise, Ergebnisse, Referenzen
+8. Einwände
+9. häufige Fragen
+10. wiederholte Handlungsaufforderung oder Formular
+11. rechtliche Hinweise und Footer
+
+Bei beiden gilt: keine Folge von Sektionen auf identischer Fläche ohne Abstufung. Bildgrund,
+Flächenwechsel oder typografische Hierarchie nach
+`../../webdesign-conversion/references/21-sektionshintergruende-hierarchie.md` gehören in
+den Plan, nicht in die Nacharbeit.
+
+## Umgang mit fehlendem Material
+
+Wenn für eine Sektion der Struktur nichts vorliegt, etwa keine Kundenstimmen und keine
+Kennzahlen, wird die Sektion **nicht mit erfundenem Inhalt gefüllt**. Zwei zulässige Wege:
+die Sektion entfällt und die Struktur bleibt tragfähig, oder sie wird als Platzhalter
+angelegt und im Abschlussbericht mit der Angabe aufgeführt, was der Kunde liefern muss.
+
+Eine belegte Quelle groß ist mehr wert als vier Kacheln, von denen drei leer sind. Die
+Kennzeichnung eigener Textvorschläge regelt
+`../../webdesign-conversion/references/12-copywriting.md`.

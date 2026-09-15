@@ -1,6 +1,6 @@
 ---
 name: webdesign-conversion
-description: Vollständiges System für conversion-orientiertes Webdesign im DACH-Raum. Deckt Homepages, Landingpages und Recruiting-Funnel ab: Strategie und Positionierung, Design und UX, Spacing und Rhythmus, Responsive Design mit Container Queries, Technik und Performance, Barrierefreiheit (BFSG/WCAG 2.2 AA), SEO, Conversion-Architektur, Copywriting, eigene Icon-Systeme, Motion mit GSAP und CSS, Marken-/CI-Extraktion aus bestehenden Seiten (Logo, Farben, Schrift), Referenzrecherche auf Premium-Designquellen (Awwwards, Dribbble, Land-book, recent.design, 21st.dev), Bildhintergründe und visuelle Sektionshierarchie sowie den rechtlichen und technischen Pflichtaufbau (Impressum, Datenschutzerklärung, Consent, 404-Seite, robots.txt, Sitemap, Weiterleitungen, Security-Header). Nutze diesen Skill beim Planen, Bauen, Überarbeiten oder Prüfen einer Website, Landingpage, Karriereseite oder Stellenanzeige, bei Fragen zu Ladezeit, Above the Fold, CTA, Formularen, Trust-Elementen, Abständen, Breakpoints, Meta-Titeln, interner Verlinkung, Designtokens, Icons, SVG, Animationen, Headlines, Buttontexten, Bewerberdaten, AGG, Markenübernahme aus einer bestehenden Website oder Rechtstexten.
+description: "Vollständiges System für conversion-orientiertes Webdesign im DACH-Raum. Deckt Homepages, Landingpages und Recruiting-Funnel ab: Strategie und Positionierung, Design und UX, Spacing und Rhythmus, Responsive Design mit Container Queries, Technik und Performance, Barrierefreiheit (BFSG/WCAG 2.2 AA), SEO, Conversion-Architektur, Copywriting, eigene Icon-Systeme, Motion mit GSAP und CSS, Marken-/CI-Extraktion aus bestehenden Seiten (Logo, Farben, Schrift), Referenzrecherche auf Premium-Designquellen (Awwwards, Dribbble, Land-book, recent.design, 21st.dev), Bildhintergründe und visuelle Sektionshierarchie sowie den rechtlichen und technischen Pflichtaufbau (Impressum, Datenschutzerklärung, Consent, 404-Seite, robots.txt, Sitemap, Weiterleitungen, Security-Header). Nutze diesen Skill beim Planen, Bauen, Überarbeiten oder Prüfen einer Website, Landingpage, Karriereseite oder Stellenanzeige, bei Fragen zu Ladezeit, Above the Fold, CTA, Formularen, Trust-Elementen, Abständen, Breakpoints, Meta-Titeln, interner Verlinkung, Designtokens, Icons, SVG, Animationen, Headlines, Buttontexten, Bewerberdaten, AGG, Markenübernahme aus einer bestehenden Website oder Rechtstexten."
 license: MIT
 metadata:
   author: Henneberg Webdesign
@@ -16,6 +16,20 @@ rechtssicher ist und technisch trägt.
 **Kernsatz für jede Entscheidung:** Design ohne Strategie ist Dekoration. Technik ohne
 Conversion-Logik ist eine schöne Sackgasse. Erst wenn alle sechs Bereiche ineinandergreifen,
 arbeitet die Seite.
+
+## Wenn tatsächlich gebaut wird
+
+Dieses Plugin enthält zwei Skills. Dieser hier ist das Regelwerk: was gut ist und warum.
+Der Schwesterskill `agentur-website-builder` ist der Lieferablauf von That's it. Marketing:
+Phasen von der Analyse bis zur Übergabe, fester Stack aus Astro und Cloudflare Pages,
+Formulare über Resend, eigenes Consent Banner, Leadsystem, Bewertungsabruf, Abschlussbericht.
+
+| Situation | Wer führt |
+|---|---|
+| Frage, Audit, Konzept, Text, Recht, Motion, Icons, Tokens | dieser Skill |
+| Kundenseite bauen, überarbeiten, relaunchen, ausliefern | `../agentur-website-builder/SKILL.md`, dieser Skill liefert die Inhalte |
+
+Die harten Grenzen weiter unten gelten in beiden Fällen unverändert.
 
 ## Zuerst: welcher Typ
 
@@ -132,6 +146,18 @@ node scripts/pruefe-platzhalter.mjs   # [[FEHLT]] und data-copy-vorschlag vor de
 node scripts/pruefe-breakpoints.mjs http://localhost:4321 --bilder
 ```
 
+Dazu zwei Werkzeuge, die nicht prüfen, sondern Material beschaffen und Texte bewerten. Sie
+wandern nie in das `package.json` eines Kundenprojekts:
+
+```bash
+node scripts/relaunch-inventory.mjs https://alte-kundenseite.de   # Bestand vor dem Relaunch
+node scripts/deslop-check.mjs src/components/sektionen/Hero.astro # selbst formulierte Copy
+```
+
+`deslop-check.mjs` prüft fünf Kriterien: Floskeln, Nominalstil, leere Superlative, fehlende
+Belege und die Dreierfigur. Er gilt für **eigene** Textvorschläge. Gelieferte Kundentexte
+werden nicht geprüft und nicht umgeschrieben.
+
 ## Sieben Fehler, die Geld kosten
 
 Bei jedem Audit und jedem Neubau zuerst gegen diese Liste prüfen. Die Prozentwerte sind
@@ -179,6 +205,10 @@ Diese Regeln gelten immer und werden nicht wegdiskutiert:
   Strich davor. Der Bereichsstrich bei Zahlen („10–12 Uhr") und der echte Bindestrich im
   Kompositum („E-Mail-Adresse") bleiben erlaubt. Geprüft mit
   `scripts/pruefe-striche.mjs`, Begründung in `references/12-copywriting.md`.
+- **Keine Standardschrift ohne Vorgabe.** Liegt keine Kundenschrift vor, sind Inter,
+  Roboto, Open Sans, Poppins, Montserrat und Lato gesperrt. Stattdessen zwei Kandidaten mit
+  einer Begründung aus Branche und Zielgruppe vorschlagen. Schriften werden immer selbst
+  gehostet, nie über ein fremdes CDN. Siehe `references/10-visuelle-richtung.md`.
 - **Keine Silbentrennung.** `hyphens: auto` trennt deutsche Komposita mitten im Wort und
   gehört nicht auf eine Verkaufsseite.
 - **Heldenbereich immer auf voller Bildschirmhöhe.** Auf jeder Breite und jeder Fensterhöhe
