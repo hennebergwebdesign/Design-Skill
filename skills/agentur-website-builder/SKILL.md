@@ -4,7 +4,7 @@ description: Baut komplette Kundenwebsites mit Astro und Cloudflare Pages nach A
 license: Proprietär, That's it. Marketing / VFDESIGN LTD
 metadata:
   author: That's it. Marketing / Henneberg Webdesign
-  version: 1.1.0
+  version: 1.2.0
 ---
 
 # Agentur Website Builder
@@ -281,6 +281,7 @@ Schwesterskill.
 | `references/consent-und-dienste.md` | jedes Projekt |
 | `references/google-bewertungen.md` | jedes Projekt |
 | `references/qa-und-abnahme.md` | Phase 5 und 6, immer |
+| `references/firecrawl-recherche.md` | eine bekannte, alte oder fremde Seite crawlen oder scrapen, für Relaunch-Inventar oder Design-Referenz |
 
 | Datei im Schwesterskill | Wann lesen |
 | --- | --- |
@@ -298,15 +299,21 @@ Bewertungsabruf. Diese kopieren und an das Projekt anpassen, statt jedes Mal neu
 schreiben. Rechtstexte, Tokens, Meta-Head, JSON-LD, 404 und Security-Header liegen in
 `../webdesign-conversion/assets/vorlagen/`.
 
-`scripts/` im Repowurzelverzeichnis enthält die fünf Prüfskripte sowie zwei
+`scripts/` im Repowurzelverzeichnis enthält die fünf Prüfskripte sowie drei
 Agenturwerkzeuge, die nie Teil der ausgelieferten Seite werden und nie in das `package.json`
 des Kundenprojekts wandern:
 
 * `relaunch-inventory.mjs` inventarisiert eine alte Kundenseite und legt Seitenliste,
   Texte, Rechtstext-Kandidaten und Weiterleitungsentwurf in `.relaunch-inventory/` ab, siehe
   `references/intake-und-entscheidungen.md`.
+* `design-scan.mjs` erfasst eine fremde, bekannte oder vom Kunden genannte Referenzseite und
+  legt Sektionsreihenfolge, Bildbelegung sowie Farb- und Schriftkandidaten in
+  `.design-scan/<host>/` ab, siehe `references/firecrawl-recherche.md`.
 * `deslop-check.mjs` prüft selbst formulierte Copy-Vorschläge auf generischen KI-Klang,
   siehe `references/qa-und-abnahme.md`.
+
+Beide Erfassungswerkzeuge laufen mit reinem `fetch()` ohne Abhängigkeit, optional über die
+Firecrawl-API mit gesetztem `FIRECRAWL_API_KEY`, siehe `references/firecrawl-recherche.md`.
 
 ## Definition of Done
 

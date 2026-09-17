@@ -63,6 +63,12 @@ Vor der Nutzung die Referenz tatsächlich ansehen und die drei bis fünf Prinzip
 die übernommen werden, dazu das, was bewusst nicht übernommen wird. Eine Referenz, die nur
 als Name im Konzept steht, hat nichts beigetragen.
 
+Ist die Referenz eine konkrete, bekannte oder alte Seite statt einer kuratierten Galerie,
+liefert `scripts/design-scan.mjs` das Rohmaterial dafür: Sektionsreihenfolge, Wortzahl,
+Bildbelegung, Farb- und Schriftkandidaten, optional ein Screenshot über die Firecrawl-API.
+Siehe `firecrawl-recherche.md`. Das Skript ersetzt nicht das Ansehen und Benennen der
+Prinzipien, es macht es konkreter.
+
 ## Ausgangsliste
 
 Diese Liste kommt nur auf Stufe 3 der Rangfolge zum Einsatz. Sie beschreibt Richtungen,

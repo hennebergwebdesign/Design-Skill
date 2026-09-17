@@ -75,6 +75,18 @@ Drei Dinge wurden dabei bewusst korrigiert statt übernommen:
 Die beiden Skripte `relaunch-inventory.mjs` und `deslop-check.mjs` waren im Agenturskill
 beschrieben, aber nicht vorhanden. Sie sind für dieses Repository neu geschrieben.
 
+### In Version 3.2 zusätzlich eingeflossen
+
+| Quelle | Was daraus eingeflossen ist |
+|---|---|
+| [21st.dev](https://21st.dev/), Registry-Komponenten des Nutzers | Fünf Beispielkomponenten (Hero, FAQ, schwebende Elemente, Bewertungen, Integrationen) als annotierte Referenzen in `webdesign-conversion/references/23-referenzkomponenten-21st.md` und `webdesign-conversion/assets/vorlagen/referenzkomponenten/`. Zwei davon (`hero-vollbild.tsx`, `faq-akkordeon.tsx`) mit vollständigem Quelltext wie geliefert. Drei weitere waren im Original nur Demo-Aufrufcode ohne die Basiskomponente (`hero-section-7`, `testimonial-v2`, `integrations-5`); deren Quelltext wurde nicht erfunden, sondern die Lücke im Skill selbst benannt |
+| [firecrawl/firecrawl](https://github.com/firecrawl/firecrawl), Lizenz ungeprüft: siehe `LICENSE` im Quellrepository vor produktivem Einsatz | Neues Werkzeug `scripts/design-scan.mjs` und Kapitel `agentur-website-builder/references/firecrawl-recherche.md`: Struktur- und Designerfassung einer fremden, bekannten oder alten Referenzseite über die Firecrawl-API (`scrape`), optional mit Screenshot. Kein Code aus dem Firecrawl-Repository wurde übernommen, nur dessen REST-API angesprochen, im selben abhängigkeitsfreien `fetch()`-Stil wie das bestehende `relaunch-inventory.mjs`, das die Firecrawl-API bereits seit Version 3.0 optional nutzt |
+
+Die Lizenz von Firecrawl wurde für diesen Eintrag nicht verifiziert, siehe die Regel gegen
+erfundene Belege in dieser Datei selbst. Vor produktivem Einsatz, insbesondere bei
+Selbsthosting, die `LICENSE`-Datei im Quellrepository prüfen, sie kann sich zwischen
+Kernserver und Client-SDKs unterscheiden.
+
 ## Inhaltliche Grundlage
 
 **Website-Conversion-Playbook 2026** (That's it. Marketing, Victor & Tim): das

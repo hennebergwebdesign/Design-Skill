@@ -136,6 +136,12 @@ npx shadcn@latest apply <code> --only theme,font
 Beim Wechsel eines Presets zuerst fragen: überschreiben, teilweise, zusammenführen oder
 überspringen?
 
+## Konkrete Beispiele
+
+Fünf annotierte 21st.dev-Beispiele (Hero, FAQ, schwebende Elemente, Bewertungen,
+Integrationen) mit Prinzip je Komponente und Übernahmeregeln stehen in
+`23-referenzkomponenten-21st.md`, Code in `../assets/vorlagen/referenzkomponenten/`.
+
 ## Verbindung zum Conversion-System
 
 shadcn/ui liefert Bausteine, keine Positionierung. Die Regeln aus

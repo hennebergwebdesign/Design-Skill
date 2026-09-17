@@ -14,7 +14,7 @@ rechtlich tragfähig, barrierearm, schnell, und nicht wie von einer Maschine geb
 
 | Skill | Rolle | Lizenz |
 |---|---|---|
-| `skills/webdesign-conversion/` | das Regelwerk: was gut ist und warum. 23 Referenzen, 3 Playbooks, Vorlagen, Checklisten | MIT |
+| `skills/webdesign-conversion/` | das Regelwerk: was gut ist und warum. 24 Referenzen, 3 Playbooks, Vorlagen, Checklisten | MIT |
 | `skills/agentur-website-builder/` | der Lieferablauf: Phasen 0 bis 6, fester Agenturstack, einsatzfertiger Code | Agenturstandard, siehe seine `SKILL.md` |
 
 Die Trennung ist die zentrale Entscheidung dieses Repositories: **Wissen und Ablauf sind
@@ -39,6 +39,7 @@ node scripts/pruefe-breakpoints.mjs http://localhost:4321 --bilder
 
 # Agenturwerkzeuge
 node scripts/relaunch-inventory.mjs https://alte-kundenseite.de
+node scripts/design-scan.mjs https://wettbewerber-oder-inspiration.de
 node scripts/deslop-check.mjs --text "Wir begleiten Sie ganzheitlich."
 
 # Eval-Suite
@@ -60,9 +61,9 @@ hier nichts ein.
 ```
 .claude-plugin/       plugin.json, marketplace.json
 skills/
-  webdesign-conversion/     SKILL.md, references/00-22, playbooks/, assets/
+  webdesign-conversion/     SKILL.md, references/00-23, playbooks/, assets/
   agentur-website-builder/  SKILL.md, references/, assets/consent|forms|reviews
-scripts/              fünf Prüfskripte, zwei Agenturwerkzeuge, ein Installer
+scripts/              fünf Prüfskripte, drei Agenturwerkzeuge, ein Installer
 evals/                acht Fälle mit Gradern, results/ ist ausgenommen
 README.md             Außendarstellung
 CREDITS.md            Herkunft jeder eingeflossenen Quelle
@@ -111,6 +112,9 @@ Diese Punkte haben einen Grund. Wer sie ändert, ändert damit auch den Grund.
 - Für vier der sechs älteren Eval-Fälle fehlt weiterhin die Baseline-Messung.
 - `relaunch-inventory.mjs` ist gegen einen lokalen Testserver geprüft, noch nicht gegen eine
   echte Kundenseite und noch nicht gegen die Firecrawl API.
+- `design-scan.mjs` ist gegen eine echte, öffentliche Seite ohne `FIRECRAWL_API_KEY` geprüft
+  (Direktabruf), noch nicht mit gesetztem Schlüssel gegen die echte Firecrawl API und noch
+  nicht gegen eine reine JS-Anwendung, die erst im Browser rendert.
 - Die Referenzliste in `agentur-website-builder/references/referenzen-und-auswahl.md` enthält
   fremde Domains. Sie veraltet und gehört einmal jährlich durchgesehen.
 - Die Lizenzlage ist gemischt: MIT für das Regelwerk, Agenturstandard für den Bauablauf.
@@ -119,6 +123,23 @@ Diese Punkte haben einen Grund. Wer sie ändert, ändert damit auch den Grund.
 
 ## Änderungsverlauf
 
+- **17.09.2026, Version 3.2.0** Zwei unabhängige Ergänzungen. Erstens: fünf vom Nutzer
+  vorgelegte 21st.dev-Komponenten als annotierte Referenzen aufgenommen, neue
+  `webdesign-conversion/references/23-referenzkomponenten-21st.md` mit Prinzip je Komponente
+  und Übernahmeregeln, Code in `webdesign-conversion/assets/vorlagen/referenzkomponenten/`.
+  Zwei der fünf Vorlagen enthielten nur Demo-Aufrufcode ohne die referenzierte
+  Basiskomponente (`hero-section-7`, `testimonial-v2`, `integrations-5` betreffen drei
+  Dateien); deren Quelltext wurde nicht nachgebaut, sondern die Lücke im Kapitel selbst
+  benannt, siehe die Regel gegen erfundene Belege. Zweitens: Firecrawl
+  (`github.com/firecrawl/firecrawl`) als optionale Abrufquelle für Referenzrecherche
+  eingebunden, kein Code übernommen, nur die REST-API angesprochen. Neues Werkzeug
+  `scripts/design-scan.mjs` erfasst eine fremde, bekannte oder alte Seite für die
+  Struktur- und Design-Recherche vor dem Tokensystem-Plan (Sektionsreihenfolge, Bilder,
+  Farb-/Schriftkandidaten, optional Screenshot), ergänzt `relaunch-inventory.mjs`, das
+  weiterhin für die eigene Bestandsseite vor dem Relaunch zuständig bleibt. Neue
+  `agentur-website-builder/references/firecrawl-recherche.md` grenzt beide Werkzeuge
+  gegeneinander ab. `design-scan.mjs` ist gegen eine echte Seite ohne Firecrawl-Schlüssel
+  geprüft, noch nicht mit gesetztem Schlüssel gegen die echte API.
 - **15.09.2026, Version 3.1.0** Cloudflare Pages Astro als Standardstack ohne Rückfrage
   festgeschrieben. Bisher stand nur in der Tabelle „Feste Agenturvorgaben", was der Stack
   ist, aber nicht, was passiert, wenn Phase 1 kein bestehendes Projekt vorfindet. Neuer

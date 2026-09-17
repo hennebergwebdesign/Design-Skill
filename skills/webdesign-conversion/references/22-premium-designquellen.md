@@ -50,9 +50,20 @@ kennzeichnen, siehe die Ehrlichkeitsregel in `SKILL.md`.
   Motion-Handschrift des Projekts anpassen, nicht unverändert einfügen (kein Wert ohne
   Token, siehe die harte Grenze in `SKILL.md`).
 
+## Eine bekannte oder alte Seite als Referenz erfassen
+
+Manchmal ist die Referenz keine kuratierte Galerie, sondern eine konkrete, bekannte Seite,
+etwa ein Wettbewerber oder eine Seite, die der Kunde nennt. Für Struktur, Sektionsreihenfolge
+und Inhaltsumfang einer solchen Seite steht `scripts/design-scan.mjs` bereit, siehe
+`../../agentur-website-builder/references/firecrawl-recherche.md`. Es liefert Rohmaterial für
+Punkt 3 unten (Prinzipien benennen), ersetzt die eigene Sichtung nicht.
+
 ## Verwandte Kapitel
 
 - Visuelle Richtung, Anti-Schablone, Durchgang 1/2: `10-visuelle-richtung.md`
 - Sektionsliste und Reihenfolge: `00-fahrplan.md`
 - Bildhintergründe und Sektionstrennung: `21-sektionshintergruende-hierarchie.md`
 - React/Next-Komponenten, shadcn/ui: `11-komponenten-shadcn.md`
+- Fünf annotierte 21st.dev-Beispielkomponenten: `23-referenzkomponenten-21st.md`
+- Bekannte oder alte Seiten per Firecrawl erfassen:
+  `../../agentur-website-builder/references/firecrawl-recherche.md`
