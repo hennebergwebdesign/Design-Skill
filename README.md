@@ -90,13 +90,16 @@ skills/
 │  │  ├─ 19-recruiting-funnel.md    EVP, Funnel-Stufen, AGG, Bewerberdaten, JobPosting
 │  │  ├─ 20-markenextraktion-bestandsseite.md  Logo, Farben, Schrift aus der alten Seite
 │  │  ├─ 21-sektionshintergruende-hierarchie.md  Bildgrund, Trennung, Abstufung
-│  │  └─ 22-premium-designquellen.md  Awwwards, Dribbble, Land-book, recent.design, 21st.dev
+│  │  ├─ 22-premium-designquellen.md  Awwwards, Dribbble, Land-book, recent.design, 21st.dev
+│  │  └─ 23-referenzkomponenten-21st.md  fünf annotierte 21st.dev-Beispielkomponenten
 │  └─ assets/
 │     ├─ vorlagen/                  marke.json, marke-brief.md, impressum.md, datenschutz.md,
 │     │                             datenschutz-bewerber.md, consent-muster.md,
 │     │                             robots.txt(.ts), sitemap.xsl, _headers, 404.astro,
 │     │                             tokens.css, global-basis.css, head-meta.html,
-│     │                             jsonld-bausteine.md
+│     │                             jsonld-bausteine.md,
+│     │                             referenzkomponenten/ (Hero, FAQ, schwebende Elemente,
+│     │                             Bewertungen, Integrationen)
 │     └─ checklisten/               pre-launch.md, conversion-audit.md
 └─ agentur-website-builder/         der Lieferablauf
    ├─ SKILL.md                      Phasen 0 bis 6, feste Agenturvorgaben, Definition of Done
@@ -109,7 +112,8 @@ skills/
    │  ├─ leadsystem-dashboard.md    D1-Schema, Dashboard, Anmeldung, Löschfrist
    │  ├─ consent-und-dienste.md     Eigenbau, fünf Kategorien, Consent Mode, Dienstekatalog
    │  ├─ google-bewertungen.md      Places API serverseitig, KV-Cache, Darstellung
-   │  └─ qa-und-abnahme.md          Prüfablauf in acht Schritten, Abschlussbericht
+   │  ├─ qa-und-abnahme.md          Prüfablauf in acht Schritten, Abschlussbericht
+   │  └─ firecrawl-recherche.md     bekannte/alte Seiten crawlen und scrapen, Firecrawl-API
    └─ assets/
       ├─ consent/                   ConsentBanner.astro, consent.ts
       ├─ forms/                     kontakt-route.ts, mail-template.ts
@@ -122,6 +126,7 @@ scripts/
 ├─ pruefe-platzhalter.mjs           [[FEHLT]] und data-copy-vorschlag vor dem Livegang
 ├─ pruefe-breakpoints.mjs           acht Größen, Überlauf, Touchziele, Schriftgröße, CLS
 ├─ relaunch-inventory.mjs           Bestandsaufnahme der alten Kundenseite vor dem Relaunch
+├─ design-scan.mjs                  Struktur- und Design-Scan einer fremden Referenzseite
 ├─ deslop-check.mjs                 selbst formulierte Copy auf generischen KI-Klang prüfen
 └─ install-quellskills.sh           Quell-Skills zusätzlich installieren
 ```
@@ -168,11 +173,12 @@ node scripts/pruefe-breakpoints.mjs http://localhost:4321 --bilder
 1440 × 720) und meldet horizontalen Überlauf mit dem Selektor des äußersten Verursachers, zu
 kleine Touchziele, Schrift unter 14 px und Bilder ohne Maße.
 
-Dazu zwei Werkzeuge, die kein Ergebnis prüfen, sondern Material beschaffen und Texte
+Dazu drei Werkzeuge, die kein Ergebnis prüfen, sondern Material beschaffen und Texte
 bewerten:
 
 ```bash
 node scripts/relaunch-inventory.mjs https://alte-kundenseite.de
+node scripts/design-scan.mjs https://wettbewerber-oder-inspiration.de
 node scripts/deslop-check.mjs src/components/sektionen/Hero.astro
 node scripts/deslop-check.mjs --text "Wir begleiten Sie ganzheitlich."
 ```
@@ -181,6 +187,13 @@ node scripts/deslop-check.mjs --text "Wir begleiten Sie ganzheitlich."
 Rechtstext-Kandidaten und einen Weiterleitungsentwurf in `.relaunch-inventory/` ab. Mit
 gesetztem `FIRECRAWL_API_KEY` läuft es über die Firecrawl API und erreicht auch Seiten, die
 erst im Browser rendern, ohne Schlüssel über den eingebauten Crawler.
+
+`design-scan.mjs` erfasst eine fremde, bekannte oder vom Kunden genannte Referenzseite für
+die Recherche vor dem Tokensystem-Plan: Sektionsreihenfolge aus der Überschriftenhierarchie,
+Wortzahl, Bildbelegung sowie Farb- und Schriftkandidaten aus dem Code, mit
+`FIRECRAWL_API_KEY` zusätzlich ein Screenshot. Ablage in `.design-scan/<host>/`, siehe
+`skills/agentur-website-builder/references/firecrawl-recherche.md`. Rohmaterial für die
+eigene Sichtung, kein Text zum Übernehmen.
 
 `deslop-check.mjs` bewertet fünf Kriterien und gibt eine Punktzahl von 0 bis 5: Floskeln,
 Nominalstil, leere Superlative, fehlende Belege und die Dreierfigur. Er gilt für **eigene**

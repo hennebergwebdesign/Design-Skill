@@ -4,7 +4,7 @@ description: "Vollständiges System für conversion-orientiertes Webdesign im DA
 license: MIT
 metadata:
   author: Henneberg Webdesign
-  version: 2.0.0
+  version: 2.1.0
 ---
 
 # Webdesign Conversion System
@@ -115,6 +115,7 @@ Lies gezielt nach, statt alles zu laden.
 | Marke/CI aus bestehender Seite auslesen (Logo, Farben, Schrift) | `20-markenextraktion-bestandsseite.md` |
 | Bildhintergründe, Sektionstrennung, visuelle Hierarchie | `21-sektionshintergruende-hierarchie.md` |
 | Referenzrecherche vor dem Entwurf: Awwwards, Dribbble, Land-book, recent.design, 21st.dev | `22-premium-designquellen.md` |
+| Fünf annotierte 21st.dev-Beispielkomponenten (Hero, FAQ, schwebende Elemente, Bewertungen, Integrationen) | `23-referenzkomponenten-21st.md` |
 
 **Technik, Recht, Messung**
 
@@ -131,7 +132,8 @@ Lies gezielt nach, statt alles zu laden.
 
 Fertige Vorlagen (Markenbrief, Rechtstexte, Bewerber-Datenschutz, robots.txt,
 Sitemap-Stylesheet, Tokens, globale Basis, Meta-Head, JSON-LD samt JobPosting, 404-Seite,
-Security-Header) liegen in `assets/vorlagen/`.
+Security-Header) liegen in `assets/vorlagen/`, annotierte 21st.dev-Referenzkomponenten in
+`assets/vorlagen/referenzkomponenten/`, siehe `references/23-referenzkomponenten-21st.md`.
 
 ## Prüfskripte
 
