@@ -10,6 +10,9 @@ neuen Plan entwirft.
 zugestimmt. Eine fremde Marke (Wettbewerber, Inspirationsseite) wird nie auf Logo- oder
 Asset-Ebene ausgelesen, siehe „Rechtlich" unten.
 
+Was hier ausgelesen wird, steht danach auf Stufe 2 der Rangfolge in
+`24-designsystem-vorrang.md` und wird von keiner externen Referenz überschrieben.
+
 ## Was ausgelesen wird
 
 | Merkmal | Woher | Werkzeug |

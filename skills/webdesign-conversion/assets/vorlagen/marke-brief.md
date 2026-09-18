@@ -117,15 +117,38 @@ Ihr Partner für · Herzlich willkommen · Wir über uns · Qualität seit
 | Schrift | [[FEHLT]] | |
 | Formsprache/Ton | [[FEHLT]] | |
 
+**Designsystem-Stufe** nach `24-designsystem-vorrang.md`. Sie entscheidet, was eine externe
+Referenz überhaupt beeinflussen darf:
+
+| Feld | Wert |
+|---|---|
+| Stufe (1 geliefertes System, 2 Markenvorgaben, 3 hier neu entschieden) | [[FEHLT]] |
+| Quelle (Tokendatei, Figma, Styleguide, Logodatei) | [[FEHLT]] |
+| Damit geschützt | Farbe, Typografie, Logo, Form, Raum, Bausteine |
+
 **Referenzen aus Premium-Designquellen**, siehe `22-premium-designquellen.md`. Vor Durchgang
-1 recherchiert, nicht danach als Nachgedanke:
+1 recherchiert, nicht danach als Nachgedanke. Jede Zeile entspricht einem Eintrag in
+`.designrecherche/register.json`, geführt von `scripts/referenz-register.mjs`, Ablauf in
+`../../agentur-website-builder/references/designrecherche-ablauf.md`:
 
-| Quelle | Link | Was übernommen wird |
-|---|---|---|
-| [[FEHLT: Awwwards/Dribbble/Land-book/recent.design/21st.dev]] | [[FEHLT]] | [[FEHLT]] |
-| [[FEHLT]] | [[FEHLT]] | [[FEHLT]] |
+| Kennung | Quelle | Link | Freigabe | Was übernommen wird | Was bewusst nicht |
+|---|---|---|---|---|---|
+| [[FEHLT: ref-01-…]] | [[FEHLT: schluessel aus referenzquellen.json]] | [[FEHLT]] | ganz / nur Sektion | [[FEHLT]] | [[FEHLT]] |
+| [[FEHLT]] | [[FEHLT]] | [[FEHLT]] | | [[FEHLT]] | [[FEHLT]] |
 
-Erst füllen, nachdem Durchgang 1 und 2 aus `10-visuelle-richtung.md` gelaufen sind.
+Ohne Eintrag in der Spalte „Freigabe" wurde die Referenz nicht abgerufen und darf nicht
+beschrieben werden. Erst füllen, nachdem Durchgang 1 und 2 aus `10-visuelle-richtung.md`
+gelaufen sind.
+
+**Konflikte zwischen Referenz und Designsystem**, Format aus `24-designsystem-vorrang.md`:
+
+```
+Konflikt: [[FEHLT: Merkmal]]
+Referenz [[FEHLT]]: [[FEHLT: was die Referenz macht]]
+Kundensystem: [[FEHLT: was vorgegeben ist]]
+Übernommen: [[FEHLT: das Prinzip ohne das geschützte Merkmal]]
+Nicht übernommen: [[FEHLT: das geschützte Merkmal]]
+```
 
 **Layoutkonzept in einem Satz Prosa:**
 

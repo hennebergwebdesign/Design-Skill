@@ -26,6 +26,12 @@ Ausführung. Alles Sichtbare entsteht aus dem Branding und dem Material des Kund
 
 ## Rangfolge der Quellen
 
+Diese Rangfolge beantwortet **welche Referenzquelle** im Projekt überhaupt gilt. Was eine
+Referenz danach beeinflussen darf und was geschützt bleibt, beantwortet sie nicht: dafür gilt
+die Fünf-Stufen-Rangfolge in
+`../../webdesign-conversion/references/24-designsystem-vorrang.md`, und zwar unabhängig davon,
+auf welcher Stufe hier das Projekt steht.
+
 Vor jeder Referenzarbeit klären, welche Quelle das Projekt überhaupt hat. Die höhere Stufe
 schlägt immer die niedrigere:
 
@@ -44,7 +50,9 @@ als eine visuelle Richtung, die am Ende verworfen wird.
 
 Auch auf Stufe 1 bleibt die Marke des Kunden die erste Quelle: eine bestehende Seite wird
 vor dem Neuentwurf ausgelesen, siehe
-`../../webdesign-conversion/references/20-markenextraktion-bestandsseite.md`.
+`../../webdesign-conversion/references/20-markenextraktion-bestandsseite.md`. Und auf jeder
+Stufe gilt: ein geliefertes Designsystem wird nie durch Werte aus einer Referenz ersetzt,
+siehe `../../webdesign-conversion/references/24-designsystem-vorrang.md`.
 
 ## Auswahl pro Projekt
 
@@ -62,6 +70,16 @@ nennt, die ihm gefällt, wird sie mit aufgenommen und derselben Regel unterworfe
 Vor der Nutzung die Referenz tatsächlich ansehen und die drei bis fünf Prinzipien benennen,
 die übernommen werden, dazu das, was bewusst nicht übernommen wird. Eine Referenz, die nur
 als Name im Konzept steht, hat nichts beigetragen.
+
+Die Obergrenze von drei gilt für die **Gesamtrichtung** des Projekts. Für eine einzelne
+komplexe Sektion sind mehrere Referenzen ausdrücklich erwünscht, je eine für Komposition,
+Hierarchie, Darstellung und Interaktion, siehe „Mehrere Referenzen, eine Synthese" in
+`designrecherche-ablauf.md`. Aus vier Prinzipien entsteht eine eigene Lösung, aus einer
+Referenz eine Kopie.
+
+Vorlegen und Freigeben gehen dem Ansehen nicht voraus, sondern dem **Abrufen**: eine Seite
+wird erst vorgelegt und freigegeben, bevor sie mit einem Werkzeug erfasst wird, siehe
+`designrecherche-ablauf.md`.
 
 Ist die Referenz eine konkrete, bekannte oder alte Seite statt einer kuratierten Galerie,
 liefert `scripts/design-scan.mjs` das Rohmaterial dafür: Sektionsreihenfolge, Wortzahl,

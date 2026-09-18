@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "designrecherche/register-schema.json",
+  "title": "Projektregister der Designreferenzen",
+  "description": "Struktur von .designrecherche/register.json im Kundenprojekt. Projektwissen, gehört in die .gitignore des Kundenprojekts und nie in die globale Musterbibliothek. Geführt ausschließlich von scripts/referenz-register.mjs.",
+  "type": "object",
+  "required": ["schema", "referenzen"],
+  "properties": {
+    "schema": { "const": 1 },
+    "projekt": { "type": ["string", "null"] },
+    "stand": { "type": "string", "description": "JJJJ-MM-TT, wird beim Schreiben gesetzt" },
+    "referenzen": { "type": "array", "items": { "$ref": "#/$defs/referenz" } }
+  },
+  "$defs": {
+    "zustand": {
+      "enum": [
+        "ENTDECKT",
+        "VORGELEGT",
+        "FREIGEGEBEN",
+        "GECRAWLT",
+        "ANALYSIERT",
+        "OFFEN_FUER_WISSEN",
+        "GLOBAL",
+        "ERWEITERT",
+        "NUR_PROJEKT",
+        "ABGELEHNT"
+      ]
+    },
+    "referenz": {
+      "type": "object",
+      "required": ["id", "name", "url", "zustand", "ausgeschlossen", "verlauf"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^ref-[0-9]{2}-" },
+        "name": { "type": "string" },
+        "url": { "type": "string" },
+        "gefunden_ueber": {
+          "type": ["string", "null"],
+          "description": "schluessel aus referenzquellen.json"
+        },
+        "ebene": { "enum": ["website", "sektion", "komponente"] },
+        "zustand": { "$ref": "#/$defs/zustand" },
+        "zustand_geaendert": { "type": "string" },
+        "relevant_fuer": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Sektionen des Projekts, für die diese Referenz vorgeschlagen wird"
+        },
+        "begruendung": { "type": "string" },
+        "geplante_extraktion": { "type": "array", "items": { "type": "string" } },
+        "ausgeschlossen": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "was aus dieser Referenz grundsätzlich nicht übernommen wird, vorbelegt aus der Anti-Kopie-Regel"
+        },
+        "risiken": { "type": "array", "items": { "type": "string" } },
+        "freigabe": {
+          "type": ["object", "null"],
+          "description": "Tor 1. Wird nur beim Übergang nach FREIGEGEBEN gesetzt.",
+          "required": ["umfang", "durch", "zeit"],
+          "properties": {
+            "umfang": { "enum": ["website", "teilweise"] },
+            "sektionen": { "type": "array", "items": { "type": "string" } },
+            "komponenten": { "type": "array", "items": { "type": "string" } },
+            "notiz": { "type": "string" },
+            "durch": { "const": "mensch" },
+            "zeit": { "type": "string" }
+          }
+        },
+        "roh": { "type": ["string", "null"], "description": "Pfad der Rohdaten aus dem Crawl" },
+        "dna": { "type": ["string", "null"], "description": "Pfad der Design DNA" },
+        "vergleich": { "type": ["string", "null"], "description": "Pfad der Ähnlichkeitsanalyse" },
+        "wissen": {
+          "type": ["object", "null"],
+          "description": "Tor 2. Wird nur beim Übergang in einen Endzustand gesetzt.",
+          "required": ["entscheidung", "durch", "zeit"],
+          "properties": {
+            "entscheidung": { "enum": ["global", "erweitern", "projekt", "ablehnen"] },
+            "muster_id": { "type": ["string", "null"] },
+            "notiz": { "type": "string" },
+            "durch": { "const": "mensch" },
+            "zeit": { "type": "string" }
+          }
+        },
+        "verlauf": {
+          "type": "array",
+          "description": "jeder Zustandswechsel mit Zeit und Notiz, wird nie gekürzt",
+          "items": {
+            "type": "object",
+            "required": ["zustand", "zeit"],
+            "properties": {
+              "zustand": { "$ref": "#/$defs/zustand" },
+              "zeit": { "type": "string" },
+              "notiz": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

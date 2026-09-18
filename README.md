@@ -91,7 +91,8 @@ skills/
 │  │  ├─ 20-markenextraktion-bestandsseite.md  Logo, Farben, Schrift aus der alten Seite
 │  │  ├─ 21-sektionshintergruende-hierarchie.md  Bildgrund, Trennung, Abstufung
 │  │  ├─ 22-premium-designquellen.md  Awwwards, Dribbble, Land-book, recent.design, 21st.dev
-│  │  └─ 23-referenzkomponenten-21st.md  fünf annotierte 21st.dev-Beispielkomponenten
+│  │  ├─ 23-referenzkomponenten-21st.md  fünf annotierte 21st.dev-Beispielkomponenten
+│  │  └─ 24-designsystem-vorrang.md  fünf Stufen, was eine Referenz beeinflussen darf
 │  └─ assets/
 │     ├─ vorlagen/                  marke.json, marke-brief.md, impressum.md, datenschutz.md,
 │     │                             datenschutz-bewerber.md, consent-muster.md,
@@ -113,11 +114,14 @@ skills/
    │  ├─ consent-und-dienste.md     Eigenbau, fünf Kategorien, Consent Mode, Dienstekatalog
    │  ├─ google-bewertungen.md      Places API serverseitig, KV-Cache, Darstellung
    │  ├─ qa-und-abnahme.md          Prüfablauf in acht Schritten, Abschlussbericht
-   │  └─ firecrawl-recherche.md     bekannte/alte Seiten crawlen und scrapen, Firecrawl-API
+   │  ├─ firecrawl-recherche.md     bekannte/alte Seiten crawlen und scrapen, Firecrawl-API
+   │  ├─ designrecherche-ablauf.md  sieben Stufen, zwei Freigabetore, Fehlerbehandlung
+   │  └─ referenzquellen-konfiguration.md  Quellen ergänzen, stilllegen, Suchmuster prüfen
    └─ assets/
       ├─ consent/                   ConsentBanner.astro, consent.ts
       ├─ forms/                     kontakt-route.ts, mail-template.ts
-      └─ reviews/                   bewertungen-route.ts
+      ├─ reviews/                   bewertungen-route.ts
+      └─ recherche/                 referenzquellen.json, register-schema.json
 
 scripts/
 ├─ pruefe-striche.mjs               Gedankenstriche, hyphens: auto, verbotene Wörter
@@ -128,6 +132,8 @@ scripts/
 ├─ relaunch-inventory.mjs           Bestandsaufnahme der alten Kundenseite vor dem Relaunch
 ├─ design-scan.mjs                  Struktur- und Design-Scan einer fremden Referenzseite
 ├─ deslop-check.mjs                 selbst formulierte Copy auf generischen KI-Klang prüfen
+├─ referenz-register.mjs            Freigabezustand der Designreferenzen, zwei Tore
+├─ tests/                           node --test, ohne Abhängigkeit
 └─ install-quellskills.sh           Quell-Skills zusätzlich installieren
 ```
 
@@ -195,6 +201,40 @@ Wortzahl, Bildbelegung sowie Farb- und Schriftkandidaten aus dem Code, mit
 `skills/agentur-website-builder/references/firecrawl-recherche.md`. Rohmaterial für die
 eigene Sichtung, kein Text zum Übernehmen.
 
+## Kuratierte Designrecherche
+
+Referenzen werden nicht gesucht, abgerufen und stillschweigend ins Skillwissen geschrieben.
+Zwischen Entdeckung und Erfassung liegt eine menschliche Freigabe, und zwischen Analyse und
+dauerhafter Aufnahme eine zweite.
+
+```bash
+node scripts/referenz-register.mjs anlegen --name "Beispiel GmbH" --url https://beispiel.de \
+     --quelle land-book --fuer hero --grund "asymmetrischer Held" --extraktion raster,hierarchie
+node scripts/referenz-register.mjs vorlegen --alle        # danach wird gewartet
+node scripts/referenz-register.mjs freigeben --id ref-01-beispiel-de --sektionen hero
+node scripts/referenz-register.mjs status
+```
+
+`referenz-register.mjs` ist die einzige Stelle, die den Zustand einer Referenz ändert. Zehn
+Zustände, sieben erlaubte Übergänge, jeder andere bricht mit Exit 2 ab. Von `ENTDECKT` führt
+kein Weg direkt nach `FREIGEGEBEN` oder `GECRAWLT`. Damit ist „erst vorlegen, dann crawlen"
+Verhalten und keine Absichtserklärung.
+
+Die Quellen sind Konfiguration, kein Code:
+`skills/agentur-website-builder/assets/recherche/referenzquellen.json`. Eine Galerie ist dabei
+immer nur Entdeckungsquelle, der Beleg ist die Originalseite. Ablauf, Ausgabeformate und
+Fehlerbehandlung stehen in
+`skills/agentur-website-builder/references/designrecherche-ablauf.md`.
+
+## Tests der Skripte
+
+```bash
+node --test 'scripts/tests/*.test.mjs'
+```
+
+Eingebauter Testrunner von Node, keine Abhängigkeit, kein `package.json`. Die Anführungszeichen
+sind nötig, die Verzeichnisform greift nicht.
+
 `deslop-check.mjs` bewertet fünf Kriterien und gibt eine Punktzahl von 0 bis 5: Floskeln,
 Nominalstil, leere Superlative, fehlende Belege und die Dreierfigur. Er gilt für **eigene**
 Textvorschläge. Gelieferte Kundentexte werden nicht geprüft und nicht umgeschrieben.
@@ -217,9 +257,10 @@ Die Suite hat dabei schon einen echten Fehler gefunden: das Landingpage-Playbook
 formuliert, dass das Modell die Navigationsregel erkannte, dann aber um Erlaubnis fragte statt
 zu liefern. Details in `evals/README.md`.
 
-Acht Fälle insgesamt, davon zwei für den Agenturstandard: `consent-ohne-keks` und
-`leadsystem-nur-auf-bestaetigung`. Diese beiden sind neu und noch nicht gelaufen, ihr Δ ist
-damit eine Vermutung und kein Messwert.
+Zehn Fälle insgesamt, davon zwei für den Agenturstandard: `consent-ohne-keks` und
+`leadsystem-nur-auf-bestaetigung`. Diese beiden und die neuen Fälle
+`kundendesignsystem-schlaegt-referenz` und `referenz-erst-freigeben` sind noch nicht gelaufen,
+ihr Δ ist damit eine Vermutung und kein Messwert.
 
 ## Quell-Skills nachinstallieren
 

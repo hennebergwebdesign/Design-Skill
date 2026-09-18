@@ -4,7 +4,7 @@ description: "Vollständiges System für conversion-orientiertes Webdesign im DA
 license: MIT
 metadata:
   author: Henneberg Webdesign
-  version: 2.1.0
+  version: 2.3.0
 ---
 
 # Webdesign Conversion System
@@ -116,6 +116,8 @@ Lies gezielt nach, statt alles zu laden.
 | Bildhintergründe, Sektionstrennung, visuelle Hierarchie | `21-sektionshintergruende-hierarchie.md` |
 | Referenzrecherche vor dem Entwurf: Awwwards, Dribbble, Land-book, recent.design, 21st.dev | `22-premium-designquellen.md` |
 | Fünf annotierte 21st.dev-Beispielkomponenten (Hero, FAQ, schwebende Elemente, Bewertungen, Integrationen) | `23-referenzkomponenten-21st.md` |
+| Was eine Referenz beeinflussen darf und was geschützt bleibt, Rangfolge | `24-designsystem-vorrang.md` |
+| Referenzen entdecken, vorlegen, freigeben, erfassen | `../agentur-website-builder/references/designrecherche-ablauf.md` |
 
 **Technik, Recht, Messung**
 
@@ -154,6 +156,7 @@ wandern nie in das `package.json` eines Kundenprojekts:
 ```bash
 node scripts/relaunch-inventory.mjs https://alte-kundenseite.de   # Bestand vor dem Relaunch
 node scripts/deslop-check.mjs src/components/sektionen/Hero.astro # selbst formulierte Copy
+node scripts/referenz-register.mjs status                         # Freigabestand der Referenzen
 ```
 
 `deslop-check.mjs` prüft fünf Kriterien: Floskeln, Nominalstil, leere Superlative, fehlende
@@ -235,6 +238,21 @@ Diese Regeln gelten immer und werden nicht wegdiskutiert:
   Premium-Designquelle** (Awwwards, Dribbble, Land-book, recent.design, 21st.dev), damit der
   Plan an echten aktuellen Premium-Beispielen entsteht, nicht am ersten Einfall. Siehe
   `references/22-premium-designquellen.md`.
+- **Keine fremde Seite wird erfasst, bevor sie vorgelegt und freigegeben wurde.** Entdecken
+  und Erfassen sind zwei Schritte. Kandidaten werden mit Adresse, Zielsektion, Begründung,
+  geplanter Extraktion und Ausschlussliste vorgelegt, dann wird gewartet. Erst nach der
+  Freigabe wird abgerufen, und nur im freigegebenen Umfang. Ebenso wandert nichts aus einer
+  Referenz dauerhaft in das Skillwissen ohne eine zweite, ausdrückliche Freigabe. Ablauf und
+  beide Tore in
+  `../agentur-website-builder/references/designrecherche-ablauf.md`, durchgesetzt von
+  `scripts/referenz-register.mjs`, geprüft mit dem Evalfall `referenz-erst-freigeben`.
+- **Ein geliefertes Kundendesignsystem schlägt jede externe Referenz.** Farben, Schriften,
+  Logo, Radien, Schatten und Abstandsregeln des Kunden werden nie durch Werte aus einer
+  Referenzseite ersetzt. Eine Referenz beeinflusst Layout, Komposition, Sektionsstruktur,
+  Hierarchie, Raster, Rhythmus, Interaktionsmuster und responsives Verhalten, mehr nicht.
+  Kollidiert beides, wird der Konflikt im Konzept benannt statt still aufgelöst. Die
+  vollständige Rangfolge aus fünf Stufen steht in `references/24-designsystem-vorrang.md`,
+  geprüft mit dem Evalfall `kundendesignsystem-schlaegt-referenz`.
 - **Jede Sektion braucht entweder einen Bildhintergrund an den entscheidenden Stellen
   (mindestens Held und der eine Custom-Abschnitt) oder eine erkennbare Trennung zur
   Nachbarsektion**, per Flächenfarbwechsel oder, wo Sektionen zusammengehören, per

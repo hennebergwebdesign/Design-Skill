@@ -1,0 +1,162 @@
+{
+  "$kommentar": [
+    "Registratur der Quellen für die Referenzentdeckung. Konfiguration, kein Code.",
+    "Eine Quelle ergänzen heißt: hier einen Eintrag anlegen, nicht ein Skript ändern.",
+    "Verfahren und Pflichtfelder: references/referenzquellen-konfiguration.md.",
+    "",
+    "WICHTIG zu suchmuster: Ein Muster mit suchmuster_geprueft = false ist eine Annahme,",
+    "kein Messwert. Beim ersten Einsatz tatsächlich aufrufen. Führt es nicht zu Treffern,",
+    "wird der Eintrag korrigiert und das Ergebnis nicht aus der Erinnerung beschrieben.",
+    "Siehe die Regel gegen erfundene Belege in der Repo-CLAUDE.md.",
+    "",
+    "ROLLE entscheidet über die Verwendung:",
+    "  galerie  = Entdeckungsquelle. Der Beleg ist danach die Originalseite, nie der",
+    "             Galerie-Screenshot. Eine Galerie wird nicht als Designreferenz erfasst.",
+    "  registry = Komponentenquelle mit Code, eigener Lizenzprüfung je Block.",
+    "  direkt   = vom Kunden genannte Seite, Wettbewerber, bekannte Seite."
+  ],
+
+  "schema": 1,
+
+  "quellen": [
+    {
+      "schluessel": "awwwards",
+      "name": "Awwwards",
+      "url": "https://www.awwwards.com/",
+      "rolle": "galerie",
+      "aktiv": true,
+      "wofuer": "Gesamtkomposition einer ganzen Seite, orchestrierte Motion-Momente",
+      "entdeckungsweg": "Kategorie- und Technikfilter der Website-Liste durchsehen",
+      "suchmuster": "https://www.awwwards.com/websites/?text={frage}",
+      "suchmuster_geprueft": false,
+      "crawlbar": "unbekannt",
+      "grenzen": [
+        "Nutzungsbedingungen der Galerie beachten, systematischer Abruf ist nicht vorgesehen",
+        "Preisgekrönt heißt nicht conversionstark, der Qualitätsfilter gilt trotzdem"
+      ],
+      "notizen": "Bestand seit Version 2.0, siehe 22-premium-designquellen.md"
+    },
+    {
+      "schluessel": "land-book",
+      "name": "Land-book",
+      "url": "https://land-book.com/",
+      "rolle": "galerie",
+      "aktiv": true,
+      "wofuer": "Abschnittsauswahl: welche Sektionstypen in einer Branche gerade überzeugen",
+      "entdeckungsweg": "Kategorien (Landings, Portfolios, Stores) und die eigenen Sections-Galerien",
+      "suchmuster": null,
+      "suchmuster_geprueft": false,
+      "crawlbar": "unbekannt",
+      "grenzen": ["handkuratiert, dadurch schmaler Bestand je Branche"],
+      "notizen": "Bestand seit Version 2.0"
+    },
+    {
+      "schluessel": "lapa-ninja",
+      "name": "Lapa Ninja",
+      "url": "https://www.lapa.ninja/",
+      "rolle": "galerie",
+      "aktiv": true,
+      "wofuer": "Landingpages nach Kategorie, brauchbar für Sektionsreihenfolge",
+      "entdeckungsweg": "Kategorieliste durchsehen",
+      "suchmuster": null,
+      "suchmuster_geprueft": false,
+      "crawlbar": "unbekannt",
+      "grenzen": ["noch nie im Projekt eingesetzt, Eignung ungeprüft"],
+      "notizen": "neu in Version 3.4.0, ungeprüft"
+    },
+    {
+      "schluessel": "godly",
+      "name": "Godly",
+      "url": "https://godly.website/",
+      "rolle": "galerie",
+      "aktiv": true,
+      "wofuer": "kuratierte Auswahl mit hohem Gestaltungsanspruch",
+      "entdeckungsweg": "Kategorieliste durchsehen",
+      "suchmuster": null,
+      "suchmuster_geprueft": false,
+      "crawlbar": "unbekannt",
+      "grenzen": ["noch nie im Projekt eingesetzt, Eignung ungeprüft"],
+      "notizen": "neu in Version 3.4.0, ungeprüft"
+    },
+    {
+      "schluessel": "siteinspire",
+      "name": "SiteInspire",
+      "url": "https://www.siteinspire.com/",
+      "rolle": "galerie",
+      "aktiv": true,
+      "wofuer": "Filter nach Stil, Typ und Branche, gut für gezielte Suche statt Scrollen",
+      "entdeckungsweg": "Filter nach Style und Type",
+      "suchmuster": null,
+      "suchmuster_geprueft": false,
+      "crawlbar": "unbekannt",
+      "grenzen": ["noch nie im Projekt eingesetzt, Eignung ungeprüft"],
+      "notizen": "neu in Version 3.4.0, ungeprüft"
+    },
+    {
+      "schluessel": "recent.design",
+      "name": "recent.design",
+      "url": "https://recent.design/websites",
+      "rolle": "galerie",
+      "aktiv": true,
+      "wofuer": "Frischecheck: ob eine Richtung schon Standard ist, weil sie überall auftaucht",
+      "entdeckungsweg": "tägliche Liste durchsehen",
+      "suchmuster": null,
+      "suchmuster_geprueft": false,
+      "crawlbar": "unbekannt",
+      "grenzen": ["kein Branchenfilter, taugt nicht für gezielte Suche"],
+      "notizen": "Bestand seit Version 2.0"
+    },
+    {
+      "schluessel": "dribbble",
+      "name": "Dribbble",
+      "url": "https://dribbble.com/",
+      "rolle": "galerie",
+      "aktiv": true,
+      "wofuer": "Details: Buttons, Karten, Icons, Farbstimmungen, Micro-Interactions",
+      "entdeckungsweg": "Stichwortsuche nach Detailtyp",
+      "suchmuster": "https://dribbble.com/search/{frage}",
+      "suchmuster_geprueft": false,
+      "crawlbar": "nein",
+      "grenzen": [
+        "Shots sind Bilder, keine Websites. Es gibt keine Originalseite zum Nachprüfen",
+        "deshalb nie als alleinige Referenz für eine Sektion, nur für ein Detail"
+      ],
+      "notizen": "Bestand seit Version 2.0"
+    },
+    {
+      "schluessel": "21st.dev",
+      "name": "21st.dev",
+      "url": "https://21st.dev/",
+      "rolle": "registry",
+      "aktiv": true,
+      "wofuer": "React/Tailwind/shadcn-Blocks mit Quelltext als Startpunkt",
+      "entdeckungsweg": "Registry durchsuchen, zusätzlich npx shadcn@latest search",
+      "suchmuster": null,
+      "suchmuster_geprueft": false,
+      "crawlbar": "ja",
+      "grenzen": [
+        "Lizenz je Block einzeln prüfen",
+        "Demobilder von cdn.21st.dev sind kein lizenziertes Bildmaterial",
+        "nur bei React- und Next-Projekten, nicht im Astro-Standardstack"
+      ],
+      "notizen": "fünf annotierte Beispiele in 23-referenzkomponenten-21st.md"
+    },
+    {
+      "schluessel": "direkt",
+      "name": "Direkt genannte Seite",
+      "url": null,
+      "rolle": "direkt",
+      "aktiv": true,
+      "wofuer": "vom Kunden genanntes Vorbild, Wettbewerber, bekannte Seite aus der Branche",
+      "entdeckungsweg": "wird im Gespräch oder im Briefing genannt",
+      "suchmuster": null,
+      "suchmuster_geprueft": true,
+      "crawlbar": "ja",
+      "grenzen": [
+        "eine vom Kunden genannte Seite ist noch keine Freigabe, sie wird trotzdem vorgelegt",
+        "Wettbewerber werden nie auf Logo- oder Assetebene ausgelesen"
+      ],
+      "notizen": "Stufe 2 der Rangfolge in referenzen-und-auswahl.md"
+    }
+  ]
+}

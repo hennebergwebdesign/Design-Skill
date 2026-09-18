@@ -31,7 +31,9 @@ davon wie das, was du für jede beliebige Seite dieser Art produzieren würdest:
 und schreibe dazu, was du geändert hast und warum. Erst danach Code.
 
 Wo der Brief eine Richtung festlegt, gilt der Brief, auch wenn er genau einen der unten
-genannten Standards verlangt.
+genannten Standards verlangt. Liegt ein Designsystem des Kunden vor, schlägt es beides, und
+Durchgang 1 entwirft dann kein neues Tokensystem, sondern übernimmt das vorhandene. Die
+vollständige Rangfolge steht in `24-designsystem-vorrang.md`.
 
 ## Die Standards, die man erkennt
 
