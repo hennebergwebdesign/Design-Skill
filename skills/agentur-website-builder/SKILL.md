@@ -4,7 +4,7 @@ description: Baut komplette Kundenwebsites mit Astro und Cloudflare Pages nach A
 license: Proprietär, That's it. Marketing / VFDESIGN LTD
 metadata:
   author: That's it. Marketing / Henneberg Webdesign
-  version: 1.4.0
+  version: 1.5.0
 ---
 
 # Agentur Website Builder
@@ -333,9 +333,15 @@ des Kundenprojekts wandern:
   siehe `references/qa-und-abnahme.md`.
 * `referenz-register.mjs` führt den Freigabezustand jeder Designreferenz und ist die einzige
   Stelle, die ihn ändert. Ohne Freigabe kein Abruf, siehe `references/designrecherche-ablauf.md`.
+* `referenz-crawl.mjs` erfasst eine freigegebene Referenz und bricht mit Exit 2 ab, wenn sie
+  es nicht ist. Optional mit Breakpoints und Screenshot über Playwright.
+* `lib/abruf.mjs` ist die gemeinsame Abrufschicht aller drei Erfassungswerkzeuge, mit vier
+  Rückfallstufen und robots.txt-Prüfung, siehe `references/firecrawl-recherche.md`.
 
-Beide Erfassungswerkzeuge laufen mit reinem `fetch()` ohne Abhängigkeit, optional über die
-Firecrawl-API mit gesetztem `FIRECRAWL_API_KEY`, siehe `references/firecrawl-recherche.md`.
+Alle Erfassungswerkzeuge laufen mit reinem `fetch()` ohne Abhängigkeit, optional über eine
+selbst gehostete Firecrawl-Instanz (`FIRECRAWL_BASE_URL`), die Firecrawl-Cloud
+(`FIRECRAWL_API_KEY`) oder ein im Projekt installiertes Playwright, siehe
+`references/firecrawl-recherche.md`.
 
 ## Definition of Done
 

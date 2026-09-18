@@ -47,6 +47,7 @@ node scripts/referenz-register.mjs anlegen --name "Beispiel" --url https://beisp
 node scripts/referenz-register.mjs vorlegen --alle
 node scripts/referenz-register.mjs freigeben --id ref-01-beispiel-de --sektionen hero
 node scripts/referenz-register.mjs status
+node scripts/referenz-crawl.mjs --id ref-01-beispiel-de --breakpoints 375,768,1440 --screenshot
 
 # Tests der Skripte, eingebauter Node-Testrunner, ohne Abhaengigkeit
 node --test 'scripts/tests/*.test.mjs'
@@ -75,7 +76,8 @@ skills/
   webdesign-conversion/     SKILL.md, references/00-23, playbooks/, assets/
   agentur-website-builder/  SKILL.md, references/, assets/consent|forms|reviews
 scripts/              fünf Prüfskripte, Agenturwerkzeuge, Designrecherche, ein Installer
-  tests/              node --test, Fixtures ohne Netzzugriff
+  lib/abruf.mjs       die eine Abrufschicht, vier Rückfallstufen, robots.txt
+  tests/              node --test, lokaler Testserver statt Netzzugriff
 evals/                acht Fälle mit Gradern, results/ ist ausgenommen
 README.md             Außendarstellung
 CREDITS.md            Herkunft jeder eingeflossenen Quelle
@@ -128,6 +130,9 @@ Diese Punkte haben einen Grund. Wer sie ändert, ändert damit auch den Grund.
 - Für vier der sechs älteren Eval-Fälle fehlt weiterhin die Baseline-Messung.
 - `relaunch-inventory.mjs` ist gegen einen lokalen Testserver geprüft, noch nicht gegen eine
   echte Kundenseite und noch nicht gegen die Firecrawl API.
+- Von den vier Abrufstufen in `lib/abruf.mjs` ist nur der Direktabruf tatsächlich gelaufen.
+  Firecrawl selbst gehostet, Firecrawl Cloud und die Playwright-Stufe sind ungetestet. Damit
+  ist auch die Breakpoint-Erfassung und der Screenshot ungetestet.
 - `design-scan.mjs` ist gegen eine echte, öffentliche Seite ohne `FIRECRAWL_API_KEY` geprüft
   (Direktabruf), noch nicht mit gesetztem Schlüssel gegen die echte Firecrawl API und noch
   nicht gegen eine reine JS-Anwendung, die erst im Browser rendert.
@@ -139,6 +144,19 @@ Diese Punkte haben einen Grund. Wer sie ändert, ändert damit auch den Grund.
 
 ## Änderungsverlauf
 
+- **18.09.2026, Version 3.5.0** Dritte von fünf Phasen: die Abrufschicht. Die
+  Firecrawl-Anbindung stand bis hierher zweimal im Repository, leicht verschieden, in
+  `relaunch-inventory.mjs` und `design-scan.mjs`, und sprach beide Male die Cloud fest an,
+  obwohl `firecrawl-recherche.md` eine selbst gehostete Instanz zusagt. Neues
+  `scripts/lib/abruf.mjs` als einzige Stelle, die eine fremde Seite holt, mit vier
+  Rückfallstufen (Firecrawl selbst gehostet über `FIRECRAWL_BASE_URL`, Firecrawl Cloud,
+  Playwright lokal für Breakpoints und Screenshots, Direktabruf), robots.txt-Prüfung nach
+  RFC 9309 und einer Liste `grenzen`, die benennt, was nicht erfasst werden konnte. Neues
+  `scripts/referenz-crawl.mjs` erfasst ausschließlich freigegebene Referenzen und bricht
+  sonst mit Exit 2 ab. `design-scan.mjs` und `relaunch-inventory.mjs` sind auf den Adapter
+  umgestellt, Aufruf, Ausgabeordner und Exitcodes bleiben unverändert. Dazu 23 neue Tests
+  gegen einen lokalen Testserver, insgesamt 40. Dabei gefunden und behoben: der
+  robots.txt-Abruf hatte kein Zeitlimit und konnte an einer stillen Seite dauerhaft hängen.
 - **18.09.2026, Version 3.4.0** Zweite von fünf Phasen: die erste Freigabe wird
   durchgesetzt statt beschrieben. Neues `scripts/referenz-register.mjs` als einzige Stelle,
   die den Freigabezustand einer Designreferenz ändert: zehn Zustände, sieben erlaubte

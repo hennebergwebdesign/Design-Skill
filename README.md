@@ -133,6 +133,8 @@ scripts/
 ├─ design-scan.mjs                  Struktur- und Design-Scan einer fremden Referenzseite
 ├─ deslop-check.mjs                 selbst formulierte Copy auf generischen KI-Klang prüfen
 ├─ referenz-register.mjs            Freigabezustand der Designreferenzen, zwei Tore
+├─ referenz-crawl.mjs               erfasst nur freigegebene Referenzen, mit Breakpoints
+├─ lib/abruf.mjs                    die eine Abrufschicht, vier Rückfallstufen, robots.txt
 ├─ tests/                           node --test, ohne Abhängigkeit
 └─ install-quellskills.sh           Quell-Skills zusätzlich installieren
 ```
@@ -220,6 +222,28 @@ Zustände, sieben erlaubte Übergänge, jeder andere bricht mit Exit 2 ab. Von `
 kein Weg direkt nach `FREIGEGEBEN` oder `GECRAWLT`. Damit ist „erst vorlegen, dann crawlen"
 Verhalten und keine Absichtserklärung.
 
+Erst danach erfasst `referenz-crawl.mjs`, und auch nur im freigegebenen Umfang:
+
+```bash
+node scripts/referenz-crawl.mjs --id ref-01-beispiel-de --breakpoints 375,768,1440 --screenshot
+```
+
+Der Abruf läuft über `scripts/lib/abruf.mjs`, die einzige Stelle im Repository, die eine fremde
+Seite holt. Vier Rückfallstufen, **selbst gehostetes Firecrawl vor der Cloud**, weil ein
+kostenpflichtiger Dienst hier nie die Voreinstellung ist:
+
+| Stufe | Voraussetzung | Kann |
+|---|---|---|
+| Firecrawl selbst gehostet | `FIRECRAWL_BASE_URL` | JS-Seiten, Screenshot, Markdown |
+| Firecrawl Cloud | `FIRECRAWL_API_KEY` | dasselbe |
+| Playwright lokal | im Projekt installiert | JS-Seiten, Screenshot, Breakpoints |
+| Direktabruf | immer | serverseitig gerendertes HTML |
+
+Die `robots.txt` der Zielseite wird gelesen und befolgt. Was nicht erfasst werden konnte,
+steht als Liste `grenzen` in `meta.json` und wird in der Analyse als `unbekannt` geführt,
+nicht geschätzt. Der Crawler ist austauschbar: der Rest des Systems kennt nur das
+Ergebnisobjekt, nie Firecrawl.
+
 Die Quellen sind Konfiguration, kein Code:
 `skills/agentur-website-builder/assets/recherche/referenzquellen.json`. Eine Galerie ist dabei
 immer nur Entdeckungsquelle, der Beleg ist die Originalseite. Ablauf, Ausgabeformate und
@@ -233,7 +257,9 @@ node --test 'scripts/tests/*.test.mjs'
 ```
 
 Eingebauter Testrunner von Node, keine Abhängigkeit, kein `package.json`. Die Anführungszeichen
-sind nötig, die Verzeichnisform greift nicht.
+sind nötig, die Verzeichnisform greift nicht. 40 Tests: alle erlaubten und alle verbotenen
+Zustandsübergänge, die Sperre gegen den Abruf ohne Freigabe, robots.txt, die Rückfallstufen
+und die Grenzenliste. Der Netzzugriff ist durch einen lokalen Testserver ersetzt.
 
 `deslop-check.mjs` bewertet fünf Kriterien und gibt eine Punktzahl von 0 bis 5: Floskeln,
 Nominalstil, leere Superlative, fehlende Belege und die Dreierfigur. Er gilt für **eigene**

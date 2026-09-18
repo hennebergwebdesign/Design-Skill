@@ -24,9 +24,11 @@
     node scripts/relaunch-inventory.mjs https://alte-kundenseite.de --max 120
     node scripts/relaunch-inventory.mjs https://alte-kundenseite.de --verzeichnis .inventar
 
-  Mit gesetztem FIRECRAWL_API_KEY laeuft die Erfassung ueber die Firecrawl API und erreicht
-  auch Seiten, die erst im Browser rendern. Ohne Schluessel arbeitet der eingebaute Crawler
-  weiter, das genuegt fuer die ueblichen WordPress- und Baukastenseiten.
+  Der Abruf laeuft seit Version 3.5.0 ueber lib/abruf.mjs mit vier Rueckfallstufen (Firecrawl
+  selbst gehostet ueber FIRECRAWL_BASE_URL, Firecrawl Cloud ueber FIRECRAWL_API_KEY, Playwright
+  lokal, Direktabruf). Die Seitenkarte ueber den /map-Endpunkt braucht weiterhin einen
+  Firecrawl-Zugang. Siehe
+  skills/agentur-website-builder/references/firecrawl-recherche.md.
 
   HINWEIS
   Das Ergebnis enthaelt fremde Texte und Bildadressen. Es ist Arbeitsmaterial, kein
@@ -38,6 +40,8 @@
 
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
+
+import { abrufen } from './lib/abruf.mjs';
 
 const args = process.argv.slice(2);
 const start = args.find((a) => !a.startsWith('--'));
@@ -114,27 +118,13 @@ function intern(href, von) {
   }
 }
 
+// Abruf über die gemeinsame Abrufschicht, siehe lib/abruf.mjs. Zwei Besonderheiten für das
+// Inventar der EIGENEN Kundenseite: statusDurchreichen, weil ein 404 hier ein Befund ist und
+// kein Fehlschlag, und keine robots.txt-Prüfung, weil es die Seite des Auftraggebers ist und
+// eine Disallow-Regel für Suchmaschinen keine Bestandsaufnahme verbietet.
 async function holen(url) {
-  if (SCHLUESSEL) {
-    try {
-      const res = await fetch('https://api.firecrawl.dev/v1/scrape', {
-        method: 'POST',
-        headers: { authorization: `Bearer ${SCHLUESSEL}`, 'content-type': 'application/json' },
-        body: JSON.stringify({ url, formats: ['html', 'markdown'], onlyMainContent: false }),
-      });
-      if (res.ok) {
-        const d = await res.json();
-        const html = d?.data?.html ?? '';
-        if (html) return { status: 200, html, markdown: d?.data?.markdown ?? '' };
-      }
-      console.warn(`  Firecrawl ${res.status} für ${url}, fällt auf Direktabruf zurück`);
-    } catch (f) {
-      console.warn(`  Firecrawl nicht erreichbar (${f.message}), fällt auf Direktabruf zurück`);
-    }
-  }
-  const res = await fetch(url, { headers: KOPF, redirect: 'follow' });
-  const typ = res.headers.get('content-type') ?? '';
-  return { status: res.status, html: typ.includes('html') ? await res.text() : '', markdown: '' };
+  const ergebnis = await abrufen(url, { robots: false, statusDurchreichen: true, wiederholen: 0 });
+  return { status: ergebnis.status, html: ergebnis.html, markdown: ergebnis.markdown };
 }
 
 async function adressenAusSitemap() {
@@ -174,7 +164,8 @@ async function adressenAusSitemap() {
 
 async function adressenAusFirecrawlMap() {
   try {
-    const res = await fetch('https://api.firecrawl.dev/v1/map', {
+    const basisAdresse = (process.env.FIRECRAWL_BASE_URL ?? 'https://api.firecrawl.dev').replace(/\/$/, '');
+    const res = await fetch(`${basisAdresse}/v1/map`, {
       method: 'POST',
       headers: { authorization: `Bearer ${SCHLUESSEL}`, 'content-type': 'application/json' },
       body: JSON.stringify({ url: basis.toString(), limit: MAX }),
@@ -214,9 +205,13 @@ function schreiben(pfad, inhalt) {
 // ---------------------------------------------------------------- Ablauf
 
 console.log(`Inventar für ${basis.origin}`);
-console.log(SCHLUESSEL ? 'Quelle: Firecrawl API' : 'Quelle: Direktabruf, kein FIRECRAWL_API_KEY gesetzt');
+console.log(
+  SCHLUESSEL || process.env.FIRECRAWL_BASE_URL
+    ? 'Firecrawl-Zugang vorhanden, Seitenkarte über /map möglich'
+    : 'Kein Firecrawl-Zugang, Abruf über Sitemap und interne Links'
+);
 
-let warteschlange = SCHLUESSEL ? await adressenAusFirecrawlMap() : [];
+let warteschlange = SCHLUESSEL || process.env.FIRECRAWL_BASE_URL ? await adressenAusFirecrawlMap() : [];
 if (!warteschlange.length) warteschlange = await adressenAusSitemap();
 const ausSitemap = warteschlange.length;
 console.log(ausSitemap ? `${ausSitemap} Adressen aus Sitemap oder Map` : 'Keine Sitemap gefunden, folge internen Links');

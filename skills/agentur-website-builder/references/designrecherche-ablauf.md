@@ -32,7 +32,7 @@ Diese Tabelle ist ehrlich gepflegt. Was hier nicht als vorhanden steht, ist Hand
 | Brief | `../../webdesign-conversion/assets/vorlagen/designrecherche-brief.md` | vorhanden |
 | Entdeckung | `assets/recherche/referenzquellen.json`, Suche von Hand oder über WebSearch | Quellenliste vorhanden, kein Suchskript |
 | Tor 1 | `scripts/referenz-register.mjs` | vorhanden, mit Tests |
-| Erfassung | `scripts/referenz-crawl.mjs` | ab Version 3.5.0 |
+| Erfassung | `scripts/referenz-crawl.mjs`, `scripts/lib/abruf.mjs` | vorhanden, mit Tests |
 | Design DNA | `scripts/design-dna.mjs` | ab Version 3.6.0 |
 | Vergleich | `scripts/muster-vergleich.mjs` | ab Version 3.6.0 |
 | Tor 2 | `scripts/muster-paket.mjs` | ab Version 4.0.0 |
@@ -117,8 +117,32 @@ Teil, und `design-dna.mjs` analysiert auch nur diesen.
 
 ### 4 Erfassung
 
-Ab Version 3.5.0 über `scripts/referenz-crawl.mjs`, das ausschließlich auf Einträgen im
-Zustand `FREIGEGEBEN` arbeitet. Grundlagen und Rückfallstufen: `firecrawl-recherche.md`.
+```bash
+node scripts/referenz-crawl.mjs --id ref-01-beispiel-de --breakpoints 375,768,1440 --screenshot
+node scripts/referenz-crawl.mjs --alle
+```
+
+Das Skript arbeitet ausschließlich auf Einträgen im Zustand `FREIGEGEBEN` und bricht sonst mit
+Exit 2 ab. Abrufstufen, robots.txt und Einrichtung: `firecrawl-recherche.md`.
+
+Abgelegt wird in `.designrecherche/referenzen/<id>/`:
+
+| Datei | Inhalt |
+|---|---|
+| `roh/seite.html` | das HTML der erfolgreichen Abrufstufe |
+| `roh/seite.md` | Markdown, wenn die Stufe es liefert |
+| `roh/screenshot.png` | nur mit `--screenshot` und nur, wenn eine Stufe es kann |
+| `roh/<breite>.html`, `roh/<breite>.png` | je Breakpoint, nur über Playwright |
+| `meta.json` | Abrufart, Status, erfasste Breakpoints, Analyseumfang, Grenzen |
+
+**Eine Teilfreigabe beschränkt die Analyse, nicht den technischen Abruf.** Eine einzelne
+Sektion lässt sich bei einer fremden Seite nicht getrennt anfordern, geliefert wird immer das
+ganze Dokument. Der freigegebene Umfang steht deshalb in `meta.json` unter `analyse_umfang`,
+und die Analyse wertet nur diesen aus. Das ehrlich zu benennen ist besser, als eine
+technische Beschränkung zu behaupten, die es nicht gibt.
+
+**Was nicht erfasst werden konnte, steht in `meta.json` unter `grenzen`**, im Klartext. Diese
+Liste ist die Grundlage für die `unbekannt`-Belege der Design DNA.
 
 ### 5 Design DNA
 
