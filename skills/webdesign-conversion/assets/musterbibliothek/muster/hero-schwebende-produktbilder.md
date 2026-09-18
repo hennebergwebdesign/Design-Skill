@@ -50,7 +50,7 @@ das weg, was es trägt, und der Held muss auch dann noch funktionieren.
 
 **Dieses Muster steht bewusst auf Konfidenz niedrig.** Die Nutzervorlage enthielt nur den
 Demo-Aufruf, nicht den Quelltext der Komponente, siehe die Notiz in
-`../../references/23-referenzkomponenten-21st.md`. Der fehlende Quelltext wurde nicht
+`../../../references/23-referenzkomponenten-21st.md`. Der fehlende Quelltext wurde nicht
 nachgebaut. Vor dem Einsatz die echte Komponente über `npx shadcn@latest search` oder auf der
 Registry nachschlagen.
 
@@ -69,5 +69,5 @@ Registry nachschlagen.
 
 Die Demo-Bilder der Registry. Jede Adresse auf `cdn.21st.dev` ist Demomaterial ohne Lizenz für
 ein Kundenprojekt. Ebenso die Keyframes der Vorlage: die Bewegungssignatur wird aus der Marke
-abgeleitet, siehe `../../references/18-motion-handschrift.md` und die harte Grenze zur eigenen
+abgeleitet, siehe `../../../references/18-motion-handschrift.md` und die harte Grenze zur eigenen
 Handschrift.

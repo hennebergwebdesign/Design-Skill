@@ -4,7 +4,7 @@ description: Baut komplette Kundenwebsites mit Astro und Cloudflare Pages nach A
 license: Proprietär, That's it. Marketing / VFDESIGN LTD
 metadata:
   author: That's it. Marketing / Henneberg Webdesign
-  version: 1.5.0
+  version: 2.0.0
 ---
 
 # Agentur Website Builder
@@ -301,6 +301,7 @@ Schwesterskill.
 | `references/firecrawl-recherche.md` | eine bekannte, alte oder fremde Seite crawlen oder scrapen, für Relaunch-Inventar oder Design-Referenz |
 | `references/designrecherche-ablauf.md` | Phase 3, sobald Referenzen gesucht, vorgelegt oder freigegeben werden |
 | `references/referenzquellen-konfiguration.md` | eine Referenzquelle ergänzen, stilllegen oder ihr Suchmuster prüfen |
+| `references/designrecherche-beispiele.md` | beim ersten Durchlauf der Recherche, und bei jeder Störungsmeldung |
 
 | Datei im Schwesterskill | Wann lesen |
 | --- | --- |
@@ -337,6 +338,10 @@ des Kundenprojekts wandern:
   es nicht ist. Optional mit Breakpoints und Screenshot über Playwright.
 * `lib/abruf.mjs` ist die gemeinsame Abrufschicht aller drei Erfassungswerkzeuge, mit vier
   Rückfallstufen und robots.txt-Prüfung, siehe `references/firecrawl-recherche.md`.
+* `design-dna.mjs`, `muster-vergleich.mjs` und `muster-paket.mjs` führen von den Rohdaten über
+  die Ähnlichkeitsprüfung bis zu Tor 2. Keines von ihnen schreibt in die Musterbibliothek des
+  Skills, siehe `references/designrecherche-ablauf.md`.
+* `pruefe-muster.mjs` prüft die Musterbibliothek und erzeugt ihren Index.
 
 Alle Erfassungswerkzeuge laufen mit reinem `fetch()` ohne Abhängigkeit, optional über eine
 selbst gehostete Firecrawl-Instanz (`FIRECRAWL_BASE_URL`), die Firecrawl-Cloud
@@ -363,3 +368,5 @@ Erst wenn alle Punkte erfüllt sind, darf von einer fertigen Seite gesprochen we
 * keine Schlüssel im Repository
 * `CLAUDE.md` aktuell
 * offene Punkte, fehlende Bilder, fehlende Rechtsangaben und Copyvorschläge im Chat benannt
+* jede genutzte Designreferenz steht mit Freigabe und Entscheidung im Register, keine wurde
+  ohne Freigabe erfasst, und `.designrecherche/` ist in der `.gitignore` des Kundenprojekts

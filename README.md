@@ -123,6 +123,7 @@ skills/
    │  ├─ qa-und-abnahme.md          Prüfablauf in acht Schritten, Abschlussbericht
    │  ├─ firecrawl-recherche.md     bekannte/alte Seiten crawlen und scrapen, Firecrawl-API
    │  ├─ designrecherche-ablauf.md  sieben Stufen, zwei Freigabetore, Fehlerbehandlung
+   │  ├─ designrecherche-beispiele.md  zwei durchgespielte Abläufe, Störungstabelle
    │  └─ referenzquellen-konfiguration.md  Quellen ergänzen, stilllegen, Suchmuster prüfen
    └─ assets/
       ├─ consent/                   ConsentBanner.astro, consent.ts
@@ -144,6 +145,7 @@ scripts/
 ├─ design-dna.mjs                   Beobachtungen mit Beleg, Prinzipien bleiben offen
 ├─ muster-vergleich.mjs             Entwurf gegen Bibliothek, fünf Einstufungen
 ├─ pruefe-muster.mjs                Pflichtfelder, Taxonomie, Anti-Kopie, Index
+├─ muster-paket.mjs                 Tor 2: Paket ins Projekt, nie in die Bibliothek
 ├─ lib/abruf.mjs                    die eine Abrufschicht, vier Rückfallstufen, robots.txt
 ├─ tests/                           node --test, ohne Abhängigkeit
 └─ install-quellskills.sh           Quell-Skills zusätzlich installieren
@@ -227,6 +229,10 @@ node scripts/referenz-register.mjs freigeben --id ref-01-beispiel-de --sektionen
 node scripts/referenz-register.mjs status
 ```
 
+Vollständig durchgespielte Abläufe für einen Neubau und einen Relaunch, dazu eine
+Störungstabelle, stehen in
+`skills/agentur-website-builder/references/designrecherche-beispiele.md`.
+
 `referenz-register.mjs` ist die einzige Stelle, die den Zustand einer Referenz ändert. Zehn
 Zustände, sieben erlaubte Übergänge, jeder andere bricht mit Exit 2 ab. Von `ENTDECKT` führt
 kein Weg direkt nach `FREIGEGEBEN` oder `GECRAWLT`. Damit ist „erst vorlegen, dann crawlen"
@@ -279,6 +285,23 @@ Duplikat über Beinahe-Duplikat und verwandt bis unverwandt, mit den konkreten
 Feldunterschieden. Deterministisch über deklarierte Merkmale, ohne Abhängigkeit und ohne
 Einbettungen.
 
+### Die zweite Freigabe
+
+```bash
+node scripts/referenz-register.mjs wissen --id ref-01-beispiel-de --entscheidung erweitern \
+     --muster hero-vollbild-pillennavigation
+node scripts/muster-paket.mjs --id ref-01-beispiel-de
+```
+
+`muster-paket.mjs` schreibt **nicht** in die Musterbibliothek. Es legt im Kundenprojekt ein
+Paket aus Musterdatei, `HERKUNFT.md` und `EINBAUEN.md` ab. Die Aufnahme ins dauerhafte Wissen
+ist ein bewusster Commit im Repository `Design-Skill`. Grund: das globale Wissen liegt im
+Plugin, gearbeitet wird im Kundenprojekt, und ein Schreibzugriff dorthin wäre entweder
+wirkungslos oder unsichtbar.
+
+Eine Entscheidung „nur Projekt" erzeugt ausdrücklich gar kein Paket. Ein Entwurf, der die
+Musterprüfung nicht besteht, ebenfalls nicht.
+
 Die Bibliothek selbst liegt in
 `skills/webdesign-conversion/assets/musterbibliothek/`: ein Muster je Datei, Frontmatter plus
 Prosa, dazu eine erweiterbare Taxonomie. Sie wächst ausschließlich über die zweite Freigabe.
@@ -291,9 +314,11 @@ node --test 'scripts/tests/*.test.mjs'
 ```
 
 Eingebauter Testrunner von Node, keine Abhängigkeit, kein `package.json`. Die Anführungszeichen
-sind nötig, die Verzeichnisform greift nicht. 40 Tests: alle erlaubten und alle verbotenen
-Zustandsübergänge, die Sperre gegen den Abruf ohne Freigabe, robots.txt, die Rückfallstufen
-und die Grenzenliste. Der Netzzugriff ist durch einen lokalen Testserver ersetzt.
+sind nötig, die Verzeichnisform greift nicht. 90 Tests: alle erlaubten und alle verbotenen
+Zustandsübergänge, die Sperre gegen den Abruf ohne Freigabe, robots.txt, die Rückfallstufen,
+die Grenzenliste, das Konfidenzmodell, die Ähnlichkeitseinstufung, die Musterprüfung und die
+Trennung von Projekt- und globalem Wissen. Der Netzzugriff ist durch einen lokalen Testserver
+ersetzt.
 
 `deslop-check.mjs` bewertet fünf Kriterien und gibt eine Punktzahl von 0 bis 5: Floskeln,
 Nominalstil, leere Superlative, fehlende Belege und die Dreierfigur. Er gilt für **eigene**

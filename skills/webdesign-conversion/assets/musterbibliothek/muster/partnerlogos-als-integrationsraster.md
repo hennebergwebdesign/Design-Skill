@@ -58,7 +58,7 @@ in jeder Sektion neu.
   vereinheitlichen, können aber die Marke eines Partners verfremden, was bei
   Markenrichtlinien ein Problem ist.
 - Die Logos sind fremde Marken. Sie dürfen nur mit Erlaubnis verwendet werden, siehe die
-  rechtliche Abgrenzung in `../../references/20-markenextraktion-bestandsseite.md`. Ohne
+  rechtliche Abgrenzung in `../../../references/20-markenextraktion-bestandsseite.md`. Ohne
   geklärte Erlaubnis steht dort ein offener Punkt, kein stillschweigendes Ja.
 
 ## Was nicht übernommen wird

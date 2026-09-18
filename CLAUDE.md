@@ -50,6 +50,8 @@ node scripts/referenz-register.mjs status
 node scripts/referenz-crawl.mjs --id ref-01-beispiel-de --breakpoints 375,768,1440 --screenshot
 node scripts/design-dna.mjs --id ref-01-beispiel-de
 node scripts/muster-vergleich.mjs --id ref-01-beispiel-de
+node scripts/referenz-register.mjs wissen --id ref-01-beispiel-de --entscheidung projekt
+node scripts/muster-paket.mjs --id ref-01-beispiel-de
 
 # Musterbibliothek pruefen und Index neu erzeugen
 node scripts/pruefe-muster.mjs
@@ -115,6 +117,22 @@ Diese Punkte haben einen Grund. Wer sie ändert, ändert damit auch den Grund.
 - Versionsnummer in `.claude-plugin/plugin.json` und in der `metadata` der beiden `SKILL.md`
   bei inhaltlichen Änderungen nachziehen.
 
+## Ein neues Designmuster aufnehmen
+
+Anders als eine Referenz. Muster wachsen ausschließlich über Tor 2 der Designrecherche, nie
+durch direktes Anlegen einer Datei.
+
+1. Im Kundenprojekt entsteht ein Musterpaket (`node scripts/muster-paket.mjs --id …`).
+2. Die Datei aus dem Paket nach
+   `skills/webdesign-conversion/assets/musterbibliothek/muster/<id>.md` kopieren, oder bei
+   einer Erweiterung in das bestehende Muster einarbeiten.
+3. `node scripts/pruefe-muster.mjs --index` laufen lassen. Ohne Index ist das Muster für den
+   Vergleich unsichtbar.
+4. `verwandt` beidseitig pflegen, auch im verlinkten Muster.
+5. Committen, mit der Herkunft aus `HERKUNFT.md` in der Nachricht.
+
+Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster-bibliothek.md`.
+
 ## Eine neue Referenz aufnehmen
 
 1. Entscheiden, in welchen Skill sie gehört: Wissen nach `webdesign-conversion`, Ablauf oder
@@ -149,12 +167,30 @@ Diese Punkte haben einen Grund. Wer sie ändert, ändert damit auch den Grund.
   nicht gegen eine reine JS-Anwendung, die erst im Browser rendert.
 - Die Referenzliste in `agentur-website-builder/references/referenzen-und-auswahl.md` enthält
   fremde Domains. Sie veraltet und gehört einmal jährlich durchgesehen.
+- `muster-paket.mjs` ist gegen Fixtures geprüft, aber noch nie mit einem echten Muster durch
+  die ganze Kette gelaufen. Die Musterbibliothek ist bisher nie über Tor 2 gewachsen.
 - Die Lizenzlage ist gemischt: MIT für das Regelwerk, Agenturstandard für den Bauablauf.
   Falls das Plugin öffentlich bleiben soll, ist zu entscheiden, ob der Bauablauf mit
   veröffentlicht wird.
 
 ## Änderungsverlauf
 
+- **18.09.2026, Version 4.0.0** Fünfte und letzte Phase: der Kreis schließt sich. Neues
+  `scripts/muster-paket.mjs` schnürt nach Tor 2 ein transportierbares Paket aus Musterdatei,
+  `HERKUNFT.md` (beide Freigabezeitpunkte, Grenzen der Erfassung, Zustandsverlauf) und
+  `EINBAUEN.md`. Es schreibt bewusst **nicht** in die Musterbibliothek: das globale Wissen
+  liegt im Plugin, gearbeitet wird im Kundenprojekt, und ein Schreibzugriff dorthin wäre
+  wirkungslos oder unsichtbar. Die Aufnahme ist ein Commit in diesem Repository. Zwei Sperren
+  im Code: ohne Entscheidung eines Menschen an Tor 2 entsteht kein Paket, und ein Entwurf,
+  der `pruefe-muster.mjs` nicht besteht, wird nicht eingepackt. `NUR_PROJEKT` und `ABGELEHNT`
+  erzeugen ausdrücklich gar nichts. Neue
+  `agentur-website-builder/references/designrecherche-beispiele.md` mit zwei vollständig
+  durchgespielten Abläufen (Neubau und Relaunch) und einer Störungstabelle mit elf
+  Meldungen. Zehn neue Tests zur Trennung von Projekt- und globalem Wissen, insgesamt 90.
+  Die Hauptversion springt, weil der Bauablauf mit der Recherche eine neue Pflichtstufe
+  bekommt und `marke.json` um zwei Felder gewachsen ist. Bestehende Projekte bleiben
+  lauffähig: alle neuen Felder sind optional, kein Aufruf und kein Ausgabeordner hat sich
+  geändert.
 - **18.09.2026, Version 3.6.0** Vierte von fünf Phasen: das globale Wissen bekommt eine Form.
   Neue `webdesign-conversion/assets/musterbibliothek/` mit `taxonomie.json` (25 Kategorien,
   14 Stile, dazu Belege, Konfidenz, Komplexität), fünf Mustern als Erstbestand und einem

@@ -35,7 +35,7 @@ Diese Tabelle ist ehrlich gepflegt. Was hier nicht als vorhanden steht, ist Hand
 | Erfassung | `scripts/referenz-crawl.mjs`, `scripts/lib/abruf.mjs` | vorhanden, mit Tests |
 | Design DNA | `scripts/design-dna.mjs` | vorhanden, mit Tests |
 | Vergleich | `scripts/muster-vergleich.mjs` | vorhanden, mit Tests |
-| Tor 2 | `scripts/muster-paket.mjs` | ab Version 4.0.0 |
+| Tor 2 | `scripts/muster-paket.mjs` | vorhanden, mit Tests |
 
 ## Die sieben Stufen
 
@@ -178,7 +178,7 @@ erweitert statt neu angelegt wird, stehen in
 
 ### 7 Tor 2: dauerhaftes Wissen
 
-Ab Version 4.0.0. Vier Ausgänge, nur die ersten beiden ändern das globale Skillwissen:
+Vier Ausgänge, nur die ersten beiden ändern das globale Skillwissen:
 
 ```bash
 node scripts/referenz-register.mjs wissen --id ref-01-… --entscheidung global
@@ -186,6 +186,19 @@ node scripts/referenz-register.mjs wissen --id ref-01-… --entscheidung erweite
 node scripts/referenz-register.mjs wissen --id ref-01-… --entscheidung projekt
 node scripts/referenz-register.mjs wissen --id ref-01-… --entscheidung ablehnen
 ```
+
+Nach `global` oder `erweitern` schnürt `muster-paket.mjs` das transportierbare Paket:
+
+```bash
+node scripts/muster-paket.mjs --id ref-01-…
+```
+
+Das Paket enthält die fertige Musterdatei, `HERKUNFT.md` mit beiden Freigabezeitpunkten und
+den Grenzen der Erfassung, sowie `EINBAUEN.md` mit den drei Schritten. Das Skript schreibt
+**nicht** in die Musterbibliothek, und bei `projekt` oder `ablehnen` entsteht gar kein Paket.
+Es bricht außerdem ab, wenn der Entwurf die Prüfung aus `pruefe-muster.mjs` nicht besteht: ein
+fehlerhaftes Muster im Paket wäre ein fehlerhaftes Muster in der Bibliothek, nur einen Schritt
+später.
 
 ## Mehrere Referenzen, eine Synthese
 
@@ -243,6 +256,7 @@ Nichts davon wird erfunden, alles wird benannt.
 
 ## Verwandte Kapitel
 
+- Zwei vollständig durchgespielte Beispiele und die Störungstabelle: `designrecherche-beispiele.md`
 - Quellen konfigurieren und ergänzen: `referenzquellen-konfiguration.md`
 - Rangfolge der Quellen, Anti-Kopie, Sektionsaufbau: `referenzen-und-auswahl.md`
 - Abrufschicht, Firecrawl, Selbsthosting: `firecrawl-recherche.md`

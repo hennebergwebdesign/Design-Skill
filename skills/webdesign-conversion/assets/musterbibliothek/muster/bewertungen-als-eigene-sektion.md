@@ -61,7 +61,7 @@ Aufrufcode lag vor. Das Prinzip trägt trotzdem, weil es nicht am Aussehen häng
 - Zitatlänge im Datenformat begrenzen, etwa auf 240 Zeichen. Längere Zitate werden gekürzt und
   die Kürzung gekennzeichnet.
 - Bei Google-Bewertungen kommt derselbe Datensatz aus der Places API, siehe
-  `../../../agentur-website-builder/references/google-bewertungen.md`, und wird nicht doppelt
+  `../../../../agentur-website-builder/references/google-bewertungen.md`, und wird nicht doppelt
   gepflegt.
 
 ## Was nicht übernommen wird

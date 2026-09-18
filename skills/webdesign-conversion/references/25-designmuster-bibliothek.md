@@ -37,7 +37,7 @@ Die wichtigste Unterscheidung der ganzen Recherche.
 
 | | Projektwissen | Diese Bibliothek |
 |---|---|---|
-| liegt in | `.designrecherche/` im Kundenprojekt | `assets/musterbibliothek/` im Plugin |
+| liegt in | `.designrecherche/` im Kundenprojekt | `../assets/musterbibliothek/` im Plugin |
 | enthält | Register, Rohdaten, Screenshots, DNA, Vergleiche | benannte Muster mit Prinzip und Metadaten |
 | Lebensdauer | Projektlaufzeit | dauerhaft, versioniert |
 | kommt hinein | automatisch, im Ablauf | nur über Tor 2, nur durch einen Menschen |

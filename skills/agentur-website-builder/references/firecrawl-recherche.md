@@ -117,10 +117,10 @@ Das Fehlen ist kein Blocker, im Bericht aber als eingeschränkte Erfassung zu be
 
 * **Vor einem Relaunch**, sobald die alte Kundenseite feststeht: `relaunch-inventory.mjs`,
   siehe `references/intake-und-entscheidungen.md`. Anschließend Marke und CI nach
-  `../webdesign-conversion/references/20-markenextraktion-bestandsseite.md` auslesen.
+  `../../webdesign-conversion/references/20-markenextraktion-bestandsseite.md` auslesen.
 * **Vor dem Tokensystem-Plan**, wenn eine konkrete Seite als Referenz dient statt einer
   kuratierten Galerie: `design-scan.mjs`, siehe
-  `../webdesign-conversion/references/22-premium-designquellen.md` und die Rangfolge der
+  `../../webdesign-conversion/references/22-premium-designquellen.md` und die Rangfolge der
   Quellen in `references/referenzen-und-auswahl.md`. Das gilt für Wettbewerberseiten, vom
   Kunden genannte Vorbilder und für „bekannte" Seiten, die als Diskussionsgrundlage dienen,
   bevor sie in der Ausgangsliste von `referenzen-und-auswahl.md` gesucht werden.
@@ -143,11 +143,11 @@ Das Fehlen ist kein Blocker, im Bericht aber als eingeschränkte Erfassung zu be
   begründet, nie Text, Logo, Bildmaterial oder eine charakteristische Layoutkombination im
   Ganzen. `design-scan.mjs` liefert Farb- und Schriftkandidaten als grobe Heuristik aus dem
   Code, keinen Tokenwert. Die Marke des Kunden selbst wird trotzdem nach
-  `../webdesign-conversion/references/20-markenextraktion-bestandsseite.md` ausgelesen, nicht
+  `../../webdesign-conversion/references/20-markenextraktion-bestandsseite.md` ausgelesen, nicht
   nach diesem Kapitel.
 * **`design-scan.mjs` bewertet nicht.** Es liefert Struktur, keine Einschätzung, ob etwas
   gut ist. Die drei bis fünf Prinzipien benennen bleibt eigene Sichtung, siehe
-  `../webdesign-conversion/references/22-premium-designquellen.md`.
+  `../../webdesign-conversion/references/22-premium-designquellen.md`.
 * **Ungetestet gegen die echte Firecrawl-API.** Alle drei Werkzeuge sind gegen Direktabruf
   geprüft, `design-scan.mjs` und `relaunch-inventory.mjs` zusätzlich gegen einen lokalen
   Testserver. Weder die Cloud-API noch eine selbst gehostete Instanz noch die Playwright-Stufe
@@ -165,7 +165,7 @@ Das Fehlen ist kein Blocker, im Bericht aber als eingeschränkte Erfassung zu be
 - Rangfolge der Referenzquellen, was übernommen werden darf:
   `referenzen-und-auswahl.md`
 - Referenzrecherche vor dem Tokensystem-Plan:
-  `../webdesign-conversion/references/22-premium-designquellen.md`
+  `../../webdesign-conversion/references/22-premium-designquellen.md`
 - Marke und CI aus einer bestehenden Seite auslesen:
-  `../webdesign-conversion/references/20-markenextraktion-bestandsseite.md`
+  `../../webdesign-conversion/references/20-markenextraktion-bestandsseite.md`
 - Ablauf mit beiden Freigabetoren: `designrecherche-ablauf.md`

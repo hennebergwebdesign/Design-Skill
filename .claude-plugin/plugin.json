@@ -1,7 +1,7 @@
 {
   "name": "webdesign-conversion",
-  "description": "Conversion-orientiertes Webdesign für den DACH-Raum in zwei Skills: webdesign-conversion liefert das Regelwerk (Strategie, Design, Spacing, Responsive mit Container Queries, Performance, Barrierefreiheit nach BFSG und WCAG 2.2 AA, SEO, Conversion-Architektur, Copywriting, eigene Icon-Systeme, Motion mit GSAP und CSS, Impressum, Datenschutz, Consent, 404, robots.txt, Sitemap, Redirects, Security-Header). agentur-website-builder liefert den Bauablauf nach Agenturstandard mit Astro und Cloudflare Pages, Formularen über Resend und Turnstile, eigenem Consent Banner mit echter Skriptblockierung, Google Bewertungen über die Places API und optionalem Leadsystem mit Dashboard. Mit Prüfskripten für Gedankenstriche, Tokens, Kontrast, Platzhalter und Breakpoints sowie Werkzeugen für Relaunch-Inventar, Design-Referenzscans über Firecrawl und KI-Klang in Texten, dazu annotierte 21st.dev-Referenzkomponenten.",
-  "version": "3.6.0",
+  "description": "Conversion-orientiertes Webdesign für den DACH-Raum in zwei Skills: webdesign-conversion liefert das Regelwerk (Strategie, Design, Spacing, Responsive mit Container Queries, Performance, Barrierefreiheit nach BFSG und WCAG 2.2 AA, SEO, Conversion-Architektur, Copywriting, eigene Icon-Systeme, Motion mit GSAP und CSS, Impressum, Datenschutz, Consent, 404, robots.txt, Sitemap, Redirects, Security-Header). agentur-website-builder liefert den Bauablauf nach Agenturstandard mit Astro und Cloudflare Pages, Formularen über Resend und Turnstile, eigenem Consent Banner mit echter Skriptblockierung, Google Bewertungen über die Places API und optionalem Leadsystem mit Dashboard. Dazu eine kuratierte Designrecherche mit zwei menschlichen Freigaben: Referenzen werden entdeckt, vorgelegt und erst nach Freigabe erfasst, analysiert mit Belegen (beobachtet, abgeleitet, unbekannt), gegen eine Musterbibliothek verglichen und nur nach einer zweiten Freigabe dauerhaft aufgenommen. Mit Prüfskripten für Gedankenstriche, Tokens, Kontrast, Platzhalter, Breakpoints und Designmuster sowie Werkzeugen für Relaunch-Inventar, Design-Referenzscans über Firecrawl (auch selbst gehostet) und KI-Klang in Texten, dazu annotierte 21st.dev-Referenzkomponenten.",
+  "version": "4.0.0",
   "author": {
     "name": "Henneberg Webdesign"
   },
@@ -46,6 +46,10 @@
     "designtokens",
     "21st-dev",
     "firecrawl",
-    "webscraping"
+    "webscraping",
+    "designrecherche",
+    "designmuster",
+    "referenzen",
+    "robots-txt"
   ]
 }

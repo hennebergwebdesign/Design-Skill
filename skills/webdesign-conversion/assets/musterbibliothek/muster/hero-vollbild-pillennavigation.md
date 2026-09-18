@@ -72,4 +72,4 @@ folgt der Reihenfolge in `06-conversion-architektur.md`, nicht einer Messung an 
 Das Bildmotiv, die Partnerlogos und jede Beschriftung der Vorlage. Die Logoreihe wird mit
 echten Partnern des Kunden gefüllt oder entfällt, ein erfundener Beweis ist ein Verstoß gegen
 § 5 UWG, siehe die harte Grenze gegen erfundene Zahlen. Farben und Schriften kommen aus dem
-Designsystem des Kunden, siehe `../../references/24-designsystem-vorrang.md`.
+Designsystem des Kunden, siehe `../../../references/24-designsystem-vorrang.md`.
