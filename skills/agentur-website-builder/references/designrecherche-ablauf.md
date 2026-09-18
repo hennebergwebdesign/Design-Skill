@@ -33,8 +33,8 @@ Diese Tabelle ist ehrlich gepflegt. Was hier nicht als vorhanden steht, ist Hand
 | Entdeckung | `assets/recherche/referenzquellen.json`, Suche von Hand oder über WebSearch | Quellenliste vorhanden, kein Suchskript |
 | Tor 1 | `scripts/referenz-register.mjs` | vorhanden, mit Tests |
 | Erfassung | `scripts/referenz-crawl.mjs`, `scripts/lib/abruf.mjs` | vorhanden, mit Tests |
-| Design DNA | `scripts/design-dna.mjs` | ab Version 3.6.0 |
-| Vergleich | `scripts/muster-vergleich.mjs` | ab Version 3.6.0 |
+| Design DNA | `scripts/design-dna.mjs` | vorhanden, mit Tests |
+| Vergleich | `scripts/muster-vergleich.mjs` | vorhanden, mit Tests |
 | Tor 2 | `scripts/muster-paket.mjs` | ab Version 4.0.0 |
 
 ## Die sieben Stufen
@@ -146,13 +146,35 @@ Liste ist die Grundlage für die `unbekannt`-Belege der Design DNA.
 
 ### 5 Design DNA
 
-Ab Version 3.6.0 über `scripts/design-dna.mjs`. Jeder Wert bekommt einen Beleg
-(`beobachtet`, `abgeleitet`, `unbekannt`). Eine Eigenschaft, die nicht erfasst werden konnte,
-wird als `unbekannt` geführt und nicht geschätzt.
+```bash
+node scripts/design-dna.mjs --id ref-01-beispiel-de
+```
+
+Jeder Wert bekommt einen Beleg: `beobachtet`, `abgeleitet` oder `unbekannt`. Eine Eigenschaft,
+die nicht erfasst werden konnte, bleibt `null` und bekommt einen Grund daneben. Aus rohem HTML
+sind Spacing-Skala, Rasterbreite, Kontrastwerte und responsives Verhalten **nicht** ablesbar,
+und genau das steht dann in `dna.md` unter „Was unbekannt bleibt".
+
+Abgelegt werden `dna.json`, `dna.md` und `muster-entwurf.md`. Der Entwurf ist bewusst ein
+Gerüst mit offenen Feldern: **das Skript benennt keine Prinzipien.** Ein Prinzip zu benennen
+ist eine Bewertung, und die trifft ein Mensch. Die Felder des Entwurfs sind dieselben wie in
+der Musterbibliothek, siehe
+`../../webdesign-conversion/references/25-designmuster-bibliothek.md`.
 
 ### 6 Vergleich
 
-Ab Version 3.6.0 über `scripts/muster-vergleich.mjs` gegen die globale Musterbibliothek.
+```bash
+node scripts/muster-vergleich.mjs --id ref-01-beispiel-de
+```
+
+Verglichen wird der **gefüllte** Entwurf gegen die globale Musterbibliothek, über deklarierte
+Merkmale: Kategorie, Sektionstypen, Tags, Stil und die beiden Zweckfelder. Ein Entwurf mit
+offenen Platzhaltern wird abgewiesen, ein Vergleich gegen Platzhalter misst nichts.
+
+Das Ergebnis ist `vergleich.md` mit einer Tabelle je Treffer, den Feldunterschieden der drei
+nächsten und einer Einstufung von Duplikat bis unverwandt. Die Schwellen und die Regel, wann
+erweitert statt neu angelegt wird, stehen in
+`../../webdesign-conversion/references/25-designmuster-bibliothek.md`.
 
 ### 7 Tor 2: dauerhaftes Wissen
 

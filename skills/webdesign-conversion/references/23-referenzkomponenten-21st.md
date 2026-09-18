@@ -52,6 +52,23 @@ Dieselben Regeln wie für jede fremde Referenz, siehe
 5. **Englischer Beispieltext wird nicht übernommen.** Er ist Platzhalter der Registry. Texte
    kommen aus dem Markenbrief oder werden nach `12-copywriting.md` entworfen und markiert.
 
+## Als Muster in der Bibliothek
+
+Alle fünf sind seit Version 3.6.0 zusätzlich als Muster in `../assets/musterbibliothek/muster/`
+geführt, mit Prinzip, Belegen und Metadaten:
+
+| Datei hier | Muster |
+|---|---|
+| `hero-vollbild.tsx` | `hero-vollbild-pillennavigation.md` |
+| `faq-akkordeon.tsx` | `faq-zweispaltig-mit-kontaktausweg.md` |
+| `hero-schwebende-elemente-demo.tsx` | `hero-schwebende-produktbilder.md`, Konfidenz niedrig |
+| `bewertungen-demo.tsx` | `bewertungen-als-eigene-sektion.md`, Konfidenz niedrig |
+| `integrationen-demo.tsx` | `partnerlogos-als-integrationsraster.md`, Konfidenz niedrig |
+
+Die drei Muster mit Konfidenz niedrig sind genau die drei, für die nur der Demo-Aufruf vorlag.
+Die Schwäche steht im Muster selbst, damit sie beim Einsatz auffällt und nicht erst im
+Projekt. Verfahren: `25-designmuster-bibliothek.md`.
+
 ## Verwandte Kapitel
 
 - Recherche vor dem Entwurf, die fünf Quellen: `22-premium-designquellen.md`

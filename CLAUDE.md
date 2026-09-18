@@ -48,6 +48,12 @@ node scripts/referenz-register.mjs vorlegen --alle
 node scripts/referenz-register.mjs freigeben --id ref-01-beispiel-de --sektionen hero
 node scripts/referenz-register.mjs status
 node scripts/referenz-crawl.mjs --id ref-01-beispiel-de --breakpoints 375,768,1440 --screenshot
+node scripts/design-dna.mjs --id ref-01-beispiel-de
+node scripts/muster-vergleich.mjs --id ref-01-beispiel-de
+
+# Musterbibliothek pruefen und Index neu erzeugen
+node scripts/pruefe-muster.mjs
+node scripts/pruefe-muster.mjs --index
 
 # Tests der Skripte, eingebauter Node-Testrunner, ohne Abhaengigkeit
 node --test 'scripts/tests/*.test.mjs'
@@ -73,7 +79,8 @@ nicht, es braucht das Glob-Muster in Anführungszeichen.
 ```
 .claude-plugin/       plugin.json, marketplace.json
 skills/
-  webdesign-conversion/     SKILL.md, references/00-23, playbooks/, assets/
+  webdesign-conversion/     SKILL.md, references/00-25, playbooks/, assets/
+                            assets/musterbibliothek/ ist das globale Musterwissen
   agentur-website-builder/  SKILL.md, references/, assets/consent|forms|reviews
 scripts/              fünf Prüfskripte, Agenturwerkzeuge, Designrecherche, ein Installer
   lib/abruf.mjs       die eine Abrufschicht, vier Rückfallstufen, robots.txt
@@ -122,8 +129,12 @@ Diese Punkte haben einen Grund. Wer sie ändert, ändert damit auch den Grund.
 ## Offene Punkte
 
 - `consent-ohne-keks`, `leadsystem-nur-auf-bestaetigung`,
-  `kundendesignsystem-schlaegt-referenz` und `referenz-erst-freigeben` sind noch nicht
-  gelaufen. Ihr Δ ist eine Vermutung, kein Messwert.
+  `kundendesignsystem-schlaegt-referenz`, `referenz-erst-freigeben` und
+  `nicht-beobachtetes-nicht-behaupten` sind noch nicht gelaufen. Ihr Δ ist eine Vermutung,
+  kein Messwert.
+- Die Musterbibliothek startet mit fünf Mustern, alle aus derselben Quelle (21st.dev) und
+  keines aus einer echten Projektrecherche. Der Ähnlichkeitsvergleich ist damit an einem
+  schmalen Bestand erprobt.
 - Die Suchmuster in `referenzquellen.json` sind mit `suchmuster_geprueft: false` markiert und
   bisher nicht aufgerufen worden. Lapa Ninja, Godly und SiteInspire sind neu aufgenommen und
   in keinem Projekt erprobt.
@@ -144,6 +155,21 @@ Diese Punkte haben einen Grund. Wer sie ändert, ändert damit auch den Grund.
 
 ## Änderungsverlauf
 
+- **18.09.2026, Version 3.6.0** Vierte von fünf Phasen: das globale Wissen bekommt eine Form.
+  Neue `webdesign-conversion/assets/musterbibliothek/` mit `taxonomie.json` (25 Kategorien,
+  14 Stile, dazu Belege, Konfidenz, Komplexität), fünf Mustern als Erstbestand und einem
+  erzeugten `index.json`. Erstbestand sind die fünf 21st.dev-Referenzkomponenten aus
+  `23-referenzkomponenten-21st.md`, drei davon ausdrücklich mit Konfidenz niedrig, weil für
+  sie nur der Demo-Aufruf vorlag. Neue `references/25-designmuster-bibliothek.md` mit
+  Pflichtfeldern, Konfidenzmodell, der Regel wann erweitert statt neu angelegt wird, dem
+  Qualitätsfilter und sechs benannten Erweiterungspunkten, die bewusst nicht gebaut sind.
+  Drei neue Skripte: `pruefe-muster.mjs` (Pflichtfelder, Taxonomie, fremdes Bildmaterial,
+  lange Zitate, Index), `design-dna.mjs` (jeder Wert mit Beleg, Prinzipien bewusst offen) und
+  `muster-vergleich.mjs` (deterministischer Merkmalsvergleich, fünf Einstufungen). Dazu 40
+  neue Tests, insgesamt 80, neue harte Grenze zum Konfidenzmodell und der Evalfall
+  `nicht-beobachtetes-nicht-behaupten`, noch nicht gelaufen. Die Stilrichtungen in
+  `10-visuelle-richtung.md` und in `taxonomie.json` sind zwei Fassungen derselben Liste, das
+  steht jetzt an beiden Stellen.
 - **18.09.2026, Version 3.5.0** Dritte von fünf Phasen: die Abrufschicht. Die
   Firecrawl-Anbindung stand bis hierher zweimal im Repository, leicht verschieden, in
   `relaunch-inventory.mjs` und `design-scan.mjs`, und sprach beide Male die Cloud fest an,

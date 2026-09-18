@@ -54,8 +54,13 @@ einsatzfertiger Code bei, keine Beschreibung.
 
 **Prüfskripte statt Checkboxen.** Eine Regel ohne Prüfung wird in der dritten Sitzung
 zurückgedreht. Fünf Skripte prüfen Gedankenstriche, Tokens, Kontrast, Platzhalter und acht
-Bildschirmgrößen samt horizontalem Überlauf. Zwei weitere beschaffen das Relaunch-Inventar
-und bewerten selbst formulierte Texte auf generischen KI-Klang.
+Bildschirmgrößen samt horizontalem Überlauf, ein sechstes die Musterbibliothek. Dazu
+Werkzeuge, die das Relaunch-Inventar beschaffen, selbst formulierte Texte auf generischen
+KI-Klang bewerten und die Designrecherche führen.
+
+**Eine kuratierte Designrecherche mit zwei Freigaben.** Referenzen werden entdeckt, vorgelegt
+und erst nach menschlicher Freigabe erfasst. Was daraus dauerhaft ins Skillwissen wandert,
+entscheidet eine zweite Freigabe. Beides ist im Code durchgesetzt, nicht nur beschrieben.
 
 **Vorlagen zum Übernehmen** statt Beschreibungen zum Nachbauen.
 
@@ -92,7 +97,8 @@ skills/
 │  │  ├─ 21-sektionshintergruende-hierarchie.md  Bildgrund, Trennung, Abstufung
 │  │  ├─ 22-premium-designquellen.md  Awwwards, Dribbble, Land-book, recent.design, 21st.dev
 │  │  ├─ 23-referenzkomponenten-21st.md  fünf annotierte 21st.dev-Beispielkomponenten
-│  │  └─ 24-designsystem-vorrang.md  fünf Stufen, was eine Referenz beeinflussen darf
+│  │  ├─ 24-designsystem-vorrang.md  fünf Stufen, was eine Referenz beeinflussen darf
+│  │  └─ 25-designmuster-bibliothek.md  Muster, Belege, Konfidenz, wann erweitern
 │  └─ assets/
 │     ├─ vorlagen/                  marke.json, marke-brief.md, impressum.md, datenschutz.md,
 │     │                             datenschutz-bewerber.md, consent-muster.md,
@@ -101,7 +107,8 @@ skills/
 │     │                             jsonld-bausteine.md,
 │     │                             referenzkomponenten/ (Hero, FAQ, schwebende Elemente,
 │     │                             Bewertungen, Integrationen)
-│     └─ checklisten/               pre-launch.md, conversion-audit.md
+│     ├─ checklisten/               pre-launch.md, conversion-audit.md
+│     └─ musterbibliothek/         taxonomie.json, muster/, index.json
 └─ agentur-website-builder/         der Lieferablauf
    ├─ SKILL.md                      Phasen 0 bis 6, feste Agenturvorgaben, Definition of Done
    ├─ references/
@@ -134,6 +141,9 @@ scripts/
 ├─ deslop-check.mjs                 selbst formulierte Copy auf generischen KI-Klang prüfen
 ├─ referenz-register.mjs            Freigabezustand der Designreferenzen, zwei Tore
 ├─ referenz-crawl.mjs               erfasst nur freigegebene Referenzen, mit Breakpoints
+├─ design-dna.mjs                   Beobachtungen mit Beleg, Prinzipien bleiben offen
+├─ muster-vergleich.mjs             Entwurf gegen Bibliothek, fünf Einstufungen
+├─ pruefe-muster.mjs                Pflichtfelder, Taxonomie, Anti-Kopie, Index
 ├─ lib/abruf.mjs                    die eine Abrufschicht, vier Rückfallstufen, robots.txt
 ├─ tests/                           node --test, ohne Abhängigkeit
 └─ install-quellskills.sh           Quell-Skills zusätzlich installieren
@@ -250,6 +260,30 @@ immer nur Entdeckungsquelle, der Beleg ist die Originalseite. Ablauf, Ausgabefor
 Fehlerbehandlung stehen in
 `skills/agentur-website-builder/references/designrecherche-ablauf.md`.
 
+### Vom Rohmaterial zum Muster
+
+```bash
+node scripts/design-dna.mjs --id ref-01-beispiel-de       # Beobachtungen mit Beleg
+node scripts/muster-vergleich.mjs --id ref-01-beispiel-de # gegen die Bibliothek
+node scripts/pruefe-muster.mjs --index                    # Bibliothek prüfen, Index bauen
+```
+
+`design-dna.mjs` gibt jedem Wert einen Beleg: **beobachtet**, **abgeleitet** oder
+**unbekannt**. Aus rohem HTML sind Spacing-Skala, Rasterbreite, Kontrastwerte und responsives
+Verhalten nicht ablesbar, also stehen sie als `unbekannt` da, mit Grund, statt geschätzt zu
+werden. Prinzipien benennt das Skript bewusst nicht: das ist eine Bewertung, und die trifft
+ein Mensch.
+
+`muster-vergleich.mjs` stuft einen gefüllten Musterentwurf gegen die Bibliothek ein, von
+Duplikat über Beinahe-Duplikat und verwandt bis unverwandt, mit den konkreten
+Feldunterschieden. Deterministisch über deklarierte Merkmale, ohne Abhängigkeit und ohne
+Einbettungen.
+
+Die Bibliothek selbst liegt in
+`skills/webdesign-conversion/assets/musterbibliothek/`: ein Muster je Datei, Frontmatter plus
+Prosa, dazu eine erweiterbare Taxonomie. Sie wächst ausschließlich über die zweite Freigabe.
+Verfahren in `skills/webdesign-conversion/references/25-designmuster-bibliothek.md`.
+
 ## Tests der Skripte
 
 ```bash
@@ -283,10 +317,11 @@ Die Suite hat dabei schon einen echten Fehler gefunden: das Landingpage-Playbook
 formuliert, dass das Modell die Navigationsregel erkannte, dann aber um Erlaubnis fragte statt
 zu liefern. Details in `evals/README.md`.
 
-Zehn Fälle insgesamt, davon zwei für den Agenturstandard: `consent-ohne-keks` und
-`leadsystem-nur-auf-bestaetigung`. Diese beiden und die neuen Fälle
-`kundendesignsystem-schlaegt-referenz` und `referenz-erst-freigeben` sind noch nicht gelaufen,
-ihr Δ ist damit eine Vermutung und kein Messwert.
+Elf Fälle insgesamt, davon zwei für den Agenturstandard: `consent-ohne-keks` und
+`leadsystem-nur-auf-bestaetigung`. Diese beiden und die drei neuen Fälle
+`kundendesignsystem-schlaegt-referenz`, `referenz-erst-freigeben` und
+`nicht-beobachtetes-nicht-behaupten` sind noch nicht gelaufen, ihr Δ ist damit eine Vermutung
+und kein Messwert.
 
 ## Quell-Skills nachinstallieren
 
