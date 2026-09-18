@@ -1,0 +1,84 @@
+{
+  "$kommentar": [
+    "Taxonomie der Musterbibliothek. Maschinenlesbare Wahrheit fuer die Frontmatter jeder",
+    "Musterdatei, geprueft von scripts/pruefe-muster.mjs. Verfahren: references/25-designmuster-bibliothek.md.",
+    "",
+    "Erweiterbar: eine neue Kategorie oder ein neuer Stil wird hier ergaenzt, nicht in einer",
+    "Musterdatei erfunden. Ein Wert, der hier nicht steht, ist ein Befund im Pruefskript.",
+    "",
+    "Die Stilrichtungen 1 bis 10 sind dieselben wie in references/10-visuelle-richtung.md,",
+    "Abschnitt 'Stilrichtungen als Startpunkt'. Diese Datei ist ihre maschinenlesbare Fassung,",
+    "keine zweite Liste. Wer dort etwas aendert, zieht hier nach und umgekehrt."
+  ],
+
+  "schema": 1,
+
+  "kategorien": {
+    "navigation": "Kopfzeile, Menue, Sprunganker, mobiles Menue",
+    "hero": "Heldenbereich, der erste Bildschirm",
+    "trust": "unmittelbarer Vertrauensbeweis: Logos, Siegel, Kennzahlen",
+    "problem": "Ausgangslage, Schmerzpunkt, Ist-Zustand",
+    "features": "Funktionen, Merkmale, technische Eigenschaften",
+    "benefits": "Nutzen und Ergebnis aus Sicht der Zielgruppe",
+    "product": "Produktdarstellung, Konfigurator, Varianten, Spezifikation",
+    "services": "Leistungen, Angebotsuebersicht",
+    "process": "Ablauf, Schritte, Zeitachse",
+    "about": "Unternehmen, Haltung, Geschichte",
+    "team": "Personen, Rollen, Ansprechpartner",
+    "cases": "Fallbeispiele, Projekte mit Ergebnis",
+    "portfolio": "Arbeiten ohne Fallstudienstruktur, Galerie",
+    "testimonials": "Kundenstimmen, Bewertungen, Zitate",
+    "pricing": "Preise, Pakete, Rechner",
+    "comparison": "Vergleich, Vorher-Nachher, Wettbewerbsmatrix",
+    "faq": "haeufige Fragen, Einwandbehandlung",
+    "forms": "Formulare, mehrstufige Strecken, Uploads",
+    "cta": "Handlungsaufforderung als eigener Abschnitt",
+    "footer": "Fusszeile, Rechtstexte, Sekundaernavigation",
+    "interactive": "Konfigurator, Rechner, Karte, Scroll-Erzaehlung",
+    "editorial": "Textstrecke, Magazinlayout, Blog",
+    "technical": "Datenblatt, Spezifikation, Messwerte",
+    "ecommerce": "Produktliste, Detailseite, Warenkorb",
+    "recruiting": "Stellenanzeige, Karriereseite, Bewerbungsstrecke"
+  },
+
+  "stil": {
+    "minimal": { "beschreibung": "viel Weissraum, wenig Farbe, ruhige Groteske", "kapitel": "10-visuelle-richtung.md" },
+    "editorial": { "beschreibung": "starke Display-Serife, Spalten, Bildunterschriften", "kapitel": "10-visuelle-richtung.md" },
+    "corporate": { "beschreibung": "klare Raster, gedaempfte Palette, dichte Information", "kapitel": "10-visuelle-richtung.md" },
+    "clean": { "beschreibung": "weiche Radien, freundliche Groteske, viel Luft", "kapitel": "10-visuelle-richtung.md" },
+    "expressive": { "beschreibung": "grosse Typo, hoher Kontrast, ein Signalton", "kapitel": "10-visuelle-richtung.md" },
+    "refined": { "beschreibung": "feine Abstufungen, praezise Raster, zurueckhaltende Bewegung", "kapitel": "10-visuelle-richtung.md" },
+    "technical-mono": { "beschreibung": "Monospace-Akzente, sichtbares Raster, Daten im Vordergrund", "kapitel": "10-visuelle-richtung.md" },
+    "material-flat": { "beschreibung": "klare Flaechen, definierte Erhebungen, Systemkomponenten", "kapitel": "10-visuelle-richtung.md" },
+    "glass-gradient": { "beschreibung": "Transparenz, Verlaeufe, Tiefe", "kapitel": "10-visuelle-richtung.md" },
+    "retro": { "beschreibung": "zeitgebundene Palette, Textur, historische Schriften", "kapitel": "10-visuelle-richtung.md" },
+    "brutalist": { "beschreibung": "rohe Kanten, Systemschrift, bewusster Bruch mit Konvention", "neu": true },
+    "luxus": { "beschreibung": "viel Leere, langsame Bewegung, Material statt Farbe", "neu": true },
+    "industriell": { "beschreibung": "Werkstoff, Massstab, Funktion vor Zier", "neu": true },
+    "experimentell": { "beschreibung": "ungewohnte Navigation oder Bewegung als Kern der Idee", "neu": true }
+  },
+
+  "belege": {
+    "beobachtet": "direkt aus dem erfassten Material abgelesen, mit Fundstelle",
+    "abgeleitet": "aus Beobachtetem begruendet geschlossen, nicht selbst gemessen",
+    "unbekannt": "nicht erfassbar gewesen. Wird nie durch eine Schaetzung ersetzt"
+  },
+
+  "konfidenz": {
+    "hoch": "mehrere beobachtete Belege, Prinzip in mehr als einer Referenz gesehen",
+    "mittel": "ein beobachteter Beleg oder ein gut begruendeter Schluss",
+    "niedrig": "Prinzip plausibel, Beleg duenn. Vor dem Einsatz pruefen"
+  },
+
+  "komplexitaet": {
+    "niedrig": "reines CSS, keine Bibliothek, kein Zustand",
+    "mittel": "wenig JavaScript oder eine vorhandene Bibliothek",
+    "hoch": "eigene Bewegungsorchestrierung, Messung, Zustandsverwaltung"
+  },
+
+  "freigabe": {
+    "global": "dauerhaft in der Bibliothek, aus Tor 2 hervorgegangen",
+    "erweitert": "hat ein bestehendes Muster ergaenzt",
+    "bestand": "vor Einfuehrung der Tore aufgenommen, Herkunft dokumentiert"
+  }
+}

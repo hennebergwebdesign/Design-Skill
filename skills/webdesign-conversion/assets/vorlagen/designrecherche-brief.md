@@ -1,7 +1,7 @@
 # Design-Research-Brief: [KUNDE]
 
 Ausgefüllt vor der ersten Referenzsuche, abgelegt im Kundenprojekt unter
-`.designrecherche/brief.md`. Ablauf: `../../agentur-website-builder/references/designrecherche-ablauf.md`.
+`.designrecherche/brief.md`. Ablauf: `../../../agentur-website-builder/references/designrecherche-ablauf.md`.
 
 Der Zweck dieser Datei ist eine Suche nach **Funktion** statt nach Geschmack. „Schöne
 Websites" ist kein Suchauftrag. „Technische Produktdarstellung für erklärungsbedürftige
@@ -24,7 +24,7 @@ Alles, was schon in `marke-brief.md` steht, wird hier nicht wiederholt, sondern 
 
 ## 2 Designsystem des Kunden
 
-Stufe nach `../references/24-designsystem-vorrang.md` eintragen. Das entscheidet, was eine
+Stufe nach `../../references/24-designsystem-vorrang.md` eintragen. Das entscheidet, was eine
 Referenz überhaupt beeinflussen darf.
 
 | Frage | Antwort |

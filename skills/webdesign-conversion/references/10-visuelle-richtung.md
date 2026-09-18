@@ -179,6 +179,11 @@ kein Rezept:
 | **Glass/Gradient** | Transparenz, Verläufe, Tiefe | Produktseiten mit starkem Visual |
 | **Retro/Vintage** | zeitgebundene Palette, Textur, historische Schriften | Gastronomie, Handwerk mit Geschichte |
 
+Dieselben zehn Richtungen stehen maschinenlesbar in
+`../assets/musterbibliothek/taxonomie.json` unter `stil`, dort ergänzt um vier weitere. Wer
+hier etwas ändert, zieht dort nach und umgekehrt: es sind zwei Fassungen derselben Liste,
+keine zwei Listen.
+
 **Vor dem Griff zur Richtung:** Was am Gegenstand selbst ist bildwürdig? Ein Dachdecker hat
 Materialien, Schichten, Wasser, Gefälle. Ein Labor hat Proben, Messreihen, Maßstäbe. Daraus
 entsteht eine Handschrift; aus einer Stilkarte entsteht eine Schablone.

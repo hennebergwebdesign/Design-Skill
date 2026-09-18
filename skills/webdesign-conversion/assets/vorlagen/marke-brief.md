@@ -129,7 +129,7 @@ Referenz überhaupt beeinflussen darf:
 **Referenzen aus Premium-Designquellen**, siehe `22-premium-designquellen.md`. Vor Durchgang
 1 recherchiert, nicht danach als Nachgedanke. Jede Zeile entspricht einem Eintrag in
 `.designrecherche/register.json`, geführt von `scripts/referenz-register.mjs`, Ablauf in
-`../../agentur-website-builder/references/designrecherche-ablauf.md`:
+`../../../agentur-website-builder/references/designrecherche-ablauf.md`:
 
 | Kennung | Quelle | Link | Freigabe | Was übernommen wird | Was bewusst nicht |
 |---|---|---|---|---|---|

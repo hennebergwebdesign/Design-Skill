@@ -4,7 +4,7 @@ description: "Vollständiges System für conversion-orientiertes Webdesign im DA
 license: MIT
 metadata:
   author: Henneberg Webdesign
-  version: 2.3.0
+  version: 2.4.0
 ---
 
 # Webdesign Conversion System
@@ -117,6 +117,7 @@ Lies gezielt nach, statt alles zu laden.
 | Referenzrecherche vor dem Entwurf: Awwwards, Dribbble, Land-book, recent.design, 21st.dev | `22-premium-designquellen.md` |
 | Fünf annotierte 21st.dev-Beispielkomponenten (Hero, FAQ, schwebende Elemente, Bewertungen, Integrationen) | `23-referenzkomponenten-21st.md` |
 | Was eine Referenz beeinflussen darf und was geschützt bleibt, Rangfolge | `24-designsystem-vorrang.md` |
+| Musterbibliothek, Design DNA, Konfidenzmodell, wann erweitern statt neu anlegen | `25-designmuster-bibliothek.md` |
 | Referenzen entdecken, vorlegen, freigeben, erfassen | `../agentur-website-builder/references/designrecherche-ablauf.md` |
 
 **Technik, Recht, Messung**
@@ -131,6 +132,10 @@ Lies gezielt nach, statt alles zu laden.
 | GA4, Heatmaps, Conversion-Ziele, A/B | `13-messung-optimierung.md` |
 | Astro-Projekt aufsetzen, Dateistruktur | `14-projektstruktur-astro.md` |
 | Kurz vor dem Livegang | `assets/checklisten/pre-launch.md` |
+
+Kuratierte Designmuster mit Prinzip, Belegen und Metadaten liegen in
+`assets/musterbibliothek/`, siehe `references/25-designmuster-bibliothek.md`. Sie wachsen nur
+über die zweite Freigabe, nie nebenbei.
 
 Fertige Vorlagen (Markenbrief, Rechtstexte, Bewerber-Datenschutz, robots.txt,
 Sitemap-Stylesheet, Tokens, globale Basis, Meta-Head, JSON-LD samt JobPosting, 404-Seite,
@@ -157,6 +162,8 @@ wandern nie in das `package.json` eines Kundenprojekts:
 node scripts/relaunch-inventory.mjs https://alte-kundenseite.de   # Bestand vor dem Relaunch
 node scripts/deslop-check.mjs src/components/sektionen/Hero.astro # selbst formulierte Copy
 node scripts/referenz-register.mjs status                         # Freigabestand der Referenzen
+node scripts/pruefe-muster.mjs --index                            # Musterbibliothek prüfen
+node --test 'scripts/tests/*.test.mjs'                            # Tests der Skripte
 ```
 
 `deslop-check.mjs` prüft fünf Kriterien: Floskeln, Nominalstil, leere Superlative, fehlende
@@ -258,6 +265,12 @@ Diese Regeln gelten immer und werden nicht wegdiskutiert:
   Nachbarsektion**, per Flächenfarbwechsel oder, wo Sektionen zusammengehören, per
   typografischer und räumlicher Hierarchie. Keine Folge von Sektionen auf identischer
   Fläche ohne jede Abstufung. Siehe `references/21-sektionshintergruende-hierarchie.md`.
+- **Nichts wird als beobachtet ausgegeben, was nicht beobachtet wurde.** Bei der Analyse einer
+  fremden Seite bekommt jeder Wert einen Beleg: beobachtet, abgeleitet oder unbekannt. Aus
+  rohem HTML sind Spacing-Skala, Rasterbreite, Kontrastwerte und responsives Verhalten nicht
+  ablesbar. Was fehlt, heißt `unbekannt` und wird nicht geschätzt, auch nicht plausibel. Siehe
+  `references/25-designmuster-bibliothek.md`, geprüft mit dem Evalfall
+  `nicht-beobachtetes-nicht-behaupten`.
 - **Keine erfundenen Zahlen.** Keine Kundenstimmen, Bewertungen, Zertifikate, Preise,
   Lieferzeiten oder Referenzen ohne Beleg. Fehlt ein Wert, steht dort ein sichtbarer
   Platzhalter `[[FEHLT: …]]`, niemals ein plausibel klingender Erfindungswert. Unechte

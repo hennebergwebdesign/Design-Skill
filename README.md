@@ -54,8 +54,13 @@ einsatzfertiger Code bei, keine Beschreibung.
 
 **Prüfskripte statt Checkboxen.** Eine Regel ohne Prüfung wird in der dritten Sitzung
 zurückgedreht. Fünf Skripte prüfen Gedankenstriche, Tokens, Kontrast, Platzhalter und acht
-Bildschirmgrößen samt horizontalem Überlauf. Zwei weitere beschaffen das Relaunch-Inventar
-und bewerten selbst formulierte Texte auf generischen KI-Klang.
+Bildschirmgrößen samt horizontalem Überlauf, ein sechstes die Musterbibliothek. Dazu
+Werkzeuge, die das Relaunch-Inventar beschaffen, selbst formulierte Texte auf generischen
+KI-Klang bewerten und die Designrecherche führen.
+
+**Eine kuratierte Designrecherche mit zwei Freigaben.** Referenzen werden entdeckt, vorgelegt
+und erst nach menschlicher Freigabe erfasst. Was daraus dauerhaft ins Skillwissen wandert,
+entscheidet eine zweite Freigabe. Beides ist im Code durchgesetzt, nicht nur beschrieben.
 
 **Vorlagen zum Übernehmen** statt Beschreibungen zum Nachbauen.
 
@@ -92,7 +97,8 @@ skills/
 │  │  ├─ 21-sektionshintergruende-hierarchie.md  Bildgrund, Trennung, Abstufung
 │  │  ├─ 22-premium-designquellen.md  Awwwards, Dribbble, Land-book, recent.design, 21st.dev
 │  │  ├─ 23-referenzkomponenten-21st.md  fünf annotierte 21st.dev-Beispielkomponenten
-│  │  └─ 24-designsystem-vorrang.md  fünf Stufen, was eine Referenz beeinflussen darf
+│  │  ├─ 24-designsystem-vorrang.md  fünf Stufen, was eine Referenz beeinflussen darf
+│  │  └─ 25-designmuster-bibliothek.md  Muster, Belege, Konfidenz, wann erweitern
 │  └─ assets/
 │     ├─ vorlagen/                  marke.json, marke-brief.md, impressum.md, datenschutz.md,
 │     │                             datenschutz-bewerber.md, consent-muster.md,
@@ -101,7 +107,8 @@ skills/
 │     │                             jsonld-bausteine.md,
 │     │                             referenzkomponenten/ (Hero, FAQ, schwebende Elemente,
 │     │                             Bewertungen, Integrationen)
-│     └─ checklisten/               pre-launch.md, conversion-audit.md
+│     ├─ checklisten/               pre-launch.md, conversion-audit.md
+│     └─ musterbibliothek/         taxonomie.json, muster/, index.json
 └─ agentur-website-builder/         der Lieferablauf
    ├─ SKILL.md                      Phasen 0 bis 6, feste Agenturvorgaben, Definition of Done
    ├─ references/
@@ -116,6 +123,7 @@ skills/
    │  ├─ qa-und-abnahme.md          Prüfablauf in acht Schritten, Abschlussbericht
    │  ├─ firecrawl-recherche.md     bekannte/alte Seiten crawlen und scrapen, Firecrawl-API
    │  ├─ designrecherche-ablauf.md  sieben Stufen, zwei Freigabetore, Fehlerbehandlung
+   │  ├─ designrecherche-beispiele.md  zwei durchgespielte Abläufe, Störungstabelle
    │  └─ referenzquellen-konfiguration.md  Quellen ergänzen, stilllegen, Suchmuster prüfen
    └─ assets/
       ├─ consent/                   ConsentBanner.astro, consent.ts
@@ -133,6 +141,12 @@ scripts/
 ├─ design-scan.mjs                  Struktur- und Design-Scan einer fremden Referenzseite
 ├─ deslop-check.mjs                 selbst formulierte Copy auf generischen KI-Klang prüfen
 ├─ referenz-register.mjs            Freigabezustand der Designreferenzen, zwei Tore
+├─ referenz-crawl.mjs               erfasst nur freigegebene Referenzen, mit Breakpoints
+├─ design-dna.mjs                   Beobachtungen mit Beleg, Prinzipien bleiben offen
+├─ muster-vergleich.mjs             Entwurf gegen Bibliothek, fünf Einstufungen
+├─ pruefe-muster.mjs                Pflichtfelder, Taxonomie, Anti-Kopie, Index
+├─ muster-paket.mjs                 Tor 2: Paket ins Projekt, nie in die Bibliothek
+├─ lib/abruf.mjs                    die eine Abrufschicht, vier Rückfallstufen, robots.txt
 ├─ tests/                           node --test, ohne Abhängigkeit
 └─ install-quellskills.sh           Quell-Skills zusätzlich installieren
 ```
@@ -215,16 +229,83 @@ node scripts/referenz-register.mjs freigeben --id ref-01-beispiel-de --sektionen
 node scripts/referenz-register.mjs status
 ```
 
+Vollständig durchgespielte Abläufe für einen Neubau und einen Relaunch, dazu eine
+Störungstabelle, stehen in
+`skills/agentur-website-builder/references/designrecherche-beispiele.md`.
+
 `referenz-register.mjs` ist die einzige Stelle, die den Zustand einer Referenz ändert. Zehn
 Zustände, sieben erlaubte Übergänge, jeder andere bricht mit Exit 2 ab. Von `ENTDECKT` führt
 kein Weg direkt nach `FREIGEGEBEN` oder `GECRAWLT`. Damit ist „erst vorlegen, dann crawlen"
 Verhalten und keine Absichtserklärung.
+
+Erst danach erfasst `referenz-crawl.mjs`, und auch nur im freigegebenen Umfang:
+
+```bash
+node scripts/referenz-crawl.mjs --id ref-01-beispiel-de --breakpoints 375,768,1440 --screenshot
+```
+
+Der Abruf läuft über `scripts/lib/abruf.mjs`, die einzige Stelle im Repository, die eine fremde
+Seite holt. Vier Rückfallstufen, **selbst gehostetes Firecrawl vor der Cloud**, weil ein
+kostenpflichtiger Dienst hier nie die Voreinstellung ist:
+
+| Stufe | Voraussetzung | Kann |
+|---|---|---|
+| Firecrawl selbst gehostet | `FIRECRAWL_BASE_URL` | JS-Seiten, Screenshot, Markdown |
+| Firecrawl Cloud | `FIRECRAWL_API_KEY` | dasselbe |
+| Playwright lokal | im Projekt installiert | JS-Seiten, Screenshot, Breakpoints |
+| Direktabruf | immer | serverseitig gerendertes HTML |
+
+Die `robots.txt` der Zielseite wird gelesen und befolgt. Was nicht erfasst werden konnte,
+steht als Liste `grenzen` in `meta.json` und wird in der Analyse als `unbekannt` geführt,
+nicht geschätzt. Der Crawler ist austauschbar: der Rest des Systems kennt nur das
+Ergebnisobjekt, nie Firecrawl.
 
 Die Quellen sind Konfiguration, kein Code:
 `skills/agentur-website-builder/assets/recherche/referenzquellen.json`. Eine Galerie ist dabei
 immer nur Entdeckungsquelle, der Beleg ist die Originalseite. Ablauf, Ausgabeformate und
 Fehlerbehandlung stehen in
 `skills/agentur-website-builder/references/designrecherche-ablauf.md`.
+
+### Vom Rohmaterial zum Muster
+
+```bash
+node scripts/design-dna.mjs --id ref-01-beispiel-de       # Beobachtungen mit Beleg
+node scripts/muster-vergleich.mjs --id ref-01-beispiel-de # gegen die Bibliothek
+node scripts/pruefe-muster.mjs --index                    # Bibliothek prüfen, Index bauen
+```
+
+`design-dna.mjs` gibt jedem Wert einen Beleg: **beobachtet**, **abgeleitet** oder
+**unbekannt**. Aus rohem HTML sind Spacing-Skala, Rasterbreite, Kontrastwerte und responsives
+Verhalten nicht ablesbar, also stehen sie als `unbekannt` da, mit Grund, statt geschätzt zu
+werden. Prinzipien benennt das Skript bewusst nicht: das ist eine Bewertung, und die trifft
+ein Mensch.
+
+`muster-vergleich.mjs` stuft einen gefüllten Musterentwurf gegen die Bibliothek ein, von
+Duplikat über Beinahe-Duplikat und verwandt bis unverwandt, mit den konkreten
+Feldunterschieden. Deterministisch über deklarierte Merkmale, ohne Abhängigkeit und ohne
+Einbettungen.
+
+### Die zweite Freigabe
+
+```bash
+node scripts/referenz-register.mjs wissen --id ref-01-beispiel-de --entscheidung erweitern \
+     --muster hero-vollbild-pillennavigation
+node scripts/muster-paket.mjs --id ref-01-beispiel-de
+```
+
+`muster-paket.mjs` schreibt **nicht** in die Musterbibliothek. Es legt im Kundenprojekt ein
+Paket aus Musterdatei, `HERKUNFT.md` und `EINBAUEN.md` ab. Die Aufnahme ins dauerhafte Wissen
+ist ein bewusster Commit im Repository `Design-Skill`. Grund: das globale Wissen liegt im
+Plugin, gearbeitet wird im Kundenprojekt, und ein Schreibzugriff dorthin wäre entweder
+wirkungslos oder unsichtbar.
+
+Eine Entscheidung „nur Projekt" erzeugt ausdrücklich gar kein Paket. Ein Entwurf, der die
+Musterprüfung nicht besteht, ebenfalls nicht.
+
+Die Bibliothek selbst liegt in
+`skills/webdesign-conversion/assets/musterbibliothek/`: ein Muster je Datei, Frontmatter plus
+Prosa, dazu eine erweiterbare Taxonomie. Sie wächst ausschließlich über die zweite Freigabe.
+Verfahren in `skills/webdesign-conversion/references/25-designmuster-bibliothek.md`.
 
 ## Tests der Skripte
 
@@ -233,7 +314,11 @@ node --test 'scripts/tests/*.test.mjs'
 ```
 
 Eingebauter Testrunner von Node, keine Abhängigkeit, kein `package.json`. Die Anführungszeichen
-sind nötig, die Verzeichnisform greift nicht.
+sind nötig, die Verzeichnisform greift nicht. 90 Tests: alle erlaubten und alle verbotenen
+Zustandsübergänge, die Sperre gegen den Abruf ohne Freigabe, robots.txt, die Rückfallstufen,
+die Grenzenliste, das Konfidenzmodell, die Ähnlichkeitseinstufung, die Musterprüfung und die
+Trennung von Projekt- und globalem Wissen. Der Netzzugriff ist durch einen lokalen Testserver
+ersetzt.
 
 `deslop-check.mjs` bewertet fünf Kriterien und gibt eine Punktzahl von 0 bis 5: Floskeln,
 Nominalstil, leere Superlative, fehlende Belege und die Dreierfigur. Er gilt für **eigene**
@@ -257,10 +342,11 @@ Die Suite hat dabei schon einen echten Fehler gefunden: das Landingpage-Playbook
 formuliert, dass das Modell die Navigationsregel erkannte, dann aber um Erlaubnis fragte statt
 zu liefern. Details in `evals/README.md`.
 
-Zehn Fälle insgesamt, davon zwei für den Agenturstandard: `consent-ohne-keks` und
-`leadsystem-nur-auf-bestaetigung`. Diese beiden und die neuen Fälle
-`kundendesignsystem-schlaegt-referenz` und `referenz-erst-freigeben` sind noch nicht gelaufen,
-ihr Δ ist damit eine Vermutung und kein Messwert.
+Elf Fälle insgesamt, davon zwei für den Agenturstandard: `consent-ohne-keks` und
+`leadsystem-nur-auf-bestaetigung`. Diese beiden und die drei neuen Fälle
+`kundendesignsystem-schlaegt-referenz`, `referenz-erst-freigeben` und
+`nicht-beobachtetes-nicht-behaupten` sind noch nicht gelaufen, ihr Δ ist damit eine Vermutung
+und kein Messwert.
 
 ## Quell-Skills nachinstallieren
 

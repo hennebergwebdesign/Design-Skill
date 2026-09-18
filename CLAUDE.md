@@ -47,6 +47,15 @@ node scripts/referenz-register.mjs anlegen --name "Beispiel" --url https://beisp
 node scripts/referenz-register.mjs vorlegen --alle
 node scripts/referenz-register.mjs freigeben --id ref-01-beispiel-de --sektionen hero
 node scripts/referenz-register.mjs status
+node scripts/referenz-crawl.mjs --id ref-01-beispiel-de --breakpoints 375,768,1440 --screenshot
+node scripts/design-dna.mjs --id ref-01-beispiel-de
+node scripts/muster-vergleich.mjs --id ref-01-beispiel-de
+node scripts/referenz-register.mjs wissen --id ref-01-beispiel-de --entscheidung projekt
+node scripts/muster-paket.mjs --id ref-01-beispiel-de
+
+# Musterbibliothek pruefen und Index neu erzeugen
+node scripts/pruefe-muster.mjs
+node scripts/pruefe-muster.mjs --index
 
 # Tests der Skripte, eingebauter Node-Testrunner, ohne Abhaengigkeit
 node --test 'scripts/tests/*.test.mjs'
@@ -72,10 +81,12 @@ nicht, es braucht das Glob-Muster in Anführungszeichen.
 ```
 .claude-plugin/       plugin.json, marketplace.json
 skills/
-  webdesign-conversion/     SKILL.md, references/00-23, playbooks/, assets/
+  webdesign-conversion/     SKILL.md, references/00-25, playbooks/, assets/
+                            assets/musterbibliothek/ ist das globale Musterwissen
   agentur-website-builder/  SKILL.md, references/, assets/consent|forms|reviews
 scripts/              fünf Prüfskripte, Agenturwerkzeuge, Designrecherche, ein Installer
-  tests/              node --test, Fixtures ohne Netzzugriff
+  lib/abruf.mjs       die eine Abrufschicht, vier Rückfallstufen, robots.txt
+  tests/              node --test, lokaler Testserver statt Netzzugriff
 evals/                acht Fälle mit Gradern, results/ ist ausgenommen
 README.md             Außendarstellung
 CREDITS.md            Herkunft jeder eingeflossenen Quelle
@@ -106,6 +117,22 @@ Diese Punkte haben einen Grund. Wer sie ändert, ändert damit auch den Grund.
 - Versionsnummer in `.claude-plugin/plugin.json` und in der `metadata` der beiden `SKILL.md`
   bei inhaltlichen Änderungen nachziehen.
 
+## Ein neues Designmuster aufnehmen
+
+Anders als eine Referenz. Muster wachsen ausschließlich über Tor 2 der Designrecherche, nie
+durch direktes Anlegen einer Datei.
+
+1. Im Kundenprojekt entsteht ein Musterpaket (`node scripts/muster-paket.mjs --id …`).
+2. Die Datei aus dem Paket nach
+   `skills/webdesign-conversion/assets/musterbibliothek/muster/<id>.md` kopieren, oder bei
+   einer Erweiterung in das bestehende Muster einarbeiten.
+3. `node scripts/pruefe-muster.mjs --index` laufen lassen. Ohne Index ist das Muster für den
+   Vergleich unsichtbar.
+4. `verwandt` beidseitig pflegen, auch im verlinkten Muster.
+5. Committen, mit der Herkunft aus `HERKUNFT.md` in der Nachricht.
+
+Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster-bibliothek.md`.
+
 ## Eine neue Referenz aufnehmen
 
 1. Entscheiden, in welchen Skill sie gehört: Wissen nach `webdesign-conversion`, Ablauf oder
@@ -120,25 +147,78 @@ Diese Punkte haben einen Grund. Wer sie ändert, ändert damit auch den Grund.
 ## Offene Punkte
 
 - `consent-ohne-keks`, `leadsystem-nur-auf-bestaetigung`,
-  `kundendesignsystem-schlaegt-referenz` und `referenz-erst-freigeben` sind noch nicht
-  gelaufen. Ihr Δ ist eine Vermutung, kein Messwert.
+  `kundendesignsystem-schlaegt-referenz`, `referenz-erst-freigeben` und
+  `nicht-beobachtetes-nicht-behaupten` sind noch nicht gelaufen. Ihr Δ ist eine Vermutung,
+  kein Messwert.
+- Die Musterbibliothek startet mit fünf Mustern, alle aus derselben Quelle (21st.dev) und
+  keines aus einer echten Projektrecherche. Der Ähnlichkeitsvergleich ist damit an einem
+  schmalen Bestand erprobt.
 - Die Suchmuster in `referenzquellen.json` sind mit `suchmuster_geprueft: false` markiert und
   bisher nicht aufgerufen worden. Lapa Ninja, Godly und SiteInspire sind neu aufgenommen und
   in keinem Projekt erprobt.
 - Für vier der sechs älteren Eval-Fälle fehlt weiterhin die Baseline-Messung.
 - `relaunch-inventory.mjs` ist gegen einen lokalen Testserver geprüft, noch nicht gegen eine
   echte Kundenseite und noch nicht gegen die Firecrawl API.
+- Von den vier Abrufstufen in `lib/abruf.mjs` ist nur der Direktabruf tatsächlich gelaufen.
+  Firecrawl selbst gehostet, Firecrawl Cloud und die Playwright-Stufe sind ungetestet. Damit
+  ist auch die Breakpoint-Erfassung und der Screenshot ungetestet.
 - `design-scan.mjs` ist gegen eine echte, öffentliche Seite ohne `FIRECRAWL_API_KEY` geprüft
   (Direktabruf), noch nicht mit gesetztem Schlüssel gegen die echte Firecrawl API und noch
   nicht gegen eine reine JS-Anwendung, die erst im Browser rendert.
 - Die Referenzliste in `agentur-website-builder/references/referenzen-und-auswahl.md` enthält
   fremde Domains. Sie veraltet und gehört einmal jährlich durchgesehen.
+- `muster-paket.mjs` ist gegen Fixtures geprüft, aber noch nie mit einem echten Muster durch
+  die ganze Kette gelaufen. Die Musterbibliothek ist bisher nie über Tor 2 gewachsen.
 - Die Lizenzlage ist gemischt: MIT für das Regelwerk, Agenturstandard für den Bauablauf.
   Falls das Plugin öffentlich bleiben soll, ist zu entscheiden, ob der Bauablauf mit
   veröffentlicht wird.
 
 ## Änderungsverlauf
 
+- **18.09.2026, Version 4.0.0** Fünfte und letzte Phase: der Kreis schließt sich. Neues
+  `scripts/muster-paket.mjs` schnürt nach Tor 2 ein transportierbares Paket aus Musterdatei,
+  `HERKUNFT.md` (beide Freigabezeitpunkte, Grenzen der Erfassung, Zustandsverlauf) und
+  `EINBAUEN.md`. Es schreibt bewusst **nicht** in die Musterbibliothek: das globale Wissen
+  liegt im Plugin, gearbeitet wird im Kundenprojekt, und ein Schreibzugriff dorthin wäre
+  wirkungslos oder unsichtbar. Die Aufnahme ist ein Commit in diesem Repository. Zwei Sperren
+  im Code: ohne Entscheidung eines Menschen an Tor 2 entsteht kein Paket, und ein Entwurf,
+  der `pruefe-muster.mjs` nicht besteht, wird nicht eingepackt. `NUR_PROJEKT` und `ABGELEHNT`
+  erzeugen ausdrücklich gar nichts. Neue
+  `agentur-website-builder/references/designrecherche-beispiele.md` mit zwei vollständig
+  durchgespielten Abläufen (Neubau und Relaunch) und einer Störungstabelle mit elf
+  Meldungen. Zehn neue Tests zur Trennung von Projekt- und globalem Wissen, insgesamt 90.
+  Die Hauptversion springt, weil der Bauablauf mit der Recherche eine neue Pflichtstufe
+  bekommt und `marke.json` um zwei Felder gewachsen ist. Bestehende Projekte bleiben
+  lauffähig: alle neuen Felder sind optional, kein Aufruf und kein Ausgabeordner hat sich
+  geändert.
+- **18.09.2026, Version 3.6.0** Vierte von fünf Phasen: das globale Wissen bekommt eine Form.
+  Neue `webdesign-conversion/assets/musterbibliothek/` mit `taxonomie.json` (25 Kategorien,
+  14 Stile, dazu Belege, Konfidenz, Komplexität), fünf Mustern als Erstbestand und einem
+  erzeugten `index.json`. Erstbestand sind die fünf 21st.dev-Referenzkomponenten aus
+  `23-referenzkomponenten-21st.md`, drei davon ausdrücklich mit Konfidenz niedrig, weil für
+  sie nur der Demo-Aufruf vorlag. Neue `references/25-designmuster-bibliothek.md` mit
+  Pflichtfeldern, Konfidenzmodell, der Regel wann erweitert statt neu angelegt wird, dem
+  Qualitätsfilter und sechs benannten Erweiterungspunkten, die bewusst nicht gebaut sind.
+  Drei neue Skripte: `pruefe-muster.mjs` (Pflichtfelder, Taxonomie, fremdes Bildmaterial,
+  lange Zitate, Index), `design-dna.mjs` (jeder Wert mit Beleg, Prinzipien bewusst offen) und
+  `muster-vergleich.mjs` (deterministischer Merkmalsvergleich, fünf Einstufungen). Dazu 40
+  neue Tests, insgesamt 80, neue harte Grenze zum Konfidenzmodell und der Evalfall
+  `nicht-beobachtetes-nicht-behaupten`, noch nicht gelaufen. Die Stilrichtungen in
+  `10-visuelle-richtung.md` und in `taxonomie.json` sind zwei Fassungen derselben Liste, das
+  steht jetzt an beiden Stellen.
+- **18.09.2026, Version 3.5.0** Dritte von fünf Phasen: die Abrufschicht. Die
+  Firecrawl-Anbindung stand bis hierher zweimal im Repository, leicht verschieden, in
+  `relaunch-inventory.mjs` und `design-scan.mjs`, und sprach beide Male die Cloud fest an,
+  obwohl `firecrawl-recherche.md` eine selbst gehostete Instanz zusagt. Neues
+  `scripts/lib/abruf.mjs` als einzige Stelle, die eine fremde Seite holt, mit vier
+  Rückfallstufen (Firecrawl selbst gehostet über `FIRECRAWL_BASE_URL`, Firecrawl Cloud,
+  Playwright lokal für Breakpoints und Screenshots, Direktabruf), robots.txt-Prüfung nach
+  RFC 9309 und einer Liste `grenzen`, die benennt, was nicht erfasst werden konnte. Neues
+  `scripts/referenz-crawl.mjs` erfasst ausschließlich freigegebene Referenzen und bricht
+  sonst mit Exit 2 ab. `design-scan.mjs` und `relaunch-inventory.mjs` sind auf den Adapter
+  umgestellt, Aufruf, Ausgabeordner und Exitcodes bleiben unverändert. Dazu 23 neue Tests
+  gegen einen lokalen Testserver, insgesamt 40. Dabei gefunden und behoben: der
+  robots.txt-Abruf hatte kein Zeitlimit und konnte an einer stillen Seite dauerhaft hängen.
 - **18.09.2026, Version 3.4.0** Zweite von fünf Phasen: die erste Freigabe wird
   durchgesetzt statt beschrieben. Neues `scripts/referenz-register.mjs` als einzige Stelle,
   die den Freigabezustand einer Designreferenz ändert: zehn Zustände, sieben erlaubte

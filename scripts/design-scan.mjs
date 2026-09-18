@@ -26,17 +26,23 @@
   ABGELEGT WIRD IN .design-scan/<host>/
     struktur.md         Überschriftenbaum, Wortzahl je Abschnitt, Bilder, Formvermutung
     seite.json           dieselben Daten maschinenlesbar, plus erkannte Farben und Schriften
-    screenshot-url.txt   Firecrawl-Screenshot-Adresse, falls FIRECRAWL_API_KEY gesetzt
+    screenshot.png       gerenderte Seite, wenn eine Abrufstufe sie liefert
+    screenshot-url.txt   stattdessen die Adresse, wenn Firecrawl nur eine Adresse liefert
 
   AUFRUF
     node scripts/design-scan.mjs https://referenz-seite.de
     node scripts/design-scan.mjs https://referenz-seite.de --verzeichnis .design-scan/wettbewerb-a
 
-  Mit gesetztem FIRECRAWL_API_KEY läuft der Abruf über die Firecrawl-API (https://firecrawl.dev,
-  Quelle https://github.com/firecrawl/firecrawl) und liefert zusätzlich einen Screenshot sowie
-  Seiten, die erst im Browser rendern. Ohne Schlüssel arbeitet ein Direktabruf des HTML, das
-  genügt für die meisten serverseitig gerenderten Seiten, aber nicht für reine JS-Apps und
-  liefert keinen Screenshot.
+  Der Abruf läuft seit Version 3.5.0 über `lib/abruf.mjs` mit vier Rückfallstufen (Firecrawl
+  selbst gehostet, Firecrawl Cloud, Playwright lokal, Direktabruf), siehe
+  `../skills/agentur-website-builder/references/firecrawl-recherche.md`. Dabei wird die
+  robots.txt der Zielseite geprüft; `--ohne-robots` übergeht das und ist nur mit Erlaubnis
+  des Seitenbetreibers zulässig.
+
+  DIESES SKRIPT IST DER EINZELBLICK, NICHT DIE RECHERCHE
+  Für die kuratierte Referenzrecherche mit Freigabe gilt `referenz-register.mjs` und
+  `referenz-crawl.mjs`. Ein Scan hier ist kein Eintrag in der Musterbibliothek und ersetzt
+  keine Freigabe.
 
   EXIT
     0 = Struktur erfasst · 1 = Seite nicht erreichbar · 2 = Aufrufproblem
@@ -44,6 +50,8 @@
 
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
+
+import { abrufen, AbrufFehler } from './lib/abruf.mjs';
 
 const args = process.argv.slice(2);
 const start = args.find((a) => !a.startsWith('--'));
@@ -65,9 +73,7 @@ try {
   process.exit(2);
 }
 
-const SCHLUESSEL = process.env.FIRECRAWL_API_KEY;
 const ZIEL_VERZEICHNIS = wert('--verzeichnis', join('.design-scan', ziel.hostname.replace(/^www\./, '')));
-const KOPF = { 'user-agent': 'design-scan (Referenzrecherche, https://thatsit.marketing)' };
 
 function entschluesseln(text = '') {
   return text
@@ -95,40 +101,12 @@ function nurText(html) {
 const eins = (html, re) => entschluesseln((html.match(re) ?? [])[1] ?? '').trim();
 
 async function holen(url) {
-  if (SCHLUESSEL) {
-    try {
-      const res = await fetch('https://api.firecrawl.dev/v1/scrape', {
-        method: 'POST',
-        headers: { authorization: `Bearer ${SCHLUESSEL}`, 'content-type': 'application/json' },
-        body: JSON.stringify({ url, formats: ['html', 'markdown', 'screenshot'], onlyMainContent: false }),
-      });
-      if (res.ok) {
-        const d = await res.json();
-        const html = d?.data?.html ?? '';
-        if (html) {
-          return {
-            status: 200,
-            html,
-            markdown: d?.data?.markdown ?? '',
-            screenshot: d?.data?.screenshot ?? '',
-            quelle: 'Firecrawl API',
-          };
-        }
-      }
-      console.warn(`Firecrawl ${res.status}, fällt auf Direktabruf zurück`);
-    } catch (f) {
-      console.warn(`Firecrawl nicht erreichbar (${f.message}), fällt auf Direktabruf zurück`);
-    }
-  }
-  const res = await fetch(url, { headers: KOPF, redirect: 'follow' });
-  const typ = res.headers.get('content-type') ?? '';
-  return {
-    status: res.status,
-    html: typ.includes('html') ? await res.text() : '',
-    markdown: '',
-    screenshot: '',
-    quelle: 'Direktabruf',
-  };
+  const ergebnis = await abrufen(url, {
+    screenshot: true,
+    robots: !args.includes('--ohne-robots'),
+  });
+  for (const grenze of ergebnis.grenzen) console.warn(`Grenze: ${grenze}`);
+  return ergebnis;
 }
 
 // -------------------------------------------------------- Strukturanalyse
@@ -179,13 +157,14 @@ function schreiben(pfad, inhalt) {
 // ---------------------------------------------------------------- Ablauf
 
 console.log(`Design-Scan für ${ziel.toString()}`);
-console.log(SCHLUESSEL ? 'Quelle: Firecrawl API (mit Screenshot)' : 'Quelle: Direktabruf, kein FIRECRAWL_API_KEY gesetzt (kein Screenshot)');
 
 let ergebnis;
 try {
   ergebnis = await holen(ziel.toString());
 } catch (f) {
-  console.error(`Fehler beim Abruf: ${f.message}`);
+  const grund = f instanceof AbrufFehler ? `${f.art}: ${f.message}` : f.message;
+  console.error(`Fehler beim Abruf: ${grund}`);
+  console.error('Nicht aus der Erinnerung beschreiben. Referenz ersetzen oder später erneut versuchen.');
   process.exit(1);
 }
 
@@ -194,7 +173,9 @@ if (!ergebnis.html || ergebnis.status < 200 || ergebnis.status >= 400) {
   process.exit(1);
 }
 
-const { html, screenshot, quelle } = ergebnis;
+const { html, screenshot, quelle, grenzen } = ergebnis;
+const screenshotIstAdresse = Boolean(screenshot) && screenshot.startsWith('http');
+const screenshotDatei = screenshot ? (screenshotIstAdresse ? 'screenshot-url.txt' : 'screenshot.png') : null;
 const text = nurText(html);
 const ueberschriften = ueberschriftenbaum(html);
 const bilder = bildAnalyse(html);
@@ -212,7 +193,11 @@ const daten = {
   bilder,
   farbKandidaten: farben,
   schriftKandidaten: schriften,
-  screenshot,
+  screenshot: screenshotIstAdresse ? screenshot : Boolean(screenshot),
+  screenshotDatei,
+  grenzen,
+  $grenzen_hinweis:
+    'Was hier steht, konnte nicht erfasst werden. Es wird als unbekannt gefuehrt, nicht geschaetzt.',
 };
 
 schreiben(join(ZIEL_VERZEICHNIS, 'seite.json'), JSON.stringify(daten, null, 2));
@@ -247,7 +232,13 @@ const md = [
   `Farben: ${farben.length ? farben.join(', ') : '(keine im Inline-CSS gefunden, vermutlich externes Stylesheet)'}`,
   `Schriften: ${schriften.length ? schriften.join(', ') : '(keine gefunden)'}`,
   '',
-  screenshot ? `## Screenshot\n\n${screenshot}\n` : '## Screenshot\n\nKein Screenshot, dafür FIRECRAWL_API_KEY setzen.\n',
+  screenshot
+    ? `## Screenshot\n\n${screenshotIstAdresse ? screenshot : `abgelegt als ${screenshotDatei}`}\n`
+    : '## Screenshot\n\nKein Screenshot. Dafür FIRECRAWL_BASE_URL oder FIRECRAWL_API_KEY setzen oder\nPlaywright im Projekt installieren, siehe firecrawl-recherche.md.\n',
+  '## Was nicht erfasst werden konnte',
+  '',
+  grenzen.length ? grenzen.map((g) => `- ${g}`).join('\n') : '- nichts, der Abruf war vollständig',
+  '',
   '## Nächster Schritt',
   '',
   '2 bis 3 Prinzipien benennen, die übernommen werden, und was bewusst nicht übernommen wird,',
@@ -256,8 +247,13 @@ const md = [
 ].join('\n');
 
 schreiben(join(ZIEL_VERZEICHNIS, 'struktur.md'), md);
-if (screenshot) schreiben(join(ZIEL_VERZEICHNIS, 'screenshot-url.txt'), `${screenshot}\n`);
+if (screenshot) {
+  schreiben(
+    join(ZIEL_VERZEICHNIS, screenshotDatei),
+    screenshotIstAdresse ? `${screenshot}\n` : Buffer.from(screenshot.replace(/^data:image\/\w+;base64,/, ''), 'base64')
+  );
+}
 
 console.log(`\nAbgelegt in ${ZIEL_VERZEICHNIS}/`);
-console.log(`  struktur.md, seite.json${screenshot ? ', screenshot-url.txt' : ''}`);
+console.log(`  struktur.md, seite.json${screenshotDatei ? `, ${screenshotDatei}` : ''}`);
 console.log(`\n${ZIEL_VERZEICHNIS}/ in die .gitignore des Kundenprojekts eintragen. Es enthält fremdes Material.`);

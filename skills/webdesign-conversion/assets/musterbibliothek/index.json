@@ -1,0 +1,191 @@
+{
+  "$kommentar": [
+    "Erzeugt von scripts/pruefe-muster.mjs --index. Nicht von Hand pflegen.",
+    "Die Wahrheit steht in muster/<id>.md, das hier ist die durchsuchbare Ableitung."
+  ],
+  "schema": 1,
+  "erzeugt": "2026-09-18",
+  "anzahl": 5,
+  "muster": [
+    {
+      "id": "bewertungen-als-eigene-sektion",
+      "name": "Kundenstimmen als eigene Komponente mit eigenem Datenformat",
+      "kategorie": "testimonials",
+      "sektionstyp": [
+        "testimonials",
+        "trust"
+      ],
+      "tags": [
+        "datengetrieben",
+        "wiederverwendbar",
+        "beleg-pflicht"
+      ],
+      "stil": [
+        "clean",
+        "corporate"
+      ],
+      "branchenbezug": [
+        "dienstleistung",
+        "handwerk",
+        "gesundheit",
+        "b2b-software"
+      ],
+      "ux_zweck": "Beweis in immer gleicher Form, damit er vergleichbar bleibt",
+      "conversion_zweck": "Einwand gegen die Glaubwürdigkeit direkt vor der Handlungsaufforderung abräumen",
+      "komplexitaet": "niedrig",
+      "responsiv": "drei Spalten auf Desktop, eine auf dem Handy, Zitatlänge bleibt begrenzt",
+      "barrierefreiheit": "Zitate als blockquote mit cite, Sterne nicht nur farblich, sondern auch als Text",
+      "konfidenz": "niedrig",
+      "freigabe": "bestand",
+      "verwandt": [
+        "partnerlogos-als-integrationsraster"
+      ],
+      "quelle_url": "https://21st.dev/",
+      "aufgenommen": "2026-09-18"
+    },
+    {
+      "id": "faq-zweispaltig-mit-kontaktausweg",
+      "name": "Zweispaltiges FAQ mit Kontaktausweg",
+      "kategorie": "faq",
+      "sektionstyp": [
+        "faq",
+        "cta"
+      ],
+      "tags": [
+        "akkordeon",
+        "zweispaltig",
+        "einwandbehandlung",
+        "ausweich-cta"
+      ],
+      "stil": [
+        "clean",
+        "corporate"
+      ],
+      "branchenbezug": [
+        "dienstleistung",
+        "b2b-software",
+        "handwerk",
+        "gesundheit"
+      ],
+      "ux_zweck": "Einwände abräumen und den Weg für die nicht beantwortete Frage offen halten",
+      "conversion_zweck": "wer nach dem Lesen noch zögert, findet den Kontakt ohne zu suchen",
+      "komplexitaet": "niedrig",
+      "responsiv": "einspaltig ab etwa 900 px, Kontextspalte über das Akkordeon, CTA bleibt am Ende sichtbar",
+      "barrierefreiheit": "natives details/summary oder korrekte aria-expanded-Auszeichnung, Tastaturbedienung ohne Zusatzcode",
+      "konfidenz": "mittel",
+      "freigabe": "bestand",
+      "verwandt": [],
+      "quelle_url": "https://21st.dev/",
+      "aufgenommen": "2026-09-18"
+    },
+    {
+      "id": "hero-schwebende-produktbilder",
+      "name": "Held mit schwebenden Produktbildern um eine zentrierte Aussage",
+      "kategorie": "hero",
+      "sektionstyp": [
+        "hero",
+        "product"
+      ],
+      "tags": [
+        "zentriert",
+        "freigestellt",
+        "schwebende-elemente",
+        "motion-statt-bildgrund"
+      ],
+      "stil": [
+        "clean",
+        "expressive"
+      ],
+      "branchenbezug": [
+        "handel",
+        "konsumgueter",
+        "produktanbieter"
+      ],
+      "ux_zweck": "Produkt und Aussage gleichzeitig zeigen, ohne dass eines das andere verdeckt",
+      "conversion_zweck": "die Handlungsaufforderung steht in der optischen Mitte, nicht am Rand",
+      "komplexitaet": "mittel",
+      "responsiv": "schwebende Elemente werden auf kleinen Geräten zu wenigen oder entfallen, Aussage bleibt zentriert",
+      "barrierefreiheit": "die Bewegung ist dekorativ und entfällt bei prefers-reduced-motion vollständig",
+      "konfidenz": "niedrig",
+      "freigabe": "bestand",
+      "verwandt": [
+        "hero-vollbild-pillennavigation"
+      ],
+      "quelle_url": "https://21st.dev/",
+      "aufgenommen": "2026-09-18"
+    },
+    {
+      "id": "hero-vollbild-pillennavigation",
+      "name": "Vollbild-Held mit freistehender Pillennavigation",
+      "kategorie": "hero",
+      "sektionstyp": [
+        "hero",
+        "navigation"
+      ],
+      "tags": [
+        "vollbild",
+        "bildhintergrund",
+        "gestaffelte-animation",
+        "navigation-ueber-bild"
+      ],
+      "stil": [
+        "expressive",
+        "clean"
+      ],
+      "branchenbezug": [
+        "dienstleistung",
+        "gastronomie",
+        "immobilien",
+        "tourismus"
+      ],
+      "ux_zweck": "eine Aussage vor allem anderen, Orientierung ohne eigene Kopfzeile",
+      "conversion_zweck": "die primäre Handlung liegt im ersten Bildschirm und bleibt über dem Bild lesbar",
+      "komplexitaet": "niedrig",
+      "responsiv": "Pillennavigation weicht auf ein Menü, Textblock rückt nach unten, Bild bleibt Hintergrund",
+      "barrierefreiheit": "Kontrast nur über eine Abdunklungsschicht sicherstellen, Fokusring muss auf dem Bild sichtbar bleiben",
+      "konfidenz": "mittel",
+      "freigabe": "bestand",
+      "verwandt": [
+        "hero-schwebende-produktbilder"
+      ],
+      "quelle_url": "https://21st.dev/",
+      "aufgenommen": "2026-09-18"
+    },
+    {
+      "id": "partnerlogos-als-integrationsraster",
+      "name": "Partner- und Integrationslogos als eigenes Raster",
+      "kategorie": "trust",
+      "sektionstyp": [
+        "trust",
+        "features"
+      ],
+      "tags": [
+        "logoraster",
+        "datengetrieben",
+        "vertrauensbeweis"
+      ],
+      "stil": [
+        "clean",
+        "corporate",
+        "technical-mono"
+      ],
+      "branchenbezug": [
+        "b2b-software",
+        "industrie",
+        "dienstleistung"
+      ],
+      "ux_zweck": "Anschlussfähigkeit und Zugehörigkeit auf einen Blick zeigen",
+      "conversion_zweck": "den Einwand \"passt das zu dem, was wir schon haben\" ohne Text beantworten",
+      "komplexitaet": "niedrig",
+      "responsiv": "Rasterbreite über auto-fit statt fester Spaltenzahl, Logos behalten ihre optische Größe",
+      "barrierefreiheit": "jedes Logo braucht einen Alternativtext mit dem Namen, nicht \"Logo",
+      "konfidenz": "niedrig",
+      "freigabe": "bestand",
+      "verwandt": [
+        "bewertungen-als-eigene-sektion"
+      ],
+      "quelle_url": "https://21st.dev/",
+      "aufgenommen": "2026-09-18"
+    }
+  ]
+}

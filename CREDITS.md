@@ -87,6 +87,27 @@ erfundene Belege in dieser Datei selbst. Vor produktivem Einsatz, insbesondere b
 Selbsthosting, die `LICENSE`-Datei im Quellrepository prüfen, sie kann sich zwischen
 Kernserver und Client-SDKs unterscheiden.
 
+### In Version 4.0 zusätzlich eingeflossen
+
+Für die kuratierte Designrecherche wurde **kein fremder Code übernommen**. Angesprochen oder
+zugrunde gelegt wurden:
+
+| Quelle | Art der Nutzung |
+|---|---|
+| [firecrawl/firecrawl](https://github.com/firecrawl/firecrawl) | weiterhin nur die REST-API, jetzt zusätzlich mit eigener Basis-URL für eine selbst gehostete Instanz. Kein Code übernommen |
+| [RFC 9309, Robots Exclusion Protocol](https://www.rfc-editor.org/rfc/rfc9309) | Grundlage des kleinen robots.txt-Lesers in `scripts/lib/abruf.mjs`, insbesondere die längste passende Regel und die Behandlung eines Serverfehlers als Verbot. Eigene Implementierung |
+| [Playwright](https://playwright.dev/) | optionale Abrufstufe für Breakpoints und Screenshots, wie schon bei `pruefe-breakpoints.mjs`. Keine Abhängigkeit im Repository |
+| `node:test`, `node:assert` | Testrunner aus dem Standardumfang von Node, damit das Repository ohne `package.json` bleibt |
+
+Die Galerien Lapa Ninja, Godly und SiteInspire sind als Entdeckungsquellen in
+`referenzquellen.json` aufgenommen, bisher ohne Erprobung im Projekt. Aufgenommen wurden nur
+Name, Adresse und der Weg der Entdeckung, keine Inhalte.
+
+Die fünf Muster des Erstbestands in `assets/musterbibliothek/muster/` beschreiben Prinzipien
+aus den 21st.dev-Referenzkomponenten der Version 3.2. Der Quelltext liegt weiterhin nur in
+`assets/vorlagen/referenzkomponenten/`, die Muster selbst enthalten keinen fremden Code, kein
+fremdes Bildmaterial und keine wörtlichen Zitate.
+
 ## Inhaltliche Grundlage
 
 **Website-Conversion-Playbook 2026** (That's it. Marketing, Victor & Tim): das
