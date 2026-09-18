@@ -26,6 +26,12 @@ Ausführung. Alles Sichtbare entsteht aus dem Branding und dem Material des Kund
 
 ## Rangfolge der Quellen
 
+Diese Rangfolge beantwortet **welche Referenzquelle** im Projekt überhaupt gilt. Was eine
+Referenz danach beeinflussen darf und was geschützt bleibt, beantwortet sie nicht: dafür gilt
+die Fünf-Stufen-Rangfolge in
+`../../webdesign-conversion/references/24-designsystem-vorrang.md`, und zwar unabhängig davon,
+auf welcher Stufe hier das Projekt steht.
+
 Vor jeder Referenzarbeit klären, welche Quelle das Projekt überhaupt hat. Die höhere Stufe
 schlägt immer die niedrigere:
 
@@ -44,7 +50,9 @@ als eine visuelle Richtung, die am Ende verworfen wird.
 
 Auch auf Stufe 1 bleibt die Marke des Kunden die erste Quelle: eine bestehende Seite wird
 vor dem Neuentwurf ausgelesen, siehe
-`../../webdesign-conversion/references/20-markenextraktion-bestandsseite.md`.
+`../../webdesign-conversion/references/20-markenextraktion-bestandsseite.md`. Und auf jeder
+Stufe gilt: ein geliefertes Designsystem wird nie durch Werte aus einer Referenz ersetzt,
+siehe `../../webdesign-conversion/references/24-designsystem-vorrang.md`.
 
 ## Auswahl pro Projekt
 

@@ -107,8 +107,9 @@ Diese Punkte haben einen Grund. Wer sie ändert, ändert damit auch den Grund.
 
 ## Offene Punkte
 
-- `consent-ohne-keks` und `leadsystem-nur-auf-bestaetigung` sind noch nicht gelaufen. Ihr Δ
-  ist eine Vermutung, kein Messwert.
+- `consent-ohne-keks`, `leadsystem-nur-auf-bestaetigung` und
+  `kundendesignsystem-schlaegt-referenz` sind noch nicht gelaufen. Ihr Δ ist eine Vermutung,
+  kein Messwert.
 - Für vier der sechs älteren Eval-Fälle fehlt weiterhin die Baseline-Messung.
 - `relaunch-inventory.mjs` ist gegen einen lokalen Testserver geprüft, noch nicht gegen eine
   echte Kundenseite und noch nicht gegen die Firecrawl API.
@@ -122,6 +123,17 @@ Diese Punkte haben einen Grund. Wer sie ändert, ändert damit auch den Grund.
   veröffentlicht wird.
 
 ## Änderungsverlauf
+
+- **18.09.2026, Version 3.3.0** Erste von fünf Phasen der kuratierten Designrecherche.
+  Bisher standen drei Ranglisten nebeneinander: die harte Grenze zur Markenextraktion, die
+  Rangfolge der Quellen im Bauablauf und der Vorrang des Briefs in `10-visuelle-richtung.md`.
+  Bei einem gelieferten Designsystem plus einer starken Referenz widersprachen sie sich.
+  Neue `webdesign-conversion/references/24-designsystem-vorrang.md` als einzige kanonische
+  Rangfolge aus fünf Stufen, mit der Trennung von Designsystem-Eingabe (geschützt) und
+  Inspirations-Eingabe (wirksam) und einem festen Format für den Konfliktfall. Die drei
+  Altstellen behalten ihren Spezialfall und verweisen dorthin. Neue harte Grenze in
+  `webdesign-conversion/SKILL.md`, dazu der Evalfall `kundendesignsystem-schlaegt-referenz`
+  mit vier Gradern, noch nicht gelaufen.
 
 - **17.09.2026, Version 3.2.0** Zwei unabhängige Ergänzungen. Erstens: fünf vom Nutzer
   vorgelegte 21st.dev-Komponenten als annotierte Referenzen aufgenommen, neue

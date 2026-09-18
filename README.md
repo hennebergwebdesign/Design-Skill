@@ -91,7 +91,8 @@ skills/
 │  │  ├─ 20-markenextraktion-bestandsseite.md  Logo, Farben, Schrift aus der alten Seite
 │  │  ├─ 21-sektionshintergruende-hierarchie.md  Bildgrund, Trennung, Abstufung
 │  │  ├─ 22-premium-designquellen.md  Awwwards, Dribbble, Land-book, recent.design, 21st.dev
-│  │  └─ 23-referenzkomponenten-21st.md  fünf annotierte 21st.dev-Beispielkomponenten
+│  │  ├─ 23-referenzkomponenten-21st.md  fünf annotierte 21st.dev-Beispielkomponenten
+│  │  └─ 24-designsystem-vorrang.md  fünf Stufen, was eine Referenz beeinflussen darf
 │  └─ assets/
 │     ├─ vorlagen/                  marke.json, marke-brief.md, impressum.md, datenschutz.md,
 │     │                             datenschutz-bewerber.md, consent-muster.md,
@@ -217,9 +218,10 @@ Die Suite hat dabei schon einen echten Fehler gefunden: das Landingpage-Playbook
 formuliert, dass das Modell die Navigationsregel erkannte, dann aber um Erlaubnis fragte statt
 zu liefern. Details in `evals/README.md`.
 
-Acht Fälle insgesamt, davon zwei für den Agenturstandard: `consent-ohne-keks` und
-`leadsystem-nur-auf-bestaetigung`. Diese beiden sind neu und noch nicht gelaufen, ihr Δ ist
-damit eine Vermutung und kein Messwert.
+Neun Fälle insgesamt, davon zwei für den Agenturstandard: `consent-ohne-keks` und
+`leadsystem-nur-auf-bestaetigung`. Diese beiden und der neue Fall
+`kundendesignsystem-schlaegt-referenz` sind noch nicht gelaufen, ihr Δ ist damit eine
+Vermutung und kein Messwert.
 
 ## Quell-Skills nachinstallieren
 

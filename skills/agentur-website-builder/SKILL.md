@@ -4,7 +4,7 @@ description: Baut komplette Kundenwebsites mit Astro und Cloudflare Pages nach A
 license: Proprietär, That's it. Marketing / VFDESIGN LTD
 metadata:
   author: That's it. Marketing / Henneberg Webdesign
-  version: 1.2.0
+  version: 1.3.0
 ---
 
 # Agentur Website Builder
@@ -27,8 +27,9 @@ Beim Bauen führt dieser Skill, das Regelwerk liefert die Inhalte. Die harten Gr
 Sie sind Abnahmekriterium, nicht Empfehlung: Kontrast, Tastaturbedienung, Ladezeit, keine
 Gedankenstriche im Seitentext, keine Silbentrennung, Heldenbereich auf voller
 Bildschirmhöhe, Hover auf Kacheln, eigene Handschrift je Projekt, Markenextraktion vor
-Neuentwurf, Referenzrecherche vor dem Tokenplan, Sektionshierarchie, keine erfundenen
-Zahlen, kein Wert ohne Token, echte Skriptblockierung.
+Neuentwurf, Referenzrecherche vor dem Tokenplan, Vorrang des Kundendesignsystems vor jeder
+Referenz, Sektionshierarchie, keine erfundenen Zahlen, kein Wert ohne Token, echte
+Skriptblockierung.
 
 Verweise auf `../webdesign-conversion/...` zeigen in den Schwesterordner desselben Plugins.
 Wer nur einen der beiden Ordner in ein Projekt kopiert, verliert diese Verweise. Es werden
@@ -51,7 +52,9 @@ wichtiger als Geschwindigkeit:
    `../webdesign-conversion/references/10-visuelle-richtung.md`.
 3. **Referenzen liefern Prinzipien, keine Vorlagen.** Aus fremden Seiten wird abgeleitet,
    warum etwas funktioniert. Texte, Markenassets und charakteristische Layoutkombinationen
-   werden nie übernommen. Siehe `references/referenzen-und-auswahl.md`.
+   werden nie übernommen. Siehe `references/referenzen-und-auswahl.md`. Eine Referenz
+   beeinflusst Aufbau und Komposition, nie das Designsystem des Kunden, siehe
+   `../webdesign-conversion/references/24-designsystem-vorrang.md`.
 4. **Conversion vor Inszenierung.** Die primäre Handlung bleibt jederzeit verständlich und
    erreichbar. Keine Animation verzögert oder verbirgt Inhalte, Navigation, Formulare oder
    Handlungsaufforderungen.
@@ -288,6 +291,7 @@ Schwesterskill.
 | `../webdesign-conversion/SKILL.md` | immer, die harten Grenzen |
 | `../webdesign-conversion/playbooks/*.md` | Phase 1, je nach Seitentyp |
 | `../webdesign-conversion/references/10-visuelle-richtung.md` | vor der ersten Zeile UI Code |
+| `../webdesign-conversion/references/24-designsystem-vorrang.md` | sobald ein Designsystem, Branding oder eine Referenz im Spiel ist |
 | `../webdesign-conversion/references/12-copywriting.md` | sobald Texte eingesetzt werden |
 | `../webdesign-conversion/references/07-recht-dsgvo.md` | Rechtstexte und Consentpflichten |
 | `../webdesign-conversion/references/04-barrierefreiheit-bfsg.md` | vor der Abnahme |
