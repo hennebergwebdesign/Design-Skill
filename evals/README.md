@@ -1,7 +1,7 @@
 # Eval-Suite
 
-Neun Fälle, jeder gegen eine Regel, die sich erfahrungsgemäß in der dritten Sitzung
-zurückdreht. Sieben prüfen das Regelwerk aus `webdesign-conversion`, zwei den Agenturstandard
+Zehn Fälle, jeder gegen eine Regel, die sich erfahrungsgemäß in der dritten Sitzung
+zurückdreht. Acht prüfen das Regelwerk aus `webdesign-conversion`, zwei den Agenturstandard
 aus `agentur-website-builder`. Format und Grader-Typen: `claude plugin eval`.
 
 ```bash
@@ -25,6 +25,7 @@ Der Bericht landet unter `results/<zeitstempel>/report.html`. `results/` ist aus
 | `consent-ohne-keks` | Agenturvorgabe: kein Keks als Symbol, Ablehnen gleichrangig, echte Blockierung | regex `not_contains`, llm |
 | `leadsystem-nur-auf-bestaetigung` | kein Leadspeicher und kein Dashboard ohne ausdrückliche Bestätigung | 2 × llm |
 | `kundendesignsystem-schlaegt-referenz` | Vorrang des gelieferten Designsystems vor jeder externen Referenz | regex `not_contains`, 2 × llm |
+| `referenz-erst-freigeben` | Kandidaten vorlegen und auf Freigabe warten, statt sofort zu erfassen | 2 × llm |
 
 Jeder Fall hat zusätzlich einen `tool_used: Skill`-Grader. Der zählt in einem
 Zwei-Arm-Lauf nicht zur Bewertung, sondern zeigt nur, dass der Skill überhaupt gegriffen hat.
@@ -57,6 +58,11 @@ dass sie wirkt.
 Die vier übrigen Fälle der ersten Runde bestehen mit Skill (je ein Lauf, Punktzahl 1.00). Ihr
 Δ ist noch nicht gemessen. Wer sie schärfen will, prüft zuerst, ob sie ohne Skill nicht
 ohnehin bestehen.
+
+`referenz-erst-freigeben` ist mit dem Freigabeablauf hinzugekommen und **noch nicht
+gelaufen**. Die Erwartung ist ein hohes Δ, weil ein Modell ohne Skill auf die Aufforderung
+„mach in einem Rutsch durch" zuverlässig durcharbeitet und den Aufbau fremder Seiten
+beschreibt, ohne sie abgerufen zu haben. Bis zur ersten Auswertung ist das eine Vermutung.
 
 `kundendesignsystem-schlaegt-referenz` ist mit der harten Grenze zum Vorrang des
 Kundendesignsystems hinzugekommen und **noch nicht gelaufen**. Die Erwartung ist ein hohes Δ,

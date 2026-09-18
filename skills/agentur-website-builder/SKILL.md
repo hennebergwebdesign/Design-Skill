@@ -4,7 +4,7 @@ description: Baut komplette Kundenwebsites mit Astro und Cloudflare Pages nach A
 license: Proprietär, That's it. Marketing / VFDESIGN LTD
 metadata:
   author: That's it. Marketing / Henneberg Webdesign
-  version: 1.3.0
+  version: 1.4.0
 ---
 
 # Agentur Website Builder
@@ -155,6 +155,19 @@ Vor dem Konzept steht die Referenzrecherche auf mindestens einer Premium-Designq
 `../webdesign-conversion/references/22-premium-designquellen.md`. Ein Konzept ohne
 angesehene Referenz ist der erste Einfall, nicht der beste.
 
+Die Recherche läuft nach `references/designrecherche-ablauf.md` und hat zwei Freigabetore.
+Tor 1 liegt **vor** jedem Abruf einer fremden Seite:
+
+```bash
+node scripts/referenz-register.mjs anlegen --name "…" --url https://… --quelle land-book      --fuer hero --grund "…" --extraktion raster,hierarchie
+node scripts/referenz-register.mjs vorlegen --alle     # danach warten, nicht crawlen
+```
+
+Kandidaten werden vorgelegt und **dann wird gestoppt**. Der Nutzer gibt ganze Websites,
+einzelne Sektionen oder einzelne Komponenten frei, lehnt ab oder fordert Alternativen an.
+Ohne Freigabe wird nichts abgerufen und nichts abgelegt. Tor 2 entscheidet später, ob ein
+Muster dauerhaft ins Skillwissen wandert, siehe dasselbe Kapitel.
+
 Erst nach Freigabe bauen. Wenn der Nutzer ausdrücklich sagt, es soll direkt gebaut werden,
 das Konzept trotzdem in Kurzform voranstellen und ohne Wartezeit weiterarbeiten.
 
@@ -230,6 +243,7 @@ Diese Punkte werden nicht neu verhandelt, auch nicht aus Bequemlichkeit.
 | Leadspeicher | Cloudflare D1, Supabase nur wenn der Kunde bereits einen Account hat |
 | Consent | Eigenbau, fünf Kategorien, echte Skriptblockierung, nie ein Keks als Symbol |
 | Bewertungen | Google Places API serverseitig mit KV Cache, in jedem Projekt |
+| Referenzen | erst vorlegen, dann freigeben, dann erfassen. Kein Abruf einer fremden Seite ohne Freigabe |
 | Schriften | immer selbst hosten, nie über ein fremdes CDN |
 | Barrierefreiheit | WCAG 2.2 AA als Ziel |
 
@@ -285,6 +299,8 @@ Schwesterskill.
 | `references/google-bewertungen.md` | jedes Projekt |
 | `references/qa-und-abnahme.md` | Phase 5 und 6, immer |
 | `references/firecrawl-recherche.md` | eine bekannte, alte oder fremde Seite crawlen oder scrapen, für Relaunch-Inventar oder Design-Referenz |
+| `references/designrecherche-ablauf.md` | Phase 3, sobald Referenzen gesucht, vorgelegt oder freigegeben werden |
+| `references/referenzquellen-konfiguration.md` | eine Referenzquelle ergänzen, stilllegen oder ihr Suchmuster prüfen |
 
 | Datei im Schwesterskill | Wann lesen |
 | --- | --- |
@@ -315,6 +331,8 @@ des Kundenprojekts wandern:
   `.design-scan/<host>/` ab, siehe `references/firecrawl-recherche.md`.
 * `deslop-check.mjs` prüft selbst formulierte Copy-Vorschläge auf generischen KI-Klang,
   siehe `references/qa-und-abnahme.md`.
+* `referenz-register.mjs` führt den Freigabezustand jeder Designreferenz und ist die einzige
+  Stelle, die ihn ändert. Ohne Freigabe kein Abruf, siehe `references/designrecherche-ablauf.md`.
 
 Beide Erfassungswerkzeuge laufen mit reinem `fetch()` ohne Abhängigkeit, optional über die
 Firecrawl-API mit gesetztem `FIRECRAWL_API_KEY`, siehe `references/firecrawl-recherche.md`.

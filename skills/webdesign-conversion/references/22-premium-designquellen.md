@@ -13,6 +13,17 @@ entwerfen. Ohne Netzzugriff in der Sitzung ersatzweise auf dokumentiertes Wissen
 aktuellen Mustern dieser Quellen zurückgreifen und das als „ungeprüft, aus Trainingswissen"
 kennzeichnen, siehe die Ehrlichkeitsregel in `SKILL.md`.
 
+**Die Quellenliste ist konfigurierbar.** Die Tabelle unten beschreibt, wofür jede Quelle
+taugt. Die maschinenlesbare Registratur mit Suchweg, Grenzen und Crawlbarkeit steht in
+`../../agentur-website-builder/assets/recherche/referenzquellen.json`, das Verfahren zum
+Ergänzen in `../../agentur-website-builder/references/referenzquellen-konfiguration.md`. Dort
+stehen zusätzlich Lapa Ninja, Godly und SiteInspire, die hier noch keine Erfahrungszeile
+haben.
+
+**Entdecken ist nicht erfassen.** Eine gefundene Seite wird erst vorgelegt und freigegeben,
+bevor sie abgerufen wird, siehe die harte Grenze in `SKILL.md` und den Ablauf in
+`../../agentur-website-builder/references/designrecherche-ablauf.md`.
+
 ## Die fünf Quellen und wofür sie taugen
 
 | Quelle | Was dort steht | Wofür nutzen |
@@ -67,3 +78,8 @@ Punkt 3 unten (Prinzipien benennen), ersetzt die eigene Sichtung nicht.
 - Fünf annotierte 21st.dev-Beispielkomponenten: `23-referenzkomponenten-21st.md`
 - Bekannte oder alte Seiten per Firecrawl erfassen:
   `../../agentur-website-builder/references/firecrawl-recherche.md`
+- Ablauf der Recherche mit beiden Freigabetoren:
+  `../../agentur-website-builder/references/designrecherche-ablauf.md`
+- Quellen ergänzen und stilllegen:
+  `../../agentur-website-builder/references/referenzquellen-konfiguration.md`
+- Was eine Referenz beeinflussen darf: `24-designsystem-vorrang.md`

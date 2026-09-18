@@ -21,8 +21,25 @@
     "$kommentar": [
       "Woher Farbe, Schrift und Layoutidee tatsächlich kommen, damit spätere Sitzungen",
       "nachvollziehen koennen, was Kontinuitaet ist und was neu entschieden wurde.",
-      "bestehende_marke: 20-markenextraktion-bestandsseite.md. referenzen: 22-premium-designquellen.md."
+      "bestehende_marke: 20-markenextraktion-bestandsseite.md. referenzen: 22-premium-designquellen.md.",
+      "designsystem: 24-designsystem-vorrang.md. referenzen werden gefuehrt in",
+      ".designrecherche/register.json, hier steht nur das Ergebnis je Referenz."
     ],
+    "designsystem": {
+      "$kommentar": [
+        "Der Design System Context nach 24-designsystem-vorrang.md. Er entscheidet, was eine",
+        "externe Referenz ueberhaupt beeinflussen darf. Stufe 1 = geliefertes Designsystem,",
+        "Stufe 2 = Markenvorgaben, Stufe 3 = in diesem Projekt neu entschieden.",
+        "Ab dem Moment der Festlegung gilt Stufe 3 selbst als geschuetzt."
+      ],
+      "stufe": null,
+      "$stufe_erlaubt": [1, 2, 3],
+      "quelle": null,
+      "$quelle_hinweis": "Tokendatei, Figma-Bibliothek, Styleguide, Logodatei oder 'in diesem Projekt entschieden'",
+      "geprueft_am": null,
+      "geschuetzt": ["farbe", "typografie", "logo", "form", "raum", "bausteine"],
+      "$geschuetzt_hinweis": "Diese Bereiche werden nie aus einer Referenz ersetzt. Konflikte werden benannt, nicht still aufgeloest."
+    },
     "bestehende_marke": {
       "quelle": null,
       "$quelle_hinweis": "URL der alten Seite, oder 'nur Print/Logo-Datei', oder null wenn keine Vormarke existiert",
@@ -34,10 +51,25 @@
     },
     "referenzen": [
       {
+        "$kommentar": [
+          "Ergebnis je Referenz. Der Zustand und die Freigabe werden nicht hier gefuehrt,",
+          "sondern in .designrecherche/register.json durch scripts/referenz-register.mjs.",
+          "Was hier steht, ist die Entscheidung, die im Markenbrief nachlesbar bleiben soll."
+        ],
+        "id": null,
+        "$id_hinweis": "Kennung aus dem Register, zum Beispiel ref-01-beispiel-de",
         "quelle": null,
-        "$quelle_erlaubt": ["awwwards", "dribbble", "land-book", "recent.design", "21st.dev"],
+        "$quelle_hinweis": "schluessel aus agentur-website-builder/assets/recherche/referenzquellen.json, dort steht die gepflegte Liste statt einer festen Aufzaehlung",
         "link": null,
-        "uebernommen": "[[FEHLT: welches Prinzip, nicht welches Layout 1:1]]"
+        "fuer": [],
+        "$fuer_hinweis": "Sektionen des Projekts, fuer die diese Referenz gilt",
+        "freigabe": null,
+        "$freigabe_erlaubt": ["website", "teilweise", null],
+        "uebernommen": "[[FEHLT: welches Prinzip, nicht welches Layout 1:1]]",
+        "nicht_uebernommen": "[[FEHLT: was bewusst nicht uebernommen wurde und warum]]",
+        "wissen": null,
+        "$wissen_erlaubt": ["global", "erweitern", "projekt", "ablehnen", null],
+        "$wissen_hinweis": "Ergebnis von Tor 2. Nur global und erweitern aendern die Musterbibliothek des Skills."
       }
     ]
   },

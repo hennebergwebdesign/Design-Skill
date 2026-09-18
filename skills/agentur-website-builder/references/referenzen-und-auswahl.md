@@ -71,6 +71,16 @@ Vor der Nutzung die Referenz tatsächlich ansehen und die drei bis fünf Prinzip
 die übernommen werden, dazu das, was bewusst nicht übernommen wird. Eine Referenz, die nur
 als Name im Konzept steht, hat nichts beigetragen.
 
+Die Obergrenze von drei gilt für die **Gesamtrichtung** des Projekts. Für eine einzelne
+komplexe Sektion sind mehrere Referenzen ausdrücklich erwünscht, je eine für Komposition,
+Hierarchie, Darstellung und Interaktion, siehe „Mehrere Referenzen, eine Synthese" in
+`designrecherche-ablauf.md`. Aus vier Prinzipien entsteht eine eigene Lösung, aus einer
+Referenz eine Kopie.
+
+Vorlegen und Freigeben gehen dem Ansehen nicht voraus, sondern dem **Abrufen**: eine Seite
+wird erst vorgelegt und freigegeben, bevor sie mit einem Werkzeug erfasst wird, siehe
+`designrecherche-ablauf.md`.
+
 Ist die Referenz eine konkrete, bekannte oder alte Seite statt einer kuratierten Galerie,
 liefert `scripts/design-scan.mjs` das Rohmaterial dafür: Sektionsreihenfolge, Wortzahl,
 Bildbelegung, Farb- und Schriftkandidaten, optional ein Screenshot über die Firecrawl-API.

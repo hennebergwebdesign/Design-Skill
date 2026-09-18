@@ -42,6 +42,15 @@ node scripts/relaunch-inventory.mjs https://alte-kundenseite.de
 node scripts/design-scan.mjs https://wettbewerber-oder-inspiration.de
 node scripts/deslop-check.mjs --text "Wir begleiten Sie ganzheitlich."
 
+# Designrecherche: Freigabezustand der Referenzen, laeuft im Kundenprojekt
+node scripts/referenz-register.mjs anlegen --name "Beispiel" --url https://beispiel.de --quelle land-book
+node scripts/referenz-register.mjs vorlegen --alle
+node scripts/referenz-register.mjs freigeben --id ref-01-beispiel-de --sektionen hero
+node scripts/referenz-register.mjs status
+
+# Tests der Skripte, eingebauter Node-Testrunner, ohne Abhaengigkeit
+node --test 'scripts/tests/*.test.mjs'
+
 # Eval-Suite
 claude plugin eval .
 claude plugin eval . --case consent-ohne-keks
@@ -54,7 +63,9 @@ bash scripts/install-quellskills.sh
 Alle Skripte laufen mit reinem Node, ohne Abhängigkeiten. Nur `pruefe-breakpoints.mjs`
 braucht Playwright im Zielprojekt. Kein `package.json`, und das bleibt so: ein
 Abhängigkeitsbaum in einem Skill-Repository wird beim nächsten Audit zum Problem und bringt
-hier nichts ein.
+hier nichts ein. Die Tests nutzen deshalb `node:test` und `node:assert` aus dem Standardumfang
+von Node, keinen externen Testrunner. Die Verzeichnisform `node --test scripts/tests/` greift
+nicht, es braucht das Glob-Muster in Anführungszeichen.
 
 ## Dateistruktur
 
@@ -63,7 +74,8 @@ hier nichts ein.
 skills/
   webdesign-conversion/     SKILL.md, references/00-23, playbooks/, assets/
   agentur-website-builder/  SKILL.md, references/, assets/consent|forms|reviews
-scripts/              fünf Prüfskripte, drei Agenturwerkzeuge, ein Installer
+scripts/              fünf Prüfskripte, Agenturwerkzeuge, Designrecherche, ein Installer
+  tests/              node --test, Fixtures ohne Netzzugriff
 evals/                acht Fälle mit Gradern, results/ ist ausgenommen
 README.md             Außendarstellung
 CREDITS.md            Herkunft jeder eingeflossenen Quelle
@@ -107,9 +119,12 @@ Diese Punkte haben einen Grund. Wer sie ändert, ändert damit auch den Grund.
 
 ## Offene Punkte
 
-- `consent-ohne-keks`, `leadsystem-nur-auf-bestaetigung` und
-  `kundendesignsystem-schlaegt-referenz` sind noch nicht gelaufen. Ihr Δ ist eine Vermutung,
-  kein Messwert.
+- `consent-ohne-keks`, `leadsystem-nur-auf-bestaetigung`,
+  `kundendesignsystem-schlaegt-referenz` und `referenz-erst-freigeben` sind noch nicht
+  gelaufen. Ihr Δ ist eine Vermutung, kein Messwert.
+- Die Suchmuster in `referenzquellen.json` sind mit `suchmuster_geprueft: false` markiert und
+  bisher nicht aufgerufen worden. Lapa Ninja, Godly und SiteInspire sind neu aufgenommen und
+  in keinem Projekt erprobt.
 - Für vier der sechs älteren Eval-Fälle fehlt weiterhin die Baseline-Messung.
 - `relaunch-inventory.mjs` ist gegen einen lokalen Testserver geprüft, noch nicht gegen eine
   echte Kundenseite und noch nicht gegen die Firecrawl API.
@@ -124,6 +139,20 @@ Diese Punkte haben einen Grund. Wer sie ändert, ändert damit auch den Grund.
 
 ## Änderungsverlauf
 
+- **18.09.2026, Version 3.4.0** Zweite von fünf Phasen: die erste Freigabe wird
+  durchgesetzt statt beschrieben. Neues `scripts/referenz-register.mjs` als einzige Stelle,
+  die den Freigabezustand einer Designreferenz ändert: zehn Zustände, sieben erlaubte
+  Übergänge, jeder andere bricht mit Exit 2 ab. Von `ENTDECKT` führt kein Weg direkt nach
+  `FREIGEGEBEN` oder `GECRAWLT`, auch eine vom Kunden genannte Seite wird erst vorgelegt.
+  Dazu `scripts/tests/register.test.mjs` mit 17 Tests über `node --test`, ohne Abhängigkeit.
+  Neue Referenzen `agentur-website-builder/references/designrecherche-ablauf.md` (sieben
+  Stufen, zwei Tore, Fehlerbehandlung, Trennung von Projekt- und globalem Wissen) und
+  `referenzquellen-konfiguration.md`. Die Quellenliste ist jetzt Konfiguration
+  (`assets/recherche/referenzquellen.json`, neun Quellen, darunter Lapa Ninja, Godly und
+  SiteInspire) statt einer Aufzählung an drei Stellen. Neue Vorlage
+  `designrecherche-brief.md`, `marke.json` bekommt `herkunft.designsystem` als Design System
+  Context und erweiterte Referenzeinträge. Neue harte Grenze gegen das Erfassen ohne
+  Freigabe, dazu der Evalfall `referenz-erst-freigeben`, noch nicht gelaufen.
 - **18.09.2026, Version 3.3.0** Erste von fünf Phasen der kuratierten Designrecherche.
   Bisher standen drei Ranglisten nebeneinander: die harte Grenze zur Markenextraktion, die
   Rangfolge der Quellen im Bauablauf und der Vorrang des Briefs in `10-visuelle-richtung.md`.
