@@ -53,14 +53,23 @@ KV-Cache, optional ein Leadsystem auf D1 mit schlankem Dashboard. Zu jedem Punkt
 einsatzfertiger Code bei, keine Beschreibung.
 
 **Prüfskripte statt Checkboxen.** Eine Regel ohne Prüfung wird in der dritten Sitzung
-zurückgedreht. Fünf Skripte prüfen Gedankenstriche, Tokens, Kontrast, Platzhalter und acht
-Bildschirmgrößen samt horizontalem Überlauf, ein sechstes die Musterbibliothek. Dazu
+zurückgedreht. Sechs Skripte prüfen Gedankenstriche, Tokens, Kontrast, Platzhalter samt
+ausgelassenem Code, acht Bildschirmgrößen samt horizontalem Überlauf und die zählbaren
+KI-Tells einer gebauten Seite, ein siebtes die Musterbibliothek. Dazu
 Werkzeuge, die das Relaunch-Inventar beschaffen, selbst formulierte Texte auf generischen
 KI-Klang bewerten und die Designrecherche führen.
 
 **Eine kuratierte Designrecherche mit zwei Freigaben.** Referenzen werden entdeckt, vorgelegt
 und erst nach menschlicher Freigabe erfasst. Was daraus dauerhaft ins Skillwissen wandert,
 entscheidet eine zweite Freigabe. Beides ist im Code durchgesetzt, nicht nur beschrieben.
+
+**Geschmacksregeln, die sich zählen lassen.** Aus den Produktionstests von taste-skill: vor
+dem Plan eine Lesart in einem Satz und drei Regler für Varianz, Bewegung und Dichte, dann
+drei Sperren für Akzent, Form und Thema, Regeln für Held und Sektionsfolge und ein Katalog
+der KI-Tells. Was sich zählen lässt (Kicker je drei Sektionen, Laufbänder, Texte für dieselbe
+Absicht), zählt `pruefe-geschmack.mjs`. Dazu ein Redesign-Protokoll für bestehende Seiten und
+ein Ablauf für Entwürfe aus einem Bildmodell, mit der klaren Grenze, dass daraus nie ein
+Beleg wird.
 
 **Vorlagen zum Übernehmen** statt Beschreibungen zum Nachbauen.
 
@@ -98,7 +107,10 @@ skills/
 │  │  ├─ 22-premium-designquellen.md  Awwwards, Dribbble, Land-book, recent.design, 21st.dev
 │  │  ├─ 23-referenzkomponenten-21st.md  fünf annotierte 21st.dev-Beispielkomponenten
 │  │  ├─ 24-designsystem-vorrang.md  fünf Stufen, was eine Referenz beeinflussen darf
-│  │  └─ 25-designmuster-bibliothek.md  Muster, Belege, Konfidenz, wann erweitern
+│  │  ├─ 25-designmuster-bibliothek.md  Muster, Belege, Konfidenz, wann erweitern
+│  │  ├─ 26-geschmack-und-ki-tells.md  Lesart, drei Regler, Sperren, Held, KI-Tells, Vorflugcheck
+│  │  ├─ 27-redesign-bestand.md     Modus erkennen, was sich nie still ändert, Hebel
+│  │  └─ 28-ki-bildentwuerfe.md     Bildmodell als Vorlage, Auswertung, nie als Beleg
 │  └─ assets/
 │     ├─ vorlagen/                  marke.json, marke-brief.md, impressum.md, datenschutz.md,
 │     │                             datenschutz-bewerber.md, consent-muster.md,
@@ -135,8 +147,9 @@ scripts/
 ├─ pruefe-striche.mjs               Gedankenstriche, hyphens: auto, verbotene Wörter
 ├─ pruefe-tokens.mjs                hartcodierte Farb-, Abstands- und Schriftwerte
 ├─ pruefe-kontrast.mjs              Kontrastwerte der Rollen-Tokens
-├─ pruefe-platzhalter.mjs           [[FEHLT]] und data-copy-vorschlag vor dem Livegang
+├─ pruefe-platzhalter.mjs           [[FEHLT]], data-copy-vorschlag, ausgelassener Code
 ├─ pruefe-breakpoints.mjs           acht Größen, Überlauf, Touchziele, Schriftgröße, CLS
+├─ pruefe-geschmack.mjs             Kicker-Quote, Laufbänder, CTA-Texte, messbare KI-Tells
 ├─ relaunch-inventory.mjs           Bestandsaufnahme der alten Kundenseite vor dem Relaunch
 ├─ design-scan.mjs                  Struktur- und Design-Scan einer fremden Referenzseite
 ├─ deslop-check.mjs                 selbst formulierte Copy auf generischen KI-Klang prüfen
@@ -178,16 +191,24 @@ tatsächlich gebaut, überarbeitet oder relauncht wird. Direkt aufrufen geht auc
 
 ## Prüfen
 
-Fünf Skripte, weil eine Regel ohne Prüfung in der dritten Sitzung zurückgedreht wird. Alle
+Sechs Skripte, weil eine Regel ohne Prüfung in der dritten Sitzung zurückgedreht wird. Alle
 laufen ohne Abhängigkeiten außer Node; nur das Breakpoint-Skript braucht Playwright.
 
 ```bash
 node scripts/pruefe-striche.mjs       # Gedankenstriche, hyphens: auto, verbotene Wörter
 node scripts/pruefe-tokens.mjs        # hartcodierte Farb-, Abstands- und Schriftwerte
 node scripts/pruefe-kontrast.mjs      # rechnet die Kontrastwerte der Rollen-Tokens nach
-node scripts/pruefe-platzhalter.mjs --launch   # [[FEHLT]] und data-copy-vorschlag
+node scripts/pruefe-platzhalter.mjs --launch   # [[FEHLT]], data-copy-vorschlag, // ...
 node scripts/pruefe-breakpoints.mjs http://localhost:4321 --bilder
+node scripts/pruefe-geschmack.mjs     # nach dem Build: dist/ und src/
 ```
+
+`pruefe-geschmack.mjs` prüft je gebauter Seite, ob höchstens ein Kicker auf drei Sektionen
+kommt, ob mehr als ein Laufband läuft und ob dieselbe Kontaktabsicht mehrere Texte hat, dazu
+Scrollhinweise, Nummern statt Themen und eine zu lange Unterzeile im Held. In den Quellen
+warnt es vor `overflow-x: hidden`, eigenen Mauszeigern, `100vh` ohne `svh`, Scroll-Listenern
+ohne `passive` sowie vor den Standardserifen und der Premium-Standardpalette, außer sie stehen
+als Markenentscheidung in `marke.json`.
 
 `pruefe-breakpoints.mjs` rendert acht Größen (die fünf Breakpoints plus 320 px, 1366 × 768 und
 1440 × 720) und meldet horizontalen Überlauf mit dem Selektor des äußersten Verursachers, zu
@@ -314,11 +335,12 @@ node --test 'scripts/tests/*.test.mjs'
 ```
 
 Eingebauter Testrunner von Node, keine Abhängigkeit, kein `package.json`. Die Anführungszeichen
-sind nötig, die Verzeichnisform greift nicht. 90 Tests: alle erlaubten und alle verbotenen
+sind nötig, die Verzeichnisform greift nicht. 111 Tests: alle erlaubten und alle verbotenen
 Zustandsübergänge, die Sperre gegen den Abruf ohne Freigabe, robots.txt, die Rückfallstufen,
 die Grenzenliste, das Konfidenzmodell, die Ähnlichkeitseinstufung, die Musterprüfung und die
-Trennung von Projekt- und globalem Wissen. Der Netzzugriff ist durch einen lokalen Testserver
-ersetzt.
+Trennung von Projekt- und globalem Wissen, die Geschmacksprüfung mit je einem Fall, der
+anschlagen muss, und einem, der ähnlich aussieht und durchgehen muss, sowie die
+Auslassungsprüfung. Der Netzzugriff ist durch einen lokalen Testserver ersetzt.
 
 `deslop-check.mjs` bewertet fünf Kriterien und gibt eine Punktzahl von 0 bis 5: Floskeln,
 Nominalstil, leere Superlative, fehlende Belege und die Dreierfigur. Er gilt für **eigene**
@@ -342,11 +364,11 @@ Die Suite hat dabei schon einen echten Fehler gefunden: das Landingpage-Playbook
 formuliert, dass das Modell die Navigationsregel erkannte, dann aber um Erlaubnis fragte statt
 zu liefern. Details in `evals/README.md`.
 
-Elf Fälle insgesamt, davon zwei für den Agenturstandard: `consent-ohne-keks` und
-`leadsystem-nur-auf-bestaetigung`. Diese beiden und die drei neuen Fälle
-`kundendesignsystem-schlaegt-referenz`, `referenz-erst-freigeben` und
-`nicht-beobachtetes-nicht-behaupten` sind noch nicht gelaufen, ihr Δ ist damit eine Vermutung
-und kein Messwert.
+Zwölf Fälle insgesamt, davon zwei für den Agenturstandard: `consent-ohne-keks` und
+`leadsystem-nur-auf-bestaetigung`. Diese beiden und die vier neueren Fälle
+`kundendesignsystem-schlaegt-referenz`, `referenz-erst-freigeben`,
+`nicht-beobachtetes-nicht-behaupten` und `keine-attrappen-als-beleg` sind noch nicht gelaufen,
+ihr Δ ist damit eine Vermutung und kein Messwert.
 
 ## Quell-Skills nachinstallieren
 
@@ -359,7 +381,11 @@ bash scripts/install-quellskills.sh
 ```
 
 Das legt sie unter `.claude/skills/` im aktuellen Projekt ab und schließt sie von
-Volltextsuchen aus. In einem shadcn-Projekt bringt die shadcn-CLI ihren Skill selbst mit
+Volltextsuchen aus. Die Skills aus taste-skill sind destilliert, aber bewusst nicht
+voreingestellt: sie empfehlen an mehreren Stellen das Gegenteil der harten Grenzen
+(Platzhalterfotos von Drittservern, fremde Logos, „organische" erfundene Zahlen). Wer sie
+trotzdem im Projekt haben will, findet die Befehle auskommentiert im Skript, die Gründe in
+`skills/webdesign-conversion/references/26-geschmack-und-ki-tells.md` Abschnitt 11. In einem shadcn-Projekt bringt die shadcn-CLI ihren Skill selbst mit
 (`npx shadcn@latest info`).
 
 ## Die Grundsätze in Kurzform

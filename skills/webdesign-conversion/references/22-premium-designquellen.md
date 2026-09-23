@@ -83,3 +83,4 @@ Punkt 3 unten (Prinzipien benennen), ersetzt die eigene Sichtung nicht.
 - Quellen ergänzen und stilllegen:
   `../../agentur-website-builder/references/referenzquellen-konfiguration.md`
 - Was eine Referenz beeinflussen darf: `24-designsystem-vorrang.md`
+- Nach der Recherche ein Entwurf mit einem Bildmodell: `28-ki-bildentwuerfe.md`

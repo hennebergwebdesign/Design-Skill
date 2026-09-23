@@ -187,4 +187,7 @@ Strukturelemente wie Rahmen, Linien, Nummern und Labels kodieren Information. Nu
 Marker sind richtig, wenn der Inhalt wirklich eine Abfolge ist (Prozess, Zeitleiste), sonst
 sind sie Dekoration.
 
-Mehr zur visuellen Richtung: `10-visuelle-richtung.md`.
+Mehr zur visuellen Richtung: `10-visuelle-richtung.md`. Der vollständige Katalog der
+Produktionstells, die Heldenregeln (höchstens vier Textelemente, Unterzeile bis 20 Wörter,
+Logowand darunter statt darin) und ihre Prüfung mit `scripts/pruefe-geschmack.mjs`:
+`26-geschmack-und-ki-tells.md`.

@@ -17,6 +17,30 @@
     "sprache": "de-DE"
   },
 
+  "gestaltung": {
+    "$kommentar": [
+      "Lesart und Regler nach 26-geschmack-und-ki-tells.md. Sie stehen hier, damit die naechste",
+      "Sitzung die Seite nicht neu und anders liest. Jeder Wert mit einem Satz Begruendung.",
+      "Die Ausgangswerte je Kundentyp stehen im Kapitel, sie sind nicht gemessen."
+    ],
+    "lesart": "[[FEHLT: Ich lese das als: Seitentyp fuer Zielgruppe, in einer Stimmung-Sprache, mit Tendenz zu Richtung]]",
+    "regler": {
+      "varianz": null,
+      "bewegung": null,
+      "dichte": null,
+      "$erlaubt": "je 1 bis 10",
+      "begruendung": "[[FEHLT: ein Satz je Regler, woraus der Wert folgt]]"
+    },
+    "$regler_hinweis": "Bewegung 1 bis 3 passt zu motion.profil zurueckhaltend, 4 bis 7 zu praezise oder weich, 8 bis 10 zu verspielt. Ueber 4 muss sich die Seite auch bewegen.",
+    "sperren": {
+      "akzent": "[[FEHLT: die eine Akzentrolle]]",
+      "form": "[[FEHLT: kantig, weich oder dokumentierte Mischregel]]",
+      "thema": "hell",
+      "$thema_erlaubt": ["hell", "dunkel"],
+      "$thema_hinweis": "Eine dunkle Sektion nur als feste Rolle flaeche_dunkel, die wiederkehrt. Nie als zufaellige Insel."
+    }
+  },
+
   "herkunft": {
     "$kommentar": [
       "Woher Farbe, Schrift und Layoutidee tatsächlich kommen, damit spätere Sitzungen",

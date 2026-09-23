@@ -17,6 +17,9 @@
     [[…]]                     jeder andere Platzhalter dieser Form
     data-copy-vorschlag       Entwicklungsmarkierung fuer noch abzustimmende Texte
     TODO, FIXME, XXX, HACK    in Seitenquellen
+    Auslassungskommentar      drei Punkte als einziger Kommentarinhalt, oder in Worten
+                              ("Rest wie oben", "rest of code", "analog zu oben"): Code,
+                              der fehlt, statt geschrieben zu sein
     lorem ipsum               Blindtext
     beispiel.de, example.com  Platzhalterdomains
     +49 123, 0123 456789      Platzhaltertelefonnummern
@@ -64,6 +67,12 @@ const MUSTER = [
     tipp: 'Platzhalter auflösen.' },
   { re: /data-copy-vorschlag/g,               art: 'Copy-Vorschlag', hart: true,
     tipp: 'Text mit dem Kunden abstimmen, dann das Attribut entfernen. Es ist auf der Seite sichtbar.' },
+  /* Auslassung im Kommentar. Kein Platzhalter fuer einen fehlenden Wert, sondern fehlender
+     Code: das Modell hat abgekuerzt und beschrieben, was hier stehen muesste. Nur im
+     Kommentar gesucht, damit der Spread-Operator (...args) kein Befund ist. */
+  { re: /(\/\/|\/\*|<!--)\s*(?:\.\.\.|…)\s*(?:\*\/|-->)?\s*\}?\s*$|(\/\/|\/\*|<!--)[^\n]*\b(rest of (?:the )?code|similar to above|continue (?:the )?pattern|add more as needed|implement (?:here|this)|rest wie oben|restlicher code|restliche[nrs]? (?:sektionen|felder|eintr(?:ä|ae)ge)|analog zu oben|hier implementieren|weitere nach bedarf)/gi,
+    art: 'Auslassung', hart: true,
+    tipp: 'Den ausgelassenen Code vollständig schreiben. Eine Auslassung ist kein offener Wert, sondern fehlender Code.' },
   { re: /\b(TODO|FIXME|XXX|HACK)\b/g,         art: 'TODO',         hart: false,
     tipp: 'Erledigen oder in die Liste offener Punkte übernehmen.' },
   { re: /lorem\s+ipsum/gi,                    art: 'Blindtext',    hart: true,

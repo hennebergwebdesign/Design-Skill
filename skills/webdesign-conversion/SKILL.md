@@ -4,7 +4,7 @@ description: "Vollständiges System für conversion-orientiertes Webdesign im DA
 license: MIT
 metadata:
   author: Henneberg Webdesign
-  version: 2.4.0
+  version: 2.5.0
 ---
 
 # Webdesign Conversion System
@@ -118,6 +118,9 @@ Lies gezielt nach, statt alles zu laden.
 | Fünf annotierte 21st.dev-Beispielkomponenten (Hero, FAQ, schwebende Elemente, Bewertungen, Integrationen) | `23-referenzkomponenten-21st.md` |
 | Was eine Referenz beeinflussen darf und was geschützt bleibt, Rangfolge | `24-designsystem-vorrang.md` |
 | Musterbibliothek, Design DNA, Konfidenzmodell, wann erweitern statt neu anlegen | `25-designmuster-bibliothek.md` |
+| Lesart, drei Regler, Konsistenzsperren, Heldenregeln, Katalog der KI-Tells, Vorflugcheck | `26-geschmack-und-ki-tells.md` |
+| Bestehende Seite überarbeiten: Modus erkennen, was sich nie still ändert, Hebel in Reihenfolge | `27-redesign-bestand.md` |
+| Entwürfe mit einem Bildmodell erzeugen, auswerten, treu umsetzen, und was sie nie belegen | `28-ki-bildentwuerfe.md` |
 | Referenzen entdecken, vorlegen, freigeben, erfassen | `../agentur-website-builder/references/designrecherche-ablauf.md` |
 
 **Technik, Recht, Messung**
@@ -151,8 +154,9 @@ Alle Skripte laufen ohne Abhängigkeiten außer Node, das Breakpoint-Skript brau
 node scripts/pruefe-striche.mjs       # Gedankenstriche, hyphens: auto, verbotene Wörter
 node scripts/pruefe-tokens.mjs        # hartcodierte Farb-, Abstands- und Schriftwerte
 node scripts/pruefe-kontrast.mjs      # Kontrastwerte der Rollen-Tokens
-node scripts/pruefe-platzhalter.mjs   # [[FEHLT]] und data-copy-vorschlag vor dem Livegang
+node scripts/pruefe-platzhalter.mjs   # [[FEHLT]], data-copy-vorschlag, ausgelassener Code
 node scripts/pruefe-breakpoints.mjs http://localhost:4321 --bilder
+node scripts/pruefe-geschmack.mjs     # nach dem Build: Kicker-Quote, Laufbänder, CTA-Texte, KI-Tells
 ```
 
 Dazu zwei Werkzeuge, die nicht prüfen, sondern Material beschaffen und Texte bewerten. Sie
@@ -236,7 +240,10 @@ Diese Regeln gelten immer und werden nicht wegdiskutiert:
   visuelle Eigenschaft, die aus der Marke abgeleitet ist (nicht aus einer Bibliothek
   kopiert), eine eigene Bewegungssignatur (siehe `18-motion-handschrift.md`) und mindestens
   ein Custom- oder Animationsabschnitt, der für genau dieses Unternehmen gebaut ist, keine
-  generische Sektion aus dem Baukasten.
+  generische Sektion aus dem Baukasten. Messbar heißt das: höchstens ein Kicker- oder
+  Eyebrow-Label je drei Sektionen (der Heldenbereich zählt mit) und höchstens ein Laufband je
+  Seite. Geprüft mit `scripts/pruefe-geschmack.mjs` nach dem Build, die übrigen
+  Geschmacksregeln und der Katalog der KI-Tells in `references/26-geschmack-und-ki-tells.md`.
 - **Existiert bereits eine Marke oder eine alte Seite, wird sie zuerst ausgelesen, nicht
   ignoriert.** Logo, Farben, Schrift und Formsprache kommen vor dem Neuentwurf auf den Tisch,
   geprüft und bewusst fortgeschrieben oder bewusst verworfen, nie stillschweigend ersetzt.
@@ -275,7 +282,11 @@ Diese Regeln gelten immer und werden nicht wegdiskutiert:
   Lieferzeiten oder Referenzen ohne Beleg. Fehlt ein Wert, steht dort ein sichtbarer
   Platzhalter `[[FEHLT: …]]`, niemals ein plausibel klingender Erfindungswert. Unechte
   Verknappung („nur noch 3 verfügbar") ohne echten Bestand ist eine Irreführung nach
-  § 5 UWG.
+  § 5 UWG. Dasselbe gilt für Bilder und Logos: keine Logowand ohne echte Kundenbeziehung und
+  Freigabe, kein Stock- oder KI-Bild als Team-, Projekt- oder Vorher-Nachher-Beleg, keine
+  Platzhalterbilder von fremden Servern, und kein Text aus einem generierten Entwurf wird zu
+  Seiteninhalt. Siehe `references/28-ki-bildentwuerfe.md`, geprüft mit dem Evalfall
+  `keine-attrappen-als-beleg`.
 - **Kein Wert ohne Token.** Keine rohe Farbe, kein hartcodierter Abstand, keine feste
   Schriftgröße im Komponentencode. Eine optisch begründete Abweichung bekommt einen
   Kommentar mit dem Wort „bewusst", sonst ist es ein Befund.
@@ -294,8 +305,10 @@ Diese Regeln gelten immer und werden nicht wegdiskutiert:
    einem leeren Fragebogen. Die Antworten gehen in `marke-brief.md`, nicht in den Chat.
    Existiert bereits eine Marke oder eine alte Seite, wird sie in diesem Schritt ausgelesen,
    siehe `references/20-markenextraktion-bestandsseite.md`.
-2. **Referenz vor Plan, Plan vor Code.** Erst mindestens eine Premium-Designquelle nach
-   Branche und Stilrichtung durchsuchen (`references/22-premium-designquellen.md`), dann ein
+2. **Referenz vor Plan, Plan vor Code.** Erst die Lesart in einem Satz und die drei Regler
+   festhalten (`references/26-geschmack-und-ki-tells.md`), dann mindestens eine
+   Premium-Designquelle nach Branche und Stilrichtung durchsuchen
+   (`references/22-premium-designquellen.md`), dann ein
    kompaktes Tokensystem (Farben, Schrift, Layoutidee, Prinzipien) entwerfen und gegen den
    Brief prüfen. Liest sich ein Teil wie der Standard, den du für jede beliebige Seite
    produzieren würdest, ersetze ihn und sage warum. Details in

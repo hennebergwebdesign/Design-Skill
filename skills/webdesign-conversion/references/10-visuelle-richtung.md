@@ -17,6 +17,10 @@ nicht im Entwurf sieht, hat die Schablone gebaut.
 
 ## Zwei Durchgänge, nicht einer
 
+Davor steht ein Satz: die Lesart, und dazu die drei Regler für Varianz, Bewegung und Dichte,
+siehe `26-geschmack-und-ki-tells.md`. Sie sagen, wofür die Seite ist, bevor entschieden wird,
+wie sie aussieht.
+
 **Durchgang 1: Plan.** Ein kompaktes Tokensystem in vier Punkten:
 
 - **Farbe:** 4–6 benannte Hex-Werte mit Rolle. Nicht mehr.
@@ -49,6 +53,10 @@ Voreinstellung statt als Entscheidung sind sie das Problem:
 5. Schablonen-Chrome: gesperrte VERSALIEN über jeder Überschrift, „A · B · C"-Ketten,
    „WORT — Fragment" mit gesperrtem Gedankenstrich, getöntes Fast-Schwarz (`#0B0B0B`, `#111`)
    statt Schwarz, Monospace für kleine Datenlabels, „→" hinter jedem Link
+
+Beim Bauen kommen weitere Muster dazu, die sich zum Teil zählen lassen (Kicker-Quote,
+Laufbänder, Texte für dieselbe Absicht), dazu die Premium-Standardpalette mit ihren Hexwerten
+und der Serifenreflex. Katalog und Prüfung: `26-geschmack-und-ki-tells.md`.
 
 **Sparsamkeit mit Mut:** Ein Element darf das Merkwürdige sein. Alles drumherum bleibt still
 und diszipliniert. Streiche eine Verzierung, die dem Auftrag nicht dient.

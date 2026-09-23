@@ -179,6 +179,7 @@ keiner wird auf Vorrat gebaut.
 ## Verwandte Kapitel
 
 - Was eine Referenz beeinflussen darf: `24-designsystem-vorrang.md`
+- Warum ein generierter Entwurf kein Muster wird: `28-ki-bildentwuerfe.md`
 - Die fünf Muster des Erstbestands im Zusammenhang: `23-referenzkomponenten-21st.md`
 - Quellen und wofür sie taugen: `22-premium-designquellen.md`
 - Stilrichtungen im Fließtext: `10-visuelle-richtung.md`

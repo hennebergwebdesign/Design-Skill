@@ -70,6 +70,16 @@ installiere web-quality-audit "web-quality-skills (addyosmani)" \
 installiere icon-set-generator "design-assets (jezweb)" \
   jezweb/claude-skills --skill icon-set-generator --agent claude-code || FEHLER=1
 
+# Taste Skill (Leonxlnx/taste-skill): destilliert in 26-geschmack-und-ki-tells.md,
+# 27-redesign-bestand.md und 28-ki-bildentwuerfe.md, bewusst NICHT voreingestellt. Die
+# Originale empfehlen Platzhalterfotos von picsum.photos, fremde Logos ueber ein CDN und
+# "organische" erfundene Zahlen, alles gegen die harten Grenzen. Mit beiden Regelwerken im
+# Kontext pendelt ein Modell genau an diesen Stellen. Auf ausdruecklichen Wunsch einzeln:
+#   npx --yes skills add https://github.com/Leonxlnx/taste-skill --skill "design-taste-frontend" --agent claude-code
+#   npx --yes skills add https://github.com/Leonxlnx/taste-skill --skill "redesign-existing-projects" --agent claude-code
+#   npx --yes skills add https://github.com/Leonxlnx/taste-skill --skill "imagegen-frontend-web" --agent claude-code
+#   npx --yes skills add https://github.com/Leonxlnx/taste-skill --skill "full-output-enforcement" --agent claude-code
+
 # Suchtreffer in den Skilldaten vermeiden: Nachschlagewerke, keine Projektquellen.
 if ! grep -q "\.claude/skills" .gitattributes 2>/dev/null; then
   printf ".claude/skills/** linguist-vendored linguist-generated -diff\n" >> .gitattributes
@@ -94,6 +104,10 @@ echo "                              hundred-million-offers: Verknappung und Drin
 echo "                              als Werkzeug kollidieren mit der UWG-Regel in 12."
 echo "  awwwards-Stilskills         Stilgeneratoren. Bento- und Broken-Grids als"
 echo "                              Voreinstellung sind die naechste Schablonengeneration."
+echo "  taste-skill (Leonxlnx)      13 Skills, destilliert in 26, 27 und 28. Die Originale"
+echo "                              empfehlen picsum-Fotos, fremde Logos per CDN und"
+echo "                              erfundene krumme Zahlen, gegen die harten Grenzen."
+echo "                              Befehle auf Zuruf stehen oben im Skript."
 echo
 echo "Hinweis: shadcn/ui bringt seinen Skill über die eigene CLI mit."
 echo "In einem shadcn-Projekt genügt: npx shadcn@latest info"

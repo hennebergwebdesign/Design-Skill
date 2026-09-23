@@ -14,7 +14,7 @@ rechtlich tragfähig, barrierearm, schnell, und nicht wie von einer Maschine geb
 
 | Skill | Rolle | Lizenz |
 |---|---|---|
-| `skills/webdesign-conversion/` | das Regelwerk: was gut ist und warum. 24 Referenzen, 3 Playbooks, Vorlagen, Checklisten | MIT |
+| `skills/webdesign-conversion/` | das Regelwerk: was gut ist und warum. 29 Referenzen, 3 Playbooks, Vorlagen, Checklisten | MIT |
 | `skills/agentur-website-builder/` | der Lieferablauf: Phasen 0 bis 6, fester Agenturstack, einsatzfertiger Code | Agenturstandard, siehe seine `SKILL.md` |
 
 Die Trennung ist die zentrale Entscheidung dieses Repositories: **Wissen und Ablauf sind
@@ -36,6 +36,7 @@ node scripts/pruefe-tokens.mjs
 node scripts/pruefe-kontrast.mjs
 node scripts/pruefe-platzhalter.mjs --launch
 node scripts/pruefe-breakpoints.mjs http://localhost:4321 --bilder
+node scripts/pruefe-geschmack.mjs            # nach dem Build: dist/ Seiten, src/ Quellen
 
 # Agenturwerkzeuge
 node scripts/relaunch-inventory.mjs https://alte-kundenseite.de
@@ -81,13 +82,13 @@ nicht, es braucht das Glob-Muster in Anführungszeichen.
 ```
 .claude-plugin/       plugin.json, marketplace.json
 skills/
-  webdesign-conversion/     SKILL.md, references/00-25, playbooks/, assets/
+  webdesign-conversion/     SKILL.md, references/00-28, playbooks/, assets/
                             assets/musterbibliothek/ ist das globale Musterwissen
   agentur-website-builder/  SKILL.md, references/, assets/consent|forms|reviews
-scripts/              fünf Prüfskripte, Agenturwerkzeuge, Designrecherche, ein Installer
+scripts/              sechs Prüfskripte, Agenturwerkzeuge, Designrecherche, ein Installer
   lib/abruf.mjs       die eine Abrufschicht, vier Rückfallstufen, robots.txt
   tests/              node --test, lokaler Testserver statt Netzzugriff
-evals/                acht Fälle mit Gradern, results/ ist ausgenommen
+evals/                zwölf Fälle mit Gradern, results/ ist ausgenommen
 README.md             Außendarstellung
 CREDITS.md            Herkunft jeder eingeflossenen Quelle
 ```
@@ -112,6 +113,12 @@ Diese Punkte haben einen Grund. Wer sie ändert, ändert damit auch den Grund.
   Beschreibung, und am Ende die Verweise auf verwandte Kapitel.
 - **Keine erfundenen Belege**, auch nicht in den eigenen Unterlagen. Ein noch nicht
   gemessener Eval-Wert wird als ungemessen benannt.
+- **Fremde Skills werden destilliert, nicht mitgeliefert.** Was eingeht, wird auf Deutsch,
+  auf Astro und auf die harten Grenzen übertragen; wo die Quelle einer harten Grenze
+  widerspricht, wird das umgedreht und mit Grund benannt (Beispiel: Abschnitt 11 in
+  `26-geschmack-und-ki-tells.md`). Grund: zwei Regelwerke im Kontext, die sich an genau diesen
+  Stellen widersprechen, lassen das Modell zwischen ihnen pendeln. Die Originale gibt es auf
+  Wunsch über `scripts/install-quellskills.sh`.
 - **Vorlagen dürfen Platzhalter enthalten**, deshalb nimmt `pruefe-platzhalter.mjs` Ordner
   namens `vorlagen` und `templates` aus.
 - Versionsnummer in `.claude-plugin/plugin.json` und in der `metadata` der beiden `SKILL.md`
@@ -147,9 +154,17 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 ## Offene Punkte
 
 - `consent-ohne-keks`, `leadsystem-nur-auf-bestaetigung`,
-  `kundendesignsystem-schlaegt-referenz`, `referenz-erst-freigeben` und
-  `nicht-beobachtetes-nicht-behaupten` sind noch nicht gelaufen. Ihr Δ ist eine Vermutung,
-  kein Messwert.
+  `kundendesignsystem-schlaegt-referenz`, `referenz-erst-freigeben`,
+  `nicht-beobachtetes-nicht-behaupten` und `keine-attrappen-als-beleg` sind noch nicht
+  gelaufen. Ihr Δ ist eine Vermutung, kein Messwert.
+- `pruefe-geschmack.mjs` ist gegen Fixtures und die eigenen Vorlagen geprüft, noch nicht
+  gegen ein gebautes Kundenprojekt in `dist/`. Die Kicker-Erkennung kennt benannte Klassen
+  und die Tailwind-Signatur aus Versalien plus Sperrung; ein Kicker mit anderer Klasse
+  bleibt unsichtbar. Die Regler-Voreinstellungen je Kundentyp in Kapitel 26 sind übertragen,
+  nicht gemessen.
+- Die `description` in `webdesign-conversion/SKILL.md` ist mit rund 1190 Zeichen länger als
+  die übliche Grenze von 1024. Sie wurde in 4.1.0 bewusst nicht verlängert. Falls Claude Code
+  sie kürzt, fällt zuerst der Auslösersatz am Ende weg; dann kürzen, nicht ergänzen.
 - Die Musterbibliothek startet mit fünf Mustern, alle aus derselben Quelle (21st.dev) und
   keines aus einer echten Projektrecherche. Der Ähnlichkeitsvergleich ist damit an einem
   schmalen Bestand erprobt.
@@ -175,6 +190,25 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Änderungsverlauf
 
+- **23.09.2026, Version 4.1.0** taste-skill (Leonxlnx, MIT, 13 Skills) aufgenommen, als
+  Destillat statt als Kopie. Drei neue Kapitel im Regelwerk:
+  `26-geschmack-und-ki-tells.md` (Lesart vor dem Plan, drei Regler mit Ausgangswerten je
+  Kundentyp, Sperren für Akzent, Form und Thema, Heldenregeln, Sektionsfolge, Katalog der
+  Produktionstells, Serifenreflex, Premium-Standardpalette, Vorflugcheck, und eine Tabelle mit
+  allem, was bewusst nicht übernommen wurde), `27-redesign-bestand.md` (Modus erkennen, was
+  sich nie still ändert, Hebel in Reihenfolge) und `28-ki-bildentwuerfe.md` (ein Bild je
+  Sektion, Sperren aus `marke.json` im Auftrag, Auswertung mit Belegmarkierung, Treue per
+  Screenshot, und was ein generiertes Bild nie ist). Neues Prüfskript
+  `scripts/pruefe-geschmack.mjs`, `pruefe-platzhalter.mjs` findet zusätzlich ausgelassenen
+  Code. Zwei harte Grenzen geschärft statt neu angelegt: die Handschrift bekommt mit
+  Kicker-Quote und Laufbandgrenze einen messbaren Teil, das Verbot erfundener Belege gilt
+  ausdrücklich für Logos, Stock- und KI-Bilder und Text aus Entwürfen, dazu der Evalfall
+  `keine-attrappen-als-beleg`, noch nicht gelaufen. `marke.json` bekommt den optionalen Block
+  `gestaltung` (Lesart, Regler, Sperren). In `09-motion-gsap.md` ein Abschnitt zu Pinning bei
+  `top top` und `overflow-x: clip`. 21 neue Tests, insgesamt 111. Die Originale bleiben
+  außerhalb der Voreinstellung im Installer, weil sie Platzhalterfotos von Drittservern,
+  fremde Logos per CDN und „organische" erfundene Zahlen empfehlen. Die unbelegten Zahlen aus
+  ihrem Ordner `research/` sind nicht übernommen.
 - **18.09.2026, Version 4.0.0** Fünfte und letzte Phase: der Kreis schließt sich. Neues
   `scripts/muster-paket.mjs` schnürt nach Tor 2 ein transportierbares Paket aus Musterdatei,
   `HERKUNFT.md` (beide Freigabezeitpunkte, Grenzen der Erfassung, Zustandsverlauf) und

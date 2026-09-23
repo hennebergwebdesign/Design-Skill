@@ -10,6 +10,10 @@ neuen Plan entwirft.
 zugestimmt. Eine fremde Marke (Wettbewerber, Inspirationsseite) wird nie auf Logo- oder
 Asset-Ebene ausgelesen, siehe „Rechtlich" unten.
 
+Ob die Überarbeitung die Marke weiterführt, neu gestaltet oder neu anfängt, und was sich dabei
+nie still ändert (Adressen, Navigation, Formularfelder, Rechtstexte), steht in
+`27-redesign-bestand.md`.
+
 Was hier ausgelesen wird, steht danach auf Stufe 2 der Rangfolge in
 `24-designsystem-vorrang.md` und wird von keiner externen Referenz überschrieben.
 

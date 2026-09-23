@@ -1,0 +1,434 @@
+#!/usr/bin/env node
+/*
+  pruefe-geschmack.mjs — findet die messbaren KI-Tells einer gebauten Seite.
+
+  WARUM ES DIESES SKRIPT GIBT
+  Die meisten Geschmacksregeln aus 26-geschmack-und-ki-tells.md lassen sich nur ansehen,
+  nicht messen. Einige aber zaehlen sich: das kleine Versalienlabel ueber jeder Ueberschrift,
+  das zweite Laufband, fuenf verschiedene Texte fuer dieselbe Kontaktabsicht. Genau diese
+  Muster sind in Produktionstests am haeufigsten zurueckgekehrt, obwohl die Regel dastand.
+  Eine Regel ohne Pruefung wird in Sitzung drei zurueckgedreht, deshalb zaehlt das hier eine
+  Maschine.
+
+  WAS GEPRUEFT WIRD
+  Je gebauter Seite (.html, am besten aus dist/ nach dem Build):
+    1. Kicker-Quote: hoechstens ein Kicker oder Eyebrow-Label je drei Sektionen,
+       der Heldenbereich zaehlt mit. Ueberschritten ist ein FEHLER.
+    2. Kicker in zu kurzem Abstand (in einer der zwei Folgesektionen): WARNUNG.
+    3. Mehr als ein Laufband (Marquee) je Seite: FEHLER.
+    4. Scrollhinweis als Text ("Scrollen", "Scroll to explore"): WARNUNG.
+    5. Nummer statt Thema im Kicker ("01 / Leistungen", "001 · Ablauf"): WARNUNG.
+    6. Mehrere Texte fuer dieselbe Kontaktabsicht ("Jetzt anfragen" und
+       "Kontakt aufnehmen" auf einer Seite): WARNUNG.
+    7. Unterzeile im Heldenbereich ueber 20 Woertern: WARNUNG.
+  Je Quelldatei, zeilenweise, Kommentare ausgenommen:
+    8. overflow-x: hidden, bricht position: sticky im Inneren. Ersatz: clip.
+    9. cursor: none, eigener Mauszeiger.
+   10. Scroll-Listener ohne passive.
+   11. 100vh oder h-screen ohne svh/dvh daneben. Projektstandard ist 100svh.
+   12. Fraunces und Instrument Serif, die zwei Serifen, zu denen Modelle von selbst greifen.
+   13. Die Premium-Standardpalette aus Creme, Messing und Espresso.
+  8 bis 13 sind WARNUNGEN. 12 und 13 entfallen, wenn der Wert in marke.json steht: dann ist
+  er eine Markenentscheidung, keine Voreinstellung.
+
+  WAS NICHT GEPRUEFT WIRD
+  Layoutfamilien, Zickzackfolgen und leere Bentozellen sind aus dem Markup nicht sicher
+  ablesbar. Sie stehen im Vorflugcheck von 26-geschmack-und-ki-tells.md und werden
+  angesehen, nicht gezaehlt.
+
+  AUFRUF
+    node scripts/pruefe-geschmack.mjs                 Standard: dist (Seiten) und src (Quellen)
+    node scripts/pruefe-geschmack.mjs dist src/styles
+    node scripts/pruefe-geschmack.mjs --marke pfad/marke.json
+    node scripts/pruefe-geschmack.mjs --strict        Warnungen zaehlen wie Fehler
+
+  EXIT
+    0 = kein Fehler · 1 = Fehler gefunden · 2 = Aufrufproblem
+*/
+
+import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
+import { join, extname, relative } from 'node:path';
+
+const QUELL_ENDUNGEN = new Set(['.astro', '.html', '.htm', '.jsx', '.tsx', '.vue', '.svelte',
+  '.ts', '.js', '.mjs', '.css', '.scss', '.pcss']);
+const UEBERSPRINGEN = new Set(['node_modules', '.git', 'build', '.astro', '.next', '.output',
+  '.cache', 'coverage', 'vendor', 'results']);
+
+const KICKER_KLASSEN = new Set(['kicker', 'eyebrow', 'overline', 'ueberzeile', 'vorspann', 'dachzeile']);
+const LAUFBAND_KLASSEN = new Set(['marquee', 'laufband', 'ticker']);
+
+/* Alles, was dieselbe Absicht hat: Kontakt aufnehmen. Ein Text dafuer, auf der ganzen Seite. */
+const KONTAKT_ABSICHT = /(kontakt|anfrag|schreiben sie|sprechen sie|sprechen wir|termin|beratung|erstgespr|r(ü|ue)ckruf|melden sie|angebot anfordern|get in touch|contact|let'?s talk)/i;
+
+const SCROLLHINWEIS = /^(↓\s*)?(scroll|scrollen|scroll down|scroll to explore|nach unten scrollen|runterscrollen|weiterscrollen|weiter scrollen|mehr entdecken)(\s*↓)?$/i;
+const NUMMER_STATT_THEMA = /^\s*\d{1,3}\s*[\/·|:.]\s*\S/;
+const PAGINIERUNG = /^\s*\d{1,2}\s*\/\s*\d{1,2}\s*$/;
+
+/* Die Premium-Standardpalette nach taste-skill, dazu das Creme und Terrakotta aus
+   10-visuelle-richtung.md. Als Voreinstellung ein Tell, als Markenentscheidung erlaubt. */
+export const STANDARDPALETTE = [
+  '#f5f1ea', '#f7f5f1', '#fbf8f1', '#efeae0', '#ece6db', '#faf7f1', '#e8dfcb', '#f4f1ea',
+  '#b08947', '#b6553a', '#9a2436', '#9c6e2a', '#bc7c3a', '#7d5621', '#d97757',
+  '#1a1714', '#1a1814', '#1b1814',
+];
+export const STANDARDSERIFEN = ['Fraunces', 'Instrument Serif', 'Instrument_Serif'];
+
+// ------------------------------------------------------------------ Hilfen
+
+function klassenVon(tag) {
+  const m = tag.match(/\bclass(?:Name)?\s*=\s*["']([^"']*)["']/i);
+  return m ? m[1].split(/\s+/).filter(Boolean) : [];
+}
+
+function textVon(html) {
+  return html.replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
+function ohneSkripte(html) {
+  return html.replace(/<script\b[\s\S]*?<\/script>/gi, '').replace(/<style\b[\s\S]*?<\/style>/gi, '');
+}
+
+/*
+  Findet alle Kicker einer Seite samt Position. Zwei Wege:
+  eine benannte Klasse (kicker, eyebrow ...) oder die Signatur uppercase plus tracking
+  an einem kurzen Element, auf das innerhalb von 300 Zeichen eine h1 bis h3 folgt.
+*/
+function kickerFinden(html) {
+  const funde = [];
+  const re = /<(p|span|div|small|strong)\b([^>]*)>([\s\S]*?)<\/\1>/gi;
+  let m;
+  while ((m = re.exec(html))) {
+    const tag = `<${m[1]}${m[2]}>`;
+    const ende = m.index + m[0].length;
+    /* Nur hinter das oeffnende Tag weiterspringen, nicht hinter das ganze Element. Sonst
+       verschluckt ein umschliessendes <div class="kopf"> den Kicker, der darin steht. */
+    re.lastIndex = m.index + tag.length;
+    const klassen = klassenVon(tag);
+    const text = textVon(m[3]);
+    if (!text || text.length > 80) continue;
+    let treffer = klassen.some((k) => KICKER_KLASSEN.has(k.toLowerCase()));
+    if (!treffer) {
+      /* Die Tailwind-Signatur: Versalien plus Sperrung. Allein reicht sie nicht, auf das
+         Element muss innerhalb von 300 Zeichen eine Ueberschrift folgen. */
+      const versal = klassen.includes('uppercase');
+      const gesperrt = klassen.some((k) => /^tracking-(wide|wider|widest|\[)/.test(k));
+      if (versal && gesperrt) treffer = /<h[1-3]\b/i.test(html.slice(ende, ende + 300));
+    }
+    if (treffer) funde.push({ pos: m.index, text });
+  }
+  return funde;
+}
+
+/* Zerlegt die Seite in Abschnitte: der Teil vor der ersten <section> zaehlt nur, wenn er
+   eine h1 enthaelt (Heldenbereich im <header>), danach jede <section>. */
+function abschnitteFinden(html) {
+  const starts = [];
+  const re = /<section\b/gi;
+  let m;
+  while ((m = re.exec(html))) starts.push(m.index);
+  const abschnitte = [];
+  if (!starts.length) return abschnitte;
+  const vorher = html.slice(0, starts[0]);
+  const koerper = vorher.search(/<body\b/i);
+  if (/<h1\b/i.test(vorher.slice(Math.max(0, koerper)))) abschnitte.push({ von: Math.max(0, koerper), bis: starts[0] });
+  starts.forEach((s, i) => abschnitte.push({ von: s, bis: starts[i + 1] ?? html.length }));
+  return abschnitte;
+}
+
+// ------------------------------------------------------------------ Seiten
+
+/**
+ * Prueft eine gebaute Seite. Liefert { fehler: [], warnungen: [] } mit { regel, meldung, tipp }.
+ * kontext.ctaPrimaer: optional der verbindliche CTA-Text aus marke.json.
+ */
+export function seiteAnalysieren(roh, kontext = {}) {
+  const html = ohneSkripte(roh);
+  const fehler = [];
+  const warnungen = [];
+
+  // 1 und 2 Kicker
+  const abschnitte = abschnitteFinden(html);
+  const kicker = kickerFinden(html);
+  if (abschnitte.length) {
+    const erlaubt = Math.ceil(abschnitte.length / 3);
+    if (kicker.length > erlaubt) {
+      fehler.push({
+        regel: 'kicker-quote',
+        meldung: `${kicker.length} Kicker bei ${abschnitte.length} Sektionen, erlaubt sind ${erlaubt}: ${kicker.map((k) => `„${k.text}"`).join(', ')}`,
+        tipp: 'Kicker streichen. Die Überschrift reicht, die Position auf der Seite ordnet die Sektion schon ein.',
+      });
+    }
+    const mitKicker = abschnitte
+      .map((a, i) => (kicker.some((k) => k.pos >= a.von && k.pos < a.bis) ? i : -1))
+      .filter((i) => i >= 0);
+    for (let j = 1; j < mitKicker.length; j++) {
+      if (mitKicker[j] - mitKicker[j - 1] < 3) {
+        warnungen.push({
+          regel: 'kicker-abstand',
+          meldung: `Kicker in Sektion ${mitKicker[j - 1] + 1} und ${mitKicker[j] + 1}, dazwischen weniger als zwei Sektionen ohne`,
+          tipp: 'Nach einem Kicker bleiben die nächsten zwei Sektionen ohne.',
+        });
+      }
+    }
+  }
+
+  // 5 Nummer statt Thema
+  for (const k of kicker) {
+    if (NUMMER_STATT_THEMA.test(k.text)) {
+      warnungen.push({
+        regel: 'nummer-statt-thema',
+        meldung: `Kicker mit Nummer: „${k.text}"`,
+        tipp: 'Das Thema in Klartext nennen oder den Kicker streichen. Nummern nur bei echter Abfolge.',
+      });
+    }
+  }
+
+  // 3 Laufband
+  let laufbaender = (html.match(/<marquee\b/gi) || []).length;
+  const tagRe = /<[a-z][a-z0-9-]*\b[^>]*>/gi;
+  let t;
+  while ((t = tagRe.exec(html))) {
+    const tag = t[0];
+    if (/\bdata-(laufband|marquee)\b/i.test(tag) || klassenVon(tag).some((k) => LAUFBAND_KLASSEN.has(k.toLowerCase()))) laufbaender++;
+  }
+  if (laufbaender > 1) {
+    fehler.push({
+      regel: 'laufband',
+      meldung: `${laufbaender} Laufbänder auf einer Seite`,
+      tipp: 'Höchstens eins. Das eine dorthin, wo die Menge die Aussage ist, die anderen bekommen ein anderes Layout.',
+    });
+  }
+
+  // 4 Scrollhinweis und Paginierung
+  const textknoten = html.match(/>([^<>]{1,60})</g) || [];
+  for (const roher of textknoten) {
+    const text = roher.slice(1, -1).replace(/&darr;/g, '↓').replace(/\s+/g, ' ').trim();
+    if (!text) continue;
+    if (SCROLLHINWEIS.test(text)) {
+      warnungen.push({
+        regel: 'scrollhinweis',
+        meldung: `Scrollhinweis als Text: „${text}"`,
+        tipp: 'Streichen. Eine angeschnittene Kante der nächsten Sektion lädt zum Scrollen ein, siehe 02-design-ux.md.',
+      });
+    } else if (PAGINIERUNG.test(text)) {
+      warnungen.push({
+        regel: 'paginierung',
+        meldung: `Zählung als Dekoration: „${text}"`,
+        tipp: 'Wer zählen kann, braucht das Label nicht. Nur bei einer echten Bildfolge mit Steuerung.',
+      });
+    }
+  }
+
+  // 6 Kontaktabsicht
+  const labels = new Map();
+  const ctaRe = /<(a|button)\b([^>]*)>([\s\S]*?)<\/\1>/gi;
+  let c;
+  while ((c = ctaRe.exec(html))) {
+    const klassen = klassenVon(`<${c[1]}${c[2]}>`).join(' ');
+    const istKnopf = c[1].toLowerCase() === 'button' || /(^|\s|-|_)(btn|button|cta|knopf)/i.test(klassen);
+    if (!istKnopf) continue;
+    const text = textVon(c[3]);
+    if (!text || text.length > 60 || !KONTAKT_ABSICHT.test(text)) continue;
+    labels.set(text.toLowerCase(), text);
+  }
+  if (labels.size > 1) {
+    const soll = kontext.ctaPrimaer && !/\[\[/.test(kontext.ctaPrimaer) ? ` Verbindlich laut marke.json: „${kontext.ctaPrimaer}".` : '';
+    warnungen.push({
+      regel: 'cta-absicht',
+      meldung: `${labels.size} Texte für dieselbe Kontaktabsicht: ${[...labels.values()].map((l) => `„${l}"`).join(', ')}`,
+      tipp: `Eine Absicht, ein Text, in Kopf, Held und Fuß gleich.${soll}`,
+    });
+  }
+
+  // 7 Unterzeile im Heldenbereich
+  if (abschnitte.length) {
+    const held = html.slice(abschnitte[0].von, abschnitte[0].bis);
+    const absaetze = [...held.matchAll(/<p\b([^>]*)>([\s\S]*?)<\/p>/gi)]
+      .filter((p) => !klassenVon(`<p${p[1]}>`).some((k) => KICKER_KLASSEN.has(k.toLowerCase())));
+    if (absaetze.length) {
+      const woerter = textVon(absaetze[0][2]).split(' ').filter(Boolean).length;
+      if (woerter > 20) {
+        warnungen.push({
+          regel: 'held-unterzeile',
+          meldung: `Unterzeile im Heldenbereich mit ${woerter} Wörtern`,
+          tipp: 'Höchstens 20 Wörter. Passt das Versprechen nicht hinein, ist es unklar, nicht die Regel zu eng.',
+        });
+      }
+    }
+  }
+
+  return { fehler, warnungen };
+}
+
+// ------------------------------------------------------------------ Quellen
+
+/**
+ * Prueft eine Quelldatei zeilenweise. Liefert eine Liste { zeile, regel, meldung, tipp }.
+ * kontext.markeText: der Inhalt von marke.json in Kleinbuchstaben, fuer die Ausnahmen.
+ */
+export function quelleAnalysieren(inhalt, kontext = {}) {
+  const marke = (kontext.markeText || '').toLowerCase();
+  const befunde = [];
+  const zeilen = inhalt.split('\n');
+  let imBlock = false;
+
+  zeilen.forEach((zeile, i) => {
+    const nr = i + 1;
+    /* Kommentare ausnehmen, sonst meldet das Skript genau die Zeile, die erklaert,
+       warum etwas verboten ist. Derselbe Zustandsautomat wie in pruefe-striche.mjs. */
+    const startetBlock = /\/\*|<!--/.test(zeile) && !/\*\/|-->/.test(zeile);
+    const istKommentar = imBlock || /^\s*(\/\*|\*|\/\/|<!--)/.test(zeile);
+    if (startetBlock) imBlock = true;
+    else if (imBlock && /\*\/|-->/.test(zeile)) { imBlock = false; return; }
+    if (istKommentar) return;
+
+    const melde = (regel, meldung, tipp) => befunde.push({ zeile: nr, regel, meldung, tipp, auszug: zeile.trim().slice(0, 110) });
+
+    // 8 overflow-x: hidden
+    if (/overflow-x\s*:\s*hidden/i.test(zeile) || /(^|[\s"'`])overflow-x-hidden([\s"'`]|$)/.test(zeile)) {
+      melde('overflow-hidden', 'overflow-x: hidden bricht position: sticky in allen Kindelementen',
+        'overflow-x: clip verwenden, das begrenzt ohne neuen Scrollcontainer. Siehe global-basis.css.');
+    }
+    // 9 eigener Mauszeiger
+    if (/cursor\s*:\s*none/i.test(zeile) || /(^|[\s"'`])cursor-none([\s"'`]|$)/.test(zeile)) {
+      melde('mauszeiger', 'Eigener Mauszeiger (cursor: none)',
+        'Streichen. Er versteckt die Position, stört Hilfstechnik und kostet Leistung.');
+    }
+    // 10 Scroll-Listener
+    if (/addEventListener\(\s*['"]scroll['"]/.test(zeile) && !/passive/.test(zeile)) {
+      melde('scroll-listener', 'Scroll-Listener ohne passive',
+        'Für Einblendungen IntersectionObserver, ScrollTrigger oder animation-timeline: view(). Sonst { passive: true } und rAF-gedrosselt.');
+    }
+    // 11 100vh
+    const nachbarn = `${zeilen[i - 1] || ''} ${zeile} ${zeilen[i + 1] || ''}`;
+    if ((/\b100vh\b/.test(zeile) || /(^|[\s"'`])h-screen([\s"'`]|$)/.test(zeile)) && !/\b100[sdl]vh\b|h-(svh|dvh|lvh)|min-h-(svh|dvh)/.test(nachbarn)) {
+      melde('viewport-hoehe', '100vh ohne svh daneben',
+        'Projektstandard ist 100svh, siehe 16-responsive-container.md. 100vh springt auf dem Handy mit der Adressleiste.');
+    }
+    // 12 Standardserifen
+    for (const s of STANDARDSERIFEN) {
+      const re = new RegExp(`(font-family[^;]*|fontsource/|@import[^;]*|family=)${s.replace(/[ _]/g, '[ _+-]?')}`, 'i');
+      if (re.test(zeile) && !marke.includes(s.replace('_', ' ').toLowerCase())) {
+        melde('standardserife', `${s.replace('_', ' ')} ohne Markenvorgabe`,
+          'Die Serife, zu der Modelle von selbst greifen. Nur mit Begründung aus Marke oder Gegenstand, dann in marke.json eintragen.');
+        break;
+      }
+    }
+    // 13 Standardpalette
+    const hexe = zeile.match(/#[0-9a-f]{6}\b/gi) || [];
+    const treffer = [...new Set(hexe.map((h) => h.toLowerCase()))].filter((h) => STANDARDPALETTE.includes(h) && !marke.includes(h));
+    if (treffer.length) {
+      melde('standardpalette', `Premium-Standardpalette: ${treffer.join(', ')}`,
+        'Creme, Messing und Espresso sind die Palette, die jede Premiumseite bekommt. Nur als Markenentscheidung, dann in marke.json.');
+    }
+  });
+
+  return befunde;
+}
+
+// ------------------------------------------------------------------ Aufruf
+
+function dateienSammeln(wurzel, nurSeiten) {
+  const gefunden = [];
+  const lauf = (p) => {
+    let eintraege;
+    try { eintraege = readdirSync(p, { withFileTypes: true }); } catch { return; }
+    for (const e of eintraege) {
+      if (e.name.startsWith('.')) continue;
+      const voll = join(p, e.name);
+      if (e.isDirectory()) { if (!UEBERSPRINGEN.has(e.name)) lauf(voll); continue; }
+      const endung = extname(e.name);
+      if (nurSeiten ? endung === '.html' : QUELL_ENDUNGEN.has(endung)) gefunden.push(voll);
+    }
+  };
+  try { statSync(wurzel).isDirectory() ? lauf(wurzel) : gefunden.push(wurzel); } catch {}
+  return gefunden;
+}
+
+function markeLaden(pfad) {
+  for (const k of [pfad, 'marke.json', 'src/marke.json', 'src/data/marke.json'].filter(Boolean)) {
+    if (!existsSync(k)) continue;
+    try {
+      const text = readFileSync(k, 'utf8');
+      const json = JSON.parse(text);
+      return { quelle: k, text: text.toLowerCase(), ctaPrimaer: json?.sprache?.cta_primaer ?? null };
+    } catch (e) {
+      console.error(`Warnung: ${k} ist kein gültiges JSON (${e.message}), Ausnahmen übersprungen.`);
+      return null;
+    }
+  }
+  return null;
+}
+
+function main() {
+  const args = process.argv.slice(2);
+  const strict = args.includes('--strict');
+  const mi = args.indexOf('--marke');
+  const markeIndex = mi === -1 ? -1 : mi + 1;
+  const pfade = args.filter((a, i) => !a.startsWith('--') && i !== markeIndex);
+
+  /* Ohne Angabe: die gebauten Seiten aus dist fuer die Seitenregeln, die Quellen aus src
+     fuer die Zeilenregeln. dist wird dann nicht zeilenweise geprueft, sonst meldet jede
+     Regel zweimal, einmal im Quelltext und einmal im gebauten Ergebnis. */
+  const auftraege = pfade.length
+    ? pfade.filter(existsSync).map((p) => ({ pfad: p, seiten: true, quellen: true }))
+    : [
+        { pfad: 'dist', seiten: true, quellen: false },
+        { pfad: 'src', seiten: false, quellen: true },
+      ].filter((a) => existsSync(a.pfad));
+
+  if (!auftraege.length) {
+    console.error('Nichts zu prüfen. Erwartet dist (nach dem Build) oder src.');
+    console.error('Oder Pfad angeben: node scripts/pruefe-geschmack.mjs dist');
+    process.exit(2);
+  }
+
+  const marke = markeLaden(mi === -1 ? null : args[markeIndex]);
+  const fehler = [];
+  const warnungen = [];
+  let seiten = 0;
+  let quellen = 0;
+
+  for (const a of auftraege) {
+    for (const datei of dateienSammeln(a.pfad, !a.quellen)) {
+      let inhalt;
+      try { inhalt = readFileSync(datei, 'utf8'); } catch { continue; }
+      const rel = relative(process.cwd(), datei);
+      if (a.seiten && extname(datei) === '.html') {
+        seiten++;
+        const erg = seiteAnalysieren(inhalt, { ctaPrimaer: marke?.ctaPrimaer });
+        erg.fehler.forEach((b) => fehler.push({ ...b, ort: rel }));
+        erg.warnungen.forEach((b) => warnungen.push({ ...b, ort: rel }));
+      }
+      if (a.quellen) {
+        quellen++;
+        quelleAnalysieren(inhalt, { markeText: marke?.text }).forEach((b) => warnungen.push({ ...b, ort: `${rel}:${b.zeile}` }));
+      }
+    }
+  }
+
+  console.log(`Geprüft: ${seiten} Seiten, ${quellen} Quelldateien`);
+  if (marke) console.log(`Markenentscheidungen aus ${marke.quelle} berücksichtigt`);
+  else console.log('Keine marke.json gefunden, jede Standardserife und Standardfarbe wird gemeldet.');
+  if (!seiten) console.log('Keine gebaute Seite gefunden. Kicker, Laufband und CTA-Texte erst nach dem Build prüfbar.');
+
+  const ausgeben = (titel, liste) => {
+    if (!liste.length) return;
+    console.log(`\n${titel} (${liste.length})`);
+    for (const b of liste) {
+      console.log(`  ${b.ort}  [${b.regel}] ${b.meldung}`);
+      if (b.auszug) console.log(`    ${b.auszug}`);
+      console.log(`    → ${b.tipp}`);
+    }
+  };
+  ausgeben('FEHLER', fehler);
+  ausgeben('WARNUNGEN', warnungen);
+
+  const zaehlt = strict ? fehler.length + warnungen.length : fehler.length;
+  if (!fehler.length && !warnungen.length) console.log('\nKein Befund.');
+  else console.log(`\n${fehler.length} Fehler, ${warnungen.length} Warnungen.${strict ? ' (--strict: Warnungen zählen)' : ''}`);
+  process.exit(zaehlt ? 1 : 0);
+}
+
+const istHauptprogramm = process.argv[1] && import.meta.url === `file://${process.argv[1]}`;
+if (istHauptprogramm) main();
