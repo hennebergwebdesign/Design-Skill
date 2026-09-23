@@ -19,15 +19,22 @@ pnpm astro check    # falls TypeScript im Projekt
 
 Warnungen nicht ignorieren. Sie sind fast immer echte Fehler in der Ausgabe.
 
-### 2. Die fünf Prüfskripte
+### 2. Die sechs Prüfskripte
 
 ```bash
 node scripts/pruefe-striche.mjs                 # Gedankenstriche, hyphens: auto, verbotene Wörter
 node scripts/pruefe-tokens.mjs                  # hartcodierte Farb-, Abstands- und Schriftwerte
 node scripts/pruefe-kontrast.mjs                # Kontrastwerte der Rollen-Tokens
-node scripts/pruefe-platzhalter.mjs --launch    # [[FEHLT]] und data-copy-vorschlag
+node scripts/pruefe-platzhalter.mjs --launch    # [[FEHLT]], data-copy-vorschlag, ausgelassener Code
 node scripts/pruefe-breakpoints.mjs http://localhost:4321 --bilder
+node scripts/pruefe-geschmack.mjs               # nach dem Build: Kicker, Laufband, CTA-Texte, KI-Tells
 ```
+
+`pruefe-geschmack.mjs` zählt, was sich an Geschmack zählen lässt: höchstens ein Kicker je drei
+Sektionen, höchstens ein Laufband, ein Text je Kontaktabsicht, dazu Warnungen für
+`overflow-x: hidden`, eigene Mauszeiger, `100vh` ohne `svh`, die Standardserifen und die
+Premium-Standardpalette. Der Rest steht als Vorflugcheck in
+`../../webdesign-conversion/references/26-geschmack-und-ki-tells.md` und wird angesehen.
 
 `pruefe-breakpoints.mjs` rendert acht Größen, die fünf Breakpoints plus 320 px, 1366 × 768
 und 1440 × 720, legt Screenshots ab und meldet horizontalen Überlauf mit dem Selektor des
@@ -115,6 +122,12 @@ auflisten.
 
 ### 8. Inhalt
 
+* **vollständig ausgeliefert:** keine Komponente, die mit `// ...`, „Rest wie oben" oder
+  „analog zu oben" endet, kein Gerüst, wo eine Umsetzung verlangt war. Die Zahl der
+  verlangten Teile (Seiten, Sektionen, Dateien) vor der Fertigmeldung gegen das Gelieferte
+  zählen. Reicht der Platz einer Antwort nicht, an einer sauberen Grenze anhalten (Ende einer
+  Datei oder Sektion) und sagen, wie viele von wie vielen fertig sind, statt den Rest zu
+  verdichten. `pruefe-platzhalter.mjs --launch` findet die Auslassungskommentare
 * keine Platzhaltertexte aus der Entwicklung mehr im Markup
 * alle `[[FEHLT: ...]]` gesammelt und im Bericht aufgeführt
 * alle Copyvorschläge gesammelt, jeder mit `deslop-check.mjs` auf 5 von 5 geprüft
@@ -139,7 +152,7 @@ Kurz, sachlich, ohne Erfolgsprosa:
 ```
 
 "Geprüft mit Ergebnis" nennt das Werkzeug und den Befund, nicht das Gefühl: "Build grün,
-fünf Prüfskripte ohne Fehler, Tastaturdurchlauf auf 375 und 1440 px, Formular mit allen vier
+sechs Prüfskripte ohne Fehler, Tastaturdurchlauf auf 375 und 1440 px, Formular mit allen vier
 Zuständen getestet" ist überprüfbar, "funktioniert" nicht.
 
 Zum Schluss ein Satz dazu, dass Rechtstexte und Datenschutzangaben vorbereitet, aber nicht

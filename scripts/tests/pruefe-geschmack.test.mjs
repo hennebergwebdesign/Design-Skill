@@ -1,0 +1,190 @@
+/*
+  pruefe-geschmack.test.mjs — prüft den Zähler für die messbaren KI-Tells.
+
+      node --test 'scripts/tests/*.test.mjs'
+
+  Je Regel ein Fall, der sie verletzt, und ein Fall, der ihr ähnlich sieht und trotzdem
+  durchgehen muss. Ein Prüfskript mit Fehlalarmen wird abgeschaltet, und dann prüft es gar
+  nichts mehr.
+*/
+
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { mkdtempSync, writeFileSync, rmSync, mkdirSync } from 'node:fs';
+import { join } from 'node:path';
+import { tmpdir } from 'node:os';
+import { spawnSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
+
+import { seiteAnalysieren, quelleAnalysieren } from '../pruefe-geschmack.mjs';
+
+const SKRIPT = fileURLToPath(new URL('../pruefe-geschmack.mjs', import.meta.url));
+
+const sektion = (inhalt) => `<section>${inhalt}</section>`;
+const seite = (...sektionen) => `<!doctype html><html><body><main>${sektionen.join('\n')}</main></body></html>`;
+const regeln = (liste) => liste.map((b) => b.regel);
+
+// ------------------------------------------------------------------ Kicker
+
+test('Kicker über jeder Sektion reißt die Quote', () => {
+  const html = seite(
+    ...['Leistungen', 'Ablauf', 'Referenzen', 'Team', 'Kontakt', 'Fragen'].map((k) =>
+      sektion(`<p class="kicker">${k}</p><h2>Überschrift</h2>`))
+  );
+  const { fehler } = seiteAnalysieren(html);
+  assert.deepEqual(regeln(fehler), ['kicker-quote']);
+});
+
+test('ein Kicker auf drei Sektionen ist erlaubt', () => {
+  const html = seite(
+    sektion('<p class="kicker">Leistungen</p><h2>A</h2>'),
+    sektion('<h2>B</h2>'),
+    sektion('<h2>C</h2>'),
+    sektion('<p class="eyebrow">Ablauf</p><h2>D</h2>'),
+    sektion('<h2>E</h2>'),
+    sektion('<h2>F</h2>'),
+  );
+  const { fehler, warnungen } = seiteAnalysieren(html);
+  assert.equal(fehler.length, 0);
+  assert.ok(!regeln(warnungen).includes('kicker-abstand'));
+});
+
+test('Kicker in direkt aufeinanderfolgenden Sektionen wird gemeldet', () => {
+  const html = seite(
+    sektion('<p class="kicker">Leistungen</p><h2>A</h2>'),
+    sektion('<p class="kicker">Ablauf</p><h2>B</h2>'),
+    sektion('<h2>C</h2>'), sektion('<h2>D</h2>'), sektion('<h2>E</h2>'), sektion('<h2>F</h2>'),
+  );
+  assert.ok(regeln(seiteAnalysieren(html).warnungen).includes('kicker-abstand'));
+});
+
+test('ein Kicker in einem umschließenden div wird nicht verschluckt', () => {
+  const kopf = (k) => sektion(`<div class="kopf"><p class="kicker">${k}</p><h2>Titel</h2></div>`);
+  const html = seite(kopf('A'), kopf('B'), kopf('C'));
+  assert.deepEqual(regeln(seiteAnalysieren(html).fehler), ['kicker-quote']);
+});
+
+test('Tailwind-Signatur zählt nur direkt vor einer Überschrift', () => {
+  const vorUeberschrift = '<span class="text-xs uppercase tracking-widest">Leistungen</span><h2>A</h2>';
+  const alleinstehend = '<span class="text-xs uppercase tracking-widest">Stand 2026</span><p>Text</p>';
+  const drei = (inhalt) => seite(sektion(inhalt), sektion(inhalt), sektion(inhalt));
+  assert.deepEqual(regeln(seiteAnalysieren(drei(vorUeberschrift)).fehler), ['kicker-quote']);
+  assert.equal(seiteAnalysieren(drei(alleinstehend)).fehler.length, 0);
+});
+
+test('Nummer statt Thema im Kicker wird gemeldet', () => {
+  const html = seite(sektion('<p class="kicker">01 / Leistungen</p><h2>A</h2>'), sektion('<h2>B</h2>'), sektion('<h2>C</h2>'));
+  assert.ok(regeln(seiteAnalysieren(html).warnungen).includes('nummer-statt-thema'));
+});
+
+// ------------------------------------------------------------------ Laufband
+
+test('zwei Laufbänder sind ein Fehler', () => {
+  const band = '<div class="marquee"><div class="marquee__spur">Logo</div></div>';
+  const { fehler } = seiteAnalysieren(seite(sektion(band), sektion(band)));
+  assert.deepEqual(regeln(fehler), ['laufband']);
+});
+
+test('ein Laufband mit Unterelementen zählt einmal', () => {
+  const band = '<div class="marquee" data-marquee><div class="marquee__spur">Logo</div><div class="marquee__spur">Logo</div></div>';
+  assert.equal(seiteAnalysieren(seite(sektion(band))).fehler.length, 0);
+});
+
+// ------------------------------------------------------------------ Texte
+
+test('Scrollhinweis als Text wird gemeldet, scroll-padding im CSS nicht', () => {
+  const html = seite(sektion('<h1>A</h1><span>Scrollen ↓</span>'))
+    .replace('<body>', '<head><style>html{scroll-padding-top:5rem}</style></head><body>');
+  const w = regeln(seiteAnalysieren(html).warnungen);
+  assert.deepEqual(w.filter((r) => r === 'scrollhinweis'), ['scrollhinweis']);
+});
+
+test('zwei Texte für dieselbe Kontaktabsicht werden gemeldet', () => {
+  const html = seite(
+    sektion('<h1>A</h1><a class="button" href="/kontakt">Jetzt anfragen</a>'),
+    sektion('<h2>B</h2><a class="btn btn-primaer" href="/kontakt">Kontakt aufnehmen</a>'),
+  );
+  const w = seiteAnalysieren(html, { ctaPrimaer: 'Jetzt anfragen' }).warnungen;
+  const befund = w.find((b) => b.regel === 'cta-absicht');
+  assert.ok(befund);
+  assert.match(befund.tipp, /Jetzt anfragen/);
+});
+
+test('derselbe CTA-Text mehrfach und ein reiner Navigationslink sind in Ordnung', () => {
+  const html = seite(
+    sektion('<nav><a href="/kontakt">Kontakt</a></nav><h1>A</h1><a class="button" href="/kontakt">Jetzt anfragen</a>'),
+    sektion('<h2>B</h2><a class="button" href="/kontakt">Jetzt anfragen</a>'),
+  );
+  assert.ok(!regeln(seiteAnalysieren(html).warnungen).includes('cta-absicht'));
+});
+
+test('lange Unterzeile im Heldenbereich wird gemeldet', () => {
+  const lang = 'Wir sanieren Flachdächer für Gewerbe und Industrie im Großraum Hannover, dokumentiert, termintreu und ohne dass Ihr Betrieb auch nur einen Tag stillstehen muss.';
+  const kurz = 'Leckage-Ortung in 48 Stunden, dokumentiert, ohne Betriebsausfall.';
+  assert.ok(regeln(seiteAnalysieren(seite(sektion(`<h1>A</h1><p>${lang}</p>`))).warnungen).includes('held-unterzeile'));
+  assert.ok(!regeln(seiteAnalysieren(seite(sektion(`<h1>A</h1><p>${kurz}</p>`))).warnungen).includes('held-unterzeile'));
+});
+
+// ------------------------------------------------------------------ Quellen
+
+test('overflow-x: hidden wird gemeldet, clip und ein Kommentar nicht', () => {
+  assert.deepEqual(regeln(quelleAnalysieren('main { overflow-x: hidden; }')), ['overflow-hidden']);
+  assert.deepEqual(quelleAnalysieren('body { overflow-x: clip; }'), []);
+  assert.deepEqual(quelleAnalysieren('/* nie overflow-x: hidden, das bricht sticky */'), []);
+  assert.deepEqual(quelleAnalysieren('/*\n  overflow-x: hidden bricht sticky\n*/\nbody { overflow-x: clip; }'), []);
+});
+
+test('eigener Mauszeiger und Scroll-Listener ohne passive', () => {
+  assert.deepEqual(regeln(quelleAnalysieren('.seite { cursor: none; }')), ['mauszeiger']);
+  assert.deepEqual(regeln(quelleAnalysieren("window.addEventListener('scroll', aktualisieren);")), ['scroll-listener']);
+  assert.deepEqual(quelleAnalysieren("window.addEventListener('scroll', kopf, { passive: true });"), []);
+});
+
+test('100vh braucht svh daneben', () => {
+  assert.deepEqual(regeln(quelleAnalysieren('.held { min-height: 100vh; }')), ['viewport-hoehe']);
+  assert.deepEqual(quelleAnalysieren('.held {\n  min-height: 100vh;\n  min-height: 100svh;\n}'), []);
+});
+
+test('Standardserife nur ohne Markenvorgabe', () => {
+  const css = "h1 { font-family: 'Fraunces', serif; }";
+  assert.deepEqual(regeln(quelleAnalysieren(css)), ['standardserife']);
+  assert.deepEqual(quelleAnalysieren(css, { markeText: '{"display":{"familie":"Fraunces"}}' }), []);
+  assert.deepEqual(regeln(quelleAnalysieren('@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif");')), ['standardserife']);
+});
+
+test('Premium-Standardpalette nur ohne Markenvorgabe', () => {
+  const css = ':root { --flaeche: #F5F1EA; --akzent: #b08947; }';
+  const befund = quelleAnalysieren(css);
+  assert.deepEqual(regeln(befund), ['standardpalette']);
+  assert.match(befund[0].meldung, /#f5f1ea, #b08947/);
+  assert.deepEqual(quelleAnalysieren(css, { markeText: '"#f5f1ea" "#b08947"' }), []);
+  assert.deepEqual(quelleAnalysieren(':root { --flaeche: #f5fbf8; }'), []);
+});
+
+// ------------------------------------------------------------------ Aufruf
+
+test('Aufruf: Fehler ergibt Exit 1, Warnungen nur mit --strict', () => {
+  const ordner = mkdtempSync(join(tmpdir(), 'geschmack-'));
+  try {
+    const dist = join(ordner, 'dist');
+    mkdirSync(dist);
+    const band = sektion('<div class="laufband">Logo</div>');
+    writeFileSync(join(dist, 'index.html'), seite(band, band));
+    writeFileSync(join(dist, 'impressum.html'), seite(sektion('<h1>Impressum</h1><span>Scrollen</span>')));
+
+    const alles = spawnSync(process.execPath, [SKRIPT, 'dist'], { cwd: ordner, encoding: 'utf8' });
+    assert.equal(alles.status, 1, alles.stdout);
+    assert.match(alles.stdout, /\[laufband\]/);
+
+    rmSync(join(dist, 'index.html'));
+    const nurWarnung = spawnSync(process.execPath, [SKRIPT, 'dist'], { cwd: ordner, encoding: 'utf8' });
+    assert.equal(nurWarnung.status, 0, nurWarnung.stdout);
+    const streng = spawnSync(process.execPath, [SKRIPT, 'dist', '--strict'], { cwd: ordner, encoding: 'utf8' });
+    assert.equal(streng.status, 1, streng.stdout);
+
+    const leer = spawnSync(process.execPath, [SKRIPT], { cwd: join(ordner, 'dist'), encoding: 'utf8' });
+    assert.equal(leer.status, 2);
+  } finally {
+    rmSync(ordner, { recursive: true, force: true });
+  }
+});

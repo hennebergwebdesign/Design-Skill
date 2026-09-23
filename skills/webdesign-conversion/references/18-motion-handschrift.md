@@ -302,6 +302,7 @@ Handlung antwortende** Bewegung und damit fast immer willkommen.
 ## Verwandte Kapitel
 
 - Technik, GSAP-API, ScrollTrigger, Fallen: `09-motion-gsap.md`
+- Bewegungsregler, „Bewegung behauptet heißt Bewegung gezeigt": `26-geschmack-und-ki-tells.md`
 - Ableitung der visuellen Handschrift: `10-visuelle-richtung.md`
 - Icons: `17-icons-eigenes-system.md`
 - Tokens: `../assets/vorlagen/tokens.css`

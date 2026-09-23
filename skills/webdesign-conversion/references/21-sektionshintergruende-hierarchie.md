@@ -86,3 +86,5 @@ klare Hierarchiestufe.
 - Kontrast bei Text auf Bild: `04-barrierefreiheit-bfsg.md`
 - Bildgewicht und Ladezeit: `03-technik-performance.md`
 - Der eine Custom-Abschnitt mit individuellem Verlauf: `18-motion-handschrift.md`
+- Geplante dunkle Sektion statt zufälliger Umkehr, die Themasperre:
+  `26-geschmack-und-ki-tells.md`

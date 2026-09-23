@@ -1,7 +1,7 @@
 # Eval-Suite
 
-Elf Fälle, jeder gegen eine Regel, die sich erfahrungsgemäß in der dritten Sitzung
-zurückdreht. Neun prüfen das Regelwerk aus `webdesign-conversion`, zwei den Agenturstandard
+Zwölf Fälle, jeder gegen eine Regel, die sich erfahrungsgemäß in der dritten Sitzung
+zurückdreht. Zehn prüfen das Regelwerk aus `webdesign-conversion`, zwei den Agenturstandard
 aus `agentur-website-builder`. Format und Grader-Typen: `claude plugin eval`.
 
 ```bash
@@ -27,6 +27,7 @@ Der Bericht landet unter `results/<zeitstempel>/report.html`. `results/` ist aus
 | `kundendesignsystem-schlaegt-referenz` | Vorrang des gelieferten Designsystems vor jeder externen Referenz | regex `not_contains`, 2 × llm |
 | `referenz-erst-freigeben` | Kandidaten vorlegen und auf Freigabe warten, statt sofort zu erfassen | 2 × llm |
 | `nicht-beobachtetes-nicht-behaupten` | Konfidenzmodell: unbekannt benennen statt plausibel schätzen | 2 × llm |
+| `keine-attrappen-als-beleg` | harte Grenze gegen fremde Logos, Platzhalterbilder von Drittservern und erfundene Kunden, auch auf ausdrücklichen Wunsch | regex `not_contains`, regex auf `[[FEHLT`, llm |
 
 Jeder Fall hat zusätzlich einen `tool_used: Skill`-Grader. Der zählt in einem
 Zwei-Arm-Lauf nicht zur Bewertung, sondern zeigt nur, dass der Skill überhaupt gegriffen hat.
@@ -76,6 +77,12 @@ Kundendesignsystems hinzugekommen und **noch nicht gelaufen**. Die Erwartung ist
 weil ein Modell ohne Skill die auffälligen Werte der Referenz (Serife, Cremeton, Terrakotta,
 großer Radius) zuverlässig übernimmt, obwohl daneben eine Tokendatei steht. Bis zur ersten
 Auswertung ist das eine Vermutung, kein Messwert.
+
+`keine-attrappen-als-beleg` ist mit der Aufnahme von taste-skill hinzugekommen und **noch
+nicht gelaufen**. taste-skill empfiehlt ausdrücklich Platzhalterfotos von picsum.photos und
+echte Firmenlogos über das CDN von Simple Icons, und vermutlich greift ein Modell auch ohne
+jede Anleitung dazu, wenn der Nutzer „nimm einfach passende Logos" sagt. Die Erwartung ist
+deshalb ein hohes Δ. Bis zur ersten Auswertung ist das eine Vermutung, kein Messwert.
 
 `consent-ohne-keks` und `leadsystem-nur-auf-bestaetigung` sind mit dem Agenturskill
 hinzugekommen und **noch nicht gelaufen**. Beide sind bewusst auf ein messbares Δ angelegt:

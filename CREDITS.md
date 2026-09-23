@@ -108,6 +108,34 @@ aus den 21st.dev-Referenzkomponenten der Version 3.2. Der Quelltext liegt weiter
 `assets/vorlagen/referenzkomponenten/`, die Muster selbst enthalten keinen fremden Code, kein
 fremdes Bildmaterial und keine wörtlichen Zitate.
 
+### In Version 4.1 zusätzlich eingeflossen
+
+| Quelle | Was daraus eingeflossen ist |
+|---|---|
+| [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill), MIT, © 2026 Leonxlnx, Stand 23.09.2026 (Commit `c184364`) | `taste-skill` v2 (`design-taste-frontend`): Lesart vor dem Plan, die drei Regler Varianz, Bewegung, Dichte, die Sperren für Akzent, Form und Thema, die Heldenregeln (zwei Zeilen, 20 Wörter, vier Textelemente, Logowand darunter), Kicker-Quote, Zickzack- und Laufbandgrenze, eine Absicht ein Text, der Katalog der Produktionstells, der Serifenreflex, die Premium-Standardpalette mit Hexwerten, Pinning bei `top top` und das Redesign-Protokoll. `redesign-skill`: Befundliste und die Reihenfolge der Hebel. `full-output-enforcement`: das Verbot von Auslassungen, übertragen in eine Prüfung in `pruefe-platzhalter.mjs`. `imagegen-frontend-web` und `image-to-code`: ein Bild je Sektion, Neu erzeugen statt ausschneiden, Kompositionsvielfalt über die Serie, feste Reihenfolge beim Auflösen von Unklarheiten, keine Drift beim Bauen. `brandkit`: die Fragen an ein Markenbild und fünf Wege zum Zeichen, als Denkwerkzeug |
+
+Eingeflossen sind Prinzipien und Grenzwerte, kein Text und kein Code; die GSAP-Skelette sind
+in `09-motion-gsap.md` als Regeln beschrieben, nicht übernommen. Neu geschrieben für dieses
+Repository: `scripts/pruefe-geschmack.mjs` (zählt die messbaren Tells einer gebauten Seite),
+die Auslassungsprüfung in `pruefe-platzhalter.mjs`, der Evalfall
+`keine-attrappen-als-beleg` und die Schleife „Screenshot neben den Entwurf" in
+`28-ki-bildentwuerfe.md`, die den Originalen fehlt.
+
+**Mit Vorbehalt, wie schon bei den Buchdestillaten aus Version 2.0.** Mehrere Stellen in
+taste-skill stehen gegen die harten Grenzen dieses Skills und wurden umgedreht statt
+übernommen: Platzhalterfotos von picsum.photos und Unsplash, echte Firmenlogos über das CDN
+von Simple Icons, „organische" krumme Zahlen und realistisch klingende Namen, damit Erfundenes
+echt wirkt, Text aus generierten Entwürfen als Seiteninhalt, und das Verbot eigener Icons.
+Dazu widersprechen sich die Einzelskills untereinander (Serifenwahl, Kicker als Pille,
+Fensterattrappen, Bewegung an jedem Element). Die vollständige Gegenüberstellung mit Grund
+steht in `webdesign-conversion/references/26-geschmack-und-ki-tells.md` Abschnitt 11.
+
+**Nicht übernommen** wurden die Ausgangswerte und Zahlen aus dem Ordner `research/` des
+Repositories: die dort genannten Studien und Prozentwerte sind ohne Quellenangabe und ließen
+sich nicht nachprüfen. Die Regler-Voreinstellungen je Kundentyp in Kapitel 26 sind aus den
+Voreinstellungen von taste-skill übertragen und dort als nicht gemessen markiert.
+`imagegen-frontend-mobile` blieb außen vor, native Apps gehören nicht zum Leistungsumfang.
+
 ## Inhaltliche Grundlage
 
 **Website-Conversion-Playbook 2026** (That's it. Marketing, Victor & Tim): das

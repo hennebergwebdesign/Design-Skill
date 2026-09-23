@@ -122,6 +122,28 @@ gegenüber vielen Einzel-Triggern für dieselbe Listenanimation.
 3. **Die Höhe einer gepinnten Bühne fest setzen, nicht aus dem Inhalt ableiten.** Hängt sie
    am Inhalt, wandert mit jedem nachgeladenen Bild der Endpunkt des Scrollwegs.
 
+### Pinning, das erst steht und dann bewegt
+
+Aus den Produktionstests von taste-skill, dort der häufigste Fehler bei Kartenstapel und
+waagerechtem Schwenk: die Bewegung beginnt, bevor die Sektion festgeheftet ist, und man sieht
+eine halbe Folie.
+
+- **Start bei `top top`**, nicht bei `top center` oder `top 80%`. Erst wenn die Oberkante der
+  Sektion an der Oberkante des Fensters liegt, wird geheftet und bewegt.
+- **Kartenstapel:** jede Karte außer der letzten wird geheftet, und das Kleinerwerden der
+  vorigen Karte hängt am Trigger der **nächsten** (`start: "top bottom"`, `end: "top top"`,
+  `scrub: true`). So schrumpft die alte, während die neue kommt.
+- **Waagerechter Schwenk:** die Hülle wird geheftet, die innere Spur scrubbt. Der Scrollweg
+  ist genau die Strecke, die die Spur wandern muss:
+  `end: () => "+=" + (spur.scrollWidth - innerWidth)` mit `invalidateOnRefresh: true`, damit
+  er nach einer Größenänderung neu gemessen wird.
+- **Kein `overflow-x: hidden` an einem Vorfahren.** Es macht den Vorfahren zum
+  Scrollcontainer, und alles darin, was haften soll, haftet nicht mehr. `overflow-x: clip`
+  begrenzt ohne diese Nebenwirkung, so steht es in `../assets/vorlagen/global-basis.css`.
+  `scripts/pruefe-geschmack.mjs` meldet `hidden`.
+- Bei `prefers-reduced-motion: reduce` wird gar nicht geheftet. Der Stapel steht als normale
+  Liste untereinander.
+
 ### Scrollgebundenes Video
 
 Ein Video an `currentTime` zu hängen ist die eindrucksvollste und zugleich teuerste

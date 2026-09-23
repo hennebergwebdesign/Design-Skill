@@ -4,7 +4,7 @@ description: Baut komplette Kundenwebsites mit Astro und Cloudflare Pages nach A
 license: Proprietär, That's it. Marketing / VFDESIGN LTD
 metadata:
   author: That's it. Marketing / Henneberg Webdesign
-  version: 2.0.0
+  version: 2.1.0
 ---
 
 # Agentur Website Builder
@@ -111,6 +111,8 @@ Bevor irgendetwas gefragt wird:
    `node scripts/relaunch-inventory.mjs https://alte-seite.de`, siehe
    `references/intake-und-entscheidungen.md`. Marke und CI der Bestandsseite werden dabei
    nach `../webdesign-conversion/references/20-markenextraktion-bestandsseite.md` ausgelesen.
+   Welcher Modus gilt (weiterentwickeln, neu gestalten, Neuanfang) und was sich dabei nie
+   still ändert, steht in `../webdesign-conversion/references/27-redesign-bestand.md`.
 4. Bilder im Repo zählen und den Bedarf schätzen.
 5. Seitentyp und Conversionziel bestimmen, dann das passende Playbook lesen:
    `../webdesign-conversion/playbooks/homepage.md`, `landingpage.md` oder
@@ -140,6 +142,7 @@ Die Antworten gehen in den Markenbrief des Projekts, nicht in den Chatverlauf. V
 Immer vor der Implementierung. Kurz, im Chat, kein Dokument im Repo. Struktur:
 
 ```
+## Lesart in einem Satz, Regler für Varianz, Bewegung, Dichte
 ## Referenzen: Conversion, Visuell, optional Motion, je mit Begründung
 ## Seitenstruktur
 ## Sektionen pro Seite mit Zweck und CTA
@@ -150,6 +153,12 @@ Immer vor der Implementierung. Kurz, im Chat, kein Dokument im Repo. Struktur:
 ## SEO Struktur: Titel, Description, Keywords je Seite
 ## Offene Punkte und Platzhalter
 ```
+
+Lesart und Regler kommen aus
+`../webdesign-conversion/references/26-geschmack-und-ki-tells.md` und gehen danach in
+`marke.json` unter `gestaltung`. Soll die Richtung vor dem Code als Bild abgestimmt werden,
+gilt `../webdesign-conversion/references/28-ki-bildentwuerfe.md`: ein Bild je Sektion, die
+Sperren aus `marke.json` im Auftrag, kein Text aus dem Bild auf die Seite.
 
 Vor dem Konzept steht die Referenzrecherche auf mindestens einer Premium-Designquelle, siehe
 `../webdesign-conversion/references/22-premium-designquellen.md`. Ein Konzept ohne
@@ -182,7 +191,9 @@ Reihenfolge, weil sie Nacharbeit spart:
 2. Layout, Navigation, Footer, Seitenstruktur nach `references/referenzen-und-auswahl.md`
    und `../webdesign-conversion/references/02-design-ux.md`
 3. Sektionen von oben nach unten, mit Hintergrund- und Hierarchieplan nach
-   `../webdesign-conversion/references/21-sektionshintergruende-hierarchie.md`. Texte
+   `../webdesign-conversion/references/21-sektionshintergruende-hierarchie.md` und den
+   Held- und Sektionsregeln aus
+   `../webdesign-conversion/references/26-geschmack-und-ki-tells.md`. Texte
    nach `references/copy-im-kundenprojekt.md`: Geliefertes wird übernommen, Ergänztes wird
    markiert
 4. Formulare und Serverrouten, siehe `references/formulare-und-resend.md`
@@ -208,7 +219,13 @@ node scripts/pruefe-tokens.mjs
 node scripts/pruefe-kontrast.mjs
 node scripts/pruefe-platzhalter.mjs --launch
 node scripts/pruefe-breakpoints.mjs http://localhost:4321 --bilder
+node scripts/pruefe-geschmack.mjs
 ```
+
+`pruefe-geschmack.mjs` läuft nach dem Build gegen `dist/` und meldet Kicker über der Quote,
+ein zweites Laufband, mehrere Texte für dieselbe Kontaktabsicht und die messbaren KI-Tells.
+`pruefe-platzhalter.mjs` findet zusätzlich ausgelassenen Code (`// ...`, „Rest wie oben"):
+eine Auslassung ist kein offener Wert, sondern Arbeit, die als erledigt gemeldet wurde.
 
 `pruefe-breakpoints.mjs` prüft acht Größen, meldet horizontales Überlaufen, zu kleine
 Klickflächen, Schrift unter 14 Pixel und Bilder ohne Maße. Gefundene Abweichungen direkt
@@ -308,6 +325,9 @@ Schwesterskill.
 | `../webdesign-conversion/SKILL.md` | immer, die harten Grenzen |
 | `../webdesign-conversion/playbooks/*.md` | Phase 1, je nach Seitentyp |
 | `../webdesign-conversion/references/10-visuelle-richtung.md` | vor der ersten Zeile UI Code |
+| `../webdesign-conversion/references/26-geschmack-und-ki-tells.md` | Phase 3 für Lesart und Regler, Phase 4 für Held und Sektionen, Phase 5 für den Vorflugcheck |
+| `../webdesign-conversion/references/27-redesign-bestand.md` | jede Überarbeitung einer bestehenden Seite |
+| `../webdesign-conversion/references/28-ki-bildentwuerfe.md` | sobald ein Bildmodell Entwürfe erzeugen soll |
 | `../webdesign-conversion/references/24-designsystem-vorrang.md` | sobald ein Designsystem, Branding oder eine Referenz im Spiel ist |
 | `../webdesign-conversion/references/12-copywriting.md` | sobald Texte eingesetzt werden |
 | `../webdesign-conversion/references/07-recht-dsgvo.md` | Rechtstexte und Consentpflichten |
@@ -320,7 +340,7 @@ Bewertungsabruf. Diese kopieren und an das Projekt anpassen, statt jedes Mal neu
 schreiben. Rechtstexte, Tokens, Meta-Head, JSON-LD, 404 und Security-Header liegen in
 `../webdesign-conversion/assets/vorlagen/`.
 
-`scripts/` im Repowurzelverzeichnis enthält die fünf Prüfskripte sowie drei
+`scripts/` im Repowurzelverzeichnis enthält die sechs Prüfskripte sowie drei
 Agenturwerkzeuge, die nie Teil der ausgelieferten Seite werden und nie in das `package.json`
 des Kundenprojekts wandern:
 
@@ -342,6 +362,8 @@ des Kundenprojekts wandern:
   die Ähnlichkeitsprüfung bis zu Tor 2. Keines von ihnen schreibt in die Musterbibliothek des
   Skills, siehe `references/designrecherche-ablauf.md`.
 * `pruefe-muster.mjs` prüft die Musterbibliothek und erzeugt ihren Index.
+* `pruefe-geschmack.mjs` zählt die messbaren KI-Tells einer gebauten Seite, siehe
+  `../webdesign-conversion/references/26-geschmack-und-ki-tells.md`.
 
 Alle Erfassungswerkzeuge laufen mit reinem `fetch()` ohne Abhängigkeit, optional über eine
 selbst gehostete Firecrawl-Instanz (`FIRECRAWL_BASE_URL`), die Firecrawl-Cloud
@@ -355,7 +377,8 @@ Erst wenn alle Punkte erfüllt sind, darf von einer fertigen Seite gesprochen we
 * alle vereinbarten Seiten und Sektionen vorhanden, keine vergessenen Platzhaltertexte
 * jeder selbst formulierte Copy-Vorschlag mit `scripts/deslop-check.mjs` auf 5 von 5 geprüft
 * Build läuft ohne Fehler, `astro check` ohne Befund
-* alle fünf Prüfskripte ohne Fehler
+* alle sechs Prüfskripte ohne Fehler, auch `pruefe-geschmack.mjs` gegen `dist/`
+* Vorflugcheck aus `26-geschmack-und-ki-tells.md` durchgegangen, Ungeprüftes benannt
 * Tastaturbedienung durch alle interaktiven Elemente, sichtbarer Fokus
 * Formular getestet: Erfolg, Validierungsfehler, Serverfehler, Turnstile
 * Bestätigungsmail und interne Benachrichtigung im Branding des Kunden

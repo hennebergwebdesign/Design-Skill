@@ -14,7 +14,10 @@ Copy kann eine Gestaltung genauso schablonenhaft wirken lassen wie das Layout se
   Neue verständlich schlägt klug.
 - **Aktiv.** Ein CTA sagt, was passiert: „Änderungen speichern", nicht „Absenden".
 - **Ein Name je Aktion, durch den ganzen Ablauf.** Der Button „Veröffentlichen" erzeugt die
-  Meldung „Veröffentlicht". Das Vokabular der Oberfläche ist die Beschilderung.
+  Meldung „Veröffentlicht". Das Vokabular der Oberfläche ist die Beschilderung. Das gilt auch
+  für Synonyme: „Jetzt anfragen", „Kontakt aufnehmen" und „Schreiben Sie uns" auf einer Seite
+  sind drei Namen für eine Aktion. `scripts/pruefe-geschmack.mjs` meldet das, siehe
+  `26-geschmack-und-ki-tells.md`.
 - **Ein Element, eine Aufgabe.** Keine Headline, die gleichzeitig erklärt, verkauft und
   zum Klick auffordert.
 - **Gesprochener Ton:** einfache Verben, normale Groß-/Kleinschreibung, kein Füllwerk,
