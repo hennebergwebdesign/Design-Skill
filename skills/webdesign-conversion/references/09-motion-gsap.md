@@ -199,6 +199,7 @@ gekillt, sonst laufen nach einem Re-Render Geister weiter.
 | Parallaxe | großes Bild | nur Desktop, kleine Amplitude |
 | Kartenstapel | Prozessschritte | nur ab ausreichender Fenstergröße und -höhe |
 | Marquee-Logoleiste | Presse, Partner | CSS statt GSAP; Liste doppelt, Spur um exakt 50 % verschieben, bei reduzierter Bewegung still und scrollbar |
+| Tastendruck | jeder Button, primär wie sekundär | CSS reicht: `scale(0.97)` bei `:active`, 0,1 s, `--kurve-wechsel`. Kein GSAP nötig, entfällt bei reduzierter Bewegung von selbst, weil nur `transform` betroffen ist |
 
 Für die vollständige GSAP-Dokumentation lohnt zusätzlich die Installation der offiziellen
 GSAP-Skills, siehe `../../../README.md` → Quell-Skills nachinstallieren.

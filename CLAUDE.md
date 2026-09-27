@@ -190,6 +190,23 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Änderungsverlauf
 
+- **27.09.2026, Version 4.2.0** Neues Kapitel
+  `webdesign-conversion/references/29-pruefdurchgaenge-und-vokabular.md`, destilliert aus
+  [pbakaus/impeccable](https://github.com/pbakaus/impeccable) (Apache-2.0): ein Kurzvokabular
+  für Feedback (Lesart, Kritik, Prüfung, Feinschliff, mutiger, ruhiger, bewegen, Satzbild), die
+  vier Blickwinkel Überzeugen, Erledigen, Lesen, Erleben, und eine Obergrenze von zwei
+  subjektiven Prüfdurchgängen mit Screenshot vor der Übergabe, ausdrücklich getrennt vom
+  Beheben von Fehlern, das weiterhin bis zur sauberen Prüfung wiederholt wird. Der Screenshot-
+  Durchgang nutzt dieselbe optionale Playwright-Stufe wie `pruefe-breakpoints.mjs`, keine neue
+  Abhängigkeit. Referenz in beiden `SKILL.md` ergänzt, Phase 5 in `agentur-website-builder`
+  verweist jetzt auf die Grenze. `09-motion-gsap.md` bekommt eine Zeile zum Tastendruck
+  (`scale(0.97)` bei `:active`) aus [delphi-ai/animate-skill](https://github.com/delphi-ai/animate-skill),
+  dessen übrige goldene Regeln beim Abgleich bereits im bestehenden Motion-System standen,
+  Lizenz dieses Repositoriums ungeprüft, es fehlt eine `LICENSE`-Datei. Geprüft und bewusst
+  nicht eigenständig integriert: [senlindesign/taste-skill](https://github.com/senlindesign/taste-skill),
+  weil dessen Belegmodell für Designextraktion bereits durch die kuratierte Designrecherche aus
+  Version 4.0 abgedeckt ist, siehe `CREDITS.md`. Auslöser war ein TikTok-Video, das die vier
+  Skills unter den Namen Emil Kowalski, Impeccable, Taste und Playwright nannte.
 - **23.09.2026, Version 4.1.0** taste-skill (Leonxlnx, MIT, 13 Skills) aufgenommen, als
   Destillat statt als Kopie. Drei neue Kapitel im Regelwerk:
   `26-geschmack-und-ki-tells.md` (Lesart vor dem Plan, drei Regler mit Ausgangswerten je
