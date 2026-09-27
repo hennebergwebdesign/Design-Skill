@@ -4,7 +4,7 @@ description: "Vollständiges System für conversion-orientiertes Webdesign im DA
 license: MIT
 metadata:
   author: Henneberg Webdesign
-  version: 2.5.0
+  version: 2.6.0
 ---
 
 # Webdesign Conversion System
@@ -121,6 +121,7 @@ Lies gezielt nach, statt alles zu laden.
 | Lesart, drei Regler, Konsistenzsperren, Heldenregeln, Katalog der KI-Tells, Vorflugcheck | `26-geschmack-und-ki-tells.md` |
 | Bestehende Seite überarbeiten: Modus erkennen, was sich nie still ändert, Hebel in Reihenfolge | `27-redesign-bestand.md` |
 | Entwürfe mit einem Bildmodell erzeugen, auswerten, treu umsetzen, und was sie nie belegen | `28-ki-bildentwuerfe.md` |
+| Kurzvokabular fürs Feedback, vier Blickwinkel, wie viele Prüfdurchgänge vor der Übergabe | `29-pruefdurchgaenge-und-vokabular.md` |
 | Referenzen entdecken, vorlegen, freigeben, erfassen | `../agentur-website-builder/references/designrecherche-ablauf.md` |
 
 **Technik, Recht, Messung**

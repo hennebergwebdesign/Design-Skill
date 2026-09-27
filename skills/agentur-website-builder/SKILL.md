@@ -4,7 +4,7 @@ description: Baut komplette Kundenwebsites mit Astro und Cloudflare Pages nach A
 license: Proprietär, That's it. Marketing / VFDESIGN LTD
 metadata:
   author: That's it. Marketing / Henneberg Webdesign
-  version: 2.1.0
+  version: 2.2.0
 ---
 
 # Agentur Website Builder
@@ -231,6 +231,10 @@ eine Auslassung ist kein offener Wert, sondern Arbeit, die als erledigt gemeldet
 Klickflächen, Schrift unter 14 Pixel und Bilder ohne Maße. Gefundene Abweichungen direkt
 korrigieren und den Check wiederholen, bis er sauber ist. Erst danach berichten.
 
+Das gilt für Fehler. Für die Geschmacksfrage danach (Kritik, Feinschliff, mutiger/ruhiger)
+gibt es eine Obergrenze statt einer endlosen Schleife, siehe
+`../webdesign-conversion/references/29-pruefdurchgaenge-und-vokabular.md`.
+
 ### Phase 6: Übergabe
 
 Keine `HANDOVER.md`. Stattdessen:
@@ -328,6 +332,7 @@ Schwesterskill.
 | `../webdesign-conversion/references/26-geschmack-und-ki-tells.md` | Phase 3 für Lesart und Regler, Phase 4 für Held und Sektionen, Phase 5 für den Vorflugcheck |
 | `../webdesign-conversion/references/27-redesign-bestand.md` | jede Überarbeitung einer bestehenden Seite |
 | `../webdesign-conversion/references/28-ki-bildentwuerfe.md` | sobald ein Bildmodell Entwürfe erzeugen soll |
+| `../webdesign-conversion/references/29-pruefdurchgaenge-und-vokabular.md` | Phase 5, für Kritik und Feinschliff nach dem Build, vor Phase 6 |
 | `../webdesign-conversion/references/24-designsystem-vorrang.md` | sobald ein Designsystem, Branding oder eine Referenz im Spiel ist |
 | `../webdesign-conversion/references/12-copywriting.md` | sobald Texte eingesetzt werden |
 | `../webdesign-conversion/references/07-recht-dsgvo.md` | Rechtstexte und Consentpflichten |

@@ -136,6 +136,25 @@ sich nicht nachprüfen. Die Regler-Voreinstellungen je Kundentyp in Kapitel 26 s
 Voreinstellungen von taste-skill übertragen und dort als nicht gemessen markiert.
 `imagegen-frontend-mobile` blieb außen vor, native Apps gehören nicht zum Leistungsumfang.
 
+### In Version 4.2 zusätzlich eingeflossen
+
+| Quelle | Was daraus eingeflossen ist |
+|---|---|
+| [pbakaus/impeccable](https://github.com/pbakaus/impeccable), Apache-2.0, © 2025 Paul Bakaus | Neues Kapitel `webdesign-conversion/references/29-pruefdurchgaenge-und-vokabular.md`: das Kurzvokabular für Feedback (Lesart, Kritik, Prüfung, Feinschliff, mutiger, ruhiger, bewegen, Satzbild), die vier Blickwinkel Überzeugen/Erledigen/Lesen/Erleben, und die Obergrenze von zwei subjektiven Prüfdurchgängen mit Screenshot vor der Übergabe |
+| [delphi-ai/animate-skill](https://github.com/delphi-ai/animate-skill), Lizenz ungeprüft: keine `LICENSE`-Datei und kein Lizenzhinweis im Repository gefunden, siehe die Regel gegen erfundene Belege in dieser Datei selbst | Geprüft und mit dem bestehenden Motion-System abgeglichen: die goldenen Regeln (Austritt kürzer als Eintritt, nur `transform`/`opacity`, GPU-Beschleunigung) standen inhaltlich bereits in `09-motion-gsap.md` und `18-motion-handschrift.md`. Neu ergänzt wurde nur die fehlende Zeile zum Tastendruck (`scale(0.97)` bei `:active`) in der Mustertabelle von `09-motion-gsap.md`. Kein Code übernommen |
+| [Playwright](https://playwright.dev/) | wie bereits seit Version 4.0 keine neue Abhängigkeit. Der Screenshot-Durchgang in Kapitel 29 nutzt dieselbe optionale Stufe wie `pruefe-breakpoints.mjs` und `scripts/lib/abruf.mjs` |
+
+**Geprüft, aber bewusst nicht eigenständig integriert:**
+[senlindesign/taste-skill](https://github.com/senlindesign/taste-skill) (im auslösenden Video
+ebenfalls als „Taste Skill" genannt) extrahiert Design-Tokens mit Beleg aus einer fremden
+Seite. Das deckt sich mit dem, was `design-dna.mjs`, `muster-vergleich.mjs` und die kuratierte
+Designrecherche aus Version 4.0 in diesem Repository bereits leisten, einschließlich des
+Belegmodells beobachtet/abgeleitet/unbekannt. Eine zweite, parallele Umsetzung hätte denselben
+Widerspruch erzeugt wie zwei Fassungen einer Rechnungsregel, siehe die Pflegeregel in
+`../CLAUDE.md`. Die bereits in Version 4.1 integrierte
+[Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) ist ein anderes Repository
+desselben Namens, siehe deren eigenen Eintrag oben.
+
 ## Inhaltliche Grundlage
 
 **Website-Conversion-Playbook 2026** (That's it. Marketing, Victor & Tim): das
