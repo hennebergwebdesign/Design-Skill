@@ -116,8 +116,10 @@ Das Fehlen ist kein Blocker, im Bericht aber als eingeschränkte Erfassung zu be
 ## Wann welches Werkzeug
 
 * **Vor einem Relaunch**, sobald die alte Kundenseite feststeht: `relaunch-inventory.mjs`,
-  siehe `references/intake-und-entscheidungen.md`. Anschließend Marke und CI nach
-  `../../webdesign-conversion/references/20-markenextraktion-bestandsseite.md` auslesen.
+  siehe `references/intake-und-entscheidungen.md`. Anschließend Marke und CI mit
+  `brand-extraktion.mjs` messen, siehe `brand-extraktion.md`. Dieses Werkzeug läuft nicht über
+  die Abrufschicht, sondern steuert einen eigenen Browser, und nur auf der eigenen Seite des
+  Kunden.
 * **Vor dem Tokensystem-Plan**, wenn eine konkrete Seite als Referenz dient statt einer
   kuratierten Galerie: `design-scan.mjs`, siehe
   `../../webdesign-conversion/references/22-premium-designquellen.md` und die Rangfolge der

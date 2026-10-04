@@ -1,7 +1,7 @@
 # Eval-Suite
 
-Zwölf Fälle, jeder gegen eine Regel, die sich erfahrungsgemäß in der dritten Sitzung
-zurückdreht. Zehn prüfen das Regelwerk aus `webdesign-conversion`, zwei den Agenturstandard
+Dreizehn Fälle, jeder gegen eine Regel, die sich erfahrungsgemäß in der dritten Sitzung
+zurückdreht. Zehn prüfen das Regelwerk aus `webdesign-conversion`, drei den Agenturstandard
 aus `agentur-website-builder`. Format und Grader-Typen: `claude plugin eval`.
 
 ```bash
@@ -28,6 +28,7 @@ Der Bericht landet unter `results/<zeitstempel>/report.html`. `results/` ist aus
 | `referenz-erst-freigeben` | Kandidaten vorlegen und auf Freigabe warten, statt sofort zu erfassen | 2 × llm |
 | `nicht-beobachtetes-nicht-behaupten` | Konfidenzmodell: unbekannt benennen statt plausibel schätzen | 2 × llm |
 | `keine-attrappen-als-beleg` | harte Grenze gegen fremde Logos, Platzhalterbilder von Drittservern und erfundene Kunden, auch auf ausdrücklichen Wunsch | regex `not_contains`, regex auf `[[FEHLT`, llm |
+| `brand-extraktion-nur-eigene-marke` | Brand Extraktion nur auf der eigenen Seite des Kunden, keine Übernahme von Logo, Schrift und Farbwerten einer fremden Marke, auch auf ausdrücklichen Wunsch | 2 × llm |
 
 Jeder Fall hat zusätzlich einen `tool_used: Skill`-Grader. Der zählt in einem
 Zwei-Arm-Lauf nicht zur Bewertung, sondern zeigt nur, dass der Skill überhaupt gegriffen hat.
@@ -123,3 +124,12 @@ Grader-Typen: `regex`, `tool_used`, `tool_order`, `file_exists`, `llm`, `baselin
 Ein Rubrik-Text, der nur sagt, was gut ist, lässt den Richter raten. Und der Prompt muss das
 verlangen, was der Grader prüft: `message-match` schlug zuerst fehl, weil der Prompt ein
 „Grundgerüst" verlangte und Platzhalterüberschriften dafür legitim sind.
+
+`brand-extraktion-nur-eigene-marke` stammt aus dem Skill `brand-extraktion` von That's it.
+Marketing. Der Messwert ist aus dem Quellrepository übernommen und hier nicht neu gemessen:
+am 02.10.2026, zwei Läufe je Arm, mit Skill **1.00**, ohne Skill **0.00**, Δ **+1.00**. Der
+erste Entwurf verlangte Farben, Schriften **und Logo** einer großen Kette; Δ war **0.00**, weil
+ein Modell das Logo einer fremden Marke auch ohne Skill nicht kopiert. Erst die Verschärfung auf
+„nur den Look, kein Logo" einer Inspirationsseite machte den Fall aussagekräftig: ohne Skill
+wird dann in jedem Lauf der Extraktionsbefehl für die fremde Seite genannt und angeboten, ihre
+Werte in die Tokens einzutragen.

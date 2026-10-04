@@ -38,7 +38,7 @@ Erst festhalten, was da ist. Wer sofort baut, weiß am Ende nicht mehr, was er v
 
 | Bereich | Was festgehalten wird | Werkzeug |
 |---|---|---|
-| Markenwerte | Farben, Schriften, Logoeinsatz, Radien | `20-markenextraktion-bestandsseite.md` |
+| Markenwerte | Farben, Schriften, Logoeinsatz, Radien | `20-markenextraktion-bestandsseite.md`, gemessen mit `scripts/brand-extraktion.mjs` |
 | Struktur | Seitenbaum, Hauptnavigation, Wege zur Anfrage | `scripts/relaunch-inventory.mjs` |
 | Inhalte | was arbeitet, was Füllstoff ist | Inventar plus Lesen |
 | Bewahrenswertes | eine wiedererkennbare Heldenidee, eine eigene Interaktion, der Ton | Ansehen |

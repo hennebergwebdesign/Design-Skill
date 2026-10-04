@@ -133,6 +133,8 @@ skills/
    │  ├─ consent-und-dienste.md     Eigenbau, fünf Kategorien, Consent Mode, Dienstekatalog
    │  ├─ google-bewertungen.md      Places API serverseitig, KV-Cache, Darstellung
    │  ├─ qa-und-abnahme.md          Prüfablauf in acht Schritten, Abschlussbericht
+   │  ├─ brand-extraktion.md       Marke der Bestandsseite messen, auswerten, übernehmen
+   │  ├─ brand-extraktion.md       Marke der Bestandsseite messen, auswerten, übernehmen
    │  ├─ firecrawl-recherche.md     bekannte/alte Seiten crawlen und scrapen, Firecrawl-API
    │  ├─ designrecherche-ablauf.md  sieben Stufen, zwei Freigabetore, Fehlerbehandlung
    │  ├─ designrecherche-beispiele.md  zwei durchgespielte Abläufe, Störungstabelle
@@ -150,6 +152,7 @@ scripts/
 ├─ pruefe-platzhalter.mjs           [[FEHLT]], data-copy-vorschlag, ausgelassener Code
 ├─ pruefe-breakpoints.mjs           acht Größen, Überlauf, Touchziele, Schriftgröße, CLS
 ├─ pruefe-geschmack.mjs             Kicker-Quote, Laufbänder, CTA-Texte, messbare KI-Tells
+├─ brand-extraktion.mjs             Farben, Schriften, Typoskala, Logo der eigenen Seite messen
 ├─ relaunch-inventory.mjs           Bestandsaufnahme der alten Kundenseite vor dem Relaunch
 ├─ design-scan.mjs                  Struktur- und Design-Scan einer fremden Referenzseite
 ├─ deslop-check.mjs                 selbst formulierte Copy auf generischen KI-Klang prüfen
@@ -159,6 +162,7 @@ scripts/
 ├─ muster-vergleich.mjs             Entwurf gegen Bibliothek, fünf Einstufungen
 ├─ pruefe-muster.mjs                Pflichtfelder, Taxonomie, Anti-Kopie, Index
 ├─ muster-paket.mjs                 Tor 2: Paket ins Projekt, nie in die Bibliothek
+├─ lib/browser.mjs                  Playwright finden, Chromium starten, mit Rückfall
 ├─ lib/abruf.mjs                    die eine Abrufschicht, vier Rückfallstufen, robots.txt
 ├─ tests/                           node --test, ohne Abhängigkeit
 └─ install-quellskills.sh           Quell-Skills zusätzlich installieren
@@ -193,6 +197,7 @@ tatsächlich gebaut, überarbeitet oder relauncht wird. Direkt aufrufen geht auc
 
 Sechs Skripte, weil eine Regel ohne Prüfung in der dritten Sitzung zurückgedreht wird. Alle
 laufen ohne Abhängigkeiten außer Node; nur das Breakpoint-Skript braucht Playwright.
+Gefunden wird es im Projekt oder global, über `scripts/lib/browser.mjs`.
 
 ```bash
 node scripts/pruefe-striche.mjs       # Gedankenstriche, hyphens: auto, verbotene Wörter
@@ -214,11 +219,12 @@ als Markenentscheidung in `marke.json`.
 1440 × 720) und meldet horizontalen Überlauf mit dem Selektor des äußersten Verursachers, zu
 kleine Touchziele, Schrift unter 14 px und Bilder ohne Maße.
 
-Dazu drei Werkzeuge, die kein Ergebnis prüfen, sondern Material beschaffen und Texte
+Dazu vier Werkzeuge, die kein Ergebnis prüfen, sondern Material beschaffen und Texte
 bewerten:
 
 ```bash
 node scripts/relaunch-inventory.mjs https://alte-kundenseite.de
+node scripts/brand-extraktion.mjs https://alte-kundenseite.de / /kontakt
 node scripts/design-scan.mjs https://wettbewerber-oder-inspiration.de
 node scripts/deslop-check.mjs src/components/sektionen/Hero.astro
 node scripts/deslop-check.mjs --text "Wir begleiten Sie ganzheitlich."
@@ -228,6 +234,14 @@ node scripts/deslop-check.mjs --text "Wir begleiten Sie ganzheitlich."
 Rechtstext-Kandidaten und einen Weiterleitungsentwurf in `.relaunch-inventory/` ab. Mit
 gesetztem `FIRECRAWL_API_KEY` läuft es über die Firecrawl API und erreicht auch Seiten, die
 erst im Browser rendern, ohne Schlüssel über den eingebauten Crawler.
+
+`brand-extraktion.mjs` misst die Marke der eigenen Bestandsseite in einem echten Browser auf
+1440 und 375 Pixel: Farbrollen mit Herleitung, CSS-Farbvariablen, Schriften samt Dateien und
+Lizenzhinweis, Typoskala, Buttons mit Hoverfarbe, Eingabefelder, Radien, Schatten, Logo und
+Favicon. Ablage in `.brand-extraktion/`: Bericht `BRAND.md`, `tokens-vorschlag.css` mit den
+Namen der Tokenvorlage, Screenshots und Assets. Braucht Playwright, nur für die eigene Seite
+des Kunden oder Leads, siehe
+`skills/agentur-website-builder/references/brand-extraktion.md`.
 
 `design-scan.mjs` erfasst eine fremde, bekannte oder vom Kunden genannte Referenzseite für
 die Recherche vor dem Tokensystem-Plan: Sektionsreihenfolge aus der Überschriftenhierarchie,
@@ -335,12 +349,14 @@ node --test 'scripts/tests/*.test.mjs'
 ```
 
 Eingebauter Testrunner von Node, keine Abhängigkeit, kein `package.json`. Die Anführungszeichen
-sind nötig, die Verzeichnisform greift nicht. 111 Tests: alle erlaubten und alle verbotenen
+sind nötig, die Verzeichnisform greift nicht. 123 Tests: alle erlaubten und alle verbotenen
 Zustandsübergänge, die Sperre gegen den Abruf ohne Freigabe, robots.txt, die Rückfallstufen,
 die Grenzenliste, das Konfidenzmodell, die Ähnlichkeitseinstufung, die Musterprüfung und die
 Trennung von Projekt- und globalem Wissen, die Geschmacksprüfung mit je einem Fall, der
-anschlagen muss, und einem, der ähnlich aussieht und durchgehen muss, sowie die
-Auslassungsprüfung. Der Netzzugriff ist durch einen lokalen Testserver ersetzt.
+anschlagen muss, und einem, der ähnlich aussieht und durchgehen muss, die
+Auslassungsprüfung sowie Tokenableitung, Untergrenzen und ein Lauf der Brand Extraktion gegen
+eine Testseite. Der Netzzugriff ist durch einen lokalen Testserver ersetzt. Der Browserlauf
+wird übersprungen und so gemeldet, wenn kein Playwright gefunden wird.
 
 `deslop-check.mjs` bewertet fünf Kriterien und gibt eine Punktzahl von 0 bis 5: Floskeln,
 Nominalstil, leere Superlative, fehlende Belege und die Dreierfigur. Er gilt für **eigene**
@@ -364,8 +380,8 @@ Die Suite hat dabei schon einen echten Fehler gefunden: das Landingpage-Playbook
 formuliert, dass das Modell die Navigationsregel erkannte, dann aber um Erlaubnis fragte statt
 zu liefern. Details in `evals/README.md`.
 
-Zwölf Fälle insgesamt, davon zwei für den Agenturstandard: `consent-ohne-keks` und
-`leadsystem-nur-auf-bestaetigung`. Diese beiden und die vier neueren Fälle
+Dreizehn Fälle insgesamt, davon drei für den Agenturstandard: `consent-ohne-keks`,
+`leadsystem-nur-auf-bestaetigung` und `brand-extraktion-nur-eigene-marke`. Die ersten beiden und die vier neueren Fälle
 `kundendesignsystem-schlaegt-referenz`, `referenz-erst-freigeben`,
 `nicht-beobachtetes-nicht-behaupten` und `keine-attrappen-als-beleg` sind noch nicht gelaufen,
 ihr Δ ist damit eine Vermutung und kein Messwert.

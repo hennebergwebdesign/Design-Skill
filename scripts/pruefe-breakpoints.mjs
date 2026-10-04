@@ -42,6 +42,8 @@
 import { mkdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 
+import { playwrightLaden, chromiumStarten, BrowserFehler, PLAYWRIGHT_FEHLT } from './lib/browser.mjs';
+
 const GROESSEN = [
   { b: 320,  h: 720,  name: '320-reflow',    mobil: true  },
   { b: 375,  h: 812,  name: '375-handy',     mobil: true  },
@@ -65,51 +67,9 @@ if (!url) {
   process.exit(2);
 }
 
-/*
-  Playwright kann an drei Orten liegen: als Abhängigkeit des Projekts, als
-  Abhängigkeit dieses Skripts oder global installiert. Node löst Importe relativ
-  zur importierenden Datei auf — ein global installiertes Playwright findet es
-  deshalb NICHT von selbst. Darum die drei Stufen.
-*/
-async function playwrightLaden() {
-  const namen = ['playwright', '@playwright/test', 'playwright-core'];
-
-  for (const n of namen) {
-    try { return await import(n); } catch {}
-  }
-
-  /* Aus dem Projektordner auflösen, von dem aus das Skript aufgerufen wurde. */
-  const { createRequire } = await import('node:module');
-  const { pathToFileURL } = await import('node:url');
-  const { join } = await import('node:path');
-  const anfrage = createRequire(join(process.cwd(), 'package.json'));
-  for (const n of namen) {
-    try { return await import(pathToFileURL(anfrage.resolve(n)).href); } catch {}
-  }
-
-  /* Globale npm-Wurzel. */
-  try {
-    const { execSync } = await import('node:child_process');
-    const wurzel = execSync('npm root -g', { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim();
-    for (const n of namen) {
-      try { return await import(pathToFileURL(join(wurzel, n, 'index.js')).href); } catch {}
-      try { return await import(pathToFileURL(join(wurzel, n)).href); } catch {}
-    }
-  } catch {}
-
-  return null;
-}
-
-/*
-  Über eine Datei-URL importiertes CJS liefert den internen Namensraum, nicht die
-  benannten Exporte: chromium hängt dann an .default. Deshalb beide Wege prüfen.
-*/
-const modul = await playwrightLaden();
-const pw = modul?.chromium ? modul : modul?.default;
-if (!pw?.chromium) {
-  console.error('Playwright nicht gefunden. Installieren mit: npm i -D playwright');
-  console.error('Oder global: npm i -g playwright');
-  console.error('Der Browser ist in vielen Umgebungen schon vorhanden; dann reicht PLAYWRIGHT_BROWSERS_PATH.');
+const pw = await playwrightLaden();
+if (!pw) {
+  console.error(PLAYWRIGHT_FEHLT);
   process.exit(2);
 }
 const { chromium } = pw;
@@ -206,56 +166,14 @@ function messen(mobil) {
   return { vw, seitenbreite, zuBreit, kleineZiele, kleinerText, bilderOhneMasse };
 }
 
-/*
-  Chromium starten. Zwei Stufen, weil die Playwright-Version eines Projekts oft
-  einen anderen Browser-Build erwartet als den, der auf dem System liegt
-  (typisch in CI-Images und Container mit PLAYWRIGHT_BROWSERS_PATH). Dann
-  scheitert launch() mit "Executable doesn't exist" und verlangt einen Download,
-  der in einer abgeschotteten Umgebung nicht gehen muss.
-
-  Stufe 2 sucht deshalb selbst nach einem vorhandenen Chromium und übergibt es
-  als executablePath.
-*/
-async function chromiumStarten() {
-  try {
-    return await chromium.launch();
-  } catch (e) {
-    if (!/Executable doesn't exist|playwright install/i.test(e.message)) throw e;
-
-    const { existsSync: da, readdirSync: lies } = await import('node:fs');
-    const { join: j } = await import('node:path');
-    const basis = process.env.PLAYWRIGHT_BROWSERS_PATH;
-    const kandidaten = [];
-
-    if (basis && da(basis)) {
-      /* Neueste Builds zuerst: chromium-1243 vor chromium-1194. */
-      const ordner = lies(basis).sort((a, b) => b.localeCompare(a, undefined, { numeric: true }));
-      for (const o of ordner) {
-        if (!/^chromium/.test(o)) continue;
-        kandidaten.push(
-          j(basis, o, 'chrome-linux', 'chrome'),
-          j(basis, o, 'chrome-linux', 'headless_shell'),
-          j(basis, o, 'chrome-headless-shell-linux64', 'chrome-headless-shell'),
-          j(basis, o, 'chrome-mac', 'Chromium.app', 'Contents', 'MacOS', 'Chromium'),
-        );
-      }
-      kandidaten.push(j(basis, 'chromium', 'chrome-linux', 'chrome'));
-    }
-    kandidaten.push('/usr/bin/chromium', '/usr/bin/chromium-browser', '/usr/bin/google-chrome');
-
-    const pfad = kandidaten.find((k) => da(k));
-    if (!pfad) {
-      console.error('Chromium nicht gefunden. Die installierte Playwright-Version erwartet einen');
-      console.error('anderen Browser-Build als den vorhandenen. Abhilfe: npx playwright install chromium');
-      console.error('oder eine Playwright-Version installieren, die zum vorhandenen Build passt.');
-      process.exit(2);
-    }
-    console.log(`Hinweis: Playwright-Build passt nicht, benutze ${pfad}\n`);
-    return await chromium.launch({ executablePath: pfad });
-  }
+let browser;
+try {
+  browser = await chromiumStarten(chromium);
+} catch (e) {
+  if (!(e instanceof BrowserFehler)) throw e;
+  console.error(e.message);
+  process.exit(2);
 }
-
-const browser = await chromiumStarten();
 let fehler = 0;
 let warnungen = 0;
 

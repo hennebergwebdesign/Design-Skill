@@ -1,10 +1,10 @@
 ---
 name: agentur-website-builder
-description: Baut komplette Kundenwebsites mit Astro und Cloudflare Pages nach Agenturstandard von That's it. Marketing, inklusive Designsystem, GSAP Animation, Formularen über Resend, eigenem DSGVO Consent Banner mit echter Skriptblockierung, Google Bewertungen, SEO, Barrierefreiheit und optionalem Leadsystem mit Dashboard. Diesen Skill immer verwenden, sobald es um das Erstellen, Überarbeiten, Relaunchen oder Erweitern einer Website, Landingpage, Leadseite oder Unternehmensseite geht, auch wenn nur Teile davon genannt werden wie "Sektion bauen", "Seite umsetzen", "Design in Code", "Cookie Banner einbauen", "Kontaktformular anbinden", "Website überarbeiten" oder wenn ein Designentwurf, ein Linktree, eine alte Kundenseite oder ein Screenshot zur Umsetzung übergeben wird.
+description: Baut komplette Kundenwebsites mit Astro und Cloudflare Pages nach Agenturstandard von That's it. Marketing, inklusive Designsystem, GSAP Animation, Formularen über Resend, eigenem DSGVO Consent Banner mit echter Skriptblockierung, Google Bewertungen, SEO, Barrierefreiheit und optionalem Leadsystem mit Dashboard. Diesen Skill immer verwenden, sobald es um das Erstellen, Überarbeiten, Relaunchen oder Erweitern einer Website, Landingpage, Leadseite oder Unternehmensseite geht, auch wenn nur Teile davon genannt werden wie "Sektion bauen", "Seite umsetzen", "Design in Code", "Cookie Banner einbauen", "Kontaktformular anbinden", "Website überarbeiten" oder wenn ein Designentwurf, ein Linktree, eine alte Kundenseite oder ein Screenshot zur Umsetzung übergeben wird. Auch wenn Farben, Schriften oder Logo einer bestehenden Kundenseite per URL ausgelesen oder übernommen werden sollen.
 license: Proprietär, That's it. Marketing / VFDESIGN LTD
 metadata:
   author: That's it. Marketing / Henneberg Webdesign
-  version: 2.2.0
+  version: 2.3.0
 ---
 
 # Agentur Website Builder
@@ -109,8 +109,12 @@ Bevor irgendetwas gefragt wird:
 3. Bei einer Überarbeitung die alte Seite abrufen und inventarisieren: Seitenstruktur, URLs,
    Texte, Rechtstexte, Kontaktdaten, Öffnungszeiten, Leistungen, bestehende Rankings. Dafür
    `node scripts/relaunch-inventory.mjs https://alte-seite.de`, siehe
-   `references/intake-und-entscheidungen.md`. Marke und CI der Bestandsseite werden dabei
-   nach `../webdesign-conversion/references/20-markenextraktion-bestandsseite.md` ausgelesen.
+   `references/intake-und-entscheidungen.md`. Marke und CI der Bestandsseite werden danach
+   gemessen, nicht geschätzt:
+   `node scripts/brand-extraktion.mjs https://alte-seite.de / /kontakt`,
+   Auswertung und Übernahme in `references/brand-extraktion.md`, Regeln in
+   `../webdesign-conversion/references/20-markenextraktion-bestandsseite.md`. Nur auf der
+   eigenen Seite des Kunden oder Leads, nie auf einer fremden.
    Welcher Modus gilt (weiterentwickeln, neu gestalten, Neuanfang) und was sich dabei nie
    still ändert, steht in `../webdesign-conversion/references/27-redesign-bestand.md`.
 4. Bilder im Repo zählen und den Bedarf schätzen.
@@ -319,6 +323,7 @@ Schwesterskill.
 | `references/consent-und-dienste.md` | jedes Projekt |
 | `references/google-bewertungen.md` | jedes Projekt |
 | `references/qa-und-abnahme.md` | Phase 5 und 6, immer |
+| `references/brand-extraktion.md` | jeder Relaunch und jede Brandingübernahme per URL: Farben, Schriften, Logo der eigenen Bestandsseite messen |
 | `references/firecrawl-recherche.md` | eine bekannte, alte oder fremde Seite crawlen oder scrapen, für Relaunch-Inventar oder Design-Referenz |
 | `references/designrecherche-ablauf.md` | Phase 3, sobald Referenzen gesucht, vorgelegt oder freigegeben werden |
 | `references/referenzquellen-konfiguration.md` | eine Referenzquelle ergänzen, stilllegen oder ihr Suchmuster prüfen |
@@ -352,6 +357,9 @@ des Kundenprojekts wandern:
 * `relaunch-inventory.mjs` inventarisiert eine alte Kundenseite und legt Seitenliste,
   Texte, Rechtstext-Kandidaten und Weiterleitungsentwurf in `.relaunch-inventory/` ab, siehe
   `references/intake-und-entscheidungen.md`.
+* `brand-extraktion.mjs` misst Farben, Schriften, Typoskala, Buttons und Logo der eigenen
+  Bestandsseite im Browser und legt Bericht, Tokenvorschlag und Markenassets in
+  `.brand-extraktion/` ab, siehe `references/brand-extraktion.md`.
 * `design-scan.mjs` erfasst eine fremde, bekannte oder vom Kunden genannte Referenzseite und
   legt Sektionsreihenfolge, Bildbelegung sowie Farb- und Schriftkandidaten in
   `.design-scan/<host>/` ab, siehe `references/firecrawl-recherche.md`.
@@ -373,7 +381,9 @@ des Kundenprojekts wandern:
 Alle Erfassungswerkzeuge laufen mit reinem `fetch()` ohne Abhängigkeit, optional über eine
 selbst gehostete Firecrawl-Instanz (`FIRECRAWL_BASE_URL`), die Firecrawl-Cloud
 (`FIRECRAWL_API_KEY`) oder ein im Projekt installiertes Playwright, siehe
-`references/firecrawl-recherche.md`.
+`references/firecrawl-recherche.md`. Einzige Ausnahme ist `brand-extraktion.mjs`: es braucht
+Playwright, weil berechnete Styles und Hoverzustände nur ein Browser liefert. Gefunden und
+gestartet wird es über `lib/browser.mjs`, wie bei `pruefe-breakpoints.mjs`.
 
 ## Definition of Done
 
@@ -392,6 +402,9 @@ Erst wenn alle Punkte erfüllt sind, darf von einer fertigen Seite gesprochen we
 * Bewertungsabruf liefert Daten oder sauberen Fallback
 * Metadaten, Open Graph, Sitemap, robots.txt, 404 Seite vorhanden
 * bei Relaunch: Weiterleitungen der alten URLs gesetzt und stichprobenartig geprüft
+* bei Relaunch: Marke der Bestandsseite mit `brand-extraktion.mjs` gemessen, jede Übernahme
+  und jede Änderung in `marke.json` unter `herkunft.bestehende_marke` begründet, offene
+  Schriftlizenzen benannt, `.brand-extraktion/` in der `.gitignore`
 * Schriften selbst gehostet, Bilder optimiert und mit Alternativtext
 * keine Schlüssel im Repository
 * `CLAUDE.md` aktuell
