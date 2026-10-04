@@ -136,6 +136,18 @@ sich nicht nachprüfen. Die Regler-Voreinstellungen je Kundentyp in Kapitel 26 s
 Voreinstellungen von taste-skill übertragen und dort als nicht gemessen markiert.
 `imagegen-frontend-mobile` blieb außen vor, native Apps gehören nicht zum Leistungsumfang.
 
+### In Version 4.3 zusätzlich eingeflossen
+
+| Quelle | Was daraus eingeflossen ist |
+|---|---|
+| Skill `brand-extraktion` von That's it. Marketing, claude.ai-Skill des Agenturkontos, Stand 25.09.2026, Skript `brand-extract.mjs` Version 1.0 (SHA-256 `ce4dcdc80a22e91dc1d434c9efad595377ec09a16aa5e4224e7b92690d50a6af`) | Neues Werkzeug `scripts/brand-extraktion.mjs` und Kapitel `agentur-website-builder/references/brand-extraktion.md`. Die Messung im Browser (`analyseImBrowser`, `hoverImBrowser`), die Farbrollen-Heuristik, die Schrift- und Lizenzerkennung und der Bericht sind übernommen. Neu für dieses Repository: Tokenvorschlag mit den Namen aus `assets/vorlagen/tokens.css` und ohne leere Werte, die Markenstufe mit 4,5:1 für Text, die Untergrenze von 14 px, der Start über `scripts/lib/browser.mjs`, die Firecrawl-Zweitmeinung über `scripts/lib/abruf.mjs` (selbst gehostet vor Cloud), Exitcodes und Tests |
+
+Anders als bei fremden Skills wird hier Code übernommen statt destilliert: der Skill stammt aus
+derselben Agentur, folgt schon den Regeln dieses Repositorys und hat keine Grenze, die
+umgedreht werden müsste. Das Firecrawl-Format `branding` der API v2 ist aus dem Original
+übernommen und nur gegen einen lokalen Testserver geprüft, nicht gegen die Firecrawl-Cloud
+oder eine selbst gehostete Instanz, siehe `CLAUDE.md`, Offene Punkte.
+
 ### In Version 4.2 zusätzlich eingeflossen
 
 | Quelle | Was daraus eingeflossen ist |

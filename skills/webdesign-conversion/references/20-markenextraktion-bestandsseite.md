@@ -27,8 +27,12 @@ Was hier ausgelesen wird, steht danach auf Stufe 2 der Rangfolge in
 | **Formsprache** | Radien an Buttons/Karten, Rahmenstärken, Foto- oder Illustrationsstil, Icon-Stil (Linie/Fläche) | Screenshot ansehen, computed Styles zentraler Komponenten |
 | **Tonalität** | vorhandene Headlines, Anrede (Sie/du), wiederkehrende Formulierungen | vorhandene Texte lesen, nicht übernehmen, nur einordnen |
 
-**Technischer Zugriff:** Erste Wahl ist WebFetch/`curl` auf die bestehende Seite und direktes
-Lesen von HTML, CSS und Meta-Tags. Steht kein Netzzugriff zur Verfügung oder liefert die
+**Technischer Zugriff:** Erste Wahl ist eine Messung im Browser, weil nur sie berechnete
+Werte liefert: die tatsächliche Farbe des Hauptbuttons samt Hoverzustand, die geladene
+Schriftdatei, die Schriftgröße auf 375 und auf 1440 Pixel. In Agenturprojekten erledigt das
+`scripts/brand-extraktion.mjs`, Ablauf in
+`../../agentur-website-builder/references/brand-extraktion.md`. Ohne Browser bleibt
+WebFetch/`curl` auf die bestehende Seite und direktes Lesen von HTML, CSS und Meta-Tags. Steht kein Netzzugriff zur Verfügung oder liefert die
 Seite serverseitig gerendertes, generisches Markup (Baukasten wie Wix, Squarespace,
 Framer), reicht ein Screenshot: Farben und Formen lassen sich auch daraus ablesen, nur die
 exakten Hex-Werte dann per Augenmaß statt Stylesheet.

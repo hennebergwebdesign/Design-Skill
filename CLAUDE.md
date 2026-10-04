@@ -40,6 +40,7 @@ node scripts/pruefe-geschmack.mjs            # nach dem Build: dist/ Seiten, src
 
 # Agenturwerkzeuge
 node scripts/relaunch-inventory.mjs https://alte-kundenseite.de
+node scripts/brand-extraktion.mjs https://alte-kundenseite.de / /kontakt   # nur eigene Seite, braucht Playwright
 node scripts/design-scan.mjs https://wettbewerber-oder-inspiration.de
 node scripts/deslop-check.mjs --text "Wir begleiten Sie ganzheitlich."
 
@@ -71,7 +72,8 @@ bash scripts/install-quellskills.sh
 ```
 
 Alle Skripte laufen mit reinem Node, ohne Abhängigkeiten. Nur `pruefe-breakpoints.mjs`
-braucht Playwright im Zielprojekt. Kein `package.json`, und das bleibt so: ein
+und `brand-extraktion.mjs` brauchen Playwright, im Zielprojekt oder global, gefunden über
+`scripts/lib/browser.mjs`. Kein `package.json`, und das bleibt so: ein
 Abhängigkeitsbaum in einem Skill-Repository wird beim nächsten Audit zum Problem und bringt
 hier nichts ein. Die Tests nutzen deshalb `node:test` und `node:assert` aus dem Standardumfang
 von Node, keinen externen Testrunner. Die Verzeichnisform `node --test scripts/tests/` greift
@@ -87,8 +89,9 @@ skills/
   agentur-website-builder/  SKILL.md, references/, assets/consent|forms|reviews
 scripts/              sechs Prüfskripte, Agenturwerkzeuge, Designrecherche, ein Installer
   lib/abruf.mjs       die eine Abrufschicht, vier Rückfallstufen, robots.txt
+  lib/browser.mjs     die eine Stelle, die Playwright sucht und Chromium startet
   tests/              node --test, lokaler Testserver statt Netzzugriff
-evals/                zwölf Fälle mit Gradern, results/ ist ausgenommen
+evals/                dreizehn Fälle mit Gradern, results/ ist ausgenommen
 README.md             Außendarstellung
 CREDITS.md            Herkunft jeder eingeflossenen Quelle
 ```
@@ -171,6 +174,10 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 - Die Suchmuster in `referenzquellen.json` sind mit `suchmuster_geprueft: false` markiert und
   bisher nicht aufgerufen worden. Lapa Ninja, Godly und SiteInspire sind neu aufgenommen und
   in keinem Projekt erprobt.
+- `brand-extraktion.mjs` ist nur gegen eine lokale Testseite mit Chromium gelaufen, nie gegen
+  eine echte Kundenseite in dieser Fassung. Die Firecrawl-Zweitmeinung (Format `branding`,
+  API v2) ist nur gegen einen lokalen Ersatzserver geprüft. Der Evalwert Δ +1.00 für
+  `brand-extraktion-nur-eigene-marke` stammt aus dem Quellrepository, hier nicht neu gemessen.
 - Für vier der sechs älteren Eval-Fälle fehlt weiterhin die Baseline-Messung.
 - `relaunch-inventory.mjs` ist gegen einen lokalen Testserver geprüft, noch nicht gegen eine
   echte Kundenseite und noch nicht gegen die Firecrawl API.
@@ -189,6 +196,20 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
   veröffentlicht wird.
 
 ## Änderungsverlauf
+
+- **04.10.2026, Version 4.3.0** Skill `brand-extraktion` von That's it. Marketing aufgenommen,
+  aus einem Fork dieses Repositories (ZIP `Skill_Website-main`), der ihn parallel zu 4.2.0
+  ergänzt hatte. Neu: `scripts/brand-extraktion.mjs` (Farben, Schriften, Typoskala, Buttons mit
+  Hover, Logo der eigenen Bestandsseite, Ablage in `.brand-extraktion/`),
+  `scripts/lib/browser.mjs` (Playwright finden, Chromium starten; `pruefe-breakpoints.mjs`
+  nutzt sie jetzt auch), `firecrawlBranding()` in `lib/abruf.mjs`, Kapitel
+  `agentur-website-builder/references/brand-extraktion.md`, Evalfall
+  `brand-extraktion-nur-eigene-marke`, 12 neue Tests, insgesamt 123. Verweise in
+  Phase 1, Definition of Done, Kapitel 20 und 27, `firecrawl-recherche.md` und
+  `intake-und-entscheidungen.md`. Nicht übernommen: die Aufteilung von `CLAUDE.md` in
+  `CHANGELOG.md` und `OFFENE-PUNKTE.md` aus dem Fork, weil das eine eigene Entscheidung ist.
+  Der Fork steht auf 4.2.0 ohne das Kapitel 29 (Prüfdurchgänge), das hier bleibt. Versionen:
+  Plugin 4.3.0, Regelwerk 2.6.1, Bauablauf 2.3.0.
 
 - **27.09.2026, Version 4.2.0** Neues Kapitel
   `webdesign-conversion/references/29-pruefdurchgaenge-und-vokabular.md`, destilliert aus

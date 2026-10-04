@@ -32,7 +32,8 @@ Bei einer Überarbeitung liefert der Nutzer den Link der alten Seite. Dann immer
 1. Alte Seite inventarisieren: Seiten, URLs, Leistungen, Texte, Kontaktdaten,
    Öffnungszeiten, Zertifikate, Referenzen. Werkzeug siehe unten.
 2. Marke und CI auslesen, bevor etwas Neues entworfen wird: Logo, Farben, Schrift,
-   Formsprache. Verfahren in
+   Formsprache. Gemessen mit `scripts/brand-extraktion.mjs`, siehe `brand-extraktion.md`,
+   Regeln in
    `../../webdesign-conversion/references/20-markenextraktion-bestandsseite.md`. Ergebnis in
    `marke-brief.md` Abschnitt 7 und `marke.json` unter `herkunft`.
 3. Impressum und Datenschutzerklärung der alten Seite übernehmen und an die neue Technik

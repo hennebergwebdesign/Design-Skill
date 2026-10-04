@@ -11,6 +11,13 @@
   ist damit eine neue Stufe in dieser Datei, kein Eingriff in Analyse, Vergleich oder
   Musterbibliothek.
 
+  Seit Version 4.2.0 liegt hier zusätzlich `firecrawlBranding()`, die Zweitmeinung für
+  brand-extraktion.mjs, damit auch dieser Firecrawl-Aufruf selbst gehostet vor der Cloud
+  versucht. Nicht über diese Datei läuft der Browser von brand-extraktion.mjs: er misst
+  berechnete Styles, Hoverzustände und geladene Schriftdateien auf der eigenen Seite des
+  Kunden, und nichts davon passt in das Ergebnisobjekt unten. Den Browser startet
+  `lib/browser.mjs`.
+
   DIE VIER STUFEN, in dieser Reihenfolge
 
     1 Firecrawl selbst gehostet   FIRECRAWL_BASE_URL gesetzt   alles, kostenlos, bevorzugt
@@ -224,6 +231,34 @@ async function ueberDirektabruf(ziel, optionen) {
   const html = await antwort.text();
   if (!html.trim()) throw new AbrufFehler('leer', 'Antwort ist leer');
   return { status: antwort.status, html, markdown: '', screenshot: '', quelle: 'Direktabruf' };
+}
+
+/**
+ * Firecrawl-Format `branding` (API v2): Farben, Schriften und Logo, wie Firecrawl sie liest.
+ * Gebraucht nur von brand-extraktion.mjs als Zweitmeinung, wenn der eigene Browser an Bot-Schutz
+ * oder blockiertem CSS scheitert. Dieselbe Reihenfolge wie beim Abruf: selbst gehostet vor
+ * Cloud. Ob eine selbst gehostete Instanz das Format kennt, hängt von ihrer Version ab; kennt
+ * sie es nicht, steht das im Fehler und nicht als leeres Ergebnis im Bericht.
+ */
+export async function firecrawlBranding(eingabe, { zeitlimit = 60000 } = {}) {
+  const ziel = adresseNormalisieren(eingabe);
+  const konfiguration = firecrawlBasis();
+  if (!konfiguration) {
+    throw new AbrufFehler('netz', 'weder FIRECRAWL_BASE_URL noch FIRECRAWL_API_KEY gesetzt');
+  }
+  const kopf = { 'content-type': 'application/json' };
+  if (konfiguration.schluessel) kopf.authorization = `Bearer ${konfiguration.schluessel}`;
+  const antwort = await fetch(`${konfiguration.basis}/v2/scrape`, {
+    method: 'POST',
+    headers: kopf,
+    body: JSON.stringify({ url: ziel.toString(), formats: [{ type: 'branding' }] }),
+    signal: AbortSignal.timeout(zeitlimit),
+  });
+  const roh = await antwort.json().catch(() => null);
+  if (!antwort.ok) throw new AbrufFehler('status', `${konfiguration.name} antwortet mit ${antwort.status}`);
+  const branding = roh?.data?.branding ?? null;
+  if (!branding) throw new AbrufFehler('leer', `${konfiguration.name} liefert kein Branding`);
+  return { quelle: konfiguration.name, branding, roh };
 }
 
 /** Welche Stufen unter den aktuellen Bedingungen überhaupt in Frage kommen, in Reihenfolge. */
