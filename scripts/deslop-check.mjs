@@ -14,10 +14,13 @@
 
   FUENF KRITERIEN, JE EIN PUNKT
     1 Floskeln          ganzheitlich, maßgeschneidert, aus einer Hand, Ihr Partner für …
-                        dazu vier Satzmuster, an denen man KI-Text erkennt: die Kontrastfigur
+                        dazu sieben Satzmuster, an denen man KI-Text und überzogene Verkaufssprache erkennt: die Kontrastfigur
                         ("nicht X, sondern Y"), die Verneinungsreihe ("Kein Aufwand, keine
                         Wartezeit"), die selbstbeantwortete Frage ("Das Ergebnis? ...") und
-                        der Dauerbrenner "In der heutigen ...". Quelle: copywriting und
+                        der Dauerbrenner "In der heutigen ...", der Vorwurf an den Leser ("Die meisten
+                        machen es falsch") und das absolute Versprechen ("über Nacht", "garantiert"),
+                        beide aus 34-ueberzeugungsausloeser.md, und der Weichmacher ("eigentlich",
+                        "vielleicht") aus 35-autoritaet-im-text.md. Quelle: copywriting und
                         copy-editing aus coreyhaines31/marketingskills, auf Deutsch übertragen
     2 Nominalstil       Substantivketten auf -ung, -heit, -keit statt Verben
     3 Superlative       beste, führend, einzigartig, optimal, ohne Beleg daneben
@@ -77,6 +80,12 @@ const SATZMUSTER = [
     tipp: 'Sagen, was passiert, nicht was alles entfällt: „Sie bekommen Ihr Angebot am selben Tag."' },
   { name: 'Selbstbeantwortete Frage', re: /(?:^|[.!?]\s+)(?:das\s+|und\s+)?(?:ergebnis|resultat|fazit|warum|wieso|weshalb|der\s+grund)\s*\?\s+\S/i,
     tipp: 'Die Antwort ohne die Frage schreiben: „Das Ergebnis? Drei Tage schneller" wird zu „Drei Tage schneller".' },
+  { name: 'Vorwurf an den Leser', re: /\b(?:die\s+meisten|viele|fast\s+alle)\s+[A-Za-zÄÖÜäöüß]+\s+(?:machen|erledigen|bauen|schreiben|planen)\b[^.!?;]{0,50}\b(?:falsch|verkehrt|schlecht)\b|\bsie\s+machen\b[^.!?;]{0,40}\b(?:falsch|verkehrt)\b/i,
+    tipp: 'Die Lage benennen, nicht den Leser: „Für Betriebe, die ihre Seite haben und mehr Anfragen wollen" statt „Die meisten machen es falsch".' },
+  { name: 'Absolutes Versprechen', re: /\b(?:über\s+nacht|garantiert(?:e[nrms]?)?|jede[rn]?\s+(?:unserer\s+)?kunden?|ohne\s+jedes\s+risiko)\b/i,
+    tipp: 'Zeitrahmen, Quote und „mehr als" statt „alle" und „garantiert", und nur mit belegten Zahlen des Kunden. Eine Garantie steht nur da, wenn der Kunde sie gibt.' },
+  { name: 'Weichmacher', re: /\b(?:eigentlich|irgendwie|quasi|sozusagen|gewissermaßen|gewissermassen|eventuell|vielleicht|möglicherweise|moeglicherweise|ein\s+bisschen|ein\s+wenig|(?:ich|wir)\s+(?:denken|glauben)|es\s+scheint)\b/i,
+    tipp: 'Die Aussage ohne das Wort schreiben. Echte Unsicherheit einmal und konkret benennen („Das wissen wir nach der Messung“), nicht mit „vielleicht“ andeuten.' },
 ];
 const NOMINAL = /\b\w{4,}(?:ung|heit|keit|ierung|barkeit)\b/gi;
 const BELEG = /(\d[\d.,]*\s*(?:%|prozent|jahre?n?|monate?n?|wochen?|tage?n?|stunden?|minuten?|std|kunden|projekte?n?|mitarbeiter|standorte?n?|euro|eur|€|km|m²|qm|kw|mwst)|\b(?:seit|ab)\s+\d{4}\b|\b\d{4}\b|\b\d{2}:\d{2}\b)/gi;

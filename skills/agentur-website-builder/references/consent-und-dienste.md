@@ -105,7 +105,8 @@ Kategorie Marketing.
 
 Vor dem Abschluss die tatsächlich eingebauten Dienste durchgehen und einzeln gegen die
 Datenschutzerklärung prüfen: Hosting bei Cloudflare, Serverprotokolle, Kontaktformular,
-Resend als Versanddienstleister, Turnstile, Google Places für Bewertungen, Schriften lokal
+Resend als Versanddienstleister, Turnstile, Google Places für Bewertungen, ein KI Chatbot
+(`chatbot-auf-der-website.md`), Schriften lokal
 gehostet, gegebenenfalls GTM, GA4, Meta Pixel, Buchungssystem, Leadspeicherung, eingebettete
 Inhalte.
 

@@ -223,3 +223,86 @@ gelesen habe.
 | Playwright / `webapp-testing` | Breakpoints und Screenshots sind über `pruefe-breakpoints.mjs` abgedeckt, ein Ablauf für Formular und Consent steht als Hinweis in `qa-und-abnahme.md`. Der Skill selbst wurde nicht gelesen |
 | Owl-Listener (63 Designerskills), Julian Oczkowski (Design-Prozess), Composio, Accesslint, Figma-Implement-Design | nur aus einer Aufstellung bekannt, nicht gelesen. Anforderungsabfrage vor dem Code steht schon in Phase 0 und 1 des Bauablaufs, Kontrast prüft `pruefe-kontrast.mjs`. Figma-Anbindung hat die Agentur über den Figma-Connector |
 | taste-skill: `minimalist-ui`, `industrial-brutalist-ui`, `high-end-visual-design`, `gpt-taste`, `stitch-design-taste`; `ui-ux-pro-max`: seit 4.1 nicht neu abgeglichen | Stilrichtungen stehen bereits als Taxonomie in `assets/musterbibliothek/taxonomie.json`. Ein erneuter Abgleich der beiden Repositories mit dem Stand von 4.1 wurde **nicht** gemacht, nur deren Repositoryübersicht gesehen |
+
+### In Version 4.5 zusätzlich eingeflossen
+
+Stand der Quelle: 06.10.2026. Gelesen wurde das **automatisch erzeugte Transkript** des Videos, nicht
+das Video selbst. Das Transkript enthält Erkennungsfehler bei Eigennamen, die hier nach bestem
+Wissen berichtigt sind. Nichts ist wörtlich übernommen.
+
+| Quelle | Was daraus eingeflossen ist |
+|---|---|
+| Joanna Wiebe (Copyhackers), YouTube Video „How To Speak Like a CEO So People ACTUALLY Listen To You", `youtube.com/watch?v=x7fZV-ZObYI`, **keine Lizenz genannt**, nur inhaltlich destilliert | Neues Kapitel `webdesign-conversion/references/33-kundenpraesentation-und-feedback.md`: die fünf Stellschrauben (Meinung herunter, Systemdenken herauf, Verteidigung herunter, Urteilskraft herauf, Rückmeldeschleifen herauf), auf Entwurfspräsentation vor Kunden übertragen. Neu für dieses Repository: die Tabelle „Aussagen statt Geschmack" mit Bezug auf die vorhandenen Prüfskripte und Regeln, die Abgrenzung der Lens von der Lesart aus Kapitel 26, die Rollentabelle, die Spielregeln für Rückmeldung, die Abgrenzung zur Obergrenze der Durchgänge in Kapitel 29. Neuer Ablauf `agentur-website-builder/references/kundenabstimmung.md` mit Markenbrief-Block, Ablauf der Präsentation, Einsortieren von Rückmeldungen |
+
+**Nicht geprüft.** Die im Video genannten Personen und Studien (Kahneman, Adam Grant, Teresa Amabile,
+Ed Catmull, Jeff Bezos, ein Vorgehen eines Xbox Teams mit dem Namen GRID, eine Harvard Studie von 2026,
+der Verkauf von Zappos an Amazon) sind nur als Aussage des Videos wiedergegeben und nicht gegen
+Primärquellen gelesen. Keine Regel in Kapitel 33 hängt allein an einer davon.
+
+**Nicht übernommen, mit Grund:** Karriere- und Beförderungsrahmen, der Brillenworkshop,
+Hinweis auf Buch und Hörbuch der Referentin. Siehe Kapitel 33, Abschnitt 7.
+
+### In Version 4.6 zusätzlich eingeflossen
+
+Stand der Quelle: 06.10.2026, wieder aus dem automatisch erzeugten Transkript, nichts wörtlich.
+
+| Quelle | Was daraus eingeflossen ist |
+|---|---|
+| Joanna Wiebe (Copyhackers), YouTube Video „The #1 Problem With AI Creative (And How To Fix It)", `youtube.com/watch?v=ct8kRihRigI`, **keine Lizenz genannt**, nur inhaltlich destilliert | Neu: `agentur-website-builder/references/chatbot-auf-der-website.md` (Leitplanken, Wissensbasis, keine verbindlichen Erklärungen, Gegenprobe, technischer Schutz, Datenschutz; die Struktur des Systemprompts folgt dem Video, alles Übrige ist für dieses Repository ergänzt). Neu: Schritt 9 „Abnahme durch einen Menschen" in `qa-und-abnahme.md`, ein Punkt in der Definition of Done und eine Zeile im Abschlussbericht. Neu: Punkt 11 „Alltagsprobe" im Vorflugcheck von Kapitel 26 |
+
+**Nicht geprüft.** Die Beispiele des Videos (Paketdienst, Autohaus, Hersteller von Schnellrestaurants, Getränkehersteller) sind nur als Aussage des Videos wiedergegeben.
+
+**Nicht übernommen, mit Grund:**
+
+| Teil des Videos | Grund |
+|---|---|
+| Kontrastfigur („nicht X, sondern Y") als Erkennungsmerkmal von KI Text | steht seit 4.4 in `scripts/deslop-check.mjs` und `12-copywriting.md` |
+| Farbübung zur Aufteilung des eigenen Prozesses, Papier und Stift vor dem Rechner, Retreats | Arbeitsweise der Person, kein Webseitenbau |
+| „Nutze KI nicht in Bereichen ohne eigene Fachkenntnis" | als Haltung nicht prüfbar; nur der Teil mit dem Bericht „zur Prüfung durch eine Fachperson" in `qa-und-abnahme.md` ist übernommen |
+
+### In Version 4.7 zusätzlich eingeflossen
+
+Stand der Quelle: 06.10.2026, aus dem automatisch erzeugten Transkript, nichts wörtlich.
+
+| Quelle | Was daraus eingeflossen ist |
+|---|---|
+| Joanna Wiebe (Copyhackers), YouTube Video „Words That SELL (Psychology-Backed)", `youtube.com/watch?v=7gjtI1rnds4`, **keine Lizenz genannt**, nur inhaltlich destilliert | Neues Kapitel `webdesign-conversion/references/34-ueberzeugungsausloeser.md`: aus den neun Auslösern des Videos nur die, die im Regelwerk fehlten (Zielgruppe ohne Vorwurf, Wirkprinzip, realistisch behaupten, ruhige Einwandzeile, drei Optionen, Einschränkung selbst nennen), mit Grenzen gegen erfundene Belege und Irreführung. Neu für dieses Repository: die Zuordnung zu Stellen der Seite, drei Felder im Markenbrief, zwei Satzmuster in `scripts/deslop-check.mjs` mit vier Tests |
+
+**Bereits im Repository, deshalb nicht neu aufgenommen:** der Botschaftsbogen und das Auflösen von
+Einwänden (`12-copywriting.md`), das Risiko am Button (Prüfung 7), ein belegter Fall statt drei
+behaupteter und der Vorrang einer starken Quelle vor vier Kacheln (`06-conversion-architektur.md`).
+
+**Nicht übernommen, mit Grund:**
+
+| Teil des Videos | Grund |
+|---|---|
+| die psychologische Begründung über zwei Denksysteme | nicht nachgelesen, jede Regel hat einen eigenen Grund |
+| Prozentwert eines Anstiegs bei einem Unternehmen, Beispiele mit großen Marken | nicht prüfbar, belegt nichts für einen anderen Betrieb |
+| Hinweis auf Buch und Hörbuch der Referentin | Werbung |
+
+### In Version 4.8 zusätzlich eingeflossen
+
+Stand der Quelle: 07.10.2026, aus dem automatisch erzeugten Transkript, nichts wörtlich.
+
+| Quelle | Was daraus eingeflossen ist |
+|---|---|
+| Joanna Wiebe (Copyhackers), YouTube Video „Use Words Like This To Make Anyone Respect you", `youtube.com/watch?v=bvvh-HZiQqo`, **keine Lizenz genannt**, nur inhaltlich destilliert | Neues Kapitel `webdesign-conversion/references/35-autoritaet-im-text.md`: Weichmacher streichen, die Satzleiter (Befund, dann Befund mit Grund), Präzision mit benanntem Fachwort, Rahmen vor dem Einwand („Frame Control“), die drei Fragearten als Folgen-, Umdeutungs- und Annahmenfrage. Neu für dieses Repository: die deutsche Weichmacherliste, die Übertragung der Rahmenidee auf Preis und Passung ohne Verknappung, die acht Regeln für Antworten in der FAQ mit Bezug auf `05-seo-sichtbarkeit.md` und `31-ki-sichtbarkeit-geo.md`, das Satzmuster „Weichmacher“ in `scripts/deslop-check.mjs` mit zwei Tests |
+
+**Nicht übernommen, mit Grund:** Körperhaltung, Mimik, Stimme und „Autoritätsgesicht“ (betrifft das
+Auftreten im Raum), strategisches Schweigen nach der Preisnennung (Verhandlungstaktik im Gespräch),
+alle Prozentwerte und Studien (nicht nachgelesen), „Rule of One“ (deckt sich mit der Kernbotschaft in
+`12-copywriting.md`), der Hinweis auf Buch und Hörbuch der Referentin.
+
+### In Version 4.9 zusätzlich eingeflossen
+
+Stand der Quelle: 07.10.2026, aus den automatisch erzeugten Transkripten, nichts wörtlich.
+
+| Quelle | Was daraus eingeflossen ist |
+|---|---|
+| Sam Crawford, YouTube Kanal `@bycrawford`, die zehn neuesten Videos zu Webdesign, **keine Lizenz genannt**, nur inhaltlich destilliert | `scripts/pruefe-aktualitaet.mjs` mit Tests (veraltetes Copyright-Jahr, Stand-Angaben, Jahr im Titel), QA Schritt 10 „Aktualität und Eigentum" in `qa-und-abnahme.md`, Vorflugcheck 12 bis 14 (Tauschtest fürs Logo, Blinzeltest, Videotest) und die Frage „für Besucher oder für uns?" in `26-geschmack-und-ki-tells.md`, Material vor Entwurf, Startseite zuerst und feste Korrekturrunden in `kundenabstimmung.md`, „erst reparieren, dann neu bauen" in `27-redesign-bestand.md`. Neu für dieses Repository sind die Prüfregeln, die Begründungen und die Einordnung als Urteil oder Messung |
+
+**Bereits im Repository, deshalb nicht erneut aufgenommen:** Held und Hierarchie, Weißraum, Kontrast,
+Formulare, Vertrauen am Knopf, Schriftwahl, Mobil, Barrierefreiheit, GEO, A/B Tests.
+
+**Nicht übernommen, mit Grund:** Studien, Prozentwerte und Anekdoten (nicht nachgelesen),
+Werbung für Kurse, Vorlagen und Dienstleistungen des Kanals.

@@ -19,7 +19,7 @@ pnpm astro check    # falls TypeScript im Projekt
 
 Warnungen nicht ignorieren. Sie sind fast immer echte Fehler in der Ausgabe.
 
-### 2. Die acht Prüfskripte
+### 2. Die neun Prüfskripte
 
 ```bash
 node scripts/pruefe-striche.mjs                 # Gedankenstriche, hyphens: auto, verbotene Wörter
@@ -30,6 +30,7 @@ node scripts/pruefe-breakpoints.mjs http://localhost:4321 --bilder
 node scripts/pruefe-geschmack.mjs               # nach dem Build: Kicker, Laufband, CTA-Texte, KI-Tells
 node scripts/pruefe-motion.mjs                  # transition: all, scale(0), ease-in, Dauer, Reduzierung
 node scripts/pruefe-geo.mjs                     # nach dem Build: robots.txt, KI-Crawler, Text im HTML, JSON-LD
+node scripts/pruefe-aktualitaet.mjs             # nach dem Build: Copyright-Jahr, Stand-Angaben, Jahr im Titel
 ```
 
 `pruefe-geschmack.mjs` zählt, was sich an Geschmack zählen lässt: höchstens ein Kicker je drei
@@ -156,6 +157,44 @@ auflisten.
 * Datenschutzerklärung deckt jeden tatsächlich eingebauten Dienst ab, und keinen mehr
 * bei Relaunch: jede alte URL hat ein Ziel, Stichprobe geprüft
 
+### 9. Abnahme durch einen Menschen
+
+Dieser Ablauf prüft mit Skripten und mit dem Modell, das gebaut hat. Beides ersetzt nicht die
+letzte Sichtung: Das Modell, das etwas erzeugt hat, ist der schwächste Prüfer seiner eigenen
+Arbeit, weil es dieselben Annahmen mitbringt. Vor der Übergabe an den Kunden liest ein Mensch
+jeden Text und klickt jede Funktion durch.
+
+* Der Bericht nennt, was der Mensch sich ansehen muss, nicht nur, was geprüft wurde: alle
+  Texte, Formularpfade, Rechtstexte, Preise und Zahlen, und bei einem Chatbot die Gegenprobe
+  aus `chatbot-auf-der-website.md`.
+* Bereiche, in denen die prüfende Person selbst nicht Fachfrau oder Fachmann ist (Recht, Barrierefreiheit,
+  Gestaltung), stehen ausdrücklich als „zur Prüfung durch eine Fachperson" im Bericht. Die
+  Prüfung eines Bereichs, den niemand beurteilen kann, ist kein Qualitätsmerkmal.
+* Das Modell meldet die Seite nie als abgenommen. Abgenommen ist sie, wenn ein Mensch es sagt.
+
+Quelle: ein Video zum Umgang mit KI Ergebnissen, siehe `CREDITS.md`, Abschnitt „Version 4.6".
+
+### 10. Aktualität und Eigentum
+
+Eine Seite, die veraltet wirkt, verliert Vertrauen, bevor jemand den ersten Absatz liest: Ein
+Copyright von 2023 im Jahr 2026 liest sich als „hier kümmert sich niemand". Und eine Seite,
+die der Kunde nicht besitzt, ist eine Leihgabe der Agentur.
+
+* `node scripts/pruefe-aktualitaet.mjs` gegen `dist/` ohne harten Befund. Das Copyright-Jahr
+  entsteht beim Build (`new Date().getFullYear()`), steht nie von Hand im Markup. Stand-Angaben
+  und Jahre in Titeln meldet das Skript als Hinweis: Dort entscheidet ein Mensch, ob der Inhalt
+  noch stimmt.
+* Übergabe mit Eigentum: Domain auf den Namen des Kunden registriert (oder die Übertragung
+  im Bericht terminiert), Zugänge zu Hosting, DNS, Repository und Formularzustellung beim
+  Kunden oder schriftlich an ihn übertragen. Was noch bei der Agentur liegt, steht im Bericht
+  als „offen, bei uns". Grund: Wer die Domain nicht besitzt, kann die Seite nicht mitnehmen und
+  bleibt abhängig, auch wenn der Vertrag etwas anderes sagt.
+* Der Bericht nennt, wer die laufende Pflege übernimmt (Kunde, Agentur, niemand). „Niemand"
+  ist eine zulässige Antwort, aber eine ausgesprochene.
+
+Quelle: Videos eines Webdesigners, siehe `CREDITS.md`, Abschnitt „Version 4.9". Ungeprüft: der
+Ablauf ist an keiner echten Übergabe erprobt.
+
 ## Abschlussbericht im Chat
 
 Kurz, sachlich, ohne Erfolgsprosa:
@@ -168,12 +207,14 @@ Kurz, sachlich, ohne Erfolgsprosa:
 ## Fehlende Bilder
 ## Fehlende Rechtsangaben
 ## Copyvorschläge zur Abstimmung mit dem Kunden
+## Von einem Menschen noch zu prüfen
+## Offene Rückmeldungen, nach Art sortiert (siehe `kundenabstimmung.md`)
 ## Bewusste Abweichungen vom Entwurf
 ## Nächste Schritte
 ```
 
 "Geprüft mit Ergebnis" nennt das Werkzeug und den Befund, nicht das Gefühl: "Build grün,
-acht Prüfskripte ohne Fehler, Tastaturdurchlauf auf 375 und 1440 px, Formular mit allen vier
+neun Prüfskripte ohne Fehler, Tastaturdurchlauf auf 375 und 1440 px, Formular mit allen vier
 Zuständen getestet" ist überprüfbar, "funktioniert" nicht.
 
 Zum Schluss ein Satz dazu, dass Rechtstexte und Datenschutzangaben vorbereitet, aber nicht

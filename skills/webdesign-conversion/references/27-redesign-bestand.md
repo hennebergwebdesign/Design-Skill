@@ -87,6 +87,10 @@ Karte für sich stimmt.
 - **Mit dem vorhandenen Stack arbeiten, solange weiterentwickelt wird.** Keine Migration von
   Framework oder Styling ohne Auftrag. Beim Relaunch in den Agenturstack gilt dagegen
   `../../agentur-website-builder/SKILL.md`, dort ist Astro auf Cloudflare Pages gesetzt.
+- **Erst reparieren, dann neu bauen.** Zeigt der Befund, dass der Schaden an drei Stellen sitzt
+  (Held, Formular, Ladezeit), ist die Reparatur dieser drei Stellen oft der kleinere und
+  schnellere Auftrag als ein Neubau. Der Befund nennt beide Wege mit Aufwand, und der Kunde
+  entscheidet. Ungemessen, ab wann sich der Neubau lohnt.
 - **Vor jeder neuen Bibliothek die Abhängigkeiten prüfen.** Ein Import, der im Projekt nicht
   existiert, ist ein Fehler, keine Kleinigkeit.
 - **Nach jedem Hebel prüfen, ob noch alles funktioniert.** Kleine, nachvollziehbare

@@ -55,6 +55,23 @@ Unternehmens. Jemand sucht „Dach undicht", nicht „Bauwerksabdichtung im Best
 Lässt sich der letzte Punkt nicht füllen, ist das kein Copy-Problem, sondern ein
 Positionierungsproblem. Dann zurück zu `01-strategie-positionierung.md`, nicht weiterbauen.
 
+Drei Felder für die Mitte und das Ende der Seite, siehe `34-ueberzeugungsausloeser.md`. Sie
+kommen vom Kunden und werden nie ergänzt, damit der Text besser klingt:
+
+**Wirkprinzip** (das Verfahren, das erklärt, warum es funktioniert, mit dem Namen, den der Kunde
+selbst benutzt; leer lassen, wenn es keines gibt):
+
+> [[FEHLT: Wirkprinzip oder „keines"]]
+
+**Stärkster Beleg** (der eine belegte Fall oder die eine Zahl, die direkt unter dem Held steht):
+
+> [[FEHLT: ein Beleg mit Quelle und Stand]]
+
+**Einschränkung oder Aufwand** (was der Kunde des Kunden tun oder aushalten muss, damit das
+Ergebnis eintritt):
+
+> [[FEHLT: ehrliche Einschränkung]]
+
 ## 4 Die fünf Einwände
 
 Jeder Einwand, der real vor einer Anfrage kommt, mit der Antwort, die auf die Seite gehört.

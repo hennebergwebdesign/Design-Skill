@@ -14,7 +14,7 @@ rechtlich tragfähig, barrierearm, schnell, und nicht wie von einer Maschine geb
 
 | Skill | Rolle | Lizenz |
 |---|---|---|
-| `skills/webdesign-conversion/` | das Regelwerk: was gut ist und warum. 32 Referenzen, 3 Playbooks, Vorlagen, Checklisten | MIT |
+| `skills/webdesign-conversion/` | das Regelwerk: was gut ist und warum. 35 Referenzen, 3 Playbooks, Vorlagen, Checklisten | MIT |
 | `skills/agentur-website-builder/` | der Lieferablauf: Phasen 0 bis 6, fester Agenturstack, einsatzfertiger Code | Agenturstandard, siehe seine `SKILL.md` |
 
 Die Trennung ist die zentrale Entscheidung dieses Repositories: **Wissen und Ablauf sind
@@ -39,6 +39,7 @@ node scripts/pruefe-breakpoints.mjs http://localhost:4321 --bilder
 node scripts/pruefe-geschmack.mjs            # nach dem Build: dist/ Seiten, src/ Quellen
 node scripts/pruefe-motion.mjs               # src/: transition: all, scale(0), ease-in, Dauer, Reduzierung
 node scripts/pruefe-geo.mjs                  # nach dem Build: dist/ robots.txt, KI-Crawler, JSON-LD
+node scripts/pruefe-aktualitaet.mjs          # dist/ und src/: Copyright-Jahr, Stand-Angaben, Jahr im Titel
 
 # Agenturwerkzeuge
 node scripts/relaunch-inventory.mjs https://alte-kundenseite.de
@@ -86,10 +87,10 @@ nicht, es braucht das Glob-Muster in Anführungszeichen.
 ```
 .claude-plugin/       plugin.json, marketplace.json
 skills/
-  webdesign-conversion/     SKILL.md, references/00-32, playbooks/, assets/
+  webdesign-conversion/     SKILL.md, references/00-35, playbooks/, assets/
                             assets/musterbibliothek/ ist das globale Musterwissen
   agentur-website-builder/  SKILL.md, references/, assets/consent|forms|reviews
-scripts/              acht Prüfskripte, Agenturwerkzeuge, Designrecherche, ein Installer
+scripts/              neun Prüfskripte, Agenturwerkzeuge, Designrecherche, ein Installer
   lib/abruf.mjs       die eine Abrufschicht, vier Rückfallstufen, robots.txt
   lib/browser.mjs     die eine Stelle, die Playwright sucht und Chromium startet
   tests/              node --test, lokaler Testserver statt Netzzugriff
@@ -158,6 +159,27 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Offene Punkte
 
+- Version 4.9.0: `pruefe-aktualitaet.mjs` kennt nur drei Formen (Copyright, Stand, Jahr im Titel)
+  und weiß nicht, welche feste Jahreszahl Absicht ist, deshalb sind zwei davon nur Hinweise.
+  Der Übergabeschritt (Domain, Zugänge, Pflege) und der Tauschtest, der Blinzeltest und der
+  Videotest im Vorflugcheck sind an keinem echten Projekt erprobt. Kein Evalfall, das Δ ist eine
+  Vermutung. Die Videos nennen Studien und Zahlen, keine davon ist übernommen.
+- Version 4.8.0: Kapitel 35 hat keinen Evalfall, das Δ ist eine Vermutung. Die deutsche
+  Weichmacherliste ist eine eigene Zusammenstellung, nicht aus dem Video. Das Satzmuster liefert
+  Hinweise und keine Fehler: Ein „vielleicht“ in einer Besucherfrage oder ein Vorbehalt in einem Rechtstext
+  ist berechtigt. Nicht geprüft, ob die FAQ Regeln mit `jsonld-bausteine.md` und der Akkordeon
+  Vorlage zusammenpassen.
+- Version 4.7.0: Kapitel 34 hat keinen Evalfall, das Δ ist eine Vermutung. Die beiden neuen
+  Satzmuster sind gegen Testsätze geprüft, nicht gegen echte Kundentexte; „garantiert“ kann
+  berechtigt dort stehen, wo der Kunde eine Garantie gibt, dann ist der Befund ein Hinweis, kein Fehler.
+- Version 4.6.0: `chatbot-auf-der-website.md` hat keine Codevorlage, die Gegenprobe ist an keinem
+  echten Bot gelaufen, und die Alltagsprobe in Kapitel 26 hat keinen Evalfall. Das Δ ist eine
+  Vermutung. Ein Prüfskript für die Gegenprobe wäre der nächste Schritt, ist aber nicht gebaut.
+- Version 4.5.0: Kapitel 33 und `kundenabstimmung.md` sind nicht an einem echten Kundentermin
+  erprobt. Es gibt keinen Evalfall, ob das Kapitel das Verhalten beim Vorstellen eines Entwurfs
+  ändert; das Δ ist eine Vermutung. Die Aussagen des Videos (Personen, Studien, ein Xbox Vorgehen)
+  sind nicht gegen Primärquellen gelesen. Die Lens der Agentur fehlt bewusst und muss von der
+  Agentur formuliert werden.
 - Version 4.4.0: `pruefe-motion.mjs` und `pruefe-geo.mjs` sind gegen Fixtures und die eigenen
   Vorlagen geprüft, nicht gegen ein gebautes Kundenprojekt. Die Hover-Erkennung in
   `pruefe-motion.mjs` liest CSS mit einfacher Klammerzählung und kennt weder verschachteltes
@@ -209,6 +231,59 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
   veröffentlicht wird.
 
 ## Änderungsverlauf
+
+- **07.10.2026, Version 4.9.0** Die zehn neuesten Videos des Kanals @bycrawford (Sam Crawford,
+  Webdesign), ausgewertet auf Lücken. Das meiste stand schon im Regelwerk (Held, Hierarchie,
+  Weißraum, Kontrast, Formulare, Vertrauen am Knopf, Schriften, Mobil, Barrierefreiheit, GEO,
+  A/B). Neu: `scripts/pruefe-aktualitaet.mjs` mit 7 Tests (insgesamt 191), QA Schritt 10
+  „Aktualität und Eigentum" (Copyright-Jahr dynamisch, Domain und Zugänge beim Kunden, Pflege
+  benannt), Vorflugcheck 12 bis 14 (Tauschtest fürs Logo, Blinzeltest, Videotest), die Frage
+  „für Besucher oder für uns?" in Abschnitt 6 von Kapitel 26, in `kundenabstimmung.md` Material
+  vor Entwurf, Startseite zuerst und der Vorschlag fester Korrekturrunden, in
+  `27-redesign-bestand.md` „erst reparieren, dann neu bauen". Nicht übernommen: Studien,
+  Prozentwerte und Anekdoten, Werbung für Kurse und Vorlagen. Siehe `CREDITS.md`, Abschnitt
+  „Version 4.9". Versionen: Plugin 4.9.0, Regelwerk 2.12.0, Bauablauf 2.9.0.
+- **07.10.2026, Version 4.8.0** Viertes Video derselben Referentin („Use Words Like This To Make
+  Anyone Respect you"), auf Wunsch unter dem Copywriting, besonders für FAQ und Einwände. Nur die
+  Teile, die sich auf geschriebene Seiten übertragen lassen. Neu: Kapitel `35-autoritaet-im-text.md`
+  (Weichmacher streichen mit eigener deutscher Liste, Satzleiter Befund vor Grund, Präzision mit
+  benanntem Fachwort, Rahmen vor dem Einwand, Fragen als Führung, acht Regeln für Antworten in der
+  FAQ), ein weiteres Satzmuster „Weichmacher“ in `deslop-check.mjs` mit zwei Tests, insgesamt 184.
+  Verweise in `12-copywriting.md` (auch an der FAQ Stelle), `copy-im-kundenprojekt.md` und
+  `SKILL.md`. Nicht übernommen: Körpersprache, Stimme, Schweigen, alle Prozentwerte und Studien,
+  „Rule of One“ als Doppelung. Siehe `CREDITS.md`, Abschnitt „Version 4.8“. Versionen: Plugin
+  4.8.0, Regelwerk 2.11.0, Bauablauf 2.8.0.
+- **06.10.2026, Version 4.7.0** Drittes Video derselben Referentin („Words That SELL"), nur die
+  Lücken. Vieles stand schon im Regelwerk (Botschaftsbogen, Einwände, Risiko am Button, ein
+  starker Beleg statt vieler, Grenze zur Irreführung) und wird nicht wiederholt. Neu: Kapitel
+  `34-ueberzeugungsausloeser.md` (Zielgruppe ohne Vorwurf, Wirkprinzip benennen, realistisch
+  behaupten, ruhige Einwandzeile, drei echte Optionen, ehrliche Einschränkung), drei neue Felder
+  im Markenbrief (Wirkprinzip, stärkster Beleg, Einschränkung, alle optional), zwei neue
+  Satzmuster in `deslop-check.mjs` („Vorwurf an den Leser", „Absolutes Versprechen") mit vier
+  Tests, insgesamt 182. Verweise in `12-copywriting.md`, `copy-im-kundenprojekt.md` und
+  `SKILL.md`. Keine neue harte Grenze. Nicht übernommen und warum: `CREDITS.md`, Abschnitt
+  „Version 4.7". Versionen: Plugin 4.7.0, Regelwerk 2.10.0, Bauablauf 2.7.0.
+- **06.10.2026, Version 4.6.0** Zweites Video derselben Referentin (KI Ergebnisse ohne „Slop"),
+  nur der Teil, der beim Webseitenbau hilft. Neu: `agentur-website-builder/references/chatbot-auf-der-website.md`
+  (nur bei Kundenwunsch: Systemprompt serverseitig, Wissensbasis vom Kunden, keine verbindlichen
+  Erklärungen, Gegenprobe, Schutz wie beim Formular, Dienst im Datenschutz), Schritt 9 „Abnahme
+  durch einen Menschen" in `qa-und-abnahme.md` mit Punkt in der Definition of Done, Zeile im
+  Abschlussbericht, Auslöserzeile in `intake-und-entscheidungen.md`, Chatbot im Dienstekatalog,
+  und Punkt 11 „Alltagsprobe" im Vorflugcheck von `26-geschmack-und-ki-tells.md`. Keine neue
+  harte Grenze, kein Prüfskript. Nicht übernommen und warum: `CREDITS.md`, Abschnitt „Version
+  4.6". Versionen: Plugin 4.6.0, Regelwerk 2.9.0, Bauablauf 2.6.0.
+- **06.10.2026, Version 4.5.0** Auf Wunsch aus einem YouTube Video über Durchsetzungskraft in
+  kreativen Teams (Joanna Wiebe, Transkript ausgewertet). Neu: Kapitel
+  `33-kundenpraesentation-und-feedback.md` im Regelwerk (fünf Stellschrauben fürs Gespräch mit dem
+  Kunden, Aussagen statt Geschmack, Ziele, Recherche, Erkenntnis, Entwurf als feste Reihenfolge,
+  Rückfrage statt Verteidigung, Lens abgegrenzt von der Lesart, Rollen und Spielregeln für
+  Rückmeldung) und `agentur-website-builder/references/kundenabstimmung.md` im Bauablauf
+  (Markenbrief-Block für Rollen, Ablauf der Präsentation, Rückmeldungen nach Art einsortieren).
+  Verweise in beiden `SKILL.md`, im Fragenkatalog (Frage 9, wer freigibt), im Konzeptgerüst der
+  Phase 3 (neuer Kopf: Ziel, Belege, Erkenntnis) und im Abschlussbericht. Keine neue harte Grenze,
+  kein neues Prüfskript, kein Evalfall: das Kapitel ist Haltung und Ablauf. Nicht übernommen und
+  warum: `CREDITS.md`, Abschnitt „Version 4.5". Versionen: Plugin 4.5.0, Regelwerk 2.8.0,
+  Bauablauf 2.5.0.
 
 - **06.10.2026, Version 4.4.0** Auf Wunsch aus einer Recherche, welche Website-Skills gerade
   viel genutzt und besprochen werden. Neu: Kapitel `30-motion-pruefung.md` (Emil Kowalski: soll
