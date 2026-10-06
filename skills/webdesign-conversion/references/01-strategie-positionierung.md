@@ -97,6 +97,24 @@ Die Struktur ist übertragbar: Umdeutung der Frage → konkrete Folgen des Nicht
 Zuspitzung in einem Satz. Die Folgen müssen für die Branche wirklich stimmen; erfundene
 Schreckensszenarien fallen zurück auf den Absender.
 
+## Schritt 1.4: Zielkonflikte entscheiden
+
+Funktionen, SEO, Nutzerführung, Conversion, Performance, Barrierefreiheit und Gestaltung sind
+nie alle zugleich optimal. Das Konzept (Phase 3) legt eine Rangfolge fest und dokumentiert sie
+in der `CLAUDE.md` des Projekts. Grund: Ein Konflikt, der nicht entschieden wurde, wird beim
+Bauen von der zuletzt gelesenen Regel entschieden.
+
+| Konflikt (Beispiele) | Frage | Entscheidung dokumentieren |
+|---|---|---|
+| SEO gegen Nutzerführung | Soll die Seite mehr Text für Suchmaschinen tragen, als der Besucher braucht? | ja oder nein, mit Grund |
+| Gestaltung gegen Performance | Lohnt der Effekt die Ladezeit? | Budget im Konzept |
+| Marketing gegen Barrierefreiheit | Verdeckt eine Aktion die Bedienbarkeit? | bei harten Grenzen hat Barrierefreiheit Vorrang |
+| Funktionsumfang gegen Tempo | Was kommt in Version 1, was später? | Liste |
+
+Die harten Grenzen aus `SKILL.md` (Kontrast 4,5:1, Tastatur, Ladezeit, echte Consent-Sperre,
+`prefers-reduced-motion`) stehen nicht zur Abwägung. Offene Entscheidungen bleiben als
+`[[FEHLT: Entscheidung Zielkonflikt …]]` stehen, damit `pruefe-platzhalter.mjs --launch` sie findet.
+
 ## Ergebnis dieses Bereichs
 
 Ein Positionierungsblatt mit vier Zeilen, das jede spätere Entscheidung trägt:
@@ -107,6 +125,8 @@ Ein Positionierungsblatt mit vier Zeilen, das jede spätere Entscheidung trägt:
 | **USP** | Ergebnis + Methode + Sicherheit |
 | **Einwände** | Preis / Vertrauen / Prozess, je mit Antwort |
 | **Conversion** | primär (z. B. Erstgespräch buchen), sekundär (z. B. Leistungen ansehen) |
+
+Dazu, sobald das Konzept steht: die Rangfolge bei Zielkonflikten (Schritt 1.4).
 
 Dieses Blatt gehört ins Projekt-`CLAUDE.md`. Jede Headline, jeder CTA und jede Sektion wird
 später daran gemessen.

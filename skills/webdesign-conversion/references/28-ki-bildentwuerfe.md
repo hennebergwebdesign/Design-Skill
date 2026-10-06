@@ -178,3 +178,4 @@ siehe „Fertiges Logo" oben.
 - `25-designmuster-bibliothek.md`: Belegmarkierung und warum Entwürfe keine Muster werden
 - `26-geschmack-und-ki-tells.md`: Lesart, Regler und die Tells, die in den Auftrag gehören
 - `07-recht-dsgvo.md` und `06-conversion-architektur.md`: Belege, Vertrauen, Irreführung
+- `39-ki-assets-bewegtbild-und-3d.md`: wenn KI ein Asset erzeugt, das auf die Seite kommt statt nur ein Entwurf

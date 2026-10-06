@@ -162,6 +162,9 @@ Scroll-Animation. Wenn, dann richtig:
   dessen Mitte der Bezugslinie am nächsten liegt. Eine feste Formel aus dem Scrollfortschritt
   läuft bei jeder Layoutänderung aus dem Takt.
 
+Wann sich ein Scrollvideo überhaupt lohnt, den Aufbauablauf, den Blendfehler und die Regeln für
+Einbettungen von Drittanbietern regelt `38-scrollvideo-und-einbettungen.md`.
+
 ## Performance
 
 - **Nur `transform` und `opacity` animieren** (`x`, `y`, `scale`, `rotation`). Diese laufen

@@ -84,7 +84,7 @@ skills/
 │  ├─ references/
 │  │  ├─ 00-fahrplan.md             Strategie → Struktur → Copy → Design → Bau → Test → Launch
 │  │  ├─ 01-strategie-positionierung.md  Zielgruppenformel, USP-Formel, Einwände
-│  │  ├─ 02-design-ux.md            Above the Fold, F-Pattern, 3-Klick-Regel, Layout
+│  │  ├─ 02-design-ux.md            Above the Fold, Scanverhalten, Buttons, 3-Klick-Regel, Layout
 │  │  ├─ 03-technik-performance.md  2-Sekunden-Regel, Bilder, Caching, fünf Breakpoints
 │  │  ├─ 04-barrierefreiheit-bfsg.md  BFSG, Kontrast, Alt-Texte, Tastatur, WCAG 2.2 AA
 │  │  ├─ 05-seo-sichtbarkeit.md     Keywords, URLs, Meta, interne Links, JSON-LD
@@ -117,13 +117,19 @@ skills/
 │  │  ├─ 32-ui-details-katalog.md   Eingabe, Touch, Safe Area, Intl, Hochkontrast, Zustand in der URL
 │  │  ├─ 33-kundenpraesentation-und-feedback.md  Aussagen statt Geschmack, Rückfrage statt Verteidigung, Rollen, Spielregeln
 │  │  ├─ 34-ueberzeugungsausloeser.md  Zielgruppe ohne Vorwurf, Wirkprinzip, realistisch behaupten, drei Optionen
-│  │  └─ 35-autoritaet-im-text.md   Weichmacher streichen, Satzleiter, Rahmen vor dem Einwand, FAQ Antworten
+│  │  ├─ 35-autoritaet-im-text.md   Weichmacher streichen, Satzleiter, Rahmen vor dem Einwand, FAQ Antworten
+│  │  ├─ 36-kundenpsychologie-erwartung-reiz-begruendung.md  Reihenfolge Erwartung, Reiz, Begründung, Gruppieren, Erinnerungstest
+│  │  ├─ 37-stilrichtung-nach-kundensprache.md  sechs Richtungen, Zuordnung vom Kundensatz, Signaturelement
+│  │  ├─ 38-scrollvideo-und-einbettungen.md  Scrollvideo nur mit Anlass, Blendfehler, 3D-Einbettungen, Tiefe, Körnung
+│  │  └─ 39-ki-assets-bewegtbild-und-3d.md  KI-Assets für Bewegtbild und 3D, Arbeitsweise, Abbruch, Rechte
 │  └─ assets/
 │     ├─ vorlagen/                  marke.json, marke-brief.md, impressum.md, datenschutz.md,
 │     │                             datenschutz-bewerber.md, consent-muster.md,
 │     │                             robots.txt(.ts), sitemap.xsl, _headers, 404.astro,
 │     │                             tokens.css, global-basis.css, head-meta.html,
 │     │                             jsonld-bausteine.md,
+│     │                             scrollvideo/ (Poster-Markup, Scrollvideo, Blendmaske,
+│     │                             Körnung, Lazy-Einbettung),
 │     │                             referenzkomponenten/ (Hero, FAQ, schwebende Elemente,
 │     │                             Bewertungen, Integrationen)
 │     ├─ checklisten/               pre-launch.md, conversion-audit.md
@@ -139,8 +145,9 @@ skills/
    │  ├─ leadsystem-dashboard.md    D1-Schema, Dashboard, Anmeldung, Löschfrist
    │  ├─ consent-und-dienste.md     Eigenbau, fünf Kategorien, Consent Mode, Dienstekatalog
    │  ├─ google-bewertungen.md      Places API serverseitig, KV-Cache, Darstellung
-   │  ├─ qa-und-abnahme.md          Prüfablauf in zehn Schritten, Abschlussbericht
-   │  ├─ kundenabstimmung.md        Rollen beim Kunden, Ablauf der Präsentation, Rückmeldungen einsortieren
+   │  ├─ qa-und-abnahme.md          Prüfablauf in zehn Schritten plus Schritt 8a, Abschlussbericht
+   │  ├─ kundenabstimmung.md        Rollen beim Kunden, Ablauf der Präsentation, Rückmeldungen, Korrekturrunden mit Frist
+   │  ├─ moodboard-und-stylescape.md  Moodboard intern, Stylescape zur Abnahme der Richtung, erster Entwurf
    │  ├─ chatbot-auf-der-website.md  Leitplanken, Wissensbasis, Gegenprobe, Datenschutz bei KI Chatbots
    │  ├─ brand-extraktion.md       Marke der Bestandsseite messen, auswerten, übernehmen
    │  ├─ brand-extraktion.md       Marke der Bestandsseite messen, auswerten, übernehmen
@@ -402,11 +409,13 @@ Die Suite hat dabei schon einen echten Fehler gefunden: das Landingpage-Playbook
 formuliert, dass das Modell die Navigationsregel erkannte, dann aber um Erlaubnis fragte statt
 zu liefern. Details in `evals/README.md`.
 
-Dreizehn Fälle insgesamt, davon drei für den Agenturstandard: `consent-ohne-keks`,
+Sechzehn Fälle insgesamt, davon drei für den Agenturstandard: `consent-ohne-keks`,
 `leadsystem-nur-auf-bestaetigung` und `brand-extraktion-nur-eigene-marke`. Die ersten beiden und die vier neueren Fälle
 `kundendesignsystem-schlaegt-referenz`, `referenz-erst-freigeben`,
 `nicht-beobachtetes-nicht-behaupten` und `keine-attrappen-als-beleg` sind noch nicht gelaufen,
-ihr Δ ist damit eine Vermutung und kein Messwert.
+ihr Δ ist damit eine Vermutung und kein Messwert. Die drei neuesten Fälle sind klein gemessen:
+`konturbutton-nicht-primaer` Δ +0,75, `f-muster-kein-leitbild` Δ +0,13, `scrollvideo-nur-mit-anlass` Δ 0,00
+(misst noch nichts), je zwei Läufe je Arm, Einzelheiten in `evals/README.md`.
 
 ## Quell-Skills nachinstallieren
 

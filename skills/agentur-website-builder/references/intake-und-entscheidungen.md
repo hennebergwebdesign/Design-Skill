@@ -119,6 +119,7 @@ Ohne ihre Antworten wird nicht gestaltet.
 | --- | --- |
 | Nutzer erwähnt Leads, Bewerber, Anfragenverwaltung | Leadspeicher und Dashboard, D1 oder vorhandener Supabase Account |
 | Nutzer erwähnt Termine oder Beratungsgespräche | Cal.com oder Calendly, eingebettet oder verlinkt |
+| Kunde beschreibt die gewünschte Optik in eigenen Sätzen (clean, nahbar, muss Wow machen) | Sätze wörtlich in den Markenbrief, Richtung vorschlagen nach `../../webdesign-conversion/references/37-stilrichtung-nach-kundensprache.md`, Abnahme über die Stylescape (`moodboard-und-stylescape.md`) |
 | Nutzer erwähnt Chatbot oder KI Assistent | zuerst fragen, ob ein Kontaktformular reicht; sonst `chatbot-auf-der-website.md`, mit Wissensbasis vom Kunden |
 | Landingpage für Kampagne | Meta Pixel, Conversions API, GTM Container ID |
 | Newsletter oder Leadmagnet | Double Opt in nötig, welcher Anbieter |

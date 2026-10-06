@@ -82,6 +82,15 @@ und diszipliniert. Streiche eine Verzierung, die dem Auftrag nicht dient.
 Komponenten greifen nie auf `--farbe-gruen-500` zu, sondern auf `--farbe-akzent`,
 `--farbe-text`, `--farbe-flaeche`. Die Rampe ist die Palette, die Rollen sind die Schnittstelle.
 
+### Faustwert für die Verteilung
+
+Als Startpunkt, nicht als Gesetz: etwa 60 Prozent der Fläche in Hintergrundfarben, etwa 30
+Prozent für Text und Karten, etwa 10 Prozent für den Akzent (Buttons, Hervorhebungen). In
+Rollen übersetzt: `--farbe-flaeche`, `--farbe-text`, `--farbe-akzent`. Weicht ein Projekt
+bewusst ab (zum Beispiel eine dunkle Seite mit großem Bildanteil), steht der Grund in einem
+Satz im Markenbrief. Grund für die Zahlen: Sie sind der Vorschlag eines Videos, das sie selbst
+einen Startpunkt nennt, und gehören deshalb weder zu den harten Grenzen noch in ein Skript.
+
 ### Die Kontrastregel, die jede Markenpalette trifft
 
 Eine helle gesättigte Markenfarbe ist eine **Flächenfarbe**, keine Textfarbe. Daraus folgen
@@ -191,6 +200,8 @@ Dieselben zehn Richtungen stehen maschinenlesbar in
 `../assets/musterbibliothek/taxonomie.json` unter `stil`, dort ergänzt um vier weitere. Wer
 hier etwas ändert, zieht dort nach und umgekehrt: es sind zwei Fassungen derselben Liste,
 keine zwei Listen.
+
+Wie aus Kundenaussagen eine Richtung wird, steht in `37-stilrichtung-nach-kundensprache.md`.
 
 **Vor dem Griff zur Richtung:** Was am Gegenstand selbst ist bildwürdig? Ein Dachdecker hat
 Materialien, Schichten, Wasser, Gefälle. Ein Labor hat Proben, Messreihen, Maßstäbe. Daraus

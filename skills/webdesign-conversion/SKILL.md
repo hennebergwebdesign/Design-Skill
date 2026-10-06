@@ -4,7 +4,7 @@ description: "Vollständiges System für conversion-orientiertes Webdesign im DA
 license: MIT
 metadata:
   author: Henneberg Webdesign
-  version: 2.12.0
+  version: 2.13.0
 ---
 
 # Webdesign Conversion System
@@ -104,7 +104,7 @@ Lies gezielt nach, statt alles zu laden.
 
 | Aufgabe | Referenz |
 |---------|----------|
-| Hero, Navigation, Seitenaufbau, F-Pattern | `02-design-ux.md` |
+| Hero, Navigation, Seitenaufbau, Scanverhalten, Buttons | `02-design-ux.md` |
 | Visuelle Richtung, Tokens, Typografie, Anti-Schablone | `10-visuelle-richtung.md` |
 | Abstände, Rhythmus, Hierarchie durch Spacing | `15-spacing-rhythmus.md` |
 | Breakpoints, Container Queries, svh/dvh, Responsive-Szenarien | `16-responsive-container.md` |
@@ -123,9 +123,14 @@ Lies gezielt nach, statt alles zu laden.
 | Entwürfe mit einem Bildmodell erzeugen, auswerten, treu umsetzen, und was sie nie belegen | `28-ki-bildentwuerfe.md` |
 | Kurzvokabular fürs Feedback, vier Blickwinkel, wie viele Prüfdurchgänge vor der Übergabe | `29-pruefdurchgaenge-und-vokabular.md` |
 | Soll es animieren, Kurven, Dauern, Motion-Review mit zehn Maßstäben, Vokabular für Animationsfeedback | `30-motion-pruefung.md` |
+| Reihenfolge Erwartung, Reiz, Begründung, mentale Modelle, Gruppieren, Erinnerungs- und Aufgabentest | `36-kundenpsychologie-erwartung-reiz-begruendung.md` |
+| Kundensatz zur Optik in eine von sechs Richtungen übersetzen, Signaturelement | `37-stilrichtung-nach-kundensprache.md` |
+| Scrollvideo (lohnt es sich?), Blendfehler, 3D-Einbettungen, Text hinter dem Motiv, Körnung | `38-scrollvideo-und-einbettungen.md` |
+| KI erzeugt ein Asset, das auf die Seite kommt: Arbeitsweise, Abbruch, Rechte | `39-ki-assets-bewegtbild-und-3d.md` |
 | Ton mit Autorität, Weichmacher streichen, Rahmen setzen, Antworten in der FAQ | `35-autoritaet-im-text.md` |
 | Auslöser je Stelle der Seite: Zielgruppe ohne Vorwurf, Wirkprinzip, realistische Behauptung, ruhige Einwandzeile, drei echte Optionen, ehrliche Einschränkung | `34-ueberzeugungsausloeser.md` |
 | Entwurf vor dem Kunden vertreten, Geschmack durch Aussagen ersetzen, Rollen und Spielregeln für Rückmeldung, Lens | `33-kundenpraesentation-und-feedback.md` |
+| Moodboard intern, Stylescape zur Abnahme der Richtung | `../agentur-website-builder/references/moodboard-und-stylescape.md` |
 | Referenzen entdecken, vorlegen, freigeben, erfassen | `../agentur-website-builder/references/designrecherche-ablauf.md` |
 
 **Technik, Recht, Messung**

@@ -9,7 +9,7 @@ ist der Ablauf dazu und wiederholt die Begründung nicht.
 | Phase | Was hier dazukommt |
 | --- | --- |
 | 2 Rückfragen | Rollen klären und im Markenbrief eintragen (Abschnitt 1), Material einfordern (Abschnitt 4) |
-| 3 Konzept | Kopf des Konzepts: Ziel, Belege, Erkenntnis in je einem Satz, danach erst die Struktur |
+| 3 Konzept | Kopf des Konzepts: Ziel, Belege, Erkenntnis in je einem Satz, danach erst die Struktur. Richtung vorab als Stylescape klären, siehe `moodboard-und-stylescape.md` |
 | 3 Freigabe | Präsentation nach Abschnitt 2, Spielregeln zuerst, dann die Runde |
 | 6 Übergabe | Offene Rückmeldungen als Liste, jede einer Art zugeordnet (Abschnitt 3) |
 
@@ -85,10 +85,27 @@ Drei Regeln, die Rückmeldungsschleifen sparen:
   Sprache. Bei der Startseite stehen zwei Fragen vor jeder Gestaltung: Wer kommt hierher, und
   was soll er als Erstes tun? Stehen die Antworten im Markenbrief, sind sie die Messlatte für
   die Rückmeldungen.
-* **Feste Korrekturrunde im Angebot.** Der Vorschlag an die Agentur, im Angebot eine begrenzte
-  Zahl von Korrekturrunden zu nennen. Das ist eine Geschäftsentscheidung der Agentur, der Skill
-  schlägt es nur vor und legt sie nicht fest. Die Obergrenze in Abschnitt 5 gilt als technische
-  Grenze der Durchgänge davon unabhängig.
+* **Feste Korrekturrunden mit Frist im Angebot.** Der Vorschlag an die Agentur, im Angebot eine
+  begrenzte Zahl von Runden und eine Frist zu nennen, siehe den Unterabschnitt gleich darunter.
+  Das ist eine Geschäftsentscheidung der Agentur, der Skill schlägt es nur vor und legt sie nicht
+  fest. Die Obergrenze in Abschnitt 5 gilt als technische Grenze der Durchgänge davon unabhängig.
+
+### Korrekturrunden und Fristen
+
+Die zwei subjektiven Durchgänge aus Abschnitt 5 sind die interne Grenze vor der Übergabe.
+Gegenüber dem Kunden braucht es zusätzlich Spielregeln im Angebot:
+
+| Regel | Inhalt | Grund |
+|---|---|---|
+| Zwei Korrekturrunden | eine für die Startseite, eine für alle übrigen Seiten | Begrenzung zwingt zu klaren Entscheidungen und verhindert Endlosschleifen |
+| Frist je Runde | Rückmeldung innerhalb von 48 Stunden, danach gilt die Runde als abgeschlossen | ein Projekt ohne Frist kann Monate stehen |
+| Spätere Änderungen | gelten als Zusatzleistung nach Angebot | macht die Grenze verbindlich |
+| Reihenfolge | Startseite zuerst, Unterseiten danach (gilt bereits) | die Startseite ist der Bauplan |
+
+Die Zahlen (zwei Runden, 48 Stunden) sind **Vorschläge** aus einem Video und müssen zur Praxis der
+Agentur passen. Die vertragliche Verankerung (Angebot, AGB, Abnahme) lässt die Agentur rechtlich
+prüfen. Arbeitsdokument, keine Rechtsberatung. Aufgabe der Agentur ist nicht nur das Bauen, sondern
+das Projekt in Bewegung zu halten.
 
 ## 5. Grenzen
 
@@ -104,4 +121,5 @@ Drei Regeln, die Rückmeldungsschleifen sparen:
 * Markenbrief und Rückfragen: `intake-und-entscheidungen.md`
 * Prüfung und Übergabebericht: `qa-und-abnahme.md`
 * Texte im Kundenprojekt: `copy-im-kundenprojekt.md`
+* Richtung vor dem Bau absprechen: `moodboard-und-stylescape.md`
 * Warum, Rollen und Stellschrauben: `../../webdesign-conversion/references/33-kundenpraesentation-und-feedback.md`

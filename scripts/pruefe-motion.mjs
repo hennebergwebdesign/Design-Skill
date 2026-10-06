@@ -25,6 +25,16 @@
     6. :hover mit transform, translate, scale, rotate oder animation ausserhalb von
        @media (hover: hover): WARNUNG. Auf Touchgeraeten bleibt der Hoverzustand haengen.
        Tailwind v4 klammert hover: selbst, deshalb betrifft das nur geschriebenes CSS.
+  Je Quelldatei, Kapitel 38 (Scrollvideo und Einbettungen), nur bei Fund:
+    8. Scrollvideo (Import von scrolly-video oder Marker data-scrollvideo): FEHLER ohne
+       prefers-reduced-motion im selben Modul, FEHLER ohne Posterbild mit width und height,
+       FEHLER ohne Ueberschrift als HTML-Text in derselben Sektion, WARNUNG bei statischem
+       Import oder synchronem Script statt dynamischem Import. Ein statischer Import ist nur
+       eine Warnung, weil ein Bundler ihn in eine spaet hydrierte Insel legen kann.
+    9. Einbettung (data-embed-src oder iframe auf eine fremde Adresse): WARNUNG ohne
+       reservierte Groesse (aspect-ratio, height oder width und height). Gehoert laut
+       Kapitel 38 zur CLS-Pruefung, liegt aber hier, weil sich das Rohmarkup ohne Browser
+       testen laesst. pruefe-breakpoints.mjs misst die tatsaechliche Verschiebung.
   Je Projekt (alle geprueften Dateien zusammen):
     7. Es gibt Keyframes, animation, gsap oder ScrollTrigger, aber nirgends
        prefers-reduced-motion: FEHLER. Das ist die Pflicht aus 04-barrierefreiheit-bfsg.md.
@@ -89,6 +99,103 @@ function zeitInMs(zahl, einheit) {
 /** Alle Zeitangaben einer Wertangabe, in Millisekunden. */
 function zeiten(wert) {
   return [...wert.matchAll(/(?<![\w.-])(\d*\.?\d+)(ms|s)\b/g)].map((m) => zeitInMs(m[1], m[2]));
+}
+
+/* Der Inhalt eines Elements mit Marker, bis zum passenden schliessenden Tag (Tiefe gezaehlt). */
+function elementMitMarker(sauber, marker) {
+  const kopf = new RegExp(`<([A-Za-z][\\w-]*)\\b[^>]*\\b${marker}\\b[^>]*>`, 'g');
+  const treffer = [];
+  let k;
+  while ((k = kopf.exec(sauber))) {
+    const tag = k[1];
+    const re = new RegExp(`<(/?)${tag}\\b`, 'gi');
+    re.lastIndex = k.index + k[0].length;
+    let tiefe = 1;
+    let ende = sauber.length;
+    let t;
+    while ((t = re.exec(sauber))) {
+      tiefe += t[1] ? -1 : 1;
+      if (tiefe === 0) { ende = t.index; break; }
+    }
+    treffer.push({ von: k.index, inhalt: sauber.slice(k.index + k[0].length, ende) });
+  }
+  return treffer;
+}
+
+const zeileVon = (text, index) => text.slice(0, index).split('\n').length;
+
+/**
+ * Kapitel 38: Scrollvideo und Einbettungen. Je Datei, nur bei Fund.
+ * Liefert Befunde mit zeile, regel, schwere, meldung, tipp.
+ */
+export function scrollvideoAnalysieren(inhalt) {
+  const befunde = [];
+  const sauber = ohneKommentare(inhalt);
+  const melde = (index, regel, schwere, meldung, tipp) =>
+    befunde.push({ zeile: zeileVon(sauber, index), regel, schwere, meldung, tipp, auszug: '' });
+
+  // Bibliothek eingebunden
+  const importStatisch = /^[ \t]*import\s[^;\n]*from\s*['"]scrolly-video['"]/m.exec(sauber);
+  const importDynamisch = /import\(\s*['"]scrolly-video['"]\s*\)/.exec(sauber);
+  const scriptTag = /<script\b(?![^>]*\b(?:defer|async)\b)(?![^>]*type\s*=\s*["']module["'])[^>]*\bsrc\s*=\s*["'][^"']*scrolly-video[^"']*["'][^>]*>/i.exec(sauber);
+  const bibliothek = importStatisch || importDynamisch || /scrolly-video/.test(sauber);
+
+  if (bibliothek && !/prefers-reduced-motion|reduce-motion|motion-reduce:/.test(sauber)) {
+    const stelle = (importStatisch || importDynamisch || { index: sauber.indexOf('scrolly-video') }).index;
+    melde(stelle, 'scrollvideo-ohne-reduzierung', 'fehler',
+      'Scrollvideo ohne Behandlung von prefers-reduced-motion im selben Modul',
+      'matchMedia("(prefers-reduced-motion: reduce)") abfragen und bei Treffer das Poster stehen lassen. Siehe 38-scrollvideo-und-einbettungen.md, Abschnitt 8.');
+  }
+  if (importStatisch && !importDynamisch) {
+    melde(importStatisch.index, 'scrollvideo-statischer-import', 'warnung',
+      'scrolly-video wird statisch importiert und damit mit der Seite geladen',
+      'Mit import("scrolly-video") erst bei Sichtbarkeit laden, siehe assets/vorlagen/scrollvideo/scrollvideo.js.');
+  }
+  if (scriptTag) {
+    melde(scriptTag.index, 'scrollvideo-synchrones-script', 'warnung',
+      'scrolly-video als synchrones Script geladen',
+      'defer oder type="module" setzen, besser dynamischer Import bei Sichtbarkeit.');
+  }
+
+  // Marker im Markup
+  for (const el of elementMitMarker(sauber, 'data-scrollvideo')) {
+    const bilder = [...el.inhalt.matchAll(/<(?:img|Image)\b[^>]*>/gi)].map((m) => m[0]);
+    const poster = bilder.some((b) => /\bwidth\s*=/i.test(b) && /\bheight\s*=/i.test(b));
+    if (!poster) {
+      melde(el.von, 'scrollvideo-ohne-poster', 'fehler',
+        'Scrollvideo ohne Posterbild mit width und height in der Sektion',
+        'Ein echtes <img> mit width und height als Poster ins Markup, sonst springt das Layout und ohne Video fehlt das Bild.');
+    }
+    if (!/<h[1-6]\b/i.test(el.inhalt)) {
+      melde(el.von, 'scrollvideo-ohne-text', 'fehler',
+        'Scrollvideo ohne Überschrift als HTML-Text in derselben Sektion',
+        'Die Aussage steht als Text im Markup, nie nur im Video. Siehe 38-scrollvideo-und-einbettungen.md, Abschnitt 2.');
+    }
+  }
+
+  // Einbettungen: Marker oder iframe auf fremde Adresse
+  const groesse = (tag, umfeld) =>
+    /aspect-ratio/i.test(tag) || /aspect-ratio/i.test(umfeld) ||
+    (/\bheight\s*=/i.test(tag) && /\bwidth\s*=/i.test(tag)) ||
+    /(?:^|[\s"';])height\s*:/i.test(tag) || /\bh-\d|\bh-\[|aspect-/.test(tag);
+  const kopf = /<([A-Za-z][\w-]*)\b[^>]*\bdata-embed-src\b[^>]*>/g;
+  let k;
+  while ((k = kopf.exec(sauber))) {
+    if (!groesse(k[0], '')) {
+      melde(k.index, 'einbettung-ohne-groesse', 'warnung',
+        'Einbettung (data-embed-src) ohne reservierte Größe',
+        'aspect-ratio oder height am Container setzen, sonst springt das Layout (CLS).');
+    }
+  }
+  const rahmen = /<iframe\b[^>]*\bsrc\s*=\s*["']https?:\/\/[^"']+["'][^>]*>/gi;
+  while ((k = rahmen.exec(sauber))) {
+    if (!groesse(k[0], '')) {
+      melde(k.index, 'einbettung-ohne-groesse', 'warnung',
+        'iframe auf eine fremde Adresse ohne reservierte Größe',
+        'width und height oder aspect-ratio setzen, sonst springt das Layout (CLS).');
+    }
+  }
+  return befunde;
 }
 
 /**
@@ -192,6 +299,7 @@ export function motionAnalysieren(inhalt) {
     }
   }
 
+  befunde.push(...scrollvideoAnalysieren(inhalt));
   return befunde.sort((a, b) => a.zeile - b.zeile);
 }
 

@@ -36,13 +36,16 @@ node scripts/pruefe-aktualitaet.mjs             # nach dem Build: Copyright-Jahr
 `pruefe-geschmack.mjs` zählt, was sich an Geschmack zählen lässt: höchstens ein Kicker je drei
 Sektionen, höchstens ein Laufband, ein Text je Kontaktabsicht, dazu Warnungen für
 `overflow-x: hidden`, eigene Mauszeiger, `100vh` ohne `svh`, die Standardserifen und die
-Premium-Standardpalette. Der Rest steht als Vorflugcheck in
+Premium-Standardpalette. Als Warnung kommen hinzu: ein Primärbutton ohne Fläche (Konturbutton)
+und mehr als ein Primärbutton je Sektion. Der Rest steht als Vorflugcheck in
 `../../webdesign-conversion/references/26-geschmack-und-ki-tells.md` und wird angesehen.
 
 `pruefe-motion.mjs` liest die Quellen und zählt, was an Bewegung zählbar ist: `transition: all`,
 Start bei `scale(0)`, `ease-in`, Layoutwerte in `transition`, feste Dauern über 300 ms,
 `:hover` mit Bewegung ohne `@media (hover: hover)`, und Animation ohne
-`prefers-reduced-motion` im ganzen Projekt. Zweck, Ursprung und Unterbrechbarkeit werden danach
+`prefers-reduced-motion` im ganzen Projekt. Gibt es ein Scrollvideo oder eine Einbettung, prüft es
+zusätzlich die Regeln aus Kapitel 38: Poster mit Maßen, Überschrift als Text, Behandlung der
+reduzierten Bewegung im selben Modul, dynamischer Import, reservierte Größe. Zweck, Ursprung und Unterbrechbarkeit werden danach
 angesehen, siehe den Review in `../../webdesign-conversion/references/30-motion-pruefung.md`.
 
 `pruefe-geo.mjs` liest `dist/`: den Zustand der KI-Crawler in der `robots.txt`, Seiten mit
@@ -157,6 +160,23 @@ auflisten.
 * Datenschutzerklärung deckt jeden tatsächlich eingebauten Dienst ab, und keinen mehr
 * bei Relaunch: jede alte URL hat ein Ziel, Stichprobe geprüft
 
+### 8a. Erinnerungstest und Aufgabentest
+
+Zwei Tests mit einer Person, die das Projekt nicht kennt, vor der Abnahme durch den Kunden:
+Erinnerungstest (woran erinnert sie sich nach wenigen Sekunden, in welcher Reihenfolge) und
+Aufgabentest (löst sie eine echte Aufgabe wie Kontakt oder Termin ohne Hilfe, der Beobachter
+schweigt). Ablauf und Maßstab: `../../webdesign-conversion/references/36-kundenpsychologie-erwartung-reiz-begruendung.md`,
+Abschnitt 6, und `../../webdesign-conversion/references/29-pruefdurchgaenge-und-vokabular.md`, Abschnitt 5.
+
+* Das Ergebnis steht im Bericht, auch ein negatives. Wird das Wichtige übersehen, wird die
+  Sektion überarbeitet, nicht der Besucher belehrt.
+* Wurde kein Test gemacht, steht „nicht getestet, keine Testperson" im Bericht. Der Skill
+  erfindet kein Ergebnis.
+* Der Befund gehört in die `CLAUDE.md` des Projekts.
+
+Hat das Projekt ein Scrollvideo, gehört zu diesem Schritt außerdem: einmal ohne Video ansehen
+(Poster und Text müssen dieselbe Aussage tragen) und einmal mit reduzierter Bewegung.
+
 ### 9. Abnahme durch einen Menschen
 
 Dieser Ablauf prüft mit Skripten und mit dem Modell, das gebaut hat. Beides ersetzt nicht die
@@ -170,6 +190,8 @@ jeden Text und klickt jede Funktion durch.
 * Bereiche, in denen die prüfende Person selbst nicht Fachfrau oder Fachmann ist (Recht, Barrierefreiheit,
   Gestaltung), stehen ausdrücklich als „zur Prüfung durch eine Fachperson" im Bericht. Die
   Prüfung eines Bereichs, den niemand beurteilen kann, ist kein Qualitätsmerkmal.
+* Wurde die Stylescape vom Kunden bestätigt (`moodboard-und-stylescape.md`), steht das Datum im
+  Bericht. Eine Richtungsänderung danach läuft nur nach neuer Absprache.
 * Das Modell meldet die Seite nie als abgenommen. Abgenommen ist sie, wenn ein Mensch es sagt.
 
 Quelle: ein Video zum Umgang mit KI Ergebnissen, siehe `CREDITS.md`, Abschnitt „Version 4.6".

@@ -1,7 +1,7 @@
 ---
 name: nicht-beobachtetes-nicht-behaupten
-description: Prüft das Konfidenzmodell: was nicht erfasst wurde, wird als unbekannt benannt und nicht geschätzt.
-expected_outcome: Ablesbares wird benannt, Spacing, Kontrast und responsives Verhalten werden als unbekannt gekennzeichnet statt geschätzt.
+description: "Prüft das Konfidenzmodell: was nicht erfasst wurde, wird als unbekannt benannt und nicht geschätzt."
+expected_outcome: "Ablesbares wird benannt, Spacing, Kontrast und responsives Verhalten werden als unbekannt gekennzeichnet statt geschätzt."
 tags: [konfidenz, belege, analyse]
 plugins: ["../.."]
 runs: 3
