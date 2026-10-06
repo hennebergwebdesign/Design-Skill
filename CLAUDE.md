@@ -162,9 +162,8 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 - Version 4.10.0: Die Kapitel 36 bis 39 und `moodboard-und-stylescape.md` haben keinen Evalfall zu
   ihrem Kern. Die drei neuen Fälle sind mit je zwei Läufen je Arm gemessen: Konturbutton Δ +0,75,
-  F-Muster Δ +0,13, Scrollvideo Δ 0,00. Der Scrollvideo-Fall misst noch nichts: beide Arme
-  verfehlen den Code-Grader, der Skill ruft Kapitel 38 offenbar nicht ab. Das ist der nächste
-  Schritt (Auslöser in `SKILL.md` schärfen oder den Fall verschärfen). Die Erkennung des Konturbuttons in `pruefe-geschmack.mjs` ist
+  F-Muster Δ +0,13, Scrollvideo Δ +0,25 (erst nach einer geschärften Auslöserzeile in `SKILL.md`,
+  vorher 0,00). Vier Läufe je Fall sind keine belastbare Stichprobe. Die Erkennung des Konturbuttons in `pruefe-geschmack.mjs` ist
   eine Heuristik, sie kennt benannte Klassen (haupt, primary, primaer) und `data-variant`, keine
   anderen Primärmarker, und eine Fläche, die ein Stylesheet in einer anderen Datei setzt, sieht sie
   nicht. Die Scrollvideo- und Einbettungsprüfung in `pruefe-motion.mjs` ist gegen Fixtures und die
@@ -264,7 +263,7 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
   Konturbutton als Primär-CTA und mehrere Primärbuttons je Sektion in `pruefe-geschmack.mjs`,
   Scrollvideo und Einbettung in `pruefe-motion.mjs`, dazu 26 Tests, insgesamt 217. Drei neue
   Evalfälle (`f-muster-kein-leitbild`, `konturbutton-nicht-primaer`, `scrollvideo-nur-mit-anlass`),
-  gemessen mit Δ +0,13, +0,75 und 0,00. In `evals/` außerdem die YAML-Köpfe der Fälle quotiert, ohne
+  gemessen mit Δ +0,13, +0,75 und +0,25. In `evals/` außerdem die YAML-Köpfe der Fälle quotiert, ohne
   das lud `claude plugin eval .` den Fall `nicht-beobachtetes-nicht-behaupten` nicht. Nicht übernommen: Einkommens- und Preisbehauptungen, die Behauptung „85
   Prozent sehen nur den Hero", Werkzeugempfehlungen, Studien, Geschäfts- und Karrierethemen (im
   Paket unter `07_OPTIONAL`, nicht im Skill). Siehe `CREDITS.md`, Abschnitt „Version 4.10".

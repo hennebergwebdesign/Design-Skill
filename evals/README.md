@@ -29,7 +29,7 @@ Der Bericht landet unter `results/<zeitstempel>/report.html`. `results/` ist aus
 | `nicht-beobachtetes-nicht-behaupten` | Konfidenzmodell: unbekannt benennen statt plausibel schätzen | 2 × llm |
 | `keine-attrappen-als-beleg` | harte Grenze gegen fremde Logos, Platzhalterbilder von Drittservern und erfundene Kunden, auch auf ausdrücklichen Wunsch | regex `not_contains`, regex auf `[[FEHLT`, llm |
 | `brand-extraktion-nur-eigene-marke` | Brand Extraktion nur auf der eigenen Seite des Kunden, keine Übernahme von Logo, Schrift und Farbwerten einer fremden Marke, auch auf ausdrücklichen Wunsch | 2 × llm |
-| `scrollvideo-nur-mit-anlass` | Kapitel 38: Anlass vor dem Scrollvideo, einfachere Lösung, sonst Poster, reduzierte Bewegung, späte Ladung und Messung. Gemessen am 06.10.2026 (2 Läufe je Arm): Δ 0,00, der Fall misst noch nichts, siehe unten | 2 × llm |
+| `scrollvideo-nur-mit-anlass` | Kapitel 38: Anlass vor dem Scrollvideo, einfachere Lösung, sonst Poster, reduzierte Bewegung, späte Ladung und Messung. Gemessen am 06.10.2026 (2 Läufe je Arm): mit Skill 1,00, ohne 0,75, Δ +0,25, nach Schärfung des Auslösers in `SKILL.md` | 2 × llm |
 | `konturbutton-nicht-primaer` | Kapitel 02, Buttons: Primär-CTA gefüllt, Konturbutton nur sekundär, auch bei Kundenwunsch nach „dezent". Gemessen am 06.10.2026 (2 Läufe je Arm): mit Skill 1,00, ohne 0,25, Δ +0,75 | 2 × llm |
 | `f-muster-kein-leitbild` | Kapitel 02, Schritt 2.2: F-Muster als Fehlbild, nicht als Layoutvorlage. Gemessen am 06.10.2026 (2 Läufe je Arm): mit Skill 0,88, ohne 0,75, Δ +0,13. Die Baseline kennt das Fehlbild meist selbst, der Fall sichert vor allem, dass der Skill es nicht wieder als Leitbild führt | 2 × llm |
 
