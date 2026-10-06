@@ -180,8 +180,8 @@
      Ableitung der Handschrift je Marke: 18-motion-handschrift.md.
      --------------------------------------------------------------------- */
   --dauer-sofort:  0.12s;   /* Zustandsfarbe, Fokusring, Haken in einer Checkbox */
-  --dauer-schnell: 0.2s;    /* Hover, Verschiebungen unter 8 px */
-  --dauer-normal:  0.4s;    /* Akkordeon, Karte anheben, Bild zoomen */
+  --dauer-schnell: 0.2s;    /* Hover, Verschiebungen unter 8 px, Akkordeon, Menü, Dropdown */
+  --dauer-normal:  0.4s;    /* Eintritt großer Flächen, Bild zoomen. Nichts, was bedient wird: 30-motion-pruefung.md */
   --dauer-lang:    0.6s;    /* Off-Canvas-Panel, Dialog, große Flächen */
   --dauer-sequenz: 0.9s;    /* orchestrierte Heldensequenz, Gesamtlaufzeit */
 
@@ -189,7 +189,8 @@
     DREI KURVEN MIT BEDEUTUNG, nicht eine für alles.
 
     eintritt  stark dezeleriert: das Element LANDET
-    austritt  akzeleriert      : das Element GEHT WEG und blockiert nicht
+    austritt  akzeleriert      : nur DEKORATIVE Austritte. Menü, Dropdown und Dialog
+                                 schließen mit --kurve-eintritt (30-motion-pruefung.md § 8)
     wechsel   symmetrisch      : keine Richtung, also keine Betonung
 
     --kurve bleibt als Alias auf eintritt, damit bestehender Code weiter läuft.

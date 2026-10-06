@@ -83,6 +83,26 @@ Touchziele mindestens **44 × 44 px** mit mindestens 8 px Abstand.
   nicht begründbar ist, fliegt raus.
 - Bei `prefers-reduced-motion: reduce` und ohne JS bleibt die Seite vollständig.
 
+### Wasserfälle und Bündelgröße
+
+Aus den `react-best-practices` von Vercel ([vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills),
+MIT) sind die Regeln übernommen, die nicht an React hängen. Die Quelle stuft Wasserfälle und
+Bündelgröße als die zwei kritischsten Ursachen ein, weil sie jeden Besucher bei jedem Aufruf
+treffen. Die React-spezifischen Kategorien (Re-Renders, Suspense, Server Components) bleiben
+außen, sie haben im Astro-Standardstack keinen Inhalt.
+
+| Regel | Umsetzung in Astro | Grund |
+|---|---|---|
+| Unabhängige Abrufe parallel | Im Frontmatter `await Promise.all([a(), b()])` statt zwei `await` hintereinander | Zwei Abrufe zu je 200 ms kosten nacheinander 400 ms, parallel 200 ms. Jeder Abruf wartet sonst auf einen, der ihn nicht braucht |
+| Billige Bedingung zuerst, dann `await` | `if (!aktiv) return` vor dem Abruf, nicht danach | Wer den Abruf nicht braucht, soll ihn auch nicht bezahlen |
+| Direkt importieren, keine Sammeldateien | `import Hero from '../komponenten/Hero.astro'` statt `import { Hero } from '../komponenten'` | Eine Sammeldatei zieht alles, was darin steht, in das Bündel, auch was die Seite nie zeigt |
+| Schweres erst bei Bedarf | Inseln mit `client:visible` oder `client:idle` statt `client:load`, schwere Bibliotheken per `import()` beim Klick | Der Besucher bezahlt für die Karte erst, wenn er sie sieht. Hängt mit „Schwere Medien erst nach `load`" oben zusammen |
+| Vorladen auf Verdacht | `data-astro-prefetch="hover"` an internen Links | Zwischen Hover und Klick vergehen oft 100 bis 300 ms, die die nächste Seite schon laden kann |
+
+**Gemessen ist das hier nicht.** Die Reihenfolge der Quelle ist eine Gewichtung der Autoren, kein
+Messwert dieser Agentur. Wo es zählt, zeigt Lighthouse, ob ein Wasserfall im Netzwerkdiagramm
+steht.
+
 ## Hosting und Auslieferung
 
 - HTTP/2 oder HTTP/3, Brotli-Kompression, TLS erzwungen.

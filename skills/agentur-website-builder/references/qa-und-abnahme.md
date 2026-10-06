@@ -19,7 +19,7 @@ pnpm astro check    # falls TypeScript im Projekt
 
 Warnungen nicht ignorieren. Sie sind fast immer echte Fehler in der Ausgabe.
 
-### 2. Die sechs Prüfskripte
+### 2. Die acht Prüfskripte
 
 ```bash
 node scripts/pruefe-striche.mjs                 # Gedankenstriche, hyphens: auto, verbotene Wörter
@@ -28,6 +28,8 @@ node scripts/pruefe-kontrast.mjs                # Kontrastwerte der Rollen-Token
 node scripts/pruefe-platzhalter.mjs --launch    # [[FEHLT]], data-copy-vorschlag, ausgelassener Code
 node scripts/pruefe-breakpoints.mjs http://localhost:4321 --bilder
 node scripts/pruefe-geschmack.mjs               # nach dem Build: Kicker, Laufband, CTA-Texte, KI-Tells
+node scripts/pruefe-motion.mjs                  # transition: all, scale(0), ease-in, Dauer, Reduzierung
+node scripts/pruefe-geo.mjs                     # nach dem Build: robots.txt, KI-Crawler, Text im HTML, JSON-LD
 ```
 
 `pruefe-geschmack.mjs` zählt, was sich an Geschmack zählen lässt: höchstens ein Kicker je drei
@@ -35,6 +37,17 @@ Sektionen, höchstens ein Laufband, ein Text je Kontaktabsicht, dazu Warnungen f
 `overflow-x: hidden`, eigene Mauszeiger, `100vh` ohne `svh`, die Standardserifen und die
 Premium-Standardpalette. Der Rest steht als Vorflugcheck in
 `../../webdesign-conversion/references/26-geschmack-und-ki-tells.md` und wird angesehen.
+
+`pruefe-motion.mjs` liest die Quellen und zählt, was an Bewegung zählbar ist: `transition: all`,
+Start bei `scale(0)`, `ease-in`, Layoutwerte in `transition`, feste Dauern über 300 ms,
+`:hover` mit Bewegung ohne `@media (hover: hover)`, und Animation ohne
+`prefers-reduced-motion` im ganzen Projekt. Zweck, Ursprung und Unterbrechbarkeit werden danach
+angesehen, siehe den Review in `../../webdesign-conversion/references/30-motion-pruefung.md`.
+
+`pruefe-geo.mjs` liest `dist/`: den Zustand der KI-Crawler in der `robots.txt`, Seiten mit
+kaum Text im ausgelieferten HTML, `h1` und Ebenen, ungültiges JSON-LD und `FAQPage` mit
+Fragen, die nicht sichtbar auf der Seite stehen. Ob eine Sperre gewollt ist, entscheidet der
+Kunde, siehe `../../webdesign-conversion/references/31-ki-sichtbarkeit-geo.md`.
 
 `pruefe-breakpoints.mjs` rendert acht Größen, die fünf Breakpoints plus 320 px, 1366 × 768
 und 1440 × 720, legt Screenshots ab und meldet horizontalen Überlauf mit dem Selektor des
@@ -83,6 +96,14 @@ Pixelgleichheit.
   absendbar
 * Seite einmal mit `prefers-reduced-motion: reduce` laden: nichts fehlt, nichts bleibt
   unsichtbar
+* Feinschliff der kleinen Dinge (Tastatur am Handy, Autofill, Einfügen, Safe Area, Anker unter
+  der festen Kopfzeile): `../../webdesign-conversion/references/32-ui-details-katalog.md`
+
+Wer Playwright ohnehin im Projekt hat, kann die Punkte zu Formular und Consent als Ablauf
+schreiben (Formular absenden, Consent ablehnen, im Netzwerkprotokoll nachsehen) und mit jedem
+Build wiederholen. Der Skill `webapp-testing` verfolgt dasselbe Ziel. Er wurde hier nicht
+eingebunden und nicht erprobt. Der Ablauf ersetzt die Handprüfung nicht, er spart nur die
+Wiederholung.
 
 ### 5. Leistung
 
@@ -152,7 +173,7 @@ Kurz, sachlich, ohne Erfolgsprosa:
 ```
 
 "Geprüft mit Ergebnis" nennt das Werkzeug und den Befund, nicht das Gefühl: "Build grün,
-sechs Prüfskripte ohne Fehler, Tastaturdurchlauf auf 375 und 1440 px, Formular mit allen vier
+acht Prüfskripte ohne Fehler, Tastaturdurchlauf auf 375 und 1440 px, Formular mit allen vier
 Zuständen getestet" ist überprüfbar, "funktioniert" nicht.
 
 Zum Schluss ein Satz dazu, dass Rechtstexte und Datenschutzangaben vorbereitet, aber nicht

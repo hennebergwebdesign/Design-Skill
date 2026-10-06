@@ -191,3 +191,35 @@ Knoten und die Sitemap-`noindex`-Konsistenz.
 Die Abschnitte zu DSGVO, DDG, TDDDG, BFSG und UWG sind nach bestem Wissen zusammengestellt
 und **stellen keine Rechtsberatung dar**. Stand der Recherche: die in den Texten genannten
 Daten. Vor dem Einsatz anwaltlich prüfen lassen.
+
+### In Version 4.4 zusätzlich eingeflossen
+
+Stand der Quellen: 06.10.2026. Gelesen wurden die genannten Dateien **über abrufende
+Zusammenfassungen**, nicht als vollständiger Klon der Repositories. Wo etwas nur aus einer
+Repository-Übersicht stammt, steht es unten ausdrücklich so.
+
+| Quelle | Was daraus eingeflossen ist |
+|---|---|
+| [emilkowalski/skills](https://github.com/emilkowalski/skills), MIT, 43,9k Sterne laut Repositoryseite: `emil-design-eng`, `review-animations` | Neues Kapitel `30-motion-pruefung.md`: die Entscheidungsfolge nach Häufigkeit und Zweck, Easing-Auswahl, die Obergrenze von 300 ms für Bedienbares, `scale(0.97)` bei `:active`, nie bei `scale(0)` beginnen, `transform-origin` am Auslöser, Unterbrechbarkeit über Transitions, nur `transform` und `opacity`, die zehn Maßstäbe und das Ausgabeformat des Reviews mit Entscheidung Blockiert oder Freigegeben, Zeitlupenprüfung. Neu für dieses Repository: `scripts/pruefe-motion.mjs` mit 27 Tests, die Bindung an die Tokens aus `tokens.css` und die offene Benennung von zwei Widersprüchen zum bestehenden Motion-System (Abschnitt 8) |
+| [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills), MIT, `web-design-guidelines` und `react-best-practices`; Regeln aus [vercel-labs/web-interface-guidelines](https://github.com/vercel-labs/web-interface-guidelines), **Lizenz im abgerufenen Dokument nicht genannt** | Neues Kapitel `32-ui-details-katalog.md`: nur, was in den bestehenden Kapiteln fehlte (Eingabe, Touch, Safe Area, `Intl`, `translate="no"`, Hochkontrast, Zustand in der URL), auf Deutsch übertragen, nichts wörtlich. Aus `react-best-practices` nur die frameworkunabhängigen Regeln (Wasserfälle, Bündelgröße, Vorladen), als Abschnitt in `03-technik-performance.md`, übertragen auf Astro |
+| [AgriciDaniel/claude-seo](https://github.com/AgriciDaniel/claude-seo), MIT; [zubair-trabzada/geo-seo-claude](https://github.com/zubair-trabzada/geo-seo-claude), MIT: nur die GEO-Teile (`seo-geo`, `geo-citability`) | Neues Kapitel `31-ki-sichtbarkeit-geo.md`: die Trennung von Such-, Abruf- und Trainingscrawlern, die Struktur zitierfähiger Absätze, die Einordnung von `llms.txt`, die Vierergruppe Beobachtung, Maßnahme, Gegenprobe, Frühindikator. Neu für dieses Repository: `scripts/pruefe-geo.mjs` mit 21 Tests |
+| [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills), MIT, 53,5k Sterne laut Repositoryseite: `copywriting`, `copy-editing` | Die sieben Prüfungen für fertige Texte und die KI-Satzmuster in `12-copywriting.md`; die Muster Kontrastfigur, Verneinungsreihe und selbstbeantwortete Frage zusätzlich in `scripts/deslop-check.mjs` (7 Tests). Die Prüfungen „Gefühl" und „Risiko" sind an die Regeln gegen Druckmittel und erfundene Belege gebunden |
+| [pbakaus/impeccable](https://github.com/pbakaus/impeccable), Apache-2.0, 77,6k Sterne laut Repositoryseite | Aktualisierung von `29-pruefdurchgaenge-und-vokabular.md`: der eigenständige Detektor `npx impeccable detect` als Zweitmeinung, nicht eingebunden und nicht ausgeführt |
+
+**Nicht übernommen, mit Grund.** Die Liste ist ehrlich gemeint: sie enthält auch, was ich nicht
+gelesen habe.
+
+| Quelle | Grund |
+|---|---|
+| Kowalski: `animate-expo`, `write-swift`, `mobile-native` | native Apps gehören nicht zum Leistungsumfang |
+| Kowalski: `animate`, `improve-animations`, `find-animation-opportunities`, `animation-vocabulary`, `apple-design`, `pick-ui-library`, `prototype`, `break-ui`, `ask-sonner` | nur aus der Repositoryübersicht bekannt, die Dateien nicht gelesen. Das Vokabular in Abschnitt 9 von Kapitel 30 ist eine eigene Zusammenstellung der gängigen Begriffe und **nicht** aus `animation-vocabulary` übernommen, dessen Inhalt ich nicht kenne |
+| Vercel: `vercel-optimize`, `react-view-transitions`, `composition-patterns`, `writing-guidelines`, `vercel-deploy-claimable` | nur aus der Übersicht bekannt, nicht gelesen. Die Deploy-Vorgaben der Agentur sind Cloudflare Pages |
+| Vercel: React-spezifische Regeln (Re-Renders, Suspense, Server Components), Title Case, Virtualisierung | im Astro-Standardstack ohne Inhalt, Title Case ist im Deutschen falsch |
+| Vercel: `preconnect` auf Drittserver | stünde gegen die Regel „Blockierung muss echt sein" in `07-recht-dsgvo.md`, deshalb umgedreht, siehe Kapitel 32 Abschnitt 5 |
+| claude-seo: 24 weitere Unterskills (lokale Suche, Handel, hreflang, Google-APIs, Drift-Überwachung), `/seo agentic` | nicht gelesen. Lokale Suche steht schon in `05-seo-sichtbarkeit.md`. `/seo agentic` ist hier nicht geprüft |
+| claude-seo und geo-seo-claude: Gewichtungen und Prozentwerte („Citability 25 %", „3-fach stärker als Backlinks", „134 bis 167 Wörter", „2,1-fach") | die Gewichte sind Setzungen der Autoren, die Studienverweise ließen sich nicht nachprüfen. Wie bei den `research/`-Werten von taste-skill nicht übernommen |
+| marketingskills: 58 weitere Skills (CRO, `ai-seo`, `schema`, `site-architecture`, Preise, E-Mail und mehr) | nicht gelesen. `ai-seo`, `schema` und `site-architecture` sind die nächsten Kandidaten für eine spätere Runde |
+| [zarazhangrui/frontend-slides](https://github.com/zarazhangrui/frontend-slides) | Präsentationen sind kein Websitebau |
+| Playwright / `webapp-testing` | Breakpoints und Screenshots sind über `pruefe-breakpoints.mjs` abgedeckt, ein Ablauf für Formular und Consent steht als Hinweis in `qa-und-abnahme.md`. Der Skill selbst wurde nicht gelesen |
+| Owl-Listener (63 Designerskills), Julian Oczkowski (Design-Prozess), Composio, Accesslint, Figma-Implement-Design | nur aus einer Aufstellung bekannt, nicht gelesen. Anforderungsabfrage vor dem Code steht schon in Phase 0 und 1 des Bauablaufs, Kontrast prüft `pruefe-kontrast.mjs`. Figma-Anbindung hat die Agentur über den Figma-Connector |
+| taste-skill: `minimalist-ui`, `industrial-brutalist-ui`, `high-end-visual-design`, `gpt-taste`, `stitch-design-taste`; `ui-ux-pro-max`: seit 4.1 nicht neu abgeglichen | Stilrichtungen stehen bereits als Taxonomie in `assets/musterbibliothek/taxonomie.json`. Ein erneuter Abgleich der beiden Repositories mit dem Stand von 4.1 wurde **nicht** gemacht, nur deren Repositoryübersicht gesehen |

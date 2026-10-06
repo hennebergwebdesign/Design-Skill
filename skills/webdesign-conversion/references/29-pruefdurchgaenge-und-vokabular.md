@@ -18,7 +18,7 @@ bildet stattdessen auf bestehende Regler, Referenzen und Prüfskripte ab.
 |---|---|---|
 | **Lesart** | Schritt 1 aus `26-geschmack-und-ki-tells.md` wiederholen, wenn die Richtung nicht trägt | `26-geschmack-und-ki-tells.md` § 1 |
 | **Kritik** | Bewertung nach Heldenregeln, Konsistenzsperren und Sektionsfolge, als Punktliste mit Grund, nicht als Meinung | `26-geschmack-und-ki-tells.md` §§ 3–9 |
-| **Prüfung** | die sechs Prüfskripte plus Vorflugcheck laufen lassen: ein technischer Befund, keine Einschätzung | `scripts/`, `26-geschmack-und-ki-tells.md` § 10 |
+| **Prüfung** | die acht Prüfskripte plus Vorflugcheck laufen lassen: ein technischer Befund, keine Einschätzung | `scripts/`, `26-geschmack-und-ki-tells.md` § 10 |
 | **Feinschliff** | letzter Durchgang vor der Übergabe: Abstände, Kontraste, Zeilenlängen, Fokusreihenfolge. Kein neuer Inhalt, keine neue Sektion | `assets/checklisten/pre-launch.md` |
 | **Mutiger** | Varianz und/oder Dichte einen Punkt höher, mit einem Satz Begründung. Akzent-, Form- und Themasperre bleiben stehen | `26-geschmack-und-ki-tells.md` § 2 |
 | **Ruhiger** | zuerst Bewegung senken, dann Varianz, Begründung in `marke.json` | `26-geschmack-und-ki-tells.md` § 2 |
@@ -69,9 +69,32 @@ etwas verbessern lässt.
   ein offen gehaltener Auftrag. Der Kunde sieht die Seite ohnehin im Feinschliff-Durchgang,
   spätere Wünsche sind eine neue Anfrage, keine Fortsetzung derselben Prüfung.
 
+## 4. Eine zweite Meinung, die ohne KI läuft
+
+Impeccable bringt seit der Aufnahme dieses Kapitels einen eigenständigen Detektor mit:
+`npx impeccable detect <ordner|datei|url>` prüft laut Repository auf 60 feste Anti-Muster, ohne
+Modell und ohne Schlüssel, darunter überstrapazierte Schriften, grauen Text auf farbigem Grund,
+verschachtelte Karten und veraltete Easing-Kurven. Das ist dieselbe Art Befund wie bei
+`pruefe-geschmack.mjs` und `pruefe-motion.mjs`, aus anderer Quelle und mit anderen Regeln.
+
+- **Als Zweitmeinung nutzen, nicht als Ersatz.** Wo beide Werkzeuge dasselbe finden, ist es
+  fast sicher ein Fehler. Wo nur eines meldet, entscheidet die harte Grenze dieses Skills.
+- **Nie ins `package.json` des Kundenprojekts.** Der Aufruf läuft über `npx` und bleibt dabei,
+  aus demselben Grund wie bei Playwright: ein Abhängigkeitsbaum im Kundenprojekt wird zum Problem.
+- **Ein Befund, der gegen die Marke steht, bleibt als Entscheidung stehen,** mit dem Wort
+  „bewusst" und einem Grund, wie bei den Tokenbefunden in `qa-und-abnahme.md`.
+- **Ungeprüft hier:** der Detektor ist nicht gegen ein Kundenprojekt gelaufen, die Zahl 60 und
+  die Regelnamen stammen aus der Beschreibung des Repositorys. Vor dem ersten Einsatz den
+  Aufruf einmal ansehen, nicht blind übernehmen.
+
+Das Original hat inzwischen 24 Befehle (`craft`, `shape`, `critique`, `audit`, `polish`,
+`animate`, `typeset`, `layout`, `harden`, `clarify`, `adapt` und weitere). Aufgenommen ist weiter
+nur das Vokabular aus Abschnitt 1, weil dieser Skill keine eigenen Slash-Commands hat; die
+Befehle bilden auf Regler, Referenzen und Prüfskripte ab.
+
 ## Verwandte Kapitel
 
 - Lesart, Regler, Vorflugcheck: `26-geschmack-und-ki-tells.md`
-- Motion-Handschrift, der eine Moment: `18-motion-handschrift.md`
+- Motion-Handschrift, der eine Moment: `18-motion-handschrift.md`, Motion-Review: `30-motion-pruefung.md`
 - Tokenplan, Typografie: `10-visuelle-richtung.md`
 - Ablauf und Prüfskripte im Bauprozess: `../../agentur-website-builder/references/qa-und-abnahme.md`
