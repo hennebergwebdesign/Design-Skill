@@ -167,6 +167,45 @@ Widerspruch erzeugt wie zwei Fassungen einer Rechnungsregel, siehe die Pflegereg
 [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) ist ein anderes Repository
 desselben Namens, siehe deren eigenen Eintrag oben.
 
+### In Version 4.10 zusätzlich eingeflossen
+
+Stand der Quellen: 07.10.2026. Ausgewertet wurden die Transkripte der zehn neuesten Videos des
+Kanals Self-Made Web Designer (YouTube, keine Lizenz genannt, nur inhaltlich destilliert, nichts
+wörtlich) und eine ältere Vorgängerfassung eines der Videos. Die Auswertung kam als
+Erweiterungspaket und ist hier umgesetzt, die Abgleichmatrix steht im Änderungsverlauf in
+`CLAUDE.md`.
+
+| Quelle | Was daraus eingeflossen ist |
+|---|---|
+| „The Psychology of a PERFECT Website" | `36-kundenpsychologie-erwartung-reiz-begruendung.md`: Reihenfolge Erwartung, Reiz, Begründung, mentale Modelle, MAYA, Gruppieren, Preisstufen im Muster. Das Drei-Instanzen-Modell steht als Denkmodell mit Warnhinweis (es vereinfacht das überholte Dreihirnmodell) |
+| „The ONLY 6 Web Design Styles that Matter (2026)" | `37-stilrichtung-nach-kundensprache.md`: Zuordnung Kundensatz zu Richtung, Signaturelement wiederholen. Die Stile heißen neutral, nicht nach Personen |
+| „Give Me 9 Minutes & Make INSANE Website Animations", „The ONLY 5 Tools You Need to Build Insane Sites" | `38-scrollvideo-und-einbettungen.md` und `39-ki-assets-bewegtbild-und-3d.md`: Anlass, Aufbau, Blendfehler, Einbettungen, Tiefe, Körnung, KI-Assets. Die Angaben zur Bibliothek `scrolly-video` stammen von deren npm-Seite (07.10.2026) und sind nicht getestet, Version und Lizenz unbekannt. Eines der Videos ist vom Werkzeuganbieter gesponsert, Werkzeugnamen sind deshalb keine Empfehlung |
+| „Give Me 11 Minutes I'll Show You How to Design $10k Sites" | `agentur-website-builder/references/moodboard-und-stylescape.md`, Korrekturrunden mit Frist in `kundenabstimmung.md`. Der Verzicht auf Wireframes ist nicht als Pflicht übernommen (Baukasten gegen Code) |
+| „11 years of web design knowledge in 7 minutes", „11 Years of Brutally Honest Web Design Advice in 7 Minutes" | Konturbutton nicht als Primär-CTA, Farbabgleich Foto und Palette, Faustwert 60 30 10, Erinnerungs- und Aufgabentest, Zielkonflikte festlegen, Gerätekontext aus Kundendaten |
+| „The Impending Downfall of Web Designers" | Kundendashboard als optionale Leistung (Idee eines anderen Webdesigners, nicht geprüft) |
+| „I studied 100's of web design legends" | Quellen außerhalb des Webs fürs Moodboard in `22-premium-designquellen.md`. Genannte Seiten und Studios nicht geprüft, nicht verlinkt |
+| Nielsen Norman Group, „F-Shaped Pattern For Reading Web Content" (`nngroup.com/articles/f-shaped-pattern-reading-web-content`), laut Seite zuletzt geprüft am 19.08.2026 | Primärquelle für die Korrektur des F-Musters in `02-design-ux.md` und `26-geschmack-und-ki-tells.md`: reales, aber schädliches Scanverhalten bei unstrukturierten Seiten, ein Fehlerbild und kein Gestaltungsziel. Die Aussage eines Videos allein („veraltet") ist dafür zu grob und nicht übernommen |
+
+**Widerspruch aufgelöst:** Bis Version 4.9 führten zwei Kapitel das F-Muster als Maßstab der
+Lesereihenfolge. Seit 4.10 ist der Maßstab die Hierarchie, das F-Muster wird durch Struktur
+verhindert. Der Evalfall `f-muster-kein-leitbild` prüft das Verhalten des Modells.
+
+**Nicht übernommen, mit Grund:**
+
+* Einkommens- und Preisbehauptungen („10.000 Euro Seiten"): ohne Beleg, nicht Teil des Skills
+* „85 Prozent sehen nur den ersten Bildschirm": im Video ohne Beleg, ein Zuschauerkommentar
+  dazu ist eine Einzelmeinung
+* die Aussage zum KI-Hype mit Beitrag auf einer Plattform: nicht geprüft
+* Zahlenangabe zur Sinnesverarbeitung im Video „Psychology": ohne Primärquelle
+* Namen von Werkzeugen, Modellen und Schriftanbietern als Empfehlung: veralten, zwei Videos sind gesponsert
+* Kundengruppen, Leistungsleiter, Arbeitsblöcke, Gewohnheiten der Legenden, Karriere und Mentoring:
+  Agenturgeschäft und persönliche Methodik, nicht Regelwerk
+* Werbung für Kurse, Vorlagen und Wartelisten des Kanals
+
+**Ungeprüft:** Bücher, Personen, Studios, Beispielseiten und Studien, die in den Videos fallen,
+wurden nicht gelesen und nicht nachgeprüft. Die Zahlen zwei Runden, 48 Stunden und 60 30 10 sind
+Vorschläge aus den Videos, keine harten Grenzen.
+
 ## Inhaltliche Grundlage
 
 **Website-Conversion-Playbook 2026** (That's it. Marketing, Victor & Tim): das

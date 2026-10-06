@@ -14,7 +14,7 @@ rechtlich tragfähig, barrierearm, schnell, und nicht wie von einer Maschine geb
 
 | Skill | Rolle | Lizenz |
 |---|---|---|
-| `skills/webdesign-conversion/` | das Regelwerk: was gut ist und warum. 35 Referenzen, 3 Playbooks, Vorlagen, Checklisten | MIT |
+| `skills/webdesign-conversion/` | das Regelwerk: was gut ist und warum. 39 Referenzen, 3 Playbooks, Vorlagen, Checklisten | MIT |
 | `skills/agentur-website-builder/` | der Lieferablauf: Phasen 0 bis 6, fester Agenturstack, einsatzfertiger Code | Agenturstandard, siehe seine `SKILL.md` |
 
 Die Trennung ist die zentrale Entscheidung dieses Repositories: **Wissen und Ablauf sind
@@ -36,8 +36,8 @@ node scripts/pruefe-tokens.mjs
 node scripts/pruefe-kontrast.mjs
 node scripts/pruefe-platzhalter.mjs --launch
 node scripts/pruefe-breakpoints.mjs http://localhost:4321 --bilder
-node scripts/pruefe-geschmack.mjs            # nach dem Build: dist/ Seiten, src/ Quellen
-node scripts/pruefe-motion.mjs               # src/: transition: all, scale(0), ease-in, Dauer, Reduzierung
+node scripts/pruefe-geschmack.mjs            # nach dem Build: dist/ Seiten, src/ Quellen, auch Konturbutton als Primär-CTA
+node scripts/pruefe-motion.mjs               # src/: transition: all, scale(0), ease-in, Dauer, Reduzierung, Scrollvideo, Einbettung
 node scripts/pruefe-geo.mjs                  # nach dem Build: dist/ robots.txt, KI-Crawler, JSON-LD
 node scripts/pruefe-aktualitaet.mjs          # dist/ und src/: Copyright-Jahr, Stand-Angaben, Jahr im Titel
 
@@ -89,12 +89,13 @@ nicht, es braucht das Glob-Muster in Anführungszeichen.
 skills/
   webdesign-conversion/     SKILL.md, references/00-35, playbooks/, assets/
                             assets/musterbibliothek/ ist das globale Musterwissen
+                            assets/vorlagen/scrollvideo/ sind die Bausteine zu Kapitel 38
   agentur-website-builder/  SKILL.md, references/, assets/consent|forms|reviews
 scripts/              neun Prüfskripte, Agenturwerkzeuge, Designrecherche, ein Installer
   lib/abruf.mjs       die eine Abrufschicht, vier Rückfallstufen, robots.txt
   lib/browser.mjs     die eine Stelle, die Playwright sucht und Chromium startet
   tests/              node --test, lokaler Testserver statt Netzzugriff
-evals/                dreizehn Fälle mit Gradern, results/ ist ausgenommen
+evals/                sechzehn Fälle mit Gradern, results/ ist ausgenommen
 README.md             Außendarstellung
 CREDITS.md            Herkunft jeder eingeflossenen Quelle
 ```
@@ -159,6 +160,21 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Offene Punkte
 
+- Version 4.10.0: Die Kapitel 36 bis 39 und `moodboard-und-stylescape.md` haben keinen Evalfall zu
+  ihrem Kern. Die drei neuen Fälle sind mit je zwei Läufen je Arm gemessen: Konturbutton Δ +0,75,
+  F-Muster Δ +0,13, Scrollvideo Δ 0,00. Der Scrollvideo-Fall misst noch nichts: beide Arme
+  verfehlen den Code-Grader, der Skill ruft Kapitel 38 offenbar nicht ab. Das ist der nächste
+  Schritt (Auslöser in `SKILL.md` schärfen oder den Fall verschärfen). Die Erkennung des Konturbuttons in `pruefe-geschmack.mjs` ist
+  eine Heuristik, sie kennt benannte Klassen (haupt, primary, primaer) und `data-variant`, keine
+  anderen Primärmarker, und eine Fläche, die ein Stylesheet in einer anderen Datei setzt, sieht sie
+  nicht. Die Scrollvideo- und Einbettungsprüfung in `pruefe-motion.mjs` ist gegen Fixtures und die
+  eigenen Vorlagen geprüft, nicht gegen ein Kundenprojekt. Die Bausteine in
+  `assets/vorlagen/scrollvideo/` sind nie mit der Bibliothek `scrolly-video` gelaufen, Version und
+  Lizenz sind unbekannt. Zwei Abweichungen von der Spezifikation des Pakets: die Einbettungsprüfung
+  liegt in `pruefe-motion.mjs` statt in `pruefe-breakpoints.mjs` (sie ist dort ohne Browser
+  testbar), und der Test mit Menschen steht als Schritt 8a statt als neuer Schritt 9, damit kein
+  Verweis auf Schritt 9 und 10 bricht. Zahlen aus den Videos (60 30 10, zwei Runden, 48 Stunden)
+  sind Vorschläge. Aussagen der Videos sind Erfahrungswerte, keine Studien.
 - Version 4.9.0: `pruefe-aktualitaet.mjs` kennt nur drei Formen (Copyright, Stand, Jahr im Titel)
   und weiß nicht, welche feste Jahreszahl Absicht ist, deshalb sind zwei davon nur Hinweise.
   Der Übergabeschritt (Domain, Zugänge, Pflege) und der Tauschtest, der Blinzeltest und der
@@ -232,6 +248,27 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Änderungsverlauf
 
+- **07.10.2026, Version 4.10.0** Zehn weitere Videos des Kanals Self-Made Web Designer, als
+  Erweiterungspaket geliefert (Abgleichmatrix mit 35 Themen) und umgesetzt. **Widerspruch behoben:**
+  `02-design-ux.md` und `26-geschmack-und-ki-tells.md` führten das F-Muster als Maßstab, die
+  Nielsen Norman Group beschreibt es als schädliches Scanverhalten auf unstrukturierten Seiten.
+  Jetzt ist es ein Fehlerbild, das Struktur verhindert, auch in der Checkliste `conversion-audit.md`.
+  Neu: Kapitel `36-kundenpsychologie-erwartung-reiz-begruendung.md`,
+  `37-stilrichtung-nach-kundensprache.md`, `38-scrollvideo-und-einbettungen.md`,
+  `39-ki-assets-bewegtbild-und-3d.md`, im Bauablauf `moodboard-und-stylescape.md`, dazu die
+  Bausteine unter `assets/vorlagen/scrollvideo/`. Kleine Regeln in bestehenden Kapiteln: Abschnitt
+  Buttons und Farbabgleich in 02, Faustwert 60 30 10 in 10, Quellen außerhalb des Webs in 22,
+  Gerätekontext aus Kundendaten in 16, Schritt 1.4 Zielkonflikte in 01, Kundendashboard in 13,
+  Erinnerungs- und Aufgabentest in 29 und als Schritt 8a in `qa-und-abnahme.md`, Korrekturrunden
+  mit Frist in `kundenabstimmung.md`, Stilrichtungsblock im Markenbrief. Zwei neue Prüfungen:
+  Konturbutton als Primär-CTA und mehrere Primärbuttons je Sektion in `pruefe-geschmack.mjs`,
+  Scrollvideo und Einbettung in `pruefe-motion.mjs`, dazu 26 Tests, insgesamt 217. Drei neue
+  Evalfälle (`f-muster-kein-leitbild`, `konturbutton-nicht-primaer`, `scrollvideo-nur-mit-anlass`),
+  gemessen mit Δ +0,13, +0,75 und 0,00. In `evals/` außerdem die YAML-Köpfe der Fälle quotiert, ohne
+  das lud `claude plugin eval .` den Fall `nicht-beobachtetes-nicht-behaupten` nicht. Nicht übernommen: Einkommens- und Preisbehauptungen, die Behauptung „85
+  Prozent sehen nur den Hero", Werkzeugempfehlungen, Studien, Geschäfts- und Karrierethemen (im
+  Paket unter `07_OPTIONAL`, nicht im Skill). Siehe `CREDITS.md`, Abschnitt „Version 4.10".
+  Versionen: Plugin 4.10.0, Regelwerk 2.13.0, Bauablauf 2.10.0.
 - **07.10.2026, Version 4.9.0** Die zehn neuesten Videos des Kanals @bycrawford (Sam Crawford,
   Webdesign), ausgewertet auf Lücken. Das meiste stand schon im Regelwerk (Held, Hierarchie,
   Weißraum, Kontrast, Formulare, Vertrauen am Knopf, Schriften, Mobil, Barrierefreiheit, GEO,

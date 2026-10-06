@@ -143,6 +143,18 @@ Referenz überhaupt beeinflussen darf:
 | Quelle (Tokendatei, Figma, Styleguide, Logodatei) | [[FEHLT]] |
 | Damit geschützt | Farbe, Typografie, Logo, Form, Raum, Bausteine |
 
+**Stilrichtung** nach `37-stilrichtung-nach-kundensprache.md`. Eine Hauptrichtung, höchstens eine
+Nebenrichtung, mit einem Satz Begründung:
+
+| Feld | Wert |
+|---|---|
+| Kundensatz, wörtlich | [[FEHLT: was der Kunde zur Optik gesagt hat]] |
+| Hauptrichtung (Klar, Präzise, Warm, Editorial, Signatur, Wow) | [[FEHLT]] |
+| Nebenrichtung (optional) | [[FEHLT oder „keine"]] |
+| Signaturelement, falls Richtung Signatur | [[FEHLT oder „keines"]] |
+| Begründung in einem Satz | [[FEHLT]] |
+| Stylescape vom Kunden bestätigt (Datum) | [[FEHLT]] |
+
 **Referenzen aus Premium-Designquellen**, siehe `22-premium-designquellen.md`. Vor Durchgang
 1 recherchiert, nicht danach als Nachgedanke. Jede Zeile entspricht einem Eintrag in
 `.designrecherche/register.json`, geführt von `scripts/referenz-register.mjs`, Ablauf in

@@ -37,7 +37,7 @@ Schnellprüfung in 15 Minuten, gibt sofort die Grobrichtung.
 
 ### 2 Design & UX
 - [ ] Above the Fold: vier Fragen in 5 Sekunden beantwortet?
-- [ ] Wichtigster CTA links oben im F-Muster, nicht rechts oben versteckt
+- [ ] Wichtigster CTA im ersten Bildschirm, nahe Headline und Logo, nicht rechts oben versteckt
 - [ ] Sticky Navigation mit den relevanten Zielen
 - [ ] 3-Klick-Regel: Anfrage, Referenzen, Prozess, Preise
 - [ ] Hero zeigt ein Ergebnis, kein Stock-Foto

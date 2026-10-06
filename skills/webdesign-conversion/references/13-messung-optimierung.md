@@ -87,6 +87,14 @@ Ab etwa 1.000 relevanten Sitzungen und 50 Conversions pro Variante und Monat loh
 echter Test. Dann gilt: eine Variable je Test, vorher festgelegte Laufzeit, vorher
 festgelegtes Erfolgskriterium, kein Abbruch beim ersten erfreulichen Zwischenstand.
 
+## Optional: Kundendashboard
+
+Analytics-Oberflächen sind für Kunden schwer lesbar. Als optionale Zusatzleistung kann ein
+vereinfachtes, gebrandetes Dashboard die wenigen Kennzahlen des monatlichen Reviews zeigen, mit
+den qualifizierten Anfragen vorn (siehe „Was gemessen wird"). Vorher klären: Quelle der Daten
+und Auftragsverarbeitung. Arbeitsdokument, keine Rechtsberatung. Herkunft: die Idee eines
+anderen Webdesigners aus einem Video, nicht geprüft und nicht an einem Projekt erprobt.
+
 ## Was nicht gemessen werden soll
 
 - Verweildauer als Erfolgsgröße. Lange Verweildauer kann auch heißen: findet nichts.

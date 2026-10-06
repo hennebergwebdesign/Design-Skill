@@ -187,6 +187,14 @@ und die Bildgröße zu verkleinern, nicht um den Heldenbereich selbst zu verkür
 Breitbild-Notebook mit 1440 × 720 braucht kompakteren Innenabstand als ein
 1440 × 1080-Monitor, bleibt aber bei 100 % Höhe.
 
+## Gerätekontext aus Kundendaten
+
+Pauschalzahlen zum mobilen Anteil gelten nicht für jeden Kunden. Vor dem Entwurf klären: Wie
+verteilen sich die Geräte bei diesem Kunden (Analytics der Bestandsseite, Branche, Befragung)?
+Jede Bildschirmklasse bekommt ihre eigene Problemliste statt einer abgeleiteten (siehe „Acht
+Szenarien"). Fehlen Daten, steht `[[unbekannt]]` im Markenbrief, und das Intake fragt nach.
+Grund: „Mobile first" ist eine gute Voreinstellung und kein Befund über diesen Kunden.
+
 ## Acht Szenarien, die immer weh tun
 
 ### 1 Hauptnavigation zu Off-Canvas

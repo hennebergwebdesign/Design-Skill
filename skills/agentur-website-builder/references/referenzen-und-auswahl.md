@@ -56,6 +56,10 @@ siehe `../../webdesign-conversion/references/24-designsystem-vorrang.md`.
 
 ## Auswahl pro Projekt
 
+Vor dieser Auswahl entsteht intern ein Moodboard, das auch Quellen außerhalb des Webs enthält,
+und zur Abnahme eine Stylescape (`moodboard-und-stylescape.md`). Beides ersetzt die Referenzen
+und die zwei Freigabetore nicht, es ordnet die Richtung davor.
+
 Im Umsetzungskonzept jeweils benennen und in einem Satz begründen:
 
 1. **eine Referenz für Conversion und Informationsarchitektur**, also Reihenfolge der

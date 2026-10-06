@@ -52,10 +52,20 @@ Lücke oder in Beschnitt, wenn der Inhalt selbst starr bleibt. Deshalb passt sic
   Rand-Trick oder eine sichtbare Kante am unteren Ende des Heldenbereichs, nicht darüber,
   dass der Heldenbereich selbst kürzer als der Viewport ist.
 
-## Schritt 2.2: F-Pattern und Navigation
+## Schritt 2.2: Scanverhalten und Navigation
 
-Besucher lesen nicht, sie scannen im F-Muster: erste Zeile links nach rechts, zweite Zeile
-links nach rechts, danach nur noch links hinunter.
+Besucher scannen, sie lesen nicht. Auf Seiten ohne erkennbare Struktur entsteht dabei ein
+F-förmiges Muster: erste Zeile ganz, zweite Zeile teilweise, danach nur noch der linke Rand.
+**Das ist ein Fehlerbild, kein Gestaltungsziel.** Die Nielsen Norman Group beschreibt es als
+Scanverhalten, das Besuchern und Anbietern schadet (Quelle in `CREDITS.md`). Wichtiges, das
+rechts oder weiter unten im Text steht, wird übersehen.
+
+| Gegenmaßnahme | Wirkung |
+|---|---|
+| Überschriften, Zwischenüberschriften, kurze Absätze | gibt dem Blick an jeder Stelle einen Anker |
+| Wichtigstes zuerst, jede Zeile mit dem Kernwort am Anfang | auch ein Blick nur am linken Rand versteht das Thema |
+| Größe, Gewicht und Abstand zeigen die Rangfolge (Hierarchie) | der Blick wird geführt, statt dem Zufall überlassen |
+| Wichtiges nicht auf die rechte Seite eines langen Textes legen | dorthin schauen Besucher am seltensten |
 
 **So geht es richtig:**
 
@@ -70,6 +80,10 @@ links nach rechts, danach nur noch links hinunter.
 - USP in der Seitenmitte
 - Zielgruppe erst nach drei Absätzen erwähnt
 - wichtige Informationen rechtsbündig
+
+Test statt Annahme: der Erinnerungstest aus
+`36-kundenpsychologie-erwartung-reiz-begruendung.md`, Abschnitt 6. Warum Besucher Konventionen
+erwarten und wo eine kleine Abweichung erlaubt ist, steht ebenfalls dort.
 
 **Sticky Navigation** mit direkten Links zu Leistungen, Referenzen/Cases, Prozess und
 Kontakt/CTA.
@@ -165,9 +179,28 @@ Drei Regeln dazu, jede mit Grund:
   geladen werden soll; dann `loading="eager"` plus `fetchpriority="low"` unterhalb des
   Heldenbereichs und `fetchpriority="high"` plus `<link rel="preload">` für das Heldenbild.
 - `width` und `height` immer setzen, sonst springt das Layout (CLS).
+- **Farben im Foto passen zur Palette der Seite.** Ein Foto, dessen Farbstimmung mit der Seite
+  kollidiert, wirkt wie nachträglich eingesetzt und ist ein typisches Anfängerzeichen. Bei
+  Kundenfotos Farbgrading oder Zuschnitt vor dem Einbau, nicht die Palette dem Foto opfern.
+  Ein Urteil beim Ansehen, keine Messung (Vorflugcheck in `26-geschmack-und-ki-tells.md`).
 - Motive mit eingebranntem Text nie beschneiden, sondern `object-fit: contain` einpassen.
 - Eine Einblendanimation gehört an den beschnittenen **Rahmen**, nie an das `<img>` darin.
   Steht die Bewegung am Bild und der Rahmen still, fährt das Bild sichtbar im Rahmen herum.
+
+## Buttons
+
+Das Hauptziel der meisten Seiten ist ein Klick. Der Primär-CTA muss sich vom Rest abheben.
+
+| Regel | Grund |
+|---|---|
+| Primär-CTA ist flächig gefüllt, mit hohem Kontrast zur Umgebung | ein Rand ohne Fläche wird übersehen und seltener geklickt (Beobachtung aus einem Video, keine Messung im Repo) |
+| Konturbutton (Ghost Button) nur als Sekundäraktion, nie als einziger oder erster CTA | die Rangfolge der Aktionen bleibt sichtbar |
+| Genau ein Primär-CTA je Sektion | zwei gleich starke Aufrufe schwächen beide (siehe Hierarchie) |
+| Kontrast der Beschriftung mindestens 4,5:1, Fokuszustand sichtbar | harte Grenze aus `SKILL.md` |
+
+Geprüft wird das heuristisch von `scripts/pruefe-geschmack.mjs` (Primärbutton ohne Fläche, mehr
+als ein Primärbutton je Sektion), beides als Warnung. Verhalten des Modells bei einem Kundenwunsch
+nach „dezentem" Hauptbutton: Evalfall `konturbutton-nicht-primaer`.
 
 ## Häufige Design-Tells, die es zu vermeiden gilt
 

@@ -4,7 +4,7 @@ description: Baut komplette Kundenwebsites mit Astro und Cloudflare Pages nach A
 license: Proprietär, That's it. Marketing / VFDESIGN LTD
 metadata:
   author: That's it. Marketing / Henneberg Webdesign
-  version: 2.9.0
+  version: 2.10.0
 ---
 
 # Agentur Website Builder
@@ -158,6 +158,7 @@ Immer vor der Implementierung. Kurz, im Chat, kein Dokument im Repo. Struktur:
 ## Formulare und Datenfluss
 ## Consent und eingesetzte Dienste
 ## SEO Struktur: Titel, Description, Keywords je Seite
+## Zielkonflikte mit Rangfolge, offene Entscheidungen als [[FEHLT: …]]
 ## Offene Punkte und Platzhalter
 ```
 
@@ -183,6 +184,10 @@ Kandidaten werden vorgelegt und **dann wird gestoppt**. Der Nutzer gibt ganze We
 einzelne Sektionen oder einzelne Komponenten frei, lehnt ab oder fordert Alternativen an.
 Ohne Freigabe wird nichts abgerufen und nichts abgelegt. Tor 2 entscheidet später, ob ein
 Muster dauerhaft ins Skillwissen wandert, siehe dasselbe Kapitel.
+
+Moodboard intern, Stylescape zur Abnahme der Richtung, siehe `references/moodboard-und-stylescape.md`.
+Die Rangfolge bei Zielkonflikten steht im Konzept und in der `CLAUDE.md`, siehe
+`../webdesign-conversion/references/01-strategie-positionierung.md`, Schritt 1.4.
 
 Das Konzept wird mit Begründung zuerst und Spielregeln für die Rückmeldung vorgelegt, Ablauf in
 `references/kundenabstimmung.md`.
@@ -330,6 +335,7 @@ Schwesterskill.
 | `references/google-bewertungen.md` | jedes Projekt |
 | `references/qa-und-abnahme.md` | Phase 5 und 6, immer |
 | `references/chatbot-auf-der-website.md` | nur wenn ein KI Chatbot auf die Seite soll: Leitplanken, Wissensbasis, Gegenprobe, Datenschutz |
+| `references/moodboard-und-stylescape.md` | Phase 2 und 3, vor dem Bau: Moodboard intern, Stylescape zur Abnahme der Richtung |
 | `references/kundenabstimmung.md` | Phase 2, 3 und 6: Rollen beim Kunden, Präsentation, Rückmeldungen einsortieren |
 | `references/brand-extraktion.md` | jeder Relaunch und jede Brandingübernahme per URL: Farben, Schriften, Logo der eigenen Bestandsseite messen |
 | `references/firecrawl-recherche.md` | eine bekannte, alte oder fremde Seite crawlen oder scrapen, für Relaunch-Inventar oder Design-Referenz |
@@ -418,6 +424,10 @@ Erst wenn alle Punkte erfüllt sind, darf von einer fertigen Seite gesprochen we
 * keine Schlüssel im Repository
 * `CLAUDE.md` aktuell
 * offene Punkte, fehlende Bilder, fehlende Rechtsangaben und Copyvorschläge im Chat benannt
+* Stylescape vom Kunden bestätigt, sofern der Kunde über Design entscheidet, siehe
+  `references/moodboard-und-stylescape.md`
+* Erinnerungs- und Aufgabentest gemacht oder ausdrücklich als nicht getestet benannt
+  (`references/qa-und-abnahme.md` Schritt 8a)
 * im Bericht steht, was ein Mensch noch sichten muss, und das Modell meldet die Seite nicht als
   abgenommen, siehe `references/qa-und-abnahme.md` Schritt 9
 * Aktualität und Eigentum nach `references/qa-und-abnahme.md` Schritt 10: Copyright-Jahr

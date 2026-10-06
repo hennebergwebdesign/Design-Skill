@@ -1,0 +1,15 @@
+/* Blendfehler: Rand des Videos weich ausblenden, damit ein leicht abweichender Hintergrund nicht als Rechteck auffällt. */
+.scrollvideo video,
+.scrollvideo canvas {
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 60%, transparent 100%);
+  mask-image: radial-gradient(ellipse at center, #000 60%, transparent 100%);
+}
+
+/* Poster bleibt Platzhalter in gleicher Größe, damit nichts springt. */
+.scrollvideo__poster {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+}

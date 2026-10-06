@@ -28,7 +28,15 @@
    11. 100vh oder h-screen ohne svh/dvh daneben. Projektstandard ist 100svh.
    12. Fraunces und Instrument Serif, die zwei Serifen, zu denen Modelle von selbst greifen.
    13. Die Premium-Standardpalette aus Creme, Messing und Espresso.
-  8 bis 13 sind WARNUNGEN. 12 und 13 entfallen, wenn der Wert in marke.json steht: dann ist
+  Je Quelldatei, Blockweise, Kommentare ausgenommen (02-design-ux.md, Abschnitt Buttons):
+   14. Primaerbutton als Konturbutton: eine Klasse oder ein Attribut mit haupt, primary oder
+       primaer (btn--haupt, btn-primary, data-variant="primary"), deren Standardzustand keine
+       Flaeche hat (background transparent oder none, oder gar keine Angabe, wenn auch kein
+       Grundstil wie .btn eine Flaeche setzt) und die einen Rand tragt. WARNUNG. Hover und
+       Fokus zaehlen nicht, sie wechseln nur den Zustand. Tailwind: bg-transparent plus border.
+  Je gebauter Seite, zusaetzlich:
+   15. Mehr als ein Primaerbutton in einer Sektion: WARNUNG (Hinweis, genau ein Primaer-CTA).
+  8 bis 14 sind WARNUNGEN. 12 und 13 entfallen, wenn der Wert in marke.json steht: dann ist
   er eine Markenentscheidung, keine Voreinstellung.
 
   WAS NICHT GEPRUEFT WIRD
@@ -133,6 +141,89 @@ function abschnitteFinden(html) {
   if (/<h1\b/i.test(vorher.slice(Math.max(0, koerper)))) abschnitte.push({ von: Math.max(0, koerper), bis: starts[0] });
   starts.forEach((s, i) => abschnitte.push({ von: s, bis: starts[i + 1] ?? html.length }));
   return abschnitte;
+}
+
+// ------------------------------------------------------------------ Primaerbutton
+
+const PRIMAER_KLASSE = /(?:haupt|primary|primaer)/i;
+const PRIMAER_SELEKTOR = /(?:\.[\w-]*(?:haupt|primary|primaer)[\w-]*|\[\s*data-variant\s*=\s*["']?(?:haupt|primary|primaer)["']?\s*\])/i;
+const GRUNDSTIL_SELEKTOR = /^(?:\.btn|\.button|\.knopf|button|\.btn-base)$/i;
+const ZUSTAND = /:(?:hover|focus|focus-visible|focus-within|active|disabled|visited)|::|\[disabled\]|\[aria-disabled/i;
+
+const istTransparent = (wert) =>
+  /^(?:transparent|none)\b/i.test(wert.trim()) ||
+  /^(?:rgba?|hsla?)\([^)]*[,/\s]\s*0(?:\.0+)?\s*\)\s*$/i.test(wert.trim());
+
+/**
+ * Findet Primaerbuttons, die im Standardzustand keine Flaeche haben und einen Rand tragen.
+ * Liest Blockweise (selektor { deklarationen }), nicht Zeile fuer Zeile, weil eine Flaeche
+ * und ein Rand fast nie in derselben Zeile stehen. Liefert { zeile, regel, meldung, tipp, auszug }.
+ */
+export function konturbuttonAnalysieren(inhalt) {
+  const sauber = inhalt
+    .replace(/\/\*[\s\S]*?\*\//g, (m) => m.replace(/[^\n]/g, ' '))
+    .replace(/<!--[\s\S]*?-->/g, (m) => m.replace(/[^\n]/g, ' '));
+  const befunde = [];
+  const bloecke = [];
+  const re = /([^{}]+)\{([^{}]*)\}/g;
+  let m;
+  while ((m = re.exec(sauber))) {
+    const selektoren = m[1].split(',').map((x) => x.trim().replace(/\s+/g, ' ')).filter(Boolean);
+    const deklarationen = {};
+    for (const d of m[2].split(';')) {
+      const i = d.indexOf(':');
+      if (i > 0) deklarationen[d.slice(0, i).trim().toLowerCase()] = d.slice(i + 1).trim();
+    }
+    bloecke.push({ selektoren, deklarationen, index: m.index + m[1].length - m[1].trimStart().length });
+  }
+
+  /* Grundstil: setzt .btn oder button eine echte Flaeche, erbt der Primaerbutton sie. */
+  const grundFlaeche = bloecke.some((b) => b.selektoren.some((x) => GRUNDSTIL_SELEKTOR.test(x)) &&
+    ['background', 'background-color'].some((k) => b.deklarationen[k] && !istTransparent(b.deklarationen[k])));
+
+  const nachSelektor = new Map();
+  for (const b of bloecke) {
+    for (const x of b.selektoren) {
+      if (!PRIMAER_SELEKTOR.test(x) || ZUSTAND.test(x)) continue;
+      const e = nachSelektor.get(x) || { deklarationen: {}, index: b.index };
+      Object.assign(e.deklarationen, b.deklarationen);
+      nachSelektor.set(x, e);
+    }
+  }
+
+  for (const [selektor, { deklarationen: d, index }] of nachSelektor) {
+    const flaeche = d['background-color'] ?? d.background;
+    const hatFlaeche = flaeche !== undefined && !istTransparent(flaeche) && !/^none\b/i.test(flaeche);
+    const randWert = d.border ?? d['border-color'] ?? d['border-width'];
+    const hatRand = randWert !== undefined && !/^(?:none|0)\b/i.test(randWert) && !/\btransparent\b/i.test(randWert);
+    if (hatFlaeche || !hatRand) continue;
+    if (flaeche === undefined && grundFlaeche) continue;
+    befunde.push({
+      zeile: sauber.slice(0, index).split('\n').length,
+      regel: 'konturbutton-primaer',
+      meldung: `Primärbutton ${selektor} ist ein Konturbutton (Rand ohne Fläche)`,
+      tipp: 'Der Primär-CTA ist flächig gefüllt, mit Kontrast zur Umgebung. Der Konturbutton ist die Sekundäraktion. Siehe 02-design-ux.md, Abschnitt Buttons.',
+      auszug: selektor,
+    });
+  }
+  return befunde;
+}
+
+/* Alle Primaerbuttons innerhalb einer <section>, gezaehlt je Sektion. */
+function primaerbuttonsJeSektion(html) {
+  const ergebnisse = [];
+  const re = /<section\b[\s\S]*?<\/section>/gi;
+  let s;
+  let nr = 0;
+  while ((s = re.exec(html))) {
+    nr++;
+    const tags = s[0].match(/<(?:a|button)\b[^>]*>/gi) || [];
+    const anzahl = tags.filter((t) =>
+      klassenVon(t).some((k) => PRIMAER_KLASSE.test(k)) ||
+      /\bdata-variant\s*=\s*["']?(?:haupt|primary|primaer)/i.test(t)).length;
+    if (anzahl > 1) ergebnisse.push({ sektion: nr, anzahl });
+  }
+  return ergebnisse;
 }
 
 // ------------------------------------------------------------------ Seiten
@@ -257,6 +348,15 @@ export function seiteAnalysieren(roh, kontext = {}) {
     }
   }
 
+  // 15 mehrere Primaerbuttons in einer Sektion
+  for (const { sektion, anzahl } of primaerbuttonsJeSektion(html)) {
+    warnungen.push({
+      regel: 'mehrere-primaer',
+      meldung: `${anzahl} Primärbuttons in Sektion ${sektion}`,
+      tipp: 'Genau ein Primär-CTA je Sektion. Zwei gleich starke Aufrufe schwächen beide, der zweite wird zur Sekundäraktion.',
+    });
+  }
+
   return { fehler, warnungen };
 }
 
@@ -323,7 +423,21 @@ export function quelleAnalysieren(inhalt, kontext = {}) {
     }
   });
 
-  return befunde;
+  // 14 Primaerbutton als Konturbutton, Blockweise, danach Tailwind je Zeile
+  befunde.push(...konturbuttonAnalysieren(inhalt));
+  zeilen.forEach((zeile, i) => {
+    if (/\bbg-transparent\b/.test(zeile) && /(^|[\s"'`])border(?:-[\w[\]#-]+)?(?=[\s"'`])/.test(zeile) &&
+        /(haupt|primary|primaer)/i.test(zeile) && !/^\s*(\/\/|\*|<!--)/.test(zeile)) {
+      befunde.push({
+        zeile: i + 1, regel: 'konturbutton-primaer',
+        meldung: 'Primärbutton mit bg-transparent und Rand (Konturbutton)',
+        tipp: 'Der Primär-CTA ist flächig gefüllt. Der Konturbutton ist die Sekundäraktion. Siehe 02-design-ux.md, Abschnitt Buttons.',
+        auszug: zeile.trim().slice(0, 110),
+      });
+    }
+  });
+
+  return befunde.sort((a, b) => a.zeile - b.zeile);
 }
 
 // ------------------------------------------------------------------ Aufruf

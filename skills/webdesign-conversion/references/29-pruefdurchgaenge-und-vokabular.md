@@ -92,9 +92,23 @@ Das Original hat inzwischen 24 Befehle (`craft`, `shape`, `critique`, `audit`, `
 nur das Vokabular aus Abschnitt 1, weil dieser Skill keine eigenen Slash-Commands hat; die
 Befehle bilden auf Regler, Referenzen und Prüfskripte ab.
 
+## 5. Zwei Tests mit Menschen
+
+Die Durchgänge oben prüft das Modell oder der Entwickler. Zwei Tests brauchen eine Person, die
+das Projekt nicht kennt. Sie sind **kein** Prüfdurchgang im Sinn der Obergrenze aus Abschnitt 3,
+weil sie nichts Subjektives nachpolieren, sondern Annahmen widerlegen.
+
+| Test | Ablauf | Bestanden, wenn |
+|---|---|---|
+| Erinnerungstest | Seite wenige Sekunden zeigen, wegnehmen, fragen: Woran erinnerst du dich, in welcher Reihenfolge? | das Wichtigste kommt zuerst und vollständig |
+| Aufgabentest | eine Person, die das Projekt nicht kennt, löst eine echte Aufgabe (Kontakt, Termin, Testbestellung), der Beobachter schweigt | sie findet den Weg ohne Hilfe |
+
+Begründung und Fragen: `36-kundenpsychologie-erwartung-reiz-begruendung.md`, Abschnitt 6.
+
 ## Verwandte Kapitel
 
 - Lesart, Regler, Vorflugcheck: `26-geschmack-und-ki-tells.md`
 - Motion-Handschrift, der eine Moment: `18-motion-handschrift.md`, Motion-Review: `30-motion-pruefung.md`
 - Tokenplan, Typografie: `10-visuelle-richtung.md`
+- Erinnerungs- und Aufgabentest, Begründung: `36-kundenpsychologie-erwartung-reiz-begruendung.md`
 - Ablauf und Prüfskripte im Bauprozess: `../../agentur-website-builder/references/qa-und-abnahme.md`

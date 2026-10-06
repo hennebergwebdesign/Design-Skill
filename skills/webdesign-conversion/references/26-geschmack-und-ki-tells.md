@@ -149,8 +149,10 @@ Anlass.
 **Die Gewohnheitsfrage vor jedem Held:** Baue ich Text links und Bild rechts, weil es passt,
 oder aus Gewohnheit? Es ist die häufigste Aufteilung überhaupt. Alternativen: Text unten links
 über dem Vollbild, gestapelt mittig über einem Motiv, das Bild als Fläche mit Text in einem
-Freiraum, eine sehr kleine, sehr ruhige Überschrift auf viel Leere. Das F-Muster aus
-`02-design-ux.md` bleibt der Maßstab für die Lesereihenfolge, nicht für die Bildposition.
+Freiraum, eine sehr kleine, sehr ruhige Überschrift auf viel Leere. Maßstab für die
+Lesereihenfolge ist die Hierarchie aus `02-design-ux.md` (Schritt 2.2): Das F-Muster beschreibt
+ein Fehlverhalten auf unstrukturierten Seiten und wird durch Struktur verhindert, nicht als
+Layoutvorlage benutzt. Die Bildposition bleibt davon unberührt.
 
 ## 5. Sektionsfolge und Layoutfamilien
 
@@ -328,6 +330,9 @@ ungeprüft benannt.
     es dieselbe Aussage, ist das Video Schmuck und kostet Ladezeit (Lazy Load, Poster,
     Untertitel oder Ersatztext) ohne Gegenwert. Fehlt dem Bild ohne Ton die Aussage, braucht es
     Untertitel. Ungemessen, wie viele Besucher mit Ton schauen.
+15. Farbabgleich: Passt die Farbstimmung jedes Fotos zur Palette? Ein Foto, das neben der Seite
+    steht statt in ihr, bekommt Farbgrading oder Zuschnitt, die Palette bleibt (`02-design-ux.md`,
+    Abschnitt Bilder). Ein Urteil, keine Messung.
 
 ```bash
 pnpm build

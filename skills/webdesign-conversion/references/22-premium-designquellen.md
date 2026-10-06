@@ -34,6 +34,21 @@ bevor sie abgerufen wird, siehe die harte Grenze in `SKILL.md` und den Ablauf in
 | **[recent.design/websites](https://recent.design/websites)** | Täglich aktualisierte Auswahl frischer Website-Launches, breites Spektrum | **Frischecheck:** ob eine Richtung schon Standard ist, weil sie überall auftaucht (Abgleich gegen die Schablonen-Liste in `10-visuelle-richtung.md`) |
 | **[21st.dev](https://21st.dev/)** | Community-Registry für React/Tailwind/shadcn-Komponenten mit fertigem Code: Marketing-Blocks (Heroes, Bento-Grids, Verläufe, Footer), UI-Komponenten | Bei React/Next-Projekten mit shadcn/ui (`11-komponenten-shadcn.md`) direkt einsetzbarer **Code-Startpunkt** für einen Abschnitt, danach an die Handschrift des Projekts angepasst |
 
+## Quellen außerhalb des Webs
+
+Die fünf Quellen oben benutzen alle. Wer nur dort sucht, baut eine Kopie einer Kopie. Zusätzlich
+ins Moodboard (`../../agentur-website-builder/references/moodboard-und-stylescape.md`):
+
+| Quelle | taugt für |
+|---|---|
+| Typografische Poster | ungewöhnliche Layouts, Schriftspannung |
+| Verpackungen im Laden | Farb- und Materialwirkung, Hierarchie auf kleinem Raum |
+| Beschilderung, Café- und Ladenmarken | Markenwirkung im Alltag |
+| Architektur, Bücher, Ausstellungen | Raster, Rhythmus, Proportion |
+
+Eine Referenz liefert ein Prinzip, nie eine Kopie (die Regel unten gilt unverändert). Fremdes
+Bildmaterial vom Moodboard kommt nie ohne geklärte Lizenz auf die Kundenseite.
+
 ## Wie recherchiert wird
 
 1. **Branche und Stilrichtung aus dem Markenbrief nehmen**, nicht raten. Ein Dachdecker und
