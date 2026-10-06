@@ -3,7 +3,11 @@
 Wie gute Texte entstehen, steht in
 `../../webdesign-conversion/references/12-copywriting.md`: Botschaftshierarchie,
 Headline-Formeln, Buttontexte, Fehlermeldungen, deutsche Eigenheiten, die Strichregel.
-Dieses Kapitel regelt den Umgang mit Texten, die vom Kunden kommen.
+Dieses Kapitel regelt den Umgang mit Texten, die vom Kunden kommen. Wie ein Satz je nach Stelle
+der Seite gebaut wird (Zielgruppe ohne Vorwurf, Wirkprinzip, realistische Behauptung, ruhige
+Einwandzeile, drei echte Optionen, ehrliche Einschränkung), steht in
+`../../webdesign-conversion/references/34-ueberzeugungsausloeser.md`. Wirkprinzip, stärkster
+Beleg und Einschränkung liefert immer der Kunde.
 
 ## Grundregel
 
@@ -43,6 +47,10 @@ Gelieferte Texte einmal gegen diese Fragen lesen und Auffälligkeiten melden, ni
 * Werden die naheliegenden Einwände behandelt, Preis, Aufwand, Dauer, Risiko?
 * Gibt es Vertrauenselemente, und sind sie belegbar?
 * Passt die Ansprache zur Zielgruppe des Kunden, du oder Sie durchgehend gleich?
+* Beginnt die FAQ jede Antwort mit der Antwort, und stehen dort Weichmacher („eigentlich“, „vielleicht“), die
+  nichts aussagen? Regeln in `../../webdesign-conversion/references/35-autoritaet-im-text.md`.
+* Wirft der Heldenbereich der Zielgruppe etwas vor („die meisten machen es falsch“), und ist jedes
+  absolute Versprechen („garantiert“, „über Nacht“) belegt oder vom Kunden zugesagt?
 
 ## Ergänzte Abschnitte kennzeichnen
 

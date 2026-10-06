@@ -214,7 +214,7 @@ günstigsten" schafft Glaubwürdigkeit für alles, was danach kommt. Das ist der
 wie beim Negativ-USP.
 
 **Die FAQ ist nicht die Restrampe für Einwände.** Sie beantwortet Fragen, die vor dem Kauf
-wirklich gestellt werden. Ein Einwand, der die Kaufentscheidung blockiert, gehört in die
+wirklich gestellt werden, mit der Antwort im ersten Satz (Regeln in `35-autoritaet-im-text.md`, Abschnitt 7). Ein Einwand, der die Kaufentscheidung blockiert, gehört in die
 Sektion, in der er entsteht.
 
 ## Deutsch: sechs Eigenheiten, die Texte schwer machen
@@ -348,6 +348,15 @@ Zwei der sieben haben eine Grenze, die vorher hier steht und nicht danach:
 - **Prüfung 7 (Risiko)** nennt nur, was **stimmt**: „Kostenlos und unverbindlich" steht nur dort,
   wo es wirklich so ist, eine Garantie nur, wenn der Kunde sie gibt. Eine ausgedachte
   Geld-zurück-Zusage ist ein Verstoß, kein Risikoabbau. Siehe „Nicht erfinden".
+
+Wie ein Text Autorität bekommt (Weichmacher streichen, Befund vor Gefühl, Rahmen vor dem Einwand,
+Fragen als Führung, Antworten in der FAQ), steht in `35-autoritaet-im-text.md`; das Satzmuster
+„Weichmacher“ prüft `scripts/deslop-check.mjs`.
+
+Welche Auslöser an welcher Stelle der Seite tragen (Zielgruppe ohne Vorwurf, Wirkprinzip,
+realistische Behauptung, ruhige Einwandzeile, drei echte Optionen, ehrliche Einschränkung), steht in
+`34-ueberzeugungsausloeser.md`. Zwei weitere Satzmuster daraus, „Vorwurf an den Leser“ und
+„Absolutes Versprechen“, prüft `scripts/deslop-check.mjs` zusätzlich zu den folgenden.
 
 ### Vier Satzmuster, an denen man KI-Text erkennt
 

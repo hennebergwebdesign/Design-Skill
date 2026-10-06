@@ -183,6 +183,7 @@ Zelle am Ende heißt: falsch geplant, nicht „ein Platzhalter passt da noch hin
 | Aufforderung bricht nie um | auf Desktop einzeilig. Lieber kürzen (bis drei Wörter, Verb vorn) als den Knopf schmal zwingen |
 | Ein Register je Seite | nicht technisches Kürzel, Feuilleton und Werbesprech in derselben Komposition |
 | Zitate | höchstens drei Zeilen, Name plus Rolle, typografische Anführungszeichen „…". Nur echte Zitate mit Freigabe, siehe harte Grenze |
+| Für Besucher oder für uns? | zu jeder Sektion die Frage, ob sie dem Besucher bei seiner Entscheidung hilft oder dem Betrieb gefällt (Gründungsgeschichte vor dem Angebot, Teamfoto vor der Leistung, Auszeichnung ohne Bezug). Eine Sektion für „uns" rückt nach unten oder kürzt sich auf einen Satz. Die Fragen, die ein Besucher auf der Startseite zuerst hat („Bin ich hier richtig?" und „Was soll ich als Nächstes tun?"), beantwortet der Held, bevor irgendeine „uns" Sektion beginnt |
 | Selbstprüfung | jeden sichtbaren Text einmal lesen: grammatisch schief, unklarer Bezug, bemühtes Wortspiel, gespielte Bescheidenheit? Dann durch einen schlichten, funktionalen Satz ersetzen. Generierte „kluge" Copy ist schlechter als langweilige |
 
 **Poetische Etiketten sind derselbe Tell wie im Englischen.** „Aus der Werkstatt", „Notizen
@@ -310,6 +311,23 @@ ungeprüft benannt.
 8. Kein Tell aus dem Katalog in Abschnitt 7 ohne Begründung.
 9. Jede Animation hat ihren Satz, und bei Bewegung über 4 bewegt sich die Seite wirklich.
 10. `node scripts/pruefe-geschmack.mjs` nach dem Build ohne Fehler.
+11. Alltagsprobe: Sieht die Seite so aus, wie ein Besucher diese Art Gegenstand aus der echten
+    Welt kennt und lesen kann? Eine Speisekarte mit dunklem Grund und schwacher Schrift besteht
+    sie nicht, eine mit hellem Grund und klarer Gliederung schon. Grund: Ein Modell wählt das
+    Wahrscheinlichste, nicht das, was jemand am Tisch tatsächlich in die Hand bekommt. Die
+    Frage wird je Branche des Kunden einmal gestellt und im Markenbrief beantwortet.
+12. Tauschtest für das Logo: Wäre die Seite mit dem Logo eines Wettbewerbers unverändert
+    brauchbar? Dann trägt nur das Logo die Marke, und die Seite ist austauschbar. Wenigstens ein
+    Element (Bildsprache, Wortwahl, Form, Material) muss ohne das Logo erkennbar zu diesem
+    Kunden gehören. Grund: Ein Modell baut das Wahrscheinliche, und das Wahrscheinliche gehört
+    keinem. Ein Urteil, keine Messung.
+13. Blinzeltest: Beim Verkleinern oder Zukneifen der Augen bleibt eine Rangfolge sichtbar
+    (erst die Überschrift, dann die Handlung, dann der Rest). Verschwimmt alles zu gleich
+    grauem Lärm, fehlt Hierarchie, siehe `21-sektionshintergruende-hierarchie.md`.
+14. Video und Bewegtbild: einmal stumm, einmal ohne das Video ansehen. Trägt die Sektion ohne
+    es dieselbe Aussage, ist das Video Schmuck und kostet Ladezeit (Lazy Load, Poster,
+    Untertitel oder Ersatztext) ohne Gegenwert. Fehlt dem Bild ohne Ton die Aussage, braucht es
+    Untertitel. Ungemessen, wie viele Besucher mit Ton schauen.
 
 ```bash
 pnpm build

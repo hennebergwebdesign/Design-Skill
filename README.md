@@ -114,7 +114,10 @@ skills/
 │  │  ├─ 29-pruefdurchgaenge-und-vokabular.md  Kurzvokabular, vier Blickwinkel, Obergrenze der Durchgänge
 │  │  ├─ 30-motion-pruefung.md      soll es animieren, Kurven, Dauer, Review mit zehn Maßstäben
 │  │  ├─ 31-ki-sichtbarkeit-geo.md  KI-Crawler, zitierfähige Absätze, llms.txt ehrlich eingeordnet
-│  │  └─ 32-ui-details-katalog.md   Eingabe, Touch, Safe Area, Intl, Hochkontrast, Zustand in der URL
+│  │  ├─ 32-ui-details-katalog.md   Eingabe, Touch, Safe Area, Intl, Hochkontrast, Zustand in der URL
+│  │  ├─ 33-kundenpraesentation-und-feedback.md  Aussagen statt Geschmack, Rückfrage statt Verteidigung, Rollen, Spielregeln
+│  │  ├─ 34-ueberzeugungsausloeser.md  Zielgruppe ohne Vorwurf, Wirkprinzip, realistisch behaupten, drei Optionen
+│  │  └─ 35-autoritaet-im-text.md   Weichmacher streichen, Satzleiter, Rahmen vor dem Einwand, FAQ Antworten
 │  └─ assets/
 │     ├─ vorlagen/                  marke.json, marke-brief.md, impressum.md, datenschutz.md,
 │     │                             datenschutz-bewerber.md, consent-muster.md,
@@ -136,7 +139,9 @@ skills/
    │  ├─ leadsystem-dashboard.md    D1-Schema, Dashboard, Anmeldung, Löschfrist
    │  ├─ consent-und-dienste.md     Eigenbau, fünf Kategorien, Consent Mode, Dienstekatalog
    │  ├─ google-bewertungen.md      Places API serverseitig, KV-Cache, Darstellung
-   │  ├─ qa-und-abnahme.md          Prüfablauf in acht Schritten, Abschlussbericht
+   │  ├─ qa-und-abnahme.md          Prüfablauf in zehn Schritten, Abschlussbericht
+   │  ├─ kundenabstimmung.md        Rollen beim Kunden, Ablauf der Präsentation, Rückmeldungen einsortieren
+   │  ├─ chatbot-auf-der-website.md  Leitplanken, Wissensbasis, Gegenprobe, Datenschutz bei KI Chatbots
    │  ├─ brand-extraktion.md       Marke der Bestandsseite messen, auswerten, übernehmen
    │  ├─ brand-extraktion.md       Marke der Bestandsseite messen, auswerten, übernehmen
    │  ├─ firecrawl-recherche.md     bekannte/alte Seiten crawlen und scrapen, Firecrawl-API
@@ -158,6 +163,7 @@ scripts/
 ├─ pruefe-geschmack.mjs             Kicker-Quote, Laufbänder, CTA-Texte, messbare KI-Tells
 ├─ pruefe-motion.mjs                transition: all, scale(0), ease-in, Dauer über 300 ms, Reduzierung
 ├─ pruefe-geo.mjs                   KI-Crawler in der robots.txt, Text im HTML, Gliederung, JSON-LD
+├─ pruefe-aktualitaet.mjs           Copyright-Jahr, Stand-Angaben, Jahr im Titel
 ├─ brand-extraktion.mjs             Farben, Schriften, Typoskala, Logo der eigenen Seite messen
 ├─ relaunch-inventory.mjs           Bestandsaufnahme der alten Kundenseite vor dem Relaunch
 ├─ design-scan.mjs                  Struktur- und Design-Scan einer fremden Referenzseite

@@ -4,7 +4,7 @@ description: "Vollständiges System für conversion-orientiertes Webdesign im DA
 license: MIT
 metadata:
   author: Henneberg Webdesign
-  version: 2.7.0
+  version: 2.12.0
 ---
 
 # Webdesign Conversion System
@@ -123,6 +123,9 @@ Lies gezielt nach, statt alles zu laden.
 | Entwürfe mit einem Bildmodell erzeugen, auswerten, treu umsetzen, und was sie nie belegen | `28-ki-bildentwuerfe.md` |
 | Kurzvokabular fürs Feedback, vier Blickwinkel, wie viele Prüfdurchgänge vor der Übergabe | `29-pruefdurchgaenge-und-vokabular.md` |
 | Soll es animieren, Kurven, Dauern, Motion-Review mit zehn Maßstäben, Vokabular für Animationsfeedback | `30-motion-pruefung.md` |
+| Ton mit Autorität, Weichmacher streichen, Rahmen setzen, Antworten in der FAQ | `35-autoritaet-im-text.md` |
+| Auslöser je Stelle der Seite: Zielgruppe ohne Vorwurf, Wirkprinzip, realistische Behauptung, ruhige Einwandzeile, drei echte Optionen, ehrliche Einschränkung | `34-ueberzeugungsausloeser.md` |
+| Entwurf vor dem Kunden vertreten, Geschmack durch Aussagen ersetzen, Rollen und Spielregeln für Rückmeldung, Lens | `33-kundenpraesentation-und-feedback.md` |
 | Referenzen entdecken, vorlegen, freigeben, erfassen | `../agentur-website-builder/references/designrecherche-ablauf.md` |
 
 **Technik, Recht, Messung**
@@ -163,6 +166,7 @@ node scripts/pruefe-breakpoints.mjs http://localhost:4321 --bilder
 node scripts/pruefe-geschmack.mjs     # nach dem Build: Kicker-Quote, Laufbänder, CTA-Texte, KI-Tells
 node scripts/pruefe-motion.mjs        # transition: all, scale(0), ease-in, Dauer über 300 ms, Reduzierung
 node scripts/pruefe-geo.mjs           # nach dem Build: KI-Crawler, Text im HTML, Gliederung, JSON-LD
+node scripts/pruefe-aktualitaet.mjs   # nach dem Build: Copyright-Jahr, Stand-Angaben, Jahr im Titel
 ```
 
 Dazu zwei Werkzeuge, die nicht prüfen, sondern Material beschaffen und Texte bewerten. Sie

@@ -4,7 +4,7 @@ description: Baut komplette Kundenwebsites mit Astro und Cloudflare Pages nach A
 license: Proprietär, That's it. Marketing / VFDESIGN LTD
 metadata:
   author: That's it. Marketing / Henneberg Webdesign
-  version: 2.4.0
+  version: 2.9.0
 ---
 
 # Agentur Website Builder
@@ -137,6 +137,8 @@ Immer explizit klären, sofern nicht eindeutig genannt:
   noch offen ist, siehe `references/referenzen-und-auswahl.md`
 * welche Rechtstexte der Kunde liefert
 * ob Terminbuchung gebraucht wird
+* wer beim Kunden freigibt (genau eine Person) und wer Rückmeldung gibt, siehe
+  `references/kundenabstimmung.md`
 
 Die Antworten gehen in den Markenbrief des Projekts, nicht in den Chatverlauf. Vorlagen:
 `../webdesign-conversion/assets/vorlagen/marke-brief.md` und `marke.json`.
@@ -146,6 +148,7 @@ Die Antworten gehen in den Markenbrief des Projekts, nicht in den Chatverlauf. V
 Immer vor der Implementierung. Kurz, im Chat, kein Dokument im Repo. Struktur:
 
 ```
+## Ziel, Belege, Erkenntnis in je einem Satz
 ## Lesart in einem Satz, Regler für Varianz, Bewegung, Dichte
 ## Referenzen: Conversion, Visuell, optional Motion, je mit Begründung
 ## Seitenstruktur
@@ -180,6 +183,9 @@ Kandidaten werden vorgelegt und **dann wird gestoppt**. Der Nutzer gibt ganze We
 einzelne Sektionen oder einzelne Komponenten frei, lehnt ab oder fordert Alternativen an.
 Ohne Freigabe wird nichts abgerufen und nichts abgelegt. Tor 2 entscheidet später, ob ein
 Muster dauerhaft ins Skillwissen wandert, siehe dasselbe Kapitel.
+
+Das Konzept wird mit Begründung zuerst und Spielregeln für die Rückmeldung vorgelegt, Ablauf in
+`references/kundenabstimmung.md`.
 
 Erst nach Freigabe bauen. Wenn der Nutzer ausdrücklich sagt, es soll direkt gebaut werden,
 das Konzept trotzdem in Kurzform voranstellen und ohne Wartezeit weiterarbeiten.
@@ -323,6 +329,8 @@ Schwesterskill.
 | `references/consent-und-dienste.md` | jedes Projekt |
 | `references/google-bewertungen.md` | jedes Projekt |
 | `references/qa-und-abnahme.md` | Phase 5 und 6, immer |
+| `references/chatbot-auf-der-website.md` | nur wenn ein KI Chatbot auf die Seite soll: Leitplanken, Wissensbasis, Gegenprobe, Datenschutz |
+| `references/kundenabstimmung.md` | Phase 2, 3 und 6: Rollen beim Kunden, Präsentation, Rückmeldungen einsortieren |
 | `references/brand-extraktion.md` | jeder Relaunch und jede Brandingübernahme per URL: Farben, Schriften, Logo der eigenen Bestandsseite messen |
 | `references/firecrawl-recherche.md` | eine bekannte, alte oder fremde Seite crawlen oder scrapen, für Relaunch-Inventar oder Design-Referenz |
 | `references/designrecherche-ablauf.md` | Phase 3, sobald Referenzen gesucht, vorgelegt oder freigegeben werden |
@@ -338,6 +346,7 @@ Schwesterskill.
 | `../webdesign-conversion/references/27-redesign-bestand.md` | jede Überarbeitung einer bestehenden Seite |
 | `../webdesign-conversion/references/28-ki-bildentwuerfe.md` | sobald ein Bildmodell Entwürfe erzeugen soll |
 | `../webdesign-conversion/references/29-pruefdurchgaenge-und-vokabular.md` | Phase 5, für Kritik und Feinschliff nach dem Build, vor Phase 6 |
+| `../webdesign-conversion/references/33-kundenpraesentation-und-feedback.md` | Phase 3 und 6, wenn ein Entwurf vor dem Kunden begründet oder Rückmeldung eingeordnet wird |
 | `../webdesign-conversion/references/24-designsystem-vorrang.md` | sobald ein Designsystem, Branding oder eine Referenz im Spiel ist |
 | `../webdesign-conversion/references/12-copywriting.md` | sobald Texte eingesetzt werden |
 | `../webdesign-conversion/references/07-recht-dsgvo.md` | Rechtstexte und Consentpflichten |
@@ -350,7 +359,7 @@ Bewertungsabruf. Diese kopieren und an das Projekt anpassen, statt jedes Mal neu
 schreiben. Rechtstexte, Tokens, Meta-Head, JSON-LD, 404 und Security-Header liegen in
 `../webdesign-conversion/assets/vorlagen/`.
 
-`scripts/` im Repowurzelverzeichnis enthält die acht Prüfskripte sowie drei
+`scripts/` im Repowurzelverzeichnis enthält die neun Prüfskripte sowie drei
 Agenturwerkzeuge, die nie Teil der ausgelieferten Seite werden und nie in das `package.json`
 des Kundenprojekts wandern:
 
@@ -392,7 +401,7 @@ Erst wenn alle Punkte erfüllt sind, darf von einer fertigen Seite gesprochen we
 * alle vereinbarten Seiten und Sektionen vorhanden, keine vergessenen Platzhaltertexte
 * jeder selbst formulierte Copy-Vorschlag mit `scripts/deslop-check.mjs` auf 5 von 5 geprüft
 * Build läuft ohne Fehler, `astro check` ohne Befund
-* alle acht Prüfskripte ohne Fehler, auch `pruefe-geschmack.mjs` und `pruefe-geo.mjs` gegen `dist/`
+* alle neun Prüfskripte ohne Fehler, auch `pruefe-geschmack.mjs`, `pruefe-geo.mjs` und `pruefe-aktualitaet.mjs` gegen `dist/`
 * Vorflugcheck aus `26-geschmack-und-ki-tells.md` durchgegangen, Ungeprüftes benannt
 * Tastaturbedienung durch alle interaktiven Elemente, sichtbarer Fokus
 * Formular getestet: Erfolg, Validierungsfehler, Serverfehler, Turnstile
@@ -409,5 +418,10 @@ Erst wenn alle Punkte erfüllt sind, darf von einer fertigen Seite gesprochen we
 * keine Schlüssel im Repository
 * `CLAUDE.md` aktuell
 * offene Punkte, fehlende Bilder, fehlende Rechtsangaben und Copyvorschläge im Chat benannt
+* im Bericht steht, was ein Mensch noch sichten muss, und das Modell meldet die Seite nicht als
+  abgenommen, siehe `references/qa-und-abnahme.md` Schritt 9
+* Aktualität und Eigentum nach `references/qa-und-abnahme.md` Schritt 10: Copyright-Jahr
+  dynamisch, Domain und Zugänge beim Kunden oder als offen benannt, Pflege geklärt
+* bei einem Chatbot: Systemprompt serverseitig, Wissensbasis vom Kunden, Gegenprobe durchgeführt
 * jede genutzte Designreferenz steht mit Freigabe und Entscheidung im Register, keine wurde
   ohne Freigabe erfasst, und `.designrecherche/` ist in der `.gitignore` des Kundenprojekts

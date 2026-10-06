@@ -18,7 +18,7 @@ bildet stattdessen auf bestehende Regler, Referenzen und Prüfskripte ab.
 |---|---|---|
 | **Lesart** | Schritt 1 aus `26-geschmack-und-ki-tells.md` wiederholen, wenn die Richtung nicht trägt | `26-geschmack-und-ki-tells.md` § 1 |
 | **Kritik** | Bewertung nach Heldenregeln, Konsistenzsperren und Sektionsfolge, als Punktliste mit Grund, nicht als Meinung | `26-geschmack-und-ki-tells.md` §§ 3–9 |
-| **Prüfung** | die acht Prüfskripte plus Vorflugcheck laufen lassen: ein technischer Befund, keine Einschätzung | `scripts/`, `26-geschmack-und-ki-tells.md` § 10 |
+| **Prüfung** | die neun Prüfskripte plus Vorflugcheck laufen lassen: ein technischer Befund, keine Einschätzung | `scripts/`, `26-geschmack-und-ki-tells.md` § 10 |
 | **Feinschliff** | letzter Durchgang vor der Übergabe: Abstände, Kontraste, Zeilenlängen, Fokusreihenfolge. Kein neuer Inhalt, keine neue Sektion | `assets/checklisten/pre-launch.md` |
 | **Mutiger** | Varianz und/oder Dichte einen Punkt höher, mit einem Satz Begründung. Akzent-, Form- und Themasperre bleiben stehen | `26-geschmack-und-ki-tells.md` § 2 |
 | **Ruhiger** | zuerst Bewegung senken, dann Varianz, Begründung in `marke.json` | `26-geschmack-und-ki-tells.md` § 2 |

@@ -40,6 +40,30 @@ test('eine echte Frage als Überschrift ist erlaubt', () => {
   assert.ok(!meldet('Wie lange dauert die Erstberatung? Sie dauert 45 Minuten.', 'Selbstbeantwortete Frage'));
 });
 
+test('Vorwurf an den Leser wird gefunden', () => {
+  assert.ok(meldet('Die meisten Betriebe machen ihre Website falsch.', 'Vorwurf an den Leser'));
+});
+
+test('eine Lagebeschreibung ohne Vorwurf ist erlaubt', () => {
+  assert.ok(!meldet('Für Betriebe, die ihre Website haben und mehr Anfragen wollen.', 'Vorwurf an den Leser'));
+});
+
+test('absolutes Versprechen wird gefunden', () => {
+  assert.ok(meldet('Ihre Anfragen verdoppeln sich über Nacht, garantiert.', 'Absolutes Versprechen'));
+});
+
+test('ein Zeitrahmen mit Quote ist erlaubt', () => {
+  assert.ok(!meldet('Bei neun von zehn Kunden stiegen die Anfragen innerhalb eines Jahres um mehr als die Hälfte.', 'Absolutes Versprechen'));
+});
+
+test('Weichmacher werden gefunden', () => {
+  assert.ok(meldet('Wir können Ihnen eventuell weiterhelfen, das ist eigentlich unser Spezialgebiet.', 'Weichmacher'));
+});
+
+test('eine klare Aussage mit „finden“ ist kein Weichmacher', () => {
+  assert.ok(!meldet('Wir finden die Ursache innerhalb von 48 Stunden und dokumentieren sie.', 'Weichmacher'));
+});
+
 test('ein sauberer, konkreter Text hat keinen Satzmusterbefund', () => {
   const erg = pruefe('Die Erstberatung dauert 45 Minuten und findet in Karlsruhe statt. Das Angebot kommt am selben Tag, seit 2014 für rund 300 Betriebe.');
   assert.ok(!/Floskeln/.test(erg.stdout));
