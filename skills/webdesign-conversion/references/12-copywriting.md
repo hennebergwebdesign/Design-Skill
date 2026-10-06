@@ -320,6 +320,56 @@ Der erste Entwurf ist nie die Copy. Der Ablauf, der funktioniert:
 **Erst danach ins Layout.** Copy, die im Layout entsteht, passt sich dem Platz an statt der
 Aussage, und dann steht dort ein Satz, weil er in zwei Zeilen passt.
 
+## Sieben Prüfungen für Texte, die schon stehen
+
+Die drei Durchgänge oben bauen einen Text. Diese sieben prüfen einen, der schon da ist, und
+zwar nur **eigene** Entwürfe. Gelieferte Kundentexte werden nicht umgeschrieben, nur
+bewertet (`../../agentur-website-builder/references/copy-im-kundenprojekt.md`). Die Reihenfolge
+gilt, weil frühe Prüfungen die späteren überflüssig machen: ein Satz, der unklar ist, braucht
+keinen Beleg, bevor er klar ist. Nach jeder Prüfung zurück zu den vorigen, ob die Änderung dort
+etwas zerstört hat.
+
+| # | Prüfung | Frage | Typischer Fund |
+|---|---|---|---|
+| 1 | Klarheit | Versteht ein Fremder den Satz beim ersten Lesen? | Pronomen ohne Bezug, Fachwort ohne Erklärung |
+| 2 | Stimme | Klingt die Seite überall wie dieselbe Person? | Sie in der Hero, du im Formular, Amtston im Footer |
+| 3 | Und was? | Warum soll mich das interessieren? | Eigenschaft ohne Nutzen: „mit 12 Mitarbeitern", was bedeutet das für mich? |
+| 4 | Beleg | Woher wissen wir das? | „Marktführer", „zufriedene Kunden" ohne Zahl, Name oder Quelle |
+| 5 | Konkretheit | Welche Zahl, welcher Ort, welche Frist? | „spart Zeit" statt „spart vier Stunden pro Woche" |
+| 6 | Gefühl | Sieht der Besucher seine Lage vorher? | Nutzen ohne die Lage, aus der er kommt |
+| 7 | Risiko | Was hält ihn kurz vor dem Klick noch zurück? | Kein Hinweis neben dem Button, ob es etwas kostet oder bindet |
+
+Zwei der sieben haben eine Grenze, die vorher hier steht und nicht danach:
+
+- **Prüfung 6 (Gefühl)** heißt: die Ausgangslage genau beschreiben, nicht Druck aufbauen.
+  Dringlichkeit, Verknappung und Angst als Werkzeug sind unter „Die Grenze zur Irreführung"
+  ausgeschlossen. Ein Satz, der nur wirkt, weil er etwas Erfundenes behauptet, besteht diese
+  Prüfung nicht, auch wenn er stark klingt.
+- **Prüfung 7 (Risiko)** nennt nur, was **stimmt**: „Kostenlos und unverbindlich" steht nur dort,
+  wo es wirklich so ist, eine Garantie nur, wenn der Kunde sie gibt. Eine ausgedachte
+  Geld-zurück-Zusage ist ein Verstoß, kein Risikoabbau. Siehe „Nicht erfinden".
+
+### Vier Satzmuster, an denen man KI-Text erkennt
+
+Sie entstehen, weil ein Modell einen Satz kontrastreich und rund wirken lassen will, und sie
+stehen in fast jedem maschinell geschriebenen Entwurf. `scripts/deslop-check.mjs` findet sie
+im Kriterium „Floskeln".
+
+| Muster | Beispiel | Besser |
+|---|---|---|
+| Kontrastfigur | „Wir bauen nicht irgendeine Seite, sondern Ihre." | „Wir bauen Ihre Seite." Nur das Zweite sagen |
+| Verneinungsreihe | „Kein Aufwand. Keine Wartezeit. Keine Kosten." | Sagen, was passiert: „Das Angebot kommt am selben Tag." |
+| Selbstbeantwortete Frage | „Das Ergebnis? Drei Tage schneller." | „Drei Tage schneller." Die Frage weglassen |
+| Nachgeschobenes Anhängsel | „Alles aus einer Hand: Planung, Umsetzung, Betreuung, und vieles mehr." | Beim Wesentlichen aufhören |
+
+**Eine Umformulierung mit Synonymen ersetzt nur ein Muster durch das nächste.** Wer „nicht X,
+sondern Y" in „statt X: Y" umbaut, hat dasselbe getan. Der Weg ist, aus den zugrunde liegenden
+Tatsachen neu zu schreiben: was passiert, für wen, in welcher Zeit.
+
+Quelle der sieben Prüfungen und der Muster: `copywriting` und `copy-editing` aus
+[coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) (MIT),
+auf Deutsch übertragen und an die Regeln gegen Druckmittel und erfundene Belege gebunden.
+
 ## Struktur langer Texte
 
 - **Zwischenüberschriften alle 2–4 Absätze**, die für sich gelesen die Geschichte erzählen.

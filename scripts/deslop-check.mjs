@@ -14,6 +14,11 @@
 
   FUENF KRITERIEN, JE EIN PUNKT
     1 Floskeln          ganzheitlich, maßgeschneidert, aus einer Hand, Ihr Partner für …
+                        dazu vier Satzmuster, an denen man KI-Text erkennt: die Kontrastfigur
+                        ("nicht X, sondern Y"), die Verneinungsreihe ("Kein Aufwand, keine
+                        Wartezeit"), die selbstbeantwortete Frage ("Das Ergebnis? ...") und
+                        der Dauerbrenner "In der heutigen ...". Quelle: copywriting und
+                        copy-editing aus coreyhaines31/marketingskills, auf Deutsch übertragen
     2 Nominalstil       Substantivketten auf -ung, -heit, -keit statt Verben
     3 Superlative       beste, führend, einzigartig, optimal, ohne Beleg daneben
     4 Belegdichte       Behauptungen ohne eine einzige Zahl, Frist, Menge oder Ortsangabe
@@ -63,6 +68,16 @@ const SUPERLATIVE = [
   'unschlagbar', 'weltklasse', 'premium-qualität', 'langjährige erfahrung', 'langjaehrige erfahrung',
   'jahrelange erfahrung', 'absolute', 'maximale',
 ];
+/* Satzmuster, die nach Maschine klingen. Jedes hat eine Gegenprobe: der Satz sagt dasselbe, wenn
+   man die Verneinung oder die Frage streicht und direkt aussagt. */
+const SATZMUSTER = [
+  { name: 'Kontrastfigur', re: /\bnicht\b[^.!?;]{2,60},\s*sondern\b(?![^.!?;]*\bauch\b)/i,
+    tipp: 'Nur das Zweite sagen: „Wir bauen Ihre Seite" statt „Wir bauen nicht irgendeine Seite, sondern Ihre."' },
+  { name: 'Verneinungsreihe', re: /\b(?:kein\w*|ohne)\b[^.!?;]{1,40}[,.]\s*(?:kein\w*|ohne)\b/i,
+    tipp: 'Sagen, was passiert, nicht was alles entfällt: „Sie bekommen Ihr Angebot am selben Tag."' },
+  { name: 'Selbstbeantwortete Frage', re: /(?:^|[.!?]\s+)(?:das\s+|und\s+)?(?:ergebnis|resultat|fazit|warum|wieso|weshalb|der\s+grund)\s*\?\s+\S/i,
+    tipp: 'Die Antwort ohne die Frage schreiben: „Das Ergebnis? Drei Tage schneller" wird zu „Drei Tage schneller".' },
+];
 const NOMINAL = /\b\w{4,}(?:ung|heit|keit|ierung|barkeit)\b/gi;
 const BELEG = /(\d[\d.,]*\s*(?:%|prozent|jahre?n?|monate?n?|wochen?|tage?n?|stunden?|minuten?|std|kunden|projekte?n?|mitarbeiter|standorte?n?|euro|eur|€|km|m²|qm|kw|mwst)|\b(?:seit|ab)\s+\d{4}\b|\b\d{4}\b|\b\d{2}:\d{2}\b)/gi;
 /* drei durch Komma getrennte Glieder, letztes mit "und": "schnell, sauber und pünktlich" */
@@ -93,8 +108,11 @@ function pruefe(name, roh) {
   let punkte = 0;
 
   const floskeln = treffer(text, FLOSKELN);
-  floskeln.length ? befunde.push({ k: 'Floskeln', fund: floskeln.slice(0, 6).join(', '),
-    tipp: 'Die Floskel durch den konkreten Vorgang ersetzen, den der Kunde tatsächlich leistet.' }) : punkte++;
+  const muster = SATZMUSTER.filter((m) => m.re.test(text));
+  floskeln.length || muster.length
+    ? befunde.push({ k: 'Floskeln', fund: [...floskeln.slice(0, 6), ...muster.map((m) => m.name)].join(', '),
+        tipp: muster.length ? muster.map((m) => `${m.name}: ${m.tipp}`).join(' ') : 'Die Floskel durch den konkreten Vorgang ersetzen, den der Kunde tatsächlich leistet.' })
+    : punkte++;
 
   const nominal = text.match(NOMINAL) ?? [];
   const nominalAnteil = woerter ? nominal.length / woerter : 0;

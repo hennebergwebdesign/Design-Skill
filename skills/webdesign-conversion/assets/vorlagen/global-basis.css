@@ -103,12 +103,13 @@ button, input, select, textarea { font: inherit; color: inherit; }
 
 /* Skip-Link: erstes fokussierbares Element, bei Fokus sichtbar */
 .sprunglink {
-  position: absolute; left: var(--raum-4); top: -100px; z-index: 10000;
+  position: absolute; left: var(--raum-4); top: var(--raum-4); z-index: 10000;
+  transform: translateY(calc(-100% - var(--raum-4)));
   background: var(--farbe-flaeche-dunkel); color: var(--farbe-text-invers);
   padding: var(--raum-3) var(--raum-4); border-radius: var(--radius-s);
-  transition: top var(--dauer-schnell);
+  transition: transform var(--dauer-schnell) var(--kurve-eintritt);
 }
-.sprunglink:focus { top: var(--raum-4); }
+.sprunglink:focus { transform: translateY(0); }
 
 /* Ein Container für alles: kein max-width in jeder Sektion einzeln */
 .inhalt {

@@ -14,7 +14,7 @@ rechtlich tragfähig, barrierearm, schnell, und nicht wie von einer Maschine geb
 
 | Skill | Rolle | Lizenz |
 |---|---|---|
-| `skills/webdesign-conversion/` | das Regelwerk: was gut ist und warum. 29 Referenzen, 3 Playbooks, Vorlagen, Checklisten | MIT |
+| `skills/webdesign-conversion/` | das Regelwerk: was gut ist und warum. 32 Referenzen, 3 Playbooks, Vorlagen, Checklisten | MIT |
 | `skills/agentur-website-builder/` | der Lieferablauf: Phasen 0 bis 6, fester Agenturstack, einsatzfertiger Code | Agenturstandard, siehe seine `SKILL.md` |
 
 Die Trennung ist die zentrale Entscheidung dieses Repositories: **Wissen und Ablauf sind
@@ -37,6 +37,8 @@ node scripts/pruefe-kontrast.mjs
 node scripts/pruefe-platzhalter.mjs --launch
 node scripts/pruefe-breakpoints.mjs http://localhost:4321 --bilder
 node scripts/pruefe-geschmack.mjs            # nach dem Build: dist/ Seiten, src/ Quellen
+node scripts/pruefe-motion.mjs               # src/: transition: all, scale(0), ease-in, Dauer, Reduzierung
+node scripts/pruefe-geo.mjs                  # nach dem Build: dist/ robots.txt, KI-Crawler, JSON-LD
 
 # Agenturwerkzeuge
 node scripts/relaunch-inventory.mjs https://alte-kundenseite.de
@@ -84,10 +86,10 @@ nicht, es braucht das Glob-Muster in Anführungszeichen.
 ```
 .claude-plugin/       plugin.json, marketplace.json
 skills/
-  webdesign-conversion/     SKILL.md, references/00-28, playbooks/, assets/
+  webdesign-conversion/     SKILL.md, references/00-32, playbooks/, assets/
                             assets/musterbibliothek/ ist das globale Musterwissen
   agentur-website-builder/  SKILL.md, references/, assets/consent|forms|reviews
-scripts/              sechs Prüfskripte, Agenturwerkzeuge, Designrecherche, ein Installer
+scripts/              acht Prüfskripte, Agenturwerkzeuge, Designrecherche, ein Installer
   lib/abruf.mjs       die eine Abrufschicht, vier Rückfallstufen, robots.txt
   lib/browser.mjs     die eine Stelle, die Playwright sucht und Chromium startet
   tests/              node --test, lokaler Testserver statt Netzzugriff
@@ -156,6 +158,17 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Offene Punkte
 
+- Version 4.4.0: `pruefe-motion.mjs` und `pruefe-geo.mjs` sind gegen Fixtures und die eigenen
+  Vorlagen geprüft, nicht gegen ein gebautes Kundenprojekt. Die Hover-Erkennung in
+  `pruefe-motion.mjs` liest CSS mit einfacher Klammerzählung und kennt weder verschachteltes
+  CSS mit `&` noch SCSS-Mixins. Zu beiden Kapiteln gibt es keinen Evalfall; ob Kapitel 30 und
+  31 das Verhalten ändern, ist ungemessen. Die Quellen der neuen Kapitel wurden über
+  abrufende Zusammenfassungen gelesen, nicht vollständig geklont; die Liste dessen, was nicht
+  gelesen wurde, steht in `CREDITS.md`. Die Lizenz des Repositorys
+  `vercel-labs/web-interface-guidelines` ist nicht verifiziert. Die Crawlernamen in Kapitel 31
+  und die Behauptung zu `llms.txt` sind aus den Beschreibungen der Quellen übernommen, nicht
+  gegen die Herstellerdokumentation geprüft.
+
 - `consent-ohne-keks`, `leadsystem-nur-auf-bestaetigung`,
   `kundendesignsystem-schlaegt-referenz`, `referenz-erst-freigeben`,
   `nicht-beobachtetes-nicht-behaupten` und `keine-attrappen-als-beleg` sind noch nicht
@@ -196,6 +209,24 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
   veröffentlicht wird.
 
 ## Änderungsverlauf
+
+- **06.10.2026, Version 4.4.0** Auf Wunsch aus einer Recherche, welche Website-Skills gerade
+  viel genutzt und besprochen werden. Neu: Kapitel `30-motion-pruefung.md` (Emil Kowalski: soll
+  es animieren, Kurven, Dauer unter 300 ms, Review mit zehn Maßstäben), `31-ki-sichtbarkeit-geo.md`
+  (Such-, Abruf- und Trainingscrawler, zitierfähige Absätze, `llms.txt` ehrlich eingeordnet),
+  `32-ui-details-katalog.md` (Vercel Web Interface Guidelines, nur die Lücken). Zwei neue
+  Prüfskripte, `pruefe-motion.mjs` und `pruefe-geo.mjs`; `deslop-check.mjs` erkennt jetzt
+  Kontrastfigur, Verneinungsreihe und selbstbeantwortete Frage; `12-copywriting.md` bekommt
+  sieben Prüfungen für fertige Texte; `03-technik-performance.md` die frameworkunabhängigen
+  Regeln aus Vercels `react-best-practices`; `29-pruefdurchgaenge-und-vokabular.md` den
+  Impeccable-Detektor als Zweitmeinung. 55 neue Tests, insgesamt 178. Dabei gefunden und
+  behoben: der eigene Sprunglink in `global-basis.css` animierte `top`, jetzt `transform`. Zwei
+  Widersprüche zwischen Kowalski und dem bestehenden Motion-System sind entschieden und in
+  Kapitel 30 Abschnitt 8 benannt: `--kurve-austritt` ist eine ease-in-Kurve (gilt nur noch für
+  dekorative Austritte), `--dauer-normal` mit 0,4 s trägt keine bedienbaren Elemente mehr.
+  Die Kommentare in `tokens.css` sind nachgezogen, die Werte nicht. Nicht übernommen und
+  warum: `CREDITS.md`, Abschnitt „Version 4.4". Versionen: Plugin 4.4.0, Regelwerk 2.7.0,
+  Bauablauf 2.4.0.
 
 - **04.10.2026, Version 4.3.0** Skill `brand-extraktion` von That's it. Marketing aufgenommen,
   aus einem Fork dieses Repositories (ZIP `Skill_Website-main`), der ihn parallel zu 4.2.0

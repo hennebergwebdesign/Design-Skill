@@ -4,7 +4,7 @@ description: "Vollständiges System für conversion-orientiertes Webdesign im DA
 license: MIT
 metadata:
   author: Henneberg Webdesign
-  version: 2.6.1
+  version: 2.7.0
 ---
 
 # Webdesign Conversion System
@@ -122,6 +122,7 @@ Lies gezielt nach, statt alles zu laden.
 | Bestehende Seite überarbeiten: Modus erkennen, was sich nie still ändert, Hebel in Reihenfolge | `27-redesign-bestand.md` |
 | Entwürfe mit einem Bildmodell erzeugen, auswerten, treu umsetzen, und was sie nie belegen | `28-ki-bildentwuerfe.md` |
 | Kurzvokabular fürs Feedback, vier Blickwinkel, wie viele Prüfdurchgänge vor der Übergabe | `29-pruefdurchgaenge-und-vokabular.md` |
+| Soll es animieren, Kurven, Dauern, Motion-Review mit zehn Maßstäben, Vokabular für Animationsfeedback | `30-motion-pruefung.md` |
 | Referenzen entdecken, vorlegen, freigeben, erfassen | `../agentur-website-builder/references/designrecherche-ablauf.md` |
 
 **Technik, Recht, Messung**
@@ -131,6 +132,8 @@ Lies gezielt nach, statt alles zu laden.
 | Ladezeit, Bilder, Caching, Schriften | `03-technik-performance.md` |
 | Kontrast, Tastatur, Alt-Texte, BFSG-Pflicht | `04-barrierefreiheit-bfsg.md` |
 | Keywords, URLs, Meta, interne Links, JSON-LD | `05-seo-sichtbarkeit.md` |
+| Sichtbarkeit in KI-Antworten: KI-Crawler in der robots.txt, zitierfähige Absätze, llms.txt einordnen | `31-ki-sichtbarkeit-geo.md` |
+| Feinschliff der kleinen Dinge: Eingabe, Touch, Safe Area, Intl, Hochkontrast, Zustand in der URL | `32-ui-details-katalog.md` |
 | Impressum, Datenschutz, Consent, Auftragsverarbeitung | `07-recht-dsgvo.md` |
 | 404, robots.txt, Sitemap, Redirects, Header | `08-pflichtseiten-technik.md` |
 | GA4, Heatmaps, Conversion-Ziele, A/B | `13-messung-optimierung.md` |
@@ -158,6 +161,8 @@ node scripts/pruefe-kontrast.mjs      # Kontrastwerte der Rollen-Tokens
 node scripts/pruefe-platzhalter.mjs   # [[FEHLT]], data-copy-vorschlag, ausgelassener Code
 node scripts/pruefe-breakpoints.mjs http://localhost:4321 --bilder
 node scripts/pruefe-geschmack.mjs     # nach dem Build: Kicker-Quote, Laufbänder, CTA-Texte, KI-Tells
+node scripts/pruefe-motion.mjs        # transition: all, scale(0), ease-in, Dauer über 300 ms, Reduzierung
+node scripts/pruefe-geo.mjs           # nach dem Build: KI-Crawler, Text im HTML, Gliederung, JSON-LD
 ```
 
 Dazu zwei Werkzeuge, die nicht prüfen, sondern Material beschaffen und Texte bewerten. Sie
@@ -171,7 +176,8 @@ node scripts/pruefe-muster.mjs --index                            # Musterbiblio
 node --test 'scripts/tests/*.test.mjs'                            # Tests der Skripte
 ```
 
-`deslop-check.mjs` prüft fünf Kriterien: Floskeln, Nominalstil, leere Superlative, fehlende
+`deslop-check.mjs` prüft fünf Kriterien: Floskeln (dazu die Satzmuster Kontrastfigur,
+Verneinungsreihe und selbstbeantwortete Frage), Nominalstil, leere Superlative, fehlende
 Belege und die Dreierfigur. Er gilt für **eigene** Textvorschläge. Gelieferte Kundentexte
 werden nicht geprüft und nicht umgeschrieben.
 

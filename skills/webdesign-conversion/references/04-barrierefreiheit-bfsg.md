@@ -156,7 +156,9 @@ Dazu gehören:
 - **Zoom bis 200 %** ohne Informationsverlust, kein `user-scalable=no`.
 - **Videos** mit Untertiteln, Audio mit Transkript.
 - **Bewegung respektieren**: `prefers-reduced-motion: reduce` schaltet nicht ausgelöste
-  Bewegung ab.
+  Bewegung ab. Gedämpft statt gestrichen, siehe `30-motion-pruefung.md`.
+- **Automatisch Bewegtes** (Autoplay, Karussell, Laufband), das länger als 5 Sekunden läuft und
+  neben Inhalt steht, braucht Pause, Stopp oder Ausblenden (WCAG 2.2.2).
 - **Zeitbegrenzungen** vermeiden, sonst verlängerbar machen.
 
 ## Prüfwerkzeuge

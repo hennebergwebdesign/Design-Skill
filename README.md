@@ -110,7 +110,11 @@ skills/
 │  │  ├─ 25-designmuster-bibliothek.md  Muster, Belege, Konfidenz, wann erweitern
 │  │  ├─ 26-geschmack-und-ki-tells.md  Lesart, drei Regler, Sperren, Held, KI-Tells, Vorflugcheck
 │  │  ├─ 27-redesign-bestand.md     Modus erkennen, was sich nie still ändert, Hebel
-│  │  └─ 28-ki-bildentwuerfe.md     Bildmodell als Vorlage, Auswertung, nie als Beleg
+│  │  ├─ 28-ki-bildentwuerfe.md     Bildmodell als Vorlage, Auswertung, nie als Beleg
+│  │  ├─ 29-pruefdurchgaenge-und-vokabular.md  Kurzvokabular, vier Blickwinkel, Obergrenze der Durchgänge
+│  │  ├─ 30-motion-pruefung.md      soll es animieren, Kurven, Dauer, Review mit zehn Maßstäben
+│  │  ├─ 31-ki-sichtbarkeit-geo.md  KI-Crawler, zitierfähige Absätze, llms.txt ehrlich eingeordnet
+│  │  └─ 32-ui-details-katalog.md   Eingabe, Touch, Safe Area, Intl, Hochkontrast, Zustand in der URL
 │  └─ assets/
 │     ├─ vorlagen/                  marke.json, marke-brief.md, impressum.md, datenschutz.md,
 │     │                             datenschutz-bewerber.md, consent-muster.md,
@@ -152,6 +156,8 @@ scripts/
 ├─ pruefe-platzhalter.mjs           [[FEHLT]], data-copy-vorschlag, ausgelassener Code
 ├─ pruefe-breakpoints.mjs           acht Größen, Überlauf, Touchziele, Schriftgröße, CLS
 ├─ pruefe-geschmack.mjs             Kicker-Quote, Laufbänder, CTA-Texte, messbare KI-Tells
+├─ pruefe-motion.mjs                transition: all, scale(0), ease-in, Dauer über 300 ms, Reduzierung
+├─ pruefe-geo.mjs                   KI-Crawler in der robots.txt, Text im HTML, Gliederung, JSON-LD
 ├─ brand-extraktion.mjs             Farben, Schriften, Typoskala, Logo der eigenen Seite messen
 ├─ relaunch-inventory.mjs           Bestandsaufnahme der alten Kundenseite vor dem Relaunch
 ├─ design-scan.mjs                  Struktur- und Design-Scan einer fremden Referenzseite
@@ -206,7 +212,17 @@ node scripts/pruefe-kontrast.mjs      # rechnet die Kontrastwerte der Rollen-Tok
 node scripts/pruefe-platzhalter.mjs --launch   # [[FEHLT]], data-copy-vorschlag, // ...
 node scripts/pruefe-breakpoints.mjs http://localhost:4321 --bilder
 node scripts/pruefe-geschmack.mjs     # nach dem Build: dist/ und src/
+node scripts/pruefe-motion.mjs        # Quellen: Bewegungsfehler, die sich zählen lassen
+node scripts/pruefe-geo.mjs           # nach dem Build: dist/ auf KI-Lesbarkeit
 ```
+
+`pruefe-motion.mjs` liest die Quellen und meldet `transition: all` als Fehler, dazu Start bei
+`scale(0)`, `ease-in`, Layoutwerte in `transition`, feste Dauern über 300 ms und `:hover` mit
+Bewegung ohne `@media (hover: hover)` als Warnungen. Gibt es irgendwo Animation, aber nirgends
+`prefers-reduced-motion`, ist das ein Fehler. `pruefe-geo.mjs` zeigt je KI-Crawler, ob die
+`robots.txt` ihn zulässt, und meldet Seiten mit kaum Text im ausgelieferten HTML, falsche
+`h1`-Zahl, ungültiges JSON-LD und `FAQPage` mit Fragen, die nicht sichtbar auf der Seite stehen.
+Ob eine Sperre gewollt ist, entscheidet der Kunde, das Skript benennt sie nur.
 
 `pruefe-geschmack.mjs` prüft je gebauter Seite, ob höchstens ein Kicker auf drei Sektionen
 kommt, ob mehr als ein Laufband läuft und ob dieselbe Kontaktabsicht mehrere Texte hat, dazu

@@ -4,7 +4,7 @@ description: Baut komplette Kundenwebsites mit Astro und Cloudflare Pages nach A
 license: Proprietär, That's it. Marketing / VFDESIGN LTD
 metadata:
   author: That's it. Marketing / Henneberg Webdesign
-  version: 2.3.0
+  version: 2.4.0
 ---
 
 # Agentur Website Builder
@@ -350,7 +350,7 @@ Bewertungsabruf. Diese kopieren und an das Projekt anpassen, statt jedes Mal neu
 schreiben. Rechtstexte, Tokens, Meta-Head, JSON-LD, 404 und Security-Header liegen in
 `../webdesign-conversion/assets/vorlagen/`.
 
-`scripts/` im Repowurzelverzeichnis enthält die sechs Prüfskripte sowie drei
+`scripts/` im Repowurzelverzeichnis enthält die acht Prüfskripte sowie drei
 Agenturwerkzeuge, die nie Teil der ausgelieferten Seite werden und nie in das `package.json`
 des Kundenprojekts wandern:
 
@@ -392,7 +392,7 @@ Erst wenn alle Punkte erfüllt sind, darf von einer fertigen Seite gesprochen we
 * alle vereinbarten Seiten und Sektionen vorhanden, keine vergessenen Platzhaltertexte
 * jeder selbst formulierte Copy-Vorschlag mit `scripts/deslop-check.mjs` auf 5 von 5 geprüft
 * Build läuft ohne Fehler, `astro check` ohne Befund
-* alle sechs Prüfskripte ohne Fehler, auch `pruefe-geschmack.mjs` gegen `dist/`
+* alle acht Prüfskripte ohne Fehler, auch `pruefe-geschmack.mjs` und `pruefe-geo.mjs` gegen `dist/`
 * Vorflugcheck aus `26-geschmack-und-ki-tells.md` durchgegangen, Ungeprüftes benannt
 * Tastaturbedienung durch alle interaktiven Elemente, sichtbarer Fokus
 * Formular getestet: Erfolg, Validierungsfehler, Serverfehler, Turnstile
