@@ -16,7 +16,7 @@ Bauablauf, nichts doppelt. Fremdes wird destilliert, nicht kopiert. Pro Phase ei
 
 ## Phasen
 
-1. **Abgleich.** Alle 12 Dateien des Pakets lesen, gegen die vorhandenen Kapitel 01 bis 39 prüfen:
+1. **Abgleich (erledigt, siehe `ABGLEICH.md`).** Alle 12 Dateien des Pakets lesen, gegen die vorhandenen Kapitel 01 bis 39 prüfen:
    neu, teilweise, vorhanden, Widerspruch. Ergebnis als Matrix in `CREDITS.md`/`CLAUDE.md`.
    Erwartete Überschneidungen: Anti Slop und Standard Fonts (26), Motion (09, 18, 30, 38),
    Bildgenerierung (28, 39), Referenzrecherche (22), Copy ohne Bindestriche (12, 35).
