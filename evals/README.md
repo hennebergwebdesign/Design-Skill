@@ -12,6 +12,8 @@ claude plugin eval . --runs 1 --ablation none          # schnell, ohne Baseline
 
 Der Bericht landet unter `results/<zeitstempel>/report.html`. `results/` ist ausgenommen.
 
+Bei einem neuen Modell läuft die Suite als Messinstrument für den Bestand: `modellwechsel.md`.
+
 ## Die Fälle
 
 | Fall | Prüft | Grader |

@@ -425,3 +425,15 @@ Stand der Quelle: 07.10.2026, Erweiterungspaket `claude-design-workflow`, automa
 **Nicht übernommen, mit Grund:** Skill im Stil einer bekannten Marke (harte Grenze Markenextraktion), bezahlte Community Angebote
 und Leitfäden, Galeriegrößen und Preise (ungeprüft), das eingebaute Designkommando und der Apple Skill (Verfügbarkeit ungeprüft).
 
+### Pflegeverfahren, ohne Versionsänderung
+
+Stand der Quelle: 07.10.2026, Erweiterungspaket `skill-pflege-und-modelltests`, eigene Zusammenfassung, nichts wörtlich.
+
+| Quelle | Was daraus eingeflossen ist |
+|---|---|
+| Nate Herk (AI Automation), YouTube „I Deleted All My Claude Skills... And Claude Got Smarter" (`youtube.com/watch?v=XNQBCRcwXV4`) mit Aussagen aus einem Interview mit Boris Cherny, **keine Lizenz genannt**, nur inhaltlich destilliert; Kommentare der Community getrennt und ungeprüft | `evals/modellwechsel.md`, Konvention in `CLAUDE.md` |
+
+**Nicht übernommen, mit Grund:** Zahlen zur Kürzung von Systemprompts (nicht geprüft), pauschales Löschen aller Anweisungen (gilt nicht für
+Pflichten und harte Grenzen), Ratschläge aus der Softwareentwicklung für Orchestrierung und Build Skills (andere Arbeit), die
+Managerbildsprache (Haltung, keine Regel).
+
