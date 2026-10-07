@@ -129,6 +129,11 @@ Diese Punkte haben einen Grund. Wer sie ändert, ändert damit auch den Grund.
   Wunsch über `scripts/install-quellskills.sh`.
 - **Vorlagen dürfen Platzhalter enthalten**, deshalb nimmt `pruefe-platzhalter.mjs` Ordner
   namens `vorlagen` und `templates` aus.
+- **Bei jedem neuen Hauptmodell, spätestens nach sechs Monaten, wird der Bestand geprüft**
+  (`evals/modellwechsel.md`). Grund: Regeln, die ein älteres Modell brauchte, können ein neueres
+  bremsen, und jede Regel kostet bei jeder Aufgabe Kontext. Rechtliche Pflichten, harte Grenzen und
+  Agenturvorgaben werden **nicht** nach einem Δ von 0 gestrichen, weil das nur zeigt, dass dieses Modell
+  sie bei diesem Prompt allein trifft.
 - Versionsnummer in `.claude-plugin/plugin.json` und in der `metadata` der beiden `SKILL.md`
   bei inhaltlichen Änderungen nachziehen.
 
@@ -161,6 +166,8 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Offene Punkte
 
+- Pflegeverfahren (`evals/modellwechsel.md`): noch nie gelaufen, das Änderungsprotokoll ist leer. Die Frist von
+  sechs Monaten ist ein Vorschlag. Die Aussagen des Videos über Modelle und Systemprompts sind nicht geprüft.
 - Version 4.14.0: Kapitel 44 ist an keinem Projekt erprobt, kein Evalfall, das Δ ist eine Vermutung. Die
   Rückbauprobe hat kein Skript: `design-dna.mjs` liefert nur die Werte für Schritt 2, den Nachbau und den
   Vergleich macht ein Mensch mit dem Modell. Dass ein anderes Modell weniger Muster des ersten übernimmt, ist
@@ -273,6 +280,15 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Änderungsverlauf
 
+- **07.10.2026, ohne Versionsänderung** Paket `skill-pflege-und-modelltests` (ein Video von Nate Herk mit Aussagen
+  von Boris Cherny, Community Hinweise getrennt) aufgenommen als Pflegeverfahren für dieses Repository, nicht
+  als Regelwerk für Kundenprojekte: neue Datei `evals/modellwechsel.md` (Ablauf, Entscheidungstabelle,
+  Schutzliste, Grenzen, leeres Änderungsprotokoll), Konvention in dieser Datei, Verweis in `evals/README.md`.
+  Die Evals mit Baseline sind der Lauf A und B des Pakets, deshalb kein neues Werkzeug. **Entschieden:** Das
+  Paket empfiehlt zu löschen, was ohne Skill gleich gut klappt. Für Pflichten, harte Grenzen und Agenturvorgaben
+  gilt das nicht, ein schwacher Fall wird verschärft statt die Regel gestrichen. Nicht übernommen: Zahlen zur
+  Kürzung von Systemprompts, die Erwartung, dass Löschen pauschal besser wirkt, der Rat aus der Softwareentwicklung
+  für Orchestrierung. Kein Skillinhalt geändert, deshalb keine neue Version. Siehe `CREDITS.md`.
 - **07.10.2026, Version 4.14.0** Erweiterungspaket aus drei Videos (Jay E, Jack Roberts: 25 Tricks, Slop,
   Konsistenz), gegen 4.13.0 abgeglichen. Der größte Teil stand seit 4.11.0 (Galerien als Kandidaten, Schriften,
   Iconpakete, Polierschleife, Komponenten, Tweaks Panel, Wettbewerbermuster). Neu: Kapitel
