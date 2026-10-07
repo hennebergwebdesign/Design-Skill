@@ -14,7 +14,7 @@ rechtlich tragfähig, barrierearm, schnell, und nicht wie von einer Maschine geb
 
 | Skill | Rolle | Lizenz |
 |---|---|---|
-| `skills/webdesign-conversion/` | das Regelwerk: was gut ist und warum. 42 Referenzen, 3 Playbooks, Vorlagen, Checklisten | MIT |
+| `skills/webdesign-conversion/` | das Regelwerk: was gut ist und warum. 43 Referenzen, 3 Playbooks, Vorlagen, Checklisten | MIT |
 | `skills/agentur-website-builder/` | der Lieferablauf: Phasen 0 bis 6, fester Agenturstack, einsatzfertiger Code | Agenturstandard, siehe seine `SKILL.md` |
 
 Die Trennung ist die zentrale Entscheidung dieses Repositories: **Wissen und Ablauf sind
@@ -87,7 +87,7 @@ nicht, es braucht das Glob-Muster in Anführungszeichen.
 ```
 .claude-plugin/       plugin.json, marketplace.json
 skills/
-  webdesign-conversion/     SKILL.md, references/00-42, playbooks/, assets/
+  webdesign-conversion/     SKILL.md, references/00-43, playbooks/, assets/
                             assets/musterbibliothek/ ist das globale Musterwissen
                             assets/vorlagen/scrollvideo/ sind die Bausteine zu Kapitel 38
                             assets/vorlagen/prompts/ sind die Prompt-Vorlagen zu Kapitel 24, 38, 39, 40
@@ -161,6 +161,11 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Offene Punkte
 
+- Version 4.13.0: Kapitel 43 ist an keinem Projekt erprobt, kein Evalfall, das Δ ist eine Vermutung.
+  Der Scramble ohne Bildschirmleserlärm ist beschrieben, nicht in einer Vorlage umgesetzt, und
+  `pruefe-motion.mjs` kennt ihn nicht. Die Adressen der sieben Beispielseiten sind aus der
+  Videobeschreibung, ungeprüft und nicht verlinkt. Alle Aussagen der Videos sind Erfahrungswerte des
+  Autors.
 - Version 4.12.0: Kapitel 41 und 42 sind an keinem echten Projekt erprobt, kein Evalfall, das Δ ist eine
   Vermutung. `scripts/design-gap-audit.mjs` und `scripts/pruefe-flow.mjs` sind benannt und **nicht gebaut**:
   der Gap Audit und der Durchlauf wie ein Nutzer sind Handarbeit. Ob Loop Pause und Poster vorhanden
@@ -264,6 +269,19 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Änderungsverlauf
 
+- **07.10.2026, Version 4.13.0** Erweiterungspaket aus vier Videos des Kanals BONT (Projektablauf, fünf
+  Schlüssel, Layoutregeln, Inspirationsquellen), gegen 4.12.0 abgeglichen. Das meiste stand schon
+  (Referenzkollage, Markenskill, wenige Zutaten, Layoutfamilien, Sticky Kopf). Neu: Kapitel
+  `43-hierarchie-raster-komposition.md` (Hierarchie als Verhältnis, Titellänge, Führungskanten, Anteile
+  je Sektion wechseln, Heldenidee als roter Faden, Animationssystem mit Scramble und Sticky Modul in drei
+  Zonen) und Abschnitt 5a „Regeln laufend festhalten" in `moodboard-und-stylescape.md`. **Fünf
+  Widersprüche entschieden, Tabelle in Kapitel 43 Abschnitt 8:** feste Pixelabstände nicht übernommen
+  (fließende Tokens bleiben), Fläche nutzen nur für Bild, Fläche und Display Überschrift (Lesebreite
+  bleibt), Titel mit 1 bis 5 Wörtern als Display Regel bei H1 mit Thema, Kleintext nur für Nebentext
+  kleiner (Mindestgröße 16 px), Stil Skill je Marke ersetzt durch `marke.json` und Markenbrief. Scramble
+  nur mit echtem Text im DOM. Nicht übernommen: Framer Bedienung, Lebenslauf und Preise des Autors,
+  vier der elf Beispielseiten. Keine harte Grenze, kein Prüfskript, kein Evalfall. Versionen: Plugin
+  4.13.0, Regelwerk 2.16.0, Bauablauf 2.13.0.
 - **07.10.2026, Version 4.12.0** Erweiterungspaket „Referenz und Motion" (eine `SKILL.md`, neun Abschnitte),
   gegen 4.11.0 abgeglichen. Neu: Kapitel `41-motion-als-funktion-der-zeit.md` (Bewegtbild als `frame(t)`,
   Storyboard und Beatgrid als Tore vor dem Code, Look gegen die Schablone, Referenzvideo auswerten,

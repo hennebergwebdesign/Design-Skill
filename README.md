@@ -124,7 +124,8 @@ skills/
 │  │  ├─ 39-ki-assets-bewegtbild-und-3d.md  KI-Assets für Bewegtbild und 3D, Arbeitsweise, Abbruch, Rechte, Kosten
 │  │  ├─ 40-polierschleife-mit-kritiker.md  Bauagent und getrennter Kritiker, Vorbedingungen, Budget, Durchlaufgrenze, Variante mit drei Kritikern
 │  │  ├─ 41-motion-als-funktion-der-zeit.md  Logoanimation, Loop, Kurzvideo: frame(t), Storyboard und Beatgrid, Formate
-│  │  └─ 42-referenzgrammatik-und-gap-audit.md  Kollage und Grammatiktabelle, Gap Audit bei „es fehlt etwas“
+│  │  ├─ 42-referenzgrammatik-und-gap-audit.md  Kollage und Grammatiktabelle, Gap Audit bei „es fehlt etwas“
+│  │  └─ 43-hierarchie-raster-komposition.md  Hierarchie als Verhältnis, Führungskanten, Anteile wechseln, Animationssystem
 │  └─ assets/
 │     ├─ vorlagen/                  marke.json, marke-brief.md, impressum.md, datenschutz.md,
 │     │                             datenschutz-bewerber.md, consent-muster.md,
