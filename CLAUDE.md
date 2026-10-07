@@ -14,7 +14,7 @@ rechtlich tragfähig, barrierearm, schnell, und nicht wie von einer Maschine geb
 
 | Skill | Rolle | Lizenz |
 |---|---|---|
-| `skills/webdesign-conversion/` | das Regelwerk: was gut ist und warum. 40 Referenzen, 3 Playbooks, Vorlagen, Checklisten | MIT |
+| `skills/webdesign-conversion/` | das Regelwerk: was gut ist und warum. 42 Referenzen, 3 Playbooks, Vorlagen, Checklisten | MIT |
 | `skills/agentur-website-builder/` | der Lieferablauf: Phasen 0 bis 6, fester Agenturstack, einsatzfertiger Code | Agenturstandard, siehe seine `SKILL.md` |
 
 Die Trennung ist die zentrale Entscheidung dieses Repositories: **Wissen und Ablauf sind
@@ -87,7 +87,7 @@ nicht, es braucht das Glob-Muster in Anführungszeichen.
 ```
 .claude-plugin/       plugin.json, marketplace.json
 skills/
-  webdesign-conversion/     SKILL.md, references/00-35, playbooks/, assets/
+  webdesign-conversion/     SKILL.md, references/00-42, playbooks/, assets/
                             assets/musterbibliothek/ ist das globale Musterwissen
                             assets/vorlagen/scrollvideo/ sind die Bausteine zu Kapitel 38
                             assets/vorlagen/prompts/ sind die Prompt-Vorlagen zu Kapitel 24, 38, 39, 40
@@ -161,6 +161,12 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Offene Punkte
 
+- Version 4.12.0: Kapitel 41 und 42 sind an keinem echten Projekt erprobt, kein Evalfall, das Δ ist eine
+  Vermutung. `scripts/design-gap-audit.mjs` und `scripts/pruefe-flow.mjs` sind benannt und **nicht gebaut**:
+  der Gap Audit und der Durchlauf wie ein Nutzer sind Handarbeit. Ob Loop Pause und Poster vorhanden
+  sind, prüft kein Skript. Die Schwelle 8 und die fünf Runden der drei Kritiker, die Randwerte der
+  Formate und die Namen der Quellen (Mobbin, Refero, Page Flows, Screens Design, whatships.com,
+  skillery.dev, aus Videountertiteln) sind ungeprüft. Die Quellvideos sind Aussagen der Autoren.
 - Version 4.11.0: Kapitel 40 und die Abschnitte zu Kosten (39), Storyboard (38) und Bausteinkandidaten
   (22) sind an keinem echten Projekt erprobt. Die zwei neuen Evalfälle sind klein gemessen
   (`polierschleife-nicht-als-start` Δ +0,13, `generator-kosten-vorab` Δ +0,20, je zwei Läufe je
@@ -258,6 +264,20 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Änderungsverlauf
 
+- **07.10.2026, Version 4.12.0** Erweiterungspaket „Referenz und Motion" (eine `SKILL.md`, neun Abschnitte),
+  gegen 4.11.0 abgeglichen. Neu: Kapitel `41-motion-als-funktion-der-zeit.md` (Bewegtbild als `frame(t)`,
+  Storyboard und Beatgrid als Tore vor dem Code, Look gegen die Schablone, Referenzvideo auswerten,
+  Einsatz im Web mit Pause nach WCAG 2.2.2, Formate aus einer Szene) und
+  `42-referenzgrammatik-und-gap-audit.md` (drei bis fünf Referenzen je Sektion, Grammatiktabelle, Gap
+  Audit mit Messpunkten und Ausgabe). Ergänzt: Variante mit drei Kritikern in Kapitel 40 (3a), Kandidaten
+  für Flows und Bewegung in 22, Interview vor dem Prompt in `intake-und-entscheidungen.md`, Durchlauf wie
+  ein Nutzer in `qa-und-abnahme.md`. **Zwei Entscheidungen:** Die drei Kritiker sind eine Variante
+  **eines** Durchgangs, die Grenze von zwei aus Kapitel 29 bleibt, und jeder Wert unter 10 muss einen
+  Mangel nennen, weil eine bloße Bewertung nach Kapitel 40 zur Zustimmung führt. Die Videoproduktion,
+  in 4.11.0 noch ausgeschlossen, ist jetzt als Lieferstück aufgenommen, ohne Skript und ohne neue
+  Abhängigkeit. Nicht übernommen: Kosten-, Zeit- und Aufrufzahlen der Quellvideos, Werkzeugvergleich
+  Remotion gegen HyperFrames. Keine neue harte Grenze, kein Prüfskript, kein Evalfall. Versionen:
+  Plugin 4.12.0, Regelwerk 2.15.0, Bauablauf 2.12.0.
 - **07.10.2026, Version 4.11.0** Neun Videos des Kanals RoboNuggets (Jay E) zu Claude Design, Prompting,
   Motion, Bildgenerierung, Plugins und Wasserzeichen, als Wissenspaket geliefert und gegen 4.10.0
   abgeglichen (30 Themen). Meist vorhanden (Design System vor dem Entwurf, Standardfont, Icons, Impeccable,

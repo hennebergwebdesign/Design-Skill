@@ -107,6 +107,12 @@ Pixelgleichheit.
 * Feinschliff der kleinen Dinge (Tastatur am Handy, Autofill, Einfügen, Safe Area, Anker unter
   der festen Kopfzeile): `../../webdesign-conversion/references/32-ui-details-katalog.md`
 
+**Durchlauf wie ein Nutzer** vor der Übergabe, in echter Browserumgebung, als kurze Liste mit
+Schweregrad: Anfrageformular absenden, Consent ablehnen und annehmen, Tastaturpfad, fünf
+Breakpoints, Fehlerzustände, Danke Seite, Tracking nur nach Einwilligung, Links und Telefon.
+Er ergänzt `pruefe-breakpoints.mjs` und `pruefe-motion.mjs`. Ein Skript `pruefe-flow.mjs` dafür
+ist als Idee benannt und **nicht gebaut**, der Durchlauf ist bis dahin Handarbeit.
+
 Wer Playwright ohnehin im Projekt hat, kann die Punkte zu Formular und Consent als Ablauf
 schreiben (Formular absenden, Consent ablehnen, im Netzwerkprotokoll nachsehen) und mit jedem
 Build wiederholen. Der Skill `webapp-testing` verfolgt dasselbe Ziel. Er wurde hier nicht

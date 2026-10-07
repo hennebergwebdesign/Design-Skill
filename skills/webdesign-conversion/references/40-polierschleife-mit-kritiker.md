@@ -49,6 +49,28 @@ Die harten Grenzen aus `SKILL.md` und die Prüfskripte stehen **über** dem Krit
 ein Element lobt, das `pruefe-kontrast.mjs` verwirft, hat unrecht. Skripte laufen weiter nach jedem
 Durchgang.
 
+## 3a. Variante mit drei Kritikern
+
+Für Assets, Sektionen und Mailings mit einem Benchmark (Screenshot einer starken Vorlage) kann der
+eine Kritiker in drei getrennte Rollen zerlegt werden. Sie zählt weiter als **ein** Durchgang.
+
+| Kritiker | Frage |
+|---|---|
+| Brief | trifft es Auftrag, Zielgruppe, Pflichtinhalt? |
+| Gestaltung | Hierarchie, Typografie, Abstand, Farbe, Konsistenz mit den Tokens |
+| Wirkung | visuelle Wirkung, Handschrift, Wiedererkennbarkeit, KI Tells (`26-geschmack-und-ki-tells.md`) |
+
+Ablauf: Version 1 bauen, jeder Kritiker vergibt 1 bis 10 mit Begründung und konkreter Korrektur,
+der Bauagent behebt die niedrigsten Werte, neu rendern, neu bewerten. Stopp bei allen Werten ab 8
+oder bei der Durchlaufgrenze aus Abschnitt 2. Ein Vorschlag aus dem Quellpaket sind höchstens fünf
+Runden, festgelegt wird die Zahl im Projekt. Die Scores kommen ins Projektprotokoll.
+
+Zwei Regeln, damit die Zahl keine Zustimmung erkauft: Jeder Wert unter 10 nennt den konkreten
+Mangel (wer eine Zahl ohne Mangel vergibt, bewertet nur), und ein Wert ab 8 hebt keinen Befund der
+Prüfskripte auf. Endet die Schleife ohne Ziel, werden Stand und Restlücken offen berichtet. Die
+Kritiker sehen den gerenderten Screenshot, nie nur den Code. Die Schwelle 8 ist ein Vorschlag, nicht
+gemessen.
+
 ## 4. Verhältnis zur Obergrenze aus Kapitel 29
 
 * Eine Schleife zählt als **ein** subjektiver Durchgang. Die Grenze von zwei bleibt.
@@ -85,4 +107,4 @@ ungemessen. Das Δ ist eine Vermutung.
 ## Verwandte Kapitel
 
 `29-pruefdurchgaenge-und-vokabular.md`, `24-designsystem-vorrang.md`, `26-geschmack-und-ki-tells.md`,
-`33-kundenpraesentation-und-feedback.md`, Vorlage `../assets/vorlagen/prompts/polierschleife.md`.
+`33-kundenpraesentation-und-feedback.md`, `41-motion-als-funktion-der-zeit.md`, Vorlage `../assets/vorlagen/prompts/polierschleife.md`.

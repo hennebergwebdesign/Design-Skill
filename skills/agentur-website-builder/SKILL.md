@@ -4,7 +4,7 @@ description: Baut komplette Kundenwebsites mit Astro und Cloudflare Pages nach A
 license: Proprietär, That's it. Marketing / VFDESIGN LTD
 metadata:
   author: That's it. Marketing / Henneberg Webdesign
-  version: 2.11.0
+  version: 2.12.0
 ---
 
 # Agentur Website Builder
@@ -380,6 +380,8 @@ Schwesterskill.
 | `../webdesign-conversion/references/29-pruefdurchgaenge-und-vokabular.md` | Phase 5, für Kritik und Feinschliff nach dem Build, vor Phase 6 |
 | `../webdesign-conversion/references/33-kundenpraesentation-und-feedback.md` | Phase 3 und 6, wenn ein Entwurf vor dem Kunden begründet oder Rückmeldung eingeordnet wird |
 | `../webdesign-conversion/references/24-designsystem-vorrang.md` | sobald ein Designsystem, Branding oder eine Referenz im Spiel ist |
+| `../webdesign-conversion/references/41-motion-als-funktion-der-zeit.md` | sobald Logoanimation, Loop oder Kurzvideo als eigenes Lieferstück gebaut wird |
+| `../webdesign-conversion/references/42-referenzgrammatik-und-gap-audit.md` | Phase 2 und 3, wenn Referenzen ausgelesen werden, und bei „es fehlt etwas“ |
 | `../webdesign-conversion/references/12-copywriting.md` | sobald Texte eingesetzt werden |
 | `../webdesign-conversion/references/07-recht-dsgvo.md` | Rechtstexte und Consentpflichten |
 | `../webdesign-conversion/references/04-barrierefreiheit-bfsg.md` | vor der Abnahme |
