@@ -42,6 +42,22 @@ das in drei Stufen (Angaben laut Dokumentation, vor dem Einbau erneut prüfen):
 Version und Lizenz der Bibliothek sind hier `[[unbekannt]]` und werden vor dem Einbau auf der Paketseite geprüft. Laut Dokumentation wird die Funktion auf iOS im Energiesparmodus abgeschaltet. **Folge für uns:** Ein Poster und ein Text,
 der ohne Video funktioniert, sind Pflicht, keine Kür. Inhalte stehen nie nur im Video.
 
+## 2a. Storyboard vor jeder Scroll-Animation
+
+Bevor Tokens und Zeit in die Animation fließen: erst statische Frames. Quelle ist ein Video zu
+Motion Graphics mit Code (Jay E, RoboNuggets, 29.09.2026), das Storyboard und Feedback am Bild
+beschreibt. Übertragen auf Webseiten:
+
+| Schritt | Inhalt | Grund |
+|---|---|---|
+| 1 Frames | je Scroll-Stufe ein statischer Zustand der Sektion (Screenshot oder HTML ohne Bewegung), mit Kennung | Feedback bezieht sich auf einen Frame, nicht auf eine Erinnerung |
+| 2 Beschreibung | je Frame ein Satz zur Bewegung zum nächsten (was bewegt sich, wie lange, mit welcher Kurve nach `30-motion-pruefung.md`) | Timing und Zweck werden vor dem Code abgestimmt |
+| 3 Rückmeldung | Kommentare mit Frame-Kennung und Position (Annotation am Screenshot), gesammelt in einem Zug | ein Rutsch statt zehn Rückfragen, Ablauf in `kundenabstimmung.md` |
+| 4 Umsetzung | erst nach Rückmeldung GSAP mit ScrollTrigger (`09-motion-gsap.md`), `prefers-reduced-motion` von Anfang an | die Bewegung ist teuer, die Frames sind billig |
+
+Der Autor des Videos nennt für das Video nach Storyboard 80 bis 90 Prozent Trefferquote. Das ist
+seine Schätzung für Video, für Webseiten ungemessen.
+
 ## 3. Aufbauablauf
 
 | Schritt | Ergebnis | Prüfung | Grund |

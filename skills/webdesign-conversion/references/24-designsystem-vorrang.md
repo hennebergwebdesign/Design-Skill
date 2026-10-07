@@ -61,6 +61,19 @@ Was eine Referenz sehr wohl beeinflussen darf, weil es Aufbau ist und nicht Mark
 Die Trennlinie in einem Satz: **Was die Marke wiedererkennbar macht, ist geschützt. Was die
 Seite verständlich macht, ist übernehmbar.**
 
+### Mehrere Referenzen mischen
+
+Eine Seite darf Prinzipien aus mehreren Referenzen verbinden (Aufbau von A, Rhythmus von B), das
+macht sie eigenständiger als eine Kopie. Damit es nachvollziehbar bleibt:
+
+* Im Markenbrief steht je Merkmal, **von welcher Referenz** es kommt und was bewusst verworfen wurde
+  (Tabelle „Referenzen aus Premium-Designquellen" in `marke-brief.md`).
+* Gemischt wird nur aus der Inspirations-Eingabe (Tabelle oben). Ein geschütztes Merkmal des
+  Kundensystems wird nie aus einer Referenz gemischt.
+* Zwei Referenzen, die sich an einem Merkmal widersprechen, werden im Konfliktformat unten entschieden,
+  nicht stillschweigend gemittelt. Grund: Ein gemischtes Ergebnis ohne Herkunft lässt sich nicht
+  verteidigen und beim Feedback nicht erklären (`33-kundenpraesentation-und-feedback.md`).
+
 ## Der Konfliktfall
 
 Ein Konflikt wird benannt, nicht aufgelöst. Er gehört ins Umsetzungskonzept und in

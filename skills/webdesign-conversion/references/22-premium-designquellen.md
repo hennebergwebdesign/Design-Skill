@@ -49,6 +49,24 @@ ins Moodboard (`../../agentur-website-builder/references/moodboard-und-stylescap
 Eine Referenz liefert ein Prinzip, nie eine Kopie (die Regel unten gilt unverändert). Fremdes
 Bildmaterial vom Moodboard kommt nie ohne geklärte Lizenz auf die Kundenseite.
 
+## Bausteine und Bibliotheken: Kandidaten, ungeprüft
+
+Aus einem Video zu Claude Design (Jay E, RoboNuggets, 27.09.2026), als Kandidatenliste. **Keine
+Empfehlung:** Adressen, Lizenzen, Pflegestand und Datenschutz sind hier nicht geprüft, deshalb steht
+keine Verlinkung da. Was gebraucht wird, wird gesucht und vor dem Einsatz geprüft.
+
+| Zweck | Kandidaten laut Video | Prüfpflicht vor dem Einsatz |
+|---|---|---|
+| Stilsammlungen, maschinenlesbare Designsysteme | styles.referero.design | Lizenz der Inhalte. Eine Sammlung liefert Prinzipien (Stufe 5 in `24-designsystem-vorrang.md`), nie ein fremdes Markensystem |
+| Schriften mit Charakter | Fontshare, Fontesk, Pairing über Fontjoy | Lizenz je Schrift, **selbst hosten** nach `10-visuelle-richtung.md`, nie vom Anbieter-CDN laden (Datenschutz, `07-recht-dsgvo.md`) |
+| Komponenten | React Bits (animierter Text, Glaskarten, Cursoreffekte) | Lizenz, Barrierefreiheit, Bewegung unter 300 ms für Bedienbares (`30-motion-pruefung.md`), an Tokens angepasst, nicht unverändert eingefügt |
+| Effekte (Shader, Raster, Verläufe) | Canvas UI | Branchenpassung vor Effekt: Handwerk, Bau, Betreuung und Gastronomie brauchen zuerst Lesbarkeit und Vertrauen. Performance messen (`38-scrollvideo-und-einbettungen.md`) |
+| Icons | Iconify, Flaticon, Lordicon (animierte Icons) | **Ein** Pack in einem Stil je Projekt, Lizenz und Namensnennung bei Flaticon, Aufteilung in Systemicons und eigenes Set nach `17-icons-eigenes-system.md` |
+| Verzeichnisse | Creators Toolbox | Auswahlhilfe, keine Quelle, die Prüfung ersetzt |
+
+Auswahlregeln aus dem Video, die hier gelten: Komponentenbibliothek vor Neuentwurf (weniger Streuung),
+ein Icon-Pack je Projekt, nie gemischt.
+
 ## Wie recherchiert wird
 
 1. **Branche und Stilrichtung aus dem Markenbrief nehmen**, nicht raten. Ein Dachdecker und

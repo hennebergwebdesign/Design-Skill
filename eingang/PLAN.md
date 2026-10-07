@@ -21,12 +21,12 @@ Bauablauf, nichts doppelt. Fremdes wird destilliert, nicht kopiert. Pro Phase ei
    Erwartete Überschneidungen: Anti Slop und Standard Fonts (26), Motion (09, 18, 30, 38),
    Bildgenerierung (28, 39), Referenzrecherche (22), Copy ohne Bindestriche (12, 35).
    Erwartete Widersprüche prüfen: cremefarbener Hintergrund ist in 26 nur bei Standardpalette ein Tell.
-2. **Neue Kapitel nur für echte Lücken.** Kandidaten: Gauntlet Loop als Polierschleife mit Budget
+2. **Neue Kapitel nur für echte Lücken (erledigt: Kapitel 40, Abschnitte in 22, 24, 38, 39, copy-im-kundenprojekt).** Kandidaten: Gauntlet Loop als Polierschleife mit Budget
    und Durchlaufgrenze (Verhältnis zu 29: zwei Durchgänge), Prompting für das aktuelle Modell
    (Rolle im Bauablauf, nicht im Regelwerk), Ressourcenbibliothek (als Konfiguration wie
    `referenzquellen.json`, Adressen ungeprüft markiert), Wasserzeichen im Kundentext (Hinweis
    mit Quelle, rechtlich ungeprüft), Sicherheit bei Shell Befehlen und Backups im Bauablauf.
-3. **Bauablauf.** Pflichtablauf aus `SKILL-ADDON.md` auf Phasen 0 bis 6 abbilden, ohne Doppelung.
+3. **Bauablauf (erledigt: Sicherheit Phase 0, Checkliste Phase 4, CLAUDE.md-Sätze, Crop und Zoom, Annotation).** Pflichtablauf aus `SKILL-ADDON.md` auf Phasen 0 bis 6 abbilden, ohne Doppelung.
    Design System vor dem Entwurf, Checkliste für lange Builds, Review per Crop und Zoom je Sektion
    (an `pruefe-breakpoints.mjs` anbinden), Storyboard vor Scroll Animation, Tweaks Panel optional.
 4. **Vorlagen.** Die acht Prompt Vorlagen unter `templates/` als Vorlagen im passenden
