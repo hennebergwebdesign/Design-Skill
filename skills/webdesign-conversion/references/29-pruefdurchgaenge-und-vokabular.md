@@ -65,6 +65,11 @@ etwas verbessern lässt.
   gehalten, wie bei KI-Bildentwürfen bereits in `28-ki-bildentwuerfe.md` beschrieben. Diese
   Playwright-Stufe ist bislang nur gegen einen lokalen Testserver geprüft, nicht gegen ein
   echtes Kundenprojekt, siehe „Offene Punkte" in `../../../CLAUDE.md`.
+- **Mit mehreren Agenten.** Wer einen Durchgang mit getrenntem Kritikagenten fahren will, folgt
+  `40-polierschleife-mit-kritiker.md`. Eine solche Schleife ist ein Durchgang, kein dritter.
+- **Ausschnitt je Sektion.** Bei dichten Bildern (Hero, Bento, Tabellen) wird nicht das Ganzseitenbild
+  beurteilt, sondern je Sektion ein Ausschnitt bei 375 und 1440 px, bei Bedarf vergrößert. Grund: Ein
+  verkleinertes Ganzseitenbild verliert Abstände und Schriftgrade, genau die Dinge, die der Durchgang prüft.
 - **Der Grund für die Grenze:** unbegrenztes Nachjustieren ist kein Qualitätsgewinn, sondern
   ein offen gehaltener Auftrag. Der Kunde sieht die Seite ohnehin im Feinschliff-Durchgang,
   spätere Wünsche sind eine neue Anfrage, keine Fortsetzung derselben Prüfung.
@@ -110,5 +115,6 @@ Begründung und Fragen: `36-kundenpsychologie-erwartung-reiz-begruendung.md`, Ab
 - Lesart, Regler, Vorflugcheck: `26-geschmack-und-ki-tells.md`
 - Motion-Handschrift, der eine Moment: `18-motion-handschrift.md`, Motion-Review: `30-motion-pruefung.md`
 - Tokenplan, Typografie: `10-visuelle-richtung.md`
+- Polierschleife mit getrenntem Kritiker: `40-polierschleife-mit-kritiker.md`
 - Erinnerungs- und Aufgabentest, Begründung: `36-kundenpsychologie-erwartung-reiz-begruendung.md`
 - Ablauf und Prüfskripte im Bauprozess: `../../agentur-website-builder/references/qa-und-abnahme.md`

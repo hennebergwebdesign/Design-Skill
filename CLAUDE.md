@@ -14,7 +14,7 @@ rechtlich tragfähig, barrierearm, schnell, und nicht wie von einer Maschine geb
 
 | Skill | Rolle | Lizenz |
 |---|---|---|
-| `skills/webdesign-conversion/` | das Regelwerk: was gut ist und warum. 39 Referenzen, 3 Playbooks, Vorlagen, Checklisten | MIT |
+| `skills/webdesign-conversion/` | das Regelwerk: was gut ist und warum. 40 Referenzen, 3 Playbooks, Vorlagen, Checklisten | MIT |
 | `skills/agentur-website-builder/` | der Lieferablauf: Phasen 0 bis 6, fester Agenturstack, einsatzfertiger Code | Agenturstandard, siehe seine `SKILL.md` |
 
 Die Trennung ist die zentrale Entscheidung dieses Repositories: **Wissen und Ablauf sind
@@ -34,7 +34,7 @@ Skills findet, hat einen Fehler gefunden, keine Redundanz mit Absicht.
 node scripts/pruefe-striche.mjs
 node scripts/pruefe-tokens.mjs
 node scripts/pruefe-kontrast.mjs
-node scripts/pruefe-platzhalter.mjs --launch
+node scripts/pruefe-platzhalter.mjs --launch  # auch data-tweaks-panel, das Reglerpanel darf nie live
 node scripts/pruefe-breakpoints.mjs http://localhost:4321 --bilder
 node scripts/pruefe-geschmack.mjs            # nach dem Build: dist/ Seiten, src/ Quellen, auch Konturbutton als Primär-CTA
 node scripts/pruefe-motion.mjs               # src/: transition: all, scale(0), ease-in, Dauer, Reduzierung, Scrollvideo, Einbettung
@@ -90,12 +90,13 @@ skills/
   webdesign-conversion/     SKILL.md, references/00-35, playbooks/, assets/
                             assets/musterbibliothek/ ist das globale Musterwissen
                             assets/vorlagen/scrollvideo/ sind die Bausteine zu Kapitel 38
+                            assets/vorlagen/prompts/ sind die Prompt-Vorlagen zu Kapitel 24, 38, 39, 40
   agentur-website-builder/  SKILL.md, references/, assets/consent|forms|reviews
 scripts/              neun Prüfskripte, Agenturwerkzeuge, Designrecherche, ein Installer
   lib/abruf.mjs       die eine Abrufschicht, vier Rückfallstufen, robots.txt
   lib/browser.mjs     die eine Stelle, die Playwright sucht und Chromium startet
   tests/              node --test, lokaler Testserver statt Netzzugriff
-evals/                sechzehn Fälle mit Gradern, results/ ist ausgenommen
+evals/                achtzehn Fälle mit Gradern, results/ ist ausgenommen
 README.md             Außendarstellung
 CREDITS.md            Herkunft jeder eingeflossenen Quelle
 ```
@@ -160,6 +161,16 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Offene Punkte
 
+- Version 4.11.0: Kapitel 40 und die Abschnitte zu Kosten (39), Storyboard (38) und Bausteinkandidaten
+  (22) sind an keinem echten Projekt erprobt. Die zwei neuen Evalfälle sind klein gemessen
+  (`polierschleife-nicht-als-start` Δ +0,13, `generator-kosten-vorab` Δ +0,20, je zwei Läufe je
+  Arm), die Baseline besteht schon großenteils. Ob eine Polierschleife bessere Seiten liefert als ein
+  einzelner Durchgang, ist ungemessen. Alle Aussagen der neun Videos (Kanal RoboNuggets) sind
+  Aussagen des Autors, Modellnamen, Preise, Anbieterbedingungen und das Wasserzeichen sind nicht
+  gegen Hersteller geprüft. Die Adressen der Kandidatentabelle in Kapitel 22 sind ungeprüft und nicht
+  verlinkt. Das Henneberg Design System liegt im Repository `henneberg-homepage` und ist nicht
+  eingesehen: ob es als Stufe 1 hier verlinkt werden soll, ist offen. Der Hook gegen zerstörerische
+  Befehle ist als Regel beschrieben, nicht als fertige Konfiguration geliefert.
 - Version 4.10.0: Die Kapitel 36 bis 39 und `moodboard-und-stylescape.md` haben keinen Evalfall zu
   ihrem Kern. Die drei neuen Fälle sind mit je zwei Läufen je Arm gemessen: Konturbutton Δ +0,75,
   F-Muster Δ +0,13, Scrollvideo Δ +0,25 (erst nach einer geschärften Auslöserzeile in `SKILL.md`,
@@ -247,6 +258,22 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Änderungsverlauf
 
+- **07.10.2026, Version 4.11.0** Neun Videos des Kanals RoboNuggets (Jay E) zu Claude Design, Prompting,
+  Motion, Bildgenerierung, Plugins und Wasserzeichen, als Wissenspaket geliefert und gegen 4.10.0
+  abgeglichen (30 Themen). Meist vorhanden (Design System vor dem Entwurf, Standardfont, Icons, Impeccable,
+  Anti-Slop-Prüfung). Drei **Widersprüche entschieden:** Fontshare gilt als Quelle, aber Lizenz prüfen und selbst
+  hosten (26 warnt vor dem Anbieter-CDN); die Gauntlet-Schleife ist ein Weg, einen der zwei subjektiven
+  Durchgänge aus Kapitel 29 zu fahren, kein dritter; die Vorlage „Design System aus Referenz" gilt nur für
+  das Material des Kunden und freigegebene Referenzen, wegen der harten Grenze zur Markenextraktion. Neu:
+  Kapitel `40-polierschleife-mit-kritiker.md`, Kosten und Protokoll bei bezahlter Generierung (39, 3a),
+  Storyboard vor Scroll-Animation (38, 2a), Kandidatentabelle mit Prüfpflicht (22), Mischen mit Herkunft je
+  Merkmal (24), Wettbewerbermuster und Wasserzeichenhinweis in `copy-im-kundenprojekt.md`, Schutz vor
+  zerstörerischen Befehlen, Checkliste bei langen Builds und zwei CLAUDE.md-Sätze im Bauablauf, Ausschnitt je
+  Sektion in Kapitel 29 und `qa-und-abnahme.md`, fünf Prompt-Vorlagen unter `assets/vorlagen/prompts/`. Eine
+  Prüfung: `pruefe-platzhalter.mjs` meldet `data-tweaks-panel` (3 Tests, insgesamt 220). Zwei Evalfälle. Nicht
+  übernommen: Effort-, Cache- und Usage-Regeln, Jev, ADHD-Antwortstil, Apple-HIG-Skill, Videoproduktion aus
+  Transkript, Anbieternamen und Preise. Siehe `CREDITS.md`, Abschnitt „Version 4.11". Versionen: Plugin 4.11.0,
+  Regelwerk 2.14.0, Bauablauf 2.11.0.
 - **07.10.2026, Version 4.10.0** Zehn weitere Videos des Kanals Self-Made Web Designer, als
   Erweiterungspaket geliefert (Abgleichmatrix mit 35 Themen) und umgesetzt. **Widerspruch behoben:**
   `02-design-ux.md` und `26-geschmack-und-ki-tells.md` führten das F-Muster als Maßstab, die

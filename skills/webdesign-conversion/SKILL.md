@@ -4,7 +4,7 @@ description: "Vollständiges System für conversion-orientiertes Webdesign im DA
 license: MIT
 metadata:
   author: Henneberg Webdesign
-  version: 2.13.0
+  version: 2.14.0
 ---
 
 # Webdesign Conversion System
@@ -127,6 +127,7 @@ Lies gezielt nach, statt alles zu laden.
 | Reihenfolge Erwartung, Reiz, Begründung, mentale Modelle, Gruppieren, Erinnerungs- und Aufgabentest | `36-kundenpsychologie-erwartung-reiz-begruendung.md` |
 | Kundensatz zur Optik in eine von sechs Richtungen übersetzen, Signaturelement | `37-stilrichtung-nach-kundensprache.md` |
 | KI erzeugt ein Asset, das auf die Seite kommt: Arbeitsweise, Abbruch, Rechte | `39-ki-assets-bewegtbild-und-3d.md` |
+| Polierschleife mit getrenntem Kritikagenten: Vorbedingungen, Budget, Durchlaufgrenze, Verhältnis zu den zwei Durchgängen | `40-polierschleife-mit-kritiker.md` |
 | Ton mit Autorität, Weichmacher streichen, Rahmen setzen, Antworten in der FAQ | `35-autoritaet-im-text.md` |
 | Auslöser je Stelle der Seite: Zielgruppe ohne Vorwurf, Wirkprinzip, realistische Behauptung, ruhige Einwandzeile, drei echte Optionen, ehrliche Einschränkung | `34-ueberzeugungsausloeser.md` |
 | Entwurf vor dem Kunden vertreten, Geschmack durch Aussagen ersetzen, Rollen und Spielregeln für Rückmeldung, Lens | `33-kundenpraesentation-und-feedback.md` |

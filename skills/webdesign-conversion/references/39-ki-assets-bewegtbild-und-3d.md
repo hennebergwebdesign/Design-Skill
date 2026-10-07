@@ -48,6 +48,26 @@ Eine Grenze gehört ins Konzept (Tor 1), damit nicht ein Nachmittag verbrennt. V
 
 Die Zahl der Versuche je Stufe wird im Projekt festgelegt und im Projekt `CLAUDE.md` dokumentiert.
 
+## 3a. Kosten, Budget, Protokoll
+
+Wenn KI Assets über eine bezahlte Schnittstelle entstehen (Bild oder Video über einen
+Anbieter oder Aggregator), gelten diese Regeln. Quelle ist ein Video zu einem eigenen
+Generierungsskill (Jay E, RoboNuggets, 31.07.2026). Anbieternamen, Preise und Nutzungsbedingungen
+darin sind Stand Video und hier **nicht übernommen**: sie ändern sich laufend und sind ungeprüft.
+
+| Regel | Grund |
+|---|---|
+| **Kosten vor dem Senden berechnen und nennen** | Pay as you go ohne Vorabzahl endet bei einer Rechnung, die niemand freigegeben hat |
+| **Budget-Deckel je Auftrag** im Konzept (Tor 1), Betrag `[[FEHLT: Deckel je Auftrag]]` | ein Deckel, der nicht dasteht, wird nicht gehalten |
+| **Bestätigung bei Mengen** (Vorschlag: ab zehn Bildern, Wert im Projekt festlegen) | Serien laufen sonst durch |
+| **Prompt vorher zeigen** | der Kunde und die Agentur sehen, was ins Werkzeug geht, auch Kundenmaterial |
+| **Protokoll je Datei**: Prompt, Modell, Kosten, Datei, Nutzungsbedingungen für Kundenprojekte | Rechte und Kalkulation der nächsten Serie hängen daran (Abschnitt 4) |
+| **Schlüssel nur in `.env`**, nie im Chat, nie im Repository | `pruefe-platzhalter.mjs` und die Regel „keine Schlüssel im Repository" aus der Definition of Done |
+| **Bedingungen des Anbieters zu Speicherung, Training und Löschfrist lesen**, bevor Kundenmaterial hochgeladen wird | das Video nennt einen Anbieter, dessen Bedingungen Inhalte für den Betrieb und die Modellverbesserung nutzbar machen, die Aussage ist ungeprüft |
+
+Vorlage: `../assets/vorlagen/prompts/bildgenerierung.md`. Ob ein Anbieter günstiger oder zuverlässiger ist als ein anderer, steht im Video als Aussage des
+Autors und ist hier ungemessen. Ein Modellvergleich gehört in die Serie des Projekts, nicht in das Regelwerk.
+
 ## 4. Rechte und Kennzeichnung
 
 - Nutzungsbedingungen des Werkzeugs für kommerzielle Verwendung der Ergebnisse prüfen und im Projekt ablegen.

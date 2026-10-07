@@ -4,7 +4,7 @@ description: Baut komplette Kundenwebsites mit Astro und Cloudflare Pages nach A
 license: Proprietär, That's it. Marketing / VFDESIGN LTD
 metadata:
   author: That's it. Marketing / Henneberg Webdesign
-  version: 2.10.0
+  version: 2.11.0
 ---
 
 # Agentur Website Builder
@@ -93,6 +93,20 @@ weiterarbeiten, nicht blockieren.
 Diese Skills werden genutzt, wenn sie zur Aufgabe passen: `ui-ux-pro-max` für Designsystem
 und Stilrecherche, ein passender Stil aus `awesome-design-skills` wenn der Nutzer ihn
 benennt, `gsap-*` für jede Animationsarbeit.
+
+**Schutz vor zerstörerischen Befehlen.** Bevor der Agent in einem Projekt mit Zugriff auf
+Kundenordner, Deploy-Skripte oder Cloudflare-Zugänge arbeitet:
+
+* Löschen und Überschreiben (`rm -rf`, `git reset --hard`, `git clean`, Force-Push, `wrangler delete`)
+  nur nach ausdrücklicher Freigabe. Besser als eine Bitte im Prompt ist ein **deterministischer
+  Hook**, der solche Befehle blockiert, ohne dass der Agent darüber entscheidet (Konfiguration über den
+  Skill `update-config`). Ein Hook kostet keine Tokens und gilt unabhängig davon, was der Agent
+  gerade „denkt".
+* Vor jedem großen Lauf (Relaunch, Umbau vieler Dateien, Polierschleife) ein Git-Commit, bei
+  Kundendaten außerhalb von Git ein Backup.
+* Der Anlass im Video (ein Entwickler berichtete, ein Modell habe beinahe seine Mac-Dateien gelöscht)
+  ist ein Einzelbericht des Videos, hier nicht geprüft. Das Restrisiko besteht bei jedem Modell
+  unabhängig davon.
 
 ### Phase 1: Analyse
 
@@ -220,7 +234,14 @@ Reihenfolge, weil sie Nacharbeit spart:
    `08-pflichtseiten-technik.md`
 9. Eigenes Icon-Set, siehe `../webdesign-conversion/references/17-icons-eigenes-system.md`
 10. Animation zuletzt aufsetzen, damit sie auf fertiges Markup trifft, siehe
-    `../webdesign-conversion/references/18-motion-handschrift.md` und `09-motion-gsap.md`
+    `../webdesign-conversion/references/18-motion-handschrift.md` und `09-motion-gsap.md`.
+    Bei Scroll-Animationen zuerst ein Storyboard aus statischen Frames
+    (`../webdesign-conversion/references/38-scrollvideo-und-einbettungen.md`, Abschnitt 2a)
+
+**Checkliste bei langen Builds.** Bei mehr als einer Seite oder acht Sektionen führt der Agent eine
+Checkliste im Projekt (Sektionen je Seite, fünf Breakpoints, Metadaten, JSON-LD, Formulare, Consent,
+Pflichtseiten) und prüft sie am Ende jedes Arbeitsschritts. Grund: Ein Zwischenstand gilt sonst
+fälschlich als Abschluss. Geliefert ist, was in der Definition of Done steht, nicht, was sich fertig anfühlt.
 
 ### Phase 5: Prüfung
 
@@ -317,6 +338,11 @@ Abschnitte:
 Nie echte Werte von Schlüsseln oder Zugangsdaten hineinschreiben, nur die Namen der
 Variablen. Jede ungewöhnliche Entscheidung bekommt ihren Grund direkt daneben, sonst dreht
 die nächste Sitzung sie zurück.
+
+Zwei Sätze gehören in jede lange Projektsitzung: frühere Antworten gelten als erledigt, außer es wird
+danach gefragt, und bei langen Aufgaben wird die Checkliste am Ende jedes Schrittes geprüft. Grund: Das
+verhindert, dass kurze Folgefragen lange Rückblicke auslösen. Ob die Zeilen das Verhalten messbar ändern,
+ist ungemessen (Quelle: ein Video zu Prompting, Jay E, RoboNuggets, 24.09.2026).
 
 ## Referenzen
 

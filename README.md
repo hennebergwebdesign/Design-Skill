@@ -121,7 +121,8 @@ skills/
 │  │  ├─ 36-kundenpsychologie-erwartung-reiz-begruendung.md  Reihenfolge Erwartung, Reiz, Begründung, Gruppieren, Erinnerungstest
 │  │  ├─ 37-stilrichtung-nach-kundensprache.md  sechs Richtungen, Zuordnung vom Kundensatz, Signaturelement
 │  │  ├─ 38-scrollvideo-und-einbettungen.md  Scrollvideo nur mit Anlass, Blendfehler, 3D-Einbettungen, Tiefe, Körnung
-│  │  └─ 39-ki-assets-bewegtbild-und-3d.md  KI-Assets für Bewegtbild und 3D, Arbeitsweise, Abbruch, Rechte
+│  │  ├─ 39-ki-assets-bewegtbild-und-3d.md  KI-Assets für Bewegtbild und 3D, Arbeitsweise, Abbruch, Rechte, Kosten
+│  │  └─ 40-polierschleife-mit-kritiker.md  Bauagent und getrennter Kritiker, Vorbedingungen, Budget, Durchlaufgrenze
 │  └─ assets/
 │     ├─ vorlagen/                  marke.json, marke-brief.md, impressum.md, datenschutz.md,
 │     │                             datenschutz-bewerber.md, consent-muster.md,
@@ -130,6 +131,8 @@ skills/
 │     │                             jsonld-bausteine.md,
 │     │                             scrollvideo/ (Poster-Markup, Scrollvideo, Blendmaske,
 │     │                             Körnung, Lazy-Einbettung),
+│     │                             prompts/ (Polierschleife, Storyboard, Tweaks-Panel,
+│     │                             Bildgenerierung, Designsystem ableiten),
 │     │                             referenzkomponenten/ (Hero, FAQ, schwebende Elemente,
 │     │                             Bewertungen, Integrationen)
 │     ├─ checklisten/               pre-launch.md, conversion-audit.md
@@ -409,12 +412,13 @@ Die Suite hat dabei schon einen echten Fehler gefunden: das Landingpage-Playbook
 formuliert, dass das Modell die Navigationsregel erkannte, dann aber um Erlaubnis fragte statt
 zu liefern. Details in `evals/README.md`.
 
-Sechzehn Fälle insgesamt, davon drei für den Agenturstandard: `consent-ohne-keks`,
+Achtzehn Fälle insgesamt, davon drei für den Agenturstandard: `consent-ohne-keks`,
 `leadsystem-nur-auf-bestaetigung` und `brand-extraktion-nur-eigene-marke`. Die ersten beiden und die vier neueren Fälle
 `kundendesignsystem-schlaegt-referenz`, `referenz-erst-freigeben`,
 `nicht-beobachtetes-nicht-behaupten` und `keine-attrappen-als-beleg` sind noch nicht gelaufen,
-ihr Δ ist damit eine Vermutung und kein Messwert. Die drei neuesten Fälle sind klein gemessen:
-`konturbutton-nicht-primaer` Δ +0,75, `f-muster-kein-leitbild` Δ +0,13, `scrollvideo-nur-mit-anlass` Δ +0,25, je zwei Läufe je Arm, Einzelheiten in `evals/README.md`.
+ihr Δ ist damit eine Vermutung und kein Messwert. Die fünf neuesten Fälle sind klein gemessen:
+`konturbutton-nicht-primaer` Δ +0,75, `f-muster-kein-leitbild` Δ +0,13, `scrollvideo-nur-mit-anlass` Δ +0,25, `polierschleife-nicht-als-start` Δ +0,13,
+`generator-kosten-vorab` Δ +0,20, je zwei Läufe je Arm, Einzelheiten in `evals/README.md`.
 
 ## Quell-Skills nachinstallieren
 

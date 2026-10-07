@@ -16,6 +16,7 @@
     [[BESTÄTIGEN: …]]         Angabe, die der Kunde bestaetigen muss
     [[…]]                     jeder andere Platzhalter dieser Form
     data-copy-vorschlag       Entwicklungsmarkierung fuer noch abzustimmende Texte
+    data-tweaks-panel         Entwicklungswerkzeug (Regler fuer Typo, Abstaende, Farben), darf nie live
     TODO, FIXME, XXX, HACK    in Seitenquellen
     Auslassungskommentar      drei Punkte als einziger Kommentarinhalt, oder in Worten
                               ("Rest wie oben", "rest of code", "analog zu oben"): Code,
@@ -67,6 +68,8 @@ const MUSTER = [
     tipp: 'Platzhalter auflösen.' },
   { re: /data-copy-vorschlag/g,               art: 'Copy-Vorschlag', hart: true,
     tipp: 'Text mit dem Kunden abstimmen, dann das Attribut entfernen. Es ist auf der Seite sichtbar.' },
+  { re: /data-tweaks-panel/g,              art: 'Tweaks-Panel', hart: true,
+    tipp: 'Das Reglerpanel ist ein lokales Werkzeug. Werte in die Tokendatei übernehmen und das Panel samt Skript entfernen, siehe assets/vorlagen/prompts/tweaks-panel.md.' },
   /* Auslassung im Kommentar. Kein Platzhalter fuer einen fehlenden Wert, sondern fehlender
      Code: das Modell hat abgekuerzt und beschrieben, was hier stehen muesste. Nur im
      Kommentar gesucht, damit der Spread-Operator (...args) kein Befund ist. */

@@ -72,6 +72,34 @@ Fehlende Angaben, die nur der Kunde liefern kann, kommen als
 `[[FEHLT: Anzahl abgeschlossener Projekte]]` in den Text und in dieselbe Liste. Nie eine
 plausible Zahl einsetzen.
 
+## Muster der stärksten Wettbewerber, nicht ihre Sätze
+
+Vor dem eigenen Text lohnt der Blick auf die Texte der fünf stärksten Wettbewerber der Nische
+(Quelle: ein Video zu Claude Design, Jay E, RoboNuggets, 27.09.2026). Notiert werden **Muster**:
+Ansprache, Satzlänge, Form der Nutzenaussage, Stil der Handlungsaufforderung, Umgang mit Einwänden.
+Daraus entstehen Regeln für den Markenbrief (`sprache`), keine Formulierungen.
+
+* Kein Satz eines Wettbewerbers wird übernommen oder nur umgestellt. Grund: Urheberrecht und
+  Irreführung (§ 5 UWG), und ein Text, der wie der Wettbewerber klingt, trägt keine Position.
+* Ruft der Skill dafür fremde Seiten ab, gilt Tor 1 der Designrecherche: erst vorlegen, dann abrufen
+  (`designrecherche-ablauf.md`).
+* Die Regeln stehen im Markenbrief, damit jede spätere Sitzung dieselbe Stimme trifft.
+
+## KI-Text und Wasserzeichen
+
+Anthropic und andere Anbieter haben laut einem Video (Jay E, RoboNuggets, 17.08.2026) statistische
+Textwasserzeichen angekündigt, die sich auf die Wortwahl legen und nicht aus sichtbaren Zeichen
+bestehen. Die Angaben im Video (Zeitpunkt, Modelle, Verfahren, Prüfwerkzeug) sind hier **nicht gegen
+die Hersteller geprüft**. Für die Arbeit folgt daraus nur, was ohnehin Standard ist:
+
+* Jede KI-Copy wird redaktionell überarbeitet: Fakten, Kundensprache, eigener Ton.
+* Kein Angebotstext verspricht „nicht als KI erkennbar". Das ist weder belegt noch ein Leistungsversprechen,
+  das die Agentur halten kann.
+* Hat ein Kunde Vorgaben zu „von Menschen geschrieben" (Verbände, Wissenschaft, Ausschreibungen), wird das
+  vor dem Schreiben geklärt, nicht danach.
+* Ob und wie KI-erzeugte Inhalte gekennzeichnet werden müssen, hängt vom Einsatz ab und ist im Einzelfall
+  zu klären. Arbeitsdokument, keine Rechtsberatung.
+
 ## Selbst formulierte Texte gegen den KI-Klang prüfen
 
 Jeder selbst formulierte Vorschlag geht durch:

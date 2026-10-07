@@ -75,6 +75,10 @@ Abschlussbericht in einem Satz begründet.
 
 Nicht erlaubt ist stilles Umgestalten, weil etwas anders schöner wirkt.
 
+Bei dichten Sektionen wird je Sektion ein Ausschnitt bei 375 und 1440 px angesehen, bei Bedarf
+vergrößert, nicht nur das Ganzseitenbild (`../../webdesign-conversion/references/29-pruefdurchgaenge-und-vokabular.md`,
+Abschnitt 3).
+
 Verglichen wird auf Proportion, Abstände, Schriftgrößen und Farbwerte, nicht auf
 Pixelgleichheit.
 

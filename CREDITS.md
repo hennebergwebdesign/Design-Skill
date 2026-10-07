@@ -206,6 +206,41 @@ verhindert. Der Evalfall `f-muster-kein-leitbild` prüft das Verhalten des Model
 wurden nicht gelesen und nicht nachgeprüft. Die Zahlen zwei Runden, 48 Stunden und 60 30 10 sind
 Vorschläge aus den Videos, keine harten Grenzen.
 
+### In Version 4.11 zusätzlich eingeflossen
+
+Stand der Quellen: 07.10.2026. Neun Videos des Kanals RoboNuggets (Jay E, YouTube, keine Lizenz
+genannt), aus den automatisch erzeugten Transkripten, nichts wörtlich. Eigennamen im Transkript wurden vom
+Paketersteller korrigiert. Die Videos nennen eigene Produkte und Affiliate-Links des Kanals, diese sind nicht
+übernommen.
+
+| Quelle | Was daraus eingeflossen ist |
+|---|---|
+| „This NEW Claude Prompting Technique (gauntlet-loop)", 06.08.2026 | `40-polierschleife-mit-kritiker.md` mit Vorbedingungen, Kritikerregeln, Verhältnis zu Kapitel 29. Ursprung laut Video: Matt Shumer, Einordnung durch Andrej Karpathy, Artikel „Building effective agents" von Anthropic (2024), alle drei **nicht im Original gelesen**. Die Ergänzungen zum Widerlegen und zur Durchlaufgrenze stammen aus Zuschauerkommentaren |
+| „25 Tricks to Level Up Claude Design", 27.09.2026 | Kandidatentabelle in `22-premium-designquellen.md`, Mischen mit Herkunft je Merkmal in `24-designsystem-vorrang.md`, Wettbewerbermuster in `copy-im-kundenprojekt.md`, Vorlage `designsystem-ableiten.md`, `tweaks-panel.md` mit Sperre |
+| „Opus 5.5 Motion Graphics is Unbelievably Good", 29.09.2026 | Storyboard vor Scroll-Animation in Kapitel 38, Annotation am Frame in `kundenabstimmung.md`, Vorlage `storyboard.md` |
+| „This 1 Claude Skill fully replaces your Higgsfield Subscription", 31.07.2026 | Kosten, Deckel, Protokoll und Schlüssel in `.env` in Kapitel 39, Vorlage `bildgenerierung.md`. Anbieternamen, Preise und Nutzungsbedingungen aus dem Video sind nicht übernommen |
+| „Anthropic Just Revealed 12 New Rules for Prompting Opus 5.5", 24.09.2026 | Checkliste bei langen Builds, zwei CLAUDE.md-Sätze, Ausschnitt je Sektion bei dichten Bildern. Quelle laut Video: Anthropics Prompting Guide, nicht gelesen |
+| „5 Powerful Claude Plugins that Nobody is Talking About" | Schutz vor zerstörerischen Befehlen im Bauablauf, werkzeugneutral als deterministischer Hook. Der Anlass im Video ist ein Einzelbericht, nicht geprüft |
+| „Claude's Invisible Watermark", 17.08.2026 | Hinweis zu KI-Text und Wasserzeichen in `copy-im-kundenprojekt.md`. Die Angaben zu Zeitpunkt, Verfahren und Prüfwerkzeug sind nicht gegen die Hersteller geprüft |
+
+**Widersprüche entschieden:** Fontshare als Quelle gegen die Warnung vor dem Anbieter-CDN in Kapitel 26,
+die Gauntlet-Schleife gegen die Obergrenze von zwei Durchgängen in Kapitel 29, die Vorlage „Design System aus
+Referenz" gegen die harte Grenze zur Markenextraktion. Wie sie aufgelöst sind, steht im Änderungsverlauf in
+`CLAUDE.md`.
+
+**Nicht übernommen, mit Grund:**
+
+* Effort-Stufen, Cache, Usage-Resets und „reasoning extraction": modell- und preisabhängig, im Video teils als Beta, nicht geprüft
+* „Jev", das Entscheidungsmodell mit Routing und Triage: Drittanbieter, Datenschutz und Auftragsverarbeitung ungeklärt, Messwerte vom Kanal
+* „I have ADHD"-Antwortstil und das Kürzel /quick: persönlicher Arbeitsstil
+* Apple-HIG- und WCAG-Skill als Vorlage, Effort-Test und Tone-of-Voice-Skill: Tap Targets und Kontrast stehen in den Kapiteln 04 und 32, die Anti-Slop-Prüfung in `deslop-check.mjs`, die Vorlage zum Tone of Voice nennt Bindestriche als Stilmittel, das Repository verbietet nur Gedankenstriche
+* Videoproduktion aus Transkript, Rohvideo, Hyperframes, Remotion: kein Webseitenbau
+* Preise, Anbieterlisten und Modellnamen: ändern sich laufend
+* die gratis PDFs des Kanals: nicht abgerufen
+
+**Ungeprüft:** Die genannten Personen, Projekte und Artikel, die Zahlen zu Geschwindigkeit und Kosten des
+Entscheidungsmodells und die Testergebnisse der Videos (3D-Wohnung, Produktseite).
+
 ## Inhaltliche Grundlage
 
 **Website-Conversion-Playbook 2026** (That's it. Marketing, Victor & Tim): das
