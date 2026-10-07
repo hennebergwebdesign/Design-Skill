@@ -162,6 +162,12 @@ Der Prüfstein bleibt der aus
 `../../agentur-website-builder/references/referenzen-und-auswahl.md`: Würde jemand, der die
 Referenz kennt, die neue Seite als deren Kopie erkennen, ist die Grenze überschritten.
 
+## Eigenes Ergebnis festschreiben
+
+Muster aus fremden Referenzen wachsen über Tor 2. Das **eigene, freigegebene Ergebnis** eines Projekts wird
+mit der Rückbauprobe festgehalten: `44-gutes-festschreiben-und-rueckbauprobe.md`. Es liegt im Projekt, nicht
+in dieser Bibliothek, solange es nicht durch Tor 2 gegangen ist.
+
 ## Erweiterungspunkte, bewusst noch nicht gebaut
 
 Damit späteres Wachstum die Struktur nicht sprengt. Keiner dieser Punkte ist umgesetzt, und

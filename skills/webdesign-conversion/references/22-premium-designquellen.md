@@ -77,9 +77,11 @@ hier gilt Tor 1: erst Kandidaten vorschlagen, dann freigeben lassen.
 |---|---|
 | App und Ablaufreferenzen (Seitenfluss, Zustände) | Mobbin, Refero, Page Flows, Screens Design |
 | Bewegungsbeispiele | whatships.com |
+| Grafik und Posterreferenzen | Savee |
+| Schriften im echten Einsatz | Fonts In Use |
 | Videobeispiele (teils kostenpflichtig) | skillery.dev |
 
-Wie aus Referenzen eine Grammatiktabelle wird: `42-referenzgrammatik-und-gap-audit.md`.
+Wie aus Referenzen eine Grammatiktabelle wird: `42-referenzgrammatik-und-gap-audit.md`. Eine eigene laufende Sammlung mit Datum und Quelle: `44-gutes-festschreiben-und-rueckbauprobe.md`, Abschnitt 7.
 
 ## Wie recherchiert wird
 

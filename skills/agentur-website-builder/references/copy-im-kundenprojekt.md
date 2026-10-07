@@ -100,6 +100,22 @@ die Hersteller geprüft**. Für die Arbeit folgt daraus nur, was ohnehin Standar
 * Ob und wie KI-erzeugte Inhalte gekennzeichnet werden müssen, hängt vom Einsatz ab und ist im Einzelfall
   zu klären. Arbeitsdokument, keine Rechtsberatung.
 
+## Zweiter Durchgang und fünf Prinzipien
+
+Nach `deslop-check.mjs` ein zweiter Durchgang von Hand oder mit einem **anderen Modell**, als es den Text
+geschrieben hat: Es erkennt die Muster des ersten weniger als dessen Ausgabe. Jede Änderung wird mit
+Begründung vorgelegt und Zeile für Zeile geprüft, nicht pauschal übernommen.
+
+| Prinzip | Prüffrage | Gegengewicht |
+|---|---|---|
+| Ohne Denkarbeit verständlich | Muss der Leser rechnen oder übersetzen? | Fachwort nur mit Erklärung (`35-autoritaet-im-text.md`) |
+| Den Schmerz zuerst | Beginnt die Sektion beim Problem des Besuchers? | Kein Vorwurf an den Leser (`34-ueberzeugungsausloeser.md`) |
+| Konkrete Aufgabe statt Allgemeinplatz | Welche Zahl, welcher Ort, welche Frist? | nur Belegtes, nichts erfinden |
+| Eine Aussage je Bildschirm | Trägt die Sektion genau einen Gedanken? | Die Kernbotschaft bleibt im ersten Bildschirm (`12-copywriting.md`) |
+| Bildhafte Sprache | Zeigt der Satz eine Situation? | keine Bilder, die der Kunde nicht belegen kann |
+
+Quelle: drei Videos (Jay E, Jack Roberts, 2026), Prinzipien in eigenen Worten, siehe `CREDITS.md`, Version 4.14.
+
 ## Selbst formulierte Texte gegen den KI-Klang prüfen
 
 Jeder selbst formulierte Vorschlag geht durch:

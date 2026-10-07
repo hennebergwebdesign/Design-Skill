@@ -14,7 +14,7 @@ rechtlich tragfähig, barrierearm, schnell, und nicht wie von einer Maschine geb
 
 | Skill | Rolle | Lizenz |
 |---|---|---|
-| `skills/webdesign-conversion/` | das Regelwerk: was gut ist und warum. 43 Referenzen, 3 Playbooks, Vorlagen, Checklisten | MIT |
+| `skills/webdesign-conversion/` | das Regelwerk: was gut ist und warum. 44 Referenzen, 3 Playbooks, Vorlagen, Checklisten | MIT |
 | `skills/agentur-website-builder/` | der Lieferablauf: Phasen 0 bis 6, fester Agenturstack, einsatzfertiger Code | Agenturstandard, siehe seine `SKILL.md` |
 
 Die Trennung ist die zentrale Entscheidung dieses Repositories: **Wissen und Ablauf sind
@@ -87,7 +87,7 @@ nicht, es braucht das Glob-Muster in Anführungszeichen.
 ```
 .claude-plugin/       plugin.json, marketplace.json
 skills/
-  webdesign-conversion/     SKILL.md, references/00-43, playbooks/, assets/
+  webdesign-conversion/     SKILL.md, references/00-44, playbooks/, assets/
                             assets/musterbibliothek/ ist das globale Musterwissen
                             assets/vorlagen/scrollvideo/ sind die Bausteine zu Kapitel 38
                             assets/vorlagen/prompts/ sind die Prompt-Vorlagen zu Kapitel 24, 38, 39, 40
@@ -161,6 +161,10 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Offene Punkte
 
+- Version 4.14.0: Kapitel 44 ist an keinem Projekt erprobt, kein Evalfall, das Δ ist eine Vermutung. Die
+  Rückbauprobe hat kein Skript: `design-dna.mjs` liefert nur die Werte für Schritt 2, den Nachbau und den
+  Vergleich macht ein Mensch mit dem Modell. Dass ein anderes Modell weniger Muster des ersten übernimmt, ist
+  eine Aussage der Videos, ungemessen. Die Aussagen der Videos sind Erfahrungswerte der Autoren.
 - Version 4.13.0: Kapitel 43 ist an keinem Projekt erprobt, kein Evalfall, das Δ ist eine Vermutung.
   Der Scramble ohne Bildschirmleserlärm ist beschrieben, nicht in einer Vorlage umgesetzt, und
   `pruefe-motion.mjs` kennt ihn nicht. Die Adressen der sieben Beispielseiten sind aus der
@@ -269,6 +273,20 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Änderungsverlauf
 
+- **07.10.2026, Version 4.14.0** Erweiterungspaket aus drei Videos (Jay E, Jack Roberts: 25 Tricks, Slop,
+  Konsistenz), gegen 4.13.0 abgeglichen. Der größte Teil stand seit 4.11.0 (Galerien als Kandidaten, Schriften,
+  Iconpakete, Polierschleife, Komponenten, Tweaks Panel, Wettbewerbermuster). Neu: Kapitel
+  `44-gutes-festschreiben-und-rueckbauprobe.md` (Rückbauprobe in sieben Schritten, Pilot vor Serie,
+  Figurenwelt mit Asset Inventar, was der Mensch entscheidet, Erklärung nach der Schleife, eigene
+  Referenzbibliothek), in `copy-im-kundenprojekt.md` der Zweitdurchgang mit anderem Modell und fünf
+  Prinzipien mit Gegengewicht, Stimme und Zeitstempel in 41, Pilot in 39 (3b), Savee und Fonts In Use als
+  Kandidaten in 22. **Entschieden:** Die Rückbauprobe gilt auf eigenem, freigegebenem Material, eine fremde
+  Referenz nur nach Tor 1 und Tor 2. Ein Skill „im Stil einer bekannten Marke" ist wegen der harten Grenze zur
+  Markenextraktion nicht übernommen, Regeln landen in `marke.json` und im Markenbrief. Screenshots einer
+  eigenen Sammlung sind intern. „Eine Aussage je Bildschirm" gilt, die Kernbotschaft bleibt im ersten
+  Bildschirm. Nicht übernommen: bezahlte Angebote der Autoren, Zahlen, das Designkommando und der Apple Skill
+  (ungeprüft). Keine harte Grenze, kein Skript, kein Evalfall. Versionen: Plugin 4.14.0, Regelwerk 2.17.0,
+  Bauablauf 2.14.0.
 - **07.10.2026, Version 4.13.0** Erweiterungspaket aus vier Videos des Kanals BONT (Projektablauf, fünf
   Schlüssel, Layoutregeln, Inspirationsquellen), gegen 4.12.0 abgeglichen. Das meiste stand schon
   (Referenzkollage, Markenskill, wenige Zutaten, Layoutfamilien, Sticky Kopf). Neu: Kapitel
