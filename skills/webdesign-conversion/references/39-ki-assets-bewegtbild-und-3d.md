@@ -65,7 +65,7 @@ darin sind Stand Video und hier **nicht übernommen**: sie ändern sich laufend 
 | **Schlüssel nur in `.env`**, nie im Chat, nie im Repository | `pruefe-platzhalter.mjs` und die Regel „keine Schlüssel im Repository" aus der Definition of Done |
 | **Bedingungen des Anbieters zu Speicherung, Training und Löschfrist lesen**, bevor Kundenmaterial hochgeladen wird | das Video nennt einen Anbieter, dessen Bedingungen Inhalte für den Betrieb und die Modellverbesserung nutzbar machen, die Aussage ist ungeprüft |
 
-Ob ein Anbieter günstiger oder zuverlässiger ist als ein anderer, steht im Video als Aussage des
+Vorlage: `../assets/vorlagen/prompts/bildgenerierung.md`. Ob ein Anbieter günstiger oder zuverlässiger ist als ein anderer, steht im Video als Aussage des
 Autors und ist hier ungemessen. Ein Modellvergleich gehört in die Serie des Projekts, nicht in das Regelwerk.
 
 ## 4. Rechte und Kennzeichnung

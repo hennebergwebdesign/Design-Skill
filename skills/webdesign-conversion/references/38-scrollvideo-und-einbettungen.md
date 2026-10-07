@@ -55,7 +55,7 @@ beschreibt. Übertragen auf Webseiten:
 | 3 Rückmeldung | Kommentare mit Frame-Kennung und Position (Annotation am Screenshot), gesammelt in einem Zug | ein Rutsch statt zehn Rückfragen, Ablauf in `kundenabstimmung.md` |
 | 4 Umsetzung | erst nach Rückmeldung GSAP mit ScrollTrigger (`09-motion-gsap.md`), `prefers-reduced-motion` von Anfang an | die Bewegung ist teuer, die Frames sind billig |
 
-Der Autor des Videos nennt für das Video nach Storyboard 80 bis 90 Prozent Trefferquote. Das ist
+Vorlage: `../assets/vorlagen/prompts/storyboard.md`. Der Autor des Videos nennt für das Video nach Storyboard 80 bis 90 Prozent Trefferquote. Das ist
 seine Schätzung für Video, für Webseiten ungemessen.
 
 ## 3. Aufbauablauf

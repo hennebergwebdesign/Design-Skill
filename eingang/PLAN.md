@@ -29,7 +29,7 @@ Bauablauf, nichts doppelt. Fremdes wird destilliert, nicht kopiert. Pro Phase ei
 3. **Bauablauf (erledigt: Sicherheit Phase 0, Checkliste Phase 4, CLAUDE.md-Sätze, Crop und Zoom, Annotation).** Pflichtablauf aus `SKILL-ADDON.md` auf Phasen 0 bis 6 abbilden, ohne Doppelung.
    Design System vor dem Entwurf, Checkliste für lange Builds, Review per Crop und Zoom je Sektion
    (an `pruefe-breakpoints.mjs` anbinden), Storyboard vor Scroll Animation, Tweaks Panel optional.
-4. **Vorlagen.** Die acht Prompt Vorlagen unter `templates/` als Vorlagen im passenden
+4. **Vorlagen (erledigt: assets/vorlagen/prompts/, Prüfung data-tweaks-panel in pruefe-platzhalter.mjs).** Die acht Prompt Vorlagen unter `templates/` als Vorlagen im passenden
    `assets/`-Ordner ablegen, mit Platzhaltern als `[[FEHLT: …]]`, Verweis aus den Kapiteln.
 5. **Prüfungen und Evals.** Jede neue harte Grenze bekommt Skript oder Evalfall. Kandidaten:
    Standardfont und kursive Zierwörter (Erweiterung `pruefe-geschmack.mjs`), Gauntlet nie als

@@ -63,6 +63,8 @@ Seite verständlich macht, ist übernehmbar.**
 
 ### Mehrere Referenzen mischen
 
+Vorlage für den Auftrag: `../assets/vorlagen/prompts/designsystem-ableiten.md`.
+
 Eine Seite darf Prinzipien aus mehreren Referenzen verbinden (Aufbau von A, Rhythmus von B), das
 macht sie eigenständiger als eine Kopie. Damit es nachvollziehbar bleibt:
 
