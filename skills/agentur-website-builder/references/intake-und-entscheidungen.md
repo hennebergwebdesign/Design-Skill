@@ -113,6 +113,19 @@ Die vier Strategiefragen aus
 größtes Problem, Abgrenzung, Vertrauensgrund) sind damit nicht abgedeckt und stehen davor.
 Ohne ihre Antworten wird nicht gestaltet.
 
+## Interview vor dem Prompt (bei größeren Aufträgen)
+
+Fehlen mehrere der neun Antworten oder ist der Auftrag groß (Funnel, App, mehrere Seitentypen),
+nicht mit einem langen Startprompt beginnen. Stattdessen interviewt das Modell das Gegenüber,
+eine Frage nach der anderen: Ziel, Zielgruppe, Referenzen, Seitenfluss, Inhalte, Grenzen. Aus den
+Antworten entsteht ein sauberer Startprompt, mit dem eine **frische Sitzung** beginnt. Grund: Das
+spart Rückfragen mitten im Bau, und der Startprompt enthält nur Geklärtes.
+
+Der Seitenfluss kommt mit Skizzen: ein Rahmen je Screen (Canva oder Figma), Reihenfolge benannt
+(Start, Beratung, Anfrage, Danke). Bei Funnel und App kommen die Zustände dazu: leer, Laden,
+Fehler, Erfolg. Antworten, die der Kunde nicht kennt, werden als offen markiert, nicht ergänzt
+(Regel gegen erfundene Belege).
+
 ## Fragen, die nur bei Auslöser kommen
 
 | Auslöser | Frage |

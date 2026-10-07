@@ -380,3 +380,19 @@ Formulare, Vertrauen am Knopf, Schriftwahl, Mobil, Barrierefreiheit, GEO, A/B Te
 
 **Nicht übernommen, mit Grund:** Studien, Prozentwerte und Anekdoten (nicht nachgelesen),
 Werbung für Kurse, Vorlagen und Dienstleistungen des Kanals.
+
+### In Version 4.12 zusätzlich eingeflossen
+
+Stand der Quelle: 07.10.2026, Erweiterungspaket `design-skill-erweiterung-referenz-motion`, nichts wörtlich.
+
+| Quelle | Was daraus eingeflossen ist |
+|---|---|
+| Erweiterungspaket mit Auswertungen mehrerer Videos (Autoren und Lizenz nicht genannt), nur inhaltlich destilliert | Kapitel 41 (Motion als Funktion der Zeit), Kapitel 42 (Referenzgrammatik, Gap Audit), Variante mit drei Kritikern in Kapitel 40, Kandidaten in Kapitel 22, Interview vor dem Prompt, Durchlauf wie ein Nutzer |
+
+**Bereits im Repository, deshalb nicht erneut aufgenommen:** Marke schlägt Referenz, zwei Freigabetore,
+Storyboard vor Animation (38, 2a), Kennzeichnung KI erzeugter Medien (39, 4).
+
+**Nicht übernommen, mit Grund:** Kosten, Zeit und Aufrufzahlen der Quellvideos (Erfahrungswerte,
+ungeprüft), Preise und Leistungsbeschreibung der Zusatzleistungen (gehören ins Angebot), Vergleich
+der Renderwerkzeuge (veraltet schnell).
+

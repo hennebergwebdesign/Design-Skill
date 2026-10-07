@@ -67,6 +67,20 @@ keine Verlinkung da. Was gebraucht wird, wird gesucht und vor dem Einsatz geprü
 Auswahlregeln aus dem Video, die hier gelten: Komponentenbibliothek vor Neuentwurf (weniger Streuung),
 ein Icon-Pack je Projekt, nie gemischt.
 
+## Quellen für Flows und Bewegung: Kandidaten, ungeprüft
+
+Aus Videountertiteln eines Erweiterungspakets. **Keine Empfehlung und keine Verlinkung:** Namen
+können falsch verstanden sein, Adressen, Lizenzen, Preise und Pflegestand sind nicht geprüft. Auch
+hier gilt Tor 1: erst Kandidaten vorschlagen, dann freigeben lassen.
+
+| Zweck | Kandidaten laut Quelle |
+|---|---|
+| App und Ablaufreferenzen (Seitenfluss, Zustände) | Mobbin, Refero, Page Flows, Screens Design |
+| Bewegungsbeispiele | whatships.com |
+| Videobeispiele (teils kostenpflichtig) | skillery.dev |
+
+Wie aus Referenzen eine Grammatiktabelle wird: `42-referenzgrammatik-und-gap-audit.md`.
+
 ## Wie recherchiert wird
 
 1. **Branche und Stilrichtung aus dem Markenbrief nehmen**, nicht raten. Ein Dachdecker und
