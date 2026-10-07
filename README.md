@@ -414,8 +414,7 @@ Sechzehn Fälle insgesamt, davon drei für den Agenturstandard: `consent-ohne-ke
 `kundendesignsystem-schlaegt-referenz`, `referenz-erst-freigeben`,
 `nicht-beobachtetes-nicht-behaupten` und `keine-attrappen-als-beleg` sind noch nicht gelaufen,
 ihr Δ ist damit eine Vermutung und kein Messwert. Die drei neuesten Fälle sind klein gemessen:
-`konturbutton-nicht-primaer` Δ +0,75, `f-muster-kein-leitbild` Δ +0,13, `scrollvideo-nur-mit-anlass` Δ 0,00
-(misst noch nichts), je zwei Läufe je Arm, Einzelheiten in `evals/README.md`.
+`konturbutton-nicht-primaer` Δ +0,75, `f-muster-kein-leitbild` Δ +0,13, `scrollvideo-nur-mit-anlass` Δ +0,25, je zwei Läufe je Arm, Einzelheiten in `evals/README.md`.
 
 ## Quell-Skills nachinstallieren
 

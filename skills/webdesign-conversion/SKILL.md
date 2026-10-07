@@ -111,6 +111,7 @@ Lies gezielt nach, statt alles zu laden.
 | Eigenes Icon-Set, SVG, Favicon | `17-icons-eigenes-system.md` |
 | Motion-Handschrift, Motion-Tokens, Scroll-Animation in CSS | `18-motion-handschrift.md` |
 | GSAP, ScrollTrigger, Timelines, Performance | `09-motion-gsap.md` |
+| **Jedes Mal, wenn ein Scrollvideo, eine Scroll-Animation mit Video oder eine 3D-Einbettung gewünscht wird: zuerst lesen, dann antworten** (Anlass, Poster, reduzierte Bewegung, späte Ladung, Messung; dazu Blendfehler, Tiefe, Körnung) | `38-scrollvideo-und-einbettungen.md` |
 | React- und Next-Komponenten, shadcn/ui | `11-komponenten-shadcn.md` |
 | Marke/CI aus bestehender Seite auslesen (Logo, Farben, Schrift) | `20-markenextraktion-bestandsseite.md` |
 | Bildhintergründe, Sektionstrennung, visuelle Hierarchie | `21-sektionshintergruende-hierarchie.md` |
@@ -125,7 +126,6 @@ Lies gezielt nach, statt alles zu laden.
 | Soll es animieren, Kurven, Dauern, Motion-Review mit zehn Maßstäben, Vokabular für Animationsfeedback | `30-motion-pruefung.md` |
 | Reihenfolge Erwartung, Reiz, Begründung, mentale Modelle, Gruppieren, Erinnerungs- und Aufgabentest | `36-kundenpsychologie-erwartung-reiz-begruendung.md` |
 | Kundensatz zur Optik in eine von sechs Richtungen übersetzen, Signaturelement | `37-stilrichtung-nach-kundensprache.md` |
-| Scrollvideo (lohnt es sich?), Blendfehler, 3D-Einbettungen, Text hinter dem Motiv, Körnung | `38-scrollvideo-und-einbettungen.md` |
 | KI erzeugt ein Asset, das auf die Seite kommt: Arbeitsweise, Abbruch, Rechte | `39-ki-assets-bewegtbild-und-3d.md` |
 | Ton mit Autorität, Weichmacher streichen, Rahmen setzen, Antworten in der FAQ | `35-autoritaet-im-text.md` |
 | Auslöser je Stelle der Seite: Zielgruppe ohne Vorwurf, Wirkprinzip, realistische Behauptung, ruhige Einwandzeile, drei echte Optionen, ehrliche Einschränkung | `34-ueberzeugungsausloeser.md` |
