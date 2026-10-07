@@ -125,7 +125,8 @@ skills/
 │  │  ├─ 40-polierschleife-mit-kritiker.md  Bauagent und getrennter Kritiker, Vorbedingungen, Budget, Durchlaufgrenze, Variante mit drei Kritikern
 │  │  ├─ 41-motion-als-funktion-der-zeit.md  Logoanimation, Loop, Kurzvideo: frame(t), Storyboard und Beatgrid, Formate
 │  │  ├─ 42-referenzgrammatik-und-gap-audit.md  Kollage und Grammatiktabelle, Gap Audit bei „es fehlt etwas“
-│  │  └─ 43-hierarchie-raster-komposition.md  Hierarchie als Verhältnis, Führungskanten, Anteile wechseln, Animationssystem
+│  │  ├─ 43-hierarchie-raster-komposition.md  Hierarchie als Verhältnis, Führungskanten, Anteile wechseln, Animationssystem
+│  │  └─ 44-gutes-festschreiben-und-rueckbauprobe.md  Rückbauprobe, Pilot, Figurenwelt, was der Mensch entscheidet
 │  └─ assets/
 │     ├─ vorlagen/                  marke.json, marke-brief.md, impressum.md, datenschutz.md,
 │     │                             datenschutz-bewerber.md, consent-muster.md,

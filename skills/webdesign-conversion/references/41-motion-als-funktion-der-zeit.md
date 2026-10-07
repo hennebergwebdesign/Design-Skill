@@ -109,6 +109,11 @@ hängt von Inhalt, Plattform und Land ab. **Arbeitsdokument, keine Rechtsberatun
 rechtlich klären, bevor Motion Material des Kunden veröffentlicht wird. Zahlen zu Kosten, Zeit
 und Aufrufen aus Quellvideos kommen nie als Tatsache in Kundentexte.
 
+**Stimme:** Eine synthetische Stimme ist eine Entscheidung mit Rechtsfolgen. Keine Stimme einer realen Person
+ohne deren schriftliche Einwilligung, Nutzungsbedingungen des Dienstes für Kundenprojekte lesen und ablegen,
+Schlüssel nur in `.env`, nie im Chat (Regeln wie `39-ki-assets-bewegtbild-und-3d.md`, 3a). Wortgenaue
+Zeitstempel aus einem Transkript können als Quelle für `beats.json` dienen, wenn das Bild der Sprache folgt.
+
 ## 8. Checkliste vor Freigabe
 
 1. Storyboard und Beatgrid freigegeben, Kontaktbogen angesehen

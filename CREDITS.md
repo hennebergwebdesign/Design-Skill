@@ -410,3 +410,18 @@ Sticky Kopf (02), Art Direction „richtig statt trendig" (10, 26), Pinning (09)
 **Nicht übernommen, mit Grund:** Framer Bedienung und Marktplatz (nicht der Agenturstack), Lebenslauf, Auszeichnungen
 und Preise des Autors, feste Pixelstufen und Punktraster (Einzelfall), vier der elf Beispielseiten (Alter, Konzept, Adresse).
 
+### In Version 4.14 zusätzlich eingeflossen
+
+Stand der Quelle: 07.10.2026, Erweiterungspaket `claude-design-workflow`, automatisch erzeugte Transkripte, nichts wörtlich.
+
+| Quelle | Was daraus eingeflossen ist |
+|---|---|
+| Jay E (RoboNuggets), „25 Tricks to Level Up Claude Design in 13 Mins" (27.09.2026); Jack Roberts, „Claude Design Now Builds Beautiful $10,000 Websites (NO AI Slop)" (17.08.2026) und „Claude Design Just Solved its #1 Problem... I Quit" (20.08.2026), **keine Lizenz genannt**, nur inhaltlich destilliert | Kapitel 44, Zweitdurchgang und fünf Prinzipien in `copy-im-kundenprojekt.md`, Pilot in Kapitel 39 (3b), Stimme in Kapitel 41, zwei Kandidaten in Kapitel 22 |
+
+**Bereits im Repository, deshalb nicht erneut aufgenommen:** Designsystem aus Referenzen und Mischen (24), Schriften mit Lizenz
+(10, 22), Iconpakete (17, 22), Komponentenkandidaten (22), Polierschleife (40), Tweaks Panel (Vorlage), Wettbewerbermuster
+(`copy-im-kundenprojekt.md`).
+
+**Nicht übernommen, mit Grund:** Skill im Stil einer bekannten Marke (harte Grenze Markenextraktion), bezahlte Community Angebote
+und Leitfäden, Galeriegrößen und Preise (ungeprüft), das eingebaute Designkommando und der Apple Skill (Verfügbarkeit ungeprüft).
+

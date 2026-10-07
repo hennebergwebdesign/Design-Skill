@@ -84,7 +84,8 @@ gemessen.
 Die Schleife liefert einen Bericht: vorher und nachher je Einheit, Status je Einheit (bestanden,
 durchgefallen, Grenze erreicht), offene Punkte. Ein Mensch liest ihn und sieht die Seite an
 (`../../agentur-website-builder/references/qa-und-abnahme.md`, Schritt 9). Das Modell, das gebaut hat, meldet
-die Seite nicht als abgenommen.
+die Seite nicht als abgenommen. Zum Bericht gehört eine kurze Erklärung, was die Kritiker geprüft haben
+(`44-gutes-festschreiben-und-rueckbauprobe.md`, Abschnitt 6).
 
 ## 6. Wann sich der Aufwand lohnt
 

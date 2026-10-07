@@ -68,6 +68,12 @@ darin sind Stand Video und hier **nicht übernommen**: sie ändern sich laufend 
 Vorlage: `../assets/vorlagen/prompts/bildgenerierung.md`. Ob ein Anbieter günstiger oder zuverlässiger ist als ein anderer, steht im Video als Aussage des
 Autors und ist hier ungemessen. Ein Modellvergleich gehört in die Serie des Projekts, nicht in das Regelwerk.
 
+## 3b. Pilot und Figurenwelt
+
+Teure Serien beginnen mit **einer** freigegebenen Pilotvariante. Wiederkehrende Figuren brauchen vorab
+Figurenliste, Bauregeln, Modellblatt und Asset Inventar. Beides: `44-gutes-festschreiben-und-rueckbauprobe.md`,
+Abschnitte 3 und 4. Figur, Stil und Name wählt ein Mensch.
+
 ## 4. Rechte und Kennzeichnung
 
 - Nutzungsbedingungen des Werkzeugs für kommerzielle Verwendung der Ergebnisse prüfen und im Projekt ablegen.
