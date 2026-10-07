@@ -72,6 +72,16 @@ Aus dem Video, passend zu den zwei subjektiven Durchgängen aus `kundenabstimmun
 
 Grund: Der erste Entwurf wird nicht gezeigt, er soll von nichts zu etwas führen.
 
+## 5a. Regeln laufend festhalten
+
+Was beim Bauen als Regel entsteht (zwei fast gleiche Module nie nebeneinander, Anteil Bild und Text
+wechselt, Dauer der Textanimation), wird nicht nur im Chat gesagt. Es wandert nach jedem Systemschritt
+(Typografie, Farben, Abstände, Animation) in den Markenbrief und, soweit maschinenlesbar, in
+`marke.json` (Block `gestaltung`, Sperren). Grund: Die nächste Sitzung und jede spätere Landingpage
+der Marke starten aus dem Festgehaltenen statt von einer leeren Fläche, und die Seite bleibt in einem
+Universum. Ein eigener Skill je Marke ist dafür **nicht nötig**, dieser Ort besteht schon. Systemwerte
+und Prüffragen: `../../webdesign-conversion/references/43-hierarchie-raster-komposition.md`.
+
 ## 6. Nicht übernommen (mit Grund)
 
 - Verzicht auf Wireframes und Mockups als Pflichtregel: siehe Abschnitt 4.
@@ -85,4 +95,5 @@ Grund: Der erste Entwurf wird nicht gezeigt, er soll von nichts zu etwas führen
 `../../webdesign-conversion/references/10-visuelle-richtung.md`,
 `../../webdesign-conversion/references/37-stilrichtung-nach-kundensprache.md`,
 `../../webdesign-conversion/references/39-ki-assets-bewegtbild-und-3d.md`,
+`../../webdesign-conversion/references/43-hierarchie-raster-komposition.md`,
 `../../webdesign-conversion/references/22-premium-designquellen.md` (Quellen außerhalb des Webs).

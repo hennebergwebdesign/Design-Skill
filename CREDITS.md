@@ -396,3 +396,17 @@ Storyboard vor Animation (38, 2a), Kennzeichnung KI erzeugter Medien (39, 4).
 ungeprüft), Preise und Leistungsbeschreibung der Zusatzleistungen (gehören ins Angebot), Vergleich
 der Renderwerkzeuge (veraltet schnell).
 
+### In Version 4.13 zusätzlich eingeflossen
+
+Stand der Quelle: 07.10.2026, Erweiterungspaket `bont-webdesign-prozess`, automatisch erzeugte Untertitel, nichts wörtlich.
+
+| Quelle | Was daraus eingeflossen ist |
+|---|---|
+| BONT (YouTube Kanal), vier Videos: „Watch me design a phone website landing from scratch" (22.09.2026), „4 Web Design layout pro tips that took me YEARS to master" (02.06.2026), „5 keys to design AWWWARD winning websites" (25.02.2026), „11 inspirational websites for 2026" (17.12.2025), **keine Lizenz genannt**, nur inhaltlich destilliert | Kapitel 43, Abschnitt 5a in `moodboard-und-stylescape.md`, sieben Kandidatenseiten ungeprüft |
+
+**Bereits im Repository, deshalb nicht erneut aufgenommen:** Referenzkollage und Stilprofil (42), Layoutfamilien (26),
+Sticky Kopf (02), Art Direction „richtig statt trendig" (10, 26), Pinning (09).
+
+**Nicht übernommen, mit Grund:** Framer Bedienung und Marktplatz (nicht der Agenturstack), Lebenslauf, Auszeichnungen
+und Preise des Autors, feste Pixelstufen und Punktraster (Einzelfall), vier der elf Beispielseiten (Alter, Konzept, Adresse).
+

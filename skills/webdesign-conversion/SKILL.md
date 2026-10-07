@@ -4,7 +4,7 @@ description: "Vollständiges System für conversion-orientiertes Webdesign im DA
 license: MIT
 metadata:
   author: Henneberg Webdesign
-  version: 2.15.0
+  version: 2.16.0
 ---
 
 # Webdesign Conversion System
@@ -130,6 +130,7 @@ Lies gezielt nach, statt alles zu laden.
 | Polierschleife mit getrenntem Kritikagenten: Vorbedingungen, Budget, Durchlaufgrenze, Verhältnis zu den zwei Durchgängen, Variante mit drei Kritikern | `40-polierschleife-mit-kritiker.md` |
 | Logoanimation, Loop, Kurzvideo: `frame(t)`, Storyboard und Beatgrid vor dem Code, Formate, Einsatz im Web | `41-motion-als-funktion-der-zeit.md` |
 | Referenzen als Kollage und Grammatiktabelle, Gap Audit bei „es fehlt etwas" | `42-referenzgrammatik-und-gap-audit.md` |
+| Hierarchie als Verhältnis, Titellänge, Führungskanten, Anteile je Sektion wechseln, Heldenidee als roter Faden, Animationssystem | `43-hierarchie-raster-komposition.md` |
 | Ton mit Autorität, Weichmacher streichen, Rahmen setzen, Antworten in der FAQ | `35-autoritaet-im-text.md` |
 | Auslöser je Stelle der Seite: Zielgruppe ohne Vorwurf, Wirkprinzip, realistische Behauptung, ruhige Einwandzeile, drei echte Optionen, ehrliche Einschränkung | `34-ueberzeugungsausloeser.md` |
 | Entwurf vor dem Kunden vertreten, Geschmack durch Aussagen ersetzen, Rollen und Spielregeln für Rückmeldung, Lens | `33-kundenpraesentation-und-feedback.md` |
