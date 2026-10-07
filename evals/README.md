@@ -1,7 +1,7 @@
 # Eval-Suite
 
-Sechzehn Fälle, jeder gegen eine Regel, die sich erfahrungsgemäß in der dritten Sitzung
-zurückdreht. Dreizehn prüfen das Regelwerk aus `webdesign-conversion`, drei den Agenturstandard
+Achtzehn Fälle, jeder gegen eine Regel, die sich erfahrungsgemäß in der dritten Sitzung
+zurückdreht. Fünfzehn prüfen das Regelwerk aus `webdesign-conversion`, drei den Agenturstandard
 aus `agentur-website-builder`. Format und Grader-Typen: `claude plugin eval`.
 
 ```bash
@@ -33,11 +33,16 @@ Der Bericht landet unter `results/<zeitstempel>/report.html`. `results/` ist aus
 | `konturbutton-nicht-primaer` | Kapitel 02, Buttons: Primär-CTA gefüllt, Konturbutton nur sekundär, auch bei Kundenwunsch nach „dezent". Gemessen am 06.10.2026 (2 Läufe je Arm): mit Skill 1,00, ohne 0,25, Δ +0,75 | 2 × llm |
 | `f-muster-kein-leitbild` | Kapitel 02, Schritt 2.2: F-Muster als Fehlbild, nicht als Layoutvorlage. Gemessen am 06.10.2026 (2 Läufe je Arm): mit Skill 0,88, ohne 0,75, Δ +0,13. Die Baseline kennt das Fehlbild meist selbst, der Fall sichert vor allem, dass der Skill es nicht wieder als Leitbild führt | 2 × llm |
 
-**Offen bei `scrollvideo-nur-mit-anlass`:** Beide Arme bestehen den Grader `anlass-geprueft`, und
-beide verfehlen `bedingungen-im-code` (Poster, reduzierte Bewegung, späte Ladung, Messung). Der
-Skill ruft Kapitel 38 im Lauf offenbar nicht ab. Das Δ von 0,00 heißt: Der Fall misst nichts, bis
-entweder der Hinweis in `SKILL.md` das Kapitel zuverlässig auslöst oder der Fall verschärft ist.
-Vier Läufe sind keine belastbare Stichprobe, die Zahlen oben sind Hinweise.
+| `polierschleife-nicht-als-start` | Kapitel 40: keine Polierschleife als erster Schritt, erst Entwurf, Design System, Referenz, Briefing, Budget und Durchlaufgrenze. Gemessen am 07.10.2026 (2 Läufe je Arm): mit Skill 1,00, ohne 0,88, Δ +0,13 | 2 × llm |
+| `generator-kosten-vorab` | Kapitel 39, Abschnitt 3a: Kosten vor dem Senden, Budget-Deckel, Bestätigung bei Menge, Schlüssel nur in `.env`, kein KI-Teamfoto. Gemessen am 07.10.2026 (2 Läufe je Arm): mit Skill 1,00, ohne 0,80, Δ +0,20 | 2 × llm |
+
+Bei den beiden letzten Fällen besteht die Baseline schon großenteils, das Δ ist klein. Sie sichern vor allem,
+dass der Skill die Regel nicht verwässert. Vier Läufe sind keine belastbare Stichprobe.
+
+**Verlauf `scrollvideo-nur-mit-anlass`:** Mit der ersten Fassung der `SKILL.md` rief der Skill
+Kapitel 38 nicht ab, beide Arme verfehlten `bedingungen-im-code`, Δ 0,00. Nach einer eigenen,
+fett gesetzten Auslöserzeile in der Referenztabelle („zuerst lesen, dann antworten") steht der Fall
+bei Δ +0,25.
 
 Jeder Fall hat zusätzlich einen `tool_used: Skill`-Grader. Der zählt in einem
 Zwei-Arm-Lauf nicht zur Bewertung, sondern zeigt nur, dass der Skill überhaupt gegriffen hat.
