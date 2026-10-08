@@ -246,6 +246,11 @@ die der Kunde nicht besitzt, ist eine Leihgabe der Agentur.
   bleibt abhängig, auch wenn der Vertrag etwas anderes sagt.
 * Der Bericht nennt, wer die laufende Pflege übernimmt (Kunde, Agentur, niemand). „Niemand"
   ist eine zulässige Antwort, aber eine ausgesprochene.
+* Bei einem Betrieb mit Einzugsgebiet: Name, Adresse und Telefon stehen in Impressum, Fuß,
+  Kontaktseite und JSON-LD gleich geschrieben (`pruefe-geo.mjs` meldet Abweichungen zwischen Markup
+  und Seite), und der Kunde bekommt die Prüfliste für sein Unternehmensprofil und den
+  Bewertungsablauf aus `../../webdesign-conversion/references/46-lokale-sichtbarkeit.md`,
+  Abschnitte 4 und 6. Das Profil pflegt der Kunde, der Bericht sagt das.
 
 Quelle: Videos eines Webdesigners, siehe `CREDITS.md`, Abschnitt „Version 4.9". Ungeprüft: der
 Ablauf ist an keiner echten Übergabe erprobt.

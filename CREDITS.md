@@ -466,6 +466,28 @@ Storyboard (38, 2a), Heldenidee (43), Pilot vor Serie (44), Consent mit echter S
 Nachbau einer ausgezeichneten Seite als Übung (kein Kundenprojekt), die Aussage, ein Modell beende den KI-Look (Momentaufnahme),
 die Originalprompts des Autors (hinter einem Link, nicht Teil des Pakets).
 
+### In Version 4.17 zusätzlich eingeflossen
+
+Stand der Quelle: 08.10.2026, Skillpaket `webcopyseo` (SKILL.md als Router, neun Referenzen, sechs Agentendateien,
+`check_seite.py`), eine eigene deutsche Auswertung von rund 35 YouTube-Videos, die Video-IDs stehen in der Quelle.
+Destilliert, nicht mitgeliefert.
+
+| Quelle | Was daraus eingeflossen ist |
+|---|---|
+| Paket `webcopyseo`, darin unter anderem Joanna Wiebe (Copyhackers), Roy Furr, Donald Miller und Mitch Meador (StoryBrand), Alex Hormozi, Neil Patel, Alex Cattoni, Flux Academy, Robert Cialdini über Pete Judo und Roger Dooley, Fabian Auler, Moritz Ceglarek, Ahrefs, Semrush, DebugBear, ithelps (Whitespark Report), Ignite Visibility, Surfer Academy, Jens Steingröver, Barry Zhang (Anthropic), Nate Herk, AI LABS, Simon Scrapes; **keine Lizenz genannt**, nur inhaltlich destilliert | Kapitel 46, Abschnitt 3b in 40 und `prompts/textkritik.md`, Ergänzungen in 01, 05, 06, 12, 13, im Markenbrief und im Bauablauf, Regeln 10 bis 14 in `pruefe-geo.mjs` |
+
+**Bereits im Repository, deshalb nicht erneut aufgenommen:** Bogen der Besucherfragen und Botschaftshierarchie (12), Preisanker und
+die Grenze zur Irreführung (12), drei echte Optionen (34), Einwände (01, 12), Formular, Trust und CTA-Hierarchie (06), Above the
+Fold mit vier Fragen (02), Keyword, Kannibalisierung, Meta und Schema (05), GEO mit Antwort zuerst und Crawlern (31), Core Web
+Vitals (03), A/B nur mit Volumen (13), Bewusstseinsstufe und Recherche (01, Schritt 1.5), Kritikschleife und Grenze der Durchgänge
+(29, 40), Gestaltung gegen den KI-Look (10, 26).
+
+**Nicht übernommen, mit Grund:** die Hausregel gegen Bindestriche („Email", „Onlineshop") und der Python-Prüfer, der sie
+durchsetzt (widerspricht der Rechtschreibung und der eigenen Strichregel; Titel, Beschreibung, H1 und JSON-LD prüft jetzt
+`pruefe-geo.mjs`); die gewichtete Rubrik mit 100 Punkten (Fächer ohne Gewichte übernommen); „Hero nicht über den ganzen
+Bildschirm" (harte Grenze); die Agentendateien als Lieferbestandteil; Zahlen aus Herstellerstudien (SparkToro, Ahrefs,
+Whitespark, Opt-in-Quoten) als Fakt; Werkzeugempfehlungen; `learning.md` im Skillordner.
+
 ### Pflegeverfahren, ohne Versionsänderung
 
 Stand der Quelle: 07.10.2026, Erweiterungspaket `skill-pflege-und-modelltests`, eigene Zusammenfassung, nichts wörtlich.

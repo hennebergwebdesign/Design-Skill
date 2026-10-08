@@ -140,6 +140,18 @@ Lösung, kennt er Lösungen, aber diesen Anbieter nicht, oder kennt er den Anbie
 womit der Held beginnt: bei der Lage, beim Weg oder beim Angebot. Wer den Anbieter kennt, braucht
 keine Erklärung des Problems, wer das Problem nicht benennen kann, versteht ein Angebot noch nicht.
 
+Die Herkunft des Besuchers ist der beste Hinweis auf seine Stufe:
+
+| Herkunft | Meist | Die Seite beginnt mit |
+|---|---|---|
+| Suche nach „Leistung plus Ort" | kennt Lösungen, sucht einen Anbieter, oft kaufbereit | Angebot, Beleg, nächster Schritt. Kaum Problemerklärung |
+| Empfehlung, Wiederkehr, eigener Kanal | kennt den Anbieter | Angebot und Handlung |
+| Anzeige in sozialen Medien, Kaltkontakt | spürt das Problem oder kennt es noch nicht | die Lage in seinen Worten, dann der Weg |
+
+Bedient eine Seite mehrere Herkünfte (typisch: die Startseite), führt der Scrollverlauf von der
+höchsten Stufe abwärts: oben steht, was der Kaufbereite braucht, darunter die Erklärung für die
+anderen. Eine Landingpage für eine Anzeige beginnt dagegen dort, wo die Anzeige den Besucher abholt.
+
 **Woher die Antworten kommen,** in dieser Rangfolge:
 
 1. Material und Antworten des Kunden (Fragebogen, Gespräch, Anfragen, die er bekommt).
@@ -150,6 +162,14 @@ keine Erklärung des Problems, wer das Problem nicht benennen kann, versteht ein
    Gestaltungsreferenzen und bleibt unberührt).
 3. Eine Recherche mit einem Modell als Vorschlag, jede Aussage als Annahme markiert, bis der Kunde sie
    bestätigt.
+
+Hat der Kunde Zugang zu eigenen Kunden, bringt eine kurze Umfrage mehr als jede Recherche. Die
+ergiebigste Frage: „Was war los, dass Sie sich gerade jetzt an uns gewandt haben?" Dazu: „Was haben
+Sie vorher versucht?", „Was hätte Sie fast abgehalten?", „Wie würden Sie uns jemandem beschreiben?".
+Antworten unverändert sichern und je Antwort festhalten: Zitat im Original, Art (Problem, Wunsch,
+Einwand, Entscheidungsgrund), wie oft es vorkommt, wo es auf der Seite hingehört (Held, Beleg, Einwand,
+FAQ). Was früh im Gespräch kommt (Ergebnis, scharfer Schmerz, Verwirrung), gehört weit nach oben auf
+die Seite. Ein Zitat aus der eigenen Umfrage darf mit Einwilligung als Kundenstimme auf die Seite.
 
 **Selbst lesen.** Eine Zusammenfassung des Kundenmaterials durch ein Modell spart Zeit, ersetzt aber
 nicht das Lesen. Modelle ergänzen Details, die nicht im Material stehen. Wer das Original kennt,

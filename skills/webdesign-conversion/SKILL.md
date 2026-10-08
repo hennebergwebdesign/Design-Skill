@@ -4,7 +4,7 @@ description: "Vollständiges System für conversion-orientiertes Webdesign im DA
 license: MIT
 metadata:
   author: Henneberg Webdesign
-  version: 2.19.0
+  version: 2.20.0
 ---
 
 # Webdesign Conversion System
@@ -129,7 +129,7 @@ Lies gezielt nach, statt alles zu laden.
 | Reihenfolge Erwartung, Reiz, Begründung, mentale Modelle, Gruppieren, Erinnerungs- und Aufgabentest | `36-kundenpsychologie-erwartung-reiz-begruendung.md` |
 | Kundensatz zur Optik in eine von sechs Richtungen übersetzen, Signaturelement | `37-stilrichtung-nach-kundensprache.md` |
 | KI erzeugt ein Asset, das auf die Seite kommt: Arbeitsweise, Abbruch, Rechte | `39-ki-assets-bewegtbild-und-3d.md` |
-| Polierschleife mit getrenntem Kritikagenten: Vorbedingungen, Budget, Durchlaufgrenze, Verhältnis zu den zwei Durchgängen, Variante mit drei Kritikern | `40-polierschleife-mit-kritiker.md` |
+| Polierschleife mit getrenntem Kritikagenten: Vorbedingungen, Budget, Durchlaufgrenze, Verhältnis zu den zwei Durchgängen, Variante mit drei Kritikern, Fachkritiker für Texte (Copy, Conversion, SEO, GEO) | `40-polierschleife-mit-kritiker.md` |
 | Logoanimation, Loop, Kurzvideo: `frame(t)`, Storyboard und Beatgrid vor dem Code, Formate, Einsatz im Web | `41-motion-als-funktion-der-zeit.md` |
 | Referenzen als Kollage und Grammatiktabelle, Gap Audit bei „es fehlt etwas" | `42-referenzgrammatik-und-gap-audit.md` |
 | Gutes Ergebnis festschreiben (Rückbauprobe), Pilot vor Serie, Figurenwelt, was der Mensch entscheidet | `44-gutes-festschreiben-und-rueckbauprobe.md` |
@@ -147,6 +147,7 @@ Lies gezielt nach, statt alles zu laden.
 | Ladezeit, Bilder, Caching, Schriften | `03-technik-performance.md` |
 | Kontrast, Tastatur, Alt-Texte, BFSG-Pflicht | `04-barrierefreiheit-bfsg.md` |
 | Keywords, URLs, Meta, interne Links, JSON-LD | `05-seo-sichtbarkeit.md` |
+| Regional gefunden werden: Name, Adresse, Telefon überall gleich, Ortsseiten ohne Austauschtext, Bewertungsablauf beim Kunden, Verzeichnisse, Prüfliste fürs Unternehmensprofil | `46-lokale-sichtbarkeit.md` |
 | Sichtbarkeit in KI-Antworten: KI-Crawler in der robots.txt, zitierfähige Absätze, llms.txt einordnen | `31-ki-sichtbarkeit-geo.md` |
 | Feinschliff der kleinen Dinge: Eingabe, Touch, Safe Area, Intl, Hochkontrast, Zustand in der URL | `32-ui-details-katalog.md` |
 | Impressum, Datenschutz, Consent, Auftragsverarbeitung | `07-recht-dsgvo.md` |
@@ -177,7 +178,7 @@ node scripts/pruefe-platzhalter.mjs   # [[FEHLT]], data-copy-vorschlag, ausgelas
 node scripts/pruefe-breakpoints.mjs http://localhost:4321 --bilder
 node scripts/pruefe-geschmack.mjs     # nach dem Build: Kicker-Quote, Laufbänder, CTA-Texte, KI-Tells, Standardschriften
 node scripts/pruefe-motion.mjs        # transition: all, scale(0), ease-in, Dauer über 300 ms, Reduzierung, Scrollvideo, 3D-Szene
-node scripts/pruefe-geo.mjs           # nach dem Build: KI-Crawler, Text im HTML, Gliederung, JSON-LD
+node scripts/pruefe-geo.mjs           # nach dem Build: KI-Crawler, Text im HTML, Gliederung, JSON-LD, Titel, Beschreibung, NAP
 node scripts/pruefe-aktualitaet.mjs   # nach dem Build: Copyright-Jahr, Stand-Angaben, Jahr im Titel
 ```
 

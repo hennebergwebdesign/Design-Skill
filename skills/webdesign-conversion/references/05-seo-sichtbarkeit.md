@@ -33,9 +33,15 @@ Lieber 10 perfekt passende Kunden als 1.000 unpassende Besucher.
 - **Suchintention bestimmen:** informational (Blog), kommerziell (Vergleich, Leistungen),
   transaktional (Kontakt, Angebot), navigational (Marke). Eine Leistungsseite, die wie ein
   Ratgeber geschrieben ist, rankt für nichts richtig.
+- **Suchintention ablesen, nicht raten:** die ersten zehn Treffer für das Hauptkeyword ansehen.
+  Stehen dort Leistungsseiten, braucht es eine Leistungsseite, stehen dort Ratgeber oder Listen,
+  gewinnt keine Leistungsseite. Zwei Begriffe mit verschiedenen Treffern brauchen zwei Seiten.
 - **Lokales SEO:** bei regionalen Dienstleistungen gehört der Ort in Titel, H1, URL und
   Text, und ein gepflegtes Google-Unternehmensprofil mit identischen NAP-Daten (Name,
-  Adresse, Telefon) wie im Impressum.
+  Adresse, Telefon) wie im Impressum. Profil, Bewertungsablauf, Ortsseiten ohne Austauschtext
+  und Verzeichnisse: `46-lokale-sichtbarkeit.md`.
+- **Keine Pauschallänge.** Ein Text ist so lang, wie die Suchintention verlangt. Feste Wortzahlen
+  („mindestens 350 Wörter") sind nicht belegt.
 - **Longtail zuerst.** Kleine, spezifische Begriffe bringen früher Ergebnisse als Kopfbegriffe.
 
 ### Keyword-Stuffing vermeiden
@@ -110,7 +116,9 @@ Der Meta-Titel ist Seitentext, für ihn gilt die Strichregel aus `12-copywriting
 
 
 Regeln: maximal **60 Zeichen**, Keyword am Anfang, Benefit oder USP rein, keine Floskeln
-(„Herzlich willkommen …"). Jeder Titel auf der Domain ist einmalig.
+(„Herzlich willkommen …"). Jeder Titel auf der Domain ist einmalig. Fehlende, zu lange und
+doppelte Titel sowie fehlende oder zu lange Beschreibungen meldet `scripts/pruefe-geo.mjs`
+nach dem Build.
 
 ### Meta-Beschreibung
 
@@ -159,6 +167,7 @@ Unterseiten auf verwandte Unterseiten, von der Startseite auf die wichtigsten Se
 | Strukturierte Daten | JSON-LD: Organization/LocalBusiness, Service, FAQPage, BreadcrumbList |
 | Open Graph | Titel, Beschreibung, absolutes Bild 1200 × 630 |
 | HTTPS | erzwungen, keine Mixed-Content-Warnungen |
+| Search Console und Bing Webmaster Tools | beide eingerichtet, Sitemap eingereicht. Bing speist auch Suchfunktionen von KI-Assistenten (`31-ki-sichtbarkeit-geo.md`) |
 | Mobile | responsiv, keine horizontale Scrollleiste |
 | Core Web Vitals | Rankingfaktor, siehe `03-technik-performance.md` |
 
@@ -182,5 +191,7 @@ Fertige JSON-LD-Bausteine: `../assets/vorlagen/jsonld-bausteine.md`.
 ## Was hier bewusst fehlt
 
 Backlinks, Content-Cluster, digitale PR und technische Großbaustellen (Log-Analyse,
-Crawl-Budget) sind OffPage- beziehungsweise Fortgeschrittenenthemen. Ohne sauberes OnPage
+Crawl-Budget) sind OffPage- beziehungsweise Fortgeschrittenenthemen. Ausnahme ist die lokale
+Sichtbarkeit außerhalb der Seite (Profil, Bewertungen, Verzeichnisse), weil sie bei regionalen
+Kunden mehr Anfragen bringt als die Seite selbst: `46-lokale-sichtbarkeit.md`. Ohne sauberes OnPage
 bringen sie nichts, mit sauberem OnPage sind sie der nächste Schritt.

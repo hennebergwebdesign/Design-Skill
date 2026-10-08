@@ -93,6 +93,18 @@ aber das ist eine CSS-Frage, keine Textfrage.
 **Nicht:** „Herzlich willkommen", „Ihr Partner für …", „Wir über uns", „Qualität seit 1987",
 „Innovative Lösungen für Ihren Erfolg".
 
+### Die Headline entsteht zuletzt
+
+| Regel | Grund |
+|---|---|
+| Erst Kernbotschaft, Bogen und Text, dann die Headline | sie fasst zusammen, was darunter steht. Vorher geschrieben, wird der Text um eine Überschrift herum gebaut |
+| Zehn Fassungen, drei in die engere Wahl, eine nach dem Test mit vier Fragen aus `02-design-ux.md`, Schritt 2.1, eine zweite für einen späteren Test aufheben | die erste Idee ist selten die beste, und der Test braucht eine echte Alternative |
+| Ein echtes Kundenzitat in der ersten Person kann die Headline sein („Ich muss abends keine Angebote mehr tippen") | die Sprache der Kunden schlägt die des Anbieters. Nur mit Quelle und Einwilligung, nie erfunden oder aus fremden Bewertungen |
+| Die Muster oben sind Hilfsmittel, keine Formeln | ein Muster, das alle benutzen, liest niemand mehr. Muster verstehen, nicht kopieren |
+
+Wie lang die Seite unter der Headline wird und in welcher Folge, hängt von der Hürde der Handlung ab
+(`45-huerde-laenge-und-leserfuehrung.md`).
+
 ## Buttontexte
 
 | Statt | Besser |

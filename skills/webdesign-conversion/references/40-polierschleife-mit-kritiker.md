@@ -71,6 +71,34 @@ Prüfskripte auf. Endet die Schleife ohne Ziel, werden Stand und Restlücken off
 Kritiker sehen den gerenderten Screenshot, nie nur den Code. Die Schwelle 8 ist ein Vorschlag, nicht
 gemessen.
 
+## 3b. Variante für Texte: Fachkritiker statt Gestaltungskritiker
+
+Für Seitentexte (Held, Leistungsseite, Landingpage) prüfen nicht Gestaltung und Wirkung, sondern vier
+Fächer. Aus dem Paket `webcopyseo` (Version 4.17) übernommen, an die Regeln dieses Skills angepasst.
+Auch das zählt als **ein** Durchgang.
+
+| Kritiker | Prüft | Maßstab |
+|---|---|---|
+| Copy | Klarheit im ersten Bildschirm, eine Kernbotschaft, Sprache der Kunden, Startpunkt nach Bewusstseinsstufe, Nutzen mit Beleg, unbeantwortete Einwände, Druck oder Übertreibung | `12-copywriting.md`, `34-ueberzeugungsausloeser.md`, `35-autoritaet-im-text.md`, `45-huerde-laenge-und-leserfuehrung.md` |
+| Conversion | ein Ziel, ein Primär-CTA, Reihenfolge der Sektionen nach Hürde, Reibung im Formular, Vertrauen neben dem Knopf, mobile Reihenfolge, ein Testvorschlag mit Hypothese | `06-conversion-architektur.md`, `45-huerde-laenge-und-leserfuehrung.md`, `13-messung-optimierung.md` |
+| SEO | Suchintention, Titel, Beschreibung, eine H1, Gliederung, Alt-Texte, interne Links, Markup deckt sich mit dem Sichtbaren, lokale Angaben | `05-seo-sichtbarkeit.md`, `46-lokale-sichtbarkeit.md` |
+| GEO | Antwort zuerst, Absätze für sich verständlich, Fragen als Überschriften, wo es Fragen sind, Konkretes, Datum, Text im HTML | `31-ki-sichtbarkeit-geo.md` |
+
+Ein fünfter Schritt, der **Bewerter**, liest Briefing, Fassung und die Befunde der Prüfskripte und gibt
+je Fach eine Zahl von 1 bis 10 mit dem konkreten Mangel aus, als JSON, ohne Schreibrechte. Fertig ist
+eine Fassung, wenn jedes Fach mindestens 8 hat, kein Prüfskript einen Fehler meldet und keine
+Aussage ohne Beleg steht. Stopp außerdem bei der Durchlaufgrenze aus Abschnitt 2 oder nach zwei Runden
+ohne Fortschritt. Beim Zusammenführen widersprüchlicher Befunde gilt: Wahrheit vor Wirkung,
+Verständlichkeit vor Keyword, Briefing vor Geschmack.
+
+**Entschieden gegen die Quelle:** Die Quelle gewichtet acht Kategorien zu 100 Punkten mit einer
+Schwelle von 90. Übernommen sind die Fächer, nicht die Gewichte und nicht die Summe, weil eine
+gewichtete Punktzahl Genauigkeit vortäuscht (`31-ki-sichtbarkeit-geo.md`, Abschnitt 7) und eine hohe
+Summe einen schwachen Teil verdecken kann. Die Prüfung der Quelle auf Bindestriche ist durch die
+Strichregel dieses Skills ersetzt: Gedankenstriche nein, der Bindestrich im Kompositum bleibt
+(„E-Mail-Adresse", nicht „Email Adresse"). Die Kritiker als eigene Agentendateien mitzuliefern ist nicht
+übernommen, die Rollen stehen in der Vorlage `../assets/vorlagen/prompts/textkritik.md`.
+
 ## 4. Verhältnis zur Obergrenze aus Kapitel 29
 
 * Eine Schleife zählt als **ein** subjektiver Durchgang. Die Grenze von zwei bleibt.
@@ -108,4 +136,5 @@ ungemessen. Das Δ ist eine Vermutung.
 ## Verwandte Kapitel
 
 `29-pruefdurchgaenge-und-vokabular.md`, `24-designsystem-vorrang.md`, `26-geschmack-und-ki-tells.md`,
-`33-kundenpraesentation-und-feedback.md`, `41-motion-als-funktion-der-zeit.md`, Vorlage `../assets/vorlagen/prompts/polierschleife.md`.
+`33-kundenpraesentation-und-feedback.md`, `41-motion-als-funktion-der-zeit.md`, Vorlagen `../assets/vorlagen/prompts/polierschleife.md`
+und `../assets/vorlagen/prompts/textkritik.md`.

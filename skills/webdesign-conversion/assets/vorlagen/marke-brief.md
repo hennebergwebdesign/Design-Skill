@@ -90,6 +90,15 @@ und Recherche, nicht ausgedacht):
 | Stufe | ☐ niedrige Hürde ☐ hohe Hürde ☐ Kauf mit Vorwissen ☐ Unternehmensseite |
 | Woher die Besucher kommen | [[FEHLT: Anzeige, Suche, eigener Kanal, Empfehlung]] |
 
+**Ort** (nur bei Einzugsgebiet, siehe `46-lokale-sichtbarkeit.md`):
+
+| Feld | Wert |
+|---|---|
+| Name, Adresse, Telefon in genau dieser Schreibweise | [[FEHLT]] |
+| Einzugsgebiet | [[FEHLT]] |
+| Orte mit echten Aufträgen und Freigabe für eine Ortsseite | [[FEHLT oder „keine eigenen Ortsseiten"]] |
+| Wer pflegt das Unternehmensprofil | [[FEHLT]] |
+
 ## 4 Die fünf Einwände
 
 Jeder Einwand, der real vor einer Anfrage kommt, mit der Antwort, die auf die Seite gehört.

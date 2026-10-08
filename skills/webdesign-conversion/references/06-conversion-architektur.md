@@ -149,5 +149,12 @@ bekommst einen festen Ansprechpartner" statt „Wir arbeiten mit festen Zuständ
   nehmen dem Erstkontakt die Unsicherheit.
 - **Zwei Optionen gegenüberstellen** (mit uns / ohne uns) macht den Wert konkret, ohne den
   Wettbewerb zu nennen.
+- **Ein kleiner Schritt vor dem großen.** Ein Rechner, eine Auswahl („Worum geht es?") oder ein
+  Selbsttest kann den Einstieg erleichtern, weil ein kleines Ja das nächste leichter macht. Nur wenn
+  er dem Besucher etwas zurückgibt (eine Spanne, eine Einordnung), nie als vorgeschaltete Hürde vor
+  dem Formular.
+- **Ein Angebot für die, die noch nicht so weit sind.** Ein Leitfaden oder eine Checkliste als
+  Sekundäraktion fängt Besucher auf, die heute nicht anfragen. Er konkurriert nicht mit dem
+  Primär-CTA und braucht bei E-Mail-Versand ein Double Opt-in.
 - **Reibung zählen, nicht Klicks feiern.** Jeder Pflichteintrag, jede Weiterleitung, jede
   Registrierung vor dem Wert ist ein Ausstieg.

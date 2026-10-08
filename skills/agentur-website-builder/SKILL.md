@@ -4,7 +4,7 @@ description: Baut komplette Kundenwebsites mit Astro und Cloudflare Pages nach A
 license: Proprietär, That's it. Marketing / VFDESIGN LTD
 metadata:
   author: That's it. Marketing / Henneberg Webdesign
-  version: 2.16.0
+  version: 2.17.0
 ---
 
 # Agentur Website Builder
@@ -406,6 +406,7 @@ Schwesterskill.
 | `../webdesign-conversion/references/07-recht-dsgvo.md` | Rechtstexte und Consentpflichten |
 | `../webdesign-conversion/references/04-barrierefreiheit-bfsg.md` | vor der Abnahme |
 | `../webdesign-conversion/references/05-seo-sichtbarkeit.md` | Metadaten und Relaunch |
+| `../webdesign-conversion/references/46-lokale-sichtbarkeit.md` | jeder Betrieb mit Einzugsgebiet: Ortsseiten, NAP, Prüfliste für Profil und Bewertungsablauf in der Übergabe |
 | `../webdesign-conversion/references/14-projektstruktur-astro.md` | Dateistruktur und Fallstricke |
 
 `assets/` enthält geprüfte Vorlagen für Consent, Formularroute, Mailtemplate und

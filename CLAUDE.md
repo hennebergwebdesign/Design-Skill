@@ -14,7 +14,7 @@ rechtlich tragfähig, barrierearm, schnell, und nicht wie von einer Maschine geb
 
 | Skill | Rolle | Lizenz |
 |---|---|---|
-| `skills/webdesign-conversion/` | das Regelwerk: was gut ist und warum. 45 Referenzen, 3 Playbooks, Vorlagen, Checklisten | MIT |
+| `skills/webdesign-conversion/` | das Regelwerk: was gut ist und warum. 46 Referenzen, 3 Playbooks, Vorlagen, Checklisten | MIT |
 | `skills/agentur-website-builder/` | der Lieferablauf: Phasen 0 bis 6, fester Agenturstack, einsatzfertiger Code | Agenturstandard, siehe seine `SKILL.md` |
 
 Die Trennung ist die zentrale Entscheidung dieses Repositories: **Wissen und Ablauf sind
@@ -38,7 +38,7 @@ node scripts/pruefe-platzhalter.mjs --launch  # auch data-tweaks-panel, das Regl
 node scripts/pruefe-breakpoints.mjs http://localhost:4321 --bilder
 node scripts/pruefe-geschmack.mjs            # nach dem Build: dist/ Seiten, src/ Quellen, auch Konturbutton als Primär-CTA, Standardschriften, Pille als Kicker
 node scripts/pruefe-motion.mjs               # src/: transition: all, scale(0), ease-in, Dauer, Reduzierung, Scrollvideo, Einbettung, 3D-Szene
-node scripts/pruefe-geo.mjs                  # nach dem Build: dist/ robots.txt, KI-Crawler, JSON-LD
+node scripts/pruefe-geo.mjs                  # nach dem Build: dist/ robots.txt, KI-Crawler, JSON-LD, Titel, Beschreibung, NAP
 node scripts/pruefe-aktualitaet.mjs          # dist/ und src/: Copyright-Jahr, Stand-Angaben, Jahr im Titel
 
 # Agenturwerkzeuge
@@ -87,10 +87,10 @@ nicht, es braucht das Glob-Muster in Anführungszeichen.
 ```
 .claude-plugin/       plugin.json, marketplace.json
 skills/
-  webdesign-conversion/     SKILL.md, references/00-45, playbooks/, assets/
+  webdesign-conversion/     SKILL.md, references/00-46, playbooks/, assets/
                             assets/musterbibliothek/ ist das globale Musterwissen
                             assets/vorlagen/scrollvideo/ sind die Bausteine zu Kapitel 38
-                            assets/vorlagen/prompts/ sind die Prompt-Vorlagen zu Kapitel 24, 38, 39, 40
+                            assets/vorlagen/prompts/ sind die Prompt-Vorlagen zu Kapitel 24, 38, 39, 40 (auch Textkritik)
   agentur-website-builder/  SKILL.md, references/, assets/consent|forms|reviews
 scripts/              neun Prüfskripte, Agenturwerkzeuge, Designrecherche, ein Installer
   lib/abruf.mjs       die eine Abrufschicht, vier Rückfallstufen, robots.txt
@@ -166,6 +166,14 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Offene Punkte
 
+- Version 4.17.0: Kapitel 46, Abschnitt 3b in Kapitel 40 und die Vorlage `textkritik.md` sind an keinem
+  Projekt erprobt, kein Evalfall, das Δ ist eine Vermutung. Die Fachkritiker sind nie als Schleife
+  gelaufen, die Schwelle 8 je Fach ist ein Vorschlag. Die neuen Regeln in `pruefe-geo.mjs` sind gegen
+  Fixtures geprüft: die Titellänge zählt Zeichen, nicht Pixel; die NAP-Prüfung kennt LocalBusiness und
+  eine feste Liste von Untertypen, vergleicht die letzten sieben Ziffern der Telefonnummer und die Straße
+  als Text, nicht den Firmennamen und nicht Profil oder Verzeichnisse. Die Zahlen der Quelle (Whitespark
+  Report, Bewertungsziele, 24 Stunden, SparkToro, Ahrefs) sind nicht geprüft und nur als Vorschlag
+  oder gar nicht übernommen. Der Python-Prüfer der Quelle ist nicht mitgeliefert.
 - Version 4.16.0: Die Abschnitte 1a, 5a und 6a in Kapitel 38 sind an keinem Projekt erprobt, keine
   Three.js-Vorlage, kein Evalfall, das Δ ist eine Vermutung. `pruefe-motion.mjs` erkennt nur Importe von
   `three` und `three/...`, nicht Pakete wie `@react-three/fiber` oder eine Einbindung per Script-Tag, und
@@ -299,6 +307,28 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Änderungsverlauf
 
+- **08.10.2026, Version 4.17.0** Skillpaket `webcopyseo` (Router, neun Referenzen, sechs Agenten, ein Python-Prüfer,
+  aus rund 35 Videos zu Copywriting, Verkaufspsychologie, Conversion, SEO, lokalem SEO, GEO und Kritikschleifen),
+  gegen 4.16.0 abgeglichen und destilliert, nicht mitgeliefert. Das meiste stand (Bogen, Botschaftshierarchie,
+  Einwände, Preisanker, drei Optionen, Formular, Trust, Keywords, Meta, Schema, GEO, Bewusstseinsstufe,
+  Kritikschleife). Neu: Kapitel `46-lokale-sichtbarkeit.md` (drei Orte des lokalen Findens, NAP überall gleich,
+  Ortsseiten gegen Brückenseiten, Bewertungsablauf beim Kunden, Verzeichnisse, Prüfliste fürs Unternehmensprofil,
+  Messung), Abschnitt 3b in Kapitel 40 mit vier Fachkritikern und einem Bewerter, Vorlage
+  `assets/vorlagen/prompts/textkritik.md`, in 01 die Herkunft des Besuchers als Hinweis auf seine Stufe und die
+  Umfrage beim Kunden, in 12 „die Headline entsteht zuletzt", in 05 Suchintention aus den ersten zehn Treffern,
+  keine Pauschallänge, Bing Webmaster Tools, in 06 kleiner Schritt vor dem großen und Angebot für noch nicht
+  Kaufbereite, in 13 Testreihenfolge und Hypothesensatz, Ortsfelder im Markenbrief, im Bauablauf NAP und
+  Übergabe des Profils in `qa-und-abnahme.md`, Auslöser im Intake, Verweis in `google-bewertungen.md`. Eine
+  Prüfung: `pruefe-geo.mjs` meldet fehlenden Titel (Fehler), zu langen Titel, fehlende oder zu lange
+  Beschreibung, doppelte Titel über Seiten und ein LocalBusiness-Markup, dessen Telefon oder Straße nicht
+  sichtbar ist (Warnungen), 8 Tests, insgesamt 239. **Entschieden:** die Bindestrich-Hausregel der Quelle
+  („Email", „Call to Action") ist nicht übernommen, die Strichregel bleibt (Gedankenstrich nein, Bindestrich im
+  Kompositum ja); die Rubrik mit 100 gewichteten Punkten und Schwelle 90 ist durch Fächer mit je 1 bis 10 und
+  Schwelle 8 ersetzt, weil gewichtete Summen Genauigkeit vortäuschen (31) und Schwächen verdecken; „Hero nicht
+  über den ganzen Bildschirm" widerspricht der harten Grenze und ist nicht übernommen; Kritiker als eigene
+  Agentendateien nicht mitgeliefert. Nicht übernommen: Zahlen aus Herstellerstudien, Werkzeugnamen,
+  `learning.md` (dafür gibt es die eigene Sammlung aus 44 und `evals/modellwechsel.md`). Kein Evalfall.
+  Versionen: Plugin 4.17.0, Regelwerk 2.20.0, Bauablauf 2.17.0.
 - **08.10.2026, Version 4.16.0** Wissenspaket zum Video „Opus 5.5: Webdesign macht ENDLICH wieder Spaß" von Alex
   Sprogis (28.09.2026, vier Schritte: Inspiration, Designsystem in Claude Design, Assets, GSAP und Three.js), dazu
   Kritik aus den Kommentaren und eigene Ergänzungen des Paketautors, gegen 4.15.0 abgeglichen. Das meiste stand
