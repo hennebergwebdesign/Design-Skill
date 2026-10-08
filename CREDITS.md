@@ -425,6 +425,30 @@ Stand der Quelle: 07.10.2026, Erweiterungspaket `claude-design-workflow`, automa
 **Nicht übernommen, mit Grund:** Skill im Stil einer bekannten Marke (harte Grenze Markenextraktion), bezahlte Community Angebote
 und Leitfäden, Galeriegrößen und Preise (ungeprüft), das eingebaute Designkommando und der Apple Skill (Verfügbarkeit ungeprüft).
 
+### In Version 4.15 zusätzlich eingeflossen
+
+Stand der Quelle: 08.10.2026, Wissensbasis `claude-websites-kurs-wissensbasis` (18 Dateien), eine eigene
+deutsche Zusammenfassung eines automatisch untertitelten Videos, nichts wörtlich.
+
+| Quelle | Was daraus eingeflossen ist |
+|---|---|
+| Jakub Papert (Jake Writing Academy), YouTube „CLAUDE AI WEBSITES FULL $0 to $10,000 COURSE 10 HOURS (2026)" (05.10.2026, 10:23:40), **keine Lizenz genannt**, nur inhaltlich destilliert. Die zwei Regeldateien des Autors (Layoutschutz, Leistung) werden im Video nicht vorgelesen, die Wissensbasis enthält eigene Rekonstruktionen | Kapitel 45 (Hürde, Länge, Leserführung, Stakkato, „kostenlos" bei Premium, entschiedene Widersprüche), Schritt 1.5 in Kapitel 01 (acht Fragen, wie weit die Zielgruppe ist, Wortwahl aus öffentlichen Stimmen, Hebel), Abschnitt 3a in Kapitel 28 (Varianten für eine gebaute Sektion, Mobilfassung), fünf Zeilen im Katalog von Kapitel 26, Plus Jakarta Sans in der Schriftsperre, `aenderungsrunden-und-layoutschutz.md`, Seitengewicht in `qa-und-abnahme.md`, Felder im Markenbrief |
+
+**Bereits im Repository, deshalb nicht erneut aufgenommen:** Bogen der Besucherfragen und Kosten des Nichthandelns (12),
+Botschaftshierarchie (12), ein Ziel und keine Navigation (Playbook Landingpage), Zielgruppe ohne Vorwurf (34), „für wen, für
+wen nicht" und FAQ-Antworten (35), Vorlesen und Satzlänge (12), Garantie nur vom Kunden (12), Bildentwürfe je Sektion (28),
+Scrollvideo (38), Kicker-Quote (26), keine erfundenen Bilder und Logos (harte Grenze), Faustwert 60 30 10 (10), Startseite zuerst
+(`kundenabstimmung.md`), Übergabe mit Domain und Zugängen (`qa-und-abnahme.md`, Schritt 10).
+
+**Nicht übernommen, mit Grund:** Akquise über Marktplätze und Communities, Verkaufsgespräch, Preise und Zahlungsmodell (Vertrieb,
+nicht Gestaltung, ein eigener Skill wäre eine eigene Entscheidung); fremde Seiten als Portfolio und Profilzahlen ohne Beleg
+(irreführend); Länderauswahl bei Kunden (pauschal); Layout vor Text (Reihenfolge bleibt); Montserrat und Inter für Coaches
+(harte Grenze); Playfair und Cormorant als Voreinstellung (Serifenreflex); Gold, Schwarz, Weiß als Rezept
+(Standardpalette); Schlüsselwort in Akzentfarbe; „Apple-Animationen" als Auftrag (fremde Marke statt Handschrift);
+Netlify, Vercel, Funnel-Baukästen (fester Stack); Nachrichtenzahl je Sitzung, Kontextfüllstand, Modell und Aufwand, Berechtigungen
+ohne Rückfrage (Werkzeugregeln, zuletzt schon in 4.11 so entschieden); PageSpeed-Punktzahl als Ziel (harte Grenze ist strenger);
+Werkzeugnamen für Bild und Video. Vollständige Tabelle in Kapitel 45, Abschnitte 10 und 11.
+
 ### Pflegeverfahren, ohne Versionsänderung
 
 Stand der Quelle: 07.10.2026, Erweiterungspaket `skill-pflege-und-modelltests`, eigene Zusammenfassung, nichts wörtlich.

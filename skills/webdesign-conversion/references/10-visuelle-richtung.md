@@ -132,9 +132,12 @@ klar unterscheidbar sein: nicht zwei Grotesken, die man verwechselt.
    Open Sans. Ein bestehendes Corporate Design schlägt jede Geschmacksfrage. Woher die
    bestehende Schrift kommt und wie sie ausgelesen wird:
    `20-markenextraktion-bestandsseite.md`.
-2. **Ohne Vorgabe sind Inter, Roboto, Open Sans, Poppins, Montserrat und Lato gesperrt.**
-   Nicht weil sie schlecht wären, sondern weil sie der Grund sind, warum Seiten
-   austauschbar wirken. Sie sind die typografische Entsprechung der Schablonen weiter oben.
+2. **Ohne Vorgabe sind Inter, Roboto, Open Sans, Poppins, Montserrat, Lato und Plus Jakarta
+   Sans gesperrt.** Nicht weil sie schlecht wären, sondern weil sie der Grund sind, warum Seiten
+   austauschbar wirken. Sie sind die typografische Entsprechung der Schablonen weiter oben. Plus
+   Jakarta Sans kam in Version 4.15.0 dazu: die Groteske, zu der Modelle bei Landingpages von
+   selbst greifen. `scripts/pruefe-geschmack.mjs` meldet jede der sieben, wenn sie nicht in
+   `marke.json` steht.
 3. **Ohne Vorgabe zwei Kandidaten vorschlagen**, jeweils mit einem Satz Begründung, die sich
    auf Branche und Zielgruppe bezieht, nicht auf Geschmack. Beispiel: eine Schrift mit hoher
    x-Höhe und offenen Punzen für einen Handwerksbetrieb mit älterer Zielgruppe.

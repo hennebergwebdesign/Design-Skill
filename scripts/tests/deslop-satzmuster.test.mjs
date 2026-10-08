@@ -68,3 +68,15 @@ test('ein sauberer, konkreter Text hat keinen Satzmusterbefund', () => {
   const erg = pruefe('Die Erstberatung dauert 45 Minuten und findet in Karlsruhe statt. Das Angebot kommt am selben Tag, seit 2014 für rund 300 Betriebe.');
   assert.ok(!/Floskeln/.test(erg.stdout));
 });
+
+test('Stakkato aus drei kurzen Sätzen wird gefunden', () => {
+  assert.ok(meldet('Müde? Wir helfen. Unser Programm funktioniert. Echte Ergebnisse.', 'Stakkato'));
+});
+
+test('ein kurzer Satz zwischen langen ist Rhythmus, kein Stakkato', () => {
+  assert.ok(!meldet('Wir sind da. Sie rufen an, und wir kommen innerhalb von 24 Stunden zu Ihnen nach Karlsruhe. Das ist alles.', 'Stakkato'));
+});
+
+test('Abkürzungen in Öffnungszeiten zerlegen den Text nicht in Stakkato', () => {
+  assert.ok(!meldet('Geöffnet Mo. bis Fr. von 8 bis 17 Uhr. Sa. nach Vereinbarung. Rufen Sie an.', 'Stakkato'));
+});

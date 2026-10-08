@@ -126,7 +126,8 @@ skills/
 │  │  ├─ 41-motion-als-funktion-der-zeit.md  Logoanimation, Loop, Kurzvideo: frame(t), Storyboard und Beatgrid, Formate
 │  │  ├─ 42-referenzgrammatik-und-gap-audit.md  Kollage und Grammatiktabelle, Gap Audit bei „es fehlt etwas“
 │  │  ├─ 43-hierarchie-raster-komposition.md  Hierarchie als Verhältnis, Führungskanten, Anteile wechseln, Animationssystem
-│  │  └─ 44-gutes-festschreiben-und-rueckbauprobe.md  Rückbauprobe, Pilot, Figurenwelt, was der Mensch entscheidet
+│  │  ├─ 44-gutes-festschreiben-und-rueckbauprobe.md  Rückbauprobe, Pilot, Figurenwelt, was der Mensch entscheidet
+│  │  └─ 45-huerde-laenge-und-leserfuehrung.md  Länge und Sektionsfolge nach Hürde, Belege früh, offene Schleifen, Stakkato
 │  └─ assets/
 │     ├─ vorlagen/                  marke.json, marke-brief.md, impressum.md, datenschutz.md,
 │     │                             datenschutz-bewerber.md, consent-muster.md,
@@ -154,6 +155,7 @@ skills/
    │  ├─ google-bewertungen.md      Places API serverseitig, KV-Cache, Darstellung
    │  ├─ qa-und-abnahme.md          Prüfablauf in zehn Schritten plus Schritt 8a, Abschlussbericht
    │  ├─ kundenabstimmung.md        Rollen beim Kunden, Ablauf der Präsentation, Rückmeldungen, Korrekturrunden mit Frist
+   │  ├─ aenderungsrunden-und-layoutschutz.md  Rückmeldungen bündeln, Auftrag mit „bleibt", Prüfung danach, Block für die Projekt-CLAUDE.md
    │  ├─ moodboard-und-stylescape.md  Moodboard intern, Stylescape zur Abnahme der Richtung, erster Entwurf
    │  ├─ chatbot-auf-der-website.md  Leitplanken, Wissensbasis, Gegenprobe, Datenschutz bei KI Chatbots
    │  ├─ brand-extraktion.md       Marke der Bestandsseite messen, auswerten, übernehmen
@@ -385,7 +387,7 @@ node --test 'scripts/tests/*.test.mjs'
 ```
 
 Eingebauter Testrunner von Node, keine Abhängigkeit, kein `package.json`. Die Anführungszeichen
-sind nötig, die Verzeichnisform greift nicht. 123 Tests: alle erlaubten und alle verbotenen
+sind nötig, die Verzeichnisform greift nicht. 227 Tests: alle erlaubten und alle verbotenen
 Zustandsübergänge, die Sperre gegen den Abruf ohne Freigabe, robots.txt, die Rückfallstufen,
 die Grenzenliste, das Konfidenzmodell, die Ähnlichkeitseinstufung, die Musterprüfung und die
 Trennung von Projekt- und globalem Wissen, die Geschmacksprüfung mit je einem Fall, der

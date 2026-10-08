@@ -78,6 +78,11 @@ herunterladen") halbieren beide.
 | 9 | Fragen | 5 bis 8 Fragen, die wirklich vorher kommen | ja |
 | 10 | Fuß | Impressum, Datenschutz, Kontakt. Kein Menü | ja |
 
+Diese Struktur trägt bei niedriger Hürde (Rückruf, Erstgespräch ohne Kosten, Leitfaden). Soll der
+Besucher Geld ausgeben, ohne den Anbieter zu kennen, oder einen Kurs kaufen, wird die Seite länger,
+und die Belege rücken direkt unter den Held: Sektionsfolgen in
+`../references/45-huerde-laenge-und-leserfuehrung.md`. Die Stufe steht im Markenbrief.
+
 **Der Primär-CTA erscheint mindestens dreimal:** im Heldenbereich, in der Seitenmitte und am
 Ende. Mit **einem** Text (`../references/06-conversion-architektur.md`).
 

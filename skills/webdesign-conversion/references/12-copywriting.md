@@ -353,6 +353,10 @@ Wie ein Text Autorität bekommt (Weichmacher streichen, Befund vor Gefühl, Rahm
 Fragen als Führung, Antworten in der FAQ), steht in `35-autoritaet-im-text.md`; das Satzmuster
 „Weichmacher“ prüft `scripts/deslop-check.mjs`.
 
+Wie die Hürde der Handlung Länge und Sektionsfolge bestimmt, wie ein Text von Satz zu Satz führt
+(offene Schleifen, die vor dem Angebot schließen) und wo ein Satz zum Stakkato zerfällt, steht in
+`45-huerde-laenge-und-leserfuehrung.md`; das Satzmuster „Stakkato" prüft `scripts/deslop-check.mjs`.
+
 Welche Auslöser an welcher Stelle der Seite tragen (Zielgruppe ohne Vorwurf, Wirkprinzip,
 realistische Behauptung, ruhige Einwandzeile, drei echte Optionen, ehrliche Einschränkung), steht in
 `34-ueberzeugungsausloeser.md`. Zwei weitere Satzmuster daraus, „Vorwurf an den Leser“ und

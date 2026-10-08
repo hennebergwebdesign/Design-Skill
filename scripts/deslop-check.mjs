@@ -20,7 +20,9 @@
                         der Dauerbrenner "In der heutigen ...", der Vorwurf an den Leser ("Die meisten
                         machen es falsch") und das absolute Versprechen ("über Nacht", "garantiert"),
                         beide aus 34-ueberzeugungsausloeser.md, und der Weichmacher ("eigentlich",
-                        "vielleicht") aus 35-autoritaet-im-text.md. Quelle: copywriting und
+                        "vielleicht") aus 35-autoritaet-im-text.md, und das Stakkato (drei
+                        Saetze mit hoechstens drei Woertern in Folge, "Müde? Wir helfen. Echte
+                        Ergebnisse.") aus 45-huerde-laenge-und-leserfuehrung.md. Quelle: copywriting und
                         copy-editing aus coreyhaines31/marketingskills, auf Deutsch übertragen
     2 Nominalstil       Substantivketten auf -ung, -heit, -keit statt Verben
     3 Superlative       beste, führend, einzigartig, optimal, ohne Beleg daneben
@@ -87,6 +89,26 @@ const SATZMUSTER = [
   { name: 'Weichmacher', re: /\b(?:eigentlich|irgendwie|quasi|sozusagen|gewissermaßen|gewissermassen|eventuell|vielleicht|möglicherweise|moeglicherweise|ein\s+bisschen|ein\s+wenig|(?:ich|wir)\s+(?:denken|glauben)|es\s+scheint)\b/i,
     tipp: 'Die Aussage ohne das Wort schreiben. Echte Unsicherheit einmal und konkret benennen („Das wissen wir nach der Messung“), nicht mit „vielleicht“ andeuten.' },
 ];
+/* Stakkato: drei Saetze in Folge mit hoechstens drei Woertern. Ein kurzer Satz ist Rhythmus,
+   drei hintereinander sind der abgehackte Roboterstil. Gezaehlt werden nur Saetze, die mit
+   Punkt, Ausrufe- oder Fragezeichen enden; Ueberschriften und Knopftexte ohne Satzzeichen
+   bleiben draussen. Abkuerzungen wie "z. B." zerlegen den Text falsch, deshalb vorher raus. */
+function stakkato(text) {
+  const saetze = text
+    .replace(/\b(?:z|u|d|o|s|v|bzw|ca|inkl|zzgl|ggf|evtl|usw|etc|mo|di|mi|do|fr|sa|so|nr|str|tel)\.\s*(?:[a-zäöü]\.\s*)?/gi, 'X ')
+    .split(/(?<=[.!?])\s+/)
+    .filter((satz) => /[.!?]$/.test(satz.trim()));
+  let folge = 0;
+  for (const satz of saetze) {
+    const woerter = satz.split(/\s+/).filter((w) => /[A-Za-zÄÖÜäöüß0-9]/.test(w)).length;
+    folge = woerter > 0 && woerter <= 3 ? folge + 1 : 0;
+    if (folge >= 3) return true;
+  }
+  return false;
+}
+SATZMUSTER.push({ name: 'Stakkato', re: { test: stakkato },
+  tipp: 'Die kurzen Sätze zu einem Satz verbinden, der den Zusammenhang sagt: „Sie haben wenig Zeit, deshalb planen wir die Woche für Sie.“ statt „Müde? Wir helfen. Echte Ergebnisse.“' });
+
 const NOMINAL = /\b\w{4,}(?:ung|heit|keit|ierung|barkeit)\b/gi;
 const BELEG = /(\d[\d.,]*\s*(?:%|prozent|jahre?n?|monate?n?|wochen?|tage?n?|stunden?|minuten?|std|kunden|projekte?n?|mitarbeiter|standorte?n?|euro|eur|€|km|m²|qm|kw|mwst)|\b(?:seit|ab)\s+\d{4}\b|\b\d{4}\b|\b\d{2}:\d{2}\b)/gi;
 /* drei durch Komma getrennte Glieder, letztes mit "und": "schnell, sauber und pünktlich" */

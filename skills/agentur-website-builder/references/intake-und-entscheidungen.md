@@ -99,7 +99,8 @@ verlinken.
 Wenn sich das nicht aus dem Auftrag oder den Dateien ergibt, fragen:
 
 1. Homepage oder Leadseite mit Leadsystem
-2. primäre Conversion, also die eine Aktion, an der die Seite gemessen wird
+2. primäre Conversion, also die eine Aktion, an der die Seite gemessen wird, und wie hoch ihre
+   Hürde ist (Stufe nach `../../webdesign-conversion/references/45-huerde-laenge-und-leserfuehrung.md`)
 3. Zielgruppe, Region und Sprache
 4. Tonalität und Ansprache, du oder Sie
 5. welche Seiten gebraucht werden
@@ -112,6 +113,12 @@ Die vier Strategiefragen aus
 `../../webdesign-conversion/references/01-strategie-positionierung.md` (Zielgruppe,
 größtes Problem, Abgrenzung, Vertrauensgrund) sind damit nicht abgedeckt und stehen davor.
 Ohne ihre Antworten wird nicht gestaltet.
+
+Liefert der Kunde einen ausgefüllten Fragebogen oder langes Material, wird es **selbst gelesen**, nicht
+nur über eine Zusammenfassung durch ein Modell. Modelle ergänzen Details, die nicht im Material
+stehen, und wer nur die Zusammenfassung kennt, findet sie nicht. Die acht Recherchefragen und woher
+fehlende Antworten kommen dürfen: `../../webdesign-conversion/references/01-strategie-positionierung.md`,
+Schritt 1.5.
 
 ## Interview vor dem Prompt (bei größeren Aufträgen)
 

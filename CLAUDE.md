@@ -14,7 +14,7 @@ rechtlich tragfähig, barrierearm, schnell, und nicht wie von einer Maschine geb
 
 | Skill | Rolle | Lizenz |
 |---|---|---|
-| `skills/webdesign-conversion/` | das Regelwerk: was gut ist und warum. 44 Referenzen, 3 Playbooks, Vorlagen, Checklisten | MIT |
+| `skills/webdesign-conversion/` | das Regelwerk: was gut ist und warum. 45 Referenzen, 3 Playbooks, Vorlagen, Checklisten | MIT |
 | `skills/agentur-website-builder/` | der Lieferablauf: Phasen 0 bis 6, fester Agenturstack, einsatzfertiger Code | Agenturstandard, siehe seine `SKILL.md` |
 
 Die Trennung ist die zentrale Entscheidung dieses Repositories: **Wissen und Ablauf sind
@@ -36,7 +36,7 @@ node scripts/pruefe-tokens.mjs
 node scripts/pruefe-kontrast.mjs
 node scripts/pruefe-platzhalter.mjs --launch  # auch data-tweaks-panel, das Reglerpanel darf nie live
 node scripts/pruefe-breakpoints.mjs http://localhost:4321 --bilder
-node scripts/pruefe-geschmack.mjs            # nach dem Build: dist/ Seiten, src/ Quellen, auch Konturbutton als Primär-CTA
+node scripts/pruefe-geschmack.mjs            # nach dem Build: dist/ Seiten, src/ Quellen, auch Konturbutton als Primär-CTA, Standardschriften, Pille als Kicker
 node scripts/pruefe-motion.mjs               # src/: transition: all, scale(0), ease-in, Dauer, Reduzierung, Scrollvideo, Einbettung
 node scripts/pruefe-geo.mjs                  # nach dem Build: dist/ robots.txt, KI-Crawler, JSON-LD
 node scripts/pruefe-aktualitaet.mjs          # dist/ und src/: Copyright-Jahr, Stand-Angaben, Jahr im Titel
@@ -87,7 +87,7 @@ nicht, es braucht das Glob-Muster in Anführungszeichen.
 ```
 .claude-plugin/       plugin.json, marketplace.json
 skills/
-  webdesign-conversion/     SKILL.md, references/00-44, playbooks/, assets/
+  webdesign-conversion/     SKILL.md, references/00-45, playbooks/, assets/
                             assets/musterbibliothek/ ist das globale Musterwissen
                             assets/vorlagen/scrollvideo/ sind die Bausteine zu Kapitel 38
                             assets/vorlagen/prompts/ sind die Prompt-Vorlagen zu Kapitel 24, 38, 39, 40
@@ -166,6 +166,17 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Offene Punkte
 
+- Version 4.15.0: Kapitel 45, Schritt 1.5 in Kapitel 01, Abschnitt 3a in Kapitel 28 und
+  `aenderungsrunden-und-layoutschutz.md` sind an keinem Projekt erprobt, kein Evalfall, das Δ ist eine
+  Vermutung. Die Sektionsfolgen für hohe Hürde und Kauf mit Vorwissen stammen aus drei Builds eines
+  Autors im US-Markt. Die Stakkato-Erkennung in `deslop-check.mjs` zählt Satzzeichen und meldet auch
+  eine gewollte Folge kurzer Sätze. Die Schriftprüfung in `pruefe-geschmack.mjs` findet Schriften in
+  `font-family`, `fontFamily`, Tokens `--schrift-*` und `--font-*`, Fontsource und Google-Fonts-Adressen,
+  nicht in einer Tailwind-Konfiguration über mehrere Zeilen. Die Pillenerkennung kennt die Klassen
+  badge, pill, pille, chip und `rounded-full` mit `text-xs` oder `text-sm`. Die zwei Regeldateien des
+  Kursautors sind nicht gesehen, die Regeln im Bauablauf sind Rekonstruktionen. Das Limit von 25 MiB
+  je Datei bei Cloudflare Pages ist am 08.10.2026 gegen die Herstellerdokumentation geprüft.
+  Ob Akquise und Verkaufsgespräch einen eigenen Skill bekommen, ist offen.
 - Pflegeverfahren (`evals/modellwechsel.md`): noch nie gelaufen, das Änderungsprotokoll ist leer. Die Frist von
   sechs Monaten ist ein Vorschlag. Die Aussagen des Videos über Modelle und Systemprompts sind nicht geprüft.
 - Version 4.14.0: Kapitel 44 ist an keinem Projekt erprobt, kein Evalfall, das Δ ist eine Vermutung. Die
@@ -280,6 +291,23 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Änderungsverlauf
 
+- **08.10.2026, Version 4.15.0** Wissensbasis zu einem zehnstündigen Kurs von Jakub Papert (verkaufsstarke
+  Websites mit Claude, 18 Dateien), gegen 4.14.0 abgeglichen. Das meiste stand (Bogen, ein Ziel, Kicker,
+  Bildentwürfe, Belege, Startseite zuerst). Neu: Kapitel `45-huerde-laenge-und-leserfuehrung.md` (Hürde der
+  Handlung bestimmt Länge und Sektionsfolge in drei Stufen, Belege früh und zweimal, „andere Wege" nur über
+  Lösungsarten wegen § 6 UWG, informative Überschriften, offene Schleifen mit sechs Regeln, Satzband und
+  Stakkato, „kostenlos" bei Premium, Überarbeitung eines KI-Entwurfs), Schritt 1.5 „Recherche vor dem Text"
+  in Kapitel 01 mit Feldern im Markenbrief, Abschnitt 3a in Kapitel 28 (Varianten für eine gebaute Sektion),
+  fünf Tells in Kapitel 26, im Bauablauf `aenderungsrunden-und-layoutschutz.md` mit Block für die
+  Projekt-`CLAUDE.md`, Seitengewicht in `qa-und-abnahme.md` Schritt 5, Abschnitt zu Modellentwürfen in
+  `copy-im-kundenprojekt.md`. **Harte Grenze erweitert:** Plus Jakarta Sans in der Schriftsperre, und die
+  Sperre hat jetzt eine Prüfung: `pruefe-geschmack.mjs` meldet alle sieben Schriften ohne Markenvorgabe
+  (vorher prüfte kein Skript die Grenze). Außerdem zählt die Pille über der Überschrift als Kicker, und
+  `deslop-check.mjs` kennt das Satzmuster „Stakkato". 7 neue Tests, insgesamt 227. **Zehn Widersprüche
+  entschieden,** Tabelle in Kapitel 45 Abschnitt 10, darunter: Layout vor Text nicht übernommen, Montserrat
+  und Inter für Coaches nicht übernommen, Playfair und Cormorant nur mit Begründung, „Apple-Animationen"
+  nicht als Auftrag. Nicht übernommen: Akquise, Verkaufsgespräch, Preise, Hosting außerhalb des Stacks,
+  Werkzeug- und Sitzungsregeln. Kein Evalfall. Versionen: Plugin 4.15.0, Regelwerk 2.18.0, Bauablauf 2.15.0.
 - **07.10.2026, ohne Versionsänderung** Paket `skill-pflege-und-modelltests` (ein Video von Nate Herk mit Aussagen
   von Boris Cherny, Community Hinweise getrennt) aufgenommen als Pflegeverfahren für dieses Repository, nicht
   als Regelwerk für Kundenprojekte: neue Datei `evals/modellwechsel.md` (Ablauf, Entscheidungstabelle,

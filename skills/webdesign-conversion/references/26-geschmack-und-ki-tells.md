@@ -228,6 +228,11 @@ Befund.
 | Eigener Mauszeiger | `cursor: none` plus Kreis, der der Maus folgt | Systemzeiger | `pruefe-geschmack.mjs` |
 | Glühen und Verlaufstext | Neonschein um Knöpfe, Verlauf in großen Überschriften | getönter Schatten, Farbe aus der Rolle | angesehen |
 | Mikro-Metasatz unter dem Kicker | „Jede dieser Leistungen bieten wir heute an, nicht erst morgen." | Kicker, Überschrift, Text reichen | angesehen |
+| Pille über der Überschrift | gerundetes Badge „Neu" oder „Ihr Partner in Karlsruhe" über der H1 | streichen. Die Pille ist ein Kicker in anderer Form und zählt in der Kicker-Quote mit | `pruefe-geschmack.mjs` |
+| Kreis-Icon mit Haarlinie | dünn gezeichnetes Icon in einem runden Rahmen, dazu dünne Ziffern in Kreisen | Icon aus dem eigenen Set mit der Strichstärke aus `marke.json` (`17-icons-eigenes-system.md`), Schritte mit Verb statt Kreisnummer | angesehen |
+| Dünner Fließtext | Fließtext oder FAQ-Antworten in einem Schnitt unter 400, kleiner als die Absätze darüber | Fließtext ab Schnitt 400, FAQ-Antworten in der Größe des Fließtexts | angesehen |
+| Alles in der Textspalte | Karten, Bilder und Belege in derselben schmalen Spalte wie der Fließtext, die Seite wirkt geschrumpft | Rahmen `--breite-inhalt` für Raster und Bilder, `--breite-text` nur für Fließtext (`45-huerde-laenge-und-leserfuehrung.md`, Abschnitt 10) | Screenshot aus `pruefe-breakpoints.mjs` ansehen |
+| Generiertes Logo | ein Bildmodell erzeugt ein Signet als Platzhalter, und es bleibt stehen | Logo vom Kunden oder `[[FEHLT: Logo]]`. Ein generiertes Logo ist weder Marke noch geklärtes Recht (`39-ki-assets-bewegtbild-und-3d.md`) | angesehen |
 
 Dazu die Muster, die schon in `10-visuelle-richtung.md` und `02-design-ux.md` stehen und hier
 nicht wiederholt werden: Cremegrund mit Serife und Terrakotta, Neon auf Fast-Schwarz,
@@ -247,6 +252,10 @@ Verlegenheit.
 - **Fraunces und Instrument Serif** sind die zwei Serifen, zu denen Modelle von selbst
   greifen. Ohne Markenvorgabe meldet sie `pruefe-geschmack.mjs`. Steht eine davon begründet
   in `marke.json`, ist es eine Entscheidung und kein Befund.
+- **Playfair Display und Cormorant** gelten in verbreiteten Kursen als Voreinstellung für
+  Premium, Makler und lokale Dienstleister. Das ist derselbe Reflex mit anderem Namen und
+  braucht dieselbe Begründung aus dem Gegenstand. Gezählt wird das nicht, weil beide oft
+  zu Recht in einer Marke stehen.
 - **Nicht dieselbe Serife in zwei Agenturprojekten hintereinander.**
 - **Betonung in der Überschrift:** kursiv oder fett **derselben** Familie. Nie ein einzelnes
   Wort in einer fremden Serife in eine Groteske-Überschrift setzen. Ob überhaupt betont wird,
@@ -379,3 +388,4 @@ beiden Regelwerken im Kontext an genau den Stellen dieser Tabelle zwischen ihnen
 - `24-designsystem-vorrang.md`: was jede Regel hier schlägt
 - `27-redesign-bestand.md`: dieselben Regeln auf eine bestehende Seite angewendet
 - `28-ki-bildentwuerfe.md`: generierte Entwürfe als Vorlage, und wo sie nichts belegen dürfen
+- `45-huerde-laenge-und-leserfuehrung.md`: informative Überschriften statt Slogans, entschiedene Widersprüche zu Schriften, Palette und Breite

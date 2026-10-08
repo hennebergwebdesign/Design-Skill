@@ -13,7 +13,9 @@
   WAS GEPRUEFT WIRD
   Je gebauter Seite (.html, am besten aus dist/ nach dem Build):
     1. Kicker-Quote: hoechstens ein Kicker oder Eyebrow-Label je drei Sektionen,
-       der Heldenbereich zaehlt mit. Ueberschritten ist ein FEHLER.
+       der Heldenbereich zaehlt mit. Ueberschritten ist ein FEHLER. Die Pille ueber der
+       Ueberschrift (badge, pill, chip oder rounded-full mit kleiner Schrift, gefolgt von
+       einer h1 bis h3) ist derselbe Kicker in anderer Form und zaehlt mit.
     2. Kicker in zu kurzem Abstand (in einer der zwei Folgesektionen): WARNUNG.
     3. Mehr als ein Laufband (Marquee) je Seite: FEHLER.
     4. Scrollhinweis als Text ("Scrollen", "Scroll to explore"): WARNUNG.
@@ -36,8 +38,11 @@
        Fokus zaehlen nicht, sie wechseln nur den Zustand. Tailwind: bg-transparent plus border.
   Je gebauter Seite, zusaetzlich:
    15. Mehr als ein Primaerbutton in einer Sektion: WARNUNG (Hinweis, genau ein Primaer-CTA).
-  8 bis 14 sind WARNUNGEN. 12 und 13 entfallen, wenn der Wert in marke.json steht: dann ist
-  er eine Markenentscheidung, keine Voreinstellung.
+  Je Quelldatei, zeilenweise (harte Grenze Standardschrift, 10-visuelle-richtung.md):
+   16. Inter, Roboto, Open Sans, Poppins, Montserrat, Lato und Plus Jakarta Sans ohne
+       Markenvorgabe. WARNUNG.
+  8 bis 14 und 16 sind WARNUNGEN. 12, 13 und 16 entfallen, wenn der Wert in marke.json steht:
+  dann ist er eine Markenentscheidung, keine Voreinstellung.
 
   WAS NICHT GEPRUEFT WIRD
   Layoutfamilien, Zickzackfolgen und leere Bentozellen sind aus dem Markup nicht sicher
@@ -63,6 +68,9 @@ const UEBERSPRINGEN = new Set(['node_modules', '.git', 'build', '.astro', '.next
   '.cache', 'coverage', 'vendor', 'results']);
 
 const KICKER_KLASSEN = new Set(['kicker', 'eyebrow', 'overline', 'ueberzeile', 'vorspann', 'dachzeile']);
+/* Die Pille ueber der Ueberschrift. Allein kein Kicker (ein Badge kann auch ein Zustand sein),
+   erst mit einer Ueberschrift dicht dahinter. */
+const PILLEN_KLASSEN = new Set(['badge', 'pill', 'pille', 'chip']);
 const LAUFBAND_KLASSEN = new Set(['marquee', 'laufband', 'ticker']);
 
 /* Alles, was dieselbe Absicht hat: Kontakt aufnehmen. Ein Text dafuer, auf der ganzen Seite. */
@@ -80,6 +88,9 @@ export const STANDARDPALETTE = [
   '#1a1714', '#1a1814', '#1b1814',
 ];
 export const STANDARDSERIFEN = ['Fraunces', 'Instrument Serif', 'Instrument_Serif'];
+/* Die Schriften, die ohne Kundenvorgabe gesperrt sind (harte Grenze in SKILL.md). Plus Jakarta
+   Sans kam in 4.15.0 dazu: die Groteske, zu der Modelle fuer Landingpages von selbst greifen. */
+export const STANDARDGROTESKEN = ['Inter', 'Roboto', 'Open Sans', 'Poppins', 'Montserrat', 'Lato', 'Plus Jakarta Sans'];
 
 // ------------------------------------------------------------------ Hilfen
 
@@ -117,10 +128,16 @@ function kickerFinden(html) {
     let treffer = klassen.some((k) => KICKER_KLASSEN.has(k.toLowerCase()));
     if (!treffer) {
       /* Die Tailwind-Signatur: Versalien plus Sperrung. Allein reicht sie nicht, auf das
-         Element muss innerhalb von 300 Zeichen eine Ueberschrift folgen. */
+         Element muss innerhalb von 300 Zeichen eine Ueberschrift folgen. Dasselbe gilt fuer
+         die Pille: eine benannte Klasse oder rounded-full mit kleiner Schrift. */
       const versal = klassen.includes('uppercase');
       const gesperrt = klassen.some((k) => /^tracking-(wide|wider|widest|\[)/.test(k));
+      const pille = klassen.some((k) => PILLEN_KLASSEN.has(k.toLowerCase())) ||
+        (klassen.includes('rounded-full') && klassen.some((k) => /^text-(xs|sm)$/.test(k)));
       if (versal && gesperrt) treffer = /<h[1-3]\b/i.test(html.slice(ende, ende + 300));
+      /* Bei der Pille strenger: zwischen ihr und der Ueberschrift steht kein Text, nur Tags.
+         Sonst wird ein Zustandsbadge in einer Liste zum Kicker der naechsten Sektion. */
+      else if (pille) treffer = /^(?:\s|<\/?[a-z][a-z0-9-]*\b[^>]*>){0,6}<h[1-3]\b/i.test(html.slice(ende, ende + 300));
     }
     if (treffer) funde.push({ pos: m.index, text });
   }
@@ -414,6 +431,19 @@ export function quelleAnalysieren(inhalt, kontext = {}) {
         break;
       }
     }
+    // 16 Standardgrotesken, die Sperrliste der harten Grenze
+    for (const s of STANDARDGROTESKEN) {
+      const name = s.replace(/ /g, '[ _+-]?');
+      /* Hinter dem Namen darf kein weiteres Wort folgen: Inter Tight, Roboto Slab und Lato
+         Hairline sind eigene Familien. Ausnahme ist der Zusatz Variable der Variablen Fassung. */
+      const re = new RegExp(`(font-family[^;]*|fontFamily[^;]*|--(?:schrift|font)[\\w-]*\\s*:[^;]*|fontsource(?:-variable)?/|@import[^;]*|family=)['"]?(?<![\\w-])${name}(?![\\w-]|[ _+](?!variable\\b)[a-z])`, 'i');
+      const inMarke = new RegExp(`\\b${name}\\b`, 'i').test(marke);
+      if (re.test(zeile) && !inMarke) {
+        melde('standardschrift', `${s} ohne Markenvorgabe`,
+          'Ohne Kundenschrift gesperrt (harte Grenze). Zwei Kandidaten mit Begründung aus Branche und Zielgruppe vorschlagen, siehe 10-visuelle-richtung.md. Steht die Schrift im Branding, in marke.json eintragen.');
+        break;
+      }
+    }
     // 13 Standardpalette
     const hexe = zeile.match(/#[0-9a-f]{6}\b/gi) || [];
     const treffer = [...new Set(hexe.map((h) => h.toLowerCase()))].filter((h) => STANDARDPALETTE.includes(h) && !marke.includes(h));
@@ -523,7 +553,7 @@ function main() {
 
   console.log(`Geprüft: ${seiten} Seiten, ${quellen} Quelldateien`);
   if (marke) console.log(`Markenentscheidungen aus ${marke.quelle} berücksichtigt`);
-  else console.log('Keine marke.json gefunden, jede Standardserife und Standardfarbe wird gemeldet.');
+  else console.log('Keine marke.json gefunden, jede Standardschrift, Standardserife und Standardfarbe wird gemeldet.');
   if (!seiten) console.log('Keine gebaute Seite gefunden. Kicker, Laufband und CTA-Texte erst nach dem Build prüfbar.');
 
   const ausgeben = (titel, liste) => {

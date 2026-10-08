@@ -128,6 +128,18 @@ SEO ab 95. Werte unter dem Richtwert entweder beheben oder mit Begründung im Be
 Die Schwellen für LCP, INP und CLS und die Trennung von Feld- und Labordaten stehen in
 `../../webdesign-conversion/references/03-technik-performance.md`.
 
+**Seitengewicht und tote Dateien.** Alles in `public/` wird unverändert ausgeliefert, auch was keine
+Seite mehr verwendet. Vor der Abnahme die großen Dateien der Auslieferung ansehen:
+
+```bash
+find dist -type f -size +300k -exec ls -lh {} + | sort -k5 -h
+```
+
+Jede Datei darin wird verwendet und ist komprimiert, sonst fliegt sie raus. Rohvideos, Originalfotos
+und verworfene Entwürfe liegen außerhalb von `public/`. Grund: Cloudflare Pages lehnt einzelne
+Dateien über 25 MiB beim Deploy ab, und eine direkt verlinkte, unkomprimierte Datei reißt die harte
+Grenze für die Ladezeit, ohne dass Lighthouse auf der Startseite es zeigt.
+
 ### 6. Sicherheit
 
 * `grep -rn "sk_\|api_key\|API_KEY\|password" src/ public/` ohne Treffer mit echten Werten
