@@ -120,7 +120,7 @@ skills/
 │  │  ├─ 35-autoritaet-im-text.md   Weichmacher streichen, Satzleiter, Rahmen vor dem Einwand, FAQ Antworten
 │  │  ├─ 36-kundenpsychologie-erwartung-reiz-begruendung.md  Reihenfolge Erwartung, Reiz, Begründung, Gruppieren, Erinnerungstest
 │  │  ├─ 37-stilrichtung-nach-kundensprache.md  sechs Richtungen, Zuordnung vom Kundensatz, Signaturelement
-│  │  ├─ 38-scrollvideo-und-einbettungen.md  Scrollvideo nur mit Anlass, Blendfehler, 3D-Einbettungen, Tiefe, Körnung
+│  │  ├─ 38-scrollvideo-und-einbettungen.md  Scrollvideo nur mit Anlass, Erlebnisidee, Blendfehler, 3D-Einbettungen und Three.js-Szenen, Tiefenkarte, Körnung
 │  │  ├─ 39-ki-assets-bewegtbild-und-3d.md  KI-Assets für Bewegtbild und 3D, Arbeitsweise, Abbruch, Rechte, Kosten
 │  │  ├─ 40-polierschleife-mit-kritiker.md  Bauagent und getrennter Kritiker, Vorbedingungen, Budget, Durchlaufgrenze, Variante mit drei Kritikern
 │  │  ├─ 41-motion-als-funktion-der-zeit.md  Logoanimation, Loop, Kurzvideo: frame(t), Storyboard und Beatgrid, Formate
@@ -387,7 +387,7 @@ node --test 'scripts/tests/*.test.mjs'
 ```
 
 Eingebauter Testrunner von Node, keine Abhängigkeit, kein `package.json`. Die Anführungszeichen
-sind nötig, die Verzeichnisform greift nicht. 227 Tests: alle erlaubten und alle verbotenen
+sind nötig, die Verzeichnisform greift nicht. 231 Tests: alle erlaubten und alle verbotenen
 Zustandsübergänge, die Sperre gegen den Abruf ohne Freigabe, robots.txt, die Rückfallstufen,
 die Grenzenliste, das Konfidenzmodell, die Ähnlichkeitseinstufung, die Musterprüfung und die
 Trennung von Projekt- und globalem Wissen, die Geschmacksprüfung mit je einem Fall, der

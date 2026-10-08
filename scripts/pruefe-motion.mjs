@@ -35,6 +35,10 @@
        reservierte Groesse (aspect-ratio, height oder width und height). Gehoert laut
        Kapitel 38 zur CLS-Pruefung, liegt aber hier, weil sich das Rohmarkup ohne Browser
        testen laesst. pruefe-breakpoints.mjs misst die tatsaechliche Verschiebung.
+   10. Eigene 3D-Szene (Import von three oder three/...): FEHLER ohne prefers-reduced-motion
+       im selben Modul, WARNUNG bei statischem Import ohne dynamischen. three ist die groesste
+       Abhaengigkeit, die ein Agenturprojekt bekommen kann, und gehoert nicht ins erste Laden.
+       Kapitel 38, Abschnitt 5a.
   Je Projekt (alle geprueften Dateien zusammen):
     7. Es gibt Keyframes, animation, gsap oder ScrollTrigger, aber nirgends
        prefers-reduced-motion: FEHLER. Das ist die Pflicht aus 04-barrierefreiheit-bfsg.md.
@@ -199,6 +203,36 @@ export function scrollvideoAnalysieren(inhalt) {
 }
 
 /**
+ * Kapitel 38, Abschnitt 5a: eigene 3D-Szene mit three. Je Datei, nur bei Fund.
+ * Liefert Befunde mit zeile, regel, schwere, meldung, tipp.
+ */
+export function dreiDAnalysieren(inhalt) {
+  const befunde = [];
+  const sauber = ohneKommentare(inhalt);
+  const melde = (index, regel, schwere, meldung, tipp) =>
+    befunde.push({ zeile: zeileVon(sauber, index), regel, schwere, meldung, tipp, auszug: '' });
+
+  /* three und three/examples/..., nicht three-stdlib oder threejs-irgendwas als eigenes Paket,
+     die laufen ueber denselben Weg, aber gehoeren erst geprueft, bevor sie hier erkannt werden. */
+  const quelle = `['"]three(?:/[^'"]*)?['"]`;
+  const importStatisch = new RegExp(String.raw`^[ \t]*import\s[^;\n]*from\s*${quelle}|^[ \t]*import\s*${quelle}`, 'm').exec(sauber);
+  const importDynamisch = new RegExp(String.raw`import\(\s*${quelle}\s*\)`).exec(sauber);
+  if (!importStatisch && !importDynamisch) return befunde;
+
+  if (!/prefers-reduced-motion|reduce-motion|motion-reduce:/.test(sauber)) {
+    melde((importStatisch || importDynamisch).index, '3d-ohne-reduzierung', 'fehler',
+      '3D-Szene (three) ohne Behandlung von prefers-reduced-motion im selben Modul',
+      'Bei reduce keine Kamerafahrt und keine Dauerdrehung: Standbild der Szene oder Poster. Siehe 38-scrollvideo-und-einbettungen.md, Abschnitt 5a.');
+  }
+  if (importStatisch && !importDynamisch) {
+    melde(importStatisch.index, '3d-statischer-import', 'warnung',
+      'three wird statisch importiert und damit mit der Seite geladen',
+      'Mit import("three") erst laden, wenn die Szene sichtbar wird, davor steht das Poster. Siehe 38-scrollvideo-und-einbettungen.md, Abschnitt 5a.');
+  }
+  return befunde;
+}
+
+/**
  * Prueft eine Quelldatei. Liefert eine Liste { zeile, regel, schwere, meldung, tipp, auszug }.
  * schwere ist 'fehler' oder 'warnung'.
  */
@@ -300,6 +334,7 @@ export function motionAnalysieren(inhalt) {
   }
 
   befunde.push(...scrollvideoAnalysieren(inhalt));
+  befunde.push(...dreiDAnalysieren(inhalt));
   return befunde.sort((a, b) => a.zeile - b.zeile);
 }
 

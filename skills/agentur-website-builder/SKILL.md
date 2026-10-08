@@ -4,7 +4,7 @@ description: Baut komplette Kundenwebsites mit Astro und Cloudflare Pages nach A
 license: Proprietär, That's it. Marketing / VFDESIGN LTD
 metadata:
   author: That's it. Marketing / Henneberg Webdesign
-  version: 2.15.0
+  version: 2.16.0
 ---
 
 # Agentur Website Builder
@@ -119,7 +119,10 @@ Bevor irgendetwas gefragt wird:
    „Standardstack ohne Rückfrage" in `references/stack-und-deployment.md`. Cloudflare Pages
    Astro ist der Standardfall dieses Skills, keine Option unter mehreren.
 2. Alle gelieferten Materialien auswerten: Designentwurf aus Claude Design, Screenshots,
-   Linktree, Copydokumente, Logos, Bilder im Repo.
+   Linktree, Copydokumente, Logos, Bilder im Repo. Liegt ein Designsystem in Claude Design, wird
+   es über die Synchronisation geholt und nach seiner Herkunft eingestuft (Kundenmaterial oder nur
+   Beschreibung), siehe „Ein Designsystem aus Claude Design" in
+   `../webdesign-conversion/references/24-designsystem-vorrang.md`.
 3. Bei einer Überarbeitung die alte Seite abrufen und inventarisieren: Seitenstruktur, URLs,
    Texte, Rechtstexte, Kontaktdaten, Öffnungszeiten, Leistungen, bestehende Rankings. Dafür
    `node scripts/relaunch-inventory.mjs https://alte-seite.de`, siehe
@@ -170,7 +173,7 @@ Immer vor der Implementierung. Kurz, im Chat, kein Dokument im Repo. Struktur:
 ## Seitenstruktur
 ## Sektionen pro Seite mit Zweck und CTA
 ## Designsystem: Farben, Schriftpaarung mit Begründung, Typoskala, Spacing
-## Animationen und wo sie sitzen
+## Animationen und wo sie sitzen, bei Marke oder Kampagne drei Erlebnisideen zur Wahl
 ## Formulare und Datenfluss
 ## Consent und eingesetzte Dienste
 ## SEO Struktur: Titel, Description, Keywords je Seite
@@ -202,6 +205,10 @@ Ohne Freigabe wird nichts abgerufen und nichts abgelegt. Tor 2 entscheidet spät
 Muster dauerhaft ins Skillwissen wandert, siehe dasselbe Kapitel.
 
 Moodboard intern, Stylescape zur Abnahme der Richtung, siehe `references/moodboard-und-stylescape.md`.
+Soll die Seite ein Erlebnis sein (Marke, Launch, Kampagne), stehen im Konzept drei Erlebnisideen mit
+Scrollablauf, Technik, Aufwand und Risiko, siehe
+`../webdesign-conversion/references/38-scrollvideo-und-einbettungen.md`, Abschnitt 1a. Bei Handwerk,
+Praxis und lokaler Dienstleistung ist der Ausgangspunkt dezente Bewegung ohne 3D.
 Die Rangfolge bei Zielkonflikten steht im Konzept und in der `CLAUDE.md`, siehe
 `../webdesign-conversion/references/01-strategie-positionierung.md`, Schritt 1.4.
 
@@ -301,7 +308,7 @@ Diese Punkte werden nicht neu verhandelt, auch nicht aus Bequemlichkeit.
 | Branch | immer `main`, keine Featurebranches |
 | Runtime | neue Projekte Node 24 LTS und pnpm, bestehende folgen ihrer Lockdatei |
 | Styling | zentrale CSS Custom Properties plus komponentennahes Astro CSS, Tailwind nur wenn bereits vorhanden oder ausdrücklich gewünscht |
-| Animation | GSAP mit ScrollTrigger, weitere Plugins nur bei Bedarf |
+| Animation | GSAP mit ScrollTrigger, weitere Plugins nur bei Bedarf. Three.js nur mit freigegebener Erlebnisidee, spät geladen, siehe `../webdesign-conversion/references/38-scrollvideo-und-einbettungen.md`, Abschnitt 5a |
 | Mailversand | Resend |
 | Spamschutz | Cloudflare Turnstile, zusätzlich Honigtopf, Zeitfeld, Origin-Prüfung, Rate Limit |
 | Leadspeicher | Cloudflare D1, Supabase nur wenn der Kunde bereits einen Account hat |

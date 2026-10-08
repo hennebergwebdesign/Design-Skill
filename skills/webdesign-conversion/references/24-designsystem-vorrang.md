@@ -117,6 +117,25 @@ Der Normalfall bei kleineren Kunden. Dann rückt Stufe 2 nach oben, und es gilt 
 Punkt 2 ist der Grund, warum die Referenzrecherche **vor** dem Tokenplan steht und nicht
 danach: danach wäre sie eine nachträgliche Rechtfertigung, davor ist sie ein Vergleichspunkt.
 
+## Ein Designsystem aus Claude Design
+
+Claude Design legt aus einer Projektbeschreibung und hochgeladenem Material ein Designsystem an
+(Farben mit Regeln, Logo, Komponenten, kleine Mockups), und Claude Code holt es über die
+Synchronisation („design sync") ins Projekt. Welche Stufe es hat, hängt an seiner Herkunft, nicht am
+Werkzeug:
+
+| Woraus es entstand | Stufe | Grund |
+|---|---|---|
+| aus dem gelieferten System oder Material des Kunden (Tokens, Figma, Styleguide, Logo, Bestandsseite) und vom Kunden bestätigt | 1 oder 2, wie das Material | das Werkzeug hat übertragen, nicht entschieden |
+| aus einer Beschreibung, ohne Material des Kunden | **keine** Stufe 1. Es ist ein Vorschlag nach `10-visuelle-richtung.md` und wird erst mit der Festlegung im Projekt zu Stufe 1 | sonst wird ein generierter Entwurf zur Vorgabe, die niemand entschieden hat |
+| aus fremden Referenzen | Stufe 5, auch wenn es wie ein System aussieht | eine Referenz liefert Prinzipien, nie ein Markensystem (harte Grenze Markenextraktion) |
+
+Nach dem Abruf gehen die Werte in `marke.json` und `tokens.css`. Erst dort gelten sie, weil die
+Prüfskripte nur dort lesen. Ob die Synchronisation auch Änderungen aus dem Code zurückträgt, ist hier
+nicht geprüft. Bis dahin ist `marke.json` die führende Fassung, und eine Änderung im Code wird von Hand
+in Claude Design nachgezogen, wenn das System dort weiter genutzt wird. Ein Designsystem der Agentur
+selbst (für eigene Auftritte) ist für Kundenprojekte keine Stufe, es ist eine fremde Marke.
+
 ## Wie sich die bisherigen Stellen dazu verhalten
 
 Keine der drei alten Stellen ist falsch. Jede behält ihren Spezialfall und verweist für die

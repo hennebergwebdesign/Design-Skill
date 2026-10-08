@@ -75,7 +75,8 @@ hier gilt Tor 1: erst Kandidaten vorschlagen, dann freigeben lassen.
 
 | Zweck | Kandidaten laut Quelle |
 |---|---|
-| App und Ablaufreferenzen (Seitenfluss, Zustände) | Mobbin, Refero, Page Flows, Screens Design |
+| App und Ablaufreferenzen (Seitenfluss, Zustände) | Mobbin, Refero, Page Flows, Screens Design. Mobbin bietet laut einem Video (Alex Sprogis, 28.09.2026) einen MCP-Server, über den Claude die Sammlung abruft. Das ist ein Abruf fremder Gestaltung: Tor 1 gilt wie bei jeder Referenz, und „nachbauen lassen" ist ausgeschlossen, übernommen wird das Prinzip (`24-designsystem-vorrang.md`) |
+| Lizenzfreie Bilder | Lummi (Schreibweise aus dem Transkript, ungeprüft) | Lizenz je Bild prüfen, nie als Team-, Projekt- oder Kundenbeleg (harte Grenze). Echte Fotos des Kunden gehen vor |
 | Bewegungsbeispiele | whatships.com |
 | Grafik und Posterreferenzen | Savee |
 | Schriften im echten Einsatz | Fonts In Use |

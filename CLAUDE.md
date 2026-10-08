@@ -37,7 +37,7 @@ node scripts/pruefe-kontrast.mjs
 node scripts/pruefe-platzhalter.mjs --launch  # auch data-tweaks-panel, das Reglerpanel darf nie live
 node scripts/pruefe-breakpoints.mjs http://localhost:4321 --bilder
 node scripts/pruefe-geschmack.mjs            # nach dem Build: dist/ Seiten, src/ Quellen, auch Konturbutton als Primär-CTA, Standardschriften, Pille als Kicker
-node scripts/pruefe-motion.mjs               # src/: transition: all, scale(0), ease-in, Dauer, Reduzierung, Scrollvideo, Einbettung
+node scripts/pruefe-motion.mjs               # src/: transition: all, scale(0), ease-in, Dauer, Reduzierung, Scrollvideo, Einbettung, 3D-Szene
 node scripts/pruefe-geo.mjs                  # nach dem Build: dist/ robots.txt, KI-Crawler, JSON-LD
 node scripts/pruefe-aktualitaet.mjs          # dist/ und src/: Copyright-Jahr, Stand-Angaben, Jahr im Titel
 
@@ -166,6 +166,14 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Offene Punkte
 
+- Version 4.16.0: Die Abschnitte 1a, 5a und 6a in Kapitel 38 sind an keinem Projekt erprobt, keine
+  Three.js-Vorlage, kein Evalfall, das Δ ist eine Vermutung. `pruefe-motion.mjs` erkennt nur Importe von
+  `three` und `three/...`, nicht Pakete wie `@react-three/fiber` oder eine Einbindung per Script-Tag, und
+  sieht nicht, ob Inhalt nur im Canvas steht. Ob „design sync" Änderungen aus dem Code nach Claude Design
+  zurückträgt, ist ungeprüft. Lummi und der MCP-Server von Mobbin sind Namen aus dem Video, ungeprüft. Die
+  Kritik an Mobilleistung, Barrierefreiheit und Codeumfang stammt aus Zuschauerkommentaren, nicht vom Autor.
+  Mit Abschnitt „Ein Designsystem aus Claude Design" in Kapitel 24 ist der offene Punkt zum Henneberg Design
+  System für Kundenprojekte entschieden (keine Stufe, fremde Marke), für eigene Auftritte bleibt er offen.
 - Version 4.15.0: Kapitel 45, Schritt 1.5 in Kapitel 01, Abschnitt 3a in Kapitel 28 und
   `aenderungsrunden-und-layoutschutz.md` sind an keinem Projekt erprobt, kein Evalfall, das Δ ist eine
   Vermutung. Die Sektionsfolgen für hohe Hürde und Kauf mit Vorwissen stammen aus drei Builds eines
@@ -291,6 +299,23 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Änderungsverlauf
 
+- **08.10.2026, Version 4.16.0** Wissenspaket zum Video „Opus 5.5: Webdesign macht ENDLICH wieder Spaß" von Alex
+  Sprogis (28.09.2026, vier Schritte: Inspiration, Designsystem in Claude Design, Assets, GSAP und Three.js), dazu
+  Kritik aus den Kommentaren und eigene Ergänzungen des Paketautors, gegen 4.15.0 abgeglichen. Das meiste stand
+  (Referenzen und Tor 1, Designsystem vor Entwurf, KI-Assets, Scrollvideo, Storyboard, Heldenidee, Consent). Neu
+  in Kapitel 38: Ausgangspunkt nach Art des Auftrags (Marke und Kampagne gegen Handwerk und Praxis), Abschnitt 1a
+  Erlebnisidee vor Effekt mit drei Ideen im Konzept, Abschnitt 5a eigene 3D-Szene mit Three.js (schlank, spät
+  geladen, Inhalt im HTML, reduzierte Bewegung, kein WebGL, Tastatur), Abschnitt 6a Parallax über Tiefenkarte.
+  In Kapitel 24 die Stufe eines Designsystems aus Claude Design nach Herkunft, in 22 Mobbin über MCP nur nach
+  Tor 1 und Lummi mit Prüfpflicht. Im Bauablauf: ungefragte Ergänzungen und Codeaufräumen in `qa-und-abnahme.md`
+  Schritt 8, kleine Schritte bei Erlebnissektionen in `aenderungsrunden-und-layoutschutz.md`, Three.js in den
+  Agenturvorgaben nur mit freigegebener Erlebnisidee, Erlebnisideen im Konzept, Claude Design in Phase 1. Eine
+  Prüfung: `pruefe-motion.mjs` meldet `three` ohne `prefers-reduced-motion` (Fehler) und statisch importiert
+  (Warnung), 4 Tests, insgesamt 231. **Entschieden:** viele kleine Schritte (Video) gegen einen gebündelten
+  Auftrag (4.15) gelöst nach Art der Änderung; Kommentare im Code, die einen Grund nennen, bleiben, nur
+  wiederholende raus; ein aus einer Beschreibung erzeugtes Designsystem ist keine Stufe 1. Nicht übernommen:
+  Stack des Autors, Cookiebot als Sponsor, Nachbau einer ausgezeichneten Seite, „das Modell beendet den KI-Look".
+  Kein Evalfall. Versionen: Plugin 4.16.0, Regelwerk 2.19.0, Bauablauf 2.16.0.
 - **08.10.2026, Version 4.15.0** Wissensbasis zu einem zehnstündigen Kurs von Jakub Papert (verkaufsstarke
   Websites mit Claude, 18 Dateien), gegen 4.14.0 abgeglichen. Das meiste stand (Bogen, ein Ziel, Kicker,
   Bildentwürfe, Belege, Startseite zuerst). Neu: Kapitel `45-huerde-laenge-und-leserfuehrung.md` (Hürde der

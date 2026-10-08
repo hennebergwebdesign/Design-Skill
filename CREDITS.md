@@ -449,6 +449,23 @@ Netlify, Vercel, Funnel-Baukästen (fester Stack); Nachrichtenzahl je Sitzung, K
 ohne Rückfrage (Werkzeugregeln, zuletzt schon in 4.11 so entschieden); PageSpeed-Punktzahl als Ziel (harte Grenze ist strenger);
 Werkzeugnamen für Bild und Video. Vollständige Tabelle in Kapitel 45, Abschnitte 10 und 11.
 
+### In Version 4.16 zusätzlich eingeflossen
+
+Stand der Quelle: 08.10.2026, Wissenspaket `webdesign_prozess_opus55` (9 Dateien), eigene Zusammenfassung, nichts wörtlich.
+Dateien 07 und 08 des Pakets sind Ergänzungen des Paketautors beziehungsweise Zuschauerkommentare und hier so gekennzeichnet.
+
+| Quelle | Was daraus eingeflossen ist |
+|---|---|
+| Alex Sprogis, YouTube „Opus 5.5: Webdesign macht ENDLICH wieder Spaß (Kein AI Slop mehr!)" (28.09.2026, 19:27, `youtube.com/watch?v=O2ufXIxJZ_w`), **keine Lizenz genannt**, nur inhaltlich destilliert; Kommentare darunter getrennt und ungeprüft | Kapitel 38 (Ausgangspunkt nach Auftrag, 1a Erlebnisidee, 5a Three.js-Szene, 6a Tiefenkarte), Kapitel 24 (Designsystem aus Claude Design), zwei Kandidaten in 22, Schritt 8 in `qa-und-abnahme.md`, eine Zeile in `aenderungsrunden-und-layoutschutz.md`, Prüfung `three` in `pruefe-motion.mjs` |
+
+**Bereits im Repository, deshalb nicht erneut aufgenommen:** Referenzen sammeln mit Freigabe (22, Tor 1), Moodboard (Bauablauf),
+Designsystem vor dem Entwurf (24, Prompt `designsystem-ableiten.md`), KI-Bilder und Rechte (28, 39), GSAP und ScrollTrigger (09),
+Storyboard (38, 2a), Heldenidee (43), Pilot vor Serie (44), Consent mit echter Sperre (Agenturvorgabe), Text als HTML für GEO (31).
+
+**Nicht übernommen, mit Grund:** Next.js, Supabase und Hostinger (fester Stack), Cookiebot als Sponsor (eigener Consent Banner),
+Nachbau einer ausgezeichneten Seite als Übung (kein Kundenprojekt), die Aussage, ein Modell beende den KI-Look (Momentaufnahme),
+die Originalprompts des Autors (hinter einem Link, nicht Teil des Pakets).
+
 ### Pflegeverfahren, ohne Versionsänderung
 
 Stand der Quelle: 07.10.2026, Erweiterungspaket `skill-pflege-und-modelltests`, eigene Zusammenfassung, nichts wörtlich.

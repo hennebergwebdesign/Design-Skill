@@ -4,7 +4,7 @@ description: "Vollständiges System für conversion-orientiertes Webdesign im DA
 license: MIT
 metadata:
   author: Henneberg Webdesign
-  version: 2.18.0
+  version: 2.19.0
 ---
 
 # Webdesign Conversion System
@@ -113,13 +113,13 @@ Lies gezielt nach, statt alles zu laden.
 | Eigenes Icon-Set, SVG, Favicon | `17-icons-eigenes-system.md` |
 | Motion-Handschrift, Motion-Tokens, Scroll-Animation in CSS | `18-motion-handschrift.md` |
 | GSAP, ScrollTrigger, Timelines, Performance | `09-motion-gsap.md` |
-| **Jedes Mal, wenn ein Scrollvideo, eine Scroll-Animation mit Video oder eine 3D-Einbettung gewünscht wird: zuerst lesen, dann antworten** (Anlass, Poster, reduzierte Bewegung, späte Ladung, Messung; dazu Blendfehler, Tiefe, Körnung) | `38-scrollvideo-und-einbettungen.md` |
+| **Jedes Mal, wenn ein Scrollvideo, eine Scroll-Animation mit Video, eine 3D-Einbettung, eine eigene 3D-Szene mit Three.js oder ein Parallax über eine Tiefenkarte gewünscht wird: zuerst lesen, dann antworten** (Anlass nach Art des Auftrags, Erlebnisidee vor Effekt, Poster, reduzierte Bewegung, späte Ladung, Inhalt im HTML statt im Canvas, Messung; dazu Blendfehler, Tiefe, Körnung) | `38-scrollvideo-und-einbettungen.md` |
 | React- und Next-Komponenten, shadcn/ui | `11-komponenten-shadcn.md` |
 | Marke/CI aus bestehender Seite auslesen (Logo, Farben, Schrift) | `20-markenextraktion-bestandsseite.md` |
 | Bildhintergründe, Sektionstrennung, visuelle Hierarchie | `21-sektionshintergruende-hierarchie.md` |
 | Referenzrecherche vor dem Entwurf: Awwwards, Dribbble, Land-book, recent.design, 21st.dev | `22-premium-designquellen.md` |
 | Fünf annotierte 21st.dev-Beispielkomponenten (Hero, FAQ, schwebende Elemente, Bewertungen, Integrationen) | `23-referenzkomponenten-21st.md` |
-| Was eine Referenz beeinflussen darf und was geschützt bleibt, Rangfolge | `24-designsystem-vorrang.md` |
+| Was eine Referenz beeinflussen darf und was geschützt bleibt, Rangfolge, welche Stufe ein Designsystem aus Claude Design hat | `24-designsystem-vorrang.md` |
 | Musterbibliothek, Design DNA, Konfidenzmodell, wann erweitern statt neu anlegen | `25-designmuster-bibliothek.md` |
 | Lesart, drei Regler, Konsistenzsperren, Heldenregeln, Katalog der KI-Tells, Vorflugcheck | `26-geschmack-und-ki-tells.md` |
 | Bestehende Seite überarbeiten: Modus erkennen, was sich nie still ändert, Hebel in Reihenfolge | `27-redesign-bestand.md` |
@@ -176,7 +176,7 @@ node scripts/pruefe-kontrast.mjs      # Kontrastwerte der Rollen-Tokens
 node scripts/pruefe-platzhalter.mjs   # [[FEHLT]], data-copy-vorschlag, ausgelassener Code
 node scripts/pruefe-breakpoints.mjs http://localhost:4321 --bilder
 node scripts/pruefe-geschmack.mjs     # nach dem Build: Kicker-Quote, Laufbänder, CTA-Texte, KI-Tells, Standardschriften
-node scripts/pruefe-motion.mjs        # transition: all, scale(0), ease-in, Dauer über 300 ms, Reduzierung
+node scripts/pruefe-motion.mjs        # transition: all, scale(0), ease-in, Dauer über 300 ms, Reduzierung, Scrollvideo, 3D-Szene
 node scripts/pruefe-geo.mjs           # nach dem Build: KI-Crawler, Text im HTML, Gliederung, JSON-LD
 node scripts/pruefe-aktualitaet.mjs   # nach dem Build: Copyright-Jahr, Stand-Angaben, Jahr im Titel
 ```
