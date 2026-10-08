@@ -87,6 +87,17 @@ Ab etwa 1.000 relevanten Sitzungen und 50 Conversions pro Variante und Monat loh
 echter Test. Dann gilt: eine Variable je Test, vorher festgelegte Laufzeit, vorher
 festgelegtes Erfolgskriterium, kein Abbruch beim ersten erfreulichen Zwischenstand.
 
+**Was zuerst getestet wird:** Headline mit Unterzeile, dann das Bild im Heldenbereich, dann der
+Knopftext, dann der Beleg. Der erste Bildschirm hat den größten Hebel. Wechselt die Headline, muss das
+Bild noch dazu passen, sonst testet man zwei Dinge.
+
+**Jeder Test bekommt einen Satz vorab:** „Wir glauben, dass Headline B mehr Anfragen bringt, weil
+sie das Ergebnis konkret nennt." Ohne den Satz ist ein Gewinner ein Zufall, aus dem man nichts lernt.
+
+**Vor jedem Test und bei zu wenig Besuchern:** fünf Fremden die Seite fünf Sekunden zeigen und fragen,
+was angeboten wird und was sie als Nächstes tun würden (Erinnerungs- und Aufgabentest,
+`36-kundenpsychologie-erwartung-reiz-begruendung.md`).
+
 ## Optional: Kundendashboard
 
 Analytics-Oberflächen sind für Kunden schwer lesbar. Als optionale Zusatzleistung kann ein

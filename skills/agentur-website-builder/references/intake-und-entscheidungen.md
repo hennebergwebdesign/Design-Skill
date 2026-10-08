@@ -146,6 +146,7 @@ Fehler, Erfolg. Antworten, die der Kunde nicht kennt, werden als offen markiert,
 | mehrere Sprachen im Material | Mehrsprachigkeit und Sprachumschaltung |
 | Blog, Referenzen, Stellenanzeigen | Content Collections oder CMS |
 | Standorte, Filialen | Kartenintegration, erst nach Einwilligung laden |
+| Betrieb mit Einzugsgebiet (Handwerk, Praxis, Gastronomie) | eine Schreibweise für Name, Adresse, Telefon, Orte mit echten Aufträgen für Ortsseiten, wer das Unternehmensprofil pflegt, siehe `../../webdesign-conversion/references/46-lokale-sichtbarkeit.md` |
 | bestehende Domain mit Rankings | Weiterleitungskonzept, Zugriff auf Search Console |
 | Stellenanzeige oder Karriereseite | Bewerberdatenschutz, Löschfrist, JobPosting-Auszeichnung |
 

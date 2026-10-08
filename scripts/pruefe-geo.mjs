@@ -26,6 +26,15 @@
     8. FAQPage mit Fragen oder Antworten, die nicht sichtbar auf der Seite stehen: FEHLER.
        Unsichtbares Markup ist ein Richtlinienverstoss, siehe 05-seo-sichtbarkeit.md.
     9. Article oder BlogPosting ohne dateModified oder datePublished: WARNUNG.
+  Je Seite, Grundlagen der Auffindbarkeit (05-seo-sichtbarkeit.md, 46-lokale-sichtbarkeit.md):
+   10. Kein oder leerer <title>: FEHLER.
+   11. Titel ueber 60 Zeichen: WARNUNG. Google kuerzt nach Pixelbreite, 60 Zeichen sind die
+       Naeherung aus Kapitel 05, kein Messwert.
+   12. Keine Meta-Beschreibung oder eine ueber 160 Zeichen: WARNUNG.
+   13. Derselbe Titel auf mehreren Seiten: WARNUNG. Jeder Titel auf der Domain ist einmalig.
+   14. LocalBusiness (oder Untertyp) im JSON-LD, dessen Telefonnummer oder Strasse nicht
+       sichtbar auf der Seite steht: WARNUNG. Name, Adresse und Telefon stehen als Text auf
+       der Seite und gleich im Markup, sonst widersprechen sich Seite und Daten.
   Mit --llms: ob llms.txt existiert, nur als Information.
 
   WAS NICHT GEPRUEFT WIRD
@@ -227,6 +236,95 @@ export function seiteAnalysieren(html, dateiname = 'index.html') {
   return { fehler, warnungen };
 }
 
+// ------------------------------------------------------------------ Auffindbarkeit
+
+const TITEL_MAX = 60;
+const BESCHREIBUNG_MAX = 160;
+/* LocalBusiness und die haeufigsten Untertypen. Ein Untertyp, der hier fehlt, wird nicht
+   geprueft, das ist eine Luecke, kein Freibrief. */
+const ORTSTYPEN = new Set(['LocalBusiness', 'ProfessionalService', 'HomeAndConstructionBusiness',
+  'Plumber', 'Electrician', 'RoofingContractor', 'GeneralContractor', 'HVACBusiness', 'Locksmith',
+  'Painter', 'HousePainter', 'MovingCompany', 'AutoRepair', 'Dentist', 'Physician', 'MedicalClinic',
+  'Restaurant', 'Cafe', 'Bakery', 'FoodEstablishment', 'Store', 'HairSalon', 'BeautySalon',
+  'LegalService', 'Attorney', 'AccountingService', 'RealEstateAgent', 'Hotel', 'LodgingBusiness']);
+
+const ziffern = (s) => String(s).replace(/\D/g, '');
+
+/** Liest Titel und Meta-Beschreibung einer Seite. */
+export function kopfLesen(html) {
+  const t = html.match(/<title\b[^>]*>([\s\S]*?)<\/title>/i);
+  const d = html.match(/<meta\b(?=[^>]*\bname\s*=\s*["']description["'])[^>]*\bcontent\s*=\s*(["'])([\s\S]*?)\1[^>]*>/i);
+  return {
+    titel: t ? sichtbarerText(t[1]) : null,
+    beschreibung: d ? sichtbarerText(d[2]) : null,
+  };
+}
+
+/**
+ * Regeln 10 bis 12 und 14. Getrennt von seiteAnalysieren, weil sie Auffindbarkeit betreffen,
+ * nicht die Lesbarkeit fuer KI-Antworten. Liefert { fehler: [], warnungen: [] }.
+ */
+export function auffindbarkeitAnalysieren(html, dateiname = 'index.html') {
+  const fehler = [];
+  const warnungen = [];
+  if (/<meta[^>]+name=["']robots["'][^>]*noindex/i.test(html)) return { fehler, warnungen };
+  if (/<meta[^>]+http-equiv=["']refresh["']/i.test(html)) return { fehler, warnungen };
+  if (/^404(\.html)?$/i.test(basename(dateiname))) return { fehler, warnungen };
+
+  /* Ein Schnipsel ohne <head> (Vorlage, Teilansicht) hat keinen Kopf zu pruefen. */
+  if (/<head\b/i.test(html)) {
+    const { titel, beschreibung } = kopfLesen(html);
+    if (!titel) {
+      fehler.push({ regel: 'titel-fehlt', meldung: 'Kein oder leerer <title>',
+        tipp: 'Jede Seite bekommt einen eigenen Titel: Hauptkeyword vorn, Nutzen, Ort oder Marke. Siehe 05-seo-sichtbarkeit.md, Schritt 5.3.' });
+    } else if (titel.length > TITEL_MAX) {
+      warnungen.push({ regel: 'titel-lang', meldung: `Titel mit ${titel.length} Zeichen: „${titel.slice(0, 70)}"`,
+        tipp: `Höchstens ${TITEL_MAX} Zeichen, das Wichtigste vorn. Was danach kommt, schneidet Google ab.` });
+    }
+    if (!beschreibung) {
+      warnungen.push({ regel: 'beschreibung-fehlt', meldung: 'Keine Meta-Beschreibung',
+        tipp: 'Sonst wählt Google einen Ausschnitt. Problem, Nutzen, Handlung, höchstens 160 Zeichen.' });
+    } else if (beschreibung.length > BESCHREIBUNG_MAX) {
+      warnungen.push({ regel: 'beschreibung-lang', meldung: `Meta-Beschreibung mit ${beschreibung.length} Zeichen`,
+        tipp: `Höchstens ${BESCHREIBUNG_MAX} Zeichen, die Handlung nicht ans abgeschnittene Ende stellen.` });
+    }
+  }
+
+  // 14 Name, Adresse, Telefon sichtbar und gleich im Markup
+  const text = sichtbarerText(html.replace(/^[\s\S]*?<body\b[^>]*>/i, ''));
+  const textZiffern = ziffern(text);
+  const textNormal = normal(text);
+  for (const m of html.matchAll(/<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)) {
+    let daten;
+    try { daten = JSON.parse(m[1]); } catch { continue; }
+    for (const { typ, knoten } of typenVon(daten)) {
+      if (!ORTSTYPEN.has(typ)) continue;
+      const fehlt = [];
+      const tel = knoten.telephone ? ziffern(knoten.telephone) : '';
+      /* Nur die letzten sieben Ziffern vergleichen: +49 721 und 0721 sind dieselbe Nummer. */
+      if (tel.length >= 7 && !textZiffern.includes(tel.slice(-7))) fehlt.push(`Telefon ${knoten.telephone}`);
+      const strasse = knoten.address?.streetAddress;
+      if (strasse && !textNormal.includes(normal(String(strasse)))) fehlt.push(`Straße ${strasse}`);
+      if (fehlt.length) {
+        warnungen.push({ regel: 'nap-nicht-sichtbar', meldung: `${typ} im JSON-LD nennt, was nicht sichtbar auf der Seite steht: ${fehlt.join(', ')}`,
+          tipp: 'Name, Adresse und Telefon als Text auf die Seite (Fuß, Kontakt) und gleich geschrieben wie im Markup, im Impressum und im Unternehmensprofil. Siehe 46-lokale-sichtbarkeit.md.' });
+      }
+    }
+  }
+  return { fehler, warnungen };
+}
+
+/** Regel 13: liefert je doppeltem Titel die Liste der Seiten. Eingabe: Map Titel -> [Seiten]. */
+export function titelDoppelt(titelJeSeite) {
+  const nachTitel = new Map();
+  for (const [seite, titel] of titelJeSeite) {
+    if (!titel) continue;
+    const k = titel.toLowerCase();
+    nachTitel.set(k, [...(nachTitel.get(k) || []), seite]);
+  }
+  return [...nachTitel.entries()].filter(([, seiten]) => seiten.length > 1).map(([titel, seiten]) => ({ titel, seiten }));
+}
+
 // ------------------------------------------------------------------ Aufruf
 
 function htmlSammeln(pfad, liste = []) {
@@ -270,13 +368,21 @@ function main() {
   if (llms) console.log(`\nllms.txt: ${existsSync(join(ziel, 'llms.txt')) ? 'vorhanden' : 'nicht vorhanden'} (Information, keine Maßnahme, siehe 31-ki-sichtbarkeit-geo.md § 5)`);
 
   const seiten = htmlSammeln(ziel);
+  const titelJeSeite = new Map();
   for (const datei of seiten) {
     const rel = relative(process.cwd(), datei);
     let inhalt;
     try { inhalt = readFileSync(datei, 'utf8'); } catch { continue; }
-    const r = seiteAnalysieren(inhalt, datei);
-    r.fehler.forEach((b) => fehler.push({ ...b, ort: rel }));
-    r.warnungen.forEach((b) => warnungen.push({ ...b, ort: rel }));
+    for (const r of [seiteAnalysieren(inhalt, datei), auffindbarkeitAnalysieren(inhalt, datei)]) {
+      r.fehler.forEach((b) => fehler.push({ ...b, ort: rel }));
+      r.warnungen.forEach((b) => warnungen.push({ ...b, ort: rel }));
+    }
+    const istInhaltsseite = !/noindex|http-equiv=["']refresh/i.test(inhalt) && !/^404(\.html)?$/i.test(basename(datei));
+    if (istInhaltsseite) titelJeSeite.set(rel, kopfLesen(inhalt).titel);
+  }
+  for (const { titel, seiten: gleiche } of titelDoppelt(titelJeSeite)) {
+    warnungen.push({ ort: gleiche.join(', '), regel: 'titel-doppelt', meldung: `Derselbe Titel auf ${gleiche.length} Seiten: „${titel.slice(0, 60)}"`,
+      tipp: 'Jeder Titel auf der Domain ist einmalig, sonst konkurrieren die Seiten miteinander. Siehe 05-seo-sichtbarkeit.md.' });
   }
   console.log(`\nGeprüft: ${seiten.length} Seiten`);
 

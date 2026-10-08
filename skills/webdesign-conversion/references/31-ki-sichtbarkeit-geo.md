@@ -139,7 +139,9 @@ Das Skript meldet je KI-Crawler den Zustand in der `robots.txt` (erlaubt, gesper
 `*` geregelt), und je Seite: leeres HTML (Inhalt erst per JavaScript), keine oder mehrere
 `h1`, übersprungene Überschriftenebenen, ungültiges JSON-LD, und `FAQPage` mit Fragen, die
 nicht sichtbar auf der Seite stehen. Ob eine Sperre gewollt ist, entscheidet es nicht: es
-benennt sie.
+benennt sie. Seit 4.17 meldet es außerdem fehlende, zu lange und doppelte Titel, fehlende oder zu
+lange Beschreibungen und ein LocalBusiness-Markup, dessen Telefon oder Straße nicht sichtbar ist
+(`05-seo-sichtbarkeit.md`, `46-lokale-sichtbarkeit.md`).
 
 ## Verwandte Kapitel
 

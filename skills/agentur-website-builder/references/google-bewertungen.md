@@ -56,6 +56,10 @@ anzeigen sowie einen Link zum vollständigen Profil.
 * die Karten sind Kacheln und bekommen damit einen Hover-Effekt, siehe die harte Grenze in
   `../../webdesign-conversion/SKILL.md`
 
+Wie der Kunde zu Bewertungen kommt (Zeitpunkt, Kurzlink, keine Gegenleistung, nicht filtern,
+antworten), ist kein Teil der Darstellung, gehört aber in die Übergabe:
+`../../webdesign-conversion/references/46-lokale-sichtbarkeit.md`, Abschnitt 4.
+
 ## Datenschutz
 
 Weil der Abruf serverseitig läuft und keine Daten des Besuchers an Google gehen, ist der
