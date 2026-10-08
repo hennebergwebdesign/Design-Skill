@@ -64,6 +64,7 @@ Bewährte Gliederung:
 ## Formulare und Datenfluss
 ## Umgebungsvariablen: was passiert, wenn sie fehlt
 ## Consent und Dienste
+## Änderungsregeln: nur die genannte Sektion, Werte aus Tokens, Prüfung danach
 ## Offene Punkte: jede Lücke, sichtbar
 ## Änderungsverlauf: was, warum, wie geprüft
 ```

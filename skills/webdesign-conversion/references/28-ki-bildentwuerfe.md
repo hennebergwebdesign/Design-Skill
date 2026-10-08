@@ -97,6 +97,31 @@ nur Text und Abstände größer: sie ist kein neuer Entwurf.
 Bild zählt, wie viel Platz eine Zeile braucht, nicht die Rechtschreibung. Der echte Text kommt
 aus dem Markenbrief, nie aus dem Bild.
 
+## 3a. Varianten für eine gebaute Sektion, die schwach ist
+
+Der Ablauf oben entwirft Sektionen vor dem Code. Häufiger ist der andere Fall: die Seite steht, und
+eine Sektion (meist Problem, Ablauf oder Vergleich) bleibt das Standardraster. Eine Beschreibung in
+Worten („mach das interessanter") liefert dann die nächste Schablone. Ein Bild als Vorgabe ist
+genauer.
+
+| Schritt | Regel | Grund |
+|---|---|---|
+| 1 Ausgang | Screenshot der gebauten Sektion bei 1440 px, dazu Branche, Zielgruppe, Aufgabe der Sektion | das Modell sieht die echten Elemente und die echten Farben |
+| 2 Auftrag | vier bis fünf **verschiedene Layouts**, exakt dieselben Elemente (keines dazu, keines weg), Farben aus der Palette, keine aufwendigen Illustrationen, Platzhalter statt Text, die Sperren aus Abschnitt 2 | aufwendige Illustrationen lassen sich nicht in HTML und SVG bauen, neue Elemente sind neue Inhalte ohne Beleg |
+| 3 Prüfen | ändert eine Variante nur Farben oder Abstände, ist sie keine Variante. Neu anfordern, mit dem Hinweis, dass das Layout sich ändern soll | sonst wird zwischen vier Fassungen desselben Rasters gewählt |
+| 4 Abbruch | ignoriert das Modell den Auftrag zweimal (fügt Elemente hinzu, wechselt die Palette), neue Sitzung mit demselben Auftrag statt Diskussion | in einer Sitzung, die einmal abgedriftet ist, wiegt der eigene Verlauf schwerer als die Korrektur |
+| 5 Wahl | genau eine Variante je Sektion, nach der Lesart aus Kapitel 26, nicht nach Gefallen. Verspielte oder kindliche Varianten fallen bei ernster Lesart weg, ruhige Linien wirken seriöser | eine Seite aus fünf Lieblingsvarianten hat keine Linie |
+| 6 Ablage | `entwuerfe/sektionen/03-ablauf.png`, nummeriert nach der Sektionsfolge, nicht im Repository der Kundenseite ausgeliefert | der Bauauftrag kann jede Sektion eindeutig einem Bild zuordnen |
+| 7 Bauauftrag | je Sektion ein Satz: welche Sektion, welches Bild, was sich nicht ändert („Text und Farben bleiben, nur das Layout folgt Bild 3") | ohne die Grenze baut das Modell den Text gleich mit um |
+| 8 Mobil | eine Desktopgrafik (Kreis mit vier Punkten, Zeitleiste quer) bekommt eine eigene Mobilfassung, die dieselbe Idee zeigt, nicht dieselben Elemente untereinander | untereinander gestapelt verliert die Grafik ihre Aussage und bleibt nur Dekoration |
+
+Danach gelten Auswertung (Abschnitt 4) und Treueprüfung (Abschnitt 5) unverändert. Eine Lieblingssektion
+einer Referenzseite als Vorbild ist kein Sonderweg: sie läuft über die Freigabe der Designrecherche
+(harte Grenze), und übernommen wird das Prinzip, nicht die Sektion (`24-designsystem-vorrang.md`).
+
+Diese Variantensuche ist ein Werkzeug innerhalb eines der zwei subjektiven Durchgänge aus
+`29-pruefdurchgaenge-und-vokabular.md`, kein zusätzlicher.
+
 ## 4. Vom Bild zum Code: die Auswertung
 
 Zwischen Bild und Code steht eine schriftliche Auswertung je Sektion. Ohne sie baut das Modell

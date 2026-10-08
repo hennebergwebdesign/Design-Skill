@@ -34,9 +34,14 @@ Nicht „kleine und mittlere Unternehmen". Wer genau, in welcher Situation, mit 
 | Was er stattdessen gerade tut | [[FEHLT]] |
 | Wovor er Angst hat | [[FEHLT]] |
 | Wie er die Sache selbst nennt | [[FEHLT]] |
+| Auslöser: warum gerade jetzt | [[FEHLT]] |
+| Was er schon versucht hat, und warum es nicht trug | [[FEHLT oder „nichts"]] |
+| Wie weit er ist: kennt das Problem nicht, kennt keine Lösung, kennt den Anbieter nicht, kennt den Anbieter | [[FEHLT]] |
 
 Die letzte Zeile ist die wichtigste: das Vokabular der Zielgruppe schlägt das Vokabular des
 Unternehmens. Jemand sucht „Dach undicht", nicht „Bauwerksabdichtung im Bestand".
+Die acht Recherchefragen dahinter und woher die Antworten kommen: `01-strategie-positionierung.md`,
+Schritt 1.5. Wortwahl aus öffentlichen Bewertungen ist erlaubt, ein fremdes Zitat als Kundenstimme nie.
 
 ## 3 Kernproblem und Versprechen
 
@@ -71,6 +76,19 @@ selbst benutzt; leer lassen, wenn es keines gibt):
 Ergebnis eintritt):
 
 > [[FEHLT: ehrliche Einschränkung]]
+
+**Hebel** (drei bis fünf Sätze, warum diese Zielgruppe jetzt handeln würde, aus Kundenmaterial
+und Recherche, nicht ausgedacht):
+
+> [[FEHLT: Hebel 1 bis 3]]
+
+**Hürde und Herkunft** (bestimmt Länge und Belegdichte der Seite, siehe
+`45-huerde-laenge-und-leserfuehrung.md`):
+
+| Feld | Wert |
+|---|---|
+| Stufe | ☐ niedrige Hürde ☐ hohe Hürde ☐ Kauf mit Vorwissen ☐ Unternehmensseite |
+| Woher die Besucher kommen | [[FEHLT: Anzeige, Suche, eigener Kanal, Empfehlung]] |
 
 ## 4 Die fünf Einwände
 

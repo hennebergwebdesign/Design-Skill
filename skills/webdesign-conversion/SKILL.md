@@ -4,7 +4,7 @@ description: "Vollständiges System für conversion-orientiertes Webdesign im DA
 license: MIT
 metadata:
   author: Henneberg Webdesign
-  version: 2.17.0
+  version: 2.18.0
 ---
 
 # Webdesign Conversion System
@@ -99,6 +99,8 @@ Lies gezielt nach, statt alles zu laden.
 | Headlines, Buttontexte, Fehlermeldungen, Angebot, Einwände, Deutsch | `12-copywriting.md` |
 | CTA, Formulare, Trust, Über-uns-Seite | `06-conversion-architektur.md` |
 | Stellenanzeige, Karriereseite, EVP, AGG, Bewerberdaten | `19-recruiting-funnel.md` |
+| Recherche vor dem Text: acht Fragen, wie weit die Zielgruppe ist, Wortwahl aus öffentlichen Stimmen, Hebel | `01-strategie-positionierung.md`, Schritt 1.5 |
+| Wie lang die Seite wird und in welcher Folge (niedrige Hürde, hohe Hürde, Kauf mit Vorwissen), Belege früh und zweimal, offene Schleifen, Stakkato, „kostenlos" bei Premium | `45-huerde-laenge-und-leserfuehrung.md` |
 
 **Gestaltung**
 
@@ -121,7 +123,7 @@ Lies gezielt nach, statt alles zu laden.
 | Musterbibliothek, Design DNA, Konfidenzmodell, wann erweitern statt neu anlegen | `25-designmuster-bibliothek.md` |
 | Lesart, drei Regler, Konsistenzsperren, Heldenregeln, Katalog der KI-Tells, Vorflugcheck | `26-geschmack-und-ki-tells.md` |
 | Bestehende Seite überarbeiten: Modus erkennen, was sich nie still ändert, Hebel in Reihenfolge | `27-redesign-bestand.md` |
-| Entwürfe mit einem Bildmodell erzeugen, auswerten, treu umsetzen, und was sie nie belegen | `28-ki-bildentwuerfe.md` |
+| Entwürfe mit einem Bildmodell erzeugen, auswerten, treu umsetzen, und was sie nie belegen; Varianten für eine schwache gebaute Sektion (3a) | `28-ki-bildentwuerfe.md` |
 | Kurzvokabular fürs Feedback, vier Blickwinkel, wie viele Prüfdurchgänge vor der Übergabe | `29-pruefdurchgaenge-und-vokabular.md` |
 | Soll es animieren, Kurven, Dauern, Motion-Review mit zehn Maßstäben, Vokabular für Animationsfeedback | `30-motion-pruefung.md` |
 | Reihenfolge Erwartung, Reiz, Begründung, mentale Modelle, Gruppieren, Erinnerungs- und Aufgabentest | `36-kundenpsychologie-erwartung-reiz-begruendung.md` |
@@ -173,7 +175,7 @@ node scripts/pruefe-tokens.mjs        # hartcodierte Farb-, Abstands- und Schrif
 node scripts/pruefe-kontrast.mjs      # Kontrastwerte der Rollen-Tokens
 node scripts/pruefe-platzhalter.mjs   # [[FEHLT]], data-copy-vorschlag, ausgelassener Code
 node scripts/pruefe-breakpoints.mjs http://localhost:4321 --bilder
-node scripts/pruefe-geschmack.mjs     # nach dem Build: Kicker-Quote, Laufbänder, CTA-Texte, KI-Tells
+node scripts/pruefe-geschmack.mjs     # nach dem Build: Kicker-Quote, Laufbänder, CTA-Texte, KI-Tells, Standardschriften
 node scripts/pruefe-motion.mjs        # transition: all, scale(0), ease-in, Dauer über 300 ms, Reduzierung
 node scripts/pruefe-geo.mjs           # nach dem Build: KI-Crawler, Text im HTML, Gliederung, JSON-LD
 node scripts/pruefe-aktualitaet.mjs   # nach dem Build: Copyright-Jahr, Stand-Angaben, Jahr im Titel
@@ -191,7 +193,7 @@ node --test 'scripts/tests/*.test.mjs'                            # Tests der Sk
 ```
 
 `deslop-check.mjs` prüft fünf Kriterien: Floskeln (dazu die Satzmuster Kontrastfigur,
-Verneinungsreihe und selbstbeantwortete Frage), Nominalstil, leere Superlative, fehlende
+Verneinungsreihe, selbstbeantwortete Frage und Stakkato), Nominalstil, leere Superlative, fehlende
 Belege und die Dreierfigur. Er gilt für **eigene** Textvorschläge. Gelieferte Kundentexte
 werden nicht geprüft und nicht umgeschrieben.
 
@@ -243,9 +245,10 @@ Diese Regeln gelten immer und werden nicht wegdiskutiert:
   Kompositum („E-Mail-Adresse") bleiben erlaubt. Geprüft mit
   `scripts/pruefe-striche.mjs`, Begründung in `references/12-copywriting.md`.
 - **Keine Standardschrift ohne Vorgabe.** Liegt keine Kundenschrift vor, sind Inter,
-  Roboto, Open Sans, Poppins, Montserrat und Lato gesperrt. Stattdessen zwei Kandidaten mit
-  einer Begründung aus Branche und Zielgruppe vorschlagen. Schriften werden immer selbst
-  gehostet, nie über ein fremdes CDN. Siehe `references/10-visuelle-richtung.md`.
+  Roboto, Open Sans, Poppins, Montserrat, Lato und Plus Jakarta Sans gesperrt. Stattdessen
+  zwei Kandidaten mit einer Begründung aus Branche und Zielgruppe vorschlagen. Schriften
+  werden immer selbst gehostet, nie über ein fremdes CDN. Siehe
+  `references/10-visuelle-richtung.md`, geprüft mit `scripts/pruefe-geschmack.mjs`.
 - **Keine Silbentrennung.** `hyphens: auto` trennt deutsche Komposita mitten im Wort und
   gehört nicht auf eine Verkaufsseite.
 - **Heldenbereich immer auf voller Bildschirmhöhe.** Auf jeder Breite und jeder Fensterhöhe

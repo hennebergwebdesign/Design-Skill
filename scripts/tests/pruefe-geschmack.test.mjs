@@ -152,6 +152,42 @@ test('Standardserife nur ohne Markenvorgabe', () => {
   assert.deepEqual(regeln(quelleAnalysieren('@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif");')), ['standardserife']);
 });
 
+test('Standardgrotesken der Sperrliste werden ohne Markenvorgabe gemeldet', () => {
+  assert.deepEqual(regeln(quelleAnalysieren("body { font-family: 'Inter', sans-serif; }")), ['standardschrift']);
+  assert.deepEqual(regeln(quelleAnalysieren("  --schrift-text: 'Plus Jakarta Sans', system-ui;")), ['standardschrift']);
+  assert.deepEqual(regeln(quelleAnalysieren("import '@fontsource-variable/montserrat';")), ['standardschrift']);
+  assert.deepEqual(regeln(quelleAnalysieren('<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400">')), ['standardschrift']);
+});
+
+test('ähnliche Familien und Markenvorgaben bleiben ohne Befund', () => {
+  assert.deepEqual(quelleAnalysieren("h1 { font-family: 'Inter Tight', sans-serif; }"), []);
+  assert.deepEqual(quelleAnalysieren("h2 { font-family: 'Roboto Slab', serif; }"), []);
+  assert.deepEqual(quelleAnalysieren("p { font-family: 'Interstate', sans-serif; }"), []);
+  assert.deepEqual(quelleAnalysieren("import '@fontsource/roboto-mono';"), []);
+  assert.deepEqual(quelleAnalysieren("body { font-family: 'Inter', sans-serif; }", { markeText: '{"text":{"familie":"inter"},"zielgruppe":"interessenten"}' }), []);
+  assert.deepEqual(regeln(quelleAnalysieren("body { font-family: 'Inter', sans-serif; }", { markeText: '{"zielgruppe":"interessenten aus dem internet"}' })), ['standardschrift']);
+});
+
+test('die Pille über der Überschrift zählt als Kicker', () => {
+  const html = seite(
+    sektion('<span class="badge">Neu</span><h1>A</h1>'),
+    sektion('<span class="rounded-full px-3 text-xs">Leistungen</span><h2>B</h2>'),
+    sektion('<h2>C</h2>'),
+  );
+  const { fehler } = seiteAnalysieren(html);
+  assert.deepEqual(regeln(fehler), ['kicker-quote']);
+});
+
+test('ein Badge ohne Überschrift dahinter ist kein Kicker', () => {
+  const html = seite(
+    sektion('<h1>A</h1><p>Text</p>'),
+    sektion('<h2>B</h2><ul><li><span class="badge">Geöffnet</span> Montag</li><li><span class="badge">Geschlossen</span> Sonntag</li></ul>'),
+    sektion('<h2>C</h2>'),
+  );
+  const { fehler } = seiteAnalysieren(html);
+  assert.equal(fehler.length, 0);
+});
+
 test('Premium-Standardpalette nur ohne Markenvorgabe', () => {
   const css = ':root { --flaeche: #F5F1EA; --akzent: #b08947; }';
   const befund = quelleAnalysieren(css);

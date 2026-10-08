@@ -72,6 +72,17 @@ Fehlende Angaben, die nur der Kunde liefern kann, kommen als
 `[[FEHLT: Anzahl abgeschlossener Projekte]]` in den Text und in dieselbe Liste. Nie eine
 plausible Zahl einsetzen.
 
+## Entwurf aus einem Modell einsetzen
+
+Entsteht ein Textvorschlag mit einem Modell, kommt er als reiner Text mit dem Sektionsnamen als
+Überschrift, nie als Markup. Das Modell füllt nur die Lücken der Seitenstruktur, erfindet keine neuen
+Sektionen und fasst das HTML nicht an. Danach wird er Satz für Satz gelesen, mit der Kurzprobe aus
+`../../webdesign-conversion/references/45-huerde-laenge-und-leserfuehrung.md`, Abschnitt 9: gesprochen,
+Nutzen für den Leser, wahr laut Markenbrief. Typische Funde: Klassennamen oder `span` im Text,
+Zwischenzeilen im Akkordeon, die nichts sagen, und eine Leistung, die das Modell aus der Liste
+herausgegriffen hat, als wäre sie das ganze Angebot. Eingesetzt wird in einer eigenen Sitzung, siehe
+`aenderungsrunden-und-layoutschutz.md`, Abschnitt 5.
+
 ## Muster der stärksten Wettbewerber, nicht ihre Sätze
 
 Vor dem eigenen Text lohnt der Blick auf die Texte der fünf stärksten Wettbewerber der Nische

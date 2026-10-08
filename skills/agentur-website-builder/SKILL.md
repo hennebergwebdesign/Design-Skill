@@ -4,7 +4,7 @@ description: Baut komplette Kundenwebsites mit Astro und Cloudflare Pages nach A
 license: Proprietär, That's it. Marketing / VFDESIGN LTD
 metadata:
   author: That's it. Marketing / Henneberg Webdesign
-  version: 2.14.0
+  version: 2.15.0
 ---
 
 # Agentur Website Builder
@@ -134,7 +134,9 @@ Bevor irgendetwas gefragt wird:
 4. Bilder im Repo zählen und den Bedarf schätzen.
 5. Seitentyp und Conversionziel bestimmen, dann das passende Playbook lesen:
    `../webdesign-conversion/playbooks/homepage.md`, `landingpage.md` oder
-   `recruiting-funnel.md`.
+   `recruiting-funnel.md`. Bei einer Landingpage zusätzlich die Hürde der Handlung festlegen
+   (niedrige Hürde, hohe Hürde, Kauf mit Vorwissen), sie bestimmt Länge und Sektionsfolge, siehe
+   `../webdesign-conversion/references/45-huerde-laenge-und-leserfuehrung.md`.
 
 ### Phase 2: Rückfragen
 
@@ -271,6 +273,11 @@ Das gilt für Fehler. Für die Geschmacksfrage danach (Kritik, Feinschliff, muti
 gibt es eine Obergrenze statt einer endlosen Schleife, siehe
 `../webdesign-conversion/references/29-pruefdurchgaenge-und-vokabular.md`.
 
+Jede Änderung an einer gebauten Seite, ob aus Prüfung, Feinschliff oder Rückmeldung des Kunden,
+läuft nach `references/aenderungsrunden-und-layoutschutz.md`: gebündelt, mit benannter Sektion und
+dem, was bleibt, danach Prüfung auf drei Breiten und der Nachbarsektionen. Text und
+Leistungsoptimierung bekommen je eine eigene Sitzung.
+
 ### Phase 6: Übergabe
 
 Keine `HANDOVER.md`. Stattdessen:
@@ -331,6 +338,7 @@ Abschnitte:
 ## Formulare und Datenfluss
 ## Umgebungsvariablen mit Zweck, ohne Werte
 ## Consent und eingesetzte Dienste
+## Änderungsregeln (Block aus references/aenderungsrunden-und-layoutschutz.md)
 ## Offene Punkte
 ## Änderungsverlauf mit Datum
 ```
@@ -363,6 +371,7 @@ Schwesterskill.
 | `references/chatbot-auf-der-website.md` | nur wenn ein KI Chatbot auf die Seite soll: Leitplanken, Wissensbasis, Gegenprobe, Datenschutz |
 | `references/moodboard-und-stylescape.md` | Phase 2 und 3, vor dem Bau: Moodboard intern, Stylescape zur Abnahme der Richtung |
 | `references/kundenabstimmung.md` | Phase 2, 3 und 6: Rollen beim Kunden, Präsentation, Rückmeldungen einsortieren |
+| `references/aenderungsrunden-und-layoutschutz.md` | jede Änderung an einer gebauten Seite: Rückmeldungen bündeln, Auftrag mit Sektion und „bleibt", Prüfung danach, eigene Sitzung für Text und Leistung, Block für die Projekt-`CLAUDE.md` |
 | `references/brand-extraktion.md` | jeder Relaunch und jede Brandingübernahme per URL: Farben, Schriften, Logo der eigenen Bestandsseite messen |
 | `references/firecrawl-recherche.md` | eine bekannte, alte oder fremde Seite crawlen oder scrapen, für Relaunch-Inventar oder Design-Referenz |
 | `references/designrecherche-ablauf.md` | Phase 3, sobald Referenzen gesucht, vorgelegt oder freigegeben werden |
@@ -385,6 +394,8 @@ Schwesterskill.
 | `../webdesign-conversion/references/43-hierarchie-raster-komposition.md` | Phase 3 und 4, beim Entscheiden über Hierarchie, Raster, Sektionsanteile und Animationssystem |
 | `../webdesign-conversion/references/44-gutes-festschreiben-und-rueckbauprobe.md` | Phase 5 und 6, wenn ein gutes Ergebnis für spätere Sektionen oder Kampagnen festgehalten wird |
 | `../webdesign-conversion/references/12-copywriting.md` | sobald Texte eingesetzt werden |
+| `../webdesign-conversion/references/45-huerde-laenge-und-leserfuehrung.md` | Phase 1 und 3 bei Landingpages: Länge und Sektionsfolge nach Hürde, Leserführung, Stakkato |
+| `../webdesign-conversion/references/01-strategie-positionierung.md` | Phase 2, Schritt 1.5: Recherche vor dem Text, acht Fragen, Hebel |
 | `../webdesign-conversion/references/07-recht-dsgvo.md` | Rechtstexte und Consentpflichten |
 | `../webdesign-conversion/references/04-barrierefreiheit-bfsg.md` | vor der Abnahme |
 | `../webdesign-conversion/references/05-seo-sichtbarkeit.md` | Metadaten und Relaunch |
