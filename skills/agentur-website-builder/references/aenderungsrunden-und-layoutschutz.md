@@ -10,6 +10,13 @@ Quelle: Kurs von Jakub Papert (Oktober 2026), dort als eigene Regeldatei im Proj
 Die Datei selbst wird im Kurs nicht gezeigt, die Regeln hier sind auf den Agenturstack übertragen.
 Herkunft in `CREDITS.md`, Version 4.15.
 
+**Zwei Quellen, ein scheinbarer Widerspruch.** Der Kurs aus 4.15 rät, Rückmeldungen in einem großen
+Auftrag zu bündeln, das Video aus 4.16 (Alex Sprogis) rät zu vielen kleinen Schritten statt eines
+Riesenauftrags. Entschieden: Korrekturen einer Runde werden gebündelt, weil sie unabhängig sind und
+gemeinsam geprüft werden. Eine Sektion, deren Wirkung erst entsteht (Abschnitt 1, letzte Zeile), wird in
+kleinen Schritten entwickelt. Der erste Bau einer Seite folgt dem freigegebenen Konzept, zuerst als
+Pilot einer Sektion (`../../webdesign-conversion/references/44-gutes-festschreiben-und-rueckbauprobe.md`).
+
 ## 1. Rückmeldungen bündeln
 
 | Regel | Grund |
@@ -17,6 +24,7 @@ Herkunft in `CREDITS.md`, Version 4.15.
 | Rückmeldungen einer Runde in **einem** Auftrag, nach Sektion sortiert | zehn Einzelaufträge erzeugen zehn Gelegenheiten, Nachbarn zu beschädigen, und zehn Prüfungen |
 | Erst einsortieren, dann ändern (`kundenabstimmung.md`, Abschnitt 3) | Geschmacksfragen und Fehler brauchen verschiedene Antworten |
 | Größere Umbauten (neue Sektion, neues Layout) getrennt von kleinen Korrekturen (Größe, Farbe, Zuschnitt) | ein Umbau braucht einen Bauauftrag mit Bild und Prüfung, eine Korrektur nicht |
+| Eine Erlebnissektion (3D-Szene, Scrollerzählung, Interaktion) in kleinen Schritten entwickeln, je Schritt eine Wirkung, je Schritt angesehen | wer fünf Änderungen an einer Szene auf einmal macht, sieht nicht, welche das Ruckeln oder den Fehler gebracht hat |
 
 ## 2. Der Änderungsauftrag
 

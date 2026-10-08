@@ -181,6 +181,17 @@ auflisten.
 * `public/images/BILDER.md` aktuell, jedes Motiv mit Herkunft und Freigabestatus
 * Datenschutzerklärung deckt jeden tatsächlich eingebauten Dienst ab, und keinen mehr
 * bei Relaunch: jede alte URL hat ein Ziel, Stichprobe geprüft
+* **ungefragte Ergänzungen geprüft:** Modelle bauen oft Dinge ein, die niemand verlangt hat
+  (ein Minispiel, eine interaktive Bilderwand, eine zusätzliche Statistik, ein animiertes Detail).
+  Jede wird einzeln entschieden: behalten, wenn sie dem Ziel der Seite dient und alle harten
+  Grenzen besteht, sonst streichen. Eine ungefragte Zahl, Stimme oder Auszeichnung wird immer
+  gestrichen oder `[[FEHLT: …]]`. Was bleibt, steht im Bericht unter „Gebaut", damit der Kunde es
+  nicht als Versehen liest
+* **generierter Code aufgeräumt:** Kommentare, die nur wiederholen, was die Zeile tut, raus;
+  Kommentare, die einen Grund nennen, bleiben (Konvention „jede ungewöhnliche Entscheidung bekommt
+  ihren Grund"). Auskommentierter Code, ungenutzte Komponenten, Stile und Abhängigkeiten raus. Grund:
+  ein Zuschauerkommentar zu einem Video über generierte Seiten nennt aufgeblähten Code als Hauptmangel,
+  und toter Code wird in der nächsten Sitzung für gültig gehalten
 
 ### 8a. Erinnerungstest und Aufgabentest
 
