@@ -66,3 +66,11 @@ test('Telefon im Markup, aber nicht auf der Seite, wird gemeldet', () => {
 test('ein Schnipsel ohne head bekommt keinen Kopfbefund', () => {
   assert.deepEqual(regeln(auffindbarkeitAnalysieren('<section><h2>Ablauf</h2><p>Text</p></section>')), []);
 });
+
+test('Bild ohne alt-Attribut ist ein Fehler, alt="" für Schmuck nicht', () => {
+  const ohne = auffindbarkeitAnalysieren(seite('<title>Dachdecker Karlsruhe</title>' + BESCHREIBUNG, '<h1>Dach</h1><img src="/bilder/dach.webp" width="800" height="600">'));
+  assert.ok(regeln(ohne).includes('bild-ohne-alt'));
+  assert.match(ohne.fehler.find((b) => b.regel === 'bild-ohne-alt').meldung, /dach\.webp/);
+  const schmuck = auffindbarkeitAnalysieren(seite('<title>Dachdecker Karlsruhe</title>' + BESCHREIBUNG, '<h1>Dach</h1><img src="/linie.svg" alt=""><img src="/dach.webp" alt="Steildach nach der Sanierung">'));
+  assert.ok(!regeln(schmuck).includes('bild-ohne-alt'));
+});

@@ -22,6 +22,19 @@ Was schon an anderer Stelle steht:
 | Karte erst nach Einwilligung | `../../agentur-website-builder/references/consent-und-dienste.md` |
 | Sichtbarkeit in KI-Antworten | `31-ki-sichtbarkeit-geo.md` |
 
+## Inhalt
+
+- 1\. Drei Orte, an denen lokal gefunden wird
+- 2\. Name, Adresse, Telefon überall gleich
+- 3\. Leistungsseiten und Ortsseiten
+- 4\. Bewertungen: der Ablauf beim Kunden
+- 5\. Verzeichnisse
+- 6\. Das Unternehmensprofil: Prüfliste für die Übergabe
+- 7\. Messen und pflegen
+- 8\. Bewusst nicht übernommen
+- 9\. Ungeprüft
+- Verwandte Kapitel
+
 ## 1. Drei Orte, an denen lokal gefunden wird
 
 | Ort | Was dort zählt | Was die Agentur liefert |

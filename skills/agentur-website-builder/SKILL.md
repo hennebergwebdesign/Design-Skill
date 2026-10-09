@@ -4,7 +4,7 @@ description: Baut komplette Kundenwebsites mit Astro und Cloudflare Pages nach A
 license: Proprietär, That's it. Marketing / VFDESIGN LTD
 metadata:
   author: That's it. Marketing / Henneberg Webdesign
-  version: 2.17.0
+  version: 2.18.0
 ---
 
 # Agentur Website Builder
@@ -104,6 +104,9 @@ Kundenordner, Deploy-Skripte oder Cloudflare-Zugänge arbeitet:
   gerade „denkt".
 * Vor jedem großen Lauf (Relaunch, Umbau vieler Dateien, Polierschleife) ein Git-Commit, bei
   Kundendaten außerhalb von Git ein Backup.
+* Modus ohne Rückfragen („Berechtigungen umgehen") nur in einer isolierten Umgebung, nie mit Kundenzugängen.
+  Einen fremden Skill oder ein Plugin vor der Installation lesen, auch seine Skripte: sie laufen mit
+  denselben Rechten wie der Agent.
 * Der Anlass im Video (ein Entwickler berichtete, ein Modell habe beinahe seine Mac-Dateien gelöscht)
   ist ein Einzelbericht des Videos, hier nicht geprüft. Das Restrisiko besteht bei jedem Modell
   unabhängig davon.
@@ -205,6 +208,8 @@ Ohne Freigabe wird nichts abgerufen und nichts abgelegt. Tor 2 entscheidet spät
 Muster dauerhaft ins Skillwissen wandert, siehe dasselbe Kapitel.
 
 Moodboard intern, Stylescape zur Abnahme der Richtung, siehe `references/moodboard-und-stylescape.md`.
+Werden mehrere Richtungen gezeigt, dann als Varianten mit Preiszeile, die Wahl in `marke.json`, siehe
+`../webdesign-conversion/references/47-richtung-varianten-und-subtraktion.md`.
 Soll die Seite ein Erlebnis sein (Marke, Launch, Kampagne), stehen im Konzept drei Erlebnisideen mit
 Scrollablauf, Technik, Aufwand und Risiko, siehe
 `../webdesign-conversion/references/38-scrollvideo-und-einbettungen.md`, Abschnitt 1a. Bei Handwerk,
@@ -266,6 +271,9 @@ node scripts/pruefe-platzhalter.mjs --launch
 node scripts/pruefe-breakpoints.mjs http://localhost:4321 --bilder
 node scripts/pruefe-geschmack.mjs
 ```
+
+Die Strichregel läuft zusätzlich als Hook nach jedem Schreiben (`node scripts/pruefe-striche.mjs --hook`),
+Einrichtung in `references/qa-und-abnahme.md`, Abschnitt 2a.
 
 `pruefe-geschmack.mjs` läuft nach dem Build gegen `dist/` und meldet Kicker über der Quote,
 ein zweites Laufband, mehrere Texte für dieselbe Kontaktabsicht und die messbaren KI-Tells.
@@ -346,6 +354,7 @@ Abschnitte:
 ## Umgebungsvariablen mit Zweck, ohne Werte
 ## Consent und eingesetzte Dienste
 ## Änderungsregeln (Block aus references/aenderungsrunden-und-layoutschutz.md)
+## Textbeispiele: freigegebene Vorher-Nachher-Paare (references/copy-im-kundenprojekt.md)
 ## Offene Punkte
 ## Änderungsverlauf mit Datum
 ```
@@ -400,6 +409,7 @@ Schwesterskill.
 | `../webdesign-conversion/references/42-referenzgrammatik-und-gap-audit.md` | Phase 2 und 3, wenn Referenzen ausgelesen werden, und bei „es fehlt etwas“ |
 | `../webdesign-conversion/references/43-hierarchie-raster-komposition.md` | Phase 3 und 4, beim Entscheiden über Hierarchie, Raster, Sektionsanteile und Animationssystem |
 | `../webdesign-conversion/references/44-gutes-festschreiben-und-rueckbauprobe.md` | Phase 5 und 6, wenn ein gutes Ergebnis für spätere Sektionen oder Kampagnen festgehalten wird |
+| `../webdesign-conversion/references/47-richtung-varianten-und-subtraktion.md` | Phase 3, wenn Richtungen als Varianten gezeigt werden, und Phase 5 für Fehlermodi und Subtraktion |
 | `../webdesign-conversion/references/12-copywriting.md` | sobald Texte eingesetzt werden |
 | `../webdesign-conversion/references/45-huerde-laenge-und-leserfuehrung.md` | Phase 1 und 3 bei Landingpages: Länge und Sektionsfolge nach Hürde, Leserführung, Stakkato |
 | `../webdesign-conversion/references/01-strategie-positionierung.md` | Phase 2, Schritt 1.5: Recherche vor dem Text, acht Fragen, Hebel |
@@ -458,6 +468,7 @@ Erst wenn alle Punkte erfüllt sind, darf von einer fertigen Seite gesprochen we
 * Build läuft ohne Fehler, `astro check` ohne Befund
 * alle neun Prüfskripte ohne Fehler, auch `pruefe-geschmack.mjs`, `pruefe-geo.mjs` und `pruefe-aktualitaet.mjs` gegen `dist/`
 * Vorflugcheck aus `26-geschmack-und-ki-tells.md` durchgegangen, Ungeprüftes benannt
+* Fehlermodi, Stresstest mit echtem Inhalt und Subtraktionsrunde nach `references/qa-und-abnahme.md` Schritt 8b
 * Tastaturbedienung durch alle interaktiven Elemente, sichtbarer Fokus
 * Formular getestet: Erfolg, Validierungsfehler, Serverfehler, Turnstile
 * Bestätigungsmail und interne Benachrichtigung im Branding des Kunden

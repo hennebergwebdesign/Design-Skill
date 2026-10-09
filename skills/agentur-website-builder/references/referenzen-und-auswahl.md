@@ -6,6 +6,17 @@ Land-book, recent.design, 21st.dev, und wofür jede Quelle taugt. Dieses Kapitel
 aus einer Referenz übernommen werden darf, welche Quelle im Projekt überhaupt gilt und
 welche Sektionsreihenfolge den Ausgangspunkt bildet.
 
+## Inhalt
+
+- Wie Referenzwebsites genutzt werden
+- Rangfolge der Quellen
+- Auswahl pro Projekt
+- Ausgangsliste
+- Vorrang der Conversion
+- Universeller Aufbau: Unternehmenshomepage
+- Universeller Aufbau: Landingpage
+- Umgang mit fehlendem Material
+
 ## Wie Referenzwebsites genutzt werden
 
 Referenzen sind eine Quelle für **Prinzipien**, nicht eine Vorlage zum Abzeichnen. Aus einer

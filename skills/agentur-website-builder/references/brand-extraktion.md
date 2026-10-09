@@ -15,6 +15,19 @@ der Start von Playwright (`scripts/lib/browser.mjs`) und die Firecrawl-Zweitmein
 (`scripts/lib/abruf.mjs`). Das Auspacken des Skripts aus der SKILL.md mit Prüfsumme entfällt,
 weil das Skript jetzt im Plugin liegt.
 
+## Inhalt
+
+- Wann
+- Abgrenzung zu den anderen Erfassungswerkzeugen
+- Einrichten, einmal pro Rechner
+- Ausführen
+- Was entsteht
+- Auswerten, Pflicht
+- Übernahme ins Projekt
+- Pitch für Leads
+- Grenzen
+- Verwandte Kapitel
+
 ## Wann
 
 | Lage | Einsatz |

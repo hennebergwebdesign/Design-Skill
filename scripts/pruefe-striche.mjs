@@ -19,6 +19,16 @@
     2. hyphens: auto im CSS — trennt deutsche Komposita mitten im Wort
        ("Ethy-len", "Verschmut-zung").
     3. Verbotene Wörter aus marke.json → sprache.verbotene_woerter.
+    4. Bindestrich mit Leerzeichen auf beiden Seiten zwischen Wörtern ("Dach - Sanierung"),
+       der Ersatz für den Gedankenstrich, wenn die Tastatur keinen hat. In Überschrift,
+       Button, Link und Kicker ein FEHLER, im Text von Markup- und Markdowndateien eine
+       WARNUNG. Code (calc, Subtraktion) wird nicht gelesen.
+
+  HOOK
+    Mit --hook liest das Skript die Eingabe eines Claude-Code-Hooks von stdin
+    (tool_input.file_path) und prüft nur diese Datei. Fehler gehen nach stderr, Exit 2, damit
+    das Modell sie sieht und behebt. Warnungen halten nicht auf. Einrichtung in
+    agentur-website-builder/references/qa-und-abnahme.md, Abschnitt 2a.
 
   WAS NICHT GEPRÜFT WIRD
     Der echte Bindestrich im Kompositum ("E-Mail-Adresse") bleibt erlaubt.
@@ -28,9 +38,10 @@
     node scripts/pruefe-striche.mjs [pfad ...]        Standard: src content app pages
     node scripts/pruefe-striche.mjs --marke pfad/marke.json
     node scripts/pruefe-striche.mjs --strict          Warnungen zählen wie Fehler
+    node scripts/pruefe-striche.mjs --hook            als PostToolUse-Hook, Eingabe von stdin
 
   EXIT
-    0 = kein Fehler · 1 = Fehler gefunden · 2 = Aufrufproblem
+    0 = kein Fehler · 1 = Fehler gefunden · 2 = Aufrufproblem, im Hook: Fehler gefunden
 */
 
 import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
@@ -57,8 +68,19 @@ if (mi !== -1) markePfad = args[mi + 1];
 const markeIndex = mi === -1 ? -1 : mi + 1;
 const pfade = args.filter((a, i) => !a.startsWith('--') && i !== markeIndex);
 
+const hook = args.includes('--hook');
+let hookDatei = null;
+if (hook) {
+  /* Ein Hook darf nie wegen eines Lesefehlers die Arbeit blockieren: ohne lesbare
+     Eingabe oder bei einer Datei, die kein Text ist, endet er still mit 0. */
+  try { hookDatei = JSON.parse(readFileSync(0, 'utf8'))?.tool_input?.file_path ?? null; } catch { hookDatei = null; }
+  const endung = hookDatei ? extname(hookDatei) : '';
+  if (!hookDatei || !existsSync(hookDatei) || !(TEXT_ENDUNGEN.has(endung) || CSS_ENDUNGEN.has(endung))
+      || hookDatei.split(/[\\/]/).some((teil) => UEBERSPRINGEN.has(teil))) process.exit(0);
+}
+
 const STANDARD_PFADE = ['src', 'content', 'app', 'pages', 'components'];
-const wurzeln = (pfade.length ? pfade : STANDARD_PFADE).filter(existsSync);
+const wurzeln = hook ? [hookDatei] : (pfade.length ? pfade : STANDARD_PFADE).filter(existsSync);
 
 if (!wurzeln.length) {
   console.error('Kein Quellordner gefunden. Erwartet einen von: ' + STANDARD_PFADE.join(', '));
@@ -119,6 +141,22 @@ function kontext(zeile) {
   return null;
 }
 
+/* Bindestrich mit Leerzeichen zwischen zwei Wörtern: der Gedankenstrich der Tastatur.
+   Links ein Buchstabe oder eine Ziffer, rechts ein Buchstabe, damit calc(100% - 2rem),
+   x - 1 und Aufzählungen am Zeilenanfang nicht zählen. */
+const LEER_STRICH = /[\p{L}\d][!?.,"“”]? - \p{L}/u;
+const MARKUP_ENDUNGEN = new Set(['.astro', '.html', '.htm', '.vue', '.svelte', '.jsx', '.tsx']);
+const MARKDOWN_ENDUNGEN = new Set(['.md', '.mdx']);
+
+/* Sichtbarer Text einer Zeile: in Markdown die Zeile ohne Code, in Markup nur, was zwischen
+   > und < steht und keine geschweifte Klammer enthält (Ausdrücke in Astro und JSX). */
+function textTeile(zeile, endung) {
+  if (MARKDOWN_ENDUNGEN.has(endung)) return [zeile.replace(/`[^`]*`/g, '')];
+  if (!MARKUP_ENDUNGEN.has(endung)) return [];
+  const ohneCode = zeile.replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1>/gi, '');
+  return [...ohneCode.matchAll(/>([^<>{}]+)</g)].map((m) => m[1]);
+}
+
 /* Bereichsangaben sind legitim: 10–12, 2013–2026, 5–7 Tage. */
 const BEREICH = new RegExp(`\\d\\s?[${HALBGEVIERT}${GEVIERT}]\\s?\\d`);
 
@@ -141,6 +179,10 @@ for (const wurzel of wurzeln) {
       Kommentar, der erklaert, warum hyphens: auto verboten ist.
     */
     let imBlock = false;
+    /* Code innerhalb einer Markupdatei: Frontmatter zwischen ---, mehrzeilige <script>-
+       und <style>-Blöcke. Dort ist " - " eine Subtraktion, kein Satzzeichen. */
+    let imCode = false;
+    let frontmatter = MARKUP_ENDUNGEN.has(extname(datei)) && zeilen[0]?.trim() === '---';
 
     zeilen.forEach((zeile, i) => {
       const nr = i + 1;
@@ -180,6 +222,23 @@ for (const wurzel of wurzeln) {
         });
       }
 
+      /* 4 Bindestrich mit Leerzeichen als Gedankenstrich */
+      const warImCode = imCode || frontmatter;
+      if (frontmatter && i > 0 && zeile.trim() === '---') frontmatter = false;
+      if (/<(script|style)\b/i.test(zeile) && !/<\/(script|style)>/i.test(zeile)) imCode = true;
+      else if (imCode && /<\/(script|style)>/i.test(zeile)) imCode = false;
+      if (!warImCode && (!istCss || MARKUP_ENDUNGEN.has(extname(datei)))) {
+        const ort = kontext(zeile);
+        const teile = ort ? [zeile.replace(/<[^>]*>/g, ' ')] : textTeile(zeile, extname(datei));
+        if (!/^\s*(\/\/|\*|\/\*|<!--)/.test(zeile) && !imBlock && teile.some((t) => LEER_STRICH.test(t))) {
+          (ort ? fehler : warnungen).push({
+            datei: rel, zeile: nr, auszug: zeile.trim().slice(0, 110),
+            meldung: `Bindestrich mit Leerzeichen als Gedankenstrich${ort ? ` in ${ort}` : ' im Text'}`,
+            tipp: 'Derselbe Strich mit anderer Taste. Ersatz: Doppelpunkt, Komma oder zwei Sätze.',
+          });
+        }
+      }
+
       /* 3 Verbotene Wörter */
       for (const w of verboteneWoerter) {
         const re = new RegExp(`(^|[^\\p{L}])${w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`, 'iu');
@@ -193,6 +252,17 @@ for (const wurzel of wurzeln) {
       }
     });
   }
+}
+
+if (hook) {
+  /* Im Hook zählen nur Fehler. Warnungen sind Urteilsfragen und gehören in den vollen Lauf. */
+  if (fehler.length) {
+    console.error(`pruefe-striche: ${fehler.length} Fehler in ${hookDatei}`);
+    for (const b of fehler) console.error(`  Zeile ${b.zeile}: ${b.meldung}\n    ${b.auszug}\n    → ${b.tipp}`);
+    console.error('Harte Grenze: keine Gedankenstriche im Seitentext (webdesign-conversion/SKILL.md). Bitte jetzt beheben.');
+    process.exit(2);
+  }
+  process.exit(0);
 }
 
 function ausgeben(titel, liste) {

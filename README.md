@@ -128,7 +128,8 @@ skills/
 │  │  ├─ 43-hierarchie-raster-komposition.md  Hierarchie als Verhältnis, Führungskanten, Anteile wechseln, Animationssystem
 │  │  ├─ 44-gutes-festschreiben-und-rueckbauprobe.md  Rückbauprobe, Pilot, Figurenwelt, was der Mensch entscheidet
 │  │  ├─ 45-huerde-laenge-und-leserfuehrung.md  Länge und Sektionsfolge nach Hürde, Belege früh, offene Schleifen, Stakkato
-│  │  └─ 46-lokale-sichtbarkeit.md  NAP überall gleich, Ortsseiten ohne Austauschtext, Bewertungsablauf, Verzeichnisse, Profil
+│  │  ├─ 46-lokale-sichtbarkeit.md  NAP überall gleich, Ortsseiten ohne Austauschtext, Bewertungsablauf, Verzeichnisse, Profil
+│  │  └─ 47-richtung-varianten-und-subtraktion.md  Richtungen mit Preiszeile, Subtraktionsrunde, Fehlermodi nach dem Bau, Prüfer ohne Vorwissen
 │  └─ assets/
 │     ├─ vorlagen/                  marke.json, marke-brief.md, impressum.md, datenschutz.md,
 │     │                             datenschutz-bewerber.md, consent-muster.md,
@@ -172,14 +173,14 @@ skills/
       └─ recherche/                 referenzquellen.json, register-schema.json
 
 scripts/
-├─ pruefe-striche.mjs               Gedankenstriche, hyphens: auto, verbotene Wörter
+├─ pruefe-striche.mjs               Gedankenstriche, Bindestrich mit Leerzeichen, hyphens: auto, Wörter; --hook
 ├─ pruefe-tokens.mjs                hartcodierte Farb-, Abstands- und Schriftwerte
-├─ pruefe-kontrast.mjs              Kontrastwerte der Rollen-Tokens
+├─ pruefe-kontrast.mjs              Kontrastwerte der Rollen-Tokens, mit --paare freie Paare
 ├─ pruefe-platzhalter.mjs           [[FEHLT]], data-copy-vorschlag, ausgelassener Code
 ├─ pruefe-breakpoints.mjs           acht Größen, Überlauf, Touchziele, Schriftgröße, CLS
-├─ pruefe-geschmack.mjs             Kicker-Quote, Laufbänder, CTA-Texte, messbare KI-Tells
+├─ pruefe-geschmack.mjs             Kicker-Quote, Laufbänder, CTA-Texte, messbare KI-Tells, Logoleiste aus Text
 ├─ pruefe-motion.mjs                transition: all, scale(0), ease-in, Dauer über 300 ms, Reduzierung
-├─ pruefe-geo.mjs                   KI-Crawler in der robots.txt, Text im HTML, Gliederung, JSON-LD
+├─ pruefe-geo.mjs                   KI-Crawler in der robots.txt, Text im HTML, Gliederung, JSON-LD, Bild ohne alt
 ├─ pruefe-aktualitaet.mjs           Copyright-Jahr, Stand-Angaben, Jahr im Titel
 ├─ brand-extraktion.mjs             Farben, Schriften, Typoskala, Logo der eigenen Seite messen
 ├─ relaunch-inventory.mjs           Bestandsaufnahme der alten Kundenseite vor dem Relaunch
@@ -191,6 +192,7 @@ scripts/
 ├─ muster-vergleich.mjs             Entwurf gegen Bibliothek, fünf Einstufungen
 ├─ pruefe-muster.mjs                Pflichtfelder, Taxonomie, Anti-Kopie, Index
 ├─ muster-paket.mjs                 Tor 2: Paket ins Projekt, nie in die Bibliothek
+├─ pruefe-skill.mjs                 Aufbau dieses Repositorys: Länge, Inhaltsverzeichnisse, Verlinkung, tote Verweise
 ├─ lib/browser.mjs                  Playwright finden, Chromium starten, mit Rückfall
 ├─ lib/abruf.mjs                    die eine Abrufschicht, vier Rückfallstufen, robots.txt
 ├─ tests/                           node --test, ohne Abhängigkeit
@@ -229,7 +231,7 @@ laufen ohne Abhängigkeiten außer Node; nur das Breakpoint-Skript braucht Playw
 Gefunden wird es im Projekt oder global, über `scripts/lib/browser.mjs`.
 
 ```bash
-node scripts/pruefe-striche.mjs       # Gedankenstriche, hyphens: auto, verbotene Wörter
+node scripts/pruefe-striche.mjs       # Gedankenstriche, Bindestrich mit Leerzeichen, hyphens: auto, verbotene Wörter
 node scripts/pruefe-tokens.mjs        # hartcodierte Farb-, Abstands- und Schriftwerte
 node scripts/pruefe-kontrast.mjs      # rechnet die Kontrastwerte der Rollen-Tokens nach
 node scripts/pruefe-platzhalter.mjs --launch   # [[FEHLT]], data-copy-vorschlag, // ...
@@ -244,8 +246,13 @@ node scripts/pruefe-geo.mjs           # nach dem Build: dist/ auf KI-Lesbarkeit
 Bewegung ohne `@media (hover: hover)` als Warnungen. Gibt es irgendwo Animation, aber nirgends
 `prefers-reduced-motion`, ist das ein Fehler. `pruefe-geo.mjs` zeigt je KI-Crawler, ob die
 `robots.txt` ihn zulässt, und meldet Seiten mit kaum Text im ausgelieferten HTML, falsche
-`h1`-Zahl, ungültiges JSON-LD und `FAQPage` mit Fragen, die nicht sichtbar auf der Seite stehen.
+`h1`-Zahl, ungültiges JSON-LD und `FAQPage` mit Fragen, die nicht sichtbar auf der Seite stehen,
+dazu jedes Bild ohne `alt`-Attribut als Fehler.
 Ob eine Sperre gewollt ist, entscheidet der Kunde, das Skript benennt sie nur.
+
+`pruefe-striche.mjs --hook` läuft als PostToolUse-Hook nach jedem Schreiben einer Datei und gibt
+Gedankenstriche in Überschrift, Button, Link und Kicker sofort an das Modell zurück. Einrichtung in
+`skills/agentur-website-builder/references/qa-und-abnahme.md`, Abschnitt 2a.
 
 `pruefe-geschmack.mjs` prüft je gebauter Seite, ob höchstens ein Kicker auf drei Sektionen
 kommt, ob mehr als ein Laufband läuft und ob dieselbe Kontaktabsicht mehrere Texte hat, dazu
@@ -388,7 +395,7 @@ node --test 'scripts/tests/*.test.mjs'
 ```
 
 Eingebauter Testrunner von Node, keine Abhängigkeit, kein `package.json`. Die Anführungszeichen
-sind nötig, die Verzeichnisform greift nicht. 239 Tests: alle erlaubten und alle verbotenen
+sind nötig, die Verzeichnisform greift nicht. 264 Tests: alle erlaubten und alle verbotenen
 Zustandsübergänge, die Sperre gegen den Abruf ohne Freigabe, robots.txt, die Rückfallstufen,
 die Grenzenliste, das Konfidenzmodell, die Ähnlichkeitseinstufung, die Musterprüfung und die
 Trennung von Projekt- und globalem Wissen, die Geschmacksprüfung mit je einem Fall, der
@@ -396,6 +403,10 @@ anschlagen muss, und einem, der ähnlich aussieht und durchgehen muss, die
 Auslassungsprüfung sowie Tokenableitung, Untergrenzen und ein Lauf der Brand Extraktion gegen
 eine Testseite. Der Netzzugriff ist durch einen lokalen Testserver ersetzt. Der Browserlauf
 wird übersprungen und so gemeldet, wenn kein Playwright gefunden wird.
+
+`node scripts/pruefe-skill.mjs` prüft dieses Repository selbst: `SKILL.md` unter 500 Zeilen,
+jede Referenz über 100 Zeilen mit Inhaltsverzeichnis, jede Referenz in ihrer `SKILL.md` genannt,
+keine toten Verweise auf Skilldateien. Mit `--inhalt` legt es fehlende Verzeichnisse an.
 
 `deslop-check.mjs` bewertet fünf Kriterien und gibt eine Punktzahl von 0 bis 5: Floskeln,
 Nominalstil, leere Superlative, fehlende Belege und die Dreierfigur. Er gilt für **eigene**
@@ -419,13 +430,15 @@ Die Suite hat dabei schon einen echten Fehler gefunden: das Landingpage-Playbook
 formuliert, dass das Modell die Navigationsregel erkannte, dann aber um Erlaubnis fragte statt
 zu liefern. Details in `evals/README.md`.
 
-Achtzehn Fälle insgesamt, davon drei für den Agenturstandard: `consent-ohne-keks`,
+Neunzehn Fälle insgesamt, davon drei für den Agenturstandard: `consent-ohne-keks`,
 `leadsystem-nur-auf-bestaetigung` und `brand-extraktion-nur-eigene-marke`. Die ersten beiden und die vier neueren Fälle
 `kundendesignsystem-schlaegt-referenz`, `referenz-erst-freigeben`,
 `nicht-beobachtetes-nicht-behaupten` und `keine-attrappen-als-beleg` sind noch nicht gelaufen,
 ihr Δ ist damit eine Vermutung und kein Messwert. Die fünf neuesten Fälle sind klein gemessen:
 `konturbutton-nicht-primaer` Δ +0,75, `f-muster-kein-leitbild` Δ +0,13, `scrollvideo-nur-mit-anlass` Δ +0,25, `polierschleife-nicht-als-start` Δ +0,13,
 `generator-kosten-vorab` Δ +0,20, je zwei Läufe je Arm, Einzelheiten in `evals/README.md`.
+Der neueste Fall `varianten-mit-preis` (Kapitel 47) misst nichts: die Baseline besteht allein
+(1,00), und der Skill wurde in keinem Lauf aufgerufen (mit Skill 0,75, Δ -0,25 als Rauschen).
 
 ## Quell-Skills nachinstallieren
 

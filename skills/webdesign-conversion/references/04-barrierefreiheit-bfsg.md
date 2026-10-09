@@ -7,6 +7,15 @@ Einschränkungen.
 **Die Zahl:** 15–20 % der Bevölkerung haben eine Form von Behinderung. Eine nicht barrierefreie
 Website schließt möglicherweise jeden fünften Besucher aus: zusätzlich zum rechtlichen Risiko.
 
+## Inhalt
+
+- Barrierefreiheitsstärkungsgesetz (BFSG)
+- Schritt 4.1: Kontrast-Check
+- Schritt 4.2: Alt-Texte
+- Schritt 4.3: Tastatur-Navigation
+- Weitere AA-Punkte, die regelmäßig durchfallen
+- Prüfwerkzeuge
+
 ## Barrierefreiheitsstärkungsgesetz (BFSG)
 
 > **Rechtlicher Hinweis:** Die folgenden Angaben dienen der allgemeinen Information und
@@ -169,6 +178,8 @@ Dazu gehören:
 | WAVE | visuelle Übersicht, Kontrast, Struktur |
 | Screenreader (NVDA/Windows, VoiceOver/Mac) | was wirklich vorgelesen wird |
 | Tab-Durchlauf von Hand | Reihenfolge, Sichtbarkeit, Fallen |
+| `scripts/pruefe-geo.mjs` nach dem Build | Bilder ohne `alt`-Attribut (Fehler), fehlende oder doppelte `h1`, übersprungene Ebenen |
+| `scripts/pruefe-kontrast.mjs --paare` | Farbpaare außerhalb der Rollen: Text auf Bildabdunklung, Hoverzustände, Badges |
 
 Automatische Tests finden nur einen Teil. Der Tab-Durchlauf und ein Screenreader-Durchgang
 über die Hauptwege sind Pflicht, kein Extra.

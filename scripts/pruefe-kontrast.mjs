@@ -25,9 +25,21 @@
 
     Zusätzlich der Hinweis, welche Stufe der Markenrampe als Textfarbe taugt.
 
+    Mit --paare datei.json zusätzlich freie Paare, die in keiner Rolle stehen: Text auf
+    der Abdunklung eines Heldenbilds, Hoverzustand eines Buttons, Badge auf Akzent. Werte
+    als Hex, rgb() oder Tokenname aus tokens.css:
+
+      { "paare": [ { "name": "Text auf Heldenbild", "vorn": "#ffffff",
+                     "hinten": "--farbe-flaeche-dunkel", "groesse": "normal" } ] }
+
+    groesse: normal 4,5:1, gross (ab 24 px oder ab 18,66 px fett) und ui (Begrenzung,
+    Icon, Fokus) 3:1 nach WCAG 2.2 AA. Bei einem Bild zählt die hellste Stelle unter dem
+    Text, nicht der Durchschnitt.
+
   AUFRUF
     node scripts/pruefe-kontrast.mjs [pfad/zu/tokens.css]
     node scripts/pruefe-kontrast.mjs --rampe        zeigt die ganze Rampe gegen Weiß
+    node scripts/pruefe-kontrast.mjs --paare kontrast-paare.json
 
   EXIT
     0 = alle Paare halten · 1 = Verstoß · 2 = Aufrufproblem
@@ -37,7 +49,13 @@ import { readFileSync, existsSync } from 'node:fs';
 
 const args = process.argv.slice(2);
 const zeigeRampe = args.includes('--rampe');
-const pfade = args.filter((a) => !a.startsWith('--'));
+const pi = args.indexOf('--paare');
+const paarePfad = pi === -1 ? null : args[pi + 1];
+const pfade = args.filter((a, i) => !a.startsWith('--') && !(pi !== -1 && i === pi + 1));
+if (pi !== -1 && (!paarePfad || !existsSync(paarePfad))) {
+  console.error(`Paardatei nicht gefunden: ${paarePfad ?? '(fehlt)'}`);
+  process.exit(2);
+}
 
 const KANDIDATEN = [
   ...pfade,
@@ -48,7 +66,7 @@ const KANDIDATEN = [
   'skills/webdesign-conversion/assets/vorlagen/tokens.css',
 ];
 const datei = KANDIDATEN.find((p) => p && existsSync(p));
-if (!datei) {
+if (!datei && !paarePfad) {
   console.error('tokens.css nicht gefunden. Pfad angeben:');
   console.error('  node scripts/pruefe-kontrast.mjs src/styles/tokens.css');
   process.exit(2);
@@ -61,7 +79,7 @@ if (!datei) {
   Selektortest schlaegt fehl. tokens.css ist absichtlich stark kommentiert, das ist
   hier also der Normalfall und nicht die Ausnahme.
 */
-const quelle = readFileSync(datei, 'utf8').replace(/\/\*[\s\S]*?\*\//g, ' ');
+const quelle = (datei ? readFileSync(datei, 'utf8') : '').replace(/\/\*[\s\S]*?\*\//g, ' ');
 
 /* ---------- Farben lesen und auflösen ---------- */
 
@@ -99,7 +117,7 @@ const roh = new Map();
 for (const b of bloeckeFinden(quelle, (s) => /(^|,)\s*:root\s*$/.test(s) || s === ':root')) {
   for (const [k, v] of deklarationen(b.koerper)) roh.set(k, v);
 }
-if (!roh.size) {
+if (!roh.size && datei) {
   /* Kein :root gefunden: auf die ganze Datei zurueckfallen, aber sagen. */
   for (const m of quelle.matchAll(/(--[\w-]+)\s*:\s*([^;]+);/g)) roh.set(m[1], m[2].trim());
   console.log('Hinweis: kein :root-Block gefunden, alle Deklarationen der Datei gelesen.\n');
@@ -197,7 +215,7 @@ const PAARE = [
   bleibt beim Menschen.
 */
 
-console.log(`Tokens aus ${datei}\n`);
+console.log(datei ? `Tokens aus ${datei}\n` : 'Keine tokens.css gefunden, nur freie Paare.\n');
 
 let verstoesse = 0, ungeprueft = 0, geprueft = 0;
 
@@ -234,6 +252,38 @@ for (const [vorn, hinten, soll, was, grad = 'fehler'] of PAARE) {
     console.log(`        → 3:1 ist nur Pflicht, wenn diese Begrenzung ein Bedienelement`);
     console.log(`          ERKENNBAR macht (Eingabefeld, Umschalter). Ziert sie eine Karte`);
     console.log(`          oder trennt sie Abschnitte, ist der Wert in Ordnung.`);
+  }
+}
+
+/* ---------- Freie Paare aus --paare ---------- */
+
+if (paarePfad) {
+  let liste;
+  try { liste = JSON.parse(readFileSync(paarePfad, 'utf8')).paare; } catch (e) {
+    console.error(`${paarePfad} ist kein gültiges JSON (${e.message})`);
+    process.exit(2);
+  }
+  if (!Array.isArray(liste)) {
+    console.error(`${paarePfad}: erwartet { "paare": [ … ] }`);
+    process.exit(2);
+  }
+  console.log(`\nFreie Paare aus ${paarePfad}`);
+  const wertVon = (w) => (typeof w === 'string' && w.startsWith('--') ? aufloesen(roh.get(w)) : w);
+  for (const p of liste) {
+    const soll = p.groesse === 'gross' || p.groesse === 'ui' ? 3.0 : 4.5;
+    const wv = wertVon(p.vorn), wh = wertVon(p.hinten);
+    const cv = nachRgb(wv), ch = nachRgb(wh);
+    if (!cv || !ch) {
+      console.log(`  ?     ${p.name ?? ''}`);
+      console.log(`        ${!cv ? `${p.vorn} (${wv})` : `${p.hinten} (${wh})`} ist kein hex- oder rgb-Wert, nicht berechenbar`);
+      ungeprueft++;
+      continue;
+    }
+    const wert = kontrast(cv, ch);
+    geprueft++;
+    if (wert < soll) verstoesse++;
+    console.log(`${wert >= soll ? '  ok  ' : ' FEHL '} ${wert.toFixed(2)}:1  (soll ${soll.toFixed(1)})  ${p.name ?? ''}`);
+    console.log(`        ${p.vorn}${wv !== p.vorn ? ` ${wv}` : ''}  auf  ${p.hinten}${wh !== p.hinten ? ` ${wh}` : ''}`);
   }
 }
 

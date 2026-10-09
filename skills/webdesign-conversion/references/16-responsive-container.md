@@ -4,6 +4,18 @@ Die fünf Breakpoints aus `03-technik-performance.md` sind die Prüfliste. Sie s
 Bauprinzip. Wer mit Media Queries anfängt, baut für Fenstergrößen; wer für Komponenten baut,
 braucht sie kaum.
 
+## Inhalt
+
+- Der Eskalationspfad
+- Stufe 1: intrinsisches CSS
+- Stufe 2: Container Queries
+- Stufe 3: Media Queries, sparsam
+- Viewport-Einheiten: svh, lvh, dvh
+- Gerätekontext aus Kundendaten
+- Acht Szenarien, die immer weh tun
+- Prüfen, nicht behaupten
+- Verwandte Kapitel
+
 ## Der Eskalationspfad
 
 Jede Responsive-Entscheidung läuft diese Leiter von oben nach unten. Erst wenn eine Stufe

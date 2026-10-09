@@ -3,6 +3,15 @@
 Nur bauen, wenn im Intake ausdrücklich bestätigt. Ohne Bestätigung versendet das Formular
 nur, siehe `formulare-und-resend.md`.
 
+## Inhalt
+
+- Speicherort
+- Schema
+- Reihenfolge im Formular
+- Dashboard
+- Anmeldung
+- Datenschutz
+
 ## Speicherort
 
 Standard ist **Cloudflare D1**, weil Hosting, Datenbank und Serverrouten damit an einem Ort

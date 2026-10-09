@@ -11,6 +11,19 @@ Joanna Wiebe (Copyhackers), siehe `CREDITS.md`, Abschnitt „Version 4.8". Das V
 Menschen im Gespräch, Verkauf und Verhandlung. Übernommen ist, was sich auf geschriebene Seiten
 übertragen lässt. Körpersprache, Stimme und Schweigen in einem Termin gehören nicht dazu (Abschnitt 8).
 
+## Inhalt
+
+- 1\. Autorität ist Genauigkeit, nicht Lautstärke
+- 2\. Weichmacher streichen
+- 3\. Die Satzleiter: Befund, dann Grund
+- 4\. Präzision, die man benennen kann
+- 5\. Rahmen setzen, bevor der Einwand kommt
+- 6\. Fragen, die führen
+- 7\. Die FAQ
+- 8\. Was bewusst nicht übernommen ist
+- 9\. Ungeprüft
+- Verwandte Kapitel
+
 ## 1. Autorität ist Genauigkeit, nicht Lautstärke
 
 Respekt entsteht im Text aus drei Dingen: Aussagen ohne Absicherung, Zahlen und Namen statt

@@ -22,7 +22,7 @@ Umsetzungshinweise, kein Text.
 | „Es muss Wow machen." | **Wow** | Bewegung und Interaktion fast überall, Bild und Typografie reagieren aufs Scrollen | Expressive/Dramatic, Technik aus `38-scrollvideo-und-einbettungen.md` |
 
 Die Zuordnung ist eine **Frage an den Kunden**, kein Urteil. Die Richtung wird im Konzept (Phase 3) vorgeschlagen und über die
-Stylescape (`agentur-website-builder/references/moodboard-und-stylescape.md`) abgesprochen.
+Stylescape (`../../agentur-website-builder/references/moodboard-und-stylescape.md`) abgesprochen.
 
 ## 2. Umsetzungshinweise je Richtung
 

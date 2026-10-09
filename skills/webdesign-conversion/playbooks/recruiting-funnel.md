@@ -7,6 +7,19 @@ Für eine Strecke, die aus einer Anzeige eine Bewerbung macht. Fachliche Grundla
 mobil zuerst statt mobil auch, und ein rechtlicher Rahmen (AGG, Bewerberdaten), der bei
 einem Fehler unmittelbar Geld kostet.
 
+## Inhalt
+
+- Reihenfolge
+- Phase 1: EVP
+- Phase 2: Anzeigentext, AGG-geprüft
+- Phase 3: Struktur
+- Phase 4: Copy
+- Phase 5: Design
+- Phase 6: Bau
+- Phase 7: Test
+- Phase 8: Livegang und danach
+- Drei Fehler, die genau bei diesem Typ passieren
+
 ## Reihenfolge
 
 ```

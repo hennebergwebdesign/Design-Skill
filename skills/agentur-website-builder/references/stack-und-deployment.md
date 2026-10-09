@@ -5,6 +5,17 @@ Fallstricke stehen in `../../webdesign-conversion/references/14-projektstruktur-
 Dieses Kapitel ergänzt, was im Agenturprojekt festgeschrieben ist: Runtime, Cloudflare
 Bindings, Umgebungsvariablen, Git und Performancebudget.
 
+## Inhalt
+
+- Standardstack ohne Rückfrage
+- Neues Projekt anlegen
+- Runtime
+- Astro Konfiguration
+- Build und Deployment
+- Umgebungsvariablen
+- Git
+- Performance Budget
+
 ## Standardstack ohne Rückfrage
 
 Astro mit statischem Build auf Cloudflare Pages ist der Standard für jedes neue

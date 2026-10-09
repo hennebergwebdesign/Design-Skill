@@ -11,6 +11,19 @@ Grenzwerte und der Review-Maßstab, kein Text. Die Originale zielen auf Produkt-
 gilt es für Unternehmensseiten in Astro mit CSS und GSAP, deshalb sind Dauer und Kurven an die
 Tokens aus `assets/vorlagen/tokens.css` gebunden und zwei Widersprüche offen benannt (Abschnitt 8).
 
+## Inhalt
+
+- 1\. Zuerst: soll es animieren?
+- 2\. Kurve und Dauer
+- 3\. Fünf Bauregeln für Bedienelemente
+- 4\. Was animiert wird und was nicht
+- 5\. Zugänglichkeit
+- 6\. Der Review, in zehn Maßstäben
+- 7\. Prüfen, nicht nur ansehen
+- 8\. Wo dieses Kapitel dem bestehenden Motion-System widerspricht
+- 9\. Kurzvokabular für Animationsfeedback
+- Verwandte Kapitel
+
 ## 1. Zuerst: soll es animieren?
 
 Die Frage kommt vor der Frage nach der Kurve. Ein Element, das nicht animiert, kann keine

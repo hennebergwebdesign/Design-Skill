@@ -4,6 +4,17 @@ Diese Dateien entstehen **am Anfang** des Projekts, nicht am Ende. Am Ende werde
 vergessen oder halbherzig nachgeschoben, und genau sie fallen beim ersten Search-Console-
 Bericht und bei der ersten Abmahnwelle auf.
 
+## Inhalt
+
+- Vollständigkeitsliste
+- Die 404-Seite
+- robots.txt
+- Sitemap
+- Weiterleitungen beim Relaunch
+- Security-Header
+- Kanonische Adresse und Domainvarianten
+- Vorschau-Umgebungen
+
 ## Vollständigkeitsliste
 
 | Datei / Seite | Pflicht | Vorlage |

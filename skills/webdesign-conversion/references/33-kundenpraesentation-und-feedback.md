@@ -11,6 +11,18 @@ in kreativen Teams, siehe `CREDITS.md`, Abschnitt „Version 4.5". Das Video ric
 in Unternehmen. Übernommen ist, was auf die Lage einer Agentur gegenüber ihrem Kunden passt. Das
 Gleiche gilt für die Prüfung in Kapitel 29: dort wird die Seite bewertet, hier das Gespräch darüber.
 
+## Inhalt
+
+- 1\. Fünf Stellschrauben für das Gespräch
+- 2\. Aussagen statt Geschmack
+- 3\. Ein fester Ablauf: Ziele, Recherche, Erkenntnis, Entwurf
+- 4\. Verteidigen kostet, Fragen gewinnt
+- 5\. Die Lens: der benannte Maßstab
+- 6\. Rückmeldeschleifen gestalten
+- 7\. Was nicht übernommen ist
+- 8\. Ungeprüft in diesem Kapitel
+- Verwandte Kapitel
+
 ## 1. Fünf Stellschrauben für das Gespräch
 
 | # | Richtung | Gemeint | Wirkung im Kundenprojekt | Grund |

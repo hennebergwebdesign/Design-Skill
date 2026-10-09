@@ -11,6 +11,15 @@ Logo, Farbe und Schrift in `20-markenextraktion-bestandsseite.md`. Die Substanz 
 Redesign-Protokoll von [taste-skill](https://github.com/Leonxlnx/taste-skill) (MIT) und seinem
 `redesign-skill`, übertragen auf deutsche Unternehmensseiten.
 
+## Inhalt
+
+- 1\. Zuerst den Auftrag erkennen
+- 2\. Befund vor dem ersten Eingriff
+- 3\. Was sich nie still ändert
+- 4\. Die Hebel, in dieser Reihenfolge
+- 5\. Arbeitsweise im Bestand
+- Verwandte Kapitel
+
 ## 1. Zuerst den Auftrag erkennen
 
 | Modus | Woran erkennbar | Was bleibt | Was sich ändert |

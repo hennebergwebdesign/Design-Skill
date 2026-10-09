@@ -3,6 +3,17 @@
 Bewegung hat eine Aufgabe: zeigen, was sich geändert hat, und Aufmerksamkeit dorthin lenken,
 wo sie hingehört. Alles andere ist Lärm.
 
+## Inhalt
+
+- Grundhaltung
+- Wann GSAP
+- Kern-API
+- Reduzierte Bewegung sauber behandeln
+- ScrollTrigger
+- Performance
+- In React
+- Bewährte Muster für Unternehmensseiten
+
 ## Grundhaltung
 
 - **Bewegung, die auf eine Handlung antwortet** (öffnen, ausklappen, bestätigen), ist fast

@@ -12,6 +12,19 @@ von Matt Shumer beschreibt und sich auf den Artikel „Building effective agents
 Transkript übernommen. Die Testergebnisse des Videos (3D Wohnung, Produktseite) sind
 Einzelfälle des Autors, hier keine Belege. Die Vorlage ist eine eigene Formulierung.
 
+## Inhalt
+
+- 1\. Das Prinzip
+- 2\. Vorbedingungen, alle vier
+- 3\. Der Kritiker
+- 3a. Variante mit drei Kritikern
+- 3b. Variante für Texte: Fachkritiker statt Gestaltungskritiker
+- 4\. Verhältnis zur Obergrenze aus Kapitel 29
+- 5\. Bericht und Mensch
+- 6\. Wann sich der Aufwand lohnt
+- 7\. Nicht übernommen (mit Grund)
+- Verwandte Kapitel
+
 ## 1. Das Prinzip
 
 | Teil | Inhalt | Grund |

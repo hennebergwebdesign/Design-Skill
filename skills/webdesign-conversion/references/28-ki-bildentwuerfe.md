@@ -11,6 +11,18 @@ Die Substanz stammt aus `imagegen-frontend-web`, `image-to-code` und `brandkit` 
 die Disziplin, nicht die Pakete mit Vertrauensleiste und Kennzahlenstreifen, die ein
 Bildmodell zum Erfinden einladen.
 
+## Inhalt
+
+- 1\. Stellung im Ablauf
+- 2\. Vor dem ersten Bild: die Sperren in den Auftrag
+- 3\. Der Auftrag an das Bildmodell
+- 3a. Varianten für eine gebaute Sektion, die schwach ist
+- 4\. Vom Bild zum Code: die Auswertung
+- 5\. Treue prüfen
+- 6\. Was ein generiertes Bild nie ist
+- 7\. Markenentwürfe als Denkwerkzeug
+- Verwandte Kapitel
+
 ## 1. Stellung im Ablauf
 
 | Frage | Antwort |

@@ -11,6 +11,17 @@ Eine Zahl, die man sich merken muss: **2 Sekunden.** Das ist die maximale Ladeze
 
 Zielwerte für die Core Web Vitals: **LCP < 2,5 s**, **CLS < 0,1**, **INP < 200 ms**.
 
+## Inhalt
+
+- Schritt 3.1: Die 2-Sekunden-Regel
+- Schritt 3.2: Bildoptimierung
+- Schritt 3.3: Caching
+- Schritt 3.4: Die fünf Breakpoints
+- Schriften
+- JavaScript
+- Hosting und Auslieferung
+- Messen, nicht raten
+
 ## Schritt 3.1: Die 2-Sekunden-Regel
 
 Die häufigste Einzelursache: ein 5-MB-Foto, hochgeladen, „weil es so schön hochauflösend

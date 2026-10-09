@@ -7,6 +7,18 @@ Sichtbarkeit als tragende Quelle.
 kommen aus der Suche mit verschiedenen Absichten und müssen sich orientieren können. Die
 Aufgabe ist nicht, einen Weg zu erzwingen, sondern den richtigen Weg naheliegend zu machen.
 
+## Inhalt
+
+- Reihenfolge
+- Phase 1: Strategie
+- Phase 2: Struktur
+- Phase 3: Copy
+- Phase 4: Design
+- Phase 5: Bau
+- Phase 6: Test
+- Phase 7: Launch und Pflege
+- Drei Fehler, die genau bei diesem Typ passieren
+
 ## Reihenfolge
 
 ```

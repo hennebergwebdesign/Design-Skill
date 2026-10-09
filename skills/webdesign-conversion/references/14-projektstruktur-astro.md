@@ -6,6 +6,17 @@ Er ist schnell, ohne Laufzeitkosten pro Besuch, und der Code bleibt lesbar.
 
 Die Prinzipien lassen sich auf Next.js, SvelteKit oder Nuxt übertragen; die Dateinamen nicht.
 
+## Inhalt
+
+- Verzeichnisbaum
+- `CLAUDE.md`: das wichtigste Dokument
+- Basis-Layout
+- Konfiguration
+- Serverrouten
+- Wiederkehrende Fallstricke
+- Prüfskripte, die sich lohnen
+- Bilder- und Rechtedokumentation
+
 ## Verzeichnisbaum
 
 ```

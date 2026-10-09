@@ -22,7 +22,8 @@
                         beide aus 34-ueberzeugungsausloeser.md, und der Weichmacher ("eigentlich",
                         "vielleicht") aus 35-autoritaet-im-text.md, und das Stakkato (drei
                         Saetze mit hoechstens drei Woertern in Folge, "Müde? Wir helfen. Echte
-                        Ergebnisse.") aus 45-huerde-laenge-und-leserfuehrung.md. Quelle: copywriting und
+                        Ergebnisse.") aus 45-huerde-laenge-und-leserfuehrung.md, und die runde
+                        Kundenzahl ("10.000 zufriedene Kunden") aus 47-richtung-varianten-und-subtraktion.md. Quelle: copywriting und
                         copy-editing aus coreyhaines31/marketingskills, auf Deutsch übertragen
     2 Nominalstil       Substantivketten auf -ung, -heit, -keit statt Verben
     3 Superlative       beste, führend, einzigartig, optimal, ohne Beleg daneben
@@ -66,6 +67,8 @@ const FLOSKELN = [
   'in der heutigen', 'schnelllebigen zeit', 'es ist wichtig zu', 'nicht nur, sondern auch',
   'innovativ', 'revolutionär', 'nahtlos', 'state of the art', 'mit herz und verstand',
   'volle bandbreite', 'ein starkes team', 'setzen neue maßstäbe', 'wir leben',
+  /* aus der Startliste des Pakets Webdesign Workflow 2026, was hier noch fehlte */
+  'rundum-sorglos', 'game changer', 'gamechanger', 'cutting edge', 'seamless',
 ];
 const SUPERLATIVE = [
   'beste', 'bester', 'bestes', 'beste qualität', 'höchste qualität', 'hoechste qualitaet',
@@ -88,6 +91,8 @@ const SATZMUSTER = [
     tipp: 'Zeitrahmen, Quote und „mehr als" statt „alle" und „garantiert", und nur mit belegten Zahlen des Kunden. Eine Garantie steht nur da, wenn der Kunde sie gibt.' },
   { name: 'Weichmacher', re: /\b(?:eigentlich|irgendwie|quasi|sozusagen|gewissermaßen|gewissermassen|eventuell|vielleicht|möglicherweise|moeglicherweise|ein\s+bisschen|ein\s+wenig|(?:ich|wir)\s+(?:denken|glauben)|es\s+scheint)\b/i,
     tipp: 'Die Aussage ohne das Wort schreiben. Echte Unsicherheit einmal und konkret benennen („Das wissen wir nach der Messung“), nicht mit „vielleicht“ andeuten.' },
+  { name: 'Runde Kundenzahl', re: /\b(?:\d{1,3}(?:[.\s]?000)+|[1-9]00)\s*\+?\s*(?:zufriedene|glückliche|glueckliche|begeisterte|happy)\s+[A-Za-zÄÖÜäöüß]+/i,
+    tipp: 'Die runde Zahl mit „zufrieden" ist das Kennzeichen eines Platzhalters, der stehen blieb. Echte Zahl des Kunden mit Quelle und Stand, sonst [[FEHLT: Anzahl Kunden, Quelle]] (harte Grenze keine erfundenen Zahlen).' },
 ];
 /* Stakkato: drei Saetze in Folge mit hoechstens drei Woertern. Ein kurzer Satz ist Rhythmus,
    drei hintereinander sind der abgehackte Roboterstil. Gezaehlt werden nur Saetze, die mit

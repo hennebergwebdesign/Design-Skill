@@ -9,6 +9,17 @@ Einwandzeile, drei echte Optionen, ehrliche Einschränkung), steht in
 `../../webdesign-conversion/references/34-ueberzeugungsausloeser.md`. Wirkprinzip, stärkster
 Beleg und Einschränkung liefert immer der Kunde.
 
+## Inhalt
+
+- Grundregel
+- Prüfung gelieferter Texte
+- Ergänzte Abschnitte kennzeichnen
+- Entwurf aus einem Modell einsetzen
+- Muster der stärksten Wettbewerber, nicht ihre Sätze
+- KI-Text und Wasserzeichen
+- Zweiter Durchgang und fünf Prinzipien
+- Selbst formulierte Texte gegen den KI-Klang prüfen
+
 ## Grundregel
 
 Gelieferte Texte werden übernommen, nicht umgeschrieben. Der Kunde hat sie freigegeben, oft
@@ -126,6 +137,16 @@ Begründung vorgelegt und Zeile für Zeile geprüft, nicht pauschal übernommen.
 | Bildhafte Sprache | Zeigt der Satz eine Situation? | keine Bilder, die der Kunde nicht belegen kann |
 
 Quelle: drei Videos (Jay E, Jack Roberts, 2026), Prinzipien in eigenen Worten, siehe `CREDITS.md`, Version 4.14.
+
+Läuft der zweite Durchgang bei einem anderen Anbieter, gilt für Kundentexte dasselbe wie für jeden Dienst:
+nur mit geklärter Auftragsverarbeitung, und personenbezogene Angaben (Namen in Kundenstimmen,
+Teamseiten) bleiben draußen (`../../webdesign-conversion/references/07-recht-dsgvo.md`). Der Text ist
+danach wieder ein Entwurf: `deslop-check.mjs` und der Abgleich mit den Belegen laufen erneut.
+
+**Gute Paare sammeln.** Wird ein Vorher-Nachher-Paar freigegeben (schwacher Satz, starker Satz mit
+Beleg des Kunden), kommt es mit Datum in die Projekt-`CLAUDE.md` unter „Textbeispiele". Fünf echte
+Paare zeigen Stil und Tiefe besser als eine weitere Regel, und die nächste Sitzung schreibt im selben
+Ton. In eine Sammlung über Projekte hinweg nur ohne Kundennamen und erst nach Rückfrage.
 
 ## Selbst formulierte Texte gegen den KI-Klang prüfen
 

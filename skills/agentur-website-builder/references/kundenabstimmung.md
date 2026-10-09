@@ -4,6 +4,16 @@ Warum so vorgegangen wird, steht in
 `../../webdesign-conversion/references/33-kundenpraesentation-und-feedback.md`. Dieses Kapitel
 ist der Ablauf dazu und wiederholt die Begründung nicht.
 
+## Inhalt
+
+- Wann was passiert
+- 1\. Rollen im Markenbrief
+- 2\. Ablauf der Präsentation
+- 3\. Rückmeldungen einsortieren
+- 4\. Material vor Entwurf, Startseite vor Unterseiten
+- 5\. Grenzen
+- Verwandte Kapitel
+
 ## Wann was passiert
 
 | Phase | Was hier dazukommt |

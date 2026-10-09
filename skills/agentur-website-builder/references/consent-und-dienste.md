@@ -6,6 +6,16 @@ Kategorienschnitt in `../../webdesign-conversion/assets/vorlagen/consent-muster.
 Kapitel regelt die Agenturentscheidungen darüber hinaus und verweist auf die einsatzfertigen
 Dateien.
 
+## Inhalt
+
+- Eigenbau statt Einwilligungsdienst
+- Aussehen
+- Kategorien
+- Speicherung der Entscheidung
+- Google Consent Mode
+- Dienstekatalog abgleichen
+- Rechtstexte
+
 ## Eigenbau statt Einwilligungsdienst
 
 Der Consent Mechanismus wird selbst gebaut. Kein Cookiebot, kein Usercentrics, kein
