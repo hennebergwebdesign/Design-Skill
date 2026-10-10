@@ -6,7 +6,7 @@ Preis** gewählt wird, wie vor der Abnahme **weggenommen** statt ergänzt wird, 
 **Fehlermodi** eine gebaute Seite trotz bestandener Skripte scheitert.
 
 Quelle: Paket „Webdesign Workflow 2026" (Auswertung von 27 Videos über Transkripte, Stand 09.10.2026,
-Kanäle in `CREDITS.md`, Version 4.18), gegen den Bestand 4.17.0 abgeglichen. Der größte Teil stand
+Kanäle in `CREDITS.md`, Version 4.19), gegen den Bestand 4.17.0 abgeglichen. Der größte Teil stand
 schon: Interview vor dem Prompt, Referenzen mit zwei Toren, Kollage und Grammatiktabelle, Gap Audit,
 Polierschleife mit fester Latte, Pilot vor Serie, Tweaks Panel, Blinzeltest, Änderungsauftrag mit
 „Bleibt", KI-Tells, Consent, selbst gehostete Schriften. Hier steht nur, was fehlte, und am Ende,
