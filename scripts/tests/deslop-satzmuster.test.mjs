@@ -80,3 +80,14 @@ test('ein kurzer Satz zwischen langen ist Rhythmus, kein Stakkato', () => {
 test('Abkürzungen in Öffnungszeiten zerlegen den Text nicht in Stakkato', () => {
   assert.ok(!meldet('Geöffnet Mo. bis Fr. von 8 bis 17 Uhr. Sa. nach Vereinbarung. Rufen Sie an.', 'Stakkato'));
 });
+
+test('runde Kundenzahl mit „zufrieden" wird gefunden, eine echte krumme Zahl nicht', () => {
+  assert.ok(meldet('Über 10.000 zufriedene Kunden vertrauen uns.', 'Runde Kundenzahl'));
+  assert.ok(meldet('500+ glückliche Kunden in der Region.', 'Runde Kundenzahl'));
+  assert.ok(!meldet('Seit 2011 haben wir 1.243 Dächer in Kassel gedeckt.', 'Runde Kundenzahl'));
+});
+
+test('Startliste des Pakets 2026: Rundum-Sorglos und Game Changer', () => {
+  assert.ok(meldet('Unser Rundum-Sorglos-Paket für Ihr Dach.', 'rundum-sorglos'));
+  assert.ok(meldet('Ein echter Game Changer für Ihren Betrieb.', 'game changer'));
+});

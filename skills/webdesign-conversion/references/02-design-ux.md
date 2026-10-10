@@ -5,6 +5,15 @@ professionellen Eindruck vermitteln. Schafft das Design das nicht, ist der erste
 negativ und die Absprungrate hoch. Der Satz dazu: sie muss dem Fisch schmecken, nicht dem
 Angler.
 
+## Inhalt
+
+- Schritt 2.1: Above the Fold entscheidet
+- Schritt 2.2: Scanverhalten und Navigation
+- Schritt 2.3: Die 3-Klick-Regel
+- Layout-Grundlagen
+- Buttons
+- Häufige Design-Tells, die es zu vermeiden gilt
+
 ## Schritt 2.1: Above the Fold entscheidet
 
 Above the Fold ist alles, was ohne Scrollen sichtbar ist. Hier fällt die Entscheidung in

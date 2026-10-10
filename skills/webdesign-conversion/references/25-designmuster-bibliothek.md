@@ -12,6 +12,20 @@ voller Screenshots.
 Die linke Spalte veraltet mit der Mode. Die rechte gilt auch in einem anderen Stil, einer
 anderen Branche und einem anderen Stack. Nur die rechte kommt in die Bibliothek.
 
+## Inhalt
+
+- Wo sie liegt
+- Global oder nur im Projekt
+- Pflichtfelder eines Musters
+- Das Konfidenzmodell
+- Ein Muster aufnehmen
+- Wann erweitern statt neu anlegen
+- Der Qualitätsfilter
+- Die Grenze zur Kopie
+- Eigenes Ergebnis festschreiben
+- Erweiterungspunkte, bewusst noch nicht gebaut
+- Verwandte Kapitel
+
 ## Wo sie liegt
 
 ```

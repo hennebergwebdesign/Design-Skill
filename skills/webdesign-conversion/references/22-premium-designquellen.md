@@ -24,6 +24,18 @@ haben.
 bevor sie abgerufen wird, siehe die harte Grenze in `SKILL.md` und den Ablauf in
 `../../agentur-website-builder/references/designrecherche-ablauf.md`.
 
+## Inhalt
+
+- Die fünf Quellen und wofür sie taugen
+- Quellen außerhalb des Webs
+- Bausteine und Bibliotheken: Kandidaten, ungeprüft
+- Quellen für Flows und Bewegung: Kandidaten, ungeprüft
+- Galerien je Sektion: Kandidaten, ungeprüft
+- Wie recherchiert wird
+- Inspiration, kein Copy-Paste
+- Eine bekannte oder alte Seite als Referenz erfassen
+- Verwandte Kapitel
+
 ## Die fünf Quellen und wofür sie taugen
 
 | Quelle | Was dort steht | Wofür nutzen |
@@ -57,9 +69,9 @@ keine Verlinkung da. Was gebraucht wird, wird gesucht und vor dem Einsatz geprü
 
 | Zweck | Kandidaten laut Video | Prüfpflicht vor dem Einsatz |
 |---|---|---|
-| Stilsammlungen, maschinenlesbare Designsysteme | styles.referero.design | Lizenz der Inhalte. Eine Sammlung liefert Prinzipien (Stufe 5 in `24-designsystem-vorrang.md`), nie ein fremdes Markensystem |
-| Schriften mit Charakter | Fontshare, Fontesk, Pairing über Fontjoy | Lizenz je Schrift, **selbst hosten** nach `10-visuelle-richtung.md`, nie vom Anbieter-CDN laden (Datenschutz, `07-recht-dsgvo.md`) |
-| Komponenten | React Bits (animierter Text, Glaskarten, Cursoreffekte) | Lizenz, Barrierefreiheit, Bewegung unter 300 ms für Bedienbares (`30-motion-pruefung.md`), an Tokens angepasst, nicht unverändert eingefügt |
+| Stilsammlungen, maschinenlesbare Designsysteme | styles.refero.design (bis 4.17 als „referero" verschrieben, Adresse am 09.10.2026 per Seitentitel geprüft) | Lizenz der Inhalte. Eine Sammlung liefert Prinzipien (Stufe 5 in `24-designsystem-vorrang.md`), nie ein fremdes Markensystem |
+| Schriften mit Charakter | Fontshare, Fontesk, Open Foundry, Pairing über Fontjoy, Paarungen im Einsatz bei Typewolf (nicht alles frei). Aus einem Screenshot bei Fonts In Use die nächste freie Schrift suchen lassen, die Referenzschrift nie ungeprüft übernehmen | Lizenz je Schrift, **selbst hosten** nach `10-visuelle-richtung.md`, nie vom Anbieter-CDN laden (Datenschutz, `07-recht-dsgvo.md`) |
+| Komponenten | React Bits (animierter Text, Glaskarten, Cursoreffekte), Aceternity UI, Relume Library, einzelne Stücke auf CodePen. Für React gebaut: im Agenturstack als Astro-Insel oder in HTML und CSS neu umgesetzt, Quelle und Lizenz in `public/images/BILDER.md` unter „Weitere Assets" | Lizenz, Barrierefreiheit, Bewegung unter 300 ms für Bedienbares (`30-motion-pruefung.md`), an Tokens angepasst, nicht unverändert eingefügt |
 | Effekte (Shader, Raster, Verläufe) | Canvas UI | Branchenpassung vor Effekt: Handwerk, Bau, Betreuung und Gastronomie brauchen zuerst Lesbarkeit und Vertrauen. Performance messen (`38-scrollvideo-und-einbettungen.md`) |
 | Icons | Iconify, Flaticon, Lordicon (animierte Icons) | **Ein** Pack in einem Stil je Projekt, Lizenz und Namensnennung bei Flaticon, Aufteilung in Systemicons und eigenes Set nach `17-icons-eigenes-system.md` |
 | Verzeichnisse | Creators Toolbox | Auswahlhilfe, keine Quelle, die Prüfung ersetzt |
@@ -75,9 +87,9 @@ hier gilt Tor 1: erst Kandidaten vorschlagen, dann freigeben lassen.
 
 | Zweck | Kandidaten laut Quelle |
 |---|---|
-| App und Ablaufreferenzen (Seitenfluss, Zustände) | Mobbin, Refero, Page Flows, Screens Design. Mobbin bietet laut einem Video (Alex Sprogis, 28.09.2026) einen MCP-Server, über den Claude die Sammlung abruft. Das ist ein Abruf fremder Gestaltung: Tor 1 gilt wie bei jeder Referenz, und „nachbauen lassen" ist ausgeschlossen, übernommen wird das Prinzip (`24-designsystem-vorrang.md`) |
+| App und Ablaufreferenzen (Seitenfluss, Zustände) | Mobbin, Refero, Page Flows, Screens Design. Mobbin bietet laut einem Video (Alex Sprogis, 28.09.2026) einen MCP-Server, über den Claude die Sammlung abruft. Das ist ein Abruf fremder Gestaltung: Tor 1 gilt wie bei jeder Referenz, und „nachbauen lassen" ist ausgeschlossen, übernommen wird das Prinzip (`24-designsystem-vorrang.md`). Der Zugangslink zum MCP-Server ist ein Geheimnis wie ein Schlüssel: nie ins Repository, nie in einen Screenshot. Ein Abo-Login statt eines offiziellen Zugangs in einem Drittwerkzeug kann gegen dessen Bedingungen verstoßen, vorher lesen |
 | Lizenzfreie Bilder | Lummi (Schreibweise aus dem Transkript, ungeprüft) | Lizenz je Bild prüfen, nie als Team-, Projekt- oder Kundenbeleg (harte Grenze). Echte Fotos des Kunden gehen vor |
-| Bewegungsbeispiele | whatships.com |
+| Bewegungsbeispiele | whatships.com (Verzeichnis von Launchvideos, am 09.10.2026 per Seitentitel geprüft; die Schreibweise „watchships.com" aus dem Paket 4.18 führt zu einer Ferienwohnung) |
 | Grafik und Posterreferenzen | Savee |
 | Schriften im echten Einsatz | Fonts In Use |
 | Videobeispiele (teils kostenpflichtig) | skillery.dev |

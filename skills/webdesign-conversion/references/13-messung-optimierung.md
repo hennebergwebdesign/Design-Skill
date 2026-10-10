@@ -3,6 +3,17 @@
 Ohne Daten keine Verbesserung. Eine Website ist nie fertig; ohne Pflege und Optimierung
 stagniert alles.
 
+## Inhalt
+
+- Was gemessen wird
+- Werkzeuge
+- GA4 einrichten, das Minimum
+- Heatmaps und Aufzeichnungen richtig lesen
+- Der monatliche Review
+- A/B-Tests, ehrlich betrachtet
+- Optional: Kundendashboard
+- Was nicht gemessen werden soll
+
 ## Was gemessen wird
 
 **Nicht** Besucherzahlen. Die eine Zahl, die zählt, ist die **qualifizierte Anfrage**. Alles

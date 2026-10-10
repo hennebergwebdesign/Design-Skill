@@ -8,6 +8,15 @@ Grundregel für die Arbeit: **Lücken bleiben sichtbar.** Jede Angabe, die nicht
 ist, steht als `[[FEHLT: …]]` oder `[[BESTÄTIGEN: …]]` im Text und in der Liste offener
 Punkte. Eine erfundene Registernummer ist schlimmer als eine leere.
 
+## Inhalt
+
+- Impressum
+- Datenschutzerklärung
+- Consent: was wirklich verlangt ist
+- Weitere Pflichten je nach Seite
+- Auftragsverarbeitung
+- Übergabe an den Kunden
+
 ## Impressum
 
 **Rechtsgrundlage:** § 5 DDG (seit Mai 2024 Nachfolger von § 5 TMG), bei journalistisch-

@@ -8,6 +8,18 @@ Der Unterschied ist sichtbar: ein Icon-Set, dessen Strichstärke zur Display-Sch
 dessen Ecken den Radius der Tokens aufnehmen, wirkt wie Teil der Marke. Ein
 zusammengesuchtes Set wirkt wie Clipart, auch wenn jedes einzelne Icon gut ist.
 
+## Inhalt
+
+- Erst die Entscheidung: Bibliothek oder eigenes Set
+- Die Ableitung, in vier Schritten
+- Optische Korrektur statt geometrischer Gleichheit
+- Technische Umsetzung
+- Barrierefreiheit
+- Favicon und App-Icons
+- Prüfung
+- Animierte Icons
+- Verwandte Kapitel
+
 ## Erst die Entscheidung: Bibliothek oder eigenes Set
 
 Ein komplettes eigenes Set von 80 Icons ist in den meisten Budgets nicht zu verantworten und

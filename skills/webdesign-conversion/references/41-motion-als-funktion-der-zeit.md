@@ -11,6 +11,20 @@ Die Substanz stammt aus einem Erweiterungspaket mit Videoauswertungen (Referenza
 Designloop). Zahlen und Aussagen daraus sind Erfahrungswerte der Autoren, nicht gemessen und
 nicht gegen Hersteller geprüft. Werkzeugnamen veralten, die Regeln sind werkzeugneutral.
 
+## Inhalt
+
+- 1\. Das Prinzip: ein Bild ist `frame(t)`
+- 2\. Reihenfolge, jede Stufe mit Tor
+- 3\. Look: gegen die Schablone
+- 4\. Referenzvideo auswerten
+- 5\. Einsatz im Web
+- 6\. Mehrere Formate aus einer Szene
+- 7\. Rechte und Kennzeichnung
+- 8\. Checkliste vor Freigabe
+- 9\. Als Zusatzleistung
+- 10\. Nicht übernommen (mit Grund)
+- Verwandte Kapitel
+
 ## 1. Das Prinzip: ein Bild ist `frame(t)`
 
 Jedes Bild der Animation ist eine reine Funktion der Zeit: gleiches `t`, gleiches Bild. Kein

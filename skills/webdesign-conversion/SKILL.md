@@ -4,7 +4,7 @@ description: "Vollständiges System für conversion-orientiertes Webdesign im DA
 license: MIT
 metadata:
   author: Henneberg Webdesign
-  version: 2.21.0
+  version: 2.22.0
 ---
 
 # Webdesign Conversion System
@@ -132,6 +132,7 @@ Lies gezielt nach, statt alles zu laden.
 | Polierschleife mit getrenntem Kritikagenten: Vorbedingungen, Budget, Durchlaufgrenze, Verhältnis zu den zwei Durchgängen, Variante mit drei Kritikern, Fachkritiker für Texte (Copy, Conversion, SEO, GEO), Design Loop mit `bar.md` und Bestanden oder Nicht bestanden (3c) | `40-polierschleife-mit-kritiker.md` |
 | Prompt-Gerüst R I S E, `DESIGN.md` neben `marke.json`, eine Referenz je Sektion, fünf Versionen, Ein-Bildschirm-Test, Fünf-Agenten-Prüfung mit Fix-Liste, Mikrobewegung, Plakat in Code, Design-Ordner | `47-claude-design-hacks.md` |
 | Logoanimation, Loop, Kurzvideo: `frame(t)`, Storyboard und Beatgrid vor dem Code, Formate, Einsatz im Web | `41-motion-als-funktion-der-zeit.md` |
+| Richtungen und Varianten der Startsektion mit Preiszeile, Struktur mit Zuständen, Subtraktionsrunde, Fehlermodi nach dem Bau (Erzählbruch, Stresstest mit echtem Inhalt, Funktion fehlt), Prüfer ohne Vorwissen, Rechner nur mit echten Formeln | `48-richtung-varianten-und-subtraktion.md` |
 | Referenzen als Kollage und Grammatiktabelle, Gap Audit bei „es fehlt etwas" | `42-referenzgrammatik-und-gap-audit.md` |
 | Gutes Ergebnis festschreiben (Rückbauprobe), Pilot vor Serie, Figurenwelt, was der Mensch entscheidet | `44-gutes-festschreiben-und-rueckbauprobe.md` |
 | Hierarchie als Verhältnis, Titellänge, Führungskanten, Anteile je Sektion wechseln, Heldenidee als roter Faden, Animationssystem | `43-hierarchie-raster-komposition.md` |
@@ -172,14 +173,14 @@ Security-Header) liegen in `assets/vorlagen/`, annotierte 21st.dev-Referenzkompo
 Alle Skripte laufen ohne Abhängigkeiten außer Node, das Breakpoint-Skript braucht Playwright.
 
 ```bash
-node scripts/pruefe-striche.mjs       # Gedankenstriche, hyphens: auto, verbotene Wörter
+node scripts/pruefe-striche.mjs       # Gedankenstriche, Bindestrich mit Leerzeichen, hyphens: auto, verbotene Wörter; --hook nach jedem Schreiben
 node scripts/pruefe-tokens.mjs        # hartcodierte Farb-, Abstands- und Schriftwerte
-node scripts/pruefe-kontrast.mjs      # Kontrastwerte der Rollen-Tokens
+node scripts/pruefe-kontrast.mjs      # Kontrastwerte der Rollen-Tokens, mit --paare auch freie Paare
 node scripts/pruefe-platzhalter.mjs   # [[FEHLT]], data-copy-vorschlag, ausgelassener Code
 node scripts/pruefe-breakpoints.mjs http://localhost:4321 --bilder
-node scripts/pruefe-geschmack.mjs     # nach dem Build: Kicker-Quote, Laufbänder, CTA-Texte, KI-Tells, Standardschriften
+node scripts/pruefe-geschmack.mjs     # nach dem Build: Kicker-Quote, Laufbänder, CTA-Texte, KI-Tells, Standardschriften, getippte Logoleiste, Violettverlauf
 node scripts/pruefe-motion.mjs        # transition: all, scale(0), ease-in, Dauer über 300 ms, Reduzierung, Scrollvideo, 3D-Szene
-node scripts/pruefe-geo.mjs           # nach dem Build: KI-Crawler, Text im HTML, Gliederung, JSON-LD, Titel, Beschreibung, NAP
+node scripts/pruefe-geo.mjs           # nach dem Build: KI-Crawler, Text im HTML, Gliederung, JSON-LD, Titel, Beschreibung, NAP, Bild ohne alt
 node scripts/pruefe-aktualitaet.mjs   # nach dem Build: Copyright-Jahr, Stand-Angaben, Jahr im Titel
 node scripts/pruefe-seitenbasis.mjs   # nach dem Build: lang, Viewport und Zoom, Alt-Texte, Labels, Fremdserver, Teilen-Ebene
 ```
@@ -196,7 +197,7 @@ node --test 'scripts/tests/*.test.mjs'                            # Tests der Sk
 ```
 
 `deslop-check.mjs` prüft fünf Kriterien: Floskeln (dazu die Satzmuster Kontrastfigur,
-Verneinungsreihe, selbstbeantwortete Frage und Stakkato), Nominalstil, leere Superlative, fehlende
+Verneinungsreihe, selbstbeantwortete Frage, Stakkato und runde Kundenzahl), Nominalstil, leere Superlative, fehlende
 Belege und die Dreierfigur. Er gilt für **eigene** Textvorschläge. Gelieferte Kundentexte
 werden nicht geprüft und nicht umgeschrieben.
 

@@ -5,6 +5,17 @@ entwickelt. Der Kunde hat Entwürfe abgelehnt, die nach Schablone aussahen, und 
 eine Haltung: bewusste, begründete Entscheidungen zu Palette, Typografie und Layout, die zu
 genau diesem Auftrag gehören.
 
+## Inhalt
+
+- Erst den Gegenstand verstehen
+- Zwei Durchgänge, nicht einer
+- Die Standards, die man erkennt
+- Farbe
+- Typografie
+- Tokensystem
+- Stilrichtungen als Startpunkt
+- Selbstkritik beim Bauen
+
 ## Erst den Gegenstand verstehen
 
 Steht im Briefing nicht, worum es geht, klär das zuerst: **ein konkretes Thema, die Zielgruppe

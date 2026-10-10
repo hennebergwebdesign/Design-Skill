@@ -1,5 +1,15 @@
 # Intake und Entscheidungen
 
+## Inhalt
+
+- Zwei Projektarten
+- Neubau oder Überarbeitung
+- Bilder
+- Fragen, die immer geklärt sein müssen
+- Interview vor dem Prompt (bei größeren Aufträgen)
+- Fragen, die nur bei Auslöser kommen
+- Was ohne Rückfrage entschieden wird
+
 ## Zwei Projektarten
 
 Der wichtigste Unterschied im ganzen Skill. Alles Weitere hängt daran.
@@ -94,6 +104,15 @@ je fehlendem Bild eine Zeile mit Dateiname, Zweck, Seitenverhältnis und Mindest
 dem Livegang ist sie die Checkliste für die Bildrechte. Diese Liste im Abschlussbericht
 verlinken.
 
+Sie ist zugleich das Asset Inventar des Projekts. Je Eintrag: Datei, Zweck und Sektion, Quelle (Kunde,
+Agentur, generiert, Stock), Lizenz mit Prüfdatum, KI-Kennzeichnung nötig (ja oder nein), Status
+(vorhanden, offen, `[[FEHLT: …]]`). Ein Abschnitt „Weitere Assets" führt Schriften, Icon-Pakete,
+Lottie-Dateien und fremde Komponenten mit Quelle, Lizenz und Weitergabe an den Kunden. Dateinamen
+beschreiben das Motiv (`dachdecker-kassel-steildach.webp`), nicht die Kamera. Grund: Eine Lizenz, die
+beim Livegang niemand findet, ist beim ersten Abmahnschreiben keine Lizenz. Eine eigene Datei je Sorte
+ist nicht übernommen (`../../webdesign-conversion/references/48-richtung-varianten-und-subtraktion.md`,
+Abschnitt 8).
+
 ## Fragen, die immer geklärt sein müssen
 
 Wenn sich das nicht aus dem Auftrag oder den Dateien ergibt, fragen:
@@ -127,6 +146,16 @@ nicht mit einem langen Startprompt beginnen. Stattdessen interviewt das Modell d
 eine Frage nach der anderen: Ziel, Zielgruppe, Referenzen, Seitenfluss, Inhalte, Grenzen. Aus den
 Antworten entsteht ein sauberer Startprompt, mit dem eine **frische Sitzung** beginnt. Grund: Das
 spart Rückfragen mitten im Bau, und der Startprompt enthält nur Geklärtes.
+
+Fragen, die das Interview zusätzlich zu den neun stellt, weil sie die Gestaltung tragen:
+
+| Frage | Wohin die Antwort geht |
+|---|---|
+| Was soll der Besucher am Ende glauben? Ein Satz, keine Liste | Markenbrief, Kernbotschaft (`../../webdesign-conversion/references/12-copywriting.md`) |
+| Was muss er zuerst sehen, welche Handlung soll die leichteste sein? | Konzept, Held und primäre Aufforderung |
+| Drei Wörter zur Stimmung und ein Gegenbeispiel („nicht wie …"), alle Klischees der Branche | Markenbrief, Stilrichtung (`../../webdesign-conversion/references/37-stilrichtung-nach-kundensprache.md`) |
+| Was ist das eine, was nur diese Seite tut? Wo ist sie ruhig, wo intensiv? | Signaturelement und Signaturbewegung (`../../webdesign-conversion/references/48-richtung-varianten-und-subtraktion.md`, Abschnitt 7) |
+| Was darf generiert werden, was nie (Personen, Team, Kunden, Gebäude)? | `public/images/BILDER.md`, Sperren für Bildaufträge |
 
 Der Seitenfluss kommt mit Skizzen: ein Rahmen je Screen (Canva oder Figma), Reihenfolge benannt
 (Start, Beratung, Anfrage, Danke). Bei Funnel und App kommen die Zustände dazu: leer, Laden,

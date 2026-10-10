@@ -12,6 +12,15 @@ endlosen Schleife. Übernommen sind die Begriffe und ihre Wirkung, kein Code und
 Playbook-Dateien des Originals: dieser Skill hat keine eigenen Slash-Commands, das Vokabular
 bildet stattdessen auf bestehende Regler, Referenzen und Prüfskripte ab.
 
+## Inhalt
+
+- 1\. Acht Wörter statt eines Absatzes
+- 2\. Vier Blickwinkel auf dieselbe Seite
+- 3\. Begrenzte Durchgänge, keine endlose Schleife
+- 4\. Eine zweite Meinung, die ohne KI läuft
+- 5\. Zwei Tests mit Menschen
+- Verwandte Kapitel
+
 ## 1. Acht Wörter statt eines Absatzes
 
 | Wort | Bedeutung hier | Wirkt auf |

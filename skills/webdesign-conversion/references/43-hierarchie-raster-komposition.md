@@ -11,6 +11,21 @@ als Erweiterungspaket geliefert. Übernommen sind Verfahren und Beobachtungen in
 Zahlen und Aussagen sind Erfahrungswerte des Autors, keine Messungen. Seitenadressen und Namen aus
 den Videos stammen aus automatischen Untertiteln und sind nicht geprüft.
 
+## Inhalt
+
+- 1\. Wenige Zutaten
+- 2\. Hierarchie ist ein Verhältnis
+- 3\. Der Gestalter führt das Raster
+- 4\. Fläche nutzen, Anteile wechseln
+- 5\. Optik schlägt Mathematik, bis eine harte Grenze trifft
+- 6\. Die Heldenidee ist der rote Faden
+- 7\. Animation als System
+- 8\. Entschieden: was das Paket anders sagt als der Bestand
+- 9\. Beispielseiten aus dem Video (Kandidaten, ungeprüft)
+- 10\. Nicht übernommen (mit Grund)
+- 11\. Checkliste
+- Verwandte Kapitel
+
 ## 1. Wenige Zutaten
 
 | Zutat | Richtwert | Wo geregelt |
@@ -135,7 +150,7 @@ stehen. Pinning und Überlauf: `09-motion-gsap.md`, Abschnitt Pinning. Scrollvid
 | Überschrift 1 bis 5 Wörter | **als Display Regel übernommen**, H1 trägt weiter das Thema (Abschnitt 2) | SEO und Kernbotschaft |
 | Kleintext nicht reflexartig vergrößern | **eingeschränkt** auf Nebentext | Mindestgröße 16 px |
 | Hintergrund mit 2 px Punktraster | **nicht übernommen** | Stilmittel einer Beispielmarke |
-| Stil Skill je Marke in Framer | übertragen auf `marke.json` und den Markenbrief, siehe `agentur-website-builder/references/moodboard-und-stylescape.md`, Abschnitt 5a | Der Bestand hat dafür schon einen Ort |
+| Stil Skill je Marke in Framer | übertragen auf `marke.json` und den Markenbrief, siehe `../../agentur-website-builder/references/moodboard-und-stylescape.md`, Abschnitt 5a | Der Bestand hat dafür schon einen Ort |
 
 ## 9. Beispielseiten aus dem Video (Kandidaten, ungeprüft)
 

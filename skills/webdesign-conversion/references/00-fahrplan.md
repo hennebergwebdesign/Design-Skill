@@ -8,6 +8,18 @@ Anzeigenbudget, sondern hat den Fehler eine Etage tiefer.
 1 Strategie  →  2 Struktur  →  3 Copy  →  4 Design  →  5 Bau  →  6 Test  →  7 Launch  →  8 Pflege
 ```
 
+## Inhalt
+
+- 1 Strategie (Kickoff)
+- 2 Struktur (Informationsarchitektur)
+- 3 Copy
+- 4 Design
+- 5 Bau
+- 6 Test
+- 7 Launch
+- 8 Pflege
+- Zeitrahmen, ehrlich
+
 ## 1 Strategie (Kickoff)
 
 **Ziel:** Klarheit über vier Punkte, bevor irgendetwas entsteht.

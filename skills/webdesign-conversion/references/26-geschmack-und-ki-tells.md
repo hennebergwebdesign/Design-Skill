@@ -15,6 +15,21 @@ Stellen stehen mit Grund am Ende des Kapitels.
 jeder Regel hier vor, siehe `24-designsystem-vorrang.md`. Eine Regel hier ist eine
 Voreinstellung gegen die Voreinstellung, keine Vorschrift gegen den Kunden.
 
+## Inhalt
+
+- 1\. Die Lesart vor dem Plan
+- 2\. Drei Regler
+- 3\. Drei Sperren
+- 4\. Heldenbereich
+- 5\. Sektionsfolge und Layoutfamilien
+- 6\. Inhaltsdichte und Copy
+- 7\. Katalog der Produktionstells
+- 8\. Typografie und Farbe: die zwei häufigsten Griffe
+- 9\. Technik, die den Eindruck trägt
+- 10\. Vorflugcheck
+- 11\. Was bewusst nicht übernommen wurde
+- Verwandte Kapitel
+
 ## 1. Die Lesart vor dem Plan
 
 Die meisten schlechten Entwürfe entstehen nicht aus schlechtem Geschmack, sondern weil vor der
@@ -222,11 +237,14 @@ Befund.
 | Haarlinie über und unter jeder Zeile | Liste mit `border-top` und `border-bottom` je Eintrag | eine Linie zwischen Einträgen oder eine über der Gruppe | angesehen |
 | Balken mit gefüllter Spur als Vergleich | grauer Balken, halb gefüllt, „Kundenzufriedenheit" | Zahl mit Quelle; wenn Balken, dann ohne Hintergrundspur | angesehen |
 | Oberflächenattrappe aus Kästen | nachgebautes Dashboard, Terminal oder Fenster mit drei Punkten aus `div` | echter Screenshot, echtes Bauteil in klein, Foto, oder gar keine Vorschau | angesehen |
-| Umbruch plus Kursiv als Manier | „seit dreißig<br>*Jahren.*" | die Überschrift liest sich zuerst normal | angesehen |
+| Umbruch plus Kursiv als Manier | „seit dreißig<br>*Jahren.*" | die Überschrift liest sich zuerst normal | `pruefe-geschmack.mjs` (kursives Akzentwort in h1 und h2), der Umbruch angesehen |
 | Senkrecht gedrehter Text | „Referenzen 2018 bis 2026" um 90° gedreht am Rand | nur bei ausdrücklich experimenteller Richtung | angesehen |
 | Deko-Raster und Fadenkreuze | Linien, die nichts ordnen | Linien nur dort, wo sie Inhalt gliedern | angesehen |
 | Eigener Mauszeiger | `cursor: none` plus Kreis, der der Maus folgt | Systemzeiger | `pruefe-geschmack.mjs` |
 | Glühen und Verlaufstext | Neonschein um Knöpfe, Verlauf in großen Überschriften | getönter Schatten, Farbe aus der Rolle | angesehen |
+| Indigo- und Violettverlauf | Fläche oder Knopf von Indigo nach Violett, ohne dass die Marke so aussieht | Farbe aus den Rollen-Tokens, ein Verlauf nur aus der Marke abgeleitet (harte Grenze eigene Handschrift) | `pruefe-geschmack.mjs` |
+| Glas auf jeder Fläche | Weichzeichner hinter Karten, Kacheln und Knöpfen | Glas nur auf fixierten Elementen (Abschnitt 9), sonst eine Fläche aus den Tokens | `pruefe-geschmack.mjs` ab vier Stellen je Datei |
+| Getippte Logoleiste | „Vertrauen uns: Müller GmbH · Schmidt AG · Bau KG" als Text in einer Kundenleiste | echte Logos mit Freigabe, oder die Leiste streichen. Eine Leiste aus Namen behauptet dieselbe Kundenbeziehung wie eine Logowand (harte Grenze) | `pruefe-geschmack.mjs` |
 | Mikro-Metasatz unter dem Kicker | „Jede dieser Leistungen bieten wir heute an, nicht erst morgen." | Kicker, Überschrift, Text reichen | angesehen |
 | Pille über der Überschrift | gerundetes Badge „Neu" oder „Ihr Partner in Karlsruhe" über der H1 | streichen. Die Pille ist ein Kicker in anderer Form und zählt in der Kicker-Quote mit | `pruefe-geschmack.mjs` |
 | Kreis-Icon mit Haarlinie | dünn gezeichnetes Icon in einem runden Rahmen, dazu dünne Ziffern in Kreisen | Icon aus dem eigenen Set mit der Strichstärke aus `marke.json` (`17-icons-eigenes-system.md`), Schritte mit Verb statt Kreisnummer | angesehen |
@@ -342,6 +360,12 @@ ungeprüft benannt.
 15. Farbabgleich: Passt die Farbstimmung jedes Fotos zur Palette? Ein Foto, das neben der Seite
     steht statt in ihr, bekommt Farbgrading oder Zuschnitt, die Palette bleibt (`02-design-ux.md`,
     Abschnitt Bilder). Ein Urteil, keine Messung.
+16. Erzählbruch und echter Inhalt: Heldbild, Überschrift und erste Sektion erzählen dieselbe
+    Geschichte, der Blick geht zuerst auf das Angebot, und jedes Bauteil hält die kürzeste und die
+    längste echte Zeichenfolge aus. Fehlermodi und Stresstest: `48-richtung-varianten-und-subtraktion.md`,
+    Abschnitt 6.
+17. Subtraktionsrunde gelaufen: jedes Element hilft der Zielgruppe bei ihrer Aufgabe oder ist
+    gestrichen, Streichungen nach Entscheidung (`48-richtung-varianten-und-subtraktion.md`, Abschnitt 5).
 
 ```bash
 pnpm build
@@ -389,3 +413,4 @@ beiden Regelwerken im Kontext an genau den Stellen dieser Tabelle zwischen ihnen
 - `27-redesign-bestand.md`: dieselben Regeln auf eine bestehende Seite angewendet
 - `28-ki-bildentwuerfe.md`: generierte Entwürfe als Vorlage, und wo sie nichts belegen dürfen
 - `45-huerde-laenge-und-leserfuehrung.md`: informative Überschriften statt Slogans, entschiedene Widersprüche zu Schriften, Palette und Breite
+- `48-richtung-varianten-und-subtraktion.md`: Richtungen in Varianten mit Preiszeile, Subtraktionsrunde, Fehlermodi nach dem Bau

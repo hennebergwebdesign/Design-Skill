@@ -7,6 +7,15 @@ ohne Strategie ist nur Dekoration.
 Eine Website ohne klare Positionierung ist wie ein Verkäufer, der nicht weiß, wen er
 anspricht, welches Problem er löst und warum man ihm vertrauen sollte.
 
+## Inhalt
+
+- Schritt 1.1: Zielgruppe schärfen
+- Schritt 1.2: Klarer USP
+- Schritt 1.3: Einwände vorwegnehmen
+- Schritt 1.4: Zielkonflikte entscheiden
+- Schritt 1.5: Recherche vor dem Text
+- Ergebnis dieses Bereichs
+
 ## Schritt 1.1: Zielgruppe schärfen
 
 Breite Zielgruppen erzeugen schwache Conversion. Je genauer sich jemand angesprochen fühlt,

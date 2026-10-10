@@ -4,6 +4,17 @@ Gilt für React-Projekte mit einer `components.json`. Für Astro-Projekte ohne R
 stattdessen `14-projektstruktur-astro.md`: die Kompositionsregeln unten sind trotzdem
 übertragbar.
 
+## Inhalt
+
+- Grundsätze
+- Projektkontext lesen, bevor irgendetwas passiert
+- Harte Regeln
+- Komponentenwahl
+- Ablauf
+- Presets
+- Konkrete Beispiele
+- Verbindung zum Conversion-System
+
 ## Grundsätze
 
 1. **Vorhandene Komponenten zuerst.** Vor eigener UI die Registries durchsuchen

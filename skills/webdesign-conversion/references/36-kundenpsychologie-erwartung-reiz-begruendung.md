@@ -10,6 +10,17 @@ keine Neurowissenschaft: Es vereinfacht das alte Dreihirnmodell, das in der Hirn
 nur als Merkhilfe für eine Reihenfolge. Die Zahlenangabe aus dem Video (eine Milliarde Informationseinheiten pro Sekunde,
 zehn davon bewusst) hat dort keine Primärquelle und ist nicht übernommen.
 
+## Inhalt
+
+- 1\. Die Reihenfolge: Erwartung, Reiz, Begründung
+- 2\. Erwartung: Konventionen sind Material, kein Hindernis
+- 3\. Reiz: das Prinzip „am weitesten fortgeschritten, aber noch akzeptabel"
+- 4\. Begründung: der rationale Teil kommt zuletzt und braucht Futter
+- 5\. Gruppieren: drei bis vier Dinge auf einmal
+- 6\. Prüfen statt behaupten
+- 7\. Nicht übernommen (mit Grund)
+- Verwandte Kapitel
+
 ## 1. Die Reihenfolge: Erwartung, Reiz, Begründung
 
 | Stufe | Frage des Besuchers (unbewusst) | Aufgabe der Seite | Umsetzung | Grund |

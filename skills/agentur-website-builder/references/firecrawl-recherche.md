@@ -20,6 +20,14 @@ Natur: `design-scan.mjs` ist der schnelle Blick auf eine Seite, `referenz-crawl.
 Schritt in einem Ablauf mit zwei Freigaben, siehe `designrecherche-ablauf.md`. Ein Scan
 ersetzt keine Freigabe und erzeugt keinen Eintrag in der Musterbibliothek.
 
+## Inhalt
+
+- Die Abrufschicht: vier Stufen mit Rückfall
+- Einrichtung
+- Wann welches Werkzeug
+- Grenzen, die nicht verhandelbar sind
+- Verwandte Kapitel
+
 ## Die Abrufschicht: vier Stufen mit Rückfall
 
 Seit Version 3.5.0 ruft keines der Skripte selbst ab. Sie nutzen alle `scripts/lib/abruf.mjs`,

@@ -9,6 +9,22 @@ verlinkt (Abschnitt 11). Die Aussagen des Videos sind Erfahrungswerte des Autors
 Der Design Loop des Pakets steht in `40-polierschleife-mit-kritiker.md`, Abschnitt 3c, weil er eine
 Variante der Polierschleife ist und keine eigene Disziplin.
 
+## Inhalt
+
+- 1\. Prompt-Gerüst R I S E
+- 2\. DESIGN.md neben marke.json
+- 3\. Eine Referenz je Sektion (Section Remix)
+- 4\. Fünf Versionen, die einfachste behalten
+- 5\. Ein-Bildschirm-Test
+- 6\. Fünf-Agenten-Prüfung vor der Freigabe
+- 7\. Bewegung: Mikro-Details und Kamerawörter
+- 8\. Plakat in Code, 3D-Szene, Nachbau aus Aufnahme
+- 9\. Design-Ordner im Kundenprojekt
+- 10\. Sicherheit, Quellen, Lizenzen
+- 11\. Was schon stand (nicht wiederholt)
+- 12\. Nicht übernommen (mit Grund)
+- Verwandte Kapitel
+
 ## 1. Prompt-Gerüst R I S E
 
 Alle 15 Prompts der Quelle haben denselben Aufbau. Für jede größere Aufgabe an Claude Design oder

@@ -9,6 +9,18 @@ Arbeitsgrundlagen und **keine Rechtsberatung.** Ein AGG-Verstoß in einer Stelle
 unmittelbar entschädigungspflichtig, deshalb geht eine Anzeige vor Veröffentlichung durch
 eine fachliche Prüfung. Rechercherstand: die im Text genannten Entscheidungen.
 
+## Inhalt
+
+- Warum der Funnel anders ist
+- Die EVP statt einer Stellenanzeige
+- Der Funnel in Stufen
+- Die Kurzbewerbung
+- Recht
+- JobPosting für Google for Jobs
+- Messung
+- Prüfliste vor dem Livegang
+- Verwandte Kapitel
+
 ## Warum der Funnel anders ist
 
 | | Kunde | Bewerber |

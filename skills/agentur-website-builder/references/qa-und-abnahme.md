@@ -8,6 +8,11 @@ Die vollständige Liste kurz vor dem Livegang steht in
 `../../webdesign-conversion/assets/checklisten/pre-launch.md`, das Audit einer bestehenden
 Seite in `conversion-audit.md` daneben. Dieses Kapitel ist der Ablauf während der Umsetzung.
 
+## Inhalt
+
+- Ablauf
+- Abschlussbericht im Chat
+
 ## Ablauf
 
 ### 1. Build und Typprüfung
@@ -22,7 +27,7 @@ Warnungen nicht ignorieren. Sie sind fast immer echte Fehler in der Ausgabe.
 ### 2. Die zehn Prüfskripte
 
 ```bash
-node scripts/pruefe-striche.mjs                 # Gedankenstriche, hyphens: auto, verbotene Wörter
+node scripts/pruefe-striche.mjs                 # Gedankenstriche, Bindestrich mit Leerzeichen, hyphens: auto, verbotene Wörter
 node scripts/pruefe-tokens.mjs                  # hartcodierte Farb-, Abstands- und Schriftwerte
 node scripts/pruefe-kontrast.mjs                # Kontrastwerte der Rollen-Tokens
 node scripts/pruefe-platzhalter.mjs --launch    # [[FEHLT]], data-copy-vorschlag, ausgelassener Code
@@ -43,8 +48,10 @@ Fünf-Agenten-Prüfung aus `../../webdesign-conversion/references/47-claude-desi
 `pruefe-geschmack.mjs` zählt, was sich an Geschmack zählen lässt: höchstens ein Kicker je drei
 Sektionen, höchstens ein Laufband, ein Text je Kontaktabsicht, dazu Warnungen für
 `overflow-x: hidden`, eigene Mauszeiger, `100vh` ohne `svh`, die Standardserifen und die
-Premium-Standardpalette. Als Warnung kommen hinzu: ein Primärbutton ohne Fläche (Konturbutton)
-und mehr als ein Primärbutton je Sektion. Der Rest steht als Vorflugcheck in
+Premium-Standardpalette. Als Warnung kommen hinzu: ein Primärbutton ohne Fläche (Konturbutton),
+mehr als ein Primärbutton je Sektion, eine Logoleiste aus getippten Namen, ein kursives Akzentwort in
+der Überschrift, ein Indigo- oder Violettverlauf ohne Markenvorgabe und Glas an vier oder mehr Stellen
+einer Datei. Der Rest steht als Vorflugcheck in
 `../../webdesign-conversion/references/26-geschmack-und-ki-tells.md` und wird angesehen.
 
 `pruefe-motion.mjs` liest die Quellen und zählt, was an Bewegung zählbar ist: `transition: all`,
@@ -57,7 +64,8 @@ angesehen, siehe den Review in `../../webdesign-conversion/references/30-motion-
 
 `pruefe-geo.mjs` liest `dist/`: den Zustand der KI-Crawler in der `robots.txt`, Seiten mit
 kaum Text im ausgelieferten HTML, `h1` und Ebenen, ungültiges JSON-LD und `FAQPage` mit
-Fragen, die nicht sichtbar auf der Seite stehen. Ob eine Sperre gewollt ist, entscheidet der
+Fragen, die nicht sichtbar auf der Seite stehen, dazu jedes Bild ohne `alt`-Attribut als Fehler
+(Schmuckbilder bekommen `alt=""`). Ob eine Sperre gewollt ist, entscheidet der
 Kunde, siehe `../../webdesign-conversion/references/31-ki-sichtbarkeit-geo.md`.
 
 `pruefe-breakpoints.mjs` rendert acht Größen, die fünf Breakpoints plus 320 px, 1366 × 768
@@ -68,9 +76,41 @@ Gefundene Punkte direkt beheben und erneut laufen lassen, bis nichts mehr gemeld
 Danach die Screenshots ansehen und mit dem Entwurf abgleichen. Der automatische Teil findet
 kaputte Layouts, nicht hässliche.
 
+`pruefe-kontrast.mjs` rechnet die Rollen-Tokens. Paare außerhalb der Rollen (weißer Text auf der
+Abdunklung eines Heldenbilds, Hoverzustand, Badge auf Akzent) kommen in eine Datei
+`kontrast-paare.json` im Projekt und laufen mit `node scripts/pruefe-kontrast.mjs --paare
+kontrast-paare.json`. Bei einem Bild zählt die hellste Stelle unter dem Text.
+
 Ein Befund aus `pruefe-tokens.mjs`, der bewusst so bleibt, bekommt einen Kommentar mit dem
 Wort "bewusst" und eine Begründung. Ohne diesen Kommentar bleibt es ein Befund, kein
 Sonderfall.
+
+### 2a. Die Strichregel als Hook
+
+Die harte Grenze gegen Gedankenstriche wird nicht erst am Ende geprüft, sondern nach jedem Schreiben
+einer Datei, deterministisch und ohne dass das Modell daran denken muss. In die
+`.claude/settings.json` des Kundenprojekts (Einrichtung über den Skill `update-config`):
+
+```json
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [{ "type": "command", "command": "node scripts/pruefe-striche.mjs --hook" }]
+      }
+    ]
+  }
+}
+```
+
+Der Hook liest den Pfad der geschriebenen Datei, prüft nur sie und meldet Fehler (Strich in
+Überschrift, Button, Link, Kicker) mit Exit 2 zurück an das Modell, das sie dann behebt. Warnungen im
+Fließtext halten nicht auf, sie kommen im vollen Lauf in Schritt 2. Eine nicht lesbare Eingabe oder
+eine Datei ohne Text beendet den Hook still. Grund: Eine Regel, die nur im Text steht, gilt, solange das
+Modell sie im Kontext hat. Ein Hook gilt immer und kostet keine Tokens. Der Aufbau der Hookkonfiguration
+ist gegen die Dokumentation von Claude Code zum Stand Oktober 2026 geschrieben und nicht in einem
+Kundenprojekt erprobt; vor dem Einsatz einmal mit einer Testdatei auslösen.
 
 ### 3. Abgleich mit dem Entwurf
 
@@ -216,6 +256,21 @@ Abschnitt 6, und `../../webdesign-conversion/references/29-pruefdurchgaenge-und-
 
 Hat das Projekt ein Scrollvideo, gehört zu diesem Schritt außerdem: einmal ohne Video ansehen
 (Poster und Text müssen dieselbe Aussage tragen) und einmal mit reduzierter Bewegung.
+
+### 8b. Fehlermodi und Subtraktion
+
+Was die Skripte nicht finden, weil die Seite nicht kaputt ist, sondern falsch: kontextfremdes Bild,
+Funktion fehlt trotz richtigem Aussehen, Erzählbruch zwischen Heldbild, Überschrift und erster Sektion,
+Layout bricht bei echtem Inhalt, erstes Foto zu spät. Je Fehlermodus Erkennen und Gegenmittel in
+`../../webdesign-conversion/references/48-richtung-varianten-und-subtraktion.md`, Abschnitt 6.
+
+* **Stresstest:** je Bauteil mit Textfeldern die kürzeste und die längste echte Zeichenfolge einsetzen
+  (längster Leistungsname, Ortsname, längste Bewertung) und auf 375 und 1440 px ansehen.
+* **Prüfer ohne Vorwissen:** ein Unteragent oder eine neue Sitzung bekommt nur die Screenshots und den
+  Prüfprompt aus `../../webdesign-conversion/assets/vorlagen/prompts/pruefprompts.md`.
+* **Subtraktionsrunde:** jedes Element gegen drei Fragen (hilft es der Zielgruppe bei ihrer Aufgabe,
+  Information oder Dekoration, was fehlt ohne es). Ausgabe ist eine Liste, gestrichen wird nach
+  Entscheidung. Sie ist Teil eines der zwei subjektiven Durchgänge, kein dritter.
 
 ### 9. Abnahme durch einen Menschen
 

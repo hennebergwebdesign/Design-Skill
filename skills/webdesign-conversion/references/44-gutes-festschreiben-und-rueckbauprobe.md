@@ -10,6 +10,18 @@ als Erweiterungspaket geliefert. Eigene Fassung in eigenen Worten. Die Aussagen 
 Autoren, nicht gemessen. Werkzeugnamen, Preise und Funktionen (zum Beispiel ein eingebautes Designkommando
 in Claude Code) sind **nicht übernommen**, weil sie schnell veralten und ungeprüft sind.
 
+## Inhalt
+
+- 1\. Das Problem
+- 2\. Die Rückbauprobe
+- 3\. Pilot vor Vollproduktion
+- 4\. Figurenwelt und Asset Inventar
+- 5\. Was der Mensch behält
+- 6\. Die Schleife erklärt sich selbst
+- 7\. Eine eigene Referenzbibliothek
+- 8\. Nicht übernommen (mit Grund)
+- Verwandte Kapitel
+
 ## 1. Das Problem
 
 Zehnmal „verbessere das Design" ergibt zehnmal neue Gründe, wenn kein Zielbild existiert. Und ein
@@ -95,6 +107,13 @@ Notizen, die das Modell lesen darf. Zwei Regeln: Die Sammlung hat ein **Datum un
 Screenshots fremder Seiten sind **intern**, sie kommen nie auf eine Kundenseite und nie in die globale
 Musterbibliothek (Bildrechte, `25-designmuster-bibliothek.md`, Grenze zur Kopie). Dass ein Mensch sie
 gesammelt hat, ersetzt Tor 1 für das **Lesen**, nicht Tor 2 für die **Aufnahme als Muster**.
+
+Ordnung, die das Wiederfinden trägt (aus dem Paket 4.18, dort „Taste Vault"): je Eintrag Designfamilie,
+Quelle mit Adresse, Datum, Screenshotdatei, was übernommen wird (Rhythmus, Raster, Komposition), was nicht
+(Inhalt, Logo, Figuren, Markenfarben) und ein Markenhinweis. Familiennamen sind Arbeitsbegriffe der Agentur,
+kein Standard. Aus der Sammlung entstehen die Richtungen der Stufe A in
+`48-richtung-varianten-und-subtraktion.md`, Abschnitt 3. Eine zentrale Sammlung der Agentur ist erlaubt,
+solange sie kein Kundenmaterial enthält.
 
 ## 8. Nicht übernommen (mit Grund)
 

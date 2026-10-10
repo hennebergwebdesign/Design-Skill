@@ -7,6 +7,19 @@ einem QR-Code und hat eine konkrete Erwartung.
 mit mehreren Absichten. Eine Landingpage bedient eine Zielgruppe mit einer Absicht, und jedes
 zusätzliche Angebot senkt die Abschlussquote.
 
+## Inhalt
+
+- Die harte Regel: keine Navigation
+- Reihenfolge
+- Phase 1: Message-Match
+- Phase 2: Struktur
+- Phase 3: Copy
+- Phase 4: Design
+- Phase 5: Bau
+- SEO: meist nicht das Ziel
+- Phase 6: Test
+- Drei Fehler, die genau bei diesem Typ passieren
+
 ## Die harte Regel: keine Navigation
 
 **Eine Landingpage hat keine Hauptnavigation, kein Menü und kein Footer-Menü.**

@@ -12,12 +12,23 @@ Maßnahmen sorgen dafür, dass Google die Seite **versteht**, **indexiert** und 
 3. Meta-Titel & Meta-Beschreibung
 4. Interne Verlinkung
 
+## Inhalt
+
+- Schritt 5.1: Keyword-Recherche
+- Schritt 5.2: URL-Struktur
+- Schritt 5.3: Meta-Titel & Meta-Beschreibung
+- Schritt 5.4: Interne Verlinkung
+- Technisches SEO
+- Was hier bewusst fehlt
+
 ## Schritt 5.1: Keyword-Recherche
 
 Keywords sind die Suchbegriffe, die Kunden bei Google eingeben. Google vergleicht die Wörter
 auf der Seite mit dem, was gesucht wird.
 
-**Entscheidend ist Relevanz, nicht Suchvolumen.**
+**Entscheidend ist Relevanz, nicht Suchvolumen.** Ein Volumen steht nur mit Quelle und Datum im
+Konzept (Search Console, ein benanntes SEO-Werkzeug), sonst als Schätzung gekennzeichnet. Ein Modell
+nennt Suchvolumen aus dem Gedächtnis, und eine geschätzte Zahl im Angebot liest der Kunde als Messung.
 
 | | Beispiel Hausverwaltung Karlsruhe |
 |---|---|

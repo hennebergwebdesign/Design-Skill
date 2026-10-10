@@ -17,6 +17,23 @@ gemeinsam geprüft werden. Eine Sektion, deren Wirkung erst entsteht (Abschnitt 
 kleinen Schritten entwickelt. Der erste Bau einer Seite folgt dem freigegebenen Konzept, zuerst als
 Pilot einer Sektion (`../../webdesign-conversion/references/44-gutes-festschreiben-und-rueckbauprobe.md`).
 
+**Eine dritte Quelle, derselbe Befund.** Das Paket 4.18 rät zu einer Änderung je Auftrag, weil von fünf
+Aufgaben in einem Auftrag oft zwei erledigt werden und drei halb. Der Befund stimmt, die Antwort hier ist
+die Zählung: Eine gebündelte Runde wird nummeriert beauftragt und am Ende Punkt für Punkt gegen den
+Auftrag abgehakt (Abschnitt 2 und 4). Was nicht erledigt ist, steht im Bericht als offen, nicht als
+erledigt.
+
+## Inhalt
+
+- 1\. Rückmeldungen bündeln
+- 2\. Der Änderungsauftrag
+- 3\. Während der Änderung
+- 4\. Nach der Änderung
+- 5\. Eigene Sitzungen für Text und Leistung
+- 6\. Block für die CLAUDE.md des Projekts
+- 7\. Grenzen
+- Verwandte Kapitel
+
 ## 1. Rückmeldungen bündeln
 
 | Regel | Grund |
@@ -28,7 +45,8 @@ Pilot einer Sektion (`../../webdesign-conversion/references/44-gutes-festschreib
 
 ## 2. Der Änderungsauftrag
 
-Jeder Auftrag nennt vier Dinge. Fehlt eines, rät das Modell.
+Jeder Auftrag nennt vier Dinge. Fehlt eines, rät das Modell. Mehrere Änderungen einer Runde bekommen
+je eine Nummer und je diesen Block.
 
 ```
 Sektion:       ‹Name aus der Seitenstruktur der CLAUDE.md›, Datei ‹src/components/sektionen/…›
@@ -49,6 +67,7 @@ bestellt hat, und der Kunde findet in der nächsten Runde Änderungen, die er ni
 | Wird ein Element entfernt, Raster und Abstände der Umgebung neu ausrichten | Lücke stehen lassen oder leere Zelle | eine leere Bentozelle oder ein halbes Raster ist ein falsch geplantes Layout (`../../webdesign-conversion/references/26-geschmack-und-ki-tells.md`, Abschnitt 5) |
 | Bilder und Videos mit Seitenverhältnis und Maßen | Bild ohne `width` und `height` einsetzen | Layoutsprung, CLS, harte Grenze Ladezeit |
 | Eine Desktopgrafik bekommt eine eigene Mobilfassung | dieselben Elemente untereinander stapeln | gestapelt verliert die Grafik ihre Aussage (`../../webdesign-conversion/references/28-ki-bildentwuerfe.md`, Abschnitt 3a) |
+| Verhalten so genau beschreiben wie Aussehen: was passiert bei Klick, Scroll, Fokus und auf dem Handy | nur das Aussehen nennen | ein Bauteil, das richtig aussieht, aber statisch bleibt oder aus dem Rahmen läuft, besteht jede Sichtprüfung am Desktop (`../../webdesign-conversion/references/48-richtung-varianten-und-subtraktion.md`, Abschnitt 6) |
 | Ein Problem lösen, nicht verdecken | `overflow: hidden`, `display: none` auf dem Handy, Text abschneiden | was versteckt wird, fehlt dem Besucher. `overflow-x: hidden` bricht zudem `position: sticky` (`pruefe-geschmack.mjs`) |
 
 ## 4. Nach der Änderung
@@ -58,7 +77,8 @@ bestellt hat, und der Kunde findet in der nächsten Runde Änderungen, die er ni
    überlappende Elemente, Hover und Verbindungslinien.
 2. Die Nachbarsektion darüber und darunter ansehen. Dort zeigt sich, ob ein Abstand mitgewandert ist.
 3. `node scripts/pruefe-tokens.mjs` und, wenn Text betroffen war, `node scripts/pruefe-striche.mjs`.
-4. Kurz berichten: was geändert wurde, was geprüft wurde, was ungeprüft blieb.
+4. Kurz berichten: was geändert wurde, was geprüft wurde, was ungeprüft blieb. Bei einer
+   nummerierten Runde je Nummer: erledigt, teilweise (was fehlt), nicht erledigt (warum).
 
 Logos und Porträts wirken auf dem Handy oft schlechter als am Desktop (zu klein, falscher Ausschnitt).
 Sie gehören bei jeder Runde, die sie betrifft, in die Sichtprüfung bei 375 px.
@@ -90,6 +110,7 @@ Damit die Regeln in jeder Sitzung gelten, ohne dass jemand daran denkt, kommt di
 - Entfernte Elemente: Raster und Abstände der Umgebung neu ausrichten, keine Lücke.
 - Nichts verstecken, um ein Layout zu retten. Desktopgrafiken bekommen eine eigene Mobilfassung.
 - Nach jeder Änderung: pruefe-breakpoints.mjs, Screenshots bei 1440, 768 und 375 px ansehen, Nachbarsektionen prüfen, kurz berichten.
+- Mehrere Änderungen: nummeriert, am Ende je Nummer erledigt, teilweise oder offen melden.
 ```
 
 ## 7. Grenzen

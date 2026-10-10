@@ -8,6 +8,17 @@ tragen (Stylescape). Der Kunde kann keine Gedanken lesen und deutet ein Moodboar
 Quelle: Videos „Give Me 11 Minutes I'll Show You How to Design $10k Sites" (07.05.2026) und „The ONLY 5 Tools You Need to
 Build Insane Sites" (04.06.2026) von Self-Made Web Designer. Übernommen ist der Ablauf, kein Text.
 
+## Inhalt
+
+- 1\. Stellung im Ablauf
+- 2\. Das Moodboard: Menge vor Politur
+- 3\. Die Stylescape: Passt das zusammen?
+- 4\. Entscheidung zu Wireframes und Mockups
+- 5\. Erster Entwurf: Tempo vor Perfektion
+- 5a. Regeln laufend festhalten
+- 6\. Nicht übernommen (mit Grund)
+- Verwandte Kapitel
+
 ## 1. Stellung im Ablauf
 
 | Phase | Neu |
@@ -44,6 +55,7 @@ sehen: Schriftpaarung, Palette, Bildsprache, Formen, eine Beispielsektion, gegeb
 | Der Kunde bekommt konkrete Fragen („Passt die Richtung? Was fehlt oder stört?"), keine Geschmacksfrage | `../../webdesign-conversion/references/33-kundenpraesentation-und-feedback.md`: Aussagen statt Geschmack |
 | Lehnt der Kunde ab, ist das ein Erfolg | die Richtung wird vor dem Bau korrigiert, nicht danach; im Beispiel des Videos sparte das viel Zeit |
 | Danach werden Tokens und Sektionen aus der Stylescape abgeleitet | eine Quelle der Wahrheit (`marke.json`, `tokens.css`) |
+| Werden mehrere Richtungen gezeigt, bekommt jede die Preiszeile (Struktur, Stärke, Preis, Passt wenn), die Wahl steht in `marke.json` unter `gestaltung.richtungswahl` | wer nur Bilder vergleicht, wählt nach Geschmack. Stufen und Vorlage: `../../webdesign-conversion/references/48-richtung-varianten-und-subtraktion.md`, Abschnitte 3 und 4 |
 
 **Format:** zwei gleichwertige Wege.
 
@@ -59,6 +71,12 @@ Gestaltungswerkzeug bedient. **Das ist hier nur teilweise übertragbar**: Astro 
 kosten mehr als dort. Das Video nennt selbst den Gegenpol (bei den meisten Baukästen wäre ein Mockup billiger).
 Entscheidung: Die Layoutskizze als ASCII Skizze aus `../../webdesign-conversion/references/10-visuelle-richtung.md` (Durchgang 1) bleibt. Kein zusätzlicher Pflichtschritt
 für Wireframes oder Mockups, aber auch kein Verbot, wenn der Kunde sie braucht.
+
+Das Paket 4.18 fordert das Gegenteil, ein Wireframe-Tor als Pflicht. Übernommen ist der Auslöser, nicht die
+Pflicht: Entscheidet der Kunde über Struktur oder entsteht mehr als ein Seitentyp, gibt es eine
+Graustufenskizze mit den Zuständen der Formulare (leer, Laden, Fehler, Erfolg), sonst bleibt es bei der
+ASCII Skizze im Konzept. Begründung und warum es kein „Tor 3" heißt:
+`../../webdesign-conversion/references/48-richtung-varianten-und-subtraktion.md`, Abschnitte 2 und 8.
 
 ## 5. Erster Entwurf: Tempo vor Perfektion
 
@@ -84,7 +102,8 @@ und Prüffragen: `../../webdesign-conversion/references/43-hierarchie-raster-kom
 
 ## 6. Nicht übernommen (mit Grund)
 
-- Verzicht auf Wireframes und Mockups als Pflichtregel: siehe Abschnitt 4.
+- Verzicht auf Wireframes und Mockups als Pflichtregel: siehe Abschnitt 4. Ebenso das Gegenteil, ein
+  Wireframe-Tor als Pflicht (Paket 4.18).
 - Der Baukasten, in dem das Video arbeitet: Stack ist fest.
 - Die Behauptung, die Methode führe zu einem bestimmten Preisniveau: kein Beleg im Video, Einkommen und Preise sind
   nicht Teil des Skills.

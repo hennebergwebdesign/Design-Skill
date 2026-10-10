@@ -41,7 +41,19 @@
   Je Quelldatei, zeilenweise (harte Grenze Standardschrift, 10-visuelle-richtung.md):
    16. Inter, Roboto, Open Sans, Poppins, Montserrat, Lato und Plus Jakarta Sans ohne
        Markenvorgabe. WARNUNG.
-  8 bis 14 und 16 sind WARNUNGEN. 12, 13 und 16 entfallen, wenn der Wert in marke.json steht:
+  Je gebauter Seite, aus dem Paket Webdesign Workflow 2026 (48-richtung-varianten-und-subtraktion.md):
+   17. Logoleiste ohne Bild: ein Block mit logo, kunden, client, partner oder marquee in der
+       Klasse, der Namen enthaelt, aber kein img und kein svg. Getippte Firmennamen als
+       Logowand behaupten eine Kundenbeziehung, ohne sie zu zeigen. WARNUNG.
+   18. Ein einzelnes kursives Akzentwort in h1 oder h2 (<em> oder <i> neben normalem Text),
+       eine der drei typografischen Voreinstellungen aus 10-visuelle-richtung.md. WARNUNG.
+  Je Quelldatei, zeilenweise:
+   19. Indigo- oder Violettverlauf (gradient mit den Tailwind-Werten indigo und violet oder den
+       Woertern indigo, violet, purple), ohne dass der Wert in marke.json steht. WARNUNG.
+  Je Quelldatei, gezaehlt:
+   20. backdrop-filter an vier oder mehr Stellen einer Datei. Glas gehoert auf fixierte oder
+       sticky Elemente (26-geschmack-und-ki-tells.md, Abschnitt 9), nicht auf jede Karte. WARNUNG.
+  8 bis 20 sind WARNUNGEN. 12, 13, 16 und 19 entfallen, wenn der Wert in marke.json steht:
   dann ist er eine Markenentscheidung, keine Voreinstellung.
 
   WAS NICHT GEPRUEFT WIRD
@@ -226,6 +238,20 @@ export function konturbuttonAnalysieren(inhalt) {
   return befunde;
 }
 
+/* Bloecke mit Logo-, Kunden- oder Partnerklasse, die Text, aber kein Bild enthalten. */
+function logoleistenOhneBild(html) {
+  const treffer = [];
+  const re = /<(ul|ol|div|section)\b([^>]*\bclass\s*=\s*["'][^"']*\b(?:logos?|logoleiste|logowand|kunden|clients?|partner|marquee)\b[^"']*["'][^>]*)>([\s\S]{0,2000}?)<\/\1>/gi;
+  let m;
+  while ((m = re.exec(html))) {
+    const inneres = m[3];
+    if (/<(img|svg|picture)\b/i.test(inneres)) continue;
+    const namen = (inneres.match(/<(li|span|div|p)\b[^>]*>[^<]{2,}</gi) || []).length;
+    if (namen >= 3) treffer.push(klassenVon(`<x${m[2]}>`).join(' ') || m[1]);
+  }
+  return treffer;
+}
+
 /* Alle Primaerbuttons innerhalb einer <section>, gezaehlt je Sektion. */
 function primaerbuttonsJeSektion(html) {
   const ergebnisse = [];
@@ -365,6 +391,26 @@ export function seiteAnalysieren(roh, kontext = {}) {
     }
   }
 
+  // 17 Logoleiste aus getipptem Text
+  for (const block of logoleistenOhneBild(html)) {
+    warnungen.push({
+      regel: 'logoleiste-text',
+      meldung: `Logoleiste ohne Bild: ${block}`,
+      tipp: 'Getippte Firmennamen sind keine Logowand. Echte Logos mit Freigabe der Kunden einsetzen oder die Leiste streichen (harte Grenze keine erfundenen Belege).',
+    });
+  }
+
+  // 18 einzelnes kursives Akzentwort in der Ueberschrift
+  const akzente = [...html.matchAll(/<h([12])\b[^>]*>([\s\S]*?)<\/h\1>/gi)]
+    .filter((m) => /<(em|i)\b[^>]*>[^<]{1,40}<\/\1>/i.test(m[2]) && textVon(m[2].replace(/<(em|i)\b[^>]*>[\s\S]*?<\/\1>/gi, '')).trim().length > 0);
+  if (akzente.length) {
+    warnungen.push({
+      regel: 'akzentwort',
+      meldung: `Kursives Akzentwort in ${akzente.length} Überschrift(en) h1/h2`,
+      tipp: 'Eine der drei typografischen Voreinstellungen (10-visuelle-richtung.md). Nur, wenn die Hervorhebung zum System gehört, dann in einer Form durchgehend.',
+    });
+  }
+
   // 15 mehrere Primaerbuttons in einer Sektion
   for (const { sektion, anzahl } of primaerbuttonsJeSektion(html)) {
     warnungen.push({
@@ -444,6 +490,14 @@ export function quelleAnalysieren(inhalt, kontext = {}) {
         break;
       }
     }
+    // 19 Indigo- oder Violettverlauf
+    const css = /gradient/i.test(zeile) && zeile.match(/#(?:6366f1|4f46e5|4338ca|8b5cf6|7c3aed|6d28d9|a855f7|9333ea)\b|\b(?:indigo|violet|purple)\b/i);
+    const tw = zeile.match(/(?:^|[\s"'`])(?:from|via|to)-((?:indigo|violet|purple)-\d{2,3})(?=[\s"'`]|$)/);
+    const wert = css ? css[0].toLowerCase() : tw ? tw[1].toLowerCase() : null;
+    if (wert && !marke.includes(wert)) {
+      melde('violettverlauf', `Indigo- oder Violettverlauf (${wert}) ohne Markenvorgabe`,
+        'Der Verlauf, den Modelle von selbst setzen. Farbe aus den Rollen-Tokens, ein Verlauf nur aus der Marke abgeleitet (harte Grenze eigene Handschrift). Steht der Wert in marke.json, entfällt die Warnung.');
+    }
     // 13 Standardpalette
     const hexe = zeile.match(/#[0-9a-f]{6}\b/gi) || [];
     const treffer = [...new Set(hexe.map((h) => h.toLowerCase()))].filter((h) => STANDARDPALETTE.includes(h) && !marke.includes(h));
@@ -452,6 +506,18 @@ export function quelleAnalysieren(inhalt, kontext = {}) {
         'Creme, Messing und Espresso sind die Palette, die jede Premiumseite bekommt. Nur als Markenentscheidung, dann in marke.json.');
     }
   });
+
+  // 20 Glasflaechen, gezaehlt je Datei
+  const glas = zeilen.filter((z) => /backdrop-filter\s*:\s*blur|(^|[\s"'`])backdrop-blur/.test(z) && !/^\s*(\/\/|\*|\/\*|<!--)/.test(z));
+  if (glas.length >= 4) {
+    const erste = zeilen.findIndex((z) => z === glas[0]);
+    befunde.push({
+      zeile: erste + 1, regel: 'glasflaechen',
+      meldung: `backdrop-filter an ${glas.length} Stellen`,
+      tipp: 'Glas nur auf fixierten oder sticky Elementen (Kopfleiste, Overlay). Auf scrollenden Karten kostet es Bildrate und wirkt wie Effekt statt Zweck. Siehe 26-geschmack-und-ki-tells.md, Abschnitt 9.',
+      auszug: glas[0].trim().slice(0, 110),
+    });
+  }
 
   // 14 Primaerbutton als Konturbutton, Blockweise, danach Tailwind je Zeile
   befunde.push(...konturbuttonAnalysieren(inhalt));

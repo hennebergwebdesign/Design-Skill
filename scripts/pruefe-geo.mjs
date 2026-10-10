@@ -35,6 +35,10 @@
    14. LocalBusiness (oder Untertyp) im JSON-LD, dessen Telefonnummer oder Strasse nicht
        sichtbar auf der Seite steht: WARNUNG. Name, Adresse und Telefon stehen als Text auf
        der Seite und gleich im Markup, sonst widersprechen sich Seite und Daten.
+   15. Ein <img> ohne alt-Attribut: FEHLER. Ein Bild, das nur schmueckt, bekommt alt="",
+       eines mit Aussage einen Text, der sie traegt (04-barrierefreiheit-bfsg.md, Schritt 4.2).
+       Ohne Attribut liest ein Bildschirmleser den Dateinamen vor, und Bildsuche wie KI-Antwort
+       haben nichts, woran sie das Bild verstehen.
   Mit --llms: ob llms.txt existiert, nur als Information.
 
   WAS NICHT GEPRUEFT WIRD
@@ -288,6 +292,15 @@ export function auffindbarkeitAnalysieren(html, dateiname = 'index.html') {
       warnungen.push({ regel: 'beschreibung-lang', meldung: `Meta-Beschreibung mit ${beschreibung.length} Zeichen`,
         tipp: `Höchstens ${BESCHREIBUNG_MAX} Zeichen, die Handlung nicht ans abgeschnittene Ende stellen.` });
     }
+  }
+
+  // 15 Bilder ohne alt-Attribut
+  const ohneAlt = (html.replace(/<noscript\b[\s\S]*?<\/noscript>/gi, '').match(/<img\b[^>]*>/gi) || [])
+    .filter((tag) => !/\salt\s*=/i.test(tag));
+  if (ohneAlt.length) {
+    const quelle = (ohneAlt[0].match(/\ssrc\s*=\s*["']([^"']+)["']/i) || [])[1] || ohneAlt[0].slice(0, 60);
+    fehler.push({ regel: 'bild-ohne-alt', meldung: `${ohneAlt.length} Bild(er) ohne alt-Attribut, zuerst ${quelle}`,
+      tipp: 'Schmuckbild: alt="". Bild mit Aussage: ein Satz, der die Aussage trägt, nicht der Dateiname. Siehe 04-barrierefreiheit-bfsg.md, Schritt 4.2.' });
   }
 
   // 14 Name, Adresse, Telefon sichtbar und gleich im Markup

@@ -16,6 +16,23 @@ getrennt gekennzeichnet, Herkunft in `CREDITS.md`, Version 4.16. Kapitel 09 besc
 Kapitel ergänzt Anlass, Blendfehler, Einbettungen und die Bibliotheksvariante mit demselben
 Schlüsselbildrat. Die Regel zum Schlüsselbild steht bewusst nur in 09 voll ausgeführt.
 
+## Inhalt
+
+- 1\. Zuerst: lohnt sich ein Scrollvideo?
+- 1a. Erlebnisidee vor Effekt
+- 2\. Das Prinzip
+- 2a. Storyboard vor jeder Scroll-Animation
+- 3\. Aufbauablauf
+- 4\. Der Blendfehler
+- 5\. Einbettungen von Drittanbietern (3D, Effektflächen)
+- 5a. Eigene 3D-Szene mit Three.js
+- 6\. Tiefe: Text hinter dem Motiv
+- 6a. Parallax über eine Tiefenkarte
+- 7\. Textur: Körnung
+- 8\. Prüfung
+- 9\. Nicht übernommen (mit Grund)
+- Verwandte Kapitel
+
 ## 1. Zuerst: lohnt sich ein Scrollvideo?
 
 Ein Scrollvideo ist kein Stilmittel für jede Seite. Es erzählt Schritte (ein Produkt zerlegt sich, ein Gerät dreht sich),

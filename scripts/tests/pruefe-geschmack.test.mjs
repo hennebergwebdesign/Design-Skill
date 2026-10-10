@@ -224,3 +224,32 @@ test('Aufruf: Fehler ergibt Exit 1, Warnungen nur mit --strict', () => {
     rmSync(ordner, { recursive: true, force: true });
   }
 });
+
+// ------------------------------------------------------------------ 4.18: Paket Webdesign Workflow 2026
+
+test('Logoleiste aus getippten Namen ist eine Warnung, mit Bildern nicht', () => {
+  const getippt = seite(sektion('<h1>Dach</h1><ul class="kunden-leiste"><li>Müller GmbH</li><li>Schmidt AG</li><li>Bau KG</li></ul>'));
+  assert.ok(regeln(seiteAnalysieren(getippt).warnungen).includes('logoleiste-text'));
+  const echt = seite(sektion('<h1>Dach</h1><ul class="logos"><li><img src="a.svg" alt="Müller GmbH"></li><li><img src="b.svg" alt="Schmidt AG"></li><li><img src="c.svg" alt="Bau KG"></li></ul>'));
+  assert.ok(!regeln(seiteAnalysieren(echt).warnungen).includes('logoleiste-text'));
+});
+
+test('kursives Akzentwort in der Überschrift, ganze kursive Überschrift nicht', () => {
+  const akzent = seite(sektion('<h1>Dächer, die <em>bleiben</em></h1>'));
+  assert.ok(regeln(seiteAnalysieren(akzent).warnungen).includes('akzentwort'));
+  const ganz = seite(sektion('<h1><em>Dächer, die bleiben</em></h1>'));
+  assert.ok(!regeln(seiteAnalysieren(ganz).warnungen).includes('akzentwort'));
+});
+
+test('Violettverlauf in CSS und Tailwind, mit Markenvorgabe still', () => {
+  assert.ok(regeln(quelleAnalysieren('.held { background: linear-gradient(90deg, #6366f1, #a855f7); }')).includes('violettverlauf'));
+  assert.ok(regeln(quelleAnalysieren('<div class="bg-gradient-to-r from-violet-500 to-white">')).includes('violettverlauf'));
+  assert.ok(!regeln(quelleAnalysieren('.held { background: linear-gradient(90deg, #6366f1, #fff); }', { markeText: '"akzent": "#6366f1"' })).includes('violettverlauf'));
+  assert.ok(!regeln(quelleAnalysieren('.held { color: #6366f1; }')).includes('violettverlauf'));
+});
+
+test('Glas an vier Stellen ist eine Warnung, auf der Kopfleiste allein nicht', () => {
+  const vier = ['.a', '.b', '.c', '.d'].map((k) => `${k} { backdrop-filter: blur(8px); }`).join('\n');
+  assert.ok(regeln(quelleAnalysieren(vier)).includes('glasflaechen'));
+  assert.ok(!regeln(quelleAnalysieren('.kopf { position: sticky; backdrop-filter: blur(8px); }')).includes('glasflaechen'));
+});

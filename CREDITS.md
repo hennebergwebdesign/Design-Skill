@@ -511,6 +511,38 @@ durchsetzt (widerspricht der Rechtschreibung und der eigenen Strichregel; Titel,
 Bildschirm" (harte Grenze); die Agentendateien als Lieferbestandteil; Zahlen aus Herstellerstudien (SparkToro, Ahrefs,
 Whitespark, Opt-in-Quoten) als Fakt; Werkzeugempfehlungen; `learning.md` im Skillordner.
 
+### In Version 4.19 zusätzlich eingeflossen
+
+Stand der Quelle: 09.10.2026, zwei ZIP-Archive mit demselben Skillordner `webdesign-workflow-erweiterung-2026`
+(SKILL.md, elf Referenzen, Quellenindex, drei Testszenarien, drei Node-Skripte und eine Wortliste), das zweite
+zusätzlich mit 27 Rohnotizen je Video und einer Einbauanleitung. Eigene deutsche Auswertung von 27 YouTube-Videos
+über Transkripte. Destilliert, nicht mitgeliefert, auch nicht als eigener Skill neben den zwei bestehenden, obwohl das
+Paket das vorschlägt: zwei Regelwerke im Kontext pendeln an den Stellen, an denen sie sich widersprechen (Konvention in
+`CLAUDE.md`). Die Skripte sind nicht kopiert, ihre Prüfungen sind in die vorhandenen Skripte übertragen.
+
+| Quelle | Was daraus eingeflossen ist |
+|---|---|
+| Paket „Webdesign Workflow 2026" mit Videos von Nate Herk (`oz2CwrPV2Rg`, `QUI6Ug4cHnE`), Jack Roberts (`fq3wx-AR6B0`, `VwGrXe2ricE`, `RDytbVDzMF4`, `pUu4G2lINnk`, `iyRYc9sVRsw`, `wJWO91mi5o0`), RoboNuggets (`VQyYzLJ6xos`), Simon Scrapes (`e7TY56-yIvM`), AI LABS (`Ysr7oNDajJI`, `bBlY5YOsKN8`), Chase AI (`1PXFAFMgdns`, `7FU98O0JLHs`, `XK6S1hbYv7I`), Mikey Website (`83geKREHQY0`), Jason Lee (`J4oygRI6mN0`), DesignCourse (`YSYqFBq68Wk`), Ben AI (`npS5jzOoji8`, `6sZAZaQ5SNU`), Sam Crawford (`PKYNTm2m8eA`, `cWZ9_EbT_2g`, `iVRsoSG3WuI`), Tim Hildesheim (`TOyObDkzGqE`), Michael Szach (`vmny0ZvpmSE`), 02ui (`eBy-FJ5V3Kg`); Adressen `youtube.com/watch?v=<ID>`. **Keine Lizenz genannt**, nur inhaltlich destilliert | Kapitel 47, `prompts/varianten.md`, `prompts/pruefprompts.md`, Ebenenansicht in `prompts/tweaks-panel.md`, `gestaltung.richtungswahl` in `marke.json`, Ergänzungen in 04, 05, 22, 26, 39, 44, im Bauablauf und in `evals/modellwechsel.md`, neue Regeln in `pruefe-striche.mjs`, `pruefe-geschmack.mjs`, `pruefe-geo.mjs`, `pruefe-kontrast.mjs` und `deslop-check.mjs`, neues `pruefe-skill.mjs` |
+| Eliot Prince, YouTube „Claude Design 2.0 = Beautiful $5K Websites in 31 Minutes (full tutorial)" (`youtube.com/watch?v=BkR7rmB66ug`, 02.09.2026), **Creative Commons Namensnennung** laut Notiz im Paket | Struktur vor Optik, Interview vor dem Text, Kommentare am Element, Analyse einer Referenz als Abfolge mit Gründen (Kapitel 47, Abschnitt 2, und Intake) |
+| Leitfaden von Anthropic zu Skills (über das Paket, hier nicht neu gelesen) | Grenzen für den Aufbau der Skills in `pruefe-skill.mjs` und `evals/modellwechsel.md` |
+
+**Bereits im Repository, deshalb nicht erneut aufgenommen:** Interview vor dem Prompt und Seitenfluss mit Zuständen (Intake,
+4.12), Referenzen mit zwei Toren, Kollage und Grammatiktabelle (Designrecherche, 42), Gap Audit (42), Polierschleife mit
+fester Latte und drei Kritikern (40), Pilot vor Serie und Figurenwelt mit Modellblatt (44), eigene Referenzsammlung (44),
+Tweaks Panel (Vorlage, `pruefe-platzhalter.mjs`), Blinzeltest, Tauschtest, Kicker-Quote und Katalog der KI-Tells (26),
+Änderungsauftrag mit „Bleibt" (Bauablauf, 4.15), Storyboard vor Scroll-Animation (38), Poster und Handyfassung bei Video
+(38), Faustwert 60 30 10 (10), Kontrastgrenzen (harte Grenze, `pruefe-kontrast.mjs`), Fonts selbst hosten, Consent mit
+echter Blockierung, Karten erst nach Einwilligung (07), Eigentum an Domain und Zugängen (QA Schritt 10), zweiter
+Textdurchgang mit anderem Modell (Bauablauf, 4.14), Abnahme durch einen Menschen (QA Schritt 9).
+
+**Nicht übernommen, mit Grund:** vier getrennte Eingabedateien (`design.md`, `copy.md`) statt des einen Markenbriefs;
+die Markierung „Bestätigen" statt `[[FEHLT: …]]`; ein drittes Tor für Wireframes; eine Änderung je Auftrag (ersetzt durch
+die Zählung); die Schriftpaarungen mit Inter, Poppins und Roboto (harte Grenze); „100 vh" im Heldprompt (`100svh`);
+Hosting auf Vercel, Netlify, Replit; der Interaktionskatalog; `disable-model-invocation`; die Korrektur auf
+„watchships.com" (falsch, am 09.10.2026 geprüft); alle Zahlen der Autoren. Begründung je Punkt: Kapitel 48, Abschnitte 8
+und 9. Offen statt entschieden: die Empfehlung, höchstens ein bis zwei fremde Skills als Prüfer zu nutzen, gegen die sieben
+Quellskills in Phase 0.
+
 ### Pflegeverfahren, ohne Versionsänderung
 
 Stand der Quelle: 07.10.2026, Erweiterungspaket `skill-pflege-und-modelltests`, eigene Zusammenfassung, nichts wörtlich.

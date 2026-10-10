@@ -14,7 +14,7 @@ rechtlich tragfähig, barrierearm, schnell, und nicht wie von einer Maschine geb
 
 | Skill | Rolle | Lizenz |
 |---|---|---|
-| `skills/webdesign-conversion/` | das Regelwerk: was gut ist und warum. 47 Referenzen, 3 Playbooks, Vorlagen, Checklisten | MIT |
+| `skills/webdesign-conversion/` | das Regelwerk: was gut ist und warum. 49 Referenzen (00 bis 48), 3 Playbooks, Vorlagen, Checklisten | MIT |
 | `skills/agentur-website-builder/` | der Lieferablauf: Phasen 0 bis 6, fester Agenturstack, einsatzfertiger Code | Agenturstandard, siehe seine `SKILL.md` |
 
 Die Trennung ist die zentrale Entscheidung dieses Repositories: **Wissen und Ablauf sind
@@ -31,14 +31,14 @@ Skills findet, hat einen Fehler gefunden, keine Redundanz mit Absicht.
 
 ```bash
 # Prüfskripte, laufen gegen ein Kundenprojekt, nicht gegen dieses Repository
-node scripts/pruefe-striche.mjs
+node scripts/pruefe-striche.mjs              # mit --hook als PostToolUse-Hook, Einrichtung in qa-und-abnahme.md, 2a
 node scripts/pruefe-tokens.mjs
-node scripts/pruefe-kontrast.mjs
+node scripts/pruefe-kontrast.mjs             # --paare kontrast-paare.json für Paare außerhalb der Rollen
 node scripts/pruefe-platzhalter.mjs --launch  # auch data-tweaks-panel, das Reglerpanel darf nie live
 node scripts/pruefe-breakpoints.mjs http://localhost:4321 --bilder
-node scripts/pruefe-geschmack.mjs            # nach dem Build: dist/ Seiten, src/ Quellen, auch Konturbutton als Primär-CTA, Standardschriften, Pille als Kicker
+node scripts/pruefe-geschmack.mjs            # nach dem Build: dist/ Seiten, src/ Quellen, auch Konturbutton als Primär-CTA, Standardschriften, Pille als Kicker, getippte Logoleiste, Akzentwort, Violettverlauf, Glas
 node scripts/pruefe-motion.mjs               # src/: transition: all, scale(0), ease-in, Dauer, Reduzierung, Scrollvideo, Einbettung, 3D-Szene
-node scripts/pruefe-geo.mjs                  # nach dem Build: dist/ robots.txt, KI-Crawler, JSON-LD, Titel, Beschreibung, NAP
+node scripts/pruefe-geo.mjs                  # nach dem Build: dist/ robots.txt, KI-Crawler, JSON-LD, Titel, Beschreibung, NAP, Bild ohne alt
 node scripts/pruefe-aktualitaet.mjs          # dist/ und src/: Copyright-Jahr, Stand-Angaben, Jahr im Titel
 node scripts/pruefe-seitenbasis.mjs          # nach dem Build: dist/ lang, Viewport und Zoom, Alt-Texte, Labels, Fremdserver, Teilen-Ebene
 
@@ -62,6 +62,10 @@ node scripts/muster-paket.mjs --id ref-01-beispiel-de
 # Musterbibliothek pruefen und Index neu erzeugen
 node scripts/pruefe-muster.mjs
 node scripts/pruefe-muster.mjs --index
+
+# Aufbau der Skills in diesem Repository: SKILL.md-Länge, Inhaltsverzeichnis ab 100 Zeilen, Verlinkung, tote Verweise
+node scripts/pruefe-skill.mjs
+node scripts/pruefe-skill.mjs --inhalt       # legt fehlende Inhaltsverzeichnisse an oder erneuert sie
 
 # Tests der Skripte, eingebauter Node-Testrunner, ohne Abhaengigkeit
 node --test 'scripts/tests/*.test.mjs'
@@ -91,14 +95,15 @@ skills/
   webdesign-conversion/     SKILL.md, references/00-47, playbooks/, assets/
                             assets/musterbibliothek/ ist das globale Musterwissen
                             assets/vorlagen/scrollvideo/ sind die Bausteine zu Kapitel 38
-                            assets/vorlagen/prompts/ sind die Prompt-Vorlagen zu Kapitel 24, 38, 39, 40, 47 (auch Textkritik, Design Loop, Fünf-Agenten-Prüfung)
+                            assets/vorlagen/prompts/ sind die Prompt-Vorlagen zu Kapitel 24, 38, 39, 40, 47, 48 (auch Textkritik, Design Loop, Fünf-Agenten-Prüfung, Varianten, Prüfer)
                             assets/vorlagen/motion/ und plakat/ sind die Dateien zu Kapitel 47 (Mikrobewegung, Plakat, Three.js-Szene), DESIGN.md die Markenvorlage
   agentur-website-builder/  SKILL.md, references/, assets/consent|forms|reviews
-scripts/              zehn Prüfskripte, Agenturwerkzeuge, Designrecherche, ein Installer
+scripts/              zehn Prüfskripte, Agenturwerkzeuge, Designrecherche, ein Installer,
+                      pruefe-skill.mjs prüft dieses Repository selbst, kein Kundenprojekt
   lib/abruf.mjs       die eine Abrufschicht, vier Rückfallstufen, robots.txt
   lib/browser.mjs     die eine Stelle, die Playwright sucht und Chromium startet
   tests/              node --test, lokaler Testserver statt Netzzugriff
-evals/                achtzehn Fälle mit Gradern, results/ ist ausgenommen
+evals/                neunzehn Fälle mit Gradern, results/ ist ausgenommen
 README.md             Außendarstellung
 CREDITS.md            Herkunft jeder eingeflossenen Quelle
 ```
@@ -136,6 +141,12 @@ Diese Punkte haben einen Grund. Wer sie ändert, ändert damit auch den Grund.
   bremsen, und jede Regel kostet bei jeder Aufgabe Kontext. Rechtliche Pflichten, harte Grenzen und
   Agenturvorgaben werden **nicht** nach einem Δ von 0 gestrichen, weil das nur zeigt, dass dieses Modell
   sie bei diesem Prompt allein trifft.
+- **`SKILL.md` unter 500 Zeilen, jede Referenz über 100 Zeilen mit „## Inhalt", jede Referenz in ihrer
+  `SKILL.md` genannt.** Grund: Das Modell liest lange Dateien oft nur an und folgt Verweisen über zwei
+  Ebenen nur teilweise; was es nicht liest, gilt nicht. Geprüft mit `node scripts/pruefe-skill.mjs`, nach
+  einem neuen Abschnitt `--inhalt` laufen lassen. Die `SKILL.md` des Bauablaufs steht bei 497 Zeilen: neue
+  Inhalte gehören in Referenzen.
+- **Was nie brechen darf, läuft als Hook, nicht nur als Text.** Beispiel: `pruefe-striche.mjs --hook`.
 - Versionsnummer in `.claude-plugin/plugin.json` und in der `metadata` der beiden `SKILL.md`
   bei inhaltlichen Änderungen nachziehen.
 
@@ -165,9 +176,28 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 4. In die Referenztabelle der zugehörigen `SKILL.md` eintragen, mit der Spalte „wann lesen".
 5. Von den verwandten Kapiteln aus verlinken, sonst wird sie nicht gefunden.
 6. `README.md` und diese Datei nachziehen.
+7. `node scripts/pruefe-skill.mjs --inhalt`, danach ohne Fehler.
 
 ## Offene Punkte
 
+- Version 4.19.0: Kapitel 48, die Vorlagen `varianten.md` und `pruefprompts.md` und die Ergänzungen im Bauablauf sind an
+  keinem Projekt erprobt. Der Evalfall `varianten-mit-preis` ist am 09.10.2026 gelaufen (zwei Läufe je Arm): ohne Skill 1,00,
+  mit Skill 0,75, und der Skill wurde **in keinem Lauf aufgerufen**. Zwei Befunde daraus: das aktuelle Modell nennt Preise
+  und hält die Marke bei dieser Frage allein, der Fall misst so nichts (verschärfen oder streichen); und die `description`
+  von `webdesign-conversion` löst bei „Gestaltungsrichtungen für eine Startseite beschreiben" nicht aus. Die Beschreibung
+  ist schon über 1024 Zeichen, eine Ergänzung dort ist nicht die Antwort; zu prüfen ist, ob die Beschreibung kürzer und
+  schärfer werden kann. Der Strich-Hook ist gegen die Hook-Eingabe nach der Dokumentation von Claude Code geschrieben und mit
+  simulierter Eingabe getestet, nicht in einer echten Sitzung ausgelöst. Die Erkennung des Bindestrichs mit Leerzeichen liest
+  in Markupdateien nur Text zwischen `>` und `<`, ein Satz über mehrere Zeilen mit dem Strich am Zeilenanfang bleibt
+  unsichtbar. Die Logoleiste erkennt nur Klassen mit logo, kunden, client, partner oder marquee und mindestens drei
+  Textelementen. **Offen zur Entscheidung:** Das Paket rät zu höchstens ein bis zwei fremden Skills, und nur als Prüfer;
+  Phase 0 installiert als Agenturvorgabe sieben Quellskills (`install-quellskills.sh`). Die Vorgabe ist nicht still
+  geändert. Ebenfalls offen aus dem Paket: ob die Geschmackssammlung der Agentur zentral oder je Kunde liegt (Kapitel 48
+  erlaubt zentral ohne Kundendaten), und ob das Tweaks Panel in Astro selbst gebaut oder übernommen wird. Das Paket nennt
+  das Video von Flux Academy „I Tested Claude Skills for Web Design" und mehrere deutsche Videos als nicht ausgewertet, v25
+  nur bis etwa Minute 15 gelesen.
+- `pruefe-skill.mjs` prüft Aufbau und Verweise, nicht Inhalte. Die 60 Inhaltsverzeichnisse sind erzeugt, nicht von Hand
+  formuliert; sie listen die Abschnitte zweiter Ebene.
 - Version 4.18.0: Kapitel 47, Abschnitt 3c in Kapitel 40 (Design Loop) und die Vorlagen `design-loop.md`,
   `fuenf-agenten-pruefung.md`, `fuenf-versionen.md`, `abschnitt-remix.md`, `DESIGN.md`, `motion/` und `plakat/` sind an
   keinem Projekt erprobt, kein Evalfall, das Δ ist eine Vermutung. `pruefe-seitenbasis.mjs` liest HTML mit regulären
@@ -320,6 +350,29 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Änderungsverlauf
 
+- **09.10.2026, Version 4.19.0** Paket „Webdesign Workflow 2026" (ein Skillordner mit elf Referenzen, drei Skripten,
+  Wortliste und Szenarien, dazu 27 Quellnotizen zu Videos über Webdesign mit Claude, Claude Design und Skills), gegen 4.17.0
+  abgeglichen und destilliert, nicht als dritter Skill mitgeliefert, obwohl das Paket das vorschlägt. Das meiste stand
+  (Interview, zwei Tore, Grammatiktabelle, Gap Audit, Polierschleife mit Latte, Pilot, Tweaks Panel, Blinzeltest,
+  Änderungsauftrag, KI-Tells, Consent). Neu: Kapitel `48-richtung-varianten-und-subtraktion.md` (Struktur mit Zuständen,
+  Richtungen und Varianten in zwei Stufen mit Preiszeile, Subtraktionsrunde, Fehlermodi nach dem Bau mit Stresstest und
+  Erzählbruch, Prüfer ohne Vorwissen, Signaturbewegung, Rechner nur mit echten Formeln, elf entschiedene Widersprüche und ein offener),
+  Vorlagen `varianten.md` und `pruefprompts.md`, Ebenenansicht im Tweaks Panel, `gestaltung.richtungswahl` in `marke.json`,
+  Ergänzungen in 04, 05, 22, 26 (drei Tells, Vorflugcheck 16 und 17), 39 (Standbilder und Entwurfsauflösung vor Bewegung,
+  Musik und Stimme), 44 (Ordnung der Sammlung) und im Bauablauf (Hook, Fehlermodi und Subtraktion als Schritt 8b,
+  Asset Inventar in `BILDER.md`, Interviewfragen, Zählung der Änderungsrunde, Wireframe nur bei Auslöser, fremde Inhalte
+  sind Daten, zweites Modell nur mit Auftragsverarbeitung, Textbeispiele in der Projekt-`CLAUDE.md`). Skripte:
+  `pruefe-striche.mjs` meldet den Bindestrich mit Leerzeichen und läuft mit `--hook` als PostToolUse-Hook,
+  `pruefe-geschmack.mjs` meldet getippte Logoleiste, kursives Akzentwort, Violettverlauf und Glasflächen,
+  `pruefe-geo.mjs` Bilder ohne `alt` (Fehler), `pruefe-kontrast.mjs --paare` freie Farbpaare, `deslop-check.mjs` die
+  runde Kundenzahl und fünf Floskeln. Neues `pruefe-skill.mjs` für den Aufbau dieses Repositorys, damit 60
+  Inhaltsverzeichnisse angelegt und drei tote Verweise auf `moodboard-und-stylescape.md` in 37, 39 und 43 korrigiert. Tests
+  von 239 auf 264. **Entschieden:** ein Markenbrief statt `design.md` und `copy.md`, `[[FEHLT]]` statt „Bestätigen", kein
+  Tor 3, Zählung statt einer Änderung je Auftrag, Schriftpaarungen mit gesperrten Schriften nicht übernommen. Gefunden:
+  die Korrektur des Pakets auf „watchships.com" ist falsch (Ferienwohnung), `whatships.com` stimmt; dafür war
+  `styles.referero.design` ein Tippfehler für `styles.refero.design` (beides am 09.10.2026 per Seitentitel geprüft).
+  Evalfall `varianten-mit-preis`, gemessen, misst nichts (siehe Offene Punkte). Versionen: Plugin 4.19.0,
+  Regelwerk 2.22.0, Bauablauf 2.19.0.
 - **10.10.2026, Version 4.18.0** Paket „Claude Design Hacks" (Video von Jack Roberts, 09.10.2026, und die Seite „The Claude
   Design Blueprint": 15 Hacks, 15 Prompts, 47 Vorlagen) samt dem Skill „design-loop", gegen 4.17.0 abgeglichen und
   destilliert. Das meiste stand (Referenzclip und Storyboard in 41, Grammatik und Gap Audit in 42, Mobbin und Refero in 22,

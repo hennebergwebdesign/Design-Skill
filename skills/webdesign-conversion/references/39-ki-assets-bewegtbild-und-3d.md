@@ -34,6 +34,8 @@ nachgeschärft. Der Ablauf unten ist ein Weg dorthin, nicht eine Garantie.
 | 5 Winkelvarianten für 3D | mehrere Ansichten desselben Motivs | Eingabe für 3D Umwandlung | Ansichten stimmen geometrisch | 3D Umwandlung braucht konsistente Ansichten |
 | 6 Video aus Start und Endbild | erstes Bild, letztes Bild, sehr konkrete Beschreibung der Bewegung | saubere mechanische Bewegung | Vorwärts und Rückwärts ansehen | Bewegung zwischen zwei festen Bildern bleibt kontrollierbar |
 | 7 Modell nach Test wählen | gleiche Eingabe an mehrere Videomodelle | das Modell, das die Bewegung sauber löst | Vergleichsraster | Eignung hängt von der Aufgabe ab, nicht vom Namen |
+| 8 Standbilder vor Bewegung | alle Szenen zuerst als Standbilder (Figur und Ort, dann beide zusammen), Freigabe der Serie | freigegebene Bildfolge | Serie nebeneinander, Modellblatt aus Kapitel 44 | eine falsche Szene als Bild kostet einen Versuch, als Video eine ganze Generierung |
+| 9 Entwurfsauflösung zuerst | Bewegung erst in niedriger Auflösung, volle Auflösung nach Freigabe | Bewegungsentwurf | Ablauf und Takt, nicht Details | die Bewegung entscheidet sich früh, die Auflösung kostet nur |
 
 **Aufwand und Kosten:** Im Video nicht genannt, ein Kommentar fragt danach. Zeit je Asset und Kosten je Serie:
 `[[unbekannt]]`, im Projekt festhalten und für die nächste Kalkulation nutzen.
@@ -80,6 +82,10 @@ Abschnitte 3 und 4. Figur, Stil und Name wählt ein Mensch.
 - Ob und wie KI erzeugte Inhalte gekennzeichnet werden müssen, ist abhängig vom Inhalt und Einsatz zu prüfen.
   Arbeitsdokument, keine Rechtsberatung; im Zweifel rechtlich klären lassen.
 - Kundenmaterial (Logos, Produktfotos) nur mit Freigabe in ein externes Werkzeug laden.
+- Musik und Stimme werden lizenziert oder aufgenommen, nicht der Generierung überlassen (Stimme:
+  `41-motion-als-funktion-der-zeit.md`). Sprechende KI-Personen wirken nach Aussage eines Videos
+  (Jason Lee, 07.10.2026) weiter künstlich, Sprecher aus dem Off über Szenen tragen besser. Erfahrungswert,
+  nicht gemessen.
 
 ## 5. Nicht übernommen (mit Grund)
 
@@ -90,4 +96,4 @@ Abschnitte 3 und 4. Figur, Stil und Name wählt ein Mensch.
 ## Verwandte Kapitel
 
 `28-ki-bildentwuerfe.md`, `38-scrollvideo-und-einbettungen.md`, `22-premium-designquellen.md`,
-`agentur-website-builder/references/moodboard-und-stylescape.md`.
+`../../agentur-website-builder/references/moodboard-und-stylescape.md`.

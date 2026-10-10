@@ -5,6 +5,14 @@ durch, einmal für einen Neubau und einmal für einen Relaunch, jeweils mit den 
 was der Nutzer sieht, und dem, was er antwortet. Wer den Ablauf zum ersten Mal fährt, liest
 hier und nicht dort.
 
+## Inhalt
+
+- Beispiel 1: Neubau, Industrie-B2B
+- Beispiel 2: Relaunch mit Bestandsseite
+- Störungen und was dann
+- Was in keinem der beiden Beispiele passiert
+- Verwandte Kapitel
+
 ## Beispiel 1: Neubau, Industrie-B2B
 
 Ausgangslage: Hersteller von Messtechnik, Zielgruppe Instandhaltungsleiter, Ziel

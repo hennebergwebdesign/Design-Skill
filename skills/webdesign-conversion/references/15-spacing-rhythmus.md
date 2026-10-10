@@ -8,6 +8,14 @@ Der Grund: Nähe liest das Auge als Zusammengehörigkeit, bevor es überhaupt li
 Vorverarbeitung, keine Entscheidung. Deshalb ist Spacing auch die häufigste Ursache dafür,
 dass eine technisch korrekte Seite billig aussieht.
 
+## Inhalt
+
+- Die sechs Regeln
+- Die drei Ebenen des Rhythmus
+- Vertikaler Fluss statt Einzelregeln
+- Was ein fehlendes Token ist
+- Prüfung
+
 ## Die sechs Regeln
 
 ### 1 Spacing gehört dem Elternteil, nie dem Kind

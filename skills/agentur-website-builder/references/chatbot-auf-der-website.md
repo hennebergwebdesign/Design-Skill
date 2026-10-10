@@ -5,6 +5,19 @@ Standardkomponente, und der Skill baut keinen ungefragt ein: Ein Chatbot ist ein
 zusätzliche Fläche, auf der etwas schiefgehen kann, und ein Kontaktformular löst die meisten
 Aufgaben einer Unternehmensseite ohne dieses Risiko.
 
+## Inhalt
+
+- 1\. Warum Leitplanken Pflicht sind
+- 2\. Wo die Regeln stehen
+- 3\. Was der Systemprompt festlegt
+- 4\. Wissensbasis statt Wissen aus dem Modell
+- 5\. Keine Befugnis, die ein Mensch nicht hätte
+- 6\. Gegenprobe vor dem Livegang
+- 7\. Technischer Schutz
+- 8\. Datenschutz
+- 9\. Ungeprüft
+- Verwandte Kapitel
+
 ## 1. Warum Leitplanken Pflicht sind
 
 Ein Chatbot ohne Regeln sagt, was ihm jemand entlockt. Zwei bekannte Fälle, so im Video einer

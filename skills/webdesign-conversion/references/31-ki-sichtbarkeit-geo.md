@@ -13,6 +13,18 @@ Absätze und die Haltung „jede Empfehlung mit Gegenprobe". Nicht übernommen s
 Prozentwerte und Gewichtungen beider Quellen (Abschnitt 7), weil sie sich nicht belegen
 ließen.
 
+## Inhalt
+
+- 1\. Grundhaltung: dasselbe Fundament, ein anderer Leser
+- 2\. Wer darf was lesen: Such- und Trainingscrawler trennen
+- 3\. Was auf der Seite zitierfähig macht
+- 4\. Strukturierte Daten und Entität
+- 5\. llms.txt: ehrlich einordnen
+- 6\. Jede Empfehlung mit Gegenprobe
+- 7\. Was hier nicht steht
+- 8\. Prüfen
+- Verwandte Kapitel
+
 ## 1. Grundhaltung: dasselbe Fundament, ein anderer Leser
 
 KI-Suche liest dieselbe Seite wie Google, nur zerlegt sie sie in Absätze und prüft, ob ein
