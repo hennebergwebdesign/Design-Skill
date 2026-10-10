@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="de">
+<head>
+<!-- Three.js-Vorlage in einer Datei. Im Entwurf lädt Three.js 0.186.1 vom jsDelivr-CDN (Stand der Quelle 05.10.2026).
+     IN DER AUSLIEFERUNG NIE VOM FREMDSERVER: Three.js herunterladen, selbst ausliefern und die Pfade der
+     Import-Map auf eigene Dateien setzen (07-recht-dsgvo.md). Einsatz und Grenzen: 38-scrollvideo-und-einbettungen.md, Abschnitt 5a.
+     Diese Datei ist eine eigenständige Szene. In einer Kundenseite wird three erst mit import('three') geladen,
+     wenn die Szene sichtbar wird, davor steht ein Poster (pruefe-motion.mjs meldet den statischen Import). -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Three.js-Vorlage</title>
+<link rel="icon" href="data:,">
+<style>
+  html, body { margin: 0; height: 100%; background: #0b0d12; overflow: hidden; }
+  canvas { display: block; touch-action: none; }
+  #hint { position: fixed; left: 16px; bottom: 16px; color: #9aa3b2; font: 13px/1.4 system-ui, sans-serif; }
+</style>
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+<div id="hint">Ziehen zum Drehen. Scrollen oder Zwei-Finger-Zoom zum Zoomen.</div>
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// Renderer: Pixel Ratio auf 2 begrenzen, damit Handys flüssig bleiben.
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+renderer.setSize(innerWidth, innerHeight);
+document.body.appendChild(renderer.domElement);
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x0b0d12);
+scene.fog = new THREE.Fog(0x0b0d12, 8, 20);
+
+const camera = new THREE.PerspectiveCamera(50, innerWidth / innerHeight, 0.1, 100);
+camera.position.set(3.2, 2.2, 4.2);
+
+// Licht: ein weiches Himmelslicht und ein Hauptlicht.
+scene.add(new THREE.HemisphereLight(0xbcd0ff, 0x1a1d26, 1.1));
+const key = new THREE.DirectionalLight(0xffffff, 2.2);
+key.position.set(3, 5, 2);
+scene.add(key);
+
+// Das Objekt. Diesen Block gegen das eigene Modell oder die eigene Form tauschen.
+const knot = new THREE.Mesh(
+  new THREE.TorusKnotGeometry(0.9, 0.3, 160, 24),
+  new THREE.MeshStandardMaterial({ color: 0xea580c, roughness: 0.35, metalness: 0.2 })
+);
+knot.position.y = 1.2;
+scene.add(knot);
+
+// Ein Boden, damit die Szene einen Platz hat.
+const floor = new THREE.Mesh(
+  new THREE.CircleGeometry(8, 64),
+  new THREE.MeshStandardMaterial({ color: 0x1a1d26, roughness: 0.9 })
+);
+floor.rotation.x = -Math.PI / 2;
+scene.add(floor);
+
+// Orbit-Steuerung: Ziehen zum Umsehen, mit weichem Auslauf.
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.target.set(0, 1.1, 0);
+controls.enableDamping = true;
+controls.maxPolarAngle = Math.PI / 2 - 0.05; // nie unter den Boden
+controls.minDistance = 2.5;
+controls.maxDistance = 9;
+
+let last = 0;
+renderer.setAnimationLoop((now) => {
+  const dt = Math.min((now - last) / 1000, 0.1); // Sekunden seit dem letzten Bild
+  last = now;
+  if (!reduceMotion) { knot.rotation.y += dt * 0.6; knot.rotation.x += dt * 0.2; }
+  controls.update();
+  renderer.render(scene, camera);
+});
+
+addEventListener('resize', () => {
+  camera.aspect = innerWidth / innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(innerWidth, innerHeight);
+});
+
+// Leistungsprüfung: stats() in der Konsole eingeben. Draw Calls und Dreiecke auf dem Handy beobachten.
+window.stats = () => ({ calls: renderer.info.render.calls, triangles: renderer.info.render.triangles });
+window.__ready = { objects: scene.children.length, three: THREE.REVISION };
+</script>
+</body>
+</html>

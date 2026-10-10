@@ -128,7 +128,8 @@ skills/
 │  │  ├─ 43-hierarchie-raster-komposition.md  Hierarchie als Verhältnis, Führungskanten, Anteile wechseln, Animationssystem
 │  │  ├─ 44-gutes-festschreiben-und-rueckbauprobe.md  Rückbauprobe, Pilot, Figurenwelt, was der Mensch entscheidet
 │  │  ├─ 45-huerde-laenge-und-leserfuehrung.md  Länge und Sektionsfolge nach Hürde, Belege früh, offene Schleifen, Stakkato
-│  │  └─ 46-lokale-sichtbarkeit.md  NAP überall gleich, Ortsseiten ohne Austauschtext, Bewertungsablauf, Verzeichnisse, Profil
+│  │  ├─ 46-lokale-sichtbarkeit.md  NAP überall gleich, Ortsseiten ohne Austauschtext, Bewertungsablauf, Verzeichnisse, Profil
+│  │  └─ 47-claude-design-hacks.md  Prompt-Gerüst R I S E, DESIGN.md, Remix je Sektion, Fünf-Agenten-Prüfung, Ein-Bildschirm-Test, Mikrobewegung, Plakat
 │  └─ assets/
 │     ├─ vorlagen/                  marke.json, marke-brief.md, impressum.md, datenschutz.md,
 │     │                             datenschutz-bewerber.md, consent-muster.md,
@@ -181,6 +182,7 @@ scripts/
 ├─ pruefe-motion.mjs                transition: all, scale(0), ease-in, Dauer über 300 ms, Reduzierung
 ├─ pruefe-geo.mjs                   KI-Crawler in der robots.txt, Text im HTML, Gliederung, JSON-LD
 ├─ pruefe-aktualitaet.mjs           Copyright-Jahr, Stand-Angaben, Jahr im Titel
+├─ pruefe-seitenbasis.mjs           lang, Viewport und Zoom, Alt-Texte, Labels, Fremdserver, Teilen-Ebene
 ├─ brand-extraktion.mjs             Farben, Schriften, Typoskala, Logo der eigenen Seite messen
 ├─ relaunch-inventory.mjs           Bestandsaufnahme der alten Kundenseite vor dem Relaunch
 ├─ design-scan.mjs                  Struktur- und Design-Scan einer fremden Referenzseite
@@ -237,6 +239,7 @@ node scripts/pruefe-breakpoints.mjs http://localhost:4321 --bilder
 node scripts/pruefe-geschmack.mjs     # nach dem Build: dist/ und src/
 node scripts/pruefe-motion.mjs        # Quellen: Bewegungsfehler, die sich zählen lassen
 node scripts/pruefe-geo.mjs           # nach dem Build: dist/ auf KI-Lesbarkeit
+node scripts/pruefe-seitenbasis.mjs   # nach dem Build: dist/ auf lang, Zoom, Alt-Texte, Labels, Fremdserver
 ```
 
 `pruefe-motion.mjs` liest die Quellen und meldet `transition: all` als Fehler, dazu Start bei

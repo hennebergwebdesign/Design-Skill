@@ -1,0 +1,37 @@
+/* Kleine Bewegung, die teuer wirkt. Nur transform und opacity bewegen sich, deshalb bleibt es flüssig.
+   Regeln: 47-claude-design-hacks.md, Abschnitt 7. Die Werte nehmen die Tokens aus tokens.css, falls
+   vorhanden; die Rückfallwerte gelten nur, wenn die Datei allein benutzt wird. */
+:root {
+  --mikro-kurve: var(--kurve-eintritt, cubic-bezier(0.22, 1, 0.36, 1));
+  --mikro-schnell: var(--dauer-schnell, 0.2s); /* höchstens 300 ms für alles, was bedient wird */
+}
+
+/* 1. Anheben bei Hover (Klasse "karte"). Hover gibt es auf dem Handy nicht, deshalb die Abfrage. */
+.karte { transition: transform var(--mikro-schnell) var(--mikro-kurve), box-shadow var(--mikro-schnell) var(--mikro-kurve); }
+@media (hover: hover) {
+  .karte:hover { transform: translateY(-4px); box-shadow: 0 14px 30px -12px rgb(0 0 0 / 0.25); }
+}
+
+/* 2. Weiches Drücken (Klasse "knopf") */
+.knopf { transition: transform var(--mikro-schnell) var(--mikro-kurve); }
+.knopf:active { transform: scale(0.97); }
+
+/* 3. Staffelung beim Eintritt: Klasse "einblenden" und style="--i:0", dann --i:1, --i:2 ...
+   40 ms Abstand, nicht mehr als ein Dutzend Elemente. */
+.einblenden {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: einblenden 300ms var(--mikro-kurve) forwards;
+  animation-delay: calc(var(--i, 0) * 40ms);
+}
+@keyframes einblenden { to { opacity: 1; transform: none; } }
+
+/* 4. Fokusring blendet weich ein. Der Ring selbst bleibt sichtbar, mindestens 2 px und 3:1. */
+:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; animation: ring var(--mikro-schnell) var(--mikro-kurve); }
+@keyframes ring { from { outline-offset: 0; } }
+
+/* 5. Reduzierte Bewegung. Diesen Block nie entfernen. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 1ms !important; animation-delay: 0ms !important; transition-duration: 1ms !important; }
+  .einblenden { opacity: 1; transform: none; }
+}
