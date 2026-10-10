@@ -14,7 +14,7 @@ rechtlich tragfähig, barrierearm, schnell, und nicht wie von einer Maschine geb
 
 | Skill | Rolle | Lizenz |
 |---|---|---|
-| `skills/webdesign-conversion/` | das Regelwerk: was gut ist und warum. 48 Referenzen (00 bis 47), 3 Playbooks, Vorlagen, Checklisten | MIT |
+| `skills/webdesign-conversion/` | das Regelwerk: was gut ist und warum. 49 Referenzen (00 bis 48), 3 Playbooks, Vorlagen, Checklisten | MIT |
 | `skills/agentur-website-builder/` | der Lieferablauf: Phasen 0 bis 6, fester Agenturstack, einsatzfertiger Code | Agenturstandard, siehe seine `SKILL.md` |
 
 Die Trennung ist die zentrale Entscheidung dieses Repositories: **Wissen und Ablauf sind
@@ -40,6 +40,7 @@ node scripts/pruefe-geschmack.mjs            # nach dem Build: dist/ Seiten, src
 node scripts/pruefe-motion.mjs               # src/: transition: all, scale(0), ease-in, Dauer, Reduzierung, Scrollvideo, Einbettung, 3D-Szene
 node scripts/pruefe-geo.mjs                  # nach dem Build: dist/ robots.txt, KI-Crawler, JSON-LD, Titel, Beschreibung, NAP, Bild ohne alt
 node scripts/pruefe-aktualitaet.mjs          # dist/ und src/: Copyright-Jahr, Stand-Angaben, Jahr im Titel
+node scripts/pruefe-seitenbasis.mjs          # nach dem Build: dist/ lang, Viewport und Zoom, Alt-Texte, Labels, Fremdserver, Teilen-Ebene
 
 # Agenturwerkzeuge
 node scripts/relaunch-inventory.mjs https://alte-kundenseite.de
@@ -94,9 +95,10 @@ skills/
   webdesign-conversion/     SKILL.md, references/00-47, playbooks/, assets/
                             assets/musterbibliothek/ ist das globale Musterwissen
                             assets/vorlagen/scrollvideo/ sind die Bausteine zu Kapitel 38
-                            assets/vorlagen/prompts/ sind die Prompt-Vorlagen zu Kapitel 24, 38, 39, 40 (auch Textkritik), 47
+                            assets/vorlagen/prompts/ sind die Prompt-Vorlagen zu Kapitel 24, 38, 39, 40, 47, 48 (auch Textkritik, Design Loop, Fünf-Agenten-Prüfung, Varianten, Prüfer)
+                            assets/vorlagen/motion/ und plakat/ sind die Dateien zu Kapitel 47 (Mikrobewegung, Plakat, Three.js-Szene), DESIGN.md die Markenvorlage
   agentur-website-builder/  SKILL.md, references/, assets/consent|forms|reviews
-scripts/              neun Prüfskripte, Agenturwerkzeuge, Designrecherche, ein Installer,
+scripts/              zehn Prüfskripte, Agenturwerkzeuge, Designrecherche, ein Installer,
                       pruefe-skill.mjs prüft dieses Repository selbst, kein Kundenprojekt
   lib/abruf.mjs       die eine Abrufschicht, vier Rückfallstufen, robots.txt
   lib/browser.mjs     die eine Stelle, die Playwright sucht und Chromium startet
@@ -178,7 +180,7 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Offene Punkte
 
-- Version 4.18.0: Kapitel 47, die Vorlagen `varianten.md` und `pruefprompts.md` und die Ergänzungen im Bauablauf sind an
+- Version 4.19.0: Kapitel 48, die Vorlagen `varianten.md` und `pruefprompts.md` und die Ergänzungen im Bauablauf sind an
   keinem Projekt erprobt. Der Evalfall `varianten-mit-preis` ist am 09.10.2026 gelaufen (zwei Läufe je Arm): ohne Skill 1,00,
   mit Skill 0,75, und der Skill wurde **in keinem Lauf aufgerufen**. Zwei Befunde daraus: das aktuelle Modell nennt Preise
   und hält die Marke bei dieser Frage allein, der Fall misst so nichts (verschärfen oder streichen); und die `description`
@@ -190,13 +192,23 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
   unsichtbar. Die Logoleiste erkennt nur Klassen mit logo, kunden, client, partner oder marquee und mindestens drei
   Textelementen. **Offen zur Entscheidung:** Das Paket rät zu höchstens ein bis zwei fremden Skills, und nur als Prüfer;
   Phase 0 installiert als Agenturvorgabe sieben Quellskills (`install-quellskills.sh`). Die Vorgabe ist nicht still
-  geändert. Ebenfalls offen aus dem Paket: ob die Geschmackssammlung der Agentur zentral oder je Kunde liegt (Kapitel 47
+  geändert. Ebenfalls offen aus dem Paket: ob die Geschmackssammlung der Agentur zentral oder je Kunde liegt (Kapitel 48
   erlaubt zentral ohne Kundendaten), und ob das Tweaks Panel in Astro selbst gebaut oder übernommen wird. Das Paket nennt
   das Video von Flux Academy „I Tested Claude Skills for Web Design" und mehrere deutsche Videos als nicht ausgewertet, v25
   nur bis etwa Minute 15 gelesen.
 - `pruefe-skill.mjs` prüft Aufbau und Verweise, nicht Inhalte. Die 60 Inhaltsverzeichnisse sind erzeugt, nicht von Hand
   formuliert; sie listen die Abschnitte zweiter Ebene.
-
+- Version 4.18.0: Kapitel 47, Abschnitt 3c in Kapitel 40 (Design Loop) und die Vorlagen `design-loop.md`,
+  `fuenf-agenten-pruefung.md`, `fuenf-versionen.md`, `abschnitt-remix.md`, `DESIGN.md`, `motion/` und `plakat/` sind an
+  keinem Projekt erprobt, kein Evalfall, das Δ ist eine Vermutung. `pruefe-seitenbasis.mjs` liest HTML mit regulären
+  Ausdrücken, nicht mit einem Parser: Felder in Komponenten, die erst im Browser entstehen, und Labels über
+  `aria-describedby` sieht es nicht, ein umschließendes Label zählt es nur der Menge nach. Die Fremdserverliste ist
+  fest und kennt keine Unterdomains anderer Anbieter. Die `DESIGN.md` ist eine Ableitung von `marke.json`, es gibt kein
+  Skript, das sie erzeugt oder gegen `marke.json` prüft. Das Format (Google Labs, Version alpha) und `npx @google/design.md
+  lint` sind nicht gelaufen. Die Plakatvorlage ist nicht in Chrome zu PDF exportiert und nicht nachgemessen, die
+  Formate und Randwerte sind Stand der Quelle (05.10.2026). Das Skill „Scroll Film Studio" der Quelle fehlt im Paket und
+  ist nicht aufgenommen. Die Adressen der Galerien in Kapitel 22 sind ungeprüft und nicht verlinkt. Die 20 Punkte der
+  Fünf-Agenten-Prüfung stammen aus einem fremden Repository (power-design), das nicht gelesen wurde.
 - Version 4.17.0: Kapitel 46, Abschnitt 3b in Kapitel 40 und die Vorlage `textkritik.md` sind an keinem
   Projekt erprobt, kein Evalfall, das Δ ist eine Vermutung. Die Fachkritiker sind nie als Schleife
   gelaufen, die Schwelle 8 je Fach ist ein Vorschlag. Die neuen Regeln in `pruefe-geo.mjs` sind gegen
@@ -338,11 +350,11 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Änderungsverlauf
 
-- **09.10.2026, Version 4.18.0** Paket „Webdesign Workflow 2026" (ein Skillordner mit elf Referenzen, drei Skripten,
+- **09.10.2026, Version 4.19.0** Paket „Webdesign Workflow 2026" (ein Skillordner mit elf Referenzen, drei Skripten,
   Wortliste und Szenarien, dazu 27 Quellnotizen zu Videos über Webdesign mit Claude, Claude Design und Skills), gegen 4.17.0
   abgeglichen und destilliert, nicht als dritter Skill mitgeliefert, obwohl das Paket das vorschlägt. Das meiste stand
   (Interview, zwei Tore, Grammatiktabelle, Gap Audit, Polierschleife mit Latte, Pilot, Tweaks Panel, Blinzeltest,
-  Änderungsauftrag, KI-Tells, Consent). Neu: Kapitel `47-richtung-varianten-und-subtraktion.md` (Struktur mit Zuständen,
+  Änderungsauftrag, KI-Tells, Consent). Neu: Kapitel `48-richtung-varianten-und-subtraktion.md` (Struktur mit Zuständen,
   Richtungen und Varianten in zwei Stufen mit Preiszeile, Subtraktionsrunde, Fehlermodi nach dem Bau mit Stresstest und
   Erzählbruch, Prüfer ohne Vorwissen, Signaturbewegung, Rechner nur mit echten Formeln, elf entschiedene Widersprüche und ein offener),
   Vorlagen `varianten.md` und `pruefprompts.md`, Ebenenansicht im Tweaks Panel, `gestaltung.richtungswahl` in `marke.json`,
@@ -359,8 +371,28 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
   Tor 3, Zählung statt einer Änderung je Auftrag, Schriftpaarungen mit gesperrten Schriften nicht übernommen. Gefunden:
   die Korrektur des Pakets auf „watchships.com" ist falsch (Ferienwohnung), `whatships.com` stimmt; dafür war
   `styles.referero.design` ein Tippfehler für `styles.refero.design` (beides am 09.10.2026 per Seitentitel geprüft).
-  Evalfall `varianten-mit-preis`, gemessen, misst nichts (siehe Offene Punkte). Versionen: Plugin 4.18.0,
-  Regelwerk 2.21.0, Bauablauf 2.18.0.
+  Evalfall `varianten-mit-preis`, gemessen, misst nichts (siehe Offene Punkte). Versionen: Plugin 4.19.0,
+  Regelwerk 2.22.0, Bauablauf 2.19.0.
+- **10.10.2026, Version 4.18.0** Paket „Claude Design Hacks" (Video von Jack Roberts, 09.10.2026, und die Seite „The Claude
+  Design Blueprint": 15 Hacks, 15 Prompts, 47 Vorlagen) samt dem Skill „design-loop", gegen 4.17.0 abgeglichen und
+  destilliert. Das meiste stand (Referenzclip und Storyboard in 41, Grammatik und Gap Audit in 42, Mobbin und Refero in 22,
+  Schriftsperre in 10 und 26, 3D-Szene in 38, Kritiker in 40). Neu: Kapitel `47-claude-design-hacks.md` (Prompt-Gerüst
+  R I S E, `DESIGN.md` als abgeleitete Fassung von `marke.json`, Remix je Sektion, fünf Versionen, Ein-Bildschirm-Test,
+  Fünf-Agenten-Prüfung mit Fix-Liste und GO, Mikrobewegung, Plakat in Code, Abbildung des Design-Ordners auf vorhandene Teile,
+  Regel „jede Korrektur wird als Regel festgehalten"), Abschnitt 3c in Kapitel 40 (Design Loop: Interview, Preflight,
+  `bar.md`, drei Kritiker mit Bestanden oder Nicht bestanden), Tabelle „Galerien je Sektion" in 22, Vorlagen unter
+  `assets/vorlagen/` (`prompts/design-loop.md`, `fuenf-agenten-pruefung.md`, `fuenf-versionen.md`, `abschnitt-remix.md`,
+  `DESIGN.md`, `motion/`, `plakat/`). Eine Prüfung: `pruefe-seitenbasis.mjs`, der statische Teil der Fünf-Agenten-Prüfung
+  als Node-Skript (Fehler: lang, Viewport, Zoom, Alt, Label, Fremdserver), 10 Tests, insgesamt 249. **Entschieden:** der
+  Design Loop ist **kein dritter Skill**, sondern eine Variante der Polierschleife (zwei Skills, Wissen und Ablauf getrennt);
+  Bestanden oder Nicht bestanden gilt für diese Variante, aber die **Durchlaufgrenze bleibt** (Vorschlag fünf Runden), die
+  Quelle kennt keine; `preship.py` ist nicht mitgeliefert, weil das Repository ohne Python bleibt, die Punkte sind in Node
+  nachgebaut; feste 8-Punkt-Abstände der Quelle nicht übernommen (fließende Tokens), Google Fonts und unpkg nur im Entwurf,
+  nie in der Auslieferung; die englischen Prompts der Quelle sind ins Deutsche übertragen; der Design-Ordner `design-os/`
+  wird nicht angelegt, weil Markenbrief, Referenzregister und Prüfskripte dieselben Schichten bereits tragen. Nicht
+  übernommen: Zahlen des Videos, Werbung für Kurse, Scroll Film Studio, Slop Monster als Pflichtwerkzeug, der Ausgabestil
+  ELI5 (betrifft Antworten an den Auftraggeber, nicht die Seite). Kein Evalfall. Versionen: Plugin 4.18.0, Regelwerk 2.21.0,
+  Bauablauf 2.18.0.
 - **08.10.2026, Version 4.17.0** Skillpaket `webcopyseo` (Router, neun Referenzen, sechs Agenten, ein Python-Prüfer,
   aus rund 35 Videos zu Copywriting, Verkaufspsychologie, Conversion, SEO, lokalem SEO, GEO und Kritikschleifen),
   gegen 4.16.0 abgeglichen und destilliert, nicht mitgeliefert. Das meiste stand (Bogen, Botschaftshierarchie,

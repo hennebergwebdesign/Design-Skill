@@ -362,10 +362,10 @@ ungeprüft benannt.
     Abschnitt Bilder). Ein Urteil, keine Messung.
 16. Erzählbruch und echter Inhalt: Heldbild, Überschrift und erste Sektion erzählen dieselbe
     Geschichte, der Blick geht zuerst auf das Angebot, und jedes Bauteil hält die kürzeste und die
-    längste echte Zeichenfolge aus. Fehlermodi und Stresstest: `47-richtung-varianten-und-subtraktion.md`,
+    längste echte Zeichenfolge aus. Fehlermodi und Stresstest: `48-richtung-varianten-und-subtraktion.md`,
     Abschnitt 6.
 17. Subtraktionsrunde gelaufen: jedes Element hilft der Zielgruppe bei ihrer Aufgabe oder ist
-    gestrichen, Streichungen nach Entscheidung (`47-richtung-varianten-und-subtraktion.md`, Abschnitt 5).
+    gestrichen, Streichungen nach Entscheidung (`48-richtung-varianten-und-subtraktion.md`, Abschnitt 5).
 
 ```bash
 pnpm build
@@ -413,4 +413,4 @@ beiden Regelwerken im Kontext an genau den Stellen dieser Tabelle zwischen ihnen
 - `27-redesign-bestand.md`: dieselben Regeln auf eine bestehende Seite angewendet
 - `28-ki-bildentwuerfe.md`: generierte Entwürfe als Vorlage, und wo sie nichts belegen dürfen
 - `45-huerde-laenge-und-leserfuehrung.md`: informative Überschriften statt Slogans, entschiedene Widersprüche zu Schriften, Palette und Breite
-- `47-richtung-varianten-und-subtraktion.md`: Richtungen in Varianten mit Preiszeile, Subtraktionsrunde, Fehlermodi nach dem Bau
+- `48-richtung-varianten-und-subtraktion.md`: Richtungen in Varianten mit Preiszeile, Subtraktionsrunde, Fehlermodi nach dem Bau

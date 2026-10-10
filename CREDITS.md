@@ -466,6 +466,29 @@ Storyboard (38, 2a), Heldenidee (43), Pilot vor Serie (44), Consent mit echter S
 Nachbau einer ausgezeichneten Seite als Übung (kein Kundenprojekt), die Aussage, ein Modell beende den KI-Look (Momentaufnahme),
 die Originalprompts des Autors (hinter einem Link, nicht Teil des Pakets).
 
+### In Version 4.18 zusätzlich eingeflossen
+
+Stand der Quelle: 09.10.2026 (Video) und 05.10.2026 (Seite „The Claude Design Blueprint"). Paket „Claude Design Hacks"
+(`design-skill-claude-design-hacks`: Videonotizen, 15 Prompts im Wortlaut, 36 Vorlagen, ein Python-Skript) und der Skill
+„design-loop" daraus. Alles destilliert und ins Deutsche übertragen, nichts wörtlich als Fremdtext übernommen. Die
+Wortlaute der Prompts sind eigene Formulierungen nach dem Muster der Quelle.
+
+| Quelle | Was daraus eingeflossen ist |
+|---|---|
+| Jack Roberts (YouTube, „How to Use Claude Design Better Than 99% of People", 09.10.2026) und die Seite „The Claude Design Blueprint" (claude-design-blueprint.vercel.app), **keine Lizenz geprüft** | Prompt-Gerüst R I S E, DESIGN.md-Vorlage im Format von Google Labs, Remix je Sektion mit Galerieliste, fünf Versionen, Ein-Bildschirm-Test, Fünf-Agenten-Prüfung mit 20 Punkten und Fix-Liste, Mikrobewegung (`motion.css`, `count-up.js`), Plakatvorlage mit Beschnitt, Three.js-Startdatei, Design-Ordner als Abbildung auf vorhandene Teile |
+| Skill „design-loop" im Paket (Gauntlet-Muster von Matt Shumer, Zerlegung, feste Kritikerrollen und Preflight nach Angabe der Quelle vom Paketautor ergänzt) | Abschnitt 3c in Kapitel 40 und `prompts/design-loop.md`: Interview mit drei Fragen, Preflight, `bar.md` aus prüfbaren Mechanismen, drei Kritiker mit frischem Kontext, Bestanden oder Nicht bestanden |
+| Regeln der Quelle: Web-Regeln aus dem Repository power-design (Jack Roberts, MIT laut Paket), Kapitel „Don't Make Me Think" nur als Idee, ASD-STE100 nur als Geist | die 20 Punkte der Prüfliste und der Test auf einen Bildschirm; **nicht gelesen:** das Repository selbst, das Buch, der Standard |
+
+**Bereits im Repository, deshalb nicht erneut aufgenommen:** Referenzclip und Storyboard (41), Referenzen als Grammatik und Gap Audit (42),
+Mobbin und Refero als Kandidaten (22), Schriftsperre und Iconsystem (10, 17, 26), 3D-Szene (38, 5a), Kritiker mit Brief, System
+und Handwerk (40, 3a), Slop-Test (12, `deslop-check.mjs`).
+
+**Nicht übernommen, mit Grund:** das Python-Skript `preship.py` (keine Python-Abhängigkeit; Punkte in Node nachgebaut als
+`pruefe-seitenbasis.mjs`), feste 8-Punkt-Abstände (fließende Tokens bleiben), Schriften und Icons per Link von Fremdservern in der
+Auslieferung, Zahlen des Videos (Aufrufe, Kosten, Zeiten, Sterne), Werbung für Kurse und Vorlagenpakete des Autors, das Skill
+„Scroll Film Studio" (Download fehlt, braucht ein Videodienst-Konto), Slop Monster als Pflichtwerkzeug (englisch, fremder Code),
+der Ausgabestil ELI5 (betrifft Antworten an den Auftraggeber), die Linearity-Übergabe als Standard (nur auf Wunsch).
+
 ### In Version 4.17 zusätzlich eingeflossen
 
 Stand der Quelle: 08.10.2026, Skillpaket `webcopyseo` (SKILL.md als Router, neun Referenzen, sechs Agentendateien,
@@ -488,7 +511,7 @@ durchsetzt (widerspricht der Rechtschreibung und der eigenen Strichregel; Titel,
 Bildschirm" (harte Grenze); die Agentendateien als Lieferbestandteil; Zahlen aus Herstellerstudien (SparkToro, Ahrefs,
 Whitespark, Opt-in-Quoten) als Fakt; Werkzeugempfehlungen; `learning.md` im Skillordner.
 
-### In Version 4.18 zusätzlich eingeflossen
+### In Version 4.19 zusätzlich eingeflossen
 
 Stand der Quelle: 09.10.2026, zwei ZIP-Archive mit demselben Skillordner `webdesign-workflow-erweiterung-2026`
 (SKILL.md, elf Referenzen, Quellenindex, drei Testszenarien, drei Node-Skripte und eine Wortliste), das zweite
@@ -516,7 +539,7 @@ Textdurchgang mit anderem Modell (Bauablauf, 4.14), Abnahme durch einen Menschen
 die Markierung „Bestätigen" statt `[[FEHLT: …]]`; ein drittes Tor für Wireframes; eine Änderung je Auftrag (ersetzt durch
 die Zählung); die Schriftpaarungen mit Inter, Poppins und Roboto (harte Grenze); „100 vh" im Heldprompt (`100svh`);
 Hosting auf Vercel, Netlify, Replit; der Interaktionskatalog; `disable-model-invocation`; die Korrektur auf
-„watchships.com" (falsch, am 09.10.2026 geprüft); alle Zahlen der Autoren. Begründung je Punkt: Kapitel 47, Abschnitte 8
+„watchships.com" (falsch, am 09.10.2026 geprüft); alle Zahlen der Autoren. Begründung je Punkt: Kapitel 48, Abschnitte 8
 und 9. Offen statt entschieden: die Empfehlung, höchstens ein bis zwei fremde Skills als Prüfer zu nutzen, gegen die sieben
 Quellskills in Phase 0.
 

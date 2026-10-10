@@ -23,7 +23,7 @@
                         "vielleicht") aus 35-autoritaet-im-text.md, und das Stakkato (drei
                         Saetze mit hoechstens drei Woertern in Folge, "Müde? Wir helfen. Echte
                         Ergebnisse.") aus 45-huerde-laenge-und-leserfuehrung.md, und die runde
-                        Kundenzahl ("10.000 zufriedene Kunden") aus 47-richtung-varianten-und-subtraktion.md. Quelle: copywriting und
+                        Kundenzahl ("10.000 zufriedene Kunden") aus 48-richtung-varianten-und-subtraktion.md. Quelle: copywriting und
                         copy-editing aus coreyhaines31/marketingskills, auf Deutsch übertragen
     2 Nominalstil       Substantivketten auf -ung, -heit, -keit statt Verben
     3 Superlative       beste, führend, einzigartig, optimal, ohne Beleg daneben

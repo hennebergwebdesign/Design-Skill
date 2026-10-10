@@ -41,7 +41,7 @@
   Je Quelldatei, zeilenweise (harte Grenze Standardschrift, 10-visuelle-richtung.md):
    16. Inter, Roboto, Open Sans, Poppins, Montserrat, Lato und Plus Jakarta Sans ohne
        Markenvorgabe. WARNUNG.
-  Je gebauter Seite, aus dem Paket Webdesign Workflow 2026 (47-richtung-varianten-und-subtraktion.md):
+  Je gebauter Seite, aus dem Paket Webdesign Workflow 2026 (48-richtung-varianten-und-subtraktion.md):
    17. Logoleiste ohne Bild: ein Block mit logo, kunden, client, partner oder marquee in der
        Klasse, der Namen enthaelt, aber kein img und kein svg. Getippte Firmennamen als
        Logowand behaupten eine Kundenbeziehung, ohne sie zu zeigen. WARNUNG.

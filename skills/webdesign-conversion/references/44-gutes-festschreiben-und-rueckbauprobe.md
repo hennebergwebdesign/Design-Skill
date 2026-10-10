@@ -112,7 +112,7 @@ Ordnung, die das Wiederfinden trägt (aus dem Paket 4.18, dort „Taste Vault"):
 Quelle mit Adresse, Datum, Screenshotdatei, was übernommen wird (Rhythmus, Raster, Komposition), was nicht
 (Inhalt, Logo, Figuren, Markenfarben) und ein Markenhinweis. Familiennamen sind Arbeitsbegriffe der Agentur,
 kein Standard. Aus der Sammlung entstehen die Richtungen der Stufe A in
-`47-richtung-varianten-und-subtraktion.md`, Abschnitt 3. Eine zentrale Sammlung der Agentur ist erlaubt,
+`48-richtung-varianten-und-subtraktion.md`, Abschnitt 3. Eine zentrale Sammlung der Agentur ist erlaubt,
 solange sie kein Kundenmaterial enthält.
 
 ## 8. Nicht übernommen (mit Grund)

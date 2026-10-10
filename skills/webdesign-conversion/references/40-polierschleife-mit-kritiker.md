@@ -19,6 +19,7 @@ Einzelfälle des Autors, hier keine Belege. Die Vorlage ist eine eigene Formulie
 - 3\. Der Kritiker
 - 3a. Variante mit drei Kritikern
 - 3b. Variante für Texte: Fachkritiker statt Gestaltungskritiker
+- 3c. Design Loop: Latte aus prüfbaren Mechanismen, Bestanden oder Nicht bestanden
 - 4\. Verhältnis zur Obergrenze aus Kapitel 29
 - 5\. Bericht und Mensch
 - 6\. Wann sich der Aufwand lohnt
@@ -112,6 +113,57 @@ Strichregel dieses Skills ersetzt: Gedankenstriche nein, der Bindestrich im Komp
 („E-Mail-Adresse", nicht „Email Adresse"). Die Kritiker als eigene Agentendateien mitzuliefern ist nicht
 übernommen, die Rollen stehen in der Vorlage `../assets/vorlagen/prompts/textkritik.md`.
 
+## 3c. Design Loop: Latte aus prüfbaren Mechanismen, Bestanden oder Nicht bestanden
+
+Dritte Variante, aus dem Skill „design-loop" des Pakets `47-claude-design-hacks.md` (Jack Roberts,
+Gauntlet-Muster von Matt Shumer, Zerlegung, feste Kritikerrollen und Preflight vom Paketautor
+ergänzt). Sie zählt weiter als **ein** Durchgang. Sie lohnt sich, wenn es eine **konkrete Referenz**
+gibt, die übertroffen werden soll, und ist sonst Aufwand ohne Maßstab.
+
+| Phase | Inhalt | Tor |
+|---|---|---|
+| 1 Interview | genau drei Fragen auf einmal: Was wird gebaut und wie groß? Was macht das schon brillant, etwas, das sich öffnen lässt? Welche Dateien gelten (Designsystem, Markenbrief, Text, Entwurf)? Dann warten | ja |
+| 2 Preflight | eine Prüfung, keine Frage: Referenz jetzt abrufen, prüfen, ob die Ausgabe gerendert werden kann (Screenshots, Frames, PDF), Eingabedateien vorhanden, benötigte Generatoren verbunden. Ein Block: was geht, was fehlt, **welcher Kritiker blind wäre**. Nie still mit einem blinden Kritiker weitermachen | ja |
+| 3 Zerlegung | 5 bis 7 **prüfbare Mechanismen** in `bar.md` (Vorlage in `../assets/vorlagen/prompts/design-loop.md`), dem Menschen zeigen, dann erst weiter | ja |
+| 4 Schleife | pro Teil ein Bauagent, danach drei Kritiker mit frischem Kontext | Durchlaufgrenze |
+
+**Ein vages Vorbild** („Apples Website", „gutes SaaS-Design") wird **einmal** zur konkreten Seite oder
+Datei nachgefragt. Grund: Mit vagem Maßstab erfindet der Kritiker einen Vergleich und winkt in Runde 1
+alles durch. Das ist der häufigste Fehlerfall der Methode. Fehlt jede Referenz, werden drei Kandidaten
+mit je einer Zeile Begründung vorgeschlagen, der Mensch wählt. Eine fremde Seite wird nur nach Tor 1
+aus `designrecherche-ablauf.md` abgerufen.
+
+**Mechanismen statt Adjektive:** „wirkt hochwertig" ist wertlos, „die Überschrift ist fünfmal so groß
+wie der Fließtext, drei Schriftgrößen insgesamt" ist prüfbar. Jede Zeile muss ein Kritiker durch
+**Ansehen** entscheiden können. Mechanismen gehören zur Gestaltung (Typografie, Farbe, Raster, Weißraum,
+Bewegung, ein Detail), nicht zum Code.
+
+| Kritiker | Maßstab | Sieht |
+|---|---|---|
+| Brief | nur das genannte Ziel: leistet es, was verlangt ist? Ästhetik ignorieren | Rendering, Auftrag |
+| System | nur das Designsystem (`marke.json`, Markenbrief, `DESIGN.md`). Fehlt es, wird die Rolle übersprungen **und das gesagt** | Rendering, Systemdatei |
+| Handwerk | nur `bar.md` und das Rendering: unsere Fassung neben die Referenz **ohne Beschriftung**, sagen, welche besser ist, **die eine größte Lücke** nennen. Stärkstes verfügbares Modell | Rendering beider |
+
+Die Briefs der Kritiker werden **für das konkrete Ziel geschrieben**, nicht aus einem allgemeinen
+Wortlaut wiederverwendet. Kritiker beurteilen das Rendering, nie den Code: Wer den Code liest, bewertet
+die Absicht statt des Ergebnisses. Die Rolle „Brief" deckt den Teil von Abschnitt 3a ab, der den Auftrag
+prüft, „System" den der Tokens, „Handwerk" den der Wirkung.
+
+**Entschieden gegen die Quelle und gegen 3a:**
+
+| Punkt | Quelle | Hier | Grund |
+|---|---|---|---|
+| Urteil | Bestanden oder Nicht bestanden, nie Punkte | **Bestanden oder Nicht bestanden je Kritiker** als Standard dieser Variante | Punkte driften von Runde zu Runde nach oben. 3a mit Werten 1 bis 10 bleibt für den Fall, dass der Mensch Abstufungen sehen will |
+| Rundenzahl | „keine feste Rundenzahl, Ausstieg ist Gewinnen" | **Durchlaufgrenze bleibt** (Abschnitt 2, Vorbedingung 4), Vorschlag fünf Runden je Teil | Ohne Grenze läuft die Schleife bis zum Kostenlimit. Endet sie ohne Ziel, werden Stand und Restlücken offen berichtet |
+| Jeder Fehlschlag | zurück zum Bauagent mit der einen größten Lücke | übernommen | eine Lücke je Runde ist umsetzbar, fünf nicht |
+| Teile | drei bis vier je Lauf | übernommen | jedes weitere Teil vervielfacht den Lauf |
+| Kosten | „keine Kostenangabe erfinden, Runden zeigen" | übernommen | das Modell sieht seinen eigenen Verbrauch nicht (`39-ki-assets-bewegtbild-und-3d.md`, 3a) |
+
+Alle drei Kritiker müssen bestehen. Ein Bestanden hebt keinen Befund der Prüfskripte auf. Fortschritt:
+eine Übersichtsseite oder Tabelle mit Teilen, Urteilen, Verlauf der größten Lücke und Rundenzahl. Läuft
+der Loop in Claude Design, geht das nicht (dort starten keine frischen Kritiker): in Claude Code.
+Die Weiterführung nach Bericht und Mensch ist Abschnitt 5.
+
 ## 4. Verhältnis zur Obergrenze aus Kapitel 29
 
 * Eine Schleife zählt als **ein** subjektiver Durchgang. Die Grenze von zwei bleibt.
@@ -149,5 +201,6 @@ ungemessen. Das Δ ist eine Vermutung.
 ## Verwandte Kapitel
 
 `29-pruefdurchgaenge-und-vokabular.md`, `24-designsystem-vorrang.md`, `26-geschmack-und-ki-tells.md`,
-`33-kundenpraesentation-und-feedback.md`, `41-motion-als-funktion-der-zeit.md`, Vorlagen `../assets/vorlagen/prompts/polierschleife.md`
-und `../assets/vorlagen/prompts/textkritik.md`.
+`33-kundenpraesentation-und-feedback.md`, `41-motion-als-funktion-der-zeit.md`,
+`47-claude-design-hacks.md`, Vorlagen `../assets/vorlagen/prompts/polierschleife.md`,
+`../assets/vorlagen/prompts/textkritik.md` und `../assets/vorlagen/prompts/design-loop.md`.

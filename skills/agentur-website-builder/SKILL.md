@@ -4,7 +4,7 @@ description: Baut komplette Kundenwebsites mit Astro und Cloudflare Pages nach A
 license: Proprietär, That's it. Marketing / VFDESIGN LTD
 metadata:
   author: That's it. Marketing / Henneberg Webdesign
-  version: 2.18.0
+  version: 2.19.0
 ---
 
 # Agentur Website Builder
@@ -209,7 +209,7 @@ Muster dauerhaft ins Skillwissen wandert, siehe dasselbe Kapitel.
 
 Moodboard intern, Stylescape zur Abnahme der Richtung, siehe `references/moodboard-und-stylescape.md`.
 Werden mehrere Richtungen gezeigt, dann als Varianten mit Preiszeile, die Wahl in `marke.json`, siehe
-`../webdesign-conversion/references/47-richtung-varianten-und-subtraktion.md`.
+`../webdesign-conversion/references/48-richtung-varianten-und-subtraktion.md`.
 Soll die Seite ein Erlebnis sein (Marke, Launch, Kampagne), stehen im Konzept drei Erlebnisideen mit
 Scrollablauf, Technik, Aufwand und Risiko, siehe
 `../webdesign-conversion/references/38-scrollvideo-und-einbettungen.md`, Abschnitt 1a. Bei Handwerk,
@@ -409,13 +409,14 @@ Schwesterskill.
 | `../webdesign-conversion/references/42-referenzgrammatik-und-gap-audit.md` | Phase 2 und 3, wenn Referenzen ausgelesen werden, und bei „es fehlt etwas“ |
 | `../webdesign-conversion/references/43-hierarchie-raster-komposition.md` | Phase 3 und 4, beim Entscheiden über Hierarchie, Raster, Sektionsanteile und Animationssystem |
 | `../webdesign-conversion/references/44-gutes-festschreiben-und-rueckbauprobe.md` | Phase 5 und 6, wenn ein gutes Ergebnis für spätere Sektionen oder Kampagnen festgehalten wird |
-| `../webdesign-conversion/references/47-richtung-varianten-und-subtraktion.md` | Phase 3, wenn Richtungen als Varianten gezeigt werden, und Phase 5 für Fehlermodi und Subtraktion |
+| `../webdesign-conversion/references/48-richtung-varianten-und-subtraktion.md` | Phase 3, wenn Richtungen als Varianten gezeigt werden, und Phase 5 für Fehlermodi und Subtraktion |
 | `../webdesign-conversion/references/12-copywriting.md` | sobald Texte eingesetzt werden |
 | `../webdesign-conversion/references/45-huerde-laenge-und-leserfuehrung.md` | Phase 1 und 3 bei Landingpages: Länge und Sektionsfolge nach Hürde, Leserführung, Stakkato |
 | `../webdesign-conversion/references/01-strategie-positionierung.md` | Phase 2, Schritt 1.5: Recherche vor dem Text, acht Fragen, Hebel |
 | `../webdesign-conversion/references/07-recht-dsgvo.md` | Rechtstexte und Consentpflichten |
 | `../webdesign-conversion/references/04-barrierefreiheit-bfsg.md` | vor der Abnahme |
 | `../webdesign-conversion/references/05-seo-sichtbarkeit.md` | Metadaten und Relaunch |
+| `../webdesign-conversion/references/47-claude-design-hacks.md` | Phase 5 vor der Abnahme (Fünf-Agenten-Prüfung, Fix-Liste mit GO, Ein-Bildschirm-Test), Phase 3 und 4 bei Remix pro Sektion und `DESIGN.md` für Claude Design |
 | `../webdesign-conversion/references/46-lokale-sichtbarkeit.md` | jeder Betrieb mit Einzugsgebiet: Ortsseiten, NAP, Prüfliste für Profil und Bewertungsablauf in der Übergabe |
 | `../webdesign-conversion/references/14-projektstruktur-astro.md` | Dateistruktur und Fallstricke |
 
@@ -424,7 +425,7 @@ Bewertungsabruf. Diese kopieren und an das Projekt anpassen, statt jedes Mal neu
 schreiben. Rechtstexte, Tokens, Meta-Head, JSON-LD, 404 und Security-Header liegen in
 `../webdesign-conversion/assets/vorlagen/`.
 
-`scripts/` im Repowurzelverzeichnis enthält die neun Prüfskripte sowie drei
+`scripts/` im Repowurzelverzeichnis enthält die zehn Prüfskripte sowie drei
 Agenturwerkzeuge, die nie Teil der ausgelieferten Seite werden und nie in das `package.json`
 des Kundenprojekts wandern:
 
@@ -466,7 +467,7 @@ Erst wenn alle Punkte erfüllt sind, darf von einer fertigen Seite gesprochen we
 * alle vereinbarten Seiten und Sektionen vorhanden, keine vergessenen Platzhaltertexte
 * jeder selbst formulierte Copy-Vorschlag mit `scripts/deslop-check.mjs` auf 5 von 5 geprüft
 * Build läuft ohne Fehler, `astro check` ohne Befund
-* alle neun Prüfskripte ohne Fehler, auch `pruefe-geschmack.mjs`, `pruefe-geo.mjs` und `pruefe-aktualitaet.mjs` gegen `dist/`
+* alle zehn Prüfskripte ohne Fehler, auch `pruefe-geschmack.mjs`, `pruefe-geo.mjs`, `pruefe-aktualitaet.mjs` und `pruefe-seitenbasis.mjs` gegen `dist/`
 * Vorflugcheck aus `26-geschmack-und-ki-tells.md` durchgegangen, Ungeprüftes benannt
 * Fehlermodi, Stresstest mit echtem Inhalt und Subtraktionsrunde nach `references/qa-und-abnahme.md` Schritt 8b
 * Tastaturbedienung durch alle interaktiven Elemente, sichtbarer Fokus

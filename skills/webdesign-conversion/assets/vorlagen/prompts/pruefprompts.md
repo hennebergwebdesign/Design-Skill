@@ -1,6 +1,6 @@
 # Prüfprompts: Prüfer ohne Vorwissen, Subtraktion, Erzählbruch
 
-Nach `47-richtung-varianten-und-subtraktion.md`, Abschnitte 5, 6 und 6a. Alle drei laufen in frischem
+Nach `48-richtung-varianten-und-subtraktion.md`, Abschnitte 5, 6 und 6a. Alle drei laufen in frischem
 Kontext (Unteragent oder neue Sitzung) und ändern nichts. Sie sind eine Art, einen der zwei
 subjektiven Durchgänge aus `29-pruefdurchgaenge-und-vokabular.md` zu fahren, kein zusätzlicher.
 Die harten Grenzen und die Prüfskripte stehen über jedem Urteil hier.

@@ -33,7 +33,7 @@
     },
     "$regler_hinweis": "Bewegung 1 bis 3 passt zu motion.profil zurueckhaltend, 4 bis 7 zu praezise oder weich, 8 bis 10 zu verspielt. Ueber 4 muss sich die Seite auch bewegen.",
     "richtungswahl": {
-      "$kommentar": "Wahl aus Stufe A und B nach 47-richtung-varianten-und-subtraktion.md. Ohne diesen Eintrag schlaegt die naechste Sitzung eine verworfene Richtung erneut vor.",
+      "$kommentar": "Wahl aus Stufe A und B nach 48-richtung-varianten-und-subtraktion.md. Ohne diesen Eintrag schlaegt die naechste Sitzung eine verworfene Richtung erneut vor.",
       "gewaehlt": "[[FEHLT: Richtung und Variante]]",
       "grund": "[[FEHLT: ein Satz, mit der Preiszeile]]",
       "verworfen": [],

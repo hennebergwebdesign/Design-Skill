@@ -30,6 +30,7 @@ bevor sie abgerufen wird, siehe die harte Grenze in `SKILL.md` und den Ablauf in
 - Quellen außerhalb des Webs
 - Bausteine und Bibliotheken: Kandidaten, ungeprüft
 - Quellen für Flows und Bewegung: Kandidaten, ungeprüft
+- Galerien je Sektion: Kandidaten, ungeprüft
 - Wie recherchiert wird
 - Inspiration, kein Copy-Paste
 - Eine bekannte oder alte Seite als Referenz erfassen
@@ -92,6 +93,35 @@ hier gilt Tor 1: erst Kandidaten vorschlagen, dann freigeben lassen.
 | Grafik und Posterreferenzen | Savee |
 | Schriften im echten Einsatz | Fonts In Use |
 | Videobeispiele (teils kostenpflichtig) | skillery.dev |
+
+## Galerien je Sektion: Kandidaten, ungeprüft
+
+Aus dem Paket „Claude Design Hacks" (`47-claude-design-hacks.md`, Stand der Quelle 05.10.2026, Angabe der
+Blueprint-Autoren, hier nicht geöffnet). **Keine Verlinkung, keine Empfehlung:** Adressen, Preise,
+Umfang und Pflegestand sind nicht geprüft. Tor 1 gilt: erst vorschlagen, dann freigeben lassen, dann
+abrufen.
+
+| Sektion | Kandidat laut Quelle | Inhalt laut Quelle |
+|---|---|---|
+| Navigation | navbar.gallery | Navigationen nach Art: statisch, Dropdown, Mega-Menü, Seitenleiste, Suche, Ankündigungsleiste |
+| Hero | landdding.com | Websites nach Kategorie und Plattform, teils Bezahlstufe |
+| Hero oder jede Sektion, mit fertigem Prompt | scrolltide.co | Prompts und Vorlagen zum Kopieren, **kostenpflichtig** |
+| Handlungsaufruf | cta.gallery | Buttons, Formulare, Modale, Newsletter, Preisseiten |
+| Fußzeile | footer.design | Fußzeilen nach Stil |
+| 404 | 404s.design | gestaltete Fehlerseiten nach Stil und Reaktion |
+| Formularbausteine | component.gallery | echte Komponenten aus Designsystemen |
+| Social-Posts | posts.design | Beiträge echter Marken |
+| Aktuelle Arbeiten | recent.design, inspora.design | neue Webdesigns, Branding, Bewegung |
+
+Zwei dieser Listen gehen auf öffentliche Beiträge auf X zurück (@iamtanzil_, 04.10.2026, und
+@viktoroddy, 13.09.2026), landdding.com auf @VullnetAdemaj (27.09.2026). Wird ein Treffer daraus
+übernommen, steht die Quelle im Kommentar des Codes.
+
+**Verbindungen für Abläufe und Stile:** Mobbin (MCP, Pro, Team oder Enterprise, Bilder-Links laufen laut
+Quelle nach 30 Tagen ab), Refero (MCP, kostenpflichtig, laut Quelle 8000 Aufrufe je Monat) und Inspo (kostenlos, laut Quelle 832 Seiten mit je einer
+DESIGN.md). Einrichtung führt fremden Code aus (`claude mcp add`, `npx`): Dokumentation lesen, Version festlegen,
+nur nach Freigabe, und nur Bildschirme speichern, die gebraucht werden. Die Zahlen sind Angaben der
+Quellen und ändern sich.
 
 Wie aus Referenzen eine Grammatiktabelle wird: `42-referenzgrammatik-und-gap-audit.md`. Eine eigene laufende Sammlung mit Datum und Quelle: `44-gutes-festschreiben-und-rueckbauprobe.md`, Abschnitt 7.
 

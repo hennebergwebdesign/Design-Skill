@@ -55,7 +55,7 @@ sehen: Schriftpaarung, Palette, Bildsprache, Formen, eine Beispielsektion, gegeb
 | Der Kunde bekommt konkrete Fragen („Passt die Richtung? Was fehlt oder stört?"), keine Geschmacksfrage | `../../webdesign-conversion/references/33-kundenpraesentation-und-feedback.md`: Aussagen statt Geschmack |
 | Lehnt der Kunde ab, ist das ein Erfolg | die Richtung wird vor dem Bau korrigiert, nicht danach; im Beispiel des Videos sparte das viel Zeit |
 | Danach werden Tokens und Sektionen aus der Stylescape abgeleitet | eine Quelle der Wahrheit (`marke.json`, `tokens.css`) |
-| Werden mehrere Richtungen gezeigt, bekommt jede die Preiszeile (Struktur, Stärke, Preis, Passt wenn), die Wahl steht in `marke.json` unter `gestaltung.richtungswahl` | wer nur Bilder vergleicht, wählt nach Geschmack. Stufen und Vorlage: `../../webdesign-conversion/references/47-richtung-varianten-und-subtraktion.md`, Abschnitte 3 und 4 |
+| Werden mehrere Richtungen gezeigt, bekommt jede die Preiszeile (Struktur, Stärke, Preis, Passt wenn), die Wahl steht in `marke.json` unter `gestaltung.richtungswahl` | wer nur Bilder vergleicht, wählt nach Geschmack. Stufen und Vorlage: `../../webdesign-conversion/references/48-richtung-varianten-und-subtraktion.md`, Abschnitte 3 und 4 |
 
 **Format:** zwei gleichwertige Wege.
 
@@ -76,7 +76,7 @@ Das Paket 4.18 fordert das Gegenteil, ein Wireframe-Tor als Pflicht. Übernommen
 Pflicht: Entscheidet der Kunde über Struktur oder entsteht mehr als ein Seitentyp, gibt es eine
 Graustufenskizze mit den Zuständen der Formulare (leer, Laden, Fehler, Erfolg), sonst bleibt es bei der
 ASCII Skizze im Konzept. Begründung und warum es kein „Tor 3" heißt:
-`../../webdesign-conversion/references/47-richtung-varianten-und-subtraktion.md`, Abschnitte 2 und 8.
+`../../webdesign-conversion/references/48-richtung-varianten-und-subtraktion.md`, Abschnitte 2 und 8.
 
 ## 5. Erster Entwurf: Tempo vor Perfektion
 

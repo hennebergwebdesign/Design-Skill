@@ -24,7 +24,7 @@ pnpm astro check    # falls TypeScript im Projekt
 
 Warnungen nicht ignorieren. Sie sind fast immer echte Fehler in der Ausgabe.
 
-### 2. Die neun Prüfskripte
+### 2. Die zehn Prüfskripte
 
 ```bash
 node scripts/pruefe-striche.mjs                 # Gedankenstriche, Bindestrich mit Leerzeichen, hyphens: auto, verbotene Wörter
@@ -36,7 +36,14 @@ node scripts/pruefe-geschmack.mjs               # nach dem Build: Kicker, Laufba
 node scripts/pruefe-motion.mjs                  # transition: all, scale(0), ease-in, Dauer, Reduzierung
 node scripts/pruefe-geo.mjs                     # nach dem Build: robots.txt, KI-Crawler, Text im HTML, JSON-LD
 node scripts/pruefe-aktualitaet.mjs             # nach dem Build: Copyright-Jahr, Stand-Angaben, Jahr im Titel
+node scripts/pruefe-seitenbasis.mjs             # nach dem Build: lang, Viewport und Zoom, Alt-Texte, Labels, Fremdserver, Teilen-Ebene
 ```
+
+`pruefe-seitenbasis.mjs` liest `dist/` und meldet als Fehler: kein `lang`, kein oder zoomsperrender Viewport,
+Bild ohne `alt`, Eingabefeld ohne Label und Schrift, Icons oder Skripte von einem Fremdserver (Google Fonts,
+unpkg, jsDelivr, cdnjs). Als Warnung: kein `main`, Bild ohne Maße, keine `og:image`, `theme-color` oder
+Favicon, toter Link. Titel, `h1` und Beschreibung prüft `pruefe-geo.mjs`. Es ist der statische Teil der
+Fünf-Agenten-Prüfung aus `../../webdesign-conversion/references/47-claude-design-hacks.md`, Abschnitt 6.
 
 `pruefe-geschmack.mjs` zählt, was sich an Geschmack zählen lässt: höchstens ein Kicker je drei
 Sektionen, höchstens ein Laufband, ein Text je Kontaktabsicht, dazu Warnungen für
@@ -255,7 +262,7 @@ Hat das Projekt ein Scrollvideo, gehört zu diesem Schritt außerdem: einmal ohn
 Was die Skripte nicht finden, weil die Seite nicht kaputt ist, sondern falsch: kontextfremdes Bild,
 Funktion fehlt trotz richtigem Aussehen, Erzählbruch zwischen Heldbild, Überschrift und erster Sektion,
 Layout bricht bei echtem Inhalt, erstes Foto zu spät. Je Fehlermodus Erkennen und Gegenmittel in
-`../../webdesign-conversion/references/47-richtung-varianten-und-subtraktion.md`, Abschnitt 6.
+`../../webdesign-conversion/references/48-richtung-varianten-und-subtraktion.md`, Abschnitt 6.
 
 * **Stresstest:** je Bauteil mit Textfeldern die kürzeste und die längste echte Zeichenfolge einsetzen
   (längster Leistungsname, Ortsname, längste Bewertung) und auf 375 und 1440 px ansehen.
@@ -281,6 +288,9 @@ jeden Text und klickt jede Funktion durch.
 * Wurde die Stylescape vom Kunden bestätigt (`moodboard-und-stylescape.md`), steht das Datum im
   Bericht. Eine Richtungsänderung danach läuft nur nach neuer Absprache.
 * Das Modell meldet die Seite nie als abgenommen. Abgenommen ist sie, wenn ein Mensch es sagt.
+* Läuft vor der Übergabe die Fünf-Agenten-Prüfung (`../../webdesign-conversion/assets/vorlagen/prompts/fuenf-agenten-pruefung.md`),
+  lesen die Agenten nur. Die Fix-Liste geht an den Menschen, geändert wird erst nach seinem GO, danach von **einer**
+  Instanz. Die Prüfung ersetzt weder die Skripte noch diese Sichtung.
 
 Quelle: ein Video zum Umgang mit KI Ergebnissen, siehe `CREDITS.md`, Abschnitt „Version 4.6".
 

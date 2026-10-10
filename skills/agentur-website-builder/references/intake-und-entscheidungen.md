@@ -110,7 +110,7 @@ Agentur, generiert, Stock), Lizenz mit Prüfdatum, KI-Kennzeichnung nötig (ja o
 Lottie-Dateien und fremde Komponenten mit Quelle, Lizenz und Weitergabe an den Kunden. Dateinamen
 beschreiben das Motiv (`dachdecker-kassel-steildach.webp`), nicht die Kamera. Grund: Eine Lizenz, die
 beim Livegang niemand findet, ist beim ersten Abmahnschreiben keine Lizenz. Eine eigene Datei je Sorte
-ist nicht übernommen (`../../webdesign-conversion/references/47-richtung-varianten-und-subtraktion.md`,
+ist nicht übernommen (`../../webdesign-conversion/references/48-richtung-varianten-und-subtraktion.md`,
 Abschnitt 8).
 
 ## Fragen, die immer geklärt sein müssen
@@ -154,7 +154,7 @@ Fragen, die das Interview zusätzlich zu den neun stellt, weil sie die Gestaltun
 | Was soll der Besucher am Ende glauben? Ein Satz, keine Liste | Markenbrief, Kernbotschaft (`../../webdesign-conversion/references/12-copywriting.md`) |
 | Was muss er zuerst sehen, welche Handlung soll die leichteste sein? | Konzept, Held und primäre Aufforderung |
 | Drei Wörter zur Stimmung und ein Gegenbeispiel („nicht wie …"), alle Klischees der Branche | Markenbrief, Stilrichtung (`../../webdesign-conversion/references/37-stilrichtung-nach-kundensprache.md`) |
-| Was ist das eine, was nur diese Seite tut? Wo ist sie ruhig, wo intensiv? | Signaturelement und Signaturbewegung (`../../webdesign-conversion/references/47-richtung-varianten-und-subtraktion.md`, Abschnitt 7) |
+| Was ist das eine, was nur diese Seite tut? Wo ist sie ruhig, wo intensiv? | Signaturelement und Signaturbewegung (`../../webdesign-conversion/references/48-richtung-varianten-und-subtraktion.md`, Abschnitt 7) |
 | Was darf generiert werden, was nie (Personen, Team, Kunden, Gebäude)? | `public/images/BILDER.md`, Sperren für Bildaufträge |
 
 Der Seitenfluss kommt mit Skizzen: ein Rahmen je Screen (Canva oder Figma), Reihenfolge benannt

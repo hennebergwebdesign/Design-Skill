@@ -1,6 +1,6 @@
 # Richtungen und Varianten mit Preiszeile
 
-Für die Startsektion oder Startseite, vor dem Bau, nach `47-richtung-varianten-und-subtraktion.md`,
+Für die Startsektion oder Startseite, vor dem Bau, nach `48-richtung-varianten-und-subtraktion.md`,
 Abschnitte 3 und 4. Voraussetzung: Markenbrief, `marke.json` mit Farben und Schriften, freigegebene
 Referenzen. Ohne diese drei entstehen Varianten des Standards, nicht der Marke.
 

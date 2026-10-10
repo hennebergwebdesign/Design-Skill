@@ -67,7 +67,7 @@ bestellt hat, und der Kunde findet in der nächsten Runde Änderungen, die er ni
 | Wird ein Element entfernt, Raster und Abstände der Umgebung neu ausrichten | Lücke stehen lassen oder leere Zelle | eine leere Bentozelle oder ein halbes Raster ist ein falsch geplantes Layout (`../../webdesign-conversion/references/26-geschmack-und-ki-tells.md`, Abschnitt 5) |
 | Bilder und Videos mit Seitenverhältnis und Maßen | Bild ohne `width` und `height` einsetzen | Layoutsprung, CLS, harte Grenze Ladezeit |
 | Eine Desktopgrafik bekommt eine eigene Mobilfassung | dieselben Elemente untereinander stapeln | gestapelt verliert die Grafik ihre Aussage (`../../webdesign-conversion/references/28-ki-bildentwuerfe.md`, Abschnitt 3a) |
-| Verhalten so genau beschreiben wie Aussehen: was passiert bei Klick, Scroll, Fokus und auf dem Handy | nur das Aussehen nennen | ein Bauteil, das richtig aussieht, aber statisch bleibt oder aus dem Rahmen läuft, besteht jede Sichtprüfung am Desktop (`../../webdesign-conversion/references/47-richtung-varianten-und-subtraktion.md`, Abschnitt 6) |
+| Verhalten so genau beschreiben wie Aussehen: was passiert bei Klick, Scroll, Fokus und auf dem Handy | nur das Aussehen nennen | ein Bauteil, das richtig aussieht, aber statisch bleibt oder aus dem Rahmen läuft, besteht jede Sichtprüfung am Desktop (`../../webdesign-conversion/references/48-richtung-varianten-und-subtraktion.md`, Abschnitt 6) |
 | Ein Problem lösen, nicht verdecken | `overflow: hidden`, `display: none` auf dem Handy, Text abschneiden | was versteckt wird, fehlt dem Besucher. `overflow-x: hidden` bricht zudem `position: sticky` (`pruefe-geschmack.mjs`) |
 
 ## 4. Nach der Änderung

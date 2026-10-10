@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plakat-Vorlage</title>
+<style>
+/* A2 hoch: 420 x 594 mm Endformat, 3 mm Beschnitt, 6 mm Sicherheitsrand.
+   Anderes Format? --trim-w, --trim-h und die @page-Zeile ändern (@page kann keine Variablen lesen). */
+:root { --trim-w: 420mm; --trim-h: 594mm; --bleed: 3mm; --safe: 6mm; --paper: #f3efe6; --ink: #151515; --accent: #e5532d; }
+@page { size: 426mm 600mm; margin: 0; } /* Endformat + 2 x Beschnitt */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #2a2a2c; }
+body { font-family: var(--schrift-plakat, system-ui, sans-serif); color: var(--ink); }
+
+/* Der Bogen ist die ganze Datei: Endformat plus Beschnitt auf jeder Seite. */
+.sheet { position: relative; overflow: hidden; background: var(--paper);
+  width: calc(var(--trim-w) + 2 * var(--bleed)); height: calc(var(--trim-h) + 2 * var(--bleed)); }
+
+/* Gestaltung kommt hierher. Sie darf bis an den Rand des Bogens laufen (Beschnitt). */
+.art { position: absolute; inset: 0; }
+.art .disc { position: absolute; width: 300mm; height: 300mm; border-radius: 50%; background: var(--accent);
+  right: -60mm; top: 250mm; }
+
+/* Text kommt hierher. Er bleibt im Sicherheitsrand, damit am Schnitt nichts fehlt. */
+.safe { position: absolute; inset: calc(var(--bleed) + var(--safe)); display: flex; flex-direction: column; }
+h1 { font-size: 74mm; line-height: .86; letter-spacing: -.02em; font-weight: 800; }
+.line { font-size: 12mm; line-height: 1.15; max-width: 250mm; margin-top: 12mm; }
+.facts { margin-top: auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 8mm; font-size: 6.5mm; line-height: 1.3; border-top: .6mm solid var(--ink); padding-top: 5mm; }
+.facts b { display: block; font-size: 4.2mm; letter-spacing: .08em; text-transform: uppercase; opacity: .65; }
+
+/* Hilfslinien: ?guides an die Adresse hängen oder G drücken. Sie werden nie gedruckt. */
+.guides::before, .guides::after { content: ""; position: absolute; pointer-events: none; z-index: 5; }
+.guides::before { inset: var(--bleed); outline: .4mm dashed #e11; } /* Schnittlinie */
+.guides::after { inset: calc(var(--bleed) + var(--safe)); outline: .4mm dashed #19c; } /* Sicherheitslinie */
+
+/* Am Bildschirm den Bogen ins Fenster einpassen. */
+@media screen { .sheet { zoom: var(--fit, .35); margin: 0 auto; } }
+@media print { html, body { background: none; } .guides::before, .guides::after { display: none; } }
+</style>
+</head>
+<body>
+<!-- Die Schrift des Kunden einbetten (@font-face aus eigener Datei, kein Fremdserver) und --schrift-plakat setzen.
+     Nur gelieferte Fakten eintragen. Nichts erfinden: kein Datum, kein Preis, kein Name. -->
+<main class="sheet" id="sheet">
+  <div class="art"><div class="disc"></div></div>
+  <div class="safe">
+    <h1>Ihr<br>Titel<br>hier</h1>
+    <p class="line">[Eine Zeile, die sagt, wofür das Plakat ist.]</p>
+    <div class="facts">
+      <div><b>Wann</b>[Datum und Uhrzeit]</div>
+      <div><b>Wo</b>[Ort]</div>
+      <div><b>Mehr</b>[Webadresse]</div>
+    </div>
+  </div>
+</main>
+<script>
+const sheet = document.getElementById('sheet');
+const fit = () => {
+  // Bogen in voller Größe messen, dann ins Fenster einpassen. Gilt für jedes Plakatformat.
+  sheet.style.setProperty('--fit', 1);
+  const r = sheet.getBoundingClientRect();
+  sheet.style.setProperty('--fit', Math.min(1, (innerWidth - 32) / r.width, (innerHeight - 32) / r.height));
+};
+addEventListener('resize', fit); fit();
+if (location.search.includes('guides')) sheet.classList.add('guides');
+addEventListener('keydown', e => { if (e.key.toLowerCase() === 'g') sheet.classList.toggle('guides'); });
+</script>
+</body>
+</html>
