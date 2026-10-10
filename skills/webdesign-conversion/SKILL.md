@@ -4,7 +4,7 @@ description: "Vollständiges System für conversion-orientiertes Webdesign im DA
 license: MIT
 metadata:
   author: Henneberg Webdesign
-  version: 2.20.0
+  version: 2.21.0
 ---
 
 # Webdesign Conversion System
@@ -129,7 +129,8 @@ Lies gezielt nach, statt alles zu laden.
 | Reihenfolge Erwartung, Reiz, Begründung, mentale Modelle, Gruppieren, Erinnerungs- und Aufgabentest | `36-kundenpsychologie-erwartung-reiz-begruendung.md` |
 | Kundensatz zur Optik in eine von sechs Richtungen übersetzen, Signaturelement | `37-stilrichtung-nach-kundensprache.md` |
 | KI erzeugt ein Asset, das auf die Seite kommt: Arbeitsweise, Abbruch, Rechte | `39-ki-assets-bewegtbild-und-3d.md` |
-| Polierschleife mit getrenntem Kritikagenten: Vorbedingungen, Budget, Durchlaufgrenze, Verhältnis zu den zwei Durchgängen, Variante mit drei Kritikern, Fachkritiker für Texte (Copy, Conversion, SEO, GEO) | `40-polierschleife-mit-kritiker.md` |
+| Polierschleife mit getrenntem Kritikagenten: Vorbedingungen, Budget, Durchlaufgrenze, Verhältnis zu den zwei Durchgängen, Variante mit drei Kritikern, Fachkritiker für Texte (Copy, Conversion, SEO, GEO), Design Loop mit `bar.md` und Bestanden oder Nicht bestanden (3c) | `40-polierschleife-mit-kritiker.md` |
+| Prompt-Gerüst R I S E, `DESIGN.md` neben `marke.json`, eine Referenz je Sektion, fünf Versionen, Ein-Bildschirm-Test, Fünf-Agenten-Prüfung mit Fix-Liste, Mikrobewegung, Plakat in Code, Design-Ordner | `47-claude-design-hacks.md` |
 | Logoanimation, Loop, Kurzvideo: `frame(t)`, Storyboard und Beatgrid vor dem Code, Formate, Einsatz im Web | `41-motion-als-funktion-der-zeit.md` |
 | Referenzen als Kollage und Grammatiktabelle, Gap Audit bei „es fehlt etwas" | `42-referenzgrammatik-und-gap-audit.md` |
 | Gutes Ergebnis festschreiben (Rückbauprobe), Pilot vor Serie, Figurenwelt, was der Mensch entscheidet | `44-gutes-festschreiben-und-rueckbauprobe.md` |
@@ -180,6 +181,7 @@ node scripts/pruefe-geschmack.mjs     # nach dem Build: Kicker-Quote, Laufbände
 node scripts/pruefe-motion.mjs        # transition: all, scale(0), ease-in, Dauer über 300 ms, Reduzierung, Scrollvideo, 3D-Szene
 node scripts/pruefe-geo.mjs           # nach dem Build: KI-Crawler, Text im HTML, Gliederung, JSON-LD, Titel, Beschreibung, NAP
 node scripts/pruefe-aktualitaet.mjs   # nach dem Build: Copyright-Jahr, Stand-Angaben, Jahr im Titel
+node scripts/pruefe-seitenbasis.mjs   # nach dem Build: lang, Viewport und Zoom, Alt-Texte, Labels, Fremdserver, Teilen-Ebene
 ```
 
 Dazu zwei Werkzeuge, die nicht prüfen, sondern Material beschaffen und Texte bewerten. Sie
