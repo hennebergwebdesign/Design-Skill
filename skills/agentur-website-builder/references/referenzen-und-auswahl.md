@@ -116,7 +116,8 @@ Klarheit, Struktur und Vertrauensaufbau im geschäftlichen Umfeld:
 `stripe.com/de`, `linear.app`, `vestris.ai`
 
 Dienstleister, Handwerk und lokale Anbieter, also der häufigste Kundentyp der Agentur:
-`comradeweb.com` und `hookagency.com` (freigegeben, siehe unten), `alliancemoving.com`, `hhjtrialattorneys.com`,
+`comradeweb.com` und `hookagency.com` (freigegeben, siehe unten), `mdccinc.com`, `vs-epple.de` und
+`driessenarchitectuur.nl` (alle drei freigegeben), `alliancemoving.com`, `hhjtrialattorneys.com`,
 `coffee-tech.com`, `beetogreen.com/en` (freigegeben)
 
 Produkt und Softwareanbieter, stark in Struktur und Argumentationsaufbau:
@@ -215,7 +216,101 @@ Nicht übernommen: Hero ohne klaren Nutzensatz, mehrere CTAs mit gleichem Ziel, 
 in anderer Sprache, die Steuer- und Förderzahlen als Muster (sie gelten nur für diesen Markt und
 brauchen eine Quelle), Namen und Logos der Kunden.
 
-Für beide gilt wie bei Comrade: Aufnahme als **Muster** nur über Tor 2, Erfassung steht aus.
+### MDCC Inc.
+
+`mdccinc.com`, Stand 11.10.2026, vom Inhaber nach dem Durchklicken der Live-Seite freigegeben
+(Tor 1, ganze Seite). Renovierung, Bau und Reinigung in Maryland, damit die Lage des
+Handwerksbetriebs, der eine Angebotsanfrage will. Aus einer Liste von 44 Referenzen
+(Awwwards, Land-book, Dribbble, Webdesign Inspiration) ausgewählt.
+
+Warum sie gefällt (Begründung des Inhabers): stark auf Conversion ausgelegt, Beweise,
+aufgelistete Vorteile, geht auf die einzelnen Leistungsbereiche direkt ein, Social Media und
+die Google-Bewertung sind eingebunden.
+
+Prinzipien, die übernommen werden dürfen (aus der Textauswertung der Liste, die Optik hat der
+Inhaber gesehen, ich nicht):
+
+| Prinzip | Beobachtung |
+|---|---|
+| Hero aus Leistung und Region | die Überschrift nennt, was getan wird und wo, darunter zwei Zeilen zu Lizenz, Versicherung und Einzugsgebiet |
+| Bewertung direkt am Knopf | Sterne, Anzahl und Quelle stehen unter dem Angebots-Button, nicht weiter unten |
+| Telefon und Anfrage immer da | Nummer und Angebots-Button bleiben in der Navigation sichtbar |
+| Leistungsbereiche als Tabs | je Bereich eine Checkliste, ein Foto und ein eigener CTA |
+| Vorteile als kurze Spalten | vier Spalten mit je einem Nutzen („Warum wir") |
+| Kundenstimmen mit Gewerk | Vor- und Nachname und die Arbeit (Boden, Trockenbau, Umbau) statt allgemeinem Lob |
+| Notdienst getrennt | eigener Hinweis mit Telefonnummer, klar abgesetzt vom Regelgeschäft |
+| echte Baustellenfotos | Fotos mit Firmenschild statt Stockbildern |
+
+Nicht übernommen: die Ähnlichkeit zu Webflow-Vorlagen (zwei Karten mit gleichem Titel,
+Beschreibung bei privat und gewerblich identisch, Wiederholung des Hero-Textes im ersten
+Block), leere Flächen in den Vorteilsspalten durch spät sichtbare Inhalte, ein Laufband mit
+Leistungs-Tags als zweites Laufband (die Grenze von einem je Seite gilt, `26-geschmack-und-ki-tells.md`),
+Texte, Claims, Logos und Fotos. Die Referenz hat keinen Ablauf („wie läuft ein Auftrag") und kein
+Vorher und Nachher auf der Startseite: beides bei uns ergänzen, statt die Lücke zu übernehmen.
+Die Bewertungszeile gilt nur mit echter, belegter Zahl und Quelle (`google-bewertungen.md`).
+
+### epple Verpackungsservice
+
+`vs-epple.de`, Stand 11.10.2026, vom Inhaber nach dem Durchklicken freigegeben (Tor 1, ganze
+Seite). B2B Verpackungsdienstleister in Deutschland, damit der Mittelstand mit Fertigung und
+erklärungsbedürftigem Angebot, deutsche Ansprache.
+
+Warum sie gefällt (Begründung des Inhabers): tritt professionell auf, beschreibt genau, worum es
+geht, geht auf die einzelnen Bereiche ein, nennt Kennzahlen und Vorteile, zeigt Zertifikate und
+Siegel.
+
+Prinzipien aus der Textauswertung der Liste, Optik vom Inhaber gesehen:
+
+| Prinzip | Beobachtung |
+|---|---|
+| Superlativ mit Beleg | die Überschrift behauptet, der Untertitel belegt („Seit über 60 Jahren") |
+| Leistungsstruktur in Ebenen | drei Leistungen, dazu die Formen und Varianten als Liste, dazu die Arbeitsweise in vier Prinzipien |
+| eine starke Kennzahl | eine einzige Zahl als Anker statt vieler schwacher |
+| Qualität messbar | Qualitätsversprechen, das sich prüfen lässt, dazu die Zertifikate als eigenes Modul |
+| Zitat der Geschäftsführung | mit Name und CTA „Lassen Sie uns sprechen" als persönlicher Abschluss |
+| ruhiges Layout | große Schrift im Fließtext, viel Luft, hohe Lesbarkeit |
+| Abschnittsmarke | kleines Label mit Punkt als Seitenmarker |
+
+Nicht übernommen: der helle Geisterknopf als Hero-CTA (zu wenig Gewicht, `26-geschmack-und-ki-tells.md`,
+Konturbutton nie als Primärknopf), der Text-Reveal mit hellgrauem Startzustand (Kontrast, und ohne
+`prefers-reduced-motion`-Rückfall nicht zulässig, `30-motion-pruefung.md`), ein Untertitel im
+Hero, der beim ersten Bildschirm hinter dem Cookie-Banner liegt, viel Fließtext bei wenigen
+Bildbeweisen in den ersten Abschnitten. Kennzahlen, Jahre und Zertifikate des Vorbilds sind
+nicht Belege des Kunden: übernommen wird die Form, nicht die Zahl.
+
+### Driessen Architectuur
+
+`driessenarchitectuur.nl`, Stand 11.10.2026, vom Inhaber nach dem Durchklicken freigegeben
+(Tor 1, ganze Seite). Architekturbüro mit Wohnen, Büro, Zorg, Leisure und Bildung in der
+Grenzregion zu NRW, damit regionale Premium-Dienstleister, Planer und Bauunternehmen mit
+Referenzprojekten.
+
+Warum sie gefällt (Begründung des Inhabers): ein Video gibt sofort einen Einblick in die
+Arbeit, die Bereiche werden beschrieben, Projekte erscheinen mit Bildern und Videos, Kundenaussagen
+sind mit guten Videos untermalt, es gibt überall einen klaren CTA und einen mitlaufenden CTA.
+
+Prinzipien aus der Textauswertung der Liste, Optik vom Inhaber gesehen:
+
+| Prinzip | Beobachtung |
+|---|---|
+| Video als Einblick | das Hero-Video zeigt die Arbeit selbst, ein Button „Film ansehen" öffnet es als Overlay |
+| schwebender Kopf | weiße Karte mit Telefon (Kontur) und Kontakt (gefüllt, Pfeil), immer sichtbar |
+| nummerierte Gliederung | Abschnitte 1.0 bis 1.4 mit Punktmarke, gut zu überblicken |
+| Fachbereiche als Liste | sechs Bereiche nummeriert, gut für Zielgruppen und Suche |
+| Projekte mit Ort und Kategorie | jedes Projekt mit Bild, Ort und Art, als Referenzsammlung |
+| Stimmen mit Rolle und Firma | Name, Funktion und Unternehmen, dem Projekt zugeordnet |
+| Abschluss mit offenen Daten | Adresse, Telefon, Mail, Verbandsmitgliedschaft und Registernummer |
+| Cookie-Banner fair | „Weigern" gleichrangig zu „Akzeptieren" |
+
+Nicht übernommen: das gepinnte Hero mit langem Weg bis zum ersten Inhalt, ein Video, das ohne
+Poster zunächst leer lädt (Poster und träges Laden sind Pflicht, `38-scrollvideo-und-einbettungen.md`),
+ein großer Cookie-Banner über dem Hero, schwacher Kontrast von Text auf Video im oberen Bereich,
+Pin und schwebender Kopf auf Mobil ungeprüft (vor Übernahme testen). Zur Sticky-Gruppe siehe
+`16-responsive-container.md`, Abschnitt 5.
+
+Für alle fünf gilt wie bei Comrade: Aufnahme als **Muster** nur über Tor 2, Erfassung steht aus.
+Die Prinzipien stammen aus einer Textauswertung der Referenzliste vom 11.10.2026, nicht aus einer
+eigenen Erfassung; der Viewport der Auswertung war ca. 1536 mal 639, Mobil wurde nicht getestet.
 
 ## Abgelehnte Referenzen
 
