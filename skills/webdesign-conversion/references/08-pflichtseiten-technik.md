@@ -141,6 +141,8 @@ schnellsten zerlegt. Vorgehen: zuerst `Content-Security-Policy-Report-Only` mitl
 Verstöße sammeln, dann scharf schalten. Eine CSP, die Inline-Skripte pauschal per
 `unsafe-inline` erlaubt, ist keine.
 
+Schlüssel, Formulare, Webhooks, Lieferkette und Prüfung: `52-sicherheit-der-kundenseite.md`, geprüft mit `scripts/pruefe-sicherheit.mjs`.
+
 Dazu die Cache-Regeln, siehe Vorlage `../assets/vorlagen/_headers`: gehashte Build-Assets
 und Schriften ein Jahr `immutable`, Bilder und Videos eine Woche, HTML kurz oder gar nicht.
 

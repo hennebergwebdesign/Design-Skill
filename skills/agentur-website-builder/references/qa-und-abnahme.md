@@ -24,7 +24,7 @@ pnpm astro check    # falls TypeScript im Projekt
 
 Warnungen nicht ignorieren. Sie sind fast immer echte Fehler in der Ausgabe.
 
-### 2. Die zehn Prüfskripte
+### 2. Die zwölf Prüfskripte
 
 ```bash
 node scripts/pruefe-striche.mjs                 # Gedankenstriche, Bindestrich mit Leerzeichen, hyphens: auto, verbotene Wörter
@@ -37,6 +37,8 @@ node scripts/pruefe-motion.mjs                  # transition: all, scale(0), eas
 node scripts/pruefe-geo.mjs                     # nach dem Build: robots.txt, KI-Crawler, Text im HTML, JSON-LD
 node scripts/pruefe-aktualitaet.mjs             # nach dem Build: Copyright-Jahr, Stand-Angaben, Jahr im Titel
 node scripts/pruefe-seitenbasis.mjs             # nach dem Build: lang, Viewport und Zoom, Alt-Texte, Labels, Fremdserver, Teilen-Ebene
+node scripts/pruefe-sicherheit.mjs              # vor und nach dem Build: Schlüssel, öffentliche Geheimnisse, .env im Index, CSP, eval, bei Stripe Webhook und Zahlungsregeln
+node scripts/pruefe-scrollstrecke.mjs http://localhost:4321   # Scrollseiten: tote Strecke, Text ohne volle Deckkraft, Überlauf; auch --mobil und --reduziert
 ```
 
 `pruefe-seitenbasis.mjs` liest `dist/` und meldet als Fehler: kein `lang`, kein oder zoomsperrender Viewport,
@@ -44,6 +46,17 @@ Bild ohne `alt`, Eingabefeld ohne Label und Schrift, Icons oder Skripte von eine
 unpkg, jsDelivr, cdnjs). Als Warnung: kein `main`, Bild ohne Maße, keine `og:image`, `theme-color` oder
 Favicon, toter Link. Titel, `h1` und Beschreibung prüft `pruefe-geo.mjs`. Es ist der statische Teil der
 Fünf-Agenten-Prüfung aus `../../webdesign-conversion/references/47-claude-design-hacks.md`, Abschnitt 6.
+
+`pruefe-sicherheit.mjs` liest Quellen und `dist/` und meldet als Fehler: Schlüssel im Quelltext (Stripe, AWS, GitHub, Resend, Slack,
+Privatschlüssel), ein Geheimnis hinter einem öffentlichen Präfix (`PUBLIC_`, `VITE_`), eine `.env` oder `.dev.vars` im Git-Index, eine CSP mit
+`unsafe-eval` oder Stern, `eval()` und `document.write()`. Bei Stripe zusätzlich `payment_method_types`, einen Webhook ohne Signaturprüfung und einen
+Geheimschlüssel im Browsercode. Warnungen: HTML aus Variablen, fehlende Header, fehlendes Lockfile, Quellkarten in `dist/`, Formularroute ohne Turnstile,
+Erfolgsseite, die selbst erfüllt, fehlende AGB und Widerrufsseite, Datenschutz ohne Stripe. Ablauf in `sicherheitspruefung.md`, Regeln in
+`../../webdesign-conversion/references/52-sicherheit-der-kundenseite.md` und `53-…`.
+
+`pruefe-scrollstrecke.mjs` läuft eine Seite von oben nach unten durch (Playwright) und meldet Scrollen ohne sichtbare Veränderung, Text, der nie volle
+Deckkraft erreicht, horizontales Überlaufen, Konsolenfehler und mit `--reduziert` Inhalt, der unsichtbar bleibt. Es legt einen Kontaktbogen ab, den ein
+Mensch liest (`../../webdesign-conversion/references/50-scroll-erlebnis-grammatik-und-gefuehl.md`, Abschnitt 12).
 
 `pruefe-geschmack.mjs` zählt, was sich an Geschmack zählen lässt: höchstens ein Kicker je drei
 Sektionen, höchstens ein Laufband, ein Text je Kontaktabsicht, dazu Warnungen für
@@ -160,6 +173,9 @@ Breakpoints, Fehlerzustände, Danke Seite, Tracking nur nach Einwilligung, Links
 Er ergänzt `pruefe-breakpoints.mjs` und `pruefe-motion.mjs`. Ein Skript `pruefe-flow.mjs` dafür
 ist als Idee benannt und **nicht gebaut**, der Durchlauf ist bis dahin Handarbeit.
 
+Zum Erkunden mit dem Agenten (Handy, reduzierte Bewegung, Consent vor dem Klick, Netzwerk, Formular mit erzwungenem Serverfehler, Bewegung Bild für Bild) gibt es
+`playwright-cli`: `browser-pruefung-mit-playwright-cli.md`. Für Scrollseiten läuft zuerst `pruefe-scrollstrecke.mjs`.
+
 Wer Playwright ohnehin im Projekt hat, kann die Punkte zu Formular und Consent als Ablauf
 schreiben (Formular absenden, Consent ablehnen, im Netzwerkprotokoll nachsehen) und mit jedem
 Build wiederholen. Der Skill `webapp-testing` verfolgt dasselbe Ziel. Er wurde hier nicht
@@ -191,7 +207,8 @@ Grenze für die Ladezeit, ohne dass Lighthouse auf der Startseite es zeigt.
 
 * `grep -rn "sk_\|api_key\|API_KEY\|password" src/ public/` ohne Treffer mit echten Werten
 * `grep -rn "API_KEY\|SECRET" dist/` ohne jeden Treffer, das ist die Prüfung, die zählt
-* `.env` und `.relaunch-inventory/` stehen in der `.gitignore`
+* `node scripts/pruefe-sicherheit.mjs` vor und nach dem Build ohne Fehler, Ablauf und Funde in `sicherheitspruefung.md`
+* `.env`, `.dev.vars`, `.relaunch-inventory/`, `.scrollstrecke/` und `.playwright-cli/` stehen in der `.gitignore`
 * Sicherheitsheader in `public/_headers` gesetzt, Vorlage in
   `../../webdesign-conversion/assets/vorlagen/_headers`
 * Abhängigkeiten geprüft: `pnpm audit` oder `npm audit`, kritische Funde melden

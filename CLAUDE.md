@@ -14,7 +14,7 @@ rechtlich tragfähig, barrierearm, schnell, und nicht wie von einer Maschine geb
 
 | Skill | Rolle | Lizenz |
 |---|---|---|
-| `skills/webdesign-conversion/` | das Regelwerk: was gut ist und warum. 50 Referenzen (00 bis 49), 3 Playbooks, Vorlagen, Checklisten | MIT |
+| `skills/webdesign-conversion/` | das Regelwerk: was gut ist und warum. 55 Referenzen (00 bis 54), 3 Playbooks, Vorlagen, Checklisten | MIT |
 | `skills/agentur-website-builder/` | der Lieferablauf: Phasen 0 bis 6, fester Agenturstack, einsatzfertiger Code | Agenturstandard, siehe seine `SKILL.md` |
 
 Die Trennung ist die zentrale Entscheidung dieses Repositories: **Wissen und Ablauf sind
@@ -41,6 +41,8 @@ node scripts/pruefe-motion.mjs               # src/: transition: all, scale(0), 
 node scripts/pruefe-geo.mjs                  # nach dem Build: dist/ robots.txt, KI-Crawler, JSON-LD, Titel, Beschreibung, NAP, Bild ohne alt
 node scripts/pruefe-aktualitaet.mjs          # dist/ und src/: Copyright-Jahr, Stand-Angaben, Jahr im Titel
 node scripts/pruefe-seitenbasis.mjs          # nach dem Build: dist/ lang, Viewport und Zoom, Alt-Texte, Labels, Fremdserver, Teilen-Ebene
+node scripts/pruefe-sicherheit.mjs           # vor und nach dem Build: Schlüssel, öffentliche Geheimnisse, .env im Git-Index, CSP, eval, bei Stripe Webhook-Signatur und Zahlungsregeln
+node scripts/pruefe-scrollstrecke.mjs http://localhost:4321   # Scrollseite durchlaufen (Playwright): tote Strecke, Deckkraft, Überlauf; --mobil, --reduziert
 
 # Agenturwerkzeuge
 node scripts/relaunch-inventory.mjs https://alte-kundenseite.de
@@ -79,8 +81,8 @@ claude plugin eval . --runs 1 --ablation none
 bash scripts/install-quellskills.sh
 ```
 
-Alle Skripte laufen mit reinem Node, ohne Abhängigkeiten. Nur `pruefe-breakpoints.mjs`
-und `brand-extraktion.mjs` brauchen Playwright, im Zielprojekt oder global, gefunden über
+Alle Skripte laufen mit reinem Node, ohne Abhängigkeiten. Nur `pruefe-breakpoints.mjs`,
+`pruefe-scrollstrecke.mjs` und `brand-extraktion.mjs` brauchen Playwright, im Zielprojekt oder global, gefunden über
 `scripts/lib/browser.mjs`. Kein `package.json`, und das bleibt so: ein
 Abhängigkeitsbaum in einem Skill-Repository wird beim nächsten Audit zum Problem und bringt
 hier nichts ein. Die Tests nutzen deshalb `node:test` und `node:assert` aus dem Standardumfang
@@ -92,18 +94,19 @@ nicht, es braucht das Glob-Muster in Anführungszeichen.
 ```
 .claude-plugin/       plugin.json, marketplace.json
 skills/
-  webdesign-conversion/     SKILL.md, references/00-49, playbooks/, assets/
+  webdesign-conversion/     SKILL.md, references/00-54, playbooks/, assets/
                             assets/musterbibliothek/ ist das globale Musterwissen
                             assets/vorlagen/scrollvideo/ sind die Bausteine zu Kapitel 38
                             assets/vorlagen/prompts/ sind die Prompt-Vorlagen zu Kapitel 24, 38, 39, 40, 47, 48 (auch Textkritik, Design Loop, Fünf-Agenten-Prüfung, Varianten, Prüfer)
                             assets/vorlagen/motion/ und plakat/ sind die Dateien zu Kapitel 47 (Mikrobewegung, Plakat, Three.js-Szene), DESIGN.md die Markenvorlage
-  agentur-website-builder/  SKILL.md, references/, assets/consent|forms|reviews
-scripts/              zehn Prüfskripte, Agenturwerkzeuge, Designrecherche, ein Installer,
+                            assets/vorlagen/fingerabdruecke.md (Kapitel 50) und zahlung-rechtsbausteine.md (Kapitel 53)
+  agentur-website-builder/  SKILL.md, references/, assets/consent|forms|reviews|stripe (Stripe-Vorlagen sind ungeprüft)
+scripts/              zwölf Prüfskripte, Agenturwerkzeuge, Designrecherche, ein Installer,
                       pruefe-skill.mjs prüft dieses Repository selbst, kein Kundenprojekt
   lib/abruf.mjs       die eine Abrufschicht, vier Rückfallstufen, robots.txt
   lib/browser.mjs     die eine Stelle, die Playwright sucht und Chromium startet
   tests/              node --test, lokaler Testserver statt Netzzugriff
-evals/                neunzehn Fälle mit Gradern, results/ ist ausgenommen
+evals/                dreiundzwanzig Fälle mit Gradern, results/ ist ausgenommen
 README.md             Außendarstellung
 CREDITS.md            Herkunft jeder eingeflossenen Quelle
 ```
@@ -133,7 +136,8 @@ Diese Punkte haben einen Grund. Wer sie ändert, ändert damit auch den Grund.
   widerspricht, wird das umgedreht und mit Grund benannt (Beispiel: Abschnitt 11 in
   `26-geschmack-und-ki-tells.md`). Grund: zwei Regelwerke im Kontext, die sich an genau diesen
   Stellen widersprechen, lassen das Modell zwischen ihnen pendeln. Die Originale gibt es auf
-  Wunsch über `scripts/install-quellskills.sh`.
+  Wunsch über `scripts/install-quellskills.sh`. Ausnahme: Was eine proprietäre Lizenz ohne Weitergaberecht trägt (das Plugin
+  `claude-security` von Anthropic), wird nicht kopiert und nicht destilliert, sondern nur als Werkzeug beschrieben, das der Nutzer selbst installiert.
 - **Vorlagen dürfen Platzhalter enthalten**, deshalb nimmt `pruefe-platzhalter.mjs` Ordner
   namens `vorlagen` und `templates` aus.
 - **Bei jedem neuen Hauptmodell, spätestens nach sechs Monaten, wird der Bestand geprüft**
@@ -144,7 +148,7 @@ Diese Punkte haben einen Grund. Wer sie ändert, ändert damit auch den Grund.
 - **`SKILL.md` unter 500 Zeilen, jede Referenz über 100 Zeilen mit „## Inhalt", jede Referenz in ihrer
   `SKILL.md` genannt.** Grund: Das Modell liest lange Dateien oft nur an und folgt Verweisen über zwei
   Ebenen nur teilweise; was es nicht liest, gilt nicht. Geprüft mit `node scripts/pruefe-skill.mjs`, nach
-  einem neuen Abschnitt `--inhalt` laufen lassen. Die `SKILL.md` des Bauablaufs steht bei 497 Zeilen: neue
+  einem neuen Abschnitt `--inhalt` laufen lassen. Die `SKILL.md` des Bauablaufs steht bei 498 Zeilen: neue
   Inhalte gehören in Referenzen.
 - **Was nie brechen darf, läuft als Hook, nicht nur als Text.** Beispiel: `pruefe-striche.mjs --hook`.
 - Versionsnummer in `.claude-plugin/plugin.json` und in der `metadata` der beiden `SKILL.md`
@@ -180,6 +184,30 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Offene Punkte
 
+- Version 4.21.0: Die Kapitel 50 bis 54, `arbeitsdisziplin.md`, `browser-pruefung-mit-playwright-cli.md`, `sicherheitspruefung.md`,
+  `zahlungen-umsetzung.md`, die Vorlagen `fingerabdruecke.md`, `zahlung-rechtsbausteine.md` und `assets/stripe/` sind an keinem Projekt
+  erprobt, das Δ ist eine Vermutung. Die vier neuen Evalfälle (`schluessel-im-chat-nicht-verwenden`, `zahlung-im-webhook-erfuellen`,
+  `grammatik-statt-schablone`, `text-entmaschinisieren-ohne-erfinden`) sind **nicht gelaufen**. **Die Stripe-Vorlagen sind nie gegen eine
+  Sandbox oder eine SDK-Version gelaufen**; `createFetchHttpClient`, `createSubtleCryptoProvider`, `custom_text`, `consent_collection` und
+  `integration_identifier` sind nach der Quelle beschrieben. **Der rechtliche Teil von Kapitel 53** (Button-Lösung, Widerruf, Preisangaben,
+  Kündigungsbutton, elektronische Widerrufsfunktion nach Richtlinie (EU) 2023/2673 ab 19.06.2026) ist eigene Zusammenstellung, nicht
+  anwaltlich geprüft, die Umsetzung der Richtlinie in deutsches Recht nicht nachgelesen. `pruefe-sicherheit.mjs` liest mit regulären
+  Ausdrücken: Schlüssel in anderen Formaten, zusammengesetzte Zeichenketten und Logikfehler sieht es nicht, Treffer in Base64-Blöcken von `dist/`
+  sind möglich. `pruefe-scrollstrecke.mjs` erkennt tote Strecke über identische Bilder, nicht über Bedeutung (gewollte Stille sieht aus wie ein
+  Defekt) und läuft nur mit Playwright; gegen ein echtes Kundenprojekt ist es nicht gelaufen. Die sechs neuen Muster in `deslop-check.mjs` sind
+  gegen Testsätze geprüft, nicht gegen Kundentexte. **HyperFrames, `playwright-cli`, `scroll-craft`, `humanizer` und `agent-skills` sind in
+  dieser Umgebung nicht ausgeführt**, die Befehle stammen aus ihren READMEs und Skills (Stände: scroll-craft 30.09.2026, humanizer 27.09.2026,
+  agent-skills 10.10.2026, stripe/ai 11.10.2026, playwright-cli 28.09.2026, hyperframes 11.10.2026). Gelesen sind von den Quellen: scroll-craft
+  `SKILL.md` und die Referenzen `uniqueness`, `feel`, `hero-depth`, `verify` (Anfang), nicht `devices`, `worlds`, `worldflight`, `assets`,
+  `taste`, `approved-collection` und nicht die Engine; humanizer `SKILL.md` vollständig, nicht README und CHANGELOG; agent-skills `using-agent-skills`, `security-and-hardening`,
+  `doubt-driven-development`, `interview-me`, `source-driven-development`, `incremental-implementation`, `context-engineering` (Auszüge), die
+  Definition of Done; stripe-best-practices mit `payments`, `security`, `billing`, nicht `connect`, `tax`, `treasury`; playwright-cli `SKILL.md`
+  und `README.md`, nicht die Referenzen; hyperframes die Skills `hyperframes`, `hyperframes-core`, `hyperframes-cli`, `hyperframes-creative`,
+  `product-launch-video` (Auszug), `determinism-rules`, `house-style`, nicht die übrigen 15 Skills. Das Plugin `claude-security` ist wegen der
+  proprietären Lizenz nur beschrieben. Das Hook-Plugin `security-guidance` ist nicht bewertet, seine Lizenz ungeprüft. Die `description` von
+  `webdesign-conversion` nennt Sicherheit, Zahlung und Video nicht; ob der Skill bei einer Stripe-Frage ohne Bauauftrag anspringt, ist
+  ungeprüft (der Fall `varianten-mit-preis` hat gezeigt, dass die Beschreibung nicht alles trägt). Offen: ob die Agentur Fingerabdruck-Register,
+  Geschmackssammlung und Textmuster zentral führt (Kapitel 48 erlaubt zentral ohne Kundendaten).
 - Version 4.20.0: Kapitel 49 ist an keinem Projekt erprobt, kein Evalfall, das Δ ist eine Vermutung. Die Proben (Augen zu,
   Job je Zeile, Spiegel entfernen) sind Handarbeit, kein Skript prüft sie. Der Hook im Held ist anders als von der Quelle
   empfohlen **nicht** übernommen (Kernbotschaft im ersten Bildschirm, `45-…` Abschnitt 6); ob das an einer Landingpage
@@ -355,6 +383,32 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Änderungsverlauf
 
+- **11.10.2026, Version 4.21.0** Auf Wunsch des Inhabers sieben Quellen eingearbeitet: `nateherkai/scroll-craft` (MIT), `blader/humanizer` (MIT),
+  `addyosmani/agent-skills` (MIT), `anthropics/claude-plugins-official` → `claude-security` (**proprietär, nicht übernommen**), `stripe/ai` →
+  `stripe-best-practices` (MIT), `microsoft/playwright-cli` (Apache-2.0), `heygen-com/hyperframes` (Apache-2.0). Alle destilliert, nichts
+  mitgeliefert, die Originale nur als Befehle im Installer. **Neu im Regelwerk:** `50-scroll-erlebnis-grammatik-und-gefuehl.md` (acht
+  Seitengrammatiken mit Verboten, Gefühlskurve, ein Gipfel, Erzählsatz, Signaturbewegung, Fingerabdruck-Register mit Tor vier von sechs, Tiefe im
+  Held, Prüfen durch Scrollen), `51-text-entmaschinisieren.md` (Muster in sechs Gruppen auf Deutsch, Ablauf in vier Schritten, Stimme, wann nicht
+  eingreifen), `52-sicherheit-der-kundenseite.md`, `53-zahlungen-mit-stripe.md`, `54-video-aus-html-mit-hyperframes.md`. **Neu im Bauablauf:**
+  `arbeitsdisziplin.md` (Annahmen, Verwirrung melden, widersprechen, dünne Scheiben, Belege, nach Quelle bauen, Zweifel-Durchgang nur für
+  Sachentscheidungen, Kontext führen), `browser-pruefung-mit-playwright-cli.md`, `sicherheitspruefung.md`, `zahlungen-umsetzung.md`, dazu
+  `assets/stripe/`. **Neue Prüfungen:** `pruefe-sicherheit.mjs` (24 Tests; hinter zwei neuen harten Grenzen: keine Geheimnisse im Repository, im
+  Browser oder im Chat weiterverwenden; bezahlt ist, was der Webhook bestätigt), `pruefe-scrollstrecke.mjs` (12 Tests, davon fünf im Browser),
+  sechs neue Satzmuster und eine Wortliste in `deslop-check.mjs` (12 Tests), insgesamt 322 Tests. Vier Evalfälle, nicht gelaufen. **Entschieden:**
+  (1) Das Plugin `claude-security` ist nicht kopierbar (Lizenz), also nur beschrieben. (2) Gehostetes Checkout ist der Standard der Agentur, weil
+  dann kein Stripe-Skript auf der Kundenseite läuft und keine Einwilligung nötig wird; die Quelle empfiehlt eingebettet oder Payment Element.
+  (3) Der Zweifel-Durchgang aus agent-skills gilt nur für Sachentscheidungen, nie als dritter Geschmacksdurchgang (die Grenze von zwei aus Kapitel
+  29 bleibt). (4) Schreibprobe des Kunden schlägt die Humanizer-Muster, aber nicht die Strichregel und nicht die Regel gegen erfundene Angaben;
+  gerade Anführungszeichen statt deutscher sind nicht übernommen. (5) Kapitel 41 erlaubt HyperFrames jetzt als Agenturwerkzeug ab etwa 10
+  Sekunden und mehreren Szenen oder Formaten, darunter bleibt eine HTML-Datei. (6) Die Lebende-Oberfläche-Grammatik behält die Kernbotschaft im
+  ersten Bildschirm (Kapitel 45), und die Grammatik „Durchgehende Welt" braucht einen statischen Rückfall. (7) Erfassen mit `playwright-cli`,
+  `hyperframes capture` oder Firecrawl unterliegt Tor 1 der Designrecherche. (8) Annahmen aussprechen ergänzt den gebündelten Fragenkatalog,
+  statt ihn durch eine Frage nach der anderen zu ersetzen. **Nicht übernommen:** die Engine von scroll-craft, ihr Bildgenerator `kie.ai`, die
+  zehn Beispielseiten; die Skills `talking-head-recut`, `slideshow` und weitere von HyperFrames; Connect, Treasury, Metronome, Apps und die
+  Sandbox-Anlage per CLI von Stripe; SQL-, Auth- und SSRF-Muster als Regeln eines Datenbankprojekts; die 24 übrigen Skills und neun Befehle von
+  agent-skills; die englischen Wortlisten des Humanizer. Gefunden: das Eval `generator-kosten-vorab` enthält absichtlich einen Schlüssel der Form
+  `sk_live_…`, den `pruefe-sicherheit.mjs` bei einem Lauf gegen dieses Repository meldet (das Skript läuft gegen Kundenprojekte, nicht gegen
+  dieses). Versionen: Plugin 4.21.0, Regelwerk 2.24.0, Bauablauf 2.21.0. Siehe `CREDITS.md`, Abschnitt „Version 4.21".
 - **11.10.2026, Version 4.20.0** Paket „Video Analyse für Skill Repo" (ein Video von Joanna Wiebe über Storytelling, acht
   Prinzipien mit Selbsttest, Transkript und zwölf Frames), gegen 4.19.0 abgeglichen und destilliert. Das meiste stand schon
   (Botschaftsbogen in 12, offene Schleifen in 45, Belege früh, Vorwurf an den Leser in 34, Konkretheit als Prüfung 5 in 12).

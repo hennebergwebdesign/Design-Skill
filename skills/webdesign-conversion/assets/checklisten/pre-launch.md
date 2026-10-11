@@ -97,6 +97,9 @@ eingeschätzt. Was nicht geprüft wurde, wird als ungeprüft an den Kunden über
 - [ ] Bildrechte und Logonutzungsrechte bestätigt
 - [ ] Schriftlizenzen geprüft
 - [ ] Rechtstexte zur anwaltlichen Prüfung gegeben oder ausdrücklich als ungeprüft übergeben
+- [ ] `node scripts/pruefe-sicherheit.mjs` vor und nach dem Build ohne Fehler, Audit gegen das Lockfile gelaufen
+- [ ] Kein Schlüssel im Repository, im Browsercode oder in `dist/`; Zugänge beim Kunden mit Zwei-Faktor-Anmeldung
+- [ ] Bei Zahlung: Webhook prüft die Signatur, Erfüllung im Webhook, Sandbox-Testplan durchlaufen, Button-Lösung, AGB, Widerruf, Datenschutzbaustein (`53-zahlungen-mit-stripe.md`)
 
 ## 8 Messung
 

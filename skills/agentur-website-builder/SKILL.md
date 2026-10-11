@@ -4,7 +4,7 @@ description: Baut komplette Kundenwebsites mit Astro und Cloudflare Pages nach A
 license: Proprietär, That's it. Marketing / VFDESIGN LTD
 metadata:
   author: That's it. Marketing / Henneberg Webdesign
-  version: 2.20.0
+  version: 2.21.0
 ---
 
 # Agentur Website Builder
@@ -60,6 +60,10 @@ wichtiger als Geschwindigkeit:
    Handlungsaufforderungen.
 5. **Nichts als fertig melden, was nicht geprüft wurde.** Build, Prüfskripte und
    Formularpfade werden tatsächlich ausgeführt, nicht behauptet.
+6. **Arbeitsweise:** Annahmen aussprechen, Widersprüche melden statt raten, in dünnen Scheiben
+   bauen, Frameworkcode nach Quelle, Sachentscheidungen mit Zweifel-Durchgang prüfen:
+   `references/arbeitsdisziplin.md`. Sicherheit und Zahlung gehören in jedes Konzept:
+   `references/sicherheitspruefung.md`, bei Geld `references/zahlungen-umsetzung.md`.
 
 Rückfragen sind ausdrücklich erwünscht. Es gibt keine Obergrenze. Aber jede Frage muss eine
 Entscheidung auslösen, die der Skill nicht selbst treffen kann. Erst alle gelieferten
@@ -270,6 +274,8 @@ node scripts/pruefe-kontrast.mjs
 node scripts/pruefe-platzhalter.mjs --launch
 node scripts/pruefe-breakpoints.mjs http://localhost:4321 --bilder
 node scripts/pruefe-geschmack.mjs
+node scripts/pruefe-sicherheit.mjs                         # vor und nach dem Build
+node scripts/pruefe-scrollstrecke.mjs http://localhost:4321   # nur Seiten mit Scroll-Bewegung
 ```
 
 Die Strichregel läuft zusätzlich als Hook nach jedem Schreiben (`node scripts/pruefe-striche.mjs --hook`),
@@ -363,10 +369,9 @@ Nie echte Werte von Schlüsseln oder Zugangsdaten hineinschreiben, nur die Namen
 Variablen. Jede ungewöhnliche Entscheidung bekommt ihren Grund direkt daneben, sonst dreht
 die nächste Sitzung sie zurück.
 
-Zwei Sätze gehören in jede lange Projektsitzung: frühere Antworten gelten als erledigt, außer es wird
-danach gefragt, und bei langen Aufgaben wird die Checkliste am Ende jedes Schrittes geprüft. Grund: Das
-verhindert, dass kurze Folgefragen lange Rückblicke auslösen. Ob die Zeilen das Verhalten messbar ändern,
-ist ungemessen (Quelle: ein Video zu Prompting, Jay E, RoboNuggets, 24.09.2026).
+Zwei Sätze gehören in jede lange Projektsitzung: frühere Antworten gelten als erledigt, außer es wird danach
+gefragt, und bei langen Aufgaben wird die Checkliste am Ende jedes Schrittes geprüft. Grund: Kurze Folgefragen
+lösen so keine langen Rückblicke aus. Wirkung ungemessen (Quelle: Jay E, RoboNuggets, 24.09.2026).
 
 ## Referenzen
 
@@ -393,6 +398,10 @@ Schwesterskill.
 | `references/designrecherche-ablauf.md` | Phase 3, sobald Referenzen gesucht, vorgelegt oder freigegeben werden |
 | `references/referenzquellen-konfiguration.md` | eine Referenzquelle ergänzen, stilllegen oder ihr Suchmuster prüfen |
 | `references/designrecherche-beispiele.md` | beim ersten Durchlauf der Recherche, und bei jeder Störungsmeldung |
+| `references/arbeitsdisziplin.md` | immer, ab Phase 2: Annahmen aussprechen, Verwirrung melden, dünne Scheiben, Belege, nach Quelle bauen, Zweifel-Durchgang, Kontext führen |
+| `references/browser-pruefung-mit-playwright-cli.md` | eine Seite im Browser erkunden und testen: Handy, reduzierte Bewegung, Consent, Netzwerk, Formular, Bewegung Bild für Bild |
+| `references/sicherheitspruefung.md` | Phase 4 bis 6, jedes Projekt: Prüfung, Funde einsortieren, Missbrauch testen, Schlüssel aufgetaucht, Tiefenscan, Übergabe |
+| `references/zahlungen-umsetzung.md` | nur wenn die Seite Geld einnimmt (Stripe): Fragen, Dateien aus `assets/stripe/`, Umgebungsvariablen, Dashboard, Testplan |
 
 | Datei im Schwesterskill | Wann lesen |
 | --- | --- |
@@ -419,46 +428,36 @@ Schwesterskill.
 | `../webdesign-conversion/references/47-claude-design-hacks.md` | Phase 5 vor der Abnahme (Fünf-Agenten-Prüfung, Fix-Liste mit GO, Ein-Bildschirm-Test), Phase 3 und 4 bei Remix pro Sektion und `DESIGN.md` für Claude Design |
 | `../webdesign-conversion/references/46-lokale-sichtbarkeit.md` | jeder Betrieb mit Einzugsgebiet: Ortsseiten, NAP, Prüfliste für Profil und Bewertungsablauf in der Übergabe |
 | `../webdesign-conversion/references/14-projektstruktur-astro.md` | Dateistruktur und Fallstricke |
+| `../webdesign-conversion/references/50-scroll-erlebnis-grammatik-und-gefuehl.md` | Phase 3 und 4 bei Marken-, Kampagnen- und Produktseiten mit Erlebnisidee: Grammatik, Gefühlskurve, gewollter Gipfel, Signaturbewegung, Prüfen durch Scrollen |
+| `../webdesign-conversion/references/51-text-entmaschinisieren.md` | sobald ein Modelltext (eigener Vorschlag, Entwurf, Blog) überarbeitet wird, nie bei gelieferten Kundentexten |
+| `../webdesign-conversion/references/52-sicherheit-der-kundenseite.md` | Phase 3 (Vertrauensgrenzen), Phase 4 bei jeder Funktion, Phase 5 vor der Abnahme |
+| `../webdesign-conversion/references/53-zahlungen-mit-stripe.md` | nur bei Zahlung: Weg, Recht der Bestellstrecke, Steuer, Webhooks |
+| `../webdesign-conversion/references/54-video-aus-html-mit-hyperframes.md` | nur wenn Video oder eine Animationssequenz als Lieferstück gebaut oder verbessert wird |
 
 `assets/` enthält geprüfte Vorlagen für Consent, Formularroute, Mailtemplate und
 Bewertungsabruf. Diese kopieren und an das Projekt anpassen, statt jedes Mal neu zu
 schreiben. Rechtstexte, Tokens, Meta-Head, JSON-LD, 404 und Security-Header liegen in
 `../webdesign-conversion/assets/vorlagen/`.
 
-`scripts/` im Repowurzelverzeichnis enthält die zehn Prüfskripte sowie drei
-Agenturwerkzeuge, die nie Teil der ausgelieferten Seite werden und nie in das `package.json`
-des Kundenprojekts wandern:
+`scripts/` im Repowurzelverzeichnis enthält zwölf Prüfskripte (`pruefe-*.mjs`) und Agenturwerkzeuge, die nie Teil der
+ausgelieferten Seite werden und nie in das `package.json` des Kundenprojekts wandern:
 
-* `relaunch-inventory.mjs` inventarisiert eine alte Kundenseite und legt Seitenliste,
-  Texte, Rechtstext-Kandidaten und Weiterleitungsentwurf in `.relaunch-inventory/` ab, siehe
-  `references/intake-und-entscheidungen.md`.
-* `brand-extraktion.mjs` misst Farben, Schriften, Typoskala, Buttons und Logo der eigenen
-  Bestandsseite im Browser und legt Bericht, Tokenvorschlag und Markenassets in
-  `.brand-extraktion/` ab, siehe `references/brand-extraktion.md`.
-* `design-scan.mjs` erfasst eine fremde, bekannte oder vom Kunden genannte Referenzseite und
-  legt Sektionsreihenfolge, Bildbelegung sowie Farb- und Schriftkandidaten in
-  `.design-scan/<host>/` ab, siehe `references/firecrawl-recherche.md`.
-* `deslop-check.mjs` prüft selbst formulierte Copy-Vorschläge auf generischen KI-Klang,
-  siehe `references/qa-und-abnahme.md`.
-* `referenz-register.mjs` führt den Freigabezustand jeder Designreferenz und ist die einzige
-  Stelle, die ihn ändert. Ohne Freigabe kein Abruf, siehe `references/designrecherche-ablauf.md`.
-* `referenz-crawl.mjs` erfasst eine freigegebene Referenz und bricht mit Exit 2 ab, wenn sie
-  es nicht ist. Optional mit Breakpoints und Screenshot über Playwright.
-* `lib/abruf.mjs` ist die gemeinsame Abrufschicht aller drei Erfassungswerkzeuge, mit vier
-  Rückfallstufen und robots.txt-Prüfung, siehe `references/firecrawl-recherche.md`.
-* `design-dna.mjs`, `muster-vergleich.mjs` und `muster-paket.mjs` führen von den Rohdaten über
-  die Ähnlichkeitsprüfung bis zu Tor 2. Keines von ihnen schreibt in die Musterbibliothek des
-  Skills, siehe `references/designrecherche-ablauf.md`.
-* `pruefe-muster.mjs` prüft die Musterbibliothek und erzeugt ihren Index.
-* `pruefe-geschmack.mjs` zählt die messbaren KI-Tells einer gebauten Seite, siehe
-  `../webdesign-conversion/references/26-geschmack-und-ki-tells.md`.
+* `relaunch-inventory.mjs` inventarisiert eine alte Kundenseite (Ablage `.relaunch-inventory/`, `references/intake-und-entscheidungen.md`),
+  `brand-extraktion.mjs` misst Farben, Schriften, Typoskala, Buttons und Logo der eigenen Bestandsseite im Browser
+  (Ablage `.brand-extraktion/`, `references/brand-extraktion.md`), `design-scan.mjs` erfasst eine fremde oder vom Kunden genannte
+  Referenz (Ablage `.design-scan/<host>/`, `references/firecrawl-recherche.md`).
+* `referenz-register.mjs` führt den Freigabezustand jeder Designreferenz und ist die einzige Stelle, die ihn ändert; `referenz-crawl.mjs`
+  erfasst nur Freigegebenes (sonst Exit 2); `design-dna.mjs`, `muster-vergleich.mjs`, `muster-paket.mjs` führen bis Tor 2, `pruefe-muster.mjs`
+  prüft die Musterbibliothek. Keines schreibt in sie (`references/designrecherche-ablauf.md`).
+* `deslop-check.mjs` prüft selbst formulierte Copy-Vorschläge (`references/qa-und-abnahme.md`), `pruefe-geschmack.mjs` zählt die messbaren
+  KI-Tells (`../webdesign-conversion/references/26-geschmack-und-ki-tells.md`), `pruefe-sicherheit.mjs` findet Schlüssel, öffentliche Geheimnisse
+  und die Zahlungsfehler (`references/sicherheitspruefung.md`), `pruefe-scrollstrecke.mjs` läuft eine Scrollseite durch (`references/qa-und-abnahme.md`, Schritt 4).
+* `lib/abruf.mjs` ist die gemeinsame Abrufschicht der Erfassungswerkzeuge (vier Rückfallstufen, robots.txt, `references/firecrawl-recherche.md`),
+  `lib/browser.mjs` die eine Stelle, die Playwright findet und Chromium startet.
 
-Alle Erfassungswerkzeuge laufen mit reinem `fetch()` ohne Abhängigkeit, optional über eine
-selbst gehostete Firecrawl-Instanz (`FIRECRAWL_BASE_URL`), die Firecrawl-Cloud
-(`FIRECRAWL_API_KEY`) oder ein im Projekt installiertes Playwright, siehe
-`references/firecrawl-recherche.md`. Einzige Ausnahme ist `brand-extraktion.mjs`: es braucht
-Playwright, weil berechnete Styles und Hoverzustände nur ein Browser liefert. Gefunden und
-gestartet wird es über `lib/browser.mjs`, wie bei `pruefe-breakpoints.mjs`.
+Die Erfassungswerkzeuge laufen mit reinem `fetch()` ohne Abhängigkeit, optional über eine selbst gehostete Firecrawl-Instanz
+(`FIRECRAWL_BASE_URL`), die Cloud (`FIRECRAWL_API_KEY`) oder ein vorhandenes Playwright. Playwright brauchen außerdem `brand-extraktion.mjs`,
+`pruefe-breakpoints.mjs` und `pruefe-scrollstrecke.mjs`: berechnete Styles, Hoverzustände und Scrollen liefert nur ein Browser.
 
 ## Definition of Done
 
@@ -467,7 +466,7 @@ Erst wenn alle Punkte erfüllt sind, darf von einer fertigen Seite gesprochen we
 * alle vereinbarten Seiten und Sektionen vorhanden, keine vergessenen Platzhaltertexte
 * jeder selbst formulierte Copy-Vorschlag mit `scripts/deslop-check.mjs` auf 5 von 5 geprüft
 * Build läuft ohne Fehler, `astro check` ohne Befund
-* alle zehn Prüfskripte ohne Fehler, auch `pruefe-geschmack.mjs`, `pruefe-geo.mjs`, `pruefe-aktualitaet.mjs` und `pruefe-seitenbasis.mjs` gegen `dist/`
+* alle zwölf Prüfskripte ohne Fehler, auch `pruefe-geschmack.mjs`, `pruefe-geo.mjs`, `pruefe-aktualitaet.mjs`, `pruefe-seitenbasis.mjs` und `pruefe-sicherheit.mjs` gegen `dist/`, bei Scrollseiten `pruefe-scrollstrecke.mjs` auf Desktop, Handy und mit reduzierter Bewegung
 * Vorflugcheck aus `26-geschmack-und-ki-tells.md` durchgegangen, Ungeprüftes benannt
 * Fehlermodi, Stresstest mit echtem Inhalt und Subtraktionsrunde nach `references/qa-und-abnahme.md` Schritt 8b
 * Tastaturbedienung durch alle interaktiven Elemente, sichtbarer Fokus
@@ -482,7 +481,8 @@ Erst wenn alle Punkte erfüllt sind, darf von einer fertigen Seite gesprochen we
   und jede Änderung in `marke.json` unter `herkunft.bestehende_marke` begründet, offene
   Schriftlizenzen benannt, `.brand-extraktion/` in der `.gitignore`
 * Schriften selbst gehostet, Bilder optimiert und mit Alternativtext
-* keine Schlüssel im Repository
+* keine Schlüssel im Repository, im Browsercode und in `dist/`, Audit gegen das Lockfile gelaufen (`references/sicherheitspruefung.md`)
+* bei Zahlung: Webhook mit Signaturprüfung, Erfüllung im Webhook, Sandbox-Testplan durchlaufen, AGB, Widerruf und Datenschutz vom Händler geliefert (`references/zahlungen-umsetzung.md`)
 * `CLAUDE.md` aktuell
 * offene Punkte, fehlende Bilder, fehlende Rechtsangaben und Copyvorschläge im Chat benannt
 * Stylescape vom Kunden bestätigt, sofern der Kunde über Design entscheidet, siehe

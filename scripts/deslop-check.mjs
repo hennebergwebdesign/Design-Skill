@@ -23,8 +23,13 @@
                         "vielleicht") aus 35-autoritaet-im-text.md, und das Stakkato (drei
                         Saetze mit hoechstens drei Woertern in Folge, "Müde? Wir helfen. Echte
                         Ergebnisse.") aus 45-huerde-laenge-und-leserfuehrung.md, und die runde
-                        Kundenzahl ("10.000 zufriedene Kunden") aus 48-richtung-varianten-und-subtraktion.md. Quelle: copywriting und
-                        copy-editing aus coreyhaines31/marketingskills, auf Deutsch übertragen
+                        Kundenzahl ("10.000 zufriedene Kunden") aus 48-richtung-varianten-und-subtraktion.md,
+                        und sechs weitere aus 51-text-entmaschinisieren.md: Bedeutungsaufblähung ("spielt eine
+                        entscheidende Rolle"), Tiefsinn-Floskel ("Im Kern geht es um"), inszenierter Anlauf
+                        ("Tauchen wir ein"), Chatbot-Rest ("Ich hoffe, das hilft"), Deutungsanhang (", was
+                        unterstreicht") und wiederholter Satzanfang (drei Sätze mit demselben ersten Wort).
+                        Quellen: copywriting und copy-editing aus coreyhaines31/marketingskills und die
+                        Musterliste des Humanizer (blader/humanizer, MIT), auf Deutsch übertragen
     2 Nominalstil       Substantivketten auf -ung, -heit, -keit statt Verben
     3 Superlative       beste, führend, einzigartig, optimal, ohne Beleg daneben
     4 Belegdichte       Behauptungen ohne eine einzige Zahl, Frist, Menge oder Ortsangabe
@@ -69,6 +74,10 @@ const FLOSKELN = [
   'volle bandbreite', 'ein starkes team', 'setzen neue maßstäbe', 'wir leben',
   /* aus der Startliste des Pakets Webdesign Workflow 2026, was hier noch fehlte */
   'rundum-sorglos', 'game changer', 'gamechanger', 'cutting edge', 'seamless',
+  /* Wortliste aus 51-text-entmaschinisieren.md: Wörter, die Modelle weit häufiger setzen als Menschen */
+  'tiefgreifend', 'facettenreich', 'vielschichtig', 'wegweisend', 'bahnbrechend', 'atemberaubend',
+  'inmitten von', 'wahres juwel', 'tauchen sie ein', 'eintauchen in', 'ein breites spektrum',
+  'in der welt von', 'in der welt der', 'reichhaltiges angebot', 'rundum gelungen',
 ];
 const SUPERLATIVE = [
   'beste', 'bester', 'bestes', 'beste qualität', 'höchste qualität', 'hoechste qualitaet',
@@ -91,6 +100,16 @@ const SATZMUSTER = [
     tipp: 'Zeitrahmen, Quote und „mehr als" statt „alle" und „garantiert", und nur mit belegten Zahlen des Kunden. Eine Garantie steht nur da, wenn der Kunde sie gibt.' },
   { name: 'Weichmacher', re: /\b(?:eigentlich|irgendwie|quasi|sozusagen|gewissermaßen|gewissermassen|eventuell|vielleicht|möglicherweise|moeglicherweise|ein\s+bisschen|ein\s+wenig|(?:ich|wir)\s+(?:denken|glauben)|es\s+scheint)\b/i,
     tipp: 'Die Aussage ohne das Wort schreiben. Echte Unsicherheit einmal und konkret benennen („Das wissen wir nach der Messung“), nicht mit „vielleicht“ andeuten.' },
+  { name: 'Bedeutungsaufblähung', re: /\b(?:spielt\s+eine\s+(?:entscheidende|zentrale|wichtige|große|Schlüssel)\w*\s+Rolle|von\s+(?:zentraler|entscheidender|herausragender)\s+Bedeutung|(?:ein|einen)\s+(?:Meilenstein|Wendepunkt)|ein\s+Zeugnis\s+(?:für|von)|ein\s+Beleg\s+für\s+(?:die|den|das)\s+\w+\s+(?:Qualität|Leistung)|Zukunft\s+(?:sieht|ist)\s+(?:rosig|hell|vielversprechend)|aufregende\s+Zeiten|bleibende[nr]?\s+(?:Spuren|Eindruck))\b/i,
+    tipp: 'Die Tatsache sagen und die Bedeutung weglassen: „Seit 2009 bauen wir Dachstühle" statt „Die Gründung 2009 war ein Meilenstein". Bedeutung steht beim Leser, nicht im Text.' },
+  { name: 'Tiefsinn-Floskel', re: /\b(?:im\s+kern\s+(?:geht|ist|dreht)|letztlich\s+geht\s+es\s+(?:um|darum)|die\s+(?:eigentliche|wahre|entscheidende)\s+(?:frage|herausforderung)\s+(?:ist|lautet)|was\s+wirklich\s+zählt|am\s+ende\s+des\s+tages|im\s+grunde\s+genommen|das\s+herzstück)\b/i,
+    tipp: 'Die Floskel streichen und die Aussage direkt schreiben: „Es kommt darauf an, ob Ihr Team Zeit hat" statt „Im Kern geht es darum, ob Ihr Team Zeit hat".' },
+  { name: 'Inszenierter Anlauf', re: /(?:^|[.!?]\s+)(?:tauchen\s+wir\s+ein|schauen\s+wir\s+(?:uns|mal)|lassen\s+sie\s+uns\s+(?:\w+\s+){0,3}(?:ansehen|anschauen|eintauchen|erkunden|beleuchten)|das\s+müssen\s+sie\s+wissen|was\s+sie\s+(?:jetzt\s+)?wissen\s+müssen|ehrlich\s+gesagt\s*\?|seien\s+wir\s+ehrlich|mal\s+ehrlich)/i,
+    tipp: 'Den Anlauf streichen und mit der Sache beginnen: „Ein Flachdach hält 30 Jahre, wenn …" statt „Tauchen wir ein: Wie lange hält ein Flachdach?".' },
+  { name: 'Chatbot-Rest', re: /(?:^|[.!?]\s+)(?:gerne!|natürlich!|selbstverständlich!|sehr\s+gute\s+frage|gute\s+frage|hier\s+ist\s+(?:ein|eine|der|die|das)\s+(?:überblick|entwurf|vorschlag|text|beispiel|zusammenfassung|übersicht)\b)|\bich\s+hoffe,?\s+(?:das|dies|ich\s+konnte)\s+(?:hilft|weiter)|\blassen\s+sie\s+(?:es\s+)?mich\s+wissen|\bals\s+(?:ki[\s-]*)?sprachmodell\b|\bbis\s+zu\s+meinem\s+(?:letzten\s+)?(?:wissens|trainings)stand\b/i,
+    tipp: 'Hülle des Chats entfernen, den Inhalt behalten. Dieser Rest ist das sicherste Zeichen für ungeprüften Modelltext und steht nie auf einer Kundenseite.' },
+  { name: 'Deutungsanhang', re: /,\s+(?:was|womit|wodurch|und\s+damit)\s+[^.!?;]{5,90}\b(?:unterstreicht|verdeutlicht|widerspiegelt|spiegelt\s+wider|sicherstellt|gewährleistet|untermauert)\b/i,
+    tipp: 'Die Tatsache stehen lassen, den angehängten Deutungssatz streichen: „Wir antworten innerhalb eines Tages" statt „…, was unseren Anspruch an Servicequalität unterstreicht".' },
   { name: 'Runde Kundenzahl', re: /\b(?:\d{1,3}(?:[.\s]?000)+|[1-9]00)\s*\+?\s*(?:zufriedene|glückliche|glueckliche|begeisterte|happy)\s+[A-Za-zÄÖÜäöüß]+/i,
     tipp: 'Die runde Zahl mit „zufrieden" ist das Kennzeichen eines Platzhalters, der stehen blieb. Echte Zahl des Kunden mit Quelle und Stand, sonst [[FEHLT: Anzahl Kunden, Quelle]] (harte Grenze keine erfundenen Zahlen).' },
 ];
@@ -113,6 +132,27 @@ function stakkato(text) {
 }
 SATZMUSTER.push({ name: 'Stakkato', re: { test: stakkato },
   tipp: 'Die kurzen Sätze zu einem Satz verbinden, der den Zusammenhang sagt: „Sie haben wenig Zeit, deshalb planen wir die Woche für Sie.“ statt „Müde? Wir helfen. Echte Ergebnisse.“' });
+
+/* Wiederholter Satzanfang: drei Saetze in Folge mit demselben ersten Wort ("Wir beraten. Wir planen.
+   Wir bauen."). Ein Satzanfang darf wiederkehren, drei in Folge sind die Maschinenstimme. Ueberschriften
+   ohne Satzzeichen bleiben draussen wie beim Stakkato. */
+function satzanfang(text) {
+  const saetze = text
+    .replace(/\b(?:z|u|d|o|s|v|bzw|ca|inkl|zzgl|ggf|evtl|usw|etc|nr|str|tel)\.\s*(?:[a-zäöü]\.\s*)?/gi, 'X ')
+    .split(/(?<=[.!?])\s+/)
+    .filter((satz) => /[.!?]$/.test(satz.trim()));
+  let folge = 1;
+  let vorher = '';
+  for (const satz of saetze) {
+    const erstes = (satz.trim().match(/^[A-Za-zÄÖÜäöüß]+/) ?? [''])[0].toLowerCase();
+    folge = erstes && erstes === vorher ? folge + 1 : 1;
+    vorher = erstes;
+    if (folge >= 3) return true;
+  }
+  return false;
+}
+SATZMUSTER.push({ name: 'Wiederholter Satzanfang', re: { test: satzanfang },
+  tipp: 'Die Sätze verschieden beginnen lassen oder zu einem verbinden: „Wir beraten und planen, bevor wir bauen." statt dreimal „Wir".' });
 
 const NOMINAL = /\b\w{4,}(?:ung|heit|keit|ierung|barkeit)\b/gi;
 const BELEG = /(\d[\d.,]*\s*(?:%|prozent|jahre?n?|monate?n?|wochen?|tage?n?|stunden?|minuten?|std|kunden|projekte?n?|mitarbeiter|standorte?n?|euro|eur|€|km|m²|qm|kw|mwst)|\b(?:seit|ab)\s+\d{4}\b|\b\d{4}\b|\b\d{2}:\d{2}\b)/gi;

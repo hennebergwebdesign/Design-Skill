@@ -259,4 +259,5 @@ hinterfragt, bevor es ein Scrollvideo baut.
 
 `03-technik-performance.md`, `09-motion-gsap.md`, `18-motion-handschrift.md`, `30-motion-pruefung.md`,
 `37-stilrichtung-nach-kundensprache.md`, `39-ki-assets-bewegtbild-und-3d.md`, `43-hierarchie-raster-komposition.md`,
-`31-ki-sichtbarkeit-geo.md`, `consent-und-dienste.md`.
+`31-ki-sichtbarkeit-geo.md`, `consent-und-dienste.md`, `50-scroll-erlebnis-grammatik-und-gefuehl.md` (Grammatik, Gefühlskurve,
+Gipfel, Signaturbewegung, Prüfen durch Scrollen), `54-video-aus-html-mit-hyperframes.md`.

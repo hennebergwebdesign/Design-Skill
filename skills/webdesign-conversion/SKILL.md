@@ -4,7 +4,7 @@ description: "Vollständiges System für conversion-orientiertes Webdesign im DA
 license: MIT
 metadata:
   author: Henneberg Webdesign
-  version: 2.23.0
+  version: 2.24.0
 ---
 
 # Webdesign Conversion System
@@ -137,6 +137,15 @@ Lies gezielt nach, statt alles zu laden.
 | Gutes Ergebnis festschreiben (Rückbauprobe), Pilot vor Serie, Figurenwelt, was der Mensch entscheidet | `44-gutes-festschreiben-und-rueckbauprobe.md` |
 | Hierarchie als Verhältnis, Titellänge, Führungskanten, Anteile je Sektion wechseln, Heldenidee als roter Faden, Animationssystem | `43-hierarchie-raster-komposition.md` |
 | Geschichte im Text: Erwartung im ersten Satz, Lage aufbauen, Wortbilder (Augen-zu-Probe), Struktur nach Zielgefühl, ein Job je Zeile, gegnerische Lage in vier Schritten, Zuckerguss mit wahrer Geschichte, Anfang und Schluss spiegeln | `49-geschichte-im-text.md` |
+| Erlebnisseite: acht Seitengrammatiken, Gefühlskurve mit einem Gipfel, Erzählsatz, Signaturbewegung, Fingerabdruck-Register, Tiefe im Held, Prüfen durch Scrollen | `50-scroll-erlebnis-grammatik-und-gefuehl.md` |
+| Einen Modelltext entmaschinisieren: Muster in Gruppen, Ablauf in vier Schritten, Stimme, wann nicht eingreifen | `51-text-entmaschinisieren.md` |
+| Sicherheit einer Kundenseite: Vertrauensgrenzen, Geheimnisse, Formulare, Inhaltsrichtlinie, Lieferkette, KI-Ausgabe, Tiefenscan | `52-sicherheit-der-kundenseite.md` |
+| Zahlung mit Stripe: Weg wählen, Webhooks und Erfüllung, Button-Lösung, Widerruf, Steuer, Testplan | `53-zahlungen-mit-stripe.md` |
+| Video oder Animationssequenz mit HyperFrames: Ablauf mit Toren, Vertrag einer Komposition, Marke, Optimierung, Prüfung | `54-video-aus-html-mit-hyperframes.md` |
+| Annahmen aussprechen, in dünnen Scheiben bauen, nach Quelle bauen, Zweifel-Durchgang für Sachentscheidungen | `../agentur-website-builder/references/arbeitsdisziplin.md` |
+| Seite im Browser erkunden und testen (Handy, reduzierte Bewegung, Consent, Netzwerk, Formular) | `../agentur-website-builder/references/browser-pruefung-mit-playwright-cli.md` |
+| Zahlung im Projekt umsetzen: Dateien, Umgebungsvariablen, Dashboard, Testplan | `../agentur-website-builder/references/zahlungen-umsetzung.md` |
+| Sicherheitsprüfung im Bau: Ablauf, Funde einsortieren, Missbrauch testen, Schlüssel aufgetaucht | `../agentur-website-builder/references/sicherheitspruefung.md` |
 | Ton mit Autorität, Weichmacher streichen, Rahmen setzen, Antworten in der FAQ | `35-autoritaet-im-text.md` |
 | Auslöser je Stelle der Seite: Zielgruppe ohne Vorwurf, Wirkprinzip, realistische Behauptung, ruhige Einwandzeile, drei echte Optionen, ehrliche Einschränkung | `34-ueberzeugungsausloeser.md` |
 | Entwurf vor dem Kunden vertreten, Geschmack durch Aussagen ersetzen, Rollen und Spielregeln für Rückmeldung, Lens | `33-kundenpraesentation-und-feedback.md` |
@@ -171,7 +180,7 @@ Security-Header) liegen in `assets/vorlagen/`, annotierte 21st.dev-Referenzkompo
 ## Prüfskripte
 
 „Prüfen statt behaupten" braucht Werkzeug, sonst wird die Checkbox abgehakt statt geprüft.
-Alle Skripte laufen ohne Abhängigkeiten außer Node, das Breakpoint-Skript braucht Playwright.
+Alle Skripte laufen ohne Abhängigkeiten außer Node, das Breakpoint- und das Scrollstrecken-Skript brauchen Playwright.
 
 ```bash
 node scripts/pruefe-striche.mjs       # Gedankenstriche, Bindestrich mit Leerzeichen, hyphens: auto, verbotene Wörter; --hook nach jedem Schreiben
@@ -184,6 +193,8 @@ node scripts/pruefe-motion.mjs        # transition: all, scale(0), ease-in, Daue
 node scripts/pruefe-geo.mjs           # nach dem Build: KI-Crawler, Text im HTML, Gliederung, JSON-LD, Titel, Beschreibung, NAP, Bild ohne alt
 node scripts/pruefe-aktualitaet.mjs   # nach dem Build: Copyright-Jahr, Stand-Angaben, Jahr im Titel
 node scripts/pruefe-seitenbasis.mjs   # nach dem Build: lang, Viewport und Zoom, Alt-Texte, Labels, Fremdserver, Teilen-Ebene
+node scripts/pruefe-sicherheit.mjs   # Quellen und dist: Schlüssel, öffentliche Geheimnisse, .env im Index, CSP, eval, bei Stripe Webhook-Signatur und Zahlungsregeln
+node scripts/pruefe-scrollstrecke.mjs http://localhost:4321   # Scrollseiten: tote Strecke, Text ohne volle Deckkraft, Überlauf, bei --reduziert unsichtbarer Inhalt
 ```
 
 Dazu zwei Werkzeuge, die nicht prüfen, sondern Material beschaffen und Texte bewerten. Sie
@@ -199,7 +210,8 @@ node --test 'scripts/tests/*.test.mjs'                            # Tests der Sk
 
 `deslop-check.mjs` prüft fünf Kriterien: Floskeln (dazu die Satzmuster Kontrastfigur,
 Verneinungsreihe, selbstbeantwortete Frage, Stakkato und runde Kundenzahl), Nominalstil, leere Superlative, fehlende
-Belege und die Dreierfigur. Er gilt für **eigene** Textvorschläge. Gelieferte Kundentexte
+Belege und die Dreierfigur; seit `51-text-entmaschinisieren.md` auch Bedeutungsaufblähung, Tiefsinn-Floskel, inszenierter
+Anlauf, Chatbot-Rest, Deutungsanhang und wiederholter Satzanfang. Er gilt für **eigene** Textvorschläge. Gelieferte Kundentexte
 werden nicht geprüft und nicht umgeschrieben.
 
 ## Sieben Fehler, die Geld kosten
@@ -288,7 +300,21 @@ Diese Regeln gelten immer und werden nicht wegdiskutiert:
   Referenz dauerhaft in das Skillwissen ohne eine zweite, ausdrückliche Freigabe. Ablauf und
   beide Tore in
   `../agentur-website-builder/references/designrecherche-ablauf.md`, durchgesetzt von
-  `scripts/referenz-register.mjs`, geprüft mit dem Evalfall `referenz-erst-freigeben`.
+  `scripts/referenz-register.mjs`, geprüft mit dem Evalfall `referenz-erst-freigeben`. Das gilt für
+  jedes Werkzeug, das eine fremde Seite lädt: `playwright-cli`, `hyperframes capture`, Firecrawl.
+- **Keine Geheimnisse im Repository, im Browser oder im Chat weiterverwenden.** Schlüssel,
+  Signaturgeheimnisse und Passwörter liegen nur in den Secrets des Hostings, nie im Quelltext,
+  nie in einer eingecheckten `.env`, nie hinter einem öffentlichen Präfix (`PUBLIC_`, `VITE_`).
+  Ein aufgetauchter Schlüssel gilt als offengelegt: erst rotieren, dann aufräumen. Ein im Chat
+  eingefügter Live-Schlüssel wird nicht in eine Datei geschrieben. Siehe
+  `references/52-sicherheit-der-kundenseite.md`, geprüft mit `scripts/pruefe-sicherheit.mjs`
+  und dem Evalfall `schluessel-im-chat-nicht-verwenden`.
+- **Bezahlt ist, was der Webhook bestätigt.** Eine Zahlung wird im Webhook erfüllt, nach
+  geprüfter Signatur, mit `payment_status` und dem verzögerten Fall, nicht auf der
+  Erfolgsseite; Preise kommen nur vom Server; Zahlarten verwaltet das Dashboard
+  (`payment_method_types` entfällt). Der Bestellknopf trägt die Zahlungspflicht aus.
+  Siehe `references/53-zahlungen-mit-stripe.md`, geprüft mit `scripts/pruefe-sicherheit.mjs`
+  und dem Evalfall `zahlung-im-webhook-erfuellen`.
 - **Ein geliefertes Kundendesignsystem schlägt jede externe Referenz.** Farben, Schriften,
   Logo, Radien, Schatten und Abstandsregeln des Kunden werden nie durch Werte aus einer
   Referenzseite ersetzt. Eine Referenz beeinflusst Layout, Komposition, Sektionsstruktur,

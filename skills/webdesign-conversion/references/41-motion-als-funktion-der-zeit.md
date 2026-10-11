@@ -35,7 +35,7 @@ verstecktes Zustandsgedächtnis, kein ungesetzter Zufall.
 | Jedes Frame lässt sich einzeln rendern, ansehen und neu zeichnen | Ein Fehler bei 1,3 s wird bei 1,3 s behoben, nicht durch Abspielen gesucht |
 | Zufall nur mit festem Seed | Sonst sieht der zweite Render anders aus als der freigegebene erste |
 | Eine Szene, viele Formate: `frame(t, format)` für 16:9, 1:1, 9:16 und Hero | Vier getrennte Entwürfe driften auseinander, ein Parameter nicht |
-| Die Szene steht in **einer HTML Datei ohne Abhängigkeiten**, solange kein Framework verlangt ist | Sie bleibt in zwei Jahren noch renderbar. Remotion oder HyperFrames nur auf ausdrücklichen Wunsch |
+| Die Szene steht in **einer HTML Datei ohne Abhängigkeiten**, solange kein Framework verlangt ist | Sie bleibt in zwei Jahren noch renderbar. HyperFrames ist als Agenturwerkzeug in `54-video-aus-html-mit-hyperframes.md` beschrieben (ab etwa 10 Sekunden, mehrere Szenen oder Formate), Remotion nur auf ausdrücklichen Wunsch |
 
 Renderkontrakt: Playwright rendert Frame für Frame (Zeit von außen gesetzt, nicht Echtzeit),
 FFmpeg setzt das MP4 zusammen. 60 Bilder pro Sekunde bei Bewegungsdesign, 30 genügen bei
@@ -156,4 +156,4 @@ Status: an keinem echten Kundenprojekt erprobt, kein Evalfall, das Δ ist eine V
 
 `09-motion-gsap.md`, `18-motion-handschrift.md`, `30-motion-pruefung.md`,
 `38-scrollvideo-und-einbettungen.md`, `39-ki-assets-bewegtbild-und-3d.md`,
-`40-polierschleife-mit-kritiker.md`, `42-referenzgrammatik-und-gap-audit.md`.
+`40-polierschleife-mit-kritiker.md`, `42-referenzgrammatik-und-gap-audit.md`, `54-video-aus-html-mit-hyperframes.md`.

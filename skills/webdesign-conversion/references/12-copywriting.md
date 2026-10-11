@@ -409,6 +409,9 @@ im Kriterium „Floskeln".
 | Selbstbeantwortete Frage | „Das Ergebnis? Drei Tage schneller." | „Drei Tage schneller." Die Frage weglassen |
 | Nachgeschobenes Anhängsel | „Alles aus einer Hand: Planung, Umsetzung, Betreuung, und vieles mehr." | Beim Wesentlichen aufhören |
 
+Weitere Muster (Bedeutungsaufblähung, Tiefsinn-Floskel, inszenierter Anlauf, Chatbot-Rest, Deutungsanhang, wiederholter Satzanfang) und der
+Ablauf beim Überarbeiten eines Modelltextes stehen in `51-text-entmaschinisieren.md`.
+
 **Eine Umformulierung mit Synonymen ersetzt nur ein Muster durch das nächste.** Wer „nicht X,
 sondern Y" in „statt X: Y" umbaut, hat dasselbe getan. Der Weg ist, aus den zugrunde liegenden
 Tatsachen neu zu schreiben: was passiert, für wen, in welcher Zeit.
