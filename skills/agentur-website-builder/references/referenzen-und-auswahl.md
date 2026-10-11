@@ -12,6 +12,8 @@ welche Sektionsreihenfolge den Ausgangspunkt bildet.
 - Rangfolge der Quellen
 - Auswahl pro Projekt
 - Ausgangsliste
+- Freigegebene Referenzen
+- Abgelehnte Referenzen
 - Vorrang der Conversion
 - Universeller Aufbau: Unternehmenshomepage
 - Universeller Aufbau: Landingpage
@@ -111,11 +113,11 @@ genau die richtige Argumentationsstruktur liefern. Es ist ausdrücklich erwünsc
 projektbezogen weiter zu recherchieren, besonders in der Branche des Kunden.
 
 Klarheit, Struktur und Vertrauensaufbau im geschäftlichen Umfeld:
-`stripe.com/de`, `linear.app`, `mercury.com`, `vestris.ai`
+`stripe.com/de`, `linear.app`, `vestris.ai`
 
 Dienstleister, Handwerk und lokale Anbieter, also der häufigste Kundentyp der Agentur:
-`comradeweb.com`, `metriccivil.ca`, `alliancemoving.com`, `hhjtrialattorneys.com`,
-`coffee-tech.com`, `beetogreen.com/en`
+`comradeweb.com` und `hookagency.com` (freigegeben, siehe unten), `alliancemoving.com`, `hhjtrialattorneys.com`,
+`coffee-tech.com`, `beetogreen.com/en` (freigegeben)
 
 Produkt und Softwareanbieter, stark in Struktur und Argumentationsaufbau:
 `brand.ai`, `showit.com`, `luffu.com`, `pop.site`, `trymira.com`, `cofactr.com`,
@@ -125,7 +127,7 @@ Marke, Atmosphäre und Produktinszenierung:
 `bynd.com/eu`, `onewhale.io`, `wattspet.com`, `rideradian.com`, `wegems.co`, `designbell.io`
 
 Ruhe, Nähe und Dienstleistung am Menschen:
-`become-a-yogi.com`, `kalmmoments.com`, `tropica.framer.website`
+`kalmmoments.com`, `tropica.framer.website`
 
 Verein, Community und Organisation:
 `hadi-community.de`, `iwcf.org`
@@ -135,6 +137,104 @@ Fallbeispiele und Referenzdarstellung, nützlich für die Case Study Sektion:
 
 Eine Adresse aus dieser Liste kann offline sein oder sich verändert haben. Was sich nicht
 abrufen lässt, wird nicht aus der Erinnerung beschrieben, sondern ersetzt.
+
+## Freigegebene Referenzen
+
+### Comrade
+
+Stand 11.10.2026, vom Inhaber nach Ansicht der Live-Seite freigegeben (Tor 1, ganze Seite).
+`comradeweb.com` war die erste ausdrücklich gutgeheißene Referenz. Sie gilt für
+Dienstleister und Handwerk, wo Anfragen das Ziel sind. Am selben Tag kamen Hook Agency und
+BeeToGreen dazu (unten).
+
+Warum sie gefällt (Begründung des Inhabers): klare CTAs, die sich durch die Seite ziehen,
+Vertrauen direkt neben dem Versprechen, die Seite sagt sofort, worum es geht, gute
+Veranschaulichungen und Übersichten, ein ansprechendes Layout, dessen Teile ineinanderfließen,
+und genügend Kontaktpunkte.
+
+Prinzipien, die übernommen werden dürfen (aus der Textauswertung, **Optik noch nicht gesehen**):
+
+| Prinzip | Beobachtung |
+|---|---|
+| Nutzenformel im Held | drei kurze Sätze, ein Angebot, ein CTA, der später mehrfach wiederkehrt |
+| Problem vor Lösung | eine Sektion mit den Schmerzpunkten der Zielgruppe, bevor die Leistung kommt |
+| Leistung in wenigen Karten | vier Karten statt einer Liste, dazu eine Übersicht des Kundenzugangs |
+| Belege mit Zahl und Fall | Bewertungswert mit Anzahl, Jahre im Geschäft, Fallkarten mit Kennzahlen |
+| Gründer sichtbar | Vorstellung mit Foto und persönlichem Ton |
+| Formular, das qualifiziert | Pflichtfelder gering gehalten, Auswahlfelder für Anliegen und Rolle, Datenschutzhinweis über dem Knopf |
+| Nach dem Absenden | „What Happens Next" in fünf Schritten nimmt die Unsicherheit nach der Anfrage |
+| Kontaktpunkte | Telefon, Adresse, Formular und CTA an mehreren Stellen |
+
+Nicht übernommen (harte Grenzen und Regelwerk):
+
+* die Kennzahlen (z. B. „10.565 %") als Vorbild: unbelegte Zahlen sind bei uns verboten, eigene
+  Belege nur mit Quelle und Freigabe des Kunden
+* „AI-powered Revenue Engine" und ähnliche Schlagworte (`12-copywriting.md`, `26-geschmack-und-ki-tells.md`)
+* Texte, Claims, Logos, Badges, Farben, Schriften und Bilder (Abschnitt „Wie Referenzwebsites genutzt werden")
+* die Ankündigungsleiste über der Navigation mit Fremdangebot, wenn der Kunde keinen Zweitzweck hat
+
+Offen: Die Aufnahme als **Muster** in `assets/musterbibliothek/` läuft über Tor 2 und setzt
+Erfassung, Design DNA und Vergleich voraus. Das ist nicht geschehen. Bis dahin ist dies ein
+Hinweis für die Auswahl, kein Muster.
+
+### Hook Agency
+
+`hookagency.com`, Stand 11.10.2026, vom Inhaber als gute Designquelle freigegeben (Tor 1, ganze
+Seite, ohne eigene Begründung). Marketing für Handwerksbetriebe, damit dieselbe Lage wie Comrade.
+Prinzipien aus der Textauswertung, **Optik nicht gesehen**:
+
+| Prinzip | Beobachtung |
+|---|---|
+| Ein Primär-CTA mit Beleg-CTA daneben | „Book an Intro Call" und „View Contractor Results", beide mehrfach |
+| Problem vor Leistung | Aussage, dass nicht die Anfragen fehlen, sondern die Wirkung nach außen, danach drei nummerierte Schmerzpunkte |
+| Prozess mit Zeitangaben | fünf Schritte, 20 Minuten Erstgespräch, 60 Minuten Videogespräch, monatlicher Bericht: das senkt das Risiko des ersten Anrufs |
+| Belege in Schichten | Logos, Bewertungszahl, Kurzzitate, Fallkarten, Langzitate |
+| Offene Preise | Stufen mit „ab"-Preis, Ratenhinweis, Einwände in der FAQ |
+| Versprechen als Grundsatz | ein kurzer, unterschriebener Grundsatz statt Garantiefloskeln |
+
+Nicht übernommen: Umsatzbehauptungen von Dritten, Verben wie „dominate", doppelter Text bei den
+Schmerzpunkten, Fallkarten ohne sichtbare Zahl, die Bindung über ein Jahr nur in der FAQ (der
+Hinweis gehört neben den Preis), kein Formular auf der Seite (bei uns steht das Formular am CTA).
+
+### BeeToGreen
+
+`beetogreen.com`, Stand 11.10.2026, vom Inhaber als gute Designquelle freigegeben (Tor 1, ganze
+Seite, ohne eigene Begründung). Software mit zwei Zielgruppen. Prinzipien aus der Textauswertung,
+**Optik nicht gesehen**:
+
+| Prinzip | Beobachtung |
+|---|---|
+| Aufteilung nach Zielgruppe | ein Block für Unternehmen, ein Block für Mitarbeitende, je mit eigenem Nutzen und eigenem CTA |
+| Dreischritt | „ausrüsten, einsteigen, begleiten" als Prozessübersicht |
+| Rechner als Beleg | Wirkung mit voreingestellten Werten, mit Handlungsaufruf nach dem Ergebnis |
+| Logos in zwei Gruppen | Kunden und Partner getrennt |
+| Zahlen zum Umfang | Anzahl Modelle, Anzahl Stellplätze, Anzahl Berater |
+| FAQ gegen Einwände | sieben Fragen zu Umsetzung und Verwaltung |
+
+Nicht übernommen: Hero ohne klaren Nutzensatz, mehrere CTAs mit gleichem Ziel, eine Überschrift
+in anderer Sprache, die Steuer- und Förderzahlen als Muster (sie gelten nur für diesen Markt und
+brauchen eine Quelle), Namen und Logos der Kunden.
+
+Für beide gilt wie bei Comrade: Aufnahme als **Muster** nur über Tor 2, Erfassung steht aus.
+
+## Abgelehnte Referenzen
+
+Vom Inhaber am 11.10.2026 nach Ansicht abgelehnt („nicht gut"). Sie werden **nicht erneut
+vorgeschlagen**, auch nicht in der Ausgangsliste oder bei einer Recherche in derselben Branche.
+Einzelne Gründe hat der Inhaber nicht genannt; die Stichworte unten sind meine Beobachtungen
+aus der Textauswertung und kein Urteil des Inhabers.
+
+| Seite | Beobachtung aus der Textauswertung |
+|---|---|
+| `metriccivil.ca` | Held ohne CTA, „Request a bid" erst am Seitenende |
+| `mercury.com` | Gedankenstriche und Jargon in der Copy, Branche weit weg von Handwerk |
+| `become-a-yogi.com` | drei externe Dienste für Buchung, Community und Beratung, lange Seite |
+| `odysseeclinic.com.au` | keine Bewertungen, keine Qualifikationen, abstrakte Copy |
+| `twks.ch` | Leistungen nur im Menü |
+| `lpas.com` | kein CTA, Karussell im Held |
+| `oathbiome.com` | Reste einer Shopvorlage und unbelegte Zahl im Text |
+| `drone.riotters.com` | Technikdemo einer Agentur, kein echter Anbieter |
+| `royalsites.ie` | kein CTA, Tippfehler |
 
 ## Vorrang der Conversion
 
