@@ -126,6 +126,9 @@ die Hersteller geprüft**. Für die Arbeit folgt daraus nur, was ohnehin Standar
 
 ## Zweiter Durchgang und fünf Prinzipien
 
+Ein Rohentwurf geht erst durch das Entmaschinisieren nach `../../webdesign-conversion/references/51-text-entmaschinisieren.md` (Muster markieren,
+Kerninhalt erhalten, keine neuen Fakten, Stimme aus der Schreibprobe des Kunden), dann durch `deslop-check.mjs`. Gelieferte Kundentexte nie.
+
 Nach `deslop-check.mjs` ein zweiter Durchgang von Hand oder mit einem **anderen Modell**, als es den Text
 geschrieben hat: Es erkennt die Muster des ersten weniger als dessen Ausgabe. Jede Änderung wird mit
 Begründung vorgelegt und Zeile für Zeile geprüft, nicht pauschal übernommen.

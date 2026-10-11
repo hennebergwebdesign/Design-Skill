@@ -134,7 +134,7 @@ auf `denied` außer `security_storage`, mit `wait_for_update`. Nach der Entschei
 
 | Fall | Pflicht |
 |---|---|
-| Verkauf an Verbraucher | Widerrufsbelehrung + Muster-Widerrufsformular, AGB, Preisangaben inkl. MwSt. und Versand, Grundpreise, Lieferzeiten, Zahlungsarten |
+| Verkauf an Verbraucher | Widerrufsbelehrung + Muster-Widerrufsformular, AGB, Preisangaben inkl. MwSt. und Versand, Grundpreise, Lieferzeiten, Zahlungsarten; bei Zahlung über Stripe außerdem Button-Lösung, Datenschutzbaustein und Webhook, siehe `53-zahlungen-mit-stripe.md` |
 | Buchungen/Termine mit Vertragscharakter | Informationspflichten nach Art. 246a EGBGB |
 | Newsletter | Double-Opt-in, Abmeldelink in jeder Mail, Protokollierung |
 | Werbeaussagen | Belegbarkeit; Testergebnisse mit Fundstelle; keine unechte Verknappung |

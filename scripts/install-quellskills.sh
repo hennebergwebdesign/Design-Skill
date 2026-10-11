@@ -80,6 +80,19 @@ installiere icon-set-generator "design-assets (jezweb)" \
 #   npx --yes skills add https://github.com/Leonxlnx/taste-skill --skill "imagegen-frontend-web" --agent claude-code
 #   npx --yes skills add https://github.com/Leonxlnx/taste-skill --skill "full-output-enforcement" --agent claude-code
 
+# Version 4.21: sieben weitere Quellen sind destilliert (50 bis 54, arbeitsdisziplin.md,
+# browser-pruefung-mit-playwright-cli.md, zahlungen-umsetzung.md), bewusst NICHT voreingestellt.
+# Mit den Originalen im Kontext pendelt ein Modell an den Stellen, an denen sie dem Regelwerk
+# widersprechen (Gedankenstrich, gehostetes gegen eingebettetes Checkout, Hook im Held, Stack).
+# Auf ausdruecklichen Wunsch einzeln, die Befehle stammen aus den READMEs und sind nicht gelaufen:
+#   npx --yes skills add nateherkai/scroll-craft --agent claude-code        # oder: /plugin marketplace add nateherkai/scroll-craft
+#   npx --yes skills add blader/humanizer --agent claude-code
+#   npx --yes skills add addyosmani/agent-skills --agent claude-code        # 25 Skills, mit --skill einzeln waehlbar
+#   npx --yes skills add stripe/ai --skill stripe-best-practices --agent claude-code
+#   npm install -g @playwright/cli@latest && playwright-cli install --skills
+#   npx hyperframes skills update                                           # oder: claude plugin marketplace add heygen-com/hyperframes
+#   /plugin install claude-security@claude-plugins-official                 # Anthropic, proprietaer, nur selbst installieren, nie weitergeben
+
 # Suchtreffer in den Skilldaten vermeiden: Nachschlagewerke, keine Projektquellen.
 if ! grep -q "\.claude/skills" .gitattributes 2>/dev/null; then
   printf ".claude/skills/** linguist-vendored linguist-generated -diff\n" >> .gitattributes
@@ -107,6 +120,12 @@ echo "                              Voreinstellung sind die naechste Schabloneng
 echo "  taste-skill (Leonxlnx)      13 Skills, destilliert in 26, 27 und 28. Die Originale"
 echo "                              empfehlen picsum-Fotos, fremde Logos per CDN und"
 echo "                              erfundene krumme Zahlen, gegen die harten Grenzen."
+echo "                              Befehle auf Zuruf stehen oben im Skript."
+echo
+echo "  Version 4.21                scroll-craft, humanizer, agent-skills, stripe-best-practices,"
+echo "                              playwright-cli, hyperframes sind destilliert (Kapitel 50 bis 54,"
+echo "                              arbeitsdisziplin.md). claude-security (Anthropic) ist proprietaer"
+echo "                              und nur zum Selbstinstallieren beschrieben (52, Abschnitt 11)."
 echo "                              Befehle auf Zuruf stehen oben im Skript."
 echo
 echo "Hinweis: shadcn/ui bringt seinen Skill über die eigene CLI mit."

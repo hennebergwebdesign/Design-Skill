@@ -170,6 +170,9 @@ Fehler, Erfolg. Antworten, die der Kunde nicht kennt, werden als offen markiert,
 | Nutzer erwähnt Termine oder Beratungsgespräche | Cal.com oder Calendly, eingebettet oder verlinkt |
 | Kunde beschreibt die gewünschte Optik in eigenen Sätzen (clean, nahbar, muss Wow machen) | Sätze wörtlich in den Markenbrief, Richtung vorschlagen nach `../../webdesign-conversion/references/37-stilrichtung-nach-kundensprache.md`, Abnahme über die Stylescape (`moodboard-und-stylescape.md`) |
 | Nutzer erwähnt Chatbot oder KI Assistent | zuerst fragen, ob ein Kontaktformular reicht; sonst `chatbot-auf-der-website.md`, mit Wissensbasis vom Kunden |
+| Nutzer erwähnt Verkauf, Bestellung, Bezahlen, Anzahlung, Spende, Abonnement, Kasse oder Stripe | `zahlungen-umsetzung.md`, Abschnitt 1: Konto beim Kunden, Verbraucher oder Unternehmen, Angebote, Erfüllung, Steuerregistrierung, Zahlarten, wer die Rechtstexte liefert |
+| Marke, Kampagne oder Produktseite mit Erlebnisanspruch („Scroll-Effekte", „wie bei Apple", Scrollytelling) | zuerst `../../webdesign-conversion/references/50-scroll-erlebnis-grammatik-und-gefuehl.md`: Grammatik, Gefühlskurve mit einem Gipfel, Erzählsatz, Signaturbewegung; bei Handwerk, Praxis und lokalen Diensten dezente Bewegung statt Erlebnisseite |
+| Nutzer erwähnt Video, Logoanimation, Animationssequenz, Erklärfilm oder Reel | Länge, Formate, Ton, Quelle, wer freigibt; `../../webdesign-conversion/references/54-video-aus-html-mit-hyperframes.md` |
 | Landingpage für Kampagne | Meta Pixel, Conversions API, GTM Container ID |
 | Newsletter oder Leadmagnet | Double Opt in nötig, welcher Anbieter |
 | mehrere Sprachen im Material | Mehrsprachigkeit und Sprachumschaltung |

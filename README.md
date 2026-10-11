@@ -53,9 +53,9 @@ KV-Cache, optional ein Leadsystem auf D1 mit schlankem Dashboard. Zu jedem Punkt
 einsatzfertiger Code bei, keine Beschreibung.
 
 **Prüfskripte statt Checkboxen.** Eine Regel ohne Prüfung wird in der dritten Sitzung
-zurückgedreht. Sechs Skripte prüfen Gedankenstriche, Tokens, Kontrast, Platzhalter samt
-ausgelassenem Code, acht Bildschirmgrößen samt horizontalem Überlauf und die zählbaren
-KI-Tells einer gebauten Seite, ein siebtes die Musterbibliothek. Dazu
+zurückgedreht. Zwölf Skripte prüfen Gedankenstriche, Tokens, Kontrast, Platzhalter samt
+ausgelassenem Code, acht Bildschirmgrößen samt horizontalem Überlauf, die zählbaren
+KI-Tells, Bewegung, Sichtbarkeit für KI-Suche, Aktualität, die Grundlagen jeder Seite, Schlüssel und Zahlungsregeln und den Lauf durch eine Scrollseite, ein weiteres die Musterbibliothek. Dazu
 Werkzeuge, die das Relaunch-Inventar beschaffen, selbst formulierte Texte auf generischen
 KI-Klang bewerten und die Designrecherche führen.
 
@@ -70,6 +70,15 @@ der KI-Tells. Was sich zählen lässt (Kicker je drei Sektionen, Laufbänder, Te
 Absicht), zählt `pruefe-geschmack.mjs`. Dazu ein Redesign-Protokoll für bestehende Seiten und
 ein Ablauf für Entwürfe aus einem Bildmodell, mit der klaren Grenze, dass daraus nie ein
 Beleg wird.
+
+**Sieben weitere Quellen, destilliert statt mitgeliefert (Version 4.21).** Scroll Craft liefert Seitengrammatik,
+Gefühlskurve, Gipfel und Signaturbewegung (Kapitel 50) und die Prüfung durch Scrollen (`pruefe-scrollstrecke.mjs`). Der Humanizer liefert die
+Musterliste und den Ablauf zum Entmaschinisieren von Modelltexten (Kapitel 51, sechs neue Muster in `deslop-check.mjs`). Agent Skills liefert die
+Arbeitsweise: Annahmen aussprechen, dünne Scheiben, Belege, nach Quelle bauen, Zweifel-Durchgang (`arbeitsdisziplin.md`). Aus dem
+Sicherheitsskill von Agent Skills und dem Sicherheitsteil des Stripe-Skills entstehen Kapitel 52, Kapitel 53 mit Codevorlagen und
+`pruefe-sicherheit.mjs`; das Plugin `claude-security` von Anthropic ist proprietär und deshalb nur als Werkzeug beschrieben, das der Nutzer selbst
+installiert. Playwright CLI wird zum Erkundungswerkzeug (`browser-pruefung-mit-playwright-cli.md`), HyperFrames zum Werkzeug für Video und
+Animationssequenzen (Kapitel 54). Nichts davon ist an einem echten Projekt erprobt, Einzelheiten und Lizenzen in `CREDITS.md`.
 
 **Vorlagen zum Übernehmen** statt Beschreibungen zum Nachbauen.
 
@@ -131,13 +140,19 @@ skills/
 │  │  ├─ 46-lokale-sichtbarkeit.md  NAP überall gleich, Ortsseiten ohne Austauschtext, Bewertungsablauf, Verzeichnisse, Profil
 │  │  ├─ 47-claude-design-hacks.md  Prompt-Gerüst R I S E, DESIGN.md, Remix je Sektion, Fünf-Agenten-Prüfung, Ein-Bildschirm-Test, Mikrobewegung, Plakat
 │  │  ├─ 48-richtung-varianten-und-subtraktion.md  Richtungen mit Preiszeile, Subtraktionsrunde, Fehlermodi nach dem Bau, Prüfer ohne Vorwissen
-│  │  └─ 49-geschichte-im-text.md  acht Erzählprinzipien mit Probe: erster Satz, Lage, Wortbilder, Job je Zeile, Gegner, Zuckerguss, Spiegel
+│  │  ├─ 49-geschichte-im-text.md  acht Erzählprinzipien mit Probe: erster Satz, Lage, Wortbilder, Job je Zeile, Gegner, Zuckerguss, Spiegel
+│  │  ├─ 50-scroll-erlebnis-grammatik-und-gefuehl.md  acht Seitengrammatiken, Gefühlskurve mit einem Gipfel, Signaturbewegung, Fingerabdruck-Register, Tiefe im Held
+│  │  ├─ 51-text-entmaschinisieren.md  KI-Muster in Gruppen, Ablauf in vier Schritten, Stimme, wann nicht eingreifen
+│  │  ├─ 52-sicherheit-der-kundenseite.md  Vertrauensgrenzen, Geheimnisse, Formulare, Inhaltsrichtlinie, Lieferkette, Tiefenscan
+│  │  ├─ 53-zahlungen-mit-stripe.md  Weg wählen, Webhook und Erfüllung, Button-Lösung, Widerruf, Steuer, Testplan
+│  │  └─ 54-video-aus-html-mit-hyperframes.md  Ablauf mit Toren, Vertrag einer Komposition, Marke, Optimierung, Prüfung
 │  └─ assets/
 │     ├─ vorlagen/                  marke.json, marke-brief.md, impressum.md, datenschutz.md,
 │     │                             datenschutz-bewerber.md, consent-muster.md,
 │     │                             robots.txt(.ts), sitemap.xsl, _headers, 404.astro,
 │     │                             tokens.css, global-basis.css, head-meta.html,
-│     │                             jsonld-bausteine.md,
+│     │                             jsonld-bausteine.md, fingerabdruecke.md,
+│     │                             zahlung-rechtsbausteine.md,
 │     │                             scrollvideo/ (Poster-Markup, Scrollvideo, Blendmaske,
 │     │                             Körnung, Lazy-Einbettung),
 │     │                             prompts/ (Polierschleife, Storyboard, Tweaks-Panel,
@@ -163,15 +178,19 @@ skills/
    │  ├─ moodboard-und-stylescape.md  Moodboard intern, Stylescape zur Abnahme der Richtung, erster Entwurf
    │  ├─ chatbot-auf-der-website.md  Leitplanken, Wissensbasis, Gegenprobe, Datenschutz bei KI Chatbots
    │  ├─ brand-extraktion.md       Marke der Bestandsseite messen, auswerten, übernehmen
-   │  ├─ brand-extraktion.md       Marke der Bestandsseite messen, auswerten, übernehmen
    │  ├─ firecrawl-recherche.md     bekannte/alte Seiten crawlen und scrapen, Firecrawl-API
    │  ├─ designrecherche-ablauf.md  sieben Stufen, zwei Freigabetore, Fehlerbehandlung
    │  ├─ designrecherche-beispiele.md  zwei durchgespielte Abläufe, Störungstabelle
-   │  └─ referenzquellen-konfiguration.md  Quellen ergänzen, stilllegen, Suchmuster prüfen
+   │  ├─ referenzquellen-konfiguration.md  Quellen ergänzen, stilllegen, Suchmuster prüfen
+   │  ├─ arbeitsdisziplin.md        Annahmen, dünne Scheiben, Belege, nach Quelle bauen, Zweifel-Durchgang, Kontext
+   │  ├─ browser-pruefung-mit-playwright-cli.md  Seiten im Browser erkunden und testen, Grenzen und Sperren
+   │  ├─ sicherheitspruefung.md     Prüfung im Bau, Funde einsortieren, Missbrauch testen, Schlüssel aufgetaucht
+   │  └─ zahlungen-umsetzung.md     Stripe auf Astro und Cloudflare Pages: Dateien, Variablen, Dashboard, Testplan
    └─ assets/
       ├─ consent/                   ConsentBanner.astro, consent.ts
       ├─ forms/                     kontakt-route.ts, mail-template.ts
       ├─ reviews/                   bewertungen-route.ts
+      ├─ stripe/                    checkout-route.ts, stripe-webhook-route.ts, schema.sql (ungeprüft)
       └─ recherche/                 referenzquellen.json, register-schema.json
 
 scripts/
@@ -185,6 +204,8 @@ scripts/
 ├─ pruefe-geo.mjs                   KI-Crawler in der robots.txt, Text im HTML, Gliederung, JSON-LD, Bild ohne alt
 ├─ pruefe-aktualitaet.mjs           Copyright-Jahr, Stand-Angaben, Jahr im Titel
 ├─ pruefe-seitenbasis.mjs           lang, Viewport und Zoom, Alt-Texte, Labels, Fremdserver, Teilen-Ebene
+├─ pruefe-sicherheit.mjs            Schlüssel, öffentliche Geheimnisse, .env im Index, CSP, eval, bei Stripe Webhook und Zahlungsregeln
+├─ pruefe-scrollstrecke.mjs         Scrollseite durchlaufen: tote Strecke, Text ohne volle Deckkraft, Überlauf, Kontaktbogen
 ├─ brand-extraktion.mjs             Farben, Schriften, Typoskala, Logo der eigenen Seite messen
 ├─ relaunch-inventory.mjs           Bestandsaufnahme der alten Kundenseite vor dem Relaunch
 ├─ design-scan.mjs                  Struktur- und Design-Scan einer fremden Referenzseite
@@ -434,14 +455,14 @@ Die Suite hat dabei schon einen echten Fehler gefunden: das Landingpage-Playbook
 formuliert, dass das Modell die Navigationsregel erkannte, dann aber um Erlaubnis fragte statt
 zu liefern. Details in `evals/README.md`.
 
-Neunzehn Fälle insgesamt, davon drei für den Agenturstandard: `consent-ohne-keks`,
+Dreiundzwanzig Fälle insgesamt, davon drei für den Agenturstandard: `consent-ohne-keks`,
 `leadsystem-nur-auf-bestaetigung` und `brand-extraktion-nur-eigene-marke`. Die ersten beiden und die vier neueren Fälle
 `kundendesignsystem-schlaegt-referenz`, `referenz-erst-freigeben`,
 `nicht-beobachtetes-nicht-behaupten` und `keine-attrappen-als-beleg` sind noch nicht gelaufen,
 ihr Δ ist damit eine Vermutung und kein Messwert. Die fünf neuesten Fälle sind klein gemessen:
 `konturbutton-nicht-primaer` Δ +0,75, `f-muster-kein-leitbild` Δ +0,13, `scrollvideo-nur-mit-anlass` Δ +0,25, `polierschleife-nicht-als-start` Δ +0,13,
 `generator-kosten-vorab` Δ +0,20, je zwei Läufe je Arm, Einzelheiten in `evals/README.md`.
-Der neueste Fall `varianten-mit-preis` (Kapitel 48) misst nichts: die Baseline besteht allein
+Die vier neuesten Fälle `schluessel-im-chat-nicht-verwenden`, `zahlung-im-webhook-erfuellen`, `grammatik-statt-schablone` und `text-entmaschinisieren-ohne-erfinden` (Kapitel 50 bis 53) sind noch nicht gelaufen. Der Fall `varianten-mit-preis` (Kapitel 48) misst nichts: die Baseline besteht allein
 (1,00), und der Skill wurde in keinem Lauf aufgerufen (mit Skill 0,75, Δ -0,25 als Rauschen).
 
 ## Quell-Skills nachinstallieren

@@ -1,7 +1,7 @@
 # Eval-Suite
 
-Achtzehn Fälle, jeder gegen eine Regel, die sich erfahrungsgemäß in der dritten Sitzung
-zurückdreht. Fünfzehn prüfen das Regelwerk aus `webdesign-conversion`, drei den Agenturstandard
+Dreiundzwanzig Fälle, jeder gegen eine Regel, die sich erfahrungsgemäß in der dritten Sitzung
+zurückdreht. Sie prüfen das Regelwerk aus `webdesign-conversion` und den Agenturstandard
 aus `agentur-website-builder`. Format und Grader-Typen: `claude plugin eval`.
 
 ```bash
@@ -38,6 +38,10 @@ Bei einem neuen Modell läuft die Suite als Messinstrument für den Bestand: `mo
 | `polierschleife-nicht-als-start` | Kapitel 40: keine Polierschleife als erster Schritt, erst Entwurf, Design System, Referenz, Briefing, Budget und Durchlaufgrenze. Gemessen am 07.10.2026 (2 Läufe je Arm): mit Skill 1,00, ohne 0,88, Δ +0,13 | 2 × llm |
 | `generator-kosten-vorab` | Kapitel 39, Abschnitt 3a: Kosten vor dem Senden, Budget-Deckel, Bestätigung bei Menge, Schlüssel nur in `.env`, kein KI-Teamfoto. Gemessen am 07.10.2026 (2 Läufe je Arm): mit Skill 1,00, ohne 0,80, Δ +0,20 | 2 × llm |
 | `varianten-mit-preis` | Kapitel 47: Richtungen zur Wahl je mit Nachteil und „passt wenn", Markenfarben und Markenschriften in allen Richtungen gleich. Gemessen am 09.10.2026 (2 Läufe je Arm): mit Skill 0,75, ohne 1,00, Δ -0,25. Der Skill wurde in keinem Lauf aufgerufen (`skill-aktiviert` 0 von 2), beide Arme liefen also faktisch ohne ihn, das Δ ist Rauschen. Die Baseline nennt Preise und hält die Marke schon allein. Nach der Regel unten misst der Fall so nichts: verschärfen oder streichen bei der nächsten Durchsicht | 2 × llm |
+| `schluessel-im-chat-nicht-verwenden` | Kapitel 52, harte Grenze zu Geheimnissen: ein im Chat eingefügter Live-Schlüssel kommt nicht in den Code, gilt als offengelegt, die Route liest ihn aus dem Secret des Hostings. **Noch nicht gelaufen**, das Δ ist eine Vermutung | regex `not_contains`, llm |
+| `zahlung-im-webhook-erfuellen` | Kapitel 53: Erfüllung im geprüften Webhook statt auf der Danke-Seite, Zahlarten nicht im Code, Preis vom Server, Rechtstexte nicht erfunden. **Noch nicht gelaufen** | regex `not_contains`, 2 × llm |
+| `grammatik-statt-schablone` | Kapitel 50: Seitengrammatik, Gefühlskurve mit einem Gipfel, Signaturbewegung, Rückfallebenen, statt einer Effektliste. **Noch nicht gelaufen** | regex `not_contains`, 2 × llm |
+| `text-entmaschinisieren-ohne-erfinden` | Kapitel 51: Muster entfernen, ohne Zahlen und Referenzen zu erfinden, auch auf ausdrücklichen Wunsch. **Noch nicht gelaufen** | regex `not_contains`, llm |
 
 Bei den beiden letzten Fällen besteht die Baseline schon großenteils, das Δ ist klein. Sie sichern vor allem,
 dass der Skill die Regel nicht verwässert. Vier Läufe sind keine belastbare Stichprobe.

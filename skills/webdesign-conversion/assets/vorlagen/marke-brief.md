@@ -182,6 +182,19 @@ Nebenrichtung, mit einem Satz Begründung:
 | Begründung in einem Satz | [[FEHLT]] |
 | Stylescape vom Kunden bestätigt (Datum) | [[FEHLT]] |
 
+**Erlebnis** nur bei Marken-, Kampagnen- und Produktseiten mit freigegebener Erlebnisidee, nach
+`50-scroll-erlebnis-grammatik-und-gefuehl.md`. Sonst „entfällt":
+
+| Feld | Wert |
+|---|---|
+| Seitengrammatik (eine von acht, mit einem Satz, warum die anderen nicht passten) | [[FEHLT oder „entfällt"]] |
+| Gefühlskurve, eine Zeile je Abschnitt: Gefühl, dann Auslöser | [[FEHLT]] |
+| Der eine Gipfel, als Satz eines Besuchers an einen Freund | [[FEHLT]] |
+| Erzählsatz: „Es ist die Seite, auf der …" | [[FEHLT]] |
+| Signaturbewegung, ein Satz | [[FEHLT]] |
+| Gewollte Stille (damit die Prüfung sie von toter Strecke trennt) | [[FEHLT oder „keine"]] |
+| Fingerabdruck-Tor gegen das Register bestanden (Datum) | [[FEHLT]] |
+
 **Referenzen aus Premium-Designquellen**, siehe `22-premium-designquellen.md`. Vor Durchgang
 1 recherchiert, nicht danach als Nachgedanke. Jede Zeile entspricht einem Eintrag in
 `.designrecherche/register.json`, geführt von `scripts/referenz-register.mjs`, Ablauf in

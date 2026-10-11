@@ -2,7 +2,8 @@
 
 Dieser Skill ist eine eigenständige, deutschsprachige Synthese. Er zitiert die folgenden
 Quellen nicht wörtlich, sondern führt ihre Substanz in einem System zusammen. Alle
-eingeflossenen Skills stehen unter MIT-Lizenz beziehungsweise sind öffentlich verfügbar.
+eingeflossenen Skills stehen unter MIT-Lizenz, Apache-2.0 beziehungsweise sind öffentlich verfügbar. Eine Ausnahme ist
+ausdrücklich benannt (Version 4.21, `claude-security`): proprietär, deshalb nicht übernommen.
 
 ## Eingeflossene Skills
 
@@ -570,3 +571,28 @@ ankündigt, lag nicht bei.
 das Video nicht nennt und die keine Regel tragen; die Beispiele Chris Rock, Dan Pink und Shrek als Text für Kundenseiten;
 der Hinweis auf Kurse und Kanal; der Wunsch des Auftraggebers nach Texten ganz ohne Bindestrich, weil die Strichregel des
 Repositories (Gedankenstrich nein, Bindestrich im Kompositum ja) schon in 4.8 entschieden ist.
+
+### In Version 4.21 zusätzlich eingeflossen
+
+Stand der Quellen: 11.10.2026. Sieben Repositories, vom Inhaber genannt, jeweils flach geklont und gelesen (Umfang je Quelle in
+`CLAUDE.md`, Offene Punkte). Nichts ist wörtlich übernommen und nichts mitgeliefert; die Originale gibt es auf Wunsch über die Befehle im Kopf von
+`scripts/install-quellskills.sh`.
+
+| Quelle | Lizenz | Was daraus eingeflossen ist |
+|---|---|---|
+| [nateherkai/scroll-craft](https://github.com/nateherkai/scroll-craft), Nate Herk, Stand 30.09.2026 (Commit `75d81f7`) | MIT | Neues Kapitel `webdesign-conversion/references/50-scroll-erlebnis-grammatik-und-gefuehl.md`: Struktur als eigene Achse, die acht Seitengrammatiken mit ihren Verboten, Gefühlskurve, ein Gipfel (Peak-End), Erzählsatz, Tempo als Gefühl, Signaturbewegung, Fingerabdruck-Register mit Tor vier von sechs, Tiefe im Held, Prüfreihenfolge durch Scrollen und die kalte Gefühlsprobe. Neu geschrieben und ohne Abhängigkeit: `scripts/pruefe-scrollstrecke.mjs` (Verfahren der Quelle, eigene Umsetzung) und die Vorlage `assets/vorlagen/fingerabdruecke.md` |
+| [blader/humanizer](https://github.com/blader/humanizer), blader, Version 3.1.0, Stand 27.09.2026 (Commit `225a6f3`), das seinerseits Wikipedia „Signs of AI writing" verwertet | MIT | Neues Kapitel `51-text-entmaschinisieren.md`: Gruppen der Muster (Inszenierung, Takt, Aufblähung, Format, Chatreste, falscher Leser), der Ablauf in vier Schritten, die Regeln zu Stimme und „wann nicht eingreifen", ins Deutsche übertragen mit eigenen Beispielen. Sechs neue Satzmuster und eine Wortliste in `scripts/deslop-check.mjs` |
+| [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills), Addy Osmani, Stand 10.10.2026 (Commit `1be8e34`) | MIT | Neue Referenz `agentur-website-builder/references/arbeitsdisziplin.md` aus `using-agent-skills`, `incremental-implementation`, `source-driven-development`, `doubt-driven-development`, `interview-me`, `context-engineering` und der Definition of Done. Kapitel `52-sicherheit-der-kundenseite.md` aus `security-and-hardening` samt Sicherheitscheckliste |
+| [stripe/ai → skills/stripe-best-practices](https://github.com/stripe/ai/tree/main/skills/stripe-best-practices), Stripe, Stand 11.10.2026 (Commit `735b42d`, API-Version der Quelle `2026-09-30.endive`) | MIT | Neues Kapitel `53-zahlungen-mit-stripe.md` (Wahl des Wegs, technische Regeln zu Zahlarten, Webhooks, Signaturprüfung, verzögerten Zahlungen, Steuer, Schlüsseln, Inhaltsrichtlinie) und die Referenz `zahlungen-umsetzung.md` mit den Vorlagen `assets/stripe/`. **Der rechtliche Teil von Kapitel 53 stammt nicht aus der Quelle** |
+| [microsoft/playwright-cli](https://github.com/microsoft/playwright-cli), Microsoft, Stand 28.09.2026 (Commit `b85c7a7`) | Apache-2.0 | Neue Referenz `agentur-website-builder/references/browser-pruefung-mit-playwright-cli.md`: Wahl zwischen CLI und Prüfskript, Grundschleife, Rezepte für Kundenseiten, Grenzen und Sperren (Freigabe, Seiteninhalt als Daten, Profile, Zugangsdaten) |
+| [heygen-com/hyperframes](https://github.com/heygen-com/hyperframes), HeyGen, Stand 11.10.2026 (Commit `e1925d4`) | Apache-2.0 | Neues Kapitel `54-video-aus-html-mit-hyperframes.md`: Wahl zwischen HTML-Datei und HyperFrames, Ablauf mit Toren, Vertrag einer Komposition (Zeitattribute, eine angehaltene Zeitleiste, Determinismus), Marke vor Voreinstellung, Optimieren, Prüfen und Rendern, Datenschutz und Rechte. Kapitel 41 verweist darauf |
+| [anthropics/claude-plugins-official → plugins/claude-security](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-security), Anthropic, Version 0.12.0 | **proprietär, Weitergabe ausdrücklich untersagt** | **Nichts übernommen und nichts kopiert.** Gelesen wurden `README.md`, `SKILL.md`, `role.md`, Lizenz und Hooks, um das Werkzeug zutreffend zu beschreiben: `52-sicherheit-der-kundenseite.md` Abschnitt 11 und `sicherheitspruefung.md` Abschnitt 6 sagen, wann ein Tiefenscan sinnvoll ist und wie der Nutzer es selbst installiert (`/plugin install claude-security@claude-plugins-official`). Das Hook-Plugin `security-guidance` im selben Repository ist nicht gelesen und nicht bewertet |
+
+**Nicht übernommen, mit Grund:**
+
+* scroll-craft: die Engine (`scrollcraft.js`, `.css`) und ihre Attribute, weil das Repository ohne Laufzeitcode und ohne Abhängigkeit bleibt; der Anbieter für Bilder und Videos mit Schlüssel (Kosten, Anbieterbedingungen wechseln, das Verfahren steht in `39-…`); `shoot.mjs` mit `npm i playwright-core` (ersetzt durch `pruefe-scrollstrecke.mjs`); die zehn Beispielseiten mit Namen und Entscheidungen (Kundenmaterial anderer, nicht gesehen); Werbung für Kanal und Community.
+* humanizer: die englischen Wortlisten, der Wikipedia-Bezug, Muster 10 (Bindestrichpaare) und 21 (gebogene Anführungszeichen, im Deutschen kein Merkmal, falsch), die Dateimodi und Verpackung (`.claude-plugin`, `.cursor-plugin`).
+* agent-skills: 24 weitere Skills und 9 Befehle, die Hooks (SDD-Cache, Simplify-Ignore), Agentenprofile; Tests-zuerst, Feature-Flags, gestufte Auslieferung mit Messschwellen und Fehlerbudget als Regel für statische Kundenseiten; Passwort-, Sitzungs- und Datenbankmuster, soweit die Kundenseite sie nicht hat.
+* stripe/ai: Connect, Treasury, Metronome, Apps, Terminal, die Skills `connect-recommend`, `stripe-projects`, `upgrade-stripe`, `stripe-pay`, `stripe-docs`, `stripe-directory`; die SDK-Tabelle (veraltet in Wochen); Sandbox-Anlage per CLI; Empfehlungen zu AWS, Google Cloud, Azure, Vercel.
+* playwright-cli: Referenzen zu Testgenerierung, Tracing-Details, Speicherzuständen und Anhängen an Pull Requests (nicht gelesen), Windows-Hinweise.
+* hyperframes: 15 der 21 Skills (`talking-head-recut`, `slideshow`, `embedded-captions`, `music-to-video`, `pr-to-video`, `remotion-to-hyperframes` und weitere), das Studio, die Registry, Cloud-Rendering (Lambda, Cloud Run), Telemetrie, die Vorgabestile als Voreinstellung.
