@@ -12,7 +12,7 @@ welche Sektionsreihenfolge den Ausgangspunkt bildet.
 - Rangfolge der Quellen
 - Auswahl pro Projekt
 - Ausgangsliste
-- Freigegebene Referenz: Comrade
+- Freigegebene Referenzen: Comrade, Hook Agency, BeeToGreen
 - Abgelehnte Referenzen
 - Vorrang der Conversion
 - Universeller Aufbau: Unternehmenshomepage
@@ -116,8 +116,8 @@ Klarheit, Struktur und Vertrauensaufbau im geschäftlichen Umfeld:
 `stripe.com/de`, `linear.app`, `vestris.ai`
 
 Dienstleister, Handwerk und lokale Anbieter, also der häufigste Kundentyp der Agentur:
-`comradeweb.com` (freigegeben, siehe unten), `alliancemoving.com`, `hhjtrialattorneys.com`,
-`coffee-tech.com`, `beetogreen.com/en`
+`comradeweb.com` und `hookagency.com` (freigegeben, siehe unten), `alliancemoving.com`, `hhjtrialattorneys.com`,
+`coffee-tech.com`, `beetogreen.com/en` (freigegeben)
 
 Produkt und Softwareanbieter, stark in Struktur und Argumentationsaufbau:
 `brand.ai`, `showit.com`, `luffu.com`, `pop.site`, `trymira.com`, `cofactr.com`,
@@ -138,11 +138,14 @@ Fallbeispiele und Referenzdarstellung, nützlich für die Case Study Sektion:
 Eine Adresse aus dieser Liste kann offline sein oder sich verändert haben. Was sich nicht
 abrufen lässt, wird nicht aus der Erinnerung beschrieben, sondern ersetzt.
 
-## Freigegebene Referenz: Comrade
+## Freigegebene Referenzen
+
+### Comrade
 
 Stand 11.10.2026, vom Inhaber nach Ansicht der Live-Seite freigegeben (Tor 1, ganze Seite).
-`comradeweb.com` ist bisher die **einzige** ausdrücklich gutgeheißene Referenz. Sie gilt für
-Dienstleister und Handwerk, wo Anfragen das Ziel sind.
+`comradeweb.com` war die erste ausdrücklich gutgeheißene Referenz. Sie gilt für
+Dienstleister und Handwerk, wo Anfragen das Ziel sind. Am selben Tag kamen Hook Agency und
+BeeToGreen dazu (unten).
 
 Warum sie gefällt (Begründung des Inhabers): klare CTAs, die sich durch die Seite ziehen,
 Vertrauen direkt neben dem Versprechen, die Seite sagt sofort, worum es geht, gute
@@ -173,6 +176,46 @@ Nicht übernommen (harte Grenzen und Regelwerk):
 Offen: Die Aufnahme als **Muster** in `assets/musterbibliothek/` läuft über Tor 2 und setzt
 Erfassung, Design DNA und Vergleich voraus. Das ist nicht geschehen. Bis dahin ist dies ein
 Hinweis für die Auswahl, kein Muster.
+
+### Hook Agency
+
+`hookagency.com`, Stand 11.10.2026, vom Inhaber als gute Designquelle freigegeben (Tor 1, ganze
+Seite, ohne eigene Begründung). Marketing für Handwerksbetriebe, damit dieselbe Lage wie Comrade.
+Prinzipien aus der Textauswertung, **Optik nicht gesehen**:
+
+| Prinzip | Beobachtung |
+|---|---|
+| Ein Primär-CTA mit Beleg-CTA daneben | „Book an Intro Call" und „View Contractor Results", beide mehrfach |
+| Problem vor Leistung | Aussage, dass nicht die Anfragen fehlen, sondern die Wirkung nach außen, danach drei nummerierte Schmerzpunkte |
+| Prozess mit Zeitangaben | fünf Schritte, 20 Minuten Erstgespräch, 60 Minuten Videogespräch, monatlicher Bericht: das senkt das Risiko des ersten Anrufs |
+| Belege in Schichten | Logos, Bewertungszahl, Kurzzitate, Fallkarten, Langzitate |
+| Offene Preise | Stufen mit „ab"-Preis, Ratenhinweis, Einwände in der FAQ |
+| Versprechen als Grundsatz | ein kurzer, unterschriebener Grundsatz statt Garantiefloskeln |
+
+Nicht übernommen: Umsatzbehauptungen von Dritten, Verben wie „dominate", doppelter Text bei den
+Schmerzpunkten, Fallkarten ohne sichtbare Zahl, die Bindung über ein Jahr nur in der FAQ (der
+Hinweis gehört neben den Preis), kein Formular auf der Seite (bei uns steht das Formular am CTA).
+
+### BeeToGreen
+
+`beetogreen.com`, Stand 11.10.2026, vom Inhaber als gute Designquelle freigegeben (Tor 1, ganze
+Seite, ohne eigene Begründung). Software mit zwei Zielgruppen. Prinzipien aus der Textauswertung,
+**Optik nicht gesehen**:
+
+| Prinzip | Beobachtung |
+|---|---|
+| Aufteilung nach Zielgruppe | ein Block für Unternehmen, ein Block für Mitarbeitende, je mit eigenem Nutzen und eigenem CTA |
+| Dreischritt | „ausrüsten, einsteigen, begleiten" als Prozessübersicht |
+| Rechner als Beleg | Wirkung mit voreingestellten Werten, mit Handlungsaufruf nach dem Ergebnis |
+| Logos in zwei Gruppen | Kunden und Partner getrennt |
+| Zahlen zum Umfang | Anzahl Modelle, Anzahl Stellplätze, Anzahl Berater |
+| FAQ gegen Einwände | sieben Fragen zu Umsetzung und Verwaltung |
+
+Nicht übernommen: Hero ohne klaren Nutzensatz, mehrere CTAs mit gleichem Ziel, eine Überschrift
+in anderer Sprache, die Steuer- und Förderzahlen als Muster (sie gelten nur für diesen Markt und
+brauchen eine Quelle), Namen und Logos der Kunden.
+
+Für beide gilt wie bei Comrade: Aufnahme als **Muster** nur über Tor 2, Erfassung steht aus.
 
 ## Abgelehnte Referenzen
 

@@ -350,7 +350,7 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Änderungsverlauf
 
-- **11.10.2026, ohne Versionsänderung** Erste Referenzfreigabe durch den Inhaber (Tor 1): `comradeweb.com` als freigegebene Referenz mit Prinzipien und Ausschlüssen in `referenzen-und-auswahl.md`, neun Seiten ausdrücklich abgelehnt und aus der Ausgangsliste entfernt (metriccivil.ca, mercury.com, become-a-yogi.com). Nur aus der Textauswertung beschrieben, Optik nicht gesehen, kein Crawl, nicht in der Musterbibliothek (Tor 2 offen).
+- **11.10.2026, ohne Versionsänderung** Zusätzlich `hookagency.com` und `beetogreen.com` vom Inhaber als gute Designquellen freigegeben (ohne eigene Begründung, Prinzipien aus meiner Textauswertung). Erste Referenzfreigabe durch den Inhaber (Tor 1): `comradeweb.com` als freigegebene Referenz mit Prinzipien und Ausschlüssen in `referenzen-und-auswahl.md`, neun Seiten ausdrücklich abgelehnt und aus der Ausgangsliste entfernt (metriccivil.ca, mercury.com, become-a-yogi.com). Nur aus der Textauswertung beschrieben, Optik nicht gesehen, kein Crawl, nicht in der Musterbibliothek (Tor 2 offen).
 - **09.10.2026, Version 4.19.0** Paket „Webdesign Workflow 2026" (ein Skillordner mit elf Referenzen, drei Skripten,
   Wortliste und Szenarien, dazu 27 Quellnotizen zu Videos über Webdesign mit Claude, Claude Design und Skills), gegen 4.17.0
   abgeglichen und destilliert, nicht als dritter Skill mitgeliefert, obwohl das Paket das vorschlägt. Das meiste stand
