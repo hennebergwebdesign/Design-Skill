@@ -12,7 +12,7 @@ welche Sektionsreihenfolge den Ausgangspunkt bildet.
 - Rangfolge der Quellen
 - Auswahl pro Projekt
 - Ausgangsliste
-- Freigegebene Referenzen: Comrade, Hook Agency, BeeToGreen
+- Freigegebene Referenzen
 - Abgelehnte Referenzen
 - Vorrang der Conversion
 - Universeller Aufbau: Unternehmenshomepage
