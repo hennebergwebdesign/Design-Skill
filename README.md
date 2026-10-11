@@ -130,7 +130,8 @@ skills/
 │  │  ├─ 45-huerde-laenge-und-leserfuehrung.md  Länge und Sektionsfolge nach Hürde, Belege früh, offene Schleifen, Stakkato
 │  │  ├─ 46-lokale-sichtbarkeit.md  NAP überall gleich, Ortsseiten ohne Austauschtext, Bewertungsablauf, Verzeichnisse, Profil
 │  │  ├─ 47-claude-design-hacks.md  Prompt-Gerüst R I S E, DESIGN.md, Remix je Sektion, Fünf-Agenten-Prüfung, Ein-Bildschirm-Test, Mikrobewegung, Plakat
-│  │  └─ 48-richtung-varianten-und-subtraktion.md  Richtungen mit Preiszeile, Subtraktionsrunde, Fehlermodi nach dem Bau, Prüfer ohne Vorwissen
+│  │  ├─ 48-richtung-varianten-und-subtraktion.md  Richtungen mit Preiszeile, Subtraktionsrunde, Fehlermodi nach dem Bau, Prüfer ohne Vorwissen
+│  │  └─ 49-geschichte-im-text.md  acht Erzählprinzipien mit Probe: erster Satz, Lage, Wortbilder, Job je Zeile, Gegner, Zuckerguss, Spiegel
 │  └─ assets/
 │     ├─ vorlagen/                  marke.json, marke-brief.md, impressum.md, datenschutz.md,
 │     │                             datenschutz-bewerber.md, consent-muster.md,

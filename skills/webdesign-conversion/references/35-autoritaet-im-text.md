@@ -164,3 +164,4 @@ einer Frage des Besuchers ist ein „vielleicht" in Ordnung.
 - FAQ Platzierung, Preise zeigen: `06-conversion-architektur.md`
 - FAQ Markup: `05-seo-sichtbarkeit.md`, `../assets/vorlagen/jsonld-bausteine.md`
 - zitierfähige Absätze: `31-ki-sichtbarkeit-geo.md`
+- Geschichte im Text, Wortbilder, Gegner, Zuckerguss: `49-geschichte-im-text.md`

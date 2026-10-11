@@ -555,3 +555,18 @@ Stand der Quelle: 07.10.2026, Erweiterungspaket `skill-pflege-und-modelltests`, 
 Pflichten und harte Grenzen), Ratschläge aus der Softwareentwicklung für Orchestrierung und Build Skills (andere Arbeit), die
 Managerbildsprache (Haltung, keine Regel).
 
+### In Version 4.20 zusätzlich eingeflossen
+
+Stand der Quelle: 11.10.2026, Paket „Video Analyse für Skill Repo" (Zusammenfassung, Transkript und zwölf Frames zu einem
+Video). Das Transkript ist automatisch erzeugt und englisch, nichts wörtlich übernommen. Das zweite Video, das das Paket
+ankündigt, lag nicht bei.
+
+| Quelle | Was daraus eingeflossen ist |
+|---|---|
+| Joanna Wiebe (Copyhackers), YouTube Video „The Psychology of Storytelling That Will Change Your Life", `youtube.com/watch?v=oCnxnaVg0bY`, 29.01.2026, **keine Lizenz genannt**, nur inhaltlich destilliert | Neues Kapitel `webdesign-conversion/references/49-geschichte-im-text.md`: die acht Prinzipien (Erwartung, Lage aufbauen, Wortbilder, Struktur nach Zielgefühl, Job je Zeile, Gegner in vier Schritten, Zuckerguss, Anfang und Schluss spiegeln) mit je einer Probe, dazu die Sammelprobe in sechs Schritten. Neu für dieses Repository: die Übertragung auf Webseiten, E-Mail-Folgen und Erzählstellen, die deutschen Beispiele für Handwerk, Lokal und Gastro, die Grenzen (Geschichte nur wahr und freigegeben, Gegner nie der Leser und nie ein Mitbewerber mit Namen, Zucker ersetzt keine Pflichtangabe) und sechs entschiedene Widersprüche |
+
+**Nicht übernommen, mit Grund:** die Zahlen des Videos (40 Prozent Verständnisverlust, 70 Prozent bessere Erinnerung, 20 bis
+40 Prozent Plus durch Streichen), weil sie ohne Quelle genannt werden; die Theorienamen (Dual Coding, Zeigarnik-Effekt), die
+das Video nicht nennt und die keine Regel tragen; die Beispiele Chris Rock, Dan Pink und Shrek als Text für Kundenseiten;
+der Hinweis auf Kurse und Kanal; der Wunsch des Auftraggebers nach Texten ganz ohne Bindestrich, weil die Strichregel des
+Repositories (Gedankenstrich nein, Bindestrich im Kompositum ja) schon in 4.8 entschieden ist.

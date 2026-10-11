@@ -4,7 +4,7 @@ description: "Vollständiges System für conversion-orientiertes Webdesign im DA
 license: MIT
 metadata:
   author: Henneberg Webdesign
-  version: 2.22.0
+  version: 2.23.0
 ---
 
 # Webdesign Conversion System
@@ -136,6 +136,7 @@ Lies gezielt nach, statt alles zu laden.
 | Referenzen als Kollage und Grammatiktabelle, Gap Audit bei „es fehlt etwas" | `42-referenzgrammatik-und-gap-audit.md` |
 | Gutes Ergebnis festschreiben (Rückbauprobe), Pilot vor Serie, Figurenwelt, was der Mensch entscheidet | `44-gutes-festschreiben-und-rueckbauprobe.md` |
 | Hierarchie als Verhältnis, Titellänge, Führungskanten, Anteile je Sektion wechseln, Heldenidee als roter Faden, Animationssystem | `43-hierarchie-raster-komposition.md` |
+| Geschichte im Text: Erwartung im ersten Satz, Lage aufbauen, Wortbilder (Augen-zu-Probe), Struktur nach Zielgefühl, ein Job je Zeile, gegnerische Lage in vier Schritten, Zuckerguss mit wahrer Geschichte, Anfang und Schluss spiegeln | `49-geschichte-im-text.md` |
 | Ton mit Autorität, Weichmacher streichen, Rahmen setzen, Antworten in der FAQ | `35-autoritaet-im-text.md` |
 | Auslöser je Stelle der Seite: Zielgruppe ohne Vorwurf, Wirkprinzip, realistische Behauptung, ruhige Einwandzeile, drei echte Optionen, ehrliche Einschränkung | `34-ueberzeugungsausloeser.md` |
 | Entwurf vor dem Kunden vertreten, Geschmack durch Aussagen ersetzen, Rollen und Spielregeln für Rückmeldung, Lens | `33-kundenpraesentation-und-feedback.md` |
