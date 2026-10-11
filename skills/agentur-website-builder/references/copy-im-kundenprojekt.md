@@ -60,6 +60,8 @@ Gelieferte Texte einmal gegen diese Fragen lesen und Auffälligkeiten melden, ni
 * Passt die Ansprache zur Zielgruppe des Kunden, du oder Sie durchgehend gleich?
 * Beginnt die FAQ jede Antwort mit der Antwort, und stehen dort Weichmacher („eigentlich“, „vielleicht“), die
   nichts aussagen? Regeln in `../../webdesign-conversion/references/35-autoritaet-im-text.md`.
+* Besteht ein erzählender Text die Augen-zu-Probe (was sieht man beim Vorlesen?), hat jede Zeile einen Job, und ist eine
+  Kundengeschichte echt und freigegeben? Proben in `../../webdesign-conversion/references/49-geschichte-im-text.md`.
 * Wirft der Heldenbereich der Zielgruppe etwas vor („die meisten machen es falsch“), und ist jedes
   absolute Versprechen („garantiert“, „über Nacht“) belegt oder vom Kunden zugesagt?
 

@@ -14,7 +14,7 @@ rechtlich tragfähig, barrierearm, schnell, und nicht wie von einer Maschine geb
 
 | Skill | Rolle | Lizenz |
 |---|---|---|
-| `skills/webdesign-conversion/` | das Regelwerk: was gut ist und warum. 49 Referenzen (00 bis 48), 3 Playbooks, Vorlagen, Checklisten | MIT |
+| `skills/webdesign-conversion/` | das Regelwerk: was gut ist und warum. 50 Referenzen (00 bis 49), 3 Playbooks, Vorlagen, Checklisten | MIT |
 | `skills/agentur-website-builder/` | der Lieferablauf: Phasen 0 bis 6, fester Agenturstack, einsatzfertiger Code | Agenturstandard, siehe seine `SKILL.md` |
 
 Die Trennung ist die zentrale Entscheidung dieses Repositories: **Wissen und Ablauf sind
@@ -92,7 +92,7 @@ nicht, es braucht das Glob-Muster in Anführungszeichen.
 ```
 .claude-plugin/       plugin.json, marketplace.json
 skills/
-  webdesign-conversion/     SKILL.md, references/00-47, playbooks/, assets/
+  webdesign-conversion/     SKILL.md, references/00-49, playbooks/, assets/
                             assets/musterbibliothek/ ist das globale Musterwissen
                             assets/vorlagen/scrollvideo/ sind die Bausteine zu Kapitel 38
                             assets/vorlagen/prompts/ sind die Prompt-Vorlagen zu Kapitel 24, 38, 39, 40, 47, 48 (auch Textkritik, Design Loop, Fünf-Agenten-Prüfung, Varianten, Prüfer)
@@ -180,6 +180,11 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Offene Punkte
 
+- Version 4.20.0: Kapitel 49 ist an keinem Projekt erprobt, kein Evalfall, das Δ ist eine Vermutung. Die Proben (Augen zu,
+  Job je Zeile, Spiegel entfernen) sind Handarbeit, kein Skript prüft sie. Der Hook im Held ist anders als von der Quelle
+  empfohlen **nicht** übernommen (Kernbotschaft im ersten Bildschirm, `45-…` Abschnitt 6); ob das an einer Landingpage
+  schlechter konvertiert, ist ungemessen. Die Zahlen des Videos sind ohne Quelle und nicht übernommen. Das zweite Video,
+  das die Paketnotiz ankündigt, lag nicht bei und ist nicht ausgewertet.
 - Version 4.19.0: Kapitel 48, die Vorlagen `varianten.md` und `pruefprompts.md` und die Ergänzungen im Bauablauf sind an
   keinem Projekt erprobt. Der Evalfall `varianten-mit-preis` ist am 09.10.2026 gelaufen (zwei Läufe je Arm): ohne Skill 1,00,
   mit Skill 0,75, und der Skill wurde **in keinem Lauf aufgerufen**. Zwei Befunde daraus: das aktuelle Modell nennt Preise
@@ -350,6 +355,16 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Änderungsverlauf
 
+- **11.10.2026, Version 4.20.0** Paket „Video Analyse für Skill Repo" (ein Video von Joanna Wiebe über Storytelling, acht
+  Prinzipien mit Selbsttest, Transkript und zwölf Frames), gegen 4.19.0 abgeglichen und destilliert. Das meiste stand schon
+  (Botschaftsbogen in 12, offene Schleifen in 45, Belege früh, Vorwurf an den Leser in 34, Konkretheit als Prüfung 5 in 12).
+  Neu: Kapitel `49-geschichte-im-text.md` (Erwartung im ersten Satz, die Lage aufbauen, Wortbilder mit Augen-zu-Probe, Struktur
+  nach Zielgefühl, Job je Zeile, Gegner in vier Schritten, Zuckerguss, Anfang und Schluss spiegeln, Sammelprobe in sechs
+  Schritten), Verweise in 12, 35, 45, `SKILL.md` und `copy-im-kundenprojekt.md`. **Entschieden:** Hook und offene Frage gehören
+  in Erzählstellen, nicht in den Held; der Gegner ist eine Lage, nie ein benannter Mitbewerber (§ 6 UWG) und nie der Leser;
+  eine Kundengeschichte nur mit echtem, freigegebenem Fall, sonst als typischer Ablauf gekennzeichnet; Strichregel des
+  Repositories gilt statt „gar keine Bindestriche". Nicht übernommen: die drei Prozentzahlen, Theorienamen, Beispielclips,
+  Werbung. Kein Skript, kein Evalfall. Versionen: Plugin 4.20.0, Regelwerk 2.23.0, Bauablauf 2.20.0.
 - **11.10.2026, ohne Versionsänderung, zweite Freigaberunde** Referenzliste mit 44 Einträgen (Awwwards, Land-book, Dribbble, Webdesign Inspiration, als PDF, Textauswertung ohne eigene Erfassung, Mobil nirgends getestet) ausgewertet, zehn Favoriten vorgelegt, der Inhaber hat nach dem Durchklicken drei freigegeben (Tor 1): `mdccinc.com`, `vs-epple.de`, `driessenarchitectuur.nl`. Eingetragen in `referenzen-und-auswahl.md` mit Prinzipien, Ausschlüssen und der Begründung des Inhabers, dazu in der Ausgangsliste. Nicht in der Musterbibliothek (Tor 2 offen). Die übrigen 41 Einträge sind nicht freigegeben und nicht abgelehnt; die Liste liegt nur im Gespräch, nicht im Repository. Aus der Liste nicht übernommen: Prozentwerte aus Dribbble-Fallstudien (unbelegt) und die Empfehlung „übernehmen" für Clinika (kursives Serif-Akzentwort und Glaskarten sind Tells nach Kapitel 26).
 - **11.10.2026, ohne Versionsänderung** Zusätzlich `hookagency.com` und `beetogreen.com` vom Inhaber als gute Designquellen freigegeben (ohne eigene Begründung, Prinzipien aus meiner Textauswertung). Erste Referenzfreigabe durch den Inhaber (Tor 1): `comradeweb.com` als freigegebene Referenz mit Prinzipien und Ausschlüssen in `referenzen-und-auswahl.md`, neun Seiten ausdrücklich abgelehnt und aus der Ausgangsliste entfernt (metriccivil.ca, mercury.com, become-a-yogi.com). Nur aus der Textauswertung beschrieben, Optik nicht gesehen, kein Crawl, nicht in der Musterbibliothek (Tor 2 offen).
 - **09.10.2026, Version 4.19.0** Paket „Webdesign Workflow 2026" (ein Skillordner mit elf Referenzen, drei Skripten,

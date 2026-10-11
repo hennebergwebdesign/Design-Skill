@@ -252,5 +252,5 @@ Die Quelle widerspricht dem Bestand an diesen Stellen. Entschieden ist so:
 
 `01-strategie-positionierung.md` (Schritt 1.5, Recherche und Hebel), `06-conversion-architektur.md`,
 `12-copywriting.md`, `26-geschmack-und-ki-tells.md`, `34-ueberzeugungsausloeser.md`,
-`35-autoritaet-im-text.md`, `../playbooks/landingpage.md`, `../playbooks/homepage.md`,
+`35-autoritaet-im-text.md`, `49-geschichte-im-text.md`, `../playbooks/landingpage.md`, `../playbooks/homepage.md`,
 `../../agentur-website-builder/references/copy-im-kundenprojekt.md`.
