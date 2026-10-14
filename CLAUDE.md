@@ -184,6 +184,18 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Offene Punkte
 
+- Version 4.22.0: Der Zweitdurchgang nach `51-…` Abschnitt 7a, die Vorlage `textueberarbeitung-zweitmodell.md`, die Befundstufen in `sicherheitspruefung.md` 6a, der Abschnitt 6a zu
+  `ego-browser`, die REA-Beschreibung in `firecrawl-recherche.md` und die Abschnitte 9a und 9b in `arbeitsdisziplin.md` sind an keinem Projekt erprobt, kein Evalfall, das Δ ist eine Vermutung. Es gibt
+  keine neue harte Grenze und kein neues Skript, deshalb auch keine neue Prüfung. **Nichts davon ist ausgeführt:** weder `npx skills`, `ego-browser`, `rea-agents` noch Orca sind in dieser Umgebung gelaufen;
+  `ego lite` läuft nur unter macOS. Gelesen sind: SlopMonster `SKILL.md`, `references/principles.md`, `references/signs-of-ai-writing.md`, `prompts/cleanse.txt`, Anfang der `README.md`
+  (nicht `tools/*`, nicht `references/sources.md`, nicht die Beispiele); Cloudflare `SKILL.md`, `README.md`, `ATTACK-CLASSES.md`, `CLIENT-SIDE.md`, `CLOUD-AND-DEPLOYMENT.md`, Anfang von
+  `VALIDATION-AND-REPORTING.md` und `SUPPLY-CHAIN-AND-RELEASE.md` (nicht `HUNTING.md`, `RECONNAISSANCE.md`, die übrigen Begleitdateien, Schema, Prüfskripte); ego-lite `README.md`, `AGENTS.md` (Anfang), `SKILL.md`
+  (bis Dialoge und Popups) (nicht `references/`, `spec/`, `docs/`, Paketquelltext); REA `README.md` (Anfang bis FAQ) und `DISCLAIMER.md` (nicht `docs/`, nicht der Quelltext); vercel-labs/skills `README.md` (bis zur
+  Agententabelle) und `skills/find-skills/SKILL.md`; Orca `README.md` und die Wegweiser `orchestration`, `orca-cli`, `orca-per-workspace-env` (nicht `skill-guides/`, nicht `docs/`). **Closed Source:** die App
+  von ego lite; was sie mit übernommenen Chrome-Daten tut, ist nicht prüfbar. Die Zuordnungen zu Kapitel 48, 40 und den Änderungsrunden in 9b sind eigene Überlegungen. Dass `npx skills add
+  hennebergwebdesign/design-skill` beide Skills dieses Repositories findet, ist abgeleitet und ungeprüft. Die Faustwerte für Installationen und Sterne (1.000, 100) sind Angaben von `find-skills`, nicht geprüft.
+  Die Aussage der Cloudflare-Quelle, ein Lauf finde etwa die Hälfte dessen, was wiederholte Läufe finden, und der Vergleich von ego lite mit `agent-browser` (bis zu 2,5-mal schneller) sind Herstellerangaben.
+  Das Skript `deslop-check.mjs` ist nicht erweitert: SlopMonster bewertet gestapelte Bindestrich-Komposita und Semikolondichte, was im Deutschen kein Merkmal ist.
 - Version 4.21.0: Die Kapitel 50 bis 54, `arbeitsdisziplin.md`, `browser-pruefung-mit-playwright-cli.md`, `sicherheitspruefung.md`,
   `zahlungen-umsetzung.md`, die Vorlagen `fingerabdruecke.md`, `zahlung-rechtsbausteine.md` und `assets/stripe/` sind an keinem Projekt
   erprobt, das Δ ist eine Vermutung. Die vier neuen Evalfälle (`schluessel-im-chat-nicht-verwenden`, `zahlung-im-webhook-erfuellen`,
@@ -383,6 +395,19 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Änderungsverlauf
 
+- **11.10.2026, Version 4.22.0** Auf Wunsch des Inhabers sechs Quellen eingearbeitet, alle MIT: `ItsssssJack/SlopMonster`, `cloudflare/security-audit-skill`, `citrolabs/ego-lite`, `morluto/rea`,
+  `vercel-labs/skills`, `stablyai/orca`. Alle destilliert oder beschrieben, nichts mitgeliefert, die Originale nur als Befehle im Installer. **Eingearbeitet:** Kapitel 51 Abschnitt 7a (Kontext vor den Mustern,
+  Zweitdurchgang durch ein Modell anderer Herkunft, Prüfwert ist kein Urteil) mit der Vorlage `textueberarbeitung-zweitmodell.md`; `sicherheitspruefung.md` Abschnitt 6a (Beratung gegen Vollprüfung, drei Befundstufen,
+  Schweregradanker, neun Prüfregeln, Prüfklassen für Clientseite und Auslieferung); `browser-pruefung-mit-playwright-cli.md` Abschnitt 6a (ego-browser); `firecrawl-recherche.md` (REA, mit Grenze);
+  `arbeitsdisziplin.md` Abschnitte 9a (fremde Skills vor der Installation prüfen) und 9b (parallele Arbeit in getrennten Arbeitsbäumen, Gestaltungsmodus). **Entschieden:** (1) Der Zweitdurchgang durch ein anderes
+  Modell ist erlaubt, aber nur mit Wissen des Kunden und Auftragsverarbeitung; SlopMonsters `cleanse.sh` wird nicht mitgeliefert, weil es Text ohne menschliche Entscheidung an einen Anbieter schickt. In Version 4.18 war
+  SlopMonster als Pflichtwerkzeug ausgeschlossen; das bleibt, es ist jetzt als Ablauf destilliert. (2) Der Strich bleibt verboten, auch wenn die Quelle ihn als angemessene Zeichensetzung ansieht. (3) Der Prüfwert von
+  `deslop-check.mjs` ist ein Hinweis, keine Sperre der Auslieferung. (4) Die Cloudflare-Disziplin gilt für die Prüfung von Hand und für den Tiefenscan; der volle Sechs-Phasen-Ablauf nur auf ausdrücklichen Auftrag. Die eigene
+  Vorschau mit Testdaten bleibt Prüfumgebung, die Produktionsadresse des Kunden ist nie Ziel. (5) ego-browser ist ein Ausnahmewerkzeug für Aufgaben, die eine echte Anmeldung brauchen; Standard bleiben Skript und `playwright-cli`.
+  Die App ist Closed Source, deshalb entscheidet die Agentur vor dem Einsatz mit Kundenkonten über das Vertrauen. (6) REA wird nicht zum Nachbauen fremder Funktionen genutzt; das widerspricht Tor 1, Tor 2 und „Prinzip, nie Kopie".
+  (7) Kein Agent installiert einen Skill ohne Zustimmung des Nutzers. **Nicht übernommen:** `deslop.py`, `cleanse.sh`, die Beispiele von SlopMonster; sechs Phasen, Deckungsbuch, JSON-Schema und Prüfskripte von
+  Cloudflare; die Klartext-API und die Benchmarks von ego lite; Werkzeugkatalog und Fallstudien von REA; Agententabelle von `skills`; Anwendung, Koordination und Umgebungen von Orca. Kein Skript, kein Evalfall, 322 Tests
+  unverändert. Versionen: Plugin 4.22.0, Regelwerk 2.25.0, Bauablauf 2.22.0. Siehe `CREDITS.md`, Abschnitt „Version 4.22".
 - **11.10.2026, Version 4.21.0** Auf Wunsch des Inhabers sieben Quellen eingearbeitet: `nateherkai/scroll-craft` (MIT), `blader/humanizer` (MIT),
   `addyosmani/agent-skills` (MIT), `anthropics/claude-plugins-official` → `claude-security` (**proprietär, nicht übernommen**), `stripe/ai` →
   `stripe-best-practices` (MIT), `microsoft/playwright-cli` (Apache-2.0), `heygen-com/hyperframes` (Apache-2.0). Alle destilliert, nichts

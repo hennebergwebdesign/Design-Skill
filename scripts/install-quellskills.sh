@@ -93,6 +93,18 @@ installiere icon-set-generator "design-assets (jezweb)" \
 #   npx hyperframes skills update                                           # oder: claude plugin marketplace add heygen-com/hyperframes
 #   /plugin install claude-security@claude-plugins-official                 # Anthropic, proprietaer, nur selbst installieren, nie weitergeben
 
+# Version 4.22: sechs weitere Quellen sind destilliert (51, sicherheitspruefung.md, browser-pruefung-mit-playwright-cli.md,
+# firecrawl-recherche.md, arbeitsdisziplin.md), bewusst NICHT voreingestellt. Auch hier gilt: mit dem Original im Kontext
+# pendelt ein Modell an den Stellen, an denen es dem Regelwerk widerspricht (Gedankenstrich in SlopMonster, Live-Sonden und
+# Bericht als JSON bei Cloudflare, Nachbauen fremder Funktionen bei REA). Auf ausdruecklichen Wunsch einzeln, die Befehle
+# stammen aus den READMEs und sind nicht gelaufen. Jeden Skill vorher lesen (arbeitsdisziplin.md, Abschnitt 9a):
+#   npx --yes skills add ItsssssJack/SlopMonster --agent claude-code        # englischer Pruefer, nur zur Ansicht
+#   npx --yes skills add https://github.com/cloudflare/security-audit-skill --skill security-audit --agent claude-code
+#   npx --yes skills add citrolabs/ego-lite --agent claude-code             # Skill ego-browser, der Browser selbst ist Closed Source, nur macOS
+#   npx --yes skills add vercel-labs/skills --skill find-skills --agent claude-code
+#   npx rea-agents setup                                                    # MCP-Server REA, schreibt in die Agentenkonfiguration, nur mit Zustimmung
+#   Orca (stablyai/orca): Desktopanwendung zum Herunterladen, kein Skill; Wegweiser unter skills/ im Repository
+
 # Suchtreffer in den Skilldaten vermeiden: Nachschlagewerke, keine Projektquellen.
 if ! grep -q "\.claude/skills" .gitattributes 2>/dev/null; then
   printf ".claude/skills/** linguist-vendored linguist-generated -diff\n" >> .gitattributes
@@ -126,6 +138,12 @@ echo "  Version 4.21                scroll-craft, humanizer, agent-skills, strip
 echo "                              playwright-cli, hyperframes sind destilliert (Kapitel 50 bis 54,"
 echo "                              arbeitsdisziplin.md). claude-security (Anthropic) ist proprietaer"
 echo "                              und nur zum Selbstinstallieren beschrieben (52, Abschnitt 11)."
+echo "                              Befehle auf Zuruf stehen oben im Skript."
+echo
+echo "  Version 4.22                SlopMonster, cloudflare/security-audit-skill, ego-lite, REA,"
+echo "                              vercel-labs/skills, Orca sind destilliert oder beschrieben (51,"
+echo "                              sicherheitspruefung.md 6a, browser-pruefung-mit-playwright-cli.md 6a,"
+echo "                              firecrawl-recherche.md, arbeitsdisziplin.md 9a und 9b)."
 echo "                              Befehle auf Zuruf stehen oben im Skript."
 echo
 echo "Hinweis: shadcn/ui bringt seinen Skill über die eigene CLI mit."

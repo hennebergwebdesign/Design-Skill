@@ -141,9 +141,19 @@ Das Fehlen ist kein Blocker, im Bericht aber als eingeschränkte Erfassung zu be
 * **Beides zusammen** bei einem Relaunch mit gleichzeitiger Neuausrichtung: erst
   `relaunch-inventory.mjs` für das, was bleiben muss, dann die Referenzrecherche für die neue
   Richtung.
+* **Tiefenanalyse der eigenen Anwendung oder Seite mit REA** (`morluto/rea`, MIT, Stand 11.10.2026; nur beschrieben, nicht mitgeliefert, nicht ausgeführt). REA
+  verbindet einen Agenten über MCP mit Werkzeugen, die Binärdateien, JavaScript- und Electron-Anwendungen, Websites (Seitenstruktur, Skripte, Netzwerkbeobachtung, Bildschirmfoto, mit einem
+  Chrome-Browser), gespeicherte Netzwerkmitschnitte (HAR) und .NET-Bibliotheken zerlegen. Für die Agentur ist das in engen Fällen nützlich: ein **Relaunch**, bei dem niemand mehr weiß, was die
+  alte Seite lädt oder wohin sie Daten schickt (Skripte, Tracker, Formularziele), und die **Sicherheitsprüfung des eigenen Bundles** (`sicherheitspruefung.md`: welche Skripte und Verbindungen enthält `dist/`
+  wirklich). Voraussetzung ist, dass die Seite oder Anwendung dem Kunden gehört oder die Prüfung ausdrücklich beauftragt ist. Die Einrichtung (`npx rea-agents setup`) schreibt in die Konfiguration des
+  Agenten und legt Sicherungen an; sie braucht die Zustimmung des Nutzers und wird nie vom Agenten selbst angestoßen.
 
 ## Grenzen, die nicht verhandelbar sind
 
+* **REA nicht zum Nachbauen einer fremden Funktion.** Die Quelle wirbt mit „eine Funktion sehen, verstehen, in das eigene Produkt bauen". Das ist hier ausgeschlossen: Eine fremde Seite oder App wird
+  weder zerlegt noch ausgelesen, ohne dass der Weg über Tor 1 (Freigabe der Referenz) und Tor 2 (Aufnahme als Muster) lief, und auch nach einer Freigabe wird kein Code, kein Text und keine Bildquelle
+  übernommen, sondern ein Prinzip benannt (siehe unten, „Prinzip, nie Kopie"). Die eigene Haftungsklausel der Quelle (`DISCLAIMER.md`) schließt das Umgehen von Schutzmaßnahmen, das Kopieren geschützter
+  Software und das Zugreifen auf Systeme ohne Erlaubnis aus; das Urheber- und Vertragsrecht regelt der Nutzer, nicht dieses Repository (hier nicht rechtlich geprüft).
 * **Rohmaterial, kein Liefergegenstand.** Alle Ausgaben (`.relaunch-inventory/`,
   `.design-scan/`, `.designrecherche/`) enthalten fremde Texte, Bildadressen und teilweise
   Screenshots der fremden Seite. Sie gehören in die `.gitignore` des Kundenprojekts und nie in
