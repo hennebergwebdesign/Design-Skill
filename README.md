@@ -80,6 +80,13 @@ Sicherheitsskill von Agent Skills und dem Sicherheitsteil des Stripe-Skills ents
 installiert. Playwright CLI wird zum Erkundungswerkzeug (`browser-pruefung-mit-playwright-cli.md`), HyperFrames zum Werkzeug für Video und
 Animationssequenzen (Kapitel 54). Nichts davon ist an einem echten Projekt erprobt, Einzelheiten und Lizenzen in `CREDITS.md`.
 
+**Sechs weitere Quellen, destilliert oder beschrieben (Version 4.22).** SlopMonster liefert den Rahmen um das Entmaschinisieren: Kontext vor den Mustern, ein zweiter
+Durchgang durch ein Modell anderer Herkunft mit Vorlage, und die Einsicht, dass ein Prüfwert kein Urteil ist (Kapitel 51, Abschnitt 7a). Der Sicherheitsskill von Cloudflare liefert
+Betriebsarten, die drei Befundstufen (bestätigt, zu klären, verworfen), Schweregradanker und die Prüfdisziplin (`sicherheitspruefung.md`, Abschnitt 6a). ego lite ist als Browser mit den
+Anmeldungen des Nutzers beschrieben, mit Regeln und dem Hinweis, dass die App Closed Source ist. REA ist als Tiefenanalyse der eigenen Anwendung beschrieben und für das Nachbauen fremder Funktionen
+ausgeschlossen. `vercel-labs/skills` liefert die Prüfung vor der Installation eines fremden Skills, Orca die Arbeitsweise mit getrennten Arbeitsbäumen (`arbeitsdisziplin.md`, Abschnitte 9a und 9b).
+Nichts davon ist an einem echten Projekt erprobt, Einzelheiten und Lizenzen in `CREDITS.md`.
+
 **Vorlagen zum Übernehmen** statt Beschreibungen zum Nachbauen.
 
 ```

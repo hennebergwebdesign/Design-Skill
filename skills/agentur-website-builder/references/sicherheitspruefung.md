@@ -11,6 +11,7 @@ einsortiert wird und was in den Bericht gehört. Zahlungen haben zusätzlich `za
 - 4\. Missbrauch von Hand testen
 - 5\. Ein Schlüssel ist aufgetaucht
 - 6\. Tiefenscan mit dem Plugin claude-security
+- 6a. Gestufte Prüfung nach dem Muster von Cloudflare
 - 7\. Übergabe
 - 8\. Bericht
 
@@ -98,6 +99,82 @@ Weitergaberecht und liegt deshalb nicht in diesem Repository.
 * Funde sind Hinweise, die ein Mensch bewertet; Patchdateien werden gelesen, gegen die harten Grenzen geprüft und erst dann angewendet. Das Plugin ändert nichts selbst.
 * Nicht gelaufen und nicht gemessen; der Nutzen ist hier eine Vermutung.
 
+## 6a. Gestufte Prüfung nach dem Muster von Cloudflare
+
+Aus dem Repository `cloudflare/security-audit-skill` (MIT, Stand 11.10.2026), dem Skill, aus dem Cloudflares Werkzeug zur Schwachstellensuche hervorging. Er ist als Ablauf für ein
+ganzes Repository gebaut (Aufklärung, Suche in Wellen, Gegenprüfung, strukturierter Bericht). Für eine Kundenseite ist der volle Ablauf fast immer zu groß. Übernommen sind die **Disziplin** und
+die **Befundstufen**; sie gelten auch für die Prüfung von Hand und für den Tiefenscan aus Abschnitt 6. Die Übertragung auf Astro und Cloudflare Pages ist eigene Zusammenstellung.
+
+**Zwei Betriebsarten.**
+
+| Art | Wann | Was entsteht |
+|---|---|---|
+| Beratung | Normalfall: Frage zur Sicherheit, Prüfung einer Änderung, ein bestimmter Verdacht, Abschnitte 2 bis 4 | eine Antwort oder ein Absatz im Bericht, keine neuen Dateien |
+| Vollprüfung | nur auf ausdrücklichen Auftrag („Sicherheitsaudit", „Pen-Test"), bei Zahlung, Anmeldung, Dashboard oder Leadsystem | Berichtsdateien außerhalb des Repositories; Ordner, den die Versionsverwaltung nicht erfasst |
+
+Ist offen, welche der beiden gemeint ist, eine gezielte Frage stellen, bevor Dateien entstehen. Der Ordner mit den Ergebnissen liegt **außerhalb** des Projekts oder in einem
+ausgeschlossenen Ordner (`.gitignore`), weil Berichte Pfade, Auszüge und Verdachtsmomente enthalten.
+
+**Drei Befundstufen.** Ein Fund steht in genau einer.
+
+| Stufe | Voraussetzung | Schweregrad |
+|---|---|---|
+| bestätigt | vollständiger Pfad im Quelltext von der Eingabe bis zur Wirkung und ein begrenzt beobachtetes Ergebnis | ja, nur hier |
+| zu klären | eine **genau benannte** Tatsache, die außerhalb des Quelltexts liegt (Einstellung im Dashboard, DNS, Zugriffsregel, Zustand beim Anbieter), dazu ein sicherer Weg, sie zu klären | nein, nie |
+| verworfen | der Verdacht ist widerlegt; er bleibt vermerkt, damit er nicht erneut gemeldet wird | entfällt |
+
+Ein Fund ohne diese Angaben ist ein Härtungshinweis, kein Fund: **wer** (geringeres Vertrauen) über **welche Eingabe** an der **Kontrolle** vorbei **welche Grenze** überschreitet und **was**
+dadurch passiert. Ein fehlender Header allein, ein vermutetes Verhalten des Hosters, eine Absturzstelle ohne Wirkung und Schaden, den man sich nur selbst zufügt, sind keine
+bestätigten Funde. Ist eine Schicht A wirksam, ist das Fehlen von Schicht B ein Hinweis zur Härtung.
+
+**Was nicht im Quelltext steht, wird weder angenommen noch ausgeschlossen.** Regeln im Cloudflare-Dashboard (Ratenbegrenzung, WAF, Zugriffsregeln, Header per Regel), DNS und die
+Einstellungen von Resend oder Stripe sind echte Kontrollen und stehen nicht im Repository. Fehlt eine, heißt der Befund „zu klären" mit der Frage an den Inhaber („Gibt es für `/api/kontakt` eine Regel zur
+Ratenbegrenzung im Dashboard?"), nicht „fehlt" und nicht „vorhanden".
+
+**Schweregrad nach Schaden, nicht nach Gefühl.** Die Anker der Quelle, übertragen:
+
+| Stufe | Anker der Quelle (sinngemäß) | Beispiel für eine Kundenseite (eigene Übertragung) |
+|---|---|---|
+| kritisch | Ohne Anmeldung Codeausführung, voller Datenzugriff oder Übernahme beliebiger Konten | Eine offene Route liefert alle Leads oder erlaubt Befehle auf dem Server |
+| hoch | Eine ausdrückliche Sicherheitskontrolle fällt vollständig, mit echten Folgen | Webhook ohne Signaturprüfung meldet Bestellungen als bezahlt; gespeichertes Skript trifft andere Besucher |
+| mittel | echte Grenzverletzung mit kleiner Reichweite oder ungewöhnlichen Voraussetzungen | Mail-Kopfzeile lässt sich über das Namensfeld erweitern, aber nur auf eine feste Empfängerliste |
+| niedrig | Preisgabe unkritischer Interna oder dauerhafter Aufwand für wenig Gewinn | Version eines Pakets in einer Antwort sichtbar |
+| Hinweis | bestätigt, aber kaum Wirkung, nützlich als Baustein eines größeren Fundes | Quellkarten ausgeliefert, ohne dass Geheimnisse darin stehen |
+
+Die Trennfrage zwischen hoch und mittel: Hebt das gezeigte Ergebnis eine ausdrückliche Kontrolle für eine Handlung mit echten Folgen **ganz** auf, oder schwächt es sie nur? Wer den
+konkreten Schaden nicht nennen kann, vergibt eine niedrigere Stufe, als es sich anfühlt.
+
+**Regeln der Prüfung.**
+
+1. **Wer sucht, prüft nicht.** Jeden Fund liest ein Prüfer, der ihn nicht gefunden hat, mit dem Auftrag, ihn zu widerlegen (`arbeitsdisziplin.md`, Abschnitt 8, ohne die Schlussfolgerung mitzugeben). Ein Fund ohne diese Gegenprüfung ist ein Verdacht.
+2. **Bericht erst nach der Gegenprüfung**, und Text und Datensatz stimmen überein. Vorher kein Bericht.
+3. **Code nur in einer Sandbox ausführen.** Gilt für Fremdcode (Relaunch, Vorlage, Fund aus dem Netz): kein Netz nach außen (höchstens ein abgeschlossenes lokales Netz), eine leere Umgebung mit ausdrücklich freigegebenen harmlosen Werten, das Ziel nur lesbar, Schreiben nur in einen zugewiesenen Arbeitsordner, feste Grenzen für Rechenzeit, Speicher, Prozesse und Laufzeit. Lässt sich eine dieser Bedingungen nicht erzwingen, **wird nicht ausgeführt**: Befund „zu klären" mit der fehlenden Sandbox als Grund und einem sicheren Prüfweg.
+4. **Nie gegen Live-Systeme.** Keine Sonden gegen ausgelieferte Endpunkte Dritter, gegen gemeinsame Dienste, echte Konten, Produktionsdaten oder kostenpflichtige Kontingente; keine Belastungstests gegen eine laufende Instanz. Zu Abschnitt 4: Die **eigene Vorschau** mit Testdaten und Testschlüsseln ist die lokale Prüfumgebung der Agentur und bleibt erlaubt. Die Produktionsadresse des Kunden gehört nicht dazu.
+5. **Platzhalter statt echter Daten.** Dummy-Konten, Testschlüssel, erfundene Datensätze. Echte Zugangsdaten tauchen in keinem Befehl und keinem Bericht auf (Abschnitt 5).
+6. **Nicht über das Minimum hinaus.** Ein Ergebnis wird auf den kleinsten Beleg begrenzt (falscher Rückgabewert, fremder Testdatensatz, abweichende Antwort der Regel). Keine Verkettung bis zum Schadensbild, kein Material zum Dauerzugriff.
+7. **Die kleinste wirksame Korrektur.** Je bestätigtem Fund: die Bedingung benennen, die der Code durchsetzen muss, die engste Änderung an der letzten vertrauenswürdigen Entscheidungsstelle und einen Test, der die Lücke künftig fängt. Die Prüfung ändert den Quelltext nicht selbst; die Korrektur ist ein eigener Schritt, den ein Mensch freigibt.
+8. **Erneute Läufe sind additiv.** Frühere Befunde werden nur übernommen, wenn der betroffene Quelltext unverändert ist; ein früher „verworfener" Verdacht unterdrückt nur genau diese widerlegte Behauptung, nicht die Prüfung des Bereichs. Die Quelle berichtet, ein einzelner Lauf habe in ihren Tests etwa die Hälfte dessen gefunden, was wiederholte Läufe zusammen fanden; das ist eine Aussage der Quelle, hier nicht gemessen.
+9. **Eine Deckungsaussage, nie „sicher".** Der Bericht sagt, welche Teile in welcher Tiefe geprüft sind und welche nicht, und ob ein Lauf eine Teilprüfung war. Ein Lauf ohne frühere Ergebnisse sagt das ausdrücklich.
+
+**Prüfklassen, die für eine Kundenseite zählen.** Auswahl aus den Begleitdateien der Quelle (Gerüst, Clientseite, Cloud und Auslieferung), je mit der Grenze, die die Quelle zieht. Alles, was die
+Quelle sonst behandelt (Speicherzugriff, Protokolle, RPC, Mandantentrennung, Lieferkette, Verbrauch), ist hier nicht gelesen oder für eine statische Seite unerheblich.
+
+| Klasse | Prüfen | Kein Fund, wenn |
+|---|---|---|
+| Ereignisquelle nicht geprüft | Webhook oder Rückruf vertraut Feldern im Körper als Absender, ohne Signatur, Konto und Wiederholungsschutz zu prüfen | Signatur über den Rohkörper, Zeitfenster und Ereignis-ID geprüft (`zahlungen-umsetzung.md`) |
+| Weitergeleitete Identität | Header wie `X-Forwarded-For` oder Identitätsfelder werden ausgewertet, obwohl sie jeder Aufrufer setzen kann | Nachweislich vom vorgeschalteten Dienst gesetzt und alle anderen Wege versperrt |
+| Geheimnis offengelegt | Schlüssel in Protokoll, Antwort, Bundle, öffentlicher Variable, Vorschau-Build | Es ist nur ein **Verweis** auf ein Secret, oder der Wert ist ohnehin öffentlich (Schlüssel für die Anzeige) |
+| Vorrang der Konfiguration | Entwicklungswerte, Vorschau gegen Produktion, Umgebungsvariablen schalten Schutz ab | Für jede ausgelieferte Umgebung geprüft, nicht nur für die Grunddatei |
+| Zustandsänderung per Rahmen | Eine Aktion, die etwas ändert, lässt sich in einem fremden Rahmen auslösen (`frame-ancestors` fehlt) | Die Seite ist reiner Lesetext |
+| Nachrichten zwischen Fenstern | `postMessage`-Empfänger (Consent, Karten, Einbettungen) führt etwas aus, ohne die Herkunft **genau** zu vergleichen | Exakter Vergleich der Herkunft, nicht Teilstring, Präfix oder Endung |
+| Markup aus Eingaben | `location`, `referrer`, Speicher oder Nachrichtendaten laufen in `innerHTML` und ähnliche Senken | Das Framework maskiert, oder die Quelle ist eine eigene Konstante |
+| Browserspeicher und Service Worker | Persönliche Antworten im Cache, Token oder Entwürfe bleiben nach Abmeldung lesbar (nur Dashboard) | Ein Token im Speicher allein, ohne Leser mit weniger Rechten |
+| Fremder Ursprung mit Anmeldedaten | CORS spiegelt die Herkunft und erlaubt Anmeldedaten | Nur ein Platzhalter ohne Anmeldedaten |
+| Offene Weiterleitung | Parameter `redirect`, `return`, `next`, `url` wird ungeprüft in eine Weiterleitung gesetzt | Nur gleiche Herkunft erlaubt |
+| Basis-Checks | Schlüsselartige Zeichenketten, `TODO: auth`, Debug-Schalter, Test-Zugangsdaten, `.env` im Repository, offene Routen `/debug`, `/admin`, `/env`, Cookies ohne `HttpOnly`/`Secure`/`SameSite`, Stacktraces in Antworten | Der Treffer ist verfolgt: Ein Cookie ohne `HttpOnly` ist nur dann ein Befund, wenn es Sensibles trägt und das Skript es nicht lesen muss |
+
+Der Satz der Quelle zum Abschluss der Basis-Checks gilt für alle Zeilen: **Ein Treffer ist kein Fund; den ganzen Pfad verfolgen, bevor man ihn meldet.**
+
 ## 7. Übergabe
 
 * Zugänge zu Domain, DNS, Hosting, Mail, Stripe gehören dem Kunden, Zwei-Faktor-Anmeldung ist an (Authenticator-App oder Passkey, nicht per SMS); die Agentur ist Teammitglied mit der kleinsten Rolle, bis zur Übergabe, dann entfernt.
@@ -115,3 +192,9 @@ Audit (pnpm audit) gegen das Lockfile: 0 kritisch, 1 hoch (nur im Build erreichb
 Header per curl auf der Vorschau geprüft. Missbrauchsfälle der Formularroute von Hand getestet: 8 von 8.
 Nicht geprüft: Berechtigungen im Dashboard, Tiefenscan (nicht beauftragt), Zwei-Faktor-Anmeldung der Konten des Kunden.
 ```
+
+Die Befundstufen aus Abschnitt 6a gehören in dieselbe Berichtszeile: „bestätigt: n, zu klären: n (je mit der genauen Frage), verworfen: n".
+Nicht gelaufen: Der Ablauf nach Cloudflare ist an keinem Kundenprojekt erprobt, das Δ ist eine Vermutung; gelesen sind `SKILL.md`, `README.md`, `ATTACK-CLASSES.md`,
+`CLIENT-SIDE.md`, `CLOUD-AND-DEPLOYMENT.md`, der Anfang von `VALIDATION-AND-REPORTING.md` und die Einleitung von `SUPPLY-CHAIN-AND-RELEASE.md`; nicht gelesen sind `HUNTING.md`,
+`RECONNAISSANCE.md`, die übrigen Begleitdateien, `report-schema.json` und die beiden Prüfskripte (`validate-findings.cjs`, `validate-coverage-ledger.cjs`). Die Prüfskripte der Quelle sind nicht
+mitgeliefert: Sie prüfen eine Berichtsdatei in einem Format, das dieses Repository nicht führt.

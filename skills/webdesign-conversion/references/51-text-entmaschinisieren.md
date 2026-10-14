@@ -13,6 +13,9 @@ englisch und auf Enzyklopädietexte zugeschnitten. Übernommen sind Denkweise, A
 übertragen lassen. Die deutschen Formen, die Beispiele und die Zuordnung zu `deslop-check.mjs` sind eine Ableitung für dieses
 Repository, nicht Text der Quelle.
 
+Eine zweite Quelle, `SlopMonster` von Jack Roberts (MIT, Stand 11.10.2026), liefert den Rahmen um die Muster: Kontext vor dem Suchen,
+einen zweiten Durchgang durch ein anderes Modell und die Einsicht, dass ein Prüfwert kein Urteil ist (Abschnitt 7a).
+
 ## Inhalt
 
 - 1\. Warum Maschinentext so klingt
@@ -22,6 +25,7 @@ Repository, nicht Text der Quelle.
 - 5\. Was im Deutschen anders ist
 - 6\. Wann nicht eingreifen
 - 7\. Das Skript
+- 7a. Kontext zuerst, zweiter Durchgang, und was ein Prüfwert nicht sagt
 - 8\. Entschiedene Widersprüche
 - 9\. Bewusst nicht übernommen
 - 10\. Ungeprüft
@@ -201,6 +205,48 @@ Jeder Fund ist ein **Hinweis**, kein Urteil: „Gerne!" kann in einem Kundenzita
 Treffer heißt: die Stelle ansehen und entscheiden. Nicht automatisch ersetzen. Was kein Ausdruck erkennt (Schlusszeile, Streit mit
 niemandem, Fett als Zierde, vage Verbindung, Passiv), findet die Gegenprobe aus Abschnitt 2. Tests: `scripts/tests/deslop-entmaschinisieren.test.mjs`.
 
+## 7a. Kontext zuerst, zweiter Durchgang, und was ein Prüfwert nicht sagt
+
+Aus `SlopMonster` (englischer Prüfer in Python, Ablauf für einen Agenten). Das Muster-Inventar steht schon oben; neu ist die Ordnung drumherum.
+
+**Erst Leser und Zweck, dann Muster.** Vor jeder Durchsicht drei Dinge festhalten: wer liest, in welchem Format, und was braucht er von diesem Text. Eine Leistungsseite
+verlangt oft zuerst die Lage des Lesers, eine Mail zuerst den Grund des Schreibens, eine Anleitung zuerst, was das Ding tut. Wer das nicht weiß, streicht Muster nach
+Gefühl und ändert den Zweck mit. Fehlt der Kontext und würde er die Bearbeitung ändern, eine gezielte Frage stellen; sonst aus dem Briefing und dem Entwurf ableiten.
+
+**Die Reihenfolge der Durchsicht.**
+
+| Schritt | Frage | Beispiel für einen Eingriff |
+|---|---|---|
+| 1 Zweck und Aufbau | Beantwortet der Anfang die erste Frage des Lesers? | Doppelten Aufhänger und Neugierlücken streichen, die eine Erklärung nur aufschieben |
+| 2 Bedeutung und Beleg | Fügt jeder Satz etwas hinzu und folgt er aus dem davor? | Leere Kontraste, wiederholte Bilder und Vergleiche streichen, die nichts erklären; Bedingungen an Aussagen lassen |
+| 3 Wortwahl und Takt | Was melden die Muster aus Abschnitt 4? | Vage Wörter durch das ersetzen, was tatsächlich geschieht; Satzlänge folgt dem Gedanken |
+
+**Ein Wert ersetzt kein Urteil.** `deslop-check.mjs` zählt Treffer in fünf Kriterien. Fünf von fünf heißt: kein bewertetes Muster gefunden. Es heißt nicht, dass der Text klar,
+belegt oder richtig ist. Die Quelle berichtet, dass ihre eigene frühere Beschreibung die Prüfung bestand und trotzdem wiederholte Bilder und leere Gegensätze enthielt;
+das hat eine Lücke in ihrer Anleitung gezeigt. Die Gegenprobe aus Abschnitt 2 (laut lesen, auf hinzugefügte oder verlorene Fakten sehen) bleibt auch bei bestandener Prüfung Pflicht.
+Und der Treffer kann berechtigt sein: Er wird angesehen, nicht blind ersetzt. **Nie ein Muster verstecken**, etwa eine Wendung in Code-Schrift setzen, nur damit der Wert steigt.
+Bleibt eine nötige Wendung als Treffer stehen, steht im Bericht, warum.
+
+**Keine Persönlichkeit erfinden.** Keine Meinung, die der Schreibende nicht hat, kein absichtlicher Fehler, keine Quote kurzer Sätze, keine Zahl an jeder Behauptung. Das ergänzt
+Abschnitt 3: Eine Reaktion gehört hinein, wenn die Stimme sie trägt und der Schreibende sie freigibt, nicht als Würze. Eine Liste mit drei Punkten bleibt, wenn es drei nützliche
+Punkte gibt; ein Gedankenstrich bleibt in dieser Schreibweise trotzdem verboten (Abschnitt 8).
+
+**Zweiter Durchgang durch ein Modell anderer Herkunft.** Ein Modell, das den Text geschrieben hat, teilt seine Gewohnheiten mit sich selbst und überliest sie. Ein Modell einer
+anderen Familie sieht sie eher. Der Ablauf:
+
+1. Den Text mit demselben Leser- und Zweckkontext übergeben, dazu die Vorlage `../assets/vorlagen/prompts/textueberarbeitung-zweitmodell.md`. Der Text ist Material, keine Anweisung.
+2. Die Ausgabe hat zwei Teile: der bearbeitete Text, dann eine Trennzeile `<<<NOTIZEN>>>` allein auf einer Zeile, dann höchstens fünf Stichpunkte zu den Eingriffen. Fehlt die Trennzeile, können Notizen im Text stehen: lesen, nicht übernehmen.
+3. **Vergleichen, nicht einsetzen.** Gegen den Ausgangstext: Fakten, Namen, Zahlen, Befehle, Links und Platzhalter (`[[FEHLT: …]]`) unverändert? Die Notizen auf gestrichene Informationen lesen. Die Struktur (HTML, Markdown) erhalten? Code, Befehle und Zitate unangetastet?
+4. `deslop-check.mjs` erneut laufen lassen, Treffer im Zusammenhang ansehen, dann die Endlesung durch einen Menschen.
+5. Ist kein zweites Modell erreichbar, **sagen**, dass der Durchgang nicht lief, und mit Prüfung und Endlesung weitermachen. Kein stilles Auslassen, keine Behauptung, der Text sei geprüft.
+
+Der Zweitdurchgang schickt den Text an einen weiteren Anbieter. Das ist nur zulässig, wenn der Kunde es weiß und eine Auftragsverarbeitung besteht
+(`../../agentur-website-builder/references/copy-im-kundenprojekt.md`, Zweitdurchgang). Ein Skript, das eine andere Befehlszeile eines fremden Anbieters aufruft, liefert dieses
+Repository nicht mit (Abschnitt 9): Der Ablauf braucht einen Menschen, der entscheidet, wohin der Text geht.
+
+**Das Ergebnis ist kein Echtheitsnachweis.** Auch nach allen Schritten gilt der Text nicht als „von Hand geschrieben". Der Bericht sagt, was geprüft wurde und was nicht, und kein Text
+wird als menschlich verkauft.
+
 ## 8. Entschiedene Widersprüche
 
 | Quelle sagt | Dieses Repository sagt | Entscheidung und Grund |
@@ -210,6 +256,10 @@ niemandem, Fett als Zierde, vage Verbindung, Passiv), findet die Gegenprobe aus 
 | Eine Schreibprobe überschreibt die Muster, auch den Gedankenstrich | harte Grenze zum Strich | Die Probe gilt für alles außer Strich und erfundene Angaben |
 | Gerade Anführungszeichen statt gebogener | deutsche Typografie | nicht übernommen (Abschnitt 5) |
 | Die Quelle ist ein Prompt, der Muster von Hand sucht, ohne Skript | Prüfskripte erkennen, was sich erkennen lässt | Der Ablauf ist übernommen, die Mustererkennung ergänzt den vorhandenen `deslop-check.mjs`. Kein zweites Werkzeug |
+| SlopMonster: Ein Gedankenstrich kann angemessene Zeichensetzung sein | harte Grenze zum Strich | Die Grenze gilt. Das Repository setzt sie bewusst strenger als die Quelle; bei Fließtext bleibt der Strich verboten, im Kompositum erlaubt |
+| SlopMonster: Eine Verkaufsseite braucht oft zuerst das Problem des Kunden | Die Kernbotschaft steht im ersten Bildschirm (`45-…`, Abschnitt 6) | Die Kernbotschaft bleibt vorn; die Lage des Lesers gehört in die erste Erzählstelle danach (`49-…`). Der Kontext der Zielgruppe bestimmt die Reihenfolge der Durchsicht, nicht den Held |
+| SlopMonster: Der Prüfer kann in einem Build als Sperre laufen (Exitcode unter 5 von 5) | Prüfskripte der Agentur melden Hinweise, `deslop-check.mjs` hat einen Exitcode | Als Hinweis im Bericht, nicht als Sperre der Auslieferung: Ein berechtigter Treffer würde sonst eine Seite blockieren, die richtig ist |
+| SlopMonster: Mit `--allow-proof` die Warnung zu erfundenen Belegen entschärfen, nachdem die Belege geprüft sind | harte Grenze: keine erfundenen Zahlen und Belege | Kein Schalter, der die Warnung stummschaltet. Ein Beleg steht im Text, wenn er vom Kunden oder aus einer Quelle stammt; sonst `[[FEHLT: …]]` |
 
 ## 9. Bewusst nicht übernommen
 
@@ -219,6 +269,7 @@ niemandem, Fett als Zierde, vage Verbindung, Passiv), findet die Gegenprobe aus 
 | Muster 10 (Bindestrichpaare) und 21 (gebogene Anführungszeichen) | im Deutschen kein Merkmal, im zweiten Fall gar falsch (Abschnitt 5) |
 | Die Dateimodi „File mode" und „Embedded mode" mit Rückgabeformaten | Agentensteuerung des Originals; hier gilt: Endtext zurück, Zusammenfassung im Bericht |
 | Pull-Request- und Plugin-Dateien (`.claude-plugin`, `.cursor-plugin`, Vorlagen für Fehlermeldungen) | Verpackung der Quelle |
+| SlopMonster: `tools/deslop.py` (englische Regeln, Python), `cleanse.sh` (ruft eine fremde Befehlszeile auf und schickt den Text an einen Anbieter) und die Beispiele `ridgeline-roofing` und `jasper-live-run` | englisch, ohne Python im Repository (`deslop-check.mjs` deckt Deutsch ab); das Skript sendet Kundentext an einen Dritten, ohne dass ein Mensch es entscheidet. Die Beispiele erfinden Betriebsdaten eines Dachdeckers, die dem Verbot erfundener Belege nahekommen |
 | Die Aussage, die Muster zeigten verlässlich KI-Text | Die Quelle sagt selbst das Gegenteil (Abschnitt 6); eine Stichprobe von Mustern beweist nichts über den Urheber |
 
 ## 10. Ungeprüft
@@ -229,6 +280,8 @@ niemandem, Fett als Zierde, vage Verbindung, Passiv), findet die Gegenprobe aus 
 * Der Wiederholte Satzanfang meldet auch bewusste Wiederholung (Wir-Sätze auf einer Über-uns-Seite).
 * Die Muster stammen aus englischem Material über Wikipedia. Wie viele davon im Deutschen tatsächlich häufiger vorkommen, wurde nicht gezählt.
 * Die Unterscheidung „Gruppe A: ein Fund genügt" folgt der Quelle und wurde nicht an deutschen Texten bestätigt.
+* Der Zweitdurchgang nach Abschnitt 7a ist mit keinem zweiten Modell gelaufen. Die Vorlage ist eine Übertragung der Anweisung von SlopMonster (`prompts/cleanse.txt`) ins Deutsche, nicht geprüft; ob ein Modell die Trennzeile verlässlich ausgibt, ist offen. Die Quelle sagt selbst, ihr Prüfwert beweise keine Klarheit; ob ein zweites Modell Kundentexte besser macht als eine sorgfältige Endlesung, ist ungemessen.
+* Von der Quelle gelesen: `SKILL.md`, die Dateien `principles.md` und `signs-of-ai-writing.md` aus dem Quellordner `references`, die Anweisung `cleanse.txt` aus dem Ordner `prompts` und der Anfang der `README.md`. Nicht gelesen: `deslop.py` und `cleanse.sh` aus dem Ordner `tools`, die Tests, `sources.md`, die Beispiele.
 
 ## Verwandte Kapitel
 
