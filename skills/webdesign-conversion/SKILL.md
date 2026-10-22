@@ -4,7 +4,7 @@ description: "Vollständiges System für conversion-orientiertes Webdesign im DA
 license: MIT
 metadata:
   author: Henneberg Webdesign
-  version: 2.25.0
+  version: 2.26.0
 ---
 
 # Webdesign Conversion System
@@ -97,7 +97,8 @@ Lies gezielt nach, statt alles zu laden.
 | Neues Projekt, Kickoff, Angebot | `00-fahrplan.md`, dann das Playbook |
 | Zielgruppe, USP, Einwände | `01-strategie-positionierung.md` |
 | Headlines, Buttontexte, Fehlermeldungen, Angebot, Einwände, Deutsch | `12-copywriting.md` |
-| CTA, Formulare, Trust, Über-uns-Seite | `06-conversion-architektur.md` |
+| CTA, Formulare, Trust, Über-uns-Seite, Seitenprüfung nach Wirkung, Pop-ups, Preisseiten | `06-conversion-architektur.md` |
+| Formulare im Detail: Felder, autocomplete, mehrstufige Anfragestrecken, Fehlerablauf | `58-formulare-und-anfragestrecken.md` |
 | Stellenanzeige, Karriereseite, EVP, AGG, Bewerberdaten | `19-recruiting-funnel.md` |
 | Recherche vor dem Text: acht Fragen, wie weit die Zielgruppe ist, Wortwahl aus öffentlichen Stimmen, Hebel | `01-strategie-positionierung.md`, Schritt 1.5 |
 | Wie lang die Seite wird und in welcher Folge (niedrige Hürde, hohe Hürde, Kauf mit Vorwissen), Belege früh und zweimal, offene Schleifen, Stakkato, „kostenlos" bei Premium | `45-huerde-laenge-und-leserfuehrung.md` |
@@ -108,6 +109,10 @@ Lies gezielt nach, statt alles zu laden.
 |---------|----------|
 | Hero, Navigation, Seitenaufbau, Scanverhalten, Buttons | `02-design-ux.md` |
 | Visuelle Richtung, Tokens, Typografie, Anti-Schablone | `10-visuelle-richtung.md` |
+| Typoskala in rem, clamp, Zeilenhöhe, Laufweite, Ersatzschrift, deutscher Satz | `55-typografie-system.md` |
+| DESIGN.md als Übergabedokument: Abzug aus marke.json und tokens.css, wann erzeugen, Aufbau | `57-design-md.md` |
+| Interface-Regeln: Fokus, Formulare, Zustände, Medien, Theming, Touch; Audit mit Befunden als datei:zeile | `56-interface-regeln.md` |
+| Entwurf, gebaute Seite oder Bestand kritisieren, Befunde nach Schwere | `assets/checklisten/design-kritik.md` |
 | Abstände, Rhythmus, Hierarchie durch Spacing | `15-spacing-rhythmus.md` |
 | Breakpoints, Container Queries, svh/dvh, Responsive-Szenarien | `16-responsive-container.md` |
 | Eigenes Icon-Set, SVG, Favicon | `17-icons-eigenes-system.md` |
@@ -157,14 +162,15 @@ Lies gezielt nach, statt alles zu laden.
 | Aufgabe | Referenz |
 |---------|----------|
 | Ladezeit, Bilder, Caching, Schriften | `03-technik-performance.md` |
-| Kontrast, Tastatur, Alt-Texte, BFSG-Pflicht | `04-barrierefreiheit-bfsg.md` |
+| Kontrast, Tastatur, Alt-Texte, BFSG-Pflicht, Dialog, Menü, Akkordeon, Reiter, Karussell, Live-Regionen, WCAG-2.2-Kriterien, Medien | `04-barrierefreiheit-bfsg.md` |
+| BFSG-Nachweis, Durchgang je Erfolgskriterium (WCAG 2.2 A und AA) | `assets/checklisten/wcag22-audit.md` |
 | Keywords, URLs, Meta, interne Links, JSON-LD | `05-seo-sichtbarkeit.md` |
 | Regional gefunden werden: Name, Adresse, Telefon überall gleich, Ortsseiten ohne Austauschtext, Bewertungsablauf beim Kunden, Verzeichnisse, Prüfliste fürs Unternehmensprofil | `46-lokale-sichtbarkeit.md` |
 | Sichtbarkeit in KI-Antworten: KI-Crawler in der robots.txt, zitierfähige Absätze, llms.txt einordnen | `31-ki-sichtbarkeit-geo.md` |
 | Feinschliff der kleinen Dinge: Eingabe, Touch, Safe Area, Intl, Hochkontrast, Zustand in der URL | `32-ui-details-katalog.md` |
 | Impressum, Datenschutz, Consent, Auftragsverarbeitung | `07-recht-dsgvo.md` |
 | 404, robots.txt, Sitemap, Redirects, Header | `08-pflichtseiten-technik.md` |
-| GA4, Heatmaps, Conversion-Ziele, A/B | `13-messung-optimierung.md` |
+| GA4, Heatmaps, Conversion-Ziele, A/B mit Hypothese und Stichprobe | `13-messung-optimierung.md` |
 | Astro-Projekt aufsetzen, Dateistruktur | `14-projektstruktur-astro.md` |
 | Kurz vor dem Livegang | `assets/checklisten/pre-launch.md` |
 
@@ -188,7 +194,8 @@ node scripts/pruefe-tokens.mjs        # hartcodierte Farb-, Abstands- und Schrif
 node scripts/pruefe-kontrast.mjs      # Kontrastwerte der Rollen-Tokens, mit --paare auch freie Paare
 node scripts/pruefe-platzhalter.mjs   # [[FEHLT]], data-copy-vorschlag, ausgelassener Code
 node scripts/pruefe-breakpoints.mjs http://localhost:4321 --bilder
-node scripts/pruefe-geschmack.mjs     # nach dem Build: Kicker-Quote, Laufbänder, CTA-Texte, KI-Tells, Standardschriften, getippte Logoleiste, Violettverlauf
+node scripts/pruefe-geschmack.mjs     # nach dem Build: Kicker-Quote, Laufbänder, CTA-Texte, KI-Tells, Standardschriften, getippte Logoleiste, Violettverlauf, Namen und Fokus
+node scripts/pruefe-typografie.mjs    # rem statt px, Zoomgrenze, 14-px-Boden, Ordnung der Skala, Schriftladen
 node scripts/pruefe-motion.mjs        # transition: all, scale(0), ease-in, Dauer über 300 ms, Reduzierung, Scrollvideo, 3D-Szene
 node scripts/pruefe-geo.mjs           # nach dem Build: KI-Crawler, Text im HTML, Gliederung, JSON-LD, Titel, Beschreibung, NAP, Bild ohne alt
 node scripts/pruefe-aktualitaet.mjs   # nach dem Build: Copyright-Jahr, Stand-Angaben, Jahr im Titel
@@ -196,6 +203,9 @@ node scripts/pruefe-seitenbasis.mjs   # nach dem Build: lang, Viewport und Zoom,
 node scripts/pruefe-sicherheit.mjs   # Quellen und dist: Schlüssel, öffentliche Geheimnisse, .env im Index, CSP, eval, bei Stripe Webhook-Signatur und Zahlungsregeln
 node scripts/pruefe-scrollstrecke.mjs http://localhost:4321   # Scrollseiten: tote Strecke, Text ohne volle Deckkraft, Überlauf, bei --reduziert unsichtbarer Inhalt
 ```
+
+Zum Typografiesystem gehören zwei Rechenwerkzeuge: `typoskala.mjs` rechnet die Skala,
+`schrift-metriken.mjs` misst die Ersatzschrift. Beide in `references/55-typografie-system.md`.
 
 Dazu zwei Werkzeuge, die nicht prüfen, sondern Material beschaffen und Texte bewerten. Sie
 wandern nie in das `package.json` eines Kundenprojekts:
@@ -262,10 +272,15 @@ Diese Regeln gelten immer und werden nicht wegdiskutiert:
   Kompositum („E-Mail-Adresse") bleiben erlaubt. Geprüft mit
   `scripts/pruefe-striche.mjs`, Begründung in `references/12-copywriting.md`.
 - **Keine Standardschrift ohne Vorgabe.** Liegt keine Kundenschrift vor, sind Inter,
-  Roboto, Open Sans, Poppins, Montserrat, Lato und Plus Jakarta Sans gesperrt. Stattdessen
-  zwei Kandidaten mit einer Begründung aus Branche und Zielgruppe vorschlagen. Schriften
-  werden immer selbst gehostet, nie über ein fremdes CDN. Siehe
-  `references/10-visuelle-richtung.md`, geprüft mit `scripts/pruefe-geschmack.mjs`.
+  Roboto, Open Sans, Poppins, Montserrat, Lato und Plus Jakarta Sans gesperrt. Stattdessen zwei
+  Kandidaten mit einer Begründung aus Branche und Zielgruppe vorschlagen. Schriften werden
+  immer selbst gehostet, nie über ein fremdes CDN. Siehe `references/10-visuelle-richtung.md`,
+  geprüft mit `scripts/pruefe-geschmack.mjs`.
+- **Typografie in rem, zoomfest, ab 14 px.** Schriftgrößen stehen in rem, nie in px, und
+  `html` bekommt keine Schriftgröße. Fließende Größen haben einen rem-Anteil, ihr Höchstwert
+  ist höchstens das 2,5-fache des Mindestwerts, keine Stufe liegt unter 0.875rem. Die Skala
+  wird mit `scripts/typoskala.mjs` gerechnet, nicht von Hand gesetzt. Geprüft mit
+  `scripts/pruefe-typografie.mjs`, Begründung in `references/55-typografie-system.md`.
 - **Keine Silbentrennung.** `hyphens: auto` trennt deutsche Komposita mitten im Wort und
   gehört nicht auf eine Verkaufsseite.
 - **Heldenbereich immer auf voller Bildschirmhöhe.** Auf jeder Breite und jeder Fensterhöhe

@@ -60,7 +60,8 @@ umgekehrt und nie getrennt gepflegt. Weichen beide ab, gilt `marke.json`. Grund:
 derselben Werte driften auseinander (`CLAUDE.md`, Pflegeregel zu Doppelungen).
 
 Reihenfolge der Abschnitte: Overview, Colors, Typography, Layout, Elevation und Depth, Shapes,
-Components, Do's und Don'ts, danach Iconography und Voice. Vorlage: `../assets/vorlagen/DESIGN.md`.
+Components, Do's und Don'ts, danach Motion, Iconography und Voice. Vorlage:
+`../assets/vorlagen/DESIGN.md`, Aufbau und Quellen je Abschnitt in `57-design-md.md`.
 
 | Regel beim Schreiben | Grund |
 |---|---|

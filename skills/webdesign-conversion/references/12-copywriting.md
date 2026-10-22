@@ -23,6 +23,8 @@ Copy kann eine Gestaltung genauso schablonenhaft wirken lassen wie das Layout se
 - Struktur langer Texte
 - Duzen oder siezen
 - Nicht erfinden
+- Bewusst nicht übernommen
+- Verwandte Kapitel
 
 ## Grundregeln
 
@@ -420,6 +422,46 @@ Quelle der sieben Prüfungen und der Muster: `copywriting` und `copy-editing` au
 [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) (MIT),
 auf Deutsch übertragen und an die Regeln gegen Druckmittel und erfundene Belege gebunden.
 
+### Satzmuster, die maschinell klingen
+
+Die Wortebene prüft `scripts/deslop-check.mjs` (Floskeln, Nominalstil, Dreierfiguren). Diese
+Muster liegen im Satzbau und fallen deshalb erst beim Lesen auf:
+
+| Muster | Beispiel | Stattdessen |
+|---|---|---|
+| Enthüllung mit „nicht, sondern" | „Es geht nicht um das Dach. Es geht um Ihre Produktion." | die eigentliche Aussage direkt, mit Grund: „Ein undichtes Dach stoppt Ihre Produktion." |
+| Verneinungsreihe | „Kein Gerüst, kein Lärm, keine Wartezeit." | sagen, was passiert. Eine einzelne Abwesenheit, die zählt, darf bleiben: „Kein Gerüst nötig." |
+| Nachklapp nach Komma | „Wir prüfen jedes Detail, damit nichts liegen bleibt." | Satz bei der Aussage beenden; der Nutzen bekommt einen eigenen Satz mit Fakt |
+| Selbst beantwortete Frage | „Das Ergebnis? Drei Tage schneller." | die Antwort als Satz: „Die Sanierung dauerte drei Tage weniger." |
+| Ankündigungsdoppelpunkt | „Das Beste daran: Sie müssen nichts tun." | normaler Satz: „Sie müssen dafür nichts vorbereiten." |
+| Einstiegsfloskel | „In der heutigen Zeit …", „Ob Sie nun … oder …", „Sagen Sie Adieu zu …" | streichen und mit dem Problem des Lesers beginnen |
+
+**Der Doppelpunkt in Headlines bleibt richtig** (Abschnitt „Keine Gedankenstriche"), wenn
+rechts der Beweis steht: „Leckage-Ortung in 48 Stunden: dokumentiert". Der Tell ist der
+Doppelpunkt, vor dem nur eine Ankündigung steht („Das Beste daran:", „Der Clou:"). Links
+eine Behauptung, rechts ein Beleg ist eine Aussage; links nichts, rechts die Pointe ist ein
+Trommelwirbel.
+
+**Nicht durch Synonyme ersetzen.** Wer „nahtlos" durch „reibungslos" tauscht, hat ein neues
+Muster. Zurück zum Fakt (Vorgang, Zahl, Kunde, Schritt) und von dort neu schreiben.
+
+**Ausgenommen:** Fragen in der FAQ, eine einzelne Abwesenheit am CTA („Unverbindlich"), eine
+Aufzählung von drei Leistungen, wenn es drei sind, und ein Nachsatz, der einen neuen Fakt
+bringt („Wir messen nachts, die Halle bleibt tagsüber in Betrieb").
+
+### Gegenlesen aus drei Rollen
+
+Für Seiten mit bezahltem Traffic oder hoher Bedeutung den fertigen Text noch dreimal lesen,
+jedes Mal als jemand anderes:
+
+| Rolle | Fragt |
+|---|---|
+| Skeptischer Käufer | Was glaube ich nicht? Wo fehlt ein Beleg? Was verschweigt der Text? |
+| Zielkunde aus dem Markenbrief | Erkenne ich meine Lage? Benutzt der Text meine Wörter? |
+| Korrektor | Rechtschreibung, Anrede, Primär-CTA-Text überall gleich, Platzhalter `[[FEHLT]]` alle erledigt oder in der Liste offener Punkte? |
+
+Ergebnis ist eine Liste von Stellen mit Grund, keine Punktzahl.
+
 ## Struktur langer Texte
 
 - **Zwischenüberschriften alle 2–4 Absätze**, die für sich gelesen die Geschichte erzählen.
@@ -454,3 +496,29 @@ sichtbare Entwicklungsmarkierung im CSS, die nie in Produktion erscheint:
 [data-copy-vorschlag] { outline: 2px dashed var(--farbe-fehler); }
 [data-copy-vorschlag]::before { content: 'Copy Vorschlag, mit Kunde abstimmen'; /* … */ }
 ```
+
+## Bewusst nicht übernommen
+
+Die Abschnitte „Bestehende Texte überarbeiten", „Satzmuster, die maschinell klingen" und
+„Gegenlesen aus drei Rollen" sind aus `copy-editing` und `copywriting` von
+coreyhaines31/marketingskills (MIT) destilliert. Diese Punkte gelten hier anders:
+
+| Die Quelle sagt | Hier gilt | Grund |
+|---|---|---|
+| Gedankenstriche in Langtext ein- bis zweimal je Seite erlaubt | keine Gedankenstriche im Seitentext | harte Grenze, geprüft mit `scripts/pruefe-striche.mjs` |
+| Doppelpunkt-Enthüllung grundsätzlich ein Tell | Ankündigungsdoppelpunkt ja, Doppelpunkt zwischen Behauptung und Beleg nein | der Doppelpunkt ist hier der vorgesehene Ersatz für den Gedankenstrich |
+| Konkretheit durch Zahlen wie „2.847 Teams", „4 Stunden pro Woche gespart" | Zahl nur mit Beleg und Stand, sonst `[[FEHLT: …]]` | harte Grenze „Keine erfundenen Zahlen"; die Quelle markiert Fehlendes als `[NEED: …]`, hier heißt der Platzhalter `[[FEHLT: …]]`, damit `pruefe-platzhalter.mjs` ihn findet |
+| Gefühl verstärken, unter anderem mit Angst, etwas zu verpassen | Ist-Zustand schildern, keine erzeugte Angst, kein Zeitdruck ohne echte Frist | § 5 UWG; Dringlichkeit nur, wenn sie wahr ist (Die Grenze zur Irreführung) |
+| „Kündigung jederzeit", „Geld-zurück-Garantie", „ohne Kreditkarte" als Risikominderer | nur, wenn der Kunde es anbietet und halten kann | eine Garantie ist eine Werbeaussage und im Zweifel ein Vertragsbestandteil |
+| Expertenrunde aus simulierten Rollen, die den Text von 1 bis 10 bewerten, bis alle 7 und der Schnitt 8 erreichen | Gegenlesen aus drei Rollen, Ergebnis ist eine Liste mit Gründen | eine Punktzahl aus simulierten Lesern ist keine Messung und läse sich im Bericht wie eine |
+| Höchstens 25 Wörter je Satz, englische Füllwortliste | Satzlänge nach „Verständlichkeit messen" oben, deutsche Füllwörter über `deslop-check.mjs` | die deutschen Maße stehen schon hier; eine übersetzte Wortliste trifft deutsche Floskeln nicht |
+| Formeln wie „Join 10,000+ teams who …" für Headlines | Headline-Muster oben | sozialer Beweis in der Headline braucht einen Beleg, und die Muster oben decken den Rest |
+
+## Verwandte Kapitel
+
+- `06-conversion-architektur.md`: CTA-Hierarchie, Seitenprüfung nach Wirkung, Pop-up-Texte
+- `26-geschmack-und-ki-tells.md`: Inhaltsdichte, poetische Etiketten, Katalog der Tells
+- `27-redesign-bestand.md`: Überarbeitung einer bestehenden Seite
+- `58-formulare-und-anfragestrecken.md`: Feldtexte, Hilfetexte, Fehlermeldungen am Formular
+- `07-recht-dsgvo.md`: Werbeaussagen, Bewertungen, Belegbarkeit
+- `19-recruiting-funnel.md`: Stellenanzeigen und AGG

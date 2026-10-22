@@ -16,7 +16,7 @@ import { tmpdir } from 'node:os';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
-import { seiteAnalysieren, quelleAnalysieren } from '../pruefe-geschmack.mjs';
+import { seiteAnalysieren, quelleAnalysieren, bedienungAnalysieren } from '../pruefe-geschmack.mjs';
 
 const SKRIPT = fileURLToPath(new URL('../pruefe-geschmack.mjs', import.meta.url));
 
@@ -197,6 +197,91 @@ test('Premium-Standardpalette nur ohne Markenvorgabe', () => {
   assert.deepEqual(quelleAnalysieren(':root { --flaeche: #f5fbf8; }'), []);
 });
 
+// ------------------------------------------------------------------ Interface-Regeln (31)
+
+test('Icon-Button ohne Namen ist ein Fehler, mit aria-label oder sr-only-Text nicht', () => {
+  const ohne = seite(sektion('<h1>A</h1>\n<button class="menue"><svg aria-hidden="true"><use href="#menue"></use></svg></button>'));
+  const { fehler } = bedienungAnalysieren(ohne);
+  assert.deepEqual(regeln(fehler), ['name-fehlt']);
+  assert.equal(fehler[0].zeile, 2);
+  const mitLabel = seite(sektion('<button aria-label="Menü öffnen"><svg aria-hidden="true"></svg></button>'));
+  const mitText = seite(sektion('<button><svg aria-hidden="true"></svg><span class="sr-only">Menü öffnen</span></button>'));
+  assert.equal(bedienungAnalysieren(mitLabel).fehler.length, 0);
+  assert.equal(bedienungAnalysieren(mitText).fehler.length, 0);
+});
+
+test('Logolink braucht alt am Bild, ein Sprungziel ohne href ist kein Link', () => {
+  const leer = seite('<header><a href="/"><img src="/logo.svg" alt=""></a></header>');
+  const benannt = seite('<header><a href="/"><img src="/logo.svg" alt="Dachbau Meier, Startseite"></a></header>');
+  const anker = seite(sektion('<a id="leistungen"></a><h2>Leistungen</h2>'));
+  assert.deepEqual(regeln(bedienungAnalysieren(leer).fehler), ['name-fehlt']);
+  assert.equal(bedienungAnalysieren(benannt).fehler.length, 0);
+  assert.equal(bedienungAnalysieren(anker).fehler.length, 0);
+});
+
+test('autofocus wird gemeldet, data-autofocus nicht', () => {
+  const mit = seite(sektion('<form><input name="suche" type="search" autofocus></form>'));
+  const ohne = seite(sektion('<form data-autofocus="aus"><input name="suche" type="search"></form>'));
+  assert.deepEqual(regeln(bedienungAnalysieren(mit).warnungen), ['autofocus']);
+  assert.deepEqual(bedienungAnalysieren(ohne).warnungen, []);
+});
+
+test('Name, E-Mail und Telefon ohne autocomplete, Honigtopf und Nachricht nicht', () => {
+  const formular = (felder) => seite(sektion(`<form method="post">${felder}</form>`));
+  const fehlt = formular('<input id="email" name="email" type="email"><input name="telefon" type="tel"><input name="name">');
+  assert.deepEqual(regeln(bedienungAnalysieren(fehlt).warnungen), ['autocomplete', 'autocomplete', 'autocomplete']);
+  const gut = formular([
+    '<input name="name" autocomplete="name">',
+    '<input name="email" type="email" autocomplete="email">',
+    '<input id="webadresse" name="webadresse" type="text" tabindex="-1" autocomplete="off">',
+    '<input name="name_hp" type="text" tabindex="-1">',
+    '<input type="hidden" name="ts" value="">',
+    '<input type="checkbox" name="datenschutz">',
+    '<textarea name="nachricht"></textarea>',
+  ].join(''));
+  assert.deepEqual(bedienungAnalysieren(gut).warnungen, []);
+});
+
+test('outline: none an :focus-visible ohne Ersatz ist ein Fehler, mit box-shadow nicht', () => {
+  const ohne = quelleAnalysieren('.knopf:focus-visible {\n  outline: none;\n}');
+  assert.deepEqual(regeln(ohne), ['fokus-entfernt']);
+  assert.equal(ohne[0].stufe, 'fehler');
+  assert.equal(ohne[0].zeile, 2);
+  assert.deepEqual(quelleAnalysieren('.knopf:focus-visible { outline: none; box-shadow: 0 0 0 3px var(--farbe-fokus); }'), []);
+});
+
+test('outline: none ohne Fokusregel warnt, :focus:not(:focus-visible) und eine Fokusregel in der Datei nicht', () => {
+  const ohne = quelleAnalysieren('button { outline: 0; }');
+  assert.deepEqual(regeln(ohne), ['fokus-entfernt']);
+  assert.equal(ohne[0].stufe, 'warnung');
+  assert.deepEqual(quelleAnalysieren(':focus:not(:focus-visible) { outline: none; }'), []);
+  assert.deepEqual(quelleAnalysieren('button { outline: none; }\n:focus-visible { outline: 3px solid var(--farbe-fokus); }'), []);
+  assert.deepEqual(quelleAnalysieren('/* outline: none ist verboten */\na { outline-offset: 3px; }'), []);
+});
+
+test('Tailwind outline-none braucht einen focus-visible-Ersatz im selben class-Attribut', () => {
+  const fehler = quelleAnalysieren('<button class="rounded focus-visible:outline-none">Senden</button>');
+  assert.equal(fehler[0].stufe, 'fehler');
+  assert.equal(quelleAnalysieren('<a class="outline-none" href="/">Start</a>')[0].stufe, 'warnung');
+  assert.deepEqual(quelleAnalysieren('<button className="outline-none focus-visible:ring-2 focus-visible:ring-offset-2">Senden</button>'), []);
+});
+
+test('transition: all und transition ohne Eigenschaft warnen, benannte Eigenschaften nicht', () => {
+  assert.deepEqual(regeln(quelleAnalysieren('.karte { transition: all 0.3s ease; }')), ['transition-all']);
+  assert.deepEqual(regeln(quelleAnalysieren('.karte { transition: .3s; }')), ['transition-all']);
+  assert.deepEqual(regeln(quelleAnalysieren('<div class="motion-safe:transition-all duration-300">')), ['transition-all']);
+  assert.deepEqual(quelleAnalysieren('.karte { transition: transform 0.3s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.3s; }'), []);
+  assert.deepEqual(quelleAnalysieren('* { transition: none !important }'), []);
+  assert.deepEqual(quelleAnalysieren('<div class="transition-colors duration-200">'), []);
+  assert.deepEqual(quelleAnalysieren('<main transition:animate="fade">'), []);
+});
+
+test('Einfügen gesperrt wird gemeldet, ein paste-Listener ohne Sperre nicht', () => {
+  assert.deepEqual(regeln(quelleAnalysieren('<input name="email2" onpaste="return false">')), ['einfuegen-gesperrt']);
+  assert.deepEqual(regeln(quelleAnalysieren("feld.addEventListener('paste', (e) => e.preventDefault());")), ['einfuegen-gesperrt']);
+  assert.deepEqual(quelleAnalysieren("feld.addEventListener('paste', () => pruefen(feld));"), []);
+});
+
 // ------------------------------------------------------------------ Aufruf
 
 test('Aufruf: Fehler ergibt Exit 1, Warnungen nur mit --strict', () => {
@@ -217,6 +302,12 @@ test('Aufruf: Fehler ergibt Exit 1, Warnungen nur mit --strict', () => {
     assert.equal(nurWarnung.status, 0, nurWarnung.stdout);
     const streng = spawnSync(process.execPath, [SKRIPT, 'dist', '--strict'], { cwd: ordner, encoding: 'utf8' });
     assert.equal(streng.status, 1, streng.stdout);
+
+    writeFileSync(join(dist, 'kontakt.html'), seite(sektion('<h1>Kontakt</h1>\n<button><svg></svg></button>')));
+    const ohneName = spawnSync(process.execPath, [SKRIPT, 'dist'], { cwd: ordner, encoding: 'utf8' });
+    assert.equal(ohneName.status, 1, ohneName.stdout);
+    assert.match(ohneName.stdout, /kontakt\.html:2 +\[name-fehlt\]/);
+    rmSync(join(dist, 'kontakt.html'));
 
     const leer = spawnSync(process.execPath, [SKRIPT], { cwd: join(ordner, 'dist'), encoding: 'utf8' });
     assert.equal(leer.status, 2);

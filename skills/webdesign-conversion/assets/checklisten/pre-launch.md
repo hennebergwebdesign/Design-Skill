@@ -35,7 +35,9 @@ eingeschätzt. Was nicht geprüft wurde, wird als ungeprüft an den Kunden über
 - [ ] LCP < 2,5 s, CLS < 0,1, INP < 200 ms (Lighthouse **und** Feldmessung nach ein paar Tagen)
 - [ ] Kein Bild über 200 KB (Hero: 500 KB), alles als WebP/AVIF
 - [ ] Jedes `<img>` hat `width` und `height`
-- [ ] Schriften selbst gehostet, nur benutzte Schnitte, zwei per Preload angekündigt
+- [ ] Schriften selbst gehostet, nur benutzte Schnitte, die Schrift der Heldenüberschrift per Preload angekündigt
+- [ ] Ersatzschrift je Familie mit `schrift-metriken.mjs` gemessen, kein sichtbarer Sprung beim Laden
+- [ ] `pruefe-typografie.mjs` ohne Fehler: alles in rem, Zoom 200 % auf 360 und 1440 px geprüft
 - [ ] Fünf Breakpoints geprüft: 375, 768, 1024, 1440, 1920 px: zusätzlich 1366 × 768
 - [ ] Keine horizontale Scrollleiste auf keiner Breite
 - [ ] Seite bleibt ohne JavaScript lesbar und bedienbar
@@ -44,6 +46,7 @@ eingeschätzt. Was nicht geprüft wurde, wird als ungeprüft an den Kunden über
 
 ## 4 Barrierefreiheit
 
+- [ ] Durchgang je Erfolgskriterium nach `wcag22-audit.md`, Befunde behoben oder benannt
 - [ ] Kontrast jeder Text-/Flächenkombination geprüft: 4,5:1 Fließtext, 3:1 große Schrift
       und Bedienelemente
 - [ ] Fokusring auf jeder Fläche sichtbar und kontraststark (3:1)

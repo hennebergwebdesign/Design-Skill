@@ -8,6 +8,7 @@
 - Fragen, die immer geklärt sein müssen
 - Interview vor dem Prompt (bei größeren Aufträgen)
 - Fragen, die nur bei Auslöser kommen
+- Brief und Informationsarchitektur: was zusätzlich festgehalten wird
 - Was ohne Rückfrage entschieden wird
 
 ## Zwei Projektarten
@@ -181,6 +182,38 @@ Fehler, Erfolg. Antworten, die der Kunde nicht kennt, werden als offen markiert,
 | Betrieb mit Einzugsgebiet (Handwerk, Praxis, Gastronomie) | eine Schreibweise für Name, Adresse, Telefon, Orte mit echten Aufträgen für Ortsseiten, wer das Unternehmensprofil pflegt, siehe `../../webdesign-conversion/references/46-lokale-sichtbarkeit.md` |
 | bestehende Domain mit Rankings | Weiterleitungskonzept, Zugriff auf Search Console |
 | Stellenanzeige oder Karriereseite | Bewerberdatenschutz, Löschfrist, JobPosting-Auszeichnung |
+
+## Brief und Informationsarchitektur: was zusätzlich festgehalten wird
+
+Aus `design-brief` und `information-architecture` von
+[julianoczkowski/designer-skills](https://github.com/julianoczkowski/designer-skills)
+(Apache 2.0) übernommen ist nur, was in `marke-brief.md` und im Umsetzungskonzept noch
+fehlte. Erst nachsehen, dann fragen:
+
+| Im Repo nachsehen | Wonach |
+|---|---|
+| `src/styles/`, `:root`-Blöcke, `tailwind.config.*`, Token-JSON aus Figma | vorhandene Tokens: erweitern statt ersetzen |
+| `src/components/`, `src/layouts/`, Storybook | vorhandene Bausteine: wiederverwenden statt neu bauen |
+| `@font-face`, Schriftlinks, `public/fonts/` | geladene Schriften und ob sie selbst gehostet sind |
+| `src/pages/`, Content Collections, `_redirects` | bestehende URLs und Inhaltsmodelle |
+
+| Feld | Frage, mit Vorschlag gestellt | Landet in | Grund |
+|---|---|---|---|
+| Anti-Referenz | Wie soll es sich **nicht** anfühlen, mit einer Seite als Beispiel? | `marke-brief.md` Abschnitt 7, „verworfen" | ein Nein grenzt schneller ein als drei Ja |
+| Leitprinzipien | Welche zwei bis drei Abwägungen gelten, etwa „Vertrauen vor Tempo"? | die drei Prinzipien in Abschnitt 7 | ein Prinzip, das keine Spannung auflöst, entscheidet nichts |
+| Bausteininventar | Welche Bausteine gibt es schon, welche werden angepasst, welche neu? | Umsetzungskonzept, Abschnitt Sektionen | sonst entsteht ein zweiter Knopf neben dem vorhandenen |
+| Nicht im Auftrag | Was gehört ausdrücklich nicht dazu? | Umsetzungskonzept, offene Punkte | verhindert, dass eine Sitzung Umfang dazuerfindet |
+| Seitenplan mit URL | Welche Seiten unter welcher Adresse, wie tief? | Umsetzungskonzept, Seitenstruktur, später `CLAUDE.md` | bei einem Relaunch die Grundlage der Weiterleitungen |
+| Navigation | Was steht im Hauptmenü, was nur im Fuß, wie sieht das Menü mobil aus? | Umsetzungskonzept | jeder Punkt im Hauptmenü konkurriert mit der primären Handlung |
+| Rangfolge je Seite | Was steht zuerst, und warum? | Sektionen pro Seite im Umsetzungskonzept | die Reihenfolge ist die Argumentation, `../../webdesign-conversion/references/06-conversion-architektur.md` |
+| Wege mit Abzweigung | Was passiert nach dem Absenden, nach einem Fehler, ohne JavaScript? | Umsetzungskonzept, Formulare und Datenfluss | der Fehlerweg wird sonst erst in der Abnahme entworfen |
+| Begriffe | Wie heißt die Hauptaktion, wie die Leistung, und zwar überall gleich? | `marke.json` unter `sprache`, `cta_primaer` | ein Begriff je Sache, `../../webdesign-conversion/references/12-copywriting.md` |
+| Wachstum | Welche Bereiche wachsen (Referenzen, Stellen, Beiträge)? | Auslöserfrage oben, Content Collections | ein wachsender Bereich braucht von Anfang an ein Inhaltsmodell |
+
+Eine eigene Ablage wie `.design/<feature>/DESIGN_BRIEF.md` aus der Quelle gibt es hier nicht.
+Grund: der Brief steht schon in `marke-brief.md`, das Konzept wird im Chat freigegeben, und
+der Stand in `CLAUDE.md`. Eine vierte Stelle veraltet als erste. Gegenfragen an das fertige
+Konzept, bevor gebaut wird: `design-review.md` Abschnitt 8.
 
 ## Was ohne Rückfrage entschieden wird
 

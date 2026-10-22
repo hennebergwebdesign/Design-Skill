@@ -246,6 +246,13 @@ Befund.
 | Glas auf jeder Fläche | Weichzeichner hinter Karten, Kacheln und Knöpfen | Glas nur auf fixierten Elementen (Abschnitt 9), sonst eine Fläche aus den Tokens | `pruefe-geschmack.mjs` ab vier Stellen je Datei |
 | Getippte Logoleiste | „Vertrauen uns: Müller GmbH · Schmidt AG · Bau KG" als Text in einer Kundenleiste | echte Logos mit Freigabe, oder die Leiste streichen. Eine Leiste aus Namen behauptet dieselbe Kundenbeziehung wie eine Logowand (harte Grenze) | `pruefe-geschmack.mjs` |
 | Mikro-Metasatz unter dem Kicker | „Jede dieser Leistungen bieten wir heute an, nicht erst morgen." | Kicker, Überschrift, Text reichen | angesehen |
+| Farbiger Seitenstreifen an Karten | `border-left: 4px solid` in der Akzentfarbe an Karte, Hinweis oder Listeneintrag, oft dazu ein Radius, an dem der Streifen krumm ausläuft | Fläche, Überschrift oder ein Symbol tragen die Hervorhebung; ein Streifen nur am echten Zitat | angesehen |
+| Symbolkachel über jeder Kartenüberschrift | kleines Icon in einem abgerundeten, getönten Quadrat, darunter Überschrift und Text, dreimal nebeneinander | Icon neben die Überschrift oder frei im Fluss, oder ein Bild statt Icon, siehe `17-icons-eigenes-system.md` | angesehen |
+| Haarrahmen plus weiter Schatten an jeder Karte | 1 px Rahmen und ein großer weicher Schatten an allen Karten einer Reihe | eins von beiden; beides nur an der einen schwebenden Fläche | angesehen |
+| Karte in Karte | ein Kasten mit Rahmen und Schatten in einem Kasten mit Rahmen und Schatten | Abstand, Linie oder Schriftgröße gliedern das Innere | angesehen |
+| Pulsierender Statuspunkt | grüner Punkt mit Pulsieren neben „Jetzt verfügbar" | ein ruhiger Punkt mit Text, Pulsieren nur bei echten Live-Daten | angesehen |
+| Blinkender Schreibcursor | Überschrift tippt sich selbst, mit blinkendem Strich dahinter | die Überschrift steht; ein Cursor gehört in ein Eingabefeld | angesehen |
+| Illustration aus Grundformen | großes Inline-SVG im Held, aus Kreisen und Rechtecken zur Szene gestapelt | echtes Foto, echte Illustration oder keine, siehe `28-ki-bildentwuerfe.md` | angesehen |
 | Pille über der Überschrift | gerundetes Badge „Neu" oder „Ihr Partner in Karlsruhe" über der H1 | streichen. Die Pille ist ein Kicker in anderer Form und zählt in der Kicker-Quote mit | `pruefe-geschmack.mjs` |
 | Kreis-Icon mit Haarlinie | dünn gezeichnetes Icon in einem runden Rahmen, dazu dünne Ziffern in Kreisen | Icon aus dem eigenen Set mit der Strichstärke aus `marke.json` (`17-icons-eigenes-system.md`), Schritte mit Verb statt Kreisnummer | angesehen |
 | Dünner Fließtext | Fließtext oder FAQ-Antworten in einem Schnitt unter 400, kleiner als die Absätze darüber | Fließtext ab Schnitt 400, FAQ-Antworten in der Größe des Fließtexts | angesehen |
@@ -255,6 +262,13 @@ Befund.
 Dazu die Muster, die schon in `10-visuelle-richtung.md` und `02-design-ux.md` stehen und hier
 nicht wiederholt werden: Cremegrund mit Serife und Terrakotta, Neon auf Fast-Schwarz,
 Schablonen-Chrome, „→" hinter jedem Link.
+
+Die sieben Zeilen ab „Farbiger Seitenstreifen" stammen aus dem Abgleich mit den
+Detector-Regeln von [impeccable](https://github.com/pbakaus/impeccable) (Apache 2.0). Was dort
+sonst steht, ist in `56-interface-regeln.md` Abschnitt 10 einer Stelle in diesem Regelwerk
+zugeordnet. Fehler in der Bedienung (Fokus entfernt, Button ohne Namen, `transition: all`,
+Felder ohne `autocomplete`) sind keine Geschmacksfrage und stehen dort; `pruefe-geschmack.mjs`
+prüft sie mit.
 
 ## 8. Typografie und Farbe: die zwei häufigsten Griffe
 
@@ -339,7 +353,8 @@ ungeprüft benannt.
 7. Keine Aufforderung bricht auf Desktop um, eine Absicht hat einen Text.
 8. Kein Tell aus dem Katalog in Abschnitt 7 ohne Begründung.
 9. Jede Animation hat ihren Satz, und bei Bewegung über 4 bewegt sich die Seite wirklich.
-10. `node scripts/pruefe-geschmack.mjs` nach dem Build ohne Fehler.
+10. `node scripts/pruefe-geschmack.mjs` nach dem Build ohne Fehler. Das Skript prüft auch die
+    zählbaren Interface-Regeln aus `56-interface-regeln.md`; den Rest dort im Audit-Ablauf.
 11. Alltagsprobe: Sieht die Seite so aus, wie ein Besucher diese Art Gegenstand aus der echten
     Welt kennt und lesen kann? Eine Speisekarte mit dunklem Grund und schwacher Schrift besteht
     sie nicht, eine mit hellem Grund und klarer Gliederung schon. Grund: Ein Modell wählt das
@@ -412,5 +427,6 @@ beiden Regelwerken im Kontext an genau den Stellen dieser Tabelle zwischen ihnen
 - `24-designsystem-vorrang.md`: was jede Regel hier schlägt
 - `27-redesign-bestand.md`: dieselben Regeln auf eine bestehende Seite angewendet
 - `28-ki-bildentwuerfe.md`: generierte Entwürfe als Vorlage, und wo sie nichts belegen dürfen
+- `56-interface-regeln.md`: Fokus, Formulare, Zustände, Medien, Touch, Audit mit `datei:zeile`
 - `45-huerde-laenge-und-leserfuehrung.md`: informative Überschriften statt Slogans, entschiedene Widersprüche zu Schriften, Palette und Breite
 - `48-richtung-varianten-und-subtraktion.md`: Richtungen in Varianten mit Preiszeile, Subtraktionsrunde, Fehlermodi nach dem Bau

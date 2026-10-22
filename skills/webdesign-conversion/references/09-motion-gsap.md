@@ -13,6 +13,7 @@ wo sie hingehört. Alles andere ist Lärm.
 - Performance
 - In React
 - Bewährte Muster für Unternehmensseiten
+- Verwandte Kapitel
 
 ## Grundhaltung
 
@@ -27,6 +28,9 @@ wo sie hingehört. Alles andere ist Lärm.
   bleibt vollständig: nichts bleibt unsichtbar, nichts bleibt verschoben.
 - Die Seite ist **ohne JavaScript vollständig lesbar und bedienbar**. Animation ist eine
   Schicht darüber, kein Träger von Inhalt.
+
+Ob eine Bewegung überhaupt sein soll (Häufigkeit, Zweck, Funktion) und wie bestehende
+Animationen geprüft werden, steht in `30-motion-pruefung.md`.
 
 ## Wann GSAP
 
@@ -214,6 +218,16 @@ gekillt, sonst laufen nach einem Re-Render Geister weiter.
 | Kartenstapel | Prozessschritte | nur ab ausreichender Fenstergröße und -höhe |
 | Marquee-Logoleiste | Presse, Partner | CSS statt GSAP; Liste doppelt, Spur um exakt 50 % verschieben, bei reduzierter Bewegung still und scrollbar |
 | Tastendruck | jeder Button, primär wie sekundär | CSS reicht: `scale(0.97)` bei `:active`, 0,1 s, `--kurve-wechsel`. Kein GSAP nötig, entfällt bei reduzierter Bewegung von selbst, weil nur `transform` betroffen ist |
+
+**Kurven aus den Tokens, nicht `power3.out`.** Dauern und Kurven kommen auch in GSAP aus
+`18-motion-handschrift.md`; wie die Token-Kurven mit CustomEase registriert werden, steht in
+`30-motion-pruefung.md` Abschnitt 4.2. Für umschaltbare Zustände `gsap.to()` statt
+`fromTo()`, weil `to()` vom aktuellen Wert aus startet und damit unterbrechbar bleibt.
+
+## Verwandte Kapitel
+
+- Handschrift und Tokens: `18-motion-handschrift.md`
+- Wann animieren, Prüfablauf, Befundliste: `30-motion-pruefung.md`
 
 Für die vollständige GSAP-Dokumentation lohnt zusätzlich die Installation der offiziellen
 GSAP-Skills, siehe `../../../README.md` → Quell-Skills nachinstallieren.

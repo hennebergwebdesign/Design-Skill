@@ -7,7 +7,8 @@
 
   AUFBAU:
     Farbrampe  → Rollen → Flächen/Text/Rahmen/Fokus/Semantik
-    Typografie → Familien, Zeilenhöhen, Skala (clamp, zwei Stufen)
+    Typografie → Familien mit Ersatz, Gewichte, Zeilenhöhen, Laufweiten,
+                 Zeilenlängen, modulare Skala in rem (typoskala.mjs)
     Raum       → feste Skala + fließende Rhythmen
     Layout     → Breiten, Ränder, Kopfhöhe, Haltepunktliste
     Form       → Radien, Schatten
@@ -86,35 +87,93 @@
 
   /* ---------------------------------------------------------------------
      TYPOGRAFIE
-     --------------------------------------------------------------------- */
-  --schrift-text:    'Instrument Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --schrift-display: 'Outfit', var(--schrift-text);
 
-  --zeilenhoehe-eng:    1.08;   /* große Überschriften */
-  --zeilenhoehe-mittel: 1.3;    /* kleine Überschriften, Buttons */
-  --zeilenhoehe-normal: 1.6;    /* Fließtext */
+     Das System dahinter steht in 55-typografie-system.md. Kurz:
+       - alles in rem: wer im Browser eine größere Schrift einstellt, bekommt sie
+       - html bekommt KEINE Schriftgröße, 1rem bleibt die Einstellung der Person
+       - fließend nur mit rem-Anteil, Höchstwert höchstens 2,5-fach (200-%-Zoom)
+       - Zeilenhöhe ohne Einheit, Laufweite in em: beides wächst mit der Schrift
+     --------------------------------------------------------------------- */
 
   /*
-    TYPOSKALA, ZWEI STUFEN.
-
-    Diese Kurven sind für 320–1200 px gebaut und deckeln dort. Der Block am Ende
-    der Datei hebt die Deckel ab 1200 px an.
-
-    Grund: Eine einzige clamp-Kurve von 320 bis 1920 lässt die Schriften zwischen
-    768 und 1200 px zu schnell wachsen. Dort wird die Heldenüberschrift vierzeilig
-    und der Heldenbereich höher als das Fenster. Mit zwei Stufen bleibt die Zeile
-    auf Tablet und kleinem Laptop bei drei Zeilen, und die großen Grade stehen
-    erst auf echtem Desktop zur Verfügung.
+    FAMILIEN mit Ersatzschrift an zweiter Stelle. Die Ersatzschrift ist eine
+    lokale Arial, per size-adjust und Overrides auf die Maße der Webschrift
+    gebracht (global-basis.css). Ohne sie springt beim Schriftwechsel jede Zeile.
+    Werte je Schrift messen: node scripts/schrift-metriken.mjs <datei.woff2>
   */
-  --text-xs:   clamp(0.875rem, 0.86rem + 0.06vw, 0.9375rem);  /* 14 px ist die kleinste erlaubte Stufe */
-  --text-sm:   clamp(0.875rem, 0.85rem + 0.13vw, 0.95rem);
-  --text-base: clamp(1rem, 0.97rem + 0.15vw, 1.0625rem);
-  --text-lg:   clamp(1.0625rem, 1rem + 0.3vw, 1.25rem);
-  --text-h4:   clamp(1.125rem, 1.03rem + 0.48vw, 1.4rem);
-  --text-h3:   clamp(1.375rem, 1.15rem + 1.1vw, 1.9rem);
-  --text-h2:   clamp(1.75rem, 1.28rem + 2.35vw, 2.5rem);
-  --text-h1:   clamp(2.125rem, 1.29rem + 4.2vw, 3.25rem);
-  --text-zahl: clamp(2rem, 1.5rem + 2.5vw, 3.25rem);
+  --schrift-text:    'Instrument Sans', 'Instrument Sans Ersatz', system-ui, sans-serif;
+  --schrift-display: 'Outfit', 'Outfit Ersatz', var(--schrift-text);
+
+  /*
+    GEWICHTE als Rollen. Jedes Gewicht, das hier steht, braucht eine eigene
+    @font-face. Fehlt sie, verfettet der Browser künstlich (pruefe-typografie
+    meldet das als fehlender-schnitt).
+  */
+  --gewicht-text:    400;
+  --gewicht-betont:  600;   /* strong, Buttons, Zwischenzeilen */
+  --gewicht-titel:   600;   /* h2 bis h4 */
+  --gewicht-display: 700;   /* h1, große Zahlen */
+
+  /*
+    ZEILENHÖHEN: je größer die Schrift, desto enger. Ein Fließtextabstand von 1.6
+    unter einer 72-px-Überschrift reißt die Zeilen auseinander; 1.08 unter
+    Fließtext macht ihn unlesbar. Ohne Einheit, damit sie mit der Schrift wachsen.
+  */
+  --zeilenhoehe-eng:    1.08;   /* h1, große Zahlen */
+  --zeilenhoehe-titel:  1.18;   /* h2, h3 */
+  --zeilenhoehe-mittel: 1.3;    /* h4, Buttons, Navigation */
+  --zeilenhoehe-lead:   1.5;    /* Einleitungsabsatz, --text-lg */
+  --zeilenhoehe-normal: 1.6;    /* Fließtext. Deutsch hat lange Wörter und braucht Luft */
+
+  /*
+    LAUFWEITE in em. Große Grade wirken bei Normalsperrung locker, weil die
+    Schrift für Lesegrößen zugerichtet ist; kleine Grade laufen zu. Ausgangswerte,
+    je Schrift im Musterblatt prüfen: manche Display-Schnitte sind schon eng.
+  */
+  --laufweite-display: -0.025em;
+  --laufweite-titel:   -0.015em;
+  --laufweite-text:    0;
+  --laufweite-klein:   0.01em;
+  --laufweite-versal:  0.06em;   /* nur für echte Versalsätze, Abkürzungen */
+
+  /*
+    ZEILENLÄNGEN. Fließtext 45 bis 75 Zeichen, Überschriften kürzer, damit sie
+    als Block gelesen werden und nicht als Zeile.
+  */
+  --breite-text:  64ch;
+  --breite-titel: 22ch;
+  --breite-lead:  52ch;
+
+  /*
+    TYPOSKALA: modular und fließend, in zwei Kurven.
+
+    Jede Stufe ist Grundgröße × Verhältnis hoch Stufe. Das Verhältnis wächst mit
+    dem Fenster: auf dem Handy 1.2 (kleine Terz), damit die Heldenzeile mit langen
+    deutschen Wörtern passt, auf dem Desktop 1.333 (Quarte) und ab 1440 px 1.414,
+    damit Hierarchie über Größe statt über Farbe entsteht.
+
+    Zwei Kurven statt einer: eine einzige Kurve von 360 bis 1440 lässt h1 zwischen
+    768 und 1200 px so schnell wachsen, dass die Heldenzeile vierzeilig und der
+    Heldenbereich höher als das Fenster wird. Die erste Kurve endet bei 1200 px,
+    die zweite (Media Query am Dateiende) trägt die großen Grade bis 1440 px, der
+    Breite der meisten Entwurfsdateien. Bei 1440 px entspricht die Seite damit
+    dem Entwurf.
+
+    Stufen: xs -1, sm -0.5, base 0, lg 0.5, h4 1, h3 2, h2 3, zahl 3.5, h1 4.
+    Boden 14 px: xs und sm werden angehoben, kleiner wird keine Schrift.
+    Andere Marke, andere Skala: node scripts/typoskala.mjs --basis … --verhaeltnis …
+  */
+  /* Typoskala, erzeugt mit scripts/typoskala.mjs. Stützpunkte: 360 px: 16 px × 1.2, 1200 px: 17 px × 1.333, 1440 px: 18 px × 1.414.
+     Nicht von Hand ändern, sondern neu rechnen. */
+  --text-xs: 0.875rem;                                           /* 14 bis 14 px, Boden 14 px */
+  --text-sm: clamp(0.9131rem, 0.9102rem + 0.0131vw, 0.92rem);    /* 14.61 bis 14.72 px */
+  --text-base: clamp(1rem, 0.9732rem + 0.119vw, 1.0625rem);      /* 16 bis 17 px */
+  --text-lg: clamp(1.0956rem, 1.0394rem + 0.25vw, 1.2269rem);    /* 17.53 bis 19.63 px */
+  --text-h4: clamp(1.2rem, 1.1073rem + 0.4119vw, 1.4163rem);     /* 19.2 bis 22.66 px */
+  --text-h3: clamp(1.44rem, 1.2479rem + 0.8536vw, 1.8881rem);    /* 23.04 bis 30.21 px */
+  --text-h2: clamp(1.7281rem, 1.3901rem + 1.5024vw, 2.5169rem);  /* 27.65 bis 40.27 px */
+  --text-zahl: clamp(1.8931rem, 1.4592rem + 1.9286vw, 2.9056rem); /* 30.29 bis 46.49 px */
+  --text-h1: clamp(2.0737rem, 1.5249rem + 2.4393vw, 3.3544rem);  /* 33.18 bis 53.67 px */
 
   /* ---------------------------------------------------------------------
      RAUM
@@ -148,7 +207,6 @@
        1200 px  Desktop, ab hier die große Typostufe
      --------------------------------------------------------------------- */
   --breite-inhalt: 1200px;
-  --breite-text:   64ch;       /* unter 80 Zeichen Zeilenlänge */
   --rand-seite:    clamp(1.125rem, 0.6rem + 2.4vw, 3rem);
   --hoehe-kopf:    clamp(3.75rem, 3.2rem + 2vw, 4.5rem);
   --hoehe-topleiste: 2.25rem;
@@ -240,17 +298,17 @@
   --icon-groesse-gross: 3rem;     /* 48px, Leistungssektion: eigene Fassung zeichnen */
 }
 
-/*
-  Zweite Typostufe ab echtem Desktop. Erst hier dürfen die Schriften über die auf
-  Tablet nötigen Deckel hinauswachsen.
-*/
+/* Kurve 2 ab 1200 px, erzeugt mit scripts/typoskala.mjs */
 @media (min-width: 1200px) {
   :root {
-    --text-h4:   clamp(1.4rem, 1.1rem + 0.5vw, 1.6rem);
-    --text-h3:   clamp(1.9rem, 1.4rem + 0.8vw, 2.1rem);
-    --text-h2:   clamp(2.5rem, 1.6rem + 1.5vw, 3rem);
-    --text-h1:   clamp(3.25rem, 0.75rem + 4.2vw, 4.25rem);
-    --text-zahl: clamp(3.25rem, 2.4rem + 1.4vw, 3.8rem);
+    --text-sm: clamp(0.92rem, 0.7888rem + 0.175vw, 0.9463rem);     /* 14.72 bis 15.14 px */
+    --text-base: clamp(1.0625rem, 0.75rem + 0.4167vw, 1.125rem);   /* 17 bis 18 px */
+    --text-lg: clamp(1.2269rem, 0.6738rem + 0.7375vw, 1.3375rem);  /* 19.63 bis 21.4 px */
+    --text-h4: clamp(1.4163rem, 0.5444rem + 1.1625vw, 1.5906rem);  /* 22.66 bis 25.45 px */
+    --text-h3: clamp(1.8881rem, 0.0819rem + 2.4083vw, 2.2494rem);  /* 30.21 bis 35.99 px */
+    --text-h2: clamp(2.5169rem, -0.8019rem + 4.425vw, 3.1806rem);  /* 40.27 bis 50.89 px */
+    --text-zahl: clamp(2.9056rem, -1.4756rem + 5.8417vw, 3.7819rem); /* 46.49 bis 60.51 px */
+    --text-h1: clamp(3.3544rem, -2.3612rem + 7.6208vw, 4.4975rem); /* 53.67 bis 71.96 px */
   }
 }
 

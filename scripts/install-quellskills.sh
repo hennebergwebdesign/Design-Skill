@@ -80,6 +80,21 @@ installiere icon-set-generator "design-assets (jezweb)" \
 #   npx --yes skills add https://github.com/Leonxlnx/taste-skill --skill "imagegen-frontend-web" --agent claude-code
 #   npx --yes skills add https://github.com/Leonxlnx/taste-skill --skill "full-output-enforcement" --agent claude-code
 
+# Version 4.4: zehn weitere Quellen, destilliert in 04, 06, 12, 13, 26, 30, 55 bis 58 sowie in
+# design-review.md und figma-zu-code.md des Bauablaufs. Bewusst NICHT voreingestellt: jede
+# Quelle enthält Stellen gegen die harten Grenzen (englische Schreibregeln, Gedankenstriche,
+# Dringlichkeit als Werkzeug, Laufzeitabruf von Regeln, Schrift unter 14 px). Die
+# Gegenüberstellungen stehen in den Kapiteln unter "Bewusst nicht übernommen". Auf
+# ausdruecklichen Wunsch einzeln, Skillnamen in den Quellen geprueft, Befehle nicht ausgefuehrt:
+#   npx --yes skills add emilkowalski/skills --skill review-animations --agent claude-code
+#   npx --yes skills add emilkowalski/skills --skill break-ui --agent claude-code
+#   npx --yes skills add vercel-labs/agent-skills --skill web-design-guidelines --agent claude-code
+#   npx --yes skills add pbakaus/impeccable --skill impeccable --agent claude-code
+#   npx --yes skills add coreyhaines31/marketingskills --skill cro --agent claude-code
+#   npx --yes skills add coreyhaines31/marketingskills --skill copy-editing --agent claude-code
+#   npx --yes skills add coreyhaines31/marketingskills --skill ab-testing --agent claude-code
+#   npx --yes skills add https://github.com/Community-Access/accessibility-agents --skill web-accessibility-wizard --agent claude-code
+#   npx --yes skills add https://github.com/anthropics/knowledge-work-plugins --skill design-critique --agent claude-code
 # Version 4.21: sieben weitere Quellen sind destilliert (50 bis 54, arbeitsdisziplin.md,
 # browser-pruefung-mit-playwright-cli.md, zahlungen-umsetzung.md), bewusst NICHT voreingestellt.
 # Mit den Originalen im Kontext pendelt ein Modell an den Stellen, an denen sie dem Regelwerk
@@ -134,6 +149,10 @@ echo "                              empfehlen picsum-Fotos, fremde Logos per CDN
 echo "                              erfundene krumme Zahlen, gegen die harten Grenzen."
 echo "                              Befehle auf Zuruf stehen oben im Skript."
 echo
+echo "  Quellen aus Version 4.4     emilkowalski, vercel web-design-guidelines, impeccable-"
+echo "                              Update, marketingskills, accessibility-agents,"
+echo "                              knowledge-work design, gstack, designer-skills, Figma,"
+echo "                              stitch-skills. Destilliert, Befehle oben im Skript."
 echo "  Version 4.21                scroll-craft, humanizer, agent-skills, stripe-best-practices,"
 echo "                              playwright-cli, hyperframes sind destilliert (Kapitel 50 bis 54,"
 echo "                              arbeitsdisziplin.md). claude-security (Anthropic) ist proprietaer"

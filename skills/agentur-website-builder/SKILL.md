@@ -4,7 +4,7 @@ description: Baut komplette Kundenwebsites mit Astro und Cloudflare Pages nach A
 license: Proprietär, That's it. Marketing / VFDESIGN LTD
 metadata:
   author: That's it. Marketing / Henneberg Webdesign
-  version: 2.22.0
+  version: 2.23.0
 ---
 
 # Agentur Website Builder
@@ -126,10 +126,11 @@ Bevor irgendetwas gefragt wird:
    „Standardstack ohne Rückfrage" in `references/stack-und-deployment.md`. Cloudflare Pages
    Astro ist der Standardfall dieses Skills, keine Option unter mehreren.
 2. Alle gelieferten Materialien auswerten: Designentwurf aus Claude Design, Screenshots,
-   Linktree, Copydokumente, Logos, Bilder im Repo. Liegt ein Designsystem in Claude Design, wird
-   es über die Synchronisation geholt und nach seiner Herkunft eingestuft (Kundenmaterial oder nur
-   Beschreibung), siehe „Ein Designsystem aus Claude Design" in
-   `../webdesign-conversion/references/24-designsystem-vorrang.md`.
+   Linktree, Copydokumente, Logos, Bilder im Repo. Figma-Link: `references/figma-zu-code.md`,
+   erst die Stufe nach `../webdesign-conversion/references/24-designsystem-vorrang.md`
+   bestimmen, dann Variablen mit `tokens.css` abgleichen. Designsystem in Claude Design: über
+   die Synchronisation holen und nach Herkunft einstufen, siehe „Ein Designsystem aus Claude
+   Design" in derselben Datei.
 3. Bei einer Überarbeitung die alte Seite abrufen und inventarisieren: Seitenstruktur, URLs,
    Texte, Rechtstexte, Kontaktdaten, Öffnungszeiten, Leistungen, bestehende Rankings. Dafür
    `node scripts/relaunch-inventory.mjs https://alte-seite.de`, siehe
@@ -224,6 +225,9 @@ Die Rangfolge bei Zielkonflikten steht im Konzept und in der `CLAUDE.md`, siehe
 Das Konzept wird mit Begründung zuerst und Spielregeln für die Rückmeldung vorgelegt, Ablauf in
 `references/kundenabstimmung.md`.
 
+Vor der Freigabe das Konzept mit den Gegenfragen aus `references/design-review.md`
+Abschnitt 8 prüfen: gesammelt in einer Nachricht je Runde, jede mit Empfehlung.
+
 Erst nach Freigabe bauen. Wenn der Nutzer ausdrücklich sagt, es soll direkt gebaut werden,
 das Konzept trotzdem in Kurzform voranstellen und ohne Wartezeit weiterarbeiten.
 
@@ -235,6 +239,9 @@ Reihenfolge, weil sie Nacharbeit spart:
    `../webdesign-conversion/references/10-visuelle-richtung.md` und
    `15-spacing-rhythmus.md`, Ausgangsdatei
    `../webdesign-conversion/assets/vorlagen/tokens.css`
+   Typoskala mit `node scripts/typoskala.mjs` rechnen, Ersatzschrift je Familie mit
+   `node scripts/schrift-metriken.mjs` messen, beides nach
+   `../webdesign-conversion/references/55-typografie-system.md`
 2. Layout, Navigation, Footer, Seitenstruktur nach `references/referenzen-und-auswahl.md`
    und `../webdesign-conversion/references/02-design-ux.md`
 3. Sektionen von oben nach unten, mit Hintergrund- und Hierarchieplan nach
@@ -274,6 +281,7 @@ node scripts/pruefe-kontrast.mjs
 node scripts/pruefe-platzhalter.mjs --launch
 node scripts/pruefe-breakpoints.mjs http://localhost:4321 --bilder
 node scripts/pruefe-geschmack.mjs
+node scripts/pruefe-typografie.mjs
 node scripts/pruefe-sicherheit.mjs                         # vor und nach dem Build
 node scripts/pruefe-scrollstrecke.mjs http://localhost:4321   # nur Seiten mit Scroll-Bewegung
 ```
@@ -286,9 +294,19 @@ ein zweites Laufband, mehrere Texte für dieselbe Kontaktabsicht und die messbar
 `pruefe-platzhalter.mjs` findet zusätzlich ausgelassenen Code (`// ...`, „Rest wie oben"):
 eine Auslassung ist kein offener Wert, sondern Arbeit, die als erledigt gemeldet wurde.
 
+`pruefe-typografie.mjs` prüft, dass Schrift in rem steht, beim Zoomen mitwächst, nie unter
+14 px fällt und selbst gehostet mit Ersatzschrift lädt.
+
 `pruefe-breakpoints.mjs` prüft acht Größen, meldet horizontales Überlaufen, zu kleine
 Klickflächen, Schrift unter 14 Pixel und Bilder ohne Maße. Gefundene Abweichungen direkt
-korrigieren und den Check wiederholen, bis er sauber ist. Erst danach berichten.
+korrigieren und den Check wiederholen, bis er sauber ist.
+
+Danach die Belastungsprobe mit Extremdaten und das Design-Review nach
+`references/qa-und-abnahme.md` und `references/design-review.md`: Aufnahmen auf festen
+Breiten, Befundliste nach Schwere, ein Befund ein Commit, Vorher-nachher-Paare. Für
+Barrierefreiheit gibt `../webdesign-conversion/assets/checklisten/wcag22-audit.md` den
+Durchgang je Erfolgskriterium vor, für Bewegung
+`../webdesign-conversion/references/30-motion-pruefung.md`. Erst danach berichten.
 
 Das gilt für Fehler. Für die Geschmacksfrage danach (Kritik, Feinschliff, mutiger/ruhiger)
 gibt es eine Obergrenze statt einer endlosen Schleife, siehe
@@ -392,6 +410,9 @@ Schwesterskill.
 | `references/chatbot-auf-der-website.md` | nur wenn ein KI Chatbot auf die Seite soll: Leitplanken, Wissensbasis, Gegenprobe, Datenschutz |
 | `references/moodboard-und-stylescape.md` | Phase 2 und 3, vor dem Bau: Moodboard intern, Stylescape zur Abnahme der Richtung |
 | `references/kundenabstimmung.md` | Phase 2, 3 und 6: Rollen beim Kunden, Präsentation, Rückmeldungen einsortieren |
+| `references/agenturwerkzeuge.md` | wenn unklar ist, welches Skript aus `scripts/` für eine Aufgabe zuständig ist, und welche Playwright oder Firecrawl brauchen |
+| `references/design-review.md` | Phase 5 nach den Prüfskripten, immer; Abschnitt 8 in Phase 3 vor der Freigabe |
+| `references/figma-zu-code.md` | sobald ein Figma-Link oder eine Figma-Bibliothek geliefert wird, Phase 1 bis 4 |
 | `references/aenderungsrunden-und-layoutschutz.md` | jede Änderung an einer gebauten Seite: Rückmeldungen bündeln, Auftrag mit Sektion und „bleibt", Prüfung danach, eigene Sitzung für Text und Leistung, Block für die Projekt-`CLAUDE.md` |
 | `references/brand-extraktion.md` | jeder Relaunch und jede Brandingübernahme per URL: Farben, Schriften, Logo der eigenen Bestandsseite messen |
 | `references/firecrawl-recherche.md` | eine bekannte, alte oder fremde Seite crawlen oder scrapen, für Relaunch-Inventar oder Design-Referenz |
@@ -434,30 +455,11 @@ Schwesterskill.
 | `../webdesign-conversion/references/53-zahlungen-mit-stripe.md` | nur bei Zahlung: Weg, Recht der Bestellstrecke, Steuer, Webhooks |
 | `../webdesign-conversion/references/54-video-aus-html-mit-hyperframes.md` | nur wenn Video oder eine Animationssequenz als Lieferstück gebaut oder verbessert wird |
 
-`assets/` enthält geprüfte Vorlagen für Consent, Formularroute, Mailtemplate und
-Bewertungsabruf. Diese kopieren und an das Projekt anpassen, statt jedes Mal neu zu
-schreiben. Rechtstexte, Tokens, Meta-Head, JSON-LD, 404 und Security-Header liegen in
-`../webdesign-conversion/assets/vorlagen/`.
+`assets/` enthält geprüfte Vorlagen für Consent, Formularroute, Mailtemplate und Bewertungsabruf
+(kopieren und anpassen, nicht neu schreiben). Rechtstexte, Tokens, Meta-Head, JSON-LD, 404 und
+Security-Header liegen in `../webdesign-conversion/assets/vorlagen/`.
 
-`scripts/` im Repowurzelverzeichnis enthält zwölf Prüfskripte (`pruefe-*.mjs`) und Agenturwerkzeuge, die nie Teil der
-ausgelieferten Seite werden und nie in das `package.json` des Kundenprojekts wandern:
-
-* `relaunch-inventory.mjs` inventarisiert eine alte Kundenseite (Ablage `.relaunch-inventory/`, `references/intake-und-entscheidungen.md`),
-  `brand-extraktion.mjs` misst Farben, Schriften, Typoskala, Buttons und Logo der eigenen Bestandsseite im Browser
-  (Ablage `.brand-extraktion/`, `references/brand-extraktion.md`), `design-scan.mjs` erfasst eine fremde oder vom Kunden genannte
-  Referenz (Ablage `.design-scan/<host>/`, `references/firecrawl-recherche.md`).
-* `referenz-register.mjs` führt den Freigabezustand jeder Designreferenz und ist die einzige Stelle, die ihn ändert; `referenz-crawl.mjs`
-  erfasst nur Freigegebenes (sonst Exit 2); `design-dna.mjs`, `muster-vergleich.mjs`, `muster-paket.mjs` führen bis Tor 2, `pruefe-muster.mjs`
-  prüft die Musterbibliothek. Keines schreibt in sie (`references/designrecherche-ablauf.md`).
-* `deslop-check.mjs` prüft selbst formulierte Copy-Vorschläge (`references/qa-und-abnahme.md`), `pruefe-geschmack.mjs` zählt die messbaren
-  KI-Tells (`../webdesign-conversion/references/26-geschmack-und-ki-tells.md`), `pruefe-sicherheit.mjs` findet Schlüssel, öffentliche Geheimnisse
-  und die Zahlungsfehler (`references/sicherheitspruefung.md`), `pruefe-scrollstrecke.mjs` läuft eine Scrollseite durch (`references/qa-und-abnahme.md`, Schritt 4).
-* `lib/abruf.mjs` ist die gemeinsame Abrufschicht der Erfassungswerkzeuge (vier Rückfallstufen, robots.txt, `references/firecrawl-recherche.md`),
-  `lib/browser.mjs` die eine Stelle, die Playwright findet und Chromium startet.
-
-Die Erfassungswerkzeuge laufen mit reinem `fetch()` ohne Abhängigkeit, optional über eine selbst gehostete Firecrawl-Instanz
-(`FIRECRAWL_BASE_URL`), die Cloud (`FIRECRAWL_API_KEY`) oder ein vorhandenes Playwright. Playwright brauchen außerdem `brand-extraktion.mjs`,
-`pruefe-breakpoints.mjs` und `pruefe-scrollstrecke.mjs`: berechnete Styles, Hoverzustände und Scrollen liefert nur ein Browser.
+Die Skripte in `scripts/` im Repowurzelverzeichnis (dreizehn Prüfskripte `pruefe-*.mjs` und die Agenturwerkzeuge) werden nie Teil der ausgelieferten Seite und wandern nie in das `package.json` des Kundenprojekts. Welches Skript was tut und wo sein Ablauf steht: `references/agenturwerkzeuge.md`.
 
 ## Definition of Done
 
@@ -466,9 +468,8 @@ Erst wenn alle Punkte erfüllt sind, darf von einer fertigen Seite gesprochen we
 * alle vereinbarten Seiten und Sektionen vorhanden, keine vergessenen Platzhaltertexte
 * jeder selbst formulierte Copy-Vorschlag mit `scripts/deslop-check.mjs` auf 5 von 5 geprüft
 * Build läuft ohne Fehler, `astro check` ohne Befund
-* alle zwölf Prüfskripte ohne Fehler, auch `pruefe-geschmack.mjs`, `pruefe-geo.mjs`, `pruefe-aktualitaet.mjs`, `pruefe-seitenbasis.mjs` und `pruefe-sicherheit.mjs` gegen `dist/`, bei Scrollseiten `pruefe-scrollstrecke.mjs` auf Desktop, Handy und mit reduzierter Bewegung
-* Vorflugcheck aus `26-geschmack-und-ki-tells.md` durchgegangen, Ungeprüftes benannt
-* Fehlermodi, Stresstest mit echtem Inhalt und Subtraktionsrunde nach `references/qa-und-abnahme.md` Schritt 8b
+* alle dreizehn Prüfskripte ohne Fehler, auch `pruefe-geschmack.mjs`, `pruefe-geo.mjs`, `pruefe-aktualitaet.mjs`, `pruefe-typografie.mjs`, `pruefe-seitenbasis.mjs` und `pruefe-sicherheit.mjs` gegen `dist/`, bei Scrollseiten `pruefe-scrollstrecke.mjs` auf Desktop, Handy und mit reduzierter Bewegung
+* Vorflugcheck aus `26-geschmack-und-ki-tells.md` durchgegangen, Ungeprüftes benannt; Belastungsprobe mit Extremdaten, Design-Review, Fehlermodi und Subtraktionsrunde nach `references/qa-und-abnahme.md` (Schritt 8b), Befunde behoben oder als Entscheidung benannt
 * Tastaturbedienung durch alle interaktiven Elemente, sichtbarer Fokus
 * Formular getestet: Erfolg, Validierungsfehler, Serverfehler, Turnstile
 * Bestätigungsmail und interne Benachrichtigung im Branding des Kunden

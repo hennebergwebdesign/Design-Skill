@@ -5,19 +5,60 @@
 @import './tokens.css';
 
 /* Schriften selbst hosten: spart DNS, Verbindung und die Datenschutzdiskussion.
-   Nur die wirklich benutzten Schnitte ausliefern. */
+   Nur die wirklich benutzten Schnitte ausliefern, jeder Wert aus --gewicht-* in
+   tokens.css braucht hier seine Fläche. Die Schrift der Heldenüberschrift im
+   <head> vorladen: <link rel="preload" href="/fonts/…woff2" as="font" type="font/woff2" crossorigin>.
+   Nur diese eine; jede weitere Vorladung konkurriert mit dem Heldenbild. */
+@font-face {
+  font-family: 'Instrument Sans'; font-style: normal; font-weight: 400; font-display: swap;
+  src: url('/fonts/instrument-sans-latin-400-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Instrument Sans'; font-style: normal; font-weight: 600; font-display: swap;
+  src: url('/fonts/instrument-sans-latin-600-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Outfit'; font-style: normal; font-weight: 600; font-display: swap;
+  src: url('/fonts/outfit-latin-600-normal.woff2') format('woff2');
+}
 @font-face {
   font-family: 'Outfit'; font-style: normal; font-weight: 700; font-display: swap;
   src: url('/fonts/outfit-latin-700-normal.woff2') format('woff2');
 }
+
+/*
+  ERSATZSCHRIFTEN: die lokale Arial, auf die Maße der Webschrift gebracht.
+
+  size-adjust gehört HIER hin, nicht in die @font-face der Webschrift. Dort
+  verkleinert oder vergrößert es die echte Schrift, und 1rem ist nicht mehr 1rem.
+
+  Gemessen am 06.10.2026 mit scripts/schrift-metriken.mjs aus den Dateien von
+  @fontsource/instrument-sans 5.3.0 (400) und @fontsource/outfit 5.3.0 (700, gegen
+  Arial Bold). Bei anderer Schrift oder anderem Schnitt neu messen, nie schätzen.
+*/
 @font-face {
-  font-family: 'Instrument Sans'; font-style: normal; font-weight: 400; font-display: swap;
-  size-adjust: 102%;   /* gleicht den Sprung zur Fallback-Schrift aus */
-  src: url('/fonts/instrument-sans-latin-400-normal.woff2') format('woff2');
+  font-family: 'Instrument Sans Ersatz';
+  src: local('Arial'), local('ArialMT'), local('Liberation Sans');
+  font-weight: 400;
+  size-adjust: 101.95%;
+  ascent-override: 95.14%;
+  descent-override: 24.52%;
+  line-gap-override: 0.00%;
+}
+@font-face {
+  font-family: 'Outfit Ersatz';
+  src: local('Arial Bold'), local('Arial-BoldMT'), local('Liberation Sans Bold');
+  font-weight: 700;
+  size-adjust: 94.46%;
+  ascent-override: 105.86%;
+  descent-override: 27.52%;
+  line-gap-override: 0.00%;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
 
+/* html bekommt KEINE font-size. 1rem ist dann die Schriftgröße, die die Person
+   im Browser eingestellt hat, und die ganze Skala folgt ihr. */
 html {
   overflow-x: clip;
   scroll-behavior: smooth;
@@ -33,7 +74,11 @@ body {
   margin: 0;
   font-family: var(--schrift-text);
   font-size: var(--text-base);
+  font-weight: var(--gewicht-text);
   line-height: var(--zeilenhoehe-normal);
+  letter-spacing: var(--laufweite-text);
+  font-kerning: normal;
+  font-optical-sizing: auto;
   color: var(--farbe-text);
   background: var(--farbe-flaeche);
   -webkit-font-smoothing: antialiased;
@@ -42,19 +87,36 @@ body {
 
 img, video, svg { max-width: 100%; height: auto; display: block; }
 
+/*
+  ÜBERSCHRIFTEN: Größe, Zeilenhöhe, Laufweite und Gewicht wandern gemeinsam.
+  Wer eine Stufe ändert, ändert alle vier, sonst steht eine 72-px-Zeile mit der
+  Sperrung einer 16-px-Zeile da.
+  Abstand: oben mehr als unten, denn eine Überschrift gehört zu dem, was unter
+  ihr steht. In em, damit er mit der Stufe wächst.
+*/
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--schrift-display);
-  font-weight: 600;
-  line-height: var(--zeilenhoehe-eng);
-  letter-spacing: -0.02em;
-  margin: 0 0 var(--raum-4);
+  font-weight: var(--gewicht-titel);
+  line-height: var(--zeilenhoehe-titel);
+  letter-spacing: var(--laufweite-titel);
+  margin: 0 0 0.5em;
   text-wrap: balance;
   overflow-wrap: break-word;
 }
-h1 { font-size: var(--text-h1); font-weight: 700; }
+h1 {
+  font-size: var(--text-h1);
+  font-weight: var(--gewicht-display);
+  line-height: var(--zeilenhoehe-eng);
+  letter-spacing: var(--laufweite-display);
+}
 h2 { font-size: var(--text-h2); }
 h3 { font-size: var(--text-h3); }
-h4 { font-size: var(--text-h4); }
+h4 { font-size: var(--text-h4); line-height: var(--zeilenhoehe-mittel); letter-spacing: var(--laufweite-text); }
+h5, h6 { font-size: var(--text-base); line-height: var(--zeilenhoehe-mittel); letter-spacing: var(--laufweite-text); }
+
+/* Kursive Unterlängen (g, j, p, q, y) in großen Graden brauchen Reserve, sonst
+   schneidet ein Container mit overflow die Unterlänge ab. */
+:is(h1, h2) :is(em, i) { padding-block-end: 0.06em; }
 
 /*
   KEINE SILBENTRENNUNG.
@@ -84,7 +146,28 @@ a { color: var(--farbe-marke-text); text-underline-offset: 0.15em; }
 a:not(.btn) { padding-block: 0.2rem; }   /* vergrößert das Ziel ohne Layoutänderung */
 a:hover { color: var(--farbe-marke-700); }
 
-strong { font-weight: 600; }
+strong, b { font-weight: var(--gewicht-betont); }
+
+/*
+  ZIFFERN: Tabellen, Preise und hochzählende Zahlen bekommen Tabellenziffern.
+  Mit Proportionalziffern springt ein Zähler bei jeder Stelle seitlich, und
+  Spalten mit Beträgen stehen nicht untereinander.
+*/
+table, .zahl, .preis, time { font-variant-numeric: tabular-nums lining-nums; }
+.zahl {
+  font-family: var(--schrift-display);
+  font-size: var(--text-zahl);
+  font-weight: var(--gewicht-display);
+  line-height: var(--zeilenhoehe-eng);
+  letter-spacing: var(--laufweite-display);
+}
+
+/* Abkürzungen in Versalien bekommen Sperrung, damit sie nicht zulaufen. */
+abbr { letter-spacing: var(--laufweite-versal); text-decoration: none; }
+small { font-size: var(--text-sm); letter-spacing: var(--laufweite-klein); }
+
+/* Deutsche Anführungszeichen für <q>, falls lang="de" am html steht. */
+:lang(de) { quotes: '„' '“' '‚' '‘'; }
 ul, ol { padding-left: 1.25em; }
 button, input, select, textarea { font: inherit; color: inherit; }
 
@@ -167,7 +250,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
   haben ist der häufigste Spacing-Fehler in langen Texten.
 */
 .fluss > * + * { margin-block-start: var(--fluss-raum, var(--raum-6)); }
-.fluss > * + :is(h2, h3) { margin-block-start: var(--raum-12); }
+.fluss > * + :is(h2, h3) { margin-block-start: 1.6em; }   /* in em: wächst mit der Stufe */
 .fluss > :is(h2, h3) + * { margin-block-start: var(--raum-3); }
 .fluss > p { max-width: var(--breite-text); }
 
@@ -238,8 +321,14 @@ button, input, select, textarea { font: inherit; color: inherit; }
 }
 
 .text-leise { color: var(--farbe-text-leise); }
-.text-klein { font-size: var(--text-sm); }
-.text-gross { font-size: var(--text-lg); }
+.text-klein { font-size: var(--text-sm); letter-spacing: var(--laufweite-klein); }
+/* Einleitungsabsatz unter einer Überschrift: eine halbe Stufe größer, kürzere
+   Zeile, eigene Zeilenhöhe. */
+.text-gross {
+  font-size: var(--text-lg);
+  line-height: var(--zeilenhoehe-lead);
+  max-width: var(--breite-lead);
+}
 .text-mitte { text-align: center; }
 .text-mitte p { margin-inline: auto; }
 
@@ -255,7 +344,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
   content: 'Copy-Vorschlag, mit Kunde abstimmen';
   position: absolute; inset-block-start: 0; inset-inline-start: 0;
   background: var(--farbe-fehler); color: #fff;
-  font-size: 0.75rem; padding: 0.25rem 0.5rem; z-index: 50;
+  font-size: 0.75rem; padding: 0.25rem 0.5rem; z-index: 50; /* bewusst klein: Entwicklungsmarkierung, nie in Produktion */
 }
 
 /*

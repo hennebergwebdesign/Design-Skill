@@ -14,7 +14,7 @@ rechtlich tragfähig, barrierearm, schnell, und nicht wie von einer Maschine geb
 
 | Skill | Rolle | Lizenz |
 |---|---|---|
-| `skills/webdesign-conversion/` | das Regelwerk: was gut ist und warum. 55 Referenzen (00 bis 54), 3 Playbooks, Vorlagen, Checklisten | MIT |
+| `skills/webdesign-conversion/` | das Regelwerk: was gut ist und warum. 59 Referenzen (00 bis 58), 3 Playbooks, Vorlagen, Checklisten | MIT |
 | `skills/agentur-website-builder/` | der Lieferablauf: Phasen 0 bis 6, fester Agenturstack, einsatzfertiger Code | Agenturstandard, siehe seine `SKILL.md` |
 
 Die Trennung ist die zentrale Entscheidung dieses Repositories: **Wissen und Ablauf sind
@@ -43,6 +43,11 @@ node scripts/pruefe-aktualitaet.mjs          # dist/ und src/: Copyright-Jahr, S
 node scripts/pruefe-seitenbasis.mjs          # nach dem Build: dist/ lang, Viewport und Zoom, Alt-Texte, Labels, Fremdserver, Teilen-Ebene
 node scripts/pruefe-sicherheit.mjs           # vor und nach dem Build: Schlüssel, öffentliche Geheimnisse, .env im Git-Index, CSP, eval, bei Stripe Webhook-Signatur und Zahlungsregeln
 node scripts/pruefe-scrollstrecke.mjs http://localhost:4321   # Scrollseite durchlaufen (Playwright): tote Strecke, Deckkraft, Überlauf; --mobil, --reduziert
+node scripts/pruefe-typografie.mjs           # rem statt px, Zoomgrenze 2,5, 14-px-Boden, Ordnung der Skala, Schriftladen
+
+# Typografie rechnen und messen (Kapitel 55)
+node scripts/typoskala.mjs                   # modulare, fließende Skala in rem als Tokens, Optionen im Kopf des Skripts
+node scripts/schrift-metriken.mjs public/fonts/marke-400.woff2   # Ersatzschrift mit size-adjust und Overrides
 
 # Agenturwerkzeuge
 node scripts/relaunch-inventory.mjs https://alte-kundenseite.de
@@ -94,14 +99,16 @@ nicht, es braucht das Glob-Muster in Anführungszeichen.
 ```
 .claude-plugin/       plugin.json, marketplace.json
 skills/
-  webdesign-conversion/     SKILL.md, references/00-54, playbooks/, assets/
+  webdesign-conversion/     SKILL.md, references/00-58, playbooks/, assets/
                             assets/musterbibliothek/ ist das globale Musterwissen
                             assets/vorlagen/scrollvideo/ sind die Bausteine zu Kapitel 38
                             assets/vorlagen/prompts/ sind die Prompt-Vorlagen zu Kapitel 24, 38, 39, 40, 47, 48 (auch Textkritik, Design Loop, Fünf-Agenten-Prüfung, Varianten, Prüfer)
                             assets/vorlagen/motion/ und plakat/ sind die Dateien zu Kapitel 47 (Mikrobewegung, Plakat, Three.js-Szene), DESIGN.md die Markenvorlage
                             assets/vorlagen/fingerabdruecke.md (Kapitel 50) und zahlung-rechtsbausteine.md (Kapitel 53)
+                            assets/checklisten/ mit pre-launch, conversion-audit, wcag22-audit (je Erfolgskriterium) und design-kritik
+                            Kapitel 55 bis 58 (Typografie, Interface-Regeln, DESIGN.md, Formulare) stammen aus der Linie von That's it. Marketing
   agentur-website-builder/  SKILL.md, references/, assets/consent|forms|reviews|stripe (Stripe-Vorlagen sind ungeprüft)
-scripts/              zwölf Prüfskripte, Agenturwerkzeuge, Designrecherche, ein Installer,
+scripts/              dreizehn Prüfskripte, Typoskala und Schriftmetriken, Agenturwerkzeuge, Designrecherche, ein Installer,
                       pruefe-skill.mjs prüft dieses Repository selbst, kein Kundenprojekt
   lib/abruf.mjs       die eine Abrufschicht, vier Rückfallstufen, robots.txt
   lib/browser.mjs     die eine Stelle, die Playwright sucht und Chromium startet
@@ -148,11 +155,19 @@ Diese Punkte haben einen Grund. Wer sie ändert, ändert damit auch den Grund.
 - **`SKILL.md` unter 500 Zeilen, jede Referenz über 100 Zeilen mit „## Inhalt", jede Referenz in ihrer
   `SKILL.md` genannt.** Grund: Das Modell liest lange Dateien oft nur an und folgt Verweisen über zwei
   Ebenen nur teilweise; was es nicht liest, gilt nicht. Geprüft mit `node scripts/pruefe-skill.mjs`, nach
-  einem neuen Abschnitt `--inhalt` laufen lassen. Die `SKILL.md` des Bauablaufs steht bei 498 Zeilen: neue
-  Inhalte gehören in Referenzen.
+  einem neuen Abschnitt `--inhalt` laufen lassen. Die `SKILL.md` des Bauablaufs steht bei 499 Zeilen, die Skriptübersicht
+  liegt deshalb in `references/agenturwerkzeuge.md`: neue Inhalte gehören in Referenzen.
 - **Was nie brechen darf, läuft als Hook, nicht nur als Text.** Beispiel: `pruefe-striche.mjs --hook`.
 - Versionsnummer in `.claude-plugin/plugin.json` und in der `metadata` der beiden `SKILL.md`
   bei inhaltlichen Änderungen nachziehen.
+- **Zwei Linien, ein Bestand.** Das Plugin wird zusätzlich im Repository `Thatsitmarketing/Skill_Website`
+  (Ordner `Design-Skill/`) gepflegt. Seit Version 4.23.0 sind `skills/`, `scripts/`, `evals/`, `README.md`,
+  `CREDITS.md` und `.claude-plugin/` in beiden gleich; nur die Unterlagen unterscheiden sich (dort `CLAUDE.md`,
+  `CHANGELOG.md`, `OFFENE-PUNKTE.md`). Abgeglichen wird dreiseitig gegen den zuletzt gemeinsamen Stand, nie
+  zeilenweise gegen den Arbeitsbaum, weil ein Zweiwegevergleich eigene Ergänzungen für fremde Änderungen hält.
+  Kapitelnummern sind fest: 55 bis 58 kommen aus der anderen Linie, die nächste freie Nummer ist 59, und eine
+  Nummer wird in keiner Linie doppelt vergeben. Grund: Beide Linien wachsen, und jeder Abgleich mit
+  Nummernkollision kostet eine Umbenennung samt aller Verweise.
 
 ## Ein neues Designmuster aufnehmen
 
@@ -184,6 +199,24 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Offene Punkte
 
+- Version 4.23.0: Die Inhalte aus der Linie von That's it. Marketing (Kapitel 55 bis 58, `design-review.md`,
+  `figma-zu-code.md`, `agenturwerkzeuge.md`, die Checklisten `wcag22-audit.md` und `design-kritik.md`, die Ergänzungen in
+  04, 06, 12, 13 und 26, die Belastungsprobe in `qa-und-abnahme.md`) sind an keinem Kundenprojekt erprobt, kein Evalfall,
+  das Δ ist eine Vermutung. `pruefe-typografie.mjs` ist nur gegen Fixtures und die eigenen Vorlagen geprüft, liest CSS,
+  `<style>`-Blöcke und Markup, nicht Tailwind-Klassen wie `text-[13px]` und nicht Stilobjekte in JSX. `schrift-metriken.mjs`
+  ist gegen Instrument Sans, Outfit und die Liberation-Schriften gelaufen; ob die Ersatzschrift den Sprung im Browser
+  beseitigt, ist nicht als CLS gemessen, WOFF2-Sammlungen (`ttcf`) lehnt es ab. Laufweiten (`-0.025em`, `-0.015em`) und
+  Zeilenhöhen in `tokens.css` sind Ausgangswerte, nicht an Lesetests gemessen. Die Figma-Werkzeuge
+  (`get_variable_defs`) sind nie gegen eine echte Datei aufgerufen. Die Dauern 0,4 s (Akkordeon) und 0,6 s (Dialog) in 18
+  liegen über den Werten aus Kapitel 30 und sind dort als Prüfpunkt markiert. Die Tokens `--ziel-min`, `--ziel-touch` und
+  `--hoehe-unten-fixiert` aus 04 fehlen in `tokens.css`. Rechtlich nicht abschließend bewertet: `sessionStorage` für den
+  Zwischenstand mehrstufiger Formulare, ein gemerktes geschlossenes Pop-up als unbedingt erforderlich, Kopplungsverbot bei
+  Download gegen Newsletter (58, 06). **Ersetzt:** die zweistufige Typoskala von Hand in `tokens.css` durch die gerechnete
+  Skala aus Kapitel 55, und die Vorlage `DESIGN.md` durch den Abzug aus Kapitel 57 (mit Iconography und Voice aus
+  Kapitel 47 ergänzt). Ob die Prompt-Vorlagen mit der neuen Vorlage besser oder schlechter arbeiten, ist ungemessen.
+  Seit dem 29.09.2026 liegen vier Dribbble-PDFs (rund 18 MB) in `agentur-website-builder/references/`: nirgends verlinkt,
+  mit dem Plugin ausgeliefert, fremdes Bildmaterial ohne Freigabe nach Tor 1. Zu entscheiden: über `referenz-register.mjs`
+  aufnehmen, außerhalb von `skills/` ablegen oder entfernen.
 - Version 4.22.0: Der Zweitdurchgang nach `51-…` Abschnitt 7a, die Vorlage `textueberarbeitung-zweitmodell.md`, die Befundstufen in `sicherheitspruefung.md` 6a, der Abschnitt 6a zu
   `ego-browser`, die REA-Beschreibung in `firecrawl-recherche.md` und die Abschnitte 9a und 9b in `arbeitsdisziplin.md` sind an keinem Projekt erprobt, kein Evalfall, das Δ ist eine Vermutung. Es gibt
   keine neue harte Grenze und kein neues Skript, deshalb auch keine neue Prüfung. **Nichts davon ist ausgeführt:** weder `npx skills`, `ego-browser`, `rea-agents` noch Orca sind in dieser Umgebung gelaufen;
@@ -395,6 +428,28 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Änderungsverlauf
 
+- **22.10.2026, Version 4.23.0** Abgleich in beide Richtungen mit `Thatsitmarketing/Skill_Website` (Ordner
+  `Design-Skill/`, dort ebenfalls als 4.22.0 geführt, aber mit anderem Inhalt). Dreiseitig gegen Upstream 4.21.0
+  (Commit `92c84c2`), den zuletzt gemeinsamen Stand: 37 Dateien nur dort geändert oder neu, 8 nur hier, 7 auf beiden
+  Seiten; davon ist `CLAUDE.md` je Linie eigen, fünf liefen ohne Konflikt zusammen, einer (Beschreibung in `plugin.json`)
+  von Hand. **Von dort übernommen:**
+  Kapitel `55-typografie-system.md` (modulare, fließende Skala in rem, Zoomgrenze 2,5, Boden 14 px, Ersatzschrift,
+  deutscher Satz), `56-interface-regeln.md` (Fokus, Zustände, Medien, Touch, Audit als `datei:zeile`), `57-design-md.md`
+  (DESIGN.md als Abzug aus `marke.json` und `tokens.css`), `58-formulare-und-anfragestrecken.md`; im Bauablauf
+  `design-review.md`, `figma-zu-code.md`, `agenturwerkzeuge.md` (Skriptübersicht, damit die `SKILL.md` unter 500 Zeilen
+  bleibt), Belastungsprobe und Intakefelder; die Checklisten `wcag22-audit.md` und `design-kritik.md`; Bauteilmuster und
+  WCAG-2.2-Kriterien in 04, Seitenprüfung nach Wirkung, Pop-ups und Preisseiten in 06, Satzmuster und Gegenlesen in 12,
+  Hypothese und Stichprobe in 13, sieben Tells in 26; die Skripte `pruefe-typografie.mjs`, `typoskala.mjs`,
+  `schrift-metriken.mjs` und sechs neue Regeln in `pruefe-geschmack.mjs`, Tests von 322 auf 359. **Neue harte Grenze:**
+  Typografie in rem, zoomfest, ab 14 px, geprüft mit `pruefe-typografie.mjs`. **Dorthin gegeben:** alles aus 4.22.0
+  (SlopMonster, Cloudflare, ego lite, REA, `vercel-labs/skills`, Orca). **Entschieden:** Die gerechnete Skala aus 55
+  ersetzt die zweistufige Skala von Hand in `tokens.css` und 10; die Vorlage `DESIGN.md` ist der Abzug aus 57, ergänzt um
+  Iconography und Voice, weil Kapitel 47 sie verlangt, und 57 nennt jetzt Motion, Iconography und Voice als Abschnitte nach
+  der Spezifikation; die Aufteilung von `CLAUDE.md` in `CHANGELOG.md` und `OFFENE-PUNKTE.md` bleibt eine Entscheidung der
+  anderen Linie und ist hier nicht übernommen. **Behoben:** in 10 der Verweis „Skala (29)" auf 55, in 29 die Zahl der
+  Prüfskripte (dreizehn), in der anderen Linie ein doppelter Evalfall in `evals/README.md`. Kein Evalfall gelaufen.
+  Versionen: Plugin 4.23.0, Regelwerk 2.26.0, Bauablauf 2.23.0. Herkunft der übernommenen Quellen in `CREDITS.md`,
+  Abschnitte „Aus der eigenen Linie".
 - **11.10.2026, Version 4.22.0** Auf Wunsch des Inhabers sechs Quellen eingearbeitet, alle MIT: `ItsssssJack/SlopMonster`, `cloudflare/security-audit-skill`, `citrolabs/ego-lite`, `morluto/rea`,
   `vercel-labs/skills`, `stablyai/orca`. Alle destilliert oder beschrieben, nichts mitgeliefert, die Originale nur als Befehle im Installer. **Eingearbeitet:** Kapitel 51 Abschnitt 7a (Kontext vor den Mustern,
   Zweitdurchgang durch ein Modell anderer Herkunft, Prüfwert ist kein Urteil) mit der Vorlage `textueberarbeitung-zweitmodell.md`; `sicherheitspruefung.md` Abschnitt 6a (Beratung gegen Vollprüfung, drei Befundstufen,

@@ -10,7 +10,12 @@ da, aber ohne Conversion-Architektur wird aus keinem Besucher eine Anfrage.
 - Schritt 6.2: Das 10-Sekunden-Formular
 - Schritt 6.3: Trust-Elemente strategisch platzieren
 - Schritt 6.4: Der Aufbau der „Über uns"-Seite
+- Schritt 6.5: Eine Seite nach Wirkung prüfen
+- Schritt 6.6: Pop-ups und Overlays
+- Schritt 6.7: Preisseiten und Preisblöcke
 - Weitere Conversion-Hebel
+- Bewusst nicht übernommen
+- Verwandte Kapitel
 
 ## Schritt 6.1: Die CTA-Hierarchie
 
@@ -91,6 +96,10 @@ Fortschrittsanzeige) konvertieren bei vielen Feldern besser als ein langes Formu
   interne Übersicht, Mail-HTML), müssen escaped werden. Ein `<script>` im Namensfeld ist
   der Standardweg zu gespeichertem XSS.
 
+Feld für Feld (E-Mail, Telefon, Auswahl, `autocomplete`), mehrstufige Anfragestrecken,
+Fehlerablauf, Rückruf, Angebotsanfrage, Download mit getrenntem Newsletter und Kontoanlage:
+`58-formulare-und-anfragestrecken.md`.
+
 ## Schritt 6.3: Trust-Elemente strategisch platzieren
 
 Wer behauptet, die perfekte Lösung zu bieten, ohne einen einzigen Beweis zu liefern, erntet
@@ -146,6 +155,145 @@ noch mehr Vertrauen aufzubauen.
 Features beschreiben, was etwas ist. Benefits beschreiben, was der Kunde davon hat: „Du
 bekommst einen festen Ansprechpartner" statt „Wir arbeiten mit festen Zuständigkeiten".
 
+## Schritt 6.5: Eine Seite nach Wirkung prüfen
+
+Für die ganze Website gibt es `../assets/checklisten/conversion-audit.md`. Dieser Schritt ist
+die Prüfung **einer** Seite, die nicht konvertiert, in der Reihenfolge, in der Befunde
+Anfragen kosten.
+
+**Vorher drei Angaben, sonst ist jeder Befund geraten:**
+
+| Angabe | Beispiel | Warum |
+|---|---|---|
+| Seitentyp | Startseite, Landingpage, Leistungsseite, Preisseite, Blogartikel | jeder Typ hat eine andere Aufgabe, siehe Tabelle unten |
+| Primäre Conversion | Rückruf anfragen | ohne festgelegtes Ziel wird jede Sektion nach einem anderen Maß bewertet |
+| Herkunft der Besucher | Google-Anzeige zu „Flachdach undicht" | eine Seite für Anzeigenklicks muss die Anzeige fortsetzen, eine für Suchtreffer die Suchanfrage beantworten |
+
+**Die Prüfreihenfolge:**
+
+| # | Prüfen | Frage | Typischer Befund |
+|---|---|---|---|
+| 1 | Wertversprechen | Versteht ein Fremder in fünf Sekunden, was das ist und warum es ihn betrifft? | Leistung statt Ergebnis, Firmensprache statt Kundensprache |
+| 2 | Headline | Trägt sie die Kernbotschaft und passt sie zur Herkunft? | allgemein, wo die Anzeige konkret war; klug statt klar |
+| 3 | Primär-CTA | Eine Handlung, ohne Scrollen sichtbar, Text nennt das Ergebnis? | drei gleich laute Knöpfe, „Absenden", „Mehr erfahren" als Hauptweg |
+| 4 | Hierarchie | Liest jemand, der nur überfliegt, die Hauptaussage? | alles gleich groß, Bild ohne Bezug zur Aussage |
+| 5 | Belege | Steht ein Beleg dort, wo eine Behauptung steht, und am CTA? | Belege gesammelt am Ende, Behauptungen ohne Quelle |
+| 6 | Einwände | Werden Preis, Eignung, Aufwand und Risiko beantwortet? | FAQ als Restrampe, siehe `12-copywriting.md` |
+| 7 | Reibung | Was hält auf dem Weg zur Anfrage auf? | Felder, Ladezeit, Navigation auf der Landingpage, Pop-up vor dem Inhalt |
+
+**Warum diese Reihenfolge:** Ein Fehler weiter oben macht alle darunter wertlos. Ein perfektes
+Formular hilft nicht, wenn der Besucher nach fünf Sekunden nicht weiß, ob er richtig ist.
+Dieselbe Logik hat die Optimierungsreihenfolge im monatlichen Review in
+`13-messung-optimierung.md`.
+
+### Was je Seitentyp zusätzlich zählt
+
+| Seitentyp | Prüfen | Ausführlich in |
+|---|---|---|
+| Startseite | Weg zur häufigsten Anfrage in einem Klick; wer schon entschieden hat und wer noch vergleicht, finden beide ihren Einstieg | `../playbooks/homepage.md` |
+| Landingpage | Message-Match zur Anzeige, keine Navigation, ein Ziel, das ganze Argument auf einer Seite | `../playbooks/landingpage.md` |
+| Leistungsseite | jede Eigenschaft mit dem, was der Kunde davon hat; ein Anwendungsfall aus seiner Branche; CTA am Ende jeder Leistung | `12-copywriting.md` |
+| Preisseite | Wahl zwischen den Paketen in Sekunden möglich, Preise als Text | Schritt 6.7 |
+| Blogartikel | CTA zum Thema des Artikels an einer natürlichen Pause, nicht der allgemeine Kontakt-CTA | `05-seo-sichtbarkeit.md` |
+| Über uns | Vertrauen statt Chronik | Schritt 6.4 |
+
+### Das Ergebnis
+
+Jeder Befund in derselben Form, damit er umgesetzt und nicht diskutiert wird:
+
+```
+Befund     Der Primär-CTA steht dreimal mit drei Texten.
+Wirkung    hoch (Begründung: der Besucher sieht drei Angebote)
+Änderung   Ein Text, „Rückruf anfragen", in Kopf, Held und Fuß.
+Aufwand    niedrig
+```
+
+**Die Wirkung wird als hoch, mittel oder niedrig mit Begründung angegeben, nie als
+Prozentzahl.** Eine geschätzte Steigerung um 20 % ist ein erfundener Beleg, und der Kunde
+hält sie später gegen die Zahlen.
+
+Gegliedert wird in vier Gruppen:
+
+1. **Sofort:** unter einer Stunde, hohe Wirkung
+2. **Umbau:** Sektion oder Seite neu
+3. **Testideen:** Annahmen, die gemessen statt entschieden werden sollten, nur bei genug
+   Volumen (`13-messung-optimierung.md`), sonst nacheinander ändern und vergleichen
+4. **Textalternativen:** für Headline und Primär-CTA je zwei bis drei Fassungen, jede mit
+   einem Satz, was sie anders macht
+
+## Schritt 6.6: Pop-ups und Overlays
+
+Ein Pop-up unterbricht. Es ist nur dann gerechtfertigt, wenn das Angebot darin mehr wert ist
+als die Unterbrechung. Deshalb zuerst der Auslöser, dann der Inhalt.
+
+### Auslöser
+
+| Auslöser | Einsatz | Bewertung |
+|---|---|---|
+| Klick (Knopf „Checkliste anfordern" öffnet das Formular im Dialog) | Download, Rückruf, Terminwunsch | erste Wahl: die Person hat danach gefragt |
+| Scrolltiefe | Ratgeberartikel, langer Inhalt | zweite Wahl: zeigt Interesse, unterbricht aber beim Lesen |
+| Exit-Intent | nur Desktop, siehe Schritt 6.1 | einmal je Sitzung, mit anderem Angebot als die Seite selbst |
+| Zeit nach dem Laden | allgemeine Seiten | nie vor der ersten Interaktion mit dem Inhalt; ein Pop-up beim Laden verdeckt genau das, wofür jemand gekommen ist |
+| Seitenzahl, wiederholter Besuch | Vergleichsphase | braucht Wiedererkennung über Seiten oder Besuche, also Einwilligung, siehe Rechtsrahmen |
+
+### Formen
+
+| Form | Wann | Regel |
+|---|---|---|
+| Dialog in der Mitte | Klickauslöser, Download | Fokusfalle, ESC schließt, Fokus zurück an den Auslöser (`04-barrierefreiheit-bfsg.md`) |
+| Einschub von unten oder aus der Ecke | Hinweis, der nicht blockieren darf | verdeckt keinen Inhalt, auf dem Handy höchstens das untere Drittel |
+| Hinweisleiste oben | echte Neuigkeit (Betriebsferien, neue Telefonnummer) | schließbar, mit Enddatum, nicht dauerhaft |
+| Vollbild | nicht | auf dem Handy aggressiv, und Google Search Central nennt aufdringliche Interstitials auf Mobilgeräten als Problem für die Nutzererfahrung |
+
+### Bau und Text
+
+- **Aufbau:** Headline mit dem Nutzen, ein Satz, was genau kommt und wie oft, ein Feld, ein
+  Knopf, sichtbares Schließen. Mehr nicht.
+- **Schließen ist leicht:** Kreuz oben rechts, mindestens 24 × 24 px (WCAG 2.5.8), dazu ESC,
+  Klick daneben und ein Textlink „Nein, danke". Wer das Schließen nicht findet, schließt den
+  Tab.
+- **Ablehnen ohne Beschämung.** Nicht „Nein, ich will kein Geld sparen". Das ist
+  Manipulation, und sie fällt auf die Marke zurück.
+- **Nicht über dem Consent-Banner.** Solange die Einwilligungsabfrage offen ist, erscheint
+  kein Pop-up. Zwei Overlays übereinander verwirren und drängen in die schnellste
+  Entscheidung.
+- **Nicht auf Kontakt-, Formular- und Danke-Seiten.** Wer dort ist, hat schon gehandelt oder
+  ist dabei.
+- **Eigenbau statt Pop-up-Dienst.** Ein Dialog ist ein `<dialog>`-Element mit wenigen Zeilen
+  Skript. Ein Pop-up-Dienst ist ein Drittanbieterskript und braucht eine Einwilligung.
+
+### Rechtsrahmen
+
+| Thema | Regel | Grundlage |
+|---|---|---|
+| Schließen merken | Speicherung im Browser ist ein Zugriff nach § 25 TDDDG. Ohne Einwilligung höchstens: einmal je Sitzung, gemerkt im Arbeitsspeicher der Seite oder in `sessionStorage`. Frequenzsteuerung über Tage, Besuchszähler und „schon konvertiert"-Kennungen brauchen Einwilligung | `07-recht-dsgvo.md` |
+| Newsletter im Pop-up | Kontrollkästchen unvorbelegt oder eindeutiger Knopftext, Zweck und Häufigkeit genannt, Double-Opt-in, Abmeldung in jeder Mail, Protokoll | § 7 Abs. 2 Nr. 2 UWG, Art. 7 DSGVO |
+| Rabatt für die Anmeldung | erlaubt, wenn klar ist, dass die Anmeldung die Gegenleistung ist; Abmeldung bleibt jederzeit möglich. Einordnung beim Kopplungsverbot in die Rechtsprüfung | Art. 7 Abs. 4 DSGVO |
+| Frist und Countdown | nur mit echtem Enddatum, das beim Neuladen nicht zurückspringt | § 5 UWG, `12-copywriting.md` |
+| „Nur noch heute", „nur für die ersten 50" | nur, wenn es stimmt | § 5 UWG, harte Grenze |
+| Barrierefreiheit | Tastatur, Fokusfalle, Kontrast, Name für das Schließkreuz | BFSG, `04-barrierefreiheit-bfsg.md` |
+
+## Schritt 6.7: Preisseiten und Preisblöcke
+
+Ob Preise gezeigt werden, steht unter „Weitere Conversion-Hebel" und in
+`12-copywriting.md` (Das Angebot formulieren). Hier geht es darum, **wie**.
+
+| Regel | Grund |
+|---|---|
+| Preise stehen als Text im HTML, nicht im Bild, nicht erst nach Skript oder Klick | Bildschirmleser, Suchmaschinen und KI-Antwortdienste lesen sonst keinen Preis, und die Seite verliert den Vergleich gegen eine, deren Preis lesbar ist |
+| Höchstens drei Pakete, je Paket ein Satz „für wen" | wer zwischen fünf Paketen wählen soll, vertagt die Entscheidung |
+| Unterschiede in Worten: „bis 3 Standorte", nicht nur ✓ und ✗ | eine Häkchenspalte sagt nicht, wo die Grenze liegt; als `<table>` mit Kopfzellen und vorlesbarem Text („enthalten", „nicht enthalten") |
+| Ein Paket als „Empfohlen" markieren nur mit sachlichem Grund, „am häufigsten gewählt" nur mit Beleg | eine Empfehlung ist eine Werbeaussage (§ 5 UWG) |
+| Gegenüber Verbrauchern Gesamtpreise inklusive Umsatzsteuer, gegenüber Unternehmen netto mit „zzgl. USt." | Preisangabenverordnung, siehe `07-recht-dsgvo.md` |
+| Streichpreis bei einer Preisermäßigung gegenüber Verbrauchern: der niedrigste Preis der letzten 30 Tage | § 11 PAngV; ein Streichpreis, der nie galt, ist zusätzlich irreführend (`12-copywriting.md`) |
+| Monats- und Jahrespreis: Ersparnis in Euro nennen, die Voreinstellung sichtbar | „17 % sparen" muss man nachrechnen, „38 € im Jahr gespart" nicht |
+| Fragen zum Preis direkt unter den Paketen: Laufzeit, Kündigung, was nicht enthalten ist | Einwand „zu teuer" gehört neben den Preis (`12-copywriting.md`) |
+| `Offer`-JSON-LD nur mit dem Preis, der sichtbar auf der Seite steht | `05-seo-sichtbarkeit.md`, Strukturierte Daten |
+
+**Die Probe:** Seite ohne JavaScript oder als reinen Text öffnen (Leseansicht, `curl`). Stehen
+dort alle Pakete mit Preis und Grenzen? Wenn nicht, sieht ein Teil der Leser und Maschinen
+keinen Preis.
+
 ## Weitere Conversion-Hebel
 
 - **FAQ als Conversion-Element**, nicht als Restrampe: zehn Fragen, die wirklich vor dem
@@ -166,3 +314,36 @@ bekommst einen festen Ansprechpartner" statt „Wir arbeiten mit festen Zuständ
   Primär-CTA und braucht bei E-Mail-Versand ein Double Opt-in.
 - **Reibung zählen, nicht Klicks feiern.** Jeder Pflichteintrag, jede Weiterleitung, jede
   Registrierung vor dem Wert ist ein Ausstieg.
+
+## Bewusst nicht übernommen
+
+Die Schritte 6.5 bis 6.7 und `58-formulare-und-anfragestrecken.md` sind aus `cro`, `popups`,
+`signup` und `pricing` von coreyhaines31/marketingskills (MIT) destilliert. Diese Punkte gelten
+hier anders:
+
+| Die Quelle sagt | Hier gilt | Grund |
+|---|---|---|
+| Pop-up nach 30 bis 60 Sekunden ist „bewährt", Richtwerte für Pop-up-Abschlüsse (E-Mail 2 bis 5 %, Exit 3 bis 10 %, Klick über 10 %) | keine Richtwerte, eigene Zahlen messen | ohne nachprüfbare Quelle angegeben; als Maßstab übernommen würden sie zu erfundenen Belegen im Kundenbericht |
+| Schließen per Cookie oder `localStorage` merken, 7 bis 30 Tage Pause, Konvertierte ausschließen | ohne Einwilligung nur je Sitzung | § 25 TDDDG, siehe Rechtsrahmen in Schritt 6.6 |
+| Rabatt-Pop-up mit Frist „schafft Dringlichkeit", Countdown als Testidee, steigende Rabatte über mehrere Besuche | Frist nur, wenn sie echt ist; kein Rabatt, der mit jedem Besuch wächst | § 5 UWG; ein wachsender Rabatt erzieht zum Warten und braucht Wiedererkennung |
+| „Join 10,000+ teams" als Headlineformel für Seite und Pop-up | Zahl nur mit Beleg und Stand, sonst `[[FEHLT: …]]` | harte Grenze „Keine erfundenen Zahlen" |
+| Köderpaket in der Mitte, damit das gewünschte Paket günstig wirkt | jedes Paket ist echt buchbar und für jemanden das richtige | Verkaufspsychologie nur, wenn sie wahr ist (`12-copywriting.md`, Die Grenze zur Irreführung) |
+| Jahresrabatt 17 bis 20 % als Standard | Rabatt aus der eigenen Kalkulation | ohne Quelle, und eine Branchenzahl aus Softwareabos sagt nichts über Handwerk und Dienstleistung |
+| Geschätzte Wirkung je Befund | hoch, mittel, niedrig mit Begründung | siehe Schritt 6.5 |
+| „Paste-Test": Preisseite einem KI-Dienst geben und fragen, was sie kostet | Probe ohne JavaScript oder als Text, siehe Schritt 6.7 | dasselbe Ziel ohne Abhängigkeit von einem Dienst, dessen Abruf sich ändert, und ohne Kundenseite bei einem Dritten |
+| Onboarding nach der Anmeldung (Checklisten, Produkttouren, Aktivierung) | nicht übernommen | betrifft Software nach dem Login, nicht die Kundenwebsite |
+
+Die Originale lassen sich auf ausdrücklichen Wunsch zusätzlich installieren, je Skill mit
+`npx --yes skills add coreyhaines31/marketingskills --skill <name> --agent claude-code`
+(`cro`, `popups`, `signup`, `pricing`).
+
+## Verwandte Kapitel
+
+- `58-formulare-und-anfragestrecken.md`: Felder, mehrstufige Strecken, Fehlerablauf, Formulartypen
+- `12-copywriting.md`: CTA-Texte, Angebot, Einwände, Grenze zur Irreführung
+- `13-messung-optimierung.md`: was gemessen wird, A/B-Tests
+- `07-recht-dsgvo.md`: § 25 TDDDG, Newsletter, Preisangaben
+- `04-barrierefreiheit-bfsg.md`: Overlays, Fokusfalle, Formularauszeichnung
+- `05-seo-sichtbarkeit.md`: FAQPage und Offer als JSON-LD
+- `../playbooks/landingpage.md` und `../playbooks/homepage.md`: Seitentypen im Ablauf
+- `../assets/checklisten/conversion-audit.md`: Prüfung der ganzen Website

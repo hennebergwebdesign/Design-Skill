@@ -71,6 +71,22 @@ Absicht), zählt `pruefe-geschmack.mjs`. Dazu ein Redesign-Protokoll für besteh
 ein Ablauf für Entwürfe aus einem Bildmodell, mit der klaren Grenze, dass daraus nie ein
 Beleg wird.
 
+**Ein Typografiesystem statt neun Einzelwerten.** Die Skala ist modular und fließend, in rem
+und in zwei Kurven bis 1440 px, gerechnet von `typoskala.mjs` aus Grundgröße und Verhältnis je
+Fensterbreite. Zeilenhöhe, Laufweite, Gewicht und Zeilenlänge wandern als Tokens mit jeder
+Stufe. `schrift-metriken.mjs` liest Ober- und Unterlänge und Laufweite aus der Schriftdatei und
+erzeugt die Ersatzschrift, damit der Schriftwechsel nicht springt. `pruefe-typografie.mjs`
+hält die Grenzen: nichts in px, nichts unter 14 px, fließend nur mit rem-Anteil und höchstens
+2,5-facher Spanne, damit 200 % Zoom in jedem Fenster funktioniert.
+
+**Prüfen wie ein Senior.** Bewegung wird nach einem festen Ablauf geprüft (30), die
+Oberfläche gegen einen Regelkatalog mit Befunden als `datei:zeile` (56), Barrierefreiheit je
+Erfolgskriterium nach WCAG 2.2 A und AA (`wcag22-audit.md`), der Entwurf mit einer
+Designkritik nach Schwere. Vor der Abnahme laufen eine Belastungsprobe mit Extremdaten und ein
+Design-Review mit Vorher-nachher-Aufnahmen. Conversion bekommt eine Seitenprüfung nach
+Wirkung, Pop-ups und Preisseiten im deutschen Rechtsrahmen, Formulare ein eigenes Kapitel und
+A/B-Tests nachrechenbare Stichproben.
+
 **Sieben weitere Quellen, destilliert statt mitgeliefert (Version 4.21).** Scroll Craft liefert Seitengrammatik,
 Gefühlskurve, Gipfel und Signaturbewegung (Kapitel 50) und die Prüfung durch Scrollen (`pruefe-scrollstrecke.mjs`). Der Humanizer liefert die
 Musterliste und den Ablauf zum Entmaschinisieren von Modelltexten (Kapitel 51, sechs neue Muster in `deslop-check.mjs`). Agent Skills liefert die
@@ -153,25 +169,31 @@ skills/
 │  │  ├─ 52-sicherheit-der-kundenseite.md  Vertrauensgrenzen, Geheimnisse, Formulare, Inhaltsrichtlinie, Lieferkette, Tiefenscan
 │  │  ├─ 53-zahlungen-mit-stripe.md  Weg wählen, Webhook und Erfüllung, Button-Lösung, Widerruf, Steuer, Testplan
 │  │  └─ 54-video-aus-html-mit-hyperframes.md  Ablauf mit Toren, Vertrag einer Komposition, Marke, Optimierung, Prüfung
+│  │  ├─ 55-typografie-system.md    Skala in rem, Zoomgrenze, Zeilen, Ersatzschrift, deutscher Satz
+│  │  ├─ 56-interface-regeln.md     Fokus, Formulare, Zustände, Medien, Touch, Audit als datei:zeile
+│  │  ├─ 57-design-md.md            DESIGN.md als Abzug aus marke.json und tokens.css
+│  │  └─ 58-formulare-und-anfragestrecken.md  Felder, autocomplete, mehrstufig, Fehlerablauf
 │  └─ assets/
 │     ├─ vorlagen/                  marke.json, marke-brief.md, impressum.md, datenschutz.md,
 │     │                             datenschutz-bewerber.md, consent-muster.md,
 │     │                             robots.txt(.ts), sitemap.xsl, _headers, 404.astro,
 │     │                             tokens.css, global-basis.css, head-meta.html,
-│     │                             jsonld-bausteine.md, fingerabdruecke.md,
-│     │                             zahlung-rechtsbausteine.md,
+│     │                             jsonld-bausteine.md, DESIGN.md,
+│     │                             fingerabdruecke.md, zahlung-rechtsbausteine.md,
 │     │                             scrollvideo/ (Poster-Markup, Scrollvideo, Blendmaske,
 │     │                             Körnung, Lazy-Einbettung),
 │     │                             prompts/ (Polierschleife, Storyboard, Tweaks-Panel,
 │     │                             Bildgenerierung, Designsystem ableiten, Textkritik),
 │     │                             referenzkomponenten/ (Hero, FAQ, schwebende Elemente,
 │     │                             Bewertungen, Integrationen)
-│     ├─ checklisten/               pre-launch.md, conversion-audit.md
+│     ├─ checklisten/               pre-launch.md, conversion-audit.md, wcag22-audit.md,
+│     │                             design-kritik.md
 │     └─ musterbibliothek/         taxonomie.json, muster/, index.json
 └─ agentur-website-builder/         der Lieferablauf
    ├─ SKILL.md                      Phasen 0 bis 6, feste Agenturvorgaben, Definition of Done
    ├─ references/
    │  ├─ intake-und-entscheidungen.md  Projektart, Relaunch-Inventar, Bilder, Fragenkatalog
+   │  ├─ brand-extraktion.md       Marke der Bestandsseite messen, auswerten, übernehmen
    │  ├─ stack-und-deployment.md    Node, Astro, wrangler.toml, Variablen, Git, Budget
    │  ├─ referenzen-und-auswahl.md  Rangfolge der Quellen, Ausgangsliste, Seitenaufbau
    │  ├─ copy-im-kundenprojekt.md   gelieferte Texte, Copy-Vorschläge kennzeichnen
@@ -185,6 +207,9 @@ skills/
    │  ├─ moodboard-und-stylescape.md  Moodboard intern, Stylescape zur Abnahme der Richtung, erster Entwurf
    │  ├─ chatbot-auf-der-website.md  Leitplanken, Wissensbasis, Gegenprobe, Datenschutz bei KI Chatbots
    │  ├─ brand-extraktion.md       Marke der Bestandsseite messen, auswerten, übernehmen
+   │  ├─ design-review.md           Aufnahmen, Befunde nach Schwere, ein Befund ein Commit
+   │  ├─ figma-zu-code.md           Figma-Variablen zu Tokens, Auto Layout zu Grid, Bilder exportieren
+   │  ├─ agenturwerkzeuge.md        welches Skript was tut, wer Playwright oder Firecrawl braucht
    │  ├─ firecrawl-recherche.md     bekannte/alte Seiten crawlen und scrapen, Firecrawl-API
    │  ├─ designrecherche-ablauf.md  sieben Stufen, zwei Freigabetore, Fehlerbehandlung
    │  ├─ designrecherche-beispiele.md  zwei durchgespielte Abläufe, Störungstabelle
@@ -207,6 +232,9 @@ scripts/
 ├─ pruefe-platzhalter.mjs           [[FEHLT]], data-copy-vorschlag, ausgelassener Code
 ├─ pruefe-breakpoints.mjs           acht Größen, Überlauf, Touchziele, Schriftgröße, CLS
 ├─ pruefe-geschmack.mjs             Kicker-Quote, Laufbänder, CTA-Texte, messbare KI-Tells, Logoleiste aus Text
+├─ pruefe-typografie.mjs            rem statt px, Zoomgrenze, 14-px-Boden, Ordnung, Schriftladen
+├─ typoskala.mjs                    modulare, fließende Typoskala in rem als Tokens, Musterblatt
+├─ schrift-metriken.mjs             Ersatzschrift mit size-adjust aus der Schriftdatei messen
 ├─ pruefe-motion.mjs                transition: all, scale(0), ease-in, Dauer über 300 ms, Reduzierung
 ├─ pruefe-geo.mjs                   KI-Crawler in der robots.txt, Text im HTML, Gliederung, JSON-LD, Bild ohne alt
 ├─ pruefe-aktualitaet.mjs           Copyright-Jahr, Stand-Angaben, Jahr im Titel
@@ -215,6 +243,7 @@ scripts/
 ├─ pruefe-scrollstrecke.mjs         Scrollseite durchlaufen: tote Strecke, Text ohne volle Deckkraft, Überlauf, Kontaktbogen
 ├─ brand-extraktion.mjs             Farben, Schriften, Typoskala, Logo der eigenen Seite messen
 ├─ relaunch-inventory.mjs           Bestandsaufnahme der alten Kundenseite vor dem Relaunch
+├─ brand-extraktion.mjs             Farben, Schriften, Typoskala, Logo der eigenen Seite messen
 ├─ design-scan.mjs                  Struktur- und Design-Scan einer fremden Referenzseite
 ├─ deslop-check.mjs                 selbst formulierte Copy auf generischen KI-Klang prüfen
 ├─ referenz-register.mjs            Freigabezustand der Designreferenzen, zwei Tore
@@ -226,6 +255,7 @@ scripts/
 ├─ pruefe-skill.mjs                 Aufbau dieses Repositorys: Länge, Inhaltsverzeichnisse, Verlinkung, tote Verweise
 ├─ lib/browser.mjs                  Playwright finden, Chromium starten, mit Rückfall
 ├─ lib/abruf.mjs                    die eine Abrufschicht, vier Rückfallstufen, robots.txt
+├─ lib/browser.mjs                  Playwright finden, Chromium starten, mit Rückfall
 ├─ tests/                           node --test, ohne Abhängigkeit
 └─ install-quellskills.sh           Quell-Skills zusätzlich installieren
 ```
@@ -268,6 +298,7 @@ node scripts/pruefe-kontrast.mjs      # rechnet die Kontrastwerte der Rollen-Tok
 node scripts/pruefe-platzhalter.mjs --launch   # [[FEHLT]], data-copy-vorschlag, // ...
 node scripts/pruefe-breakpoints.mjs http://localhost:4321 --bilder
 node scripts/pruefe-geschmack.mjs     # nach dem Build: dist/ und src/
+node scripts/pruefe-typografie.mjs    # rem statt px, Zoomgrenze, 14-px-Boden, Schriftladen
 node scripts/pruefe-motion.mjs        # Quellen: Bewegungsfehler, die sich zählen lassen
 node scripts/pruefe-geo.mjs           # nach dem Build: dist/ auf KI-Lesbarkeit
 node scripts/pruefe-seitenbasis.mjs   # nach dem Build: dist/ auf lang, Zoom, Alt-Texte, Labels, Fremdserver
@@ -285,6 +316,14 @@ Ob eine Sperre gewollt ist, entscheidet der Kunde, das Skript benennt sie nur.
 `pruefe-striche.mjs --hook` läuft als PostToolUse-Hook nach jedem Schreiben einer Datei und gibt
 Gedankenstriche in Überschrift, Button, Link und Kicker sofort an das Modell zurück. Einrichtung in
 `skills/agentur-website-builder/references/qa-und-abnahme.md`, Abschnitt 2a.
+
+`pruefe-typografie.mjs` meldet Schriftgrößen in px, eine Schriftgröße auf `html`, fließende
+Größen ohne rem-Anteil oder mit mehr als 2,5-facher Spanne, Stufen unter 14 px, eine Skala,
+deren Stufen sich bei 360, 768, 1200 oder 1440 px überholen, gesperrten Zoom und fremde
+Schriftdienste. Warnungen gibt es für Zeilenhöhe und Laufweite in px, fehlendes
+`font-display`, benutzte Gewichte ohne Schnitt und fehlende Ersatzschriften. Die Skala selbst
+rechnet `node scripts/typoskala.mjs` (Optionen im Kopf des Skripts), die Ersatzschrift misst
+`node scripts/schrift-metriken.mjs public/fonts/<datei>.woff2`.
 
 `pruefe-geschmack.mjs` prüft je gebauter Seite, ob höchstens ein Kicker auf drei Sektionen
 kommt, ob mehr als ein Laufband läuft und ob dieselbe Kontaktabsicht mehrere Texte hat, dazu

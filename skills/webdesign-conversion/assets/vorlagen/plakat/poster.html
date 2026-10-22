@@ -9,10 +9,12 @@
    Anderes Format? --trim-w, --trim-h und die @page-Zeile ändern (@page kann keine Variablen lesen). */
 :root { --trim-w: 420mm; --trim-h: 594mm; --bleed: 3mm; --safe: 6mm; --paper: #f3efe6; --ink: #151515; --accent: #e5532d; }
 @page { size: 426mm 600mm; margin: 0; } /* Endformat + 2 x Beschnitt */
+/* Platzhalter: die Schrift des Kunden aus eigener Datei, Gewicht passend zu h1. Ohne Schnitt verfettet der Browser künstlich. */
+@font-face { font-family: 'Plakat'; src: url('./plakat-800.woff2') format('woff2'); font-weight: 800; font-display: swap; }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html, body { background: #2a2a2c; }
-body { font-family: var(--schrift-plakat, system-ui, sans-serif); color: var(--ink); }
+body { font-family: var(--schrift-plakat, 'Plakat', system-ui, sans-serif); color: var(--ink); }
 
 /* Der Bogen ist die ganze Datei: Endformat plus Beschnitt auf jeder Seite. */
 .sheet { position: relative; overflow: hidden; background: var(--paper);

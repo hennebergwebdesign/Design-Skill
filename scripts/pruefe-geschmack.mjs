@@ -56,10 +56,32 @@
   8 bis 20 sind WARNUNGEN. 12, 13, 16 und 19 entfallen, wenn der Wert in marke.json steht:
   dann ist er eine Markenentscheidung, keine Voreinstellung.
 
+  INTERFACE-REGELN (aus 56-interface-regeln.md, mit Zeilennummer)
+  Je gebauter Seite:
+   14. Button oder Link ohne zugaenglichen Namen: kein Text, kein aria-label, kein
+       aria-labelledby, kein title, kein Bild mit alt darin. FEHLER (WCAG 4.1.2).
+   15. autofocus an einem Element: WARNUNG.
+   16. Feld fuer Name, E-Mail oder Telefon ohne autocomplete: WARNUNG. Felder mit
+       tabindex="-1" (Honigtopf) sind ausgenommen.
+  Je Quelldatei:
+   17. outline: none oder outline-none ohne Fokusersatz. FEHLER, wenn die Regel selbst an
+       :focus-visible haengt und nichts anderes setzt (der Tastaturfokus wird entfernt);
+       WARNUNG, wenn weder dieselbe Regel noch eine :focus-visible-Regel derselben Datei
+       einen Ersatz zeigt. :focus:not(:focus-visible) ist erlaubt.
+   18. transition: all, transition ohne Eigenschaft (transition: .3s) oder transition-all:
+       WARNUNG.
+   19. Einfuegen gesperrt (onpaste mit preventDefault oder return false, paste-Listener mit
+       preventDefault in derselben Zeile): WARNUNG.
+  Bilder ohne width und height prueft pruefe-breakpoints.mjs im gerenderten Zustand, Zoom-
+  sperre im meta viewport pruefe-typografie.mjs. Beides steht deshalb nicht hier.
+
   WAS NICHT GEPRUEFT WIRD
   Layoutfamilien, Zickzackfolgen und leere Bentozellen sind aus dem Markup nicht sicher
   ablesbar. Sie stehen im Vorflugcheck von 26-geschmack-und-ki-tells.md und werden
-  angesehen, nicht gezaehlt.
+  angesehen, nicht gezaehlt. Ebenso alles aus 56-interface-regeln.md, was erst im Browser
+  entsteht (Fokusreihenfolge, verdeckter Fokus, Touchziele): ansehen oder
+  pruefe-breakpoints.mjs. Werte, die ueber mehrere Zeilen laufen oder aus Variablen kommen,
+  werden nicht geraten, sondern uebersprungen: lieber ein Befund zu wenig als ein Fehlalarm.
 
   AUFRUF
     node scripts/pruefe-geschmack.mjs                 Standard: dist (Seiten) und src (Quellen)
@@ -117,6 +139,185 @@ function textVon(html) {
 
 function ohneSkripte(html) {
   return html.replace(/<script\b[\s\S]*?<\/script>/gi, '').replace(/<style\b[\s\S]*?<\/style>/gi, '');
+}
+
+/* Wie ohneSkripte, aber laengengleich: Inhalt wird durch Leerzeichen ersetzt, Zeilenumbrueche
+   bleiben. So zeigen die Positionen der Interface-Regeln auf die richtige Zeile. */
+function ausblenden(text, re) {
+  return text.replace(re, (m) => m.replace(/[^\n]/g, ' '));
+}
+
+function zeileVon(text, pos) {
+  let n = 1;
+  for (let i = 0; i < pos; i++) if (text.charCodeAt(i) === 10) n++;
+  return n;
+}
+
+function attribut(tag, name) {
+  const m = tag.match(new RegExp(`\\s${name}\\s*=\\s*(?:"([^"]*)"|'([^']*)'|([^\\s>]+))`, 'i'));
+  return m ? (m[1] ?? m[2] ?? m[3] ?? '') : null;
+}
+
+function hatAttribut(tag, name) {
+  return new RegExp(`\\s${name}(?=[\\s=/>])`, 'i').test(tag);
+}
+
+/* Felder, die die Autofuellung des Browsers kennt und die jedes Anfrageformular hat. */
+const AUTOFUELL_NAME = /^(name|vorname|nachname|fullname|full-name|first-?name|last-?name|e-?mail|email-?adresse|telefon|telefonnummer|tel|phone|mobil|handy)$/i;
+const OHNE_AUTOFUELL = new Set(['hidden', 'checkbox', 'radio', 'submit', 'button', 'reset', 'file', 'image', 'range', 'color']);
+
+/**
+ * Interface-Regeln einer gebauten Seite (14 bis 16). Liefert Befunde mit Zeilennummer.
+ */
+export function bedienungAnalysieren(roh) {
+  const html = ausblenden(ausblenden(ausblenden(roh, /<script\b[\s\S]*?<\/script>/gi), /<style\b[\s\S]*?<\/style>/gi), /<!--[\s\S]*?-->/g);
+  const fehler = [];
+  const warnungen = [];
+
+  // 14 Bedienelement ohne Namen
+  const re = /<(button|a)\b([^>]*)>([\s\S]*?)<\/\1\s*>/gi;
+  let m;
+  while ((m = re.exec(html))) {
+    const tag = `<${m[1]}${m[2]}>`;
+    const istLink = m[1].toLowerCase() === 'a';
+    if (istLink && !hatAttribut(tag, 'href')) continue;
+    if (attribut(tag, 'aria-hidden') === 'true') continue;
+    const benannt = ['aria-label', 'title'].some((a) => (attribut(tag, a) || '').trim())
+      || hatAttribut(tag, 'aria-labelledby')
+      || textVon(m[3])
+      || /<img\b[^>]*\salt\s*=\s*(?:"[^"\s][^"]*"|'[^'\s][^']*')/i.test(m[3]);
+    if (!benannt) {
+      fehler.push({
+        regel: 'name-fehlt',
+        zeile: zeileVon(html, m.index),
+        meldung: `${istLink ? 'Link' : 'Button'} ohne zugänglichen Namen: ${tag.slice(0, 90)}`,
+        tipp: 'Sichtbarer Text, sonst aria-label oder ein .sr-only-Text. Ein Icon allein liest der Screenreader nur als „Schalter" oder „Link" vor, ohne Ziel. Siehe 56-interface-regeln.md.',
+      });
+    }
+  }
+
+  const tagRe = /<([a-z][a-z0-9-]*)\b[^>]*>/gi;
+  let t;
+  while ((t = tagRe.exec(html))) {
+    const tag = t[0];
+    const name = t[1].toLowerCase();
+
+    // 15 autofocus
+    if (hatAttribut(tag, 'autofocus')) {
+      warnungen.push({
+        regel: 'autofocus',
+        zeile: zeileVon(html, t.index),
+        meldung: `autofocus an <${name}>`,
+        tipp: 'Streichen. Der Fokus springt beim Laden ins Feld, das Handy öffnet die Tastatur über dem Inhalt, und der Screenreader überspringt alles davor.',
+      });
+    }
+
+    // 16 Autofuellung
+    if (name === 'input') {
+      const typ = (attribut(tag, 'type') || 'text').toLowerCase();
+      if (OHNE_AUTOFUELL.has(typ) || attribut(tag, 'tabindex') === '-1' || hatAttribut(tag, 'autocomplete')) continue;
+      const feld = attribut(tag, 'name') || attribut(tag, 'id') || '';
+      if (typ === 'email' || typ === 'tel' || AUTOFUELL_NAME.test(feld)) {
+        warnungen.push({
+          regel: 'autocomplete',
+          zeile: zeileVon(html, t.index),
+          meldung: `Feld ${feld ? `„${feld}" ` : ''}(type="${typ}") ohne autocomplete`,
+          tipp: 'autocomplete="name", "email" oder "tel" setzen. Die Autofüllung spart am Handy das Tippen und ist der kürzeste Weg zur Anfrage, siehe 58-formulare-und-anfragestrecken.md.',
+        });
+      }
+    }
+  }
+
+  return { fehler, warnungen };
+}
+
+/* Ersatz fuer einen entfernten Fokusring: alles, was im Fokuszustand sichtbar etwas aendert. */
+const FOKUS_ERSATZ = /(^|[;{\s])(box-shadow\s*:\s*(?!none)|outline(-style|-width)?\s*:\s*(?!none|0[\s;}]|0$)|border[a-z-]*\s*:|background[a-z-]*\s*:|text-decoration[a-z-]*\s*:|color\s*:)/i;
+const TW_FOKUS_ERSATZ = /(^|\s)(focus-visible|focus|group-focus-visible|peer-focus-visible):(ring|outline|shadow|border|bg|underline)(?!-none|-hidden|-0\b)/;
+
+/* Kommentare laengengleich ausblenden, damit Positionen Zeilen bleiben. Zeilenkommentare nur
+   am Zeilenanfang, sonst traefe es jede URL mit https://. */
+function ohneKommentare(text) {
+  return ausblenden(ausblenden(ausblenden(text, /\/\*[\s\S]*?\*\//g), /<!--[\s\S]*?-->/g), /^[ \t]*\/\/.*$/gm);
+}
+
+/**
+ * Regel 17 ueber die ganze Datei: outline entfernt, ohne Ersatz.
+ */
+export function fokusAnalysieren(inhalt) {
+  const text = ohneKommentare(inhalt);
+  const befunde = [];
+  const zeilen = inhalt.split('\n');
+  const melde = (pos, stufe, meldung) => {
+    const zeile = zeileVon(text, pos);
+    befunde.push({
+      zeile, regel: 'fokus-entfernt', stufe, meldung,
+      tipp: 'Fokusringe werden gestaltet, nie entfernt (harte Grenze). Ersatz in derselben Regel, etwa box-shadow oder outline in der Fokusfarbe, oder :focus:not(:focus-visible) statt :focus.',
+      auszug: (zeilen[zeile - 1] || '').trim().slice(0, 110),
+    });
+  };
+  const fileHatFokusRegel = /:focus-visible[^{]*\{[^}]*(outline\s*:\s*(?!none|0[\s;}])|box-shadow\s*:\s*(?!none))/i.test(text);
+
+  // CSS: outline: none oder outline: 0
+  const cssRe = /(^|[;{\s])outline\s*:\s*(none|0)\s*(!important\s*)?(?=[;}\n]|$)/gi;
+  let m;
+  while ((m = cssRe.exec(text))) {
+    const pos = m.index + m[1].length;
+    const auf = text.lastIndexOf('{', pos);
+    if (auf === -1) continue;
+    const zu = text.indexOf('}', pos);
+    const davor = Math.max(text.lastIndexOf('}', auf - 1), text.lastIndexOf('{', auf - 1), text.lastIndexOf(';', auf - 1));
+    const selektor = text.slice(davor + 1, auf);
+    const block = text.slice(auf + 1, zu === -1 ? text.length : zu).replace(m[0].slice(m[1].length), '');
+    if (/:not\(\s*:focus-visible\s*\)/.test(selektor)) continue;
+    const fokusSelektor = /:focus/.test(selektor);
+    if (fokusSelektor && FOKUS_ERSATZ.test(block)) continue;
+    if (/:focus-visible/.test(selektor)) {
+      melde(pos, 'fehler', `Fokusring an ${selektor.trim().slice(0, 60)} entfernt, ohne Ersatz`);
+    } else if (!fileHatFokusRegel) {
+      melde(pos, 'warnung', `outline: ${m[2]} an ${selektor.trim().slice(0, 60)}, kein :focus-visible-Ersatz in dieser Datei`);
+    }
+  }
+
+  // Tailwind: outline-none oder outline-hidden in einem class-Attribut
+  const klasseRe = /\bclass(?:Name)?\s*=\s*(?:"([^"]*)"|'([^']*)'|\{`([^`]*)`\})/g;
+  while ((m = klasseRe.exec(text))) {
+    const klassen = m[1] ?? m[2] ?? m[3] ?? '';
+    const entfernt = klassen.match(/(^|\s)((?:[a-z-]+:)*)outline-(none|hidden)(?=\s|$)/);
+    if (!entfernt || TW_FOKUS_ERSATZ.test(klassen)) continue;
+    const variante = entfernt[2];
+    if (/focus-visible:$/.test(variante)) melde(m.index, 'fehler', `${variante}outline-${entfernt[3]} ohne focus-visible-Ersatz`);
+    else melde(m.index, 'warnung', `${variante}outline-${entfernt[3]} ohne focus-visible:ring, :outline oder :shadow im selben class-Attribut`);
+  }
+  return befunde;
+}
+
+/* Teilt einen transition-Wert an den Kommas der obersten Ebene (cubic-bezier hat eigene). */
+function teileAnKommas(wert) {
+  const teile = [];
+  let tiefe = 0;
+  let start = 0;
+  for (let i = 0; i < wert.length; i++) {
+    const z = wert[i];
+    if (z === '(') tiefe++;
+    else if (z === ')') tiefe--;
+    else if (z === ',' && tiefe === 0) { teile.push(wert.slice(start, i)); start = i + 1; }
+  }
+  teile.push(wert.slice(start));
+  return teile.map((x) => x.trim()).filter(Boolean);
+}
+
+function uebergangAlles(zeile) {
+  const kurz = zeile.match(/(?:^|[;{\s"'])transition\s*:\s*([^;{}"'`]+)/i);
+  if (kurz) {
+    for (const teil of teileAnKommas(kurz[1])) {
+      const erstes = teil.split(/\s+/)[0].toLowerCase();
+      if (erstes === 'all' || /^-?[\d.]+m?s$/.test(erstes)) return true;
+    }
+  }
+  const eigenschaft = zeile.match(/(?:^|[;{\s"'])transition-property\s*:\s*([^;{}]+)/i);
+  if (eigenschaft && teileAnKommas(eigenschaft[1]).some((t) => t.toLowerCase().split(/\s+/)[0] === 'all')) return true;
+  return /(^|[\s"'`:])transition-all([\s"'`]|$)/.test(zeile);
 }
 
 /*
@@ -505,8 +706,21 @@ export function quelleAnalysieren(inhalt, kontext = {}) {
       melde('standardpalette', `Premium-Standardpalette: ${treffer.join(', ')}`,
         'Creme, Messing und Espresso sind die Palette, die jede Premiumseite bekommt. Nur als Markenentscheidung, dann in marke.json.');
     }
+    // 18 transition: all
+    if (uebergangAlles(zeile)) {
+      melde('transition-all', 'transition auf alle Eigenschaften',
+        'Eigenschaften einzeln nennen (transform, opacity, box-shadow). „all" animiert auch Breite, Höhe und Abstände, rechnet dabei das Layout neu und ruckelt.');
+    }
+    // 19 Einfuegen gesperrt
+    if ((/\bon:?paste\b/i.test(zeile) || /addEventListener\(\s*['"]paste['"]/.test(zeile) || /@paste\.prevent/.test(zeile))
+      && /preventDefault|return\s+false|@paste\.prevent|\|preventDefault/.test(zeile)) {
+      melde('einfuegen-gesperrt', 'Einfügen in ein Feld gesperrt',
+        'Sperre entfernen. Sie bricht Passwortmanager und kopierte Adressen und trifft zuerst Menschen, die schwer tippen.');
+    }
   });
 
+  // 17 Fokus entfernt, ueber die ganze Datei, weil die Regel ihren Selektor braucht
+  for (const b of fokusAnalysieren(inhalt)) befunde.push(b);
   // 20 Glasflaechen, gezaehlt je Datei
   const glas = zeilen.filter((z) => /backdrop-filter\s*:\s*blur|(^|[\s"'`])backdrop-blur/.test(z) && !/^\s*(\/\/|\*|\/\*|<!--)/.test(z));
   if (glas.length >= 4) {
@@ -609,10 +823,14 @@ function main() {
         const erg = seiteAnalysieren(inhalt, { ctaPrimaer: marke?.ctaPrimaer });
         erg.fehler.forEach((b) => fehler.push({ ...b, ort: rel }));
         erg.warnungen.forEach((b) => warnungen.push({ ...b, ort: rel }));
+        const bed = bedienungAnalysieren(inhalt);
+        bed.fehler.forEach((b) => fehler.push({ ...b, ort: `${rel}:${b.zeile}` }));
+        bed.warnungen.forEach((b) => warnungen.push({ ...b, ort: `${rel}:${b.zeile}` }));
       }
       if (a.quellen) {
         quellen++;
-        quelleAnalysieren(inhalt, { markeText: marke?.text }).forEach((b) => warnungen.push({ ...b, ort: `${rel}:${b.zeile}` }));
+        quelleAnalysieren(inhalt, { markeText: marke?.text })
+          .forEach((b) => (b.stufe === 'fehler' ? fehler : warnungen).push({ ...b, ort: `${rel}:${b.zeile}` }));
       }
     }
   }

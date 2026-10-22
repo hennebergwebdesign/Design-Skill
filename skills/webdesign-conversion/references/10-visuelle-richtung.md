@@ -130,10 +130,9 @@ klar unterscheidbar sein: nicht zwei Grotesken, die man verwechselt.
 - **Bewusst wählen**, nicht die Familie, zu der man ohnehin greift.
 - **Zeilenlänge unter 80 Zeichen.** Serifen vertragen etwas mehr und brauchen dann mehr
   Zeilenhöhe als Groteske.
-- **Skala mit `clamp()`, kleinste Stufe 14 px.** Eine einzige Kurve von 320 bis 1920 lässt
-  Schriften zwischen 768 und 1200 px zu schnell wachsen: dort wird die Heldenüberschrift
-  vierzeilig und der Heldenbereich höher als das Fenster. Zwei Stufen (bis 1200 px eine
-  Kurve mit Deckel, darüber die großen Grade) lösen das.
+- **Skala als System, nicht als neun Einzelwerte:** modular, fließend, in rem, kleinste
+  Stufe 14 px, gerechnet mit `scripts/typoskala.mjs`. Zeilenhöhe, Laufweite, Gewicht,
+  Zeilenlänge und das Laden ohne Sprung stehen in `55-typografie-system.md`.
 - Ist eine Schrift Bildelement (Headline, Signet), wird die Satzform selbst Teil der
   Gestaltung, nicht neutraler Transportweg.
 
@@ -155,8 +154,8 @@ klar unterscheidbar sein: nicht zwei Grotesken, die man verwechselt.
 4. **Höchstens zwei Familien**, eine für Fließtext, eine für Überschriften. Eine dritte nur,
    wenn das Design sie eindeutig verlangt.
 5. **Immer selbst hosten** aus `public/fonts/`, WOFF2, nur die genutzten Schnitte,
-   `@font-face` mit `font-display: swap` und passendem `size-adjust`, damit der Wechsel
-   nicht springt. Nie über ein fremdes CDN: das ist eine Verbindung zu einem Drittserver und
+   `@font-face` mit `font-display: swap` und einer gemessenen Ersatzschrift, damit der
+   Wechsel nicht springt (`55-typografie-system.md`, Abschnitt 4). Nie über ein fremdes CDN: das ist eine Verbindung zu einem Drittserver und
    damit einwilligungspflichtig, siehe `07-recht-dsgvo.md`.
 
 **Drei typografische Voreinstellungen vermeiden:**
@@ -179,7 +178,7 @@ Vollständige, kommentierte Vorlage: `../assets/vorlagen/tokens.css`. Der Schnit
 
 ```
 Farbrampe        → Rollen (akzent, text, flaeche, rahmen, fokus, semantisch)
-Typografie       → Familien, Zeilenhöhen, Skala (clamp, zwei Stufen)
+Typografie       → Familien mit Ersatz, Gewichte, Zeilenhöhen, Laufweiten, Skala (55)
 Raum             → feste Skala --raum-1 … --raum-32 + fließende Rhythmen
 Layout           → Inhaltsbreite, Textbreite, Seitenrand, Kopfhöhe
 Form             → Radien, Schatten, Dauer, Kurve

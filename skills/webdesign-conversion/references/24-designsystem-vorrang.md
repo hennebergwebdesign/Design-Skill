@@ -167,3 +167,7 @@ Rangfolge hierher.
   `../../agentur-website-builder/references/referenzen-und-auswahl.md`
 - Ablauf der kuratierten Referenzrecherche mit beiden Freigabetoren:
   `../../agentur-website-builder/references/designrecherche-ablauf.md`
+- Figma-Datei als Entwurf einordnen und umsetzen:
+  `../../agentur-website-builder/references/figma-zu-code.md`
+- DESIGN.md als Abzug aus `marke.json` und `tokens.css`, nie als zweite Quelle:
+  `57-design-md.md`

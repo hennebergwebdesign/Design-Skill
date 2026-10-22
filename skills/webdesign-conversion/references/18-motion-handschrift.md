@@ -4,6 +4,10 @@
 richtig ist, welche Fallen Zeit kosten. Dieses Kapitel ist die Haltung: **wie Bewegung bei
 genau dieser Marke klingt.**
 
+Ob etwas überhaupt animieren soll, wie man eine Bewegung benennt und wie man bestehende
+Animationen prüft, steht in `30-motion-pruefung.md`. Dort sind auch die Werte aus
+emilkowalski/skills mit diesen Tokens abgeglichen; eine zweite Tokenwelt gibt es nicht.
+
 Der Unterschied ist derselbe wie zwischen Farbrampe und Farbrolle. Zwei Seiten können
 dieselbe GSAP-Timeline benutzen und völlig verschieden wirken, weil Dauer, Kurve und
 Amplitude verschieden sind. Diese drei Werte sind Markenentscheidungen, keine Voreinstellungen.
@@ -316,6 +320,7 @@ Handlung antwortende** Bewegung und damit fast immer willkommen.
 - Scrollvideo, Tiefe, Textur und Einbettungen: `38-scrollvideo-und-einbettungen.md`
 - Technik, GSAP-API, ScrollTrigger, Fallen: `09-motion-gsap.md`
 - Bewegungsregler, „Bewegung behauptet heißt Bewegung gezeigt": `26-geschmack-und-ki-tells.md`
+- Wann animieren, Vokabular, Prüfablauf mit Befundliste, Abgleich der Dauern und Kurven: `30-motion-pruefung.md`
 - Ableitung der visuellen Handschrift: `10-visuelle-richtung.md`
 - Seitengrammatik, Gefühlskurve, Signaturbewegung als Handschrift der ganzen Seite: `50-scroll-erlebnis-grammatik-und-gefuehl.md`
 - Icons: `17-icons-eigenes-system.md`

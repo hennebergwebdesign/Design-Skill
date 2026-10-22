@@ -556,6 +556,43 @@ Stand der Quelle: 07.10.2026, Erweiterungspaket `skill-pflege-und-modelltests`, 
 Pflichten und harte Grenzen), Ratschläge aus der Softwareentwicklung für Orchestrierung und Build Skills (andere Arbeit), die
 Managerbildsprache (Haltung, keine Regel).
 
+### Aus der eigenen Linie (Abgleich 4.15, Nummern dort), Teil A: Typografie, Figma, DESIGN.md
+
+Herkunft: eigener Entwicklungszweig dieses Repositories, dort als Version 4.3 geführt, beim Abgleich mit dem Upstream (4.14.0) zusammengeführt.
+
+| Quelle | Was daraus eingeflossen ist |
+|---|---|
+| [Utopia](https://utopia.fyi), Trys Mudford und James Gilyead (Clearleft) | Das Verfahren der fließenden modularen Skala: Grundgröße und Verhältnis je Stützpunkt, lineare Interpolation zu `clamp()`. In `scripts/typoskala.mjs` neu geschrieben, um eine zweite Kurve und die Prüfungen ergänzt |
+| Maxwell Barvian, „Addressing Accessibility Concerns With Using Fluid Type", Smashing Magazine 2023 | Die Herleitung der Grenze: Höchstwert höchstens das 2,5-fache des Mindestwerts, damit 200 % Zoom in jedem Fenster erreichbar bleibt |
+| [seek-oss/capsize](https://github.com/seek-oss/capsize) und [unjs/fontaine](https://github.com/unjs/fontaine), MIT | Das Verfahren der Ersatzschrift: `size-adjust` aus dem Verhältnis der mittleren Laufweiten, Overrides aus hhea geteilt durch `size-adjust`. Kein Code übernommen, `scripts/schrift-metriken.mjs` liest TTF, OTF, WOFF und WOFF2 selbst |
+| Leonxlnx/taste-skill, Commit `ce26fc2` (26.09.2026) | Gegen den Stand `c184364` geprüft: seitdem nur Änderungen an der Sponsorenliste, keine neuen Regeln. Die Typografieregeln der Einzelskills sind in `55-typografie-system.md` Abschnitt 7 abgeglichen |
+
+Die Referenzwerte für Arial und Times New Roman in `schrift-metriken.mjs` sind am 06.10.2026
+aus Liberation Sans und Liberation Serif (Regular und Bold) gemessen, die metrisch mit Arial
+und Times New Roman übereinstimmen. Die Ersatzwerte in `global-basis.css` sind aus
+`@fontsource/instrument-sans` 5.3.0 und `@fontsource/outfit` 5.3.0 gemessen.
+
+### Aus der eigenen Linie (Abgleich 4.15, Nummern dort), Teil B: Review, Barrierefreiheit, Interface, Formulare
+
+Herkunft: derselbe Zweig, dort als Version 4.4 geführt. Die Kapitelnummern 29, 31, 32 und 33 dieses Zweigs heißen seit dem Abgleich mit Upstream 4.21 (Version 4.22) 55, 56, 57 und 58, weil der Upstream inzwischen selbst 45 bis 54 belegt.
+
+Alle Quellen sind destilliert, nicht mitgeliefert: kein Text und kein Code wörtlich übernommen,
+auch nicht aus den Quellen unter Apache 2.0. Was gegen die harten Grenzen steht, ist in jedem
+Kapitel unter „Bewusst nicht übernommen" mit Grund aufgeführt.
+
+| Quelle | Was daraus eingeflossen ist |
+|---|---|
+| [emilkowalski/skills](https://github.com/emilkowalski/skills), MIT, Commit `e8a175d` | emil-design-eng, animate, review-animations, improve-animations, find-animation-opportunities, animation-vocabulary, apple-design: Häufigkeits- und Zweckprüfung, Werkzeugleiter, Prüfsätze, Befundliste mit Urteil, Verbesserungshebel, Gelegenheitssuche, deutsches Bewegungsvokabular, abgeglichen mit den Tokens aus 18. Daraus `30-motion-pruefung.md`. Aus break-ui die Belastungsprobe mit Extremdaten in `qa-und-abnahme.md` |
+| [vercel-labs/web-interface-guidelines](https://github.com/vercel-labs/web-interface-guidelines), MIT, Commit `434b7f9`, über den Skill `web-design-guidelines` aus [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) (Commit `063bee9`) | Regelbereiche, Anti-Muster und das Befundformat `datei:zeile` in `56-interface-regeln.md`, ohne Laufzeitabruf; die Prüfungen `transition-all`, `autofocus`, `autocomplete` und `einfuegen-gesperrt` in `pruefe-geschmack.mjs` |
+| [pbakaus/impeccable](https://github.com/pbakaus/impeccable), Apache 2.0, Commit `cf3d2fa` | Abgleich der 60 Detector-Regeln mit dem Regelwerk (56, Abschnitt 10), sieben Tells in 26, Trennung sofortiger und später Befunde, Umgang mit Fehlalarmen |
+| [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills), MIT, Commit `dda3841` | cro, signup, popups, pricing, copy-editing, copywriting, ab-testing: Seitenprüfung nach Wirkung, Pop-ups und Preisseiten in 06, Prüffragen und Satzmuster in 12, Hypothese und Stichprobe in 13 (Stichprobenwerte selbst gerechnet, weil die Tabellen der Quelle sich widersprechen), neu `58-formulare-und-anfragestrecken.md`; übertragen auf UWG, DSGVO, TDDDG und PAngV |
+| [Community-Access/accessibility-agents](https://github.com/Community-Access/accessibility-agents), MIT, Commit `decf6ba` | modal-specialist, keyboard-navigator, aria-specialist, live-region-controller, forms-specialist, media-accessibility, wcag-guide, web-accessibility-wizard: Bauteilmuster, WCAG-2.2-Kriterien und Medien in 04, `assets/checklisten/wcag22-audit.md`. Die Stufen sind gegen den W3C-Quelltext (github.com/w3c/wcag, Commit `23bad59`) geprüft, drei Fehler der Quelle korrigiert |
+| [anthropics/knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins), Plugin design, Apache 2.0, Commit `8444efc` | design-critique, accessibility-review, ux-copy, design-handoff, design-system: Kritikaufbau, Schwerestufen, Übergabe in `assets/checklisten/design-kritik.md`, von WCAG 2.1 auf 2.2 AA angehoben |
+| [garrytan/gstack](https://github.com/garrytan/gstack), MIT, Commit `c285d88` | `/design-review`: Aufnahme, Befund, Behebung, Beleg, ein Befund ein Commit, Rücknahme, Haltepunkte; `/design-consultation`: Gliederung von DESIGN.md. Daraus `design-review.md` im Bauablauf |
+| [julianoczkowski/designer-skills](https://github.com/julianoczkowski/designer-skills), Apache 2.0, Commit `c259656` | design-brief und information-architecture: zusätzliche Felder in `intake-und-entscheidungen.md`; design-review: Screenshots als Pflicht; grill-me: Gegenfragen in Runden in `design-review.md` Abschnitt 8 |
+| [figma/mcp-server-guide](https://github.com/figma/mcp-server-guide), ohne Lizenzdatei, laut README Figma Developer Terms, Commit `f049329` | nur der Ablauf: Werkzeugreihenfolge, Ausgabe als Referenz statt Code, Assets exportieren, Variablen abgleichen. Daraus `figma-zu-code.md` im Bauablauf |
+| [google-labs-code/stitch-skills](https://github.com/google-labs-code/stitch-skills), Apache 2.0, Commit `0337446`, und die Spezifikation [google-labs-code/design.md](https://github.com/google-labs-code/design.md), Apache 2.0, Commit `9bf8eae` | design-md: Abschnittsfolge, Front Matter, Linter. Daraus `57-design-md.md` und die Vorlage `assets/vorlagen/DESIGN.md`, als Abzug aus `marke.json` und `tokens.css`, nie als zweite Quelle |
+
 ### In Version 4.20 zusätzlich eingeflossen
 
 Stand der Quelle: 11.10.2026, Paket „Video Analyse für Skill Repo" (Zusammenfassung, Transkript und zwölf Frames zu einem

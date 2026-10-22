@@ -79,10 +79,12 @@ Touchziele mindestens **44 × 44 px** mit mindestens 8 px Abstand.
 - **Selbst hosten**, nicht von Google Fonts laden. Das spart eine DNS-Auflösung, eine
   Verbindung und die datenschutzrechtliche Diskussion (siehe `07-recht-dsgvo.md`).
 - Nur die wirklich benutzten Schnitte ausliefern, `font-display: swap`.
-- Die zwei wichtigsten Schnitte per `<link rel="preload" as="font" crossorigin>` ankündigen.
+- Die Schrift der Heldenüberschrift per `<link rel="preload" as="font" crossorigin>`
+  ankündigen, höchstens eine zweite: jede Vorladung konkurriert mit dem Heldenbild.
 - Variable Fonts, wenn mehr als drei Schnitte einer Familie gebraucht werden.
-- `size-adjust` nutzen, wenn die Fallback-Schrift deutlich anders läuft: das reduziert den
-  Sprung beim Schriftwechsel.
+- Eine gemessene Ersatzschrift mit `size-adjust` und Overrides vermeidet den Sprung beim
+  Schriftwechsel (CLS). Messen mit `scripts/schrift-metriken.mjs`, Ablauf und typische Fehler
+  in `55-typografie-system.md`, Abschnitt 4.
 
 ## JavaScript
 

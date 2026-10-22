@@ -12,6 +12,8 @@ Seite in `conversion-audit.md` daneben. Dieses Kapitel ist der Ablauf während d
 
 - Ablauf
 - Abschlussbericht im Chat
+- Design-Review
+- Belastungsprobe mit Extremdaten
 
 ## Ablauf
 
@@ -24,7 +26,7 @@ pnpm astro check    # falls TypeScript im Projekt
 
 Warnungen nicht ignorieren. Sie sind fast immer echte Fehler in der Ausgabe.
 
-### 2. Die zwölf Prüfskripte
+### 2. Die dreizehn Prüfskripte
 
 ```bash
 node scripts/pruefe-striche.mjs                 # Gedankenstriche, Bindestrich mit Leerzeichen, hyphens: auto, verbotene Wörter
@@ -33,6 +35,7 @@ node scripts/pruefe-kontrast.mjs                # Kontrastwerte der Rollen-Token
 node scripts/pruefe-platzhalter.mjs --launch    # [[FEHLT]], data-copy-vorschlag, ausgelassener Code
 node scripts/pruefe-breakpoints.mjs http://localhost:4321 --bilder
 node scripts/pruefe-geschmack.mjs               # nach dem Build: Kicker, Laufband, CTA-Texte, KI-Tells
+node scripts/pruefe-typografie.mjs              # rem statt px, Zoomgrenze, 14-px-Boden, Schriftladen
 node scripts/pruefe-motion.mjs                  # transition: all, scale(0), ease-in, Dauer, Reduzierung
 node scripts/pruefe-geo.mjs                     # nach dem Build: robots.txt, KI-Crawler, Text im HTML, JSON-LD
 node scripts/pruefe-aktualitaet.mjs             # nach dem Build: Copyright-Jahr, Stand-Angaben, Jahr im Titel
@@ -40,6 +43,13 @@ node scripts/pruefe-seitenbasis.mjs             # nach dem Build: lang, Viewport
 node scripts/pruefe-sicherheit.mjs              # vor und nach dem Build: Schlüssel, öffentliche Geheimnisse, .env im Index, CSP, eval, bei Stripe Webhook und Zahlungsregeln
 node scripts/pruefe-scrollstrecke.mjs http://localhost:4321   # Scrollseiten: tote Strecke, Text ohne volle Deckkraft, Überlauf; auch --mobil und --reduziert
 ```
+
+`pruefe-typografie.mjs` meldet als Fehler Schriftgrößen in px, eine Schriftgröße auf `html`,
+fließende Größen ohne rem-Anteil oder mit mehr als 2,5-facher Spanne, Stufen unter 14 px,
+eine Skala, deren Stufen sich überholen, gesperrten Zoom und fremde Schriftdienste. Als
+Warnung: Zeilenhöhe oder Laufweite in px, `@font-face` ohne `font-display`, benutzte
+Gewichte ohne eigenen Schnitt und eigene Schriften ohne gemessene Ersatzschrift. Regeln und
+Gründe: `../../webdesign-conversion/references/55-typografie-system.md`.
 
 `pruefe-seitenbasis.mjs` liest `dist/` und meldet als Fehler: kein `lang`, kein oder zoomsperrender Viewport,
 Bild ohne `alt`, Eingabefeld ohne Label und Schrift, Icons oder Skripte von einem Fremdserver (Google Fonts,
@@ -356,8 +366,106 @@ Kurz, sachlich, ohne Erfolgsprosa:
 ```
 
 "Geprüft mit Ergebnis" nennt das Werkzeug und den Befund, nicht das Gefühl: "Build grün,
-neun Prüfskripte ohne Fehler, Tastaturdurchlauf auf 375 und 1440 px, Formular mit allen vier
+zehn Prüfskripte ohne Fehler, Tastaturdurchlauf auf 375 und 1440 px, Formular mit allen vier
 Zuständen getestet" ist überprüfbar, "funktioniert" nicht.
 
 Zum Schluss ein Satz dazu, dass Rechtstexte und Datenschutzangaben vorbereitet, aber nicht
 rechtlich geprüft sind.
+
+## Design-Review
+
+Sind Build und Prüfskripte grün, folgt vor dem Abschlussbericht das Design-Review nach
+`design-review.md`: Aufnahmen auf festen Breiten mit `pruefe-breakpoints.mjs`, Befundliste
+nach Schwere, ein Befund ein Commit, Vorher-nachher-Paare, Abgleich gegen Brief und
+`marke.json`. Sein Ergebnis steht im Bericht unter „Geprüft mit Ergebnis". Grund: die Skripte
+finden kaputte Layouts, das Review die hässlichen und die, die vom Entwurf abweichen.
+
+Die Aufnahmen landen in `pruefung/`. Der Ordner gehört in die `.gitignore` des
+Kundenprojekts: es sind Arbeitsbelege, keine Seiteninhalte.
+
+## Belastungsprobe mit Extremdaten
+
+Eine Komponente, die mit Beispieldaten gut aussieht, ist gegen freundliche Daten gebaut:
+Namen, die in eine Zeile passen, Zahlen ohne Tausenderpunkt, jedes optionale Feld gefüllt.
+Die Probe macht diese Auswahl rückgängig, Feld für Feld. Sie läuft vor dem Design-Review,
+damit das Review nicht an Brüchen hängen bleibt, die Daten verursachen. Destilliert aus
+`break-ui` in emilkowalski/skills (MIT).
+
+### Regeln
+
+| Regel | Grund |
+|---|---|
+| **Plausibel oder aus dem Schema, nie zufällig.** Jeder Extremwert ist realistisch oder die echte Grenze aus Formular (`maxlength`), Schema, CMS-Feld oder API | „aaaaaaaa" und 5.000 Zeichen beweisen nichts, der Kunde sagt zu Recht „kommt nie vor". Gibt es keine Grenze, ist das selbst ein Befund |
+| **Die Daten ändern, nicht die Komponente.** Extremwerte kommen über dieselbe Stelle wie die Beispieldaten (Content Collection, JSON, Props) | wer Markup oder CSS von Hand bricht, prüft seine Änderung, nicht die Komponente |
+| **Ein Datensatz, viele Brüche, über die ersten Zeilen verteilt** | was oben steht, ist auf dem Bildschirm; reale Daten mischen die Fälle |
+| **Nur in der Entwicklung.** Extremdaten und Umschalter gehen nie live | es sind Prüfdaten, keine Inhalte. Für fehlende echte Inhalte gilt weiter `[[FEHLT: …]]` |
+| **Erst berichten, dann beheben** | manche Brüche sind Entscheidungen (umbrechen oder kürzen?), die der Mensch trifft |
+| **E-Mails und Adressen nur mit `example.com`, `example.org` oder `.test`** | eine Prüfdatei darf auf kein echtes Postfach und keine echte Seite zeigen |
+
+### Ablauf
+
+1. **Oberfläche kartieren.** Jeden dargestellten Wert mit Quelle, Typ, Grenze und „optional?"
+   auflisten, auch die vergessenen: Zahl in der Überschrift („12 Bewertungen"), Datumsangaben,
+   Buttontexte aus Daten, Alt-Texte, Avatare, die Länge der Liste selbst.
+2. **Extremfall bauen** neben den Beispieldaten, gleich aufgebaut. Dazu drei Zustände, die
+   kein einzelner Datensatz abdeckt: **leer** (0 Einträge), **eins** (jede Zahl genau 1,
+   wegen der Mehrzahl), **viele** (realistische Obergrenze).
+3. **Umschalter nur in der Entwicklung**, etwa eine Prüfroute, deren `getStaticPaths()` im
+   Produktionsbuild nichts liefert, mit den Fällen `beispiel`, `extrem`, `leer`, `eins`,
+   `viele`. Ungetestet, siehe `OFFENE-PUNKTE.md`.
+4. **Brechen** in der echten Containerbreite, bei 320 px, in der größten Breite und mit 200 %
+   Browserzoom. Liegt kein Browser vor: aus dem CSS schließen und ausdrücklich sagen, was
+   gesehen und was gefolgert ist.
+5. **Bericht, dann anhalten.** Behoben wird erst auf Ansage. Danach alle Zustände erneut
+   durchschalten, auch „beispiel": eine Korrektur für den Extremfall darf den Normalfall nicht
+   verschlechtern. Die Extremdaten bleiben als Regressionsprobe im Projekt.
+
+### Werte, die auf Kundenseiten brechen
+
+| Feld | Extremwert | Bricht |
+|---|---|---|
+| Name im Team | `Maximilian-Alexander von Hohenstein-Wettberg` | Zeilenumbruch, Kartenhöhe, Initialen |
+| Name im Team | `Jo` | leere Namensspalte, Initialen „J" |
+| Name | `Özlem Yıldırım-Schäfer`, `Đặng Thị Ngọc Hân` | gestapelte Diakritika werden bei knapper `line-height` mit `overflow: hidden` abgeschnitten |
+| Berufsbezeichnung | `Rechtsanwaltsfachangestellte` | ein Wort ohne Umbruchstelle sprengt schmale Karten |
+| Firma | `Steuerberatungsgesellschaft Müller & Partner mbB` | Fuß, Impressum, Kopfzeile auf 320 px |
+| E-Mail | `bartholomaeus.fitzgerald@nordwest-industrieholding.example.com` | schiebt Nachbarn aus der Zeile |
+| Leistungstitel | `Kraftfahrzeug-Haftpflichtversicherung` | Überschrift in einer Kachel, Navigation |
+| Bewertung | 0, 1, Text mit 2.000 Zeichen, ohne Foto | Leerzustand, „1 Bewertungen", Kartenhöhe, Avatar-Rückfall |
+| Stellen, Referenzen | 0, 1, 40 oder 60 Einträge | Leerzustand, Raster mit einer Karte, Seitenlänge, Paginierung |
+| Zahl | `1284`, `12345678,9` | ohne `Intl.NumberFormat('de-DE')` kein Tausenderpunkt, falsches Dezimalzeichen |
+| Zahl | `0`, `null`, `NaN` | „0 Mitglieder", Literal im Text |
+| Zahl, die sich ändert | `99` zu `100` | springt ohne `font-variant-numeric: tabular-nums` |
+| Datum | heute, vor 12 Tagen, in der Zukunft | „vor 0 Sekunden", „vor -3 Tagen" |
+| Öffnungszeiten | geteilte Zeiten, Ruhetag, Feiertag | Tabellenbreite, leere Zelle |
+| Bild | fehlt, 4000×200, 200×4000, transparentes Logo auf dunklem Grund | Rückfall, Verzerrung ohne `object-fit`, unsichtbares Logo, Sprung ohne `aspect-ratio` |
+| Text aus Daten | `<script>`, `&amp;`, Zeilenumbruch in einem einzeiligen Feld | Escaping, doppelte Zeilenhöhe |
+| Zustand | Ladefehler der Bewertungs-API, Serverfehler im Formular | verständliche Meldung statt `TypeError` |
+
+### Bruchbilder und ihre Ursache
+
+| Was man sieht | Ursache | Lösung |
+|---|---|---|
+| Avatar oder Icon gequetscht | Flex-Kind schrumpft | `flex-shrink: 0` |
+| Text läuft aus dem Kasten | Flex- oder Grid-Kind mit `min-width: auto` | `min-width: 0`, im Grid `minmax(0, 1fr)` |
+| E-Mail oder URL über den Rand | keine Umbruchstelle | `overflow-wrap: anywhere` an diesem Element, nie `hyphens: auto` (harte Grenze) |
+| Avatar treibt neben dreizeiligem Namen | `align-items: center` bei wechselnder Höhe | oben ausrichten, sobald Text umbrechen kann |
+| Falsche Initialen | `.split(' ')[0][0]` | Graphemcluster über `Intl.Segmenter`, Rückfall-Icon |
+| „1 Bewertungen" | feste Mehrzahl | `Intl.PluralRules('de-DE')` oder Texte je Anzahl |
+| Leere Zeile, wo die Rolle stand | Platzhalter für ein fehlendes optionales Feld | Zeile weglassen, nie einen Strich als Platzhalter (harte Grenze) |
+| Diakritika abgeschnitten | knappe `line-height` mit `overflow: hidden` | großzügigere Zeilenhöhe, Textkästen nicht beschneiden |
+| Gekürzter Text ohne Weg zum Volltext | nur `text-overflow: ellipsis` | Volltext sichtbar an anderer Stelle, nicht nur als `title` |
+| `&amp;` erscheint roh | falsche Escaping-Ebene | einmal beim Ausgeben escapen, nie `set:html` mit Nutzerdaten |
+
+### Umbrechen, kürzen oder begrenzen
+
+| Wahl | Für | Grund |
+|---|---|---|
+| umbrechen | Namen, Titel, alles, woran man etwas erkennt | wer es nicht vollständig liest, verwechselt es |
+| am Ende kürzen | Nebeninformation, deren Anfang trägt, immer mit Weg zum Volltext | der Anfang reicht zum Erkennen |
+| begrenzen (`line-clamp`) | mehrzeilige Vorschauen in Karten | Kartenhöhen bleiben berechenbar |
+| nie kürzen | Preise, Beträge, Daten, Telefonnummern | ein abgeschnittener Preis ist ein falscher Preis |
+
+Bericht in drei Teilen: was brach (Schwere kaputt, unschön oder brüchig, mit Lösung als
+`datei:zeile`), Entscheidungen für den Menschen mit Empfehlung, was gehalten hat.
+

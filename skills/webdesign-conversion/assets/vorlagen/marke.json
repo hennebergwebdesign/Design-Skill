@@ -156,7 +156,7 @@
     "display": {
       "familie": "Outfit",
       "lizenz": "OFL, selbst gehostet",
-      "schnitte": [700]
+      "schnitte": [600, 700]
     },
     "$lizenz_warnung": "Kommerzielle Schrift ohne Lizenz ist nicht einsetzbar, auch nicht für den Entwurf. Der spätere Tausch verschiebt jede Zeilenlänge.",
     "strichstaerke_display": 700,
