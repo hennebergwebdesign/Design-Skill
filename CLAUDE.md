@@ -366,6 +366,7 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 - Die `description` in `webdesign-conversion/SKILL.md` ist mit rund 1190 Zeichen länger als
   die übliche Grenze von 1024. Sie wurde in 4.1.0 bewusst nicht verlängert. Falls Claude Code
   sie kürzt, fällt zuerst der Auslösersatz am Ende weg; dann kürzen, nicht ergänzen.
+- Die Fallstudie `memberspot.de` (freigegeben 23.10.2026) ist nicht ausgewertet, weil die Domain in der Arbeitsumgebung gesperrt war. Zum Nachholen `memberspot.de` in den erlaubten Domains der Umgebung freigeben, dann Startseite, `/expert` und die übrigen Unterseiten nach dem Auftrag in `referenzen-und-auswahl.md` auswerten. Ob die Fallstudie danach eine eigene Datei bekommt, ist offen.
 - Die Musterbibliothek startet mit fünf Mustern, alle aus derselben Quelle (21st.dev) und
   keines aus einer echten Projektrecherche. Der Ähnlichkeitsvergleich ist damit an einem
   schmalen Bestand erprobt.
@@ -395,6 +396,7 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Änderungsverlauf
 
+- **23.10.2026, ohne Versionsänderung** `memberspot.de` samt Unterseiten (genannt `/expert`) vom Inhaber als Designreferenz freigegeben (Tor 1) und als Fallstudie gewünscht, Begründung: Layout, Aufbau, Spacing, Copywriting, Veranschaulichung, starke Einzelabschnitte auf den Unterseiten. Eingetragen in `referenzen-und-auswahl.md` (Ausgangsliste und Abschnitt „Memberspot (Fallstudie)") mit dem Auftrag für die Auswertung. **Nicht ausgewertet:** die Domain war aus der Arbeitsumgebung gesperrt, deshalb keine Prinzipien, kein Crawl, nichts aus Suchergebnissen übernommen außer fünf Adressen der englischen Fassung. Nicht in der Musterbibliothek (Tor 2 offen).
 - **11.10.2026, Version 4.22.0** Auf Wunsch des Inhabers sechs Quellen eingearbeitet, alle MIT: `ItsssssJack/SlopMonster`, `cloudflare/security-audit-skill`, `citrolabs/ego-lite`, `morluto/rea`,
   `vercel-labs/skills`, `stablyai/orca`. Alle destilliert oder beschrieben, nichts mitgeliefert, die Originale nur als Befehle im Installer. **Eingearbeitet:** Kapitel 51 Abschnitt 7a (Kontext vor den Mustern,
   Zweitdurchgang durch ein Modell anderer Herkunft, Prüfwert ist kein Urteil) mit der Vorlage `textueberarbeitung-zweitmodell.md`; `sicherheitspruefung.md` Abschnitt 6a (Beratung gegen Vollprüfung, drei Befundstufen,

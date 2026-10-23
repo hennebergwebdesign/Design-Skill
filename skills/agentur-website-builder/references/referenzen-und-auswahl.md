@@ -122,7 +122,8 @@ Dienstleister, Handwerk und lokale Anbieter, also der häufigste Kundentyp der A
 
 Produkt und Softwareanbieter, stark in Struktur und Argumentationsaufbau:
 `brand.ai`, `showit.com`, `luffu.com`, `pop.site`, `trymira.com`, `cofactr.com`,
-`carcompany.ai`, `amp.framer.media`, `voltaskai.endover.ee/en`
+`carcompany.ai`, `amp.framer.media`, `voltaskai.endover.ee/en`,
+`memberspot.de` mit Unterseiten (freigegeben, Fallstudie, siehe unten)
 
 Marke, Atmosphäre und Produktinszenierung:
 `bynd.com/eu`, `onewhale.io`, `wattspet.com`, `rideradian.com`, `wegems.co`, `designbell.io`
@@ -311,6 +312,52 @@ Pin und schwebender Kopf auf Mobil ungeprüft (vor Übernahme testen). Zur Stick
 Für alle fünf gilt wie bei Comrade: Aufnahme als **Muster** nur über Tor 2, Erfassung steht aus.
 Die Prinzipien stammen aus einer Textauswertung der Referenzliste vom 11.10.2026, nicht aus einer
 eigenen Erfassung; der Viewport der Auswertung war ca. 1536 mal 639, Mobil wurde nicht getestet.
+
+### Memberspot (Fallstudie)
+
+`memberspot.de` mit Unterseiten, Stand 23.10.2026, vom Inhaber nach Ansicht der Live-Seite
+freigegeben (Tor 1, Startseite **und Unterseiten**, ausdrücklich genannt `memberspot.de/expert`).
+Deutsche Softwareplattform für Onlinekurse, Community und Mitgliederbereiche mit eigenen Seiten
+je Zielgruppe (Experten wie Coaches und Trainer, Unternehmen). Damit die Lage eines
+erklärungsbedürftigen Angebots mit mehreren Zielgruppen und deutscher Ansprache.
+
+Der Inhaber will die Seite zusätzlich als **Fallstudie** für die Agentur: nicht nur als Name
+in einem Konzept, sondern als ausgewertetes Beispiel, an dem Layout, Abschnitte und Copy
+nachvollziehbar werden.
+
+Warum sie gefällt (Begründung des Inhabers): sehr professionell gestaltet, gutes Layout, guter
+Aufbau, gutes Spacing, gutes Copywriting, eine sehr starke Veranschaulichung, und die Unterseiten
+haben einzeln sehr gute Abschnitte.
+
+**Stand der Auswertung: nicht ausgewertet.** Am 23.10.2026 war die Seite aus der Arbeitsumgebung
+nicht abrufbar (die Netzwerkregel der Umgebung hat die Domain gesperrt, kein Fehler der Seite).
+Deshalb steht hier keine Prinzipientabelle, und es wird keine aus der Erinnerung oder aus
+Suchergebnissen geschrieben (Abschnitt „Ausgangsliste": was sich nicht abrufen lässt, wird nicht
+aus der Erinnerung beschrieben). Über die Websuche bestätigt sind nur Adressen der englischen
+Fassung: `/en`, `/en/feature/mitgliederbereich`, `/en/lms-software-plattform`, `/en/pricing`,
+`/en/facts/memberspot`. Die deutschen Pfade dazu sind ungeprüft. Preisangaben in den
+Suchergebnissen widersprachen sich zwischen den Seiten und sind nicht übernommen.
+
+Auftrag für die Fallstudie, sobald die Seite abrufbar ist (Ablauf nach `designrecherche-ablauf.md`,
+Erfassung mit `referenz-crawl.mjs --id … --breakpoints 375,768,1440 --screenshot`, Werte mit
+`design-dna.mjs`):
+
+| Frage | woran es festgemacht wird |
+|---|---|
+| Aufbau | Sektionsfolge der Startseite und jeder Zielgruppenseite, wo der erste CTA steht, wie oft er wiederkehrt |
+| Spacing | gemessene Abstände zwischen und in Sektionen, Lesebreite, Rhythmus auf 375 und 1440 |
+| Veranschaulichung | womit das Produkt gezeigt wird (Bildschirmansicht, Video, Animation, Grafik), wie nah am echten Produkt, ob Bewegung `prefers-reduced-motion` beachtet |
+| Copy | Überschrift und Unterzeile je Sektion, Nutzenformel, Umgang mit Einwänden, Belege mit Quelle |
+| Unterseiten | je Unterseite die stärksten Abschnitte mit Begründung, als Kandidaten für Tor 2 |
+| Grenzen | was gegen Kapitel 26 (KI-Tells), 30 (Motion) oder die harten Grenzen verstößt und deshalb nicht übernommen wird |
+
+Schon vor der Auswertung gilt: Memberspot zeigt Software. Ein Dienstleister oder Handwerksbetrieb
+hat keine Programmoberfläche, die er zeigen kann. Übernommen wird deshalb die Art, wie ein
+abstraktes Angebot sichtbar gemacht wird, nicht die Bildschirmansicht als Bildform; was beim
+Kunden an ihre Stelle tritt, kommt aus seinem Material, nicht aus einem KI-Bild als Beleg
+(`../../webdesign-conversion/references/28-ki-bildentwuerfe.md`). Texte, Claims, Logos,
+Produktbilder, Farben, Schriften und Kennzahlen bleiben bei Memberspot (Abschnitt „Wie
+Referenzwebsites genutzt werden").
 
 ## Abgelehnte Referenzen
 
