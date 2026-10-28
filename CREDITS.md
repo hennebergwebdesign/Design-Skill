@@ -619,3 +619,15 @@ Stand der Quellen: 11.10.2026. Sechs Repositories, vom Inhaber genannt, jeweils 
 * REA: Einrichtung und Werkzeugkatalog, die Fallstudien („eine Funktion verstehen und nachbauen"), die Anbindung an Hopper, Ghidra, IDA, JEB, Frida; native Analyse, Firmware, Android, EVM, SQLite, Pakete. Für Kundenseiten ohne Gegenstand.
 * vercel-labs/skills: alle Optionen außer denen aus Abschnitt 9a, die Tabelle der über 70 unterstützten Agenten, private Repositories, Azure Repos und GitLab.
 * Orca: die Anwendung, Koordinationsschleife und Aufgabengraphen, Umgebungen je Arbeitsbereich, Jira und Linear, Emulatoren, Computersteuerung, Telefon-Begleitprogramm, Relais, alle Dateien unter `skill-guides/`, `src/` und `docs/`.
+
+### In Version 4.23 zusätzlich eingeflossen
+
+Stand der Quelle: 28.10.2026 (Commit `eecb8f9`). Ein Repository, vom Inhaber genannt, flach geklont und gelesen. Nichts ist übernommen oder mitgeliefert.
+
+| Quelle | Lizenz | Was daraus eingeflossen ist |
+|---|---|---|
+| [robonuggets/ribbon](https://github.com/robonuggets/ribbon), Jay E (RoboNuggets), Stand 28.10.2026 | MIT (die eingebettete Schrift Outfit unter SIL OFL 1.1) | `arbeitsdisziplin.md`, Abschnitt 9: ribbon als optionales Nutzerwerkzeug, das Restnutzung und Cache-Zustand zeigt, mit der Folgerung für lange Bauten (Scheibe abschließen und Stand festhalten, bevor eine Pause über eine Stunde beginnt). Der Befehl steht im Kopf von `scripts/install-quellskills.sh`. |
+
+**Geprüft vor der Aufnahme** (Abschnitt 9a): Lizenz MIT; keine Netzwerkaufrufe, kein `exec`, kein `eval`, keine Dateizugriffe und keine Installationsskripte in `register.tsx` und `cache-art.ts`; die README richtet sich an Agenten mit dem Satz, sie sollten den Installationsbefehl ausführen. Diese Anweisung ist als Daten behandelt und **nicht befolgt**: die Installation ist Sache des Nutzers.
+
+**Nicht übernommen, mit Grund:** der Quelltext des Bands, die Preistabelle (veraltet mit den Modellpreisen) und die eingebettete Schrift, weil das Mod Darstellung für den Nutzer ist und kein Wissen für Kundenseiten.

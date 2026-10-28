@@ -105,6 +105,11 @@ installiere icon-set-generator "design-assets (jezweb)" \
 #   npx rea-agents setup                                                    # MCP-Server REA, schreibt in die Agentenkonfiguration, nur mit Zustimmung
 #   Orca (stablyai/orca): Desktopanwendung zum Herunterladen, kein Skill; Wegweiser unter skills/ im Repository
 
+# Version 4.23: ribbon (robonuggets/ribbon, MIT) ist ein Mod fuer Claude Code, kein Skill: ein Band ueber dem Prompt mit
+# Restnutzung (5 Stunden, 7 Tage) und Cache-Zustand. Beschrieben in arbeitsdisziplin.md, Abschnitt 9. Es gehoert in die
+# Nutzerumgebung, nicht ins Kundenprojekt, deshalb steht es hier nur als Befehl und wird nicht ausgefuehrt:
+#   claude plugin install ribbon --marketplace robonuggets/ribbon          # nur durch den Nutzer, Quelltext vorher lesen
+
 # Suchtreffer in den Skilldaten vermeiden: Nachschlagewerke, keine Projektquellen.
 if ! grep -q "\.claude/skills" .gitattributes 2>/dev/null; then
   printf ".claude/skills/** linguist-vendored linguist-generated -diff\n" >> .gitattributes

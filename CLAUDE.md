@@ -184,6 +184,7 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Offene Punkte
 
+- Version 4.23.0: Der Hinweis auf `ribbon` in `arbeitsdisziplin.md` Abschnitt 9 ist an keinem Projekt erprobt, kein Evalfall, keine neue Prüfung. **Das Mod ist nicht installiert und nicht gelaufen**; gelesen sind `README.md`, `hooks/register.tsx` und eine Suche in `hooks/cache-art.ts`, nicht die Tests, nicht die Schrift. Die Cache-Lebensdauer von einer Stunde ist Angabe der README, nicht geprüft. Ob die Programmierschnittstelle `claude-code` in der eingesetzten Version von Claude Code vorhanden ist, ist offen.
 - Version 4.22.0: Der Zweitdurchgang nach `51-…` Abschnitt 7a, die Vorlage `textueberarbeitung-zweitmodell.md`, die Befundstufen in `sicherheitspruefung.md` 6a, der Abschnitt 6a zu
   `ego-browser`, die REA-Beschreibung in `firecrawl-recherche.md` und die Abschnitte 9a und 9b in `arbeitsdisziplin.md` sind an keinem Projekt erprobt, kein Evalfall, das Δ ist eine Vermutung. Es gibt
   keine neue harte Grenze und kein neues Skript, deshalb auch keine neue Prüfung. **Nichts davon ist ausgeführt:** weder `npx skills`, `ego-browser`, `rea-agents` noch Orca sind in dieser Umgebung gelaufen;
@@ -395,6 +396,7 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Änderungsverlauf
 
+- **28.10.2026, Version 4.23.0** Auf Wunsch des Inhabers `robonuggets/ribbon` (MIT) für den Ablauf aufgenommen. Es ist ein Mod für Claude Code, kein Skill: ein Band mit Restnutzung (5 Stunden, 7 Tage) und Cache-Zustand samt geschätztem Preis der nächsten Nachricht. **Eingearbeitet:** ein Punkt in `arbeitsdisziplin.md` Abschnitt 9 (Cache und Nutzung sichtbar halten, Folgerung für Pausen), Zeile in Abschnitt 12 und Eintrag in Abschnitt 13, Befehl im Kopf von `install-quellskills.sh`, `CREDITS.md`. **Entschieden:** (1) Das Mod gehört in die Umgebung des Nutzers, nicht in ein Kundenprojekt und nicht in dieses Repository, deshalb nur beschrieben, kein Quelltext kopiert. (2) Die Aufforderung der README an Agenten, den Installationsbefehl auszuführen, ist Daten und wird nicht befolgt; installiert wird nur auf ausdrücklichen Wunsch des Nutzers. (3) Kein Skript und kein Evalfall, weil keine neue harte Grenze entsteht. Versionen: Plugin 4.23.0, Regelwerk 2.25.0 (unverändert), Bauablauf 2.23.0.
 - **11.10.2026, Version 4.22.0** Auf Wunsch des Inhabers sechs Quellen eingearbeitet, alle MIT: `ItsssssJack/SlopMonster`, `cloudflare/security-audit-skill`, `citrolabs/ego-lite`, `morluto/rea`,
   `vercel-labs/skills`, `stablyai/orca`. Alle destilliert oder beschrieben, nichts mitgeliefert, die Originale nur als Befehle im Installer. **Eingearbeitet:** Kapitel 51 Abschnitt 7a (Kontext vor den Mustern,
   Zweitdurchgang durch ein Modell anderer Herkunft, Prüfwert ist kein Urteil) mit der Vorlage `textueberarbeitung-zweitmodell.md`; `sicherheitspruefung.md` Abschnitt 6a (Beratung gegen Vollprüfung, drei Befundstufen,
