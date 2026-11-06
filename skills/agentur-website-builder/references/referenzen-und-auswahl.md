@@ -120,6 +120,9 @@ Dienstleister, Handwerk und lokale Anbieter, also der häufigste Kundentyp der A
 `driessenarchitectuur.nl` (alle drei freigegeben), `alliancemoving.com`, `hhjtrialattorneys.com`,
 `coffee-tech.com`, `beetogreen.com/en` (freigegeben)
 
+Zwei Zielgruppen, Nische und Projektgeschäft (alle freigegeben, Erfassung vom 06.11.2026):
+`electriccarscheme.com`, `siliconhillstalent.com`, `teifmoreaux.com`, `flo-corp.com`
+
 Produkt und Softwareanbieter, stark in Struktur und Argumentationsaufbau:
 `brand.ai`, `showit.com`, `luffu.com`, `pop.site`, `trymira.com`, `cofactr.com`,
 `carcompany.ai`, `amp.framer.media`, `voltaskai.endover.ee/en`
@@ -131,7 +134,10 @@ Ruhe, Nähe und Dienstleistung am Menschen:
 `kalmmoments.com`, `tropica.framer.website`
 
 Verein, Community und Organisation:
-`hadi-community.de`, `iwcf.org`
+`hadi-community.de`, `iwcf.org`, `pennywise.org` (freigegeben)
+
+Angebote mit hoher Hürde und Bewerbung, nur als Strukturvorbild:
+`danscryptomastermind.com` (freigegeben, Ton und Versprechen ausdrücklich nicht)
 
 Fallbeispiele und Referenzdarstellung, nützlich für die Case Study Sektion:
 `showcase.nixtio.com/cases/board`, `xnrgyclub.com`
@@ -311,6 +317,223 @@ Pin und schwebender Kopf auf Mobil ungeprüft (vor Übernahme testen). Zur Stick
 Für alle fünf gilt wie bei Comrade: Aufnahme als **Muster** nur über Tor 2, Erfassung steht aus.
 Die Prinzipien stammen aus einer Textauswertung der Referenzliste vom 11.10.2026, nicht aus einer
 eigenen Erfassung; der Viewport der Auswertung war ca. 1536 mal 639, Mobil wurde nicht getestet.
+
+### Erfassungsrunde vom 06.11.2026
+
+Sechs Seiten, vom Inhaber zur Aufnahme genannt (Tor 1, ganze Seite, ohne eigene Begründung, mit dem
+Auftrag, Komposition, Layout, Farbgebung und Platzierung der Conversion zu betrachten). Anders als die
+Runde vom 11.10.2026 ist das hier eine **eigene Erfassung**, keine Textauswertung: Playwright mit
+Chromium, Desktop 1440 × 900 und Mobil 390 × 844, ganze Seite und zusätzlich Bildschirm für
+Bildschirm gescrollt, weil drei Seiten Inhalte erst beim Scrollen einblenden. Farben, Schriften,
+Überschriften und Knöpfe sind aus den berechneten Stilen ausgelesen, die Kontraste nachgerechnet.
+Nicht erfasst: Unterseiten, Verhalten nach dem Absenden eines Formulars, Ladezeiten, Tastaturbedienung.
+Fünf der sechs Seiten laufen auf Squarespace (im Quelltext erkennbar), Teif Moreaux ohne erkennbaren
+Baukasten. Die Zahlen in den Tabellen beschreiben die Vorbilder, sie sind keine Belege für Kunden.
+
+### The Electric Car Scheme
+
+`electriccarscheme.com`, Stand 06.11.2026. Gehaltsumwandlung für Elektroautos in Großbritannien,
+verkauft an Arbeitgeber, genutzt von Mitarbeitenden. Gilt für Dienstleister mit **zwei Zielgruppen**,
+Finanzierungs- und Förderangebote, erklärungsbedürftige Modelle. Ergänzt BeeToGreen, das dieselbe
+Lage nur als Text zeigte.
+
+Sektionsfolge: Kopf mit Rechner-CTA, Bewertungszeile, Held mit zwei Knöpfen und vier Häkchen, zwei
+Bildkarten (eine mit Ablauf 01 bis 03), Logoleiste, Bild und Text mit CTA, drei Preisbeispiele,
+sechs Vorteilskarten, Kundenstimmen auf dunkler Fläche, CTA-Banner, Kennzahlen, FAQ für HR und
+Finanzen, Fußzeile mit Registerangaben. Rund 9.900 px.
+
+Farbe und Schrift: Weiß und Creme (#F9F5EC) als Flächen, Dunkelgrün (#285350) als Ankerfläche für
+Belege, Mint (#61CCAC) als Handlungsfarbe, Gelb (#FEBC2F) genau einmal für den Kopf-CTA. Schwarz auf
+Mint 10,7:1, auf Gelb 12,5:1. Überschriften fett, zentriert, H1 rund 85 px.
+
+| Prinzip | Beobachtung |
+|---|---|
+| Beleg über der Überschrift | Bewertungszeile mit Wert, Anzahl und Quelle steht vor der H1, nicht darunter |
+| Eine Farbe je Zielgruppe | Kopf-CTA für Mitarbeitende („Ersparnis berechnen") in Gelb, Held-CTA für Arbeitgeber („Demo buchen") in Mint |
+| Primär und risikoarme Zweitoption | Demo gefüllt, Erklärdokument zum Herunterladen daneben, gleich groß |
+| Spanne statt Zielgruppenfloskel | der Untertext nennt „von 10 bis 100.000 Mitarbeitende" und damit, für wen es passt |
+| Ablauf im ersten Bild | drei Schritte als Oberflächenkarte über dem Foto, keine eigene Sektion |
+| Preis konkret | drei Beispielkarten mit „ab"-Monatspreis, Reichweite und Ersparnis, jede mit eigenem Anfrageknopf |
+| Belege in Schichten | Bewertungszeile, B Corp Siegel, Logoleiste, Stimmen mit Foto, Rolle und Firmenlogo |
+| FAQ nach Rolle | „Häufige Fragen von HR und Finanzen", zehn Fragen zu Kosten, Austritt, Steuer |
+| Rechtsangaben offen | Register, Aufsicht und Vermittlerstatus vollständig in der Fußzeile, Vertrauen bei Geldthemen |
+| Mobil | Knöpfe in voller Breite im ersten Bildschirm |
+
+Nicht übernommen: Kennzahlenkarten, die bei der Erfassung „0", „£0" und „0+" zeigten (siehe Gemeinsame
+Befunde), Outfit und Poppins (Poppins ist gesperrt), die Kundenstimmen dreifach im DOM mit je einer H2
+pro Name (Dubletten für Bildschirmleser, falsche Gliederung), sechs Menüpunkte mit vier Untermenüs,
+die britischen Steuer- und Sparzahlen, Texte, Logos und Fotos.
+
+### Teif Moreaux
+
+`teifmoreaux.com`, Stand 06.11.2026. Eventagentur für Strategie, Gestaltung und Produktion. Gilt für
+kreative Dienstleister und Projektgeschäft, bei dem das Foto der Arbeit der stärkste Beleg ist
+(Veranstalter, Messebau, Architektur, Bühne, Ausstattung). Nächster Verwandter in dieser Liste:
+Driessen Architectuur.
+
+Sektionsfolge: Vollbildfoto einer echten Produktion mit H1 unten links und „Arbeiten ansehen" unten
+rechts, ein Satz Positionierung, Kundenlogos, drei Leistungen nummeriert mit Kontakt-CTA, Projekt im
+Vollbild als Schieber, vier Kennzahlen, Zitat, Blog. Rund 5.100 px, also kurz.
+
+Farbe und Schrift: fast nur Schwarz (#0A0A0A) und Weiß, Warmgrau (#F4F3EF) als Wechselfläche, Magenta
+nur für Zitatzeichen und das Plus einer Kennzahl. Geometrische Grotesk in leichtem Schnitt für
+Überschriften, Monospace in Versalien für Labels und Knöpfe.
+
+| Prinzip | Beobachtung |
+|---|---|
+| Das Foto ist der Beleg | echte Produktion in einem Stadion statt Illustration, Text auf der ruhigen Bildzone |
+| Überschrift nennt nur die Leistung | drei Wörter für drei Leistungen, kein Versprechen |
+| Diagonale Komposition | H1 unten links, CTA unten rechts: das Auge läuft über das Bild zum Knopf |
+| CTA als Gespräch | „Lass uns reden" im Kopf, „Klingt passend? Schreib uns" direkt nach den Leistungen |
+| Akzent fast unsichtbar | eine Akzentfarbe an zwei Stellen, sonst nur Schwarz, Weiß, Warmgrau |
+| Kennzahlen mit Bezug | Gründungsjahr, Anzahl Events, Gäste, Anteil wiederkehrender Kunden |
+| Zitat mit Anlass | Name, Rolle und die Veranstaltung mit Jahr |
+| Kopf bleibt | „Lass uns reden" ist beim Scrollen sichtbar |
+
+Nicht übernommen: Kontur- und Glasknöpfe als einzige Knopfform, auch für den Haupt-CTA (Konturbutton
+nie als Primärknopf, `../../webdesign-conversion/references/26-geschmack-und-ki-tells.md`), kein
+Formular, nur Mail, das Projektkarussell mit Zählung „02 / 04", die H1 in Kleinbuchstaben (Markenmanier,
+im Deutschen mit Substantiven nicht übertragbar), Text auf unruhigem Foto ohne Abdunklung, auf Mobil der
+Held-CTA ganz unten im Bild.
+
+### Dan's Crypto Mastermind
+
+`danscryptomastermind.com`, Stand 06.11.2026. Bezahlte Mitgliedschaft mit Bewerbung, zwei Stufen zu
+10.000 und 25.000 US-Dollar im Jahr. Gilt nur als **Strukturvorbild** für Angebote mit hoher Hürde und
+Bewerbungsverfahren (Coaching, Programm, Premiumberatung), **nie** für Ton und Versprechen.
+
+Sektionsfolge: Held mit Ergebnisversprechen, Video, Beschreibung mit Gerätemockup, vier Strategien,
+Leistungsumfang, Videostimmen, „Für wen", Gründerprofil, „Wer aufgenommen wird", Preise, weitere
+Videostimmen, FAQ, zwei Bewerbungswege, Chatscreenshots. Rund 15.300 px, „Jetzt bewerben" zwölfmal.
+
+Farbe und Schrift: Schwarz (#111) als Grund, Gold (#B89D51) als Akzent und Wechselfläche, weiße
+Abschnitte für Stimmen und Preise. Gold auf Schwarz 7,2:1, Gold auf Weiß 2,6:1.
+
+| Prinzip | Beobachtung |
+|---|---|
+| Ein Ziel, ein Wortlaut | derselbe CTA-Text in derselben Form nach jedem Argumentblock |
+| Länge folgt der Hürde | hoher Preis, lange Seite, Belege früh und mehrfach (`../../webdesign-conversion/references/45-huerde-laenge-und-leserfuehrung.md`) |
+| Qualifizieren statt überreden | drei Profile „für wen" und drei harte Voraussetzungen stehen vor dem Preis |
+| Zwei Wege zur selben Handlung | Bewerbung per Gespräch oder per Formular nebeneinander, je ein Satz, was passiert |
+| Preisstufen mit Entscheidungshilfe | der Satz über den Karten sagt, wer welche Stufe nimmt; die höhere ist farbig hervorgehoben |
+| Videostimmen mit Ergebniszeile | Untertitel im Bild, darunter Name und ein Satz zum Ergebnis |
+
+Nicht übernommen: Einkommens- und Renditeversprechen in Überschrift und Stimmen („7M+", „100x",
+„84 % Trefferquote"), die bei uns als unbelegte Zahl und bei Geldanlage als irreführende Werbung gelten
+würden (`../../webdesign-conversion/references/34-ueberzeugungsausloeser.md`, realistisch behaupten),
+Chatscreenshots als Beleg (nicht prüfbar), die Pille „Willkommen bei" als Kicker und das farbige
+Akzentwort in fast jeder Überschrift (beides meldet `pruefe-geschmack.mjs`), das Schwarz-Gold-Schema als
+Luxusvorlage, Gold als Textfarbe auf Weiß, Poppins, eine Kontaktadresse bei einem Freemailer, das
+Cookie-Banner ohne Ablehnen, auf Mobil ein erster Bildschirm mit neun Zeilen Überschrift und ohne CTA.
+
+### Silicon Hills Talent
+
+`siliconhillstalent.com`, Stand 06.11.2026. Personalvermittlung für KI-, Robotik- und Hardware-Startups,
+Zielgruppe Gründer und technische Leitung. Gilt für B2B-Dienstleister mit enger Nische (Vermittlung,
+Beratung, Fachplanung), bei denen das Verständnis der Branche das Argument ist.
+
+Sektionsfolge: dunkler Held mit gedimmtem Foto und gerundeter Unterkante, Belegpille, zentrierte H1,
+zwei Knöpfe, eine weiße Kennzahlenkarte überlappt die Kante, vier Schmerzpunkte auf dunkler Fläche,
+Überleitungssatz mit CTA, lange Stimmen, Blog, CTA-Block, Abschluss mit großer Wortmarke. Rund 6.100 px.
+
+Farbe und Schrift: Anthrazit (#1A1B1F) und fast Weiß (#F9F9FB) im Wechsel, Hellgrün (#B6FD86) als
+einzige Handlungsfarbe, dunkler Text darauf 14,2:1. Grauer Nebentext (#808185) auf Hellgrau nur 3,7:1.
+
+| Prinzip | Beobachtung |
+|---|---|
+| Nische ausgeschrieben | der Untertext zählt die vier Fachgebiete auf, kein „für Unternehmen jeder Größe" |
+| Schmerzpunkte als Überschriften | vier Karten in der Sprache der Zielgruppe, jede mit einem Satz Folge |
+| Überlappende Karte | die Kennzahlenkarte liegt halb auf dem Held und zieht den Blick in die nächste Sektion |
+| Eine Handlungsfarbe | Hellgrün nur für Knöpfe und Symbolflächen, sonst neutral |
+| Zweitknopf zur Methode | „So arbeiten wir" statt „Mehr erfahren" |
+| Kennzahl mit Zeitbezug | Verbleibquote „nach 12 Monaten" statt einer nackten Prozentzahl |
+| Abschluss als Frage | „Bereit, ein Team aufzubauen, das wächst?" mit einem Knopf vor der Fußzeile |
+
+Nicht übernommen: Plus Jakarta Sans (gesperrt), die Pille mit Icon als Kicker, die Wortmarke als
+Wasserzeichen in der Fußzeile (Mode), der Widerspruch „300+" im Held und „299 +" in der Kennzahl, der
+graue Nebentext unter 4,5:1, die Handlungsfarbe auch auf den Cookie-Knöpfen (verwässert die Farbe),
+der Kopf, der beim Scrollen verschwindet.
+
+### Pennywise Foundation
+
+`pennywise.org`, Stand 06.11.2026. Gemeinnützige Stiftung, Ziel ist die Spende. Gilt für Vereine,
+Stiftungen und Initiativen mit einer einzigen Handlung (spenden, Mitglied werden, unterstützen).
+Ergänzt `hadi-community.de` und `iwcf.org` in der Ausgangsliste.
+
+Sektionsfolge: schwebender Kopf als weiße Karte mit Spendenknopf, Held mit Gruppenfoto und
+zweifarbiger Versalienüberschrift, ein Satz und Spendenknopf, aktueller Anlass mit Fotos, Ort, Datum
+und Zahl der Betroffenen, zwei Kennzahlen mit Karte, Schwerpunkte als nummerierte Fotokarten,
+eingebettete Grafik zum Modell, Fußzeile mit Newsletter, Transparenzsiegel, Adresse. Rund 4.300 px.
+
+Farbe und Schrift: Rotbraun (#79422F) als Fläche, Dunkelbraun (#453631) als Text, Orange (#FCB65A) als
+Handlungsfarbe, Weiß. Brauner Text auf Orange 6,6:1, Weiß auf Rotbraun 8,0:1, das orange Akzentwort
+auf Weiß nur 1,75:1. Schmale Versalgrotesk für alle Überschriften.
+
+| Prinzip | Beobachtung |
+|---|---|
+| Eine Handlung, zweimal sofort | Spendenknopf im Kopf und im Held, gleiche Form und Farbe |
+| Dringlichkeit belegt | der aktuelle Anlass nennt Ort, Datum und Zahl der Betroffenen, statt „jetzt helfen" zu rufen |
+| Warme Erdfarben | Braun und Orange statt des üblichen Hilfsorganisationsblaus, passt zu Fotos von Menschen |
+| Schwebender Kopf | weiße Karte mit Abstand zum Rand über dem Foto |
+| Siegel am Ende | Transparenzsiegel einer unabhängigen Stelle neben Adresse und Telefon |
+| Kurz | eine Handlung, wenig Text, keine Unterseite nötig, um zu spenden |
+
+Nicht übernommen: das orange Akzentwort auf Weiß (Kontrastfehler, und Akzentwort als Manier), Versalien
+auch in Navigation und Knöpfen (Lesbarkeit), die eingebettete Grafik von einem Fremdserver ohne
+Einwilligung und ohne Textalternative (`../../webdesign-conversion/references/38-scrollvideo-und-einbettungen.md`),
+Kennzahlen, die bei der Erfassung zwischen „101+", „127+" und „149+" lagen, der Schieber für die
+Schwerpunkte, das Newsletterfeld ohne sichtbares Label, das Cookie-Banner ohne Ablehnen.
+
+### FLO-CORP
+
+`flo-corp.com`, Stand 06.11.2026. Hersteller von Füllstand- und Durchflussmesstechnik seit 1989, mit
+Shop und Angebotsanfrage. Gilt für Mittelstand, Hersteller und technische B2B-Produkte, bei denen ein
+Teil direkt kauft und ein Teil Beratung braucht. Nächster Verwandter: epple Verpackungsservice.
+
+Sektionsfolge: rote Hinweisleiste „Nicht sicher, welches Gerät passt? Mit Fachleuten sprechen", Kopf
+mit Telefon und Angebot, Held links mit Produktbild rechts und zwei Knöpfen, Kundenlogos, drei
+Produktkarten, Kennzahlenraster, Leistungen mit Foto, 16 Branchen als Kacheln, Unternehmen auf Schwarz,
+News, Stimmen, FAQ, Kontakt mit Formular, Newsletter, Fußzeile mit Werkzeugen. Rund 10.800 px.
+
+Farbe und Schrift: Weiß, Hellgrau (#EEEEF2), Schwarz und Signalrot (#FC031C); die Markenfarbe ist
+zugleich die Handlungsfarbe. Weiß auf Rot 4,06:1, also nur für große Schrift. Grotesk für Überschriften,
+Monospace in Versalien für Labels und Knöpfe.
+
+| Prinzip | Beobachtung |
+|---|---|
+| Unsicherheit vor der Navigation abfangen | die Hinweisleiste spricht genau den Zweifel bei einem Beratungsprodukt an und bietet das Gespräch |
+| Drei Wege nach Reife | anrufen, Angebot anfragen, direkt kaufen; je Zone ist nur einer gefüllt |
+| Unterscheidung im Untertitel | „einzige fünfjährige Garantie der Branche" steht im ersten Bildschirm |
+| Produktkarte mit Fachangabe | Kategorie als Label, Name, ein Satz Technik, eigener Knopf |
+| Branchen zur Selbstzuordnung | 16 Kacheln mit Icon, jede eine Einstiegsseite, gut für Suche |
+| Formular, das qualifiziert | Anfrageart und Produkt als Pflichtauswahl, Adresse und Telefon auf roter Fläche daneben |
+| Werkzeuge in der Fußzeile | Rechner, Glossar, FAQ und noch einmal beide CTAs |
+
+Nicht übernommen: Kennzahlen, die bei der Erfassung „26+" statt „35+" und „4 Yr" statt „5 Yr" zeigten,
+Copyright 2025 in der Fußzeile neben News vom November 2026 (`pruefe-aktualitaet.mjs`), Inter
+(gesperrt), Weiß auf Rot für Kleintext, ein persönliches Glaubensbekenntnis im Unternehmensteil (Haltung
+des Inhabers, nicht übertragbar), zwei Newsletterfelder auf einer Seite, das Cookie-Banner ohne Ablehnen,
+auf Mobil eine zweizeilige Hinweisleiste und kein CTA im ersten Bildschirm.
+
+### Gemeinsame Befunde der Runde vom 06.11.2026
+
+Was sich über mehrere der sechs Seiten zeigt und für unsere Builds gilt:
+
+| Befund | Wo | Folge für uns |
+|---|---|---|
+| Hochzählende Kennzahlen zeigen falsche Werte, solange die Animation nicht durchgelaufen ist | Electric Car Scheme („0"), Silicon Hills, Pennywise, FLO-CORP | der Endwert steht im HTML, die Animation zählt nur sichtbar, bei `prefers-reduced-motion` gar nicht; Zahl nur mit Beleg (`../../webdesign-conversion/references/09-motion-gsap.md`) |
+| Einblenden beim Scrollen lässt ganze Sektionen leer | Dan's Crypto, Silicon Hills, Pennywise auf dem ganzseitigen Bild | Startzustand nie unsichtbar für Inhalt, Prüfung mit `pruefe-scrollstrecke.mjs` und Kapitel 30 |
+| Eine gesättigte Handlungsfarbe, Rest neutral | alle sechs | stützt die Faustregel 60 30 10 in `../../webdesign-conversion/references/10-visuelle-richtung.md` |
+| Cookie-Banner ohne gleichrangiges Ablehnen | vier der fünf Squarespace-Seiten | bei uns der eigene Banner aus `../assets/consent/`, Ablehnen auf derselben Ebene (`../../webdesign-conversion/references/07-recht-dsgvo.md`) |
+| Banner deckt auf Mobil ein Drittel des ersten Bildschirms | alle fünf mit Banner | Banner kompakt, Kernbotschaft und CTA bleiben sichtbar |
+| CTA im ersten Bildschirm auf Mobil | nur Electric Car Scheme, Silicon Hills, Pennywise | Pflicht bei uns, auch wenn die Desktopfassung ihn zeigt |
+| Gesperrte Standardschriften | Poppins, Inter, Plus Jakarta Sans | Schrift aus der Marke oder nach `../../webdesign-conversion/references/10-visuelle-richtung.md`, nie aus der Referenz |
+| Pille als Kicker, farbiges Akzentwort | Dan's Crypto, Silicon Hills, Pennywise | Tells nach Kapitel 26, `pruefe-geschmack.mjs` meldet beide |
+
+Für alle sechs gilt: Aufnahme als **Muster** in `assets/musterbibliothek/` nur über Tor 2. Die
+Erfassung liegt jetzt vor, Design DNA und Mustervergleich sind nicht gelaufen. Die Screenshots lagen
+nur im Arbeitsordner der Sitzung und sind nicht im Repository, weil fremdes Bildmaterial nicht
+mitgeliefert wird.
 
 ## Abgelehnte Referenzen
 
