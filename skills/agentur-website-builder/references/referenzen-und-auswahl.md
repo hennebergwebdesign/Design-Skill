@@ -326,7 +326,7 @@ Runde vom 11.10.2026 ist das hier eine **eigene Erfassung**, keine Textauswertun
 Chromium, Desktop 1440 × 900 und Mobil 390 × 844, ganze Seite und zusätzlich Bildschirm für
 Bildschirm gescrollt, weil drei Seiten Inhalte erst beim Scrollen einblenden. Farben, Schriften,
 Überschriften und Knöpfe sind aus den berechneten Stilen ausgelesen, die Kontraste nachgerechnet.
-Nicht erfasst: Unterseiten, Verhalten nach dem Absenden eines Formulars, Ladezeiten, Tastaturbedienung.
+Im ersten Durchgang nur die Startseiten; die Menüseiten folgen im Abschnitt „Abstände und Seitensystem" unten. Nicht erfasst: Verhalten nach dem Absenden eines Formulars, Ladezeiten, Tastaturbedienung.
 Fünf der sechs Seiten laufen auf Squarespace (im Quelltext erkennbar), Teif Moreaux ohne erkennbaren
 Baukasten. Die Zahlen in den Tabellen beschreiben die Vorbilder, sie sind keine Belege für Kunden.
 
@@ -530,9 +530,87 @@ Was sich über mehrere der sechs Seiten zeigt und für unsere Builds gilt:
 | Gesperrte Standardschriften | Poppins, Inter, Plus Jakarta Sans | Schrift aus der Marke oder nach `../../webdesign-conversion/references/10-visuelle-richtung.md`, nie aus der Referenz |
 | Pille als Kicker, farbiges Akzentwort | Dan's Crypto, Silicon Hills, Pennywise | Tells nach Kapitel 26, `pruefe-geschmack.mjs` meldet beide |
 
+### Abstände und Seitensystem, gemessen über die Menüseiten
+
+Zweiter Durchgang am 06.11.2026, auf Wunsch des Inhabers: alle Hauptseiten aus dem Menü (ohne Blog,
+News und Ratgeberartikel), zusammen 54 Seiten: Electric Car Scheme 22, Pennywise 11, FLO-CORP 10
+(davon zwei der 15 gleich gebauten Branchenseiten), Silicon Hills 5, Teif Moreaux 5, Dan's Crypto 1
+(die Seite hat nur eine). Jede Seite ist komplett geladen, langsam bis zum Ende durchgescrollt und
+dabei als Video aufgenommen worden, Desktop 1440 × 900 und Mobil 390 × 844, zusammen 108 Aufnahmen.
+Danach wurde im Browser gemessen.
+
+So ist gemessen: „Abstand oben" und „unten" ist der Weg vom Rand eines Abschnitts bis zum ersten
+beziehungsweise letzten sichtbaren Inhalt, also das, was das Auge als Luft sieht, nicht nur das
+CSS-Padding. Held und letzter Abschnitt sind herausgenommen, angegeben ist der Median. Squarespace
+teilt manche Sektionen in mehrere Blöcke, deshalb sind die Spannen breit; der Median ist belastbarer
+als Minimum und Maximum.
+
+| Wert | Electric Car Scheme | FLO-CORP | Silicon Hills | Pennywise | Teif Moreaux | Dan's Crypto |
+|---|---|---|---|---|---|---|
+| Abschnitt oben, Desktop | 95 | 95 | 87 | 79 | 89 | 77 |
+| Abschnitt unten, Desktop | 95 | 95 | 79 | 95 | 89 | 81 |
+| Abschnitt oben, Mobil | 56 | 56 | 54 | 36 | 77 | 35 |
+| Seitenrand, Desktop | 58 | 58 | 58 | 58 | 55 | 58 |
+| Seitenrand, Mobil | 23 | 23 | 23 | 23 | 21 | 23 |
+| Überschrift zum Text | 32 | 32 | 27 bis 34 | 20 (H2) | 21 (H2) | 21 (H2) |
+| Abstand zwischen Karten | 20 | 28 | 20 | 28 | 3 | 20 |
+| Innenabstand Karte, Desktop | 26 | 21 | 31 bis 39 | randlos (Bildkarten) | randlos | 16 |
+| Knopf Höhe, Desktop | 55 | 56 | 53 | 50 | 47 | 52 |
+| Knopf Innenabstand (oben, seitlich) | 16, 39 | 17, 19 | 16, 26 | 11, 26 | 13, 34 | 15, 20 |
+| Rundung Knopf, Karte | 12, 20 | 8, 8 bis 10 | Pille, 20 | Pille, 20 | Pille, eckig | Pille, 16 |
+| Kopfzeile Desktop, Mobil | 95, 82 | 141, 146 (mit Hinweisleiste) | 100, 87 | 150, 110 (schwebend) | nicht als header ausgezeichnet | 100, 87 |
+
+Alle Werte in px. Die Prüfung auf ein Achterraster (Wert durch 8 teilbar, ±1) trifft je nach Seite nur
+40 bis 75 % der Werte; keine der sechs Seiten folgt einem strengen Raster, die Werte entstehen aus
+Prozenten der Fensterbreite.
+
+Schrift über alle Seiten (Desktop, Mobil, in px):
+
+| | Electric Car Scheme | FLO-CORP | Silicon Hills | Pennywise | Teif Moreaux | Dan's Crypto |
+|---|---|---|---|---|---|---|
+| H1 | 85, 57 | 68, 46 | 68, 46 | 94, 62 | 68, 44 | 64, 44 |
+| H2 | 59, 41 | 47, 34 | 47, 34 | 76, 51 | 55, 34 | 57, 40 |
+| Fließtext | 19, 18 | 14, 13 (Monospace) | 19, 18 | 16, 16 | 21, 21 | 19, 18 |
+| Zeilenhöhe Fließtext | 1,54 | 1,53 | 1,54 | 1,50 | 1,55 | 1,54 |
+| Zeilenhöhe H1 | 1,09 | 1,10 | 1,05 | 0,98 | 1,12 | 1,07 |
+| Überschrift enger gesperrt um | 0,02 em | 0,03 em | 0,02 em | 0,02 em | 0,02 em | 0,02 em |
+
+Was daraus folgt:
+
+| Befund | Folge für uns |
+|---|---|
+| Fünf Seiten nutzen denselben Seitenrand: 58 px bei 1440 und 23 px bei 390, rechnerisch 4 % und 6 % der Fensterbreite (Squarespace-Standard) | unser `--rand-seite` ergibt 44 px und 19 px, also schmaler; bei vollflächigen Bildern und Karten bis an den Rand ist das in Ordnung, bei Textseiten den oberen Wert der Spanne prüfen. Nicht still geändert, siehe Offene Punkte |
+| Abschnittsabstand um 95 px am Desktop und 56 px mobil bei den beiden ruhigsten Seiten | `--raum-sektion` ergibt 96 px und 48 px und liegt damit richtig; mobil eher nicht enger als 48 |
+| Abstand Überschrift zum folgenden Text: 32 px bei Electric Car Scheme, FLO-CORP und Silicon Hills für H1 bis H3, um 20 px bei den drei anderen | ein fester Wert unter allen Überschriften wirkt ruhiger als je Ebene ein anderer; die drei Seiten mit 32 px wirken am geordnetsten |
+| Knöpfe 50 bis 56 px hoch, Schrift 16 bis 19 px | Mindesthöhe 48 px bleibt, die Referenzen liegen darüber |
+| Mobile H1 ist überall rund zwei Drittel der Desktop-H1 (0,65 bis 0,69) | passt zu einer fließenden Skala; ein Sprung kleiner als 0,6 macht die Seite mobil flach |
+| Fließtext 16 bis 21 px, meist 18 bis 19, Zeilenhöhe 1,50 bis 1,55 | 18 px und mehr für Fließtext ist bei den ruhigsten Seiten Standard; 13 und 14 px Monospace bei FLO-CORP sind für Fließtext zu klein |
+| Mobil sind die Seiten bis 2,3-mal so lang wie am Desktop, meist das 1,5- bis 1,8-fache (Pennywise „About" 20.400 px, Electric Car Scheme Vergleich 40.300 px); nur Teif Moreaux bleibt gleich lang, weil fast alles einspaltig ist | Mehrspalter brechen untereinander; ab etwa dreifacher Bildschirmlänge mobil eine Sprungnavigation oder kürzere Fassung vorsehen |
+| Karten mit 20 bis 28 px Abstand und 20 bis 40 px Innenabstand | Karten nicht enger als 16 px setzen, sonst lesen sie sich als ein Block |
+
+#### Unterseiten je Website
+
+| Website | Was die Menüseiten zeigen |
+|---|---|
+| Electric Car Scheme | Jede Unterseite öffnet gleich: Bewertungszeile, zentrierte H1, ein Satz, zwei Knöpfe, vier Häkchen. Darunter eine Reiternavigation innerhalb der Seite (Vorteile, Ablauf, Preise, Leistungen, Schutz, Großkunden), ein Rechenbeispiel als Karte mit Monatsrate, Steuer, Sozialabgaben und Nettobetrag, am Ende FAQ der Seite, CTA-Karte und Fußzeile mit Zertifikatslogos. Kopf mit gelbem Rechner-Knopf bleibt stehen. Befund: Die H1 erscheint in der ersten Sekunde in einer Serifen-Ersatzschrift und springt dann um (Schrift lädt nach, sichtbar im Video). Die Vergleichsseite ist mit 22.400 px Desktop zu lang. |
+| FLO-CORP | Jede Seite endet mit demselben roten Kontaktblock (Formular mit 9 Feldern, Adresse, Telefon), Newsletter und Fußzeile mit beiden CTAs: Wer irgendwo zu Ende liest, steht vor dem Formular. Branchenseiten: Label, H1, ein Absatz mit E-Mail und Telefon im Text, dann die passenden Produkte. Shop: Filter links, Produktkarten mit „ab"-Preis oder „Angebot anfragen". Copyright 2025 auf allen Seiten. |
+| Silicon Hills | Feste Unterseitenvorlage: kompakter dunkler Held (rund 420 px) mit Label, H1 und einer Zeile, gerundete Unterkante, dann Inhalt, dann auf jeder Seite derselbe Abschluss „Bereit, ein Team aufzubauen?". Leistungen als drei Karten mit Icon, Text, Häkchenliste und eigenem Knopf. Kontakt zweispaltig: links E-Mail und Telefon mit Icon, rechts Formularkarte mit 6 Feldern. Über uns mit Foto und Zitat der Gründerin. |
+| Pennywise | Kurzer Fotoheld mit Versaltitel auf jeder Seite, Newsletter in der Fußzeile auf allen 11 Seiten. Spendenseite: Beträge als Auswahlknöpfe, einmalig oder monatlich, Haken „Gebühren übernehmen", daneben die anderen Wege (PayPal, Venmo, Post) mit Anschrift. Kontaktformular mit 12 Feldern (zu viele). |
+| Teif Moreaux | Fotoheld mit kurzer Überschrift auf jeder Seite, Fußzeile als große Wortmarke auf dunklem Violett mit „E-Mail" und „Lass uns reden". Arbeiten: Filter und zweispaltiges Raster mit 29 Projekten, je Kunde, Jahr und Leistung. Kontakt: 7 Felder als Unterstrichfelder, Pflichtfelder markiert, Mailadresse als Alternative über dem Formular; der Sendeknopf ist eine blasse Kontur und damit das schwächste Element der Seite. |
+| Dan's Crypto | nur die Startseite, die Bewerbung läuft über eine Dankeseite |
+
+Übernehmen dürfen wir aus den Unterseiten: eine feste Eröffnung für alle Unterseiten (Electric Car
+Scheme, Silicon Hills), einen gleichen Abschluss mit CTA vor jeder Fußzeile (alle), das Kontaktformular
+am Ende jeder Seite für Betriebe mit Anfrage als Ziel (FLO-CORP, mit weniger Feldern), das
+Rechenbeispiel als Beleg für Preis und Ersparnis (Electric Car Scheme, nur mit echten Zahlen des
+Kunden), die Spendenstrecke mit festen Beträgen und anderen Wegen daneben (Pennywise). Nicht
+übernehmen: nachladende Schrift ohne passende Ersatzschrift (Sprung im Bild, `font-display` und
+`size-adjust` nach `../../webdesign-conversion/references/03-technik-performance.md`), Formulare über
+sieben Felder, Kontur als Sendeknopf.
+
 Für alle sechs gilt: Aufnahme als **Muster** in `assets/musterbibliothek/` nur über Tor 2. Die
-Erfassung liegt jetzt vor, Design DNA und Mustervergleich sind nicht gelaufen. Die Screenshots lagen
-nur im Arbeitsordner der Sitzung und sind nicht im Repository, weil fremdes Bildmaterial nicht
+Erfassung liegt jetzt vor, Design DNA und Mustervergleich sind nicht gelaufen. Screenshots und die 108 Videoaufnahmen
+lagen nur im Arbeitsordner der Sitzung und sind nicht im Repository, weil fremdes Bildmaterial nicht
 mitgeliefert wird.
 
 ## Abgelehnte Referenzen
