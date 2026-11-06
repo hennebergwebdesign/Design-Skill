@@ -174,6 +174,7 @@ skills/
    │  ├─ intake-und-entscheidungen.md  Projektart, Relaunch-Inventar, Bilder, Fragenkatalog
    │  ├─ stack-und-deployment.md    Node, Astro, wrangler.toml, Variablen, Git, Budget
    │  ├─ referenzen-und-auswahl.md  Rangfolge der Quellen, Ausgangsliste, Seitenaufbau
+   │  ├─ referenz-bausteine.md      Bausteine B1 bis B22 aus freigegebenen Referenzen: warum, Aufbau, Kundentyp
    │  ├─ copy-im-kundenprojekt.md   gelieferte Texte, Copy-Vorschläge kennzeichnen
    │  ├─ formulare-und-resend.md    Serverroute, Honigtopf, Turnstile, Rate Limit, Zustände
    │  ├─ leadsystem-dashboard.md    D1-Schema, Dashboard, Anmeldung, Löschfrist

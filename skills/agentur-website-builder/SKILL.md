@@ -382,7 +382,7 @@ Schwesterskill.
 | --- | --- |
 | `references/intake-und-entscheidungen.md` | Phase 1 und 2, immer |
 | `references/stack-und-deployment.md` | Projektaufbau, Build, Cloudflare, Umgebungsvariablen |
-| `references/referenzen-und-auswahl.md` | Phase 3, vor jedem Konzept, immer |
+| `references/referenzen-und-auswahl.md`, `references/referenz-bausteine.md` | Phase 3, vor jedem Konzept, immer; die Bausteine je Sektion (warum, Aufbau, für welchen Kunden) beim Festlegen der Sektionen |
 | `references/copy-im-kundenprojekt.md` | sobald Texte eingesetzt oder ergänzt werden |
 | `references/formulare-und-resend.md` | jedes Formular |
 | `references/leadsystem-dashboard.md` | nur bei Leadseiten mit Dashboard |

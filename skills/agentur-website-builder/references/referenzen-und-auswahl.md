@@ -515,6 +515,8 @@ Copyright 2025 in der Fußzeile neben News vom November 2026 (`pruefe-aktualitae
 des Inhabers, nicht übertragbar), zwei Newsletterfelder auf einer Seite, das Cookie-Banner ohne Ablehnen,
 auf Mobil eine zweizeilige Hinweisleiste und kein CTA im ersten Bildschirm.
 
+Aus diesen sechs Seiten sind wiederverwendbare Abschnitte mit Begründung und Aufbau abgeleitet: `referenz-bausteine.md` (B1 bis B22, CTA-Logik, Farbrollen, Zuordnung zum Kundentyp).
+
 ### Gemeinsame Befunde der Runde vom 06.11.2026
 
 Was sich über mehrere der sechs Seiten zeigt und für unsere Builds gilt:
