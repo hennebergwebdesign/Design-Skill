@@ -105,6 +105,14 @@ installiere icon-set-generator "design-assets (jezweb)" \
 #   npx rea-agents setup                                                    # MCP-Server REA, schreibt in die Agentenkonfiguration, nur mit Zustimmung
 #   Orca (stablyai/orca): Desktopanwendung zum Herunterladen, kein Skill; Wegweiser unter skills/ im Repository
 
+# Version 4.23: Slop Detect (ravidsrk/slop-detect, MIT) ist destilliert (55-slop-detect-ki-muster-vermeiden.md,
+# slop-pruefung.md) und als Aufruf eingebunden (scripts/pruefe-slop.mjs), bewusst NICHT voreingestellt. Im Agenturablauf
+# gilt pruefe-slop.mjs: lokal, mit Agenturschwellen, ohne Weitergabe der Adresse. Der Original-Skill verweist auf die
+# Hosting-API (slop-detect.com) und auf Fix-Rezepte, die hier nicht gelesen sind. Auf ausdruecklichen Wunsch, der Befehl
+# stammt aus dem Repository des Werkzeugs und ist nicht gelaufen. Vorher lesen (arbeitsdisziplin.md, Abschnitt 9a):
+#   npx --yes skills add ravidsrk/slop-detect --skill slop-detect --agent claude-code
+# Der CLI selbst braucht keine Skill-Installation: `npm i -D slop-detect@0.8.0` im Kundenprojekt genuegt.
+
 # Suchtreffer in den Skilldaten vermeiden: Nachschlagewerke, keine Projektquellen.
 if ! grep -q "\.claude/skills" .gitattributes 2>/dev/null; then
   printf ".claude/skills/** linguist-vendored linguist-generated -diff\n" >> .gitattributes

@@ -619,3 +619,23 @@ Stand der Quellen: 11.10.2026. Sechs Repositories, vom Inhaber genannt, jeweils 
 * REA: Einrichtung und Werkzeugkatalog, die Fallstudien („eine Funktion verstehen und nachbauen"), die Anbindung an Hopper, Ghidra, IDA, JEB, Frida; native Analyse, Firmware, Android, EVM, SQLite, Pakete. Für Kundenseiten ohne Gegenstand.
 * vercel-labs/skills: alle Optionen außer denen aus Abschnitt 9a, die Tabelle der über 70 unterstützten Agenten, private Repositories, Azure Repos und GitLab.
 * Orca: die Anwendung, Koordinationsschleife und Aufgabengraphen, Umgebungen je Arbeitsbereich, Jira und Linear, Emulatoren, Computersteuerung, Telefon-Begleitprogramm, Relais, alle Dateien unter `skill-guides/`, `src/` und `docs/`.
+
+### In Version 4.23 zusätzlich eingeflossen
+
+Stand: 09.11.2026. Zwei Quellen, vom Inhaber genannt. Nichts davon ist mitgeliefert.
+
+| Quelle | Lizenz | Was daraus eingeflossen ist |
+|---|---|---|
+| [ravidsrk/slop-detect](https://github.com/ravidsrk/slop-detect), Ravindra Kumar, Stand 09.11.2026 (Repository main, Definitionen 2026.11; npm 0.8.0 mit Definitionen 2026.09) | MIT | `webdesign-conversion/references/55-slop-detect-ki-muster-vermeiden.md` (fünf Achsen, Stufen, Katalog der Designmuster mit Gewichten und Gegenmitteln, Beobachtungsmuster, Textartefakte, Grenzen), `agentur-website-builder/references/slop-pruefung.md`, `scripts/pruefe-slop.mjs` (startet den Original-CLI, bildet ihn nicht nach) |
+| Projekt Gewerbestrom (`Thatsitmarketing/gewerbestrom`, That's it. Marketing für die Wehbe Group), Stand 07.11.2026 | eigenes Kundenprojekt der Agentur, kein Fremdcode | `webdesign-conversion/references/56-tracking-umsetzung-einwilligung-ereignisse.md`, `agentur-website-builder/references/tracking-einbauen.md`, `assets/tracking/tracking-client.ts` und `meta-capi.ts` (abgeleitet aus `public/assets/consent.js`, `public/assets/funnel.js` und `functions/api/lead.js`, ohne Kundendaten), `scripts/pruefe-tracking.mjs` |
+
+Gelesen von Slop Detect: `README.md`, `spec/patterns.md` (Tabelle vollständig, Einzelbeschreibungen nur bis `stat_banner`), `spec/copy-axis.md`, `docs/CLI_GUIDE.md` (bis Abschnitt 6), `skills/slop-detect/SKILL.md`, `schemas/README.md` und `schemas/scan-result.v1.json`, `plugin.json`, `LICENSE`; ausgeführt: der CLI
+in der npm-Fassung 0.8.0 gegen zwei Testseiten. **Nicht gelesen:** `packages/` (Quelltext von CLI, Motor und MCP-Server), `fixes.ts`, `docs/AEO_GUIDE.md`, `docs/DESIGN_SYSTEMS.md`, `CALIBRATION.md`, `VALIDATION.md`.
+Gelesen von Gewerbestrom: `CLAUDE.md` (vollständig), `public/assets/consent.js`, die Abschnitte zu Tracking in `public/assets/funnel.js` und `functions/api/lead.js`.
+
+**Nicht übernommen, mit Grund:**
+
+* Slop Detect: die Hosting-API und das Web-Frontend (schickt die Adresse an einen Dritten), die GitHub Action, der MCP-Server, die Plugins für Netlify und Lighthouse, die Vale-Regeln, `--fix-prompt` (Rezepte nicht gelesen), `.sloprc.json` (die
+  npm-Fassung kennt es nicht, eine einfachere eigene Ausnahmedatei ersetzt es), Baselines und `--compare-to`, die Ranglisten und die Studien aus dem README (nicht geprüft).
+* Gewerbestrom: Funnel, Formularvalidierung, Close-Anbindung, Backoffice, Meta-Ads-MCP, Kampagnenstände, Pixel-ID, Mess-ID, Domain und alles, was einen Kunden benennt. Die Zählmeldung ohne Einwilligung ist als Option beschrieben,
+  nicht als Voreinstellung übernommen.

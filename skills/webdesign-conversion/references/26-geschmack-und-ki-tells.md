@@ -414,3 +414,4 @@ beiden Regelwerken im Kontext an genau den Stellen dieser Tabelle zwischen ihnen
 - `28-ki-bildentwuerfe.md`: generierte Entwürfe als Vorlage, und wo sie nichts belegen dürfen
 - `45-huerde-laenge-und-leserfuehrung.md`: informative Überschriften statt Slogans, entschiedene Widersprüche zu Schriften, Palette und Breite
 - `48-richtung-varianten-und-subtraktion.md`: Richtungen in Varianten mit Preiszeile, Subtraktionsrunde, Fehlermodi nach dem Bau
+- `55-slop-detect-ki-muster-vermeiden.md`: dieselben Muster am gerenderten DOM gemessen (Slop Detect), Vermeideliste für den Entwurf, Ausnahmen bei Markenvorgabe

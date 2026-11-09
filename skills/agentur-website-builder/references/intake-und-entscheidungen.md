@@ -173,7 +173,8 @@ Fehler, Erfolg. Antworten, die der Kunde nicht kennt, werden als offen markiert,
 | Nutzer erwähnt Verkauf, Bestellung, Bezahlen, Anzahlung, Spende, Abonnement, Kasse oder Stripe | `zahlungen-umsetzung.md`, Abschnitt 1: Konto beim Kunden, Verbraucher oder Unternehmen, Angebote, Erfüllung, Steuerregistrierung, Zahlarten, wer die Rechtstexte liefert |
 | Marke, Kampagne oder Produktseite mit Erlebnisanspruch („Scroll-Effekte", „wie bei Apple", Scrollytelling) | zuerst `../../webdesign-conversion/references/50-scroll-erlebnis-grammatik-und-gefuehl.md`: Grammatik, Gefühlskurve mit einem Gipfel, Erzählsatz, Signaturbewegung; bei Handwerk, Praxis und lokalen Diensten dezente Bewegung statt Erlebnisseite |
 | Nutzer erwähnt Video, Logoanimation, Animationssequenz, Erklärfilm oder Reel | Länge, Formate, Ton, Quelle, wer freigibt; `../../webdesign-conversion/references/54-video-aus-html-mit-hyperframes.md` |
-| Landingpage für Kampagne | Meta Pixel, Conversions API, GTM Container ID |
+| Nutzer erwähnt Tracking, Pixel, Conversion Tracking, Conversions API, GA4 oder Kampagnenmessung | `tracking-einbauen.md`, Abschnitt 1: bezahlter Verkehr, Konten beim Kunden, Ereignisse, zweite Kampagne, Banner, Zählmeldung (Kundenentscheidung), Speicher für die Herkunft |
+| Landingpage für Kampagne | Meta Pixel, Conversions API, GTM Container ID, danach `tracking-einbauen.md` |
 | Newsletter oder Leadmagnet | Double Opt in nötig, welcher Anbieter |
 | mehrere Sprachen im Material | Mehrsprachigkeit und Sprachumschaltung |
 | Blog, Referenzen, Stellenanzeigen | Content Collections oder CMS |

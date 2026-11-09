@@ -109,7 +109,8 @@ gtag('consent', 'default', {
 
 Nach Zustimmung folgt `gtag('consent', 'update', ...)` mit den gewählten Kategorien, das
 erledigt `consent.ts`. Meta Pixel nur auf Kampagnenseiten und ausschließlich in der
-Kategorie Marketing.
+Kategorie Marketing. Der ganze Ablauf mit Server-Schnittstelle und Vorlagen steht in
+`tracking-einbauen.md`, geprüft von `scripts/pruefe-tracking.mjs`.
 
 ## Dienstekatalog abgleichen
 

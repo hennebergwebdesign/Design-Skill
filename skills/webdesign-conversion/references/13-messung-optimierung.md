@@ -13,6 +13,7 @@ stagniert alles.
 - A/B-Tests, ehrlich betrachtet
 - Optional: Kundendashboard
 - Was nicht gemessen werden soll
+- Verwandt
 
 ## Was gemessen wird
 
@@ -124,3 +125,8 @@ anderen Webdesigners aus einem Video, nicht geprüft und nicht an einem Projekt 
   hervorragend konvertieren.
 - Seitenaufrufe als Ziel. Mehr Klicks bis zur Anfrage sind ein Problem, kein Erfolg (siehe
   3-Klick-Regel).
+
+## Verwandt
+
+Wie Pixel, Server-Schnittstelle und eigene Datenbank so zusammenspielen, dass jede Anfrage genau einmal zählt und nichts vor der Entscheidung läuft:
+`56-tracking-umsetzung-einwilligung-ereignisse.md`. Ablauf und Vorlagen: `../../agentur-website-builder/references/tracking-einbauen.md`.

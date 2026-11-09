@@ -14,7 +14,7 @@ rechtlich tragfähig, barrierearm, schnell, und nicht wie von einer Maschine geb
 
 | Skill | Rolle | Lizenz |
 |---|---|---|
-| `skills/webdesign-conversion/` | das Regelwerk: was gut ist und warum. 55 Referenzen (00 bis 54), 3 Playbooks, Vorlagen, Checklisten | MIT |
+| `skills/webdesign-conversion/` | das Regelwerk: was gut ist und warum. 57 Referenzen (00 bis 56), 3 Playbooks, Vorlagen, Checklisten | MIT |
 | `skills/agentur-website-builder/` | der Lieferablauf: Phasen 0 bis 6, fester Agenturstack, einsatzfertiger Code | Agenturstandard, siehe seine `SKILL.md` |
 
 Die Trennung ist die zentrale Entscheidung dieses Repositories: **Wissen und Ablauf sind
@@ -43,6 +43,8 @@ node scripts/pruefe-aktualitaet.mjs          # dist/ und src/: Copyright-Jahr, S
 node scripts/pruefe-seitenbasis.mjs          # nach dem Build: dist/ lang, Viewport und Zoom, Alt-Texte, Labels, Fremdserver, Teilen-Ebene
 node scripts/pruefe-sicherheit.mjs           # vor und nach dem Build: Schlüssel, öffentliche Geheimnisse, .env im Git-Index, CSP, eval, bei Stripe Webhook-Signatur und Zahlungsregeln
 node scripts/pruefe-scrollstrecke.mjs http://localhost:4321   # Scrollseite durchlaufen (Playwright): tote Strecke, Deckkraft, Überlauf; --mobil, --reduziert
+node scripts/pruefe-slop.mjs http://localhost:4321 --copy     # Slop Detect (Original-CLI, lokal) gegen die Vorschau: Heavy und Textartefakte sind Fehler, --streng, --ausnahmen slop-ausnahmen.json; --vorbeugen listet die Vermeideliste
+node scripts/pruefe-tracking.mjs             # Tracking nur nach Einwilligung: Tracker im Markup, Pixel und CAPI ohne Consent, event_id, Token hinter PUBLIC_, Datenschutz nennt den Dienst
 
 # Agenturwerkzeuge
 node scripts/relaunch-inventory.mjs https://alte-kundenseite.de
@@ -82,7 +84,7 @@ bash scripts/install-quellskills.sh
 ```
 
 Alle Skripte laufen mit reinem Node, ohne Abhängigkeiten. Nur `pruefe-breakpoints.mjs`,
-`pruefe-scrollstrecke.mjs` und `brand-extraktion.mjs` brauchen Playwright, im Zielprojekt oder global, gefunden über
+`pruefe-scrollstrecke.mjs`, `pruefe-slop.mjs` (über den CLI von Slop Detect, `npm i -D slop-detect@0.8.0` im Kundenprojekt oder `npx`) und `brand-extraktion.mjs` brauchen Playwright, im Zielprojekt oder global, gefunden über
 `scripts/lib/browser.mjs`. Kein `package.json`, und das bleibt so: ein
 Abhängigkeitsbaum in einem Skill-Repository wird beim nächsten Audit zum Problem und bringt
 hier nichts ein. Die Tests nutzen deshalb `node:test` und `node:assert` aus dem Standardumfang
@@ -100,13 +102,13 @@ skills/
                             assets/vorlagen/prompts/ sind die Prompt-Vorlagen zu Kapitel 24, 38, 39, 40, 47, 48 (auch Textkritik, Design Loop, Fünf-Agenten-Prüfung, Varianten, Prüfer)
                             assets/vorlagen/motion/ und plakat/ sind die Dateien zu Kapitel 47 (Mikrobewegung, Plakat, Three.js-Szene), DESIGN.md die Markenvorlage
                             assets/vorlagen/fingerabdruecke.md (Kapitel 50) und zahlung-rechtsbausteine.md (Kapitel 53)
-  agentur-website-builder/  SKILL.md, references/, assets/consent|forms|reviews|stripe (Stripe-Vorlagen sind ungeprüft)
-scripts/              zwölf Prüfskripte, Agenturwerkzeuge, Designrecherche, ein Installer,
+  agentur-website-builder/  SKILL.md, references/, assets/consent|forms|reviews|stripe|tracking (Stripe- und Tracking-Vorlagen sind ungeprüft)
+scripts/              vierzehn Prüfskripte gegen Kundenprojekte, Agenturwerkzeuge, Designrecherche, ein Installer,
                       pruefe-skill.mjs prüft dieses Repository selbst, kein Kundenprojekt
   lib/abruf.mjs       die eine Abrufschicht, vier Rückfallstufen, robots.txt
   lib/browser.mjs     die eine Stelle, die Playwright sucht und Chromium startet
   tests/              node --test, lokaler Testserver statt Netzzugriff
-evals/                dreiundzwanzig Fälle mit Gradern, results/ ist ausgenommen
+evals/                fünfundzwanzig Fälle mit Gradern, results/ ist ausgenommen
 README.md             Außendarstellung
 CREDITS.md            Herkunft jeder eingeflossenen Quelle
 ```
@@ -148,7 +150,7 @@ Diese Punkte haben einen Grund. Wer sie ändert, ändert damit auch den Grund.
 - **`SKILL.md` unter 500 Zeilen, jede Referenz über 100 Zeilen mit „## Inhalt", jede Referenz in ihrer
   `SKILL.md` genannt.** Grund: Das Modell liest lange Dateien oft nur an und folgt Verweisen über zwei
   Ebenen nur teilweise; was es nicht liest, gilt nicht. Geprüft mit `node scripts/pruefe-skill.mjs`, nach
-  einem neuen Abschnitt `--inhalt` laufen lassen. Die `SKILL.md` des Bauablaufs steht bei 498 Zeilen: neue
+  einem neuen Abschnitt `--inhalt` laufen lassen. Die `SKILL.md` des Bauablaufs steht bei 499 Zeilen: neue
   Inhalte gehören in Referenzen.
 - **Was nie brechen darf, läuft als Hook, nicht nur als Text.** Beispiel: `pruefe-striche.mjs --hook`.
 - Versionsnummer in `.claude-plugin/plugin.json` und in der `metadata` der beiden `SKILL.md`
@@ -183,6 +185,20 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 7. `node scripts/pruefe-skill.mjs --inhalt`, danach ohne Fehler.
 
 ## Offene Punkte
+
+- Version 4.23.0: Kapitel 55, `slop-pruefung.md`, Kapitel 56, `tracking-einbauen.md`, `assets/tracking/`, `pruefe-slop.mjs` und `pruefe-tracking.mjs` sind an keinem Kundenprojekt erprobt, die zwei neuen
+  Evalfälle (`slop-vor-auslieferung-pruefen`, `tracking-nur-nach-einwilligung`) sind **nicht gelaufen**, das Δ ist eine Vermutung. **Gelaufen ist:** der Original-CLI von Slop Detect in der npm-Fassung
+  0.8.0 (Definitionen 2026.09, 27 Designmuster, 9 Textmuster, kein `--craft`) gegen zwei kleine Testseiten (Heavy 66, Clean 0) und `pruefe-slop.mjs` gegen diesen CLI; dazu die Tests von
+  beiden Skripten (23) und `pruefe-tracking.mjs` gegen den Quelltext des Projekts Gewerbestrom (kein Fehler, sechs Warnungen wegen fester IDs in statischem HTML). **Nicht gelaufen:** die 2026.11-Muster
+  (45 Design, 26 Text, 9 System, 11 Handwerk, 16 Auffindbarkeit) sind nach `spec/patterns.md` und `spec/copy-axis.md` des Repositories übernommen, nicht gemessen; der Original-Skill, die Hosting-API, `.sloprc.json`,
+  die Fix-Rezepte (`fixes.ts`) und der Quelltext des CLI sind **nicht gelesen** (gelesen: README, `spec/patterns.md`, `spec/copy-axis.md`, `docs/CLI_GUIDE.md`, `skills/slop-detect/SKILL.md`, `schemas/`). Die
+  Schwellen der Agentur (Heavy als Fehler, Mild als Warnung, höchstens drei Durchläufe) und die Zuordnung der Gegenmittel sind eigene Überlegungen. Die bereinigte Punktzahl nach einer Ausnahme ist eine Näherung.
+  Offen: ob die Textachse bei deutschem Text je etwas Brauchbares liefert (der Motor kennt englische Prosa), ob ein Lauf gegen die Vorschau von Astro stabil ist (späte Hydration, Schriftladen), und ob die npm-Fassung
+  nachzieht, damit `--craft` und die 45 Muster verfügbar sind. **Tracking:** Die Vorlagen sind vom TypeScript-Compiler (strikt) geprüft, nie gegen Meta, einen Browser oder Cloudflare gelaufen; die Graph-Version
+  `v21.0` ist die des Projekts und kann veraltet sein. Alle Aussagen zum Verhalten von Meta stammen aus der Projektdokumentation von Gewerbestrom, nicht aus einer neuen Prüfung. **Der rechtliche Teil ist
+  nicht anwaltlich geprüft.** Offen: ob die Zählmeldung ohne Einwilligung zulässig ist (in der Vorlage standardmäßig aus, im Projekt Gewerbestrom an), TikTok, LinkedIn, Google Enhanced Conversions und Server-Messung
+  für GA4 sind nicht abgedeckt. `pruefe-tracking.mjs` liest mit regulären Ausdrücken und sieht keinen Pixel hinter einem Tag Manager. Der Ablauf „Tracking einführen" ist ein Auslöser in der `description`
+  des Bauskills und in `intake-und-entscheidungen.md`; ob der Skill bei dem Satz „wir wollen Tracking einführen" ohne Bauauftrag anspringt, ist ungeprüft.
 
 - Messung vom 06.11.2026: Der Seitenrand aus `--rand-seite` (19 px mobil, 44 px bei 1440) ist schmaler als bei fünf von sechs freigegebenen Referenzen (23 px und 58 px). Offen, ob der Token angehoben wird; die Messung zeigt nur, was die Referenzen tun, nicht was besser konvertiert.
 - Referenzrunde vom 06.11.2026 (sechs Seiten in `referenzen-und-auswahl.md`): offen, ob der Befund zu hochzählenden Kennzahlen (Endwert gehört ins HTML, Animation nur sichtbar, bei reduzierter Bewegung gar nicht) als Regel in `09-motion-gsap.md` und als Prüfung in `pruefe-motion.mjs` aufgenommen wird. Bisher steht er nur in der Tabelle „Gemeinsame Befunde". Die Erfassung lief nur gegen die Startseiten, ohne Unterseiten, Tastatur und Ladezeit; Design DNA und Mustervergleich sind nicht gelaufen.
@@ -397,6 +413,21 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Änderungsverlauf
 
+- **09.11.2026, Version 4.23.0** Auf Wunsch des Inhabers zwei Dinge eingearbeitet. **(1) Slop Detect** (`ravidsrk/slop-detect`, MIT), um KI-Muster zu vermeiden und vor der Übergabe zu messen. Destilliert
+  und als Aufruf eingebunden, nicht kopiert (Konvention „Fremde Skills werden destilliert", kein `package.json`): Kapitel `55-slop-detect-ki-muster-vermeiden.md` (fünf Achsen, Vermeideliste für den Entwurf mit Gegenmitteln,
+  was über Kapitel 26 hinausgeht, Entscheidungstabelle für Konflikte), `agentur-website-builder/references/slop-pruefung.md` (Zeitpunkte, Aufruf, Schwellen, Ausnahmen mit Grund, Behebungsschleife, Bericht) und
+  `scripts/pruefe-slop.mjs` (startet den Original-CLI lokal, wendet die Agenturgrenzen an). **(2) Tracking aus dem Projekt Gewerbestrom** (`Thatsitmarketing/gewerbestrom`, Wehbe Group, eigenes Kundenprojekt der Agentur,
+  Code und `CLAUDE.md` gelesen, keine Kundendaten, keine Pixel-ID und keine Domain übernommen) als fester Arbeitsablauf, der mit dem Satz „wir wollen Tracking einführen" anläuft: Kapitel
+  `56-tracking-umsetzung-einwilligung-ereignisse.md` (Wissen), `agentur-website-builder/references/tracking-einbauen.md` (Fragen, Trackingplan, Schritte, Abnahme, was der Agent nie tut),
+  `assets/tracking/tracking-client.ts` und `meta-capi.ts` (Vorlagen für Astro und Cloudflare Pages) und `scripts/pruefe-tracking.mjs`. Auslöser in der `description` des Bauskills, in
+  `intake-und-entscheidungen.md`, in `SKILL.md` (Bauschritt 6 und Referenztabelle), in `consent-und-dienste.md` und `formulare-und-resend.md`. **Entschieden:** (1) `pruefe-slop.mjs` lehnt `--remote` und `--api` ab, weil sie die Adresse
+  einer Kundenvorschau an `slop-detect.com` schicken. (2) Ein Lauf ohne Bewertung ist Exit 2, nie sauber; der CLI meldet das ohne `--fail-on` nur im JSON und beendet sich mit 0. (3) Ausnahmen nur mit Begründung in
+  `slop-ausnahmen.json`, eine Markenvorgabe trägt eine Ausnahme, eine Zwischenlösung nicht. (4) Der Original-Skill von Slop Detect ist nicht voreingestellt, der Befehl steht kommentiert im Installer. (5) Die
+  Zählmeldung ohne Einwilligung, im Projekt Gewerbestrom eine Kundenentscheidung und dort an, ist in der Vorlage **aus** und wird nie vom Agenten eingeschaltet. (6) UTM-Parameter bleiben im Arbeitsspeicher statt in
+  `sessionStorage`. (7) Der Agent ändert nie ein Werbekonto (im Projekt Gewerbestrom ausdrücklich pausiert). **Nicht übernommen:** die Plattformen des Werkzeugs (MCP-Server, GitHub Action, Netlify- und Lighthouse-Plugin,
+  Vale-Regeln, Hosting-API), die Backoffice-, Close- und Funnelteile von Gewerbestrom, der Meta-Ads-MCP. Gefunden: die npm-Fassung 0.8.0 liegt hinter dem Repository (27 statt 45 Muster, kein `--craft`), und der
+  Playwright-Chromium muss zur Version des CLI passen. Gewerbestrom besteht `pruefe-tracking.mjs` ohne Fehler. 23 neue Tests, insgesamt 346. Versionen: Plugin 4.23.0, Regelwerk 2.26.0, Bauablauf 2.23.0.
+  Siehe `CREDITS.md`, Abschnitt „Version 4.23".
 - **11.10.2026, Version 4.22.0** Auf Wunsch des Inhabers sechs Quellen eingearbeitet, alle MIT: `ItsssssJack/SlopMonster`, `cloudflare/security-audit-skill`, `citrolabs/ego-lite`, `morluto/rea`,
   `vercel-labs/skills`, `stablyai/orca`. Alle destilliert oder beschrieben, nichts mitgeliefert, die Originale nur als Befehle im Installer. **Eingearbeitet:** Kapitel 51 Abschnitt 7a (Kontext vor den Mustern,
   Zweitdurchgang durch ein Modell anderer Herkunft, Prüfwert ist kein Urteil) mit der Vorlage `textueberarbeitung-zweitmodell.md`; `sicherheitspruefung.md` Abschnitt 6a (Beratung gegen Vollprüfung, drei Befundstufen,

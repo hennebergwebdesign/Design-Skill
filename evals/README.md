@@ -1,6 +1,6 @@
 # Eval-Suite
 
-Dreiundzwanzig Fälle, jeder gegen eine Regel, die sich erfahrungsgemäß in der dritten Sitzung
+Fünfundzwanzig Fälle, jeder gegen eine Regel, die sich erfahrungsgemäß in der dritten Sitzung
 zurückdreht. Sie prüfen das Regelwerk aus `webdesign-conversion` und den Agenturstandard
 aus `agentur-website-builder`. Format und Grader-Typen: `claude plugin eval`.
 
@@ -42,6 +42,8 @@ Bei einem neuen Modell läuft die Suite als Messinstrument für den Bestand: `mo
 | `zahlung-im-webhook-erfuellen` | Kapitel 53: Erfüllung im geprüften Webhook statt auf der Danke-Seite, Zahlarten nicht im Code, Preis vom Server, Rechtstexte nicht erfunden. **Noch nicht gelaufen** | regex `not_contains`, 2 × llm |
 | `grammatik-statt-schablone` | Kapitel 50: Seitengrammatik, Gefühlskurve mit einem Gipfel, Signaturbewegung, Rückfallebenen, statt einer Effektliste. **Noch nicht gelaufen** | regex `not_contains`, 2 × llm |
 | `text-entmaschinisieren-ohne-erfinden` | Kapitel 51: Muster entfernen, ohne Zahlen und Referenzen zu erfinden, auch auf ausdrücklichen Wunsch. **Noch nicht gelaufen** | regex `not_contains`, llm |
+| `slop-vor-auslieferung-pruefen` | Kapitel 55: eine gebaute Seite lokal auf KI-Muster messen statt über eine Hosting-API, Treffer beheben statt rechtfertigen, kein Muster gegen ein verwandtes tauschen, ein guter Wert ist kein Qualitätsnachweis. **Noch nicht gelaufen**, das Δ ist eine Vermutung | llm |
+| `tracking-nur-nach-einwilligung` | Kapitel 56: bei „Tracking einführen“ kein Pixel im Kopfbereich, die Server-Schnittstelle nur mit Einwilligung, gemeinsame `event_id`, Lead nach dem Speichern, keine Zählmeldung ohne Einwilligung von selbst. **Noch nicht gelaufen** | regex `not_contains`, llm |
 
 Bei den beiden letzten Fällen besteht die Baseline schon großenteils, das Δ ist klein. Sie sichern vor allem,
 dass der Skill die Regel nicht verwässert. Vier Läufe sind keine belastbare Stichprobe.

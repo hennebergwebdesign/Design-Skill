@@ -1,10 +1,10 @@
 ---
 name: agentur-website-builder
-description: Baut komplette Kundenwebsites mit Astro und Cloudflare Pages nach Agenturstandard von That's it. Marketing, inklusive Designsystem, GSAP Animation, Formularen über Resend, eigenem DSGVO Consent Banner mit echter Skriptblockierung, Google Bewertungen, SEO, Barrierefreiheit und optionalem Leadsystem mit Dashboard. Diesen Skill immer verwenden, sobald es um das Erstellen, Überarbeiten, Relaunchen oder Erweitern einer Website, Landingpage, Leadseite oder Unternehmensseite geht, auch wenn nur Teile davon genannt werden wie "Sektion bauen", "Seite umsetzen", "Design in Code", "Cookie Banner einbauen", "Kontaktformular anbinden", "Website überarbeiten" oder wenn ein Designentwurf, ein Linktree, eine alte Kundenseite oder ein Screenshot zur Umsetzung übergeben wird. Auch wenn Farben, Schriften oder Logo einer bestehenden Kundenseite per URL ausgelesen oder übernommen werden sollen.
+description: Baut komplette Kundenwebsites mit Astro und Cloudflare Pages nach Agenturstandard von That's it. Marketing, inklusive Designsystem, GSAP Animation, Formularen über Resend, eigenem DSGVO Consent Banner mit echter Skriptblockierung, Google Bewertungen, SEO, Barrierefreiheit und optionalem Leadsystem mit Dashboard. Diesen Skill immer verwenden, sobald es um das Erstellen, Überarbeiten, Relaunchen oder Erweitern einer Website, Landingpage, Leadseite oder Unternehmensseite geht, auch wenn nur Teile davon genannt werden wie "Sektion bauen", "Seite umsetzen", "Design in Code", "Cookie Banner einbauen", "Kontaktformular anbinden", "Website überarbeiten" oder wenn ein Designentwurf, ein Linktree, eine alte Kundenseite oder ein Screenshot zur Umsetzung übergeben wird. Auch wenn Farben, Schriften oder Logo einer bestehenden Kundenseite per URL ausgelesen oder übernommen werden sollen. Auch bei Tracking (Meta Pixel, Conversions API, GA4) und KI-Mustern („wirkt generisch").
 license: Proprietär, That's it. Marketing / VFDESIGN LTD
 metadata:
   author: That's it. Marketing / Henneberg Webdesign
-  version: 2.22.0
+  version: 2.23.0
 ---
 
 # Agentur Website Builder
@@ -111,9 +111,7 @@ Kundenordner, Deploy-Skripte oder Cloudflare-Zugänge arbeitet:
 * Modus ohne Rückfragen („Berechtigungen umgehen") nur in einer isolierten Umgebung, nie mit Kundenzugängen.
   Einen fremden Skill oder ein Plugin vor der Installation lesen, auch seine Skripte: sie laufen mit
   denselben Rechten wie der Agent.
-* Der Anlass im Video (ein Entwickler berichtete, ein Modell habe beinahe seine Mac-Dateien gelöscht)
-  ist ein Einzelbericht des Videos, hier nicht geprüft. Das Restrisiko besteht bei jedem Modell
-  unabhängig davon.
+* Der Anlass (ein Videobericht über beinahe gelöschte Mac-Dateien) ist hier nicht geprüft. Das Restrisiko besteht bei jedem Modell.
 
 ### Phase 1: Analyse
 
@@ -245,7 +243,7 @@ Reihenfolge, weil sie Nacharbeit spart:
    markiert
 4. Formulare und Serverrouten, siehe `references/formulare-und-resend.md`
 5. Leadsystem und Dashboard, nur wenn bestätigt, siehe `references/leadsystem-dashboard.md`
-6. Consent, Skriptblockierung und Rechtstexte, siehe `references/consent-und-dienste.md`
+6. Consent, Skriptblockierung, Rechtstexte: `references/consent-und-dienste.md`; bei Tracking der feste Ablauf in `references/tracking-einbauen.md`
 7. Google Bewertungen, siehe `references/google-bewertungen.md`
 8. SEO, Pflichtseiten und Metadaten, siehe
    `../webdesign-conversion/references/05-seo-sichtbarkeit.md` und
@@ -276,6 +274,7 @@ node scripts/pruefe-breakpoints.mjs http://localhost:4321 --bilder
 node scripts/pruefe-geschmack.mjs
 node scripts/pruefe-sicherheit.mjs                         # vor und nach dem Build
 node scripts/pruefe-scrollstrecke.mjs http://localhost:4321   # nur Seiten mit Scroll-Bewegung
+node scripts/pruefe-slop.mjs http://localhost:4321 --copy   # KI-Muster im gerenderten DOM, Ablauf in references/slop-pruefung.md
 ```
 
 Die Strichregel läuft zusätzlich als Hook nach jedem Schreiben (`node scripts/pruefe-striche.mjs --hook`),
@@ -393,6 +392,8 @@ Schwesterskill.
 | `references/moodboard-und-stylescape.md` | Phase 2 und 3, vor dem Bau: Moodboard intern, Stylescape zur Abnahme der Richtung |
 | `references/kundenabstimmung.md` | Phase 2, 3 und 6: Rollen beim Kunden, Präsentation, Rückmeldungen einsortieren |
 | `references/aenderungsrunden-und-layoutschutz.md` | jede Änderung an einer gebauten Seite: Rückmeldungen bündeln, Auftrag mit Sektion und „bleibt", Prüfung danach, eigene Sitzung für Text und Leistung, Block für die Projekt-`CLAUDE.md` |
+| `references/tracking-einbauen.md` | sobald Tracking, Pixel, Conversions API oder GA4 erwähnt wird: Fragen, Trackingplan, Schritte, Abnahme, Vorlagen in `assets/tracking/` |
+| `references/slop-pruefung.md` | Phase 3 (Vermeideliste) und Phase 5 (Lauf, Schwellen, Ausnahmen mit Grund, Behebungsschleife) |
 | `references/brand-extraktion.md` | jeder Relaunch und jede Brandingübernahme per URL: Farben, Schriften, Logo der eigenen Bestandsseite messen |
 | `references/firecrawl-recherche.md` | eine bekannte, alte oder fremde Seite crawlen oder scrapen, für Relaunch-Inventar oder Design-Referenz |
 | `references/designrecherche-ablauf.md` | Phase 3, sobald Referenzen gesucht, vorgelegt oder freigegeben werden |
@@ -439,7 +440,7 @@ Bewertungsabruf. Diese kopieren und an das Projekt anpassen, statt jedes Mal neu
 schreiben. Rechtstexte, Tokens, Meta-Head, JSON-LD, 404 und Security-Header liegen in
 `../webdesign-conversion/assets/vorlagen/`.
 
-`scripts/` im Repowurzelverzeichnis enthält zwölf Prüfskripte (`pruefe-*.mjs`) und Agenturwerkzeuge, die nie Teil der
+`scripts/` im Repowurzelverzeichnis enthält vierzehn Prüfskripte (`pruefe-*.mjs`) und Agenturwerkzeuge, die nie Teil der
 ausgelieferten Seite werden und nie in das `package.json` des Kundenprojekts wandern:
 
 * `relaunch-inventory.mjs` inventarisiert eine alte Kundenseite (Ablage `.relaunch-inventory/`, `references/intake-und-entscheidungen.md`),
@@ -466,7 +467,7 @@ Erst wenn alle Punkte erfüllt sind, darf von einer fertigen Seite gesprochen we
 * alle vereinbarten Seiten und Sektionen vorhanden, keine vergessenen Platzhaltertexte
 * jeder selbst formulierte Copy-Vorschlag mit `scripts/deslop-check.mjs` auf 5 von 5 geprüft
 * Build läuft ohne Fehler, `astro check` ohne Befund
-* alle zwölf Prüfskripte ohne Fehler, auch `pruefe-geschmack.mjs`, `pruefe-geo.mjs`, `pruefe-aktualitaet.mjs`, `pruefe-seitenbasis.mjs` und `pruefe-sicherheit.mjs` gegen `dist/`, bei Scrollseiten `pruefe-scrollstrecke.mjs` auf Desktop, Handy und mit reduzierter Bewegung
+* alle vierzehn Prüfskripte ohne Fehler (`pruefe-tracking.mjs` nur bei Tracking, `pruefe-slop.mjs` mit `--streng`), auch `pruefe-geschmack.mjs`, `pruefe-geo.mjs`, `pruefe-aktualitaet.mjs`, `pruefe-seitenbasis.mjs` und `pruefe-sicherheit.mjs` gegen `dist/`, bei Scrollseiten `pruefe-scrollstrecke.mjs` auf Desktop, Handy und mit reduzierter Bewegung
 * Vorflugcheck aus `26-geschmack-und-ki-tells.md` durchgegangen, Ungeprüftes benannt
 * Fehlermodi, Stresstest mit echtem Inhalt und Subtraktionsrunde nach `references/qa-und-abnahme.md` Schritt 8b
 * Tastaturbedienung durch alle interaktiven Elemente, sichtbarer Fokus
