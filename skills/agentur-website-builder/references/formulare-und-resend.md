@@ -127,7 +127,8 @@ Alle vier müssen tatsächlich existieren und getestet sein:
   Mailadresse, damit eine Anfrage nicht verloren geht
 
 Bei Erfolg das Ereignis für Tracking auslösen, aber nur, wenn eine Einwilligung für
-Marketing vorliegt.
+Marketing vorliegt, mit einer `event_id` je Anfrage, die beim Wiederholen gleich bleibt
+(`tracking-einbauen.md`).
 
 Das Formular funktioniert auch ohne JavaScript: `<form method="post" action="/api/kontakt">`
 als Grundlage, die Zustandslogik legt sich darüber. Ohne diesen Weg verliert die Seite jede

@@ -24,7 +24,7 @@ pnpm astro check    # falls TypeScript im Projekt
 
 Warnungen nicht ignorieren. Sie sind fast immer echte Fehler in der Ausgabe.
 
-### 2. Die zwölf Prüfskripte
+### 2. Die vierzehn Prüfskripte
 
 ```bash
 node scripts/pruefe-striche.mjs                 # Gedankenstriche, Bindestrich mit Leerzeichen, hyphens: auto, verbotene Wörter
@@ -39,6 +39,8 @@ node scripts/pruefe-aktualitaet.mjs             # nach dem Build: Copyright-Jahr
 node scripts/pruefe-seitenbasis.mjs             # nach dem Build: lang, Viewport und Zoom, Alt-Texte, Labels, Fremdserver, Teilen-Ebene
 node scripts/pruefe-sicherheit.mjs              # vor und nach dem Build: Schlüssel, öffentliche Geheimnisse, .env im Index, CSP, eval, bei Stripe Webhook und Zahlungsregeln
 node scripts/pruefe-scrollstrecke.mjs http://localhost:4321   # Scrollseiten: tote Strecke, Text ohne volle Deckkraft, Überlauf; auch --mobil und --reduziert
+node scripts/pruefe-slop.mjs http://localhost:4321 --copy     # KI-Muster im gerenderten DOM (Slop Detect), Playwright; mit --streng vor der Übergabe
+node scripts/pruefe-tracking.mjs                # nur wenn Tracking gebaut wurde: Skripte nur nach Einwilligung, event_id, Schlüssel, Datenschutz
 ```
 
 `pruefe-seitenbasis.mjs` liest `dist/` und meldet als Fehler: kein `lang`, kein oder zoomsperrender Viewport,
@@ -53,6 +55,15 @@ Privatschlüssel), ein Geheimnis hinter einem öffentlichen Präfix (`PUBLIC_`, 
 Geheimschlüssel im Browsercode. Warnungen: HTML aus Variablen, fehlende Header, fehlendes Lockfile, Quellkarten in `dist/`, Formularroute ohne Turnstile,
 Erfolgsseite, die selbst erfüllt, fehlende AGB und Widerrufsseite, Datenschutz ohne Stripe. Ablauf in `sicherheitspruefung.md`, Regeln in
 `../../webdesign-conversion/references/52-sicherheit-der-kundenseite.md` und `53-…`.
+
+`pruefe-slop.mjs` startet den Original-CLI von Slop Detect gegen die Vorschau und wendet die Agenturgrenzen an: Design Heavy und jedes Textartefakt (Platzhalter, rohes
+Markdown, Chatbotrest, versteckte Zeichen) sind Fehler, Mild eine Warnung und mit `--streng` ein Fehler. Ein Lauf ohne Bewertung ist Exit 2, nie sauber. Ausnahmen stehen
+in `slop-ausnahmen.json` und gelten nur mit Begründung. Ablauf in `slop-pruefung.md`, Muster und Deutung in
+`../../webdesign-conversion/references/55-slop-detect-ki-muster-vermeiden.md`.
+
+`pruefe-tracking.mjs` liest Quellen und `dist/` und meldet als Fehler: einen Tracker im Markup, der vor der Entscheidung lädt, Pixel-Code und Conversions API ohne Bezug zur
+Einwilligung, ein Lead-Ereignis ohne `eventID` oder `event_id`, ein Token hinter `PUBLIC_` oder im Build. Warnungen: Testcode ohne Schalter, feste Pixel- oder GA4-ID,
+Datenschutzerklärung ohne Nennung. Das Netzwerkprotokoll vor der Entscheidung prüft ein Mensch. Ablauf in `tracking-einbauen.md`.
 
 `pruefe-scrollstrecke.mjs` läuft eine Seite von oben nach unten durch (Playwright) und meldet Scrollen ohne sichtbare Veränderung, Text, der nie volle
 Deckkraft erreicht, horizontales Überlaufen, Konsolenfehler und mit `--reduziert` Inhalt, der unsichtbar bleibt. Es legt einen Kontaktbogen ab, den ein

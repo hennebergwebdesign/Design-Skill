@@ -53,9 +53,9 @@ KV-Cache, optional ein Leadsystem auf D1 mit schlankem Dashboard. Zu jedem Punkt
 einsatzfertiger Code bei, keine Beschreibung.
 
 **Prüfskripte statt Checkboxen.** Eine Regel ohne Prüfung wird in der dritten Sitzung
-zurückgedreht. Zwölf Skripte prüfen Gedankenstriche, Tokens, Kontrast, Platzhalter samt
+zurückgedreht. Vierzehn Skripte prüfen Gedankenstriche, Tokens, Kontrast, Platzhalter samt
 ausgelassenem Code, acht Bildschirmgrößen samt horizontalem Überlauf, die zählbaren
-KI-Tells, Bewegung, Sichtbarkeit für KI-Suche, Aktualität, die Grundlagen jeder Seite, Schlüssel und Zahlungsregeln und den Lauf durch eine Scrollseite, ein weiteres die Musterbibliothek. Dazu
+KI-Tells, Bewegung, Sichtbarkeit für KI-Suche, Aktualität, die Grundlagen jeder Seite, Schlüssel und Zahlungsregeln den Lauf durch eine Scrollseite, KI-Muster im gerenderten DOM (Slop Detect) und Tracking nur nach Einwilligung, ein weiteres die Musterbibliothek. Dazu
 Werkzeuge, die das Relaunch-Inventar beschaffen, selbst formulierte Texte auf generischen
 KI-Klang bewerten und die Designrecherche führen.
 
@@ -271,7 +271,16 @@ node scripts/pruefe-geschmack.mjs     # nach dem Build: dist/ und src/
 node scripts/pruefe-motion.mjs        # Quellen: Bewegungsfehler, die sich zählen lassen
 node scripts/pruefe-geo.mjs           # nach dem Build: dist/ auf KI-Lesbarkeit
 node scripts/pruefe-seitenbasis.mjs   # nach dem Build: dist/ auf lang, Zoom, Alt-Texte, Labels, Fremdserver
+node scripts/pruefe-slop.mjs http://localhost:4321 --copy   # KI-Muster im gerenderten DOM (Slop Detect, braucht Playwright)
+node scripts/pruefe-tracking.mjs      # Tracking nur nach Einwilligung, event_id, Schlüssel, Datenschutz
 ```
+
+`pruefe-slop.mjs` startet den Original-CLI von [Slop Detect](https://github.com/ravidsrk/slop-detect) (MIT) lokal gegen die Vorschau und wendet die Agenturgrenzen an: Design Heavy und Textartefakte
+(Platzhalter, rohes Markdown, Chatbotreste) sind Fehler, Ausnahmen gelten nur mit Begründung, ein Lauf ohne Bewertung ist nie sauber, die Hosting-API wird nicht benutzt. Muster, Vermeideliste für den Entwurf und
+Grenzen: `skills/webdesign-conversion/references/55-slop-detect-ki-muster-vermeiden.md`, Ablauf in `skills/agentur-website-builder/references/slop-pruefung.md`.
+
+`pruefe-tracking.mjs` gehört zum festen Ablauf „Tracking einführen“ (`skills/agentur-website-builder/references/tracking-einbauen.md`, Wissen in Kapitel 56, Vorlagen in `assets/tracking/`): kein Pixel und kein GA4 vor der
+Einwilligung, dieselbe `event_id` im Browser und auf dem Server, kein Token hinter `PUBLIC_`. Abgeleitet aus dem Projekt Gewerbestrom, die Vorlagen sind nie gegen Meta gelaufen.
 
 `pruefe-motion.mjs` liest die Quellen und meldet `transition: all` als Fehler, dazu Start bei
 `scale(0)`, `ease-in`, Layoutwerte in `transition`, feste Dauern über 300 ms und `:hover` mit
@@ -427,7 +436,7 @@ node --test 'scripts/tests/*.test.mjs'
 ```
 
 Eingebauter Testrunner von Node, keine Abhängigkeit, kein `package.json`. Die Anführungszeichen
-sind nötig, die Verzeichnisform greift nicht. 264 Tests: alle erlaubten und alle verbotenen
+sind nötig, die Verzeichnisform greift nicht. 346 Tests (einer davon läuft nur mit `SLOP_ECHT`): alle erlaubten und alle verbotenen
 Zustandsübergänge, die Sperre gegen den Abruf ohne Freigabe, robots.txt, die Rückfallstufen,
 die Grenzenliste, das Konfidenzmodell, die Ähnlichkeitseinstufung, die Musterprüfung und die
 Trennung von Projekt- und globalem Wissen, die Geschmacksprüfung mit je einem Fall, der
@@ -462,7 +471,7 @@ Die Suite hat dabei schon einen echten Fehler gefunden: das Landingpage-Playbook
 formuliert, dass das Modell die Navigationsregel erkannte, dann aber um Erlaubnis fragte statt
 zu liefern. Details in `evals/README.md`.
 
-Dreiundzwanzig Fälle insgesamt, davon drei für den Agenturstandard: `consent-ohne-keks`,
+Fünfundzwanzig Fälle insgesamt, davon drei für den Agenturstandard: `consent-ohne-keks`,
 `leadsystem-nur-auf-bestaetigung` und `brand-extraktion-nur-eigene-marke`. Die ersten beiden und die vier neueren Fälle
 `kundendesignsystem-schlaegt-referenz`, `referenz-erst-freigeben`,
 `nicht-beobachtetes-nicht-behaupten` und `keine-attrappen-als-beleg` sind noch nicht gelaufen,

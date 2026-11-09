@@ -4,7 +4,7 @@ description: "Vollständiges System für conversion-orientiertes Webdesign im DA
 license: MIT
 metadata:
   author: Henneberg Webdesign
-  version: 2.25.0
+  version: 2.26.0
 ---
 
 # Webdesign Conversion System
@@ -142,10 +142,14 @@ Lies gezielt nach, statt alles zu laden.
 | Sicherheit einer Kundenseite: Vertrauensgrenzen, Geheimnisse, Formulare, Inhaltsrichtlinie, Lieferkette, KI-Ausgabe, Tiefenscan | `52-sicherheit-der-kundenseite.md` |
 | Zahlung mit Stripe: Weg wählen, Webhooks und Erfüllung, Button-Lösung, Widerruf, Steuer, Testplan | `53-zahlungen-mit-stripe.md` |
 | Video oder Animationssequenz mit HyperFrames: Ablauf mit Toren, Vertrag einer Komposition, Marke, Optimierung, Prüfung | `54-video-aus-html-mit-hyperframes.md` |
+| KI-Muster am gerenderten DOM messen (Slop Detect), Vermeideliste für den Entwurf, Ausnahmen bei Markenvorgabe, Grenzen des Werts | `55-slop-detect-ki-muster-vermeiden.md` |
+| Tracking umsetzen: eine Einwilligung für Pixel und Server, `event_id`, Kennungen, Herkunft in der eigenen Datenbank, Zählmeldung, Testkanal | `56-tracking-umsetzung-einwilligung-ereignisse.md` |
 | Annahmen aussprechen, in dünnen Scheiben bauen, nach Quelle bauen, Zweifel-Durchgang für Sachentscheidungen | `../agentur-website-builder/references/arbeitsdisziplin.md` |
 | Seite im Browser erkunden und testen (Handy, reduzierte Bewegung, Consent, Netzwerk, Formular) | `../agentur-website-builder/references/browser-pruefung-mit-playwright-cli.md` |
 | Zahlung im Projekt umsetzen: Dateien, Umgebungsvariablen, Dashboard, Testplan | `../agentur-website-builder/references/zahlungen-umsetzung.md` |
 | Sicherheitsprüfung im Bau: Ablauf, Funde einsortieren, Missbrauch testen, Schlüssel aufgetaucht | `../agentur-website-builder/references/sicherheitspruefung.md` |
+| KI-Muster vor der Übergabe messen: Lauf, Schwellen, Ausnahmen mit Grund, Behebungsschleife | `../agentur-website-builder/references/slop-pruefung.md` |
+| Tracking einführen (Meta Pixel, Conversions API, GA4): Fragen, Trackingplan, Schritte, Abnahme | `../agentur-website-builder/references/tracking-einbauen.md` |
 | Ton mit Autorität, Weichmacher streichen, Rahmen setzen, Antworten in der FAQ | `35-autoritaet-im-text.md` |
 | Auslöser je Stelle der Seite: Zielgruppe ohne Vorwurf, Wirkprinzip, realistische Behauptung, ruhige Einwandzeile, drei echte Optionen, ehrliche Einschränkung | `34-ueberzeugungsausloeser.md` |
 | Entwurf vor dem Kunden vertreten, Geschmack durch Aussagen ersetzen, Rollen und Spielregeln für Rückmeldung, Lens | `33-kundenpraesentation-und-feedback.md` |
@@ -180,7 +184,7 @@ Security-Header) liegen in `assets/vorlagen/`, annotierte 21st.dev-Referenzkompo
 ## Prüfskripte
 
 „Prüfen statt behaupten" braucht Werkzeug, sonst wird die Checkbox abgehakt statt geprüft.
-Alle Skripte laufen ohne Abhängigkeiten außer Node, das Breakpoint- und das Scrollstrecken-Skript brauchen Playwright.
+Alle Skripte laufen ohne Abhängigkeiten außer Node, das Breakpoint-, das Scrollstrecken- und das Slop-Skript brauchen Playwright.
 
 ```bash
 node scripts/pruefe-striche.mjs       # Gedankenstriche, Bindestrich mit Leerzeichen, hyphens: auto, verbotene Wörter; --hook nach jedem Schreiben
@@ -195,6 +199,8 @@ node scripts/pruefe-aktualitaet.mjs   # nach dem Build: Copyright-Jahr, Stand-An
 node scripts/pruefe-seitenbasis.mjs   # nach dem Build: lang, Viewport und Zoom, Alt-Texte, Labels, Fremdserver, Teilen-Ebene
 node scripts/pruefe-sicherheit.mjs   # Quellen und dist: Schlüssel, öffentliche Geheimnisse, .env im Index, CSP, eval, bei Stripe Webhook-Signatur und Zahlungsregeln
 node scripts/pruefe-scrollstrecke.mjs http://localhost:4321   # Scrollseiten: tote Strecke, Text ohne volle Deckkraft, Überlauf, bei --reduziert unsichtbarer Inhalt
+node scripts/pruefe-slop.mjs http://localhost:4321 --copy   # Slop Detect gegen die Vorschau: Heavy und Textartefakte sind Fehler, Ausnahmen nur mit Begründung; Playwright
+node scripts/pruefe-tracking.mjs      # Pixel und GA4 nur nach Einwilligung, event_id auf beiden Wegen, Token nie öffentlich, Datenschutz nennt den Dienst
 ```
 
 Dazu zwei Werkzeuge, die nicht prüfen, sondern Material beschaffen und Texte bewerten. Sie

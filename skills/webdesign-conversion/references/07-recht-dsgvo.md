@@ -159,3 +159,5 @@ In die Abschlussdokumentation gehören:
 - für welche Dienste ein AV-Vertrag abzuschließen ist
 - welche Bild- und Logorechte noch zu bestätigen sind
 - welche Speicherfristen festzulegen sind
+
+Tracking mit Pixel und Server-Schnittstelle (eine Einwilligung für beide Wege, Kennungen, Widerruf): `56-tracking-umsetzung-einwilligung-ereignisse.md`.
