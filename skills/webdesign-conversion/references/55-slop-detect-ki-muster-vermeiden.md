@@ -81,7 +81,7 @@ neben den Sperren aus `marke.json` (`gestaltung.sperren`). Gewichte nach Reposit
 | `oversized_hero_h1` | 4 | H1 ab 72 px und 40 Zeichen | kürzen oder verkleinern |
 | `nested_cards` | 4 | Karten in Karten | eine Ebene |
 | `numbered_steps` | 3 | Schritte 1, 2, 3 als Raster | Schritte mit Verb, Zählung nur wenn sie ordnet |
-| `stat_banner` | 3 | drei große Kennzahlen in einer Reihe | nur belegte Zahlen (harte Grenze), sonst weglassen |
+| `stat_banner` | 3 | drei große Kennzahlen in einer Reihe | nicht als Band bauen; die Zahl gehört an den Fall, der sie belegt (harte Grenze: nur belegte Zahlen) |
 | `ai_sparkle_badges` | 3 | „✨" an KI-Text | streichen |
 | `flat_type_hierarchy` | 3 | Schriftgrößen liegen zu nah beieinander | Stufen mit Verhältnis ab 2:1 |
 | `faq_accordion` | 2 | FAQ als Akkordeon im unteren Drittel | nur echte Fragen, Antworten im HTML (`31-…`, `35-…`) |

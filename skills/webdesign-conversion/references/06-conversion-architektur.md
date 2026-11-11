@@ -100,12 +100,14 @@ Skepsis, und 40–60 % weniger Conversions.
 
 1. **Kundenstimmen** mit Name, Funktion, Unternehmen und möglichst Foto
 2. **Referenzen/Case Studies** mit Ausgangslage, Vorgehen und Ergebnis
-3. **Zahlen** (Projekte, Jahre, Kunden, messbare Ergebnisse)
+3. **Zahlen**, nur als Teil eines Falls ("210 Bewerbungen in 60 Tagen" an der Referenz), nicht als
+   Band aus Projekten, Jahren und Kunden. Ein Band aus großen Zahlen unter dem Held trägt kaum Beweis
+   und liest sich als Standardbaustein (`26-geschmack-und-ki-tells.md`)
 4. **Logos** von Kunden, Partnern, Presse
 5. **Bewertungen** von Google, Trustpilot, ProvenExpert, mit Schnitt, Anzahl und Datum
 6. **Zertifikate, Auszeichnungen, Mitgliedschaften**
 
-**Wo platzieren:** Die Startseite trägt so viele Trust-Elemente wie möglich. Auf Unterseiten
+**Wo platzieren:** Die Startseite trägt die Trust-Elemente, die belegt sind und etwas beweisen. Auf Unterseiten
 und der Kontaktseite dürfen sie sich wiederholen: sie **sollen** öfter als einmal
 vorkommen, weil nicht jeder Besucher die komplette Seite ansieht.
 

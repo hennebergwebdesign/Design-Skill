@@ -4,7 +4,7 @@ description: "Vollständiges System für conversion-orientiertes Webdesign im DA
 license: MIT
 metadata:
   author: Henneberg Webdesign
-  version: 2.26.0
+  version: 2.27.0
 ---
 
 # Webdesign Conversion System

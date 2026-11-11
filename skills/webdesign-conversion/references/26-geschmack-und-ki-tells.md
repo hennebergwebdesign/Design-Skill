@@ -154,6 +154,7 @@ Die Höhe ist harte Grenze (`100svh`, siehe `SKILL.md`). Hier geht es darum, was
 | Textelemente | höchstens vier: Kicker **oder** Markenzeile **oder** nichts, Überschrift, Unterzeile, Handlungsaufforderungen | der Held ist ein Moment, keine Leistungsliste |
 | Handlungsaufforderungen | eine primäre, höchstens eine sekundäre | zwei gleich starke Knöpfe teilen die Aufmerksamkeit |
 | Vertrauen | **genau ein** belegter Beweis darf im Held stehen, zum Beispiel die Google-Bewertung mit Quelle | `02-design-ux.md` verlangt Vertrauen über der Falz; eine Leiste aus Mikrotext, Preisteaser und Avatarreihe verlangt es nicht |
+| Kennzahlen | **keine** im Held und **kein** Kennzahlenband direkt darunter, auch nicht als Standardsektion der Startseite | drei große Zahlen in einer Reihe sind der häufigste Baustein, der eine Seite nach Schablone aussehen lässt, und sie belegen selten etwas. Die Zahl gehört in die Referenzkachel, die sie trägt (210 Bewerbungen in 60 Tagen am Fall Schulz). Ausnahme: der Kunde liefert eine belegte Zahl, die allein das Angebot entscheidet, dann eine Zahl im Satz, kein Band. Prüfung: `55-…` (`stat_banner` über Slop Detect), `pruefe-geschmack.mjs` kennt das Muster nicht |
 | Logowand | eigene Sektion direkt unter dem Held, nie in derselben Zeile wie die Heldencopy | der Held trägt Versprechen und Aufforderung, die Logowand trägt den Beweis |
 | Oberer Innenabstand | begrenzt, der Inhalt schwebt nicht auf halber Höhe | braucht der Held mehr Luft, wird die Schrift oder das Bild größer, nicht der Abstand |
 

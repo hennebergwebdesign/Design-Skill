@@ -68,7 +68,7 @@ eigene Anfrage erzeugen (`../references/05-seo-sichtbarkeit.md`).
 | # | Sektion | Zweck | Pflicht |
 |---|---|---|---|
 | 1 | Held | Zielgruppe, Problem, Lösung, Primär-CTA, ein Trust-Signal | ja |
-| 2 | Trust-Leiste | Logos, Bewertung mit Stand, Zahlen | ja |
+| 2 | Trust-Leiste | Logos oder Bewertung mit Stand, nur was belegt und freigegeben ist. Kein Kennzahlenband als Standard | wenn belegt |
 | 3 | Problem | das Kernproblem in den Worten der Zielgruppe | ja |
 | 4 | Leistungen | 3 bis 6, jede verlinkt auf ihre eigene Seite | ja |
 | 5 | Warum wir | der USP, mit Beweis | ja |
@@ -79,8 +79,10 @@ eigene Anfrage erzeugen (`../references/05-seo-sichtbarkeit.md`).
 | 10 | CTA-Block | Formular oder direkter Weg zum Kontakt | ja |
 | 11 | Fuß | Navigation, Kontakt, Pflichtlinks | ja |
 
-**Die Startseite trägt so viele Trust-Elemente wie möglich**, und sie wiederholen sich auf
-Unterseiten (`../references/06-conversion-architektur.md`).
+**Die Startseite trägt die Trust-Elemente, die belegt sind und etwas beweisen**, und sie
+wiederholen sich auf Unterseiten (`../references/06-conversion-architektur.md`). Kennzahlen
+stehen nicht im Held und nicht als Band darunter, sondern an der Referenz, die sie belegt
+(`../references/26-geschmack-und-ki-tells.md`, Abschnitt 4).
 
 **Navigation:** Leistungen, Referenzen, Ablauf oder Über uns, Kontakt. Sticky, mit den drei
 Details aus `../references/02-design-ux.md` (Ausblenden beim Runterscrollen, immer sichtbar

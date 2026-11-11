@@ -140,7 +140,7 @@ Angebote mit hoher Hürde und Bewerbung, nur als Strukturvorbild:
 `danscryptomastermind.com` (freigegeben, Ton und Versprechen ausdrücklich nicht)
 
 Fallbeispiele und Referenzdarstellung, nützlich für die Case Study Sektion:
-`showcase.nixtio.com/cases/board`, `xnrgyclub.com`
+`showcase.nixtio.com/cases/board`, `xnrgyclub.com`, `creativcube.de` (freigegeben, Galerie, Leistungen als Akkordeon, Held)
 
 Eine Adresse aus dieser Liste kann offline sein oder sich verändert haben. Was sich nicht
 abrufen lässt, wird nicht aus der Erinnerung beschrieben, sondern ersetzt.
@@ -515,6 +515,55 @@ Copyright 2025 in der Fußzeile neben News vom November 2026 (`pruefe-aktualitae
 des Inhabers, nicht übertragbar), zwei Newsletterfelder auf einer Seite, das Cookie-Banner ohne Ablehnen,
 auf Mobil eine zweizeilige Hinweisleiste und kein CTA im ersten Bildschirm.
 
+### CreativCube
+
+`creativcube.de`, Stand 11.11.2026, vom Inhaber genannt (Tor 1). Videoproduktion und Content Agentur aus Essen,
+Zielgruppe Mittelstand und Konzerne, Angebot ist ein Strategie Call. Gilt für Agenturen, Studios, Produktionen
+und alle Anbieter, deren Arbeit **sichtbar** ist und die ein Portfolio verkaufen. Erfassung mit Playwright
+(Desktop 1440, Mobil 390 nur als Messwerte, Screenshots nicht ausgewertet), Quelle der Werte sind die berechneten
+Stile und das gerenderte DOM, kein Quelltext des Herstellers. Die Seite ist Astro (Markierung im DOM), ohne GSAP,
+Lenis, Swiper oder Three.js, ohne Canvas; die Bewegung ist CSS (`@keyframes`, `transition`) und Klassen, die beim
+Scrollen gesetzt werden (`is-visible`, `is-in`, `is-done`). Rund 13.400 px Höhe auf Desktop.
+
+Sektionsfolge: schwebende Kopfleiste mit Knopf, Held als Vollbild Loop mit Logoreihe und Scrollhinweis, „Ein Partner.
+Nicht sieben.", Bildstrecke hinter den Kulissen, Kundenkacheln als Raster, vier Leistungen als Akkordeon, acht
+Lieblingsprojekte als Galerie, Videostimmen, Ablauf in drei Schritten, sieben Branchen, Team, Büro, Kontaktformular,
+Fußzeile. Eigene Unterseite je Referenz mit Auftrag, Herausforderung, Antwort, Zeitstrahl und Ergebnis.
+
+Farbe und Schrift: Schwarzstufen (#0D0D0D Grund, #050505 für abgesetzte Sektionen, #161616 und #1A1A1A für Karten),
+ein Orange (#FFA500) als einzige Handlungs und Akzentfarbe, Text #D4D4D4. Montserrat in 200 bis 900 für Überschriften
+und Text, JetBrains Mono in Versalien mit Sperrung für Labels, Kategorien und Knöpfe. Display Größen als `clamp`
+(Held bis 6,25 rem, Kapitel bis 4,5 rem), Zeilenhöhe 0,95 für Display.
+
+| Prinzip | Beobachtung |
+|---|---|
+| Held als Ergebnisversprechen auf bewegtem Bild | Vollbild Loop (WebM mit Poster, stumm), dunkle Abdeckung, zweizeilige Headline mit der Wendung „Schöne Videos hat jeder. Unsere Videos bringen Anfragen." Die semantische H1 ist die kleine Kickerzeile „Videoproduktion in Essen" (Ort und Leistung für die Suche), die große Zeile ist Gestaltung |
+| Held Auftritt in einer Kette | Headline zeilenweise aus einer Maske (850 ms), Unterzeile, Knöpfe, Logoreihe und Scrollhinweis nacheinander (je 800 ms), Unterstreichung unter dem Schlüsselwort (600 ms). Ein orchestrierter Moment, danach Ruhe |
+| Zwei Knöpfe mit Rangfolge | gefüllter Primärknopf in Orange und ein Konturknopf daneben, beide als Pille mit rundem Pfeilsymbol; der Sekundärweg führt zu den Referenzen |
+| Galerie als Mosaik mit Leitkachel | zwölf Spalten, Lücke 14 px, Radius 14 px; eine große Kachel (657 × 504) links, vier kleine (321 × 245) rechts, darunter drei mittlere (433 × 245). Jede Kachel ein Standbild mit Kategorie und Jahr als Label, **eine** große Zahl als Ergebnis des Falls, Kunde, Branche. Die Leitkachel spielt ihren Film von selbst, die anderen bei Hover. Die Quelle der Videos steht leer, bis die Kachel gebraucht wird |
+| Kacheln erscheinen als Maske | `clip-path` mit 1,1 s und weicher Austrittskurve, Deckkraft 0,6 s; Zustand wird per Klasse gesetzt, nicht per Bibliothek |
+| Leistungen als Akkordeon aus Streifen | vier Felder nebeneinander, das offene ist 595 px breit, die drei anderen je 230 px; Hover oder Fokus öffnet ein anderes (711 gegen je 191 px) über `flex-grow` mit 0,55 s. Geschlossen zeigt ein Feld nur Bild und Titel, offen Titel und einen Satz. Eine Zeile Rahmung steht darüber, kursiv und kurz |
+| Ablauf als drei Felder mit demselben Mechanismus | drei Felder je 441 px, `flex-grow` 0,7 s mit leichtem Überschwingen; dieselbe Bauart wie die Leistungen, damit die Seite eine Handschrift hat |
+| Kundenkacheln als Bento | vier Spalten, Lücke 14 px, Radius 17 px, eine Leitkachel; Hover mit Federkurve (0,5 s) |
+| Branchen zur Selbstzuordnung | zwölf Spalten, sieben Kacheln mit Bildgrund und Überlagerung, jede verlinkt auf eine Einstiegsseite |
+| Videostimmen mit Zitat | acht Stimmen, Schaltflächen mit sprechendem Namen („Video abspielen: Kundenstimme …"), ein Abspielsymbol, das pulsiert (2,4 s), bis jemand klickt |
+| Bewegung mit Funktion | Fortschrittslinie in Orange am oberen Rand, Scrollhinweis mit wanderndem Punkt, Orbit Ring (80 s) als stille Deko; kein Smooth Scroll Paket, kein WebGL |
+| Der Ort im Held | „Essen · deutschlandweit" und „Videoproduktion in Essen" stehen im ersten Bildschirm, ein Kontaktweg im Kopf, der Hauptknopf im Held |
+
+Was die Galerie richtig macht, in Regeln für uns: ein Raster, in dem eine Kachel führt und die Größen wechseln,
+statt acht gleicher Kästen; Ergebnis als **eine** Zahl **an** der Referenz, nicht als Band; Film erst bei Hover oder
+Sichtbarkeit laden; Kategorie und Jahr als Label, damit die Kachel ohne Text lesbar bleibt.
+
+Nicht übernommen: das Akzentwort in Orange mit Unterstreichung in der Heldüberschrift und das kursive Akzentwort in
+den Sektionsüberschriften (Tell nach `../../webdesign-conversion/references/26-geschmack-und-ki-tells.md`, kommt von
+`pruefe-geschmack.mjs`); Versalien für lange Überschriften (Lesbarkeit); das Einwilligungsfenster als Vollbild über
+dem Held beim ersten Besuch (verdeckt den ersten Bildschirm, wir bauen den kompakten Banner aus `../assets/consent/`);
+die Kundenzahl, die auf drei Seiten als 270+ und 280+ steht (Konsistenzfehler, siehe Kapitel 35); Montserrat gilt bei
+uns nur mit Markenvorgabe; alle Texte, Logos, Filme und Fotos. Nicht gesehen: Hover Zustände außer Leistungen und
+Leitkachel (das Einwilligungsfenster blockierte die übrigen), Tastaturbedienung der Akkordeons, Verhalten bei
+`prefers-reduced-motion`, Ladezeit und Gewicht der Videos, Mobilansicht als Bild. Design DNA und Mustervergleich
+sind nicht gelaufen (Tor 2 offen).
+
 ### Gemeinsame Befunde der Runde vom 06.11.2026
 
 Was sich über mehrere der sechs Seiten zeigt und für unsere Builds gilt:
@@ -665,7 +714,7 @@ verlangt, und werden begründet. Die knappere Variante für B2B Dienstleister st
 7. Ergebnis und Nutzen
 8. Referenzen oder Fallbeispiele
 9. Differenzierung, also warum dieser Anbieter
-10. Kundenstimmen und Kennzahlen
+10. Kundenstimmen, Zahlen nur am jeweiligen Fall
 11. Einwandbehandlung oder häufige Fragen
 12. abschließende Handlungsaufforderung
 13. Footer mit Kontakt, Navigation und Rechtstexten
@@ -692,7 +741,7 @@ den Plan, nicht in die Nacharbeit.
 ## Umgang mit fehlendem Material
 
 Wenn für eine Sektion der Struktur nichts vorliegt, etwa keine Kundenstimmen und keine
-Kennzahlen, wird die Sektion **nicht mit erfundenem Inhalt gefüllt**. Zwei zulässige Wege:
+belegten Ergebnisse, wird die Sektion **nicht mit erfundenem Inhalt gefüllt**. Zwei zulässige Wege:
 die Sektion entfällt und die Struktur bleibt tragfähig, oder sie wird als Platzhalter
 angelegt und im Abschlussbericht mit der Angabe aufgeführt, was der Kunde liefern muss.
 

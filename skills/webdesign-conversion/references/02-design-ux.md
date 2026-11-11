@@ -34,7 +34,7 @@ Above the Fold ist alles, was ohne Scrollen sichtbar ist. Hier fällt die Entsch
 | **Subheadline** | Wie + konkretes Ergebnis |
 | **Visual** | Bild oder Video, das das Ergebnis zeigt: nicht das Gebäude, nicht das Team beim Händeschütteln |
 | **CTA** | eine klare Handlungsaufforderung |
-| **Trust** | Kundenlogos, Bewertungen, Zahlen |
+| **Trust** | genau ein belegter Beweis: Kundenlogos oder Bewertung, keine Kennzahlenreihe |
 
 Ein Stock-Foto eines lachenden Teams am Konferenztisch zeigt kein Ergebnis. Ein Vorher-
 Nachher, ein Screenshot des Resultats, das fertige Werk, die laufende Anlage: das zeigt eins.

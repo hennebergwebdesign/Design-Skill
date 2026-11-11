@@ -52,7 +52,7 @@ Zielgruppe ist schlimmer als keine, weil sie sich durch jede spätere Entscheidu
 Worten überzeugt, lohnt ein Layout.
 
 **Bewährte Sektionsreihenfolge für eine B2B-Dienstleisterseite:**
-Hero → Trust-Streifen → Problem → Lösung/Prozess → Leistungen → Beweis (Cases, Zahlen) →
+Hero → Trust-Streifen → Problem → Lösung/Prozess → Leistungen → Beweis (Cases, Stimmen, die Zahl am jeweiligen Fall) →
 Über uns/Team → Bewertungen → Angebot/Preise → FAQ → CTA-Abschluss.
 
 ## 3 Copy

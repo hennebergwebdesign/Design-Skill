@@ -208,7 +208,7 @@ gekillt, sonst laufen nach einem Re-Render Geister weiter.
 |---|---|---|
 | Hero-Timeline | einmal beim Laden, gestaffelt | der eine orchestrierte Moment |
 | Einblenden je Sektionsgruppe | `data-anim-gruppe` + `data-anim="auf"` | sparsam, nicht an jeder Sektion |
-| Zahlen hochzählen | Kennzahlen | nur wenn die Zahl belegt ist |
+| Zahlen hochzählen | eine belegte Zahl an einem Fall | kein Standard, kein Kennzahlenband; Endwert steht im HTML |
 | Balken wachsen | Vergleiche | `scaleX` mit `transform-origin: left` |
 | Parallaxe | großes Bild | nur Desktop, kleine Amplitude |
 | Kartenstapel | Prozessschritte | nur ab ausreichender Fenstergröße und -höhe |
