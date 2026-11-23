@@ -62,16 +62,32 @@ Beides liest sich sofort generiert. Deshalb gilt als harte Grenze:
 
 ### Auch nicht vorangestellt: Kicker und Eyebrow-Labels
 
-Dieselbe Regel gilt für das kleine Label über der Headline (Kicker, Eyebrow, Vorspann):
-kein Strich davor, egal ob als Textzeichen oder als dekoratives Linien-Element im Markup.
+Dieselbe Regel gilt für das kleine Label über der Headline (Kicker, Eyebrow, Vorspann): **kein Strich
+davor, in keiner Form.** Das umfasst drei Wege, auf denen er ins Bild kommt:
 
-> „— Was wir machen" über „Acht Gewerke, ein Ansprechpartner"
+| Weg | Beispiel | Ersatz |
+|---|---|---|
+| Textzeichen | „— Was wir machen", „- Was wir machen" | Label ohne Präfix |
+| gestaltetes Linienstück | `.eyebrow::before { content: ''; width: 2.5rem; height: 3px; background: gelb }`, ein leeres `<span class="strich">`, Tailwind `before:w-10 before:h-0.5 before:bg-amber-500` | Label ohne Präfix |
+| Zeichen im content | `.kicker::before { content: '— ' }` | Label ohne Präfix |
+
+> „━━ Hersteller aus Bielefeld, seit 2005" (ein gelber Balken, dann der Text)
 
 ist derselbe Fehler wie ein Gedankenstrich in der Headline selbst, nur eine Zeile höher, und
-fällt unter dasselbe Muster „Schablonen-Chrome" aus `10-visuelle-richtung.md`. Ein
-Kicker-Label steht entweder ohne jedes Präfix, oder das Präfix ist ein bewusst gestaltetes
-Element, das zur Marke gehört (ein farbiger Punkt, ein kurzer Balken in Akzentfarbe), nie ein
-Strich- oder Bindestrich-Zeichen.
+fällt unter dasselbe Muster „Schablonen-Chrome" aus `10-visuelle-richtung.md`. Ein Balken in
+Akzentfarbe ist **kein** bewusst gestaltetes Markenelement im Sinne dieser Regel, er ist der
+Strich in anderer Verpackung. (Frühere Fassungen dieses Kapitels erlaubten „einen kurzen Balken
+in Akzentfarbe". Das war falsch und ist gestrichen: eine Kundenseite ging damit live, und der
+Inhaber nannte genau diesen Balken einen Designfehler.)
+
+Erlaubt bleibt ein **Punkt** in Akzentfarbe (Breite gleich Höhe, rund) als bewusstes Markenelement
+am Kicker, und eine Unterstreichung, die ein Link oder ein Menüpunkt trägt, weil sie einen
+Zustand zeigt (Hover, aktuelle Seite) und an keinem Kicker hängt. Die Abstände zwischen Kicker und
+Überschrift tragen die Gliederung, nicht eine Linie.
+
+**Prüfung:** `scripts/pruefe-striche.mjs` meldet den Zierstrich am Kicker als Fehler (CSS,
+Markup und Tailwind), an einer Überschrift als Warnung, und läuft mit `--hook` nach jedem
+Schreiben einer Datei. Wer eine neue Sektionsvorlage anlegt, setzt den Kicker ohne `::before`.
 
 ### Der Ersatz macht den Text besser, nicht nur regelkonform
 

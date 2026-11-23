@@ -4,7 +4,7 @@ description: "Vollständiges System für conversion-orientiertes Webdesign im DA
 license: MIT
 metadata:
   author: Henneberg Webdesign
-  version: 2.26.0
+  version: 2.27.0
 ---
 
 # Webdesign Conversion System
@@ -263,10 +263,13 @@ Diese Regeln gelten immer und werden nicht wegdiskutiert:
   Subheadlines, Buttons, Links, Alt-Texten oder Fließtext. Das gilt auch **vorangestellt**:
   kein Strich, kein Bindestrich und kein dekoratives Strich-Element vor einer Headline,
   Subheadline oder einem Kicker-/Eyebrow-Label (das „— Was wir machen" über einer
-  Überschrift). Ersatz: Doppelpunkt, Komma, zwei Sätze oder das Label steht einfach ohne
-  Strich davor. Der Bereichsstrich bei Zahlen („10–12 Uhr") und der echte Bindestrich im
-  Kompositum („E-Mail-Adresse") bleiben erlaubt. Geprüft mit
-  `scripts/pruefe-striche.mjs`, Begründung in `references/12-copywriting.md`.
+  Überschrift). **Auch das Linienstück zählt:** ein gelber Balken vor dem Kicker, gebaut als
+  `::before`, leeres `<span>` oder Tailwind `before:`, ist derselbe Strich in anderer Form.
+  Ersatz: Doppelpunkt, Komma, zwei Sätze oder das Label steht einfach ohne Strich davor.
+  Erlaubt bleiben ein runder Punkt am Kicker, der Bereichsstrich bei Zahlen („10–12 Uhr"),
+  der echte Bindestrich im Kompositum („E-Mail-Adresse") und die Unterstreichung eines
+  Menüpunkts oder Links. Geprüft mit `scripts/pruefe-striche.mjs` (Zeichen, CSS, Markup,
+  Tailwind), Begründung in `references/12-copywriting.md`.
 - **Keine Standardschrift ohne Vorgabe.** Liegt keine Kundenschrift vor, sind Inter,
   Roboto, Open Sans, Poppins, Montserrat, Lato und Plus Jakarta Sans gesperrt. Stattdessen
   zwei Kandidaten mit einer Begründung aus Branche und Zielgruppe vorschlagen. Schriften

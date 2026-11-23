@@ -27,7 +27,7 @@ Warnungen nicht ignorieren. Sie sind fast immer echte Fehler in der Ausgabe.
 ### 2. Die vierzehn Prüfskripte
 
 ```bash
-node scripts/pruefe-striche.mjs                 # Gedankenstriche, Bindestrich mit Leerzeichen, hyphens: auto, verbotene Wörter
+node scripts/pruefe-striche.mjs                 # Gedankenstriche, Bindestrich mit Leerzeichen, Zierstrich vor dem Kicker, hyphens: auto, verbotene Wörter
 node scripts/pruefe-tokens.mjs                  # hartcodierte Farb-, Abstands- und Schriftwerte
 node scripts/pruefe-kontrast.mjs                # Kontrastwerte der Rollen-Tokens
 node scripts/pruefe-platzhalter.mjs --launch    # [[FEHLT]], data-copy-vorschlag, ausgelassener Code

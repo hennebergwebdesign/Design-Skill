@@ -31,7 +31,7 @@ Skills findet, hat einen Fehler gefunden, keine Redundanz mit Absicht.
 
 ```bash
 # Prüfskripte, laufen gegen ein Kundenprojekt, nicht gegen dieses Repository
-node scripts/pruefe-striche.mjs              # mit --hook als PostToolUse-Hook, Einrichtung in qa-und-abnahme.md, 2a
+node scripts/pruefe-striche.mjs              # Zeichen, Bindestrich mit Leerzeichen, Zierstrich vor dem Kicker (CSS, Markup, Tailwind), mit --hook als PostToolUse-Hook, Einrichtung in qa-und-abnahme.md, 2a
 node scripts/pruefe-tokens.mjs
 node scripts/pruefe-kontrast.mjs             # --paare kontrast-paare.json für Paare außerhalb der Rollen
 node scripts/pruefe-platzhalter.mjs --launch  # auch data-tweaks-panel, das Reglerpanel darf nie live
@@ -413,6 +413,14 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Änderungsverlauf
 
+- **23.11.2026, Version 4.24.0** Auf Hinweis des Inhabers: ein gelber Strich vor dem Kicker („━━ Hersteller aus Bielefeld, seit 2005") ging auf einer Kundenseite live, obwohl die Regel gegen Striche vor dem Kicker
+  schon in `SKILL.md` stand. **Zwei Ursachen, beide behoben.** (1) `12-copywriting.md` erlaubte ausdrücklich „einen kurzen Balken in Akzentfarbe" als Präfix und widersprach damit der harten Grenze; die Ausnahme ist gestrichen,
+  erlaubt bleibt nur ein runder Punkt. (2) `pruefe-striche.mjs` las nur Zeichen (`–`, `—`), kein CSS: der Strich war ein `::before` mit leerem content und sah für die Prüfung wie nichts aus. Neu: Prüfung 5, Zierstrich,
+  dateiweit über CSS (`::before` und `::after` an Kicker- und Überschriftselektoren, leerer content, Höhe bis 8 px, Breite mindestens doppelt so groß wie die Höhe, Fläche oder Rand), Markup (leeres Strichelement als erstes
+  Kind eines Kickers oder direkt davor) und Tailwind (`before:` und `after:` mit Breite, Höhe und Fläche). Am Kicker Fehler, an einer Überschrift Warnung; Punkt, Menüunterstreichung und Vollflächenverlauf bestehen.
+  Auch `content: '—'` am Kicker ist ein Fehler. 11 neue Tests, insgesamt 357. Eintrag im Katalog der KI-Tells (`26-…`). **Gegengeprüft** an der Kundenseite: der alte Stand von `global.css` wird als Fehler gemeldet, der
+  bereinigte Stand besteht. **Nicht geprüft:** Striche aus Hintergrundbildern, SVG und `border-image`, ein Strich als eigenes Element mit beliebigem Klassennamen (nur Wörter wie strich, balken, line, bar, rule, divider),
+  Komponentenbibliotheken, die den Strich erst zur Laufzeit erzeugen. Kein Evalfall. Versionen: Plugin 4.24.0, Regelwerk 2.27.0, Bauablauf 2.24.0.
 - **09.11.2026, Version 4.23.0** Auf Wunsch des Inhabers zwei Dinge eingearbeitet. **(1) Slop Detect** (`ravidsrk/slop-detect`, MIT), um KI-Muster zu vermeiden und vor der Übergabe zu messen. Destilliert
   und als Aufruf eingebunden, nicht kopiert (Konvention „Fremde Skills werden destilliert", kein `package.json`): Kapitel `55-slop-detect-ki-muster-vermeiden.md` (fünf Achsen, Vermeideliste für den Entwurf mit Gegenmitteln,
   was über Kapitel 26 hinausgeht, Entscheidungstabelle für Konflikte), `agentur-website-builder/references/slop-pruefung.md` (Zeitpunkte, Aufruf, Schwellen, Ausnahmen mit Grund, Behebungsschleife, Bericht) und

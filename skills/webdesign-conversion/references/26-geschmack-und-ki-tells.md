@@ -228,6 +228,7 @@ Befund.
 | Zählung auf Bildern und Kacheln | „01 / 04" | weglassen, außer bei einer bedienbaren Bildfolge | `pruefe-geschmack.mjs` |
 | Scrollhinweis | „Scrollen ↓", „Mehr entdecken", animierte Maus | angeschnittene Kante der nächsten Sektion, siehe `02-design-ux.md` | `pruefe-geschmack.mjs` |
 | Orts-, Zeit- und Wetterleiste | „Hannover 14:23 · 18 °C" | die Adresse im Fuß reicht. Nur bei echtem Ortsbezug (Hotel, Veranstaltungsort) | angesehen |
+| Zierstrich vor dem Kicker | gelbes Linienstück (`::before`, leeres Element, Tailwind `before:`) vor dem Text „Hersteller aus Bielefeld, seit 2005" | das Label steht ohne Präfix. Der Strich ist der Gedankenstrich als Element, harte Grenze in `SKILL.md`, Begründung in `12-copywriting.md` | `pruefe-striche.mjs` |
 | Zierpunkt vor jedem Eintrag | farbiger Punkt vor jedem Menüpunkt, jeder Zeile, jedem Badge | nur bei echtem Zustand (geöffnet, verfügbar), einmal je Sektion. Ein Punkt als bewusstes Markenelement am Kicker (`12-copywriting.md`) ist eine Entscheidung, ein Punkt vor allem ist Deko | angesehen |
 | Mittelpunktketten | „Beratung · Planung · Montage · Service" | höchstens ein Mittelpunkt je Zeile, sonst Zeilen, Spalten oder Linien | angesehen |
 | Etiketten auf Fotos | „Projekt · 02" als Pille über dem Bild | das Bild allein, oder eine Bildunterschrift darunter | angesehen |

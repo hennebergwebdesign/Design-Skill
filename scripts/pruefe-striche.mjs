@@ -23,6 +23,13 @@
        der Ersatz für den Gedankenstrich, wenn die Tastatur keinen hat. In Überschrift,
        Button, Link und Kicker ein FEHLER, im Text von Markup- und Markdowndateien eine
        WARNUNG. Code (calc, Subtraktion) wird nicht gelesen.
+    5. Zierstrich: ein gestalteter Strich als Element, nicht als Zeichen. Gleiche Regel, anderer
+       Weg ins Bild: das gelbe Linienstück vor dem Kicker ("━━ Hersteller aus Bielefeld, seit 2005"),
+       gebaut als ::before oder ::after mit leerem content, kleiner Höhe, Breite und Fläche,
+       als leeres Element vor dem Text oder als Tailwind before: und after: Klassen. Am Kicker ein
+       FEHLER, an einer Überschrift eine WARNUNG. Ein Punkt (Breite gleich Höhe) ist kein Strich.
+       Auch content: "—" oder "-" vor dem Kicker ist ein FEHLER. Die Unterstreichung eines
+       Navigationspunkts oder Links gehört nicht dazu, sie hängt an keinem Kicker.
 
   HOOK
     Mit --hook liest das Skript die Eingabe eines Claude-Code-Hooks von stdin
@@ -160,6 +167,96 @@ function textTeile(zeile, endung) {
 /* Bereichsangaben sind legitim: 10–12, 2013–2026, 5–7 Tage. */
 const BEREICH = new RegExp(`\\d\\s?[${HALBGEVIERT}${GEVIERT}]\\s?\\d`);
 
+
+/*
+  5 Zierstrich (Kicker und Überschrift). Liest den ganzen Text einer Datei, weil ein Selektor und
+  sein Block über mehrere Zeilen laufen. Kommentare werden vorher durch Leerraum ersetzt.
+*/
+const KICKER_SEL = /(kicker|eyebrow|overline|ueberzeile|vorspann|dachzeile|tagline|subline|pretitle)/i;
+const TITEL_SEL = /(^|[^\w-])h[1-6]\b|headline|sektionskopf|section-head|(^|[^\w-])title\b|(^|[^\w-])titel\b/i;
+const STRICH_WORT = /(?:strich|balken|linie|line|dash|bar|rule|divider|trenner|marke)/i;
+const STRICH_ZEICHEN = '[-–—−‒―]';
+
+function ohneKommentare(t) {
+  return t.replace(/\/\*[\s\S]*?\*\//g, (m) => m.replace(/[^\n]/g, ' ')).replace(/<!--[\s\S]*?-->/g, (m) => m.replace(/[^\n]/g, ' '));
+}
+function zeileVon(text, index) { return text.slice(0, index).split('\n').length; }
+/* Zahl mit Einheit in Pixel, grob: 1rem und 1em gelten als 16. Ohne lesbare Einheit null. */
+function pixel(wert) {
+  const m = /^\s*(-?[\d.]+)\s*(px|rem|em)?\s*$/.exec(wert || '');
+  if (!m) return null;
+  const n = parseFloat(m[1]);
+  return m[2] === 'rem' || m[2] === 'em' ? n * 16 : n;
+}
+function eigenschaft(block, namen) {
+  const m = new RegExp(`(?<![-\\w])(?:${namen})\\s*:\\s*([^;}]+)`, 'i').exec(block);
+  return m ? m[1].trim() : null;
+}
+
+export function zierstricheFinden(roh) {
+  const text = ohneKommentare(roh);
+  const funde = [];
+
+  // a) CSS: Pseudoelement an Kicker oder Überschrift
+  for (const m of text.matchAll(/([^{}]+)\{([^{}]*)\}/g)) {
+    const sel = m[1].split('\n').pop().trim() && m[1];
+    const teile = m[1].split(',').map((t) => t.trim()).filter(Boolean);
+    const treffer = teile.filter((t) => /::?(before|after)\b/i.test(t));
+    if (!treffer.length) continue;
+    const alsKicker = treffer.some((t) => KICKER_SEL.test(t));
+    const alsTitel = !alsKicker && treffer.some((t) => TITEL_SEL.test(t));
+    if (!alsKicker && !alsTitel) continue;
+    const block = m[2];
+    const inhalt = eigenschaft(block, 'content');
+    const index = m.index + m[1].length - m[1].trimStart().length;
+    // Strichzeichen als Inhalt des Pseudoelements
+    if (inhalt && new RegExp(`^(['"])\\s*${STRICH_ZEICHEN}`).test(inhalt)) {
+      funde.push({ index, fehler: alsKicker, meldung: `Strichzeichen als content vor ${alsKicker ? 'Kicker' : 'Überschrift'}: ${inhalt}` });
+      continue;
+    }
+    if (!inhalt || !/^(''|"")$/.test(inhalt)) continue;
+    const h = pixel(eigenschaft(block, 'height|block-size'));
+    const bRaw = eigenschaft(block, 'width|inline-size');
+    const b = pixel(bRaw);
+    const rand = eigenschaft(block, 'border-top|border-bottom|border-block-start|border-block-end');
+    const rh = rand ? pixel((/^\s*([\d.]+(?:px|rem|em)?)/.exec(rand) || [])[1]) : null;
+    const flaeche = eigenschaft(block, 'background|background-color|background-image');
+    const dicke = h ?? rh;
+    if (dicke === null || dicke > 8) continue;
+    if (!bRaw) continue;
+    if (b !== null && b < dicke * 2) continue; // Punkt, kein Strich
+    if (!flaeche && !rand) continue;
+    funde.push({ index, fehler: alsKicker, meldung: `Zierstrich (${bRaw} breit, ${Math.round(dicke)} px hoch) als ${/::?after/i.test(treffer[0]) ? '::after' : '::before'} an ${alsKicker ? 'Kicker' : 'Überschrift'}: ${treffer[0].slice(0, 60)}` });
+  }
+
+  // b) Markup: leeres Strichelement als erstes Kind eines Kickers oder direkt vor Kicker oder Überschrift
+  const leer = `<(span|i|b|div|hr)\\b[^>]*?(?:class\\s*=\\s*["'][^"']*${STRICH_WORT.source}[^"']*["'])?[^>]*?(?:/>|>\\s*</\\1>)`;
+  const kickerKlasse = '(?:kicker|eyebrow|overline|ueberzeile|vorspann|dachzeile|tagline)';
+  const reInnen = new RegExp(`<(?:p|span|div|h[1-6])\\b[^>]*class\\s*=\\s*["'][^"']*${kickerKlasse}[^"']*["'][^>]*>\\s*(${leer.replace('\\1', '\\2')})`, 'gi');
+  for (const m of text.matchAll(reInnen)) {
+    const kind = m[1];
+    if (/^<hr\b/i.test(kind) || STRICH_WORT.test(kind)) funde.push({ index: m.index, fehler: true, meldung: 'Leeres Strichelement als erstes Kind eines Kickers' });
+  }
+  const reDavor = new RegExp(`(<(?:span|i|b|div|hr)\\b[^>]*class\\s*=\\s*["'][^"']*${STRICH_WORT.source}[^"']*["'][^>]*?(?:/>|>\\s*</(?:span|i|b|div)>))\\s*<(h[1-6]|p[^>]*class\\s*=\\s*["'][^"']*${kickerKlasse})`, 'gi');
+  for (const m of text.matchAll(reDavor)) {
+    funde.push({ index: m.index, fehler: !/^h[1-6]/i.test(m[2]), meldung: `Leeres Strichelement direkt vor ${/^h[1-6]/i.test(m[2]) ? 'einer Überschrift' : 'einem Kicker'}` });
+  }
+
+  // c) Tailwind: before: und after: Klassen, die einen Strich bauen
+  for (const m of text.matchAll(/<(\w+)\b[^>]*?class\s*=\s*(?:"([^"]*)"|'([^']*)'|\{`([^`]*)`\})/gi)) {
+    const k = m[2] ?? m[3] ?? m[4] ?? '';
+    if (!/(?:before|after):content-\[(?:''|""|&quot;&quot;)\]/.test(k)) continue;
+    const dick = /(?:before|after):h-(?:px|0\.5|1|\[[1-8]px\])\b/.test(k);
+    const breit = /(?:before|after):w-(?!px\b|0\.5\b|1\b|\[[1-8]px\])/.test(k);
+    const flaeche = /(?:before|after):bg-/.test(k);
+    if (!(dick && breit && flaeche)) continue;
+    const kicker = /(kicker|eyebrow|overline|uppercase|tracking-)/i.test(k) || KICKER_SEL.test(k);
+    const titel = /^h[1-6]$/i.test(m[1]);
+    if (kicker || titel) funde.push({ index: m.index, fehler: kicker && !titel, meldung: `Zierstrich über Tailwind (before: oder after:) an ${titel ? 'Überschrift' : 'Kicker'}` });
+  }
+  return funde.map((f) => ({ ...f, zeile: zeileVon(text, f.index), auszug: roh.split('\n')[zeileVon(text, f.index) - 1]?.trim().slice(0, 110) ?? '' }));
+}
+
 const fehler = [];
 const warnungen = [];
 let dateienGeprueft = 0;
@@ -251,6 +348,14 @@ for (const wurzel of wurzeln) {
         }
       }
     });
+
+    /* 5 Zierstrich: dateiweit, nicht zeilenweise */
+    for (const z of zierstricheFinden(inhalt)) {
+      (z.fehler ? fehler : warnungen).push({
+        datei: rel, zeile: z.zeile, auszug: z.auszug, meldung: z.meldung,
+        tipp: 'Kein Strich vor dem Kicker, auch kein Linienstück in Akzentfarbe. Der Kicker steht ohne Präfix, die Überschrift trägt die Sektion.',
+      });
+    }
   }
 }
 
