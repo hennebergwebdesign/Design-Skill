@@ -64,3 +64,6 @@ nav a[aria-current="location"]{text-decoration:underline;text-decoration-thickne
 /* Umbrüche: Überschriften ausgleichen, Absätze ohne einzelnes Schlusswort */
 h1,h2,h3{text-wrap:balance}
 p,li,blockquote{text-wrap:pretty}
+
+/* Einblenden von der Seite darf keine waagerechte Scrollleiste erzeugen (clip erzeugt keinen Scrollbereich, Sticky bleibt intakt) */
+body{overflow-x:clip}
