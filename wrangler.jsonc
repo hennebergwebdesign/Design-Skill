@@ -1,0 +1,9 @@
+{
+  // Übersicht der Template-Bibliothek: reine statische Dateien, kein Worker-Skript, kein Build.
+  // Der Name muss dem Worker im Cloudflare-Dashboard entsprechen (Workers und Pages, Einstellungen).
+  "name": "template-bibliothek",
+  "compatibility_date": "2026-11-24",
+  "assets": {
+    "directory": "./skills/webdesign-conversion/assets/vorlagen/bibliothek"
+  }
+}
