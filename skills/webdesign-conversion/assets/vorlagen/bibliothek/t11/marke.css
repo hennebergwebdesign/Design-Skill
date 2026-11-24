@@ -1,0 +1,21 @@
+/* marke.css der Vorlage t11: dunkle Dienstleistungsseite. Marke wechseln = nur diese Werte ändern. */
+:root{
+  --flaeche:#0f292b;        /* Grundton, dunkel */
+  --flaeche-alt:#173a3c;    /* abgesetzte, etwas hellere Abschnitte */
+  --flaeche-dunkel:#0a1d1f; /* Fußbereich */
+  --text:#eef3ee;
+  --text-leise:#aec3bf;
+  --linie:#2f5557;          /* feine Trenner und Kartenränder */
+  --rahmen-feld:#7aa39f;    /* Rand von Eingabefeldern, mindestens 3 zu 1 */
+  --akzent:#f2c14e;         /* Hauptaktion, ein Akzent für die ganze Seite */
+  --akzent-text:#0f292b;
+  --schrift-titel:'Familjen Grotesk',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --titel-gewicht:400;
+  --titel-spur:-0.01em;
+  --radius-knopf:999px;
+  --radius-karte:18px;
+  --radius-bild:18px;
+  --radius-kopf:999px;
+  --radius-feld:12px;
+}
