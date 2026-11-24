@@ -198,10 +198,10 @@ html:not(.js) .stimme{grid-area:auto}
   .kopf__cta{margin-left:1rem}
   .start__bild .bild{aspect-ratio:16/9}
   .kopfzeile{grid-template-columns:1fr minmax(0,26rem);align-items:start;gap:3rem}
-  .arbeitsraster{grid-template-columns:1fr 1fr;column-gap:.5rem;row-gap:4.5rem;align-items:start}
+  .arbeitsraster{grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:.5rem;row-gap:4.5rem;align-items:start}
   .arbeit:nth-child(even){margin-top:clamp(5rem,18vw,16rem)}
   .arbeit .bild{aspect-ratio:1/.96}
-  .leistungsraster{grid-template-columns:repeat(2,1fr)}
+  .leistungsraster{grid-template-columns:repeat(2,minmax(0,1fr))}
   .leistung{padding:2rem}
   .zeile-ak summary{grid-template-columns:11rem 1fr 11rem auto;min-height:5rem;padding:1rem 1.5rem}
   .zeile-ak summary .plus{grid-column:auto;grid-row:auto}
@@ -210,11 +210,11 @@ html:not(.js) .stimme{grid-area:auto}
   .fragen .ak__nr,.fragen .ak__titel,.fragen .ak__kurz,.fragen .zeile-ak summary .plus{grid-column:auto;grid-row:auto}
   .fragen .zeile-ak .ak__inhalt{padding-left:calc(1.5rem + 2.5rem + 1rem)}
   .ak__inhalt{padding:0 1.5rem 1.75rem}
-  .kontakt__raster{grid-template-columns:1.25fr 1fr}
+  .kontakt__raster{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr)}
   .fuss__leiste{grid-template-columns:auto auto;justify-content:space-between;text-align:left}
 }
 @media (min-width:64em){
-  .leistungsraster{grid-template-columns:repeat(4,1fr)}
+  .leistungsraster{grid-template-columns:repeat(4,minmax(0,1fr))}
   .werdegang__raster{grid-template-columns:minmax(0,22rem) 1fr;gap:4rem;align-items:start}
   .klebt{position:sticky;top:calc(var(--kopf-h) + 1.5rem)}
   .werdegang .zeile-ak summary{grid-template-columns:9rem 1fr 9rem auto}
@@ -240,3 +240,4 @@ html:not(.js) .stimme{grid-area:auto}
 .zeile-ak[open]{background:var(--akzent);color:var(--akzent-text)}
 .zeile-ak[open] *{color:inherit}
 .zeile-ak[open] .plus{background:var(--akzent-text);color:var(--akzent)}
+.panel,.kontakt__raster>*{min-width:0}.seitenliste a{overflow-wrap:anywhere}

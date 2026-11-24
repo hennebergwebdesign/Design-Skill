@@ -60,3 +60,7 @@ nav a[aria-current="location"]{text-decoration:underline;text-decoration-thickne
 .licht .wort{opacity:.28;transition:opacity .35s ease}
 .licht .wort.an{opacity:1}
 @media (prefers-reduced-motion:reduce){.licht .wort{opacity:1;transition:none}}
+
+/* Umbrüche: Überschriften ausgleichen, Absätze ohne einzelnes Schlusswort */
+h1,h2,h3{text-wrap:balance}
+p,li,blockquote{text-wrap:pretty}
