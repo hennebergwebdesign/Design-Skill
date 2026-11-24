@@ -1,0 +1,28 @@
+/* marke.css der Vorlage t09: Ausgangswerte. Marke wechseln = nur diese Werte (und die zwei Schriftzeilen) ändern.
+   Kontrast geprüft: Text auf Fläche 4,5 zu 1, weiße Schrift auf --akzent 4,5 zu 1, --akzent-hell auf --flaeche-dunkel 3 zu 1 und mehr. */
+:root{
+  --flaeche:#ffffff;
+  --flaeche-alt:#f4f6f5;
+  --flaeche-dunkel:#1b2a2e;
+  --text:#1b2a2e;
+  --text-leise:#475759;
+  --linie:#dde4e2;
+  --akzent:#0b7266;
+  --akzent-text:#ffffff;
+  --schrift-titel:'Outfit',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:24px;
+  --radius-bild:24px;
+  /* Zusatztokens dieser Vorlage */
+  --akzent-hell:#6fe3d2;          /* Akzent auf dunklen Flächen (Wörter im Aussagenband, Schrift auf Dunkel) */
+  --akzent-zart:#e0f2ee;          /* Kopfband der Preiskarte, aktiver Menüpunkt */
+  --flaeche-dunkel-2:#2b3d42;     /* zweite dunkle Fläche (Leistungsliste, Felder) */
+  --text-auf-dunkel:#ffffff;
+  --text-auf-dunkel-leise:#c3d1ce;
+  --stern:#b45309;
+  --platz-1:#8aa6a1;              /* Platzhalterbilder: vier Tonwerte, später durch Fotos ersetzen */
+  --platz-2:#c4d4cf;
+  --platz-3:#6d8a8a;
+  --platz-4:#a9bdb6;
+}
