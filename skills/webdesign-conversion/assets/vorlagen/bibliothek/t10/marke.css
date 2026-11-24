@@ -1,0 +1,29 @@
+/* marke.css der Vorlage "Stapelseite Beratung": hier wird umgefärbt. Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#fbfaf8;        /* Seitenhintergrund, warmes Weiß */
+  --flaeche-alt:#ecebe7;    /* erstes Leistungsfeld und FAQ */
+  --flaeche-alt-2:#f1f0ec;  /* zweites Leistungsfeld, heller */
+  --flaeche-alt-3:#f6f5f2;  /* drittes Leistungsfeld, noch heller */
+  --flaeche-dunkel:#14161a; /* Kopfbereich, Menüfläche */
+  --text:#16181c;
+  --text-leise:#555960;
+  --linie:#d2d0ca;
+  --akzent:#1d4f49;         /* ein Akzent: Hauptaktion, Fokus, geöffnete Reihe */
+  --akzent-text:#ffffff;
+  --schrift-titel:'Hanken Grotesk',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:2px;
+  --radius-karte:0;
+  --radius-bild:0;
+  --bild-grund:linear-gradient(135deg,var(--flaeche-alt),var(--linie));
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:330;
+  --titel-spur:-0.025em;
+  --auf-dunkel:#ffffff;
+  --auf-dunkel-leise:#d9dbde;
+  --linie-dunkel:rgba(255,255,255,.38);
+  --schleier:rgba(14,16,19,.62);
+  --foto-hell:#4a4f58;
+  --foto-warm:#6a5c4c;
+  --foto-dunkel:#0e1013;
+}
