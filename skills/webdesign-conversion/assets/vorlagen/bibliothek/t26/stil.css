@@ -85,7 +85,7 @@ a:hover .mehr{text-decoration-color:var(--akzent)}
 /* 1. Held */
 .held{position:relative;min-height:max(46rem,100svh);display:flex;flex-direction:column;justify-content:flex-end;background:var(--flaeche-dunkel);color:var(--text-auf-dunkel);isolation:isolate;overflow:clip}
 .held__bild{position:absolute;inset:0;border-radius:0;z-index:-1;background:var(--flaeche-dunkel)}
-.held__bild::after{inset:50% 1.5rem auto auto!important}
+.held__bild::after{inset:5.5rem 1.5rem auto auto!important;max-width:calc(100% - 3rem);text-align:right}
 .held__bild-innen{position:absolute;inset:0;background:radial-gradient(55% 70% at 78% 38%,var(--ton-2),transparent 72%),radial-gradient(60% 60% at 15% 95%,var(--ton-1),transparent 70%),linear-gradient(160deg,var(--ton-3),var(--flaeche-dunkel));animation:held-zoom 2.4s var(--kurve) both}
 .held__schleier{position:absolute;inset:0;background:linear-gradient(90deg,color-mix(in srgb,var(--flaeche-dunkel) 88%,transparent) 0,color-mix(in srgb,var(--flaeche-dunkel) 58%,transparent) 55%,color-mix(in srgb,var(--flaeche-dunkel) 20%,transparent) 100%),linear-gradient(0deg,color-mix(in srgb,var(--flaeche-dunkel) 75%,transparent),transparent 45%)}
 @keyframes held-zoom{from{transform:scale(1.14)}to{transform:scale(1)}}
@@ -199,12 +199,12 @@ a:hover .mehr{text-decoration-color:var(--akzent)}
 /* 6. Projekte */
 .pgrid{display:grid;grid-template-columns:minmax(0,1fr);gap:1.5rem}
 .projekt a{display:grid;gap:.4rem}
-.projekt__bild{aspect-ratio:4/5;border-radius:var(--radius-karte);margin-bottom:.75rem}
+.projekt__bild{aspect-ratio:4/3;border-radius:var(--radius-karte);margin-bottom:.75rem}
 .projekt a:hover .projekt__innen{transform:scale(1.05)}
 .projekt h3{font-size:1.25rem}
 .projekt p{color:var(--text-leise);font-size:var(--text-s)}
 .projekt a:hover h3{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.2em;text-decoration-color:var(--akzent)}
-@media (min-width:48rem){.pgrid{grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem}.projekt:nth-child(2){margin-top:3rem}}
+@media (min-width:48rem){.projekt__bild{aspect-ratio:4/5}.pgrid{grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem}.projekt:nth-child(2){margin-top:3rem}}
 
 /* 7. Ablauf */
 .ablauf{padding-top:0}
@@ -268,14 +268,14 @@ a:hover .mehr{text-decoration-color:var(--akzent)}
 .news .knopf{background:var(--flaeche-dunkel);color:var(--text-auf-dunkel)}
 .news .knopf:hover{background:var(--flaeche-dunkel-2)}
 .news__hinweis{margin:0;padding-inline:.75rem;font-size:var(--text-s);color:var(--text-leise-dunkel)}
-.news__hinweis a{text-decoration:underline;text-underline-offset:.2em}
+.news__hinweis a{display:inline-block;padding-block:.65rem;margin-block:-.65rem;text-decoration:underline;text-underline-offset:.2em}
 .news__hinweis a:hover{color:var(--akzent)}
 .fuss__linie{height:1px;background:var(--linie-dunkel);margin-block:clamp(2rem,4vw,3.5rem)}
 .fuss__raster{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem 1.5rem}
 .fuss__marke{grid-column:1/-1;display:grid;gap:.75rem;align-content:start;color:var(--text-leise-dunkel);max-width:22rem}
 .fuss__logo{font-family:var(--schrift-titel);font-weight:800;font-size:1.5rem;letter-spacing:-.03em;color:var(--text-auf-dunkel)}
 .fuss__kontakt{display:grid;gap:.1rem}
-.fuss__kontakt a,.fuss__spalte a{display:inline-flex;align-items:center;min-height:2.75rem;color:var(--text-auf-dunkel)}
+.fuss__kontakt a,.fuss__spalte a{display:inline-flex;align-items:center;min-height:2.75rem;min-width:2.75rem;color:var(--text-auf-dunkel)}
 .fuss__kontakt a:hover,.fuss__spalte a:hover,.fuss__ende a:hover{color:var(--akzent)}
 .fuss__spalte h3{font-size:.8125rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-leise-dunkel);margin-bottom:.5rem}
 .fuss__ende{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 1.5rem;margin-top:clamp(2rem,4vw,3.5rem);padding-top:1.25rem;border-top:1px solid var(--linie-dunkel);font-size:var(--text-s);color:var(--text-leise-dunkel)}
