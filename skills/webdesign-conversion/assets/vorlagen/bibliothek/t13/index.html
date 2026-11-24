@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Markenname, laufende Betreuung im Monatsabo</title>
+<meta name="description" content="Beispieltext: Laufende Betreuung zum festen Monatspreis, mit klarem Plan, festem Ansprechpartner und monatlichem Bericht. Vor dem Einsatz durch den echten Text der Marke ersetzen.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../_basis/schriften.css">
+<link rel="stylesheet" href="../_basis/basis.css">
+<link rel="stylesheet" href="marke.css">
+<link rel="stylesheet" href="stil.css">
+</head>
+<body>
+<a class="sprunglink" href="#inhalt">Zum Inhalt springen</a>
+
+<!-- Symbole: ein Satz, gleiche Strichstärke, Farbe über currentColor -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H10l-4 4v-4H4z"/></symbol>
+    <symbol id="i-lagen" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></symbol>
+    <symbol id="i-diagramm" viewBox="0 0 24 24"><path d="M4 4v16h16"/><path d="M8 16v-5M13 16V8M18 16v-8"/></symbol>
+    <symbol id="i-schild" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+    <symbol id="i-kalender" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/></symbol>
+    <symbol id="i-euro" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M15 9.2a3.6 3.6 0 100 5.6M8 11h5M8 13h5"/></symbol>
+    <symbol id="i-person" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.6-3.6 3.4-5.5 7-5.5s6.4 1.9 7 5.5"/></symbol>
+    <symbol id="i-tel" viewBox="0 0 24 24"><path d="M6 4h3l1.5 4-2 1.5a11 11 0 006 6L16 13.5l4 1.5v3a2 2 0 01-2 2A14 14 0 014 6a2 2 0 012-2z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="M4 7l8 6 8-6"/></symbol>
+    <symbol id="i-ort" viewBox="0 0 24 24"><path d="M12 21s6.5-5.6 6.5-11a6.5 6.5 0 00-13 0c0 5.400 6.500 11 6.500 11z"/><circle cx="12" cy="10" r="2.300"/></symbol>
+    <symbol id="i-haken" viewBox="0 0 24 24"><path d="M5 12.500l4.500 4.500L19 7.500"/></symbol>
+    <symbol id="i-pfeil" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-zurueck" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+    <symbol id="i-stern" viewBox="0 0 24 24"><path d="M12 2.800l2.800 5.900 6.400.8-4.700 4.400 1.200 6.400L12 17.200 6.300 20.300l1.200-6.400L2.800 9.500l6.400-.8z"/></symbol>
+  </defs>
+</svg>
+
+<header class="kopf">
+  <div class="kopf__leiste wrap">
+    <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
+      <svg class="kopf__marke" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8"/><path d="M9 23V9l7 9 7-9v14"/></svg>
+      <span>Markenname</span>
+    </a>
+    <button class="kopf__burger" type="button" data-menue aria-expanded="false" aria-controls="hauptnav">
+      <span class="sr-nur">Menü öffnen oder schließen</span>
+      <span class="burger" aria-hidden="true"></span>
+    </button>
+    <nav class="kopf__nav" id="hauptnav" aria-label="Hauptnavigation" data-menue-ziel>
+      <ul>
+        <li><a href="#leistungen">Leistungen</a></li>
+        <li><a href="#referenzen">Referenzen</a></li>
+        <li><a href="#preise">Preise</a></li>
+        <li><a href="#faq">Fragen</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+      <a class="kopf__tel" href="tel:+4900000000000"><svg class="ico" aria-hidden="true"><use href="#i-tel"/></svg><span>0000 000 000 00</span></a>
+      <a class="knopf" href="#kontakt">Anfrage stellen</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inhalt">
+  <!-- 1. Held: dunkel, mittig, Lichtwelle. Beim Scrollen verblasst der Inhalt, die helle Fläche schiebt sich darüber -->
+  <section class="held" id="top" aria-labelledby="h-held" data-abdunkeln>
+    <div class="held__licht" aria-hidden="true">
+      <svg class="held__welle" viewBox="0 0 1440 320" preserveAspectRatio="none" focusable="false">
+        <g class="welle welle--a">
+          <path class="welle__breit" d="M0 200 C240 100 480 100 720 200 C960 300 1200 300 1440 200 C1680 100 1920 100 2160 200 C2400 300 2640 300 2880 200"/>
+          <path class="welle__fein" d="M0 200 C240 100 480 100 720 200 C960 300 1200 300 1440 200 C1680 100 1920 100 2160 200 C2400 300 2640 300 2880 200"/>
+        </g>
+        <g class="welle welle--b">
+          <path class="welle__fein welle__fein--zwei" d="M0 230 C240 150 480 150 720 230 C960 310 1200 310 1440 230 C1680 150 1920 150 2160 230 C2400 310 2640 310 2880 230"/>
+        </g>
+      </svg>
+    </div>
+    <div class="held__inhalt wrap" data-staffel>
+      <p class="held__bewertung" data-zeig data-beispiel>
+        <span class="avatare" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="sterne" role="img" aria-label="4,8 von 5 Sternen"><svg class="stern"><use href="#i-stern"/></svg><svg class="stern"><use href="#i-stern"/></svg><svg class="stern"><use href="#i-stern"/></svg><svg class="stern"><use href="#i-stern"/></svg><svg class="stern"><use href="#i-stern"/></svg></span>
+        <span>4,8 von 5, Beispielwert</span>
+      </p>
+      <h1 data-zeig>Laufende Betreuung, die Ihr Geschäft Monat für Monat voranbringt</h1>
+      <p class="held__text" data-zeig>Statt Einzelaufträgen mit offenem Ende: ein fester Monatsbetrag, ein klarer Plan und ein Team, das jeden Monat liefert. Ohne lange Vertragsbindung.</p>
+      <div class="held__aktionen" data-zeig>
+        <a class="knopf" href="#kontakt">Anfrage stellen <svg class="ico" aria-hidden="true"><use href="#i-pfeil"/></svg></a>
+        <a class="textlink textlink--hell" href="tel:+4900000000000">Oder anrufen: 0000 000 000 00</a>
+      </div>
+    </div>
+    <aside class="held__karte" aria-hidden="true" data-beispiel>
+      <span class="sterne"><svg class="stern"><use href="#i-stern"/></svg><svg class="stern"><use href="#i-stern"/></svg><svg class="stern"><use href="#i-stern"/></svg><svg class="stern"><use href="#i-stern"/></svg><svg class="stern"><use href="#i-stern"/></svg></span>
+      <p>Beispielstimme: Endlich ein Partner, der jeden Monat verlässlich liefert.</p>
+    </aside>
+  </section>
+
+  <div class="folge">
+    <!-- 2. Vertrauen: Logoleiste als Laufband, Platzhalter -->
+    <section class="logos sektion" aria-labelledby="h-logos">
+      <div class="wrap">
+        <h2 class="logos__titel" id="h-logos">Hier stehen freigegebene Kundenlogos</h2>
+        <div class="band logos__band" aria-hidden="true">
+          <div class="band__spur">
+            <span class="logo-kachel"><i></i><b></b></span><span class="logo-kachel"><i></i><b></b></span><span class="logo-kachel"><i></i><b></b></span><span class="logo-kachel"><i></i><b></b></span><span class="logo-kachel"><i></i><b></b></span><span class="logo-kachel"><i></i><b></b></span>
+          </div>
+          <div class="band__spur" aria-hidden="true">
+            <span class="logo-kachel"><i></i><b></b></span><span class="logo-kachel"><i></i><b></b></span><span class="logo-kachel"><i></i><b></b></span><span class="logo-kachel"><i></i><b></b></span><span class="logo-kachel"><i></i><b></b></span><span class="logo-kachel"><i></i><b></b></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Idee: Abo statt Einzelauftrag -->
+    <section class="sektion idee" id="idee" aria-labelledby="h-idee">
+      <div class="wrap idee__raster">
+        <div class="idee__text" data-staffel>
+          <h2 id="h-idee" data-zeig>Ein Abo statt Einzelaufträge: planbar im Aufwand, sichtbar im Ergebnis</h2>
+          <p data-zeig>Einzelaufträge sind teuer, schwer zu vergleichen und enden dort, wo es gerade anfängt zu wirken. Im Abo bekommen Sie jeden Monat feste Leistung zu einem festen Preis, und wir entwickeln gemeinsam weiter, was funktioniert.</p>
+          <a class="knopf knopf--dunkel" href="#leistungen" data-zeig>Leistungen ansehen <svg class="ico" aria-hidden="true"><use href="#i-pfeil"/></svg></a>
+        </div>
+        <div class="idee__bild" data-zeig="skala">
+          <div class="bild bild--a" data-platzhalter="Bild: Beratungsgespräch am Tisch" aria-hidden="true"></div>
+          <div class="chip chip--oben" aria-hidden="true">
+            <span class="chip__symbol"><svg class="ico"><use href="#i-haken"/></svg></span>
+            <span>Monatsplan steht</span>
+          </div>
+          <div class="idee__avatare avatare avatare--gross" aria-hidden="true"><i></i><i></i><i></i></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Leistungen: Bild bleibt stehen, Akkordeon rechts, Diagrammkarte wächst beim Scrollen -->
+    <section class="sektion leistungen" id="leistungen" aria-labelledby="h-leistungen">
+      <div class="wrap">
+        <div class="kopfblock" data-staffel>
+          <h2 id="h-leistungen" data-zeig>Unsere Leistungen</h2>
+          <p data-zeig>Ob kleiner Betrieb, Praxis oder Onlineshop: Wir übernehmen die laufende Arbeit, damit Sie sich auf Ihr Geschäft konzentrieren können.</p>
+        </div>
+        <div class="leistungen__raster">
+          <div class="leistungen__bild" data-wachs>
+            <div class="bild bild--b" data-platzhalter="Bild: Beraterin am Arbeitsplatz" aria-hidden="true"></div>
+            <div class="diagramm" aria-hidden="true">
+              <span class="diagramm__kopf">Monatsbericht, Beispiel</span>
+              <span class="diagramm__balken"><i style="--h:38%"></i><i style="--h:52%"></i><i style="--h:46%"></i><i style="--h:70%"></i><i style="--h:84%"></i><i style="--h:100%"></i></span>
+            </div>
+          </div>
+          <div class="akk" data-exklusiv data-zeig>
+            <details open>
+              <summary><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg><span class="akk__titel">Beratung und Strategie</span><svg class="ico akk__pfeil" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+              <p>Wir klären Ziel, Zielgruppe und Ausgangslage und legen einen Plan für die nächsten Monate fest. Sie wissen danach, was wir tun, in welcher Reihenfolge und woran wir den Erfolg messen.</p>
+            </details>
+            <details>
+              <summary><svg class="ico" aria-hidden="true"><use href="#i-lagen"/></svg><span class="akk__titel">Umsetzung und Pflege</span><svg class="ico akk__pfeil" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+              <p>Wir setzen die Maßnahmen des Monatsplans um und halten alles aktuell. Kleine Änderungen zwischendurch sind im Abo enthalten, größere stimmen wir vorher mit Ihnen ab.</p>
+            </details>
+            <details>
+              <summary><svg class="ico" aria-hidden="true"><use href="#i-diagramm"/></svg><span class="akk__titel">Auswertung und Bericht</span><svg class="ico akk__pfeil" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+              <p>Am Monatsende erhalten Sie einen kurzen Bericht in verständlicher Sprache: was lief, was nicht, und was wir im nächsten Monat ändern.</p>
+            </details>
+            <details>
+              <summary><svg class="ico" aria-hidden="true"><use href="#i-schild"/></svg><span class="akk__titel">Support und Soforthilfe</span><svg class="ico akk__pfeil" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+              <p>Wenn etwas nicht läuft, erreichen Sie einen festen Ansprechpartner per Telefon oder E-Mail. Reaktionszeiten nennen wir im Angebot, nicht im Kleingedruckten.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Referenzen: Reiter mit Pfeilen und Punkten -->
+    <section class="sektion referenzen" id="referenzen" aria-labelledby="h-referenzen">
+      <div class="wrap">
+        <div class="kopfblock" data-staffel>
+          <h2 id="h-referenzen" data-zeig>So sieht Erfolg im Abo aus</h2>
+          <p data-zeig>Beispielkarten: Hier stehen später echte, freigegebene Projekte mit Ausgangslage, Lösung und Ergebnis.</p>
+        </div>
+        <div class="kar" data-kar aria-roledescription="Karussell" aria-label="Erfolgsgeschichten" role="group" data-zeig>
+          <ul class="kar__spur" tabindex="0" aria-label="Erfolgsgeschichten, mit Pfeiltasten blättern">
+            <li class="kar__folie" aria-label="1 von 3">
+              <article class="fall" data-beispiel>
+                <div class="fall__text">
+                  <p class="fall__kunde"><span class="logo-kachel logo-kachel--klein" aria-hidden="true"><i></i><b></b></span><span>Beispielkunde A, Handel und Onlineshop</span></p>
+                  <h3 class="fall__frage">Ausgangslage</h3>
+                  <p>Kunden kauften einmal und kamen selten zurück. Anfragen trafen unregelmäßig ein.</p>
+                  <h3 class="fall__frage">Lösung</h3>
+                  <p>Ein fester Monatsplan mit Mailfolgen, einem Treuebonus und einem Bericht am Monatsende.</p>
+                </div>
+                <div class="bild bild--c fall__bild" data-platzhalter="Bild: Kunde am Schreibtisch" aria-hidden="true"></div>
+                <div class="fall__stimme">
+                  <p class="fall__zahl"><b data-zaehle="60">60</b><span>&nbsp;%</span> <small>mehr wiederkehrende Kunden in drei Monaten, Beispielwert</small></p>
+                  <blockquote>Beispielzitat: Seit wir den Monatsplan haben, wissen wir im Voraus, was kommt und was es kostet.</blockquote>
+                  <p class="fall__person"><span class="avatare" aria-hidden="true"><i></i></span><span>Vorname Nachname<br><small>Geschäftsführung, Beispiel</small></span></p>
+                </div>
+              </article>
+            </li>
+            <li class="kar__folie" aria-label="2 von 3">
+              <article class="fall" data-beispiel>
+                <div class="fall__text">
+                  <p class="fall__kunde"><span class="logo-kachel logo-kachel--klein" aria-hidden="true"><i></i><b></b></span><span>Beispielkunde B, Praxis und Gesundheit</span></p>
+                  <h3 class="fall__frage">Ausgangslage</h3>
+                  <p>Viele Termine fielen kurzfristig aus, die Rezeption war ständig am Telefon.</p>
+                  <h3 class="fall__frage">Lösung</h3>
+                  <p>Erinnerungen per Mail, eine klare Terminseite und ein Monatsbericht über die Auslastung.</p>
+                </div>
+                <div class="bild bild--d fall__bild" data-platzhalter="Bild: Rezeption mit Bildschirm" aria-hidden="true"></div>
+                <div class="fall__stimme">
+                  <p class="fall__zahl"><b data-zaehle="35">35</b><span>&nbsp;%</span> <small>weniger Terminausfälle, Beispielwert</small></p>
+                  <blockquote>Beispielzitat: Die Abläufe sind ruhiger geworden, und der Bericht zeigt uns schwarz auf weiß, was sich verbessert hat.</blockquote>
+                  <p class="fall__person"><span class="avatare" aria-hidden="true"><i></i></span><span>Vorname Nachname<br><small>Praxisleitung, Beispiel</small></span></p>
+                </div>
+              </article>
+            </li>
+            <li class="kar__folie" aria-label="3 von 3">
+              <article class="fall" data-beispiel>
+                <div class="fall__text">
+                  <p class="fall__kunde"><span class="logo-kachel logo-kachel--klein" aria-hidden="true"><i></i><b></b></span><span>Beispielkunde C, Handwerk und Bau</span></p>
+                  <h3 class="fall__frage">Ausgangslage</h3>
+                  <p>Gute Arbeit, aber kaum Anfragen von neuen Kunden außerhalb der Empfehlungen.</p>
+                  <h3 class="fall__frage">Lösung</h3>
+                  <p>Laufend gepflegte Projektseiten, Bewertungsanfragen nach jedem Auftrag und ein fester Monatstermin.</p>
+                </div>
+                <div class="bild bild--a fall__bild" data-platzhalter="Bild: Baustelle mit Team" aria-hidden="true"></div>
+                <div class="fall__stimme">
+                  <p class="fall__zahl"><b data-zaehle="2.4">2,4</b><span>fach</span> <small>mehr Anfragen pro Monat, Beispielwert</small></p>
+                  <blockquote>Beispielzitat: Wir müssen nicht mehr überlegen, was als Nächstes zu tun ist. Das Team hat den Plan.</blockquote>
+                  <p class="fall__person"><span class="avatare" aria-hidden="true"><i></i></span><span>Vorname Nachname<br><small>Inhaber, Beispiel</small></span></p>
+                </div>
+              </article>
+            </li>
+          </ul>
+          <div class="kar__steuerung" hidden>
+            <button class="kar__pfeil" type="button" data-zurueck aria-label="Vorherige Erfolgsgeschichte"><svg class="ico" aria-hidden="true"><use href="#i-zurueck"/></svg></button>
+            <span class="kar__punkte" role="group" aria-label="Erfolgsgeschichte wählen"></span>
+            <button class="kar__pfeil" type="button" data-weiter aria-label="Nächste Erfolgsgeschichte"><svg class="ico" aria-hidden="true"><use href="#i-pfeil"/></svg></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Warum das Abo: dunkle Tafel mit laufenden Reihen, vier Karten -->
+    <section class="sektion warum" id="abo" aria-labelledby="h-warum">
+      <div class="wrap">
+        <div class="kopfblock" data-staffel>
+          <h2 id="h-warum" data-zeig>Warum ein Abo für Betriebe wie Ihren funktioniert</h2>
+          <p data-zeig>Wir führen keine Kampagnen von der Stange aus. Wir bauen Monat für Monat auf, was für Ihr Geschäft trägt.</p>
+        </div>
+        <div class="warum__raster">
+          <div class="tafel" aria-hidden="true" data-zeig="skala">
+            <div class="tafel__reihe tafel__reihe--vor"><span class="tafel__chip"><i></i><b></b></span><span class="tafel__chip tafel__chip--hell"><i></i><b></b></span><span class="tafel__chip"><i></i><b></b></span><span class="tafel__chip tafel__chip--hell"><i></i><b></b></span><span class="tafel__chip"><i></i><b></b></span><span class="tafel__chip tafel__chip--hell"><i></i><b></b></span></div>
+            <div class="tafel__reihe tafel__reihe--rueck"><span class="tafel__chip tafel__chip--hell"><i></i><b></b></span><span class="tafel__chip"><i></i><b></b></span><span class="tafel__chip tafel__chip--hell"><i></i><b></b></span><span class="tafel__chip"><i></i><b></b></span><span class="tafel__chip tafel__chip--hell"><i></i><b></b></span><span class="tafel__chip"><i></i><b></b></span></div>
+            <div class="tafel__reihe tafel__reihe--vor"><span class="tafel__chip"><i></i><b></b></span><span class="tafel__chip"><i></i><b></b></span><span class="tafel__chip tafel__chip--hell"><i></i><b></b></span><span class="tafel__chip"><i></i><b></b></span><span class="tafel__chip"><i></i><b></b></span><span class="tafel__chip tafel__chip--hell"><i></i><b></b></span></div>
+          </div>
+          <ul class="vorteile" data-staffel>
+            <li class="vorteil" data-zeig>
+              <span class="vorteil__symbol"><svg class="ico" aria-hidden="true"><use href="#i-euro"/></svg></span>
+              <h3>Feste Monatskosten</h3>
+              <p>Sie zahlen jeden Monat denselben Betrag und wissen vorher, was Sie bekommen.</p>
+            </li>
+            <li class="vorteil" data-zeig>
+              <span class="vorteil__symbol"><svg class="ico" aria-hidden="true"><use href="#i-kalender"/></svg></span>
+              <h3>Kurze Laufzeit</h3>
+              <p>Monatlich oder jährlich buchbar, mit kurzer Kündigungsfrist. Beispielangabe.</p>
+            </li>
+            <li class="vorteil" data-zeig>
+              <span class="vorteil__symbol"><svg class="ico" aria-hidden="true"><use href="#i-person"/></svg></span>
+              <h3>Fester Ansprechpartner</h3>
+              <p>Eine Person kennt Ihr Geschäft und ist für Rückfragen erreichbar.</p>
+            </li>
+            <li class="vorteil" data-zeig>
+              <span class="vorteil__symbol"><svg class="ico" aria-hidden="true"><use href="#i-diagramm"/></svg></span>
+              <h3>Klare Berichte</h3>
+              <p>Ein Bericht pro Monat, ohne Fachjargon und mit einer klaren Empfehlung.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Preise: Schalter monatlich oder jährlich, drei Pakete -->
+    <section class="sektion preise" id="preise" aria-labelledby="h-preise">
+      <div class="wrap">
+        <div class="kopfblock" data-staffel>
+          <h2 id="h-preise" data-zeig>Preise ohne Überraschung</h2>
+          <p data-zeig>Beispielpreise: Drei Pakete mit festem Monatsbetrag. Alle Beträge vor dem Einsatz durch die echten Preise ersetzen.</p>
+        </div>
+        <div class="schalter-zeile" data-schalter hidden>
+          <span class="schalter-zeile__text" data-text-monat>Monatlich</span>
+          <button class="schalter" type="button" role="switch" aria-checked="false" aria-label="Jährliche Zahlung anzeigen"><span class="schalter__knauf"></span></button>
+          <span class="schalter-zeile__text" data-text-jahr>Jährlich</span>
+        </div>
+        <ul class="pakete" data-staffel data-beispiel>
+          <li class="paket" data-zeig>
+            <h3>Start</h3>
+            <p class="paket__fuer">Für kleine Betriebe mit einem klaren Ziel</p>
+            <p class="preis"><span class="preis__zahl" data-monat="490" data-jahr="390">490</span>&nbsp;€ <small>pro Monat</small></p>
+            <p class="preis__hinweis">Bei jährlicher Zahlung: 390&nbsp;€ pro Monat</p>
+            <ul class="liste">
+              <li><svg class="ico" aria-hidden="true"><use href="#i-haken"/></svg>Monatsplan mit zwei Maßnahmen</li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-haken"/></svg>Pflege von bis zu fünf Seiten</li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-haken"/></svg>Bericht am Monatsende</li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-haken"/></svg>Support per E-Mail</li>
+            </ul>
+            <a class="knopf knopf--dunkel" href="#kontakt">Paket anfragen</a>
+          </li>
+          <li class="paket" data-zeig>
+            <h3>Wachstum</h3>
+            <p class="paket__fuer">Für Betriebe, die mehr Anfragen wollen</p>
+            <p class="preis"><span class="preis__zahl" data-monat="890" data-jahr="690">890</span>&nbsp;€ <small>pro Monat</small></p>
+            <p class="preis__hinweis">Bei jährlicher Zahlung: 690&nbsp;€ pro Monat</p>
+            <ul class="liste">
+              <li><svg class="ico" aria-hidden="true"><use href="#i-haken"/></svg>Alles aus Start</li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-haken"/></svg>Monatsplan mit vier Maßnahmen</li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-haken"/></svg>Bewertungen und Anfragen im Blick</li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-haken"/></svg>Monatliches Gespräch von 30 Minuten</li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-haken"/></svg>Support per Telefon</li>
+            </ul>
+            <a class="knopf knopf--dunkel" href="#kontakt">Paket anfragen</a>
+          </li>
+          <li class="paket paket--dunkel" data-zeig>
+            <h3>Komplett</h3>
+            <p class="paket__fuer">Für Betriebe mit mehreren Standorten oder Angeboten</p>
+            <p class="preis"><span class="preis__zahl" data-monat="1490" data-jahr="1190">1.490</span>&nbsp;€ <small>pro Monat</small></p>
+            <p class="preis__hinweis">Bei jährlicher Zahlung: 1.190&nbsp;€ pro Monat</p>
+            <ul class="liste">
+              <li><svg class="ico" aria-hidden="true"><use href="#i-haken"/></svg>Alles aus Wachstum</li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-haken"/></svg>Monatsplan nach Bedarf</li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-haken"/></svg>Fester Ansprechpartner mit Vertretung</li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-haken"/></svg>Vierteljährliche Planungsrunde</li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-haken"/></svg>Vorrang bei Anfragen</li>
+            </ul>
+            <a class="knopf" href="#kontakt">Paket anfragen</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 8. Ablauf: dunkel, drei Schritte leuchten beim Scrollen nacheinander auf -->
+    <section class="ablauf" id="ablauf" aria-labelledby="h-ablauf" data-fortschritt>
+      <div class="ablauf__bahn">
+        <div class="wrap ablauf__innen">
+          <div class="kopfblock kopfblock--hell" data-staffel>
+            <h2 id="h-ablauf" data-zeig>In drei Schritten zu stetigem Wachstum</h2>
+            <p data-zeig>Wir arbeiten nach einem festen Ablauf, damit Sie jeden Monat wissen, woran Sie sind.</p>
+          </div>
+          <ol class="schritte">
+            <li class="schritt" style="--von:0.05">
+              <span class="schritt__zahl" aria-hidden="true">1</span>
+              <h3>Gespräch und Plan</h3>
+              <p>Wir hören zu, klären Ziele und legen gemeinsam fest, was im ersten Monat geschieht.</p>
+            </li>
+            <li class="schritt" style="--von:0.38">
+              <span class="schritt__zahl" aria-hidden="true">2</span>
+              <h3>Umsetzung im Monat</h3>
+              <p>Wir setzen die vereinbarten Maßnahmen um und halten Sie mit kurzen Zwischenständen auf dem Laufenden.</p>
+            </li>
+            <li class="schritt" style="--von:0.66">
+              <span class="schritt__zahl" aria-hidden="true">3</span>
+              <h3>Bericht und Anpassung</h3>
+              <p>Am Monatsende werten wir aus, was gewirkt hat, und richten den nächsten Monat danach aus.</p>
+            </li>
+          </ol>
+          <div class="ablauf__linie" aria-hidden="true"><i></i></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Stimmen: große Zitate im Reiter -->
+    <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen">
+      <div class="wrap">
+        <div class="kopfblock" data-staffel>
+          <h2 id="h-stimmen" data-zeig>Das sagen Kunden über die Zusammenarbeit</h2>
+          <p data-zeig>Beispielstimmen: Hier stehen später echte, freigegebene Rückmeldungen.</p>
+        </div>
+        <div class="kar kar--stimmen" data-kar aria-roledescription="Karussell" aria-label="Kundenstimmen" role="group" data-zeig>
+          <ul class="kar__spur" tabindex="0" aria-label="Kundenstimmen, mit Pfeiltasten blättern">
+            <li class="kar__folie" aria-label="1 von 3">
+              <figure class="stimme" data-beispiel>
+                <span class="sterne" role="img" aria-label="5 von 5 Sternen"><svg class="stern"><use href="#i-stern"/></svg><svg class="stern"><use href="#i-stern"/></svg><svg class="stern"><use href="#i-stern"/></svg><svg class="stern"><use href="#i-stern"/></svg><svg class="stern"><use href="#i-stern"/></svg></span>
+                <blockquote>Beispielzitat: Vorher war alles Stückwerk. Jetzt haben wir einen Plan, einen festen Preis und jeden Monat einen Bericht, den wir wirklich verstehen.</blockquote>
+                <figcaption><span class="avatare" aria-hidden="true"><i></i></span><span>Vorname Nachname<br><small>Funktion, Beispiel</small></span></figcaption>
+              </figure>
+            </li>
+            <li class="kar__folie" aria-label="2 von 3">
+              <figure class="stimme" data-beispiel>
+                <span class="sterne" role="img" aria-label="5 von 5 Sternen"><svg class="stern"><use href="#i-stern"/></svg><svg class="stern"><use href="#i-stern"/></svg><svg class="stern"><use href="#i-stern"/></svg><svg class="stern"><use href="#i-stern"/></svg><svg class="stern"><use href="#i-stern"/></svg></span>
+                <blockquote>Beispielzitat: Rückfragen werden am selben Tag beantwortet, und Änderungen sind meist nach wenigen Tagen online.</blockquote>
+                <figcaption><span class="avatare" aria-hidden="true"><i></i></span><span>Vorname Nachname<br><small>Funktion, Beispiel</small></span></figcaption>
+              </figure>
+            </li>
+            <li class="kar__folie" aria-label="3 von 3">
+              <figure class="stimme" data-beispiel>
+                <span class="sterne" role="img" aria-label="4 von 5 Sternen"><svg class="stern"><use href="#i-stern"/></svg><svg class="stern"><use href="#i-stern"/></svg><svg class="stern"><use href="#i-stern"/></svg><svg class="stern"><use href="#i-stern"/></svg><svg class="stern stern--leer"><use href="#i-stern"/></svg></span>
+                <blockquote>Beispielzitat: Wir haben die Laufzeit zuerst klein gehalten. Nach drei Monaten haben wir auf das größere Paket gewechselt.</blockquote>
+                <figcaption><span class="avatare" aria-hidden="true"><i></i></span><span>Vorname Nachname<br><small>Funktion, Beispiel</small></span></figcaption>
+              </figure>
+            </li>
+          </ul>
+          <div class="kar__steuerung" hidden>
+            <button class="kar__pfeil" type="button" data-zurueck aria-label="Vorherige Stimme"><svg class="ico" aria-hidden="true"><use href="#i-zurueck"/></svg></button>
+            <span class="kar__punkte" role="group" aria-label="Stimme wählen"></span>
+            <button class="kar__pfeil" type="button" data-weiter aria-label="Nächste Stimme"><svg class="ico" aria-hidden="true"><use href="#i-pfeil"/></svg></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Kontakt: Daten links, Formular rechts, ohne Versand -->
+    <section class="sektion kontakt" id="kontakt" aria-labelledby="h-kontakt">
+      <div class="wrap">
+        <div class="kopfblock" data-staffel>
+          <h2 id="h-kontakt" data-zeig>Sprechen wir über Ihr Vorhaben</h2>
+          <p data-zeig>Schreiben Sie uns kurz, worum es geht. Wir melden uns mit einem Vorschlag, in der Regel innerhalb eines Werktages. Beispielangabe.</p>
+        </div>
+        <div class="kontakt__raster">
+          <div class="kontakt__daten" data-zeig>
+            <h3>Kontakt</h3>
+            <ul class="kontaktliste">
+              <li><span class="vorteil__symbol"><svg class="ico" aria-hidden="true"><use href="#i-tel"/></svg></span><span><b>Anrufen</b><a class="textlink" href="tel:+4900000000000">0000 000 000 00</a></span></li>
+              <li><span class="vorteil__symbol"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg></span><span><b>E-Mail</b><a class="textlink" href="mailto:kontakt@beispiel.example">kontakt@beispiel.example</a></span></li>
+              <li><span class="vorteil__symbol"><svg class="ico" aria-hidden="true"><use href="#i-ort"/></svg></span><span><b>Adresse</b>Musterstraße 1, 00000 Musterstadt</span></li>
+            </ul>
+          </div>
+          <form class="formular" action="#kontakt" method="post" data-beispielformular data-zeig>
+            <h3>Anfrage stellen</h3>
+            <div class="feld">
+              <label for="f-name">Name</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="feld">
+              <label for="f-mail">E-Mail-Adresse</label>
+              <input id="f-mail" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="feld">
+              <label for="f-text">Ihre Nachricht</label>
+              <textarea id="f-text" name="nachricht" rows="4" required></textarea>
+            </div>
+            <label class="haken" for="f-dsgvo"><input id="f-dsgvo" name="datenschutz" type="checkbox" required><span>Ich habe die <a class="textlink" href="#top">Datenschutzerklärung</a> gelesen.</span></label>
+            <button class="knopf knopf--dunkel" type="submit">Anfrage senden</button>
+            <p class="formular__status" role="status"></p>
+            <p class="formular__hinweis">Beispielformular: Es wird nichts versendet. Vor dem Einsatz an einen Versand anbinden.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. FAQ -->
+    <section class="sektion faq" id="faq" aria-labelledby="h-faq">
+      <div class="wrap faq__raster">
+        <div class="faq__kopf" data-staffel>
+          <h2 id="h-faq" data-zeig>Antworten auf die häufigsten Fragen</h2>
+          <p data-zeig>Beispielfragen: Hier stehen später die Fragen, die Ihre Kunden wirklich stellen.</p>
+          <a class="textlink" href="#kontakt" data-zeig>Ihre Frage ist nicht dabei? Fragen Sie uns.</a>
+        </div>
+        <div class="akk" data-exklusiv data-zeig>
+          <details>
+            <summary><span class="akk__titel">Was ist der Unterschied zum Einzelauftrag?</span><svg class="ico akk__pfeil" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+            <p>Beim Einzelauftrag zahlen Sie für ein Ergebnis und danach beginnt die Suche von vorn. Im Abo arbeiten wir laufend an Ihrem Ziel, zu einem festen Preis und mit einem festen Ansprechpartner.</p>
+          </details>
+          <details>
+            <summary><span class="akk__titel">Wie lange bin ich gebunden?</span><svg class="ico akk__pfeil" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+            <p>Beispielantwort: Die Mindestlaufzeit beträgt einen Monat, danach kündigen Sie mit einer Frist von vier Wochen. Die echte Regelung steht im Angebot.</p>
+          </details>
+          <details>
+            <summary><span class="akk__titel">Was passiert in den ersten Wochen?</span><svg class="ico akk__pfeil" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+            <p>Wir führen ein Gespräch, klären Ziele und Ausgangslage und legen den Plan für den ersten Monat fest. Danach beginnt die Umsetzung.</p>
+          </details>
+          <details>
+            <summary><span class="akk__titel">Kann ich das Paket wechseln?</span><svg class="ico akk__pfeil" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+            <p>Ja. Zum Monatsende wechseln Sie in ein größeres oder kleineres Paket, wenn sich Ihr Bedarf ändert.</p>
+          </details>
+          <details>
+            <summary><span class="akk__titel">Wer erledigt die Arbeit?</span><svg class="ico akk__pfeil" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+            <p>Ein festes Team mit einem Ansprechpartner für Sie. Wer das ist, steht im Angebot, mit Namen.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="fuss" id="fuss">
+  <div class="wrap fuss__oben">
+    <form class="fuss__news" action="#fuss" method="post" data-beispielformular>
+      <h2 class="fuss__titel" id="h-news">Neuigkeiten per E-Mail</h2>
+      <p>Kurze Hinweise, höchstens einmal im Monat. Abmeldung jederzeit.</p>
+      <div class="fuss__eingabe">
+        <label class="sr-nur" for="f-news">E-Mail-Adresse</label>
+        <input id="f-news" name="email" type="email" autocomplete="email" placeholder="Ihre E-Mail-Adresse" required>
+        <button class="knopf" type="submit">Eintragen</button>
+      </div>
+      <p class="formular__status" role="status"></p>
+    </form>
+    <nav class="fuss__spalten" aria-label="Fußnavigation">
+      <div>
+        <h2 class="fuss__titel">Firma</h2>
+        <ul>
+          <li><a href="#idee">Über uns</a></li>
+          <li><a href="#leistungen">Leistungen</a></li>
+          <li><a href="#referenzen">Referenzen</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="fuss__titel">Rechtliches</h2>
+        <ul>
+          <li><a href="#top">Impressum</a></li>
+          <li><a href="#top">Datenschutz</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="fuss__wort" aria-hidden="true"><span>Markenname</span></div>
+  <p class="wrap fuss__klein">© Markenname. Alle Texte, Zahlen und Preise auf dieser Seite sind Beispiele.</p>
+</footer>
+
+<script src="../_basis/bewegung.js" defer></script>
+<script src="stil.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+/* marke.css der Vorlage "Abo Dunkelstart": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#fbf8f3;
+  --flaeche-alt:#f1ece3;
+  --flaeche-dunkel:#15120f;
+  --text:#1b1713;
+  --text-leise:#5a524a;
+  --linie:#ddd5c8;
+  --akzent:#f26b3a;
+  --akzent-text:#1a0e08;
+  --schrift-titel:'Lexend',system-ui,sans-serif;
+  --schrift-text:'Manrope',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:20px;
+  --radius-bild:20px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:28px;          /* Tafeln, Preiskarten, Kontaktkarte */
+  --radius-klein:12px;          /* Chips, Eingabefelder */
+  --titel-gewicht:600;
+  --titel-spur:-0.03em;
+  --akzent-tief:#a63c14;        /* Akzent als Text auf hellen Flächen (mindestens 4,5 zu 1) */
+  --akzent-mittel:#d9531f;      /* Sterne und Symbole auf hellen Flächen (mindestens 3 zu 1) */
+  --akzent-hell:#ff9a6c;        /* Akzent als Text und Symbol auf dunklen Flächen */
+  --text-auf-dunkel:#fbf8f3;
+  --text-leise-dunkel:#cfc5b8;
+  --linie-dunkel:#3a332b;
+  --flaeche-dunkel-2:#201b16;   /* zweite dunkle Stufe für Karten auf dunkel */
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen), alle dunkel genug für weiße Beschriftung */
+  --ton-1:#3b2a22;
+  --ton-2:#5b3a2a;
+  --ton-3:#2c3a3a;
+  --ton-4:#4a3d2c;
+}
