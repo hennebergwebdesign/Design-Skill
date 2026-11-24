@@ -1,0 +1,35 @@
+/* marke.css der Vorlage "Praxis": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#f7f5f0;
+  --flaeche-alt:#ebe9e1;
+  --flaeche-dunkel:#14263d;
+  --text:#14202f;
+  --text-leise:#4a5566;
+  --linie:#d9d6cc;
+  --akzent:#f2a65a;
+  --akzent-text:#14263d;
+  --schrift-titel:'Outfit',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:22px;
+  --radius-bild:22px;
+
+  /* Zusatztokens dieser Vorlage */
+  --flaeche-dunkel-2:#1f4166;   /* zweite Tafel im Stapel, Karten auf Dunkel */
+  --flaeche-dunkel-3:#0e1a2b;   /* Fuß, tiefster Ton */
+  --radius-gross:32px;          /* Tafeln */
+  --radius-klein:14px;
+  --titel-gewicht:500;
+  --titel-spur:-0.025em;
+  --text-auf-dunkel:#ffffff;
+  --text-leise-dunkel:#bccbdc;
+  --linie-dunkel:#31486a;
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#34567c;
+  --ton-2:#b98a5e;
+  --ton-3:#4f7a6e;
+  --ton-4:#8499b3;
+  --ton-5:#c9a97f;
+  --ton-6:#3d6275;
+}

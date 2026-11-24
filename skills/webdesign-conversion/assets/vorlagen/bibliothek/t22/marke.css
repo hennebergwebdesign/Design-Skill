@@ -1,0 +1,34 @@
+/* marke.css der Vorlage "Handwerk vor Ort" (t22): Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#ffffff;
+  --flaeche-alt:#eef2ef;
+  --flaeche-dunkel:#0f2a30;
+  --text:#13211f;
+  --text-leise:#4a5956;
+  --linie:#d5ddd9;
+  --akzent:#f28c3c;
+  --akzent-text:#1a120b;
+  --schrift-titel:'Familjen Grotesk',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:14px;
+  --radius-karte:20px;
+  --radius-bild:20px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:28px;          /* große Bildtafeln und Bänder */
+  --radius-klein:10px;          /* Felder, Chips */
+  --titel-gewicht:600;
+  --titel-spur:-0.025em;
+  --flaeche-dunkel-2:#183a41;   /* Karten auf Dunkel */
+  --text-auf-dunkel:#ffffff;
+  --text-leise-dunkel:#b8cbc8;
+  --linie-dunkel:#2c474d;
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen), dunkel genug für weiße Schrift */
+  --ton-1:#1f4a52;
+  --ton-2:#6e4f35;
+  --ton-3:#2e5a4a;
+  --ton-4:#7a5b3a;
+  --ton-5:#38586a;
+  --ton-6:#5f4b3b;
+}

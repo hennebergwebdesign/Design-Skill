@@ -1,0 +1,37 @@
+/* marke.css der Vorlage "Mitgliedschaft": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#fbfaf6;
+  --flaeche-alt:#f0eee6;
+  --flaeche-dunkel:#0f2b29;
+  --text:#13201e;
+  --text-leise:#4a5956;
+  --linie:#dcdad0;
+  --akzent:#bfe36a;           /* Hauptaktion und Vergleichsfläche, nur als Fläche, nie als Text auf Hell */
+  --akzent-text:#0f2b29;
+  --schrift-titel:'Archivo',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:20px;
+  --radius-bild:20px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:28px;
+  --radius-klein:14px;
+  --titel-gewicht:600;
+  --titel-spur:-0.03em;
+  --akzent-tief:#3b6410;      /* Akzent als Text oder Linie auf Hell (6 zu 1) */
+  --flaeche-dunkel-2:#1a3d3a; /* zweite dunkle Fläche, z. B. Paketkarte im dunklen Rahmen */
+  --text-blass:#7a8783;        /* noch nicht gelesene Wörter im Vorteilssatz, nur große Schrift (3,4 zu 1) */
+  --text-auf-dunkel:#f5f7f2;
+  --text-leise-dunkel:#b6c7c2;
+  --linie-dunkel:#2c4a46;
+  --spalte-hell:#e4e1d6;      /* hervorgehobene Spalte der Vergleichstabelle auf heller Karte */
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#2f5a55;
+  --ton-2:#8a6f4d;
+  --ton-3:#3d6a52;
+  --ton-4:#a08560;
+  --ton-5:#40606b;
+  --ton-6:#6b5a47;
+}

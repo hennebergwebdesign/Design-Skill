@@ -1,0 +1,24 @@
+/* marke.css der Vorlage t20: Ausgangswerte. Marke wechseln = nur diese Werte (und die zwei Schriftzeilen) ändern.
+   Kontrast gerechnet: --text auf --flaeche und --karte über 12 zu 1, --text-leise auf --karte über 7 zu 1,
+   --akzent-text auf --akzent über 8 zu 1, --akzent auf --flaeche über 7 zu 1, Logo auf Rundquadrat über 3 zu 1. */
+:root{
+  --flaeche:#0b1114;        /* Seitenhintergrund, dunkel */
+  --flaeche-alt:#111a1e;    /* abgesetzte Abschnitte */
+  --flaeche-dunkel:#070c0e; /* feste Rolle: tiefster Ton (Fuß, Knopf auf Akzent) */
+  --text:#eef3f2;
+  --text-leise:#a9b8b5;
+  --linie:#26363c;
+  --akzent:#ff8a4c;         /* Hauptaktion und Hervorhebung, ein Akzent für die ganze Seite */
+  --akzent-text:#1b0c04;
+  --schrift-titel:'Schibsted Grotesk',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:12px;
+  --radius-karte:22px;
+  --radius-bild:22px;
+  /* Zusatztokens dieser Vorlage */
+  --karte:#0f181b;          /* Karten auf der Seitenfläche */
+  --karte-hoch:#182429;     /* Felder und Chips auf Karten */
+  --signal:#7fe3b0;         /* Häkchen und Bestätigung */
+  --stern:#ffc15e;          /* Sterne */
+  --leuchte:#ff8a4c;        /* Schein im Held, nur als Mischung verwendet */
+}

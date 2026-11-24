@@ -1,0 +1,42 @@
+/* marke.css der Vorlage "Raumfolge" (t21): Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche, Akzenttext auf Akzent und helle Schrift auf Dunkel mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#f3f5f1;
+  --flaeche-alt:#e3eae4;
+  --flaeche-dunkel:#0f2a2e;
+  --flaeche-dunkel-2:#1a3d42;
+  --text:#10201f;
+  --text-leise:#46585a;
+  --linie:#cbd6ce;
+  --akzent:#12595a;
+  --akzent-text:#ffffff;
+  --schrift-titel:'Outfit',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:.875rem;
+  --radius-karte:1.75rem;
+  --radius-bild:1.5rem;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:2.25rem;
+  --radius-klein:1rem;
+  --titel-gewicht:500;
+  --titel-spur:-0.03em;
+  --akzent-hell:#9fe3cc;          /* Akzent auf dunklen Flächen */
+  --text-auf-dunkel:#f3f5f1;
+  --text-leise-dunkel:#b3c6c4;
+  --linie-dunkel:#31555a;
+  --rand-feld-dunkel:#7ea0a3;     /* Rand von Eingabefeldern auf Dunkel, mindestens 3 zu 1 */
+  --stern:#a35f00;
+  /* Kartentöne (dunkler Text darauf) */
+  --ton-sand:#efe2c6;
+  --ton-rose:#f0d5cb;
+  --ton-himmel:#d0e2ea;
+  --ton-salbei:#d5e6d1;
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --bild-1:#2d5f61;
+  --bild-2:#56747d;
+  --bild-3:#7a6a4c;
+  --bild-4:#3f6e5b;
+  --bild-5:#506583;
+  --bild-6:#6b5545;
+}

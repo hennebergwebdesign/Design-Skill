@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abläufe automatisieren ohne Programmieren | Markenname</title>
+<meta name="description" content="Beispielseite für Software, die wiederkehrende Abläufe automatisiert: Funktionen, Integrationen, Preise und Anfrage. Vorlage mit Platzhaltertexten.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../_basis/schriften.css">
+<link rel="stylesheet" href="../_basis/basis.css">
+<link rel="stylesheet" href="marke.css">
+<link rel="stylesheet" href="../_basis/logos.css">
+<link rel="stylesheet" href="stil.css">
+</head>
+<body>
+<a class="sprunglink" href="#inhalt">Zum Inhalt springen</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="pfeil" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></symbol>
+  <symbol id="haken" viewBox="0 0 256 256" fill="currentColor"><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></symbol>
+  <symbol id="stern" viewBox="0 0 256 256" fill="currentColor"><path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"/></symbol>
+  <symbol id="plus" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></symbol>
+  <symbol id="minus" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128Z"/></symbol>
+  <symbol id="telefon" viewBox="0 0 256 256" fill="currentColor"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/></symbol>
+  <symbol id="mail" viewBox="0 0 256 256" fill="currentColor"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm-96,85.15L52.57,64H203.43ZM98.71,128,40,181.81V74.19Zm11.84,10.85,12,11.05a8,8,0,0,0,10.82,0l12-11.05,58,53.15H52.57ZM157.29,128,216,74.18V181.82Z"/></symbol>
+  <symbol id="blitz" viewBox="0 0 256 256" fill="currentColor"><path d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z"/></symbol>
+  <symbol id="kalender" viewBox="0 0 256 256" fill="currentColor"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z"/></symbol>
+  <symbol id="waage" viewBox="0 0 256 256" fill="currentColor"><path d="M216,64H56a8,8,0,0,1,0-16H192a8,8,0,0,0,0-16H56A24,24,0,0,0,32,56V184a24,24,0,0,0,24,24H216a16,16,0,0,0,16-16V80A16,16,0,0,0,216,64Zm0,128H56a8,8,0,0,1-8-8V78.63A23.84,23.84,0,0,0,56,80H216Zm-48-60a12,12,0,1,1,12,12A12,12,0,0,1,168,132Z"/></symbol>
+  <symbol id="paket" viewBox="0 0 256 256" fill="currentColor"><path d="M223.68,66.15,135.68,18a15.88,15.88,0,0,0-15.36,0l-88,48.17a16,16,0,0,0-8.32,14v95.64a16,16,0,0,0,8.32,14l88,48.17a15.88,15.88,0,0,0,15.36,0l88-48.17a16,16,0,0,0,8.32-14V80.18A16,16,0,0,0,223.68,66.15ZM128,32l80.34,44-29.77,16.3-80.35-44ZM128,120,47.66,76l33.9-18.56,80.34,44ZM40,90l80,43.78v85.79L40,175.82Zm176,85.78h0l-80,43.79V133.82l32-17.51V152a8,8,0,0,0,16,0V107.55L216,90v85.77Z"/></symbol>
+  <symbol id="chat" viewBox="0 0 256 256" fill="currentColor"><path d="M128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></symbol>
+  <symbol id="tabelle" viewBox="0 0 256 256" fill="currentColor"><path d="M200,152a31.84,31.84,0,0,0-19.53,6.68l-23.11-18A31.65,31.65,0,0,0,160,128c0-.74,0-1.48-.08-2.21l13.23-4.41A32,32,0,1,0,168,104c0,.74,0,1.48.08,2.21l-13.23,4.41A32,32,0,0,0,128,96a32.59,32.59,0,0,0-5.27.44L115.89,81A32,32,0,1,0,96,88a32.59,32.59,0,0,0,5.27-.44l6.84,15.4a31.92,31.92,0,0,0-8.57,39.64L73.83,165.44a32.06,32.06,0,1,0,10.63,12l25.71-22.84a31.91,31.91,0,0,0,37.36-1.24l23.11,18A31.65,31.65,0,0,0,168,184a32,32,0,1,0,32-32Zm0-64a16,16,0,1,1-16,16A16,16,0,0,1,200,88ZM80,56A16,16,0,1,1,96,72,16,16,0,0,1,80,56ZM56,208a16,16,0,1,1,16-16A16,16,0,0,1,56,208Zm56-80a16,16,0,1,1,16,16A16,16,0,0,1,112,128Zm88,72a16,16,0,1,1,16-16A16,16,0,0,1,200,200Z"/></symbol>
+  <symbol id="ziel" viewBox="0 0 256 256" fill="currentColor"><path d="M221.87,83.16A104.1,104.1,0,1,1,195.67,49l22.67-22.68a8,8,0,0,1,11.32,11.32l-96,96a8,8,0,0,1-11.32-11.32l27.72-27.72a40,40,0,1,0,17.87,31.09,8,8,0,1,1,16-.9,56,56,0,1,1-22.38-41.65L184.3,60.39a87.88,87.88,0,1,0,23.13,29.67,8,8,0,0,1,14.44-6.9Z"/></symbol>
+  <symbol id="zahnrad" viewBox="0 0 256 256" fill="currentColor"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Zm88-29.84q.06-2.16,0-4.32l14.92-18.64a8,8,0,0,0,1.48-7.06,107.21,107.21,0,0,0-10.88-26.25,8,8,0,0,0-6-3.93l-23.72-2.64q-1.48-1.56-3-3L186,40.54a8,8,0,0,0-3.94-6,107.71,107.71,0,0,0-26.25-10.87,8,8,0,0,0-7.06,1.49L130.16,40Q128,40,125.84,40L107.2,25.11a8,8,0,0,0-7.06-1.48A107.6,107.6,0,0,0,73.89,34.51a8,8,0,0,0-3.93,6L67.32,64.27q-1.56,1.49-3,3L40.54,70a8,8,0,0,0-6,3.94,107.71,107.71,0,0,0-10.87,26.25,8,8,0,0,0,1.49,7.06L40,125.84Q40,128,40,130.16L25.11,148.8a8,8,0,0,0-1.48,7.06,107.21,107.21,0,0,0,10.88,26.25,8,8,0,0,0,6,3.93l23.72,2.64q1.49,1.56,3,3L70,215.46a8,8,0,0,0,3.94,6,107.71,107.71,0,0,0,26.25,10.87,8,8,0,0,0,7.06-1.49L125.84,216q2.16.06,4.32,0l18.64,14.92a8,8,0,0,0,7.06,1.48,107.21,107.21,0,0,0,26.25-10.88,8,8,0,0,0,3.93-6l2.64-23.72q1.56-1.48,3-3L215.46,186a8,8,0,0,0,6-3.94,107.71,107.71,0,0,0,10.87-26.25,8,8,0,0,0-1.49-7.06Zm-16.1-6.5a73.93,73.93,0,0,1,0,8.68,8,8,0,0,0,1.74,5.48l14.19,17.73a91.57,91.57,0,0,1-6.23,15L187,173.11a8,8,0,0,0-5.1,2.64,74.11,74.11,0,0,1-6.14,6.14,8,8,0,0,0-2.64,5.1l-2.51,22.58a91.32,91.32,0,0,1-15,6.23l-17.74-14.19a8,8,0,0,0-5-1.75h-.48a73.93,73.93,0,0,1-8.68,0,8,8,0,0,0-5.48,1.74L100.45,215.8a91.57,91.57,0,0,1-15-6.23L82.89,187a8,8,0,0,0-2.64-5.1,74.11,74.11,0,0,1-6.14-6.14,8,8,0,0,0-5.1-2.64L46.43,170.6a91.32,91.32,0,0,1-6.23-15l14.19-17.74a8,8,0,0,0,1.74-5.48,73.93,73.93,0,0,1,0-8.68,8,8,0,0,0-1.74-5.48L40.2,100.45a91.57,91.57,0,0,1,6.23-15L69,82.89a8,8,0,0,0,5.1-2.64,74.11,74.11,0,0,1,6.14-6.14A8,8,0,0,0,82.89,69L85.4,46.43a91.32,91.32,0,0,1,15-6.23l17.74,14.19a8,8,0,0,0,5.48,1.74,73.93,73.93,0,0,1,8.68,0,8,8,0,0,0,5.48-1.74L155.55,40.2a91.57,91.57,0,0,1,15,6.23L173.11,69a8,8,0,0,0,2.64,5.1,74.11,74.11,0,0,1,6.14,6.14,8,8,0,0,0,5.1,2.64l22.58,2.51a91.32,91.32,0,0,1,6.23,15l-14.19,17.74A8,8,0,0,0,199.87,123.66Z"/></symbol>
+  <symbol id="rakete" viewBox="0 0 256 256" fill="currentColor"><path d="M223.85,47.12a16,16,0,0,0-15-15c-12.58-.75-44.73.4-71.41,27.07L132.69,64H74.36A15.91,15.91,0,0,0,63,68.68L28.7,103a16,16,0,0,0,9.07,27.16l38.47,5.37,44.21,44.21,5.37,38.49a15.94,15.94,0,0,0,10.78,12.92,16.11,16.11,0,0,0,5.1.83A15.91,15.91,0,0,0,153,227.3L187.32,193A15.91,15.91,0,0,0,192,181.64V123.31l4.77-4.77C223.45,91.86,224.6,59.71,223.85,47.12ZM74.36,80h42.33L77.16,119.52,40,114.34Zm74.41-9.45a76.65,76.65,0,0,1,59.11-22.47,76.46,76.46,0,0,1-22.42,59.16L128,164.68,91.32,128ZM176,181.64,141.67,216l-5.19-37.17L176,139.31Zm-74.16,9.5C97.34,201,82.29,224,40,224a8,8,0,0,1-8-8c0-42.29,23-57.34,32.86-61.85a8,8,0,0,1,6.64,14.56c-6.43,2.93-20.62,12.36-23.12,38.91,26.55-2.5,36-16.69,38.91-23.12a8,8,0,1,1,14.56,6.64Z"/></symbol>
+</svg>
+
+<header class="kopf">
+  <div class="kopf__innen">
+    <a class="logo" href="#top" aria-label="Markenname, zur Startseite"><span class="logo__zeichen" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 25V7l9 11 9-11v18"/></svg></span>Markenname</a>
+    <nav class="menue" id="menue" aria-label="Hauptmenü" data-menue-ziel data-offen="false">
+      <ul>
+        <li><a href="#funktionen">Funktionen</a></li>
+        <li><a href="#ablauf">Ablauf</a></li>
+        <li><a href="#integrationen">Integrationen</a></li>
+        <li><a href="#preise">Preise</a></li>
+        <li><a href="#stimmen">Stimmen</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <a class="telefon" href="tel:+490000000000"><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#telefon"/></svg><span>+49 000 000 00 00</span></a>
+    <a class="knopf knopf--hell kopf__cta" href="#kontakt">Anfrage</a>
+    <button class="burger" type="button" data-menue aria-expanded="false" aria-controls="menue" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="inhalt">
+
+<!-- 1. Held -->
+<section class="held" id="top" aria-labelledby="h-held">
+  <div class="held__sterne" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="wrap held__kopf">
+    <h1 id="h-held" data-zeig>Abläufe, die Sie selbst bauen. <span class="leise">Und die mit Ihrem Betrieb wachsen.</span></h1>
+    <p class="held__satz" data-zeig style="--i:1">Beispieltext: Verbinden Sie Anfragen, Aufträge und Rechnungen zu Abläufen, die von allein laufen. Ohne Programmierkenntnisse, ohne Wartezeit auf die IT.</p>
+    <div class="held__knoepfe" data-zeig style="--i:2">
+      <a class="knopf" href="#kontakt">Kostenlos starten <svg class="ico" width="20" height="20" aria-hidden="true"><use href="#pfeil"/></svg></a>
+      <a class="knopf knopf--ruhig" href="#kontakt">Vorführung buchen</a>
+    </div>
+  </div>
+  <div class="wrap held__buehne">
+    <div class="bild held__bild" data-platzhalter="Bild: Produktansicht der Oberfläche" data-zoom>
+      <ul class="held__chips" aria-hidden="true">
+        <li><svg class="ico" width="20" height="20"><use href="#blitz"/></svg>Neue Anfrage</li>
+        <li><svg class="ico" width="20" height="20"><use href="#haken"/></svg>Angebot erstellt</li>
+        <li><svg class="ico" width="20" height="20"><use href="#kalender"/></svg>Termin gebucht</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 2. Vertrauen -->
+<section class="vertrauen" id="vertrauen" aria-labelledby="h-vertrauen">
+  <div class="wrap">
+    <h2 id="h-vertrauen" class="vertrauen__titel">Im Einsatz bei Teams wie diesen <small>(Beispiellogos)</small></h2>
+  </div>
+  <div class="band" style="--band-abstand:0px;--band-dauer:36s">
+    <div class="band__spur"><span class="beispiellogo logo-nordwerk" role="img" aria-label="Nordwerk (Beispiel)"></span><span class="beispiellogo logo-lichtbau" role="img" aria-label="Lichtbau (Beispiel)"></span><span class="beispiellogo logo-talgrund" role="img" aria-label="Talgrund (Beispiel)"></span><span class="beispiellogo logo-fjordstein" role="img" aria-label="Fjordstein (Beispiel)"></span><span class="beispiellogo logo-kronwerk" role="img" aria-label="Kronwerk (Beispiel)"></span><span class="beispiellogo logo-sonnenfeld" role="img" aria-label="Sonnenfeld (Beispiel)"></span><span class="beispiellogo logo-mareal" role="img" aria-label="Mareal (Beispiel)"></span><span class="beispiellogo logo-quellwerk" role="img" aria-label="Quellwerk (Beispiel)"></span></div>
+    <div class="band__spur" aria-hidden="true"><span class="beispiellogo logo-nordwerk"></span><span class="beispiellogo logo-lichtbau"></span><span class="beispiellogo logo-talgrund"></span><span class="beispiellogo logo-fjordstein"></span><span class="beispiellogo logo-kronwerk"></span><span class="beispiellogo logo-sonnenfeld"></span><span class="beispiellogo logo-mareal"></span><span class="beispiellogo logo-quellwerk"></span></div>
+  </div>
+</section>
+
+<!-- 3. Funktionen -->
+<section class="sektion" id="funktionen" aria-labelledby="h-funktionen">
+  <div class="wrap">
+    <header class="kopfblock">
+      <p class="kicker">Funktionen</p>
+      <h2 id="h-funktionen" data-zeig>Alles, was ein Ablauf braucht, in einem Werkzeug</h2>
+      <p class="kopfblock__satz" data-zeig style="--i:1">Beispieltext: Bausteine ziehen, verbinden, einschalten. Was Sie heute von Hand weiterreichen, erledigt morgen die Software.</p>
+    </header>
+    <div class="bento" data-staffel>
+      <article class="karte karte--bento" data-zeig>
+        <div class="karte__text">
+          <h3>Ziehen, ablegen, automatisieren</h3>
+          <p>Bausteine per Maus verbinden. Jeder Schritt zeigt, was als Nächstes passiert.</p>
+        </div>
+        <div class="demo demo--schritte" aria-hidden="true">
+          <div class="schritt schritt--a"><svg class="ico" width="22" height="22"><use href="#haken"/></svg><span>Rechnung prüfen</span></div>
+          <div class="schritt schritt--b"><svg class="ico" width="22" height="22"><use href="#mail"/></svg><span>Team benachrichtigen</span></div>
+          <div class="schritt schritt--c"><svg class="ico" width="22" height="22"><use href="#kalender"/></svg><span>Frist eintragen</span></div>
+        </div>
+      </article>
+      <article class="karte karte--bento" data-zeig>
+        <div class="karte__text">
+          <h3>Wächst ohne Mehraufwand</h3>
+          <p>Zehn Vorgänge oder zehntausend: der Ablauf bleibt derselbe, nur die Zahl wird größer.</p>
+        </div>
+        <div class="demo demo--messer" role="group" aria-label="Beispielanzeige: Umsatz nach Produkt">
+          <div class="messer">
+            <svg viewBox="0 0 200 110" width="200" height="110" aria-hidden="true"><path class="messer__bahn" d="M20 100a80 80 0 0 1 160 0" pathLength="100"/><path class="messer__a" d="M20 100a80 80 0 0 1 160 0" pathLength="100"/><path class="messer__b" d="M20 100a80 80 0 0 1 160 0" pathLength="100"/></svg>
+            <p class="messer__wert"><span data-zaehle="12480">12.480</span> €<small>Beispielwert</small></p>
+          </div>
+          <ul class="legende">
+            <li><i class="punkt punkt--a"></i>Produkt A <b>41 %</b></li>
+            <li><i class="punkt punkt--b"></i>Produkt B <b>36 %</b></li>
+            <li><i class="punkt punkt--c"></i>Produkt C <b>23 %</b></li>
+          </ul>
+        </div>
+      </article>
+      <article class="karte karte--bento" data-zeig>
+        <div class="karte__text">
+          <h3>Alles verbunden</h3>
+          <p>Mail, Kalender, Buchhaltung, Tabellen: Ihre Werkzeuge sprechen miteinander, ohne dass Sie kopieren müssen.</p>
+        </div>
+        <div class="demo demo--netz" aria-hidden="true">
+          <svg viewBox="0 0 320 150" width="320" height="150"><path d="M60 30C130 30 130 75 150 75M60 120C130 120 130 75 150 75M260 30C190 30 190 75 170 75M260 120C190 120 190 75 170 75" class="netz__linie"/><g class="netz__knoten"><rect x="30" y="10" width="40" height="40" rx="12"/><rect x="30" y="100" width="40" height="40" rx="12"/><rect x="250" y="10" width="40" height="40" rx="12"/><rect x="250" y="100" width="40" height="40" rx="12"/></g><rect class="netz__mitte" x="138" y="53" width="44" height="44" rx="13"/><svg x="44" y="24" width="12" height="12" class="ico"><use href="#mail"/></svg><svg x="44" y="114" width="12" height="12" class="ico"><use href="#kalender"/></svg><svg x="264" y="24" width="12" height="12" class="ico"><use href="#waage"/></svg><svg x="264" y="114" width="12" height="12" class="ico"><use href="#paket"/></svg><svg x="148" y="63" width="24" height="24" class="ico ico--mitte"><use href="#blitz"/></svg></svg>
+        </div>
+      </article>
+      <article class="karte karte--bento" data-zeig>
+        <div class="karte__text">
+          <h3>Mitdenkende Automatik</h3>
+          <p>Die Software merkt, welche Fälle liegen bleiben, und schlägt vor, was sich lohnt zu automatisieren.</p>
+        </div>
+        <div class="demo demo--vorschlag" role="group" aria-label="Beispielanzeige: Trefferquote der Vorschläge">
+          <p class="vorschlag__kopf">Trefferquote der Vorschläge <small>(Beispiel)</small></p>
+          <p class="vorschlag__wert"><span data-zaehle="99">99</span> %</p>
+          <div class="fuell" aria-hidden="true"><i></i></div>
+          <ul class="chips" aria-hidden="true"><li><svg class="ico" width="18" height="18"><use href="#tabelle"/></svg>Tabelle</li><li><svg class="ico" width="18" height="18"><use href="#chat"/></svg>Chat</li></ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 4. Ablauf mit Wortlicht und Sticky -->
+<section class="ablauf" id="ablauf" aria-labelledby="h-ablauf" data-fortschritt>
+  <div class="wrap ablauf__raster">
+    <div class="ablauf__kopf">
+      <p class="kicker">Ablauf</p>
+      <h2 id="h-ablauf" data-licht>In drei Schritten vom ersten Gespräch zum laufenden Ablauf, ohne dass Ihr Team ein Handbuch lesen muss.</h2>
+      <div class="fortschritt" aria-hidden="true"><i></i></div>
+    </div>
+    <ol class="schritte">
+      <li class="schritt-karte" data-zeig>
+        <span class="schritt-karte__nr" aria-hidden="true">1</span>
+        <svg class="ico" width="32" height="32" aria-hidden="true"><use href="#ziel"/></svg>
+        <h3>Ziel festlegen</h3>
+        <p>Beispieltext: Wir klären in 30 Minuten, welcher Ablauf Ihnen die meiste Zeit kostet, und wählen den ersten aus.</p>
+      </li>
+      <li class="schritt-karte" data-zeig>
+        <span class="schritt-karte__nr" aria-hidden="true">2</span>
+        <svg class="ico" width="32" height="32" aria-hidden="true"><use href="#zahnrad"/></svg>
+        <h3>Ablauf bauen</h3>
+        <p>Beispieltext: Sie oder wir setzen den Ablauf aus fertigen Bausteinen zusammen und testen ihn mit echten Beispielfällen.</p>
+      </li>
+      <li class="schritt-karte" data-zeig>
+        <span class="schritt-karte__nr" aria-hidden="true">3</span>
+        <svg class="ico" width="32" height="32" aria-hidden="true"><use href="#rakete"/></svg>
+        <h3>Einschalten und messen</h3>
+        <p>Beispieltext: Ein Schalter, und der Ablauf läuft. Eine Übersicht zeigt, wie viele Vorgänge er übernommen hat.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- 5. Integrationen -->
+<section class="sektion sektion--alt" id="integrationen" aria-labelledby="h-integr">
+  <div class="wrap">
+    <header class="kopfblock kopfblock--mitte">
+      <p class="kicker">Integrationen</p>
+      <h2 id="h-integr" data-zeig>Mit den Werkzeugen verbunden, die Sie schon nutzen</h2>
+      <p class="kopfblock__satz" data-zeig style="--i:1">Beispieltext: Über 250 Anbindungen sind als Ziel geplant. Welche Ihr Betrieb braucht, klären wir im Gespräch.</p>
+    </header>
+    <div class="netz" data-zeig="skala">
+      <svg class="netz__bild" viewBox="0 0 800 420" role="img" aria-label="Schema: sechs Anwendungen links und rechts sind mit einem Baustein in der Mitte verbunden">
+        <g class="netz__wege">
+          <path pathLength="1" d="M130 70C250 70 250 210 352 210"/>
+          <path pathLength="1" d="M130 210H352"/>
+          <path pathLength="1" d="M130 350C250 350 250 210 352 210"/>
+          <path pathLength="1" d="M448 210C550 210 550 70 670 70"/>
+          <path pathLength="1" d="M448 210H670"/>
+          <path pathLength="1" d="M448 210C550 210 550 350 670 350"/>
+        </g>
+        <g class="netz__punkte" aria-hidden="true">
+          <circle r="5" class="p1"/><circle r="5" class="p2"/><circle r="5" class="p3"/><circle r="5" class="p4"/><circle r="5" class="p5"/><circle r="5" class="p6"/>
+        </g>
+        <g class="netz__knoten">
+          <rect x="50" y="30" width="80" height="80" rx="22"/><rect x="50" y="170" width="80" height="80" rx="22"/><rect x="50" y="310" width="80" height="80" rx="22"/>
+          <rect x="670" y="30" width="80" height="80" rx="22"/><rect x="670" y="170" width="80" height="80" rx="22"/><rect x="670" y="310" width="80" height="80" rx="22"/>
+        </g>
+        <rect class="netz__mitte" x="352" y="162" width="96" height="96" rx="28"/>
+        <svg x="72" y="52" width="36" height="36" class="ico"><use href="#mail"/></svg>
+        <svg x="72" y="192" width="36" height="36" class="ico"><use href="#kalender"/></svg>
+        <svg x="72" y="332" width="36" height="36" class="ico"><use href="#waage"/></svg>
+        <svg x="692" y="52" width="36" height="36" class="ico"><use href="#paket"/></svg>
+        <svg x="692" y="192" width="36" height="36" class="ico"><use href="#chat"/></svg>
+        <svg x="692" y="332" width="36" height="36" class="ico"><use href="#tabelle"/></svg>
+        <svg x="376" y="186" width="48" height="48" class="ico ico--mitte"><use href="#blitz"/></svg>
+      </svg>
+    </div>
+    <ul class="anbindungen" data-staffel>
+      <li data-zeig>E-Mail und Postfach</li><li data-zeig>Kalender</li><li data-zeig>Buchhaltung</li><li data-zeig>Versand und Lager</li><li data-zeig>Chat und Telefon</li><li data-zeig>Tabellen und Datenbanken</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 6. Preise -->
+<section class="sektion" id="preise" aria-labelledby="h-preise">
+  <div class="wrap">
+    <header class="kopfblock kopfblock--mitte">
+      <p class="kicker">Preise</p>
+      <h2 id="h-preise" data-zeig>Einfache Pakete, die mitwachsen</h2>
+      <p class="kopfblock__satz" data-zeig style="--i:1">Beispielpreise, noch nicht festgelegt. Keine versteckten Gebühren, jederzeit wechselbar.</p>
+      <div class="wahl" role="group" aria-label="Abrechnung wählen" data-preiswahl>
+        <button type="button" aria-pressed="true" data-art="monat">Monatlich</button>
+        <button type="button" aria-pressed="false" data-art="jahr">Jährlich <small>zwei Monate geschenkt</small></button>
+      </div>
+    </header>
+    <div class="preise" data-staffel>
+      <article class="preis" data-zeig>
+        <h3>Start</h3>
+        <p class="preis__wert"><span class="preis__zahl">0</span> €<small> / Monat</small></p>
+        <p class="preis__satz">Zum Ausprobieren mit einem Ablauf.</p>
+        <a class="knopf knopf--hell knopf--voll" href="#kontakt">Kostenlos starten</a>
+        <h4>Enthalten</h4>
+        <ul class="haken">
+          <li><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#haken"/></svg>Ein aktiver Ablauf</li>
+          <li><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#haken"/></svg>1.000 Vorgänge im Monat</li>
+          <li><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#haken"/></svg>Fünf Anbindungen</li>
+          <li><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#haken"/></svg>Hilfe per Handbuch</li>
+        </ul>
+      </article>
+      <article class="preis preis--stark" data-zeig>
+        <h3>Team</h3>
+        <p class="preis__wert"><span class="preis__zahl" data-monat="49" data-jaehrlich="41">49</span> €<small> / Monat</small></p>
+        <p class="preis__satz">Für Betriebe, die mehrere Abläufe laufen lassen.</p>
+        <a class="knopf knopf--dunkel knopf--voll" href="#kontakt">Team wählen</a>
+        <h4>Enthalten</h4>
+        <ul class="haken">
+          <li><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#haken"/></svg>Unbegrenzte Abläufe</li>
+          <li><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#haken"/></svg>25.000 Vorgänge im Monat</li>
+          <li><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#haken"/></svg>Alle Anbindungen</li>
+          <li><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#haken"/></svg>Hilfe per Mail in einem Werktag</li>
+        </ul>
+      </article>
+      <article class="preis" data-zeig>
+        <h3>Betrieb</h3>
+        <p class="preis__wert"><span class="preis__zahl" data-monat="99" data-jaehrlich="83">99</span> €<small> / Monat</small></p>
+        <p class="preis__satz">Für Teams mit festen Ansprechpersonen.</p>
+        <a class="knopf knopf--hell knopf--voll" href="#kontakt">Betrieb wählen</a>
+        <h4>Enthalten</h4>
+        <ul class="haken">
+          <li><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#haken"/></svg>Alles aus Team</li>
+          <li><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#haken"/></svg>Unbegrenzte Vorgänge</li>
+          <li><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#haken"/></svg>Feste Ansprechperson</li>
+          <li><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#haken"/></svg>Einrichtung im Gespräch</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 7. Stimmen -->
+<section class="sektion sektion--alt" id="stimmen" aria-labelledby="h-stimmen">
+  <div class="wrap">
+    <header class="kopfblock kopfblock--mitte">
+      <p class="kicker">Stimmen</p>
+      <h2 id="h-stimmen" data-zeig>Was Anwender sagen werden</h2>
+      <p class="kopfblock__satz" data-zeig style="--i:1">Platzhalter: Die drei Karten zeigen Beispieltexte, keine echten Kundenstimmen. Beim Kunden durch freigegebene Zitate ersetzen.</p>
+    </header>
+    <div class="stimmen" data-staffel>
+      <figure class="stimme" data-zeig data-beispiel>
+        <p class="sterne" role="img" aria-label="5 von 5 Sternen (Beispiel)"><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg></p>
+        <blockquote><p>Beispieltext: Die Angebotsmails gehen jetzt raus, bevor wir den Hörer aufgelegt haben.</p></blockquote>
+        <figcaption><span class="avatar" aria-hidden="true">A</span><span><b>Beispielperson A.</b><br>Rolle, Beispielfirma</span></figcaption>
+      </figure>
+      <figure class="stimme" data-zeig data-beispiel>
+        <p class="sterne" role="img" aria-label="5 von 5 Sternen (Beispiel)"><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg></p>
+        <blockquote><p>Beispieltext: Eingerichtet an einem Nachmittag, danach hat sich niemand mehr um die Fristen gekümmert.</p></blockquote>
+        <figcaption><span class="avatar" aria-hidden="true">B</span><span><b>Beispielperson B.</b><br>Rolle, Beispielfirma</span></figcaption>
+      </figure>
+      <figure class="stimme" data-zeig data-beispiel>
+        <p class="sterne" role="img" aria-label="5 von 5 Sternen (Beispiel)"><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg></p>
+        <blockquote><p>Beispieltext: Endlich sehen wir auf einer Seite, welche Vorgänge laufen und welche hängen.</p></blockquote>
+        <figcaption><span class="avatar" aria-hidden="true">C</span><span><b>Beispielperson C.</b><br>Rolle, Beispielfirma</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 8. FAQ -->
+<section class="sektion" id="faq" aria-labelledby="h-faq">
+  <div class="wrap faq">
+    <header class="kopfblock">
+      <p class="kicker">Häufige Fragen</p>
+      <h2 id="h-faq" data-zeig>Was Sie vor dem Start wissen möchten</h2>
+      <p class="kopfblock__satz" data-zeig style="--i:1">Beispielantworten. Steht Ihre Frage nicht dabei, schreiben oder rufen Sie an.</p>
+      <a class="knopf knopf--hell" href="#kontakt">Frage stellen</a>
+    </header>
+    <div class="akkordeon" data-exklusiv>
+      <details open>
+        <summary>Brauche ich Programmierkenntnisse?<span class="pm" aria-hidden="true"><svg class="ico ico--plus" width="24" height="24"><use href="#plus"/></svg><svg class="ico ico--minus" width="24" height="24"><use href="#minus"/></svg></span></summary>
+        <div class="antwort"><p>Beispielantwort: Nein. Abläufe entstehen aus fertigen Bausteinen. Für Sonderfälle richtet unser Team sie ein.</p></div>
+      </details>
+      <details>
+        <summary>Wie lange dauert die Einrichtung?<span class="pm" aria-hidden="true"><svg class="ico ico--plus" width="24" height="24"><use href="#plus"/></svg><svg class="ico ico--minus" width="24" height="24"><use href="#minus"/></svg></span></summary>
+        <div class="antwort"><p>Beispielantwort: Ein einfacher Ablauf läuft nach einem Gespräch und einem Testtag. Größere Vorhaben planen wir gemeinsam.</p></div>
+      </details>
+      <details>
+        <summary>Wo liegen meine Daten?<span class="pm" aria-hidden="true"><svg class="ico ico--plus" width="24" height="24"><use href="#plus"/></svg><svg class="ico ico--minus" width="24" height="24"><use href="#minus"/></svg></span></summary>
+        <div class="antwort"><p>Beispielantwort: Platzhalter. Hier gehört der tatsächliche Standort der Server und der Verweis auf die Datenschutzerklärung hin.</p></div>
+      </details>
+      <details>
+        <summary>Kann ich jederzeit kündigen?<span class="pm" aria-hidden="true"><svg class="ico ico--plus" width="24" height="24"><use href="#plus"/></svg><svg class="ico ico--minus" width="24" height="24"><use href="#minus"/></svg></span></summary>
+        <div class="antwort"><p>Beispielantwort: Platzhalter. Laufzeit und Kündigungsfrist richten sich nach dem späteren Vertrag und werden hier genannt.</p></div>
+      </details>
+      <details>
+        <summary>Was passiert, wenn ein Ablauf fehlschlägt?<span class="pm" aria-hidden="true"><svg class="ico ico--plus" width="24" height="24"><use href="#plus"/></svg><svg class="ico ico--minus" width="24" height="24"><use href="#minus"/></svg></span></summary>
+        <div class="antwort"><p>Beispielantwort: Der Vorgang wird angehalten und Sie bekommen eine Nachricht. Nichts geht still verloren.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 9. Abschluss mit Handlung -->
+<section class="sektion sektion--oben-klein" id="kontakt" aria-labelledby="h-kontakt">
+  <div class="wrap">
+    <div class="abschluss">
+      <div class="abschluss__text">
+        <p class="abschluss__kicker">Jetzt starten</p>
+        <h2 id="h-kontakt">Bereit, Abläufe klüger zu machen?</h2>
+        <p>Beispieltext: Der erste Ablauf läuft in wenigen Stunden. Kostenlos beginnen oder eine Vorführung vereinbaren.</p>
+        <div class="abschluss__knoepfe">
+          <a class="knopf knopf--dunkel" href="#anfrage">Kostenlos starten</a>
+          <a class="knopf knopf--auf-akzent" href="tel:+490000000000"><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#telefon"/></svg>+49 000 000 00 00</a>
+        </div>
+      </div>
+      <div class="abschluss__schmuck" aria-hidden="true">
+        <i><svg class="ico" width="28" height="28"><use href="#mail"/></svg></i>
+        <i><svg class="ico" width="28" height="28"><use href="#kalender"/></svg></i>
+        <i class="gross"><svg class="ico" width="44" height="44"><use href="#blitz"/></svg></i>
+        <i><svg class="ico" width="28" height="28"><use href="#paket"/></svg></i>
+      </div>
+    </div>
+    <form class="anfrage" id="anfrage" action="#" method="post" onsubmit="return false">
+      <div class="anfrage__text">
+        <h3>Anfrage senden</h3>
+        <p>Automatisieren Sie, was sich wiederholt. Wir melden uns in einem Werktag.</p>
+      </div>
+      <div class="anfrage__feld">
+        <label for="mail">Ihre E-Mail-Adresse</label>
+        <input id="mail" name="mail" type="email" autocomplete="email" required placeholder="name@beispiel.de">
+        <button class="knopf knopf--voll" type="submit">Anfrage senden</button>
+        <p class="anfrage__hinweis">Beispielformular ohne Versand. Einwilligung und Datenschutzhinweis gehören hier später hin.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="fuss">
+  <div class="wrap">
+    <div class="fuss__oben">
+      <div class="fuss__kontakt">
+        <a class="logo" href="#top" aria-label="Markenname, nach oben"><span class="logo__zeichen" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 25V7l9 11 9-11v18"/></svg></span>Markenname</a>
+        <a href="mailto:hallo@beispiel.de">hallo@beispiel.de</a>
+        <a href="tel:+490000000000">+49 000 000 00 00</a>
+        <p>Musterstraße 1, 00000 Musterstadt</p>
+      </div>
+      <nav class="fuss__spalten" aria-label="Fußmenü">
+        <div><h2>Seite</h2><ul><li><a href="#funktionen">Funktionen</a></li><li><a href="#integrationen">Integrationen</a></li><li><a href="#preise">Preise</a></li></ul></div>
+        <div><h2>Hilfe</h2><ul><li><a href="#faq">Häufige Fragen</a></li><li><a href="#stimmen">Stimmen</a></li><li><a href="#kontakt">Kontakt</a></li></ul></div>
+        <div><h2>Rechtliches</h2><ul><li><a href="#">Impressum</a></li><li><a href="#">Datenschutz</a></li><li><a href="#">AGB</a></li></ul></div>
+      </nav>
+    </div>
+    <p class="fuss__marke" aria-hidden="true">Markenname</p>
+    <p class="fuss__unten">© <span data-jahr>2026</span> Markenname. Vorlage mit Beispieltexten.</p>
+  </div>
+</footer>
+
+<script src="../_basis/bewegung.js" defer></script>
+<script src="stil.js" defer></script>
+</body>
+</html>
