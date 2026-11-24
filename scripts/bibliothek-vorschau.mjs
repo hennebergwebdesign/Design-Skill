@@ -6,7 +6,7 @@
   Das war langsam. Jetzt zeigt sie je Vorlage drei kleine JPEG Bilder (hohe Seitenvorschau, Abschnittsübersicht beim Überfahren, Mobil). Dieses Skript erzeugt sie neu,
   wenn sich eine Vorlage ändert. Ausgabe: <bibliothek>/vorschau/tNN-desktop.jpg, tNN-abschnitte.jpg und tNN-mobil.jpg.
 
-  Aufruf: node scripts/bibliothek-vorschau.mjs [--qualitaet 78]
+  Aufruf: node scripts/bibliothek-vorschau.mjs [--qualitaet 78] [--nur t19,t20]
   Braucht Playwright (gefunden über lib/browser.mjs), sonst keine Abhängigkeit. Eigener lokaler
   Server, kein Netzzugriff. Bewegung ist auf "reduziert" gestellt, damit alle Inhalte stehen.
 */
@@ -34,7 +34,9 @@ const server = createServer(async (req, res) => {
 await new Promise((ok) => server.listen(0, '127.0.0.1', ok));
 const basis = `http://127.0.0.1:${server.address().port}`;
 
-const ordner = (await readdir(wurzel)).filter((n) => /^t\d\d$/.test(n)).sort();
+const nurIdx = process.argv.indexOf('--nur');
+const nur = nurIdx > 0 ? process.argv[nurIdx + 1].split(',') : null;
+const ordner = (await readdir(wurzel)).filter((n) => /^t\d\d$/.test(n) && (!nur || nur.includes(n))).sort();
 await mkdir(join(wurzel, 'vorschau'), { recursive: true });
 const browser = await chromiumStarten(pw.chromium);
 /* Desktop: hohe Vorschau (oberer Seitenteil, Format 4 zu 5) und Abschnittsübersicht (acht gleichmäßig verteilte Ausschnitte der ganzen Seite in zwei Spalten, erscheint beim Überfahren).

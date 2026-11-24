@@ -1,6 +1,6 @@
 # Herkunft und Grenzen der Bibliothek
 
-Stand 24.11.2026. Die achtzehn Vorlagen sind **eigenständige Umsetzungen** nach dem Prinzip achtzehn öffentlich erreichbarer Referenzseiten (t01 bis t12 am 24.11.2026, t13 bis t18 am 25.11.2026 nachgereicht). Der Inhaber der
+Stand 24.11.2026. Die achtundzwanzig Vorlagen sind **eigenständige Umsetzungen** nach dem Prinzip öffentlich erreichbarer Referenzseiten (t01 bis t12 am 24.11.2026, t13 bis t28 am 25.11.2026 nachgereicht). Der Inhaber der
 Agentur hat die Erfassung der Seiten ausdrücklich freigegeben und Weg 1 gewählt (eigene Templates, branchenneutral). Er wünschte einen Nachbau von
 Layout, Design, Prinzip und Animation; übernommen ist das Prinzip, nicht die Ausführung.
 
@@ -24,6 +24,16 @@ Layout, Design, Prinzip und Animation; übernommen ist das Prinzip, nicht die Au
 | t16 | harmone.webflow.io | 25.11.2026 |
 | t17 | fernvale.webflow.io | 25.11.2026 |
 | t18 | ovo-confetti.webflow.io | 25.11.2026 |
+| t19 | ocure.webflow.io | 25.11.2026 |
+| t20 | flow-mate.webflow.io | 25.11.2026 |
+| t21 | alvix.webflow.io | 25.11.2026 |
+| t22 | pipewise-template.webflow.io (Startseite) | 25.11.2026 |
+| t23 | pipewise-template.webflow.io/membership | 25.11.2026 |
+| t24 | airvia.webflow.io/home-v3 | 25.11.2026 |
+| t25 | airvia.webflow.io/about-v1 | 25.11.2026 |
+| t26 | ventraflow.webflow.io | 25.11.2026 |
+| t27 | ainova-template.webflow.io | 25.11.2026 |
+| t28 | fitedge.webflow.io | 25.11.2026 |
 
 ## Was übernommen ist, was nicht
 
@@ -36,8 +46,8 @@ Layout, Design, Prinzip und Animation; übernommen ist das Prinzip, nicht die Au
 
 ## Was gemessen ist
 
-* Je Vorlage im Browser (Chromium, Playwright) bei 390 und 1440 Pixel gesehen. Gemeinsamer Messlauf aller achtzehn am 24.11.2026: **kein horizontales Überlaufen, keine
-  Konsolenfehler**. `pruefe-striche` ohne Befund bei allen achtzehn.
+* Je Vorlage im Browser (Chromium, Playwright) bei 390 und 1440 Pixel gesehen. Gemeinsamer Messlauf aller achtundzwanzig am 24.11.2026: **kein horizontales Überlaufen, keine
+  Konsolenfehler**. `pruefe-striche` ohne Befund bei allen achtundzwanzig.
 * Kontrast: ein gemeinsamer Lauf (Text gegen die nächste deckende Fläche) meldete Treffer, die nach Sichtprüfung Fehlalarme waren (Text über Bild, Verlauf oder Markerfläche).
   **Nicht flächendeckend nachgemessen** sind Text über Bildern und Verläufen und der Rand von Eingabefeldern. Bekannt: `t06` hat nicht gefüllte Überschriftwörter mit etwa 3,5 zu 1
   (Schätzung des Agenten), `t04` nutzt einen Verlaufstext im Großwort.
