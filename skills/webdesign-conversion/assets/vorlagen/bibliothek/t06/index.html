@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bühne | Vorlage für Konferenz und Veranstaltung</title>
+<meta name="description" content="Beispielseite einer Veranstaltung mit Programm, Referenten, Partnern, Preisen und Fragen. Alle Texte sind Platzhalter.">
+<link rel="stylesheet" href="../_basis/schriften.css">
+<link rel="stylesheet" href="marke.css">
+<link rel="stylesheet" href="../_basis/basis.css">
+<link rel="stylesheet" href="stil.css">
+</head>
+<body>
+<a class="sprunglink" href="#inhalt">Zum Inhalt springen</a>
+
+<header class="kopf">
+  <div class="kopf__innen">
+    <button class="kopf__burger" type="button" data-menue aria-expanded="false" aria-controls="hauptmenue" aria-label="Menü öffnen">
+      <span class="burger" aria-hidden="true"><i></i><i></i></span>
+    </button>
+    <nav class="kopf__nav" id="hauptmenue" aria-label="Hauptnavigation" data-menue-ziel data-offen="false">
+      <ul>
+        <li><a href="#ueberblick">Überblick</a></li>
+        <li><a href="#programm">Programm</a></li>
+        <li><a href="#referenten">Referenten</a></li>
+        <li><a href="#partner">Partner</a></li>
+        <li><a href="#preise">Tickets</a></li>
+      </ul>
+    </nav>
+    <a class="logo" href="#top" aria-label="Bühne, zur Startseite">
+      <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><path d="M4 28V16a12 12 0 0 1 24 0v12h-7V16a5 5 0 0 0-10 0v12z" fill="currentColor"/></svg>
+      <span>Bühne</span>
+    </a>
+    <a class="knopf knopf--hell kopf__cta" href="#preise"><span class="nur-gross">Ticket sichern</span><span class="nur-klein">Ticket</span><span class="pfeil" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+  </div>
+</header>
+
+<main id="inhalt">
+
+<!-- 1. Hero: dunkel, riesige H1, gebogene Bilderleiste, die beim Scrollen flach und groß wird -->
+<section class="hero" id="top" data-fortschritt aria-labelledby="hero-titel">
+  <div class="hero__sticky">
+    <div class="hero__linien" aria-hidden="true"></div>
+    <div class="hero__kopf">
+      <p class="hero__vor">Sie sind eingeladen zum jährlichen</p>
+      <h1 id="hero-titel">Treffpunkt</h1>
+    </div>
+    <div class="buehne" aria-hidden="true">
+      <div class="buehne__reihe">
+        <div class="bild buehne__feld" style="--r:30;--ton:22%" data-platzhalter="Bild: Publikum"></div>
+        <div class="bild buehne__feld" style="--r:15;--ton:38%" data-platzhalter="Bild: Bühne"></div>
+        <div class="bild buehne__feld" style="--r:0;--ton:30%" data-platzhalter="Bild: Applaus"></div>
+        <div class="bild buehne__feld" style="--r:-15;--ton:44%" data-platzhalter="Bild: Gespräch"></div>
+        <div class="bild buehne__feld" style="--r:-30;--ton:26%" data-platzhalter="Bild: Vortrag"></div>
+      </div>
+    </div>
+    <div class="wrap hero__meta">
+      <dl class="hero__fakt">
+        <div><dt>Wann?</dt><dd data-beispiel>24. Dezember 2026<br>08:00 Uhr</dd></div>
+        <div><dt>Wo?</dt><dd data-beispiel>Musterstadt<br>Musterhalle</dd></div>
+      </dl>
+      <a class="knopf knopf--hell" href="#programm">Programm ansehen<span class="pfeil" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      <div class="hero__runde">
+        <div class="avatare" aria-hidden="true"><span class="bild" data-platzhalter=""></span><span class="bild" data-platzhalter=""></span><span class="bild" data-platzhalter=""></span><span class="avatare__plus">+</span></div>
+        <p>Platz für <span data-beispiel>mehrere Tausend</span> Teilnehmende</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. Überblick: Überschrift füllt sich Wort für Wort, drei Spalten -->
+<section class="sektion ueberblick" id="ueberblick" aria-labelledby="ueberblick-titel">
+  <div class="wrap ueberblick__raster">
+    <div class="ueberblick__links">
+      <p class="kicker">Überblick</p>
+      <h2 id="ueberblick-titel" data-wortfuell>Wir bringen Menschen ins Gespräch</h2>
+      <div class="bild ueberblick__klein" data-platzhalter="Bild: Zuhörende" data-zeig="skala"></div>
+    </div>
+    <div class="bild ueberblick__gross" data-platzhalter="Bild: Rednerin" data-zeig="skala"></div>
+    <div class="ueberblick__karten" data-staffel>
+      <article class="infokarte infokarte--hell" data-zeig>
+        <svg viewBox="0 0 32 32" width="40" height="40" aria-hidden="true"><circle cx="11" cy="11" r="6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="21" cy="11" r="6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="11" cy="21" r="6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="21" cy="21" r="6" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        <h3>Planung</h3>
+        <p>Beispieltext: Wir begleiten die Vorbereitung von der Raumfrage bis zum Ablaufplan.</p>
+      </article>
+      <article class="infokarte infokarte--dunkel" data-zeig>
+        <svg viewBox="0 0 32 32" width="40" height="40" aria-hidden="true"><circle cx="16" cy="9" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 27v-4a6 6 0 0 1 6-6h8a6 6 0 0 1 6 6v4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        <h3>Betreuung</h3>
+        <p>Beispieltext: Ansprechpersonen vor Ort kümmern sich um Technik, Gäste und Zeitplan.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 3. Programm: Tage als Reiter, helle Karten in einem Tint-Panel -->
+<section class="sektion programm" id="programm" aria-labelledby="programm-titel">
+  <div class="wrap">
+    <div class="programm__kopf">
+      <div>
+        <p class="kicker">Programm</p>
+        <h2 id="programm-titel" data-wortfuell>Unser Ablauf in drei Tagen</h2>
+      </div>
+      <div class="tage" role="tablist" aria-label="Veranstaltungstage" data-reiter>
+        <button class="tag" role="tab" type="button" id="tab-1" aria-controls="tag-1" aria-selected="true"><span class="tag__datum" data-beispiel>24.12.2026</span><span class="tag__name">Tag 01</span></button>
+        <button class="tag" role="tab" type="button" id="tab-2" aria-controls="tag-2" aria-selected="false" tabindex="-1"><span class="tag__datum" data-beispiel>25.12.2026</span><span class="tag__name">Tag 02</span></button>
+        <button class="tag" role="tab" type="button" id="tab-3" aria-controls="tag-3" aria-selected="false" tabindex="-1"><span class="tag__datum" data-beispiel>26.12.2026</span><span class="tag__name">Tag 03</span></button>
+      </div>
+    </div>
+
+    <div class="programm__panel" data-staffel>
+      <div class="tagesliste" role="tabpanel" id="tag-1" aria-labelledby="tab-1">
+        <h3 class="tagestitel">Tag 01</h3>
+        <article class="slot" data-zeig><p class="slot__zeit" data-beispiel>08:00 bis 09:15</p><div class="bild slot__bild" data-platzhalter="Bild: Empfang"></div><div class="slot__text"><h4>Ankunft und Empfang</h4><p>Beispieltext: Unterlagen abholen, Platz finden und die ersten Gespräche führen.</p></div></article>
+        <article class="slot" data-zeig><p class="slot__zeit" data-beispiel>09:30 bis 10:45</p><div class="bild slot__bild" data-platzhalter="Bild: Eröffnung"></div><div class="slot__text"><h4>Eröffnungsvortrag</h4><p>Beispieltext: Ein Blick auf Themen, die in den kommenden Jahren wichtig werden.</p></div></article>
+        <article class="slot" data-zeig><p class="slot__zeit" data-beispiel>11:00 bis 12:00</p><div class="bild slot__bild" data-platzhalter="Bild: Werkstatt"></div><div class="slot__text"><h4>Arbeiten in Kleingruppen</h4><p>Beispieltext: Aufgaben gemeinsam lösen, Ideen austauschen und mitnehmen.</p></div></article>
+      </div>
+      <div class="tagesliste" role="tabpanel" id="tag-2" aria-labelledby="tab-2">
+        <h3 class="tagestitel">Tag 02</h3>
+        <article class="slot"><p class="slot__zeit" data-beispiel>09:00 bis 10:30</p><div class="bild slot__bild" data-platzhalter="Bild: Podium"></div><div class="slot__text"><h4>Podiumsgespräch</h4><p>Beispieltext: Mehrere Stimmen, eine Frage, viel Raum für Nachfragen aus dem Saal.</p></div></article>
+        <article class="slot"><p class="slot__zeit" data-beispiel>11:00 bis 12:30</p><div class="bild slot__bild" data-platzhalter="Bild: Austausch"></div><div class="slot__text"><h4>Austausch am Tisch</h4><p>Beispieltext: Themenrunden mit wechselnden Gästen und Moderation.</p></div></article>
+      </div>
+      <div class="tagesliste" role="tabpanel" id="tag-3" aria-labelledby="tab-3">
+        <h3 class="tagestitel">Tag 03</h3>
+        <article class="slot"><p class="slot__zeit" data-beispiel>09:30 bis 11:00</p><div class="bild slot__bild" data-platzhalter="Bild: Praxis"></div><div class="slot__text"><h4>Praxisbeispiele</h4><p>Beispieltext: Kurze Berichte aus der Umsetzung, ehrlich mit Hürden.</p></div></article>
+        <article class="slot"><p class="slot__zeit" data-beispiel>11:30 bis 12:30</p><div class="bild slot__bild" data-platzhalter="Bild: Abschluss"></div><div class="slot__text"><h4>Abschluss und Ausblick</h4><p>Beispieltext: Das Wichtigste in Kürze und die nächsten Schritte.</p></div></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. Countdown: Vollbild-Platzhalter, Ortschip, Zählkästen -->
+<section class="countdown" aria-labelledby="countdown-titel">
+  <div class="bild countdown__bild" data-platzhalter="Bild: Saal" data-parallax="0.06"></div>
+  <div class="wrap countdown__innen">
+    <p class="ortschip"><span>Live in</span><strong data-beispiel>Musterstadt</strong></p>
+    <h2 class="sr-nur" id="countdown-titel">Countdown bis zum Beginn</h2>
+    <div class="countdown__fuss">
+      <div class="zaehler" data-countdown data-ziel="2027-03-20T09:00:00" data-beispiel role="timer" aria-label="Zeit bis zum Beginn">
+        <div class="zaehler__kasten"><span class="zaehler__zahl" data-t>05</span><span>Tage</span></div>
+        <span class="zaehler__punkte" aria-hidden="true"></span>
+        <div class="zaehler__kasten"><span class="zaehler__zahl" data-h>04</span><span>Std.</span></div>
+        <span class="zaehler__punkte" aria-hidden="true"></span>
+        <div class="zaehler__kasten"><span class="zaehler__zahl" data-m>27</span><span>Min.</span></div>
+        <span class="zaehler__punkte" aria-hidden="true"></span>
+        <div class="zaehler__kasten"><span class="zaehler__zahl" data-s>09</span><span>Sek.</span></div>
+      </div>
+      <a class="knopf knopf--hell" href="#preise">Platz reservieren<span class="pfeil" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Referenten: Karussell mit Scroll Snap und Punkten -->
+<section class="sektion referenten" id="referenten" aria-labelledby="referenten-titel">
+  <div class="wrap">
+    <p class="kicker">Auf der Bühne</p>
+    <h2 id="referenten-titel" data-wortfuell>Wer zu uns spricht</h2>
+    <p class="referenten__text">Beispieltext: Kurze Vorstellung der Gäste und worüber sie sprechen werden.</p>
+  </div>
+  <div class="wrap">
+    <ul class="karussell" data-karussell tabindex="0" aria-label="Referentenliste, mit Pfeiltasten scrollen">
+      <li class="person"><div class="bild person__bild" data-platzhalter="Foto"></div><div class="person__name"><h3>Mara Linde</h3><p data-beispiel>Geschäftsführung, Beispiel GmbH</p></div></li>
+      <li class="person"><div class="bild person__bild" data-platzhalter="Foto"></div><div class="person__name"><h3>Jonas Kerner</h3><p data-beispiel>Leitung Entwicklung, Beispiel AG</p></div></li>
+      <li class="person"><div class="bild person__bild" data-platzhalter="Foto"></div><div class="person__name"><h3>Selin Arndt</h3><p data-beispiel>Vorständin, Beispielverband</p></div></li>
+      <li class="person"><div class="bild person__bild" data-platzhalter="Foto"></div><div class="person__name"><h3>Tobias Reuter</h3><p data-beispiel>Forschung, Beispiel Institut</p></div></li>
+      <li class="person"><div class="bild person__bild" data-platzhalter="Foto"></div><div class="person__name"><h3>Lea Winkler</h3><p data-beispiel>Moderation und Beratung</p></div></li>
+      <li class="person"><div class="bild person__bild" data-platzhalter="Foto"></div><div class="person__name"><h3>Karim Sayed</h3><p data-beispiel>Gründer, Beispiel Studio</p></div></li>
+    </ul>
+    <div class="punkte" data-punkte aria-label="Seite im Karussell"></div>
+  </div>
+</section>
+
+<!-- 6. Partner: großes Tint-Panel, links Text, rechts drei Karten mit Logolauf -->
+<section class="partner" id="partner" aria-labelledby="partner-titel">
+  <div class="wrap">
+    <div class="partner__panel">
+      <div class="partner__text">
+        <div>
+          <p class="kicker">Unsere Partner</p>
+          <h2 id="partner-titel" data-wortfuell>Gemeinsam für eine gelungene Veranstaltung</h2>
+        </div>
+        <div>
+          <p>Beispieltext: Präsentieren Sie Ihre Marke, lernen Sie Entscheider kennen und gestalten Sie das Programm mit.</p>
+          <a class="knopf knopf--dunkel" href="#kontakt">Partner werden<span class="pfeil" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        </div>
+      </div>
+      <div class="partner__karten" data-staffel>
+        <article class="partnerkarte" data-zeig>
+          <h3>Hauptpartner</h3>
+          <div class="band logoband" aria-hidden="true"><div class="band__spur"><span class="bild logo-platz" data-platzhalter=""></span><span class="bild logo-platz logo-platz--b" data-platzhalter=""></span><span class="bild logo-platz" data-platzhalter=""></span></div><div class="band__spur"><span class="bild logo-platz" data-platzhalter=""></span><span class="bild logo-platz logo-platz--b" data-platzhalter=""></span><span class="bild logo-platz" data-platzhalter=""></span></div></div>
+        </article>
+        <article class="partnerkarte" data-zeig>
+          <h3>Partner</h3>
+          <div class="band logoband logoband--zurueck" aria-hidden="true"><div class="band__spur"><span class="bild logo-platz logo-platz--b" data-platzhalter=""></span><span class="bild logo-platz" data-platzhalter=""></span><span class="bild logo-platz logo-platz--b" data-platzhalter=""></span></div><div class="band__spur"><span class="bild logo-platz logo-platz--b" data-platzhalter=""></span><span class="bild logo-platz" data-platzhalter=""></span><span class="bild logo-platz logo-platz--b" data-platzhalter=""></span></div></div>
+        </article>
+        <article class="partnerkarte" data-zeig>
+          <h3>Förderer</h3>
+          <div class="band logoband" aria-hidden="true"><div class="band__spur"><span class="bild logo-platz" data-platzhalter=""></span><span class="bild logo-platz" data-platzhalter=""></span><span class="bild logo-platz logo-platz--b" data-platzhalter=""></span></div><div class="band__spur"><span class="bild logo-platz" data-platzhalter=""></span><span class="bild logo-platz" data-platzhalter=""></span><span class="bild logo-platz logo-platz--b" data-platzhalter=""></span></div></div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. Preise: dunkel, drei Karten, mittlere hervorgehoben -->
+<section class="sektion preise" id="preise" aria-labelledby="preise-titel">
+  <div class="wrap">
+    <div class="mitte-kopf">
+      <p class="kicker">Tickets</p>
+      <h2 id="preise-titel" data-wortfuell>Das passende Ticket für Sie</h2>
+    </div>
+    <div class="preis__raster" data-staffel>
+      <article class="preis" data-zeig>
+        <div class="preis__kopf">
+          <h3>Basis</h3>
+          <p>Beispieltext: Zugang zu allen Vorträgen und Pausenbereichen.</p>
+          <ul class="haken"><li>Alle Vorträge</li><li>Platz im Saal</li><li>Austauschrunden</li></ul>
+        </div>
+        <div class="preis__fuss">
+          <p class="preis__zahl" data-beispiel>249 €</p>
+          <a class="knopf knopf--hell" href="#kontakt">Ticket wählen<span class="pfeil" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+          <p class="preis__hinweis">Beispieltext: Hinweis zur Verfügbarkeit</p>
+        </div>
+      </article>
+      <article class="preis preis--vorn" data-zeig>
+        <div class="preis__kopf">
+          <h3>Komfort</h3>
+          <p>Beispieltext: Bevorzugte Plätze und ein Treffen mit den Gästen der Bühne.</p>
+          <ul class="haken"><li>Alles aus Basis</li><li>Plätze vorne</li><li>Gespräch mit Referenten</li></ul>
+        </div>
+        <div class="preis__fuss">
+          <p class="preis__zahl" data-beispiel>399 €</p>
+          <a class="knopf knopf--dunkel" href="#kontakt">Ticket wählen<span class="pfeil" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+          <p class="preis__hinweis">Beispieltext: Hinweis zur Verfügbarkeit</p>
+        </div>
+      </article>
+      <article class="preis" data-zeig>
+        <div class="preis__kopf">
+          <h3>Ermäßigt</h3>
+          <p>Beispieltext: Für Studierende und Auszubildende gegen Nachweis.</p>
+          <ul class="haken"><li>Alles aus Basis</li><li>Nachweis erforderlich</li><li>Netzwerktreffen</li></ul>
+        </div>
+        <div class="preis__fuss">
+          <p class="preis__zahl" data-beispiel>99 €</p>
+          <a class="knopf knopf--hell" href="#kontakt">Ticket wählen<span class="pfeil" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+          <p class="preis__hinweis">Beispieltext: Hinweis zur Verfügbarkeit</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 8. Stimmen: gekippte, überlappende Karten, die sich beim Scrollen aufrichten -->
+<section class="sektion stimmen" aria-labelledby="stimmen-titel">
+  <div class="wrap">
+    <div class="mitte-kopf">
+      <p class="kicker">Stimmen</p>
+      <h2 id="stimmen-titel" data-wortfuell>Das sagen Teilnehmende</h2>
+      <p>Beispieltext: Hier stehen später echte, freigegebene Zitate.</p>
+    </div>
+    <div class="faecher" data-faecher>
+      <figure class="zitat zitat--hell" style="--w:-3;--v:1"><figcaption><span class="bild zitat__bild" data-platzhalter=""></span><span><strong>Vorname Nachname</strong><span>Funktion, Organisation</span></span></figcaption><blockquote data-beispiel>Beispielzitat: Hier steht eine echte Rückmeldung zur Organisation und zu den Inhalten.</blockquote></figure>
+      <figure class="zitat zitat--dunkel" style="--w:2;--v:-1"><figcaption><span class="bild zitat__bild" data-platzhalter=""></span><span><strong>Vorname Nachname</strong><span>Funktion, Organisation</span></span></figcaption><blockquote data-beispiel>Beispielzitat: Hier steht eine echte Rückmeldung zu den Gesprächen vor Ort.</blockquote></figure>
+      <figure class="zitat zitat--hell" style="--w:-2;--v:1"><figcaption><span class="bild zitat__bild" data-platzhalter=""></span><span><strong>Vorname Nachname</strong><span>Funktion, Organisation</span></span></figcaption><blockquote data-beispiel>Beispielzitat: Hier steht eine echte Rückmeldung zum Programm und zu den Gästen.</blockquote></figure>
+      <figure class="zitat zitat--dunkel" style="--w:3;--v:-1"><figcaption><span class="bild zitat__bild" data-platzhalter=""></span><span><strong>Vorname Nachname</strong><span>Funktion, Organisation</span></span></figcaption><blockquote data-beispiel>Beispielzitat: Hier steht eine echte Rückmeldung dazu, was hängen geblieben ist.</blockquote></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 9. Laufband in zwei Reihen, gegenläufig -->
+<section class="lauf" aria-label="Schlagworte der Veranstaltung">
+  <div class="band lauf__reihe" aria-hidden="true">
+    <div class="band__spur"><span>Tickets</span><i class="stern"></i><span>Programm</span><i class="stern"></i><span>Partner</span><i class="stern"></i><span>Lounge</span><i class="stern"></i></div>
+    <div class="band__spur"><span>Tickets</span><i class="stern"></i><span>Programm</span><i class="stern"></i><span>Partner</span><i class="stern"></i><span>Lounge</span><i class="stern"></i></div>
+  </div>
+  <div class="band lauf__reihe lauf__reihe--zurueck" aria-hidden="true">
+    <div class="band__spur"><span>Tickets</span><i class="stern"></i><span>Programm</span><i class="stern"></i><span>Partner</span><i class="stern"></i><span>Lounge</span><i class="stern"></i></div>
+    <div class="band__spur"><span>Tickets</span><i class="stern"></i><span>Programm</span><i class="stern"></i><span>Partner</span><i class="stern"></i><span>Lounge</span><i class="stern"></i></div>
+  </div>
+</section>
+
+<!-- 10. Fragen -->
+<section class="sektion fragen" id="fragen" aria-labelledby="fragen-titel">
+  <div class="wrap">
+    <div class="mitte-kopf">
+      <p class="kicker">Fragen und Antworten</p>
+      <h2 id="fragen-titel" data-wortfuell>Fragen Sie, wir antworten</h2>
+    </div>
+    <div class="faq" data-exklusiv>
+      <details><summary>Wo findet die Veranstaltung statt?<span class="plus" aria-hidden="true"></span></summary><p>Beispieltext: Die Adresse und die Anreise stehen hier, sobald der Ort feststeht.</p></details>
+      <details><summary>Für wen ist die Veranstaltung gedacht?<span class="plus" aria-hidden="true"></span></summary><p>Beispieltext: Beschreiben Sie in zwei Sätzen, wer profitiert und warum.</p></details>
+      <details><summary>Werden die Vorträge aufgezeichnet?<span class="plus" aria-hidden="true"></span></summary><p>Beispieltext: Hier steht, ob und wie lange Aufzeichnungen verfügbar sind.</p></details>
+      <details><summary>Wann sollte ich ankommen?<span class="plus" aria-hidden="true"></span></summary><p>Beispieltext: Der Einlass beginnt vor dem ersten Programmpunkt, Zeiten stehen im Ablauf.</p></details>
+      <details><summary>Gibt es Raum für Austausch?<span class="plus" aria-hidden="true"></span></summary><p>Beispieltext: Pausen und Runden am Tisch sind fest im Programm eingeplant.</p></details>
+      <details><summary>Was muss ich mitbringen?<span class="plus" aria-hidden="true"></span></summary><p>Beispieltext: Das Ticket als Ausdruck oder auf dem Telefon sowie einen Ausweis.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- 11. Abschluss-CTA -->
+<section class="abschluss" id="kontakt" aria-labelledby="abschluss-titel">
+  <div class="wrap">
+    <div class="abschluss__panel">
+      <div class="bild abschluss__bild" data-platzhalter="Bild: Silhouette" data-parallax="0.05"></div>
+      <div class="abschluss__innen">
+        <p class="kicker kicker--hell">Jetzt anmelden</p>
+        <h2 id="abschluss-titel" data-wortfuell>Sichern Sie sich Ihren Platz</h2>
+        <a class="knopf knopf--hell" href="#preise">Zur Anmeldung<span class="pfeil" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 12. Neuigkeiten -->
+<section class="sektion neues" aria-labelledby="neues-titel">
+  <div class="wrap">
+    <div class="neues__kopf">
+      <div>
+        <p class="kicker">Aktuelles</p>
+        <h2 id="neues-titel" data-wortfuell>Neuigkeiten und Rückblicke</h2>
+      </div>
+      <p>Beispieltext: Kurze Meldungen zu Programm, Gästen und Organisation.</p>
+    </div>
+    <div class="neues__raster" data-staffel>
+      <article class="beitrag" data-zeig>
+        <a href="#" class="beitrag__link">
+          <div class="bild beitrag__bild" data-platzhalter="Bild: Rückblick"></div>
+          <div class="beitrag__text"><p class="datum" data-beispiel>3. März 2026</p><h3>Beispielüberschrift zu einem Rückblick</h3><span class="mehr">Weiterlesen <span aria-hidden="true">→</span></span></div>
+        </a>
+      </article>
+      <article class="beitrag" data-zeig>
+        <a href="#" class="beitrag__link">
+          <div class="bild beitrag__bild" data-platzhalter="Bild: Gäste"></div>
+          <div class="beitrag__text"><p class="datum" data-beispiel>12. Oktober 2026</p><h3>Beispielüberschrift zu neuen Gästen</h3><span class="mehr">Weiterlesen <span aria-hidden="true">→</span></span></div>
+        </a>
+      </article>
+      <article class="beitrag" data-zeig>
+        <a href="#" class="beitrag__link">
+          <div class="bild beitrag__bild" data-platzhalter="Bild: Austausch"></div>
+          <div class="beitrag__text"><p class="datum" data-beispiel>3. März 2026</p><h3>Beispielüberschrift zu einem Programmtag</h3><span class="mehr">Weiterlesen <span aria-hidden="true">→</span></span></div>
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="fuss">
+  <div class="fuss__linien" aria-hidden="true"></div>
+  <div class="wrap fuss__raster">
+    <div class="fuss__marke">
+      <p class="fuss__spruch">Wir planen Treffen, die man gern erinnert.</p>
+      <p><a href="tel:+490000000000" data-beispiel>+49 000 0000000</a><br><a href="mailto:info@beispiel.de" data-beispiel>info@beispiel.de</a></p>
+    </div>
+    <nav class="fuss__spalte" aria-label="Firma">
+      <h2>Firma</h2>
+      <ul><li><a href="#top">Start</a></li><li><a href="#ueberblick">Überblick</a></li><li><a href="#programm">Programm</a></li><li><a href="#preise">Tickets</a></li><li><a href="#">Aktuelles</a></li></ul>
+    </nav>
+    <nav class="fuss__spalte" aria-label="Rechtliches">
+      <h2>Rechtliches</h2>
+      <ul><li><a href="#">Impressum</a></li><li><a href="#">Datenschutz</a></li><li><a href="#">Teilnahmebedingungen</a></li><li><a href="#kontakt">Kontakt</a></li></ul>
+    </nav>
+    <div class="fuss__news">
+      <h2>Neuigkeiten per E-Mail</h2>
+      <form action="#" method="post" class="news">
+        <label class="sr-nur" for="mail">E-Mail-Adresse</label>
+        <input id="mail" name="email" type="email" autocomplete="email" placeholder="E-Mail-Adresse" required>
+        <button class="knopf knopf--dunkel" type="submit">Anmelden</button>
+      </form>
+      <p class="news__hinweis">Mit der Anmeldung stimmen Sie der Datenschutzerklärung zu.</p>
+    </div>
+    <p class="fuss__zeile">© <span data-jahr></span> Bühne. Alle Rechte vorbehalten.</p>
+  </div>
+</footer>
+
+<script src="../_basis/bewegung.js" defer></script>
+<script src="stil.js" defer></script>
+</body>
+</html>

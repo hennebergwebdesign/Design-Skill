@@ -1,0 +1,30 @@
+/* marke.css der Vorlage Bühne: DIE Datei zum Umfärben. Marke wechseln = nur diese Werte (und bei Bedarf die zwei Schriftzeilen).
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#ffffff;          /* heller Seitengrund */
+  --flaeche-alt:#eef5f2;      /* Platzhalter und leise Flächen */
+  --flaeche-dunkel:#07181b;   /* dunkle Abschnitte, Kopfzeile, Fuß */
+  --text:#0b1a1d;
+  --text-leise:#44585a;
+  --linie:#d3e0dc;
+  --akzent:#c4f0d9;           /* Hauptaktion auf Dunkel, helle Panels */
+  --akzent-text:#07181b;
+  --schrift-titel:'Archivo',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:10px;
+  --radius-karte:16px;
+  --radius-bild:14px;
+
+  /* Zusatztokens dieser Vorlage */
+  --flaeche-tint:#d6eee3;         /* große helle Panels (Programm, Partner, FAQ) */
+  --flaeche-dunkel-2:#102a2e;     /* Karten auf Dunkel */
+  --linie-dunkel:#1d3a3f;         /* feine Linien auf Dunkel */
+  --text-auf-dunkel:#ffffff;
+  --text-leise-dunkel:#b7cbc7;
+  --text-blass:#798b88;           /* Wort noch nicht gefüllt, auf Hell (mind. 3 zu 1) */
+  --text-blass-dunkel:#6c8a86;    /* dito auf Dunkel */
+  --fokus:#0a6a52;                /* Fokusring auf Hell */
+  --radius-gross:24px;
+  --radius-klein:8px;
+  --schatten-karte:0 1px 2px color-mix(in srgb,var(--flaeche-dunkel) 10%,transparent),0 8px 24px color-mix(in srgb,var(--flaeche-dunkel) 9%,transparent);
+}
