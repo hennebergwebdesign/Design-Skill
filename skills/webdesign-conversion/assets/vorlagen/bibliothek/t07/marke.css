@@ -1,0 +1,30 @@
+/* marke.css der Vorlage t07 (Beratung Dunkel): zum Umfärben nur diese Werte ändern.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#0b0b0c;        /* Seitenhintergrund, fast schwarz */
+  --flaeche-alt:#161617;    /* abgesetzte Abschnitte und Karten */
+  --flaeche-dunkel:#050505; /* Menüfläche, Kopfzeile nach dem Scrollen */
+  --text:#f2f2ee;
+  --text-leise:#a3a39d;
+  --linie:#2d2d2f;
+  --akzent:#44c08f;         /* Hauptaktion, ein Akzent für die ganze Seite */
+  --akzent-text:#04130c;
+  --schrift-titel:'Hanken Grotesk',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:2px;
+  --radius-karte:4px;
+  --radius-bild:0px;
+  --titel-gewicht:400;
+  --titel-spur:-0.025em;
+  /* Zusatztokens dieser Vorlage */
+  --hell:#f4f4f0;           /* helle Fläche: Menüknopf, Reiter, Preiskarte */
+  --hell-text:#121212;
+  --hell-leise:#53534f;
+  --akzent-hell:#0a6844;    /* Akzent als Text oder Haken auf heller Fläche */
+  --linie-stark:#6b6b68;    /* Feldränder, mindestens 3 zu 1 */
+  --radius-rund:999px;      /* nur Avatar und Marker */
+  --bild-a:#2b3530;         /* Platzhalterverläufe, später durch Bilder ersetzt */
+  --bild-b:#14181b;
+  --bild-c:#352f28;
+  --bild-licht:#4d6a5c;
+}
