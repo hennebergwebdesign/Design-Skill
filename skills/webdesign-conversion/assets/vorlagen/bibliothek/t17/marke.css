@@ -1,0 +1,28 @@
+/* marke.css der Vorlage Kontor: DIE Datei zum Umfärben. Marke wechseln = nur diese Werte (und bei Bedarf die zwei Schriftzeilen).
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#f6f3ec;          /* Seitengrund, warmes Papier */
+  --flaeche-alt:#ebe6da;      /* Karten, Platzhalter, leise Flächen */
+  --flaeche-dunkel:#13211d;   /* dunkle Rolle: Kopfzeile, Held, Kontaktkarte, Fuß */
+  --text:#1b2622;
+  --text-leise:#506059;
+  --linie:#d8d1c1;
+  --akzent:#e7c07b;           /* Hauptaktion, ein Akzent für die ganze Seite */
+  --akzent-text:#13211d;
+  --schrift-titel:'Instrument Sans',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:10px;
+  --radius-karte:14px;
+  --radius-bild:12px;
+
+  /* Zusatztokens dieser Vorlage */
+  --flaeche-dunkel-2:#1d2f29;     /* Karten auf Dunkel */
+  --linie-dunkel:#2c423b;         /* feine Linien auf Dunkel */
+  --akzent-hell:#efe0c0;          /* Rahmen der Fallbeispiele */
+  --text-auf-dunkel:#f6f3ec;
+  --text-leise-dunkel:#b4c2bb;
+  --text-blass:#7b8680;           /* Wort noch nicht erhellt, auf Hell (mind. 3 zu 1) */
+  --fokus:#7a4f00;                /* Fokusring auf Hell */
+  --radius-gross:22px;
+  --schatten-karte:0 1px 2px color-mix(in srgb,var(--flaeche-dunkel) 10%,transparent),0 10px 28px color-mix(in srgb,var(--flaeche-dunkel) 10%,transparent);
+}
