@@ -99,7 +99,7 @@ Keine Zusatzskills vorab installieren. `bash scripts/install-quellskills.sh` nur
 volle Tiefe verlangt (GSAP Dokumentation, durchsuchbare UI/UX Daten, shadcn Registry). Grund: Jeder
 installierte Skill legt seine Beschreibung in jeden Kontext, die Datendateien von `ui-ux-pro-max` sind
 mehrere Megabyte groß, und für den Erstentwurf liefert das Regelwerk samt Branchenprofil dasselbe
-kleiner. Wer sie installiert, sucht nie in `.claude/skills/` und greift nur über deren Suchskript zu.
+kleiner. Wer sie installiert, sucht nie in `.claude/skills/` und greift nur über deren Suchskript zu. Schlanke Auswahl mit Lücken und Prüfung: `references/zusatzskills.md` (`install-quellskills.sh --zusatz`).
 Schlägt die Installation fehl, ohne sie weiterarbeiten.
 
 **Schutz vor zerstörerischen Befehlen.** In Projekten mit Kundenordnern, Deploy-Skripten oder Cloudflare-Zugängen:

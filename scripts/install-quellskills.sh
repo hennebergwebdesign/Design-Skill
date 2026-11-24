@@ -31,6 +31,27 @@ installiere() {
 
 FEHLER=0
 
+# Schlanke Zusatzauswahl (Version 4.25): nur was eine Lücke füllt, siehe
+# agentur-website-builder/references/zusatzskills.md. Aufruf: bash scripts/install-quellskills.sh --zusatz
+# Beschreibungen aller installierten Skills stehen in jedem Kontext, deshalb nur diese vier.
+if [ "${1:-}" = "--zusatz" ]; then
+  installiere better-interface "better-interface (jakubkrehel)" \
+    jakubkrehel/skills --skill better-interface --agent claude-code || FEHLER=1
+  installiere better-typography "better-typography (jakubkrehel)" \
+    jakubkrehel/skills --skill better-typography --agent claude-code || FEHLER=1
+  installiere cro "cro (coreyhaines31)" \
+    coreyhaines31/marketingskills --skill cro --agent claude-code || FEHLER=1
+  installiere popups "popups (coreyhaines31)" \
+    coreyhaines31/marketingskills --skill popups --agent claude-code || FEHLER=1
+  echo
+  echo "Schriftkatalog fontpool ist ein MCP-Server, kein Skill, und lädt Dateien aus dem Netz (api.fontshare.com,"
+  echo "api.fontsource.org). Nur mit Zustimmung, im Kundenprojekt: claude mcp add fontpool -- npx -y fontpool"
+  echo "Lizenz jeder gewählten Schrift prüfen, Selbsthosting ist Pflicht (Fontshare siehe 40-polierschleife-mit-kritiker.md)."
+  echo "Weitere auf Zuruf: references/zusatzskills.md"
+  ls -1 "$ZIEL" 2>/dev/null | grep -v '^\.ignore$'
+  exit "$FEHLER"
+fi
+
 # GSAP: acht Skills (core, timeline, scrolltrigger, react, frameworks, plugins, utils, performance)
 installiere gsap-core "gsap-skills (greensock)" \
   https://github.com/greensock/gsap-skills --agent claude-code || FEHLER=1
