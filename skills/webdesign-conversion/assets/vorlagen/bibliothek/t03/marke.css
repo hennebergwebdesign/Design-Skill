@@ -1,0 +1,42 @@
+/* marke.css der Vorlage t03 (Vor-Ort-Service, hell und dunkel im Wechsel).
+   Marke wechseln = nur diese Werte (und die zwei Schriftzeilen). Kontrast prüfen:
+   Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#f6f6f3;
+  --flaeche-alt:#e4e5e1;
+  --flaeche-dunkel:#0b0c0d;
+  --text:#0f1011;
+  --text-leise:#464a50;
+  --linie:#c9cbc6;
+  --akzent:#c8f23c;          /* Hauptaktion, nur auf dunklen Flächen als Fläche */
+  --akzent-text:#0b0c0d;
+  --schrift-titel:'Instrument Sans',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --titel-gewicht:400;
+  --titel-spur:-0.025em;
+  --radius-knopf:6px;
+  --radius-karte:12px;
+  --radius-bild:10px;
+
+  /* Zusatztokens dieser Vorlage */
+  --akzent-ink:#4a5f00;             /* Akzent als Schrift oder Punkt auf hellen Flächen */
+  --karte-hell:#ffffff;
+  --karte-dunkel:#17181a;
+  --karte-dunkel-aktiv:#25272a;
+  --text-hell:#f3f3f0;
+  --text-hell-leise:#a8abb0;
+  --linie-dunkel:#34363a;
+  --feld-dunkel:#101113;
+  --feldrand:#7a7e85;
+  --leiste:#000000;
+  --radius-klein:4px;
+  /* Platzhalterverläufe für Bilder, später durch Fotos ersetzen */
+  --bild-szene:radial-gradient(120% 80% at 70% 20%,#3a3f44 0%,transparent 60%),linear-gradient(160deg,#2a2d30 0%,#101112 70%);
+  --bild-a:linear-gradient(150deg,#3c4146,#15171a);
+  --bild-b:linear-gradient(210deg,#59605f,#262a29);
+  --bild-c:linear-gradient(130deg,#2c3338,#0f1214);
+  --bild-d:linear-gradient(190deg,#6a6e6a,#2f322f);
+  --bild-hell:linear-gradient(180deg,#f0f0ec,#d3d5cf);
+  --bild-vorher:linear-gradient(120deg,#6d6252,#3b352b);
+  --bild-nachher:linear-gradient(120deg,#c7d2d9,#7f98a6);
+}

@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mobiler Service direkt bei Ihnen vor Ort</title>
+<meta name="description" content="Vorlage für Anbieter mit Einsatz vor Ort: Hero, Leistungen mit Preis, Ablauf in drei Schritten, Vorher und Nachher, Stimmen, Fragen und Terminformular.">
+<link rel="stylesheet" href="../_basis/schriften.css">
+<link rel="stylesheet" href="marke.css">
+<link rel="stylesheet" href="../_basis/basis.css">
+<link rel="stylesheet" href="stil.css">
+</head>
+<body>
+<a class="sprunglink" href="#inhalt">Zum Inhalt springen</a>
+
+<!-- Alle Zahlen, Preise, Namen und Stimmen in dieser Vorlage sind Beispiele (data-beispiel) und müssen ersetzt werden. -->
+<p class="leiste">Neukunden sparen beim ersten Termin 15 Prozent <span data-beispiel>(Beispielangebot)</span></p>
+
+<header class="kopf">
+  <div class="kopf__pille">
+    <a class="logo" href="#top" aria-label="Markenname, zum Seitenanfang">
+      <svg class="logo__zeichen" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="12" cy="12" r="4" fill="currentColor"/></svg>
+      <span>Markenname</span>
+    </a>
+    <button class="kopf__burger" type="button" data-menue aria-expanded="false" aria-controls="menue">
+      <span class="sr-nur">Menü</span><span class="kopf__balken" aria-hidden="true"></span>
+    </button>
+    <nav class="kopf__nav" id="menue" data-menue-ziel aria-label="Hauptmenü">
+      <ul>
+        <li><a href="#leistungen">Leistungen</a></li>
+        <li><a href="#ergebnisse">Ergebnisse</a></li>
+        <li><a href="#stimmen">Stimmen</a></li>
+        <li><a href="#fragen">Fragen</a></li>
+      </ul>
+      <a class="knopf knopf--klein" href="#termin"><span class="rolle" data-text="Termin buchen">Termin buchen</span><span class="knopf__pfeil" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="inhalt">
+
+<!-- 1 Hero: Vollbild, Text unten links, Bewertungskarte unten rechts -->
+<section class="held" id="top" aria-labelledby="held-titel">
+  <div class="held__bild bild" data-platzhalter="Heldbild" data-parallax="0.1"></div>
+  <div class="wrap held__inhalt">
+    <div class="held__text">
+      <p class="kicker kicker--hell">Einsatzgebiet Beispielregion</p>
+      <h1 id="held-titel"><span class="zeile"><span>Ihr Service,</span></span> <span class="zeile"><span>direkt bei Ihnen vor Ort.</span></span></h1>
+      <a class="knopf" href="#leistungen"><span class="rolle" data-text="Leistungen ansehen">Leistungen ansehen</span><span class="knopf__pfeil" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    </div>
+    <aside class="bewertung" aria-label="Bewertung (Beispielwerte)" data-beispiel>
+      <p class="bewertung__sterne" aria-hidden="true">★★★★★</p>
+      <p class="bewertung__zeile"><strong class="bewertung__wert">4,8<span>/5</span></strong>
+      <span class="bewertung__text"><b>Sehr gut</b> Basis: Beispielzahl Kundenstimmen</span></p>
+    </aside>
+  </div>
+</section>
+
+<!-- 2 Über uns: Aussage mit Wort für Wort Aufhellung, drei Kacheln -->
+<section class="sektion hell-alt ueber" aria-labelledby="ueber-titel">
+  <div class="wrap">
+    <div class="ueber__kopf">
+      <p class="kicker">Über uns</p>
+      <h2 class="aussage" id="ueber-titel" data-wortlicht>Wir kommen mit Ausrüstung und Erfahrung zu Ihnen, erledigen den Auftrag gründlich vor Ort und lassen Ihnen die Zeit für anderes.</h2>
+    </div>
+    <div class="ueber__kacheln">
+      <div class="bild bild--a ueber__bild" data-platzhalter="Bild Team bei der Arbeit" data-zeig></div>
+      <div class="bild bild--b ueber__bild" data-platzhalter="Bild Einsatz vor Ort" data-zeig style="--i:1"></div>
+      <div class="karte-hell ueber__karte" data-zeig style="--i:2">
+        <p>Ein fester Ansprechpartner, ein klarer Ablauf und ein Termin, der zu Ihrem Tag passt, ob zu Hause, im Betrieb oder unterwegs.</p>
+        <dl class="werte" data-beispiel>
+          <div><dt>Erledigte Aufträge</dt><dd><span data-zaehle="850">850</span>+</dd></div>
+          <div><dt>Service vor Ort</dt><dd><span data-zaehle="100">100</span>%</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 Leistungen: Tabs links, Karte rechts (Desktop), gestapelt (mobil) -->
+<section class="sektion dunkel leistungen" id="leistungen" aria-labelledby="leistungen-titel">
+  <div class="wrap">
+    <header class="mitte">
+      <p class="kicker kicker--hell">Leistungen</p>
+      <h2 id="leistungen-titel">Leistungen, passend zu Ihrem Bedarf.</h2>
+      <p class="einleitung">Drei bis fünf Pakete mit klarem Preis und klarem Umfang, ohne Überraschung am Ende.</p>
+    </header>
+    <div class="tabs" data-tabs>
+      <ul class="tabs__liste" role="tablist" aria-label="Leistungen" hidden>
+        <li role="presentation"><button type="button" role="tab" aria-selected="true"><span class="nr">01</span>Basispaket</button></li>
+        <li role="presentation"><button type="button" role="tab" aria-selected="false"><span class="nr">02</span>Komfortpaket</button></li>
+        <li role="presentation"><button type="button" role="tab" aria-selected="false"><span class="nr">03</span>Innenbereich</button></li>
+        <li role="presentation"><button type="button" role="tab" aria-selected="false"><span class="nr">04</span>Schutzbehandlung</button></li>
+        <li role="presentation"><button type="button" role="tab" aria-selected="false"><span class="nr">05</span>Zusatzleistung</button></li>
+      </ul>
+      <div class="tabs__felder">
+        <article class="paket" role="tabpanel" data-tab>
+          <div class="paket__kopf">
+            <div class="paket__text">
+              <h3>Basispaket</h3>
+              <p>Für die regelmäßige Pflege zwischendurch, schnell erledigt und gründlich.</p>
+              <p class="preis"><span class="preis__label">Ab</span> <strong data-beispiel>79 €</strong></p>
+              <a class="knopf knopf--hellflaeche" href="#termin"><span class="rolle" data-text="Termin buchen">Termin buchen</span><span class="knopf__pfeil" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+            </div>
+            <div class="bild bild--c paket__bild" data-platzhalter="Bild Basispaket"></div>
+          </div>
+          <h4>Enthalten</h4>
+          <ul class="liste-plus"><li>Leistungspunkt eins</li><li>Leistungspunkt zwei</li><li>Leistungspunkt drei</li><li>Leistungspunkt vier</li><li>Leistungspunkt fünf</li><li>Leistungspunkt sechs</li></ul>
+        </article>
+        <article class="paket" role="tabpanel" data-tab>
+          <div class="paket__kopf">
+            <div class="paket__text">
+              <h3>Komfortpaket</h3>
+              <p>Der umfassende Termin für alle, die Gründlichkeit innen und außen wollen.</p>
+              <p class="preis"><span class="preis__label">Ab</span> <strong data-beispiel>199 €</strong></p>
+              <a class="knopf knopf--hellflaeche" href="#termin"><span class="rolle" data-text="Termin buchen">Termin buchen</span><span class="knopf__pfeil" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+            </div>
+            <div class="bild bild--a paket__bild" data-platzhalter="Bild Komfortpaket"></div>
+          </div>
+          <h4>Enthalten</h4>
+          <ul class="liste-plus"><li>Leistungspunkt eins</li><li>Leistungspunkt zwei</li><li>Leistungspunkt drei</li><li>Leistungspunkt vier</li><li>Leistungspunkt fünf</li><li>Leistungspunkt sechs</li><li>Leistungspunkt sieben</li><li>Leistungspunkt acht</li></ul>
+        </article>
+        <article class="paket" role="tabpanel" data-tab>
+          <div class="paket__kopf">
+            <div class="paket__text">
+              <h3>Innenbereich</h3>
+              <p>Eine gründliche Auffrischung aller Flächen, auf Sauberkeit und Wohlgefühl ausgelegt.</p>
+              <p class="preis"><span class="preis__label">Ab</span> <strong data-beispiel>149 €</strong></p>
+              <a class="knopf knopf--hellflaeche" href="#termin"><span class="rolle" data-text="Termin buchen">Termin buchen</span><span class="knopf__pfeil" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+            </div>
+            <div class="bild bild--b paket__bild" data-platzhalter="Bild Innenbereich"></div>
+          </div>
+          <h4>Enthalten</h4>
+          <ul class="liste-plus"><li>Leistungspunkt eins</li><li>Leistungspunkt zwei</li><li>Leistungspunkt drei</li><li>Leistungspunkt vier</li><li>Leistungspunkt fünf</li><li>Leistungspunkt sechs</li></ul>
+        </article>
+        <article class="paket" role="tabpanel" data-tab>
+          <div class="paket__kopf">
+            <div class="paket__text">
+              <h3>Schutzbehandlung</h3>
+              <p>Langlebiger Schutz, damit das Ergebnis lange sichtbar bleibt.</p>
+              <p class="preis"><span class="preis__label">Ab</span> <strong data-beispiel>599 €</strong></p>
+              <a class="knopf knopf--hellflaeche" href="#termin"><span class="rolle" data-text="Termin buchen">Termin buchen</span><span class="knopf__pfeil" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+            </div>
+            <div class="bild bild--d paket__bild" data-platzhalter="Bild Schutzbehandlung"></div>
+          </div>
+          <h4>Enthalten</h4>
+          <ul class="liste-plus"><li>Leistungspunkt eins</li><li>Leistungspunkt zwei</li><li>Leistungspunkt drei</li><li>Leistungspunkt vier</li><li>Leistungspunkt fünf</li><li>Leistungspunkt sechs</li></ul>
+        </article>
+        <article class="paket" role="tabpanel" data-tab>
+          <div class="paket__kopf">
+            <div class="paket__text">
+              <h3>Zusatzleistung</h3>
+              <p>Eine einzelne Leistung, die Sie zu jedem Paket dazubuchen können.</p>
+              <p class="preis"><span class="preis__label">Ab</span> <strong data-beispiel>249 €</strong></p>
+              <a class="knopf knopf--hellflaeche" href="#termin"><span class="rolle" data-text="Termin buchen">Termin buchen</span><span class="knopf__pfeil" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+            </div>
+            <div class="bild bild--c paket__bild" data-platzhalter="Bild Zusatzleistung"></div>
+          </div>
+          <h4>Enthalten</h4>
+          <ul class="liste-plus"><li>Leistungspunkt eins</li><li>Leistungspunkt zwei</li><li>Leistungspunkt drei</li><li>Leistungspunkt vier</li></ul>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 Einsatzorte: Raster aus sechs Motiven -->
+<section class="sektion hell-alt orte" aria-labelledby="orte-titel">
+  <div class="wrap">
+    <header class="mitte">
+      <p class="kicker">Einsatzorte</p>
+      <h2 id="orte-titel">Vom Wohnzimmer<br>bis zur Werkhalle.</h2>
+    </header>
+    <ul class="orte__raster" data-staffel>
+      <li data-zeig><div class="bild bild--hell" data-platzhalter="Motiv"></div><p>Zuhause</p></li>
+      <li data-zeig><div class="bild bild--hell" data-platzhalter="Motiv"></div><p>Büro</p></li>
+      <li data-zeig><div class="bild bild--hell" data-platzhalter="Motiv"></div><p>Praxis</p></li>
+      <li data-zeig><div class="bild bild--hell" data-platzhalter="Motiv"></div><p>Laden</p></li>
+      <li data-zeig><div class="bild bild--hell" data-platzhalter="Motiv"></div><p>Werkstatt</p></li>
+      <li data-zeig><div class="bild bild--hell" data-platzhalter="Motiv"></div><p>Lager</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 5 Ablauf: links klebt Bildfläche mit Titel, rechts laufen drei Karten -->
+<section class="ablauf hell" id="ablauf" aria-labelledby="ablauf-titel" data-fortschritt>
+  <div class="ablauf__links">
+    <div class="ablauf__bild bild bild--c" data-platzhalter="Bild Ablauf"></div>
+    <div class="ablauf__text">
+      <p class="kicker kicker--hell">Ablauf</p>
+      <h2 id="ablauf-titel">Drei Schritte vom Wunsch zum Ergebnis.</h2>
+      <p>Ein klarer Ablauf, der sich um Ihren Alltag herum organisiert.</p>
+    </div>
+  </div>
+  <ol class="ablauf__karten">
+    <li class="schritt" data-zeig>
+      <div class="bild bild--a" data-platzhalter="Bild Schritt eins"></div>
+      <h3><span class="nr">01</span> Termin in Minuten</h3>
+      <p>Wählen Sie Leistung und Wunschtermin. Wir bestätigen und kümmern uns um den Rest.</p>
+    </li>
+    <li class="schritt" data-zeig>
+      <div class="bild bild--b" data-platzhalter="Bild Schritt zwei"></div>
+      <h3><span class="nr">02</span> Wir kommen zu Ihnen</h3>
+      <p>Das Team erscheint mit allem Nötigen an Ihrem Ort, Sie müssen nichts vorbereiten.</p>
+    </li>
+    <li class="schritt" data-zeig>
+      <div class="bild bild--d" data-platzhalter="Bild Schritt drei"></div>
+      <h3><span class="nr">03</span> Ergebnis genießen</h3>
+      <p>Sie nehmen das fertige Ergebnis ab, ohne den Ort je verlassen zu haben.</p>
+    </li>
+  </ol>
+</section>
+
+<!-- 6 Vorher und Nachher: Schieberegler, Pfeile wechseln die Paare -->
+<section class="sektion dunkel vergleich" id="ergebnisse" aria-labelledby="vergleich-titel">
+  <div class="wrap">
+    <header class="mitte">
+      <p class="kicker kicker--hell">Vorher und Nachher</p>
+      <h2 id="vergleich-titel">Der Unterschied ist sichtbar.</h2>
+      <p class="einleitung">Ziehen Sie den Regler und sehen Sie, was eine gründliche Behandlung verändert.</p>
+    </header>
+    <div class="vergleich__buehne" data-vergleich>
+      <button class="pfeil pfeil--zurueck" type="button" data-zurueck aria-label="Vorheriges Beispiel" hidden><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="vergleich__folien">
+        <figure class="folie" data-folie>
+          <div class="folie__bild"><div class="bild bild--vorher" data-platzhalter="Vorher"></div><div class="bild bild--nachher folie__nachher" data-platzhalter="Nachher"></div><span class="folie__griff" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16"><path d="M1 8h14M4 5 1 8l3 3M12 5l3 3-3 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <label class="sr-nur" for="regler-1">Regler zwischen Vorher und Nachher, Beispiel eins</label><input class="folie__regler" id="regler-1" type="range" min="0" max="100" value="50"></div>
+          <figcaption class="sr-nur">Beispiel eins</figcaption>
+        </figure>
+        <figure class="folie" data-folie>
+          <div class="folie__bild"><div class="bild bild--vorher" data-platzhalter="Vorher"></div><div class="bild bild--nachher folie__nachher" data-platzhalter="Nachher"></div><span class="folie__griff" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16"><path d="M1 8h14M4 5 1 8l3 3M12 5l3 3-3 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <label class="sr-nur" for="regler-2">Regler zwischen Vorher und Nachher, Beispiel zwei</label><input class="folie__regler" id="regler-2" type="range" min="0" max="100" value="50"></div>
+          <figcaption class="sr-nur">Beispiel zwei</figcaption>
+        </figure>
+        <figure class="folie" data-folie>
+          <div class="folie__bild"><div class="bild bild--vorher" data-platzhalter="Vorher"></div><div class="bild bild--nachher folie__nachher" data-platzhalter="Nachher"></div><span class="folie__griff" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16"><path d="M1 8h14M4 5 1 8l3 3M12 5l3 3-3 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <label class="sr-nur" for="regler-3">Regler zwischen Vorher und Nachher, Beispiel drei</label><input class="folie__regler" id="regler-3" type="range" min="0" max="100" value="50"></div>
+          <figcaption class="sr-nur">Beispiel drei</figcaption>
+        </figure>
+      </div>
+      <button class="pfeil pfeil--vor" type="button" data-vor aria-label="Nächstes Beispiel" hidden><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<!-- 7 Arbeiten: versetztes Raster mit Parallax -->
+<section class="sektion dunkel arbeiten" aria-labelledby="arbeiten-titel">
+  <div class="wrap">
+    <header class="mitte">
+      <p class="kicker kicker--hell">Referenzen</p>
+      <h2 id="arbeiten-titel">Aufträge, die wir zuletzt erledigt haben.</h2>
+    </header>
+    <ul class="arbeiten__raster">
+      <li class="arbeit arbeit--1"><div data-parallax="0.05"><div class="bild bild--a" data-platzhalter="Referenzbild"></div></div><p>Basispaket</p></li>
+      <li class="arbeit arbeit--2"><div data-parallax="-0.04"><p>Komfortpaket</p><div class="bild bild--b" data-platzhalter="Referenzbild"></div></div></li>
+      <li class="arbeit arbeit--3"><div data-parallax="0.06"><div class="bild bild--c" data-platzhalter="Referenzbild"></div><p>Schutzbehandlung</p></div></li>
+      <li class="arbeit arbeit--4"><div data-parallax="-0.05"><div class="bild bild--d" data-platzhalter="Referenzbild"></div><p>Innenbereich</p></div></li>
+      <li class="arbeit arbeit--5"><div data-parallax="0.04"><p>Zusatzleistung</p><div class="bild bild--a" data-platzhalter="Referenzbild"></div></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 8 Vergleich: Tabelle mit hervorgehobener Spalte -->
+<section class="sektion hell unterschied" aria-labelledby="unterschied-titel">
+  <div class="wrap">
+    <header class="mitte">
+      <p class="kicker">Warum wir</p>
+      <h2 id="unterschied-titel">Warum Kunden uns wählen.</h2>
+      <p class="einleitung">Ein Service, der bequemer, verlässlicher und gründlicher ist als der übliche Weg.</p>
+    </header>
+    <div class="tabelle-huelle" data-zeig>
+    <table class="tabelle">
+      <caption class="sr-nur">Vergleich der Merkmale: Markenname gegen übliche Anbieter</caption>
+      <thead><tr><th scope="col">Merkmal</th><th scope="col" class="wir">Markenname</th><th scope="col">Übliche Anbieter</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Wir kommen zu Ihnen</th><td class="wir"><svg class="ja" viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><circle cx="10" cy="10" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m6.2 10.2 2.6 2.6 5-5.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-nur">Ja</span></td><td><svg class="nein" viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><circle cx="10" cy="10" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m7 7 6 6M13 7l-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span class="sr-nur">Nein</span></td></tr>
+        <tr><th scope="row">Termin nach Absprache</th><td class="wir"><svg class="ja" viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><circle cx="10" cy="10" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m6.2 10.2 2.6 2.6 5-5.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-nur">Ja</span></td><td><svg class="nein" viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><circle cx="10" cy="10" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m7 7 6 6M13 7l-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span class="sr-nur">Nein</span></td></tr>
+        <tr><th scope="row">Keine Wartezeit</th><td class="wir"><svg class="ja" viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><circle cx="10" cy="10" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m6.2 10.2 2.6 2.6 5-5.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-nur">Ja</span></td><td><svg class="nein" viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><circle cx="10" cy="10" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m7 7 6 6M13 7l-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span class="sr-nur">Nein</span></td></tr>
+        <tr><th scope="row">Hochwertige Materialien</th><td class="wir"><svg class="ja" viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><circle cx="10" cy="10" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m6.2 10.2 2.6 2.6 5-5.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-nur">Ja</span></td><td><svg class="nein" viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><circle cx="10" cy="10" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m7 7 6 6M13 7l-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span class="sr-nur">Nein</span></td></tr>
+        <tr><th scope="row">Fester Ansprechpartner</th><td class="wir"><svg class="ja" viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><circle cx="10" cy="10" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m6.2 10.2 2.6 2.6 5-5.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-nur">Ja</span></td><td><svg class="nein" viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><circle cx="10" cy="10" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m7 7 6 6M13 7l-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span class="sr-nur">Nein</span></td></tr>
+        <tr><th scope="row">Gleichbleibendes Ergebnis</th><td class="wir"><svg class="ja" viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><circle cx="10" cy="10" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m6.2 10.2 2.6 2.6 5-5.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-nur">Ja</span></td><td><svg class="nein" viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><circle cx="10" cy="10" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m7 7 6 6M13 7l-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span class="sr-nur">Nein</span></td></tr>
+        <tr><th scope="row">Qualität vor Tempo</th><td class="wir"><svg class="ja" viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><circle cx="10" cy="10" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m6.2 10.2 2.6 2.6 5-5.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-nur">Ja</span></td><td><svg class="nein" viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><circle cx="10" cy="10" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m7 7 6 6M13 7l-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span class="sr-nur">Nein</span></td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+<!-- 9 Stimmen: waagerechter Slider mit Scroll Snap -->
+<section class="sektion dunkel stimmen" id="stimmen" aria-labelledby="stimmen-titel" data-beispiel>
+  <div class="wrap">
+    <header class="stimmen__kopf">
+      <div>
+        <p class="kicker kicker--hell">Stimmen</p>
+        <h2 id="stimmen-titel">Das sagen unsere Kunden.</h2>
+      </div>
+      <div class="stimmen__pfeile" hidden>
+        <button class="pfeil" type="button" data-zurueck aria-label="Vorherige Stimme"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <button class="pfeil" type="button" data-vor aria-label="Nächste Stimme"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </div>
+    </header>
+  </div>
+  <ul class="stimmen__spur" tabindex="0" aria-label="Kundenstimmen, seitlich scrollbar">
+    <li class="stimme"><blockquote><p>„Beispieltext einer Kundenstimme: pünktlich, gründlich und freundlich. Das Ergebnis hat meine Erwartung übertroffen.“</p></blockquote><p class="stimme__fuss"><span class="stimme__name">Vorname N.<small>Beispielleistung</small></span><span class="stimme__bild bild" data-platzhalter="" aria-hidden="true"></span></p></li>
+    <li class="stimme"><blockquote><p>„Beispieltext einer zweiten Stimme: Der Ablauf war klar, der Termin passte, und alles wurde sauber erledigt.“</p></blockquote><p class="stimme__fuss"><span class="stimme__name">Vorname N.<small>Beispielleistung</small></span><span class="stimme__bild bild" data-platzhalter="" aria-hidden="true"></span></p></li>
+    <li class="stimme"><blockquote><p>„Beispieltext einer dritten Stimme: Ich musste mich um nichts kümmern und bekam genau das, was vereinbart war.“</p></blockquote><p class="stimme__fuss"><span class="stimme__name">Vorname N.<small>Beispielleistung</small></span><span class="stimme__bild bild" data-platzhalter="" aria-hidden="true"></span></p></li>
+    <li class="stimme"><blockquote><p>„Beispieltext einer vierten Stimme: Gute Beratung vorab und ein Ergebnis, das lange hält.“</p></blockquote><p class="stimme__fuss"><span class="stimme__name">Vorname N.<small>Beispielleistung</small></span><span class="stimme__bild bild" data-platzhalter="" aria-hidden="true"></span></p></li>
+    <li class="stimme"><blockquote><p>„Beispieltext einer fünften Stimme: Zuverlässig, transparent im Preis und angenehm unkompliziert.“</p></blockquote><p class="stimme__fuss"><span class="stimme__name">Vorname N.<small>Beispielleistung</small></span><span class="stimme__bild bild" data-platzhalter="" aria-hidden="true"></span></p></li>
+  </ul>
+</section>
+
+<!-- 10 Fragen: zwei Spalten Akkordeon -->
+<section class="sektion hell-alt fragen" id="fragen" aria-labelledby="fragen-titel">
+  <div class="wrap">
+    <header class="mitte">
+      <p class="kicker">Fragen</p>
+      <h2 id="fragen-titel">Häufig gestellte Fragen.</h2>
+    </header>
+    <div class="fragen__spalten">
+      <div class="fragen__spalte" data-exklusiv>
+        <details><summary>Muss ich etwas vorbereiten?<span class="plus" aria-hidden="true"></span></summary><div class="antwort"><p>Beispielantwort: Nein, unser Team bringt alles Nötige mit und braucht nur Zugang zum Einsatzort.</p></div></details>
+        <details><summary>Wie lange dauert ein Termin?<span class="plus" aria-hidden="true"></span></summary><div class="antwort"><p>Beispielantwort: Je nach Leistung zwischen einer und mehreren Stunden. Wir nennen die Dauer bei der Buchung.</p></div></details>
+        <details><summary>Wie oft sollte ich buchen?<span class="plus" aria-hidden="true"></span></summary><div class="antwort"><p>Beispielantwort: Das hängt von der Nutzung ab, wir empfehlen einen Rhythmus nach dem ersten Termin.</p></div></details>
+        <details><summary>Ist jede Leistung überall möglich?<span class="plus" aria-hidden="true"></span></summary><div class="antwort"><p>Beispielantwort: In der Regel ja, Ausnahmen klären wir vorab mit Ihnen.</p></div></details>
+      </div>
+      <div class="fragen__spalte" data-exklusiv>
+        <details><summary>Welche Zahlungsarten gibt es?<span class="plus" aria-hidden="true"></span></summary><div class="antwort"><p>Beispielantwort: Überweisung nach Rechnung, vor Ort per Karte oder bar. Bitte an das eigene Angebot anpassen.</p></div></details>
+        <details><summary>Wie früh muss ich buchen?<span class="plus" aria-hidden="true"></span></summary><div class="antwort"><p>Beispielantwort: Meist reichen wenige Tage, in der Hochsaison empfehlen wir mehr Vorlauf.</p></div></details>
+        <details><summary>Kommen Sie auch zum Arbeitsplatz?<span class="plus" aria-hidden="true"></span></summary><div class="antwort"><p>Beispielantwort: Ja, sofern der Ort zugänglich ist und die Arbeit dort erlaubt ist.</p></div></details>
+        <details><summary>Lohnt sich die Schutzbehandlung?<span class="plus" aria-hidden="true"></span></summary><div class="antwort"><p>Beispielantwort: Wir beraten ehrlich und sagen auch, wenn sie in Ihrem Fall nicht nötig ist.</p></div></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11 Termin: Hintergrundfläche, links Titel und Kontakt, rechts Formular -->
+<section class="termin dunkel" id="termin" aria-labelledby="termin-titel">
+  <div class="termin__bild bild bild--d" data-platzhalter="Hintergrundbild" aria-hidden="true"></div>
+  <div class="wrap termin__raster">
+    <div class="termin__links">
+      <div>
+        <p class="kicker kicker--hell">Termin</p>
+        <h2 id="termin-titel">Buchen Sie Ihren nächsten Termin.</h2>
+        <p>Füllen Sie das Formular aus, wir melden uns zeitnah und bestätigen den Termin.</p>
+      </div>
+      <div class="termin__kontakt">
+        <p class="termin__frage">Lieber direkt sprechen?</p>
+        <ul>
+          <li><a href="tel:+490000000000"><span class="icon" aria-hidden="true"><svg viewBox="0 0 20 20" width="20" height="20"><path d="M5 3h3l1.5 4-2 1.3a9 9 0 0 0 4.2 4.2L13 10.500l4 1.500v3a2 2 0 0 1-2 2A12 12 0 0 1 3 5a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>0000 000000</a></li>
+          <li><a href="mailto:info@beispiel.de"><span class="icon" aria-hidden="true"><svg viewBox="0 0 20 20" width="20" height="20"><rect x="2.500" y="4.500" width="15" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m3 6 7 5 7-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>info@beispiel.de</a></li>
+        </ul>
+      </div>
+    </div>
+    <form class="formular" action="#" method="post">
+      <div class="formular__gitter">
+        <p class="feld"><label for="f-name">Name <span aria-hidden="true">*</span></label><input id="f-name" name="name" type="text" autocomplete="name" placeholder="Ihr vollständiger Name" required></p>
+        <p class="feld"><label for="f-mail">E-Mail <span aria-hidden="true">*</span></label><input id="f-mail" name="email" type="email" autocomplete="email" placeholder="Ihre E-Mail-Adresse" required></p>
+        <p class="feld"><label for="f-tel">Telefon <span aria-hidden="true">*</span></label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" placeholder="Ihre Telefonnummer" required></p>
+        <p class="feld"><label for="f-datum">Wunschtermin</label><input id="f-datum" name="datum" type="date"></p>
+        <p class="feld"><label for="f-ort">Einsatzort <span aria-hidden="true">*</span></label><select id="f-ort" name="ort" required><option value="">Bitte wählen</option><option>Zuhause</option><option>Büro</option><option>Praxis</option><option>Laden</option><option>Sonstiges</option></select></p>
+        <p class="feld"><label for="f-leistung">Leistung <span aria-hidden="true">*</span></label><select id="f-leistung" name="leistung" required><option value="">Bitte wählen</option><option>Basispaket</option><option>Komfortpaket</option><option>Innenbereich</option><option>Schutzbehandlung</option><option>Zusatzleistung</option></select></p>
+        <p class="feld feld--breit"><label for="f-text">Nachricht</label><textarea id="f-text" name="nachricht" rows="4" placeholder="Beschreiben Sie kurz Ihr Anliegen"></textarea></p>
+      </div>
+      <p class="formular__hinweis">Pflichtfelder sind mit * markiert. Hinweis zum Datenschutz hier einsetzen.</p>
+      <button class="knopf knopf--voll" type="submit">Anfrage senden</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- 12 Fuß: Kacheln -->
+<footer class="fuss dunkel">
+  <div class="wrap fuss__raster">
+    <div class="bild bild--a fuss__team" data-platzhalter="Teambild"></div>
+    <div class="fuss__karte fuss__nav">
+      <nav aria-label="Fußmenü">
+        <h2 class="fuss__titel">Navigation</h2>
+        <ul><li><a href="#leistungen">Leistungen</a></li><li><a href="#ergebnisse">Ergebnisse</a></li><li><a href="#stimmen">Stimmen</a></li><li><a href="#fragen">Fragen</a></li><li><a href="#termin">Termin</a></li></ul>
+      </nav>
+      <nav aria-label="Rechtliches">
+        <h2 class="fuss__titel">Rechtliches</h2>
+        <ul><li><a href="#">Impressum</a></li><li><a href="#">Datenschutz</a></li></ul>
+      </nav>
+      <div>
+        <h2 class="fuss__titel">Kontakt</h2>
+        <p>0000 000000<br>info@beispiel.de</p>
+      </div>
+      <p class="fuss__recht">© <span id="jahr">2026</span> Markenname</p>
+    </div>
+    <div class="fuss__spalte">
+      <div class="fuss__karte fuss__ort">
+        <div class="bild bild--hell" data-platzhalter="Karte"></div>
+        <h2>Betriebssitz</h2>
+        <p>Musterstraße 1, 00000 Musterstadt<br>Montag bis Sonntag, 8 bis 19 Uhr<br>Einsatz in der gesamten Region</p>
+      </div>
+      <div class="fuss__karte fuss__marke">
+        <svg viewBox="0 0 24 24" width="40" height="40" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="12" cy="12" r="4" fill="currentColor"/></svg>
+        <p class="fuss__name">Markenname</p>
+        <p>Service direkt vor Ort</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="../_basis/bewegung.js"></script>
+<script src="stil.js"></script>
+</body>
+</html>
