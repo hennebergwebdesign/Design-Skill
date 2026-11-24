@@ -1,0 +1,11 @@
+/* logos.css: Beispiellogos (einfarbig, per Maske in currentColor). Klasse .beispiellogo plus ein Logo, z.B. <span class="beispiellogo logo-nordwerk" role="img" aria-label="Nordwerk (Beispiel)"></span>.
+   Beim Kunden durch echte Logos ersetzen. Erzeugt von scripts/bibliothek-logos.mjs, nicht von Hand ändern. */
+.beispiellogo{display:inline-block;height:var(--logo-h,1.75rem);aspect-ratio:var(--b);background:currentColor;-webkit-mask:var(--logo) center/contain no-repeat;mask:var(--logo) center/contain no-repeat;flex:none}
+.logo-nordwerk{--logo:url(logos/nordwerk.svg);--b:176/40}
+.logo-lichtbau{--logo:url(logos/lichtbau.svg);--b:176/40}
+.logo-talgrund{--logo:url(logos/talgrund.svg);--b:176/40}
+.logo-fjordstein{--logo:url(logos/fjordstein.svg);--b:207/40}
+.logo-kronwerk{--logo:url(logos/kronwerk.svg);--b:176/40}
+.logo-sonnenfeld{--logo:url(logos/sonnenfeld.svg);--b:207/40}
+.logo-mareal{--logo:url(logos/mareal.svg);--b:145/40}
+.logo-quellwerk{--logo:url(logos/quellwerk.svg);--b:192/40}
