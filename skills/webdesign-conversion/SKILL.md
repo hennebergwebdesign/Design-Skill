@@ -4,7 +4,7 @@ description: "Vollständiges System für conversion-orientiertes Webdesign im DA
 license: MIT
 metadata:
   author: Henneberg Webdesign
-  version: 2.28.0
+  version: 2.29.0
 ---
 
 # Webdesign Conversion System
@@ -142,6 +142,7 @@ Lies gezielt nach, statt alles zu laden.
 | Sicherheit einer Kundenseite: Vertrauensgrenzen, Geheimnisse, Formulare, Inhaltsrichtlinie, Lieferkette, KI-Ausgabe, Tiefenscan | `52-sicherheit-der-kundenseite.md` |
 | Zahlung mit Stripe: Weg wählen, Webhooks und Erfüllung, Button-Lösung, Widerruf, Steuer, Testplan | `53-zahlungen-mit-stripe.md` |
 | Video oder Animationssequenz mit HyperFrames: Ablauf mit Toren, Vertrag einer Komposition, Marke, Optimierung, Prüfung | `54-video-aus-html-mit-hyperframes.md` |
+| Fertige Startseiten-Vorlagen (zwölf, branchenneutral, Marke über `marke.css`), Herkunft und Messstand | `assets/vorlagen/bibliothek/README.md`, `HERKUNFT.md` |
 | Erstentwurf: Lesebudget, Startseite zuerst, Grundaufbau, Branchenprofile (`scripts/branchenprofil.mjs`), Anti-Slop-Regelsatz als Gate vor dem Schreiben | `57-erstentwurf-kern.md` |
 | KI-Muster am gerenderten DOM messen (Slop Detect), Vermeideliste für den Entwurf, Ausnahmen bei Markenvorgabe, Grenzen des Werts | `55-slop-detect-ki-muster-vermeiden.md` |
 | Tracking umsetzen: eine Einwilligung für Pixel und Server, `event_id`, Kennungen, Herkunft in der eigenen Datenbank, Zählmeldung, Testkanal | `56-tracking-umsetzung-einwilligung-ereignisse.md` |

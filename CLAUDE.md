@@ -187,7 +187,7 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Offene Punkte
 
-- Version 4.25.0: Die Grundgalerie (fertige, gestaltete Templates je Branche) fehlt noch. Die Profile legen Richtung und Folge fest, gebaut ist keine Vorlage. Siehe Rückfrage an den Inhaber.
+- Version 4.26.0: Die Bibliothek ist branchenneutral. Branchenvarianten (Farbe, Bildwelt, Folge nach `branchenprofile.json`) sind nicht gebaut. Kontrast über Bildern und Verläufen und Eingabefeldränder sind nicht nachgemessen.
 - Version 4.23.0: Kapitel 55, `slop-pruefung.md`, Kapitel 56, `tracking-einbauen.md`, `assets/tracking/`, `pruefe-slop.mjs` und `pruefe-tracking.mjs` sind an keinem Kundenprojekt erprobt, die zwei neuen
   Evalfälle (`slop-vor-auslieferung-pruefen`, `tracking-nur-nach-einwilligung`) sind **nicht gelaufen**, das Δ ist eine Vermutung. **Gelaufen ist:** der Original-CLI von Slop Detect in der npm-Fassung
   0.8.0 (Definitionen 2026.09, 27 Designmuster, 9 Textmuster, kein `--craft`) gegen zwei kleine Testseiten (Heavy 66, Clean 0) und `pruefe-slop.mjs` gegen diesen CLI; dazu die Tests von
@@ -415,6 +415,7 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Änderungsverlauf
 
+- **24.11.2026, Version 4.26.0** Template-Bibliothek unter `skills/webdesign-conversion/assets/vorlagen/bibliothek/`: zwölf eigenständige, branchenneutrale Startseiten (`t01` bis `t12`) mit gemeinsamer Basis (`_basis/`: selbst gehostete Schriften, `basis.css`, `bewegung.js`, `marke.css`) und Galerie (`index.html`). Auf Wunsch des Inhabers nach zwölf Referenzseiten, **als Prinzip nachgebaut, nicht als Kopie**: Aufbau, Raster, Sektionsfolge und Art der Bewegung übernommen, Text, Bild, Code, Schrift und Farbe eigen (Grund und Rechtslage in `HERKUNFT.md`). Die Erfassung lief mit Playwright, Desktop und Mobil. Zusatzskills: `references/zusatzskills.md` und `install-quellskills.sh --zusatz` (vier Skills, fontpool nur mit Zustimmung; claude-seo, designer-skills, MengTo/Skills nicht). **Gemessen:** alle zwölf bei 390 und 1440 ohne Überlauf und ohne Konsolenfehler, `pruefe-striche` ohne Befund. **Ungemessen:** Kontrast über Bildern und Verläufen, Rand der Eingabefelder, Safari, Screenreader, echte Geräte, Leistung. Bekannt: `t06` nicht gefüllte Überschriftwörter (Schätzung 3,5 zu 1), `t04` Verlaufstext im Großwort, `t08` Videoknopf ohne Funktion, Formulare senden nichts, Platzhalterbilder nur Verläufe. Kein Evalfall, kein neues Prüfskript (`pruefe-tokens` passt nicht auf diese Bibliothek, es erwartet das `tokens.css`-System). Versionen: Plugin 4.26.0, Regelwerk 2.29.0, Bauablauf 2.25.0.
 - **24.11.2026, Version 4.25.0** Auf Wunsch des Inhabers: Ergebnisse zu schwach, zu viele Überarbeitungen, zu viele Token. Analyse in `evals/token-analyse.md`
   (gemessen: Zeichen und Zeilen, geschätzt: Token). Neu: Kapitel `57-erstentwurf-kern.md` (Lesebudget, Startseite zuerst, Landingpage direkt, Protokoll ohne Wartestopp, Grundaufbau,
   Anti-Slop-Regelsatz mit 21 Regeln als Gate vor dem Schreiben), `assets/branchenprofile.json` (15 Branchenprofile mit Richtung, Hauptaktion, Regler, Farbstimmung, Schriftcharakter,

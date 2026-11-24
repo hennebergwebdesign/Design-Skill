@@ -15,6 +15,7 @@ wichtigsten. Das Vorgehen ist eine Auslegung, kein neuer Zwang: alle harten Gren
 - 5\. Anti-Slop-Regelsatz (Gate)
 - 6\. Auslöser: wann tiefer gelesen wird
 - 7\. Branchenprofile pflegen
+- 8\. Vorlagen als Ausgangspunkt
 - Verwandte Kapitel
 
 ## 1. Lesebudget
@@ -162,6 +163,12 @@ Datei: `assets/branchenprofile.json`. Abruf: `node scripts/branchenprofil.mjs li
 - Die Design Systeme aus `awesome-design-skills` (MIT, 67 Stile, `npx typeui.sh pull <name>`) sind **nicht** eingebunden.
   Sie sind allgemeine Komponentenregeln ohne Branche und ohne Conversion. Nur auf Wunsch des Kunden („so wie Editorial")
   einzeln ziehen und vorher lesen, die Marke des Kunden und Kapitel 24 bleiben vorrangig.
+
+## 8. Vorlagen als Ausgangspunkt
+
+Für den Erstentwurf gibt es zwölf fertige, branchenneutrale Startseiten unter `assets/vorlagen/bibliothek/` (Galerie `index.html`). Sie ersetzen weder Branchenprofil noch Gate:
+Wahl der Vorlage nach Eignung und Bewegungsart, Marke über `marke.css`, danach Abschnitt 5 und die Prüfskripte. Eine Vorlage ist Ausgangspunkt, nicht Ergebnis: Folge und Texte folgen dem Profil der Branche.
+Herkunft und Grenzen: `HERKUNFT.md` dort.
 
 ## Verwandte Kapitel
 

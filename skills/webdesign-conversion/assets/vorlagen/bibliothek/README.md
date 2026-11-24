@@ -1,7 +1,7 @@
 # Template-Bibliothek
 
 Zwölf eigenständige Startseiten-Vorlagen, branchenneutral, ohne Build, ohne Abhängigkeit, ohne Fremdserver. Jede Vorlage ist ein Ordner
-(`t01` bis `t12`) mit `index.html`, `marke.css`, `stil.css` und `INFO.md`. Gemeinsam genutzt wird `_basis/`.
+(`t01` bis `t12`, Überblick in `index.html`) mit `index.html`, `marke.css`, `stil.css` und `INFO.md`. Gemeinsam genutzt wird `_basis/`.
 
 ## Benutzen
 
@@ -33,3 +33,5 @@ Sticky-Abschnitte (`data-fortschritt`), leichte Parallaxe (`data-parallax`), Men
 Selbst gehostet unter `_basis/schriften/` (Variablenschriften, Latein, Quelle Fontsource, SIL Open Font License 1.1): Archivo, Bricolage Grotesque, Familjen
 Grotesk, Hanken Grotesk, Instrument Sans, Lexend, Manrope, Newsreader, Outfit, Schibsted Grotesk. Eine Markenschrift des Kunden wird in `marke.css` eingetragen
 und selbst gehostet, nie über einen Anbieter geladen.
+
+Herkunft, Messstand und Grenzen: `HERKUNFT.md`.
