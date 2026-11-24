@@ -97,7 +97,7 @@ h3{font-size:var(--h3);font-weight:600}
 .vorteil{display:grid;grid-template-columns:auto 1fr auto;gap:.5rem 1rem;align-items:center;will-change:transform}
 .vorteil h3{font-size:var(--h3)}
 .vorteil p{grid-column:1/-1;color:var(--text-leise)}
-.vorteil__icon{color:var(--akzent)}
+.vorteil__icon{width:40px;height:40px;min-width:40px;color:var(--akzent)}
 .vorteil__nr{font-family:var(--schrift-titel);font-weight:600;font-size:clamp(2.5rem,2rem + 2vw,3.5rem);line-height:1;color:var(--akzent)}
 @media (min-width:56rem){
   .vorteile__raster{grid-template-columns:1fr 1.05fr 1fr;grid-template-rows:auto auto;gap:1.5rem}
