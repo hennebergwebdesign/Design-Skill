@@ -29,7 +29,7 @@ Die Galerie lädt keine Seiten, sondern kleine JPEG Bilder aus `vorschau/` (24 D
 ## Bewegung
 
 `_basis/bewegung.js` liefert Einblenden (`data-zeig`), Staffelung (`data-staffel`), Zählen (`data-zaehle`, Endwert steht im HTML), Fortschritt für
-Sticky-Abschnitte (`data-fortschritt`), leichte Parallaxe (`data-parallax`), Menü (`data-menue`) und Akkordeon (`data-exklusiv`). Spezielle Bewegung steht in
+Sticky-Abschnitte (`data-fortschritt`), leichte Parallaxe (`data-parallax`), Menü (`data-menue`) und Akkordeon (`data-exklusiv`). Dazu: Abschnittsanzeige im Menü (Hauptmenü-Links auf `#Anker` bekommen `aria-current="location"`, automatisch), Wortlicht (`data-licht` an einer Überschrift mit reinem Text, Wörter hellen beim Scrollen auf), Abdunkeln eines Bildabschnitts beim Scrollen (`data-abdunkeln`, setzt `--dunkel`) und Selbstlauf für Vorher Nachher Regler (`data-selbstlauf` am Rangefeld, bricht bei jeder Eingabe ab). Spezielle Bewegung steht in
 `stil.js` der jeweiligen Vorlage. Bei `prefers-reduced-motion` und ohne JavaScript bleibt alles sichtbar und ruhig.
 
 ## Schriften

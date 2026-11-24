@@ -264,3 +264,6 @@ section[id]{scroll-margin-top:var(--kopf-h)}
   .js .menue__liste a{transform:none}
   .stimmen__spur{scroll-behavior:auto}
 }
+
+/* Held dunkelt beim Scrollen ab (data-abdunkeln, --dunkel aus bewegung.js) */
+.held::after{content:"";position:absolute;inset:0;z-index:-1;background:var(--flaeche);opacity:calc(var(--dunkel,0) * .88);pointer-events:none}

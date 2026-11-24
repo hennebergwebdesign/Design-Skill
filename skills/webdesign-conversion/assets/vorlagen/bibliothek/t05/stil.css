@@ -234,3 +234,9 @@ html:not(.js) .stimme{grid-area:auto}
   .bild__innen{transform:none!important}
   .raster__lage{transform:none!important}
 }
+
+/* Offene Zeile wird zur Akzentfläche (Werdegang, Fragen) */
+.zeile-ak{transition:background-color .25s ease,color .25s ease}
+.zeile-ak[open]{background:var(--akzent);color:var(--akzent-text)}
+.zeile-ak[open] *{color:inherit}
+.zeile-ak[open] .plus{background:var(--akzent-text);color:var(--akzent)}

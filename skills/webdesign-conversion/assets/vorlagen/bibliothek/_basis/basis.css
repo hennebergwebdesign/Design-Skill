@@ -54,3 +54,9 @@ p{text-wrap:pretty}
   .band__spur{animation:none}
   *{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
+
+/* Menü: Abschnitt im Blickfeld (aus bewegung.js) und Wortlicht */
+nav a[aria-current="location"]{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.45em}
+.licht .wort{opacity:.28;transition:opacity .35s ease}
+.licht .wort.an{opacity:1}
+@media (prefers-reduced-motion:reduce){.licht .wort{opacity:1;transition:none}}
