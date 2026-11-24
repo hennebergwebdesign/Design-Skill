@@ -55,12 +55,11 @@ main p{color:var(--text-leise)}
 .kopf__nav ul{display:flex;flex-wrap:wrap;column-gap:1.25rem}
 .kopf__nav li a{display:flex;align-items:center;min-height:2.75rem;font-weight:600;transition:color var(--dauer-kurz)}
 .kopf__nav li a:hover{color:var(--akzent)}
-.js .kopf__nav{position:fixed;inset:calc(var(--kopf-h) + 2.75rem) 0 0 0;z-index:40;display:none;padding:1.5rem var(--rand);background:var(--flaeche);overflow:auto}
+.js .kopf__nav{position:fixed;inset:0;z-index:40;display:none;padding:calc(var(--kopf-h) + 3.75rem) var(--rand) 1.5rem;background:var(--flaeche);overflow:auto}
 .js .kopf__nav[data-offen="true"]{display:block}
 .js .kopf__nav ul{display:block}
 .js .kopf__nav li a{min-height:3.5rem;font-family:var(--schrift-titel);font-size:1.75rem;font-weight:600;border-bottom:1px solid var(--linie)}
 .kopf__cta{margin-top:1.5rem}
-@media (max-width:59.99em){.gescrollt .kopf,.kopf{position:sticky}}
 @media (min-width:60em){
   .kopf__innen{grid-template-columns:auto 1fr auto;grid-template-areas:"l n b";gap:2rem}
   .kopf__burger,.js .kopf__burger{display:none}
@@ -69,7 +68,6 @@ main p{color:var(--text-leise)}
   .kopf__nav li a,.js .kopf__nav li a{min-height:2.75rem;font-family:var(--schrift-text);font-size:1rem;font-weight:600;border:0}
   .kopf__cta{margin-top:0}
 }
-/* Beim geöffneten Menü liegt der Streifen darüber, deshalb beginnt das Menü darunter */
 
 /* Held */
 .held{padding-block:clamp(2.5rem,6vw,5.5rem) clamp(3rem,7vw,6rem)}

@@ -305,3 +305,4 @@ details[open] .ico--minus{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.js .preis[data-zeig].ist-da:hover,.js .stimme[data-zeig].ist-da:hover,.js .schritt-karte[data-zeig].ist-da:hover{transform:none}}
 @media (max-width:35rem){.nur-breit{display:none}}
 @media (max-width:35rem){.logo{font-size:1.15rem;gap:.5rem}.kopf__innen{padding-inline:.6rem .5rem;gap:.5rem}}
+@media (max-width:24rem){.logo{font-size:1.05rem}.kopf__cta{padding-inline:.75rem}.burger{width:2.75rem;height:2.75rem}}
