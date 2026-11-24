@@ -1,0 +1,33 @@
+/* marke.css der Vorlage "Aufzieh-Bühne": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#fbf9f5;
+  --flaeche-alt:#f0ece4;
+  --flaeche-dunkel:#0f2422;
+  --text:#13201f;
+  --text-leise:#4f5d5b;
+  --linie:#d9d3c7;
+  --akzent:#ff7a3d;
+  --akzent-text:#1c0e06;
+  --schrift-titel:'Bricolage Grotesque',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:12px;
+  --radius-karte:20px;
+  --radius-bild:20px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:28px;          /* Bildtafeln, dunkle Karten, Fußkarte */
+  --radius-klein:12px;          /* Akkordeon, Felder, Etiketten */
+  --titel-gewicht:600;
+  --titel-spur:-0.03em;
+  --text-auf-dunkel:#fbf9f5;
+  --text-leise-dunkel:#b7c6c3;
+  --linie-dunkel:#2a403d;
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#2c5753;
+  --ton-2:#8a5a3b;
+  --ton-3:#3a6558;
+  --ton-4:#7d5c36;
+  --ton-5:#2f4c5e;
+  --ton-6:#6b4f3a;
+}

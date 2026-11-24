@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Markenname, Orientierungscheck und persönliche Begleitung</title>
+<meta name="description" content="Beispieltext: Der Orientierungscheck zeigt in 15 Minuten, wo Ihr Vorhaben steht, und liefert einen Plan mit drei nächsten Schritten. Vor dem Einsatz durch den echten Text der Marke ersetzen.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../_basis/schriften.css">
+<link rel="stylesheet" href="../_basis/basis.css">
+<link rel="stylesheet" href="marke.css">
+<link rel="stylesheet" href="stil.css">
+</head>
+<body>
+<a class="sprunglink" href="#inhalt">Zum Inhalt springen</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="marke" viewBox="0 0 32 32"><rect width="32" height="32" rx="7" fill="currentColor"/><path d="M9 23V9l7 9 7-9v14" fill="none" stroke="var(--akzent)" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="pfeil" viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="haken" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="var(--akzent)"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="var(--akzent-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="zitat" viewBox="0 0 24 24"><path d="M6 17c-1.5-1-2.5-2.6-2.5-5 0-3 1.8-5.2 5-6M15 17c-1.5-1-2.5-2.6-2.5-5 0-3 1.8-5.2 5-6M6 17h3.5v-4.5H5M15 17h3.5v-4.5H14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="liste" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M9 4V3h6v1M9 11l1.8 1.8L15 9M9 17h6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="gespraech" viewBox="0 0 24 24"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v7a2.5 2.5 0 0 1-2.5 2.5H11l-4.5 4v-4h0A2.5 2.5 0 0 1 4 13.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.5 9.5h7M8.5 12.5h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="balken" viewBox="0 0 24 24"><path d="M4 20h16M7 20v-7M12 20V6M17 20v-10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="telefon" viewBox="0 0 24 24"><path d="M6.5 4h3l1.5 4-2 1.4a11 11 0 0 0 5.6 5.6L16 13l4 1.5v3A2.5 2.5 0 0 1 17.5 20 13.5 13.5 0 0 1 4 6.5 2.5 2.5 0 0 1 6.5 4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="brief" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4.5 7.5l7.5 6 7.5-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<header class="kopf">
+  <div class="kopf__leiste">
+    <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite"><svg width="32" height="32" aria-hidden="true"><use href="#marke"/></svg><span>Markenname</span></a>
+    <button class="kopf__burger" type="button" data-menue aria-expanded="false" aria-controls="hauptnav">
+      <span class="sr-nur">Menü öffnen oder schließen</span>
+      <span class="burger" aria-hidden="true"></span>
+    </button>
+    <nav class="kopf__nav" id="hauptnav" aria-label="Hauptnavigation" data-menue-ziel>
+      <ul>
+        <li><a href="#leistungen">Leistungen</a></li>
+        <li><a href="#ablauf">Ablauf</a></li>
+        <li><a href="#preise">Preise</a></li>
+        <li><a href="#faq">Fragen</a></li>
+      </ul>
+      <a class="knopf" href="#kontakt">Check starten</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inhalt">
+
+  <!-- 1. Held: Text mittig, darunter die Bildreihe. Beim Scrollen zieht sich das Mittelbild auf Vollbild auf, die Seitenspalten fahren hinaus. -->
+  <section class="held" id="top" aria-labelledby="h-held">
+    <div class="wrap held__kopf" data-staffel>
+      <p class="kicker" data-zeig>Orientierungscheck in 15 Minuten</p>
+      <h1 id="h-held" data-zeig>Wissen, wo Ihr Vorhaben steht, und was als Nächstes zählt</h1>
+      <p class="held__text" data-zeig>Beispieltext: Der Check ordnet Ziel, Stand und Budget ein und liefert einen Plan mit drei konkreten nächsten Schritten, ohne Fachsprache und ohne Verkaufsdruck.</p>
+      <div class="held__aktionen" data-zeig>
+        <a class="knopf" href="#kontakt">Check starten</a>
+        <a class="knopf knopf--leise" href="#ablauf">So läuft es ab</a>
+      </div>
+      <p class="held__telefon" data-zeig>Lieber sprechen? <a href="tel:+490000000000">Telefon 0000 000000</a> <span data-beispiel>(Platzhalter)</span></p>
+    </div>
+
+    <div class="held__buehne" data-fortschritt aria-hidden="true">
+      <div class="held__rahmen">
+        <div class="held__reihe">
+          <div class="spalte spalte--rand spalte--links" style="--ri:-1.25;--v:-14svh">
+            <div class="bild kachel kachel--hoch bild--d" data-platzhalter=""></div>
+          </div>
+          <div class="spalte spalte--innen spalte--oben" style="--ri:-1;--v:-22svh">
+            <div class="bild kachel kachel--quadrat bild--e" data-platzhalter=""></div>
+            <div class="bild kachel kachel--vier bild--b" data-platzhalter=""></div>
+          </div>
+          <div class="spalte spalte--mitte">
+            <div class="mitte">
+              <div class="bild mitte__zoom bild--a" data-platzhalter="Bild: Hauptmotiv"></div>
+            </div>
+          </div>
+          <div class="spalte spalte--innen spalte--oben" style="--ri:1;--v:-22svh">
+            <div class="bild kachel kachel--vier bild--f" data-platzhalter=""></div>
+            <div class="bild kachel kachel--quadrat bild--c" data-platzhalter=""></div>
+          </div>
+          <div class="spalte spalte--rand spalte--rechts" style="--ri:1.25;--v:-14svh">
+            <div class="bild kachel kachel--hoch bild--e" data-platzhalter=""></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Kennzahlen: Karte mit vier Werten, Zahlen zählen beim Sichtbarwerden hoch, Endwert steht im HTML -->
+  <section class="kennzahlen" aria-labelledby="h-zahlen">
+    <div class="wrap">
+      <div class="kennzahlen__karte" data-zeig data-beispiel>
+        <div class="kennzahlen__kopf">
+          <h2 id="h-zahlen">Zahlen auf einen Blick</h2>
+          <p>Beispielwerte, vor dem Livegang durch echte Angaben ersetzen oder entfernen.</p>
+        </div>
+        <ul class="kennzahlen__liste">
+          <li><strong class="zahl"><span data-zaehle="1200">1.200+</span></strong><span>Checks durchgeführt</span></li>
+          <li><strong class="zahl"><span data-zaehle="92">92</span>&nbsp;%</strong><span>würden uns empfehlen</span></li>
+          <li><strong class="zahl"><span data-zaehle="15">15</span>&nbsp;Min.</strong><span>Dauer des Checks</span></li>
+          <li><strong class="zahl"><span data-zaehle="3">3</span></strong><span>Schritte im Plan</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Leistungen: drei Bildkarten -->
+  <section class="sektion leistungen" id="leistungen" aria-labelledby="h-leistungen">
+    <div class="wrap">
+      <div class="kopfblock" data-zeig>
+        <p class="kicker">Leistungen</p>
+        <h2 id="h-leistungen">Alles, was Sie für den Start brauchen</h2>
+        <p>Beispieltext: Drei Bausteine, einzeln oder zusammen buchbar.</p>
+      </div>
+      <ul class="karten" data-staffel>
+        <li data-zeig>
+          <article class="bildkarte">
+            <div class="bild bildkarte__bild bild--a" data-platzhalter="Bild" aria-hidden="true"></div>
+            <p class="bildkarte__etikett"><svg width="20" height="20" aria-hidden="true"><use href="#liste"/></svg>Orientierungscheck</p>
+            <div class="bildkarte__text">
+              <h3>Der Check</h3>
+              <p>Zwölf Fragen zu Ziel, Stand und Budget. Danach wissen Sie, wo Sie stehen.</p>
+              <a class="pfeillink" href="#preise">Pakete ansehen<svg width="20" height="20" aria-hidden="true"><use href="#pfeil"/></svg></a>
+            </div>
+          </article>
+        </li>
+        <li data-zeig>
+          <article class="bildkarte">
+            <div class="bild bildkarte__bild bild--d" data-platzhalter="Bild" aria-hidden="true"></div>
+            <p class="bildkarte__etikett"><svg width="20" height="20" aria-hidden="true"><use href="#gespraech"/></svg>Persönliche Begleitung</p>
+            <div class="bildkarte__text">
+              <h3>Das Gespräch</h3>
+              <p>Eine feste Ansprechperson ordnet die Auswertung mit Ihnen ein und plant die nächsten Schritte.</p>
+              <a class="pfeillink" href="#ablauf">So läuft es ab<svg width="20" height="20" aria-hidden="true"><use href="#pfeil"/></svg></a>
+            </div>
+          </article>
+        </li>
+        <li data-zeig>
+          <article class="bildkarte">
+            <div class="bild bildkarte__bild bild--e" data-platzhalter="Bild" aria-hidden="true"></div>
+            <p class="bildkarte__etikett"><svg width="20" height="20" aria-hidden="true"><use href="#balken"/></svg>Auswertung</p>
+            <div class="bildkarte__text">
+              <h3>Der Plan</h3>
+              <p>Klare Prioritäten statt langer Listen, mit Aufwand und Wirkung je Schritt.</p>
+              <a class="pfeillink" href="#kontakt">Anfrage senden<svg width="20" height="20" aria-hidden="true"><use href="#pfeil"/></svg></a>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 4. Einblick: Bildfläche beginnt als Vollbild und schrumpft beim Scrollen, danach erscheint der Text darunter.
+          Hier später ein Video einbetten, das erst nach Klick lädt (Kapitel 38). -->
+  <section class="video" id="einblick" aria-labelledby="h-video">
+    <div class="video__buehne" data-fortschritt>
+      <div class="video__rahmen">
+        <div class="video__kachel">
+          <div class="bild video__zoom bild--b" data-platzhalter="Bild oder Video: Einblick" aria-hidden="true"></div>
+        </div>
+        <div class="video__text">
+          <h2 id="h-video">Sehen Sie, wie ein Gespräch abläuft</h2>
+          <p>Beispieltext: Ein kurzer Einblick, wie Check und Gespräch ablaufen, bevor Sie sich entscheiden.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Ablauf: große Ziffer bleibt je Schritt stehen, bis der nächste Schritt sie ablöst -->
+  <section class="sektion ablauf" id="ablauf" aria-labelledby="h-ablauf">
+    <div class="wrap">
+      <div class="kopfblock" data-zeig>
+        <p class="kicker">Ablauf</p>
+        <h2 id="h-ablauf">In drei Schritten zum Plan</h2>
+      </div>
+      <ol class="ablauf__liste">
+        <li class="schritt">
+          <span class="schritt__linie" data-zeig="skala" aria-hidden="true"></span>
+          <span class="schritt__nr" aria-hidden="true">01</span>
+          <div class="schritt__text" data-zeig>
+            <p class="schritt__label">Schritt 1</p>
+            <h3>Check ausfüllen</h3>
+            <p>Beispieltext: Sie beantworten zwölf Fragen zu Ziel, Stand und Budget. Das dauert etwa 15 Minuten und geht auch am Handy.</p>
+          </div>
+        </li>
+        <li class="schritt">
+          <span class="schritt__linie" data-zeig="skala" aria-hidden="true"></span>
+          <span class="schritt__nr" aria-hidden="true">02</span>
+          <div class="schritt__text" data-zeig>
+            <p class="schritt__label">Schritt 2</p>
+            <h3>Auswertung erhalten</h3>
+            <p>Beispieltext: Sie bekommen eine klare Einordnung mit den größten Hebeln, in verständlicher Sprache und mit Aufwand je Schritt.</p>
+          </div>
+        </li>
+        <li class="schritt">
+          <span class="schritt__linie" data-zeig="skala" aria-hidden="true"></span>
+          <span class="schritt__nr" aria-hidden="true">03</span>
+          <div class="schritt__text" data-zeig>
+            <p class="schritt__label">Schritt 3</p>
+            <h3>Plan umsetzen</h3>
+            <p>Beispieltext: Gemeinsam gehen wir die ersten drei Schritte an und prüfen nach vier Wochen, was gewirkt hat und was als Nächstes dran ist.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 6. Stimme: Bild als Grund mit leichter Tiefenverschiebung, Karte darüber. Text und Name sind Beispiele, kein echtes Zitat. -->
+  <section class="stimme" id="stimme" aria-labelledby="h-stimme">
+    <div class="bild stimme__grund bild--c" data-parallax="0.06" aria-hidden="true"></div>
+    <div class="wrap stimme__innen">
+      <h2 class="sr-nur" id="h-stimme">Stimme aus der Praxis (Beispiel)</h2>
+      <figure class="stimme__karte" data-zeig data-beispiel>
+        <div class="bild stimme__bild bild--b" data-platzhalter="Bild: Porträt" aria-hidden="true"></div>
+        <div class="stimme__text">
+          <svg class="stimme__zeichen" width="48" height="48" aria-hidden="true"><use href="#zitat"/></svg>
+          <blockquote><p>„Beispielzitat: Der Check hat uns in einer Viertelstunde gezeigt, womit wir anfangen sollten. Vorher hatten wir zu viele Baustellen gleichzeitig.“</p></blockquote>
+          <figcaption>Beispielperson, Beispielrolle</figcaption>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 7. Preise: drei Karten, die mittlere dunkel und angehoben. Alle Preise sind Beispiele. -->
+  <section class="sektion preise" id="preise" aria-labelledby="h-preise">
+    <div class="wrap">
+      <div class="kopfblock kopfblock--mitte" data-zeig>
+        <p class="kicker">Preise</p>
+        <h2 id="h-preise">Pakete mit klaren Preisen</h2>
+        <p data-beispiel>Beispielpreise, vor dem Livegang durch echte Angaben ersetzen.</p>
+      </div>
+      <ul class="preisliste" data-staffel>
+        <li data-zeig>
+          <article class="plan">
+            <h3>Start</h3>
+            <p class="plan__preis"><span class="plan__zahl">19&nbsp;€</span> <span class="plan__takt">pro Monat</span></p>
+            <p class="plan__alt">oder 190&nbsp;€ im Jahr</p>
+            <ul class="plan__liste">
+              <li><svg width="22" height="22" aria-hidden="true"><use href="#haken"/></svg>Orientierungscheck, 15 Minuten</li>
+              <li><svg width="22" height="22" aria-hidden="true"><use href="#haken"/></svg>Auswertung als PDF</li>
+              <li><svg width="22" height="22" aria-hidden="true"><use href="#haken"/></svg>Antwort per E-Mail</li>
+            </ul>
+            <a class="knopf knopf--dunkel" href="#kontakt">Start wählen</a>
+          </article>
+        </li>
+        <li data-zeig>
+          <article class="plan plan--haupt">
+            <h3>Plus</h3>
+            <p class="plan__preis"><span class="plan__zahl">49&nbsp;€</span> <span class="plan__takt">pro Monat</span></p>
+            <p class="plan__alt">oder 490&nbsp;€ im Jahr</p>
+            <ul class="plan__liste">
+              <li><svg width="22" height="22" aria-hidden="true"><use href="#haken"/></svg>Alles aus Start</li>
+              <li><svg width="22" height="22" aria-hidden="true"><use href="#haken"/></svg>Ein persönliches Gespräch im Monat</li>
+              <li><svg width="22" height="22" aria-hidden="true"><use href="#haken"/></svg>Plan mit Schritten und Terminen</li>
+            </ul>
+            <a class="knopf" href="#kontakt">Plus wählen</a>
+          </article>
+        </li>
+        <li data-zeig>
+          <article class="plan">
+            <h3>Team</h3>
+            <p class="plan__preis"><span class="plan__zahl">129&nbsp;€</span> <span class="plan__takt">pro Monat</span></p>
+            <p class="plan__alt">oder 1.290&nbsp;€ im Jahr</p>
+            <ul class="plan__liste">
+              <li><svg width="22" height="22" aria-hidden="true"><use href="#haken"/></svg>Alles aus Plus, für mehrere Personen</li>
+              <li><svg width="22" height="22" aria-hidden="true"><use href="#haken"/></svg>Gemeinsame Auswertung</li>
+              <li><svg width="22" height="22" aria-hidden="true"><use href="#haken"/></svg>Workshop vor Ort oder online</li>
+            </ul>
+            <a class="knopf knopf--dunkel" href="#kontakt">Team wählen</a>
+          </article>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 8. FAQ als Akkordeon -->
+  <section class="sektion faq" id="faq" aria-labelledby="h-faq">
+    <div class="wrap faq__raster">
+      <div class="faq__kopf" data-zeig>
+        <h2 id="h-faq">Noch Fragen?</h2>
+        <p>Hier steht, was am häufigsten gefragt wird. Alles andere beantworten wir gern persönlich.</p>
+      </div>
+      <div class="faq__liste" data-exklusiv>
+        <details><summary>Wie hilft mir der Check bei meinem Vorhaben?</summary><p class="antwort">Beispielantwort: Er zeigt, wo Sie stehen und welcher Schritt die größte Wirkung hat. Sie bekommen eine Reihenfolge statt einer langen Liste.</p></details>
+        <details><summary>Ist das auch für kleine Vorhaben sinnvoll?</summary><p class="antwort">Beispielantwort: Ja. Der Check passt sich dem Umfang an, auch kleine Vorhaben bekommen einen klaren Plan.</p></details>
+        <details><summary>Kann ich die Fragen anpassen?</summary><p class="antwort">Beispielantwort: Im Gespräch können Sie Schwerpunkte setzen, der Grundaufbau bleibt gleich, damit Ergebnisse vergleichbar sind.</p></details>
+        <details><summary>Brauche ich Vorkenntnisse?</summary><p class="antwort">Beispielantwort: Nein. Die Fragen sind in Alltagssprache gestellt, Fachbegriffe erklären wir bei Bedarf.</p></details>
+        <details><summary>Wie sicher sind meine Angaben?</summary><p class="antwort">Beispielantwort: Wir verwenden Ihre Angaben nur für die Auswertung. Einzelheiten stehen in der Datenschutzerklärung.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Abschluss mit Handlung: Bildgrund, dunkle Karte, Feld und Knopf. Das Formular sendet in der Vorlage nichts. -->
+  <section class="start" id="start" aria-labelledby="h-start">
+    <div class="bild start__grund bild--e" data-parallax="0.06" aria-hidden="true"></div>
+    <div class="wrap start__innen">
+      <div class="start__karte" data-zeig>
+        <h2 id="h-start">Bereit für Ihren Orientierungscheck?</h2>
+        <p>Tragen Sie Ihre E-Mail-Adresse ein, wir senden Ihnen den Link zum Check.</p>
+        <form class="start__formular" action="#" data-vorlage-form>
+          <label class="sr-nur" for="mail-start">E-Mail-Adresse</label>
+          <input id="mail-start" name="email" type="email" autocomplete="email" placeholder="Ihre E-Mail-Adresse" required>
+          <button class="knopf" type="submit">Link senden</button>
+          <p class="start__status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Kontakt: Formular links, Bild rechts mit schwebender Beispielkarte -->
+  <section class="sektion kontakt" id="kontakt" aria-labelledby="h-kontakt">
+    <div class="wrap kontakt__raster">
+      <div class="kontakt__links">
+        <div class="kopfblock" data-zeig>
+          <p class="kicker">Kontakt</p>
+          <h2 id="h-kontakt">Schreiben Sie uns</h2>
+          <p>Wir melden uns innerhalb eines Werktags. Direkt erreichen Sie uns so:</p>
+          <ul class="kontakt__wege">
+            <li><svg width="22" height="22" aria-hidden="true"><use href="#telefon"/></svg><a href="tel:+490000000000">Telefon 0000 000000</a> <span data-beispiel>(Platzhalter)</span></li>
+            <li><svg width="22" height="22" aria-hidden="true"><use href="#brief"/></svg><a href="mailto:kontakt@markenname.example">kontakt@markenname.example</a> <span data-beispiel>(Platzhalter)</span></li>
+          </ul>
+        </div>
+        <form class="formular" action="#" data-vorlage-form data-zeig>
+          <div class="feld"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" placeholder="Ihr Name" required></div>
+          <div class="feld"><label for="f-mail">E-Mail</label><input id="f-mail" name="email" type="email" autocomplete="email" placeholder="name@beispiel.de" required></div>
+          <div class="feld"><label for="f-text">Nachricht</label><textarea id="f-text" name="nachricht" rows="5" placeholder="Worum geht es bei Ihrem Vorhaben?" required></textarea></div>
+          <div class="haken-feld"><input id="f-dsgvo" name="datenschutz" type="checkbox" required><label for="f-dsgvo">Ich habe die <a href="#">Datenschutzerklärung</a> gelesen.</label></div>
+          <button class="knopf" type="submit">Anfrage senden</button>
+          <p class="formular__status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+      <div class="kontakt__rechts" data-zeig="rechts">
+        <div class="bild kontakt__bild bild--d" data-platzhalter="Bild: Gespräch" aria-hidden="true"></div>
+        <aside class="auswertung" aria-label="Beispielauswertung" data-beispiel>
+          <p class="auswertung__titel">Beispielauswertung</p>
+          <ul>
+            <li><span class="auswertung__icon"><svg width="22" height="22" aria-hidden="true"><use href="#liste"/></svg></span><span><strong>Klarheit über das Ziel</strong><small>Beispiel: Ziel benannt, Stand offen</small></span></li>
+            <li><span class="auswertung__icon"><svg width="22" height="22" aria-hidden="true"><use href="#balken"/></svg></span><span><strong>Größter Hebel</strong><small>Beispiel: Reihenfolge der Schritte</small></span></li>
+            <li><span class="auswertung__icon"><svg width="22" height="22" aria-hidden="true"><use href="#gespraech"/></svg></span><span><strong>Nächster Schritt</strong><small>Beispiel: Gespräch in dieser Woche</small></span></li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="fuss">
+  <div class="wrap">
+    <div class="fuss__karte">
+      <div class="fuss__links">
+        <a class="kopf__logo fuss__logo" href="#top" aria-label="Markenname, nach oben"><svg width="32" height="32" aria-hidden="true"><use href="#marke"/></svg><span>Markenname</span></a>
+        <p class="fuss__claim">Gute Entscheidungen brauchen ein gutes Gespräch.</p>
+        <p class="fuss__text">Beispieltext: Ein Satz zur Haltung der Marke, vor dem Einsatz ersetzen.</p>
+      </div>
+      <nav class="fuss__nav" aria-label="Fußnavigation">
+        <ul>
+          <li><a href="#leistungen">Leistungen</a></li>
+          <li><a href="#ablauf">Ablauf</a></li>
+          <li><a href="#preise">Preise</a></li>
+          <li><a href="#faq">Fragen</a></li>
+        </ul>
+        <ul>
+          <li><a href="#kontakt">Kontakt</a></li>
+          <li><a href="#top">Impressum</a></li>
+          <li><a href="#top">Datenschutz</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="fuss__zeile">© <span data-jahr>2026</span> Markenname. Alle Rechte vorbehalten.</p>
+  </div>
+</footer>
+
+<script src="../_basis/bewegung.js" defer></script>
+<script src="stil.js" defer></script>
+</body>
+</html>

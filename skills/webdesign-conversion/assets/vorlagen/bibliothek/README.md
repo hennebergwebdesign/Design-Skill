@@ -1,7 +1,7 @@
 # Template-Bibliothek
 
-Zwölf eigenständige Startseiten-Vorlagen, branchenneutral, ohne Build, ohne Abhängigkeit, ohne Fremdserver. Jede Vorlage ist ein Ordner
-(`t01` bis `t12`, Überblick in `index.html`) mit `index.html`, `marke.css`, `stil.css` und `INFO.md`. Gemeinsam genutzt wird `_basis/`.
+Achtzehn eigenständige Startseiten-Vorlagen, branchenneutral, ohne Build, ohne Abhängigkeit, ohne Fremdserver. Jede Vorlage ist ein Ordner
+(`t01` bis `t18`, Überblick in `index.html`) mit `index.html`, `marke.css`, `stil.css` und `INFO.md`. Gemeinsam genutzt wird `_basis/`.
 
 ## Benutzen
 
@@ -16,7 +16,7 @@ In ein Astro-Projekt übernehmen: `index.html` in eine Seite überführen, `_bas
 
 ## Was sie sind und was nicht
 
-* **Eigenständige Umsetzung** nach dem Prinzip von zwölf Referenzseiten (Aufbau, Raster, Sektionsfolge, Art der Bewegung). Kein Text, kein Bild,
+* **Eigenständige Umsetzung** nach dem Prinzip von achtzehn Referenzseiten (Aufbau, Raster, Sektionsfolge, Art der Bewegung). Kein Text, kein Bild,
   kein Icon, kein Code der Referenzen ist übernommen. Die Referenzen sind in `HERKUNFT.md` genannt und wurden vom Inhaber zur Erfassung freigegeben.
 * **Keine fertigen Seiten:** Beispieltexte sind Platzhalter, Beispielzahlen sind keine Belege. Rechtstexte, Consent, Formularversand, echte Bilder und
   Meta-Angaben je Kunde fehlen bewusst.
