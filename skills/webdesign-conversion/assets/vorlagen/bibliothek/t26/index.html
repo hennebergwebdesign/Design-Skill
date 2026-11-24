@@ -346,9 +346,11 @@
       </div>
       <!-- Formular ohne Versand: Anbindung und Einwilligung (Double Opt-in) beim Einsatz ergänzen -->
       <form class="news" action="#" method="post" data-ohne-versand>
-        <label class="sr-nur" for="nl-mail">E-Mail-Adresse</label>
-        <input id="nl-mail" name="email" type="email" required placeholder="Ihre E-Mail-Adresse" autocomplete="email">
-        <button class="knopf" type="submit">Anmelden</button>
+        <div class="news__feld">
+          <label class="sr-nur" for="nl-mail">E-Mail-Adresse</label>
+          <input id="nl-mail" name="email" type="email" required placeholder="Ihre E-Mail-Adresse" autocomplete="email">
+          <button class="knopf" type="submit">Anmelden</button>
+        </div>
         <p class="news__hinweis">Abmeldung jederzeit möglich. Mehr dazu in der <a href="#top">Datenschutzerklärung</a>.</p>
       </form>
     </div>

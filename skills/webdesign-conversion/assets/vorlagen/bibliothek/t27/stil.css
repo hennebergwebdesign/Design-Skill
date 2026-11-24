@@ -100,7 +100,7 @@ main p{color:var(--text-leise)}
 .held__text{max-width:38rem;font-size:var(--text-l)}
 .held__buehne{margin-top:2.25rem;padding-bottom:var(--raum)}
 .held__knopf{position:sticky;top:1rem;z-index:5;display:flex;justify-content:center;height:3.25rem;margin-bottom:-1.625rem}
-.held__feld{--z:1;--bild-grund:radial-gradient(circle at 78% 22%,color-mix(in srgb,var(--akzent) 60%,transparent),transparent 55%),radial-gradient(circle at 20% 90%,color-mix(in srgb,var(--akzent-hell) 22%,transparent),transparent 50%),linear-gradient(160deg,var(--flaeche-dunkel-2),var(--flaeche-dunkel));display:flex;flex-direction:column;justify-content:space-between;gap:2rem;min-height:clamp(31rem,120vw,38rem);padding:clamp(1.5rem,4vw,3rem);padding-top:clamp(3rem,6vw,4.5rem);border-radius:var(--radius-gross);color:var(--text-auf-dunkel);transform:scale(calc(.9 + .1 * var(--z)));transform-origin:center top;will-change:transform}
+.held__feld{--z:1;--bild-grund:radial-gradient(circle at 78% 22%,color-mix(in srgb,var(--akzent) 60%,transparent),transparent 55%),radial-gradient(circle at 20% 90%,color-mix(in srgb,var(--akzent-hell) 22%,transparent),transparent 50%),linear-gradient(160deg,var(--flaeche-dunkel-2),var(--flaeche-dunkel));display:flex;flex-direction:column;justify-content:space-between;gap:2rem;min-height:clamp(31rem,120vw,38rem);padding:clamp(1.5rem,4vw,3rem);padding-top:clamp(3rem,6vw,4.5rem);padding-bottom:5rem;border-radius:var(--radius-gross);color:var(--text-auf-dunkel);transform:scale(calc(.9 + .1 * var(--z)));transform-origin:center top;will-change:transform}
 .held__feld::after{inset:1rem 1.25rem auto auto!important;color:var(--text-leise-dunkel)!important}
 .zahlen{display:grid;gap:1.25rem}
 .zahlen div{display:grid;gap:.1rem}
