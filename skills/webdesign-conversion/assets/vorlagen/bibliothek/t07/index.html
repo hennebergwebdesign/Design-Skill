@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="marke.css">
 <link rel="stylesheet" href="../_basis/basis.css">
 <link rel="stylesheet" href="stil.css">
+<link rel="stylesheet" href="../_basis/bilder.css">
 </head>
 <body>
 <!-- Alle Texte, Zahlen und Preise sind Beispiele (data-beispiel) und werden vor dem Livegang ersetzt. -->
@@ -54,7 +55,7 @@
 
 <!-- 1. Held: Vollbild, Text links unten -->
 <section class="held" id="top">
-  <div class="held__bild bild" data-platzhalter="Platzhalter Heldenbild" aria-hidden="true"><div class="held__tiefe" data-parallax="0.08"></div></div>
+  <div class="held__bild bild" data-platzhalter="Platzhalter Heldenbild" aria-hidden="true" data-motiv="arbeitsplatz-dunkel"><div class="held__tiefe" data-parallax="0.08"></div></div>
   <div class="wrap held__inhalt">
     <p class="kicker" data-zeig>Beratung für Selbstständige und kleine Teams</p>
     <h1 data-zeig>Aus Fachwissen wird ein Angebot, das gebucht wird.</h1>
@@ -109,7 +110,7 @@
 <!-- 4. Ansatz: Bild links, Text und Akkordeon rechts, abgesetzte Fläche -->
 <section class="sektion sektion--alt" id="ansatz" aria-labelledby="ansatz-t">
   <div class="wrap zwei">
-    <div class="bild zwei__bild" data-platzhalter="Platzhalter Bild" data-zeig="links"><div class="bild__tiefe" style="--grund:radial-gradient(60% 50% at 30% 30%,var(--bild-licht),transparent 75%),linear-gradient(160deg,var(--bild-c),var(--bild-b))" data-parallax="0.06"></div></div>
+    <div class="bild zwei__bild" data-platzhalter="Platzhalter Bild" data-zeig="links" data-motiv="innen-nacht"><div class="bild__tiefe" style="--grund:radial-gradient(60% 50% at 30% 30%,var(--bild-licht),transparent 75%),linear-gradient(160deg,var(--bild-c),var(--bild-b))" data-parallax="0.06"></div></div>
     <div class="zwei__text">
       <p class="kicker" data-zeig>Unser Ansatz</p>
       <h2 id="ansatz-t" data-zeig>Ein einfaches System für verlässliche Ergebnisse.</h2>
@@ -144,7 +145,7 @@
     </div>
     <div class="tafeln">
       <article class="tafel zwei" id="tafel-1" aria-labelledby="reiter-1">
-        <div class="bild zwei__bild" data-platzhalter="Platzhalter Bild" style="--bild-grund:linear-gradient(150deg,var(--bild-licht),var(--bild-b))"></div>
+        <div class="bild zwei__bild" data-platzhalter="Platzhalter Bild" style="--bild-grund:linear-gradient(150deg,var(--bild-licht),var(--bild-b))" data-motiv="stadt-dunkel"></div>
         <div class="zwei__text">
           <p class="kicker">Ein Tag</p>
           <h3>Orientierungstag</h3>
@@ -154,7 +155,7 @@
         </div>
       </article>
       <article class="tafel zwei" id="tafel-2" aria-labelledby="reiter-2">
-        <div class="bild zwei__bild" data-platzhalter="Platzhalter Bild" style="--bild-grund:linear-gradient(150deg,var(--bild-c),var(--bild-licht))"></div>
+        <div class="bild zwei__bild" data-platzhalter="Platzhalter Bild" style="--bild-grund:linear-gradient(150deg,var(--bild-c),var(--bild-licht))" data-motiv="welle-nacht"></div>
         <div class="zwei__text">
           <p class="kicker">Mehrere Wochen</p>
           <h3>Begleitprogramm</h3>
@@ -164,7 +165,7 @@
         </div>
       </article>
       <article class="tafel zwei" id="tafel-3" aria-labelledby="reiter-3">
-        <div class="bild zwei__bild" data-platzhalter="Platzhalter Bild" style="--bild-grund:linear-gradient(150deg,var(--bild-b),var(--bild-c))"></div>
+        <div class="bild zwei__bild" data-platzhalter="Platzhalter Bild" style="--bild-grund:linear-gradient(150deg,var(--bild-b),var(--bild-c))" data-motiv="arbeitsplatz-dunkel"></div>
         <div class="zwei__text">
           <p class="kicker">Fortlaufend</p>
           <h3>Laufende Beratung</h3>
@@ -192,7 +193,7 @@
 
 <!-- 7. Bildband über die volle Breite, Tiefe beim Scrollen -->
 <section class="bildband" aria-hidden="true">
-  <div class="bild bildband__bild" data-platzhalter="Platzhalter Bild, volle Breite"><div class="bildband__tiefe" data-parallax="0.12"></div></div>
+  <div class="bild bildband__bild" data-platzhalter="Platzhalter Bild, volle Breite" data-motiv="innen-nacht"><div class="bildband__tiefe" data-parallax="0.12"></div></div>
 </section>
 
 <!-- 8. Preise: zwei Karten, die helle ist hervorgehoben -->
@@ -308,7 +309,7 @@
 
 <!-- 13. Newsletter über Bildfläche -->
 <section class="brief" aria-labelledby="brief-t">
-  <div class="brief__bild bild" data-platzhalter="Platzhalter Bild" aria-hidden="true"></div>
+  <div class="brief__bild bild" data-platzhalter="Platzhalter Bild" aria-hidden="true" data-motiv="stadt-dunkel"></div>
   <div class="wrap brief__inhalt">
     <div>
       <p class="kicker" data-zeig>Newsletter</p>

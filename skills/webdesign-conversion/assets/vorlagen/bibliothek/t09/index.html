@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="marke.css">
 <link rel="stylesheet" href="../_basis/basis.css">
 <link rel="stylesheet" href="stil.css">
+<link rel="stylesheet" href="../_basis/bilder.css">
 </head>
 <body>
 <a class="sprunglink" href="#inhalt">Zum Inhalt springen</a>
@@ -44,7 +45,7 @@
 <!-- 1. Held: große gerundete Bildfläche mit Text darauf -->
 <section class="held" id="top">
   <div class="wrap wrap--weit">
-    <div class="bild held__bild" data-platzhalter="Bild: Hauptmotiv" style="--platz:var(--platz-3)">
+    <div class="bild held__bild" data-platzhalter="Bild: Hauptmotiv" style="--platz:var(--platz-3)" data-motiv="dach-warm">
       <div class="held__text">
         <h1 data-zeig>Verlässliche Arbeit für ein ruhigeres Zuhause</h1>
         <p data-zeig style="--i:2">Sie sagen uns, was zu tun ist. Wir erledigen es pünktlich, sauber und zu einem Preis, den Sie vorher kennen. Einmalig oder regelmäßig.</p>
@@ -80,7 +81,7 @@
         <h3>Geschultes Personal</h3>
         <p>Unser Team arbeitet nach festen Abläufen, wird regelmäßig weitergebildet und kennt sein Handwerk.</p>
       </article>
-      <div class="bild vorteile__bild" data-platzhalter="Bild: Team bei der Arbeit" style="--platz:var(--platz-1)" data-zeig="skala"></div>
+      <div class="bild vorteile__bild" data-platzhalter="Bild: Team bei der Arbeit" style="--platz:var(--platz-1)" data-zeig="skala" data-motiv="innen-warm"></div>
       <article class="karte vorteil vorteil--3" data-versatz="0.09" data-zeig="rechts">
         <span class="vorteil__nr" aria-hidden="true">03</span>
         <h3>Flexible Termine</h3>
@@ -104,9 +105,9 @@
     </div>
     <div class="leistungen__tafel" data-tabs data-zeig>
       <div class="leistungen__bilder">
-        <div class="bild leistungen__bild" role="tabpanel" id="l-bild-1" aria-labelledby="l-tab-1" data-platzhalter="Bild: Privatkunden" style="--platz:var(--platz-4)"></div>
-        <div class="bild leistungen__bild" role="tabpanel" id="l-bild-2" aria-labelledby="l-tab-2" data-platzhalter="Bild: Gewerbekunden" style="--platz:var(--platz-1)"></div>
-        <div class="bild leistungen__bild" role="tabpanel" id="l-bild-3" aria-labelledby="l-tab-3" data-platzhalter="Bild: Sonderaufträge" style="--platz:var(--platz-3)"></div>
+        <div class="bild leistungen__bild" role="tabpanel" id="l-bild-1" aria-labelledby="l-tab-1" data-platzhalter="Bild: Privatkunden" style="--platz:var(--platz-4)" data-motiv="arbeitsplatz-warm"></div>
+        <div class="bild leistungen__bild" role="tabpanel" id="l-bild-2" aria-labelledby="l-tab-2" data-platzhalter="Bild: Gewerbekunden" style="--platz:var(--platz-1)" data-motiv="feld-warm"></div>
+        <div class="bild leistungen__bild" role="tabpanel" id="l-bild-3" aria-labelledby="l-tab-3" data-platzhalter="Bild: Sonderaufträge" style="--platz:var(--platz-3)" data-motiv="huegel-warm"></div>
         <!-- Beispielwert, vom Kunden zu ersetzen -->
         <p class="leistungen__preis" data-beispiel aria-live="polite"><span data-preis>ab 24 €</span><small> je m²</small></p>
       </div>
@@ -147,10 +148,10 @@
       </div>
     </div>
     <ul class="team__raster" data-staffel>
-      <li class="person" data-zeig data-beispiel><div class="bild" data-platzhalter="Foto" style="--platz:var(--platz-2)"></div><div class="person__leiste"><h3>Name Eins</h3><p>Fachkraft</p></div></li>
-      <li class="person" data-zeig data-beispiel><div class="bild" data-platzhalter="Foto" style="--platz:var(--platz-4)"></div><div class="person__leiste"><h3>Name Zwei</h3><p>Fachkraft</p></div></li>
-      <li class="person" data-zeig data-beispiel><div class="bild" data-platzhalter="Foto" style="--platz:var(--platz-1)"></div><div class="person__leiste"><h3>Name Drei</h3><p>Assistenz</p></div></li>
-      <li class="person" data-zeig data-beispiel><div class="bild" data-platzhalter="Foto" style="--platz:var(--platz-3)"></div><div class="person__leiste"><h3>Name Vier</h3><p>Mitarbeit</p></div></li>
+      <li class="person" data-zeig data-beispiel><div class="bild" data-platzhalter="Foto" style="--platz:var(--platz-2)" data-motiv="person-1"></div><div class="person__leiste"><h3>Name Eins</h3><p>Fachkraft</p></div></li>
+      <li class="person" data-zeig data-beispiel><div class="bild" data-platzhalter="Foto" style="--platz:var(--platz-4)" data-motiv="person-2"></div><div class="person__leiste"><h3>Name Zwei</h3><p>Fachkraft</p></div></li>
+      <li class="person" data-zeig data-beispiel><div class="bild" data-platzhalter="Foto" style="--platz:var(--platz-1)" data-motiv="person-3"></div><div class="person__leiste"><h3>Name Drei</h3><p>Assistenz</p></div></li>
+      <li class="person" data-zeig data-beispiel><div class="bild" data-platzhalter="Foto" style="--platz:var(--platz-3)" data-motiv="person-4"></div><div class="person__leiste"><h3>Name Vier</h3><p>Mitarbeit</p></div></li>
     </ul>
   </div>
 </section>
@@ -194,7 +195,7 @@
 
 <!-- 6. Aussage auf Bildfläche -->
 <section class="aussage" aria-label="Aussage">
-  <div class="aussage__grund" aria-hidden="true"><div class="bild" data-platzhalter="Bild: Hintergrund" style="--platz:var(--platz-3)"></div></div>
+  <div class="aussage__grund" aria-hidden="true"><div class="bild" data-platzhalter="Bild: Hintergrund" style="--platz:var(--platz-3)" data-motiv="huegel-warm"></div></div>
   <div class="wrap aussage__innen">
     <p class="aussage__satz" data-zeig>Ob wöchentlich, alle zwei Wochen oder einmal im Monat: Sie wählen den <em>Rhythmus</em>, wir halten ihn <em>ein</em>. Kleine Besorgungen übernehmen wir auf Wunsch gleich mit.</p>
     <a class="knopf" href="#termin" data-zeig>Termin vereinbaren</a>
@@ -212,16 +213,16 @@
   <!-- Beispieltexte, durch echte freigegebene Bewertungen ersetzen -->
   <div class="band stimmen__band" style="--band-abstand:1.5rem;--band-dauer:60s" data-beispiel>
     <div class="band__spur">
-      <figure class="stimme"><p class="sterne"><span class="sr-nur">5 von 5 Sternen</span><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg></p><blockquote><p><strong>Beispiel: pünktlich und gründlich</strong> Beispieltext einer Kundenstimme. Hier steht später eine echte, freigegebene Bewertung mit Namen.</p></blockquote><figcaption><span class="bild stimme__foto" data-platzhalter="" style="--platz:var(--platz-2)"></span>Kundin Eins</figcaption></figure>
-      <figure class="stimme"><p class="sterne"><span class="sr-nur">5 von 5 Sternen</span><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg></p><blockquote><p><strong>Beispiel: klare Abläufe</strong> Beispieltext einer Kundenstimme. Hier steht später eine echte, freigegebene Bewertung mit Namen.</p></blockquote><figcaption><span class="bild stimme__foto" data-platzhalter="" style="--platz:var(--platz-4)"></span>Kunde Zwei</figcaption></figure>
-      <figure class="stimme"><p class="sterne"><span class="sr-nur">5 von 5 Sternen</span><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg></p><blockquote><p><strong>Beispiel: faire Preise</strong> Beispieltext einer Kundenstimme. Hier steht später eine echte, freigegebene Bewertung mit Namen.</p></blockquote><figcaption><span class="bild stimme__foto" data-platzhalter="" style="--platz:var(--platz-1)"></span>Kunde Drei</figcaption></figure>
-      <figure class="stimme"><p class="sterne"><span class="sr-nur">5 von 5 Sternen</span><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg></p><blockquote><p><strong>Beispiel: zuverlässig</strong> Beispieltext einer Kundenstimme. Hier steht später eine echte, freigegebene Bewertung mit Namen.</p></blockquote><figcaption><span class="bild stimme__foto" data-platzhalter="" style="--platz:var(--platz-3)"></span>Kundin Vier</figcaption></figure>
+      <figure class="stimme"><p class="sterne"><span class="sr-nur">5 von 5 Sternen</span><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg></p><blockquote><p><strong>Beispiel: pünktlich und gründlich</strong> Beispieltext einer Kundenstimme. Hier steht später eine echte, freigegebene Bewertung mit Namen.</p></blockquote><figcaption><span class="bild stimme__foto" data-platzhalter="" style="--platz:var(--platz-2)" data-motiv="dach-warm"></span>Kundin Eins</figcaption></figure>
+      <figure class="stimme"><p class="sterne"><span class="sr-nur">5 von 5 Sternen</span><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg></p><blockquote><p><strong>Beispiel: klare Abläufe</strong> Beispieltext einer Kundenstimme. Hier steht später eine echte, freigegebene Bewertung mit Namen.</p></blockquote><figcaption><span class="bild stimme__foto" data-platzhalter="" style="--platz:var(--platz-4)" data-motiv="innen-warm"></span>Kunde Zwei</figcaption></figure>
+      <figure class="stimme"><p class="sterne"><span class="sr-nur">5 von 5 Sternen</span><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg></p><blockquote><p><strong>Beispiel: faire Preise</strong> Beispieltext einer Kundenstimme. Hier steht später eine echte, freigegebene Bewertung mit Namen.</p></blockquote><figcaption><span class="bild stimme__foto" data-platzhalter="" style="--platz:var(--platz-1)" data-motiv="arbeitsplatz-warm"></span>Kunde Drei</figcaption></figure>
+      <figure class="stimme"><p class="sterne"><span class="sr-nur">5 von 5 Sternen</span><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg><svg class="ico" width="20" height="20" aria-hidden="true"><use href="#stern"/></svg></p><blockquote><p><strong>Beispiel: zuverlässig</strong> Beispieltext einer Kundenstimme. Hier steht später eine echte, freigegebene Bewertung mit Namen.</p></blockquote><figcaption><span class="bild stimme__foto" data-platzhalter="" style="--platz:var(--platz-3)" data-motiv="feld-warm"></span>Kundin Vier</figcaption></figure>
     </div>
     <div class="band__spur" aria-hidden="true">
-      <figure class="stimme"><p class="sterne"><svg class="ico" width="20" height="20"><use href="#stern"/></svg><svg class="ico" width="20" height="20"><use href="#stern"/></svg><svg class="ico" width="20" height="20"><use href="#stern"/></svg><svg class="ico" width="20" height="20"><use href="#stern"/></svg><svg class="ico" width="20" height="20"><use href="#stern"/></svg></p><blockquote><p><strong>Beispiel: pünktlich und gründlich</strong> Beispieltext einer Kundenstimme. Hier steht später eine echte, freigegebene Bewertung mit Namen.</p></blockquote><figcaption><span class="bild stimme__foto" style="--platz:var(--platz-2)"></span>Kundin Eins</figcaption></figure>
-      <figure class="stimme"><p class="sterne"><svg class="ico" width="20" height="20"><use href="#stern"/></svg><svg class="ico" width="20" height="20"><use href="#stern"/></svg><svg class="ico" width="20" height="20"><use href="#stern"/></svg><svg class="ico" width="20" height="20"><use href="#stern"/></svg><svg class="ico" width="20" height="20"><use href="#stern"/></svg></p><blockquote><p><strong>Beispiel: klare Abläufe</strong> Beispieltext einer Kundenstimme. Hier steht später eine echte, freigegebene Bewertung mit Namen.</p></blockquote><figcaption><span class="bild stimme__foto" style="--platz:var(--platz-4)"></span>Kunde Zwei</figcaption></figure>
-      <figure class="stimme"><p class="sterne"><svg class="ico" width="20" height="20"><use href="#stern"/></svg><svg class="ico" width="20" height="20"><use href="#stern"/></svg><svg class="ico" width="20" height="20"><use href="#stern"/></svg><svg class="ico" width="20" height="20"><use href="#stern"/></svg><svg class="ico" width="20" height="20"><use href="#stern"/></svg></p><blockquote><p><strong>Beispiel: faire Preise</strong> Beispieltext einer Kundenstimme. Hier steht später eine echte, freigegebene Bewertung mit Namen.</p></blockquote><figcaption><span class="bild stimme__foto" style="--platz:var(--platz-1)"></span>Kunde Drei</figcaption></figure>
-      <figure class="stimme"><p class="sterne"><svg class="ico" width="20" height="20"><use href="#stern"/></svg><svg class="ico" width="20" height="20"><use href="#stern"/></svg><svg class="ico" width="20" height="20"><use href="#stern"/></svg><svg class="ico" width="20" height="20"><use href="#stern"/></svg><svg class="ico" width="20" height="20"><use href="#stern"/></svg></p><blockquote><p><strong>Beispiel: zuverlässig</strong> Beispieltext einer Kundenstimme. Hier steht später eine echte, freigegebene Bewertung mit Namen.</p></blockquote><figcaption><span class="bild stimme__foto" style="--platz:var(--platz-3)"></span>Kundin Vier</figcaption></figure>
+      <figure class="stimme"><p class="sterne"><svg class="ico" width="20" height="20"><use href="#stern"/></svg><svg class="ico" width="20" height="20"><use href="#stern"/></svg><svg class="ico" width="20" height="20"><use href="#stern"/></svg><svg class="ico" width="20" height="20"><use href="#stern"/></svg><svg class="ico" width="20" height="20"><use href="#stern"/></svg></p><blockquote><p><strong>Beispiel: pünktlich und gründlich</strong> Beispieltext einer Kundenstimme. Hier steht später eine echte, freigegebene Bewertung mit Namen.</p></blockquote><figcaption><span class="bild stimme__foto" style="--platz:var(--platz-2)" data-motiv="huegel-warm"></span>Kundin Eins</figcaption></figure>
+      <figure class="stimme"><p class="sterne"><svg class="ico" width="20" height="20"><use href="#stern"/></svg><svg class="ico" width="20" height="20"><use href="#stern"/></svg><svg class="ico" width="20" height="20"><use href="#stern"/></svg><svg class="ico" width="20" height="20"><use href="#stern"/></svg><svg class="ico" width="20" height="20"><use href="#stern"/></svg></p><blockquote><p><strong>Beispiel: klare Abläufe</strong> Beispieltext einer Kundenstimme. Hier steht später eine echte, freigegebene Bewertung mit Namen.</p></blockquote><figcaption><span class="bild stimme__foto" style="--platz:var(--platz-4)" data-motiv="dach-warm"></span>Kunde Zwei</figcaption></figure>
+      <figure class="stimme"><p class="sterne"><svg class="ico" width="20" height="20"><use href="#stern"/></svg><svg class="ico" width="20" height="20"><use href="#stern"/></svg><svg class="ico" width="20" height="20"><use href="#stern"/></svg><svg class="ico" width="20" height="20"><use href="#stern"/></svg><svg class="ico" width="20" height="20"><use href="#stern"/></svg></p><blockquote><p><strong>Beispiel: faire Preise</strong> Beispieltext einer Kundenstimme. Hier steht später eine echte, freigegebene Bewertung mit Namen.</p></blockquote><figcaption><span class="bild stimme__foto" style="--platz:var(--platz-1)" data-motiv="innen-warm"></span>Kunde Drei</figcaption></figure>
+      <figure class="stimme"><p class="sterne"><svg class="ico" width="20" height="20"><use href="#stern"/></svg><svg class="ico" width="20" height="20"><use href="#stern"/></svg><svg class="ico" width="20" height="20"><use href="#stern"/></svg><svg class="ico" width="20" height="20"><use href="#stern"/></svg><svg class="ico" width="20" height="20"><use href="#stern"/></svg></p><blockquote><p><strong>Beispiel: zuverlässig</strong> Beispieltext einer Kundenstimme. Hier steht später eine echte, freigegebene Bewertung mit Namen.</p></blockquote><figcaption><span class="bild stimme__foto" style="--platz:var(--platz-3)" data-motiv="arbeitsplatz-warm"></span>Kundin Vier</figcaption></figure>
     </div>
   </div>
 </section>
@@ -245,7 +246,7 @@
       </form>
     </div>
     <div class="termin__bild" data-zeig="rechts" data-slider>
-      <div class="bild termin__foto" data-platzhalter="Bild: Ansprechpartnerin" style="--platz:var(--platz-4)"></div>
+      <div class="bild termin__foto" data-platzhalter="Bild: Ansprechpartnerin" style="--platz:var(--platz-4)" data-motiv="feld-warm"></div>
       <div class="termin__panel">
         <p class="termin__satz" aria-live="polite"><span data-slide>Zufriedenheit garantiert.</span></p>
         <div class="termin__pfeile">
@@ -273,7 +274,7 @@
       <h2 id="h-faq">Häufige Fragen</h2>
       <p>Kurze Antworten auf das, was Kunden vor der Anfrage wissen wollen.</p>
       <a class="knopf knopf--dunkel" href="#termin">Kontakt <svg class="ico" width="20" height="20" aria-hidden="true"><use href="#pfeil"/></svg></a>
-      <div class="bild faq__bild" data-platzhalter="Bild: Freisteller" style="--platz:var(--platz-3)" aria-hidden="true"></div>
+      <div class="bild faq__bild" data-platzhalter="Bild: Freisteller" style="--platz:var(--platz-3)" aria-hidden="true" data-motiv="huegel-warm"></div>
     </div>
     <div class="faq__liste" data-exklusiv data-staffel>
       <details data-zeig><summary>Welche Leistungen bieten Sie an?<span class="plus" aria-hidden="true"></span></summary><p>Hier steht die Antwort auf die erste Frage in zwei bis drei Sätzen. Der Text ist ein Platzhalter.</p></details>
@@ -296,8 +297,8 @@
       <a class="knopf" href="#termin" data-zeig>Termin vereinbaren</a>
     </div>
     <div class="vergleich" data-vergleich data-zeig="skala">
-      <div class="bild vergleich__bild vergleich__bild--vorher" data-platzhalter="Vorher" style="--platz:var(--platz-3)"></div>
-      <div class="bild vergleich__bild vergleich__bild--nachher" data-platzhalter="Nachher" style="--platz:var(--platz-2)"></div>
+      <div class="bild vergleich__bild vergleich__bild--vorher" data-platzhalter="Vorher" style="--platz:var(--platz-3)" data-motiv="dach-hell"></div>
+      <div class="bild vergleich__bild vergleich__bild--nachher" data-platzhalter="Nachher" style="--platz:var(--platz-2)" data-motiv="dach-warm"></div>
       <span class="vergleich__strich" aria-hidden="true"><span class="vergleich__griff"><svg class="ico" width="22" height="22"><use href="#pfeil"/></svg></span></span>
       <label class="sr-nur" for="v-regler">Anteil Nachher-Bild</label>
       <input class="vergleich__regler" id="v-regler" type="range" min="0" max="100" value="50">
