@@ -1,0 +1,30 @@
+/* marke.css der Vorlage Lehrpfad: DIE Datei zum Umfärben. Marke wechseln = nur diese Werte (und bei Bedarf die zwei Schriftzeilen).
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#fbfaf7;          /* Seitengrund, warmes Weiß */
+  --flaeche-alt:#f0ede5;      /* abgesetzte Abschnitte und Platzhalter */
+  --flaeche-dunkel:#121620;   /* dunkle Abschnitte, Kopfzeile, Fuß */
+  --text:#12151c;
+  --text-leise:#4d5361;
+  --linie:#ddd8cc;
+  --akzent:#2a4bff;           /* Hauptaktion, ein Akzent für die ganze Seite */
+  --akzent-text:#ffffff;
+  --schrift-titel:'Bricolage Grotesque',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:20px;
+  --radius-bild:14px;
+
+  /* Zusatztokens dieser Vorlage */
+  --flaeche-dunkel-2:#1c2230;     /* Karten auf Dunkel */
+  --linie-dunkel:#2e3649;         /* feine Linien auf Dunkel */
+  --text-auf-dunkel:#f6f5f1;
+  --text-leise-dunkel:#b6bccb;
+  --akzent-hell:#b9c5ff;          /* Akzent auf Dunkel: Icons, Fokusring, Hervorhebung */
+  --fokus:#1b37d6;                /* Fokusring auf Hell */
+  --stern:#b36a00;                /* Sterne auf Hell */
+  --stern-dunkel:#f3b63f;         /* Sterne auf Dunkel */
+  --radius-gross:32px;
+  --radius-klein:12px;
+  --schatten-karte:0 1px 2px color-mix(in srgb,var(--flaeche-dunkel) 8%,transparent),0 14px 32px color-mix(in srgb,var(--flaeche-dunkel) 10%,transparent);
+}

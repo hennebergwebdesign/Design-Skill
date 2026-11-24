@@ -151,7 +151,7 @@ h3{font-weight:500;letter-spacing:-.01em}
 .team__kopf{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:1.5rem;margin-bottom:2rem}
 .team__kopf h2{font-size:var(--h2);max-width:16ch}
 .team__text{margin-top:1rem;max-width:34rem;color:var(--text-leise)}
-.team__liste{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--rand);padding:.5rem var(--rand) 1.25rem;scrollbar-width:thin;scrollbar-color:var(--text-leise) transparent}
+.team__liste{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:max(var(--rand),calc((100% - var(--breite)) / 2));padding:.5rem max(var(--rand),calc((100% - var(--breite)) / 2)) 1.25rem;scrollbar-width:thin;scrollbar-color:var(--text-leise) transparent}
 .arzt{position:relative;flex:none;width:clamp(14rem,70vw,18.5rem);scroll-snap-align:start;border-radius:var(--radius-karte);overflow:hidden;transition:transform var(--dauer-mittel) var(--kurve),box-shadow var(--dauer-mittel)}
 .arzt:hover,.arzt:focus-within{transform:translateY(-6px);box-shadow:0 18px 32px -20px color-mix(in srgb,var(--flaeche-dunkel) 70%,transparent)}
 .arzt__bild{aspect-ratio:3/4;border-radius:0}
@@ -162,7 +162,7 @@ h3{font-weight:500;letter-spacing:-.01em}
 
 /* Leistungen */
 .leist{margin-top:clamp(3rem,7vw,6rem)}
-.leist__kopf{display:grid;justify-items:center;text-align:center;gap:.5rem;margin-bottom:2rem}
+.leist__kopf{display:grid;justify-items:center;text-align:center;gap:1rem;margin-bottom:2rem}
 .leist__kopf h2{font-size:var(--h2);max-width:18ch}
 .leist__kopf p:not(.kicker){max-width:34rem}
 .reiterkopf{display:none}
@@ -178,6 +178,7 @@ h3{font-weight:500;letter-spacing:-.01em}
 .reiter__name{font-weight:600;font-size:var(--text-m)}
 .reiterflaeche{display:grid;gap:1rem}
 .folie{display:grid;gap:1rem}
+.folie[hidden]{display:none}
 .js .folie:not([hidden]){animation:ein .45s var(--kurve)}
 @keyframes ein{from{opacity:0;transform:translateY(14px)}}
 .folie__karte{display:grid;gap:1.1rem;align-content:center;justify-items:start;padding:clamp(1.5rem,3.5vw,2.75rem);border-radius:var(--radius-karte);background:var(--flaeche-dunkel-2)}
@@ -283,6 +284,7 @@ h3{font-weight:500;letter-spacing:-.01em}
 .kontakt{display:grid;gap:.25rem;margin-top:.5rem}
 .kontakt li{display:flex;align-items:center;gap:.8rem;min-height:2.75rem;color:var(--text-auf-dunkel)}
 .kontakt .ic{color:var(--akzent)}
+.kontakt a,.fuss__spalte a{overflow-wrap:anywhere}
 .kontakt a{font-weight:600;border-bottom:2px solid transparent;transition:border-color var(--dauer-kurz)}
 .kontakt a:hover{border-bottom-color:var(--akzent)}
 .formular{display:grid;gap:1rem;padding:clamp(1.25rem,3vw,2.25rem);border-radius:var(--radius-karte);background:var(--flaeche);color:var(--text)}
@@ -326,3 +328,7 @@ h3{font-weight:500;letter-spacing:-.01em}
   .laeuft .reiter[aria-selected="true"] .reiter__balken::after{animation:none;transform:scaleX(1)}
   .js .folie:not([hidden]),.faq__liste details[open] .antwort{animation:none}
 }
+
+/* Formular auf heller Karte innerhalb der dunklen Tafel: Farben zurücksetzen */
+.tafel--dunkel .formular h3{color:var(--text)}
+.tafel--dunkel .formular p{color:var(--text-leise)}

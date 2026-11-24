@@ -1,0 +1,36 @@
+/* marke.css der Vorlage "Training und Coaching": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#fbf8f6;
+  --flaeche-alt:#f7ebee;
+  --flaeche-dunkel:#3a0f1c;
+  --text:#26111b;
+  --text-leise:#684f5a;
+  --linie:#e8d8dd;
+  --akzent:#7be0b0;           /* Hauptaktion auf dunklen Flächen, auf Hell nur als Fläche mit dunklem Text */
+  --akzent-text:#26111b;
+  --schrift-titel:'Schibsted Grotesk',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:20px;
+  --radius-bild:20px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:28px;
+  --radius-klein:14px;
+  --titel-gewicht:600;
+  --titel-spur:-0.03em;
+  --akzent-tief:#8f2349;      /* Akzentfarbe der hellen Flächen: Text, Linie, Symbolkreis (8 zu 1 auf Hell) */
+  --verlauf-von:#3a0f1c;      /* Rahmenverlauf von oben nach unten, nur Flächen mit heller Schrift */
+  --verlauf-bis:#9c2a45;
+  --text-auf-dunkel:#fff8fa;
+  --text-leise-dunkel:#f6dfe6;
+  --linie-dunkel:#c4778c;
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#5a2438;
+  --ton-2:#2f6b57;
+  --ton-3:#a35d4a;
+  --ton-4:#8a6f55;
+  --ton-5:#3f5c63;
+  --ton-6:#6b3a4c;
+}

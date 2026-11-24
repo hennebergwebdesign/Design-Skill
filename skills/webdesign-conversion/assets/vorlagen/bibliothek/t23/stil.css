@@ -67,7 +67,7 @@ html{scroll-padding-top:6rem}
 .held{background:var(--flaeche-dunkel);color:var(--text-auf-dunkel);padding-top:clamp(2.5rem,6vw,5rem)}
 .held .kicker{color:var(--akzent);margin-bottom:1rem}
 .held__kopf{display:grid;gap:2rem;align-items:end}
-.held h1{font-size:clamp(2.5rem,1.2rem + 5vw,5rem);max-width:14ch}
+.held h1{font-size:clamp(2.5rem,1.2rem + 5vw,5rem);max-width:16ch}
 .held__rechts{display:flex;flex-direction:column;gap:1.5rem;align-items:flex-start;max-width:28rem;color:var(--text-leise-dunkel);font-size:var(--text-l);line-height:1.5}
 .held__knoepfe{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1.5rem}
 .held__link{display:inline-flex;align-items:center;gap:.5rem;min-height:3rem;color:var(--text-auf-dunkel);font-weight:600;transition:color var(--dauer-kurz)}

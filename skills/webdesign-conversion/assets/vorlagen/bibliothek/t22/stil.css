@@ -2,6 +2,8 @@
 :root{--kopfhoehe:4.5rem;--spur-rand:max(var(--rand),calc((100% - var(--breite)) / 2))}
 html{scroll-padding-top:5.5rem}
 [hidden]{display:none!important}
+h2{font-size:clamp(2rem,1.3rem + 2.8vw,3.75rem);font-weight:600}
+h3{font-size:1.25rem}
 .ic{flex:none}
 :focus-visible{outline-color:var(--text)}
 .held :focus-visible,.fuss :focus-visible,.paket--dunkel :focus-visible,.abschluss :focus-visible,.kopf__innen :focus-visible,.fall :focus-visible,.lkarte :focus-visible{outline-color:var(--akzent)}
@@ -77,6 +79,7 @@ main>section:not(.held),.fuss{position:relative;z-index:1;background:var(--flaec
 /* 1. Held */
 .held{display:grid;grid-template-columns:minmax(0,1fr);align-items:end;min-height:max(38rem,calc(100svh - 3rem));color:var(--text-auf-dunkel);isolation:isolate;overflow:hidden}
 .held>*{grid-area:1/1}
+.held>.held__bild,.held>.held__schleier{align-self:stretch}
 .held__bild{border-radius:0;animation:zoom-ein 1.6s var(--kurve) both}
 .held__bild-innen{position:absolute;inset:0;transform:scale(calc(1 + var(--dunkel,0) * .12));transform-origin:50% 40%}
 .held__bild::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(to top,color-mix(in srgb,var(--flaeche-dunkel) 80%,transparent) 0%,color-mix(in srgb,var(--flaeche-dunkel) 45%,transparent) 55%,color-mix(in srgb,var(--flaeche-dunkel) 55%,transparent) 100%)}
@@ -84,7 +87,7 @@ main>section:not(.held),.fuss{position:relative;z-index:1;background:var(--flaec
 @keyframes zoom-ein{from{transform:scale(1.08)}to{transform:scale(1)}}
 .held__inhalt{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1fr);gap:2rem;padding-top:9rem;padding-bottom:2.5rem;align-items:end}
 .held__links{display:flex;flex-direction:column;align-items:flex-start;gap:1.5rem}
-.held h1{font-size:clamp(2.5rem,1.3rem + 5vw,5rem);max-width:13ch;font-weight:600}
+.held h1{font-size:clamp(2.5rem,1.3rem + 5vw,5rem);max-width:16ch;font-weight:600}
 .js .held h1 .w{display:inline-block;animation:wort-ein .8s var(--kurve) both;animation-delay:calc(var(--i) * 70ms + 250ms)}
 @keyframes wort-ein{from{opacity:0;transform:translateY(.5em)}to{opacity:1;transform:none}}
 .held__knoepfe,.abschluss__knoepfe{display:flex;flex-wrap:wrap;gap:.75rem}
@@ -182,6 +185,7 @@ main>section:not(.held),.fuss{position:relative;z-index:1;background:var(--flaec
 .ablauf__lead{color:var(--text-leise);max-width:24rem}
 .ablauf__raster{display:grid;grid-template-columns:minmax(0,1fr);gap:1.5rem}
 .ablauf__bild{aspect-ratio:4/3}
+.ablauf__bild[data-platzhalter]::after,.vorteile__bild[data-platzhalter]::after{inset:1rem auto auto 1rem}
 .ablauf__karte{display:flex;flex-direction:column;align-items:flex-start;gap:.75rem;background:var(--flaeche-alt);border-radius:var(--radius-karte);padding:1.25rem;margin-top:.75rem}
 .ablauf__karte .avatare .bild{border-color:var(--flaeche-alt)}
 .ablauf__bewertung{font-size:1rem;font-weight:500}
@@ -207,8 +211,8 @@ main>section:not(.held),.fuss{position:relative;z-index:1;background:var(--flaec
 }
 @media (min-width:62rem){
   .ablauf__raster{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:2rem}
-  .ablauf__sticky{position:sticky;top:6rem}
-  .ablauf__bild{aspect-ratio:4/5;max-height:calc(100svh - 8rem);min-height:26rem;width:100%}
+  .ablauf__sticky{position:relative}
+  .ablauf__bild{aspect-ratio:4/5;min-height:26rem;width:100%}
   .ablauf__karte{position:absolute;left:1rem;right:1rem;bottom:1rem;margin:0;max-width:20rem}
 }
 

@@ -1,0 +1,35 @@
+/* marke.css der Vorlage "Teamseite": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#f1f3f6;
+  --flaeche-alt:#e5e9ef;
+  --flaeche-dunkel:#0e1a2b;
+  --text:#0e1726;
+  --text-leise:#46515f;
+  --linie:#cfd5de;
+  --akzent:#2450d6;
+  --akzent-text:#ffffff;
+  --schrift-titel:'Instrument Sans',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:18px;
+  --radius-bild:18px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:28px;          /* große Bildtafeln und dunkle Panels */
+  --radius-klein:12px;          /* Akkordeon, Eingabefelder */
+  --titel-gewicht:600;
+  --titel-spur:-0.03em;
+  --text-blass:#7b8696;         /* noch nicht gelesene Wörter im Leitsatz, nur große Schrift (3 zu 1) */
+  --text-auf-dunkel:#ffffff;
+  --text-leise-dunkel:#b7c1d0;
+  --linie-dunkel:#2a3a52;
+  --karte:#ffffff;              /* Karten auf heller und dunkler Fläche */
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen), alle dunkel genug für weiße Beschriftung */
+  --ton-1:#31506e;
+  --ton-2:#45627a;
+  --ton-3:#2b4a5f;
+  --ton-4:#4b5f78;
+  --ton-5:#3a5368;
+  --ton-6:#56687d;
+}
