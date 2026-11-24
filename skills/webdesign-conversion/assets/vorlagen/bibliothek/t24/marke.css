@@ -1,0 +1,36 @@
+/* marke.css der Vorlage "Jahreszeiten": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#f3f5f1;
+  --flaeche-alt:#e6eae2;
+  --flaeche-dunkel:#10201e;
+  --text:#12201d;
+  --text-leise:#4a5753;
+  --linie:#cdd5cb;
+  --akzent:#0b6b66;
+  --akzent-text:#ffffff;
+  --schrift-titel:'Instrument Sans',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:20px;
+  --radius-bild:16px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:28px;          /* Stapelkarten, Panels */
+  --radius-klein:12px;          /* Eingabefelder, Akkordeon */
+  --titel-gewicht:500;
+  --titel-spur:-0.03em;
+  --karte:#fbfcfa;              /* helle Karten auf Fläche, Akzent und Dunkel */
+  --text-auf-dunkel:#f3f5f1;
+  --text-leise-dunkel:#b4c4bf;
+  --linie-dunkel:#2b3f3b;
+  --text-auf-akzent-leise:#d3e8e5;
+  --akzent-hell:#7fd1c8;        /* Fokus und Hervorhebung auf dunklem Grund */
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#2f4a47;
+  --ton-2:#8a7f6a;
+  --ton-3:#3d5a52;
+  --ton-4:#a89c84;
+  --ton-5:#486066;
+  --ton-6:#6b7468;
+}
