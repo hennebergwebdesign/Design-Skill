@@ -1,0 +1,222 @@
+/* stil.css der Vorlage "Bildbühne": mobil zuerst. Alle Farben und Radien aus marke.css. */
+:root{--tafel-rand:.5rem;--klein:1rem}
+html{scroll-padding-top:6rem}
+.mitte{text-align:center}
+.kicker{font-size:1rem;font-weight:600;color:var(--text-leise);letter-spacing:.01em}
+
+/* Platzhalterflächen: Töne aus den Tokens */
+.bild[data-platzhalter]::after{color:var(--text-auf-dunkel);text-shadow:0 1px 2px color-mix(in srgb,var(--flaeche-dunkel) 60%,transparent);opacity:.8;font-size:1rem;z-index:2}
+.bild[data-platzhalter=""]::after{display:none}
+.bild--a{background:linear-gradient(180deg,var(--ton-1) 0%,var(--ton-5) 45%,var(--ton-2) 100%)}
+.bild--b{background:linear-gradient(160deg,var(--ton-5),var(--ton-3))}
+.bild--c{background:linear-gradient(170deg,var(--ton-2),var(--ton-1))}
+.bild--d{background:linear-gradient(150deg,var(--ton-3),var(--ton-4))}
+.bild--e{background:linear-gradient(190deg,var(--ton-6),var(--ton-5))}
+.bild--f{background:linear-gradient(165deg,var(--ton-4),var(--ton-3))}
+
+/* Knöpfe */
+.knopf{min-height:3rem}
+.knopf--hell{background:var(--flaeche);color:var(--text)}
+.knopf--dunkel{background:var(--text);color:var(--flaeche)}
+
+/* Kopf: schwebende Pille */
+.kopf{position:fixed;inset:.75rem 0 auto 0;z-index:50;pointer-events:none}
+.kopf__pille{pointer-events:auto;position:relative;width:min(100% - 2*var(--tafel-rand) - 1rem,62rem);margin-inline:auto;background:var(--flaeche);border-radius:var(--radius-knopf);padding:.4rem .4rem .4rem 1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;transition:box-shadow var(--dauer-mittel)}
+.gescrollt .kopf__pille{box-shadow:0 8px 28px color-mix(in srgb,var(--flaeche-dunkel) 18%,transparent)}
+.kopf__logo{font-family:var(--schrift-titel);font-weight:700;font-size:1.375rem;letter-spacing:-.02em;min-height:2.75rem;display:inline-flex;align-items:center}
+.kopf__burger{display:none;width:3rem;height:3rem;border-radius:var(--radius-knopf);align-items:center;justify-content:center;background:var(--flaeche-alt)}
+.js .kopf__burger{display:inline-flex}
+.burger,.burger::before{display:block;width:1.25rem;height:2px;background:var(--text);border-radius:2px;transition:transform var(--dauer-mittel) var(--kurve)}
+.burger{position:relative;transform:translateY(-4px)}
+.burger::before{content:"";position:absolute;left:0;top:8px}
+.kopf__burger[aria-expanded="true"] .burger{transform:rotate(45deg)}
+.kopf__burger[aria-expanded="true"] .burger::before{transform:translateY(-8px) rotate(-90deg)}
+.kopf__nav{flex-basis:100%;padding:.5rem 0 1rem}
+.kopf__nav ul{display:flex;flex-direction:column}
+.kopf__nav li a{display:flex;align-items:center;min-height:3rem;font-weight:500;padding-inline:.5rem}
+.kopf__nav li a:hover{color:var(--akzent)}
+.kopf__nav .knopf{width:100%;justify-content:center;margin-top:.5rem;background:var(--text);color:var(--flaeche)}
+.js .kopf__nav{position:absolute;top:calc(100% + .5rem);left:0;right:0;background:var(--flaeche);border-radius:var(--radius-karte);padding:1rem;box-shadow:0 12px 32px color-mix(in srgb,var(--flaeche-dunkel) 20%,transparent)}
+.js .kopf__nav:not([data-offen="true"]){display:none}
+@media (min-width:62rem){
+  .kopf__burger,.js .kopf__burger{display:none}
+  .kopf__nav,.js .kopf__nav,.js .kopf__nav:not([data-offen="true"]){position:static;display:flex;flex-basis:auto;align-items:center;gap:1.5rem;padding:0;background:none;box-shadow:none;border-radius:0}
+  .kopf__nav ul{flex-direction:row;gap:.25rem}
+  .kopf__nav li a{padding-inline:.9rem}
+  .kopf__nav .knopf{width:auto;margin:0}
+}
+
+/* 1. Held */
+.held{position:relative;margin:var(--tafel-rand);border-radius:var(--radius-gross);overflow:hidden;min-height:max(40rem,calc(100svh - 1rem));display:flex;color:var(--text-auf-dunkel);isolation:isolate}
+.held__bild{position:absolute;inset:0;border-radius:0;z-index:-1;animation:zoom-ein 1.6s var(--kurve) both}
+.held__bild-innen{position:absolute;inset:-6% 0}
+.held__bild::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(to top,color-mix(in srgb,var(--flaeche-dunkel) 70%,transparent) 0%,color-mix(in srgb,var(--flaeche-dunkel) 25%,transparent) 45%,color-mix(in srgb,var(--flaeche-dunkel) 25%,transparent) 100%)}
+@keyframes zoom-ein{from{transform:scale(1.1)}to{transform:scale(1)}}
+.held__inhalt{position:relative;flex:1;display:flex;flex-direction:column;justify-content:space-between;gap:2rem;padding:7rem 1.25rem 1.75rem}
+.held__text{max-width:22rem;font-size:1.0625rem;line-height:1.5}
+.held__unten{display:flex;flex-direction:column;gap:2rem}
+.held__links{display:flex;flex-direction:column;align-items:flex-start;gap:1.5rem}
+.held h1{font-size:clamp(2.5rem,1.2rem + 5.4vw,5.5rem);max-width:12ch}
+.held__zahl{display:flex;flex-direction:column;gap:.25rem}
+.held__zahl-label{font-size:1rem}
+.zahl{font-family:var(--schrift-titel);font-weight:500;font-size:clamp(3.5rem,2rem + 6vw,6.25rem);line-height:1;letter-spacing:-.04em}
+.zahl--gross{font-size:clamp(4rem,2.5rem + 6vw,7rem)}
+.rolle{display:inline-flex;font-variant-numeric:tabular-nums}
+.rolle__stelle{display:inline-block;height:1em;overflow:hidden}
+.rolle__zeichen{display:inline-block;height:1em}
+.rolle__spalte{display:flex;flex-direction:column;transition:transform 1.6s var(--kurve) calc(var(--n,0) * 140ms)}
+.rolle__spalte span{display:block;height:1em;line-height:1}
+.rolle.laeuft .rolle__spalte{transform:translateY(calc(var(--ziel) * -1em))}
+@media (min-width:62rem){
+  .held__inhalt{padding:8rem 3rem 3rem;display:grid;grid-template-rows:auto 1fr;grid-template-columns:1fr}
+  .held__text{justify-self:end;text-align:right}
+  .held__unten{flex-direction:row;justify-content:space-between;align-items:flex-end;align-self:end}
+  .held__zahl{align-items:flex-end;text-align:right}
+}
+
+/* 2. Leitsatz und Logoleiste */
+.leitsatz__raster{display:grid;gap:2rem;align-items:end}
+.leitsatz__links{display:flex;align-items:center;gap:1rem;color:var(--text-leise);max-width:18rem}
+.avatare{display:flex;flex:none}
+.avatare .bild{width:3rem;height:3rem;border-radius:50%;border:2px solid var(--flaeche);margin-left:-.6rem;background:var(--ton-3)}
+.avatare .bild:first-child{margin-left:0;background:var(--ton-2)}
+.avatare .bild:last-child{background:var(--ton-5)}
+.leitsatz__satz{font-family:var(--schrift-titel);font-weight:500;font-size:clamp(1.5rem,1rem + 2vw,2.5rem);line-height:1.22;letter-spacing:-.02em;color:var(--text);text-wrap:pretty}
+.wortfarbe .wort{color:var(--text-blass);transition:color .35s ease}
+.wortfarbe .wort.an{color:var(--text)}
+.logos{margin-top:clamp(3rem,6vw,5rem);--band-abstand:.75rem;--band-dauer:40s}
+.logo-kachel{flex:none;display:flex;align-items:center;justify-content:center;gap:.75rem;width:11rem;height:5rem;background:var(--flaeche-alt);border-radius:var(--radius-klein)}
+.logo-kachel i{width:1.75rem;height:1.75rem;border-radius:50%;background:var(--linie)}
+.logo-kachel b{width:4rem;height:.9rem;border-radius:.45rem;background:var(--linie)}
+.logo-kachel:nth-child(even) i{border-radius:.4rem}
+.logo-kachel:nth-child(3n) b{width:3rem}
+@media (min-width:62rem){
+  .leitsatz__raster{grid-template-columns:1fr 2fr;gap:3rem}
+  .logo-kachel{width:14rem;height:6rem}
+}
+
+/* 3. Leistungen */
+.tafel{position:relative;margin:var(--tafel-rand);border-radius:var(--radius-gross);overflow:hidden;isolation:isolate;color:var(--text-auf-dunkel);min-height:46rem;display:flex}
+.tafel__bild{position:absolute;inset:0;border-radius:0;z-index:-1}
+.tafel__bild-innen{position:absolute;inset:-6% 0}
+.tafel__bild::before{content:"";position:absolute;inset:0;z-index:1;background:color-mix(in srgb,var(--flaeche-dunkel) 55%,transparent)}
+.tafel__inhalt{flex:1;display:flex;flex-direction:column;justify-content:space-between;gap:3rem;padding:2.5rem 1.25rem 1.25rem}
+.tafel__kopf{display:flex;flex-direction:column;gap:1.5rem}
+.tafel h2{font-size:clamp(2rem,1.2rem + 3vw,3.5rem);font-weight:500;max-width:14ch}
+.tafel__kopf-rechts{display:flex;flex-direction:column;align-items:flex-start;gap:1.25rem;max-width:20rem}
+.karten{display:grid;gap:.75rem}
+.karte{background:var(--flaeche);color:var(--text);border-radius:var(--radius-karte);padding:1.5rem;display:flex;flex-direction:column;justify-content:space-between;gap:2.5rem;min-height:13rem;transition:transform var(--dauer-mittel) var(--kurve)}
+.karte:hover{transform:translateY(-6px)}
+.karte__icon{width:2.5rem;height:2.5rem;color:var(--text)}
+.karte h3{font-size:1.375rem;font-weight:600;margin-bottom:.5rem;letter-spacing:-.015em}
+.karte p{color:var(--text-leise);font-size:1rem;line-height:1.5}
+@media (min-width:62rem){
+  .tafel{min-height:52rem}
+  .tafel__inhalt{padding:3.5rem 3rem 3rem}
+  .tafel__kopf{flex-direction:row;justify-content:space-between;align-items:flex-start}
+  .tafel__kopf-rechts{align-items:flex-end;text-align:right}
+  .karten{grid-template-columns:repeat(3,1fr);gap:1rem}
+  .karte{min-height:15rem}
+}
+
+/* 4. Arbeiten */
+.arbeiten h2,.beitraege h2{font-size:clamp(2rem,1.2rem + 3vw,3.5rem);font-weight:500;max-width:16ch;margin-inline:auto}
+.arbeiten__raster{display:grid;gap:2.5rem 1.5rem;margin-top:clamp(2rem,5vw,4rem)}
+.projekt a{display:block;padding-bottom:1.25rem;border-bottom:1px solid var(--linie)}
+.projekt__bild{aspect-ratio:4/3;margin-bottom:1.25rem}
+.projekt__innen{position:absolute;inset:0;transition:transform 1s var(--kurve)}
+.projekt a:hover .projekt__innen,.beitrag a:hover .projekt__innen{transform:scale(1.05)}
+.projekt h3{font-size:1.375rem;font-weight:600;margin-bottom:.25rem}
+.projekt p{color:var(--text-leise);font-size:1rem}
+.projekt__bild{transition:clip-path 1.1s var(--kurve)}
+.js .projekt:not(.ist-da) .projekt__bild{clip-path:inset(0 0 100% 0 round var(--radius-bild))}
+@media (min-width:48rem){
+  .arbeiten__raster{grid-template-columns:repeat(12,1fr);align-items:start}
+  .projekt--gross{grid-column:span 8}
+  .projekt--klein{grid-column:span 4}
+  .projekt--gross .projekt__bild{aspect-ratio:3/2}
+  .projekt--klein .projekt__bild{aspect-ratio:4/5}
+  .projekt:nth-child(3){margin-top:2rem}
+}
+
+/* 5. Warum wir */
+.warum__kopf{display:grid;gap:1rem;margin-bottom:2rem}
+.warum h2{font-size:clamp(1.75rem,1.2rem + 2vw,2.75rem);font-weight:500;max-width:20ch}
+.warum__kacheln{display:grid;gap:1rem}
+.kachel{border-radius:var(--radius-gross);overflow:hidden;position:relative}
+.kachel--hell{background:var(--flaeche-alt);padding:1.25rem;display:grid;gap:1.5rem}
+.kachel__links{display:flex;flex-direction:column;justify-content:space-between;gap:1.5rem;align-items:flex-start}
+.kachel__bildchen{width:100%;max-width:14rem;aspect-ratio:3/2;border-radius:var(--radius-klein)}
+.kachel__rechts{display:flex;flex-direction:column;gap:.5rem}
+.kachel__rechts h3{font-size:1.375rem;font-weight:600;margin-top:.5rem}
+.kachel__rechts p:last-child{color:var(--text-leise);font-size:1rem}
+.kachel--bild{min-height:22rem;display:flex;align-items:flex-end;color:var(--text-auf-dunkel);isolation:isolate}
+.kachel__vollbild{position:absolute;inset:0;border-radius:0;z-index:-1}
+.kachel__vollbild::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(to top,color-mix(in srgb,var(--flaeche-dunkel) 70%,transparent),color-mix(in srgb,var(--flaeche-dunkel) 15%,transparent))}
+.kachel__unten{padding:1.5rem;display:flex;flex-direction:column;gap:.25rem}
+@media (min-width:48rem){
+  .warum__kopf{grid-template-columns:1fr 1fr;gap:2rem;align-items:start}
+  .warum__kopf .kicker{padding-top:.5rem}
+  .warum__kacheln{grid-template-columns:1fr 1fr;align-items:stretch}
+  .kachel--hell{grid-template-columns:auto 1fr;padding:1.75rem;gap:2rem}
+  .kachel__links{min-width:10rem}
+  .kachel__rechts{border-left:1px solid var(--linie);padding-left:2rem}
+}
+
+/* 6. Ablauf: dunkles Panel */
+.prozess{margin:var(--tafel-rand);margin-block:clamp(2rem,5vw,4rem);background:var(--flaeche-dunkel);color:var(--text-auf-dunkel);border-radius:var(--radius-gross);padding:3.5rem 1.25rem}
+.prozess__spalte{width:min(100%,30rem);margin-inline:auto}
+.prozess__titel{font-size:clamp(1.75rem,1.2rem + 2vw,2.75rem);font-weight:500;margin-bottom:2rem}
+.prozess__karten{display:grid;gap:1rem}
+.pkarte{background:var(--flaeche);color:var(--text);border-radius:var(--radius-karte);padding:.5rem;position:relative;z-index:2}
+.pkarte__bild{aspect-ratio:16/9;border-radius:calc(var(--radius-karte) - .5rem)}
+.pkarte__text{padding:1rem .75rem .75rem}
+.pkarte h3{font-size:1.25rem;font-weight:600;margin-bottom:.5rem}
+.pkarte p{color:var(--text-leise);font-size:1rem;line-height:1.55}
+@media (min-width:62rem){
+  .prozess{padding:6rem 3rem 8rem}
+  .prozess__titel{position:sticky;top:7rem;z-index:1;margin-bottom:0}
+  .prozess__karten{margin-top:14rem;gap:1.5rem}
+}
+
+/* 7. Beiträge */
+.beitraege__raster{display:grid;gap:2.5rem;margin-top:clamp(2rem,5vw,4rem)}
+.beitrag a{display:block;padding-bottom:1.25rem;border-bottom:1px solid var(--linie)}
+.beitrag__bild{aspect-ratio:16/10;margin-bottom:1.25rem}
+.beitrag__meta{display:flex;align-items:center;gap:1rem;margin-bottom:.75rem;color:var(--text-leise);font-size:1rem}
+.chip{display:inline-flex;align-items:center;min-height:2.25rem;padding:0 1rem;background:var(--flaeche-alt);border-radius:var(--radius-knopf);color:var(--text)}
+.beitrag h3{font-size:1.25rem;font-weight:600;letter-spacing:-.015em}
+.beitrag a:hover h3{color:var(--akzent)}
+@media (min-width:48rem){.beitraege__raster{grid-template-columns:1fr 1fr;gap:1.5rem}}
+
+/* 8. FAQ */
+.faq{background:var(--flaeche-alt)}
+.faq__raster{display:grid;gap:2rem}
+.faq h2{font-size:clamp(1.75rem,1.2rem + 2vw,2.75rem);font-weight:500;margin-bottom:1rem}
+.faq__kopf p{color:var(--text-leise);max-width:24rem}
+.faq__liste{display:grid;gap:.5rem;align-content:start}
+.faq details{background:var(--flaeche);border-radius:var(--radius-klein)}
+.faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:3.5rem;padding:.75rem 1.25rem;font-weight:600}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:1rem;height:1rem;background:linear-gradient(var(--text),var(--text)) center/100% 2px no-repeat,linear-gradient(var(--text),var(--text)) center/2px 100% no-repeat;transition:transform var(--dauer-mittel) var(--kurve)}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq .antwort{padding:0 1.25rem 1.25rem;color:var(--text-leise);animation:einblenden .4s var(--kurve)}
+@keyframes einblenden{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+@media (min-width:62rem){.faq__raster{grid-template-columns:1fr 1.2fr;gap:4rem}}
+
+/* Fuß */
+.fuss{background:var(--flaeche-dunkel);color:var(--text-auf-dunkel);padding-top:clamp(4rem,8vw,7rem)}
+.fuss__raster{display:grid;gap:3rem;padding-bottom:clamp(3rem,6vw,6rem)}
+.fuss__logo{font-family:var(--schrift-titel);font-weight:700;font-size:1.5rem;margin-bottom:2rem}
+.fuss h2{font-size:clamp(1.75rem,1.2rem + 2.4vw,3.25rem);font-weight:500;max-width:14ch;margin-bottom:1.75rem}
+.fuss__nav li{border-bottom:1px solid var(--linie-dunkel)}
+.fuss__nav li:first-child{border-top:1px solid var(--linie-dunkel)}
+.fuss__nav a{display:flex;align-items:center;justify-content:space-between;min-height:3.5rem;transition:padding var(--dauer-mittel) var(--kurve),color var(--dauer-mittel)}
+.fuss__nav a:hover{padding-left:.75rem;color:var(--text-leise-dunkel)}
+.fuss__nav svg{width:1.25rem;height:1.25rem;transition:transform var(--dauer-mittel) var(--kurve)}
+.fuss__nav a:hover svg{transform:translateX(4px)}
+.fuss__ende{display:flex;flex-wrap:wrap;gap:.5rem 2rem;justify-content:space-between;align-items:center;border-top:1px solid var(--linie-dunkel);padding-block:1rem;color:var(--text-leise-dunkel)}
+.fuss__ende ul{display:flex;gap:1.5rem}
+.fuss__ende a{display:inline-flex;align-items:center;min-height:2.75rem}
+.fuss__ende a:hover{color:var(--text-auf-dunkel)}
+@media (min-width:62rem){.fuss__raster{grid-template-columns:1.1fr 1fr;gap:6rem;align-items:start}}

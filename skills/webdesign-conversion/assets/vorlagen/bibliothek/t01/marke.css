@@ -1,0 +1,34 @@
+/* marke.css der Vorlage "Bildbühne": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#ffffff;
+  --flaeche-alt:#f3f2ee;
+  --flaeche-dunkel:#0e1210;
+  --text:#141816;
+  --text-leise:#505753;
+  --linie:#dad9d2;
+  --akzent:#1d6a52;
+  --akzent-text:#ffffff;
+  --schrift-titel:'Schibsted Grotesk',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:22px;
+  --radius-bild:22px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:28px;          /* große Bildtafeln und dunkle Panels */
+  --radius-klein:14px;          /* Akkordeon, Chips */
+  --titel-gewicht:600;
+  --titel-spur:-0.025em;
+  --text-blass:#838985;         /* noch nicht gelesene Wörter im Leitsatz, nur große Schrift (3 zu 1) */
+  --text-auf-dunkel:#ffffff;
+  --text-leise-dunkel:#b9c2bd;
+  --linie-dunkel:#2e3631;
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#25474d;
+  --ton-2:#76593b;
+  --ton-3:#2f4f3f;
+  --ton-4:#8a6a44;
+  --ton-5:#35505f;
+  --ton-6:#5d4a38;
+}

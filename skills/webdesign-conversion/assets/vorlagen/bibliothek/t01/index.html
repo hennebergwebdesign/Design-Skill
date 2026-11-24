@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Markenname, Beratung, Planung und Umsetzung</title>
+<meta name="description" content="Beispieltext: Beratung, Planung und Umsetzung aus einer Hand. Vor dem Einsatz durch den echten Text der Marke ersetzen.">
+<link rel="stylesheet" href="../_basis/schriften.css">
+<link rel="stylesheet" href="marke.css">
+<link rel="stylesheet" href="../_basis/basis.css">
+<link rel="stylesheet" href="stil.css">
+</head>
+<body>
+<a class="sprunglink" href="#inhalt">Zum Inhalt springen</a>
+
+<header class="kopf">
+  <div class="kopf__pille">
+    <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">Markenname</a>
+    <button class="kopf__burger" type="button" data-menue aria-expanded="false" aria-controls="hauptnav">
+      <span class="sr-nur">Menü öffnen oder schließen</span>
+      <span class="burger" aria-hidden="true"></span>
+    </button>
+    <nav class="kopf__nav" id="hauptnav" aria-label="Hauptnavigation" data-menue-ziel>
+      <ul>
+        <li><a href="#top">Start</a></li>
+        <li><a href="#ueber-uns">Über uns</a></li>
+        <li><a href="#leistungen">Leistungen</a></li>
+        <li><a href="#arbeiten">Arbeiten</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+      <a class="knopf" href="#kontakt">Termin buchen</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inhalt">
+  <!-- 1. Held: große Bildtafel, Text an den Ecken -->
+  <section class="held" id="top" aria-labelledby="h-held">
+    <div class="bild held__bild" data-platzhalter="Bild: Hauptmotiv" aria-hidden="true">
+      <div class="held__bild-innen bild--a" data-tiefe="0.06"></div>
+    </div>
+    <div class="held__inhalt" data-staffel>
+      <p class="held__text" data-zeig>Beratung, Planung und Umsetzung aus einer Hand, für Vorhaben jeder Größe.</p>
+      <div class="held__unten">
+        <div class="held__links">
+          <a class="knopf knopf--hell" href="#kontakt" data-zeig>Jetzt starten</a>
+          <h1 id="h-held" data-zeig>Ihr Vorhaben, sauber und verlässlich umgesetzt</h1>
+        </div>
+        <!-- Beispielwert, vor Livegang durch echte Angabe ersetzen oder entfernen -->
+        <div class="held__zahl" data-zeig data-beispiel>
+          <span class="zahl" data-rolle>650</span>
+          <span class="held__zahl-label">Projekte umgesetzt</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Leitsatz und Logoleiste -->
+  <section class="sektion leitsatz" id="ueber-uns" aria-labelledby="h-leitsatz">
+    <div class="wrap leitsatz__raster">
+      <div class="leitsatz__links" data-zeig>
+        <div class="avatare" aria-hidden="true"><span class="bild" data-platzhalter=""></span><span class="bild"></span><span class="bild"></span></div>
+        <p>Mit uns ist Ihr Vorhaben in guten Händen.</p>
+      </div>
+      <div class="leitsatz__rechts">
+        <h2 class="sr-nur" id="h-leitsatz">Unser Anspruch</h2>
+        <p class="leitsatz__satz" data-wortfarbe>Wir glauben, dass gute Arbeit klar beginnt: mit Zuhören, mit einem Plan und mit Menschen, die ihr Handwerk verstehen. So entsteht ein Ergebnis, das lange trägt und auf das Sie sich verlassen können.</p>
+      </div>
+    </div>
+    <!-- Logoleiste: Platzhalterflächen, echte Logos der Kunden mit Freigabe einsetzen -->
+    <div class="wrap">
+      <div class="band logos" aria-hidden="true">
+        <div class="band__spur">
+          <span class="logo-kachel"><i></i><b></b></span><span class="logo-kachel"><i></i><b></b></span><span class="logo-kachel"><i></i><b></b></span><span class="logo-kachel"><i></i><b></b></span><span class="logo-kachel"><i></i><b></b></span><span class="logo-kachel"><i></i><b></b></span>
+        </div>
+        <div class="band__spur" aria-hidden="true">
+          <span class="logo-kachel"><i></i><b></b></span><span class="logo-kachel"><i></i><b></b></span><span class="logo-kachel"><i></i><b></b></span><span class="logo-kachel"><i></i><b></b></span><span class="logo-kachel"><i></i><b></b></span><span class="logo-kachel"><i></i><b></b></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Leistungen: Bildtafel mit drei Karten -->
+  <section class="tafel" id="leistungen" aria-labelledby="h-leistungen">
+    <div class="bild tafel__bild" data-platzhalter="Bild: Leistungen" aria-hidden="true">
+      <div class="tafel__bild-innen bild--b" data-tiefe="0.06"></div>
+    </div>
+    <div class="tafel__inhalt">
+      <div class="tafel__kopf">
+        <h2 id="h-leistungen" data-zeig>Leistungen, passend zu Ihrem Vorhaben</h2>
+        <div class="tafel__kopf-rechts" data-zeig>
+          <p>Drei Bausteine, einzeln oder zusammen buchbar.</p>
+          <a class="knopf knopf--hell" href="#kontakt">Anfrage senden</a>
+        </div>
+      </div>
+      <ul class="karten" data-staffel>
+        <li class="karte" data-zeig>
+          <svg class="karte__icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="20" cy="20" r="6"/><circle cx="20" cy="20" r="15"/><path d="M20 5v5M20 30v5M5 20h5M30 20h5"/></svg>
+          <div><h3>Beratung und Planung</h3><p>Wir klären Ziel, Umfang und Budget, bevor etwas gebaut wird.</p></div>
+        </li>
+        <li class="karte" data-zeig>
+          <svg class="karte__icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19 20 6l15 13"/><path d="M9 16v18h22V16"/><path d="M16 34V24h8v10"/></svg>
+          <div><h3>Umsetzung</h3><p>Unser Team arbeitet nach Plan und hält Sie auf dem Laufenden.</p></div>
+        </li>
+        <li class="karte" data-zeig>
+          <svg class="karte__icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="20" cy="11" rx="11" ry="4.5"/><path d="M9 11v9c0 2.5 5 4.5 11 4.5s11-2 11-4.5v-9"/><path d="M9 20v9c0 2.5 5 4.5 11 4.5s11-2 11-4.5v-9"/></svg>
+          <div><h3>Betreuung danach</h3><p>Wartung und Pflege, damit das Ergebnis dauerhaft funktioniert.</p></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 4. Arbeiten: versetztes Raster -->
+  <section class="sektion arbeiten" id="arbeiten" aria-labelledby="h-arbeiten">
+    <div class="wrap">
+      <h2 class="mitte" id="h-arbeiten" data-zeig>Ausgewählte Arbeiten</h2>
+      <!-- Projektnamen und Rubriken sind Beispiele -->
+      <ul class="arbeiten__raster">
+        <li class="projekt projekt--gross" data-zeig data-beispiel>
+          <a href="#kontakt"><div class="bild projekt__bild" data-platzhalter="Bild"><div class="projekt__innen bild--c"></div></div>
+          <h3>Projekt Nordhang</h3><p>Wohnbau</p></a>
+        </li>
+        <li class="projekt projekt--klein" data-zeig data-beispiel>
+          <a href="#kontakt"><div class="bild projekt__bild" data-platzhalter="Bild"><div class="projekt__innen bild--d"></div></div>
+          <h3>Projekt Werkhalle</h3><p>Gewerbe</p></a>
+        </li>
+        <li class="projekt projekt--klein" data-zeig data-beispiel>
+          <a href="#kontakt"><div class="bild projekt__bild" data-platzhalter="Bild"><div class="projekt__innen bild--e"></div></div>
+          <h3>Projekt Stadtplatz</h3><p>Öffentliche Hand</p></a>
+        </li>
+        <li class="projekt projekt--gross" data-zeig data-beispiel>
+          <a href="#kontakt"><div class="bild projekt__bild" data-platzhalter="Bild"><div class="projekt__innen bild--f"></div></div>
+          <h3>Projekt Hofgut</h3><p>Landwirtschaft</p></a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 5. Warum wir: zwei Kacheln mit rollenden Zahlen -->
+  <section class="sektion warum" aria-labelledby="h-warum">
+    <div class="wrap">
+      <div class="warum__kopf">
+        <p class="kicker" data-zeig>Warum wir</p>
+        <h2 id="h-warum" data-zeig>Verlässlichkeit ist der Kern unserer Arbeit</h2>
+      </div>
+      <div class="warum__kacheln" data-staffel>
+        <!-- Zahlen sind Beispielwerte -->
+        <article class="kachel kachel--hell" data-zeig data-beispiel>
+          <div class="kachel__links">
+            <div class="bild kachel__bildchen" data-platzhalter="" aria-hidden="true"><div class="projekt__innen bild--a"></div></div>
+            <a class="knopf knopf--dunkel" href="#kontakt">Kontakt aufnehmen</a>
+          </div>
+          <div class="kachel__rechts">
+            <p class="zahl zahl--gross" data-rolle>800+</p>
+            <h3>Zufriedene Kunden</h3>
+            <p>Privat, gewerblich und öffentlich, in jeder Größenordnung.</p>
+          </div>
+        </article>
+        <article class="kachel kachel--bild" data-zeig data-beispiel>
+          <div class="bild kachel__vollbild" data-platzhalter="Bild" aria-hidden="true"><div class="projekt__innen bild--f"></div></div>
+          <div class="kachel__unten">
+            <p class="zahl zahl--gross" data-rolle>98%</p>
+            <p>Würden uns weiterempfehlen</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Ablauf: dunkles Panel, Überschrift bleibt stehen, Karten ziehen darüber -->
+  <section class="prozess" aria-labelledby="h-prozess">
+    <div class="prozess__spalte">
+      <h2 class="prozess__titel" id="h-prozess">Ein klarer Ablauf spart Zeit und Geld</h2>
+      <ol class="prozess__karten">
+        <li class="pkarte" data-zeig>
+          <div class="bild pkarte__bild" data-platzhalter="Bild" aria-hidden="true"><div class="projekt__innen bild--e"></div></div>
+          <div class="pkarte__text"><h3>Erstgespräch und Plan</h3><p>Wir hören zu, halten Ziel, Umfang und Termin schriftlich fest und legen gemeinsam den Weg fest.</p></div>
+        </li>
+        <li class="pkarte" data-zeig>
+          <div class="bild pkarte__bild" data-platzhalter="Bild" aria-hidden="true"><div class="projekt__innen bild--d"></div></div>
+          <div class="pkarte__text"><h3>Umsetzung</h3><p>Das Team arbeitet nach dem abgestimmten Plan. Sie erfahren von uns, wo wir stehen, nicht erst auf Nachfrage.</p></div>
+        </li>
+        <li class="pkarte" data-zeig>
+          <div class="bild pkarte__bild" data-platzhalter="Bild" aria-hidden="true"><div class="projekt__innen bild--c"></div></div>
+          <div class="pkarte__text"><h3>Übergabe</h3><p>Gemeinsame Abnahme, saubere Unterlagen und ein fester Ansprechpartner für die Zeit danach.</p></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 7. Beiträge -->
+  <section class="sektion beitraege" aria-labelledby="h-beitraege">
+    <div class="wrap">
+      <h2 class="mitte" id="h-beitraege" data-zeig>Wissen aus der Praxis</h2>
+      <ul class="beitraege__raster" data-staffel>
+        <li class="beitrag" data-zeig data-beispiel>
+          <a href="#kontakt"><div class="bild beitrag__bild" data-platzhalter="Bild"><div class="projekt__innen bild--b"></div></div>
+          <div class="beitrag__meta"><span class="chip">Ratgeber</span><time>TT.MM.JJJJ</time></div>
+          <h3>Beispielbeitrag: Worauf es bei der Planung ankommt</h3></a>
+        </li>
+        <li class="beitrag" data-zeig data-beispiel>
+          <a href="#kontakt"><div class="bild beitrag__bild" data-platzhalter="Bild"><div class="projekt__innen bild--f"></div></div>
+          <div class="beitrag__meta"><span class="chip">Praxis</span><time>TT.MM.JJJJ</time></div>
+          <h3>Beispielbeitrag: Was ein guter Ablauf kostet und spart</h3></a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 8. Häufige Fragen -->
+  <section class="sektion faq" aria-labelledby="h-faq">
+    <div class="wrap faq__raster">
+      <div class="faq__kopf" data-zeig>
+        <h2 id="h-faq">Häufige Fragen</h2>
+        <p>Antworten vorab, den Rest klären wir im Gespräch.</p>
+      </div>
+      <div class="faq__liste" data-exklusiv>
+        <details><summary>Wie lange dauert ein Vorhaben?</summary><p class="antwort">Beispielantwort: Das hängt vom Umfang ab. Nach dem Erstgespräch nennen wir einen festen Zeitrahmen.</p></details>
+        <details><summary>Arbeiten Sie auch für Unternehmen?</summary><p class="antwort">Beispielantwort: Ja, für Privatkunden ebenso wie für Unternehmen und die öffentliche Hand.</p></details>
+        <details><summary>Gibt es eine Gewährleistung?</summary><p class="antwort">Beispielantwort: Die gesetzliche Gewährleistung gilt immer, weitere Zusagen halten wir schriftlich fest.</p></details>
+        <details><summary>Lohnt sich das auch für kleine Vorhaben?</summary><p class="antwort">Beispielantwort: Ja, auch kleine Vorhaben bekommen einen klaren Plan und einen Ansprechpartner.</p></details>
+        <details><summary>Was passiert nach der Übergabe?</summary><p class="antwort">Beispielantwort: Wir bleiben erreichbar und bieten Wartung und Pflege als eigenen Baustein an.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="fuss" id="kontakt">
+  <div class="wrap fuss__raster">
+    <div class="fuss__links" data-zeig>
+      <p class="fuss__logo">Markenname</p>
+      <h2>Sprechen wir über Ihr Vorhaben</h2>
+      <a class="knopf knopf--hell" href="mailto:info@beispiel.invalid">Anfrage per E-Mail</a>
+    </div>
+    <nav class="fuss__nav" aria-label="Fußnavigation">
+      <ul>
+        <li><a href="#top">Start<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h17M14 6l6 6-6 6"/></svg></a></li>
+        <li><a href="#ueber-uns">Über uns<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h17M14 6l6 6-6 6"/></svg></a></li>
+        <li><a href="#leistungen">Leistungen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h17M14 6l6 6-6 6"/></svg></a></li>
+        <li><a href="#arbeiten">Arbeiten<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h17M14 6l6 6-6 6"/></svg></a></li>
+        <li><a href="mailto:info@beispiel.invalid">Kontakt<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h17M14 6l6 6-6 6"/></svg></a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="wrap fuss__ende">
+    <p>© Markenname</p>
+    <ul><li><a href="#top">Impressum</a></li><li><a href="#top">Datenschutz</a></li></ul>
+  </div>
+</footer>
+
+<script src="../_basis/bewegung.js"></script>
+<script src="stil.js"></script>
+</body>
+</html>
