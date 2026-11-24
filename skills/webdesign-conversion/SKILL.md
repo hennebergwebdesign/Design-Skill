@@ -4,7 +4,7 @@ description: "Vollständiges System für conversion-orientiertes Webdesign im DA
 license: MIT
 metadata:
   author: Henneberg Webdesign
-  version: 2.27.0
+  version: 2.28.0
 ---
 
 # Webdesign Conversion System
@@ -142,6 +142,7 @@ Lies gezielt nach, statt alles zu laden.
 | Sicherheit einer Kundenseite: Vertrauensgrenzen, Geheimnisse, Formulare, Inhaltsrichtlinie, Lieferkette, KI-Ausgabe, Tiefenscan | `52-sicherheit-der-kundenseite.md` |
 | Zahlung mit Stripe: Weg wählen, Webhooks und Erfüllung, Button-Lösung, Widerruf, Steuer, Testplan | `53-zahlungen-mit-stripe.md` |
 | Video oder Animationssequenz mit HyperFrames: Ablauf mit Toren, Vertrag einer Komposition, Marke, Optimierung, Prüfung | `54-video-aus-html-mit-hyperframes.md` |
+| Erstentwurf: Lesebudget, Startseite zuerst, Grundaufbau, Branchenprofile (`scripts/branchenprofil.mjs`), Anti-Slop-Regelsatz als Gate vor dem Schreiben | `57-erstentwurf-kern.md` |
 | KI-Muster am gerenderten DOM messen (Slop Detect), Vermeideliste für den Entwurf, Ausnahmen bei Markenvorgabe, Grenzen des Werts | `55-slop-detect-ki-muster-vermeiden.md` |
 | Tracking umsetzen: eine Einwilligung für Pixel und Server, `event_id`, Kennungen, Herkunft in der eigenen Datenbank, Zählmeldung, Testkanal | `56-tracking-umsetzung-einwilligung-ereignisse.md` |
 | Annahmen aussprechen, in dünnen Scheiben bauen, nach Quelle bauen, Zweifel-Durchgang für Sachentscheidungen | `../agentur-website-builder/references/arbeitsdisziplin.md` |
@@ -301,7 +302,8 @@ Diese Regeln gelten immer und werden nicht wegdiskutiert:
 - **Vor dem Tokensystem-Plan steht eine Referenzrecherche auf mindestens einer
   Premium-Designquelle** (Awwwards, Dribbble, Land-book, recent.design, 21st.dev), damit der
   Plan an echten aktuellen Premium-Beispielen entsteht, nicht am ersten Einfall. Siehe
-  `references/22-premium-designquellen.md`.
+  `references/22-premium-designquellen.md`. Für den Erstentwurf ist sie im Branchenprofil festgeschrieben
+  (`references/57-erstentwurf-kern.md`, Abschnitt 3): die dort genannten Referenzen wurden einmal recherchiert und freigegeben.
 - **Keine fremde Seite wird erfasst, bevor sie vorgelegt und freigegeben wurde.** Entdecken
   und Erfassen sind zwei Schritte. Kandidaten werden mit Adresse, Zielsektion, Begründung,
   geplanter Extraktion und Ausschlussliste vorgelegt, dann wird gewartet. Erst nach der

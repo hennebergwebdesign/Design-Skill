@@ -141,7 +141,7 @@ Voller Durchgang aus `../references/10-visuelle-richtung.md`, mit zwei Abweichun
 - [ ] Heldenbild per `preload` und `fetchpriority="high"`
 - [ ] Auf kurzen Landingpages alles sofort laden: `loading="eager"` plus
       `fetchpriority="low"` unter der Falz (`../references/02-design-ux.md`)
-- [ ] `FAQPage`-JSON-LD für die Fragen
+- [ ] `FAQPage`-JSON-LD für die Fragen, optional (kein Google-Rich-Result zu erwarten, ungeprüft)
 
 ## SEO: meist nicht das Ziel
 

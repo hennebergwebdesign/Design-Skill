@@ -44,6 +44,7 @@ node scripts/pruefe-seitenbasis.mjs          # nach dem Build: dist/ lang, Viewp
 node scripts/pruefe-sicherheit.mjs           # vor und nach dem Build: Schlüssel, öffentliche Geheimnisse, .env im Git-Index, CSP, eval, bei Stripe Webhook-Signatur und Zahlungsregeln
 node scripts/pruefe-scrollstrecke.mjs http://localhost:4321   # Scrollseite durchlaufen (Playwright): tote Strecke, Deckkraft, Überlauf; --mobil, --reduziert
 node scripts/pruefe-slop.mjs http://localhost:4321 --copy     # Slop Detect (Original-CLI, lokal) gegen die Vorschau: Heavy und Textartefakte sind Fehler, --streng, --ausnahmen slop-ausnahmen.json; --vorbeugen listet die Vermeideliste
+node scripts/branchenprofil.mjs dachdecker   # Branchenprofil für den Erstentwurf (liste, --landing, --marke, --json), Daten in assets/branchenprofile.json
 node scripts/pruefe-tracking.mjs             # Tracking nur nach Einwilligung: Tracker im Markup, Pixel und CAPI ohne Consent, event_id, Token hinter PUBLIC_, Datenschutz nennt den Dienst
 
 # Agenturwerkzeuge
@@ -186,6 +187,7 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Offene Punkte
 
+- Version 4.25.0: Die Grundgalerie (fertige, gestaltete Templates je Branche) fehlt noch. Die Profile legen Richtung und Folge fest, gebaut ist keine Vorlage. Siehe Rückfrage an den Inhaber.
 - Version 4.23.0: Kapitel 55, `slop-pruefung.md`, Kapitel 56, `tracking-einbauen.md`, `assets/tracking/`, `pruefe-slop.mjs` und `pruefe-tracking.mjs` sind an keinem Kundenprojekt erprobt, die zwei neuen
   Evalfälle (`slop-vor-auslieferung-pruefen`, `tracking-nur-nach-einwilligung`) sind **nicht gelaufen**, das Δ ist eine Vermutung. **Gelaufen ist:** der Original-CLI von Slop Detect in der npm-Fassung
   0.8.0 (Definitionen 2026.09, 27 Designmuster, 9 Textmuster, kein `--craft`) gegen zwei kleine Testseiten (Heavy 66, Clean 0) und `pruefe-slop.mjs` gegen diesen CLI; dazu die Tests von
@@ -413,6 +415,16 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Änderungsverlauf
 
+- **24.11.2026, Version 4.25.0** Auf Wunsch des Inhabers: Ergebnisse zu schwach, zu viele Überarbeitungen, zu viele Token. Analyse in `evals/token-analyse.md`
+  (gemessen: Zeichen und Zeilen, geschätzt: Token). Neu: Kapitel `57-erstentwurf-kern.md` (Lesebudget, Startseite zuerst, Landingpage direkt, Protokoll ohne Wartestopp, Grundaufbau,
+  Anti-Slop-Regelsatz mit 21 Regeln als Gate vor dem Schreiben), `assets/branchenprofile.json` (15 Branchenprofile mit Richtung, Hauptaktion, Regler, Farbstimmung, Schriftcharakter,
+  Bildwelt, Held, Folge für Startseite und Landingpage, Belege, Fehlbilder, freigegebene Referenzen), `scripts/branchenprofil.mjs` (liefert nur ein Profil, 12 Tests). Bauablauf: Schnellpfad,
+  Phase 0 installiert keine Zusatzskills mehr vorab, `referenzen-und-auswahl.md`, Intake und QA nicht mehr „immer". **Entschieden:** (1) Das Branchenprofil ersetzt beim Erstentwurf die Referenzrecherche
+  je Entwurf (Auslegung der harten Grenze, Grund im Kapitel); Tor 1 bleibt für neue Seiten. (2) `ui-ux-pro-max` (MIT) ist destilliert, nicht installiert; die Stilnamen Glassmorphism, Liquid Glass,
+  Neumorphism, Dark Mode OLED und Vibrant und Block sind nicht übernommen (Tells). (3) `awesome-design-skills` (MIT, 67 Stile) ist nicht eingebunden, nur auf Kundenwunsch einzeln. (4) `claude-seo`
+  (MIT, Python, viele API Anbindungen) ist nicht eingebunden; übernommen nur der Hinweis, dass `FAQPage` kein Google Rich Result mehr erwarten lässt (Quelle nennt 07.05.2026, **nicht gegen Google
+  geprüft**), deshalb in den Playbooks optional. Die Aussagen der Quelle zu `HowTo` und weiteren Typen sind nicht geprüft. **Ungemessen:** die Ersparnis an Token und Runden, Regler und Folgen der Profile,
+  Farb- und Schriftvorschläge (nie als Seite gebaut). Kein Evalfall. Versionen: Plugin 4.25.0, Regelwerk 2.28.0, Bauablauf 2.25.0.
 - **23.11.2026, Version 4.24.0** Auf Hinweis des Inhabers: ein gelber Strich vor dem Kicker („━━ Hersteller aus Bielefeld, seit 2005") ging auf einer Kundenseite live, obwohl die Regel gegen Striche vor dem Kicker
   schon in `SKILL.md` stand. **Zwei Ursachen, beide behoben.** (1) `12-copywriting.md` erlaubte ausdrücklich „einen kurzen Balken in Akzentfarbe" als Präfix und widersprach damit der harten Grenze; die Ausnahme ist gestrichen,
   erlaubt bleibt nur ein runder Punkt. (2) `pruefe-striche.mjs` las nur Zeichen (`–`, `—`), kein CSS: der Strich war ein `::before` mit leerem content und sah für die Prüfung wie nichts aus. Neu: Prüfung 5, Zierstrich,

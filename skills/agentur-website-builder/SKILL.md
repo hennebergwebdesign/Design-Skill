@@ -4,7 +4,7 @@ description: Baut komplette Kundenwebsites mit Astro und Cloudflare Pages nach A
 license: Proprietär, That's it. Marketing / VFDESIGN LTD
 metadata:
   author: That's it. Marketing / Henneberg Webdesign
-  version: 2.24.0
+  version: 2.25.0
 ---
 
 # Agentur Website Builder
@@ -69,49 +69,47 @@ Rückfragen sind ausdrücklich erwünscht. Es gibt keine Obergrenze. Aber jede F
 Entscheidung auslösen, die der Skill nicht selbst treffen kann. Erst alle gelieferten
 Materialien lesen, dann fragen, und die Fragen gesammelt stellen statt einzeln nachzuhaken.
 
+## Schnellpfad: Erstentwurf einer Startseite oder Landingpage
+
+Gilt für den ersten Entwurf. Ziel: ein Durchlauf, ohne Wartestopp, ohne Überarbeitung. Regeln und Begründung in
+`../webdesign-conversion/references/57-erstentwurf-kern.md`, das hier ist die Kurzfassung.
+
+1. **Nur die Startseite zuerst.** Bei einer Unternehmenswebsite entsteht die Startseite mit Kopf, Fuß, Impressum,
+   Datenschutz, Consent und 404. Unterseiten erst nach ihrer Abnahme. Eine Landingpage wird direkt gebaut,
+   ohne Startseite davor.
+2. **Branche bestimmen:** `node scripts/branchenprofil.mjs <suchwort>` (alle: `liste`). Das Profil gibt Richtung,
+   Hauptaktion, Regler, Farbstimmung, Schriftcharakter, Bildwelt, Heldmuster, Sektionsfolge und Fehlbilder vor. Es
+   ersetzt die Referenzrecherche vor dem Tokenplan (sie steckt im Profil, Tor 1 nur bei neuen Seiten).
+   `--marke` liefert den Block `gestaltung` für `marke.json`, `--landing` die Landingfolge.
+3. **Annahmen in höchstens zehn Zeilen nennen und weiterbauen.** Nur eine gebündelte Rückfrage, und nur bei
+   Unannehmbarem (Hauptaktion, Rechtsform, Leistungsumfang). Konzept in Kurzform im Chat, keine Freigabeschleife.
+4. **Tokens vor Markup**, dann Sektionen in der Folge des Profils. Vor jeder Sektion das Gate (Anti-Slop-Regelsatz,
+   Abschnitt 5 im Kapitel 57), nicht erst nach dem Bau.
+5. **Einmal vollständig prüfen** (Phase 5), Fehler beheben, dann berichten.
+
+Gelesen wird: dieses Kapitel, das Branchenprofil, das Playbook, `marke.json`. Alles Weitere nur bei einem Auslöser
+(Tabelle in Abschnitt 6 des Kapitels 57). Insbesondere `references/referenzen-und-auswahl.md` (rund 47 KB) nur, wenn das
+Profil keine Referenz nennt oder eine neue vorgeschlagen wird.
+
 ## Phasenablauf
 
-### Phase 0: Projektskills installieren
+### Phase 0: Schutz, Zusatzskills nur auf Wunsch
 
-Immer zuerst, im Projektroot:
+Keine Zusatzskills vorab installieren. `bash scripts/install-quellskills.sh` nur, wenn der Nutzer die
+volle Tiefe verlangt (GSAP Dokumentation, durchsuchbare UI/UX Daten, shadcn Registry). Grund: Jeder
+installierte Skill legt seine Beschreibung in jeden Kontext, die Datendateien von `ui-ux-pro-max` sind
+mehrere Megabyte groß, und für den Erstentwurf liefert das Regelwerk samt Branchenprofil dasselbe
+kleiner. Wer sie installiert, sucht nie in `.claude/skills/` und greift nur über deren Suchskript zu.
+Schlägt die Installation fehl, ohne sie weiterarbeiten.
 
-```bash
-bash scripts/install-quellskills.sh
-```
-
-Das Skript installiert die Quellskills nach `.claude/skills/`: GSAP, `ui-ux-pro-max`,
-`impeccable`, `responsive-craft`, `accessible-animation`, `web-quality-audit` und
-`icon-set-generator`. Es überspringt, was bereits vorhanden ist, und installiert nur beim
-ersten Mal oder mit `--update` neu. Zwei Dinge sind dabei wichtig:
-
-* Der Ordner wird über `.gitattributes` und eine `.ignore` Datei von Volltextsuchen
-  ausgenommen. Die Datendateien von `ui-ux-pro-max` sind mehrere Megabyte groß, und
-  Suchtreffer darin landen im Kontext, ohne etwas beizutragen. Bei einer Suche im Projekt
-  nie in `.claude/skills/` mitsuchen.
-* Auf die Daten wird ausschließlich über das mitgelieferte Suchskript zugegriffen, nie durch
-  Einlesen ganzer Dateien.
-
-Wenn das Skript fehlschlägt, dem Nutzer die Fehlermeldung zeigen und ohne die Zusatzskills
-weiterarbeiten, nicht blockieren.
-
-Diese Skills werden genutzt, wenn sie zur Aufgabe passen: `ui-ux-pro-max` für Designsystem
-und Stilrecherche, ein passender Stil aus `awesome-design-skills` wenn der Nutzer ihn
-benennt, `gsap-*` für jede Animationsarbeit.
-
-**Schutz vor zerstörerischen Befehlen.** Bevor der Agent in einem Projekt mit Zugriff auf
-Kundenordner, Deploy-Skripte oder Cloudflare-Zugänge arbeitet:
+**Schutz vor zerstörerischen Befehlen.** In Projekten mit Kundenordnern, Deploy-Skripten oder Cloudflare-Zugängen:
 
 * Löschen und Überschreiben (`rm -rf`, `git reset --hard`, `git clean`, Force-Push, `wrangler delete`)
-  nur nach ausdrücklicher Freigabe. Besser als eine Bitte im Prompt ist ein **deterministischer
-  Hook**, der solche Befehle blockiert, ohne dass der Agent darüber entscheidet (Konfiguration über den
-  Skill `update-config`). Ein Hook kostet keine Tokens und gilt unabhängig davon, was der Agent
-  gerade „denkt".
-* Vor jedem großen Lauf (Relaunch, Umbau vieler Dateien, Polierschleife) ein Git-Commit, bei
-  Kundendaten außerhalb von Git ein Backup.
-* Modus ohne Rückfragen („Berechtigungen umgehen") nur in einer isolierten Umgebung, nie mit Kundenzugängen.
-  Einen fremden Skill oder ein Plugin vor der Installation lesen, auch seine Skripte: sie laufen mit
-  denselben Rechten wie der Agent.
-* Der Anlass (ein Videobericht über beinahe gelöschte Mac-Dateien) ist hier nicht geprüft. Das Restrisiko besteht bei jedem Modell.
+  nur nach ausdrücklicher Freigabe, besser als **Hook**, der solche Befehle blockiert (Skill `update-config`).
+  Ein Hook kostet keine Tokens und gilt unabhängig davon, was der Agent gerade „denkt".
+* Vor jedem großen Lauf (Relaunch, Umbau vieler Dateien, Polierschleife) ein Git-Commit.
+* Modus ohne Rückfragen nur in einer isolierten Umgebung, nie mit Kundenzugängen. Fremde Skills und
+  Plugins samt Skripten vor der Installation lesen: sie laufen mit denselben Rechten wie der Agent.
 
 ### Phase 1: Analyse
 
@@ -169,7 +167,9 @@ Die Antworten gehen in den Markenbrief des Projekts, nicht in den Chatverlauf. V
 
 ### Phase 3: Umsetzungskonzept zur Freigabe
 
-Immer vor der Implementierung. Kurz, im Chat, kein Dokument im Repo. Struktur:
+Immer vor der Implementierung. Kurz, im Chat, kein Dokument im Repo. Beim Erstentwurf gilt der Schnellpfad: Referenzen kommen aus dem
+Branchenprofil, das Konzept steht in Kurzform vor dem Bau, ohne Wartezeit. Die Schleife unten gilt für Relaunch, Marke, Kampagne und
+neue Referenzen. Struktur:
 
 ```
 ## Ziel, Belege, Erkenntnis in je einem Satz
@@ -379,15 +379,15 @@ Schwesterskill.
 
 | Datei | Wann lesen |
 | --- | --- |
-| `references/intake-und-entscheidungen.md` | Phase 1 und 2, immer |
+| `references/intake-und-entscheidungen.md` | Phase 1 und 2, bei Relaunch, Leadsystem oder unklarem Auftrag; beim Erstentwurf nach Schnellpfad nur der Abschnitt zur Frage |
 | `references/stack-und-deployment.md` | Projektaufbau, Build, Cloudflare, Umgebungsvariablen |
-| `references/referenzen-und-auswahl.md` | Phase 3, vor jedem Konzept, immer |
+| `references/referenzen-und-auswahl.md` | nur wenn das Branchenprofil keine Referenz nennt, neue Referenzen vorgeschlagen werden oder Abstände und Seitensystem gebraucht werden (rund 47 KB, Inhaltsliste zuerst) |
 | `references/copy-im-kundenprojekt.md` | sobald Texte eingesetzt oder ergänzt werden |
 | `references/formulare-und-resend.md` | jedes Formular |
 | `references/leadsystem-dashboard.md` | nur bei Leadseiten mit Dashboard |
 | `references/consent-und-dienste.md` | jedes Projekt |
 | `references/google-bewertungen.md` | jedes Projekt |
-| `references/qa-und-abnahme.md` | Phase 5 und 6, immer |
+| `references/qa-und-abnahme.md` | Phase 5 und 6: die Befehle stehen in Phase 5, Schritte nur lesen, wenn ein Lauf scheitert oder die Abnahme ansteht |
 | `references/chatbot-auf-der-website.md` | nur wenn ein KI Chatbot auf die Seite soll: Leitplanken, Wissensbasis, Gegenprobe, Datenschutz |
 | `references/moodboard-und-stylescape.md` | Phase 2 und 3, vor dem Bau: Moodboard intern, Stylescape zur Abnahme der Richtung |
 | `references/kundenabstimmung.md` | Phase 2, 3 und 6: Rollen beim Kunden, Präsentation, Rückmeldungen einsortieren |

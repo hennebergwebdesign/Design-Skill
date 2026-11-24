@@ -75,7 +75,7 @@ eigene Anfrage erzeugen (`../references/05-seo-sichtbarkeit.md`).
 | 6 | Referenzen | 2 bis 3 Fälle, verlinkt auf die Detailseiten | ja |
 | 7 | Ablauf | 3 bis 6 Schritte von der Anfrage bis zum Ergebnis | ja |
 | 8 | Stimmen | Kundenstimmen mit Name, Funktion, Unternehmen | ja |
-| 9 | Fragen | 6 bis 10, jede mit echter Antwort, plus `FAQPage`-JSON-LD | ja |
+| 9 | Fragen | 6 bis 10, jede mit echter Antwort, `FAQPage`-JSON-LD optional (kein Google-Rich-Result zu erwarten, nach claude-seo Stand 10.2026, ungeprüft) | ja |
 | 10 | CTA-Block | Formular oder direkter Weg zum Kontakt | ja |
 | 11 | Fuß | Navigation, Kontakt, Pflichtlinks | ja |
 
@@ -132,7 +132,7 @@ Projektstruktur und Referenzstack: `../references/14-projektstruktur-astro.md`.
 - [ ] Consent blockiert echt, nicht kosmetisch (`../references/07-recht-dsgvo.md`)
 - [ ] Impressum, Datenschutz, 404, `robots.txt`, Sitemap, Security-Header
       (`../references/08-pflichtseiten-technik.md`)
-- [ ] `Organization` plus `LocalBusiness` plus `FAQPage`-JSON-LD
+- [ ] `Organization` plus `LocalBusiness`, `FAQPage`-JSON-LD optional (siehe `05-seo-sichtbarkeit.md`)
       (`../assets/vorlagen/jsonld-bausteine.md`)
 - [ ] Interne Verlinkung: jede Leistungsseite verlinkt auf verwandte und auf Kontakt
 

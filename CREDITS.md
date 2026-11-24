@@ -639,3 +639,11 @@ Gelesen von Gewerbestrom: `CLAUDE.md` (vollständig), `public/assets/consent.js`
   npm-Fassung kennt es nicht, eine einfachere eigene Ausnahmedatei ersetzt es), Baselines und `--compare-to`, die Ranglisten und die Studien aus dem README (nicht geprüft).
 * Gewerbestrom: Funnel, Formularvalidierung, Close-Anbindung, Backoffice, Meta-Ads-MCP, Kampagnenstände, Pixel-ID, Mess-ID, Domain und alles, was einen Kunden benennt. Die Zählmeldung ohne Einwilligung ist als Option beschrieben,
   nicht als Voreinstellung übernommen.
+
+
+## Version 4.25
+
+* `nextlevelbuilder/ui-ux-pro-max-skill` (MIT, Stand 24.11.2026, Version 2.15.0): gelesen `ui-reasoning.csv` (Zeilen zu Branchen), Aufbau der Daten. Destilliert in `branchenprofile.json` (Seitenmuster, Farbstimmung, Fehlbilder). Nicht übernommen: Stilnamen, Paletten, Schriftpaarungen, Skripte.
+* `bergside/awesome-design-skills` (MIT, 67 Stile): README und ein `SKILL.md` gelesen (`editorial`). Nicht eingebunden, siehe Kapitel 57 Abschnitt 7.
+* `AgriciDaniel/claude-seo` (MIT): `skills/seo-schema/SKILL.md` und Dateiliste gelesen, nichts übernommen außer dem Hinweis zu `FAQPage`. Python und API Anbindungen bleiben draußen.
+* Zusätzlich vorgelegt, nicht eingearbeitet: `website_entwurf_skill` (That's it. Marketing, schlanker Entwurfsskill, Vorbild für den Schnellpfad), `Skill_Website` und `SEO-GEO-SKILLS` (nur Dokumentation und `find-skills`).
