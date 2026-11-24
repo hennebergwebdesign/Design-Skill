@@ -1,0 +1,35 @@
+/* marke.css der Vorlage "Gartenbühne": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#f3f5ef;
+  --flaeche-alt:#e2e8d8;
+  --flaeche-dunkel:#13211b;
+  --text:#17211c;
+  --text-leise:#4b5851;
+  --linie:#c9d2c0;
+  --akzent:#a8461a;
+  --akzent-text:#ffffff;
+  --schrift-titel:'Bricolage Grotesque',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:14px;
+  --radius-karte:20px;
+  --radius-bild:20px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-klein:12px;
+  --titel-gewicht:600;
+  --titel-spur:-0.03em;
+  --text-auf-dunkel:#f6f8f2;
+  --text-leise-dunkel:#b9c6bc;
+  --linie-dunkel:#2c4035;
+  --flaeche-karte-dunkel:#1d3027;   /* Karten auf dunkler Fläche */
+  --akzent-auf-dunkel:#f0a47b;      /* Text und Symbole in Akzentfarbe auf dunkler Fläche */
+  --text-blass:#7f8c84;             /* noch nicht gelesene Wörter im Wortlicht, nur große Schrift (3 zu 1) */
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#1f5a2c;
+  --ton-2:#0f3a1e;
+  --ton-3:#4f7d34;
+  --ton-4:#8aa05a;
+  --ton-5:#2b4a3a;
+  --ton-6:#6b5a3e;
+}
