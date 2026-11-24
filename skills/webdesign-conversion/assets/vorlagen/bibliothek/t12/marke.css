@@ -1,0 +1,30 @@
+/* marke.css der Vorlage t12 (Klarwerk). Marke wechseln = nur diese Werte (und bei Bedarf die zwei Schriftzeilen).
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#f1f3ef;        /* Seitenhintergrund, helles Grau mit Grünstich */
+  --flaeche-alt:#e3ece0;    /* abgesetzte helle Fläche (Preise, Kontakt) */
+  --flaeche-dunkel:#0c2a2c; /* feste Rolle: dunkle Abschnitte */
+  --text:#14201f;
+  --text-leise:#475654;
+  --linie:#d3dcd4;
+  --akzent:#0c2a2c;         /* Hauptaktion auf hellem Grund (Knopf) */
+  --akzent-text:#ffffff;
+  --schrift-titel:'Instrument Sans',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:16px;
+  --radius-bild:16px;
+  /* Zusatztokens dieser Vorlage */
+  --lebhaft:#d0e55c;        /* Hauptaktion auf dunklem Grund, Zierakzent auf Dunkel */
+  --lebhaft-text:#0c2a2c;   /* Text auf --lebhaft */
+  --gruen:#1b6b47;          /* Akzentwörter und Kicker auf hellem Grund */
+  --karte:#ffffff;          /* weiße Karten */
+  --auf-dunkel:#f4f7f2;     /* Text auf --flaeche-dunkel */
+  --auf-dunkel-leise:#b4c6c1;
+  --linie-dunkel:rgba(244,247,242,.16);
+  /* Platzhalterverläufe der Bildflächen */
+  --bild-dunkel-a:#27504c; --bild-dunkel-b:#193c3c; --bild-hell-a:#d9e6d6; --bild-hell-b:#a9c2b0; --bild-mittel:#7fa28c;
+  --radius-flaeche:28px;    /* große abgerundete Abschnittsflächen */
+  --titel-gewicht:400;
+  --titel-spur:-0.03em;
+}
