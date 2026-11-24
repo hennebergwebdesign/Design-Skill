@@ -1,0 +1,32 @@
+/* marke.css der Vorlage t02: DIE Datei zum Umfärben. Alle Farben und Radien der Gestaltung kommen von hier.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#ffffff;
+  --flaeche-alt:#f2f1ed;
+  --flaeche-dunkel:#1b1d1b;
+  --text:#1c1e1c;
+  --text-leise:#555a56;
+  --linie:#dcdcd6;
+  --akzent:#1f7a45;
+  --akzent-text:#ffffff;
+  --schrift-titel:'Hanken Grotesk',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:1.5rem;
+  --radius-bild:1.5rem;
+  /* Zusatztokens dieser Vorlage */
+  --flaeche-dunkel-2:#2a2c2a;   /* gewählter Eintrag im dunklen Abschnitt */
+  --akzent-hell:#7bd69b;        /* Akzent auf dunklem Grund */
+  --auf-dunkel:#ffffff;
+  --auf-dunkel-leise:#c3c8c3;
+  --linie-dunkel:#3d403d;
+  --schatten-rgb:0 0 0;         /* Abdunklung über Bildern, als Zahlentripel */
+  --bild-a:#7f8f55;
+  --bild-b:#2b4529;
+  --bild-c:#cdb67f;
+  --bild-d:#4d7771;
+  --bild-e:#a9b88c;
+  --radius-panel:2rem;
+  --radius-klein:1rem;
+  --rahmen:.75rem;              /* Abstand der großen Flächen zum Fensterrand */
+}
