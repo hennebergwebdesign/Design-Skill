@@ -14,7 +14,7 @@ h3{font-size:var(--h3);line-height:1.15}
 .dunkel .kicker{color:var(--akzent)}
 .kopf-mitte{display:grid;justify-items:center;gap:1.25rem;text-align:center;margin-bottom:clamp(2rem,4.5vw,3.75rem)}
 .kopf-mitte h2{max-width:20ch}
-.knopf{font-family:var(--schrift-titel);font-weight:700;font-size:.9375rem;letter-spacing:.01em}
+.knopf{font-family:var(--schrift-titel);font-weight:700;font-size:1rem;letter-spacing:.01em}
 .knopf svg{width:1.125rem;height:1.125rem;flex:none;transition:transform var(--dauer-kurz) var(--kurve)}
 .knopf:hover svg{transform:translateX(3px)}
 .knopf:focus-visible{outline-offset:3px}
@@ -151,8 +151,8 @@ a:hover .mehr{text-decoration-color:var(--akzent)}
 .lkarte__bild{aspect-ratio:4/3;border-radius:calc(var(--radius-gross) - 10px)}
 .lkarte__innen,.projekt__innen{position:absolute;inset:0;transition:transform .7s var(--kurve)}
 .lkarte a:hover .lkarte__innen{transform:scale(1.05)}
-.symb--ueber{position:absolute;left:1.75rem;top:calc(.75rem + (100% - .75rem - var(--karte-pad)) * 0);background:var(--flaeche);box-shadow:0 6px 16px color-mix(in srgb,var(--flaeche-dunkel) 20%,transparent)}
-.lkarte h3{padding-inline:calc(var(--karte-pad) - .75rem);margin-top:1.1rem;font-size:1.375rem}
+.symb--ueber{position:relative;justify-self:start;margin:calc(-1.375rem - .75rem) 0 0 calc(var(--karte-pad) - .75rem);background:var(--flaeche);box-shadow:0 6px 16px color-mix(in srgb,var(--flaeche-dunkel) 20%,transparent)}
+.lkarte h3{padding-inline:calc(var(--karte-pad) - .75rem);margin-top:.25rem;font-size:1.375rem}
 .lkarte p{padding-inline:calc(var(--karte-pad) - .75rem);color:var(--text-leise)}
 .lkarte .mehr{margin-inline:calc(var(--karte-pad) - .75rem);margin-top:.5rem;justify-self:start}
 @media (min-width:48rem){.lkarten{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -163,7 +163,7 @@ a:hover .mehr{text-decoration-color:var(--akzent)}
 .preise .kopf-mitte{margin-bottom:clamp(1.5rem,3vw,2.5rem)}
 .preise h2{color:var(--text-auf-dunkel)}
 .umschalter{display:inline-flex;gap:.25rem;padding:.25rem;margin:0;border:0;border-radius:var(--radius-knopf);background:var(--flaeche-dunkel-2)}
-.umschalter label{display:inline-flex;align-items:center;justify-content:center;min-height:2.75rem;min-width:7rem;padding-inline:1.25rem;border-radius:var(--radius-knopf);font-family:var(--schrift-titel);font-weight:700;font-size:.9375rem;color:var(--text-leise-dunkel);cursor:pointer;transition:background-color var(--dauer-kurz),color var(--dauer-kurz)}
+.umschalter label{display:inline-flex;align-items:center;justify-content:center;min-height:2.75rem;min-width:7rem;padding-inline:1.25rem;border-radius:var(--radius-knopf);font-family:var(--schrift-titel);font-weight:700;font-size:1rem;color:var(--text-leise-dunkel);cursor:pointer;transition:background-color var(--dauer-kurz),color var(--dauer-kurz)}
 .umschalter label:hover{color:var(--text-auf-dunkel)}
 .umschalter input:checked+label{background:var(--akzent);color:var(--akzent-text)}
 .umschalter input:focus-visible+label{outline:3px solid var(--text-auf-dunkel);outline-offset:2px}

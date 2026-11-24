@@ -332,3 +332,4 @@ summary:hover .faq__icon{background:var(--akzent);color:var(--akzent-text)}
   .jkarte:hover,.skarte:hover,.beitrag a:hover .bild,.knopf:hover{transform:none}
   .karussell__spur{scroll-behavior:auto}
 }
+.vorteile__bild .bild[data-platzhalter]::after,.faq__bild .bild[data-platzhalter]::after{inset:.75rem auto auto .75rem}

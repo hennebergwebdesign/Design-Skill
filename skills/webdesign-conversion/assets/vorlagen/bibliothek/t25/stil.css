@@ -43,6 +43,7 @@ main p{color:var(--text-leise)}
 .kopf__innen{display:grid;grid-template-columns:1fr auto;grid-template-areas:"l b" "n n";align-items:center;min-height:var(--kopf-h)}
 .logo{grid-area:l;display:inline-flex;align-items:center;gap:.6rem;min-height:2.75rem;font-family:var(--schrift-titel);font-size:1.375rem;font-weight:700;letter-spacing:-.02em}
 .logo__zeichen{width:1.75rem;height:1.75rem;color:var(--akzent);flex:none}
+.logo,.kopf__burger{position:relative;z-index:41}
 .kopf__burger{grid-area:b;display:none;width:2.75rem;height:2.75rem;place-items:center;margin-right:-.6rem}
 .js .kopf__burger{display:grid}
 .burger{position:relative;display:block;width:1.5rem;height:.875rem}

@@ -139,7 +139,7 @@ main p{color:var(--text-leise)}
 .insel{border-radius:var(--radius-gross);margin-inline:var(--insel-rand)}
 .insel--dunkel{background:var(--flaeche-dunkel);color:var(--text-auf-dunkel)}
 .sek--insel .insel{padding-block:var(--raum)}
-.insel--dunkel main p,.insel--dunkel p{color:var(--text-leise-dunkel)}
+.insel--dunkel p{color:var(--text-leise-dunkel)}
 .lehrplan{display:grid;grid-template-columns:minmax(0,1fr);gap:1.5rem;align-items:start}
 .module{display:grid;gap:.75rem}
 .modul{border:1px solid var(--linie-dunkel);border-radius:1.25rem;background:var(--flaeche-dunkel-2);transition:border-color var(--dauer-kurz)}
@@ -235,13 +235,13 @@ details[open]>.modul__inhalt{animation:auf .28s var(--kurve) both}
 .stimme__play{display:grid;place-items:center;width:3.5rem;height:3.5rem;border-radius:50%;background:var(--text-auf-dunkel);color:var(--flaeche-dunkel)}
 .stimme--video figcaption{display:block;margin:0;padding:.9rem .75rem .5rem;font-size:var(--text-s);font-weight:600;color:var(--text-auf-dunkel)}
 .stimmen__mehr{display:flex;justify-content:center;margin-top:1.5rem}
-.js .stimmen{position:relative;max-height:46rem;overflow:hidden}
-.js .stimmen::after{content:"";position:absolute;inset:auto 0 0 0;height:9rem;background:linear-gradient(to bottom,transparent,var(--flaeche));pointer-events:none}
-.js .stimmen.offen{max-height:none;overflow:visible}
-.js .stimmen.offen::after{display:none}
+.js .stimmen-huelle{position:relative;max-height:46rem;overflow:hidden}
+.js .stimmen-huelle::after{content:"";position:absolute;inset:auto 0 0 0;height:9rem;background:linear-gradient(to bottom,transparent,var(--flaeche));pointer-events:none}
+.js .stimmen-huelle.offen{max-height:none;overflow:visible}
+.js .stimmen-huelle.offen::after{display:none}
 .stimmen__mehr .knopf[hidden]{display:none}
-@media (min-width:40em){.stimmen{column-count:2}.js .stimmen{max-height:42rem}}
-@media (min-width:64em){.stimmen{column-count:3}.js .stimmen{max-height:44rem}}
+@media (min-width:40em){.stimmen{column-count:2}.js .stimmen-huelle{max-height:42rem}}
+@media (min-width:64em){.stimmen{column-count:3}.js .stimmen-huelle{max-height:44rem}}
 
 /* Vorher und Nachher */
 .vn{display:grid;grid-template-columns:minmax(0,1fr);gap:1rem;max-width:52rem;margin-inline:auto}
