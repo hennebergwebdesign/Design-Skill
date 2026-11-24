@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Vorlagenansicht</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="_basis/schriften.css">
 <style>
 :root{--leiste:#16181a;--text:#fff;--leise:#aeb3b7;--akzent:#7fd1b0;--rahmen:#2a2e31}
@@ -72,6 +73,7 @@ iframe{border:0;background:#fff;width:100%;height:100%;transition:width .25s}
   var i=K.indexOf(t);
   document.title=N[t]+' | Vorlagenansicht';
   document.getElementById('name').textContent=N[t];
+  document.querySelector('link[rel=icon]').href=t+'/favicon.svg';
   document.getElementById('rahmen').src=t+'/index.html';
   document.getElementById('rahmen').title=N[t];
   document.getElementById('pur').href=t+'/index.html';
