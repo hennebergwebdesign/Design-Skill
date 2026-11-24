@@ -101,8 +101,8 @@ h2,h3{font-weight:400}
 .logos{padding-block:clamp(2.5rem,5vw,4rem) 0}
 .logos__titel{font-size:var(--text-m);font-weight:500;text-align:center;margin-bottom:1.5rem;letter-spacing:0;line-height:1.3}
 .logos__raster{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
-.logos__raster .bild{height:5.5rem;background:var(--karte);--bild-grund:var(--karte)}
-.logos__raster .bild::after{inset:50% auto auto 50%;transform:translate(-50%,-50%);opacity:.5}
+.logos__zelle{display:grid;place-items:center;height:5.5rem;background:var(--karte);border-radius:var(--radius-bild);color:var(--text);--logo-h:1.75rem}
+.logos__zelle .beispiellogo{opacity:.85}
 
 /* Zweispalter */
 .zweispalt{display:grid;gap:2.5rem}
@@ -146,10 +146,11 @@ h2,h3{font-weight:400}
 .zeile-lst__titel{font-family:var(--schrift-titel);font-size:var(--h3);line-height:1.1;letter-spacing:-.03em;transition:transform var(--dauer-mittel) var(--kurve)}
 .zeile-lst summary:hover .zeile-lst__titel{transform:translateX(6px)}
 .zeile-lst__text{color:var(--auf-dunkel-leise);max-width:28rem}
-.plus{position:relative;justify-self:end;width:2.75rem;height:2.75rem;color:var(--lebhaft);transition:transform var(--dauer-mittel) var(--kurve)}
-.plus::before,.plus::after{content:"";position:absolute;left:50%;top:50%;width:1.5rem;height:2px;background:currentColor;transform:translate(-50%,-50%)}
-.plus::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform var(--dauer-mittel) var(--kurve)}
-.zeile-lst[open] .plus::after{transform:translate(-50%,-50%) rotate(0)}
+.plus{position:relative;justify-self:end;width:2.75rem;height:2.75rem;color:var(--lebhaft)}
+.plus svg{position:absolute;left:50%;top:50%;margin:-14px 0 0 -14px;transition:transform var(--dauer-mittel) var(--kurve),opacity var(--dauer-mittel) var(--kurve)}
+.plus__aus{opacity:0;transform:rotate(-90deg)}
+.zeile-lst[open] .plus__an{opacity:0;transform:rotate(90deg)}
+.zeile-lst[open] .plus__aus{opacity:1;transform:none}
 .zeile-lst__mehr{padding:0 3.25rem 1.75rem 3.25rem;color:var(--auf-dunkel-leise);max-width:40rem}
 .js .zeile-lst[open] .zeile-lst__mehr{animation:auf var(--dauer-lang) var(--kurve)}
 @keyframes auf{from{opacity:0;transform:translateY(-8px)}}
@@ -224,8 +225,8 @@ h2,h3{font-weight:400}
 .frage summary::-webkit-details-marker{display:none}
 .frage p{padding:0 1.25rem 1.25rem;color:var(--text-leise);max-width:36rem}
 .frage[open] p{animation:auf var(--dauer-lang) var(--kurve)}
-.chevron{flex:none;width:.6rem;height:.6rem;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg) translateY(-2px);transition:transform var(--dauer-mittel) var(--kurve)}
-.frage[open] .chevron{transform:rotate(-135deg)}
+.chevron{flex:none;transition:transform var(--dauer-mittel) var(--kurve)}
+.frage[open] .chevron{transform:rotate(180deg)}
 
 /* Kontakt */
 .kontakt{margin:0 .5rem;padding-block:var(--raum);background:var(--flaeche-alt);border-radius:var(--radius-flaeche)}
@@ -278,7 +279,7 @@ h2,h3{font-weight:400}
   .streifen .bild:nth-child(3){margin-top:5rem}
   .zahlen{grid-template-columns:repeat(4,1fr);gap:2rem}
   .logos__raster{grid-template-columns:repeat(4,1fr);gap:1rem}
-  .logos__raster .bild{height:7.5rem}
+  .logos__zelle{height:7.5rem;--logo-h:2.25rem}
   .zweispalt{grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,6rem)}
   .haken-liste:not(.haken-liste--eins){grid-template-columns:1fr 1fr}
   .warum__karten{grid-template-columns:1fr 1fr;align-items:start}

@@ -29,3 +29,6 @@ Alle `data-beispiel` Texte, Zahlen, Preise, Zitate, Kontaktdaten ersetzen oder A
 
 ## Grenzen
 Kein Sticky Abschnitt und kein Hintergrundvideo wie bei Vorlagen mit Scrollbühne. Die Stimmenspur zeigt auf Desktop drei von fünf Karten. Helles Thema nicht vorgesehen. Hero und Newsletter sind ohne echtes Foto flächig und wirken erst mit Bildmaterial.
+
+## Icons und Logos
+Icons: Phosphor Icons (MIT), durchgehend Strichstärke thin, als Sprite im Kopf der Seite (Lizenz in `../_basis/icons/LICENSE-Phosphor.txt`). Logos im Vertrauensband sind erfundene Beispiellogos aus `../_basis/logos/` (Maske in `currentColor`), beim Kunden durch echte, freigegebene Logos ersetzen.

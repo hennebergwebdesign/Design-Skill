@@ -34,3 +34,6 @@ Tokens und Schriften tauschen, Kontrast prüfen (Akzenttext auf Akzent mindesten
 - Der Videoknopf ist ein Platzhalter ohne Funktion, Video samt Poster und Untertitel selbst einbinden.
 - Gestapelte Karten kleben nur auf Desktop, mobil stehen sie untereinander.
 - Das Team läuft als Band, das bei Hover pausiert; für Tastaturnutzer ist es nicht anhaltbar, bei Bedarf Pause Schalter ergänzen (WCAG 2.2.2).
+
+## Icons und Logos
+Icons: Phosphor Icons (MIT), durchgehend Strichstärke fill, als Sprite am Seitenanfang (Lizenz in `../_basis/icons/LICENSE-Phosphor.txt`). Logos im Partnerband sind erfundene Beispiellogos aus `../_basis/logos/` (Maske in `currentColor`), beim Kunden durch echte, freigegebene Logos ersetzen.

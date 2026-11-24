@@ -28,12 +28,12 @@
 ## Marke wechseln
 1. Werte in `marke.css` und die zwei Schriftzeilen ändern, Kontrast prüfen (`--text-blass` mindestens 3 zu 1, nur große Schrift).
 2. Platzhalter `.bild[data-platzhalter]` durch Fotos ersetzen (`<img>` mit `alt`, `object-fit` ist gesetzt), Overlay-Verläufe bleiben für die Lesbarkeit.
-3. Logoleiste mit freigegebenen Kundenlogos füllen oder entfernen; Aussageelemente `aria-hidden` dann entfernen.
+3. Beispiellogos der Leiste durch freigegebene Kundenlogos ersetzen oder die Leiste entfernen.
 4. Alle Elemente mit `data-beispiel` (Kennzahlen 650, 800+, 98%, Projekte, Beiträge, Daten, FAQ) durch echte Angaben ersetzen oder löschen.
 5. Titel, Beschreibung, Kontaktadresse, Impressum und Datenschutz ergänzen.
 
 ## Grenzen
-- Keine echten Bilder, Icons sind eigene Beispiele. Kein Cookie-Banner, kein Formular.
+- Keine echten Bilder. Logoleiste zeigt erfundene Beispiellogos (`_basis/logos.css`), vor Livegang durch freigegebene Kundenlogos ersetzen. Icons: Phosphor Icons (MIT), durchgehend Strichstärke light, als Sprite im Seitenanfang (Lizenz in `_basis/icons/LICENSE-Phosphor.txt`). Kein Cookie-Banner, kein Formular.
 - Drei Karten in Sektion 3 sind bewusst wie in der Aufbauvorlage; bei anderem Angebot Anzahl anpassen.
 - Sticky Überschrift im Ablauf nur ab 62rem, darunter normaler Fluss.
 - Nicht geprüft: Screenreader, Safari, echte Fotos als Hintergrund hinter Overlays (Kontrast neu messen).

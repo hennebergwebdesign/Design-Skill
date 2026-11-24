@@ -16,3 +16,4 @@ Name und Stern im Logo (Symbol `#stern`, drei Stellen), Texte, Bilder (`.bild` m
 
 ## Grenzen
 Formulare senden nichts (stil.js verhindert das Absenden, Backend und Einwilligung fehlen). Kennzahlen, Preise, Bewertung und Zitate sind Platzhalter, keine Belege. Preisumschalter braucht JavaScript (ohne bleibt Takt "einmalig" sichtbar). Impressum und Datenschutz sind nur Linkplatzhalter.
+- Icons: Phosphor Icons (MIT), durchgehend die Strichstärke fill (gefüllt, wie die Referenz), als Sprite im HTML (Lizenz: `../_basis/icons/LICENSE-Phosphor.txt`). Die Logoleiste zeigt erfundene Beispiellogos aus `../_basis/logos.css`, durch echte, freigegebene ersetzen.

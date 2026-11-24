@@ -20,6 +20,8 @@ Ankündigungsleiste, schwebende Kopfpille, Hero (Vollbild, Text unten links, Bew
 `--flaeche`, `--flaeche-alt`, `--flaeche-dunkel`, `--karte-dunkel`, `--karte-dunkel-aktiv`, `--text`, `--text-hell`, `--akzent` mit `--akzent-text`, `--akzent-ink` (Akzent als Schrift auf Hell), `--feldrand`, Radien, Bildverläufe `--bild-*`, Schrift (Instrument Sans).
 
 ## Bei Markenwechsel
+Icons: Phosphor Icons (MIT), durchgehend Strichstärke bold, als Sprite im Seitenanfang (Lizenz in `_basis/icons/LICENSE-Phosphor.txt`); nur die Bewertungssterne nutzen die gefüllte Fassung, damit sie als Sterne lesbar bleiben. Die Vorlage hat keine Logoleiste.
+
 Tokens und Schriftzeilen in `marke.css` ändern, `--akzent-ink` so wählen, dass es auf `--flaeche-alt` mindestens 4,5 zu 1 erreicht. Logo (Inline SVG, zweimal) und Name ersetzen. Alle Platzhalterflächen (`data-platzhalter`) durch Fotos ersetzen, dann das Attribut entfernen. Preise, Zahlen, Bewertung und Stimmen tragen `data-beispiel` und sind Beispielwerte: durch echte Angaben mit Quelle ersetzen oder streichen. Formular braucht `action` und Datenschutztext (Bauablauf, `formulare-und-resend.md`). Tabs und Einsatzorte an das echte Angebot anpassen.
 
 ## Grenzen

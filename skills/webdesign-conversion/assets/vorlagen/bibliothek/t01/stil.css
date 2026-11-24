@@ -84,15 +84,11 @@ html{scroll-padding-top:6rem}
 .leitsatz__satz{font-family:var(--schrift-titel);font-weight:500;font-size:clamp(1.5rem,1rem + 2vw,2.5rem);line-height:1.22;letter-spacing:-.02em;color:var(--text);text-wrap:pretty}
 .wortfarbe .wort{color:var(--text-blass);transition:color .35s ease}
 .wortfarbe .wort.an{color:var(--text)}
-.logos{margin-top:clamp(3rem,6vw,5rem);--band-abstand:.75rem;--band-dauer:40s}
-.logo-kachel{flex:none;display:flex;align-items:center;justify-content:center;gap:.75rem;width:11rem;height:5rem;background:var(--flaeche-alt);border-radius:var(--radius-klein)}
-.logo-kachel i{width:1.75rem;height:1.75rem;border-radius:50%;background:var(--linie)}
-.logo-kachel b{width:4rem;height:.9rem;border-radius:.45rem;background:var(--linie)}
-.logo-kachel:nth-child(even) i{border-radius:.4rem}
-.logo-kachel:nth-child(3n) b{width:3rem}
+.logos{margin-top:clamp(3rem,6vw,5rem);--band-abstand:3.5rem;--band-dauer:40s;--logo-h:1.75rem;color:var(--text-leise)}
+.logos .beispiellogo{opacity:.85}
 @media (min-width:62rem){
   .leitsatz__raster{grid-template-columns:1fr 2fr;gap:3rem}
-  .logo-kachel{width:14rem;height:6rem}
+  .logos{--logo-h:2.25rem;--band-abstand:5rem}
 }
 
 /* 3. Leistungen */
@@ -107,7 +103,7 @@ html{scroll-padding-top:6rem}
 .karten{display:grid;gap:.75rem}
 .karte{background:var(--flaeche);color:var(--text);border-radius:var(--radius-karte);padding:1.5rem;display:flex;flex-direction:column;justify-content:space-between;gap:2.5rem;min-height:13rem;transition:transform var(--dauer-mittel) var(--kurve)}
 .karte:hover{transform:translateY(-6px)}
-.karte__icon{width:2.5rem;height:2.5rem;color:var(--text)}
+.karte__icon{width:2.5rem;height:2.5rem;color:var(--text);flex:none}
 .karte h3{font-size:1.375rem;font-weight:600;margin-bottom:.5rem;letter-spacing:-.015em}
 .karte p{color:var(--text-leise);font-size:1rem;line-height:1.5}
 @media (min-width:62rem){
@@ -198,8 +194,8 @@ html{scroll-padding-top:6rem}
 .faq details{background:var(--flaeche);border-radius:var(--radius-klein)}
 .faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:3.5rem;padding:.75rem 1.25rem;font-weight:600}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"";flex:none;width:1rem;height:1rem;background:linear-gradient(var(--text),var(--text)) center/100% 2px no-repeat,linear-gradient(var(--text),var(--text)) center/2px 100% no-repeat;transition:transform var(--dauer-mittel) var(--kurve)}
-.faq details[open] summary::after{transform:rotate(45deg)}
+.faq__plus{flex:none;width:1.25rem;height:1.25rem;color:var(--text);transition:transform var(--dauer-mittel) var(--kurve)}
+.faq details[open] .faq__plus{transform:rotate(45deg)}
 .faq .antwort{padding:0 1.25rem 1.25rem;color:var(--text-leise);animation:einblenden .4s var(--kurve)}
 @keyframes einblenden{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
 @media (min-width:62rem){.faq__raster{grid-template-columns:1fr 1.2fr;gap:4rem}}
@@ -213,7 +209,7 @@ html{scroll-padding-top:6rem}
 .fuss__nav li:first-child{border-top:1px solid var(--linie-dunkel)}
 .fuss__nav a{display:flex;align-items:center;justify-content:space-between;min-height:3.5rem;transition:padding var(--dauer-mittel) var(--kurve),color var(--dauer-mittel)}
 .fuss__nav a:hover{padding-left:.75rem;color:var(--text-leise-dunkel)}
-.fuss__nav svg{width:1.25rem;height:1.25rem;transition:transform var(--dauer-mittel) var(--kurve)}
+.fuss__nav svg{width:1.25rem;height:1.25rem;flex:none;transition:transform var(--dauer-mittel) var(--kurve)}
 .fuss__nav a:hover svg{transform:translateX(4px)}
 .fuss__ende{display:flex;flex-wrap:wrap;gap:.5rem 2rem;justify-content:space-between;align-items:center;border-top:1px solid var(--linie-dunkel);padding-block:1rem;color:var(--text-leise-dunkel)}
 .fuss__ende ul{display:flex;gap:1.5rem}

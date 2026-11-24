@@ -173,8 +173,7 @@ main{display:block}
 .stimme__nr{color:var(--text-leise);font-variant-numeric:tabular-nums}
 .stimme__inhalt{display:flex;align-items:center;justify-content:center;text-align:center;padding-top:1rem}
 .stimme__inhalt p{max-width:17rem}
-.stimme__marke{width:7.5rem;height:3rem;color:var(--text-leise)}
-.stimme__marke::after{inset:50% auto auto 50%;transform:translate(-50%,-50%)}
+.stimme__inhalt .beispiellogo{--logo-h:2rem;color:var(--text-leise);opacity:.85}
 @media (min-width:40rem){.stimmen__raster{grid-template-columns:repeat(2,1fr)}}
 @media (min-width:64rem){.stimmen__raster{grid-template-columns:repeat(4,1fr);row-gap:2rem}.stimme{min-height:17rem}}
 
@@ -213,3 +212,12 @@ main{display:block}
   .vorgehen .band__spur[aria-hidden]{display:none}
   .band-steuerung{display:none!important}
 }
+
+/* Icons: Phosphor, Strichstärke light, als Sprite im HTML */
+.ikon{display:block;flex:none;width:1.5rem;height:1.5rem;fill:currentColor}
+.reihe__plus .ikon{width:1.5rem;height:1.5rem}
+.zeilenlink__pfeil .ikon{width:1em;height:1em}
+.schritt .ikon{width:2rem;height:2rem;margin-bottom:1rem;color:var(--akzent)}
+.fuss__zeile{display:flex;align-items:flex-start;gap:.75rem;margin-bottom:.25rem}
+.fuss__zeile .ikon{margin-top:.15rem;width:1.25rem;height:1.25rem;color:var(--text-leise)}
+.fuss__zeile a{min-height:0}

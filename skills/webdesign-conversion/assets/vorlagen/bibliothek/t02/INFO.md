@@ -31,5 +31,6 @@
 
 ## Grenzen
 - Ablauf-Sticky ist auf genau fünf Schritte und fünf Bilder gebaut (Höhe 4,2 Bildschirme); mehr oder weniger Schritte brauchen Anpassung in `stil.js` und `stil.css`.
-- Partnerband enthält nur Platzhalterflächen, keine Logos.
+- Partnerband zeigt erfundene Beispiellogos (`_basis/logos.css`), vor Livegang durch freigegebene Kundenlogos ersetzen oder entfernen.
+- Icons: Phosphor Icons (MIT), durchgehend Strichstärke regular, als Sprite im Seitenanfang (Lizenz in `_basis/icons/LICENSE-Phosphor.txt`).
 - Kein Formular, kein Consent, keine Unterseiten.

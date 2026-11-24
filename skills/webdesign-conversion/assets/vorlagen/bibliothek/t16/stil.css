@@ -102,11 +102,7 @@ body{overflow-x:clip}
 
 /* 2. Logoleiste */
 .logoleiste{background:var(--flaeche);padding-block:clamp(1.25rem,3vw,2rem);border-bottom:1px solid var(--linie);position:relative;z-index:1;--band-abstand:clamp(2rem,5vw,4rem)}
-.logo-kachel{display:inline-flex;align-items:center;gap:.6rem;flex:none;color:var(--text-leise);opacity:.75}
-.logo-kachel i{width:1.5rem;height:1.5rem;border-radius:7px;background:currentColor}
-.logo-kachel b{width:5.5rem;height:.75rem;border-radius:4px;background:currentColor}
-.logo-kachel:nth-child(even) i{border-radius:50%}
-.logo-kachel:nth-child(3n) b{width:4rem}
+.logoleiste .beispiellogo{--logo-h:1.75rem;color:var(--text-leise);opacity:.8}
 
 /* 3. Über uns */
 .ueber{background:var(--flaeche)}
@@ -258,8 +254,8 @@ body{overflow-x:clip}
 .faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:3.5rem;padding:.75rem 1.25rem;font-weight:600;border-radius:var(--radius-klein);transition:background-color var(--dauer-kurz)}
 .faq summary:hover{background:color-mix(in srgb,var(--flaeche-alt) 70%,var(--linie))}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"";flex:none;width:1rem;height:1rem;background:linear-gradient(var(--text),var(--text)) center/100% 2px no-repeat,linear-gradient(var(--text),var(--text)) center/2px 100% no-repeat;transition:transform var(--dauer-mittel) var(--kurve)}
-.faq details[open] summary::after{transform:rotate(45deg)}
+.faq summary::after{content:"";flex:none;width:1.5rem;height:1.5rem;background:var(--text);--plus:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath d='M220,128a4,4,0,0,1-4,4H132v84a4,4,0,0,1-8,0V132H40a4,4,0,0,1,0-8h84V40a4,4,0,0,1,8,0v84h84A4,4,0,0,1,220,128Z'/%3E%3C/svg%3E");--minus:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath d='M220,128a4,4,0,0,1-4,4H40a4,4,0,0,1,0-8H216A4,4,0,0,1,220,128Z'/%3E%3C/svg%3E");-webkit-mask:var(--plus) center/contain no-repeat;mask:var(--plus) center/contain no-repeat;transition:transform var(--dauer-mittel) var(--kurve)}
+.faq details[open] summary::after{-webkit-mask-image:var(--minus);mask-image:var(--minus);transform:rotate(180deg)}
 .faq .antwort{padding:0 1.25rem 1.25rem;color:var(--text-leise);animation:einblenden .4s var(--kurve)}
 @keyframes einblenden{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
 @media (min-width:62rem){.faq__raster{grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:4rem}}

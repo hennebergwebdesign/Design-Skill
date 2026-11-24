@@ -68,7 +68,7 @@ button.knopf{padding-right:1.4rem;justify-content:center}
 /* Logoband */
 .logos{padding-block:clamp(1.5rem,4vw,3rem);overflow:hidden}
 .logos .band{--band-abstand:clamp(2.5rem,6vw,5rem);--band-dauer:40s}
-.logo-platz{display:block;width:clamp(7rem,12vw,10rem);height:2.5rem;border-radius:var(--radius-knopf);background:color-mix(in srgb,var(--text) 14%,var(--flaeche))}
+.logos .beispiellogo{--logo-h:2rem;color:var(--text-leise);opacity:.85}
 
 /* Über uns */
 .kopfzeile{display:grid;gap:1.5rem;margin-bottom:clamp(2rem,4vw,3.5rem)}
@@ -149,7 +149,7 @@ button.knopf{padding-right:1.4rem;justify-content:center}
 .reihe.drift{overflow:hidden;padding-bottom:0}
 .reihe__spur{display:flex;gap:1.25rem;width:max-content;padding-inline:var(--rand);will-change:transform}
 .stimme{display:flex;flex-direction:column;justify-content:space-between;gap:1.25rem;width:min(80vw,22rem);padding:1.5rem;border:1px solid var(--linie);border-radius:var(--radius-karte);background:var(--flaeche-alt)}
-.stimme__sterne{color:var(--akzent);letter-spacing:.2em;font-size:var(--text-m)}
+.stimme__sterne{display:flex;gap:.25rem;color:var(--akzent)}
 .stimme blockquote{color:var(--text);font-size:var(--text-m)}
 .stimme__person{display:flex;align-items:center;gap:.75rem}
 .stimme__person p{line-height:1.35}
@@ -192,3 +192,9 @@ textarea{resize:vertical}
 .fuss__news .knopf{padding-right:1.4rem}
 .fuss__ende{margin-top:clamp(2.5rem,5vw,4rem);padding-block:1.5rem;border-top:1px solid var(--linie)}
 @media (min-width:48rem){.fuss__raster{grid-template-columns:1.4fr .7fr .7fr 1.2fr}}
+
+/* Icons: Phosphor, Strichstärke light (Sterne der Bewertung: fill, damit sie als gefüllt lesbar sind) */
+.ikon{display:block;flex:none;fill:currentColor}
+.knopf__pfeil .ikon{width:1rem;height:1rem}
+.ikon--stern{width:1.1rem;height:1.1rem}
+.ikon--leistung{width:2.25rem;height:2.25rem;color:var(--akzent)}

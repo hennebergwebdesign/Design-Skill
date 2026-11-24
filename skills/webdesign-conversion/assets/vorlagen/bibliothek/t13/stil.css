@@ -2,7 +2,7 @@
 :root{--kopfhoehe:4.5rem;--reihe:1.25rem;interpolate-size:allow-keywords}
 html{scroll-padding-top:calc(var(--kopfhoehe) + 1rem)}
 body{overflow-x:clip}
-.ico{width:1.5rem;height:1.5rem;flex:none;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+.ico{width:1.5rem;height:1.5rem;flex:none;fill:currentColor;stroke:none}
 .stern{width:1.125rem;height:1.125rem;fill:currentColor;stroke:none}
 .stern--leer{opacity:.3}
 .sterne{display:inline-flex;gap:.15rem;color:var(--akzent-mittel)}
@@ -109,12 +109,10 @@ nav a[aria-current="location"]{text-decoration-color:var(--akzent-hell)}
 /* 2. Logoleiste */
 .logos{padding-block:clamp(2.5rem,5vw,4rem) 0}
 .logos__titel{font-family:var(--schrift-text);font-weight:600;font-size:1rem;letter-spacing:0;color:var(--text-leise);text-align:center;margin-bottom:1.5rem}
-.logos__band{--band-abstand:1.25rem}
-.logo-kachel{display:inline-flex;align-items:center;gap:.6rem;padding:.7rem 1.25rem;border-radius:var(--radius-klein);background:var(--flaeche-alt)}
-.logo-kachel i{display:block;width:1.5rem;height:1.5rem;border-radius:7px;background:var(--text-leise)}
-.logo-kachel b{display:block;width:5.5rem;height:.7rem;border-radius:4px;background:var(--linie)}
-.logo-kachel--klein{padding:.4rem .6rem}
-.logo-kachel--klein b{width:2.5rem}
+.logos__band{--band-abstand:3.5rem;--logo-h:1.75rem;color:var(--text-leise);padding-block:.5rem}
+.logos__band .beispiellogo{opacity:.85}
+.fall__ico{color:var(--akzent-mittel);width:1.75rem;height:1.75rem;align-self:center;margin-right:.5rem}
+.fall__logo{--logo-h:1.5rem;color:var(--text)}
 
 /* 3. Idee */
 .idee__raster{display:grid;grid-template-columns:minmax(0,1fr);gap:2.5rem;align-items:center}

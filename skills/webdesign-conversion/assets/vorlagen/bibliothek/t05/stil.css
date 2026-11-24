@@ -2,11 +2,13 @@
 :root{--kopf-h:4.5rem;--fokus:var(--text)}
 html{scroll-padding-top:var(--kopf-h)}
 :focus-visible{outline-color:var(--fokus)}
+.ico{width:1.1em;height:1.1em;flex:none;fill:currentColor}
 .wrap--schmal{width:min(100% - 2*var(--rand),62rem)}
 .wrap--mittel{width:min(100% - 2*var(--rand),66rem)}
 .zentriert{text-align:center}
 .sektion{position:relative}
 .knopf{color:var(--akzent-text)}
+.pfeil{display:inline-flex;align-items:center}
 .knopf .pfeil,.textlink .pfeil{transition:transform var(--dauer-mittel) var(--kurve)}
 .knopf:hover .pfeil,.textlink:hover .pfeil{transform:translateX(4px)}
 .lead{font-size:var(--text-l);line-height:1.5;color:var(--text-leise);max-width:34rem}
@@ -118,6 +120,7 @@ html:not(.js) .kopf__cta{margin-left:auto}
 .js .schieber .stimme:not(.ist-aktiv){opacity:0;visibility:hidden;transform:translateX(2rem)}
 .js .schieber .stimme.ist-zurueck:not(.ist-aktiv){transform:translateX(-2rem)}
 .rund{position:absolute;bottom:1.25rem;display:grid;place-items:center;width:3rem;height:3rem;border-radius:50%;background:var(--akzent);color:var(--akzent-text);font-size:1.25rem;transition:transform var(--dauer-kurz) var(--kurve)}
+.rund .ico{width:1.35rem;height:1.35rem}
 .rund[hidden]{display:none}
 .rund:hover{transform:scale(1.08)}
 .schieber__zurueck{left:1.25rem}
@@ -129,12 +132,12 @@ html:not(.js) .stimme{grid-area:auto}
 /* Leistungen */
 .leistungsraster{display:grid;gap:.5rem}
 .leistung{background:var(--flaeche-alt);border-radius:var(--radius-karte);padding:1.75rem}
-.leistung__icon{color:var(--text)}
+.leistung__icon{color:var(--text);fill:currentColor}
 .leistung__titel{font-size:var(--h3);line-height:1.05;margin:2rem 0 1rem;letter-spacing:-0.03em}
 .leistung p{color:var(--text-leise);font-size:var(--text-m)}
 .punkte{margin-top:1.5rem;display:grid;gap:.3rem;font-size:var(--text-s)}
-.punkte li{position:relative;padding-left:1.1rem}
-.punkte li::before{content:"";position:absolute;left:0;top:.7em;width:.35rem;height:.35rem;border-radius:50%;background:var(--text)}
+.punkte li{display:flex;align-items:flex-start;gap:.5rem}
+.punkte .ico{width:1rem;height:1rem;margin-top:.28em}
 .leiste{margin-top:.5rem;background:var(--flaeche-alt);border-radius:var(--radius-karte);padding:1.1rem 1.5rem;text-align:center;color:var(--text-leise);font-size:var(--text-s)}
 .leiste a{color:var(--text);display:inline-flex;align-items:center;min-height:2.75rem}
 
@@ -146,11 +149,12 @@ html:not(.js) .stimme{grid-area:auto}
 .zeile-ak summary .plus{grid-column:2;grid-row:1/span 3}
 .ak__datum,.ak__rolle,.ak__nr,.ak__kurz{font-size:var(--text-s);color:var(--text-leise)}
 .ak__titel{font-family:var(--schrift-titel);font-size:var(--h3);letter-spacing:-0.03em;line-height:1.1}
-.plus{position:relative;flex:none;width:2.5rem;height:2.5rem;border:1.5px solid var(--text);border-radius:50%;transition:transform var(--dauer-mittel) var(--kurve),background-color var(--dauer-mittel)}
-.plus::before,.plus::after{content:"";position:absolute;left:50%;top:50%;width:.9rem;height:1.5px;background:var(--text);transform:translate(-50%,-50%);transition:transform var(--dauer-mittel) var(--kurve)}
-.plus::after{transform:translate(-50%,-50%) rotate(90deg)}
-.zeile-ak[open] .plus{transform:rotate(180deg);background:var(--akzent)}
-.zeile-ak[open] .plus::after{transform:translate(-50%,-50%) rotate(0)}
+.plus{position:relative;flex:none;display:grid;place-items:center;width:2.5rem;height:2.5rem;border:1.5px solid var(--text);border-radius:50%;transition:background-color var(--dauer-mittel)}
+.plus .ico{grid-area:1/1;width:1.1rem;height:1.1rem;transition:transform var(--dauer-mittel) var(--kurve),opacity var(--dauer-kurz)}
+.plus__zu{opacity:0;transform:rotate(-90deg)}
+.zeile-ak[open] .plus__auf{opacity:0;transform:rotate(90deg)}
+.zeile-ak[open] .plus__zu{opacity:1;transform:none}
+.zeile-ak[open] .plus{background:var(--akzent)}
 .zeile-ak summary:hover .plus{background:var(--akzent)}
 .ak__inhalt{padding:0 1.25rem 1.5rem;color:var(--text-leise);max-width:40rem}
 .zeile-ak[open] .ak__inhalt{animation:auf var(--dauer-lang) var(--kurve)}
@@ -192,7 +196,7 @@ html:not(.js) .stimme{grid-area:auto}
   .menueknopf{margin-left:0}
   .menueknopf__text{display:inline}
   .kopf__cta{padding:.7rem 1.4rem;font-size:var(--text-m)}
-  .kopf__cta .pfeil{display:inline}
+  .kopf__cta .pfeil{display:inline-flex}
   .kopf__zeile{gap:2rem}
   .logo{margin-right:auto}
   .kopf__cta{margin-left:1rem}

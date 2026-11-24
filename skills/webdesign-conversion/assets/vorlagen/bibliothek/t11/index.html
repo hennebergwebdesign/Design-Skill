@@ -9,10 +9,24 @@
 <link rel="stylesheet" href="../_basis/schriften.css">
 <link rel="stylesheet" href="marke.css">
 <link rel="stylesheet" href="../_basis/basis.css">
+<link rel="stylesheet" href="../_basis/logos.css">
 <link rel="stylesheet" href="stil.css">
 </head>
 <body>
 <a class="sprunglink" href="#inhalt">Zum Inhalt springen</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-pfeil" viewBox="0 0 256 256" fill="currentColor"><path d="M198,64V168a6,6,0,0,1-12,0V78.48L68.24,196.24a6,6,0,0,1-8.48-8.48L177.52,70H88a6,6,0,0,1,0-12H192A6,6,0,0,1,198,64Z"/></symbol>
+  <symbol id="i-preis" viewBox="0 0 256 256" fill="currentColor"><path d="M188.47,193.66a6,6,0,0,1-.47,8.48A78,78,0,0,1,58.25,150H40a6,6,0,0,1,0-12H58V118H40a6,6,0,0,1,0-12H58.25A78,78,0,0,1,188,53.86a6,6,0,0,1-8,9A66,66,0,0,0,70.29,106H136a6,6,0,0,1,0,12H70v20h50a6,6,0,0,1,0,12H70.29A66,66,0,0,0,180,193.2,6,6,0,0,1,188.47,193.66Z"/></symbol>
+  <symbol id="i-zeit" viewBox="0 0 256 256" fill="currentColor"><path d="M128,26A102,102,0,1,0,230,128,102.12,102.12,0,0,0,128,26Zm0,192a90,90,0,1,1,90-90A90.1,90.1,0,0,1,128,218Zm62-90a6,6,0,0,1-6,6H128a6,6,0,0,1-6-6V72a6,6,0,0,1,12,0v50h50A6,6,0,0,1,190,128Z"/></symbol>
+  <symbol id="i-schild" viewBox="0 0 256 256" fill="currentColor"><path d="M208,42H48A14,14,0,0,0,34,56v56c0,51.94,25.12,83.4,46.2,100.64,22.73,18.6,45.27,24.89,46.22,25.15a6,6,0,0,0,3.16,0c.95-.26,23.49-6.55,46.22-25.15C196.88,195.4,222,163.94,222,112V56A14,14,0,0,0,208,42Zm2,70c0,37.76-13.94,68.39-41.44,91.06A131.17,131.17,0,0,1,128,225.72a130.94,130.94,0,0,1-40.56-22.66C59.94,180.39,46,149.76,46,112V56a2,2,0,0,1,2-2H208a2,2,0,0,1,2,2ZM172.24,99.76a6,6,0,0,1,0,8.48l-56,56a6,6,0,0,1-8.48,0l-24-24a6,6,0,0,1,8.48-8.48L112,151.51l51.76-51.75A6,6,0,0,1,172.24,99.76Z"/></symbol>
+  <symbol id="i-blatt" viewBox="0 0 256 256" fill="currentColor"><path d="M221.45,40.19a6,6,0,0,0-5.64-5.64C140.43,30.11,80.14,52.71,54.53,95c-17.44,28.79-16.76,62.8,1.79,96.2L35.76,211.76a6,6,0,1,0,8.48,8.48L64.8,199.68c17.27,9.59,34.7,14.41,51.49,14.41A85.38,85.38,0,0,0,161,201.47C203.29,175.86,225.88,115.57,221.45,40.19Zm-66.66,151c-24.08,14.58-52.64,14.37-81.13-.39l90.59-90.59a6,6,0,0,0-8.48-8.48L65.18,182.34c-14.76-28.49-15-57-.39-81.13,22.68-37.43,76.63-57.8,145-54.95C212.59,114.58,192.22,168.54,154.79,191.21Z"/></symbol>
+  <symbol id="i-plan" viewBox="0 0 256 256" fill="currentColor"><path d="M233.91,74.79,181.22,22.1a14,14,0,0,0-19.8,0L22.09,161.41a14,14,0,0,0,0,19.8L74.78,233.9a14,14,0,0,0,19.8,0L233.91,94.59A14,14,0,0,0,233.91,74.79ZM225.42,86.1,86.1,225.41h0a2,2,0,0,1-2.83,0L30.58,172.73a2,2,0,0,1,0-2.83L64,136.48l27.76,27.76a6,6,0,1,0,8.48-8.48L72.48,128,96,104.48l27.76,27.76a6,6,0,0,0,8.48-8.48L104.48,96,128,72.49l27.76,27.75a6,6,0,0,0,8.48-8.48L136.49,64,169.9,30.59a2,2,0,0,1,2.83,0l52.69,52.68A2,2,0,0,1,225.42,86.1Z"/></symbol>
+  <symbol id="i-bau" viewBox="0 0 256 256" fill="currentColor"><path d="M249.92,113.4,182.47,45.49a94.12,94.12,0,0,0-133,.06L35.68,59.78a6,6,0,0,0,8.63,8.35L58,54A82,82,0,0,1,78.55,39l49,49L30.09,185.4a14,14,0,0,0,0,19.81L50.78,225.9a14,14,0,0,0,19.8,0L168,128.46l33.42,33.42a14,14,0,0,0,19.8,0l28.68-28.69A14,14,0,0,0,249.92,113.4ZM62.1,217.41a2,2,0,0,1-2.83,0L38.58,196.72a2,2,0,0,1,0-2.83L108,124.46,131.51,148ZM163.76,115.73,140,139.49,116.48,116l23.76-23.76a6,6,0,0,0,0-8.49L90.54,34A82.07,82.07,0,0,1,174,54l45.62,45.93L188,131.49l-15.76-15.76A6,6,0,0,0,163.76,115.73Zm77.66,9-28.69,28.7a2,2,0,0,1-2.83,0L196.49,140l31.56-31.57,13.37,13.46A2,2,0,0,1,241.42,124.7Z"/></symbol>
+  <symbol id="i-gest" viewBox="0 0 256 256" fill="currentColor"><path d="M224,26c-20.8,0-44.11,11.41-69.3,33.9C136.62,76.06,121,94.9,110.3,109A58,58,0,0,0,34,164c0,32.07-20.43,46.39-21.35,47A6,6,0,0,0,16,222H92a58,58,0,0,0,55-76.3c14.08-10.67,32.92-26.32,49.08-44.4C218.59,76.11,230,52.8,230,32A6,6,0,0,0,224,26ZM92,210H30.65C37.92,200.85,46,185.78,46,164a46,46,0,1,1,46,46Zm29.49-95.91c3.6-4.67,7.88-10,12.71-15.69a78.17,78.17,0,0,1,23.4,23.4c-5.67,4.83-11,9.11-15.69,12.71A58.38,58.38,0,0,0,121.49,114.09Zm45.2-.3a90.24,90.24,0,0,0-24.48-24.48C163.05,66.46,191,42,217.56,38.44,214,65,189.54,93,166.69,113.79Z"/></symbol>
+  <symbol id="i-pflege" viewBox="0 0 256 256" fill="currentColor"><path d="M224.91,69.75a6,6,0,0,0-9.63-2.16l-41.07,37.9L154.7,101.3l-4.19-19.51,37.9-41.07a6,6,0,0,0-2.16-9.63,70,70,0,0,0-89.77,94.39l-61.39,53c-.11.09-.21.19-.32.3A30,30,0,0,0,77.2,221.23c.11-.11.21-.21.3-.32l53-61.39a70,70,0,0,0,94.39-89.77ZM160,154a58,58,0,0,1-28-7.22,6,6,0,0,0-7.45,1.33L68.57,212.88a18,18,0,0,1-25.45-25.45l64.76-55.94A6,6,0,0,0,109.2,124a58,58,0,0,1,64-84.53L139.58,75.93a6,6,0,0,0-1.45,5.33l5.65,26.35a6,6,0,0,0,4.61,4.61l26.35,5.65a6,6,0,0,0,5.33-1.45L216.49,82.8A58.06,58.06,0,0,1,160,154Z"/></symbol>
+  <symbol id="i-stern" viewBox="0 0 256 256" fill="currentColor"><path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"/></symbol>
+</svg>
 
 <header class="kopf">
   <a class="kopf__marke" href="#oben" aria-label="Musterbetrieb, zur Startseite">
@@ -43,8 +57,8 @@
       <h1 id="h1" data-zeig>Aus Ihrem Vorhaben wird ein Ergebnis, das bleibt</h1>
       <p data-zeig style="--i:1">Wir planen, setzen um und betreuen langfristig, damit Ihr Objekt im Alltag funktioniert und an Wert gewinnt.</p>
       <div class="held__aktionen" data-zeig style="--i:2">
-        <a class="knopf" href="#kontakt">Beratung vereinbaren <span class="knopf__pfeil" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></span></a>
-        <a class="knopf knopf--rand" href="#leistungen">Leistungen ansehen <span class="knopf__pfeil" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></span></a>
+        <a class="knopf" href="#kontakt">Beratung vereinbaren <span class="knopf__pfeil" aria-hidden="true"><svg class="ikon" width="16" height="16" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-pfeil"/></svg></span></a>
+        <a class="knopf knopf--rand" href="#leistungen">Leistungen ansehen <span class="knopf__pfeil" aria-hidden="true"><svg class="ikon" width="16" height="16" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-pfeil"/></svg></span></a>
       </div>
     </div>
     <div class="held__bild" data-zeig="skala"><div class="bild bild--a" data-platzhalter="Bild: Hauptmotiv"></div></div>
@@ -52,10 +66,10 @@
 </section>
 
 <section class="logos" aria-label="Partner und Auszeichnungen">
-  <!-- Platzhalter für Partnerlogos des Kunden, leer lassen oder durch echte, freigegebene Logos ersetzen -->
+  <!-- Beispiellogos (erfundene Marken) aus _basis/logos.css, durch echte, freigegebene Logos des Kunden ersetzen -->
   <div class="band" aria-hidden="true">
-    <div class="band__spur"><span class="logo-platz"></span><span class="logo-platz"></span><span class="logo-platz"></span><span class="logo-platz"></span><span class="logo-platz"></span><span class="logo-platz"></span></div>
-    <div class="band__spur"><span class="logo-platz"></span><span class="logo-platz"></span><span class="logo-platz"></span><span class="logo-platz"></span><span class="logo-platz"></span><span class="logo-platz"></span></div>
+    <div class="band__spur"><span class="beispiellogo logo-nordwerk" role="img" aria-label="Nordwerk (Beispiel)"></span><span class="beispiellogo logo-lichtbau" role="img" aria-label="Lichtbau (Beispiel)"></span><span class="beispiellogo logo-talgrund" role="img" aria-label="Talgrund (Beispiel)"></span><span class="beispiellogo logo-fjordstein" role="img" aria-label="Fjordstein (Beispiel)"></span><span class="beispiellogo logo-kronwerk" role="img" aria-label="Kronwerk (Beispiel)"></span><span class="beispiellogo logo-sonnenfeld" role="img" aria-label="Sonnenfeld (Beispiel)"></span></div>
+    <div class="band__spur"><span class="beispiellogo logo-nordwerk" role="img" aria-label="Nordwerk (Beispiel)"></span><span class="beispiellogo logo-lichtbau" role="img" aria-label="Lichtbau (Beispiel)"></span><span class="beispiellogo logo-talgrund" role="img" aria-label="Talgrund (Beispiel)"></span><span class="beispiellogo logo-fjordstein" role="img" aria-label="Fjordstein (Beispiel)"></span><span class="beispiellogo logo-kronwerk" role="img" aria-label="Kronwerk (Beispiel)"></span><span class="beispiellogo logo-sonnenfeld" role="img" aria-label="Sonnenfeld (Beispiel)"></span></div>
   </div>
 </section>
 
@@ -68,7 +82,7 @@
       </div>
       <div class="kopfzeile__rechts" data-zeig style="--i:2">
         <p>Wir verbinden Erfahrung mit klaren Absprachen. Sie wissen jederzeit, was als Nächstes passiert und was es kostet.</p>
-        <a class="knopf" href="#kontakt">Kennenlernen <span class="knopf__pfeil" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></span></a>
+        <a class="knopf" href="#kontakt">Kennenlernen <span class="knopf__pfeil" aria-hidden="true"><svg class="ikon" width="16" height="16" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-pfeil"/></svg></span></a>
       </div>
     </div>
     <div class="ueber__bilder">
@@ -85,7 +99,7 @@
         <p class="kicker" data-zeig>Ergebnisse</p>
         <h2 id="h-ergebnis" data-zeig style="--i:1">Erfahrung und Vertrauen machen den Unterschied</h2>
         <p data-zeig style="--i:2">Wir liefern nicht nur ein schönes Ergebnis, sondern Verlässlichkeit, Sorgfalt und Werte, die bleiben.</p>
-        <a class="knopf" href="#kontakt" data-zeig style="--i:3">Jetzt anrufen <span class="knopf__pfeil" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></span></a>
+        <a class="knopf" href="#kontakt" data-zeig style="--i:3">Jetzt anrufen <span class="knopf__pfeil" aria-hidden="true"><svg class="ikon" width="16" height="16" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-pfeil"/></svg></span></a>
       </div>
       <div class="erg erg--1" data-zeig="skala"><div class="bild bild--a" data-versatz="0.12" data-platzhalter="Bild: Projekt 1"></div></div>
       <div class="erg erg--2" data-zeig="skala"><div class="bild bild--c" data-versatz="0.2" data-platzhalter="Bild: Projekt 2"></div></div>
@@ -108,10 +122,11 @@
         <div class="leistung__innen">
           <div class="bild bild--a" data-platzhalter="Bild: Leistung 1"></div>
           <div class="leistung__text">
+            <svg class="ikon ikon--leistung" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-plan"/></svg>
             <ul class="tags" aria-label="Schwerpunkte"><li>Bestandsaufnahme</li><li>Angebot</li><li>Terminplan</li></ul>
             <h3>Beratung und Planung</h3>
             <p>Wir klären Ziele, Budget und Zeitrahmen und legen einen Plan vor, der sich ohne Überraschungen umsetzen lässt.</p>
-            <a class="knopf leistung__cta" href="#kontakt">Plan besprechen <span class="knopf__pfeil" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></span></a>
+            <a class="knopf leistung__cta" href="#kontakt">Plan besprechen <span class="knopf__pfeil" aria-hidden="true"><svg class="ikon" width="16" height="16" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-pfeil"/></svg></span></a>
           </div>
         </div>
       </article>
@@ -119,10 +134,11 @@
         <div class="leistung__innen">
           <div class="bild bild--b" data-platzhalter="Bild: Leistung 2"></div>
           <div class="leistung__text">
+            <svg class="ikon ikon--leistung" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-bau"/></svg>
             <ul class="tags" aria-label="Schwerpunkte"><li>Vorbereitung</li><li>Ausführung</li><li>Abnahme</li></ul>
             <h3>Umsetzung vor Ort</h3>
             <p>Unser Team arbeitet nach festem Ablauf, hält Termine ein und hinterlässt die Baustelle so, wie man sie sich wünscht.</p>
-            <a class="knopf leistung__cta" href="#kontakt">Termin anfragen <span class="knopf__pfeil" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></span></a>
+            <a class="knopf leistung__cta" href="#kontakt">Termin anfragen <span class="knopf__pfeil" aria-hidden="true"><svg class="ikon" width="16" height="16" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-pfeil"/></svg></span></a>
           </div>
         </div>
       </article>
@@ -130,10 +146,11 @@
         <div class="leistung__innen">
           <div class="bild bild--c" data-platzhalter="Bild: Leistung 3"></div>
           <div class="leistung__text">
+            <svg class="ikon ikon--leistung" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-gest"/></svg>
             <ul class="tags" aria-label="Schwerpunkte"><li>Entwurf</li><li>Materialwahl</li></ul>
             <h3>Gestaltung und Ausbau</h3>
             <p>Wir entwickeln Lösungen, die zu Ihrem Alltag passen, und wählen Materialien, die lange halten und gut aussehen.</p>
-            <a class="knopf leistung__cta" href="#kontakt">Entwurf anfragen <span class="knopf__pfeil" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></span></a>
+            <a class="knopf leistung__cta" href="#kontakt">Entwurf anfragen <span class="knopf__pfeil" aria-hidden="true"><svg class="ikon" width="16" height="16" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-pfeil"/></svg></span></a>
           </div>
         </div>
       </article>
@@ -141,10 +158,11 @@
         <div class="leistung__innen">
           <div class="bild bild--a" data-platzhalter="Bild: Leistung 4"></div>
           <div class="leistung__text">
+            <svg class="ikon ikon--leistung" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-pflege"/></svg>
             <ul class="tags" aria-label="Schwerpunkte"><li>Frühjahrscheck</li><li>Herbstcheck</li><li>Laufende Pflege</li></ul>
             <h3>Pflege und Wartung</h3>
             <p>Regelmäßige Kontrollen halten alles in Form und schützen Ihre Investition über viele Jahre.</p>
-            <a class="knopf leistung__cta" href="#kontakt">Wartung buchen <span class="knopf__pfeil" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></span></a>
+            <a class="knopf leistung__cta" href="#kontakt">Wartung buchen <span class="knopf__pfeil" aria-hidden="true"><svg class="ikon" width="16" height="16" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-pfeil"/></svg></span></a>
           </div>
         </div>
       </article>
@@ -164,28 +182,28 @@
         <div class="bild bild--b" data-platzhalter="Bild: Gemeinsam"></div>
         <div class="karte__innen">
           <p class="karte__satz">Unser Anspruch reicht über das Handwerk hinaus: Es geht um Menschen, Verantwortung und Vertrauen.</p>
-          <a class="knopf" href="#kontakt">Kontakt aufnehmen <span class="knopf__pfeil" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></span></a>
+          <a class="knopf" href="#kontakt">Kontakt aufnehmen <span class="knopf__pfeil" aria-hidden="true"><svg class="ikon" width="16" height="16" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-pfeil"/></svg></span></a>
         </div>
       </div>
       <div class="karte karte--wert" data-zeig>
         <h3>Fairer Preis</h3>
         <p>Klare Angebote mit Festpreis, wo es möglich ist.</p>
-        <svg class="karte__icon" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="6" y="12" width="36" height="26" rx="5"/><path d="M6 20h36"/><circle cx="34" cy="30" r="2.5"/></svg>
+        <svg class="karte__icon" width="48" height="48" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-preis"/></svg>
       </div>
       <div class="karte karte--wert" data-zeig>
         <h3>Weniger Aufwand</h3>
         <p>Ein Ansprechpartner, ein Ablauf, wenig Abstimmung.</p>
-        <svg class="karte__icon" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="24" cy="24" r="17"/><path d="M24 13v11l7 5"/></svg>
+        <svg class="karte__icon" width="48" height="48" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-zeit"/></svg>
       </div>
       <div class="karte karte--wert" data-zeig>
         <h3>Verlässliche Qualität</h3>
         <p>Saubere Ausführung, geprüft vor der Übergabe.</p>
-        <svg class="karte__icon" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M24 6l15 5v11c0 9-6 16-15 20C15 38 9 31 9 22V11z"/><path d="M17 24l5 5 9-10"/></svg>
+        <svg class="karte__icon" width="48" height="48" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-schild"/></svg>
       </div>
       <div class="karte karte--wert" data-zeig>
         <h3>Nachhaltig gedacht</h3>
         <p>Langlebige Materialien und kurze Wege.</p>
-        <svg class="karte__icon" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M10 38C10 20 22 9 40 8c0 18-9 29-26 30"/><path d="M10 38c6-10 14-17 24-22"/></svg>
+        <svg class="karte__icon" width="48" height="48" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-blatt"/></svg>
       </div>
     </div>
   </div>
@@ -197,26 +215,26 @@
       <p class="kicker" data-zeig>Kundenstimmen</p>
       <h2 id="h-stimmen" data-zeig style="--i:1">Das sagen Menschen, mit denen wir gearbeitet haben</h2>
       <p data-zeig style="--i:2">Beispieltexte, vor dem Livegang durch echte, freigegebene Stimmen ersetzen.</p>
-      <a class="knopf" href="#kontakt" data-zeig style="--i:3">Auch Kunde werden <span class="knopf__pfeil" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></span></a>
+      <a class="knopf" href="#kontakt" data-zeig style="--i:3">Auch Kunde werden <span class="knopf__pfeil" aria-hidden="true"><svg class="ikon" width="16" height="16" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-pfeil"/></svg></span></a>
     </div>
   </div>
   <!-- Beispieltexte, keine echten Kundenaussagen -->
   <div class="stimmen__reihen" data-beispiel>
     <div class="reihe" data-richtung="links"><ul class="reihe__spur">
-      <li class="stimme"><p class="stimme__sterne" aria-label="Bewertung: 5 von 5 Sternen">★★★★★</p><blockquote>„Beispieltext: Von der Beratung bis zur Übergabe lief alles geordnet, und wir wussten immer, woran wir sind.“</blockquote><div class="stimme__person"><span class="avatar" aria-hidden="true"></span><p><strong>Vorname Nachname</strong><br>Leistung 1</p></div></li>
-      <li class="stimme"><p class="stimme__sterne" aria-label="Bewertung: 5 von 5 Sternen">★★★★★</p><blockquote>„Beispieltext: Termine wurden gehalten, und das Ergebnis sieht besser aus, als wir es uns vorgestellt hatten.“</blockquote><div class="stimme__person"><span class="avatar" aria-hidden="true"></span><p><strong>Vorname Nachname</strong><br>Leistung 2</p></div></li>
-      <li class="stimme"><p class="stimme__sterne" aria-label="Bewertung: 5 von 5 Sternen">★★★★★</p><blockquote>„Beispieltext: Freundlich, direkt und sauber gearbeitet. Wir würden jederzeit wieder beauftragen.“</blockquote><div class="stimme__person"><span class="avatar" aria-hidden="true"></span><p><strong>Vorname Nachname</strong><br>Leistung 3</p></div></li>
-      <li class="stimme"><p class="stimme__sterne" aria-label="Bewertung: 5 von 5 Sternen">★★★★★</p><blockquote>„Beispieltext: Die Abstimmung war einfach, und bei Rückfragen kam die Antwort am selben Tag.“</blockquote><div class="stimme__person"><span class="avatar" aria-hidden="true"></span><p><strong>Vorname Nachname</strong><br>Leistung 4</p></div></li>
-      <li class="stimme"><p class="stimme__sterne" aria-label="Bewertung: 5 von 5 Sternen">★★★★★</p><blockquote>„Beispieltext: Der Preis war fair, und es gab keine versteckten Posten am Ende.“</blockquote><div class="stimme__person"><span class="avatar" aria-hidden="true"></span><p><strong>Vorname Nachname</strong><br>Leistung 1</p></div></li>
-      <li class="stimme"><p class="stimme__sterne" aria-label="Bewertung: 5 von 5 Sternen">★★★★★</p><blockquote>„Beispieltext: Man merkt, dass hier mit Sorgfalt gearbeitet wird und nicht nach Schema.“</blockquote><div class="stimme__person"><span class="avatar" aria-hidden="true"></span><p><strong>Vorname Nachname</strong><br>Leistung 2</p></div></li>
+      <li class="stimme"><p class="stimme__sterne" aria-label="Bewertung: 5 von 5 Sternen"><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg></p><blockquote>„Beispieltext: Von der Beratung bis zur Übergabe lief alles geordnet, und wir wussten immer, woran wir sind.“</blockquote><div class="stimme__person"><span class="avatar" aria-hidden="true"></span><p><strong>Vorname Nachname</strong><br>Leistung 1</p></div></li>
+      <li class="stimme"><p class="stimme__sterne" aria-label="Bewertung: 5 von 5 Sternen"><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg></p><blockquote>„Beispieltext: Termine wurden gehalten, und das Ergebnis sieht besser aus, als wir es uns vorgestellt hatten.“</blockquote><div class="stimme__person"><span class="avatar" aria-hidden="true"></span><p><strong>Vorname Nachname</strong><br>Leistung 2</p></div></li>
+      <li class="stimme"><p class="stimme__sterne" aria-label="Bewertung: 5 von 5 Sternen"><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg></p><blockquote>„Beispieltext: Freundlich, direkt und sauber gearbeitet. Wir würden jederzeit wieder beauftragen.“</blockquote><div class="stimme__person"><span class="avatar" aria-hidden="true"></span><p><strong>Vorname Nachname</strong><br>Leistung 3</p></div></li>
+      <li class="stimme"><p class="stimme__sterne" aria-label="Bewertung: 5 von 5 Sternen"><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg></p><blockquote>„Beispieltext: Die Abstimmung war einfach, und bei Rückfragen kam die Antwort am selben Tag.“</blockquote><div class="stimme__person"><span class="avatar" aria-hidden="true"></span><p><strong>Vorname Nachname</strong><br>Leistung 4</p></div></li>
+      <li class="stimme"><p class="stimme__sterne" aria-label="Bewertung: 5 von 5 Sternen"><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg></p><blockquote>„Beispieltext: Der Preis war fair, und es gab keine versteckten Posten am Ende.“</blockquote><div class="stimme__person"><span class="avatar" aria-hidden="true"></span><p><strong>Vorname Nachname</strong><br>Leistung 1</p></div></li>
+      <li class="stimme"><p class="stimme__sterne" aria-label="Bewertung: 5 von 5 Sternen"><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg></p><blockquote>„Beispieltext: Man merkt, dass hier mit Sorgfalt gearbeitet wird und nicht nach Schema.“</blockquote><div class="stimme__person"><span class="avatar" aria-hidden="true"></span><p><strong>Vorname Nachname</strong><br>Leistung 2</p></div></li>
     </ul></div>
     <div class="reihe" data-richtung="rechts"><ul class="reihe__spur">
-      <li class="stimme"><p class="stimme__sterne" aria-label="Bewertung: 5 von 5 Sternen">★★★★★</p><blockquote>„Beispieltext: Gute Beratung, die sich nicht aufdrängt. Wir haben uns von Anfang an ernst genommen gefühlt.“</blockquote><div class="stimme__person"><span class="avatar" aria-hidden="true"></span><p><strong>Vorname Nachname</strong><br>Leistung 3</p></div></li>
-      <li class="stimme"><p class="stimme__sterne" aria-label="Bewertung: 5 von 5 Sternen">★★★★★</p><blockquote>„Beispieltext: Ruhig, pünktlich und mit einem klaren Blick fürs Detail.“</blockquote><div class="stimme__person"><span class="avatar" aria-hidden="true"></span><p><strong>Vorname Nachname</strong><br>Leistung 4</p></div></li>
-      <li class="stimme"><p class="stimme__sterne" aria-label="Bewertung: 5 von 5 Sternen">★★★★★</p><blockquote>„Beispieltext: Die laufende Betreuung nimmt uns viel Arbeit ab, und alles bleibt in Ordnung.“</blockquote><div class="stimme__person"><span class="avatar" aria-hidden="true"></span><p><strong>Vorname Nachname</strong><br>Leistung 1</p></div></li>
-      <li class="stimme"><p class="stimme__sterne" aria-label="Bewertung: 5 von 5 Sternen">★★★★★</p><blockquote>„Beispieltext: Alles wurde erklärt, bevor es losging. Das hat uns viel Sicherheit gegeben.“</blockquote><div class="stimme__person"><span class="avatar" aria-hidden="true"></span><p><strong>Vorname Nachname</strong><br>Leistung 2</p></div></li>
-      <li class="stimme"><p class="stimme__sterne" aria-label="Bewertung: 5 von 5 Sternen">★★★★★</p><blockquote>„Beispieltext: Das Team war gut organisiert und hat auf unsere Wünsche flexibel reagiert.“</blockquote><div class="stimme__person"><span class="avatar" aria-hidden="true"></span><p><strong>Vorname Nachname</strong><br>Leistung 3</p></div></li>
-      <li class="stimme"><p class="stimme__sterne" aria-label="Bewertung: 5 von 5 Sternen">★★★★★</p><blockquote>„Beispieltext: Verlässlich von der ersten Anfrage bis zur Schlussrechnung.“</blockquote><div class="stimme__person"><span class="avatar" aria-hidden="true"></span><p><strong>Vorname Nachname</strong><br>Leistung 4</p></div></li>
+      <li class="stimme"><p class="stimme__sterne" aria-label="Bewertung: 5 von 5 Sternen"><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg></p><blockquote>„Beispieltext: Gute Beratung, die sich nicht aufdrängt. Wir haben uns von Anfang an ernst genommen gefühlt.“</blockquote><div class="stimme__person"><span class="avatar" aria-hidden="true"></span><p><strong>Vorname Nachname</strong><br>Leistung 3</p></div></li>
+      <li class="stimme"><p class="stimme__sterne" aria-label="Bewertung: 5 von 5 Sternen"><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg></p><blockquote>„Beispieltext: Ruhig, pünktlich und mit einem klaren Blick fürs Detail.“</blockquote><div class="stimme__person"><span class="avatar" aria-hidden="true"></span><p><strong>Vorname Nachname</strong><br>Leistung 4</p></div></li>
+      <li class="stimme"><p class="stimme__sterne" aria-label="Bewertung: 5 von 5 Sternen"><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg></p><blockquote>„Beispieltext: Die laufende Betreuung nimmt uns viel Arbeit ab, und alles bleibt in Ordnung.“</blockquote><div class="stimme__person"><span class="avatar" aria-hidden="true"></span><p><strong>Vorname Nachname</strong><br>Leistung 1</p></div></li>
+      <li class="stimme"><p class="stimme__sterne" aria-label="Bewertung: 5 von 5 Sternen"><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg></p><blockquote>„Beispieltext: Alles wurde erklärt, bevor es losging. Das hat uns viel Sicherheit gegeben.“</blockquote><div class="stimme__person"><span class="avatar" aria-hidden="true"></span><p><strong>Vorname Nachname</strong><br>Leistung 2</p></div></li>
+      <li class="stimme"><p class="stimme__sterne" aria-label="Bewertung: 5 von 5 Sternen"><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg></p><blockquote>„Beispieltext: Das Team war gut organisiert und hat auf unsere Wünsche flexibel reagiert.“</blockquote><div class="stimme__person"><span class="avatar" aria-hidden="true"></span><p><strong>Vorname Nachname</strong><br>Leistung 3</p></div></li>
+      <li class="stimme"><p class="stimme__sterne" aria-label="Bewertung: 5 von 5 Sternen"><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-stern"/></svg></p><blockquote>„Beispieltext: Verlässlich von der ersten Anfrage bis zur Schlussrechnung.“</blockquote><div class="stimme__person"><span class="avatar" aria-hidden="true"></span><p><strong>Vorname Nachname</strong><br>Leistung 4</p></div></li>
     </ul></div>
   </div>
 </section>
