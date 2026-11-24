@@ -7,79 +7,133 @@
 <meta name="description" content="Zwölf eigenständige, branchenneutrale Startseiten-Vorlagen mit austauschbarer Marke, ohne Build und ohne Fremdserver.">
 <link rel="stylesheet" href="_basis/schriften.css">
 <style>
-:root{--flaeche:#f6f5f1;--text:#16181a;--leise:#53585c;--linie:#dcdad3;--akzent:#1f5c4a}
+:root{--flaeche:#f3f2ed;--karte:#fff;--text:#16181a;--leise:#53585c;--linie:#dcdad3;--akzent:#1f5c4a;--akzent-hell:#e3efe9}
 *{box-sizing:border-box}body{margin:0;background:var(--flaeche);color:var(--text);font-family:'Hanken Grotesk',system-ui,sans-serif;line-height:1.55}
-.wrap{width:min(100% - 2.5rem,82rem);margin-inline:auto}
-header{padding:4rem 0 2rem}h1{font-family:'Schibsted Grotesk',system-ui,sans-serif;font-size:clamp(2.2rem,1.2rem + 4vw,4.2rem);line-height:1.05;letter-spacing:-.02em;margin:0 0 1rem;max-width:20ch}
-header p{max-width:60ch;color:var(--leise);font-size:1.125rem;margin:0}
-.raster{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fill,minmax(min(100%,22rem),1fr));padding-bottom:5rem}
-.karte{display:grid;border:1px solid var(--linie);border-radius:16px;overflow:hidden;background:#fff;color:inherit;text-decoration:none;transition:transform .2s,box-shadow .2s}
-.karte:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(0,0,0,.08)}
+.wrap{width:min(100% - 2.5rem,84rem);margin-inline:auto}
+svg{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+header{padding:3.5rem 0 1.5rem}
+h1{font-family:'Schibsted Grotesk',system-ui,sans-serif;font-size:clamp(2.2rem,1.2rem + 4vw,4rem);line-height:1.04;letter-spacing:-.02em;margin:0 0 1rem}
+header p:not(.hinweis){max-width:62ch;color:var(--leise);font-size:1.125rem;margin:0}
+.hinweis{max-width:none;display:inline-flex;align-items:center;gap:.6rem;margin-top:1.5rem;padding:.6rem 1rem;border-radius:999px;background:var(--akzent-hell);color:var(--akzent);font-weight:600;font-size:.95rem}
+.hinweis svg{font-size:1.2rem}
+.leiste{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;padding:1rem 0 1.5rem}
+.leiste span{color:var(--leise);font-size:.95rem;margin-right:.25rem}
+.leiste button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:999px;border:1px solid var(--linie);background:var(--karte);color:var(--text);cursor:pointer;min-height:44px}
+.leiste button[aria-pressed=true]{background:var(--text);border-color:var(--text);color:#fff}
+.leiste button:focus-visible{outline:3px solid var(--akzent);outline-offset:2px}
+.raster{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fill,minmax(min(100%,22rem),1fr));padding-bottom:5rem}
+.karte{display:grid;grid-template-rows:auto 1fr;border:1px solid var(--linie);border-radius:18px;overflow:hidden;background:var(--karte);color:inherit;text-decoration:none;transition:transform .2s,box-shadow .2s,border-color .2s}
+.karte:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(0,0,0,.1);border-color:#c9c6bc}
 .karte:focus-visible{outline:3px solid var(--akzent);outline-offset:3px}
-.vorschau{display:block;position:relative;height:15rem;overflow:hidden;border-bottom:1px solid var(--linie);background:#e9e7e0}
-.vorschau iframe{position:absolute;left:0;top:0;width:1440px;height:900px;border:0;transform:scale(.3);transform-origin:0 0;pointer-events:none}
-@media (min-width:480px){.vorschau iframe{transform:scale(.3)}}
-.text{display:grid;gap:.25rem;padding:1rem 1.25rem 1.25rem}.text span{color:var(--leise)}.text em{font-style:normal;font-size:1rem;color:var(--akzent);font-weight:600}
+.karte[hidden]{display:none}
+.vorschau{display:block;position:relative;aspect-ratio:16/10;overflow:hidden;border-bottom:1px solid var(--linie);background:#e9e7e0}
+.vorschau iframe{position:absolute;left:0;top:0;width:1440px;height:900px;border:0;transform-origin:0 0;pointer-events:none}
+.auf{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:.6rem;background:rgba(22,24,26,.55);color:#fff;font-weight:600;opacity:0;transition:opacity .2s}
+.auf svg{font-size:1.4rem}
+.karte:hover .auf,.karte:focus-visible .auf{opacity:1}
+@media (hover:none){.auf{inset:auto .75rem .75rem auto;padding:.4rem .8rem;border-radius:999px;background:rgba(22,24,26,.8);opacity:1;font-size:.85rem}.auf svg{font-size:1rem}}
+.text{display:grid;gap:.35rem;padding:1.1rem 1.25rem 1.3rem;align-content:start}
+.kopf{display:flex;justify-content:space-between;align-items:center}
+.kopf b{font-family:'Schibsted Grotesk',system-ui,sans-serif;color:var(--leise);font-size:.9rem;letter-spacing:.06em}
+.ton{font-size:.8rem;padding:.15rem .6rem;border-radius:999px;border:1px solid var(--linie)}
+.ton-dunkel{background:#16181a;color:#fff;border-color:#16181a}
+.ton-beides{background:var(--akzent-hell);color:var(--akzent);border-color:var(--akzent-hell)}
+.text strong{font-family:'Schibsted Grotesk',system-ui,sans-serif;font-size:1.25rem;line-height:1.2}
+.use{color:var(--leise)}
+.text em{font-style:normal;font-size:.95rem;color:var(--akzent);font-weight:600;margin-top:.25rem}
 footer{border-top:1px solid var(--linie);padding:2rem 0 3rem;color:var(--leise)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
 <body>
 <header class="wrap">
   <h1>Template-Bibliothek</h1>
   <p>Zwölf eigenständige Startseiten, branchenneutral. Eine Vorlage wählen, den Ordner samt <code>_basis</code> kopieren, in <code>marke.css</code> die Marke eintragen, Texte und Bilder ersetzen.</p>
+  <p class="hinweis"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>Jede Vorlage öffnet in einem neuen Tab, zuerst in der Desktopansicht.</p>
 </header>
 <main class="wrap">
+  <div class="leiste" role="group" aria-label="Nach Helligkeit filtern">
+    <span>Anzeigen:</span>
+    <button type="button" data-f="alle" aria-pressed="true">Alle</button>
+    <button type="button" data-f="hell" aria-pressed="false">Hell</button>
+    <button type="button" data-f="dunkel" aria-pressed="false">Dunkel</button>
+    <button type="button" data-f="beides" aria-pressed="false">Hell und dunkel</button>
+  </div>
   <div class="raster">
-    <a class="karte" href="t01/index.html">
-      <span class="vorschau" aria-hidden="true"><iframe src="t01/index.html" title="" loading="lazy" tabindex="-1"></iframe></span>
-      <span class="text"><strong>T01 Bildbühne</strong><span>Bau, Energie, Handwerk, Planung: große Bildtafeln, Projekte, Beratung</span><em>hell, Bildtafeln</em></span>
+    <a class="karte" href="ansicht.html?t=t01" target="_blank" rel="noopener" data-ton="hell">
+      <span class="vorschau"><iframe src="t01/index.html" title="" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+        <span class="auf"><span>In neuem Tab öffnen</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></span>
+      <span class="text"><span class="kopf"><b>T01</b><span class="ton ton-hell">Hell</span></span><strong>Bildbühne</strong><span class="use">Bau, Energie, Handwerk, Planung: große Bildtafeln, Projekte, Beratung</span><em>hell, Bildtafeln</em></span>
     </a>
-    <a class="karte" href="t02/index.html">
-      <span class="vorschau" aria-hidden="true"><iframe src="t02/index.html" title="" loading="lazy" tabindex="-1"></iframe></span>
-      <span class="text"><strong>T02 Panorama Hell Dunkel</strong><span>Mehrere Leistungen, erklärungsbedürftiger Ablauf, ruhig und großzügig</span><em>hell und dunkel, Sticky-Ablauf</em></span>
+    <a class="karte" href="ansicht.html?t=t02" target="_blank" rel="noopener" data-ton="beides">
+      <span class="vorschau"><iframe src="t02/index.html" title="" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+        <span class="auf"><span>In neuem Tab öffnen</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></span>
+      <span class="text"><span class="kopf"><b>T02</b><span class="ton ton-beides">Hell und dunkel</span></span><strong>Panorama Hell Dunkel</strong><span class="use">Mehrere Leistungen, erklärungsbedürftiger Ablauf, ruhig und großzügig</span><em>hell und dunkel, Sticky-Ablauf</em></span>
     </a>
-    <a class="karte" href="t03/index.html">
-      <span class="vorschau" aria-hidden="true"><iframe src="t03/index.html" title="" loading="lazy" tabindex="-1"></iframe></span>
-      <span class="text"><strong>T03 Vor Ort Service</strong><span>Einsatz beim Kunden, Paketpreise, Vergleichstabelle, Termin</span><em>hell und dunkel im Wechsel</em></span>
+    <a class="karte" href="ansicht.html?t=t03" target="_blank" rel="noopener" data-ton="beides">
+      <span class="vorschau"><iframe src="t03/index.html" title="" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+        <span class="auf"><span>In neuem Tab öffnen</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></span>
+      <span class="text"><span class="kopf"><b>T03</b><span class="ton ton-beides">Hell und dunkel</span></span><strong>Vor Ort Service</strong><span class="use">Einsatz beim Kunden, Paketpreise, Vergleichstabelle, Termin</span><em>hell und dunkel im Wechsel</em></span>
     </a>
-    <a class="karte" href="t04/index.html">
-      <span class="vorschau" aria-hidden="true"><iframe src="t04/index.html" title="" loading="lazy" tabindex="-1"></iframe></span>
-      <span class="text"><strong>T04 Großwort und Stapelkarten</strong><span>Projekte oder Pakete, bildstark, Stapelkarten</span><em>Großwort, sticky Karten</em></span>
+    <a class="karte" href="ansicht.html?t=t04" target="_blank" rel="noopener" data-ton="hell">
+      <span class="vorschau"><iframe src="t04/index.html" title="" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+        <span class="auf"><span>In neuem Tab öffnen</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></span>
+      <span class="text"><span class="kopf"><b>T04</b><span class="ton ton-hell">Hell</span></span><strong>Großwort und Stapelkarten</strong><span class="use">Projekte oder Pakete, bildstark, Stapelkarten</span><em>Großwort, sticky Karten</em></span>
     </a>
-    <a class="karte" href="t05/index.html">
-      <span class="vorschau" aria-hidden="true"><iframe src="t05/index.html" title="" loading="lazy" tabindex="-1"></iframe></span>
-      <span class="text"><strong>T05 Atelier hell</strong><span>Portfolio und Einzelanbieter mit Projektschau</span><em>hell, ruhig, Akkordeon</em></span>
+    <a class="karte" href="ansicht.html?t=t05" target="_blank" rel="noopener" data-ton="hell">
+      <span class="vorschau"><iframe src="t05/index.html" title="" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+        <span class="auf"><span>In neuem Tab öffnen</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></span>
+      <span class="text"><span class="kopf"><b>T05</b><span class="ton ton-hell">Hell</span></span><strong>Atelier hell</strong><span class="use">Portfolio und Einzelanbieter mit Projektschau</span><em>hell, ruhig, Akkordeon</em></span>
     </a>
-    <a class="karte" href="t06/index.html">
-      <span class="vorschau" aria-hidden="true"><iframe src="t06/index.html" title="" loading="lazy" tabindex="-1"></iframe></span>
-      <span class="text"><strong>T06 Bühne</strong><span>Konferenz, Festival, Schulung mit Programm und Tickets</span><em>dunkel, Countdown, Programm</em></span>
+    <a class="karte" href="ansicht.html?t=t06" target="_blank" rel="noopener" data-ton="dunkel">
+      <span class="vorschau"><iframe src="t06/index.html" title="" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+        <span class="auf"><span>In neuem Tab öffnen</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></span>
+      <span class="text"><span class="kopf"><b>T06</b><span class="ton ton-dunkel">Dunkel</span></span><strong>Bühne</strong><span class="use">Konferenz, Festival, Schulung mit Programm und Tickets</span><em>dunkel, Countdown, Programm</em></span>
     </a>
-    <a class="karte" href="t07/index.html">
-      <span class="vorschau" aria-hidden="true"><iframe src="t07/index.html" title="" loading="lazy" tabindex="-1"></iframe></span>
-      <span class="text"><strong>T07 Beratung Dunkel</strong><span>Beratung, Coaching, wenige gestaffelte Angebote</span><em>dunkel, Reiter, Preise</em></span>
+    <a class="karte" href="ansicht.html?t=t07" target="_blank" rel="noopener" data-ton="dunkel">
+      <span class="vorschau"><iframe src="t07/index.html" title="" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+        <span class="auf"><span>In neuem Tab öffnen</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></span>
+      <span class="text"><span class="kopf"><b>T07</b><span class="ton ton-dunkel">Dunkel</span></span><strong>Beratung Dunkel</strong><span class="use">Beratung, Coaching, wenige gestaffelte Angebote</span><em>dunkel, Reiter, Preise</em></span>
     </a>
-    <a class="karte" href="t08/index.html">
-      <span class="vorschau" aria-hidden="true"><iframe src="t08/index.html" title="" loading="lazy" tabindex="-1"></iframe></span>
-      <span class="text"><strong>T08 Bühnenkarten App</strong><span>App, Dienst mit Plänen oder Programm mit Stufen</span><em>hell mit dunklem Block</em></span>
+    <a class="karte" href="ansicht.html?t=t08" target="_blank" rel="noopener" data-ton="hell">
+      <span class="vorschau"><iframe src="t08/index.html" title="" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+        <span class="auf"><span>In neuem Tab öffnen</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></span>
+      <span class="text"><span class="kopf"><b>T08</b><span class="ton ton-hell">Hell</span></span><strong>Bühnenkarten App</strong><span class="use">App, Dienst mit Plänen oder Programm mit Stufen</span><em>hell mit dunklem Block</em></span>
     </a>
-    <a class="karte" href="t09/index.html">
-      <span class="vorschau" aria-hidden="true"><iframe src="t09/index.html" title="" loading="lazy" tabindex="-1"></iframe></span>
-      <span class="text"><strong>T09 Frische Dienstleistung</strong><span>Privat- und Gewerbekunden, klarer Preisrahmen, Termin</span><em>hell, Laufbänder, Regler</em></span>
+    <a class="karte" href="ansicht.html?t=t09" target="_blank" rel="noopener" data-ton="hell">
+      <span class="vorschau"><iframe src="t09/index.html" title="" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+        <span class="auf"><span>In neuem Tab öffnen</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></span>
+      <span class="text"><span class="kopf"><b>T09</b><span class="ton ton-hell">Hell</span></span><strong>Frische Dienstleistung</strong><span class="use">Privat- und Gewerbekunden, klarer Preisrahmen, Termin</span><em>hell, Laufbänder, Regler</em></span>
     </a>
-    <a class="karte" href="t10/index.html">
-      <span class="vorschau" aria-hidden="true"><iframe src="t10/index.html" title="" loading="lazy" tabindex="-1"></iframe></span>
-      <span class="text"><strong>T10 Stapelseite Beratung</strong><span>Beratung, Planung, Betreuung in Stufen, nüchtern</span><em>dunkel, gestapelte Felder</em></span>
+    <a class="karte" href="ansicht.html?t=t10" target="_blank" rel="noopener" data-ton="dunkel">
+      <span class="vorschau"><iframe src="t10/index.html" title="" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+        <span class="auf"><span>In neuem Tab öffnen</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></span>
+      <span class="text"><span class="kopf"><b>T10</b><span class="ton ton-dunkel">Dunkel</span></span><strong>Stapelseite Beratung</strong><span class="use">Beratung, Planung, Betreuung in Stufen, nüchtern</span><em>dunkel, gestapelte Felder</em></span>
     </a>
-    <a class="karte" href="t11/index.html">
-      <span class="vorschau" aria-hidden="true"><iframe src="t11/index.html" title="" loading="lazy" tabindex="-1"></iframe></span>
-      <span class="text"><strong>T11 Dunkle Dienstleistung</strong><span>Mehrere klar getrennte Leistungen, Stapelkarten</span><em>dunkel, Stapelkarten</em></span>
+    <a class="karte" href="ansicht.html?t=t11" target="_blank" rel="noopener" data-ton="dunkel">
+      <span class="vorschau"><iframe src="t11/index.html" title="" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+        <span class="auf"><span>In neuem Tab öffnen</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></span>
+      <span class="text"><span class="kopf"><b>T11</b><span class="ton ton-dunkel">Dunkel</span></span><strong>Dunkle Dienstleistung</strong><span class="use">Mehrere klar getrennte Leistungen, Stapelkarten</span><em>dunkel, Stapelkarten</em></span>
     </a>
-    <a class="karte" href="t12/index.html">
-      <span class="vorschau" aria-hidden="true"><iframe src="t12/index.html" title="" loading="lazy" tabindex="-1"></iframe></span>
-      <span class="text"><strong>T12 Klarwerk</strong><span>Lokale Dienstleister mit Leistungsliste, Paketen, Terminanfrage</span><em>dunkel und hell, Preise, Laufband</em></span>
+    <a class="karte" href="ansicht.html?t=t12" target="_blank" rel="noopener" data-ton="beides">
+      <span class="vorschau"><iframe src="t12/index.html" title="" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+        <span class="auf"><span>In neuem Tab öffnen</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></span>
+      <span class="text"><span class="kopf"><b>T12</b><span class="ton ton-beides">Hell und dunkel</span></span><strong>Klarwerk</strong><span class="use">Lokale Dienstleister mit Leistungsliste, Paketen, Terminanfrage</span><em>dunkel und hell, Preise, Laufband</em></span>
     </a>
   </div>
 </main>
 <footer class="wrap"><p>Beispieltexte, Beispielzahlen und Platzhalterbilder sind nicht für die Auslieferung. Herkunft und Grenzen: HERKUNFT.md und README.md.</p></footer>
+<script>
+(function(){
+  var v=document.querySelectorAll('.vorschau');
+  function skaliere(){v.forEach(function(e){var f=e.querySelector('iframe');f.style.transform='scale('+(e.clientWidth/1440)+')';});}
+  skaliere();addEventListener('resize',skaliere);
+  document.querySelectorAll('.leiste button').forEach(function(b){b.addEventListener('click',function(){
+    document.querySelectorAll('.leiste button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+    document.querySelectorAll('.karte').forEach(function(k){k.hidden=b.dataset.f!=='alle'&&k.dataset.ton!==b.dataset.f});
+    skaliere();
+  });});
+})();
+</script>
 </body>
 </html>

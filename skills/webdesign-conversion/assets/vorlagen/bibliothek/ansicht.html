@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Vorlagenansicht</title>
+<link rel="stylesheet" href="_basis/schriften.css">
+<style>
+:root{--leiste:#16181a;--text:#fff;--leise:#aeb3b7;--akzent:#7fd1b0;--rahmen:#2a2e31}
+*{box-sizing:border-box}html,body{height:100%;margin:0}
+body{display:flex;flex-direction:column;background:#0e0f10;color:var(--text);font-family:'Hanken Grotesk',system-ui,sans-serif}
+svg{width:1.1em;height:1.1em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.leiste{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding:.5rem 1rem;background:var(--leiste);border-bottom:1px solid var(--rahmen)}
+.leiste a,.leiste button{display:inline-flex;align-items:center;gap:.4rem;min-height:44px;padding:0 .8rem;border-radius:10px;border:1px solid var(--rahmen);background:transparent;color:var(--text);font:inherit;font-size:.95rem;text-decoration:none;cursor:pointer}
+.leiste a:hover,.leiste button:hover{background:#23272a}
+.leiste :focus-visible{outline:3px solid var(--akzent);outline-offset:2px}
+.titel{display:flex;align-items:center;gap:.25rem;flex:1;min-width:14rem}
+.titel strong{font-family:'Schibsted Grotesk',system-ui,sans-serif;font-size:1.05rem;padding:0 .5rem}
+.geraete{display:flex;gap:.25rem}
+.geraete button[aria-pressed=true]{background:var(--akzent);border-color:var(--akzent);color:#0e0f10;font-weight:600}
+.bahn{flex:1;min-height:0;display:flex;justify-content:center;background:#0e0f10;overflow:auto}
+iframe{border:0;background:#fff;width:100%;height:100%;transition:width .25s}
+.bahn[data-g=tablet] iframe{width:820px;max-width:100%;margin:1rem 0;height:calc(100% - 2rem);border-radius:12px}
+.bahn[data-g=mobil] iframe{width:390px;max-width:100%;margin:1rem 0;height:calc(100% - 2rem);border-radius:12px}
+.klein{display:none}
+@media (max-width:700px){.geraete{display:none}}
+@media (prefers-reduced-motion:reduce){iframe{transition:none}}
+</style>
+</head>
+<body>
+<div class="leiste">
+  <a href="index.html" id="zurueck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Alle Vorlagen</a>
+  <div class="titel">
+    <a id="vor" href="#" aria-label="Vorherige Vorlage"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></a>
+    <strong id="name"></strong>
+    <a id="nach" href="#" aria-label="Nächste Vorlage"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+  </div>
+  <div class="geraete" role="group" aria-label="Ansicht">
+    <button type="button" data-g="desktop" aria-pressed="true">Desktop</button>
+    <button type="button" data-g="tablet" aria-pressed="false">Tablet</button>
+    <button type="button" data-g="mobil" aria-pressed="false">Mobil</button>
+  </div>
+  <a id="pur" href="#" target="_blank" rel="noopener">Ohne Leiste öffnen<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+</div>
+<div class="bahn" id="bahn" data-g="desktop"><iframe id="rahmen" title="Vorlage"></iframe></div>
+<script>
+(function(){
+  var N={"t01": "T01 Bildbühne", "t02": "T02 Panorama Hell Dunkel", "t03": "T03 Vor Ort Service", "t04": "T04 Großwort und Stapelkarten", "t05": "T05 Atelier hell", "t06": "T06 Bühne", "t07": "T07 Beratung Dunkel", "t08": "T08 Bühnenkarten App", "t09": "T09 Frische Dienstleistung", "t10": "T10 Stapelseite Beratung", "t11": "T11 Dunkle Dienstleistung", "t12": "T12 Klarwerk"}, K=Object.keys(N);
+  var t=new URLSearchParams(location.search).get('t');
+  if(!N[t]){t=K[0];}
+  var i=K.indexOf(t);
+  document.title=N[t]+' | Vorlagenansicht';
+  document.getElementById('name').textContent=N[t];
+  document.getElementById('rahmen').src=t+'/index.html';
+  document.getElementById('rahmen').title=N[t];
+  document.getElementById('pur').href=t+'/index.html';
+  document.getElementById('vor').href='ansicht.html?t='+K[(i+K.length-1)%K.length];
+  document.getElementById('nach').href='ansicht.html?t='+K[(i+1)%K.length];
+  document.querySelectorAll('.geraete button').forEach(function(b){b.addEventListener('click',function(){
+    document.querySelectorAll('.geraete button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+    document.getElementById('bahn').dataset.g=b.dataset.g;
+  });});
+  addEventListener('keydown',function(e){
+    if(e.target.closest&&e.target.closest('iframe'))return;
+    if(e.key==='ArrowLeft')location.href=document.getElementById('vor').href;
+    if(e.key==='ArrowRight')location.href=document.getElementById('nach').href;
+  });
+})();
+</script>
+</body>
+</html>
