@@ -125,7 +125,7 @@ main .hero__tel{color:var(--text-leise-dunkel)}
 main .ueber__hinweis{position:absolute;left:clamp(.75rem,2vw,1.5rem);bottom:.65rem;font-size:.9375rem;color:var(--text-auf-dunkel)}
 .lauf{margin-top:clamp(2.5rem,6vw,4rem);color:var(--text-leise);--band-abstand:clamp(2rem,5vw,4rem);--band-dauer:36s;opacity:.8}
 .lauf .band__spur{gap:var(--band-abstand)}
-.lauf svg{flex:none}
+.lauf .beispiellogo{--logo-h:2rem}
 main .lauf__hinweis{margin-top:.75rem;font-size:.9375rem;text-align:center}
 @media (min-width:48em){
   .ueber__kopf{grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:3rem}
@@ -243,10 +243,11 @@ main .cta__inhalt .kicker{margin:0;color:var(--text-leise-dunkel)}
 .faq details[open]{background:var(--flaeche-alt)}
 .faq summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:3.5rem;padding:.8rem 1rem .8rem 1.25rem;cursor:pointer;list-style:none;font-family:var(--schrift-titel);font-size:var(--text-l);font-weight:500;line-height:1.2}
 .faq summary::-webkit-details-marker{display:none}
-.plus{position:relative;flex:none;width:2rem;height:2rem;border-radius:50%;border:1px solid currentColor}
-.plus::before,.plus::after{content:"";position:absolute;left:50%;top:50%;width:.75rem;height:1.5px;background:currentColor;transform:translate(-50%,-50%);transition:transform var(--dauer-mittel) var(--kurve)}
-.plus::after{transform:translate(-50%,-50%) rotate(90deg)}
-.faq details[open] .plus::after{transform:translate(-50%,-50%) rotate(0)}
+.plus{display:grid;place-items:center;flex:none;width:2rem;height:2rem;border-radius:50%;border:1px solid currentColor}
+.plus svg{grid-area:1/1;width:1.125rem;height:1.125rem;transition:transform var(--dauer-mittel) var(--kurve),opacity var(--dauer-kurz)}
+.plus__zu{opacity:0;transform:rotate(-90deg)}
+.faq details[open] .plus__auf{opacity:0;transform:rotate(90deg)}
+.faq details[open] .plus__zu{opacity:1;transform:none}
 .faq details p{padding:0 1.25rem 1.25rem;max-width:44rem;animation:wechsel var(--dauer-mittel) var(--kurve) both}
 @keyframes wechsel{from{opacity:0}to{opacity:1}}
 @media (min-width:64em){
@@ -262,7 +263,8 @@ main .cta__inhalt .kicker{margin:0;color:var(--text-leise-dunkel)}
 .kontakt__zweite{display:block;color:var(--akzent)}
 .kontakt__liste{display:grid;gap:.9rem;margin-top:auto}
 .kontakt__liste li{display:grid;gap:.1rem;color:var(--text-auf-dunkel)}
-.kontakt__liste span{font-size:1rem;color:var(--text-leise-dunkel);text-transform:uppercase;letter-spacing:.06em;font-weight:600}
+.kontakt__liste span{display:flex;align-items:center;gap:.5rem;font-size:1rem;color:var(--text-leise-dunkel);text-transform:uppercase;letter-spacing:.06em;font-weight:600}
+.kontakt__liste .kontakt__icon{flex:none;color:var(--akzent)}
 .kontakt__liste a{display:inline-flex;align-items:center;min-height:2.75rem;font-size:var(--text-l);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.25em}
 .kontakt__liste a:hover{color:var(--akzent)}
 .kontakt__form{display:grid;gap:1rem;padding:clamp(1.25rem,3vw,2rem);border-radius:var(--radius-karte);background:var(--flaeche);color:var(--text)}

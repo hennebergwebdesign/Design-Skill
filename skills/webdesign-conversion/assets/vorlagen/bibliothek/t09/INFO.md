@@ -38,3 +38,6 @@ Tokens setzen, Kontrast prüfen (weiße Schrift auf `--akzent` mindestens 4,5 zu
 - Das Aussagenband setzt die Schrift dekorativ und ist für Hilfstechnik ausgeblendet; der Inhalt darf nicht nur dort stehen.
 - Der Markenname im Fuß skaliert nach Breite des Textes "Markenname"; bei längerem Namen Divisor in `.fuss__marke` anpassen.
 - Mehr als drei Leistungen oder Aussagen erfordern Anpassung von HTML und `stil.js`.
+
+## Icons
+Phosphor Icons (MIT), durchgehend Strichstärke fill, als Sprite am Seitenanfang (Lizenz in `../_basis/icons/LICENSE-Phosphor.txt`). Die Laufbänder tragen Aussagen statt Kundenlogos, deshalb gibt es in dieser Vorlage keine Logoleiste; wer eine ergänzt, nimmt die Beispiellogos aus `../_basis/logos/` (Beispiel in `t07`).

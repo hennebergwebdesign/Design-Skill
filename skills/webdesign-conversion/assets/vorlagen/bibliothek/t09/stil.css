@@ -94,9 +94,10 @@ h3{font-size:var(--h3);font-weight:600}
 .vorteile__raster{display:grid;gap:1rem}
 .vorteile__bild{min-height:22rem;order:-1}
 .karte{background:var(--flaeche);border-radius:var(--radius-karte);padding:clamp(1.25rem,3vw,2rem);transition:transform var(--dauer-mittel) var(--kurve),box-shadow var(--dauer-mittel)}
-.vorteil{display:grid;grid-template-columns:auto 1fr;gap:.5rem 1rem;align-items:center;will-change:transform}
+.vorteil{display:grid;grid-template-columns:auto 1fr auto;gap:.5rem 1rem;align-items:center;will-change:transform}
 .vorteil h3{font-size:var(--h3)}
 .vorteil p{grid-column:1/-1;color:var(--text-leise)}
+.vorteil__icon{color:var(--akzent)}
 .vorteil__nr{font-family:var(--schrift-titel);font-weight:600;font-size:clamp(2.5rem,2rem + 2vw,3.5rem);line-height:1;color:var(--akzent)}
 @media (min-width:56rem){
   .vorteile__raster{grid-template-columns:1fr 1.05fr 1fr;grid-template-rows:auto auto;gap:1.5rem}
@@ -120,7 +121,7 @@ h3{font-size:var(--h3);font-weight:600}
 .leistungen__preis small{font-size:var(--text-s);font-weight:400;color:var(--text-auf-dunkel-leise)}
 .leistungen__liste{display:grid;gap:.5rem;align-content:stretch}
 .leistung{display:grid;gap:.5rem;align-content:center;text-align:left;padding:1.25rem 1.5rem;border-radius:calc(var(--radius-karte) - .25rem);color:var(--text-auf-dunkel);transition:background-color var(--dauer-mittel),color var(--dauer-mittel)}
-.leistung__titel{font-family:var(--schrift-titel);font-weight:600;font-size:var(--h3)}
+.leistung__titel{display:flex;align-items:center;gap:.65rem;font-family:var(--schrift-titel);font-weight:600;font-size:var(--h3)}
 .leistung__text{color:var(--text-auf-dunkel-leise)}
 .leistung:hover{background:color-mix(in srgb,var(--text-auf-dunkel) 8%,transparent)}
 .leistung[aria-selected="true"]{background:var(--akzent);color:var(--akzent-text)}
@@ -241,10 +242,10 @@ h3{font-size:var(--h3);font-weight:600}
 .faq__liste summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:3.5rem;padding:1rem 1.25rem;cursor:pointer;list-style:none;font-family:var(--schrift-titel);font-weight:600;font-size:var(--text-l);line-height:1.25}
 .faq__liste summary::-webkit-details-marker{display:none}
 .faq__liste details p{padding:0 1.25rem 1.25rem;color:var(--text-leise);max-width:60ch}
-.plus{position:relative;flex:none;width:2.25rem;height:2.25rem;border-radius:calc(var(--radius-karte) / 3);background:var(--akzent)}
-.plus::before,.plus::after{content:"";position:absolute;left:50%;top:50%;width:.9rem;height:2px;background:var(--akzent-text);transform:translate(-50%,-50%);transition:transform var(--dauer-mittel) var(--kurve)}
-.plus::after{transform:translate(-50%,-50%) rotate(90deg)}
-details[open] .plus::after{transform:translate(-50%,-50%) rotate(0deg)}
+.plus{flex:none;display:grid;color:var(--akzent)}
+.plus svg{grid-area:1/1;width:2.25rem;height:2.25rem}
+.plus__zu,details[open] .plus__auf{display:none}
+details[open] .plus__zu{display:block}
 @media (min-width:56rem){.faq__raster{grid-template-columns:1fr 1.7fr;gap:2rem;align-items:start}.faq__karte{min-height:32rem;position:sticky;top:6rem}}
 
 /* Vorher und Nachher */
@@ -267,7 +268,7 @@ details[open] .plus::after{transform:translate(-50%,-50%) rotate(0deg)}
 .fuss__titel{display:flex;align-items:center;gap:.5rem;font-size:var(--text-l);font-weight:600;margin-bottom:1rem}
 .fuss__titel::before{content:"";width:.5rem;height:.5rem;border-radius:50%;background:var(--akzent-hell)}
 .chips{display:flex;flex-wrap:wrap;gap:.5rem}
-.chips a{display:inline-flex;align-items:center;min-height:2.75rem;padding:.5rem 1.1rem;border-radius:var(--radius-knopf);background:var(--flaeche-dunkel-2);transition:background-color var(--dauer-kurz),color var(--dauer-kurz)}
+.chips a{display:inline-flex;align-items:center;gap:.6rem;min-height:2.75rem;padding:.5rem 1.1rem;border-radius:var(--radius-knopf);background:var(--flaeche-dunkel-2);transition:background-color var(--dauer-kurz),color var(--dauer-kurz)}
 .chips a:hover{background:var(--akzent-hell);color:var(--flaeche-dunkel)}
 .fuss__marke{font-family:var(--schrift-titel);font-weight:700;font-size:calc((100vw - 2 * var(--rand)) / 5.9);line-height:.9;letter-spacing:-.04em;white-space:nowrap;margin-block:clamp(2rem,5vw,3.5rem) 1rem;border-top:1px solid var(--flaeche-dunkel-2);padding-top:clamp(1.5rem,3vw,2.5rem)}
 .fuss__unten{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center;padding-bottom:1.5rem;color:var(--text-auf-dunkel-leise);font-size:var(--text-s)}
