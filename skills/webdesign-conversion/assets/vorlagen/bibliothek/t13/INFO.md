@@ -39,3 +39,6 @@
 - Keine echten Bilder, keine Belege. Formulare senden nichts.
 - Preise, Laufzeiten und Reaktionszeiten sind Beispielangaben.
 - Nicht geprüft: Screenreader, Safari, echte Fotos unter Overlays (Kontrast neu messen).
+
+## Icons und Logos
+Icons: Phosphor Icons (MIT, Lizenz in `_basis/icons/LICENSE-Phosphor.txt`), durchgehend in der Strichstärke duotone (Referenz marketo-agency, runde Symbolflächen). Beispiellogos aus `_basis/logos.css` in der Logoleiste und bei den Erfolgsgeschichten, durch freigegebene Kundenlogos ersetzen.

@@ -39,3 +39,6 @@
 - Farbwahl braucht `:has()` für Vorschau und Farbname. Ohne `:has()` bleibt die erste Farbe sichtbar, die Auswahl bleibt wählbar.
 - Fenster nutzt das `popover`-Attribut (aktuelle Browser).
 - Nicht geprüft: Screenreader, Safari, echte Fotos hinter den Overlays (Kontrast neu messen), Leistung auf schwachen Geräten.
+
+## Icons
+Phosphor Icons (MIT, Lizenz in `_basis/icons/LICENSE-Phosphor.txt`), durchgehend in der Strichstärke light (Referenz vrtxs, feine Linien). Die Vorlage hat keine Logoleiste.

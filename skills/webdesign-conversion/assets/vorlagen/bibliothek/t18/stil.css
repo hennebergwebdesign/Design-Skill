@@ -140,10 +140,7 @@ nav a[aria-current="location"]{text-decoration:none;background:var(--flaeche-dun
 .logos{padding-block:clamp(2.5rem,5vw,4rem);--band-abstand:.75rem;--band-dauer:44s;border-block:1px solid var(--linie);background:var(--flaeche)}
 .logos__hinweis{text-align:center;color:var(--text-leise);font-size:1rem;margin-bottom:1.5rem;padding-inline:var(--rand)}
 .logo-kachel{flex:none;display:flex;align-items:center;justify-content:center;gap:.75rem;width:11rem;height:4.5rem;background:var(--flaeche-alt);border-radius:var(--radius-klein)}
-.logo-kachel i{width:1.75rem;height:1.75rem;border-radius:50%;background:var(--linie)}
-.logo-kachel b{width:4rem;height:.9rem;border-radius:.45rem;background:var(--linie)}
-.logo-kachel:nth-child(even) i{border-radius:.4rem}
-.logo-kachel:nth-child(3n) b{width:3rem}
+.logo-kachel .beispiellogo{--logo-h:1.5rem;color:var(--text-leise);opacity:.85}
 .band__spur{justify-content:flex-start;gap:var(--band-abstand)}
 
 /* 3. Funktionen */

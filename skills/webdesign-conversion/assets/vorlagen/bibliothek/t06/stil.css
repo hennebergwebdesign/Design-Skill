@@ -293,8 +293,8 @@ main .datum{color:var(--text)}
 .fuss .fuss__spruch{color:var(--text-auf-dunkel);max-width:20ch;margin-bottom:1.25rem;font-family:var(--schrift-titel);font-size:var(--h3);font-weight:800;line-height:1.1;text-transform:uppercase;color:var(--text-auf-dunkel)}
 .fuss a{display:inline-block;padding-block:.7rem;color:var(--text-leise-dunkel)}
 .fuss a:hover{color:var(--text-auf-dunkel)}
-.fuss__marke a{text-decoration:underline;text-underline-offset:3px}
-.fuss__marke .ico{width:1.1em;height:1.1em;margin-right:.45rem;vertical-align:-.18em}
+.fuss__marke a{display:inline-flex;align-items:center;gap:.45rem;text-decoration:underline;text-underline-offset:3px}
+.fuss__marke .ico{width:1.1em;height:1.1em}
 .fuss__spalte ul{display:grid}
 .fuss__spalte a{text-transform:uppercase;font-weight:500}
 .news{display:flex;flex-wrap:wrap;gap:.5rem}

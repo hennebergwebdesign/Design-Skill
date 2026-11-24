@@ -41,3 +41,6 @@
 - Die Einblick-Kachel hat bewusst keinen Abspielknopf, ein Knopf ohne Funktion täuscht. Beim Einbau eines Videos einen echten Knopf mit Beschriftung setzen.
 - Ziffern im Ablauf nur ab 62rem sticky, darunter normaler Fluss.
 - Nicht geprüft: Screenreader, Safari und Firefox, echte Fotos hinter den Überlagerungen (Kontrast neu messen), Leistung auf schwachen Geräten (das Aufziehen verändert Größe und Rand eines Elements je Bild).
+
+## Icons
+Phosphor Icons (MIT, Lizenz in `_basis/icons/LICENSE-Phosphor.txt`), durchgehend in der Strichstärke bold (Referenz sportrik, kräftige Symbole). Die Vorlage hat keine Logoleiste.
