@@ -11,3 +11,4 @@
 **Marke wechseln:** Tokens setzen, Kontrast prüfen (Akzenttext auf Akzent, Text auf Flächen), Schriften aus `schriften.css` wählen, Platzhalter (`.bild[data-platzhalter]`) durch echte Bilder ersetzen, Beispieltexte und alle Elemente mit `data-beispiel` durch echte, freigegebene Inhalte ersetzen, Kontaktlinks und Impressum setzen. Ersatz für ein Bild: `<img>` in das `.bild`, im Held den Verlauf in `.bild__innen` entfernen und ein Bild dort einsetzen.
 
 **Grenzen:** Der Akzent hat gegen die Fläche nur etwa 2,5 zu 1, deshalb tragen Knöpfe dunklen Text und der Fokusring ist dunkel. Der Schieber hat keine Automatik und keine Wischgeste. Das Menü braucht JavaScript (ohne: Seitenübersicht im Kontaktbereich). Kein Formular enthalten.
+- Icons: Phosphor Icons (MIT, Lizenz in `_basis/icons/LICENSE-Phosphor.txt`), durchgehend Strichstärke regular, als Inline-Sprite am Seitenanfang

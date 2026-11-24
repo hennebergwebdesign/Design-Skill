@@ -193,7 +193,7 @@ main .ortschip{color:var(--akzent-text)}
 .partnerkarte h3{margin-bottom:1rem;font-size:var(--h3);text-align:center}
 .logoband{--band-abstand:1.25rem;padding:.75rem;border-radius:var(--radius-bild);background:var(--flaeche-tint)}
 .logoband--zurueck .band__spur{animation-direction:reverse}
-.logoband{--logo-h:1.75rem;color:var(--text);opacity:.85}
+.logoband{--logo-h:2rem;color:var(--text);opacity:.85}
 @media (min-width:60em){
   .partner__panel{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:3rem}
   .partner__text{padding-block:.5rem}
