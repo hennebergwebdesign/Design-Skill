@@ -23,7 +23,16 @@ svg{width:1.1em;height:1.1em;fill:none;stroke:currentColor;stroke-width:2;stroke
 iframe{border:0;background:#fff;width:100%;height:100%;transition:width .25s}
 .bahn[data-g=tablet] iframe{width:820px;max-width:100%;margin:1rem 0;height:calc(100% - 2rem);border-radius:12px}
 .bahn[data-g=mobil] iframe{width:390px;max-width:100%;margin:1rem 0;height:calc(100% - 2rem);border-radius:12px}
-.klein{display:none}
+.marke{display:none;flex-wrap:wrap;align-items:flex-end;gap:.75rem 1.25rem;padding:.75rem 1rem;background:#1b1e20;border-bottom:1px solid var(--rahmen)}
+.marke.offen{display:flex}
+.marke label{display:grid;gap:.25rem;font-size:.8rem;color:var(--leise)}
+.marke select,.marke input[type=color]{min-height:44px;border-radius:10px;border:1px solid var(--rahmen);background:#23272a;color:var(--text);font:inherit;font-size:.95rem;padding:0 .6rem}
+.marke input[type=color]{width:64px;padding:.2rem;cursor:pointer}
+.marke button{display:inline-flex;align-items:center;min-height:44px;padding:0 .8rem;border-radius:10px;border:1px solid var(--rahmen);background:transparent;color:var(--text);font:inherit;font-size:.95rem;cursor:pointer}.marke button:hover{background:#23272a}.marke :focus-visible{outline:3px solid var(--akzent);outline-offset:2px}
+.marke .kontrast{font-size:.85rem;color:var(--leise);align-self:center}
+.marke .kontrast.warn{color:#ffb27a}
+.leiste button[aria-expanded=true]{background:#23272a}
+.kopiert{background:var(--akzent)!important;color:#0e1210!important;border-color:var(--akzent)!important}
 @media (max-width:700px){.geraete{display:none}}
 @media (prefers-reduced-motion:reduce){iframe{transition:none}}
 </style>
@@ -41,7 +50,18 @@ iframe{border:0;background:#fff;width:100%;height:100%;transition:width .25s}
     <button type="button" data-g="tablet" aria-pressed="false">Tablet</button>
     <button type="button" data-g="mobil" aria-pressed="false">Mobil</button>
   </div>
+  <button type="button" id="markeknopf" aria-expanded="false" aria-controls="marke">Marke testen</button>
+  <button type="button" id="kopieren" title="Kopiert den Befehl, der Vorlage und _basis in das Projekt kopiert">Vorlage übernehmen</button>
   <a id="pur" href="#" target="_blank" rel="noopener">Ohne Leiste öffnen<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+</div>
+<div class="marke" id="marke">
+  <label>Akzentfarbe<input type="color" id="m-akzent" value="#1d6a52"></label>
+  <label>Schrift Titel<select id="m-titel"><option value="">Original</option></select></label>
+  <label>Schrift Text<select id="m-text"><option value="">Original</option></select></label>
+  <label>Ecken<select id="m-ecken"><option value="">Original</option><option value="eckig">Eckig</option><option value="weich">Weich</option><option value="rund">Rund</option></select></label>
+  <button type="button" id="m-reset">Zurücksetzen</button>
+  <button type="button" id="m-kopieren">Werte für marke.css kopieren</button>
+  <span class="kontrast" id="m-kontrast" role="status"></span>
 </div>
 <div class="bahn" id="bahn" data-g="desktop"><iframe id="rahmen" title="Vorlage"></iframe></div>
 <script>
@@ -61,8 +81,55 @@ iframe{border:0;background:#fff;width:100%;height:100%;transition:width .25s}
     document.querySelectorAll('.geraete button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});
     document.getElementById('bahn').dataset.g=b.dataset.g;
   });});
+
+  /* Übernehmen: Befehl in die Zwischenablage */
+  function kopiere(text,knopf,label){
+    function fertig(){var alt=knopf.textContent;knopf.textContent=label||'Kopiert';knopf.classList.add('kopiert');setTimeout(function(){knopf.textContent=alt;knopf.classList.remove('kopiert')},1600);}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(fertig,function(){alert(text)});}
+    else{var a=document.createElement('textarea');a.value=text;document.body.appendChild(a);a.select();try{document.execCommand('copy');fertig();}catch(e){alert(text)}a.remove();}
+  }
+  var BIB='skills/webdesign-conversion/assets/vorlagen/bibliothek';
+  document.getElementById('kopieren').addEventListener('click',function(){
+    kopiere('cp -r '+BIB+'/{'+t+',_basis} ./',this,'Befehl kopiert');
+  });
+  /* Markenvorschau: überschreibt die Tokens der Vorlage im Iframe, ändert keine Datei */
+  var fr=document.getElementById('rahmen'),panel=document.getElementById('marke'),mk=document.getElementById('markeknopf');
+  var SCHRIFTEN=['Archivo','Bricolage Grotesque','Familjen Grotesk','Hanken Grotesk','Instrument Sans','Lexend','Manrope','Newsreader','Outfit','Schibsted Grotesk'];
+  ['m-titel','m-text'].forEach(function(id){var sel=document.getElementById(id);SCHRIFTEN.forEach(function(n){var o=document.createElement('option');o.value=n;o.textContent=n;sel.appendChild(o);});});
+  mk.addEventListener('click',function(){var an=!panel.classList.contains('offen');panel.classList.toggle('offen',an);mk.setAttribute('aria-expanded',an);});
+  var akzentGeaendert=false;
+  function lum(h){var c=[1,3,5].map(function(i){var v=parseInt(h.substr(i,2),16)/255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4)});return .2126*c[0]+.7152*c[1]+.0722*c[2];}
+  function verh(a,b){var x=lum(a),y=lum(b);return (Math.max(x,y)+.05)/(Math.min(x,y)+.05);}
+  var ECKEN={eckig:['4px','6px','6px'],weich:['12px','16px','16px'],rund:['999px','28px','28px']};
+  function werte(){
+    var r={},ak=document.getElementById('m-akzent').value,ti=document.getElementById('m-titel').value,te=document.getElementById('m-text').value,ec=document.getElementById('m-ecken').value;
+    if(akzentGeaendert){var weiss=verh(ak,'#ffffff'),dunkel=verh(ak,'#111111');r['--akzent']=ak;r['--akzent-text']=weiss>=dunkel?'#ffffff':'#111111';r.kontrast=Math.max(weiss,dunkel);}
+    if(ti)r['--schrift-titel']="'"+ti+"',system-ui,sans-serif";
+    if(te)r['--schrift-text']="'"+te+"',system-ui,sans-serif";
+    if(ec){r['--radius-knopf']=ECKEN[ec][0];r['--radius-karte']=ECKEN[ec][1];r['--radius-bild']=ECKEN[ec][2];}
+    return r;
+  }
+  function anwenden(){
+    var d;try{d=fr.contentDocument;}catch(e){return;}
+    if(!d||!d.head)return;
+    var w=werte(),css='',k=document.getElementById('m-kontrast');
+    Object.keys(w).forEach(function(n){if(n.indexOf('--')===0)css+=n+':'+w[n]+';';});
+    var st=d.getElementById('markenvorschau');
+    if(!css){if(st)st.remove();}else{if(!st){st=d.createElement('style');st.id='markenvorschau';d.head.appendChild(st);}st.textContent=':root{'+css+'}';}
+    if(w.kontrast){k.textContent='Kontrast Akzenttext auf Akzent: '+w.kontrast.toFixed(1)+' zu 1'+(w.kontrast<4.5?' (unter 4,5, nicht ausreichend)':'');k.classList.toggle('warn',w.kontrast<4.5);}else{k.textContent='';k.classList.remove('warn');}
+  }
+  document.getElementById('m-akzent').addEventListener('input',function(){akzentGeaendert=true;anwenden();});
+  ['m-titel','m-text','m-ecken'].forEach(function(id){document.getElementById(id).addEventListener('change',anwenden);});
+  fr.addEventListener('load',anwenden);
+  document.getElementById('m-reset').addEventListener('click',function(){
+    akzentGeaendert=false;['m-titel','m-text','m-ecken'].forEach(function(id){document.getElementById(id).value='';});anwenden();});
+  document.getElementById('m-kopieren').addEventListener('click',function(){
+    var w=werte(),z=[];Object.keys(w).forEach(function(n){if(n.indexOf('--')===0)z.push('  '+n+':'+w[n]+';');});
+    if(!z.length){alert('Noch nichts geändert.');return;}
+    kopiere(':root{\n'+z.join('\n')+'\n}',this,'Werte kopiert');
+  });
   addEventListener('keydown',function(e){
-    if(e.target.closest&&e.target.closest('iframe'))return;
+    if(e.target.closest&&e.target.closest('iframe,select,input'))return;
     if(e.key==='ArrowLeft')location.href=document.getElementById('vor').href;
     if(e.key==='ArrowRight')location.href=document.getElementById('nach').href;
   });

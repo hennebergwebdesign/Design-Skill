@@ -5,7 +5,7 @@ Zwölf eigenständige Startseiten-Vorlagen, branchenneutral, ohne Build, ohne Ab
 
 ## Benutzen
 
-1. `index.html` dieses Ordners im Browser öffnen (Galerie), eine Vorlage wählen.
+1. `index.html` dieses Ordners im Browser öffnen (Galerie, nur für den internen Gebrauch). Filter nach Helligkeit und Branche, Vorschau wahlweise Desktop oder Mobil. Eine Vorlage öffnet in einem neuen Tab (`ansicht.html`), zuerst in der Desktopansicht, mit Umschalter Tablet und Mobil, **Marke testen** (Akzent, Schriften, Ecken live überschreiben, Werte für `marke.css` kopieren, Kontrastwert) und **Vorlage übernehmen** (kopiert den `cp` Befehl für Vorlage und `_basis`). Die Markenvorschau ändert keine Datei.
 2. Den Ordner der Vorlage samt `_basis/` in das Projekt kopieren. Die Pfade sind relativ (`../_basis/…`), beide Ordner bleiben nebeneinander.
 3. **Marke einsetzen:** nur `marke.css` der Vorlage ändern (Farben, Radien, die zwei Schriftzeilen). Alle Gestaltung zieht ihre Werte aus diesen Tokens.
 4. Texte und Bilder ersetzen. Bilder sind Platzhalterflächen (`class="bild" data-platzhalter="…"`), dort `<img>` einsetzen.
@@ -21,6 +21,10 @@ In ein Astro-Projekt übernehmen: `index.html` in eine Seite überführen, `_bas
 * **Keine fertigen Seiten:** Beispieltexte sind Platzhalter, Beispielzahlen sind keine Belege. Rechtstexte, Consent, Formularversand, echte Bilder und
   Meta-Angaben je Kunde fehlen bewusst.
 * **Kein Ersatz für die Prüfung:** Jede Vorlage ist im Browser auf 390 und 1440 Pixel gesehen, nicht auf echten Geräten und nicht mit Screenreader.
+
+## Vorschaubilder erneuern
+
+Die Galerie lädt keine Seiten, sondern kleine JPEG Bilder aus `vorschau/` (24 Dateien, zusammen etwa 0,8 MB, Bilder außerhalb des Bildschirms laden erst beim Scrollen). Nach einer Änderung an einer Vorlage neu erzeugen, aus dem Repository Stamm: `node scripts/bibliothek-vorschau.mjs` (braucht Playwright, startet einen lokalen Server, Bewegung auf reduziert).
 
 ## Bewegung
 
