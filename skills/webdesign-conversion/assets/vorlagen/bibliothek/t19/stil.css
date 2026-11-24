@@ -304,7 +304,8 @@ h3{font-weight:500;letter-spacing:-.01em}
 
 /* Fuß */
 .fuss{margin-top:.5rem;margin-bottom:.5rem;padding-block:clamp(2.5rem,5vw,4rem) 1.5rem}
-.fuss__raster{display:grid;gap:2rem;grid-template-columns:repeat(2,minmax(0,1fr))}
+.fuss__raster{display:grid;gap:1.5rem 2rem;grid-template-columns:minmax(0,1fr)}
+@media (min-width:36em){.fuss__raster{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .fuss__marke{grid-column:1/-1;display:grid;gap:1rem;align-content:start}
 .fuss__logo{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--schrift-titel);font-weight:600;font-size:1.4rem}
 .fuss__notfall{color:var(--text-leise-dunkel)}
