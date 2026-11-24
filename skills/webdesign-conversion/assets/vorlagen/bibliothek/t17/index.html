@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kontor | Vorlage für Beratung mit Kennzahlen</title>
+<meta name="description" content="Beispielseite einer Beratung mit Leitsatz, Leistungen, Fallbeispielen, Stimmen und Fragen. Alle Texte und Zahlen sind Platzhalter.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../_basis/schriften.css">
+<link rel="stylesheet" href="../_basis/basis.css">
+<link rel="stylesheet" href="marke.css">
+<link rel="stylesheet" href="stil.css">
+</head>
+<body>
+<a class="sprunglink" href="#inhalt">Zum Inhalt springen</a>
+
+<header class="kopf">
+  <div class="kopf__innen">
+    <a class="logo" href="#top" aria-label="Kontor, zum Seitenanfang">
+      <svg class="logo__marke" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true"><rect width="32" height="32" rx="7"/><path d="M9 23V9l7 9 7-9v14" fill="none" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Kontor</span>
+    </a>
+    <button class="kopf__burger" type="button" data-menue aria-expanded="false" aria-controls="hauptmenue" aria-label="Menü öffnen">
+      <span class="burger" aria-hidden="true"><i></i><i></i></span>
+    </button>
+    <nav class="kopf__nav" id="hauptmenue" aria-label="Hauptnavigation" data-menue-ziel data-offen="false">
+      <ul>
+        <li><a href="#ueber">Über uns</a></li>
+        <li><a href="#leistungen">Leistungen</a></li>
+        <li><a href="#vorteile">Vorteile</a></li>
+        <li><a href="#faelle">Fallbeispiele</a></li>
+        <li><a href="#fragen">Fragen</a></li>
+        <li class="kopf__tel-eintrag"><a class="kopf__tel" href="tel:+490000000000">+49 000 0000000</a></li>
+      </ul>
+    </nav>
+    <a class="knopf kopf__cta" href="#kontakt">Anfrage</a>
+  </div>
+</header>
+
+<main id="inhalt">
+
+<!-- 1. Held: bleibt stehen, die nächste Fläche schiebt sich darüber, der Held dunkelt dabei ab -->
+<section class="hero" id="top" data-abdunkeln aria-labelledby="hero-titel">
+  <div class="bild bild--dunkel hero__bild" data-platzhalter="Bild: Beraterin im Gespräch, Vollbild" role="img" aria-label="Platzhalter für ein Vollbild"></div>
+  <div class="hero__schutz" aria-hidden="true"></div>
+  <div class="hero__abdunkeln" aria-hidden="true"></div>
+  <div class="wrap hero__innen">
+    <h1 id="hero-titel">Zahlen, auf denen Ihr Betrieb wachsen kann</h1>
+    <div class="hero__unten">
+      <div class="hero__runde">
+        <div class="avatare" aria-hidden="true"><span class="bild bild--dunkel" data-platzhalter=""></span><span class="bild bild--dunkel" data-platzhalter=""></span><span class="bild bild--dunkel" data-platzhalter=""></span></div>
+        <p><span data-beispiel>250 Betriebe</span> begleitet<br><small>Beispielwert, bitte ersetzen</small></p>
+      </div>
+      <div class="hero__aktion">
+        <p>Beispieltext: Wir übersetzen Planung, Finanzierung und Kennzahlen in Entscheidungen, die ein mittelständisches Unternehmen tragen kann.</p>
+        <div class="hero__knoepfe">
+          <a class="knopf" href="#kontakt">Erstgespräch anfragen</a>
+          <a class="knopf knopf--hell" href="#leistungen">Leistungen ansehen</a>
+        </div>
+        <p class="hero__tel">Oder anrufen: <a href="tel:+490000000000">+49 000 0000000</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="deckend">
+
+<!-- 2. Über uns: Leitsatz erhellt sich Wort für Wort, Bild mit Kennzahlen, Laufband -->
+<section class="sektion ueber" id="ueber" aria-labelledby="ueber-titel">
+  <div class="wrap">
+    <div class="ueber__kopf">
+      <div class="ueber__satz">
+        <p class="kicker">Über uns</p>
+        <h2 id="ueber-titel" data-licht>Wir helfen wachsenden Unternehmen, ihre Finanzen so zu ordnen, dass Entscheidungen leichter fallen und Spielraum entsteht.</h2>
+      </div>
+      <p class="ueber__text" data-zeig>Beispieltext: Wir verbinden belastbare Zahlen mit klaren Empfehlungen. Weniger Reibung im Alltag, mehr Liquidität im Plan, ein Fundament für die nächsten Jahre.</p>
+    </div>
+    <div class="ueber__tafel" data-zeig="skala">
+      <div class="bild ueber__bild" data-platzhalter="Bild: Gespräch am Besprechungstisch" role="img" aria-label="Platzhalter für ein Querformatbild"></div>
+      <dl class="ueber__zahlen">
+        <div><dt>Kapitaleffizienz</dt><dd><span data-zaehle="3.5">3,5</span> fach</dd></div>
+        <div><dt>Mandantenbindung</dt><dd><span data-zaehle="98">98</span> %</dd></div>
+      </dl>
+      <p class="ueber__hinweis">Beispielwerte, keine Belege</p>
+    </div>
+    <div class="lauf band" aria-hidden="true">
+      <div class="band__spur">
+        <svg viewBox="0 0 120 32" width="120" height="32"><circle cx="14" cy="16" r="10" fill="currentColor"/><rect x="34" y="8" width="80" height="6" rx="3" fill="currentColor"/><rect x="34" y="19" width="52" height="5" rx="2.5" fill="currentColor"/></svg>
+        <svg viewBox="0 0 120 32" width="120" height="32"><rect x="2" y="4" width="24" height="24" rx="6" fill="currentColor"/><rect x="36" y="9" width="78" height="14" rx="7" fill="currentColor"/></svg>
+        <svg viewBox="0 0 120 32" width="120" height="32"><path d="M16 4 28 28H4z" fill="currentColor"/><rect x="38" y="8" width="76" height="6" rx="3" fill="currentColor"/><rect x="38" y="19" width="40" height="5" rx="2.5" fill="currentColor"/></svg>
+        <svg viewBox="0 0 120 32" width="120" height="32"><circle cx="12" cy="16" r="9" fill="none" stroke="currentColor" stroke-width="4"/><circle cx="30" cy="16" r="9" fill="none" stroke="currentColor" stroke-width="4"/><rect x="50" y="10" width="64" height="12" rx="6" fill="currentColor"/></svg>
+        <svg viewBox="0 0 120 32" width="120" height="32"><rect x="2" y="12" width="30" height="8" rx="4" fill="currentColor"/><rect x="2" y="2" width="14" height="8" rx="4" fill="currentColor"/><rect x="44" y="9" width="70" height="14" rx="7" fill="currentColor"/></svg>
+        <svg viewBox="0 0 120 32" width="120" height="32"><path d="M4 28V8l12 10L28 8v20" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><rect x="42" y="8" width="72" height="6" rx="3" fill="currentColor"/><rect x="42" y="19" width="48" height="5" rx="2.5" fill="currentColor"/></svg>
+      </div>
+      <div class="band__spur">
+        <svg viewBox="0 0 120 32" width="120" height="32"><circle cx="14" cy="16" r="10" fill="currentColor"/><rect x="34" y="8" width="80" height="6" rx="3" fill="currentColor"/><rect x="34" y="19" width="52" height="5" rx="2.5" fill="currentColor"/></svg>
+        <svg viewBox="0 0 120 32" width="120" height="32"><rect x="2" y="4" width="24" height="24" rx="6" fill="currentColor"/><rect x="36" y="9" width="78" height="14" rx="7" fill="currentColor"/></svg>
+        <svg viewBox="0 0 120 32" width="120" height="32"><path d="M16 4 28 28H4z" fill="currentColor"/><rect x="38" y="8" width="76" height="6" rx="3" fill="currentColor"/><rect x="38" y="19" width="40" height="5" rx="2.5" fill="currentColor"/></svg>
+        <svg viewBox="0 0 120 32" width="120" height="32"><circle cx="12" cy="16" r="9" fill="none" stroke="currentColor" stroke-width="4"/><circle cx="30" cy="16" r="9" fill="none" stroke="currentColor" stroke-width="4"/><rect x="50" y="10" width="64" height="12" rx="6" fill="currentColor"/></svg>
+        <svg viewBox="0 0 120 32" width="120" height="32"><rect x="2" y="12" width="30" height="8" rx="4" fill="currentColor"/><rect x="2" y="2" width="14" height="8" rx="4" fill="currentColor"/><rect x="44" y="9" width="70" height="14" rx="7" fill="currentColor"/></svg>
+        <svg viewBox="0 0 120 32" width="120" height="32"><path d="M4 28V8l12 10L28 8v20" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><rect x="42" y="8" width="72" height="6" rx="3" fill="currentColor"/><rect x="42" y="19" width="48" height="5" rx="2.5" fill="currentColor"/></svg>
+      </div>
+    </div>
+    <p class="lauf__hinweis">Platz für die Logos echter Kunden und Partner, nur mit deren Freigabe</p>
+  </div>
+</section>
+
+<!-- 3. Leistungen: Überschrift mit Knopf, drei Bildkarten -->
+<section class="sektion leistungen" id="leistungen" aria-labelledby="leistungen-titel">
+  <div class="wrap">
+    <div class="kopfzeile" data-zeig>
+      <div>
+        <p class="kicker">Leistungen</p>
+        <h2 id="leistungen-titel">Beratung, die zu Ihrem Betrieb passt.</h2>
+      </div>
+      <a class="knopf knopf--dunkel" href="#kontakt">Alle Leistungen besprechen</a>
+    </div>
+    <ul class="leistungen__raster" data-staffel>
+      <li data-zeig>
+        <a class="leistung" href="#kontakt">
+          <span class="bild bild--dunkel leistung__bild" style="--ton:30%" data-platzhalter="Bild: Planung" aria-hidden="true"></span>
+          <span class="leistung__text">
+            <span class="leistung__titel">Liquiditätsplanung</span>
+            <span class="leistung__kurz">Beispieltext: Ein Plan für die nächsten zwölf Monate, den Sie lesen können.</span>
+          </span>
+          <span class="pfeilrund" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16"><path d="M4 12 12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+      </li>
+      <li data-zeig>
+        <a class="leistung" href="#kontakt">
+          <span class="bild bild--dunkel leistung__bild" style="--ton:18%" data-platzhalter="Bild: Gespräch" aria-hidden="true"></span>
+          <span class="leistung__text">
+            <span class="leistung__titel">Finanzierung</span>
+            <span class="leistung__kurz">Beispieltext: Passende Wege zu Kapital, vorbereitet für das Gespräch mit der Bank.</span>
+          </span>
+          <span class="pfeilrund" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16"><path d="M4 12 12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+      </li>
+      <li data-zeig>
+        <a class="leistung" href="#kontakt">
+          <span class="bild bild--dunkel leistung__bild" style="--ton:24%" data-platzhalter="Bild: Unterlagen" aria-hidden="true"></span>
+          <span class="leistung__text">
+            <span class="leistung__titel">Risikosteuerung</span>
+            <span class="leistung__kurz">Beispieltext: Schwankungen früh erkennen, bevor sie Ihre Entscheidungen bestimmen.</span>
+          </span>
+          <span class="pfeilrund" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16"><path d="M4 12 12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- 4. Vorteile: ein hohes Bild, vier Karten -->
+<section class="sektion vorteile" id="vorteile" aria-labelledby="vorteile-titel">
+  <div class="wrap">
+    <div class="mitte-kopf" data-zeig>
+      <p class="kicker">Warum Kontor</p>
+      <h2 id="vorteile-titel">Fachwissen, dem Sie vertrauen können.</h2>
+    </div>
+    <div class="vorteile__raster">
+      <div class="bild vorteile__bild" data-platzhalter="Bild: Beraterin, hochformatig" role="img" aria-label="Platzhalter für ein Hochformatbild" data-zeig="skala"></div>
+      <ul class="vorteile__karten" data-staffel>
+        <li class="wcard" data-zeig>
+          <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3>Kennzahlen, die aktuell sind</h3>
+          <p>Beispieltext: Ein Überblick, der monatlich nachzieht und nicht erst im Jahresabschluss.</p>
+        </li>
+        <li class="wcard" data-zeig>
+          <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
+          <h3>Pläne nach Ihrem Ziel</h3>
+          <p>Beispieltext: Wir beginnen mit dem, was Sie erreichen wollen, und rechnen rückwärts.</p>
+        </li>
+        <li class="wcard" data-zeig>
+          <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.4 3.1 7.6 7.5 9.5 4.4-1.9 7.5-5.1 7.5-9.5V6z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+          <h3>Schutz vor Marktschwankungen</h3>
+          <p>Beispieltext: Szenarien zeigen, was ein schlechtes Quartal wirklich kosten würde.</p>
+        </li>
+        <li class="wcard" data-zeig>
+          <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M4 21v-1.5a5.5 5.5 0 0 1 5.5-5.5h5a5.5 5.5 0 0 1 5.5 5.5V21" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+          <h3>Direkter Draht zu Fachleuten</h3>
+          <p>Beispieltext: Eine feste Ansprechperson, die Ihre Zahlen kennt und zurückruft.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Fallbeispiele: drei Rahmen stapeln sich beim Scrollen -->
+<section class="sektion faelle" id="faelle" aria-labelledby="faelle-titel">
+  <div class="wrap">
+    <div class="mitte-kopf" data-zeig>
+      <p class="kicker">Fallbeispiele</p>
+      <h2 id="faelle-titel">Beispielhafte Ergebnisse für wachsende Betriebe.</h2>
+      <p>Die Fälle unten sind erfundene Beispiele. Ersetzen Sie sie durch freigegebene Projekte.</p>
+    </div>
+    <div class="faelle__stapel" data-stapel>
+      <article class="fall" style="--n:0">
+        <div class="fall__rahmen">
+          <div class="bild fall__bild" style="--ton:34%" data-platzhalter="Bild: Fall 1" role="img" aria-label="Platzhalter für ein Fallbild"></div>
+          <div class="fall__karte">
+            <span class="pfeilrund" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16"><path d="M4 12 12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <p class="fall__branche">Beispiel, Technologie</p>
+            <h3>Umbau eines Abomodells</h3>
+            <p>Beispieltext: Neue Preisstaffel, klarere Rücklagen, ein Plan für das zweite Jahr. Ergebnis hier mit echtem Wert nennen.</p>
+          </div>
+        </div>
+      </article>
+      <article class="fall" style="--n:1">
+        <div class="fall__rahmen fall__rahmen--spiegel">
+          <div class="bild fall__bild" style="--ton:22%" data-platzhalter="Bild: Fall 2" role="img" aria-label="Platzhalter für ein Fallbild"></div>
+          <div class="fall__karte">
+            <span class="pfeilrund" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16"><path d="M4 12 12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <p class="fall__branche">Beispiel, Handel</p>
+            <h3>Lieferkette finanzieren</h3>
+            <p>Beispieltext: Kurze Zahlungsziele auf der einen Seite, lange Lagerzeiten auf der anderen. So wurde die Lücke geschlossen.</p>
+          </div>
+        </div>
+      </article>
+      <article class="fall" style="--n:2">
+        <div class="fall__rahmen">
+          <div class="bild fall__bild" style="--ton:42%" data-platzhalter="Bild: Fall 3" role="img" aria-label="Platzhalter für ein Fallbild"></div>
+          <div class="fall__karte">
+            <span class="pfeilrund" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16"><path d="M4 12 12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <p class="fall__branche">Beispiel, Industrie</p>
+            <h3>Verbindlichkeiten neu ordnen</h3>
+            <p>Beispieltext: Mehrere Kredite, ein Überblick. Die Laufzeiten wurden an die Erträge angepasst.</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 6. Stimmen: eine Aussage je Ansicht, Pfeile -->
+<section class="sektion stimmen" id="stimmen" aria-labelledby="stimmen-titel">
+  <div class="wrap">
+    <p class="kicker" id="stimmen-titel">Stimmen unserer Kunden, als Beispiel</p>
+    <div class="stimmen__bahn" data-karussell>
+      <ul class="stimmen__liste" tabindex="0" aria-label="Beispielstimmen, seitlich blätterbar">
+        <li class="stimme">
+          <blockquote>
+            <p>„Beispieltext: Die Beratung hat unsere Kapitalstruktur geordnet und uns schneller in die Gewinnzone gebracht.“</p>
+            <footer><span class="stimme__name">Beispielperson</span><span class="stimme__rolle">Geschäftsführung, Beispiel GmbH</span></footer>
+          </blockquote>
+        </li>
+        <li class="stimme">
+          <blockquote>
+            <p>„Beispieltext: Endlich Zahlen, die wir ohne Übersetzer lesen. Entscheidungen dauern nur noch halb so lang.“</p>
+            <footer><span class="stimme__name">Beispielperson</span><span class="stimme__rolle">Inhaberin, Beispiel Handel</span></footer>
+          </blockquote>
+        </li>
+        <li class="stimme">
+          <blockquote>
+            <p>„Beispieltext: Der Plan hat gehalten, auch als ein großer Auftrag wegfiel. Das war der Beweis für uns.“</p>
+            <footer><span class="stimme__name">Beispielperson</span><span class="stimme__rolle">Leitung Finanzen, Beispiel Werke</span></footer>
+          </blockquote>
+        </li>
+      </ul>
+      <div class="stimmen__tasten" hidden>
+        <button class="taste" type="button" data-zurueck aria-label="Vorherige Stimme"><svg viewBox="0 0 16 16" width="18" height="18" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <button class="taste" type="button" data-weiter aria-label="Nächste Stimme"><svg viewBox="0 0 16 16" width="18" height="18" aria-hidden="true"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. Aufruf: Bildfläche, die beim Scrollen herunterzoomt -->
+<section class="cta" aria-labelledby="cta-titel">
+  <div class="wrap">
+    <div class="cta__rahmen" data-zoom>
+      <div class="bild bild--dunkel cta__bild" data-platzhalter="Bild: Straße, Stadt, Bewegung" role="img" aria-label="Platzhalter für ein Breitbild"></div>
+      <div class="cta__abdunkeln" aria-hidden="true"></div>
+      <div class="cta__inhalt">
+        <p class="kicker kicker--hell">Der nächste Schritt</p>
+        <h2 id="cta-titel">Bringen Sie Ihre Finanzen in Form.</h2>
+        <p>Beispieltext: Ein Gespräch von 30 Minuten genügt, um zu sehen, wo Sie stehen.</p>
+        <div class="cta__knoepfe">
+          <a class="knopf" href="#kontakt">Erstgespräch anfragen</a>
+          <a class="knopf knopf--hell" href="#leistungen">Leistungen ansehen</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. Zitat auf Bildfläche -->
+<section class="sektion zitat" aria-labelledby="zitat-titel">
+  <div class="wrap">
+    <figure class="zitat__rahmen" data-zeig="skala">
+      <div class="bild bild--dunkel zitat__bild" style="--ton:20%" data-platzhalter="Bild: Beraterin im Profil" role="img" aria-label="Platzhalter für ein Bild"></div>
+      <div class="zitat__abdunkeln" aria-hidden="true"></div>
+      <blockquote class="zitat__text">
+        <h2 id="zitat-titel">„Beratung soll Klarheit schaffen, nicht Fachsprache.“</h2>
+        <figcaption>Beispielperson, Gründung von Kontor (Beispieltext)</figcaption>
+      </blockquote>
+    </figure>
+  </div>
+</section>
+
+<!-- 9. Fragen: Überschrift links, Akkordeon rechts -->
+<section class="sektion fragen" id="fragen" aria-labelledby="fragen-titel">
+  <div class="wrap fragen__raster">
+    <div class="fragen__kopf" data-zeig>
+      <p class="kicker">Fragen und Antworten</p>
+      <h2 id="fragen-titel">Sie haben Fragen? Wir haben Antworten.</h2>
+      <p>Beispieltext: Hier stehen die Fragen, die im Erstgespräch am häufigsten kommen.</p>
+    </div>
+    <div class="faq" data-exklusiv>
+      <details><summary>Für welche Branchen arbeiten Sie?<span class="plus" aria-hidden="true"></span></summary><p>Beispieltext: Wir beraten vor allem wachsende Unternehmen im Mittelstand, vom Handel bis zur Industrie.</p></details>
+      <details><summary>Wie läuft eine Zusammenarbeit ab?<span class="plus" aria-hidden="true"></span></summary><p>Beispieltext: Erstgespräch, Bestandsaufnahme, Plan, dann feste Termine zur Auswertung. Den Ablauf beschreiben Sie hier genau.</p></details>
+      <details><summary>Wann sehe ich erste Ergebnisse?<span class="plus" aria-hidden="true"></span></summary><p>Beispieltext: Nennen Sie hier einen ehrlichen Zeitraum und was bis dahin vorliegt. Keine Zusagen, die Sie nicht halten.</p></details>
+      <details><summary>Helfen Sie auch bei der Kapitalbeschaffung?<span class="plus" aria-hidden="true"></span></summary><p>Beispieltext: Ja, wir bereiten Unterlagen und Gespräche vor. Die Entscheidung trifft immer der Geldgeber.</p></details>
+      <details><summary>Wie sicher sind meine Finanzdaten?<span class="plus" aria-hidden="true"></span></summary><p>Beispieltext: Beschreiben Sie, wo Daten liegen, wer Zugriff hat und welche Vereinbarung gilt. Bitte mit Ihrer Datenschutzstelle abstimmen.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- 10. Kontakt: dunkle Karte mit heller Formularkarte -->
+<section class="sektion kontakt" id="kontakt" aria-labelledby="kontakt-titel">
+  <div class="wrap">
+    <div class="kontakt__karte">
+      <div class="kontakt__text" data-zeig>
+        <p class="kicker kicker--hell">Kontakt</p>
+        <h2 id="kontakt-titel">Bereit für den ersten Schritt? <span class="kontakt__zweite">Schreiben Sie uns.</span></h2>
+        <ul class="kontakt__liste">
+          <li><span>Telefon</span><a href="tel:+490000000000">+49 000 0000000</a></li>
+          <li><span>E-Mail</span><a href="mailto:hallo@beispiel.invalid">hallo@beispiel.invalid</a></li>
+          <li><span>Büro</span>Musterstraße 1, 00000 Musterstadt</li>
+        </ul>
+      </div>
+      <form class="kontakt__form" action="#" method="post" data-beispielformular novalidate data-zeig>
+        <p class="kontakt__lead">Beispieltext: Kurze Nachricht genügt. Wir melden uns innerhalb eines Werktags.</p>
+        <div class="feld"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+        <div class="feld"><label for="f-mail">E-Mail</label><input id="f-mail" name="email" type="email" autocomplete="email" required></div>
+        <div class="feld"><label for="f-tel">Telefon (freiwillig)</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel"></div>
+        <div class="feld"><label for="f-text">Ihr Anliegen</label><textarea id="f-text" name="nachricht" rows="4"></textarea></div>
+        <label class="haken"><input type="checkbox" name="datenschutz" required><span>Ich habe die <a href="#">Datenschutzhinweise</a> gelesen.</span></label>
+        <button class="knopf" type="submit">Anfrage senden</button>
+        <p class="kontakt__status" role="status" data-status>Beispielformular: Es wird nichts gesendet.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</div>
+</main>
+
+<footer class="fuss" data-enthuellen>
+  <div class="wrap">
+    <div class="fuss__oben">
+      <div class="fuss__marke">
+        <a class="logo" href="#top" aria-label="Kontor, zum Seitenanfang">
+          <svg class="logo__marke" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true"><rect width="32" height="32" rx="7"/><path d="M9 23V9l7 9 7-9v14" fill="none" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Kontor</span>
+        </a>
+        <p>Beispieltext: Beratung für Unternehmen, die verlässlich wachsen wollen.</p>
+      </div>
+      <nav class="fuss__spalte" aria-label="Seiten">
+        <h2>Seiten</h2>
+        <ul>
+          <li><a href="#ueber">Über uns</a></li>
+          <li><a href="#leistungen">Leistungen</a></li>
+          <li><a href="#faelle">Fallbeispiele</a></li>
+          <li><a href="#fragen">Fragen</a></li>
+        </ul>
+      </nav>
+      <div class="fuss__spalte">
+        <h2>Kontakt</h2>
+        <ul>
+          <li><a href="mailto:hallo@beispiel.invalid">hallo@beispiel.invalid</a></li>
+          <li><a href="tel:+490000000000">+49 000 0000000</a></li>
+          <li>Musterstraße 1, 00000 Musterstadt</li>
+        </ul>
+      </div>
+      <form class="fuss__news" action="#" method="post" data-beispielformular novalidate>
+        <h2>Neuigkeiten per E-Mail</h2>
+        <div class="news">
+          <label class="sr-nur" for="n-mail">E-Mail-Adresse</label>
+          <input id="n-mail" name="email" type="email" placeholder="E-Mail-Adresse" autocomplete="email">
+          <button class="knopf" type="submit">Anmelden</button>
+        </div>
+        <p class="fuss__status" role="status" data-status>Beispielformular: Es wird nichts gesendet.</p>
+      </form>
+    </div>
+    <div class="fuss__unten">
+      <p>© <span data-jahr>2026</span> Kontor, Beispielunternehmen</p>
+      <ul>
+        <li><a href="#">Impressum</a></li>
+        <li><a href="#">Datenschutz</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="fuss__wort" aria-hidden="true">Kontor</p>
+</footer>
+
+<script src="../_basis/bewegung.js" defer></script>
+<script src="stil.js" defer></script>
+</body>
+</html>

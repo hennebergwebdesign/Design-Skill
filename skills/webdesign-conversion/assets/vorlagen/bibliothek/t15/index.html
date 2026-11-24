@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marke Muster Modell Eins, Produktseite mit Farbwahl und Kauf</title>
+<meta name="description" content="Beispieltext: Produktseite für ein einzelnes Gerät mit Höhepunkten, Technik, Galerie, Farbwahl und Kauf. Vor dem Einsatz durch den echten Text der Marke ersetzen.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../_basis/schriften.css">
+<link rel="stylesheet" href="../_basis/basis.css">
+<link rel="stylesheet" href="marke.css">
+<link rel="stylesheet" href="stil.css">
+</head>
+<body>
+<a class="sprunglink" href="#inhalt">Zum Inhalt springen</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="geraet" viewBox="0 0 200 200">
+      <rect x="48" y="12" width="104" height="176" rx="36" fill="currentColor"/>
+      <rect x="48" y="12" width="104" height="176" rx="36" fill="#000" opacity=".08"/>
+      <circle cx="100" cy="82" r="34" fill="#000" opacity=".16"/>
+      <circle cx="100" cy="82" r="22" fill="#000" opacity=".14"/>
+      <circle cx="100" cy="82" r="8" fill="#fff" opacity=".35"/>
+      <rect x="70" y="138" width="60" height="10" rx="5" fill="#000" opacity=".16"/>
+      <circle cx="100" cy="168" r="6" fill="#fff" opacity=".4"/>
+    </symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-pfeil-l" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-pfeil-r" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-mikro" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3" fill="none" stroke="currentColor" stroke-width="1.75"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></symbol>
+    <symbol id="i-tropfen" viewBox="0 0 24 24"><path d="M12 3.5s6 6.2 6 10.5a6 6 0 0 1-12 0c0-4.3 6-10.5 6-10.5z" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/></symbol>
+    <symbol id="i-akku" viewBox="0 0 24 24"><rect x="3" y="7" width="16" height="10" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.75"/><path d="M21.5 10.5v3M7 10.5v3M11 10.5v3M15 10.5v3" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></symbol>
+    <symbol id="i-feder" viewBox="0 0 24 24"><path d="M5 19c0-8 5-14 14-14 0 9-6 14-14 14zM5 19l8-8" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-verbinden" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-welle" viewBox="0 0 24 24"><path d="M4 10v4M8 7v10M12 4v16M16 8v8M20 10v4" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></symbol>
+    <symbol id="i-lieferung" viewBox="0 0 24 24"><path d="M3 6h11v10H3zM14 9h4l3 3v4h-7" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/><circle cx="7.5" cy="17.5" r="1.8" fill="none" stroke="currentColor" stroke-width="1.75"/><circle cx="17" cy="17.5" r="1.8" fill="none" stroke="currentColor" stroke-width="1.75"/></symbol>
+    <symbol id="i-abholung" viewBox="0 0 24 24"><path d="M4 9l1.5-5h13L20 9M4 9h16v11H4zM4 9a3 3 0 0 0 5.3 1.8A3 3 0 0 0 14.7 10.8 3 3 0 0 0 20 9M10 20v-5h4v5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/></symbol>
+    <symbol id="i-rueckgabe" viewBox="0 0 24 24"><path d="M4 8h14M14 4l4 4-4 4M20 16H6M10 12l-4 4 4 4" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-telefon" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A15 15 0 0 1 4 5a1 1 0 0 1 1-1z" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<header class="kopf" id="top">
+  <div class="kopf__zeile">
+    <a class="kopf__logo" href="#top" aria-label="Marke Muster, nach oben"><span class="kopf__zeichen" aria-hidden="true"><svg viewBox="0 0 32 32" width="28" height="28" focusable="false"><path d="M7 24V8l9 10 9-10v16" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Marke Muster</a>
+    <button class="kopf__burger" type="button" data-menue aria-expanded="false" aria-controls="hauptnav">
+      <span class="sr-nur">Menü öffnen oder schließen</span>
+      <span class="burger" aria-hidden="true"></span>
+    </button>
+    <nav class="kopf__nav" id="hauptnav" aria-label="Hauptnavigation" data-menue-ziel>
+      <ul>
+        <li><a href="#hoehepunkte">Höhepunkte</a></li>
+        <li><a href="#technik">Technik</a></li>
+        <li><a href="#galerie">Galerie</a></li>
+        <li><a href="#faq">Fragen</a></li>
+      </ul>
+      <a class="knopf knopf--klein" href="#kaufen">Vorbestellen</a>
+    </nav>
+  </div>
+  <p class="kopf__band"><span class="kopf__aktion">Beispielaktion: Altgerät eintauschen und Gutschrift sichern. </span>Beratung unter <a href="tel:+498000000000">0800 000 0000</a></p>
+</header>
+
+<main id="inhalt">
+  <!-- 1. Held: Produktreihe läuft beim Scrollen durch, Preis erscheint am Ende -->
+  <section class="held" data-fortschritt aria-labelledby="h-held">
+    <div class="held__buehne">
+      <div class="held__kopf">
+        <p class="held__marke">Marke Muster Modell Eins</p>
+        <h1 id="h-held">Ein Gerät, das sich Ihrem Alltag anpasst</h1>
+      </div>
+      <div class="held__fenster">
+        <div class="held__reihe">
+          <div class="bild produkt produkt--e" data-platzhalter="Bild: Produkt in Nebel" aria-hidden="true"><svg class="geraet"><use href="#geraet"/></svg></div>
+          <div class="bild produkt produkt--a" data-platzhalter="Bild: Produkt in Sand" aria-hidden="true"><svg class="geraet"><use href="#geraet"/></svg></div>
+          <div class="bild produkt produkt--b" data-platzhalter="Bild: Produkt in Koralle" aria-hidden="true"><svg class="geraet"><use href="#geraet"/></svg></div>
+          <div class="bild produkt produkt--c" data-platzhalter="Bild: Produkt in Salbei" aria-hidden="true"><svg class="geraet"><use href="#geraet"/></svg></div>
+          <div class="bild produkt produkt--d" data-platzhalter="Bild: Produkt in Tinte" aria-hidden="true"><svg class="geraet"><use href="#geraet"/></svg></div>
+        </div>
+      </div>
+      <div class="held__fuss">
+        <div class="held__merk held__merk--l"><p class="held__merk-tag">Kraftvoll</p><p>Voller Klang in jedem Raum.</p></div>
+        <div class="preispille"><span class="preispille__preis">249 €</span><a class="knopf knopf--klein" href="#kaufen">Jetzt kaufen</a></div>
+        <div class="held__merk held__merk--r"><p class="held__merk-tag">Leicht</p><p>Passt in jede Tasche.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Höhepunkte: dunkle Tafel wächst, vier Folien wechseln beim Scrollen -->
+  <section class="schritte schritte--hell" id="hoehepunkte" data-schritte data-fortschritt aria-labelledby="h-hoehe">
+    <div class="schritte__buehne">
+      <div class="wrap schritte__kopf">
+        <h2 id="h-hoehe" data-zeig>Die Höhepunkte im Überblick</h2>
+        <a class="knopf knopf--rand knopf--klein" href="#galerie" data-zeig><svg class="knopf__icon" aria-hidden="true" focusable="false"><use href="#i-play"/></svg>Video ansehen</a>
+      </div>
+      <div class="wrap">
+        <ol class="segmente" aria-hidden="true"><li style="--i:0"></li><li style="--i:1"></li><li style="--i:2"></li><li style="--i:3"></li></ol>
+        <div class="tafel">
+        <article class="folie aktiv" data-schritt>
+          <div class="bild folie__bild" data-platzhalter="Bild: Produkt im Einsatz 1" aria-hidden="true"><div class="folie__ton" style="--t:var(--ton-1)"></div></div>
+          <div class="folie__text">
+            <p class="folie__tag">Klang</p>
+            <h3>Klarer Klang</h3>
+            <p>Zwei Treiber und ein Basskörper sorgen für ein Klangbild, das auch bei hoher Lautstärke sauber bleibt.</p>
+          </div>
+        </article>
+        <article class="folie" data-schritt>
+          <div class="bild folie__bild" data-platzhalter="Bild: Produkt im Einsatz 2" aria-hidden="true"><div class="folie__ton" style="--t:var(--ton-3)"></div></div>
+          <div class="folie__text">
+            <p class="folie__tag">Gehäuse</p>
+            <h3>Robust gebaut</h3>
+            <p>Gehäuse aus recyceltem Aluminium und Gewebe, ausgelegt für den Einsatz draußen und im Alltag.</p>
+          </div>
+        </article>
+        <article class="folie" data-schritt>
+          <div class="bild folie__bild" data-platzhalter="Bild: Produkt im Einsatz 3" aria-hidden="true"><div class="folie__ton" style="--t:var(--ton-4)"></div></div>
+          <div class="folie__text">
+            <p class="folie__tag">Akku</p>
+            <h3>Lange Laufzeit</h3>
+            <p>Eine Ladung trägt durch ein ganzes Wochenende, ohne dass Sie ans Kabel denken müssen.</p>
+          </div>
+        </article>
+        <article class="folie" data-schritt>
+          <div class="bild folie__bild" data-platzhalter="Bild: Produkt im Einsatz 4" aria-hidden="true"><div class="folie__ton" style="--t:var(--ton-5)"></div></div>
+          <div class="folie__text">
+            <p class="folie__tag">Verbindung</p>
+            <h3>Einfach verbunden</h3>
+            <p>Mit einem Tippen koppeln, zwei Geräte gleichzeitig verbinden, fertig.</p>
+          </div>
+        </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Die Idee: Wortlicht, zwei Bilder, Absatz -->
+  <section class="sektion idee" aria-labelledby="h-idee">
+    <div class="wrap idee__kopf">
+      <p class="kicker" data-zeig>Die Idee dahinter</p>
+      <h2 id="h-idee" data-licht>Gebaut, um zu bleiben, gemacht, um Freude zu bereiten.</h2>
+    </div>
+    <div class="wrap idee__bilder">
+      <div class="idee__spalte"><div data-parallax="0.06"><div class="bild idee__bild" data-platzhalter="Bild: Hochformat links" aria-hidden="true"><div class="folie__ton" style="--t:var(--ton-2)"></div></div></div></div>
+      <div class="idee__spalte idee__spalte--v"><div data-parallax="-0.04"><div class="bild idee__bild" data-platzhalter="Bild: Hochformat rechts" aria-hidden="true"><div class="folie__ton" style="--t:var(--ton-5)"></div></div></div></div>
+    </div>
+    <div class="wrap idee__fuss">
+      <p class="idee__absatz" data-licht>Sie entscheiden sich nicht nur für ein Gerät, sondern für etwas, das lange hält. Vom Klang über den Komfort bis zur Reparierbarkeit ist jedes Detail auf viele Jahre ausgelegt. Und wenn Sie eine Frage haben, antworten wir persönlich.</p>
+      <a class="knopf" href="#kaufen" data-zeig>Jetzt kaufen</a>
+    </div>
+  </section>
+
+  <!-- 4. Farbabschnitt: Detailtext, großes Bild, drei Servicepunkte -->
+  <section class="farbflaeche" aria-labelledby="h-detail">
+    <div class="wrap farbflaeche__kopf">
+      <h2 id="h-detail" data-zeig>Alles bis ins Detail</h2>
+      <p data-zeig>Das Modell Eins liefert einen präzisen, kräftigen Klang. Jede Komponente ist auf die anderen abgestimmt, damit Sie jeden Ton klar hören, ohne Verzerrung. Alle Angaben sind Beispieltexte.</p>
+    </div>
+    <div class="farbflaeche__bild">
+      <div class="bild farbflaeche__tafel" data-platzhalter="Bild: Großaufnahme" aria-hidden="true"><div class="farbflaeche__innen" data-parallax="0.1"></div></div>
+      <ul class="service wrap">
+        <li data-zeig><svg class="service__icon" aria-hidden="true" focusable="false"><use href="#i-lieferung"/></svg><h3>Kostenloser Versand</h3><p>Zwei Werktage Lieferzeit bei Artikeln auf Lager (Beispiel).</p></li>
+        <li data-zeig><svg class="service__icon" aria-hidden="true" focusable="false"><use href="#i-abholung"/></svg><h3>Abholung im Laden</h3><p>Bestellung im Geschäft in Ihrer Nähe abholen (Beispiel).</p></li>
+        <li data-zeig><svg class="service__icon" aria-hidden="true" focusable="false"><use href="#i-rueckgabe"/></svg><h3>Einfache Rückgabe</h3><p>Rückgabe innerhalb von 14 Tagen nach Erhalt (Beispiel).</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 5. Technik: sechs Karten, Plus öffnet ein Fenster -->
+  <section class="sektion technik" id="technik" aria-labelledby="h-technik">
+    <div class="wrap">
+      <p class="kicker" data-zeig>Technik</p>
+      <h2 id="h-technik" data-zeig>Die Technik, die den Unterschied macht</h2>
+      <ul class="karten" data-staffel>
+        <li class="karte" data-zeig>
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mikro"/></svg>
+          <h3 class="karte__titel">Klare Gespräche, auch bei Wind</h3>
+          <button class="plus" type="button" popovertarget="pop-1" aria-label="Mehr zu: Klare Gespräche, auch bei Wind"><svg class="plus__icon" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></button>
+          <div class="pop" id="pop-1" popover role="dialog" aria-labelledby="pop-1-t">
+            <p class="pop__tag">Gespräche in guter Qualität</p>
+            <h4 class="pop__titel" id="pop-1-t">Klare Gespräche, auch bei Wind</h4>
+            <p>Ein Mikrofon-Array filtert Umgebungsgeräusche heraus. Ob Sie unterwegs telefonieren oder im Garten arbeiten, Ihr Gegenüber versteht Sie ohne Rückfrage. Beispieltext, durch die echten Produktangaben ersetzen.</p>
+            <button class="knopf knopf--hell" type="button" popovertarget="pop-1" popovertargetaction="hide">Schließen</button>
+          </div>
+        </li>
+        <li class="karte" data-zeig>
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-tropfen"/></svg>
+          <h3 class="karte__titel">Spritzwasser und Staub abgewiesen</h3>
+          <button class="plus" type="button" popovertarget="pop-2" aria-label="Mehr zu: Spritzwasser und Staub abgewiesen"><svg class="plus__icon" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></button>
+          <div class="pop" id="pop-2" popover role="dialog" aria-labelledby="pop-2-t">
+            <p class="pop__tag">Robustes Gehäuse</p>
+            <h4 class="pop__titel" id="pop-2-t">Spritzwasser und Staub abgewiesen</h4>
+            <p>Das Gehäuse ist nach Schutzklasse IPX5 gegen Strahlwasser geschützt (Beispielwert). Regen, Spritzer und Staub stören nicht, nur untertauchen sollten Sie das Gerät nicht.</p>
+            <button class="knopf knopf--hell" type="button" popovertarget="pop-2" popovertargetaction="hide">Schließen</button>
+          </div>
+        </li>
+        <li class="karte" data-zeig>
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-akku"/></svg>
+          <h3 class="karte__titel">30 Stunden Laufzeit mit einer Ladung</h3>
+          <button class="plus" type="button" popovertarget="pop-3" aria-label="Mehr zu: 30 Stunden Laufzeit mit einer Ladung"><svg class="plus__icon" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></button>
+          <div class="pop" id="pop-3" popover role="dialog" aria-labelledby="pop-3-t">
+            <p class="pop__tag">Ausdauer</p>
+            <h4 class="pop__titel" id="pop-3-t">30 Stunden Laufzeit mit einer Ladung</h4>
+            <p>Mit einer Ladung spielt das Gerät bis zu 30 Stunden (Beispielwert bei mittlerer Lautstärke). Zehn Minuten am Kabel genügen für etwa drei Stunden.</p>
+            <button class="knopf knopf--hell" type="button" popovertarget="pop-3" popovertargetaction="hide">Schließen</button>
+          </div>
+        </li>
+        <li class="karte" data-zeig>
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-feder"/></svg>
+          <h3 class="karte__titel">Leicht genug für jede Tasche</h3>
+          <button class="plus" type="button" popovertarget="pop-4" aria-label="Mehr zu: Leicht genug für jede Tasche"><svg class="plus__icon" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></button>
+          <div class="pop" id="pop-4" popover role="dialog" aria-labelledby="pop-4-t">
+            <p class="pop__tag">Handlich</p>
+            <h4 class="pop__titel" id="pop-4-t">Leicht genug für jede Tasche</h4>
+            <p>Mit unter 700 Gramm (Beispielwert) und einem integrierten Tragegriff nehmen Sie das Gerät überallhin mit, vom Balkon bis zur Baustelle.</p>
+            <button class="knopf knopf--hell" type="button" popovertarget="pop-4" popovertargetaction="hide">Schließen</button>
+          </div>
+        </li>
+        <li class="karte" data-zeig>
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-verbinden"/></svg>
+          <h3 class="karte__titel">Stabile Verbindung mit zwei Geräten</h3>
+          <button class="plus" type="button" popovertarget="pop-5" aria-label="Mehr zu: Stabile Verbindung mit zwei Geräten"><svg class="plus__icon" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></button>
+          <div class="pop" id="pop-5" popover role="dialog" aria-labelledby="pop-5-t">
+            <p class="pop__tag">Verbindung</p>
+            <h4 class="pop__titel" id="pop-5-t">Stabile Verbindung mit zwei Geräten</h4>
+            <p>Koppeln Sie Telefon und Laptop gleichzeitig. Das Gerät wechselt automatisch zur Quelle, die gerade spielt, und verbindet sich beim Einschalten von selbst.</p>
+            <button class="knopf knopf--hell" type="button" popovertarget="pop-5" popovertargetaction="hide">Schließen</button>
+          </div>
+        </li>
+        <li class="karte" data-zeig>
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-welle"/></svg>
+          <h3 class="karte__titel">Voller Klang ohne Verzerrung</h3>
+          <button class="plus" type="button" popovertarget="pop-6" aria-label="Mehr zu: Voller Klang ohne Verzerrung"><svg class="plus__icon" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></button>
+          <div class="pop" id="pop-6" popover role="dialog" aria-labelledby="pop-6-t">
+            <p class="pop__tag">Klangbild</p>
+            <h4 class="pop__titel" id="pop-6-t">Voller Klang ohne Verzerrung</h4>
+            <p>Zwei Treiber und ein Basskörper teilen sich die Arbeit. Das Klangbild bleibt auch bei hoher Lautstärke sauber und füllt den Raum gleichmäßig.</p>
+            <button class="knopf knopf--hell" type="button" popovertarget="pop-6" popovertargetaction="hide">Schließen</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 6. Galerie: dunkel, Liste links, Panel rechts wechselt beim Scrollen -->
+  <section class="schritte galerie" id="galerie" data-schritte data-fortschritt aria-labelledby="h-galerie">
+    <div class="schritte__buehne">
+      <div class="wrap galerie__raster">
+        <div class="galerie__kopf">
+          <p class="kicker" data-zeig>Produktgalerie</p>
+          <h2 id="h-galerie" data-zeig>Technik mit Charakter, in jedem Detail</h2>
+        </div>
+        <ol class="galerie__liste" aria-label="Galerie wählen">
+          <li><button class="galerie__eintrag" type="button" data-nach="0" aria-current="true">Leichter Aufbau</button></li>
+          <li><button class="galerie__eintrag" type="button" data-nach="1">Ausdauer für Tage</button></li>
+          <li><button class="galerie__eintrag" type="button" data-nach="2">Bedienung per Fingertipp</button></li>
+          <li><button class="galerie__eintrag" type="button" data-nach="3">Klang nach Maß</button></li>
+          <li><button class="galerie__eintrag" type="button" data-nach="4">Verbindung ohne Mühe</button></li>
+          <li><button class="galerie__eintrag" type="button" data-nach="5">Alles in Reichweite</button></li>
+        </ol>
+        <div class="galerie__panele">
+          <article class="panel aktiv" data-schritt>
+            <div class="bild panel__bild" data-platzhalter="Bild: Szene 1" aria-hidden="true"><div class="folie__ton" style="--t:var(--ton-2)"></div></div>
+            <div class="panel__text">
+              <p class="panel__tag">Alltag</p>
+              <h3>Leicht gebaut, fest verarbeitet</h3>
+              <p>Ein Rahmen aus Aluminium hält das Gerät stabil und wiegt dabei wenig. Kanten sind abgerundet, Nähte sauber verarbeitet.</p>
+            </div>
+          </article>
+          <article class="panel" data-schritt>
+            <div class="bild panel__bild" data-platzhalter="Bild: Szene 2" aria-hidden="true"><div class="folie__ton" style="--t:var(--ton-5)"></div></div>
+            <div class="panel__text">
+              <p class="panel__tag">Akku</p>
+              <h3>Mehr Zeit zwischen zwei Ladungen</h3>
+              <p>Der Akku trägt bis zu 30 Stunden (Beispielwert). Eine Anzeige am Gerät zeigt den Stand, ein Signal erinnert rechtzeitig ans Laden.</p>
+            </div>
+          </article>
+          <article class="panel" data-schritt>
+            <div class="bild panel__bild" data-platzhalter="Bild: Szene 3" aria-hidden="true"><div class="folie__ton" style="--t:var(--ton-3)"></div></div>
+            <div class="panel__text">
+              <p class="panel__tag">Steuerung</p>
+              <h3>Alles im Griff, ohne Menü</h3>
+              <p>Lautstärke, Titel und Anrufe steuern Sie über griffige Tasten oben am Gerät. Kein Display, keine Untermenüs.</p>
+            </div>
+          </article>
+          <article class="panel" data-schritt>
+            <div class="bild panel__bild" data-platzhalter="Bild: Szene 4" aria-hidden="true"><div class="folie__ton" style="--t:var(--ton-4)"></div></div>
+            <div class="panel__text">
+              <p class="panel__tag">App</p>
+              <h3>Klang nach Ihrem Geschmack</h3>
+              <p>In der App stellen Sie Höhen und Bässe ein oder wählen ein Profil für Raum, Garten oder Unterwegs.</p>
+            </div>
+          </article>
+          <article class="panel" data-schritt>
+            <div class="bild panel__bild" data-platzhalter="Bild: Szene 5" aria-hidden="true"><div class="folie__ton" style="--t:var(--ton-1)"></div></div>
+            <div class="panel__text">
+              <p class="panel__tag">Kopplung</p>
+              <h3>Schnell gekoppelt, sicher verbunden</h3>
+              <p>Beim ersten Einschalten verbindet sich das Gerät automatisch. Zwei Quellen sind gleichzeitig möglich.</p>
+            </div>
+          </article>
+          <article class="panel" data-schritt>
+            <div class="bild panel__bild" data-platzhalter="Bild: Szene 6" aria-hidden="true"><div class="folie__ton" style="--t:var(--ton-6)"></div></div>
+            <div class="panel__text">
+              <p class="panel__tag">Zubehör</p>
+              <h3>Ein Griff, ein Kabel, fertig</h3>
+              <p>Tragegurt, Ladekabel und Schnellstart liegen bei. Weiteres Zubehör bestellen Sie später dazu.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Alltag: Bildreihe läuft quer durch, Sticky -->
+  <section class="reise" data-fortschritt aria-labelledby="h-reise">
+    <div class="reise__buehne">
+      <div class="wrap reise__kopf">
+        <div><p class="kicker" data-zeig>Im Alltag</p><h2 id="h-reise" data-zeig>Das Modell Eins, wo Sie es brauchen</h2></div>
+        <a class="knopf knopf--rand knopf--klein" href="#kaufen" data-zeig><svg class="knopf__icon" aria-hidden="true" focusable="false"><use href="#i-play"/></svg>Video ansehen</a>
+      </div>
+      <div class="reise__fenster">
+        <ul class="reise__spur" tabindex="0" aria-label="Bildreihe, mit den Pfeiltasten verschiebbar">
+        <li class="szene"><div class="bild szene__bild" data-platzhalter="Bild: Unterwegs" aria-hidden="true"><div class="folie__ton" style="--t:var(--ton-1)"></div></div><p class="szene__name">Unterwegs</p></li>
+        <li class="szene"><div class="bild szene__bild" data-platzhalter="Bild: Am Wasser" aria-hidden="true"><div class="folie__ton" style="--t:var(--ton-2)"></div></div><p class="szene__name">Am Wasser</p></li>
+        <li class="szene"><div class="bild szene__bild" data-platzhalter="Bild: Im Garten" aria-hidden="true"><div class="folie__ton" style="--t:var(--ton-3)"></div></div><p class="szene__name">Im Garten</p></li>
+        <li class="szene"><div class="bild szene__bild" data-platzhalter="Bild: Auf dem Dach" aria-hidden="true"><div class="folie__ton" style="--t:var(--ton-4)"></div></div><p class="szene__name">Auf dem Dach</p></li>
+        <li class="szene"><div class="bild szene__bild" data-platzhalter="Bild: Zu Hause" aria-hidden="true"><div class="folie__ton" style="--t:var(--ton-5)"></div></div><p class="szene__name">Zu Hause</p></li>
+        <li class="szene"><div class="bild szene__bild" data-platzhalter="Bild: Bei der Arbeit" aria-hidden="true"><div class="folie__ton" style="--t:var(--ton-6)"></div></div><p class="szene__name">Bei der Arbeit</p></li>
+        <li class="szene"><div class="bild szene__bild" data-platzhalter="Bild: Am Abend" aria-hidden="true"><div class="folie__ton" style="--t:var(--ton-1)"></div></div><p class="szene__name">Am Abend</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Stimmen: dunkel, quer scrollbar -->
+  <section class="sektion stimmen" aria-labelledby="h-stimmen">
+    <div class="wrap">
+      <p class="kicker" data-zeig>Stimmen</p>
+      <h2 id="h-stimmen" data-zeig>Was Kundinnen und Kunden sagen können</h2>
+      <p class="stimmen__hinweis" data-zeig>Beispielstimmen, vor Livegang durch echte, freigegebene Rückmeldungen ersetzen.</p>
+    </div>
+    <div class="stimmen__fenster">
+      <ul class="stimmen__spur" id="stimmen-spur" tabindex="0" aria-label="Stimmen, mit den Pfeiltasten verschiebbar">
+        <li class="stimme"><blockquote><p>Die Lautstärke reicht für den ganzen Hof, und nach einem Wochenende ist der Akku noch halb voll.</p></blockquote><div class="stimme__person"><span class="stimme__kreis" aria-hidden="true">A</span><div><p class="stimme__name">Beispielstimme A</p><p class="stimme__rolle">Rolle oder Ort der Person</p></div></div></li>
+        <li class="stimme"><blockquote><p>Gut gebaut und einfach zu bedienen. Die App könnte schlanker sein, der Klang überzeugt.</p></blockquote><div class="stimme__person"><span class="stimme__kreis" aria-hidden="true">B</span><div><p class="stimme__name">Beispielstimme B</p><p class="stimme__rolle">Rolle oder Ort der Person</p></div></div></li>
+        <li class="stimme"><blockquote><p>Wir nutzen das Gerät im Betrieb jeden Tag. Es hat bisher jeden Transport mitgemacht.</p></blockquote><div class="stimme__person"><span class="stimme__kreis" aria-hidden="true">C</span><div><p class="stimme__name">Beispielstimme C</p><p class="stimme__rolle">Rolle oder Ort der Person</p></div></div></li>
+        <li class="stimme"><blockquote><p>Die Beratung am Telefon war ehrlich und kurz. Das Gerät hält, was sie gesagt haben.</p></blockquote><div class="stimme__person"><span class="stimme__kreis" aria-hidden="true">D</span><div><p class="stimme__name">Beispielstimme D</p><p class="stimme__rolle">Rolle oder Ort der Person</p></div></div></li>
+      </ul>
+    </div>
+    <div class="wrap stimmen__steuer">
+      <button class="pfeil" type="button" data-richtung="-1" aria-controls="stimmen-spur" aria-label="Vorherige Stimme"><svg class="pfeil__icon" aria-hidden="true" focusable="false"><use href="#i-pfeil-l"/></svg></button>
+      <button class="pfeil" type="button" data-richtung="1" aria-controls="stimmen-spur" aria-label="Nächste Stimme"><svg class="pfeil__icon" aria-hidden="true" focusable="false"><use href="#i-pfeil-r"/></svg></button>
+    </div>
+  </section>
+
+  <!-- 9. Kaufen: Farbwahl, Preis, Lieferumfang -->
+  <section class="sektion kauf" id="kaufen" aria-labelledby="h-kauf">
+    <div class="wrap">
+      <p class="kicker kicker--mitte" data-zeig>Bestellung</p>
+      <h2 class="kauf__titel" id="h-kauf" data-zeig>Ihr Modell Eins: Farbe wählen und bestellen</h2>
+      <form class="kauf__raster" onsubmit="return false" aria-label="Farbwahl und Bestellung (Beispiel ohne Versand)">
+        <div class="kauf__vorschau">
+          <p class="kauf__marke">Marke Muster Modell Eins</p>
+          <div class="bild kauf__bild produkt produkt--gewaehlt" data-platzhalter="Bild: gewählte Farbe" aria-hidden="true"><svg class="geraet"><use href="#geraet"/></svg></div>
+        </div>
+        <div class="kauf__optionen">
+          <fieldset class="farben">
+            <legend>Farbe: <span class="farbnamen"><span class="farbname farbname--a">Sand</span><span class="farbname farbname--b">Koralle</span><span class="farbname farbname--c">Salbei</span><span class="farbname farbname--d">Tinte</span></span></legend>
+            <div class="farben__raster">
+            <label class="farbe"><input class="sr-nur" type="radio" name="farbe" id="farbe-a" value="Sand" checked><span class="farbe__karte"><span class="farbe__punkt farbe__punkt--a" aria-hidden="true"></span><span>Sand</span></span></label>
+            <label class="farbe"><input class="sr-nur" type="radio" name="farbe" id="farbe-b" value="Koralle"><span class="farbe__karte"><span class="farbe__punkt farbe__punkt--b" aria-hidden="true"></span><span>Koralle</span></span></label>
+            <label class="farbe"><input class="sr-nur" type="radio" name="farbe" id="farbe-c" value="Salbei"><span class="farbe__karte"><span class="farbe__punkt farbe__punkt--c" aria-hidden="true"></span><span>Salbei</span></span></label>
+            <label class="farbe"><input class="sr-nur" type="radio" name="farbe" id="farbe-d" value="Tinte"><span class="farbe__karte"><span class="farbe__punkt farbe__punkt--d" aria-hidden="true"></span><span>Tinte</span></span></label>
+            </div>
+          </fieldset>
+          <div class="preiskarte">
+            <p class="preiskarte__label">Preis</p>
+            <p class="preiskarte__preis">249,00 €</p>
+            <p class="preiskarte__rate">oder 42,00 € pro Monat über 6 Monate (Beispiel)</p>
+            <a class="knopf knopf--voll" href="#kontakt">Jetzt kaufen</a>
+          </div>
+          <div class="preiskarte">
+            <h3 class="preiskarte__titel">Das ist dabei</h3>
+            <ul class="liste">
+              <li>Marke Muster Modell Eins</li>
+              <li>Tragegurt</li>
+              <li>USB-C Ladekabel</li>
+              <li>Kurzanleitung</li>
+            </ul>
+          </div>
+        </div>
+      </form>
+      <div class="kauf__unten">
+        <div>
+          <h3>Produktüberblick</h3>
+          <p>Das ultimative Gerät für unterwegs und zu Hause, mit kräftigem Klang, langer Laufzeit und robustem Gehäuse. Gebaut für den ganzen Tag, bedient mit einem Griff. Beispieltext, durch die echte Produktbeschreibung ersetzen.</p>
+        </div>
+        <ul class="service service--klein">
+          <li><svg class="service__icon" aria-hidden="true" focusable="false"><use href="#i-lieferung"/></svg><h3>Versand</h3><p>Kostenlos ab Lager (Beispiel).</p></li>
+          <li><svg class="service__icon" aria-hidden="true" focusable="false"><use href="#i-abholung"/></svg><h3>Abholung</h3><p>Im Laden in Ihrer Nähe (Beispiel).</p></li>
+          <li><svg class="service__icon" aria-hidden="true" focusable="false"><use href="#i-rueckgabe"/></svg><h3>Rückgabe</h3><p>14 Tage Zeit (Beispiel).</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. FAQ -->
+  <section class="sektion faq" id="faq" aria-labelledby="h-faq">
+    <div class="wrap faq__raster">
+      <div>
+        <p class="kicker" data-zeig>Fragen</p>
+        <h2 id="h-faq" data-zeig>Häufige Fragen zum Modell Eins</h2>
+      </div>
+      <div class="faq__liste" data-exklusiv data-staffel>
+        <details data-zeig><summary>Was macht das Modell Eins besonders?</summary><p>Ein robustes Gehäuse, ein Klangbild ohne Verzerrung und eine Laufzeit von bis zu 30 Stunden (Beispielwert). Alle Angaben sind Beispieltexte und werden durch die echten Produktdaten ersetzt.</p></details>
+        <details data-zeig><summary>Wie lange hält der Akku pro Ladung?</summary><p>Bis zu 30 Stunden bei mittlerer Lautstärke (Beispielwert). Zehn Minuten Laden reichen für etwa drei Stunden.</p></details>
+        <details data-zeig><summary>Kann ich zwei Geräte gleichzeitig verbinden?</summary><p>Ja. Telefon und Laptop lassen sich gleichzeitig koppeln, das Gerät wechselt zur Quelle, die gerade spielt.</p></details>
+        <details data-zeig><summary>Hält das Gerät Regen und Spritzwasser aus?</summary><p>Ja, nach Schutzklasse IPX5 (Beispielwert). Untertauchen ist nicht vorgesehen.</p></details>
+        <details data-zeig><summary>Wie funktioniert der Eintausch eines Altgeräts?</summary><p>Sie senden Ihr Altgerät ein oder bringen es in den Laden. Die Gutschrift wird beim Kauf verrechnet. Die Höhe nennen wir Ihnen vorab am Telefon (Beispielaktion).</p></details>
+        <details data-zeig><summary>Welche Garantie und welchen Support gibt es?</summary><p>Zwei Jahre Garantie und ein Ersatzgerät innerhalb von 48 Stunden (Beispielwerte). Fragen beantworten wir persönlich unter 0800 000 0000.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. Abschluss mit Handlung -->
+  <section class="abschluss" id="kontakt" aria-labelledby="h-abschluss">
+    <div class="wrap">
+      <div class="abschluss__tafel bild" data-platzhalter="Bild: Abschlussmotiv">
+        <div class="abschluss__inhalt">
+          <p class="kicker kicker--hell">Jetzt bestellen</p>
+          <h2 id="h-abschluss" data-zeig>Bereit für Ihr Modell Eins?</h2>
+          <p data-zeig>Bestellen Sie online oder lassen Sie sich vorher beraten. Wir antworten persönlich und ohne Warteschleife.</p>
+          <div class="abschluss__knoepfe" data-zeig>
+            <a class="knopf" href="#kaufen">Jetzt kaufen</a>
+            <a class="knopf knopf--hell" href="tel:+498000000000"><svg class="knopf__icon" aria-hidden="true" focusable="false"><use href="#i-telefon"/></svg>0800 000 0000</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="fuss">
+  <div class="wrap fuss__raster">
+    <div>
+      <p class="fuss__marke">Marke Muster</p>
+      <p class="fuss__text">Platzhalteradresse, Musterstraße 1, 00000 Musterstadt. Alle Angaben auf dieser Seite sind Beispiele.</p>
+    </div>
+    <div>
+      <p class="fuss__titel">Fragen? Wir sind erreichbar</p>
+      <p><a class="fuss__tel" href="tel:+498000000000">0800 000 0000</a></p>
+      <p><a href="mailto:beispiel@marke-muster.example">beispiel@marke-muster.example</a></p>
+    </div>
+    <nav aria-label="Fußnavigation">
+      <ul class="fuss__liste">
+        <li><a href="#hoehepunkte">Höhepunkte</a></li>
+        <li><a href="#technik">Technik</a></li>
+        <li><a href="#galerie">Galerie</a></li>
+        <li><a href="#kaufen">Kaufen</a></li>
+        <li><a href="#faq">Fragen</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="wrap fuss__recht">
+    <p>© Marke Muster</p>
+    <ul>
+      <li><a href="#impressum">Impressum</a></li>
+      <li><a href="#datenschutz">Datenschutz</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="../_basis/bewegung.js" defer></script>
+<script src="stil.js" defer></script>
+</body>
+</html>

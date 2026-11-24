@@ -1,0 +1,43 @@
+/* marke.css der Vorlage "Produktbühne": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast geprüft: Text auf Fläche, Weiß auf --akzent und Weiß auf --flaeche-farbe mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#f7f6f3;
+  --flaeche-alt:#ecebe6;
+  --flaeche-karte:#ffffff;
+  --flaeche-dunkel:#13161c;
+  --flaeche-dunkel-2:#1d222b;
+  --flaeche-farbe:#0c4a52;      /* kräftiger Farbabschnitt mit Weiß darauf */
+  --text:#16181d;
+  --text-leise:#555a63;
+  --linie:#d9d8d2;
+  --akzent:#c2381f;
+  --akzent-text:#ffffff;
+  --akzent-hell:#ff8f74;        /* Fokus und Markierung auf dunklem Grund */
+  --schrift-titel:'Lexend',system-ui,sans-serif;
+  --schrift-text:'Manrope',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:20px;
+  --radius-bild:20px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:28px;
+  --radius-klein:14px;
+  --titel-gewicht:500;
+  --titel-spur:-0.025em;
+  --text-auf-dunkel:#ffffff;
+  --text-leise-dunkel:#b8bec9;
+  --linie-dunkel:#333a46;
+  /* Beispielfarben des Produkts (Farbwahl). Später durch die echten Farbvarianten ersetzen. */
+  --farbe-a:#d9b48f;            /* Sand */
+  --farbe-b:#e0705a;            /* Koralle */
+  --farbe-c:#8fae9b;            /* Salbei */
+  --farbe-d:#2c3e50;            /* Tinte */
+  --farbe-e:#c9ccd1;            /* Nebel */
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#3b4c5e;
+  --ton-2:#7b5f4a;
+  --ton-3:#33564f;
+  --ton-4:#6e4b5a;
+  --ton-5:#46586b;
+  --ton-6:#5c5240;
+}

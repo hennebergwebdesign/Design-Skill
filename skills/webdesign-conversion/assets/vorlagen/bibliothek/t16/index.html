@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Markenname, Gartengestaltung und Pflege aus einer Hand</title>
+<meta name="description" content="Beispieltext: Gartengestaltung, Landschaftsbau und Pflege aus einer Hand. Vor dem Einsatz durch den echten Text der Marke ersetzen.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../_basis/schriften.css">
+<link rel="stylesheet" href="../_basis/basis.css">
+<link rel="stylesheet" href="marke.css">
+<link rel="stylesheet" href="stil.css">
+</head>
+<body>
+<a class="sprunglink" href="#inhalt">Zum Inhalt springen</a>
+
+<header class="kopf">
+  <div class="kopf__leiste">
+    <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
+      <svg viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 28V15"/><path d="M16 17C16 10 11 6 4 6c0 7 4 11 12 11Z"/><path d="M16 14c0-6 4-9 12-9 0 6-4 9-12 9Z"/></svg>
+      <span>Markenname</span>
+    </a>
+    <nav class="kopf__nav" id="hauptnav" aria-label="Hauptnavigation" data-menue-ziel>
+      <ul>
+        <li><a href="#top">Start</a></li>
+        <li><a href="#ueber-uns">Über uns</a></li>
+        <li><a href="#leistungen">Leistungen</a></li>
+        <li><a href="#projekte">Projekte</a></li>
+        <li><a href="#tipps">Tipps</a></li>
+      </ul>
+      <a class="knopf knopf--akzent kopf__knopf" href="#kontakt">Beratung buchen</a>
+    </nav>
+    <div class="kopf__aktionen">
+      <!-- Beispielnummer, vor Livegang ersetzen -->
+      <a class="kopf__tel" href="tel:+490000000000" data-beispiel><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg><span class="kopf__tel-text">+49 000 0000000</span><span class="sr-nur kopf__tel-sr">Anrufen</span></a>
+      <button class="kopf__burger" type="button" data-menue aria-expanded="false" aria-controls="hauptnav">
+        <span class="sr-nur">Menü öffnen oder schließen</span>
+        <span class="burger" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="inhalt">
+  <!-- 1. Held: Markenwort riesig, Bühne bleibt stehen, Wort rutscht beim Scrollen unter die Kante -->
+  <section class="held" id="top" aria-labelledby="h-held" data-fortschritt>
+    <div class="held__buehne">
+      <div class="bild held__bild" data-platzhalter="Bild: Garten von oben, Liege im Rasen" aria-hidden="true"><div class="held__bild-innen"></div></div>
+      <div class="held__maske">
+        <h1 class="held__wort" id="h-held">Marke<span class="sr-nur">, Gartengestaltung und Pflege aus einer Hand</span></h1>
+        <svg class="held__blatt" data-parallax="0.12" viewBox="0 0 64 64" aria-hidden="true"><path d="M8 56C6 28 24 8 58 6c2 30-14 50-44 52" fill="currentColor"/><path d="M10 54C22 38 34 26 52 14" fill="none" stroke="var(--flaeche-dunkel)" stroke-width="2" stroke-linecap="round" opacity=".35"/></svg>
+      </div>
+      <div class="held__unten">
+        <p class="held__text">Aus Ihrer Rasenfläche wird ein Ort, den Sie nicht mehr verlassen wollen.</p>
+        <!-- Formular ohne Versand (Beispiel): stil.js verhindert das Absenden -->
+        <form class="held__form" action="#kontakt" data-beispielform>
+          <label class="sr-nur" for="rueckruf">Ihre Telefonnummer für den Rückruf</label>
+          <input id="rueckruf" name="telefon" type="tel" autocomplete="tel" inputmode="tel" placeholder="Telefonnummer für Rückruf" required>
+          <button class="knopf knopf--hell" type="submit">Rückruf erbitten</button>
+          <p class="held__rueckmeldung" role="status" aria-live="polite" hidden></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Vertrauen: Logoleiste als Laufband, Platzhalter -->
+  <div class="logoleiste" aria-hidden="true">
+    <div class="band">
+      <div class="band__spur">
+        <span class="logo-kachel"><i></i><b></b></span><span class="logo-kachel"><i></i><b></b></span><span class="logo-kachel"><i></i><b></b></span><span class="logo-kachel"><i></i><b></b></span><span class="logo-kachel"><i></i><b></b></span><span class="logo-kachel"><i></i><b></b></span>
+      </div>
+      <div class="band__spur" aria-hidden="true">
+        <span class="logo-kachel"><i></i><b></b></span><span class="logo-kachel"><i></i><b></b></span><span class="logo-kachel"><i></i><b></b></span><span class="logo-kachel"><i></i><b></b></span><span class="logo-kachel"><i></i><b></b></span><span class="logo-kachel"><i></i><b></b></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Über uns: Leitsatz mit Wortlicht, Stimme mit Kennzahl, Merkmalsreihe -->
+  <section class="sektion ueber" id="ueber-uns" aria-labelledby="h-ueber">
+    <div class="wrap">
+      <div class="kopfmitte">
+        <p class="kicker" data-zeig><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21V11"/><path d="M12 13C12 8 9 5 4 5c0 5 3 8 8 8Z"/><path d="M12 11c0-4 3-6 8-6 0 4-3 6-8 6Z"/></svg>Wer wir sind</p>
+        <h2 id="h-ueber" data-licht>Was als leere Fläche beginnt, wird Ihr liebster Platz zum Durchatmen. Wir planen Gärten, die mit Ihrem Haus und Ihrem Leben wachsen.</h2>
+        <!-- Beispielwerte, vor Livegang durch echte Angaben ersetzen oder entfernen -->
+        <div class="avatare" data-zeig data-beispiel><span class="avatare__reihe" aria-hidden="true"><span class="bild bild--a"></span><span class="bild bild--b"></span><span class="bild bild--c"></span><span class="bild bild--d"></span></span><span>Beispielwert: Platz für Ihre Bewertungszahl</span></div>
+      </div>
+      <div class="ueber__paar" data-staffel>
+        <div class="streifen bild ueber__bild" data-zeig="skala" data-platzhalter="Bild: Heckenschere im Gras" aria-hidden="true"><div class="projekt__innen bild--a"></div></div>
+        <figure class="stimme" data-zeig data-beispiel>
+          <svg class="sterne" viewBox="0 0 100 18" width="100" height="18" fill="currentColor" role="img" aria-label="5 von 5 Sternen (Beispiel)"><path id="stern" d="M9 1l2.4 5.2 5.6.6-4.2 3.8 1.2 5.6L9 13.4 3.9 16.2l1.2-5.6L1 6.8l5.6-.6Z"/><use href="#stern" x="20"/><use href="#stern" x="40"/><use href="#stern" x="60"/><use href="#stern" x="80"/></svg>
+          <blockquote><p>Beispielzitat: Der Garten ist genau so geworden, wie wir ihn uns vorgestellt haben, und wir wurden die ganze Zeit gut informiert.</p></blockquote>
+          <figcaption>Beispielname, Beispielort</figcaption>
+          <div class="stimme__zahl"><span class="zahl"><span data-zaehle="15">15</span>+</span><span>Jahre Erfahrung (Beispielwert)</span></div>
+        </figure>
+      </div>
+      <ul class="merkmale" data-staffel>
+        <li data-zeig><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 3 3 5-6"/></svg>Geprüfte Qualität</li>
+        <li data-zeig><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 3 3 5-6"/></svg>Pflege rund ums Jahr</li>
+        <li data-zeig><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 3 3 5-6"/></svg>Naturnahe Planung</li>
+        <li data-zeig><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 3 3 5-6"/></svg>Haltbare Ergebnisse</li>
+        <li data-zeig><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 3 3 5-6"/></svg>Saisonale Bepflanzung</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 4. Leistungen: dunkel, seitlich scrollbare Schiene -->
+  <section class="sektion dunkel leistungen" id="leistungen" aria-labelledby="h-leistungen">
+    <div class="wrap">
+      <div class="schienenkopf">
+        <h2 id="h-leistungen" data-zeig>Natur näher ans Haus bringen</h2>
+        <a class="knopf knopf--hell" href="#kontakt" data-zeig>Alle Leistungen</a>
+      </div>
+    </div>
+    <div class="schiene" data-schiene>
+      <ul class="schiene__liste" tabindex="0" aria-label="Leistungen, seitlich scrollbar">
+        <li class="lkarte">
+          <svg class="lkarte__icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 36V20"/><circle cx="20" cy="12" r="8"/><path d="M20 26l-6-4M20 30l6-4"/></svg>
+          <div><h3>Baum und Pflanzenpflege</h3><p>Fachgerechter Schnitt und saisonale Pflege, damit Bäume und Sträucher gesund bleiben und gut aussehen.</p></div>
+        </li>
+        <li class="lkarte">
+          <svg class="lkarte__icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 32h32"/><path d="M8 32c0-6 2-10 4-14M16 32c0-8 1-14 4-20M24 32c0-6 2-12 6-16M32 32c0-3 1-6 3-8"/></svg>
+          <div><h3>Rasenpflege</h3><p>Mähen, Vertikutieren, Düngen und Nachsaat für eine dichte Fläche, die auch im Sommer grün bleibt.</p></div>
+        </li>
+        <li class="lkarte">
+          <svg class="lkarte__icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h30v24H5z"/><path d="M5 22c6-6 10 4 15-2s10-2 15-6"/></svg>
+          <div><h3>Gartengestaltung</h3><p>Von der Skizze bis zur Bepflanzung: Wege, Beete und Sitzplätze, die zu Ihrem Alltag passen.</p></div>
+        </li>
+        <li class="lkarte">
+          <svg class="lkarte__icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 4 30 34H10Z"/><path d="M14 26h12M17 16h6"/></svg>
+          <div><h3>Formschnitt</h3><p>Hecken und Gehölze in Form gebracht, von der klaren Kante bis zur geschwungenen Kugel.</p></div>
+        </li>
+        <li class="lkarte">
+          <svg class="lkarte__icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 5c6 8 10 13 10 19a10 10 0 0 1-20 0c0-6 4-11 10-19Z"/><path d="M15 25a5 5 0 0 0 5 5"/></svg>
+          <div><h3>Bewässerung</h3><p>Automatische Systeme nach Maß, die sparsam arbeiten und Ihre Pflanzen auch im Urlaub versorgen.</p></div>
+        </li>
+      </ul>
+      <div class="wrap schiene__tasten">
+        <button class="taste" type="button" data-zurueck aria-label="Vorherige Leistung"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button class="taste" type="button" data-vor aria-label="Nächste Leistung"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Ablauf: Leitsatz mit Wortlicht, Bildpaar mit Streifenöffnung, drei Schritte -->
+  <section class="sektion ablauf" aria-labelledby="h-ablauf">
+    <div class="wrap">
+      <div class="kopfmitte kopfmitte--links">
+        <p class="kicker" data-zeig><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21V11"/><path d="M12 13C12 8 9 5 4 5c0 5 3 8 8 8Z"/><path d="M12 11c0-4 3-6 8-6 0 4-3 6-8 6Z"/></svg>So arbeiten wir</p>
+        <h2 id="h-ablauf" data-licht>Wir machen aus Ihrer Vorstellung einen Garten, der sich draußen genauso gut anfühlt wie auf dem Plan.</h2>
+      </div>
+      <div class="ablauf__bilder" data-staffel>
+        <div class="streifen bild ablauf__bild ablauf__bild--gross" data-zeig="skala" data-platzhalter="Bild: Formschnitt an der Kugelhecke" aria-hidden="true"><div class="projekt__innen bild--b"></div></div>
+        <div class="streifen bild ablauf__bild ablauf__bild--klein" data-zeig="skala" data-platzhalter="Bild: Wiese mit Bank" aria-hidden="true"><div class="projekt__innen bild--d"></div></div>
+      </div>
+      <ol class="schritte" data-staffel>
+        <li class="schritt" data-zeig>
+          <svg viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h24v16H4z"/><path d="M4 14h24M12 8v16"/></svg>
+          <h3>Aufmaß und Gespräch</h3><p>Wir sehen uns die Fläche an, hören Ihre Wünsche und klären Budget und Zeitplan.</p>
+        </li>
+        <li class="schritt" data-zeig>
+          <svg viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 26 22 10l4 4L10 30H6Z" transform="translate(0 -4)"/><path d="m20 8 2-2 4 4-2 2"/></svg>
+          <h3>Entwurf und Pflanzplan</h3><p>Sie bekommen einen Plan mit Materialien, Pflanzen und festem Preis, bevor wir anfangen.</p>
+        </li>
+        <li class="schritt" data-zeig>
+          <svg viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 28V14"/><path d="M16 16C16 9 12 6 6 6c0 6 3 10 10 10Z"/><path d="M16 13c0-5 3-7 10-7 0 5-3 7-10 7Z"/></svg>
+          <h3>Ausführung und Pflege</h3><p>Unser Team baut nach Plan und übernimmt auf Wunsch die Pflege in den ersten Jahren.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 6. Werte: Überschrift links, vier Karten rechts -->
+  <section class="sektion werte" aria-labelledby="h-werte">
+    <div class="wrap werte__raster">
+      <div class="werte__kopf">
+        <p class="kicker" data-zeig><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21V11"/><path d="M12 13C12 8 9 5 4 5c0 5 3 8 8 8Z"/><path d="M12 11c0-4 3-6 8-6 0 4-3 6-8 6Z"/></svg>Unsere Werte</p>
+        <h2 id="h-werte" data-zeig>Mit Leidenschaft und Präzision entstehen schöne Gärten</h2>
+      </div>
+      <ul class="werte__karten" data-staffel>
+        <li class="wkarte" data-zeig>
+          <svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="16" cy="16" r="11"/><path d="M11 16.5l3.5 3.5L21 12"/></svg>
+          <h3>Sorgfalt im Detail</h3><p>Wir arbeiten sauber, messen nach und räumen auf, bevor wir gehen.</p>
+        </li>
+        <li class="wkarte" data-zeig>
+          <svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 27V13"/><path d="M16 15c0-6-4-9-10-9 0 6 3 9 10 9Z"/><path d="M16 12c0-5 3-7 10-7 0 5-3 7-10 7Z"/></svg>
+          <h3>Natürliche Harmonie</h3><p>Pflanzen und Materialien, die zur Gegend passen und sich einfügen.</p>
+        </li>
+        <li class="wkarte" data-zeig>
+          <svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 25V12l10-7 10 7v13z"/><path d="M13 25v-8h6v8"/></svg>
+          <h3>Verlässliche Betreuung</h3><p>Ein fester Ansprechpartner von der ersten Besichtigung bis zur Pflege.</p>
+        </li>
+        <li class="wkarte" data-zeig>
+          <svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4c5 6 8 10 8 15a8 8 0 0 1-16 0c0-5 3-9 8-15Z"/><path d="M12 20a4 4 0 0 0 4 4"/></svg>
+          <h3>Nachhaltiges Wachstum</h3><p>Sparsam beim Wasser, schonend zum Boden und freundlich zu Insekten.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 7. Projekte: dunkel, Schiene mit großen Karten -->
+  <section class="sektion dunkel projekte" id="projekte" aria-labelledby="h-projekte">
+    <div class="wrap">
+      <div class="schienenkopf">
+        <p class="kicker kicker--dunkel" data-zeig><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21V11"/><path d="M12 13C12 8 9 5 4 5c0 5 3 8 8 8Z"/><path d="M12 11c0-4 3-6 8-6 0 4-3 6-8 6Z"/></svg>Unsere Projekte</p>
+        <h2 id="h-projekte" data-zeig>Mit Sorgfalt und Ziel gebaut</h2>
+      </div>
+    </div>
+    <div class="schiene" data-schiene>
+      <!-- Projektnamen und Texte sind Beispiele -->
+      <ul class="schiene__liste schiene__liste--projekte" tabindex="0" aria-label="Projekte, seitlich scrollbar">
+        <li class="pkarte" data-beispiel>
+          <div class="bild pkarte__bild" data-platzhalter="Bild: Rasen mit Mähroboter" aria-hidden="true"><div class="projekt__innen bild--a"></div></div>
+          <div class="pkarte__text"><h3>Beispielprojekt: Der ruhige Hinterhof</h3><p>Aus einer ungenutzten Fläche wird ein Garten mit heimischen Stauden, Natursteinweg und einem Sitzplatz.</p><a class="knopf knopf--hell" href="#kontakt">Details ansehen</a></div>
+        </li>
+        <li class="pkarte" data-beispiel>
+          <div class="bild pkarte__bild" data-platzhalter="Bild: Kegelhecken im Beet" aria-hidden="true"><div class="projekt__innen bild--b"></div></div>
+          <div class="pkarte__text"><h3>Beispielprojekt: Formschnitt mit Charakter</h3><p>Gestutzte Hecken und Zierbäume geben einem langen Grundstück Rhythmus und Struktur.</p><a class="knopf knopf--hell" href="#kontakt">Details ansehen</a></div>
+        </li>
+        <li class="pkarte" data-beispiel>
+          <div class="bild pkarte__bild" data-platzhalter="Bild: Hecke an der Grundstücksgrenze" aria-hidden="true"><div class="projekt__innen bild--c"></div></div>
+          <div class="pkarte__text"><h3>Beispielprojekt: Grün als Sichtschutz</h3><p>Eine dichte Hecke ersetzt den Zaun und bietet Rückzug, ohne das Grundstück zu verschließen.</p><a class="knopf knopf--hell" href="#kontakt">Details ansehen</a></div>
+        </li>
+      </ul>
+      <div class="wrap schiene__tasten">
+        <button class="taste" type="button" data-zurueck aria-label="Vorheriges Projekt"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button class="taste" type="button" data-vor aria-label="Nächstes Projekt"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Stimmen -->
+  <section class="sektion stimmen" aria-labelledby="h-stimmen">
+    <div class="wrap">
+      <div class="kopfmitte">
+        <p class="kicker" data-zeig><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21V11"/><path d="M12 13C12 8 9 5 4 5c0 5 3 8 8 8Z"/><path d="M12 11c0-4 3-6 8-6 0 4-3 6-8 6Z"/></svg>Kundenstimmen</p>
+        <h2 id="h-stimmen" data-zeig>Gärten, die Eindruck hinterlassen</h2>
+      </div>
+      <!-- Zitate und Namen sind Beispieltexte, keine echten Kunden -->
+      <div class="stimmen__raster" data-staffel>
+        <div class="streifen bild stimmen__bild" data-zeig="skala" data-platzhalter="Bild: Porträt Kundin oder Kunde" aria-hidden="true"><div class="projekt__innen bild--d"></div></div>
+        <figure class="stimme stimme--dunkel" data-zeig data-beispiel>
+          <svg class="sterne" viewBox="0 0 100 18" width="100" height="18" fill="currentColor" role="img" aria-label="5 von 5 Sternen (Beispiel)"><use href="#stern"/><use href="#stern" x="20"/><use href="#stern" x="40"/><use href="#stern" x="60"/><use href="#stern" x="80"/></svg>
+          <blockquote><p>Beispielzitat: Das Team hat unseren Garten von Grund auf neu gedacht, termingerecht gebaut und uns bei jeder Entscheidung beraten.</p></blockquote>
+          <figcaption>Beispielname, Beispielort</figcaption>
+        </figure>
+        <figure class="stimme" data-zeig data-beispiel>
+          <svg class="sterne" viewBox="0 0 100 18" width="100" height="18" fill="currentColor" role="img" aria-label="5 von 5 Sternen (Beispiel)"><use href="#stern"/><use href="#stern" x="20"/><use href="#stern" x="40"/><use href="#stern" x="60"/><use href="#stern" x="80"/></svg>
+          <blockquote><p>Beispielzitat: Seit der Pflege im Abo sieht der Garten das ganze Jahr gepflegt aus, und wir haben keinen Aufwand mehr.</p></blockquote>
+          <figcaption>Beispielname, Beispielort</figcaption>
+        </figure>
+        <figure class="stimme" data-zeig data-beispiel>
+          <svg class="sterne" viewBox="0 0 100 18" width="100" height="18" fill="currentColor" role="img" aria-label="5 von 5 Sternen (Beispiel)"><use href="#stern"/><use href="#stern" x="20"/><use href="#stern" x="40"/><use href="#stern" x="60"/><use href="#stern" x="80"/></svg>
+          <blockquote><p>Beispielzitat: Ehrliches Angebot, klare Absprachen und ein Ergebnis, das die Nachbarn heute noch erwähnen.</p></blockquote>
+          <figcaption>Beispielname, Beispielort</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Warum wir: dunkel, Bild bleibt rechts stehen -->
+  <section class="sektion dunkel warum" aria-labelledby="h-warum">
+    <div class="wrap warum__raster">
+      <div class="warum__text">
+        <p class="kicker kicker--dunkel" data-zeig><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21V11"/><path d="M12 13C12 8 9 5 4 5c0 5 3 8 8 8Z"/><path d="M12 11c0-4 3-6 8-6 0 4-3 6-8 6Z"/></svg>Warum wir</p>
+        <h2 id="h-warum" data-licht>Darum entscheiden sich Hausbesitzer für uns</h2>
+        <ul class="vorteile" data-staffel>
+          <li data-zeig><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg><div><h3>Handwerk mit Erfahrung</h3><p>Erfahrene Gärtner und Landschaftsbauer arbeiten an Ihrem Projekt, nicht wechselnde Aushilfen.</p></div></li>
+          <li data-zeig><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg><div><h3>Ein Plan nach Ihrem Leben</h3><p>Familie, Haustiere, Zeit für Pflege: Wir gestalten, was zu Ihrem Alltag passt.</p></div></li>
+          <li data-zeig><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg><div><h3>Festpreis vor dem Start</h3><p>Sie wissen vorher, was es kostet. Änderungen besprechen wir, bevor sie Geld kosten.</p></div></li>
+          <li data-zeig><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg><div><h3>Qualität, die bleibt</h3><p>Wir pflanzen, was in Ihrer Region gedeiht, und bleiben auch nach der Übergabe erreichbar.</p></div></li>
+        </ul>
+      </div>
+      <div class="warum__bildspalte">
+        <div class="streifen bild warum__bild" data-zeig="skala" data-platzhalter="Bild: Blattwerk aus der Nähe" aria-hidden="true"><div class="projekt__innen bild--c"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Tipps -->
+  <section class="sektion tipps" id="tipps" aria-labelledby="h-tipps">
+    <div class="wrap">
+      <div class="tippkopf">
+        <h2 id="h-tipps" data-licht>Einfache Tipps für einen besseren Garten</h2>
+        <a class="knopf knopf--dunkel" href="#kontakt" data-zeig>Alle Beiträge</a>
+      </div>
+      <!-- Beiträge sind Beispiele -->
+      <ul class="tipps__raster" data-staffel>
+        <li class="beitrag" data-zeig data-beispiel>
+          <a href="#kontakt"><div class="bild beitrag__bild" data-platzhalter="Bild" aria-hidden="true"><div class="projekt__innen bild--a"></div></div>
+          <p class="beitrag__meta">Beispielautor, TT.MM.JJJJ</p>
+          <h3>Beispielbeitrag: Ideen, die aus dem Garten einen Lebensraum machen</h3></a>
+        </li>
+        <li class="beitrag" data-zeig data-beispiel>
+          <a href="#kontakt"><div class="bild beitrag__bild" data-platzhalter="Bild" aria-hidden="true"><div class="projekt__innen bild--d"></div></div>
+          <p class="beitrag__meta">Beispielautor, TT.MM.JJJJ</p>
+          <h3>Beispielbeitrag: So pflegen Sie Ihren Rasen durch alle Jahreszeiten</h3></a>
+        </li>
+        <li class="beitrag" data-zeig data-beispiel>
+          <a href="#kontakt"><div class="bild beitrag__bild" data-platzhalter="Bild" aria-hidden="true"><div class="projekt__innen bild--b"></div></div>
+          <p class="beitrag__meta">Beispielautor, TT.MM.JJJJ</p>
+          <h3>Beispielbeitrag: Die richtige Zeit für den Heckenschnitt</h3></a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 11. Häufige Fragen -->
+  <section class="sektion faq" aria-labelledby="h-faq">
+    <div class="wrap faq__raster">
+      <div class="faq__kopf" data-zeig>
+        <h2 id="h-faq">Häufige Fragen</h2>
+        <p>Antworten vorab, den Rest klären wir bei der Besichtigung.</p>
+      </div>
+      <div class="faq__liste" data-exklusiv>
+        <details><summary>Wann ist die beste Zeit für einen neuen Garten?</summary><p class="antwort">Beispielantwort: Planung und Erdarbeiten laufen fast das ganze Jahr, gepflanzt wird am besten im Frühjahr und im Herbst.</p></details>
+        <details><summary>Was kostet eine Gartenplanung?</summary><p class="antwort">Beispielantwort: Das hängt von Größe und Wunsch ab. Nach der Besichtigung nennen wir einen festen Preis für Planung und Ausführung.</p></details>
+        <details><summary>Übernehmen Sie auch die laufende Pflege?</summary><p class="antwort">Beispielantwort: Ja, als Einzelauftrag oder als Pflegevertrag mit festen Terminen im Jahr.</p></details>
+        <details><summary>Wie lange dauert der Bau?</summary><p class="antwort">Beispielantwort: Ein Beet oder eine Terrasse dauert Tage, ein ganzer Garten einige Wochen. Den Zeitplan halten wir schriftlich fest.</p></details>
+        <details><summary>Arbeiten Sie auch mit Pflanzen aus der Region?</summary><p class="antwort">Beispielantwort: Wo es geht, ja. Wir bevorzugen heimische und standortgerechte Pflanzen, weil sie weniger Wasser brauchen.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. Abschluss mit Handlung -->
+  <section class="abschluss" aria-labelledby="h-abschluss">
+    <div class="bild abschluss__bild" data-platzhalter="Bild: Tautropfen auf Blättern" aria-hidden="true"><div class="abschluss__innen"></div></div>
+    <div class="wrap abschluss__inhalt">
+      <h2 id="h-abschluss" data-licht>Lassen Sie uns Ihren Traumgarten planen</h2>
+      <div class="abschluss__aktionen" data-zeig>
+        <a class="knopf knopf--akzent" href="#kontakt">Anfrage senden</a>
+        <a class="knopf knopf--hell" href="tel:+490000000000" data-beispiel>Anrufen: +49 000 0000000</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="fuss" id="kontakt">
+  <div class="wrap fuss__raster">
+    <div class="fuss__marke">
+      <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
+        <svg viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 28V15"/><path d="M16 17C16 10 11 6 4 6c0 7 4 11 12 11Z"/><path d="M16 14c0-6 4-9 12-9 0 6-4 9-12 9Z"/></svg>
+        <span>Markenname</span>
+      </a>
+      <p>Beispieltext: Gärten gestalten, bauen und pflegen, mit Handwerk, Planung und Sinn für Natur.</p>
+      <!-- Formular ohne Versand (Beispiel) -->
+      <form class="fuss__form" action="#kontakt" data-beispielform>
+        <label class="sr-nur" for="nl-mail">Ihre E-Mail-Adresse für den Gartenbrief</label>
+        <input id="nl-mail" name="email" type="email" autocomplete="email" placeholder="E-Mail für den Gartenbrief" required>
+        <button class="taste taste--akzent" type="submit" aria-label="Anmelden"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <p class="held__rueckmeldung" role="status" aria-live="polite" hidden></p>
+      </form>
+    </div>
+    <nav class="fuss__spalte" aria-label="Seiten">
+      <h2 class="fuss__titel">Seiten</h2>
+      <ul><li><a href="#top">Start</a></li><li><a href="#ueber-uns">Über uns</a></li><li><a href="#leistungen">Leistungen</a></li><li><a href="#projekte">Projekte</a></li><li><a href="#tipps">Tipps</a></li></ul>
+    </nav>
+    <div class="fuss__spalte">
+      <h2 class="fuss__titel">Kontakt</h2>
+      <!-- Beispielangaben, vor Livegang ersetzen -->
+      <ul data-beispiel><li><a href="tel:+490000000000">+49 000 0000000</a></li><li><a href="mailto:info@example.org">info@example.org</a></li><li>Beispielstraße 1, 00000 Beispielstadt</li></ul>
+    </div>
+    <nav class="fuss__spalte" aria-label="Rechtliches">
+      <h2 class="fuss__titel">Rechtliches</h2>
+      <ul><li><a href="#impressum">Impressum</a></li><li><a href="#datenschutz">Datenschutz</a></li></ul>
+    </nav>
+  </div>
+  <p class="fuss__wort" aria-hidden="true">Marke</p>
+  <div class="wrap fuss__unten"><p>© Markenname, Beispieltext. Alle Rechte vorbehalten.</p></div>
+</footer>
+
+<script src="../_basis/bewegung.js" defer></script>
+<script src="stil.js" defer></script>
+</body>
+</html>
