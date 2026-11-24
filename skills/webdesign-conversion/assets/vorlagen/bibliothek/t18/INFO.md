@@ -4,7 +4,7 @@
 
 ## Sektionsfolge
 1. Schwebende dunkle Kopfleiste, Held: zentrierte H1, Text, Aktion, Telefon mit schwebenden Karten vor Farbverlauf
-2. Vertrauen: Laufband mit Logo-Platzhaltern (keine Namen)
+2. Vertrauen: Laufband mit Beispiellogos (aus `_basis/logos`, durch freigegebene Partnerlogos ersetzen)
 3. Funktionen: Überschrift und drei Karten mit Mini-Oberfläche, gestaffelt
 4. Leitsatz, Wörter hellen beim Scrollen auf
 5. App: Telefon bleibt stehen (sticky), drei Schritte ziehen vorbei und schalten die Ansicht, zwei Kennzahlen
@@ -39,3 +39,6 @@ Nicht enthalten, weil die Referenz sie nicht hat: Preise, Stimmen.
 - Sticky nur ab 62rem, darunter normaler Fluss mit der ersten Ansicht.
 - Schwebende Karten im Held nur ab 62rem.
 - Nicht geprüft: Safari, Screenreader, echte Geräte, Leistung, Kontrast über dem Verlauf per Messung (nur Sichtprüfung).
+
+## Icons
+Phosphor Icons (MIT, siehe `_basis/icons/LICENSE-Phosphor.txt`), durchgehend Strichstärke duotone, inline als SVG mit `currentColor` (App-Oberfläche im Telefon, Funktionen, Akkordeon).

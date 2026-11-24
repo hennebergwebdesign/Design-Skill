@@ -5,7 +5,7 @@
 ## Sektionsfolge
 1. Kopfzeile (fest, über dem Held durchsichtig, nach dem Scrollen dunkel, Anfrageknopf, mobil Burger)
 2. Held: Vollbild, H1 oben links, Kurztext, zwei Knöpfe und Telefon unten rechts, Hinweis auf Zahl unten links
-3. Über uns: Leitsatz, Bild mit zwei Kennzahlen, Laufband mit Platz für Logos
+3. Über uns: Leitsatz, Bild mit zwei Kennzahlen, Laufband mit Beispiellogos (aus `_basis/logos`, durch freigegebene Logos ersetzen)
 4. Leistungen: Überschrift mit Knopf, drei Bildkarten
 5. Vorteile: hohes Bild, vier Karten mit Symbol
 6. Fallbeispiele: drei Rahmen mit Bild und dunkler Karte, wechselnde Seite, stapeln sich
@@ -37,3 +37,6 @@ Tokens in `marke.css` setzen, Kontrast prüfen, Schrift aus `schriften.css` wäh
 - Formulare haben keine Auswertung (`action="#"`), Impressum und Datenschutz verlinken auf `#`.
 - Der Fallstapel nutzt `position: sticky` mit Skalierung per JavaScript, nur im Chromium geprüft.
 - Zahlen, Fälle, Zitate und Namen sind Beispiele, keine Belege.
+
+## Icons
+Phosphor Icons (MIT, siehe `_basis/icons/LICENSE-Phosphor.txt`), durchgehend Strichstärke light, inline als SVG mit `currentColor`; Plus und Minus im Akkordeon sind ebenfalls Phosphor.

@@ -4,7 +4,7 @@
 
 ## Sektionsfolge
 1. Kopf: Logo, Navigation, Telefon, Knopf (auf dem Held durchsichtig, danach dunkel)
-2. Held: Markenwort über die ganze Breite, Kurzsatz mit Rückrufformular (ohne Versand), Logoleiste als Laufband
+2. Held: Markenwort über die ganze Breite, Kurzsatz mit Rückrufformular (ohne Versand), Logoleiste als Laufband (Beispiellogos aus `_basis/logos`)
 3. Über uns: Leitsatz mit Wortlicht, Bewertungsreihe, Bild und Stimme mit Zählerkennzahl, Merkmalsreihe
 4. Leistungen: dunkel, fünf Karten in einer seitlich scrollbaren Schiene mit Tasten
 5. Ablauf: Leitsatz mit Wortlicht, zwei Bilder mit Streifenöffnung, drei Schritte
@@ -37,3 +37,6 @@
 - Keine echten Bilder, Formulare senden nichts. Kein Cookie-Banner. Keine Preisliste (hat die Referenz nicht).
 - Streifenöffnung braucht `@property`; ohne Unterstützung erscheint das Bild ohne Übergang.
 - Nicht geprüft: Safari, Screenreader, echte Fotos hinter Overlays (Kontrast neu messen), Leistung auf schwachen Geräten.
+
+## Icons
+Phosphor Icons (MIT, siehe `_basis/icons/LICENSE-Phosphor.txt`), durchgehend Strichstärke thin, inline als SVG mit `currentColor`; Bewertungssterne in t16 als gefüllte Variante, weil ein Rating sonst leer wirkt.
