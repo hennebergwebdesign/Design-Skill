@@ -1,0 +1,35 @@
+/* marke.css der Vorlage "Stapelkarten": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#f4f6f2;
+  --flaeche-alt:#e5eae3;
+  --flaeche-dunkel:#0f2420;
+  --text:#14201d;
+  --text-leise:#4b5b56;
+  --linie:#cdd6cf;
+  --akzent:#f26b2d;
+  --akzent-text:#14201d;
+  --schrift-titel:'Manrope',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:22px;
+  --radius-bild:18px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:32px;          /* große Bildkarte, Prozesskarten, Fuß */
+  --radius-klein:14px;          /* Akkordeon, Eingabefeld */
+  --titel-gewicht:600;
+  --titel-spur:-0.03em;
+  --flaeche-dunkel-2:#17302b;   /* Knöpfe und Felder auf dunkler Fläche */
+  --akzent-tief:#a8400e;        /* Akzent als Textfarbe auf heller Fläche (5 zu 1) */
+  --text-auf-dunkel:#f4f6f2;
+  --text-leise-dunkel:#b4c4be;
+  --linie-dunkel:#2c4741;
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#1f4a46;
+  --ton-2:#7a4a2c;
+  --ton-3:#2b5a4a;
+  --ton-4:#5d6b4a;
+  --ton-5:#2f4f63;
+  --ton-6:#6b4a38;
+}

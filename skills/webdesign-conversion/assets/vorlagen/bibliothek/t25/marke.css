@@ -24,6 +24,7 @@
   --text-auf-dunkel:#ffffff;
   --text-leise-dunkel:#b7c1d0;
   --linie-dunkel:#2a3a52;
+  --feld-rand:#6f7a8a;          /* Rand der Eingabefelder, mindestens 3 zu 1 auf Weiß */
   --karte:#ffffff;              /* Karten auf heller und dunkler Fläche */
   /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen), alle dunkel genug für weiße Beschriftung */
   --ton-1:#31506e;

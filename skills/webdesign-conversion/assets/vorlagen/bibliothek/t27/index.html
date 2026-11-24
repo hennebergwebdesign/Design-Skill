@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lehrpfad | Vorlage für Online-Kurs und Weiterbildung</title>
+<meta name="description" content="Beispielseite eines Online-Kurses mit Lehrplan, Dozentin, Stimmen, Preis und Fragen. Alle Texte und Zahlen sind Platzhalter.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../_basis/schriften.css">
+<link rel="stylesheet" href="../_basis/basis.css">
+<link rel="stylesheet" href="marke.css">
+<link rel="stylesheet" href="../_basis/logos.css">
+<link rel="stylesheet" href="stil.css">
+</head>
+<body>
+<a class="sprunglink" href="#inhalt">Zum Inhalt springen</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-pfeil" viewBox="0 0 256 256" fill="currentColor"><path d="M220.24,132.24l-72,72a6,6,0,0,1-8.48-8.48L201.51,134H40a6,6,0,0,1,0-12H201.51L139.76,60.24a6,6,0,0,1,8.48-8.48l72,72A6,6,0,0,1,220.24,132.24Z"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 256 256" fill="currentColor"><path d="M222,128a6,6,0,0,1-6,6H134v82a6,6,0,0,1-12,0V134H40a6,6,0,0,1,0-12h82V40a6,6,0,0,1,12,0v82h82A6,6,0,0,1,222,128Z"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 256 256" fill="currentColor"><path d="M222,128a6,6,0,0,1-6,6H40a6,6,0,0,1,0-12H216A6,6,0,0,1,222,128Z"/></symbol>
+  <symbol id="i-haken" viewBox="0 0 256 256" fill="currentColor"><path d="M172.24,99.76a6,6,0,0,1,0,8.48l-56,56a6,6,0,0,1-8.48,0l-24-24a6,6,0,0,1,8.48-8.48L112,151.51l51.76-51.75A6,6,0,0,1,172.24,99.76ZM230,128A102,102,0,1,1,128,26,102.12,102.12,0,0,1,230,128Zm-12,0a90,90,0,1,0-90,90A90.1,90.1,0,0,0,218,128Z"/></symbol>
+  <symbol id="i-stern" viewBox="0 0 256 256" fill="currentColor"><path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"/></symbol>
+  <symbol id="i-play" viewBox="0 0 256 256" fill="currentColor"><path d="M231.36,116.19,87.28,28.06a14,14,0,0,0-14.18-.27A13.69,13.69,0,0,0,66,39.87V216.13a13.69,13.69,0,0,0,7.1,12.08,14,14,0,0,0,14.18-.27l144.08-88.13a13.82,13.82,0,0,0,0-23.62Zm-6.26,13.38L81,217.7a2,2,0,0,1-2.06,0,1.78,1.78,0,0,1-1-1.61V39.87a1.78,1.78,0,0,1,1-1.61A2.06,2.06,0,0,1,80,38a2,2,0,0,1,1,.31L225.1,126.43a1.82,1.82,0,0,1,0,3.14Z"/></symbol>
+  <symbol id="i-nutzer" viewBox="0 0 256 256" fill="currentColor"><path d="M229.19,213c-15.81-27.32-40.63-46.49-69.47-54.62a70,70,0,1,0-63.44,0C67.44,166.5,42.62,185.67,26.81,213a6,6,0,1,0,10.38,6C56.4,185.81,90.34,166,128,166s71.6,19.81,90.81,53a6,6,0,1,0,10.38-6ZM70,96a58,58,0,1,1,58,58A58.07,58.07,0,0,1,70,96Z"/></symbol>
+  <symbol id="i-gruppe" viewBox="0 0 256 256" fill="currentColor"><path d="M112.6,158.43a58,58,0,1,0-57.2,0A93.83,93.83,0,0,0,5.21,196.72a6,6,0,0,0,10.05,6.56,82,82,0,0,1,137.48,0,6,6,0,0,0,10-6.56A93.83,93.83,0,0,0,112.6,158.43ZM38,108a46,46,0,1,1,46,46A46.06,46.06,0,0,1,38,108Zm211,97a6,6,0,0,1-8.3-1.74A81.8,81.8,0,0,0,172,166a6,6,0,0,1,0-12,46,46,0,1,0-17.08-88.73,6,6,0,1,1-4.46-11.14,58,58,0,0,1,50.14,104.3,93.83,93.83,0,0,1,50.19,38.29A6,6,0,0,1,249,205Z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 256 256" fill="currentColor"><path d="M128,26A102,102,0,0,0,38.35,176.69L26.73,211.56a14,14,0,0,0,17.71,17.71l34.87-11.62A102,102,0,1,0,128,26Zm0,192a90,90,0,0,1-45.06-12.08,6.09,6.09,0,0,0-3-.81,6.2,6.2,0,0,0-1.9.31L40.65,217.88a2,2,0,0,1-2.53-2.53L50.58,178a6,6,0,0,0-.5-4.91A90,90,0,1,1,128,218Z"/></symbol>
+  <symbol id="i-zertifikat" viewBox="0 0 256 256" fill="currentColor"><path d="M126,136a6,6,0,0,1-6,6H72a6,6,0,0,1,0-12h48A6,6,0,0,1,126,136Zm-6-38H72a6,6,0,0,0,0,12h48a6,6,0,0,0,0-12Zm110,62.62V224a6,6,0,0,1-9,5.21l-25-14.3-25,14.3a6,6,0,0,1-9-5.21V198H40a14,14,0,0,1-14-14V56A14,14,0,0,1,40,42H216a14,14,0,0,1,14,14V87.38a49.91,49.91,0,0,1,0,73.24ZM196,86a38,38,0,1,0,38,38A38,38,0,0,0,196,86ZM162,186V160.62a50,50,0,0,1,56-81.51V56a2,2,0,0,0-2-2H40a2,2,0,0,0-2,2V184a2,2,0,0,0,2,2Zm56-17.11a49.91,49.91,0,0,1-44,0v44.77l19-10.87a6,6,0,0,1,6,0l19,10.87Z"/></symbol>
+  <symbol id="i-rakete" viewBox="0 0 256 256" fill="currentColor"><path d="M221.86,47.24a14,14,0,0,0-13.11-13.1c-12.31-.73-43.77.39-69.88,26.5L133.52,66H74.35a13.9,13.9,0,0,0-9.89,4.1L30.11,104.44a14,14,0,0,0,7.94,23.76l39.13,5.46,45.16,45.16L127.8,218a14,14,0,0,0,23.76,7.92l34.35-34.35a13.91,13.91,0,0,0,4.1-9.89V122.48l5.35-5.35h0C221.46,91,222.59,59.56,221.86,47.24ZM38.11,115a2,2,0,0,1,.49-2L72.94,78.58A2,2,0,0,1,74.35,78h47.17L77.87,121.64l-38.14-5.32A1.93,1.93,0,0,1,38.11,115ZM178,181.65a2,2,0,0,1-.59,1.41L143.08,217.4a2,2,0,0,1-3.4-1.11l-5.32-38.16L178,134.48Zm8.87-73h0L128,167.51,88.49,128l58.87-58.88a78.47,78.47,0,0,1,60.69-23A2,2,0,0,1,209.88,48,78.47,78.47,0,0,1,186.88,108.64ZM100,190.31C95.68,199.84,81.13,222,40,222a6,6,0,0,1-6-6c0-41.13,22.16-55.68,31.69-60a6,6,0,1,1,5,10.92c-7,3.17-22.53,13.52-24.47,42.91,29.39-1.94,39.74-17.52,42.91-24.47a6,6,0,1,1,10.92,5Z"/></symbol>
+  <symbol id="i-blitz" viewBox="0 0 256 256" fill="currentColor"><path d="M213.84,118.63a6,6,0,0,0-3.73-4.25L150.88,92.17l15-75a6,6,0,0,0-10.27-5.27l-112,120a6,6,0,0,0,2.28,9.71l59.23,22.21-15,75a6,6,0,0,0,3.14,6.52A6.07,6.07,0,0,0,96,246a6,6,0,0,0,4.39-1.91l112-120A6,6,0,0,0,213.84,118.63ZM106,220.46l11.85-59.28a6,6,0,0,0-3.77-6.8l-55.6-20.85,91.46-98L138.12,94.82a6,6,0,0,0,3.77,6.8l55.6,20.85Z"/></symbol>
+  <symbol id="i-x" viewBox="0 0 256 256" fill="currentColor"><path d="M204.24,195.76a6,6,0,1,1-8.48,8.48L128,136.49,60.24,204.24a6,6,0,0,1-8.48-8.48L119.51,128,51.76,60.24a6,6,0,0,1,8.48-8.48L128,119.51l67.76-67.75a6,6,0,0,1,8.48,8.48L136.49,128Z"/></symbol>
+  <symbol id="i-tel" viewBox="0 0 256 256" fill="currentColor"><path d="M221.59,160.3l-47.24-21.17a14,14,0,0,0-13.28,1.22,4.81,4.81,0,0,0-.56.42l-24.69,21a1.88,1.88,0,0,1-1.68.06c-15.87-7.66-32.31-24-40-39.65a1.91,1.91,0,0,1,0-1.68l21.07-25a6.13,6.13,0,0,0,.42-.58,14,14,0,0,0,1.12-13.27L95.73,34.49a14,14,0,0,0-14.56-8.38A54.24,54.24,0,0,0,34,80c0,78.3,63.7,142,142,142a54.25,54.25,0,0,0,53.89-47.17A14,14,0,0,0,221.59,160.3ZM176,210C104.32,210,46,151.68,46,80A42.23,42.23,0,0,1,82.67,38h.23a2,2,0,0,1,1.84,1.31l21.1,47.11a2,2,0,0,1,0,1.67L84.73,113.15a4.73,4.73,0,0,0-.43.57,14,14,0,0,0-.91,13.73c8.87,18.16,27.17,36.32,45.53,45.19a14,14,0,0,0,13.77-1c.19-.13.38-.27.56-.42l24.68-21a1.92,1.92,0,0,1,1.6-.1l47.25,21.17a2,2,0,0,1,1.21,2A42.24,42.24,0,0,1,176,210Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 256 256" fill="currentColor"><path d="M224,50H32a6,6,0,0,0-6,6V192a14,14,0,0,0,14,14H216a14,14,0,0,0,14-14V56A6,6,0,0,0,224,50Zm-96,85.86L47.42,62H208.58ZM101.67,128,38,186.36V69.64Zm8.88,8.14L124,148.42a6,6,0,0,0,8.1,0l13.4-12.28L208.58,194H47.43ZM154.33,128,218,69.64V186.36Z"/></symbol>
+  <symbol id="i-desktop" viewBox="0 0 256 256" fill="currentColor"><path d="M208,42H48A22,22,0,0,0,26,64V176a22,22,0,0,0,22,22h74v20H96a6,6,0,0,0,0,12h64a6,6,0,0,0,0-12H134V198h74a22,22,0,0,0,22-22V64A22,22,0,0,0,208,42ZM48,54H208a10,10,0,0,1,10,10v82H38V64A10,10,0,0,1,48,54ZM208,186H48a10,10,0,0,1-10-10V158H218v18A10,10,0,0,1,208,186Z"/></symbol>
+  <symbol id="i-liste" viewBox="0 0 256 256" fill="currentColor"><path d="M222,128a6,6,0,0,1-6,6H40a6,6,0,0,1,0-12H216A6,6,0,0,1,222,128ZM40,70H216a6,6,0,0,0,0-12H40a6,6,0,0,0,0,12ZM216,186H40a6,6,0,0,0,0,12H216a6,6,0,0,0,0-12Z"/></symbol>
+  <symbol id="i-uhr" viewBox="0 0 256 256" fill="currentColor"><path d="M128,26A102,102,0,1,0,230,128,102.12,102.12,0,0,0,128,26Zm0,192a90,90,0,1,1,90-90A90.1,90.1,0,0,1,128,218Zm62-90a6,6,0,0,1-6,6H128a6,6,0,0,1-6-6V72a6,6,0,0,1,12,0v50h50A6,6,0,0,1,190,128Z"/></symbol>
+  <symbol id="i-schild" viewBox="0 0 256 256" fill="currentColor"><path d="M208,42H48A14,14,0,0,0,34,56v56c0,51.94,25.12,83.4,46.2,100.64,22.73,18.6,45.27,24.89,46.22,25.15a6,6,0,0,0,3.16,0c.95-.26,23.49-6.55,46.22-25.15C196.88,195.4,222,163.94,222,112V56A14,14,0,0,0,208,42Zm2,70c0,37.76-13.94,68.39-41.44,91.06A131.17,131.17,0,0,1,128,225.72a130.94,130.94,0,0,1-40.56-22.66C59.94,180.39,46,149.76,46,112V56a2,2,0,0,1,2-2H208a2,2,0,0,1,2,2ZM172.24,99.76a6,6,0,0,1,0,8.48l-56,56a6,6,0,0,1-8.48,0l-24-24a6,6,0,0,1,8.48-8.48L112,151.51l51.76-51.75A6,6,0,0,1,172.24,99.76Z"/></symbol>
+  <symbol id="i-handschlag" viewBox="0 0 256 256" fill="currentColor"><path d="M252.51,108.8,227,57.75a14,14,0,0,0-18.78-6.27L182.66,64.26,129.53,50.2a6.1,6.1,0,0,0-3.06,0L73.34,64.26,47.79,51.48A14,14,0,0,0,29,57.75L3.49,108.8a14,14,0,0,0,6.26,18.78L36.9,141.16l55.61,39.72a6,6,0,0,0,2,.94l64,16A6.08,6.08,0,0,0,160,198a6,6,0,0,0,4.24-1.76l55.31-55.31,26.7-13.35a14,14,0,0,0,6.26-18.78Zm-53,35.16-35.8-28.68a6,6,0,0,0-8,.45c-18.65,18.79-39.5,16.42-52.79,7.92a2,2,0,0,1-.94-1.5,1.9,1.9,0,0,1,.51-1.55L146.43,78h33.86l28.41,56.82ZM14.11,115.69a2,2,0,0,1,.11-1.52L39.74,63.11a2,2,0,0,1,1.8-1.1,2,2,0,0,1,.89.21l22.21,11.1L37.32,128l-22.21-11.1A2,2,0,0,1,14.11,115.69Zm144.05,69.67-59.6-14.9L47.66,134.1,76.84,75.75,128,62.21l14.8,3.92a5.92,5.92,0,0,0-3,1.57L94.1,112.05a14,14,0,0,0,2.39,21.72c20.22,12.92,44.75,10.49,63.8-5.89L191,152.5Zm83.73-69.67a2,2,0,0,1-1,1.16L218.68,128,191.36,73.32l22.21-11.1a2,2,0,0,1,1.53-.11,2,2,0,0,1,1.16,1l25.52,51.06A2,2,0,0,1,241.89,115.69Zm-112,101.76a6,6,0,0,1-7.27,4.37L80.89,211.39a5.88,5.88,0,0,1-2-.94L52.52,191.64a6,6,0,1,1,7-9.77L84.91,200l40.61,10.15A6,6,0,0,1,129.88,217.45Z"/></symbol>
+  <symbol id="i-pinsel" viewBox="0 0 256 256" fill="currentColor"><path d="M224,26c-20.8,0-44.11,11.41-69.3,33.9C136.62,76.06,121,94.9,110.3,109A58,58,0,0,0,34,164c0,32.07-20.43,46.39-21.35,47A6,6,0,0,0,16,222H92a58,58,0,0,0,55-76.3c14.08-10.67,32.92-26.32,49.08-44.4C218.59,76.11,230,52.8,230,32A6,6,0,0,0,224,26ZM92,210H30.65C37.92,200.85,46,185.78,46,164a46,46,0,1,1,46,46Zm29.49-95.91c3.6-4.67,7.88-10,12.71-15.69a78.17,78.17,0,0,1,23.4,23.4c-5.67,4.83-11,9.11-15.69,12.71A58.38,58.38,0,0,0,121.49,114.09Zm45.2-.3a90.24,90.24,0,0,0-24.48-24.48C163.05,66.46,191,42,217.56,38.44,214,65,189.54,93,166.69,113.79Z"/></symbol>
+  <symbol id="i-kompass" viewBox="0 0 256 256" fill="currentColor"><path d="M128,26A102,102,0,1,0,230,128,102.12,102.12,0,0,0,128,26Zm0,192a90,90,0,1,1,90-90A90.1,90.1,0,0,1,128,218ZM173.32,74.63l-64,32a6,6,0,0,0-2.69,2.69l-32,64A6,6,0,0,0,80,182a6.06,6.06,0,0,0,2.68-.63l64-32a6,6,0,0,0,2.69-2.69l32-64a6,6,0,0,0-8.05-8.05Zm-33.79,64.9L93.42,162.58l23-46.11,46.11-23Z"/></symbol>
+  <symbol id="i-download" viewBox="0 0 256 256" fill="currentColor"><path d="M222,144v64a6,6,0,0,1-6,6H40a6,6,0,0,1-6-6V144a6,6,0,0,1,12,0v58H210V144a6,6,0,0,1,12,0Zm-98.24,4.24a6,6,0,0,0,8.48,0l40-40a6,6,0,0,0-8.48-8.48L134,129.51V32a6,6,0,0,0-12,0v97.51L92.24,99.76a6,6,0,0,0-8.48,8.48Z"/></symbol>
+  <symbol id="i-medaille" viewBox="0 0 256 256" fill="currentColor"><path d="M214,96A86,86,0,1,0,74,162.87V240a6,6,0,0,0,2.85,5.1A5.93,5.93,0,0,0,80,246a6,6,0,0,0,2.68-.63L128,222.71l45.33,22.66A6,6,0,0,0,182,240V162.87A85.87,85.87,0,0,0,214,96ZM54,96a74,74,0,1,1,74,74A74.09,74.09,0,0,1,54,96ZM170,230.29l-39.33-19.66a6,6,0,0,0-5.36,0L86,230.29V171a85.75,85.75,0,0,0,84,0ZM128,150A54,54,0,1,0,74,96,54.06,54.06,0,0,0,128,150Zm0-96A42,42,0,1,1,86,96,42,42,0,0,1,128,54Z"/></symbol>
+</svg>
+
+<header class="kopf" id="kopf">
+  <div class="kopf__pille">
+    <a class="logo" href="#top" aria-label="Lehrpfad, zum Seitenanfang">
+      <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M9 23V9l7 9 7-9v14" fill="none" stroke="var(--flaeche-dunkel)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Lehrpfad</span>
+    </a>
+    <nav class="kopf__nav" id="hauptmenue" aria-label="Hauptnavigation" data-menue-ziel data-offen="false">
+      <ul>
+        <li><a href="#funktionen">Vorteile</a></li>
+        <li><a href="#lehrplan">Lehrplan</a></li>
+        <li><a href="#dozentin">Dozentin</a></li>
+        <li><a href="#stimmen">Stimmen</a></li>
+        <li><a href="#fragen">Fragen</a></li>
+      </ul>
+      <a class="knopf kopf__cta-menue" href="#preis">Platz sichern</a>
+    </nav>
+    <a class="knopf kopf__cta" href="#preis">Platz sichern</a>
+    <button class="kopf__burger" type="button" data-menue aria-expanded="false" aria-controls="hauptmenue" aria-label="Menü öffnen">
+      <span class="burger" aria-hidden="true"><i></i><i></i></span>
+    </button>
+  </div>
+</header>
+
+<main id="inhalt">
+
+<!-- 1. Held: Bewertung, Überschrift, Knopf, großes Bildfeld mit Zählern -->
+<section class="held" id="top" aria-labelledby="held-titel">
+  <div class="wrap held__kopf">
+    <p class="bewertung" data-zeig>
+      <span class="avatare" aria-hidden="true"><i style="--t:18%"><svg class="ico"><use href="#i-nutzer"/></svg></i><i style="--t:34%"><svg class="ico"><use href="#i-nutzer"/></svg></i><i style="--t:50%"><svg class="ico"><use href="#i-nutzer"/></svg></i></span>
+      <span class="bewertung__text">
+        <span class="sterne" aria-hidden="true"><svg class="ico"><use href="#i-stern"/></svg><svg class="ico"><use href="#i-stern"/></svg><svg class="ico"><use href="#i-stern"/></svg><svg class="ico"><use href="#i-stern"/></svg><svg class="ico"><use href="#i-stern"/></svg></span>
+        <span data-beispiel><strong>4,9 von 5</strong> · 1.200+ Teilnehmende (Beispielwerte)</span>
+      </span>
+    </p>
+    <h1 id="held-titel" data-wortrein>Lerne, was du am nächsten Tag anwenden kannst</h1>
+    <p class="held__text" data-zeig>Ein Kurs mit klarem Lehrplan, Live-Terminen und Aufgaben aus der Praxis. Du lernst in deinem Tempo und bekommst Rückmeldung, wenn du sie brauchst.</p>
+  </div>
+
+  <div class="wrap held__buehne">
+    <div class="held__knopf">
+      <a class="knopf" href="#preis">Jetzt anmelden<span class="pfeil" aria-hidden="true"><svg class="ico"><use href="#i-pfeil"/></svg></span></a>
+    </div>
+    <div class="held__feld bild" data-platzhalter="Bild: Lernende bei der Arbeit" data-panel>
+      <dl class="zahlen" data-beispiel>
+        <div><dt>Teilnehmende</dt><dd><span data-zaehle="1200">1.200</span>+</dd></div>
+        <div><dt>schließen den Kurs ab</dt><dd><span data-zaehle="97">97</span> %</dd></div>
+        <div><dt>Praxislektionen</dt><dd><span data-zaehle="14">14</span></dd></div>
+      </dl>
+      <div class="held__unter">
+        <h2 class="held__unter-titel">Praxis zuerst</h2>
+        <p>Du arbeitest an echten Aufgaben und nimmst am Ende etwas mit, das du vorzeigen kannst.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. Vertrauen: Laufband mit Beispiellogos -->
+<section class="vertrauen" aria-labelledby="vertrauen-titel">
+  <div class="wrap">
+    <h2 class="vertrauen__titel" id="vertrauen-titel">Teilnehmende arbeiten unter anderem bei (Beispiellogos)</h2>
+  </div>
+  <div class="band vertrauen__band" style="--band-dauer:36s;--band-abstand:clamp(2.5rem,6vw,5rem)">
+    <ul class="band__spur">
+      <li><span class="beispiellogo logo-nordwerk" role="img" aria-label="Nordwerk (Beispiel)"></span></li>
+      <li><span class="beispiellogo logo-lichtbau" role="img" aria-label="Lichtbau (Beispiel)"></span></li>
+      <li><span class="beispiellogo logo-talgrund" role="img" aria-label="Talgrund (Beispiel)"></span></li>
+      <li><span class="beispiellogo logo-fjordstein" role="img" aria-label="Fjordstein (Beispiel)"></span></li>
+      <li><span class="beispiellogo logo-kronwerk" role="img" aria-label="Kronwerk (Beispiel)"></span></li>
+      <li><span class="beispiellogo logo-sonnenfeld" role="img" aria-label="Sonnenfeld (Beispiel)"></span></li>
+      <li><span class="beispiellogo logo-mareal" role="img" aria-label="Mareal (Beispiel)"></span></li>
+      <li><span class="beispiellogo logo-quellwerk" role="img" aria-label="Quellwerk (Beispiel)"></span></li>
+    </ul>
+    <ul class="band__spur" aria-hidden="true">
+      <li><span class="beispiellogo logo-nordwerk"></span></li>
+      <li><span class="beispiellogo logo-lichtbau"></span></li>
+      <li><span class="beispiellogo logo-talgrund"></span></li>
+      <li><span class="beispiellogo logo-fjordstein"></span></li>
+      <li><span class="beispiellogo logo-kronwerk"></span></li>
+      <li><span class="beispiellogo logo-sonnenfeld"></span></li>
+      <li><span class="beispiellogo logo-mareal"></span></li>
+      <li><span class="beispiellogo logo-quellwerk"></span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 3. Vorteile: Wortlicht-Überschrift, sechs Karten -->
+<section class="sektion sek--alt" id="funktionen" aria-labelledby="funktionen-titel">
+  <div class="wrap">
+    <header class="mitte-kopf">
+      <p class="kicker">Das bekommst du</p>
+      <h2 id="funktionen-titel" data-licht>Alles, was du für den Kurs brauchst</h2>
+    </header>
+    <ul class="karten" data-staffel>
+      <li class="karte" data-zeig>
+        <div class="bild karte__bild" data-platzhalter="Bild: Live-Unterricht"><svg class="ico" aria-hidden="true"><use href="#i-desktop"/></svg></div>
+        <h3>Live-Unterricht</h3>
+        <p>Nimm an Terminen mit der Dozentin teil, stell Fragen in Echtzeit und lerne mit anderen aus der Gruppe.</p>
+      </li>
+      <li class="karte" data-zeig>
+        <div class="bild karte__bild" data-platzhalter="Bild: Lehrplan"><svg class="ico" aria-hidden="true"><use href="#i-liste"/></svg></div>
+        <h3>Klarer Lehrplan</h3>
+        <p>Ein fester Weg von den Grundlagen bis zum Abschlussprojekt, Schritt für Schritt aufgebaut.</p>
+      </li>
+      <li class="karte" data-zeig>
+        <div class="bild karte__bild" data-platzhalter="Bild: Begleitung"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg></div>
+        <h3>Begleitung im Kurs</h3>
+        <p>Du bekommst Rückmeldung zu deinen Aufgaben und eine Antwort auf deine Fragen, auch zwischen den Terminen.</p>
+      </li>
+      <li class="karte" data-zeig>
+        <div class="bild karte__bild" data-platzhalter="Bild: Zugang"><svg class="ico" aria-hidden="true"><use href="#i-uhr"/></svg></div>
+        <h3>Zugang ohne Ablauf</h3>
+        <p>Alle Lektionen bleiben für dich verfügbar, auch neue Inhalte, die später dazukommen.</p>
+      </li>
+      <li class="karte" data-zeig>
+        <div class="bild karte__bild" data-platzhalter="Bild: Praxisprojekt"><svg class="ico" aria-hidden="true"><use href="#i-rakete"/></svg></div>
+        <h3>Projekte aus der Praxis</h3>
+        <p>Du wendest das Gelernte sofort an und baust Ergebnisse, die du im Beruf einsetzen kannst.</p>
+      </li>
+      <li class="karte" data-zeig>
+        <div class="bild karte__bild" data-platzhalter="Bild: Zertifikat"><svg class="ico" aria-hidden="true"><use href="#i-zertifikat"/></svg></div>
+        <h3>Zertifikat zum Abschluss</h3>
+        <p>Nach dem Abschlussprojekt erhältst du eine Bestätigung deiner Teilnahme für Lebenslauf und Profil.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- 4. Lehrplan: dunkle Insel, Module als Akkordeon links, Preiskarte rechts (Sticky) -->
+<section class="sek--alt sek--insel" id="lehrplan" aria-labelledby="lehrplan-titel">
+  <div class="insel insel--dunkel">
+    <div class="wrap">
+      <header class="mitte-kopf">
+        <p class="kicker">Lehrplan</p>
+        <h2 id="lehrplan-titel" data-licht>Vom Grundverständnis zum eigenen Projekt</h2>
+      </header>
+      <div class="lehrplan">
+        <div class="module" data-exklusiv>
+          <details class="modul" open>
+            <summary><span class="modul__nr">Modul 1</span><h3>Grundlagen und Begriffe</h3><span class="modul__ik" aria-hidden="true"><svg class="ico ik-plus"><use href="#i-plus"/></svg><svg class="ico ik-minus"><use href="#i-minus"/></svg></span></summary>
+            <div class="modul__inhalt">
+              <ol class="lektionen">
+                <li>Worum es im Kurs geht</li>
+                <li>Das Handwerkszeug im Überblick</li>
+                <li>Typische Fehler am Anfang</li>
+                <li>Deine erste kleine Aufgabe</li>
+                <li>So misst du deinen Fortschritt</li>
+              </ol>
+            </div>
+          </details>
+          <details class="modul">
+            <summary><span class="modul__nr">Modul 2</span><h3>Methoden und Arbeitsweise</h3><span class="modul__ik" aria-hidden="true"><svg class="ico ik-plus"><use href="#i-plus"/></svg><svg class="ico ik-minus"><use href="#i-minus"/></svg></span></summary>
+            <div class="modul__inhalt">
+              <ol class="lektionen">
+                <li>Probleme sauber beschreiben</li>
+                <li>Ein Vorgehen auswählen</li>
+                <li>Ergebnisse prüfen und verbessern</li>
+                <li>Übung mit Rückmeldung</li>
+              </ol>
+            </div>
+          </details>
+          <details class="modul">
+            <summary><span class="modul__nr">Modul 3</span><h3>Werkzeuge im Alltag</h3><span class="modul__ik" aria-hidden="true"><svg class="ico ik-plus"><use href="#i-plus"/></svg><svg class="ico ik-minus"><use href="#i-minus"/></svg></span></summary>
+            <div class="modul__inhalt">
+              <ol class="lektionen">
+                <li>Die wichtigsten Werkzeuge im Vergleich</li>
+                <li>Einrichten und erste Schritte</li>
+                <li>Abläufe im Beruf vereinfachen</li>
+                <li>Übung mit Rückmeldung</li>
+              </ol>
+            </div>
+          </details>
+          <details class="modul">
+            <summary><span class="modul__nr">Modul 4</span><h3>Eigene Abläufe gestalten</h3><span class="modul__ik" aria-hidden="true"><svg class="ico ik-plus"><use href="#i-plus"/></svg><svg class="ico ik-minus"><use href="#i-minus"/></svg></span></summary>
+            <div class="modul__inhalt">
+              <ol class="lektionen">
+                <li>Wiederkehrende Aufgaben erkennen</li>
+                <li>Einen Ablauf entwerfen</li>
+                <li>Testen und verbessern</li>
+                <li>Übung mit Rückmeldung</li>
+              </ol>
+            </div>
+          </details>
+          <details class="modul">
+            <summary><span class="modul__nr">Modul 5</span><h3>Das Abschlussprojekt</h3><span class="modul__ik" aria-hidden="true"><svg class="ico ik-plus"><use href="#i-plus"/></svg><svg class="ico ik-minus"><use href="#i-minus"/></svg></span></summary>
+            <div class="modul__inhalt">
+              <ol class="lektionen">
+                <li>Thema und Ziel festlegen</li>
+                <li>Umsetzung mit Begleitung</li>
+                <li>Vorstellung und Rückmeldung</li>
+              </ol>
+            </div>
+          </details>
+          <p class="module__hinweis"><span>Jedes Modul enthält</span>
+            <span class="enth"><svg class="ico" aria-hidden="true"><use href="#i-play"/></svg>Videolektionen</span>
+            <span class="enth"><svg class="ico" aria-hidden="true"><use href="#i-haken"/></svg>Aufgaben</span>
+            <span class="enth"><svg class="ico" aria-hidden="true"><use href="#i-download"/></svg>Lernheft</span>
+          </p>
+        </div>
+
+        <aside class="preis" id="preis" aria-labelledby="preis-titel">
+          <div class="preis__kopf">
+            <p class="preis__tag"><svg class="ico" aria-hidden="true"><use href="#i-schild"/></svg>30 Tage Geld zurück (Beispiel)</p>
+            <h3 id="preis-titel">Starte jetzt und lerne in deinem Tempo.</h3>
+            <div class="preis__zeile">
+              <p class="preis__betrag" data-beispiel><span>129 €</span><small>einmalig, inkl. MwSt. (Beispielpreis)</small></p>
+              <p class="bewertung bewertung--klein"><span class="sterne" aria-hidden="true"><svg class="ico"><use href="#i-stern"/></svg><svg class="ico"><use href="#i-stern"/></svg><svg class="ico"><use href="#i-stern"/></svg><svg class="ico"><use href="#i-stern"/></svg><svg class="ico"><use href="#i-stern"/></svg></span><span data-beispiel>4,9 von 5 (Beispiel)</span></p>
+            </div>
+            <a class="knopf" href="#abschluss">Jetzt anmelden<span class="pfeil" aria-hidden="true"><svg class="ico"><use href="#i-pfeil"/></svg></span></a>
+          </div>
+          <div class="preis__liste">
+            <h4>Das ist enthalten</h4>
+            <ul>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-haken"/></svg>Live-Termine mit der Dozentin</li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-haken"/></svg>Zugang ohne Ablauf</li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-haken"/></svg>Rückmeldung zu deinen Aufgaben</li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-haken"/></svg>Praxisprojekte</li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-haken"/></svg>Lernhefte zum Herunterladen</li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-haken"/></svg>Zertifikat zum Abschluss</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Zielgruppe: vier Karten um ein Bild -->
+<section class="sektion sek--alt" id="zielgruppe" aria-labelledby="zielgruppe-titel">
+  <div class="wrap">
+    <header class="mitte-kopf">
+      <p class="kicker">Für dich gemacht</p>
+      <h2 id="zielgruppe-titel" data-licht>Für wen ist dieser Kurs?</h2>
+      <p>Egal, ob du bei null beginnst oder dein Wissen vertiefen willst: Der Kurs holt dich dort ab, wo du stehst.</p>
+    </header>
+    <div class="zielgruppe" data-staffel>
+      <div class="bild zielgruppe__bild" data-platzhalter="Bild: Lernende am Laptop" data-zeig="skala"></div>
+      <div class="zg zg--1" data-zeig><span class="zg__ik" aria-hidden="true"><svg class="ico"><use href="#i-nutzer"/></svg></span><p><strong>Einsteiger</strong> mit dem Wunsch nach einem festen Fundament, auf dem sie aufbauen können.</p></div>
+      <div class="zg zg--2" data-zeig><span class="zg__ik" aria-hidden="true"><svg class="ico"><use href="#i-handschlag"/></svg></span><p><strong>Berufstätige</strong>, die ihren Arbeitsalltag vereinfachen und Zeit gewinnen wollen.</p></div>
+      <div class="zg zg--3" data-zeig><span class="zg__ik" aria-hidden="true"><svg class="ico"><use href="#i-pinsel"/></svg></span><p><strong>Kreative und Selbstständige</strong>, die ihre Arbeit besser organisieren und mehr schaffen möchten.</p></div>
+      <div class="zg zg--4" data-zeig><span class="zg__ik" aria-hidden="true"><svg class="ico"><use href="#i-kompass"/></svg></span><p><strong>Neugierige</strong>, die sich auf kommende Aufgaben vorbereiten und Neues ausprobieren wollen.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. Dozentin: dunkle Karte mit Bild -->
+<section class="sektion" id="dozentin" aria-labelledby="dozentin-titel">
+  <div class="wrap">
+    <div class="dozentin" data-zeig="skala">
+      <div class="dozentin__text">
+        <p class="kicker kicker--hell">Deine Dozentin</p>
+        <h2 id="dozentin-titel">Das ist Mara Beispiel</h2>
+        <p>Mara Beispiel (Platzhalter) begleitet seit mehreren Jahren Menschen beim Einstieg in neue Themen. Ihr Ansatz: einfach erklären, direkt ausprobieren und aus Fehlern lernen.</p>
+        <ul class="dozentin__fakten">
+          <li><svg class="ico" aria-hidden="true"><use href="#i-medaille"/></svg><span data-beispiel>8 Jahre Erfahrung in Lehre und Praxis (Beispiel)</span></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-gruppe"/></svg><span data-beispiel>Live-Termine in kleinen Gruppen (Beispiel)</span></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg><span>Antwort auf Fragen innerhalb eines Werktags (Beispiel)</span></li>
+        </ul>
+      </div>
+      <div class="bild dozentin__bild" data-platzhalter="Bild: Porträt der Dozentin"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. Stimmen: Mauerwerk aus Karten mit Mehr anzeigen -->
+<section class="sektion" id="stimmen" aria-labelledby="stimmen-titel">
+  <div class="wrap">
+    <header class="mitte-kopf">
+      <p class="kicker">Stimmen</p>
+      <h2 id="stimmen-titel" data-licht>Das sagen Teilnehmende</h2>
+      <p class="stimmen__hinweis">Beispielstimmen, keine echten Teilnehmenden. Beim Kunden durch freigegebene Zitate ersetzen.</p>
+      <a class="knopf" href="#preis">Zum Kurs<span class="pfeil" aria-hidden="true"><svg class="ico"><use href="#i-pfeil"/></svg></span></a>
+    </header>
+    <div class="stimmen" id="stimmen-raster" data-klappe>
+      <figure class="stimme stimme--video" data-zeig>
+        <div class="bild stimme__film" data-platzhalter="Bild: Videostimme"><span class="stimme__play" aria-hidden="true"><svg class="ico"><use href="#i-play"/></svg></span></div>
+        <figcaption>Beispielvideo: Wie ein Team den Kurs gemeinsam nutzt</figcaption>
+      </figure>
+      <figure class="stimme" data-zeig>
+        <blockquote><p>Die Aufgaben waren mein liebster Teil. Statt Theorie habe ich sofort etwas gebaut, das ich im Alltag nutzen konnte.</p></blockquote>
+        <figcaption><span class="stimme__av" aria-hidden="true"><svg class="ico"><use href="#i-nutzer"/></svg></span><span><strong>Name Platzhalter</strong><small>Rolle, Beispiel</small></span></figcaption>
+      </figure>
+      <figure class="stimme" data-zeig>
+        <blockquote><p>Ich habe vorher schon andere Kurse besucht. Dieser ist der erste, bei dem alles aufeinander aufbaut und nichts offen bleibt.</p></blockquote>
+        <figcaption><span class="stimme__av" aria-hidden="true"><svg class="ico"><use href="#i-nutzer"/></svg></span><span><strong>Name Platzhalter</strong><small>Rolle, Beispiel</small></span></figcaption>
+      </figure>
+      <figure class="stimme" data-zeig>
+        <blockquote><p>Von null auf eigenes Projekt in wenigen Wochen. Die Rückmeldung zu meinen Abgaben hat mir enorm geholfen.</p></blockquote>
+        <figcaption><span class="stimme__av" aria-hidden="true"><svg class="ico"><use href="#i-nutzer"/></svg></span><span><strong>Name Platzhalter</strong><small>Rolle, Beispiel</small></span></figcaption>
+      </figure>
+      <figure class="stimme" data-zeig>
+        <blockquote><p>Die Live-Termine geben dem Ganzen Struktur. Ich wusste jede Woche, was dran ist, und hatte jemanden zum Fragen.</p></blockquote>
+        <figcaption><span class="stimme__av" aria-hidden="true"><svg class="ico"><use href="#i-nutzer"/></svg></span><span><strong>Name Platzhalter</strong><small>Rolle, Beispiel</small></span></figcaption>
+      </figure>
+      <figure class="stimme stimme--dunkel" data-zeig>
+        <blockquote><p>Wir haben den Kurs im Team gemacht. Seitdem sprechen wir dieselbe Sprache und sparen uns viele Abstimmungsrunden.</p></blockquote>
+        <figcaption><span class="stimme__av" aria-hidden="true"><svg class="ico"><use href="#i-nutzer"/></svg></span><span><strong>Name Platzhalter</strong><small>Rolle, Beispiel</small></span></figcaption>
+      </figure>
+      <figure class="stimme" data-zeig>
+        <blockquote><p>Endlich ein Kurs ohne Fachchinesisch. Ich konnte jedes Beispiel nachvollziehen und gleich ausprobieren.</p></blockquote>
+        <figcaption><span class="stimme__av" aria-hidden="true"><svg class="ico"><use href="#i-nutzer"/></svg></span><span><strong>Name Platzhalter</strong><small>Rolle, Beispiel</small></span></figcaption>
+      </figure>
+      <figure class="stimme" data-zeig>
+        <blockquote><p>Das Zertifikat habe ich in mein Profil aufgenommen. Wichtiger ist mir aber, dass ich das Gelernte wirklich nutze.</p></blockquote>
+        <figcaption><span class="stimme__av" aria-hidden="true"><svg class="ico"><use href="#i-nutzer"/></svg></span><span><strong>Name Platzhalter</strong><small>Rolle, Beispiel</small></span></figcaption>
+      </figure>
+      <figure class="stimme" data-zeig>
+        <blockquote><p>Der Zugang ohne Ablauf war für mich entscheidend. Ich schaue Lektionen noch heute wieder an, wenn ich etwas nachschlagen will.</p></blockquote>
+        <figcaption><span class="stimme__av" aria-hidden="true"><svg class="ico"><use href="#i-nutzer"/></svg></span><span><strong>Name Platzhalter</strong><small>Rolle, Beispiel</small></span></figcaption>
+      </figure>
+    </div>
+    <p class="stimmen__mehr"><button class="knopf knopf--dunkel" type="button" data-klappe-knopf aria-expanded="false" aria-controls="stimmen-raster" hidden>Mehr anzeigen</button></p>
+  </div>
+</section>
+
+<!-- 8. Vorher und Nachher -->
+<section class="sektion sek--alt" id="vorher-nachher" aria-labelledby="vn-titel">
+  <div class="wrap">
+    <header class="mitte-kopf">
+      <p class="kicker">Vorher und nachher</p>
+      <h2 id="vn-titel" data-licht>So verändert sich dein Arbeiten</h2>
+      <p>Der Weg vom ersten Verständnis bis zur sicheren Anwendung im Alltag.</p>
+    </header>
+    <div class="vn">
+      <div class="vn__karte vn__karte--vorher" data-zeig="links">
+        <h3>Vorher</h3>
+        <ul>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-x"/></svg>Viel Zeit für wiederkehrende Aufgaben</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-x"/></svg>Unsicher, wie sich Wissen im Beruf anwenden lässt</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-x"/></svg>Kein klarer Weg, wo man anfangen soll</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-x"/></svg>Unklar, welche Werkzeuge sich lohnen</li>
+        </ul>
+      </div>
+      <div class="vn__karte vn__karte--nachher" data-zeig="rechts">
+        <h3>Nachher</h3>
+        <ul>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-blitz"/></svg>Wiederkehrende Aufgaben laufen schneller</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-blitz"/></svg>Sicher im Umgang mit echten Aufgaben</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-blitz"/></svg>Ein eigenes Projekt als Nachweis</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-blitz"/></svg>Klarheit bei der Wahl der Werkzeuge</li>
+        </ul>
+      </div>
+    </div>
+    <p class="vn__cta"><a class="knopf" href="#preis">Jetzt für 129 € anmelden (Beispielpreis)<span class="pfeil" aria-hidden="true"><svg class="ico"><use href="#i-pfeil"/></svg></span></a></p>
+  </div>
+</section>
+
+<!-- 9. Fragen -->
+<section class="sektion" id="fragen" aria-labelledby="fragen-titel">
+  <div class="wrap">
+    <header class="mitte-kopf">
+      <p class="kicker">Fragen</p>
+      <h2 id="fragen-titel" data-licht>Du hast Fragen? Wir haben Antworten.</h2>
+    </header>
+    <div class="faq" data-exklusiv>
+      <details class="faq__punkt">
+        <summary><h3>Für wen ist der Kurs gedacht?</h3><span class="faq__ik" aria-hidden="true"><svg class="ico ik-plus"><use href="#i-plus"/></svg><svg class="ico ik-minus"><use href="#i-minus"/></svg></span></summary>
+        <p>Für alle, die Schritt für Schritt Neues lernen und es im Alltag anwenden möchten. Vorkenntnisse sind nicht nötig.</p>
+      </details>
+      <details class="faq__punkt">
+        <summary><h3>Brauche ich Vorwissen?</h3><span class="faq__ik" aria-hidden="true"><svg class="ico ik-plus"><use href="#i-plus"/></svg><svg class="ico ik-minus"><use href="#i-minus"/></svg></span></summary>
+        <p>Nein. Der erste Block erklärt die Grundlagen. Wer schon Erfahrung hat, überspringt Lektionen und steigt später ein.</p>
+      </details>
+      <details class="faq__punkt">
+        <summary><h3>Wie lange habe ich Zugang zum Kurs?</h3><span class="faq__ik" aria-hidden="true"><svg class="ico ik-plus"><use href="#i-plus"/></svg><svg class="ico ik-minus"><use href="#i-minus"/></svg></span></summary>
+        <p>Dein Zugang gilt ohne Ablauf. Du kannst Lektionen jederzeit wiederholen, auch nach dem Abschluss. Dieser Text ist ein Beispiel und gehört an das echte Angebot angepasst.</p>
+      </details>
+      <details class="faq__punkt">
+        <summary><h3>Arbeite ich an echten Projekten?</h3><span class="faq__ik" aria-hidden="true"><svg class="ico ik-plus"><use href="#i-plus"/></svg><svg class="ico ik-minus"><use href="#i-minus"/></svg></span></summary>
+        <p>Ja. Jedes Modul endet mit einer Übung, und im letzten Modul setzt du ein eigenes Projekt um.</p>
+      </details>
+      <details class="faq__punkt">
+        <summary><h3>Bekomme ich ein Zertifikat?</h3><span class="faq__ik" aria-hidden="true"><svg class="ico ik-plus"><use href="#i-plus"/></svg><svg class="ico ik-minus"><use href="#i-minus"/></svg></span></summary>
+        <p>Nach dem Abschlussprojekt erhältst du eine Teilnahmebestätigung. Ob sie anerkannt ist, hängt vom Anbieter ab und ist hier nicht festgelegt.</p>
+      </details>
+    </div>
+    <p class="faq__kontakt">Deine Frage ist nicht dabei? Ruf an unter <a href="tel:+490000000000">0000 000 000 (Beispiel)</a> oder <a href="#kontakt">stelle eine Anfrage</a>.</p>
+  </div>
+</section>
+
+<!-- 10. Abschluss mit Handlung -->
+<section class="sektion sek--abschluss" id="abschluss" aria-labelledby="abschluss-titel">
+  <div class="wrap">
+    <div class="abschluss">
+      <div class="abschluss__bg bild" data-platzhalter="Bild: Lernende am Schreibtisch" data-parallax=".07"></div>
+      <div class="abschluss__inhalt">
+        <h2 id="abschluss-titel">Baue dein Wissen auf, das du wirklich nutzt.</h2>
+        <a class="knopf knopf--hell" href="#preis">Jetzt lernen<span class="pfeil" aria-hidden="true"><svg class="ico"><use href="#i-pfeil"/></svg></span></a>
+      </div>
+      <p class="abschluss__bewertung bewertung bewertung--dunkel"><span class="avatare" aria-hidden="true"><i style="--t:30%"><svg class="ico"><use href="#i-nutzer"/></svg></i><i style="--t:46%"><svg class="ico"><use href="#i-nutzer"/></svg></i><i style="--t:62%"><svg class="ico"><use href="#i-nutzer"/></svg></i></span><span class="bewertung__text"><span class="sterne" aria-hidden="true"><svg class="ico"><use href="#i-stern"/></svg><svg class="ico"><use href="#i-stern"/></svg><svg class="ico"><use href="#i-stern"/></svg><svg class="ico"><use href="#i-stern"/></svg><svg class="ico"><use href="#i-stern"/></svg></span><span data-beispiel><strong>4,9 von 5</strong> (Beispiel)</span></span></p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="fuss-aussen" id="kontakt">
+  <div class="insel insel--dunkel fuss">
+    <div class="wrap fuss__raster">
+      <div class="fuss__marke">
+        <a class="logo logo--fuss" href="#top" aria-label="Lehrpfad, zum Seitenanfang">
+          <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M9 23V9l7 9 7-9v14" fill="none" stroke="var(--flaeche-dunkel)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Lehrpfad</span>
+        </a>
+        <p>Lernen mit klarem Weg, Begleitung und Aufgaben aus der Praxis. Beispielseite einer Kursvorlage.</p>
+        <ul class="fuss__kontakt">
+          <li><a href="tel:+490000000000"><svg class="ico" aria-hidden="true"><use href="#i-tel"/></svg>0000 000 000 (Beispiel)</a></li>
+          <li><a href="mailto:anfrage@beispiel.example"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg>anfrage@beispiel.example</a></li>
+        </ul>
+      </div>
+      <nav class="fuss__spalte" aria-label="Seitenbereiche">
+        <h2>Seite</h2>
+        <ul>
+          <li><a href="#funktionen">Vorteile</a></li>
+          <li><a href="#lehrplan">Lehrplan</a></li>
+          <li><a href="#dozentin">Dozentin</a></li>
+          <li><a href="#stimmen">Stimmen</a></li>
+          <li><a href="#fragen">Fragen</a></li>
+        </ul>
+      </nav>
+      <nav class="fuss__spalte" aria-label="Rechtliches">
+        <h2>Rechtliches</h2>
+        <ul>
+          <li><a href="#">Impressum</a></li>
+          <li><a href="#">Datenschutz</a></li>
+        </ul>
+      </nav>
+      <form class="fuss__form" action="#" data-beispielform>
+        <h2>Anfrage oder Newsletter</h2>
+        <label for="mail">E-Mail-Adresse</label>
+        <div class="fuss__feld">
+          <input id="mail" name="mail" type="email" autocomplete="email" placeholder="name@beispiel.example" required>
+          <button class="knopf" type="submit">Absenden</button>
+        </div>
+        <p class="fuss__status" role="status">Beispielformular, es wird nichts gesendet.</p>
+      </form>
+    </div>
+    <div class="wrap fuss__unten">
+      <p>&copy; <span data-jahr>2026</span> Lehrpfad (Beispielmarke)</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../_basis/bewegung.js" defer></script>
+<script src="stil.js" defer></script>
+</body>
+</html>
