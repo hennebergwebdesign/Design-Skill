@@ -1,0 +1,30 @@
+/* marke.css der Vorlage t08: Ausgangswerte. Marke wechseln = nur diese Werte (und die zwei Schriftzeilen). */
+:root{
+  --flaeche:#ffffff;
+  --flaeche-alt:#eef0f3;
+  --flaeche-dunkel:#15191c;
+  --text:#15191c;
+  --text-leise:#4a5058;
+  --linie:#dde0e5;
+  --akzent:#ff7a3d;          /* Hauptaktion und Hervorhebung */
+  --akzent-text:#15191c;     /* Text auf Akzent, Kontrast ca. 7 zu 1 */
+  --schrift-titel:'Bricolage Grotesque',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:28px;
+  --radius-bild:28px;
+  /* Zusatztokens dieser Vorlage */
+  --signal:#3a55d6;          /* zweite Farbe: Nebenaktion, Teamband, Kachel */
+  --signal-text:#ffffff;
+  --akzent-weich:#ffd7c2;    /* helle Tönung des Akzents für Verläufe */
+  --text-auf-dunkel:#f4f5f7;
+  --text-leise-dunkel:#c5cad1;
+  --linie-dunkel:#2b3136;
+  --radius-gross:36px;
+  --radius-klein:14px;
+  --radius-marke:8px;
+  --bild-a:#c9d3e8;          /* Platzhalterfarben für Bildflächen */
+  --bild-b:#e6c9b8;
+  --bild-c:#b8d1c9;
+  --kopf:4.75rem;
+}

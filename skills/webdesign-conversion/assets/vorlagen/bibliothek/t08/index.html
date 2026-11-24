@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Takt: Planer App für Aufgaben und Ziele</title>
+<meta name="description" content="Beispielseite einer App Vorstellung: Aufgaben, Termine und Ziele an einem Ort, mit Preisen, Fragen und Download.">
+<link rel="stylesheet" href="../_basis/schriften.css">
+<link rel="stylesheet" href="marke.css">
+<link rel="stylesheet" href="../_basis/basis.css">
+<link rel="stylesheet" href="stil.css">
+</head>
+<body>
+<a class="sprunglink" href="#inhalt">Zum Inhalt springen</a>
+
+<header class="kopf">
+  <div class="wrap wrap--breit kopf__innen">
+    <a class="logo" href="#oben" aria-label="Takt, zum Seitenanfang">Takt</a>
+    <button class="menue-knopf" type="button" data-menue aria-expanded="false" aria-controls="menue"><span class="menue-knopf__text">Menü</span><span class="menue-knopf__symbol" aria-hidden="true"></span></button>
+    <div class="menue" id="menue" data-menue-ziel>
+      <nav class="nav" aria-label="Hauptnavigation">
+        <a href="#demo">Demo</a><a href="#funktionen">Funktionen</a><a href="#team">Team</a><a href="#preise">Preise</a><a href="#start">Download</a>
+      </nav>
+      <div class="kopf__aktionen">
+        <a class="knopf" href="#preise">Anmelden</a>
+        <a class="knopf knopf--hell" href="#demo">Mehr erfahren</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="inhalt">
+<span id="oben"></span>
+
+<!-- 1 Held: zwei Karten, Telefon überlappt in den dunklen Block -->
+<section class="held" aria-labelledby="h-held">
+  <div class="wrap wrap--breit held__raster">
+    <div class="held__text" data-zeig>
+      <h1 id="h-held">Einfach geplant. <span class="marker"><span class="marker__text">Klar erledigt.</span></span></h1>
+      <p class="held__lead">Aufgaben, Termine und Ziele an einem Ort. Die App passt sich Ihrem Alltag an und erinnert nur dann, wenn es hilft.</p>
+      <div class="knopfreihe">
+        <a class="knopf knopf--signal" href="#start">App laden</a>
+        <a class="knopf knopf--hell" href="#demo">Mehr erfahren</a>
+      </div>
+      <p class="held__hinweis"><span class="punkt" aria-hidden="true"></span>Kostenlos testen. Jederzeit kündbar.</p>
+      <div class="partner">
+        <p class="partner__titel">Partner und Förderer</p>
+        <!-- Platzhalter: hier echte Partnerlogos mit Freigabe einsetzen -->
+        <div class="band partner__band" aria-hidden="true" data-beispiel>
+          <div class="band__spur"><span class="bild logo-platz" data-platzhalter="Logo"></span><span class="bild logo-platz" data-platzhalter="Logo"></span><span class="bild logo-platz" data-platzhalter="Logo"></span><span class="bild logo-platz" data-platzhalter="Logo"></span></div>
+          <div class="band__spur"><span class="bild logo-platz" data-platzhalter="Logo"></span><span class="bild logo-platz" data-platzhalter="Logo"></span><span class="bild logo-platz" data-platzhalter="Logo"></span><span class="bild logo-platz" data-platzhalter="Logo"></span></div>
+        </div>
+      </div>
+    </div>
+    <div class="held__bild bild bild--a" data-platzhalter="Held Bild" data-zeig="skala">
+      <span class="chip chip--dunkel">Ein Plan für jeden Tag</span>
+      <span class="chip chip--hell">Los geht es</span>
+    </div>
+  </div>
+</section>
+
+<div class="wrap wrap--breit buehne">
+  <div class="telefon telefon--gross" data-parallax="0.05" aria-hidden="true">
+    <span class="telefon__kerbe"></span>
+    <div class="telefon__schirm">
+      <div class="tel-kopfzeile"><span>Guten Tag</span><b>Name Nachname</b></div>
+      <div class="bild bild--b tel-bild" data-platzhalter="Bild"></div>
+      <div class="tel-liste"><span>Heute</span><span>Diese Woche</span></div>
+      <div class="tel-leiste"><i></i><i></i><i></i><i></i></div>
+    </div>
+  </div>
+
+<!-- 2 Dunkler Block: Demo, Video, gestapelte Funktionskarten -->
+<section class="dunkel" id="demo" aria-labelledby="h-demo">
+  <p class="tag tag--akzent dunkel__tag">App Demo</p>
+  <div class="mitte" data-zeig>
+    <h2 id="h-demo">Gebaut, damit Sie dranbleiben.</h2>
+    <p class="lead lead--dunkel">Klare Ansichten, kleine Erinnerungen und Fortschritte, die man sofort sieht. Alles in einer App.</p>
+  </div>
+  <div class="video" data-video>
+    <div class="video__rahmen bild bild--c" data-platzhalter="Video Vorschau">
+      <!-- Video hier einbinden, Poster und Untertitel nicht vergessen -->
+      <button class="play" type="button" aria-label="Video abspielen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></button>
+    </div>
+  </div>
+
+  <div class="stapel" id="funktionen">
+    <article class="stapelkarte">
+      <div class="stapelkarte__bild"><div class="telefon telefon--mittel" aria-hidden="true"><span class="telefon__kerbe"></span><div class="telefon__schirm"><b class="tel-titel">PLANER</b><div class="tel-zeilen"><span></span><span></span></div><svg class="tel-kurve" viewBox="0 0 200 70" preserveAspectRatio="none"><path d="M0 60 L20 40 L40 55 L60 20 L80 50 L100 30 L120 58 L140 15 L160 45 L180 28 L200 50 L200 70 L0 70Z" fill="currentColor"/></svg></div></div></div>
+      <div class="stapelkarte__text">
+        <p class="tag">Funktion</p>
+        <h3>Persönliche Pläne</h3>
+        <p>Pläne richten sich nach Ihrem Zeitfenster und Ihrem Ziel. So wissen Sie jeden Morgen, was als Nächstes dran ist, ohne lange zu suchen.</p>
+        <a class="knopf knopf--akzent" href="#preise">Mehr erfahren</a>
+      </div>
+    </article>
+    <article class="stapelkarte stapelkarte--wechsel">
+      <div class="stapelkarte__bild"><div class="telefon telefon--mittel telefon--signal" aria-hidden="true"><span class="telefon__kerbe"></span><div class="telefon__schirm"><b class="tel-titel">FORTSCHRITT</b>
+        <div class="ring" data-zeig="skala"><svg viewBox="0 0 120 120"><circle class="ring__spur" cx="60" cy="60" r="48"/><circle class="ring__wert" cx="60" cy="60" r="48" pathLength="100"/></svg><span data-beispiel>75 %</span></div></div></div></div>
+      <div class="stapelkarte__text">
+        <p class="tag tag--signal">Funktion</p>
+        <h3>Fortschritt im Blick</h3>
+        <p>Übersichtliche Auswertungen zeigen, was Sie erreicht haben und wo noch Luft ist. Das motiviert und hilft bei der nächsten Entscheidung.</p>
+        <a class="knopf knopf--signal" href="#preise">Mehr erfahren</a>
+      </div>
+    </article>
+    <article class="stapelkarte">
+      <div class="stapelkarte__bild"><div class="telefon telefon--mittel" aria-hidden="true"><span class="telefon__kerbe"></span><div class="telefon__schirm"><b class="tel-titel">ERINNERUNG</b><div class="tel-karte"><span>Kurze Pause?</span><i></i></div><div class="bild bild--a tel-bild" data-platzhalter="Bild"></div></div></div></div>
+      <div class="stapelkarte__text">
+        <p class="tag tag--hell">Funktion</p>
+        <h3>Kluge Erinnerungen</h3>
+        <p>Hinweise kommen zur passenden Zeit und lassen sich mit einem Tipp verschieben. Sie bleiben im Rhythmus, ohne gestört zu werden.</p>
+        <a class="knopf knopf--grau" href="#preise">Mehr erfahren</a>
+      </div>
+    </article>
+  </div>
+</section>
+</div>
+
+<!-- 3 Anmeldung: Textkarte plus großes Bild -->
+<section class="sektion anmeldung" aria-labelledby="h-anm">
+  <div class="wrap wrap--breit anmeldung__raster">
+    <div class="anmeldung__text" data-zeig="links">
+      <p class="tag tag--akzent">Anmeldung</p>
+      <h2 id="h-anm">Planen Sie den nächsten Termin direkt in der App.</h2>
+      <p>Ein Schritt voraus: Termin sichern, Erinnerung setzen, fertig.</p>
+      <a class="knopf knopf--hell knopf--weiss" href="#preise">Termin buchen</a>
+    </div>
+    <div class="anmeldung__bild bild bild--b" data-platzhalter="Bild Anmeldung" data-zeig="rechts">
+      <span class="chip chip--dunkel">Kurs Beispiel</span>
+      <a class="eck" href="#start" aria-label="Zum Download"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="qr" aria-hidden="true"><span class="qr__flaeche"></span><span class="qr__text">Hier anmelden</span></div>
+      <span class="chip chip--hell chip--unten">Bei Anmeldung ein Vorteil (Beispiel)</span>
+    </div>
+  </div>
+</section>
+
+<!-- 4 Vorteile -->
+<section class="sektion vorteile" aria-labelledby="h-vor">
+  <div class="wrap wrap--breit">
+    <div class="mitte" data-zeig>
+      <p class="tag tag--akzent">Vorteile</p>
+      <h2 id="h-vor">Der einfachste Weg, am Ball zu bleiben.</h2>
+      <p class="lead">Persönliche Pläne und sichtbarer Fortschritt machen den Alltag leichter.</p>
+    </div>
+    <div class="vorteile__raster" data-staffel>
+      <div class="vorteile__gross" data-zeig>
+        <p class="tag tag--dunkel">Vollen Zugang entdecken</p>
+        <div class="fotoreihen" aria-hidden="true">
+          <div class="band"><div class="band__spur"><span class="bild bild--a" data-platzhalter="Bild"></span><span class="bild bild--b" data-platzhalter="Bild"></span><span class="bild bild--c" data-platzhalter="Bild"></span><span class="bild bild--a" data-platzhalter="Bild"></span><span class="bild bild--a" data-platzhalter="Bild"></span><span class="bild bild--b" data-platzhalter="Bild"></span><span class="bild bild--c" data-platzhalter="Bild"></span><span class="bild bild--a" data-platzhalter="Bild"></span></div><div class="band__spur"><span class="bild bild--a" data-platzhalter="Bild"></span><span class="bild bild--b" data-platzhalter="Bild"></span><span class="bild bild--c" data-platzhalter="Bild"></span><span class="bild bild--a" data-platzhalter="Bild"></span><span class="bild bild--a" data-platzhalter="Bild"></span><span class="bild bild--b" data-platzhalter="Bild"></span><span class="bild bild--c" data-platzhalter="Bild"></span><span class="bild bild--a" data-platzhalter="Bild"></span></div></div>
+          <div class="band band--zurueck"><div class="band__spur"><span class="bild bild--c" data-platzhalter="Bild"></span><span class="bild bild--a" data-platzhalter="Bild"></span><span class="bild bild--b" data-platzhalter="Bild"></span><span class="bild bild--c" data-platzhalter="Bild"></span><span class="bild bild--c" data-platzhalter="Bild"></span><span class="bild bild--a" data-platzhalter="Bild"></span><span class="bild bild--b" data-platzhalter="Bild"></span><span class="bild bild--c" data-platzhalter="Bild"></span></div><div class="band__spur"><span class="bild bild--c" data-platzhalter="Bild"></span><span class="bild bild--a" data-platzhalter="Bild"></span><span class="bild bild--b" data-platzhalter="Bild"></span><span class="bild bild--c" data-platzhalter="Bild"></span><span class="bild bild--c" data-platzhalter="Bild"></span><span class="bild bild--a" data-platzhalter="Bild"></span><span class="bild bild--b" data-platzhalter="Bild"></span><span class="bild bild--c" data-platzhalter="Bild"></span></div></div>
+        </div>
+        <h3>Finden Sie, was zu Ihnen passt</h3>
+        <p>Von einfachen Routinen bis zu größeren Vorhaben: für jedes Ziel und jede Lebenslage gibt es einen Einstieg.</p>
+      </div>
+      <article class="vorteil" data-zeig><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 12h16M12 4c3 3 3 13 0 16M12 4c-3 3-3 13 0 16" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span><h3>Überall nutzbar</h3><p>Zu Hause, unterwegs oder im Büro. Ihr Stand ist immer dabei.</p></article>
+      <article class="vorteil" data-zeig><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 10h16M9 3v4M15 3v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><h3>Flexible Termine</h3><p>Zeiten buchen und Erinnerungen setzen, passend zu Ihrem Tag.</p></article>
+      <article class="vorteil" data-zeig><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><h3>Schnell erledigt</h3><p>Kurze Einheiten, die in einen vollen Terminkalender passen.</p></article>
+      <article class="vorteil" data-zeig><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M5 20c0-4 3-7 7-7s7 3 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><h3>Ohne Zubehör</h3><p>Die App passt sich an, was Sie gerade zur Hand haben.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- 5 Bildbühne mit Wochenkarten -->
+<section class="buehne-bild" aria-labelledby="h-woche">
+  <div class="wrap wrap--breit">
+    <div class="bildkarte bild bild--c" data-platzhalter="Großes Bild">
+      <h2 id="h-woche" class="marker-titel" data-zeig><span class="marker"><span class="marker__text">Im Takt bleiben,</span></span> <span class="marker-titel__rest">Kontrolle behalten.</span></h2>
+      <div class="wochen" data-staffel>
+        <article class="woche" data-zeig="rechts"><span class="icon icon--dunkel" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 10h16" stroke="currentColor" stroke-width="2"/></svg></span><h3>Woche 1</h3><ul><li>Ziel festlegen</li><li>Termine eintragen</li><li>Erste Erinnerung</li></ul></article>
+        <article class="woche woche--grau" data-zeig="rechts"><span class="icon icon--dunkel" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 10h16" stroke="currentColor" stroke-width="2"/></svg></span><h3>Woche 2</h3><ul><li>Plan anpassen</li><li>Fortschritt prüfen</li><li>Serie halten</li></ul></article>
+        <article class="woche woche--dunkel" data-zeig="rechts"><span class="icon icon--hell" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 10h16" stroke="currentColor" stroke-width="2"/></svg></span><h3>Woche 3</h3><ul><li>Neue Ziele setzen</li><li>Rückblick ansehen</li><li>Plan teilen</li></ul></article>
+      </div>
+      <a class="knopf knopf--signal bildkarte__knopf" href="#start">App laden und starten</a>
+    </div>
+  </div>
+</section>
+
+<!-- 6 Belohnungen -->
+<section class="sektion belohnung" aria-labelledby="h-bel">
+  <div class="wrap wrap--breit belohnung__raster">
+    <div class="telefon telefon--signal telefon--bel" data-zeig aria-hidden="true"><span class="telefon__kerbe"></span><div class="telefon__schirm telefon__schirm--signal"><b class="tel-gross">Belohnungen entdecken</b><span class="tel-marke">Takt</span><div class="bild bild--a tel-bild tel-bild--unten" data-platzhalter="Bild"></div></div></div>
+    <div class="belohnung__text" data-zeig>
+      <p class="tag tag--dunkel">Belohnungen</p>
+      <p>Werden Sie Teil einer Gemeinschaft, die sich gegenseitig anspornt. Meistern Sie kleine Herausforderungen und sammeln Sie Auszeichnungen für Ihre Erfolge.</p>
+      <h2 id="h-bel">Feiern Sie jeden Meilenstein mit Abzeichen.</h2>
+      <a class="knopf knopf--akzent" href="#start">Jetzt Abzeichen sammeln</a>
+    </div>
+    <ul class="belohnung__liste" data-staffel>
+      <li data-zeig="rechts"><span>Gemeinschaft</span><span class="avatare" aria-hidden="true"><i></i><i></i><i></i><i></i></span></li>
+      <li data-zeig="rechts"><span>Abzeichen sammeln</span><svg class="schild" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v5c0 4.5 3 8 7 10 4-2 7-5.500 7-10V6z" fill="currentColor"/><path d="m8.500 12 2.500 2.500 4.500-5" fill="none" stroke="var(--flaeche)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+      <li data-zeig="rechts"><span>Serien verfolgen</span><span class="rund" aria-hidden="true"></span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 7 Team -->
+<section class="team" id="team" aria-labelledby="h-team">
+  <div class="wrap wrap--breit">
+    <div class="team__band">
+      <div class="team__karte">
+        <div class="mitte" data-zeig>
+          <p class="tag tag--akzent">Das Team</p>
+          <h2 id="h-team">Die Menschen hinter Ihrem Fortschritt.</h2>
+          <p class="lead">Von Fachleuten bis zur Beratung: ein Team, das Sie auf dem Weg begleitet.</p>
+        </div>
+        <div class="band team__reihe" data-beispiel>
+          <ul class="band__spur">
+            <li><div class="bild bild--a" data-platzhalter="Foto"></div><p>Vorname Nachname</p></li><li><div class="bild bild--b" data-platzhalter="Foto"></div><p>Vorname Nachname</p></li><li><div class="bild bild--c" data-platzhalter="Foto"></div><p>Vorname Nachname</p></li><li><div class="bild bild--a" data-platzhalter="Foto"></div><p>Vorname Nachname</p></li><li><div class="bild bild--b" data-platzhalter="Foto"></div><p>Vorname Nachname</p></li><li><div class="bild bild--c" data-platzhalter="Foto"></div><p>Vorname Nachname</p></li><li><div class="bild bild--a" data-platzhalter="Foto"></div><p>Vorname Nachname</p></li><li><div class="bild bild--b" data-platzhalter="Foto"></div><p>Vorname Nachname</p></li>
+          </ul>
+          <ul class="band__spur" aria-hidden="true">
+            <li><div class="bild bild--a" data-platzhalter="Foto"></div><p>Vorname Nachname</p></li><li><div class="bild bild--b" data-platzhalter="Foto"></div><p>Vorname Nachname</p></li><li><div class="bild bild--c" data-platzhalter="Foto"></div><p>Vorname Nachname</p></li><li><div class="bild bild--a" data-platzhalter="Foto"></div><p>Vorname Nachname</p></li><li><div class="bild bild--b" data-platzhalter="Foto"></div><p>Vorname Nachname</p></li><li><div class="bild bild--c" data-platzhalter="Foto"></div><p>Vorname Nachname</p></li><li><div class="bild bild--a" data-platzhalter="Foto"></div><p>Vorname Nachname</p></li><li><div class="bild bild--b" data-platzhalter="Foto"></div><p>Vorname Nachname</p></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 Stimmen -->
+<section class="sektion stimmen" aria-labelledby="h-stim">
+  <div class="wrap wrap--breit">
+    <div class="mitte" data-zeig>
+      <p class="tag tag--akzent">Stimmen</p>
+      <h2 id="h-stim">Ergebnisse, die man spürt.</h2>
+      <p class="lead">Beispieltexte: hier stehen später echte, freigegebene Rückmeldungen.</p>
+    </div>
+    <div class="stimmen__raster" data-staffel data-beispiel>
+      <figure class="stimme stimme--akzent" data-zeig><p class="sterne" aria-label="Fünf von fünf Sternen">★★★★★</p><blockquote>„Die App macht den Alltag einfacher. Ich bleibe seit Wochen dran.“</blockquote><figcaption><span class="bild avatar" data-platzhalter=""></span>Vorname Nachname</figcaption></figure>
+      <figure class="stimme" data-zeig><p class="sterne" aria-label="Fünf von fünf Sternen">★★★★★</p><blockquote>„Kurz, klar und passend zu meinem Tag. Genau das habe ich gesucht.“</blockquote><figcaption><span class="bild avatar" data-platzhalter=""></span>Vorname Nachname</figcaption></figure>
+      <figure class="stimme" data-zeig><p class="sterne" aria-label="Fünf von fünf Sternen">★★★★★</p><blockquote>„Die Gemeinschaft motiviert mich, auch an trägen Tagen weiterzumachen.“</blockquote><figcaption><span class="bild avatar" data-platzhalter=""></span>Vorname Nachname</figcaption></figure>
+      <figure class="stimme" data-zeig><p class="sterne" aria-label="Fünf von fünf Sternen">★★★★★</p><blockquote>„Kleine Erfolge summieren sich schnell. Das treibt mich an.“</blockquote><figcaption><span class="bild avatar" data-platzhalter=""></span>Vorname Nachname</figcaption></figure>
+      <div class="stimme stimme--deko" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13.500 2 5 13.500h6L10 22l9-12h-6.500z" fill="currentColor"/></svg></div>
+      <figure class="stimme" data-zeig><p class="sterne" aria-label="Fünf von fünf Sternen">★★★★★</p><blockquote>„Ich brauche kein Zubehör und komme trotzdem voran, ganz ohne Stress.“</blockquote><figcaption><span class="bild avatar" data-platzhalter=""></span>Vorname Nachname</figcaption></figure>
+      <figure class="stimme" data-zeig><p class="sterne" aria-label="Fünf von fünf Sternen">★★★★★</p><blockquote>„Erinnerungen und Serien helfen mir, Gewohnheiten aufzubauen.“</blockquote><figcaption><span class="bild avatar" data-platzhalter=""></span>Vorname Nachname</figcaption></figure>
+      <figure class="stimme" data-zeig><p class="sterne" aria-label="Fünf von fünf Sternen">★★★★★</p><blockquote>„Es fühlt sich an, als hätte ich eine Begleitung in der Tasche.“</blockquote><figcaption><span class="bild avatar" data-platzhalter=""></span>Vorname Nachname</figcaption></figure>
+      <figure class="stimme stimme--signal" data-zeig><p class="sterne" aria-label="Fünf von fünf Sternen">★★★★★</p><blockquote>„Die Ranglisten halten mich dran. Gemeinsam macht es mehr Freude.“</blockquote><figcaption><span class="bild avatar" data-platzhalter=""></span>Vorname Nachname</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 9 Personalisierung -->
+<section class="sektion personal" aria-labelledby="h-pers">
+  <div class="wrap wrap--breit">
+    <div class="mitte" data-zeig>
+      <p class="tag tag--akzent">Personalisierung</p>
+      <h2 id="h-pers">Persönliche Begleitung, gestützt auf Ihre Daten.</h2>
+      <p class="lead">Das System erkennt Ihre Gewohnheiten und passt jede Einheit an Ihren Rhythmus an.</p>
+    </div>
+    <div class="personal__raster">
+      <div class="personal__dunkel" data-zeig="links">
+        <p class="statuschip" data-beispiel><span>Status</span><b>Aktiv</b><i aria-hidden="true"></i></p>
+        <h3>Ihr Plan, der mitdenkt</h3>
+        <p>Die <strong>persönliche Begleitung</strong> lernt aus Ihren Einträgen, bewertet Ihren Fortschritt und passt Ziele, Dauer und Zeitpunkt laufend an.</p>
+        <div class="knopfreihe"><a class="knopf knopf--signal" href="#start">App jetzt laden</a><a class="knopf knopf--hell" href="#preise">Mehr erfahren</a></div>
+      </div>
+      <div class="personal__hell" data-zeig="rechts">
+        <div class="uhr" aria-hidden="true"><div class="uhr__schirm"><b>Ihr Plan</b><span class="uhr__knopf">Weiter</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 Preise -->
+<section class="sektion preise" id="preise" aria-labelledby="h-preis">
+  <div class="wrap wrap--breit">
+    <div class="mitte" data-zeig>
+      <p class="tag tag--akzent">Preise</p>
+      <h2 id="h-preis">Starten Sie mit Ihrem Tempo.</h2>
+      <p class="lead">Drei Stufen. Die Preise sind Beispielwerte und werden vor dem Start eingesetzt.</p>
+    </div>
+    <div class="preise__raster" data-staffel>
+      <article class="plan" data-zeig><span class="icon icon--dunkel" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 17c3 1 6-1 8-5s3-6 6-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><h3>Basis</h3><p>Für den Einstieg mit geführten Abläufen und Zugang zur Gemeinschaft.</p><p class="plan__preis" data-beispiel>0 €</p><ul class="haken"><li>Geführte Abläufe</li><li>Zugang zur Gemeinschaft</li><li>Einfache Übersicht</li></ul><a class="knopf knopf--dunkel" href="#start">Kostenlos starten</a></article>
+      <article class="plan plan--akzent" data-zeig><span class="plan__marke">Beliebt</span><span class="icon icon--dunkel" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="2.500" fill="currentColor"/></svg></span><h3>Plus</h3><p>Anpassbare Pläne, detaillierte Auswertungen und kluge Erinnerungen.</p><p class="plan__preis" data-beispiel>9 € <small>im Monat</small></p><ul class="haken"><li>Anpassbare Pläne</li><li>Kluge Erinnerungen</li><li>Erweiterte Auswertung</li></ul><a class="knopf knopf--weiss" href="#start">Plus wählen</a></article>
+      <article class="plan plan--dunkel" data-zeig><span class="icon icon--hell" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 4h10v5a5 5 0 0 1-10 0zM12 14v4M8 20h8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><h3>Komplett</h3><p>Voller Zugang mit persönlicher Begleitung, tiefer Auswertung und Vorrang beim Support.</p><p class="plan__preis" data-beispiel>19 € <small>im Monat</small></p><ul class="haken"><li>Persönliche Begleitung</li><li>Exklusive Auszeichnungen</li><li>Vorrang beim Support</li></ul><a class="knopf knopf--signal" href="#start">Komplett wählen</a></article>
+    </div>
+  </div>
+</section>
+
+<!-- 11 FAQ -->
+<section class="sektion faq" aria-labelledby="h-faq">
+  <div class="wrap">
+    <div class="mitte" data-zeig>
+      <p class="tag tag--akzent">Fragen</p>
+      <h2 id="h-faq">Noch Fragen? Hier sind Antworten.</h2>
+      <p class="lead">Kurze Antworten, damit Sie schnell loslegen können.</p>
+    </div>
+    <div class="faq__gruppen">
+      <div class="faq__gruppe" data-zeig>
+        <h3 class="faq__titel"><span class="icon icon--hell" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 11v5M12 8h.01" stroke="currentColor" stroke-width="2.200" stroke-linecap="round"/></svg></span>Allgemein</h3>
+        <div class="faq__liste" data-exklusiv>
+          <details><summary>Worum geht es in dieser App?</summary><p>Beispielantwort: Die App bündelt Aufgaben, Termine und Ziele und hilft beim Dranbleiben.</p></details>
+          <details><summary>Wie entstehen die persönlichen Pläne?</summary><p>Beispielantwort: Aus Ihren Angaben und Ihrem Fortschritt entsteht ein Plan, der sich laufend anpasst.</p></details>
+        </div>
+      </div>
+      <div class="faq__gruppe" data-zeig>
+        <h3 class="faq__titel"><span class="icon icon--hell" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 4 2.400 5 5.600.8-4 4 1 5.600-5-2.700L7 19.400l1-5.600-4-4 5.600-.8z" fill="currentColor"/></svg></span>Funktionen</h3>
+        <div class="faq__liste" data-exklusiv>
+          <details><summary>Kann ich meinen Fortschritt verfolgen?</summary><p>Beispielantwort: Ja, Auswertungen zeigen Verlauf und Meilensteine.</p></details>
+          <details><summary>Lässt sich die App mit anderen Geräten verbinden?</summary><p>Beispielantwort: Hier die tatsächlich unterstützten Geräte nennen.</p></details>
+          <details><summary>Funktioniert sie auch ohne Verbindung?</summary><p>Beispielantwort: Hier den echten Funktionsumfang offline beschreiben.</p></details>
+        </div>
+      </div>
+      <div class="faq__gruppe" data-zeig>
+        <h3 class="faq__titel"><span class="icon icon--hell" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="9" r="3" fill="currentColor"/><circle cx="16" cy="10" r="2.500" fill="currentColor"/><path d="M3 19c0-3 2.500-5 6-5s6 2 6 5zM15 14c3 0 6 1.500 6 5h-5" fill="currentColor"/></svg></span>Gemeinschaft</h3>
+        <div class="faq__liste" data-exklusiv>
+          <details><summary>Was sind gemeinsame Herausforderungen?</summary><p>Beispielantwort: Zeitlich begrenzte Aufgaben, die man allein oder mit anderen angeht.</p></details>
+          <details><summary>Kann ich Freunde einladen?</summary><p>Beispielantwort: Ja, über einen Einladungslink.</p></details>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 12 Abschluss -->
+<section class="start" id="start" aria-labelledby="h-start">
+  <div class="wrap wrap--breit">
+    <div class="start__karte">
+      <i class="funke funke--1" aria-hidden="true"></i><i class="funke funke--2" aria-hidden="true"></i><i class="funke funke--3" aria-hidden="true"></i><i class="funke funke--4" aria-hidden="true"></i>
+      <p class="tag tag--hell">Jetzt starten</p>
+      <div class="batterie" data-zeig="skala" aria-hidden="true"><svg viewBox="0 0 160 80"><rect x="2" y="2" width="146" height="76" rx="14" fill="none" stroke="currentColor" stroke-width="3"/><rect x="152" y="26" width="8" height="28" rx="3" fill="currentColor"/><rect class="batterie__fuell" x="10" y="10" width="130" height="60" rx="9"/><path class="batterie__blitz" d="M78 16 56 44h14l-4 20 24-30H76z"/></svg></div>
+      <div class="mitte" data-zeig>
+        <h2 id="h-start">Bringen Sie Ihren nächsten Schritt in Gang.</h2>
+        <p class="lead lead--dunkel">Laden Sie die App und starten Sie mit einem Plan, der zu Ihnen passt.</p>
+        <a class="knopf knopf--signal" href="#oben">App laden</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="fuss">
+  <div class="wrap wrap--breit">
+    <div class="fuss__karte">
+      <div class="fuss__marke">
+        <p>Beispieltext: ein Satz zur Marke, zu Aufgaben und Zielen.</p>
+        <a class="knopf knopf--weiss" href="#oben">Zum Seitenanfang</a>
+      </div>
+      <nav class="fuss__spalte" aria-label="Abschnitte"><h2>Abschnitte</h2><ul><li><a href="#demo">Demo</a></li><li><a href="#funktionen">Funktionen</a></li><li><a href="#team">Team</a></li><li><a href="#preise">Preise</a></li><li><a href="#start">Download</a></li></ul></nav>
+      <nav class="fuss__spalte" aria-label="Rechtliches"><h2>Rechtliches</h2><ul><li><a href="#oben">Impressum</a></li><li><a href="#oben">Datenschutz</a></li><li><a href="#oben">Kontakt</a></li></ul></nav>
+      <nav class="fuss__spalte" aria-label="Soziale Netzwerke"><h2>Folgen</h2><ul><li><a href="#oben">Netzwerk eins</a></li><li><a href="#oben">Netzwerk zwei</a></li><li><a href="#oben">Netzwerk drei</a></li></ul></nav>
+    </div>
+  </div>
+</footer>
+
+<script src="../_basis/bewegung.js"></script>
+<script src="stil.js"></script>
+</body>
+</html>
