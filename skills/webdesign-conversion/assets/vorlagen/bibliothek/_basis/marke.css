@@ -1,0 +1,18 @@
+/* marke.css: DIE Datei zum Umfärben. Jede Vorlage hat ihre eigene Kopie mit ihren Ausgangswerten.
+   Marke wechseln = nur diese Werte ändern (und bei Bedarf die zwei Schriftzeilen). Sonst nichts anfassen.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#ffffff;        /* Seitenhintergrund */
+  --flaeche-alt:#f3f4f6;    /* abgesetzte Flächen */
+  --flaeche-dunkel:#0f172a; /* feste Rolle: dunkler Abschnitt */
+  --text:#111827;
+  --text-leise:#4b5563;
+  --linie:#e5e7eb;
+  --akzent:#2563eb;         /* Hauptaktion, ein Akzent für die ganze Seite */
+  --akzent-text:#ffffff;
+  --schrift-titel:'Manrope',system-ui,sans-serif;
+  --schrift-text:'Manrope',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:20px;
+  --radius-bild:20px;
+}
