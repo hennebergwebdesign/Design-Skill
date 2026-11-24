@@ -214,7 +214,7 @@ h3{font-size:var(--h3)}
 .pfeil:hover:not(:disabled){transform:translateY(-2px);background:var(--flaeche-dunkel);color:var(--text-auf-dunkel)}
 .pfeil:active:not(:disabled){transform:scale(.95)}
 .pfeil:disabled{opacity:.45;cursor:default}
-.karussell__spur{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-block:.25rem;margin-inline:calc(-1 * var(--rand));padding-inline:var(--rand);scroll-padding-inline:var(--rand);border-radius:var(--radius-karte)}
+.karussell__spur{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-block:.25rem}
 .karussell__spur::-webkit-scrollbar{display:none}
 .skarte{flex:0 0 min(85%,22rem);scroll-snap-align:start;background:var(--karte);color:var(--text);border-radius:var(--radius-karte);padding:1.5rem;display:flex;flex-direction:column;gap:1.25rem;min-height:17rem;transition:transform var(--dauer-mittel) var(--kurve),box-shadow var(--dauer-mittel)}
 .skarte:hover{transform:translateY(-4px);box-shadow:0 16px 36px color-mix(in srgb,var(--flaeche-dunkel) 30%,transparent)}

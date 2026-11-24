@@ -192,7 +192,7 @@ a:hover .mehr{text-decoration-color:var(--akzent)}
 .preiskarte__fuer span{font-size:.8125rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text-leise)}
 .preiskarte--akzent .preiskarte__fuer{border-top-color:color-mix(in srgb,var(--akzent-text) 30%,transparent)}
 .preiskarte--akzent .preiskarte__fuer span{color:var(--akzent-text)}
-.partner{display:grid;gap:1.5rem;padding-block:2.5rem clamp(3rem,6vw,5rem);border-top:1px solid var(--linie-dunkel)}
+.partner{display:grid;grid-template-columns:minmax(0,1fr);gap:1.5rem;padding-block:2.5rem clamp(3rem,6vw,5rem);border-top:1px solid var(--linie-dunkel)}
 .partner__titel{text-align:center;color:var(--text-leise-dunkel)!important}
 .dunkel .logos{color:var(--text-leise-dunkel);--logo-h:1.75rem;--band-abstand:clamp(2.5rem,6vw,5rem);-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
 
