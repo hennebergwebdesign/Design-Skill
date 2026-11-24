@@ -1,0 +1,30 @@
+/* marke.css der Vorlage t05 (Atelier hell, warmes Papier, ein orangener Akzent).
+   Marke wechseln = nur diese Werte ändern. Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#f0ece7;        /* Seitenhintergrund, warmes Papier */
+  --flaeche-alt:#e3ddd6;    /* Karten, Zeilen, Panels */
+  --flaeche-dunkel:#1c1511; /* Menüebene */
+  --text:#1c1511;
+  --text-leise:#5a5049;
+  --linie:#c9c0b7;
+  --akzent:#f4700f;         /* Hauptaktion, ein Akzent für die ganze Seite */
+  --akzent-text:#1c1511;
+  --schrift-titel:'Familjen Grotesk','Instrument Sans',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:24px;
+  --radius-bild:24px;
+  /* Zusatztokens dieser Vorlage */
+  --radius-zeile:16px;
+  --titel-gewicht:400;
+  --titel-spur:-0.04em;
+  --menue-text:#f0ece7;     /* Text auf der dunklen Menüebene */
+  --raster-linie:#d9d1c8;   /* Hintergrundraster im Kopfbereich */
+  /* Platzhalterflächen, Verläufe je Bild, später durch echte Bilder ersetzen */
+  --bild-a1:#e9c3a6; --bild-a2:#c98c68;
+  --bild-b1:#cdd6c3; --bild-b2:#9fb08f;
+  --bild-c1:#c4d0d8; --bild-c2:#8fa5b3;
+  --bild-d1:#ecd2c8; --bild-d2:#c99a8c;
+  --bild-e1:#ead9b0; --bild-e2:#c9a85c;
+  --bild-f1:#d9d3cb; --bild-f2:#aaa095;
+}
