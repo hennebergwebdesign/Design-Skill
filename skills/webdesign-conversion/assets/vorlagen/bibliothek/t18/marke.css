@@ -1,0 +1,38 @@
+/* marke.css der Vorlage "App Bühne": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#08100f;
+  --flaeche-alt:#101a18;
+  --flaeche-dunkel:#040807;
+  --text:#f2f5f3;
+  --text-leise:#a6b4af;
+  --linie:#26332f;
+  --akzent:#f4b63f;
+  --akzent-text:#1a1305;
+  --schrift-titel:'Outfit',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:24px;
+  --radius-bild:24px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:32px;          /* Bühnen, große Tafeln */
+  --radius-klein:14px;          /* Zeilen, Mini-Oberflächen */
+  --radius-telefon:2.4em;       /* Telefonrahmen, in em */
+  --titel-gewicht:500;
+  --titel-spur:-0.03em;
+  --flaeche-karte:#121e1b;      /* dunkle Karten */
+  --flaeche-hell:#e4eee8;       /* helle, deckende Karten (kein Glas) */
+  --text-auf-hell:#0b1412;
+  --text-leise-hell:#43524c;
+  --linie-hell:#c3d3ca;
+  --rahmen-telefon:#2c3a36;     /* Rahmen des Telefons */
+  /* Farbverlauf der Bühne: warm und grün, bewusst ohne Violett */
+  --verlauf-a:#0e8f80;
+  --verlauf-b:#f4b63f;
+  --verlauf-c:#e8603c;
+  --verlauf-d:#1b6f9b;
+  --ton-1:#1c3a35;
+  --ton-2:#3b4a2c;
+  --ton-3:#4a3426;
+}
