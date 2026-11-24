@@ -5,7 +5,7 @@
 .kopf :focus-visible,.held :focus-visible,.kontakt__rahmen :focus-visible,.frage :focus-visible{outline-color:var(--akzent)}
 h2{font-size:var(--h2-m);letter-spacing:var(--titel-spur)}
 h3{font-size:var(--h3)}
-.zahl{font-family:var(--schrift-titel);font-weight:600;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.zahl{font-family:var(--schrift-titel);font-weight:600;letter-spacing:-.02em}
 
 /* Knöpfe */
 .knopf{justify-content:center;text-align:center;transition:transform var(--dauer-kurz) var(--kurve),background-color var(--dauer-kurz),box-shadow var(--dauer-kurz)}
@@ -75,7 +75,7 @@ h3{font-size:var(--h3)}
 .held__buehne{position:relative;display:grid;gap:1.25rem;justify-items:end;padding-bottom:0}
 .held__bild{width:min(100%,30rem);aspect-ratio:4/4.4;border-radius:var(--radius-gross)}
 .held__bild[data-platzhalter]::after{inset:1rem 1rem auto auto}
-.held__karte-huelle{position:absolute;left:.75rem;bottom:5.5rem;width:min(70%,17rem)}
+.held__karte-huelle{position:absolute;left:.75rem;bottom:1.25rem;width:min(86%,19rem)}
 .held__karte{background:var(--flaeche);color:var(--text);border-radius:var(--radius-karte);padding:.9rem;display:grid;gap:.75rem;box-shadow:0 20px 40px color-mix(in srgb,var(--flaeche-dunkel) 40%,transparent)}
 .held__karte-kopf{display:flex;align-items:center;gap:.75rem}
 .held__karte-icon{display:grid;place-items:center;flex:none;width:2.75rem;height:2.75rem;border-radius:50%;background:var(--akzent-tief);color:var(--text-auf-dunkel)}
@@ -83,7 +83,8 @@ h3{font-size:var(--h3)}
 .held__karte-text{font-size:1rem;color:var(--text-leise);line-height:1.3}
 .held__karte-bild{aspect-ratio:16/9;border-radius:var(--radius-klein)}
 .held__karte-bild[data-platzhalter]::after{display:none}
-.held__beleg{display:flex;align-items:center;gap:.75rem;justify-self:start;color:var(--text-leise-dunkel);font-size:1rem;max-width:20rem;line-height:1.35}
+.held__karte-bild{display:none}
+.held__beleg{display:flex;align-items:center;gap:.9rem;margin-top:2rem;color:var(--text-leise-dunkel);font-size:1rem;max-width:24rem;line-height:1.35}
 .avatare{display:flex;flex:none}
 .avatare i{width:2.5rem;height:2.5rem;border-radius:50%;border:2px solid var(--verlauf-bis);margin-left:-.6rem;background:linear-gradient(160deg,var(--ton-2),var(--ton-5))}
 .avatare i:first-child{margin-left:0}
@@ -93,10 +94,10 @@ h3{font-size:var(--h3)}
 @media (min-width:62rem){
   .held{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:3rem;min-height:min(54rem,calc(100svh - 2 * var(--rahmen-rand)));padding-top:9rem;padding-bottom:2.5rem}
   .held__bild{aspect-ratio:4/5}
-  .held__karte-huelle{left:-2.5rem;bottom:auto;top:32%;width:17.5rem}
-  .held__beleg{position:absolute;right:calc(100% - 20rem);bottom:0;left:auto;justify-self:auto}
+  .held__karte-bild{display:block}
+  .held__karte-huelle{left:-4rem;bottom:auto;top:34%;width:20rem}
 }
-@media (min-width:62rem) and (max-width:75rem){.held__karte-huelle{left:-1rem}}
+@media (min-width:62rem) and (max-width:75rem){.held__karte-huelle{left:-1.5rem;width:17rem}}
 
 /* Gemeinsamer Kopf der Abschnitte */
 .vertrauen{padding-block:2.5rem 1rem}
@@ -117,7 +118,7 @@ h3{font-size:var(--h3)}
 .bento__gross{position:relative;isolation:isolate;overflow:hidden;border-radius:var(--radius-gross);color:var(--text-auf-dunkel);padding:clamp(1.5rem,3vw,2.5rem);min-height:26rem;display:flex;flex-direction:column;gap:1.5rem}
 .bento__bild{position:absolute;inset:0;z-index:-1;border-radius:0}
 .bento__bild::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,color-mix(in srgb,var(--flaeche-dunkel) 88%,transparent),color-mix(in srgb,var(--flaeche-dunkel) 45%,transparent))}
-.bento__bild[data-platzhalter]::after{inset:auto 1rem 1rem auto}
+.bento__bild[data-platzhalter]::after{inset:1rem 1rem auto auto}
 .zahlen{display:grid;gap:0;max-width:20rem}
 .zahlen li{padding-block:1rem;border-bottom:1px solid color-mix(in srgb,#fff 38%,transparent)}
 .zahlen .zahl{font-size:clamp(2.25rem,1.6rem + 2.4vw,3.5rem);line-height:1}
