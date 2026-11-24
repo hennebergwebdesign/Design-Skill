@@ -1,0 +1,35 @@
+/* marke.css der Vorlage "Haustechnik dunkel": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#f4f0e8;
+  --flaeche-alt:#e9e3d6;
+  --flaeche-dunkel:#0c1012;
+  --text:#12171a;
+  --text-leise:#555c5e;
+  --linie:#d8d1c2;
+  --akzent:#f2b134;           /* Hauptaktion: Fläche mit dunklem Text, auf Dunkel auch als Text und Punkt */
+  --akzent-text:#14100a;
+  --schrift-titel:'Familjen Grotesk',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:18px;
+  --radius-bild:18px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:26px;
+  --titel-gewicht:500;
+  --titel-spur:-0.03em;
+  --akzent-tief:#8a5600;      /* Akzent auf Hell: Text und Linie (5,4 zu 1 auf --flaeche) */
+  --flaeche-dunkel-2:#151b1e; /* Karten auf Dunkel */
+  --schiefer:#2b3a40;         /* getönte Karte auf Dunkel */
+  --text-auf-dunkel:#f6f3ec;
+  --text-leise-dunkel:#b7bebf;
+  --linie-dunkel:#2a3337;
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#6b4a2a;
+  --ton-2:#2e3f45;
+  --ton-3:#8a5f3a;
+  --ton-4:#3d3a2e;
+  --ton-5:#4a5a56;
+  --ton-6:#1c2327;
+}

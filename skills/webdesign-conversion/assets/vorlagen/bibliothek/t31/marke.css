@@ -1,0 +1,33 @@
+/* marke.css der Vorlage "Gebäudeservice, Flächenwechsel": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#fbfaf7;
+  --flaeche-alt:#eeece5;
+  --flaeche-dunkel:#0f3a47;
+  --text:#14262b;
+  --text-leise:#4f6168;
+  --linie:#d9d5cb;
+  --akzent:#f1c85b;           /* Hauptaktion: Fläche mit dunklem Text, auf Dunkel auch als Zahl und Punkt */
+  --akzent-text:#14262b;
+  --schrift-titel:'Familjen Grotesk',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:22px;
+  --radius-bild:22px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:36px;
+  --titel-gewicht:600;
+  --titel-spur:-0.035em;
+  --akzent-tief:#0b5a6e;      /* Text, Linie und Symbole auf Hell (7 zu 1 auf Fläche) */
+  --text-auf-dunkel:#f4fbfc;
+  --text-leise-dunkel:#c3dde3;
+  --linie-dunkel:#3f6c78;
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#1e4f5c;
+  --ton-2:#7a8f86;
+  --ton-3:#b08d5a;
+  --ton-4:#45606a;
+  --ton-5:#8a9aa0;
+  --ton-6:#2b3e46;
+}

@@ -1,0 +1,33 @@
+/* marke.css der Vorlage "Reisen und Erlebnisse": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#fbf8f3;
+  --flaeche-alt:#f2ece2;
+  --flaeche-dunkel:#10201f;
+  --text:#17211f;
+  --text-leise:#505c59;
+  --linie:#e2d9ca;
+  --akzent:#f2b84b;            /* Hauptaktion auf dunklen Flächen und als Fläche mit dunklem Text */
+  --akzent-text:#17211f;
+  --akzent-tief:#0e6660;       /* Akzentwörter, Zahlen, Häkchen und Linien auf hellen Flächen (6 zu 1 auf Hell) */
+  --schrift-titel:'Bricolage Grotesque',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:20px;
+  --radius-bild:20px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:28px;
+  --titel-gewicht:600;
+  --titel-spur:-0.03em;
+  --text-auf-dunkel:#fbf8f3;
+  --text-leise-dunkel:#d5dcd8;
+  --linie-dunkel:#4a5f5b;
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#27414a;
+  --ton-2:#5a4636;
+  --ton-3:#2f5a4f;
+  --ton-4:#6b5a3c;
+  --ton-5:#3a4a63;
+  --ton-6:#7a4a3a;
+}
