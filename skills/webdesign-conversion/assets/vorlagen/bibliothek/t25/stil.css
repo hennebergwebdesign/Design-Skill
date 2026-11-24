@@ -25,7 +25,7 @@ main p{color:var(--text-leise)}
 .knopf--dunkel{background:var(--flaeche-dunkel);color:var(--text-auf-dunkel)}
 .knopf--hell{background:var(--text-auf-dunkel);color:var(--flaeche-dunkel)}
 .knopf--hell:hover{box-shadow:0 8px 20px -8px color-mix(in srgb,var(--text-auf-dunkel) 50%,transparent)}
-.bild[data-platzhalter]::after{color:var(--text-auf-dunkel);opacity:.9;font-size:var(--text-s)}
+.bild[data-platzhalter]::after{max-width:calc(100% - 2rem);text-align:right;color:var(--text-auf-dunkel);opacity:.9;font-size:var(--text-s)}
 .bild{background:radial-gradient(circle at 28% 18%,color-mix(in srgb,var(--text-auf-dunkel) 14%,transparent),transparent 58%),linear-gradient(155deg,var(--ton,var(--ton-1)),var(--ton-3))}
 .ton-1{--ton:var(--ton-1)}.ton-2{--ton:var(--ton-2)}.ton-3{--ton:var(--ton-3)}.ton-4{--ton:var(--ton-4)}.ton-5{--ton:var(--ton-5)}.ton-6{--ton:var(--ton-6)}
 /* Wortlicht: leise Wörter bleiben lesbar (3 zu 1 bei großer Schrift), gelesene Wörter in voller Farbe */
