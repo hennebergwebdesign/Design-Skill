@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reisen und Erlebnisse, Markenname</title>
+<meta name="description" content="Beispieltext: Handverlesene Reisen und Erlebnisse mit klarem Preis und persönlicher Beratung. Vor dem Einsatz durch den echten Text der Marke ersetzen.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../_basis/schriften.css">
+<link rel="stylesheet" href="marke.css">
+<link rel="stylesheet" href="../_basis/basis.css">
+<link rel="stylesheet" href="stil.css">
+</head>
+<body>
+<a class="sprunglink" href="#inhalt">Zum Inhalt springen</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-pfeil" viewBox="0 0 256 256" fill="currentColor"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"/></symbol>
+  <symbol id="i-links" viewBox="0 0 256 256" fill="currentColor"><path d="M228,128a12,12,0,0,1-12,12H69l51.52,51.51a12,12,0,0,1-17,17l-72-72a12,12,0,0,1,0-17l72-72a12,12,0,0,1,17,17L69,116H216A12,12,0,0,1,228,128Z"/></symbol>
+  <symbol id="i-haken" viewBox="0 0 256 256" fill="currentColor"><path d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183,215.51,63.51a12,12,0,0,1,17,17Z"/></symbol>
+  <symbol id="i-telefon" viewBox="0 0 256 256" fill="currentColor"><path d="M224,154.8l-47.09-21.11-.18-.08a19.94,19.94,0,0,0-19,1.75,13.08,13.08,0,0,0-1.12.84l-22.31,19c-13-7.05-26.43-20.37-33.49-33.21l19.06-22.66a11.76,11.76,0,0,0,.85-1.15,20,20,0,0,0,1.66-18.83,1.42,1.42,0,0,1-.08-.18L101.2,32A20.06,20.06,0,0,0,80.42,20.15,60.27,60.27,0,0,0,28,80c0,81.61,66.39,148,148,148a60.27,60.27,0,0,0,59.85-52.42A20.06,20.06,0,0,0,224,154.8ZM176,204A124.15,124.15,0,0,1,52,80,36.29,36.29,0,0,1,80.48,44.46l18.82,42L80.14,109.28a12,12,0,0,0-.86,1.16A20,20,0,0,0,78,130.08c9.42,19.28,28.83,38.56,48.31,48A20,20,0,0,0,146,176.63a11.63,11.63,0,0,0,1.11-.85l22.43-19.07,42,18.81A36.29,36.29,0,0,1,176,204Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 256 256" fill="currentColor"><path d="M224,44H32A12,12,0,0,0,20,56V192a20,20,0,0,0,20,20H216a20,20,0,0,0,20-20V56A12,12,0,0,0,224,44Zm-96,83.72L62.85,68h130.3ZM92.79,128,44,172.72V83.28Zm17.76,16.28,9.34,8.57a12,12,0,0,0,16.22,0l9.34-8.57L193.15,188H62.85ZM163.21,128,212,83.28v89.44Z"/></symbol>
+  <symbol id="i-ort" viewBox="0 0 256 256" fill="currentColor"><path d="M128,60a44,44,0,1,0,44,44A44.05,44.05,0,0,0,128,60Zm0,64a20,20,0,1,1,20-20A20,20,0,0,1,128,124Zm0-112a92.1,92.1,0,0,0-92,92c0,77.36,81.64,135.4,85.12,137.83a12,12,0,0,0,13.76,0,259,259,0,0,0,42.18-39C205.15,170.57,220,136.37,220,104A92.1,92.1,0,0,0,128,12Zm31.3,174.71A249.35,249.35,0,0,1,128,216.89a249.35,249.35,0,0,1-31.3-30.18C80,167.37,60,137.31,60,104a68,68,0,0,1,136,0C196,137.31,176,167.37,159.3,186.71Z"/></symbol>
+  <symbol id="i-stern" viewBox="0 0 256 256" fill="currentColor"><path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"/></symbol>
+  <symbol id="i-zitat" viewBox="0 0 256 256" fill="currentColor"><path d="M100,52H40A20,20,0,0,0,20,72v64a20,20,0,0,0,20,20H96v4a28,28,0,0,1-28,28,12,12,0,0,0,0,24,52.06,52.06,0,0,0,52-52V72A20,20,0,0,0,100,52Zm-4,80H44V76H96ZM216,52H156a20,20,0,0,0-20,20v64a20,20,0,0,0,20,20h56v4a28,28,0,0,1-28,28,12,12,0,0,0,0,24,52.06,52.06,0,0,0,52-52V72A20,20,0,0,0,216,52Zm-4,80H160V76h52Z"/></symbol>
+  <symbol id="i-zeit" viewBox="0 0 256 256" fill="currentColor"><path d="M128,44a96,96,0,1,0,96,96A96.11,96.11,0,0,0,128,44Zm0,168a72,72,0,1,1,72-72A72.08,72.08,0,0,1,128,212ZM164.49,99.51a12,12,0,0,1,0,17l-28,28a12,12,0,0,1-17-17l28-28A12,12,0,0,1,164.49,99.51ZM92,16A12,12,0,0,1,104,4h48a12,12,0,0,1,0,24H104A12,12,0,0,1,92,16Z"/></symbol>
+  <symbol id="i-kalender" viewBox="0 0 256 256" fill="currentColor"><path d="M208,28H188V24a12,12,0,0,0-24,0v4H92V24a12,12,0,0,0-24,0v4H48A20,20,0,0,0,28,48V208a20,20,0,0,0,20,20H208a20,20,0,0,0,20-20V48A20,20,0,0,0,208,28ZM68,52a12,12,0,0,0,24,0h72a12,12,0,0,0,24,0h16V76H52V52ZM52,204V100H204V204Z"/></symbol>
+  <symbol id="i-person" viewBox="0 0 256 256" fill="currentColor"><path d="M234.38,210a123.36,123.36,0,0,0-60.78-53.23,76,76,0,1,0-91.2,0A123.36,123.36,0,0,0,21.62,210a12,12,0,1,0,20.77,12c18.12-31.32,50.12-50,85.61-50s67.49,18.69,85.61,50a12,12,0,0,0,20.77-12ZM76,96a52,52,0,1,1,52,52A52.06,52.06,0,0,1,76,96Z"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 256 256" fill="currentColor"><path d="M228,128a12,12,0,0,1-12,12H140v76a12,12,0,0,1-24,0V140H40a12,12,0,0,1,0-24h76V40a12,12,0,0,1,24,0v76h76A12,12,0,0,1,228,128Z"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 256 256" fill="currentColor"><path d="M228,128a12,12,0,0,1-12,12H40a12,12,0,0,1,0-24H216A12,12,0,0,1,228,128Z"/></symbol>
+  <symbol id="i-schraeg" viewBox="0 0 256 256" fill="currentColor"><path d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"/></symbol>
+</svg>
+
+<p class="ansage" data-beispiel>Frühbucher: bis Ende des Monats 15 Prozent auf ausgewählte Reisen. <a href="#pakete">Reisen ansehen</a></p>
+
+<header class="kopf">
+  <div class="wrap kopf__innen">
+    <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
+      <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle cx="16" cy="13" r="5" fill="currentColor"/><path d="M4 26c4-7 8-9 12-9s8 2 12 9z" fill="currentColor"/></svg>
+      Markenname
+    </a>
+    <button class="kopf__burger" type="button" data-menue aria-expanded="false" aria-controls="hauptnav">
+      <span class="burger"></span><span class="sr-nur">Menü öffnen oder schließen</span>
+    </button>
+    <nav class="kopf__nav" id="hauptnav" aria-label="Hauptnavigation" data-menue-ziel>
+      <ul class="kopf__menue">
+        <li><a href="#ziele">Ziele</a></li>
+        <li><a href="#pakete">Reisen</a></li>
+        <li><a href="#stimmen">Stimmen</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+      <a class="knopf kopf__knopf" href="#kontakt">Reise anfragen</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inhalt">
+
+  <!-- 1. Held: Vollbild, Bild dunkelt beim Scrollen ab -->
+  <section class="held" id="top" aria-labelledby="h-held" data-abdunkeln>
+    <div class="held__bild" role="img" aria-label="Platzhalter für ein Foto einer Landschaft in der Abenddämmerung" data-platzhalter="Bild: Landschaft in der Dämmerung, Querformat">
+      <svg class="held__berge" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true" focusable="false" data-parallax="-0.06"><path d="M0 220 C140 150 260 120 420 170 S700 250 860 190 S1180 90 1440 180 V320 H0Z" fill="currentColor" opacity=".55"/><path d="M0 270 C180 220 330 210 520 250 S860 300 1040 245 S1320 230 1440 270 V320 H0Z" fill="currentColor"/></svg>
+    </div>
+    <div class="held__schleier" aria-hidden="true"></div>
+    <div class="wrap held__inhalt" data-staffel>
+      <p class="bewertung bewertung--hell" data-zeig data-beispiel>
+        <span class="sterne" aria-hidden="true"><svg width="16" height="16"><use href="#i-stern"/></svg><svg width="16" height="16"><use href="#i-stern"/></svg><svg width="16" height="16"><use href="#i-stern"/></svg><svg width="16" height="16"><use href="#i-stern"/></svg><svg width="16" height="16"><use href="#i-stern"/></svg></span>
+        4,8 aus 1.240 Bewertungen
+      </p>
+      <h1 id="h-held">
+        <span class="zeile"><span style="--z:0">Reisen, an die</span></span>
+        <span class="zeile"><span style="--z:1">du dich noch</span></span>
+        <span class="zeile"><span style="--z:2">lange erinnerst.</span></span>
+      </h1>
+      <p class="held__lead" data-zeig>Handverlesene Touren mit festem Preis, klarer Planung und einem Menschen, der dich vor Ort begleitet.</p>
+      <div class="held__aktion" data-zeig>
+        <a class="knopf" href="#pakete">Reise finden<svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-pfeil"/></svg></a>
+        <a class="telefon telefon--hell" href="tel:+4930123456" data-beispiel>
+          <span class="telefon__kreis"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-telefon"/></svg></span>
+          <span><span class="telefon__klein">Beratung täglich</span><strong>030 123 456</strong></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Einstieg: Text, Bildcollage, Kennzahlen -->
+  <section class="sektion einstieg" aria-labelledby="h-einstieg">
+    <div class="wrap">
+      <div class="einstieg__raster">
+        <div class="einstieg__text" data-staffel>
+          <p class="bewertung" data-zeig data-beispiel><span class="sterne" aria-hidden="true"><svg width="16" height="16"><use href="#i-stern"/></svg><svg width="16" height="16"><use href="#i-stern"/></svg><svg width="16" height="16"><use href="#i-stern"/></svg><svg width="16" height="16"><use href="#i-stern"/></svg><svg width="16" height="16"><use href="#i-stern"/></svg></span>4,8 aus 1.240 Bewertungen</p>
+          <h2 id="h-einstieg" data-licht>Entdecke die Welt mit einem Partner, der mitdenkt</h2>
+          <p data-zeig>Von der ersten Idee bis zur Rückkehr kümmern wir uns um Planung, Buchung und Betreuung. Du entscheidest, wohin es geht und wie viel Zeit du dir nimmst. Den Rest erledigen wir.</p>
+          <ul class="haken" data-zeig>
+            <li><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-haken"/></svg>Unterkünfte, die wir selbst kennen</li>
+            <li><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-haken"/></svg>Pakete für jede Reisedauer</li>
+            <li><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-haken"/></svg>Erreichbar vor, während und nach der Reise</li>
+          </ul>
+        </div>
+        <div class="collage" aria-hidden="true">
+          <div class="bild bild--a collage__gross" data-platzhalter="Bild: Stadtansicht, Hochformat" data-zeig="skala"></div>
+          <div class="bild bild--b collage__klein1" data-platzhalter="Bild: Küste, Querformat" data-zeig="rechts"></div>
+          <div class="bild bild--c collage__klein2" data-platzhalter="Bild: Wanderin, Hochformat" data-zeig="rechts"></div>
+        </div>
+      </div>
+      <ul class="zahlen" data-staffel data-beispiel>
+        <li data-zeig><p class="zahl"><span data-zaehle="12000">12.000</span>+</p><p>zufriedene Reisende</p></li>
+        <li data-zeig><p class="zahl"><span data-zaehle="340">340</span></p><p>geplante Reisen im Jahr</p></li>
+        <li data-zeig><p class="zahl"><span data-zaehle="48">48</span></p><p>Länder im Angebot</p></li>
+        <li data-zeig><p class="zahl"><span data-zaehle="15">15</span> Jahre</p><p>Erfahrung in der Planung</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 3. Ziele: Karussell mit angedeuteten Nachbarn -->
+  <section class="sektion ziele" id="ziele" aria-labelledby="h-ziele" data-reiter-gruppe>
+    <div class="wrap kopfzeile">
+      <p class="kicker" data-zeig>Beliebte Ziele</p>
+      <h2 id="h-ziele" data-licht>Unsere beliebtesten Reiseziele</h2>
+      <p data-zeig>Von Küstenorten bis zu Bergdörfern: Jedes Ziel ist von uns geprüft und mit festen Leistungen hinterlegt.</p>
+    </div>
+    <ul class="karussell" data-reiter-spur tabindex="0" role="region" aria-label="Reiseziele, mit Pfeiltasten blättern">
+      <li class="slide" data-beispiel>
+        <article class="slide__innen">
+          <div class="bild bild--a slide__bild" data-platzhalter="Bild: Altstadt am Fluss, Hochformat" aria-hidden="true"></div>
+          <div class="slide__karte">
+            <h3>Altstadt am Fluss</h3>
+            <p>Gassen, Märkte und Abende am Wasser. Eine Reise für alle, die Kultur und Genuss verbinden möchten.</p>
+            <ul class="haken haken--zwei"><li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-haken"/></svg>Stadtführung</li><li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-haken"/></svg>Hotel im Zentrum</li><li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-haken"/></svg>Kochkurs</li><li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-haken"/></svg>Bootsfahrt</li></ul>
+            <div class="slide__aktion"><a class="knopf knopf--dunkel" href="#kontakt">Diese Reise anfragen</a><a class="telefon" href="tel:+4930123456"><span class="telefon__kreis"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-telefon"/></svg></span><span><span class="telefon__klein">Beratung</span><strong>030 123 456</strong></span></a></div>
+          </div>
+        </article>
+      </li>
+      <li class="slide" data-beispiel>
+        <article class="slide__innen">
+          <div class="bild bild--b slide__bild" data-platzhalter="Bild: Bucht mit Booten, Hochformat" aria-hidden="true"></div>
+          <div class="slide__karte">
+            <h3>Küste und Inseln</h3>
+            <p>Türkisfarbenes Wasser, kleine Fähren und Zeit zum Nichtstun. Ideal für Paare und Familien.</p>
+            <ul class="haken haken--zwei"><li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-haken"/></svg>Inselhüpfen</li><li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-haken"/></svg>Strandhaus</li><li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-haken"/></svg>Schnorchelausflug</li><li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-haken"/></svg>Transfers</li></ul>
+            <div class="slide__aktion"><a class="knopf knopf--dunkel" href="#kontakt">Diese Reise anfragen</a><a class="telefon" href="tel:+4930123456"><span class="telefon__kreis"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-telefon"/></svg></span><span><span class="telefon__klein">Beratung</span><strong>030 123 456</strong></span></a></div>
+          </div>
+        </article>
+      </li>
+      <li class="slide" data-beispiel>
+        <article class="slide__innen">
+          <div class="bild bild--c slide__bild" data-platzhalter="Bild: Bergsee im Morgenlicht, Hochformat" aria-hidden="true"></div>
+          <div class="slide__karte">
+            <h3>Berge und Seen</h3>
+            <p>Klare Luft, markierte Wege und Hütten mit Aussicht. Für alle, die draußen Energie tanken.</p>
+            <ul class="haken haken--zwei"><li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-haken"/></svg>Geführte Wanderung</li><li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-haken"/></svg>Hüttenübernachtung</li><li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-haken"/></svg>Gepäcktransport</li><li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-haken"/></svg>Seilbahnticket</li></ul>
+            <div class="slide__aktion"><a class="knopf knopf--dunkel" href="#kontakt">Diese Reise anfragen</a><a class="telefon" href="tel:+4930123456"><span class="telefon__kreis"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-telefon"/></svg></span><span><span class="telefon__klein">Beratung</span><strong>030 123 456</strong></span></a></div>
+          </div>
+        </article>
+      </li>
+      <li class="slide" data-beispiel>
+        <article class="slide__innen">
+          <div class="bild bild--d slide__bild" data-platzhalter="Bild: Wüstenlandschaft bei Sonnenaufgang, Hochformat" aria-hidden="true"></div>
+          <div class="slide__karte">
+            <h3>Weite und Wüste</h3>
+            <p>Dünen, Sternenhimmel und Stille. Eine Reise für alle, die Abstand zum Alltag suchen.</p>
+            <ul class="haken haken--zwei"><li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-haken"/></svg>Geländewagentour</li><li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-haken"/></svg>Nacht im Zeltcamp</li><li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-haken"/></svg>Sternenführung</li><li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-haken"/></svg>Verpflegung</li></ul>
+            <div class="slide__aktion"><a class="knopf knopf--dunkel" href="#kontakt">Diese Reise anfragen</a><a class="telefon" href="tel:+4930123456"><span class="telefon__kreis"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-telefon"/></svg></span><span><span class="telefon__klein">Beratung</span><strong>030 123 456</strong></span></a></div>
+          </div>
+        </article>
+      </li>
+    </ul>
+    <div class="steuerung" data-reiter-steuerung>
+      <button class="rund" type="button" data-reiter="zurueck" aria-label="Voriges Ziel"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-links"/></svg></button>
+      <button class="rund" type="button" data-reiter="weiter" aria-label="Nächstes Ziel"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-pfeil"/></svg></button>
+    </div>
+  </section>
+
+  <!-- 4. Warum wir: dunkle Bildfläche, vier Vorteile -->
+  <section class="sektion warum" aria-labelledby="h-warum">
+    <div class="warum__bild" aria-hidden="true" data-platzhalter="Bild: Bergsilhouette bei Nacht" data-parallax="0.08"></div>
+    <div class="wrap">
+      <div class="kopfzeile kopfzeile--hell">
+        <h2 id="h-warum" data-licht>Warum wir der richtige Partner für deine Reise sind</h2>
+        <p data-zeig>Reisen ist mehr, als neue Orte zu sehen. Es geht um Momente, die bleiben, und um Sicherheit, dass alles passt.</p>
+      </div>
+      <ul class="vorteile" data-staffel>
+        <li data-zeig><span class="symbolkreis"><svg width="24" height="24" aria-hidden="true" focusable="false"><use href="#i-kalender"/></svg></span><h3>Sofort buchen</h3><p>Du siehst freie Termine und feste Preise und bekommst die Bestätigung am selben Tag.</p></li>
+        <li data-zeig><span class="symbolkreis"><svg width="24" height="24" aria-hidden="true" focusable="false"><use href="#i-ort"/></svg></span><h3>Abholung und Transfer</h3><p>Vom Wohnort bis zur Unterkunft ist die Anreise organisiert, ohne Umwege und Warten.</p></li>
+        <li data-zeig><span class="symbolkreis"><svg width="24" height="24" aria-hidden="true" focusable="false"><use href="#i-person"/></svg></span><h3>Menschen vor Ort</h3><p>Eine feste Ansprechperson kennt dein Programm und hilft, wenn sich etwas ändert.</p></li>
+        <li data-zeig><span class="symbolkreis"><svg width="24" height="24" aria-hidden="true" focusable="false"><use href="#i-haken"/></svg></span><h3>Fairer Preis</h3><p>Alle Leistungen stehen im Angebot. Es gibt keine Zuschläge, die du vorher nicht gesehen hast.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 5. Pakete -->
+  <section class="sektion pakete" id="pakete" aria-labelledby="h-pakete">
+    <div class="wrap">
+      <div class="kopfzeile">
+        <p class="kicker" data-zeig>Reisepakete</p>
+        <h2 id="h-pakete" data-licht>Beliebte Reisepakete</h2>
+        <p data-zeig>Handverlesene Reisen mit allem, was dazugehört, zu einem Preis, den du vorher kennst.</p>
+      </div>
+      <ul class="paketliste" data-staffel>
+        <li data-zeig>
+          <article class="paket" data-beispiel>
+            <div class="bild bild--a paket__bild" data-platzhalter="Bild: Fluss mit Ausflugsboot, Querformat" aria-hidden="true"></div>
+            <div class="paket__text">
+              <p class="paket__meta">5 Tage, 4 Nächte</p>
+              <h3>Stadtreise am Fluss</h3>
+              <ul class="haken haken--klein"><li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-haken"/></svg>Hotel nahe der Altstadt</li><li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-haken"/></svg>Bootsfahrt am Abend</li><li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-haken"/></svg>Führung mit Ortskundigen</li></ul>
+              <p class="preis"><strong class="zahl">890 €</strong><span>ab, pro Person</span></p>
+              <div class="paket__aktion"><a class="knopf knopf--klein" href="#kontakt">Anfrage senden</a><a class="telefon telefon--klein" href="tel:+4930123456"><span class="telefon__kreis"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-telefon"/></svg></span><span><span class="telefon__klein">Beratung</span><strong>030 123 456</strong></span></a></div>
+            </div>
+          </article>
+        </li>
+        <li data-zeig>
+          <article class="paket" data-beispiel>
+            <div class="bild bild--b paket__bild" data-platzhalter="Bild: Tempel auf einer Insel, Querformat" aria-hidden="true"></div>
+            <div class="paket__text">
+              <p class="paket__meta">8 Tage, 7 Nächte</p>
+              <h3>Inselzeit mit Strand</h3>
+              <ul class="haken haken--klein"><li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-haken"/></svg>Strandhaus mit Frühstück</li><li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-haken"/></svg>Ausflug zu zwei Nachbarinseln</li><li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-haken"/></svg>Flughafentransfer inklusive</li></ul>
+              <p class="preis"><strong class="zahl">1.490 €</strong><span>ab, pro Person</span></p>
+              <div class="paket__aktion"><a class="knopf knopf--klein" href="#kontakt">Anfrage senden</a><a class="telefon telefon--klein" href="tel:+4930123456"><span class="telefon__kreis"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-telefon"/></svg></span><span><span class="telefon__klein">Beratung</span><strong>030 123 456</strong></span></a></div>
+            </div>
+          </article>
+        </li>
+        <li data-zeig>
+          <article class="paket" data-beispiel>
+            <div class="bild bild--c paket__bild" data-platzhalter="Bild: Bergdorf am See, Querformat" aria-hidden="true"></div>
+            <div class="paket__text">
+              <p class="paket__meta">6 Tage, 5 Nächte</p>
+              <h3>Bergwoche am See</h3>
+              <ul class="haken haken--klein"><li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-haken"/></svg>Drei geführte Touren</li><li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-haken"/></svg>Pension mit Halbpension</li><li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-haken"/></svg>Gepäcktransport zwischen den Orten</li></ul>
+              <p class="preis"><strong class="zahl">1.090 €</strong><span>ab, pro Person</span></p>
+              <div class="paket__aktion"><a class="knopf knopf--klein" href="#kontakt">Anfrage senden</a><a class="telefon telefon--klein" href="tel:+4930123456"><span class="telefon__kreis"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-telefon"/></svg></span><span><span class="telefon__klein">Beratung</span><strong>030 123 456</strong></span></a></div>
+            </div>
+          </article>
+        </li>
+      </ul>
+      <p class="hinweis-klein" data-beispiel>Beispieltext: Alle Preise sind Platzhalter. Leistungen, Reisezeitraum und Stornobedingungen hier eintragen.</p>
+    </div>
+  </section>
+
+  <!-- 6. Stimmen: Zitatreiter -->
+  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen" data-reiter-gruppe>
+    <div class="wrap">
+      <div class="kopfzeile">
+        <p class="bewertung" data-zeig data-beispiel><span class="sterne" aria-hidden="true"><svg width="16" height="16"><use href="#i-stern"/></svg><svg width="16" height="16"><use href="#i-stern"/></svg><svg width="16" height="16"><use href="#i-stern"/></svg><svg width="16" height="16"><use href="#i-stern"/></svg><svg width="16" height="16"><use href="#i-stern"/></svg></span>4,8 aus 1.240 Bewertungen</p>
+        <h2 id="h-stimmen" data-licht>Was unsere Gäste sagen</h2>
+        <p data-zeig>Wir sind stolz auf jede Reise, die gelingt. Hier erzählen Gäste, wie es für sie war.</p>
+      </div>
+      <div class="stimmen__raster">
+        <button class="rund" type="button" data-reiter="zurueck" aria-label="Vorherige Stimme"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-links"/></svg></button>
+        <ul class="zitate" data-reiter-spur tabindex="0" role="region" aria-label="Stimmen von Gästen, mit Pfeiltasten blättern">
+          <li data-beispiel><figure><blockquote><p>„Von der Beratung bis zur Rückfahrt hat alles gepasst. Wir mussten uns um nichts kümmern und hatten trotzdem Zeit für eigene Wege.“</p></blockquote><figcaption><span class="avatar" aria-hidden="true">MK</span>Familie K., Beispielstadt</figcaption></figure></li>
+          <li data-beispiel><figure><blockquote><p>„Als eine Fähre ausfiel, hatte uns die Ansprechperson schon eine Lösung geschickt, bevor wir nachfragen konnten.“</p></blockquote><figcaption><span class="avatar" aria-hidden="true">AS</span>Anja S., Beispielstadt</figcaption></figure></li>
+          <li data-beispiel><figure><blockquote><p>„Der Preis im Angebot war der Preis am Ende. Das kenne ich von anderen Anbietern anders.“</p></blockquote><figcaption><span class="avatar" aria-hidden="true">TB</span>Thomas B., Beispielstadt</figcaption></figure></li>
+        </ul>
+        <button class="rund" type="button" data-reiter="weiter" aria-label="Nächste Stimme"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-pfeil"/></svg></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Kacheln -->
+  <section class="sektion kacheln" aria-labelledby="h-kacheln">
+    <div class="wrap">
+      <div class="kopfzeile">
+        <h2 id="h-kacheln" data-licht>Reisen nach Art entdecken</h2>
+        <p data-zeig>Wähle, was du erleben möchtest, und sieh dir passende Reisen an.</p>
+      </div>
+      <ul class="kachelliste" data-staffel data-beispiel>
+        <li data-zeig><a class="kachel kachel--a" href="#pakete"><span class="kachel__meta">14 Reisen</span><span class="kachel__name">Städte</span><span class="kachel__pfeil"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-pfeil"/></svg></span></a></li>
+        <li data-zeig><a class="kachel kachel--b" href="#pakete"><span class="kachel__meta">11 Reisen</span><span class="kachel__name">Küsten</span><span class="kachel__pfeil"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-pfeil"/></svg></span></a></li>
+        <li data-zeig><a class="kachel kachel--c" href="#pakete"><span class="kachel__meta">9 Reisen</span><span class="kachel__name">Berge</span><span class="kachel__pfeil"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-pfeil"/></svg></span></a></li>
+        <li data-zeig><a class="kachel kachel--d" href="#pakete"><span class="kachel__meta">6 Reisen</span><span class="kachel__name">Wüsten</span><span class="kachel__pfeil"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-pfeil"/></svg></span></a></li>
+        <li data-zeig><a class="kachel kachel--e" href="#pakete"><span class="kachel__meta">8 Reisen</span><span class="kachel__name">Inseln</span><span class="kachel__pfeil"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-pfeil"/></svg></span></a></li>
+        <li data-zeig><a class="kachel kachel--f" href="#pakete"><span class="kachel__meta">7 Reisen</span><span class="kachel__name">Wälder</span><span class="kachel__pfeil"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-pfeil"/></svg></span></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 8. Kontakt -->
+  <section class="sektion kontakt" id="kontakt" aria-labelledby="h-kontakt">
+    <div class="wrap kontakt__wrap">
+      <div class="kopfzeile">
+        <p class="kicker" data-zeig>Kontakt</p>
+        <h2 id="h-kontakt" data-licht>Sprich mit unseren Reiseberatern</h2>
+        <p data-zeig>Erzähl uns kurz, was du vorhast. Wir melden uns innerhalb von 24 Stunden mit einem Vorschlag und einem festen Preis.</p>
+      </div>
+      <form class="formular" data-formular data-zeig action="#" method="post" novalidate>
+        <div class="formular__feld"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" placeholder="Dein Name" required></div>
+        <div class="formular__feld"><label for="f-mail">E-Mail-Adresse</label><input id="f-mail" name="email" type="email" autocomplete="email" placeholder="du@beispiel.de" required></div>
+        <div class="formular__feld"><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" placeholder="Für Rückfragen"></div>
+        <div class="formular__feld"><label for="f-zeit">Wunschzeitraum</label><input id="f-zeit" name="zeitraum" type="text" placeholder="zum Beispiel: Mitte September"></div>
+        <div class="formular__feld"><label for="f-budget">Budget pro Person</label>
+          <select id="f-budget" name="budget"><option value="">Bitte wählen</option><option>bis 1.000 €</option><option>1.000 bis 2.000 €</option><option>über 2.000 €</option></select></div>
+        <div class="formular__feld"><label for="f-reisende">Anzahl der Reisenden</label><input id="f-reisende" name="reisende" type="number" min="1" inputmode="numeric" placeholder="2"></div>
+        <div class="formular__feld formular__feld--breit"><label for="f-text">Nachricht</label><textarea id="f-text" name="nachricht" rows="3" placeholder="Ziele, Wünsche, besondere Anliegen"></textarea></div>
+        <p class="formular__recht formular__feld--breit">Deine Angaben verwenden wir nur, um die Anfrage zu beantworten. Mehr dazu in der <a href="#fuss">Datenschutzerklärung</a>.</p>
+        <button class="knopf knopf--dunkel formular__senden" type="submit">Anfrage senden</button>
+        <p class="formular__meldung" data-formular-meldung role="status" hidden>Beispielformular: In dieser Vorlage wird nichts gesendet. Der Versand wird im Projekt angebunden.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- 9. Abschluss mit Newsletter -->
+  <section class="abschluss" aria-labelledby="h-abschluss">
+    <div class="abschluss__bild" aria-hidden="true" data-platzhalter="Bild: Tempel im Abendlicht, Querformat"></div>
+    <div class="wrap abschluss__raster">
+      <div data-staffel>
+        <p class="bewertung bewertung--hell" data-zeig data-beispiel><span class="sterne" aria-hidden="true"><svg width="16" height="16"><use href="#i-stern"/></svg><svg width="16" height="16"><use href="#i-stern"/></svg><svg width="16" height="16"><use href="#i-stern"/></svg><svg width="16" height="16"><use href="#i-stern"/></svg><svg width="16" height="16"><use href="#i-stern"/></svg></span>4,8 aus 1.240 Bewertungen</p>
+        <h2 id="h-abschluss" data-zeig>Klüger reisen mit Markenname.</h2>
+        <p data-zeig>Einmal im Monat schicken wir dir Reiseideen und freie Plätze. Kein Spam, Austragen jederzeit möglich.</p>
+      </div>
+      <form class="news" data-formular data-zeig action="#" method="post" novalidate>
+        <label for="n-mail">Reiseideen per E-Mail</label>
+        <div class="news__zeile">
+          <input id="n-mail" name="email" type="email" autocomplete="email" placeholder="du@beispiel.de" required>
+          <button class="knopf" type="submit">Eintragen</button>
+        </div>
+        <p class="news__recht">Mit dem Eintragen stimmst du dem Versand zu. Details in der <a href="#fuss">Datenschutzerklärung</a>.</p>
+        <p class="formular__meldung" data-formular-meldung role="status" hidden>Beispielformular: In dieser Vorlage wird nichts gesendet.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="fuss" id="fuss">
+  <div class="wrap fuss__raster">
+    <div class="fuss__marke">
+      <a class="kopf__logo" href="#top" aria-label="Markenname, nach oben">
+        <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle cx="16" cy="13" r="5" fill="currentColor"/><path d="M4 26c4-7 8-9 12-9s8 2 12 9z" fill="currentColor"/></svg>
+        Markenname
+      </a>
+      <p>Wir machen aus Reiseideen Reisen, die sich so anfühlen, wie du sie dir vorgestellt hast.</p>
+    </div>
+    <nav aria-label="Seiten"><h3>Seiten</h3><ul><li><a href="#ziele">Ziele</a></li><li><a href="#pakete">Reisen</a></li><li><a href="#stimmen">Stimmen</a></li><li><a href="#kontakt">Kontakt</a></li></ul></nav>
+    <nav aria-label="Rechtliches"><h3>Rechtliches</h3><ul><li><a href="#fuss">Impressum</a></li><li><a href="#fuss">Datenschutz</a></li><li><a href="#fuss">Reisebedingungen</a></li></ul></nav>
+    <address class="fuss__kontakt" data-beispiel><h3>Kontakt</h3><p>Beispielstraße 1<br>12345 Beispielstadt</p><p><a href="tel:+4930123456">030 123 456</a><br><a href="mailto:reisen@beispiel.de">reisen@beispiel.de</a><br>Montag bis Samstag, 9 bis 18 Uhr</p></address>
+  </div>
+  <div class="wrap fuss__zeile"><p>© Markenname, alle Rechte vorbehalten</p></div>
+</footer>
+
+<script src="../_basis/bewegung.js"></script>
+<script src="stil.js"></script>
+</body>
+</html>

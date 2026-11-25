@@ -1,0 +1,34 @@
+/* marke.css der Vorlage "Pastellkarten": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#ffffff;
+  --flaeche-alt:#f6f2ef;
+  --flaeche-dunkel:#141414;
+  --text:#141414;
+  --text-leise:#4f4f55;
+  --linie:#e6e1dc;
+  --akzent:#2646e8;           /* Hauptaktion, Wortfarbe Blau, Pfeilkreise */
+  --akzent-text:#ffffff;
+  --schrift-titel:'Archivo',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:26px;
+  --radius-bild:26px;
+
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:850;
+  --titel-spur:-0.045em;
+  --pfirsich:#fdd9c9;
+  --pfirsich-tief:#f7a98a;
+  --blau-hell:#d6e2fc;
+  --blau-mittel:#9db9f6;
+  --lila:#e6dcf9;
+  --lila-tief:#b79ceb;
+  --gelb:#fbf2a8;
+  --gelb-tief:#f5d628;
+  --orange:#f1622a;
+  --wort-orange:#c2410c;      /* Akzentwort auf Weiß, 5 zu 1 */
+  --wort-lila:#6d3fc4;
+  --text-auf-dunkel:#ffffff;
+  --text-leise-dunkel:#c9c9cf;
+}

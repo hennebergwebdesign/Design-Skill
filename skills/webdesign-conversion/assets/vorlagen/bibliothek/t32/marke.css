@@ -1,0 +1,37 @@
+/* marke.css der Vorlage "Dach und Bau": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche, weiße Schrift auf --ziegel und --akzent-text auf --akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#f6f3ee;
+  --flaeche-alt:#ece6dc;
+  --flaeche-dunkel:#192126;
+  --text:#1c2327;
+  --text-leise:#59635f;
+  --linie:#ddd5c8;
+  --akzent:#f2b232;           /* Hauptaktion: Fläche mit dunklem Text */
+  --akzent-text:#1c2327;
+  --schrift-titel:'Bricolage Grotesque',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:20px;
+  --radius-bild:18px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-klein:12px;
+  --titel-gewicht:600;
+  --titel-spur:-0.03em;
+  --ziegel:#a3452c;           /* Farbfläche der Kennzahlen und Stimmen, weiße Schrift 6 zu 1 */
+  --ziegel-tief:#8a3722;
+  --ziegel-text:#fff7f1;
+  --ziegel-leise:#f6dccd;
+  --text-auf-dunkel:#f6f3ee;
+  --text-leise-dunkel:#c4cbc6;
+  --linie-dunkel:#3b484f;
+  --karte:#fffdf9;
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#2f4650;
+  --ton-2:#6b7d86;
+  --ton-3:#8b5a43;
+  --ton-4:#9a8467;
+  --ton-5:#3d5a4a;
+  --ton-6:#5e3b32;
+}
