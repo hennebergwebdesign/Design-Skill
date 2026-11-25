@@ -29,6 +29,9 @@ Der Akzent (Hellgrün) trägt Knöpfe nur auf dunklen Flächen. Auf hellen Fläc
 
 ## Conversion (Playbook)
 
-- Formular von sieben auf fünf Felder gekürzt (Wunschtermin und Einsatzort gehören in die Nachricht, Telefon ist optional)
-- Feldhinweise unter E-Mail und Telefon (`.feld__hinweis`)
-- Held nach Formel als Kommentar vor der H1 ergänzt.
+- Held: Autofahrer und Firmenfahrzeuge, Problem Zeitverlust durch den Weg zur Aufbereitung, Lösung mobile Aufbereitung am Stellplatz (neue Unterzeile `held__unter`)
+- Primär-CTA „Termin anfragen“ in Kopfzeile, Held, allen Paketen und als Absendeknopf
+- Titel „Fahrzeugaufbereitung Musterstadt | Mobil | Markenname“, Beschreibung mit Nutzen und Handlung
+- Held-Beleg „Bewertungen unserer Kunden (Beispiel)“, Preise bleiben `data-beispiel`
+- FAQ: Vorbereitung, Dauer, Kosten des Aufschiebens, Einsatzorte, Zahlung, Vorlauf, Arbeitsplatz, Schutzbehandlung
+- Formular (5 Felder) für Terminanfrage: Paket, Fahrzeug und Wunschtermin in der Nachricht, Hinweise unter E-Mail und Telefon

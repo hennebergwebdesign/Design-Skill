@@ -44,8 +44,9 @@ Phosphor Icons (MIT), durchgehend Strichstärke fill, als Sprite am Seitenanfang
 
 ## Conversion (Playbook)
 
-- Titel auf 51 Zeichen gekürzt
-- Hauptmenü von sieben auf sechs Punkte: „Start“ entfällt (das Logo führt zum Seitenanfang)
-- Formular: Vor und Nachname zu „Name“, Pflichtfeld E-Mail ergänzt, fünf Felder insgesamt
-- Feldhinweise unter E-Mail und Telefon (`.feld__hinweis`)
-- Held nach Formel als Kommentar vor der H1 ergänzt. Kein Beleg im ersten Bildschirm ergänzt, weil dort nur das Bild steht und die H1 darunter beginnt.
+- Held: Privathaushalte und kleine Betriebe, Problem keine Zeit zum Putzen, Lösung Reinigung mit Preis vorab, einmalig oder regelmäßig
+- Primär-CTA „Termin anfragen“ in Kopfzeile, Held, Leistungen, Preisen, Vorher-nachher, Formular und FAQ
+- Titel „Reinigungsservice Musterstadt | Feste Preise | Markenname“, Beschreibung mit Problem, Nutzen und Handlung
+- Kein Beleg im ersten Bildschirm (dort steht nur das Bild); Bewertungen folgen in „Was Kunden über uns sagen“ als Beispiel
+- FAQ: Leistungen, Beauftragung, Anwesenheit beim Termin, Preis, Zahlung und Kündigung (Beispielantwort)
+- Formular (5 Felder) für Terminanfragen: Auswahl „Wofür brauchen Sie uns?“, Ort, Fläche und Wunschtermin in der Nachricht, Hinweise unter E-Mail und Telefon

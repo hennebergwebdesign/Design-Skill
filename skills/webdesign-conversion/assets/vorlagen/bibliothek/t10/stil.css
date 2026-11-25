@@ -67,6 +67,7 @@ main{display:block}
 .hero__titel{font-size:clamp(2.5rem,1.1rem + 6.2vw,6.25rem);line-height:1.04;max-width:13em;color:var(--auf-dunkel)}
 .wort{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.14em;margin-bottom:-.14em}
 .wort>span{display:inline-block;animation:hoch 1s var(--kurve) both;animation-delay:calc(var(--w) * 90ms + 150ms)} /* bewusst lang: große Überschrift, nicht bedient */
+.hero__unter{max-width:38rem;margin-top:1.25rem;font-size:var(--text-l,1.2rem);line-height:1.5;color:var(--auf-dunkel)}
 .hero__aktion{margin-top:clamp(1.5rem,3vw,2.25rem)}
 .hero__liste{display:grid;grid-template-columns:repeat(2,1fr);gap:0 var(--spalte);padding-bottom:clamp(1.25rem,3vw,2.5rem)}
 .hero__liste li{position:relative}

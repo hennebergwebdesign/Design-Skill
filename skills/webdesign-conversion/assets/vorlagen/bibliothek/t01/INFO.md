@@ -40,5 +40,10 @@
 
 ## Conversion (Playbook)
 
-- Telefonlink (Platzhalter, `data-beispiel`) in der Fußnavigation
-- Held nach Formel als Kommentar vor der H1 ergänzt.
+- Held: Bauherren (privat, gewerblich), Problem Termin- und Kostenchaos, Lösung fester Zeitplan mit einer Ansprechperson
+- Primär-CTA „Erstgespräch buchen“ in Kopfzeile, Held, Leistungen, Kachel und Fuß
+- Titel „Bauunternehmen Musterstadt | Planung bis Übergabe | Markenname“, Beschreibung mit Nutzen und Handlung
+- Held-Beleg „Abgeschlossene Projekte (Beispiel)“, Kennzahlen bleiben `data-beispiel`
+- FAQ aus Sicht von Bauherren: Zeitplan, Kosten beim Warten, Nachträge, Unternehmen und Kommunen, Ansprechperson nach der Übergabe
+- Kein Formular, Ziel der Seite ist das Erstgespräch per E-Mail oder Telefon
+- Telefonlink in der Fußnavigation (Platzhalter)

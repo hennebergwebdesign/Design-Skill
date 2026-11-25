@@ -43,5 +43,10 @@
 
 ## Conversion (Playbook)
 
-- Telefonlink (Platzhalter, `data-beispiel`) in der Fußnavigation
-- Held nach Formel als Kommentar vor der H1 ergänzt. Kein Beleg im ersten Bildschirm ergänzt, weil die Karte „Erstgespräch planen“ und der Großschriftzug den Held füllen.
+- Held: Auftraggeber größerer Vorhaben, Problem verlorener Überblick über Termine und Kosten, Lösung Steuerung in festen Schritten mit Zwischenständen
+- H1 bleibt das Großwort „Kontor“ (Gestaltung), die Formel steckt in der Unterzeile und im unsichtbaren Zusatz der H1 für Suche und Screenreader
+- Primär-CTA „Erstgespräch anfragen“ in Kopfzeile, Held, Abschluss; Knöpfe zu Projekten und Paketen bleiben leise
+- Titel „Projektsteuerung Musterstadt | Klarer Ablauf | Kontor“, Beschreibung mit Problem, Weg und Handlung
+- Kein Zahlenbeleg im ersten Bildschirm, die Karte „Erstgespräch planen“ trägt den Einstieg
+- FAQ: Vorwissen, Pakete, Abweichung bei Termin und Kosten, Abrechnung, späterer Start (alle als Beispielantwort)
+- Kein Anfrageformular, nur Newsletter im Fuß; Ziel ist das Erstgespräch

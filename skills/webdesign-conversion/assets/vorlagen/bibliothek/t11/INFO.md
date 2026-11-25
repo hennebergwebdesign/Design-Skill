@@ -15,8 +15,9 @@
 
 ## Conversion (Playbook)
 
-- Neue Sektion „Häufige Fragen“ vor dem Kontakt (fünf Fragen zu Preis, Dauer, Qualität, Gewährleistung und Zeitpunkt, Akkordeon `.frage` im Kartenstil, `data-exklusiv`), Fragen im Fuß verlinkt
-- Telefonlink (Platzhalter) unter dem Fußtext
-- Feldhinweis unter E-Mail im Kontaktformular (`.feld__hinweis`)
-- Belegzeile `.held__beleg` mit Sternen im Held (Beispielwert)
-- Held nach Formel als Kommentar vor der H1 ergänzt.
+- Held: Eigentümer von Wohnhäusern und Gewerbeobjekten, Problem Baustellenchaos und unklare Kosten, Lösung Planung, Sanierung und Pflege nach festem Ablauf
+- Primär-CTA „Beratung vereinbaren“ in Kopfzeile, Menü, Held, Über uns, Ergebnis, Werten, Stimmen und Formular; die vier Leistungsknöpfe bleiben leistungsbezogen und leiser
+- Titel „Sanierung Musterstadt | Planung bis Pflege | Musterbetrieb“, Beschreibung mit Nutzen und Handlung
+- Held-Beleg „4,9 von 5 Sternen, Bewertungen unserer Kunden“ als Beispielwert
+- FAQ: Kosten, Dauer, Wohnen während der Arbeiten, Mängel nach Abnahme, Kosten des Wartens (Beispielantwort)
+- Formular (3 Felder) für die Beratungsanfrage: Nachricht fragt nach Aufgabe, Ort und Zeitraum, Absendeknopf gleich dem Primär-CTA

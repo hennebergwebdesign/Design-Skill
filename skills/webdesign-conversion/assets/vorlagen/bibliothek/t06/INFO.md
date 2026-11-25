@@ -43,4 +43,9 @@ Tokens in `marke.css` setzen, Kontrast prüfen (Akzenttext auf Akzent, blasse W�
 
 ## Conversion (Playbook)
 
-- Held nach Formel als Kommentar vor der H1 ergänzt.
+- Held: Betriebe und Führungskräfte der Branche, Problem Lösungen allein suchen, Lösung Fachtreffen mit Praxisbeispielen; die H1 bleibt das Großwort „Treffpunkt“, die Formel steht in der Zeile darüber und im unsichtbaren Zusatz der H1
+- Primär-CTA „Ticket sichern“ in Kopfzeile, Held, Countdown, allen Ticketstufen und Abschluss
+- Titel „Branchentreffen Musterstadt | Drei Tage Praxis | Bühne“, Beschreibung mit Nutzen und Handlung
+- Beleg im Held: Teilnehmende im Vorjahr als Beispielwert
+- FAQ: Ort, Zielgruppe, Tagestickets, Stornierung, Aufzeichnung, Preisentwicklung (Beispielantwort)
+- Kein Anmeldeformular, nur Newsletter im Fuß; Ziel ist der Ticketkauf

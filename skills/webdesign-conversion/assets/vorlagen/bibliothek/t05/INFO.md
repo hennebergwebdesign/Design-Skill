@@ -15,7 +15,9 @@
 
 ## Conversion (Playbook)
 
-- Hauptnavigation auf sechs Punkte: die drei Profillinks (Profil A bis C) aus der Kopfzeile entfernt, sie stehen weiter im Kontaktbereich
-- Telefonlink (Platzhalter) in der Fußleiste
-- Belegzeile `.start__beleg` unter den Aktionen (Beispielwert)
-- Held nach Formel als Kommentar vor der H1 ergänzt.
+- Held: kleine und mittlere Unternehmen mit Marke oder Produkt, Problem austauschbarer Auftritt, Lösung Gestaltung vom Logo bis zur Verpackung
+- Primär-CTA „Projekt anfragen“ in Kopfzeile, Held, Arbeiten, Leistungen, Stimmen, Werdegang, Fragen und Kontakt; „E-Mail schreiben“ bleibt leiser Textlink
+- Titel „Markendesign Musterstadt | Mehr Wirkung | Atelier Beispiel“, Beschreibung mit Nutzen und Handlung
+- Beleg im Held als Beispielwert („120 gestaltete Marken und Produkte“)
+- FAQ: Ablauf, Lieferumfang, Korrekturrunden, Kosten des unveränderten Auftritts, Preis (alle als Beispielantwort)
+- Kein Formular, Ziel ist die Projektanfrage per E-Mail und Telefon

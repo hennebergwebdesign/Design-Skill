@@ -40,5 +40,9 @@ Icons: Phosphor Icons (MIT), durchgehend Strichstärke fill, als Sprite am Seite
 
 ## Conversion (Playbook)
 
-- Telefonlink (Platzhalter, `data-beispiel`) in der Fußspalte „Rechtliches“
-- Held nach Formel als Kommentar vor der H1 ergänzt.
+- Held: Berufstätige mit vollem Kalender, Problem Aufgaben und Termine in mehreren Listen, Lösung eine App mit Erinnerung nur wenn sinnvoll
+- Primär-CTA „App laden“ in Kopfzeile, Held, Demo, Abzeichen, Persönliche Begleitung und Abschluss; „Mehr erfahren“ bleibt leise
+- Titel „Planer-App für Aufgaben und Ziele | Alles im Griff | Takt“, Beschreibung mit Nutzen und Handlung (kein Ortsbezug, weil App)
+- Held-Beleg: Partnerleiste als Beispiel markiert, Prozentwert im Ring `data-beispiel`
+- FAQ: Zielgruppe, Pläne, Fortschritt, Daten, Offline, Kosten des Testens, Einladen (Beispielantwort)
+- Kein Formular, Ziel ist der Download; „Kostenlos testen“ im Heldhinweis ist ein Beispielversprechen und vor Livegang zu prüfen

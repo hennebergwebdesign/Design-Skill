@@ -37,5 +37,10 @@
 
 ## Conversion (Playbook)
 
-- Telefonlink (Platzhalter, `data-beispiel`) in der Fußspalte „Seiten“
-- Held nach Formel als Kommentar vor der H1 ergänzt.
+- Held: Betriebe mit eigener Technik, Problem Ausfälle und Einzelangebote, Lösung Bestandsaufnahme und Plan im laufenden Betrieb
+- Primär-CTA „Beratung anfragen“ in Kopfzeile, Held und Kontakt; „Mehr erfahren“ und „Fragen lesen“ bleiben leise
+- Titel „Anlagenplanung Musterstadt | Weniger Ausfälle | Markenname“, Beschreibung mit Problem, Weg und Handlung
+- Beleg: Kennzahlkarte im Held als Beispielwert (Betreute Anlagen) markiert
+- FAQ: Ablauf, Betriebsstopp, Kosten des Nichtstuns, Kosten der Beratung, Ansprechperson (alle als Beispielantwort)
+- Kein Formular, Ziel ist die Terminvereinbarung zur Bestandsaufnahme per E-Mail oder Telefon
+- Telefonlink in der Fußspalte (Platzhalter)

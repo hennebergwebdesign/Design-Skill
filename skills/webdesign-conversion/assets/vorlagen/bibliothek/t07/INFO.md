@@ -35,8 +35,9 @@ Icons: Phosphor Icons (MIT), durchgehend Strichstärke thin, als Sprite im Kopf 
 
 ## Conversion (Playbook)
 
-- Hauptmenü von acht auf sechs Punkte: „Für wen“ und „Kontakt“ entfernt (Kontakt deckt der Knopf „Termin“ ab, der Abschnitt „Für wen“ bleibt per Scrollen erreichbar)
-- Formular von sechs auf fünf Felder: Organisation entfällt, der Platzhalter der Nachricht nennt sie
-- Feldhinweise unter E-Mail und Telefon (`.feld__hinweis`)
-- Belegzeile `.held__beleg` im Held (Beispielwert)
-- Held nach Formel als Kommentar vor der H1 ergänzt.
+- Held: Selbstständige Berater, Coaches und Expertinnen, Problem unklares Angebot und unpassende Anfragen, Lösung Fachwissen als Pakete mit Preis und Ablauf
+- Primär-CTA „Erstgespräch buchen“ in Kopfzeile, Held, Ansatz, Wirkung, Preisen, Formular und Fuß; „Mehr erfahren“ und „Preise ansehen“ bleiben leise
+- Titel „Beratung für Selbstständige Musterstadt | Klare Angebote“, Beschreibung mit Problem, Weg und Handlung
+- Held-Beleg „120 begleitete Beratungsangebote“ als Beispielwert
+- FAQ: Zielgruppe, Erstgespräch, Kosten des unklaren Angebots, Preis, Vorwissen, Nachbetreuung (Beispielantwort)
+- Formular (5 Felder) für das Erstgespräch: Platzhalter der Nachricht fragt nach Anliegen und Wunsch, Absendeknopf gleich dem Primär-CTA

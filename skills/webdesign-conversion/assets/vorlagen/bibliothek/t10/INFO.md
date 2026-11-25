@@ -40,6 +40,9 @@
 
 ## Conversion (Playbook)
 
-- Primär-CTA im Held („Erstgespräch anfragen“, `.hero__aktion`) und im Schlussbereich (`.abschluss__aktion`)
-- Belegzeile `.hero__beleg` im Held (Beispielwert)
-- Held nach Formel als Kommentar vor der H1 ergänzt.
+- Held: Unternehmen vor einer größeren Entscheidung, Problem Fehlentscheidungen und offene Punkte, Lösung Analyse, Konzept und Umsetzung mit festem Ansprechpartner (neue Unterzeile `hero__unter`)
+- Primär-CTA „Erstgespräch anfragen“ in Kopfzeile, Held und Schlussbereich
+- Titel „Unternehmensberatung Musterstadt | Klarheit | Beispielname“, Beschreibung mit Problem, Weg und Handlung
+- Held-Beleg „98 % Weiterempfehlung durch Kunden“ als Beispielwert
+- FAQ: Erstgespräch, Kosten des Aufschiebens, Zwischenstände, Unternehmensgröße, Kostenfestlegung, Übergabe (Beispielantwort)
+- Kein Formular, Ziel ist das Erstgespräch per E-Mail
