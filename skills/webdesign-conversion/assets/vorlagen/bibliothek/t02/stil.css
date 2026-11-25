@@ -258,3 +258,10 @@ small{font-size:1rem}
   .zeile:hover .zeile__kopf{transform:translateX(.75rem)}
   .zeile:hover .zeile__pfeil{transform:translate(3px,-3px);color:var(--akzent)}
 }
+
+/* Fotos statt Platzhalterverläufe */
+.bild__foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.bild:has(>.bild__foto){isolation:isolate}
+.medienkarte__bild>.bild__foto,.stapel__bild>.bild__foto{z-index:-1}
+.kontakt__bild>.bild__foto{z-index:-2}
+img.held__foto{position:absolute;inset:-5%;width:110%;height:110%;object-fit:cover;object-position:50% 40%;z-index:-2;background:none}

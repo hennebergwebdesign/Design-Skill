@@ -292,3 +292,8 @@ a.rundlink:hover{background:var(--akzent);color:var(--akzent-text)}
 html:not(.js) .held__innen{padding-top:11rem}
 @media (min-width:70rem){html:not(.js) .held__innen{padding-top:6.5rem}}
 .held__bild[data-platzhalter]::after{inset:6rem 1rem auto auto}
+
+/* Fotos statt Platzhalterverläufe */
+.bild__foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.held__bild::before,.cta__bild::before{z-index:1}
+.held__bild .bild__foto{filter:brightness(.55) saturate(.9)}
