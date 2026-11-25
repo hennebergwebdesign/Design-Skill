@@ -31,6 +31,17 @@ h2{font-size:var(--h2-m)}
 .kopfzeile--mitte{justify-items:center;text-align:center}
 .kopfzeile--mitte h2{max-width:20ch}
 
+/* Fragen */
+.fragen .kicker{font-size:1rem}
+.fragen__liste{display:grid;gap:.75rem;max-width:50rem;margin-inline:auto}
+.frage{border-radius:var(--radius-karte);background:var(--flaeche-alt)}
+.frage summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:3.75rem;padding:1rem 1.5rem;font-family:var(--schrift-titel);font-weight:600;font-size:1.125rem;letter-spacing:-.02em;cursor:pointer;list-style:none;border-radius:var(--radius-karte)}
+.frage summary::-webkit-details-marker{display:none}
+.frage__plus{flex:none;color:var(--akzent-tief);transition:transform var(--dauer-mittel) var(--kurve)}
+.frage[open] .frage__plus{transform:rotate(45deg)}
+.frage .antwort{padding:0 1.5rem 1.5rem;max-width:42rem;color:var(--text-leise);animation:antwort-ein var(--dauer-mittel) var(--kurve)}
+@keyframes antwort-ein{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+
 /* Kopf: schwebende Kapsel */
 .kopf{position:fixed;top:.75rem;left:0;right:0;z-index:50;padding-inline:var(--rand);pointer-events:none}
 .kopf__innen{pointer-events:auto;position:relative;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;max-width:var(--breite);margin-inline:auto;min-height:3.5rem;padding:.375rem .5rem .375rem 1.25rem;border-radius:var(--radius-knopf);background:color-mix(in srgb,var(--flaeche) 92%,transparent);backdrop-filter:blur(10px);box-shadow:0 8px 28px color-mix(in srgb,var(--flaeche-dunkel) 16%,transparent);transition:box-shadow var(--dauer-mittel)}

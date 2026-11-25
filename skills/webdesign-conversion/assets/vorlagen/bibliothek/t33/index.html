@@ -71,6 +71,7 @@
         <li data-zeig><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-haken"/></svg>Notdienst rund um die Uhr</li>
       </ul>
       <div class="held__text" data-staffel>
+        <!-- Held nach Formel: H1 = [Zielgruppe] + [Problem] + [Lösung]; Unterzeile = Wie + konkretes Ergebnis; Bild zeigt das Ergebnis; ein Primär-CTA; ein Beleg (Bewertung, Zahl, Logo) im ersten Bildschirm -->
         <h1 id="h-held" data-zeig>Wärme, die zuverlässig läuft. Auch nachts um drei.</h1>
         <div class="held__knoepfe" data-zeig>
           <a class="knopf" href="#kontakt"><span class="punkt" aria-hidden="true"></span>Termin anfragen</a>
@@ -282,8 +283,8 @@
         <p class="formular-karte__text">Beschreibe kurz, was deine Anlage macht. Wir rufen zurück und nennen den nächsten Termin.</p>
         <form class="formular" data-formular action="#" method="post" novalidate>
           <div class="formular__feld"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" placeholder="Vor und Nachname" required></div>
-          <div class="formular__feld"><label for="f-mail">Mail</label><input id="f-mail" name="email" type="email" autocomplete="email" placeholder="du@beispiel.invalid" required></div>
-          <div class="formular__feld formular__feld--breit"><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" placeholder="Für den Rückruf" required></div>
+          <div class="formular__feld"><label for="f-mail">Mail</label><input id="f-mail" name="email" type="email" autocomplete="email" placeholder="du@beispiel.invalid" required><small class="feld__hinweis">Damit wir dir die Bestätigung schicken können.</small></div>
+          <div class="formular__feld formular__feld--breit"><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" placeholder="Für den Rückruf" required><small class="feld__hinweis">Nur für Rückfragen zu deiner Anfrage.</small></div>
           <div class="formular__feld formular__feld--breit"><label for="f-text">Nachricht</label><textarea id="f-text" name="nachricht" rows="4" placeholder="Was ist los? Was soll gemacht werden?"></textarea></div>
           <p class="formular__recht formular__feld--breit">Mit dem Absenden stimmst du der Verarbeitung deiner Angaben zur Beantwortung der Anfrage zu. Mehr dazu in der <a href="#fuss">Datenschutzerklärung</a>.</p>
           <button class="formular__senden" type="submit"><span>Anfrage senden</span><span class="formular__pfeil" aria-hidden="true"><svg width="20" height="20" focusable="false"><use href="#i-pfeil"/></svg></span></button>

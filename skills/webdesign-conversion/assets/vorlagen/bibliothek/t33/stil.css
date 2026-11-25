@@ -240,7 +240,7 @@ figcaption strong{color:var(--text-auf-dunkel);font-weight:600}
 .formular-karte{padding:1.5rem;border-radius:var(--radius-gross);background:var(--flaeche-alt)}
 .formular-karte h3{font-weight:500}
 .formular-karte__text{margin-top:.6rem;color:var(--text-leise)}
-.formular{display:grid;gap:1rem;margin-top:1.5rem}
+.formular{display:grid;gap:1rem;margin-top:1.5rem;align-items:start}
 .formular__feld{display:grid;gap:.4rem}
 .formular label{font-size:1rem;font-weight:600}
 .formular input,.formular textarea{width:100%;min-height:3rem;padding:.75rem 1rem;font:inherit;font-size:1rem;color:var(--text);background:var(--flaeche);border:1.5px solid color-mix(in srgb,var(--text) 45%,var(--flaeche));border-radius:12px}
@@ -249,6 +249,7 @@ figcaption strong{color:var(--text-auf-dunkel);font-weight:600}
 .formular input:focus-visible,.formular textarea:focus-visible{outline:3px solid var(--akzent-tief);outline-offset:2px;border-color:var(--akzent-tief)}
 .formular__recht{font-size:1rem;color:var(--text-leise)}
 .formular__recht a{text-decoration:underline}
+.feld__hinweis{font-size:1rem;line-height:1.4;color:var(--text-leise)}
 .formular__senden{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:3.75rem;padding:.5rem .6rem .5rem 1.25rem;border-radius:var(--radius-karte);background:var(--akzent);color:var(--akzent-text);font-weight:600;font-size:1rem;transition:transform var(--dauer-kurz) var(--kurve),box-shadow var(--dauer-kurz)}
 .formular__senden:hover{box-shadow:0 10px 22px color-mix(in srgb,var(--flaeche-dunkel) 25%,transparent)}
 .formular__senden:active{transform:scale(.99)}

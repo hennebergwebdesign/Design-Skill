@@ -39,3 +39,6 @@ Tokens in `marke.css` setzen, Kontrast prüfen, Schrift aus `schriften.css` wäh
 - Die Zähler zeigen kurz den Endwert, bevor sie von vorn zählen (Verhalten von `bewegung.js`).
 - Stimmen hinter Mehr anzeigen sind gekürzt, nicht ausgeblendet; ohne JavaScript stehen sie offen.
 - Icons: Phosphor Icons (MIT, Lizenz in `_basis/icons/LICENSE-Phosphor.txt`), durchgehend Strichstärke light, Sterne fill, als Inline-Sprite.
+
+## Conversion (Playbook)
+- Held: Kommentar mit der Heldenformel vor der H1 (sonst keine Lücke)

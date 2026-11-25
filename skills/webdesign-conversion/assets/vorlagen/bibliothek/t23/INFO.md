@@ -33,3 +33,6 @@
 - Keine echten Bilder, keine echten Belege. Icons: Phosphor Icons (MIT), Strichstärke bold, als Sprite im Seitenanfang.
 - Zwei Pakete wie in der Aufbauvorlage; bei drei Paketen die Tabellenspalten und das Raster anpassen.
 - Nicht geprüft: Screenreader, Safari, echte Fotos hinter Overlays (Kontrast neu messen), Leistung.
+
+## Conversion (Playbook)
+- Held: Kommentar mit der Heldenformel vor der H1 (sonst keine Lücke)

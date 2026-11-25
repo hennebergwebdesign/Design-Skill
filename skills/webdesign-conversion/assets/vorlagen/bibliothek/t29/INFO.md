@@ -6,7 +6,7 @@ Prinzip nach der freigegebenen Referenz Wilun (Tor 1 erteilt), als Aufbau, Raste
 Dienstleister mit klaren Paketen und festen Preisen, die freundlich und modern auftreten wollen (Beratung, Verwaltung, Büro und Service, Software nahe Angebote). Helle Seite mit Pastellflächen und sehr fetten Großbuchstaben. Ansprache im Du, für Sie im Text ersetzen. Für Handwerk und Gastronomie nur mit anderer Bildwelt und anderen Farben sinnvoll.
 
 ## Sektionsfolge
-Dunkler Reiter als Kopf, Held (Verlaufsrahmen, Ringe, Telefonbild mit schwebender Karte), Vorteile (Überschrift bleibt stehen, schräge Zettel stapeln sich), Leistungen (Farbwörter in der Überschrift, Bento aus fünf Kacheln), Preise (Überschrift links, drei Pastellpakete), Stimmen (drei Zettel öffnen sich zum Fächer), Abschluss (Blauverlauf mit Mailzeile) und Fuß als dunkle Karte.
+Dunkler Reiter als Kopf, Held (Verlaufsrahmen, Ringe, Telefonbild mit schwebender Karte), Vorteile (Überschrift bleibt stehen, schräge Zettel stapeln sich), Leistungen (Farbwörter in der Überschrift, Bento aus fünf Kacheln), Preise (Überschrift links, drei Pastellpakete), Stimmen (drei Zettel öffnen sich zum Fächer), Fragen (Pastellzettel mit Akkordeon), Abschluss (Blauverlauf mit Mailzeile) und Fuß als dunkle Karte.
 
 ## Animationen
 | Wo | Was | Wie |
@@ -27,3 +27,8 @@ Name und Zeichen im Reiter und im Fuß, Texte, Telefonbild (CSS, durch echtes Pr
 
 ## Grenzen
 Das Formular sendet nichts (`stil.js` verhindert das Absenden, Backend und Einwilligung fehlen). Bewertung, Preise, Zahlen und Zitate sind Platzhalter, keine Belege. Die Schrift ist Archivo in hohem Gewicht, die Referenz nutzt eine schmalere Plakatschrift, lange Wörter brechen deshalb früher um. Der Fächer verdeckt auf Desktop Teile der seitlichen Zitate, bis man sie berührt oder anwählt. Impressum und Datenschutz sind nur Linkplatzhalter.
+
+## Conversion (Playbook)
+- Kopfzeile: Primär-CTA Gespräch als Pillenknopf im Nav-Container (im Mobilpanel sichtbar)
+- Neue Sektion Fragen vor dem Kontakt: fünf Einwandfragen als Akkordeon aus Pastellkarten (`data-exklusiv`), Sektionsfolge: Preise, Stimmen, Fragen, Abschluss
+- Held: Kommentar mit der Heldenformel vor der H1

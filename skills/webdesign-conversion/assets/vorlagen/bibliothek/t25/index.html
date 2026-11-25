@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Über uns, Markenname Heizung und Klima</title>
-<meta name="description" content="Beispieltext: Ein Betrieb für Heizung und Klima, auf den man sich verlassen kann. Haltung, Zahlen, Werte, Geschichte und Team. Vor dem Einsatz durch den echten Text ersetzen.">
+<meta name="description" content="Beispieltext: Heizung und Klima von einem Betrieb, auf den Sie sich verlassen können. Lernen Sie uns kennen und fragen Sie einen Rückruf an.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../_basis/schriften.css">
 <link rel="stylesheet" href="../_basis/basis.css">
@@ -60,6 +60,7 @@
     <div class="wrap">
       <div class="held__kopf" data-staffel>
         <p class="kicker" data-zeig>Über uns</p>
+        <!-- Held nach Formel: H1 = [Zielgruppe] + [Problem] + [Lösung]; Unterzeile = Wie + konkretes Ergebnis; Bild zeigt das Ergebnis; ein Primär-CTA; ein Beleg (Bewertung, Zahl, Logo) im ersten Bildschirm -->
         <h1 id="h-held" data-zeig>Damit es bei Ihnen angenehm bleibt.</h1>
       </div>
       <div class="held__bilder" data-staffel>
@@ -246,7 +247,7 @@
       <form class="formular" data-zeig action="#" method="post" novalidate>
         <h3>Rückruf anfordern</h3>
         <div class="feld"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
-        <div class="feld"><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" required></div>
+        <div class="feld"><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" required><small class="feld__hinweis">Nur für Rückfragen zu Ihrer Anfrage.</small></div>
         <div class="feld"><label for="f-text">Ihr Anliegen</label><textarea id="f-text" name="anliegen" rows="3"></textarea></div>
         <button class="knopf" type="submit">Rückruf anfordern<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-pfeil"/></svg></button>
         <p class="formular__status" role="status" data-status></p>

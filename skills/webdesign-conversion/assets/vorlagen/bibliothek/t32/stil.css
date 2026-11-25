@@ -15,6 +15,17 @@ body{background:var(--flaeche)}
 .kopfzeile h2,.ueber h2,.ruhe h2,.qual h2,.termin h2{font-size:var(--h2)}
 .kopfzeile--links{justify-items:start;text-align:left;margin-bottom:2rem}
 .kopfzeile--hell{color:var(--ziegel-text)}
+
+/* 9a. Fragen */
+.fragen__liste{display:grid;gap:.75rem;max-width:50rem;margin-inline:auto}
+.frage{border-radius:var(--radius-karte);background:var(--karte);box-shadow:inset 0 0 0 1.5px var(--linie)}
+.frage summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:3.75rem;padding:1rem 1.5rem;font-family:var(--schrift-titel);font-weight:600;font-size:1.125rem;letter-spacing:-.02em;cursor:pointer;list-style:none;border-radius:var(--radius-karte)}
+.frage summary::-webkit-details-marker{display:none}
+.frage summary:focus-visible{outline-color:var(--ziegel)}
+.frage__plus{flex:none;color:var(--ziegel);transition:transform var(--dauer-mittel) var(--kurve)}
+.frage[open] .frage__plus{transform:rotate(45deg)}
+.frage .antwort{padding:0 1.5rem 1.5rem;max-width:42rem;color:var(--text-leise);animation:antwort-ein var(--dauer-mittel) var(--kurve)}
+@keyframes antwort-ein{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
 .sterne{display:flex;align-items:center;gap:.15rem;color:var(--akzent)}
 .sterne span{margin-left:.5rem;color:var(--text-leise-dunkel);font-size:var(--text-s)}
 .gesichter{display:flex}
@@ -204,6 +215,7 @@ body{background:var(--flaeche)}
 .formular ::placeholder{color:#6b726e;opacity:1}
 .formular__recht{color:var(--text-leise);font-size:var(--text-s)}
 .formular__recht a{text-decoration:underline;text-underline-offset:.2em}
+.feld__hinweis{display:block;margin-top:.4rem;font-size:1rem;line-height:1.4;color:var(--text-leise)}
 .formular__meldung{padding:.8rem 1rem;border-radius:var(--radius-klein);background:var(--flaeche-alt)}
 @media (min-width:40rem){.formular{grid-template-columns:repeat(2,minmax(0,1fr))}.formular__feld--breit,.formular__recht,.formular .knopf,.formular__meldung{grid-column:1/-1}}
 @media (min-width:62rem){.termin__karte{grid-template-columns:.9fr 1.1fr;gap:4rem}}

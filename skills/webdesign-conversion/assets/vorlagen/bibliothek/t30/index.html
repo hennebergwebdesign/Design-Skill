@@ -65,6 +65,7 @@
         <span class="sterne" aria-hidden="true"><svg width="16" height="16"><use href="#i-stern"/></svg><svg width="16" height="16"><use href="#i-stern"/></svg><svg width="16" height="16"><use href="#i-stern"/></svg><svg width="16" height="16"><use href="#i-stern"/></svg><svg width="16" height="16"><use href="#i-stern"/></svg></span>
         4,8 aus 1.240 Bewertungen
       </p>
+      <!-- Held nach Formel: H1 = [Zielgruppe] + [Problem] + [Lösung]; Unterzeile = Wie + konkretes Ergebnis; Bild zeigt das Ergebnis; ein Primär-CTA; ein Beleg (Bewertung, Zahl, Logo) im ersten Bildschirm -->
       <h1 id="h-held">
         <span class="zeile"><span style="--z:0">Reisen, an die</span></span>
         <span class="zeile"><span style="--z:1">du dich noch</span></span>
@@ -274,6 +275,24 @@
     </div>
   </section>
 
+  <!-- 7a. Fragen: Überschrift mittig, Liste mit Linien -->
+  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen">
+    <div class="wrap fragen__wrap">
+      <div class="kopfzeile">
+        <p class="kicker" data-zeig>Fragen</p>
+        <h2 id="h-fragen" data-licht>Gut zu wissen vor der Buchung</h2>
+        <p data-zeig>Noch etwas offen? Schreib uns oder ruf an, wir antworten ehrlich.</p>
+      </div>
+      <div class="fragen__liste" data-exklusiv data-staffel>
+        <details class="frage" data-zeig><summary><span>Was kostet eine Reise, und was ist enthalten?</span><svg class="frage__plus" width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary><p class="antwort" data-beispiel>Beispielantwort: Der Preis je Person steht bei jedem Paket, Anreise, Unterkunft und Programm sind darin aufgeführt. Preise und Leistungen hier mit den echten Angaben ersetzen.</p></details>
+        <details class="frage" data-zeig><summary><span>Wie läuft die Planung ab, und wie schnell bekomme ich ein Angebot?</span><svg class="frage__plus" width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary><p class="antwort" data-beispiel>Beispielantwort: Du schickst uns deine Wünsche, wir melden uns innerhalb von 24 Stunden mit einem Vorschlag. Frist und Ablauf hier eintragen.</p></details>
+        <details class="frage" data-zeig><summary><span>Kann ich mich auf die Qualität der Unterkünfte und Touren verlassen?</span><svg class="frage__plus" width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary><p class="antwort" data-beispiel>Beispielantwort: Wir buchen nur Unterkünfte und Anbieter, die wir selbst kennen, und eine Begleitung ist vor Ort erreichbar. Belege hier mit echten Angaben ersetzen.</p></details>
+        <details class="frage" data-zeig><summary><span>Was passiert, wenn ich stornieren muss oder etwas schiefgeht?</span><svg class="frage__plus" width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary><p class="antwort" data-beispiel>Beispielantwort: Bis zu einer festen Frist stornierst du kostenlos, bei Problemen unterwegs hilft unser Notfallkontakt. Stornobedingungen hier mit den echten Regeln ersetzen.</p></details>
+        <details class="frage" data-zeig><summary><span>Passt das auch für kurzfristige Reisen oder kleine Gruppen?</span><svg class="frage__plus" width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary><p class="antwort" data-beispiel>Beispielantwort: Ja, viele Touren gehen schon ab zwei Personen, auch kurzfristig, solange Plätze frei sind. Mindestgruppe und Vorlauf hier eintragen.</p></details>
+      </div>
+    </div>
+  </section>
+
   <!-- 8. Kontakt -->
   <section class="sektion kontakt" id="kontakt" aria-labelledby="h-kontakt">
     <div class="wrap kontakt__wrap">
@@ -284,13 +303,10 @@
       </div>
       <form class="formular" data-formular data-zeig action="#" method="post" novalidate>
         <div class="formular__feld"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" placeholder="Dein Name" required></div>
-        <div class="formular__feld"><label for="f-mail">E-Mail-Adresse</label><input id="f-mail" name="email" type="email" autocomplete="email" placeholder="du@beispiel.de" required></div>
-        <div class="formular__feld"><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" placeholder="Für Rückfragen"></div>
+        <div class="formular__feld"><label for="f-mail">E-Mail-Adresse</label><input id="f-mail" name="email" type="email" autocomplete="email" placeholder="du@beispiel.de" required><small class="feld__hinweis">Damit wir dir die Bestätigung schicken können.</small></div>
+        <div class="formular__feld"><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" placeholder="Für Rückfragen"><small class="feld__hinweis">Nur für Rückfragen zu deiner Anfrage.</small></div>
         <div class="formular__feld"><label for="f-zeit">Wunschzeitraum</label><input id="f-zeit" name="zeitraum" type="text" placeholder="zum Beispiel: Mitte September"></div>
-        <div class="formular__feld"><label for="f-budget">Budget pro Person</label>
-          <select id="f-budget" name="budget"><option value="">Bitte wählen</option><option>bis 1.000 €</option><option>1.000 bis 2.000 €</option><option>über 2.000 €</option></select></div>
-        <div class="formular__feld"><label for="f-reisende">Anzahl der Reisenden</label><input id="f-reisende" name="reisende" type="number" min="1" inputmode="numeric" placeholder="2"></div>
-        <div class="formular__feld formular__feld--breit"><label for="f-text">Nachricht</label><textarea id="f-text" name="nachricht" rows="3" placeholder="Ziele, Wünsche, besondere Anliegen"></textarea></div>
+        <div class="formular__feld formular__feld--breit"><label for="f-text">Nachricht</label><textarea id="f-text" name="nachricht" rows="3" placeholder="Reisende, Budget, Ziele und Wünsche"></textarea></div>
         <p class="formular__recht formular__feld--breit">Deine Angaben verwenden wir nur, um die Anfrage zu beantworten. Mehr dazu in der <a href="#fuss">Datenschutzerklärung</a>.</p>
         <button class="knopf knopf--dunkel formular__senden" type="submit">Anfrage senden</button>
         <p class="formular__meldung" data-formular-meldung role="status" hidden>Beispielformular: In dieser Vorlage wird nichts gesendet. Der Versand wird im Projekt angebunden.</p>

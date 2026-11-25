@@ -43,6 +43,7 @@
         <li><a href="#preise">Preise</a></li>
         <li><a href="#kontakt">Kontakt</a></li>
       </ul>
+      <a class="knopf knopf--pille kopf__knopf" href="#kontakt"><span class="knopf__kreis"><svg width="14" height="14" aria-hidden="true"><use href="#i-schraeg"/></svg></span>Gespräch</a>
     </nav>
   </div>
 </header>
@@ -54,6 +55,7 @@
     <div class="held__ringe" aria-hidden="true"><span class="ring ring--a"></span><span class="ring ring--b"></span></div>
     <div class="held__text">
       <p class="held__beleg" data-zeig><span class="sterne" aria-hidden="true"><svg><use href="#i-stern"/></svg><svg><use href="#i-stern"/></svg><svg><use href="#i-stern"/></svg><svg><use href="#i-stern"/></svg><svg><use href="#i-stern"/></svg></span><span data-beispiel>4,9 von 5, von 320 Kunden bewertet</span></p>
+      <!-- Held nach Formel: H1 = [Zielgruppe] + [Problem] + [Lösung]; Unterzeile = Wie + konkretes Ergebnis; Bild zeigt das Ergebnis; ein Primär-CTA; ein Beleg (Bewertung, Zahl, Logo) im ersten Bildschirm -->
       <h1 id="h-held" data-zeig>Aufträge erledigt, Kopf wieder frei</h1>
       <p class="held__lead" data-zeig>Wir übernehmen, was dich Zeit kostet, und liefern es verlässlich, mit festem Preis und einem Ansprechpartner, der erreichbar ist.</p>
       <p data-zeig><a class="knopf knopf--pille" href="#kontakt"><span class="knopf__kreis"><svg width="14" height="14" aria-hidden="true"><use href="#i-schraeg"/></svg></span>Gespräch vereinbaren</a></p>
@@ -202,6 +204,24 @@
           <p class="stimme__name"><span class="stimme__bild" aria-hidden="true">MB</span><span><b>Marcus B.</b><br>Beispiel, Teamleitung</span></p>
         </li>
       </ul>
+    </div>
+  </section>
+
+  <!-- 5a. Fragen: Überschrift links, Pastellzettel mit Akkordeon rechts -->
+  <section class="fragen" id="fragen" aria-labelledby="h-fragen">
+    <div class="wrap fragen__raster">
+      <div class="fragen__kopf">
+        <p class="kicker" data-zeig>Fragen</p>
+        <h2 id="h-fragen" data-zeig>Gut zu wissen, bevor du startest</h2>
+        <p class="fragen__text" data-zeig>Noch etwas offen? Schreib uns, wir antworten ehrlich und ohne Verkaufsdruck.</p>
+      </div>
+      <div class="fragen__liste" data-exklusiv data-staffel>
+        <details class="frage frage--pfirsich" data-zeig><summary><span>Was kostet das, und kommen später Kosten dazu?</span><svg class="frage__plus" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></summary><p class="antwort" data-beispiel>Beispielantwort: Du bekommst einen festen Preis je Paket. Was enthalten ist, steht vorab im Angebot. Preis und Leistungsumfang hier mit den echten Angaben ersetzen.</p></details>
+        <details class="frage frage--blau" data-zeig><summary><span>Wie schnell geht es los, und wie läuft es ab?</span><svg class="frage__plus" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></summary><p class="antwort" data-beispiel>Beispielantwort: Nach dem ersten Gespräch bekommst du einen Zeitplan. Dauer und Ablauf hier mit den echten Schritten ersetzen.</p></details>
+        <details class="frage frage--lila" data-zeig><summary><span>Kann ich mich auf die Qualität verlassen?</span><svg class="frage__plus" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></summary><p class="antwort" data-beispiel>Beispielantwort: Du hast einen festen Ansprechpartner, und wir zeigen dir Zwischenstände. Belege wie Bewertungen oder Referenzen hier mit echten Angaben ersetzen.</p></details>
+        <details class="frage frage--gelb" data-zeig><summary><span>Was, wenn es am Ende nicht passt?</span><svg class="frage__plus" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></summary><p class="antwort" data-beispiel>Beispielantwort: Wir bessern nach, bis es stimmt, oder du kündigst zum Monatsende. Gewährleistung und Kündigungsfrist hier mit den echten Bedingungen ersetzen.</p></details>
+        <details class="frage frage--pfirsich" data-zeig><summary><span>Passt das jetzt zu mir, auch wenn ich klein starte?</span><svg class="frage__plus" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></summary><p class="antwort" data-beispiel>Beispielantwort: Ja, du kannst mit dem kleinsten Paket beginnen und später wechseln. Mindestumfang und Wechselregeln hier eintragen.</p></details>
+      </div>
     </div>
   </section>
 

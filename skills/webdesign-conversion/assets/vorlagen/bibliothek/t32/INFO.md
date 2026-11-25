@@ -6,7 +6,7 @@ Prinzip nach der freigegebenen Referenz Roofex (Tor 1 erteilt), als Aufbau, Rast
 Dachdecker, Zimmerer, Spengler und verwandte Handwerksbetriebe mit Notdienst, Beratungstermin vor Ort und Festpreisangebot. Auch für Bau, Sanierung, Fenster und Haustechnik mit wiederkehrender Anfrage. Ansprache im Sie.
 
 ## Sektionsfolge
-Kopf mit Notdienstleiste, Vollbildheld (Bild, Hauptaktion, WhatsApp, Telefon), Vertrauensleiste (Bewertung und fünf Siegel), Über uns auf Farbfläche (Wortlichtsatz, vier Kennzahlen, großes Bild), Stimmenlaufband, Leistungen (sechs Karten), Qualität (Bild bleibt stehen, Liste mit mitlaufendem Punkt), Ablauf (drei Schritte), Vorteil (Text, versetzte Bilder, schwebende Karte), Stimmen (Kartenmauer auf Farbfläche), Termin (Formular in Karte auf geteiltem Grund), Ratgeber (zwei Karten), Fuß mit Abschluss.
+Kopf mit Notdienstleiste, Vollbildheld (Bild, Hauptaktion, WhatsApp, Telefon), Vertrauensleiste (Bewertung und fünf Siegel), Über uns auf Farbfläche (Wortlichtsatz, vier Kennzahlen, großes Bild), Stimmenlaufband, Leistungen (sechs Karten), Qualität (Bild bleibt stehen, Liste mit mitlaufendem Punkt), Ablauf (drei Schritte), Vorteil (Text, versetzte Bilder, schwebende Karte), Stimmen (Kartenmauer auf Farbfläche), Fragen (Akkordeon), Termin (Formular in Karte auf geteiltem Grund), Ratgeber (zwei Karten), Fuß mit Abschluss.
 
 ## Animationen
 | Wo | Was | Wie |
@@ -29,3 +29,10 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: weiße Schrift auf `--zi
 
 ## Offen
 Formulare senden nichts. Bewertung, Siegel, Kennzahlen, Stimmen, Namen, Telefon, WhatsApp und Adresse sind Beispiele und keine Belege; Siegel nur zeigen, wenn der Betrieb sie wirklich führt. Kontrast über den Bildflächen nach dem Einsetzen der Fotos neu prüfen. Der Ratgeber verlinkt nur auf den Termin.
+
+## Conversion (Playbook)
+- Beschreibung auf unter 160 Zeichen gekürzt
+- Neue Sektion Fragen vor dem Termin: fünf Einwandfragen als Karten mit Plus in Ziegelfarbe
+- Feldhinweise unter Mailadresse und Telefon im Terminformular
+- Sektionsfolge: nach den Stimmen neu Fragen, dann Termin
+- Held: Kommentar mit der Heldenformel vor der H1

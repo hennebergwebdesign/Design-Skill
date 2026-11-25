@@ -35,3 +35,6 @@
 - Keine echten Bilder, Logos sind erfundene Beispiellogos. Icons: Phosphor bold (MIT), als Sprite.
 - Preisumschalter braucht `:has` (ältere Browser zeigen beide Preise).
 - Nicht geprüft: Screenreader, Safari, echte Fotos hinter den Overlays (Kontrast neu messen).
+
+## Conversion (Playbook)
+- Held: Kommentar mit der Heldenformel vor der H1 (sonst keine Lücke)

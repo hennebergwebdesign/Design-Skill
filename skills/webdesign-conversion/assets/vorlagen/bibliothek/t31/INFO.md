@@ -6,7 +6,7 @@ Prinzip nach der freigegebenen Referenz Klener (Tor 1 erteilt), als Aufbau, Rast
 Gebäudereinigung, Hausmeisterdienste, Facility Services und Handwerk mit Branchenlösungen. Ansprache im Sie.
 
 ## Sektionsfolge
-Kopf, Vollbildheld mit Großtitel, Logoleiste, Über uns mit Kennzahlen und Bildpaar, Leistungsliste mit Bildern, Gründlichkeit (Karte und Hochbild), Warum wir (vier Punkte), Projekte (dunkle Fläche, Bildraster), Stimmen mit Porträtwahl, Ratgeber, Abschluss mit Kontakt, Fuß.
+Kopf, Vollbildheld mit Großtitel, Logoleiste, Über uns mit Kennzahlen und Bildpaar, Leistungsliste mit Bildern, Gründlichkeit (Karte und Hochbild), Warum wir (vier Punkte), Projekte (dunkle Fläche, Bildraster), Stimmen mit Porträtwahl, Ratgeber, Fragen (Akkordeon), Abschluss mit Kontakt, Fuß.
 
 ## Animationen
 Einblenden und Staffelung (data-zeig), Zähler mit Endwert im HTML, Wortlicht in Überschriften, Sticky Abschnitte. Bei reduzierter Bewegung ruht alles, ohne JavaScript bleibt der Inhalt sichtbar.
@@ -16,3 +16,8 @@ Nur `marke.css`. Kontrast nach Wechsel prüfen.
 
 ## Grenzen
 Formulare senden nichts. Kennzahlen, Stimmen und Logos sind Beispiele, keine Belege. Bilder sind Verlaufsplatzhalter. Kontrast über Bildern nicht gemessen.
+
+## Conversion (Playbook)
+- Neue Sektion Fragen vor dem Abschluss: fünf Einwandfragen als Karten mit Plus
+- Sektionsfolge: nach den Bereichen neu Fragen, dann Abschluss
+- Held: Kommentar mit der Heldenformel vor der H1

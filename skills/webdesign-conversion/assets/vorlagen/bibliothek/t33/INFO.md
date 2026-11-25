@@ -30,3 +30,7 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent-tief` auf `--f
 
 ## Offen
 Formulare senden nichts. Bewertung, Siegel, Kennzahlen, Namen, Stimmen und Adresse sind Beispiele, keine Belege; Siegel nur zeigen, wenn der Betrieb sie wirklich führt. Logos sind Beispiellogos. Kontrast von Text über Fotos nach dem Einsetzen neu prüfen (Schleier sind auf die Platzhalter abgestimmt). Zwei Links im Fuß (Impressum, Datenschutz) sind Platzhalter.
+
+## Conversion (Playbook)
+- Feldhinweise unter Mail und Telefon (`.feld__hinweis`)
+- Held: Kommentar mit der Heldenformel vor der H1

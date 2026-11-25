@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dach und Bau, Markenname</title>
-<meta name="description" content="Beispieltext: Dachdeckerbetrieb für Neubau, Sanierung und Reparatur mit festem Ansprechpartner, Festpreisangebot und Notdienst. Vor dem Einsatz durch den echten Text der Marke ersetzen.">
+<meta name="description" content="Beispieltext: Dachdecker für Reparatur, Sanierung und Neubau mit Festpreis und festem Ansprechpartner. Jetzt Termin vereinbaren. Durch echten Text ersetzen.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../_basis/schriften.css">
 <link rel="stylesheet" href="marke.css">
@@ -83,6 +83,7 @@
     <div class="held__schleier" aria-hidden="true"></div>
     <div class="wrap held__innen" data-staffel>
       <p class="kicker" data-zeig>Dachdeckerbetrieb in Musterstadt und Umgebung</p>
+      <!-- Held nach Formel: H1 = [Zielgruppe] + [Problem] + [Lösung]; Unterzeile = Wie + konkretes Ergebnis; Bild zeigt das Ergebnis; ein Primär-CTA; ein Beleg (Bewertung, Zahl, Logo) im ersten Bildschirm -->
       <h1 id="h-held" data-zeig>Ihr Dach in sicheren Händen, vom ersten Ziegel bis zur Abnahme</h1>
       <p class="held__lead" data-zeig>Reparatur, Sanierung und Neubau aus einer Hand. Fester Ansprechpartner, Festpreis vor Baubeginn, Antwort innerhalb eines Werktags.</p>
       <div class="held__knoepfe" data-zeig>
@@ -310,6 +311,23 @@
     </div>
   </section>
 
+  <!-- 9a. Fragen: Überschrift mittig, Akkordeon aus Karten -->
+  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen">
+    <div class="wrap">
+      <header class="kopfzeile">
+        <p class="kicker" data-zeig>Fragen</p>
+        <h2 id="h-fragen" data-zeig>Gut zu wissen, bevor Sie anfragen</h2>
+      </header>
+      <div class="fragen__liste" data-exklusiv data-staffel>
+        <details class="frage" data-zeig><summary><span>Was kostet ein neues Dach oder eine Reparatur, und kommen Kosten dazu?</span><svg class="frage__plus" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></summary><p class="antwort" data-beispiel>Beispielantwort: Sie erhalten vor Baubeginn ein Festpreisangebot. Was darin enthalten ist, steht schriftlich dabei. Preise und Leistungsumfang hier mit den echten Angaben ersetzen.</p></details>
+        <details class="frage" data-zeig><summary><span>Wie schnell kommen Sie, und wie lange dauern die Arbeiten?</span><svg class="frage__plus" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></summary><p class="antwort" data-beispiel>Beispielantwort: Sie bekommen innerhalb eines Werktags eine Antwort, bei Notfällen schneller. Dauer je Arbeit hier mit den echten Zeiten ersetzen.</p></details>
+        <details class="frage" data-zeig><summary><span>Wie gut ist die Arbeit, und welche Nachweise gibt es?</span><svg class="frage__plus" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></summary><p class="antwort" data-beispiel>Beispielantwort: Wir arbeiten als eingetragener Meisterbetrieb mit festen Teams und Abnahme am Ende. Nachweise wie Meistertitel oder Bewertungen hier mit echten Angaben ersetzen.</p></details>
+        <details class="frage" data-zeig><summary><span>Welche Gewährleistung gilt, und was ist bei Sturmschäden?</span><svg class="frage__plus" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></summary><p class="antwort" data-beispiel>Beispielantwort: Auf unsere Arbeit gilt die gesetzliche Gewährleistung, bei Sturmschäden unterstützen wir Sie bei der Meldung an die Versicherung. Fristen und Zusagen hier mit echten Angaben ersetzen.</p></details>
+        <details class="frage" data-zeig><summary><span>Lohnt sich die Sanierung jetzt, oder reicht eine Reparatur?</span><svg class="frage__plus" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></summary><p class="antwort" data-beispiel>Beispielantwort: Das klären wir bei einer Begutachtung und sagen Ihnen ehrlich, was nötig ist. Preis und Dauer der Begutachtung hier eintragen.</p></details>
+      </div>
+    </div>
+  </section>
+
   <!-- 10. Termin: Formular in Karte auf geteiltem Grund -->
   <section class="termin" id="termin" aria-labelledby="h-termin">
     <div class="wrap">
@@ -329,9 +347,9 @@
         </div>
         <form class="formular" data-formular action="#" method="post" novalidate>
           <div class="formular__feld"><label for="f-name">Ihr Name</label><input id="f-name" name="name" type="text" autocomplete="name" placeholder="Vor und Nachname" required></div>
-          <div class="formular__feld"><label for="f-mail">Mailadresse</label><input id="f-mail" name="email" type="email" autocomplete="email" placeholder="ihre@adresse.de" required></div>
+          <div class="formular__feld"><label for="f-mail">Mailadresse</label><input id="f-mail" name="email" type="email" autocomplete="email" placeholder="ihre@adresse.de" required><small class="feld__hinweis">Damit wir Ihnen die Bestätigung schicken können.</small></div>
           <div class="formular__feld"><label for="f-ort">Adresse des Objekts</label><input id="f-ort" name="adresse" type="text" autocomplete="street-address" placeholder="Straße, Ort"></div>
-          <div class="formular__feld"><label for="f-tel">Telefon oder WhatsApp</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" placeholder="0000 000 000"></div>
+          <div class="formular__feld"><label for="f-tel">Telefon oder WhatsApp</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" placeholder="0000 000 000"><small class="feld__hinweis">Nur für Rückfragen zu Ihrer Anfrage.</small></div>
           <div class="formular__feld formular__feld--breit"><label for="f-art">Worum geht es?</label>
             <select id="f-art" name="art"><option>Reparatur oder Notfall</option><option>Dachsanierung</option><option>Neueindeckung</option><option>Flachdach</option><option>Etwas anderes</option></select></div>
           <p class="formular__recht">Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Angaben zur Bearbeitung der Anfrage zu. Mehr in der <a href="#fuss">Datenschutzerklärung</a>.</p>

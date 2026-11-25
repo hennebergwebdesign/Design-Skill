@@ -30,3 +30,8 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: weiße Schrift auf `--ve
 
 ## Offen
 Formulare senden nichts. Preise, Zahlen, Stimmen, Namen und Adresse sind Beispiele. Kontrast über den Bildflächen nach dem Einsetzen der Fotos neu prüfen.
+
+## Conversion (Playbook)
+- Beschreibung gekürzt
+- Formular: Vor- und Nachname zu einem Feld Name zusammengefasst (jetzt vier Felder plus Nachricht), Feldhinweis unter E-Mail (`.feld__hinweis`)
+- Held: Kommentar mit der Heldenformel vor der H1

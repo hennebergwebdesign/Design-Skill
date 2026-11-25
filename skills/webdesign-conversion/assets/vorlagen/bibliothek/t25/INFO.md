@@ -36,3 +36,8 @@
 - Die Links im Fuß auf Impressum und Datenschutz sind `#`, die Menülinks gehen auf Abschnitte dieser Seite. Bei echter Website auf die Unterseiten zeigen lassen.
 - Sticky Überschrift im Weg nur ab 62em, darunter normaler Fluss.
 - Nicht geprüft: Screenreader, Safari, echte Fotos hinter den dunklen Flächen (Kontrast neu messen), echte Geräte.
+
+## Conversion (Playbook)
+- Beschreibung auf 160 Zeichen gekürzt, Nutzen und Handlungsaufforderung ergänzt
+- Feldhinweis unter Telefon im Rückrufformular (`.feld__hinweis`)
+- Held: Kommentar mit der Heldenformel vor der H1

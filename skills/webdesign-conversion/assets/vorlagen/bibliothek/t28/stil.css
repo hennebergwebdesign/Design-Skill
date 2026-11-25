@@ -222,6 +222,7 @@ h3{font-size:var(--h3)}
 .formular textarea{resize:vertical;min-height:7.5rem}
 .formular__recht{color:var(--text-leise-dunkel);font-size:1rem}
 .formular__recht a{text-decoration:underline;text-underline-offset:.2em}
+.feld__hinweis{display:block;margin-top:.4rem;font-size:1rem;line-height:1.4;color:var(--text-leise-dunkel)}
 .formular__meldung{padding:.8rem 1rem;border-radius:var(--radius-klein);background:color-mix(in srgb,#fff 16%,transparent);color:var(--text-auf-dunkel)}
 @media (min-width:36rem){
   .formular{grid-template-columns:repeat(2,minmax(0,1fr))}

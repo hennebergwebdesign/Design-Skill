@@ -38,3 +38,6 @@
 - Ablauf haftet nur ab 62rem; darunter normaler Fluss. Die Leistungsbühne nutzt `svh` mit `vh` als Rückfall.
 - Die Referenz hat keine Logoleiste, deshalb gibt es hier keine.
 - Nicht geprüft: Screenreader, Safari, echte Fotos hinter den Schleiern (Kontrast neu messen), echte Geräte, Leistung.
+
+## Conversion (Playbook)
+- Held: Kommentar mit der Heldenformel vor der H1 (sonst keine Lücke)

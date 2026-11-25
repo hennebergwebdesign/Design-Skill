@@ -36,6 +36,7 @@ mark{background:var(--gelb-tief);color:var(--text);padding:0 .15em;border-radius
 .kopf__nav{flex-basis:100%;padding:.25rem 0 1rem}
 .kopf__menue a{display:flex;align-items:center;min-height:3rem;font-weight:600;transition:color var(--dauer-kurz)}
 .kopf__menue a:hover{color:var(--gelb-tief)}
+.kopf__knopf{margin-top:.5rem;justify-self:start}
 .kopf__reiter{flex-wrap:wrap}
 .js .kopf__nav{position:absolute;top:calc(100% + .5rem);left:0;right:0;background:var(--flaeche-dunkel);border-radius:1.25rem;padding:.5rem 1.5rem 1rem}
 .js .kopf__nav:not([data-offen="true"]){display:none}
@@ -44,6 +45,8 @@ mark{background:var(--gelb-tief);color:var(--text);padding:0 .15em;border-radius
   .kopf__burger,.js .kopf__burger{display:none}
   .kopf__nav,.js .kopf__nav,.js .kopf__nav:not([data-offen="true"]){position:static;display:block;flex-basis:auto;padding:0;background:none;border-radius:0}
   .kopf__menue{display:flex;gap:1.75rem}
+  .kopf__nav,.js .kopf__nav,.js .kopf__nav:not([data-offen="true"]){display:flex;align-items:center;gap:1.75rem}
+  .kopf__knopf{min-height:2.75rem;font-size:.9375rem}
   .kopf__menue a{min-height:2.75rem;font-size:.9375rem}
 }
 
@@ -128,6 +131,25 @@ mark{background:var(--gelb-tief);color:var(--text);padding:0 .15em;border-radius
 .preise__kopf{display:grid;gap:1.25rem;align-content:start;justify-items:start}
 .preise h2{font-size:var(--h-mittel)}
 .preise__lead{max-width:40rem;font-size:var(--text-l);margin-bottom:2rem}
+
+/* 5a. Fragen */
+.fragen{padding-block:var(--raum)}
+.fragen__raster{display:grid;gap:2rem}
+.fragen__kopf{display:grid;gap:1.25rem;align-content:start;justify-items:start}
+.fragen__text{max-width:26rem;font-size:var(--text-l)}
+.fragen__liste{display:grid;gap:.75rem;align-content:start}
+.frage{border-radius:var(--radius-karte);color:var(--text)}
+.frage--pfirsich{background:var(--pfirsich)}.frage--blau{background:var(--blau-hell)}.frage--lila{background:var(--lila)}.frage--gelb{background:var(--gelb)}
+.frage summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:3.75rem;padding:1rem 1.25rem;font-family:var(--schrift-titel);font-weight:800;font-size:1.125rem;letter-spacing:-.02em;cursor:pointer;list-style:none;border-radius:var(--radius-karte)}
+.frage summary::-webkit-details-marker{display:none}
+.frage__plus{flex:none;box-sizing:content-box;width:1.25rem;height:1.25rem;padding:.35rem;border-radius:50%;background:var(--flaeche-dunkel);color:#fff;transition:transform var(--dauer-mittel) var(--kurve)}
+.frage[open] .frage__plus{transform:rotate(45deg)}
+.frage .antwort{padding:0 1.25rem 1.25rem;max-width:40rem;animation:antwort-ein var(--dauer-mittel) var(--kurve)}
+@keyframes antwort-ein{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+@media (min-width:62rem){
+  .fragen__raster{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:4rem}
+  .fragen__kopf{position:sticky;top:1.5rem;align-self:start}
+}
 .pakete{display:grid;gap:1rem}
 .paket{position:relative;overflow:hidden;min-height:15rem;padding:1.25rem;border-radius:var(--radius-karte);display:grid;grid-template-columns:1fr auto;grid-template-rows:auto 1fr auto auto;gap:.35rem;transition:translate var(--dauer-mittel) var(--kurve)}
 .paket:hover{translate:0 -6px}

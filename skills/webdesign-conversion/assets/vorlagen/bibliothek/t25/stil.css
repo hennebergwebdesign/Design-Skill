@@ -192,6 +192,7 @@ details[open] .plus{background:var(--akzent);color:var(--akzent-text)}
 .feld label{font-weight:600;font-size:var(--text-s)}
 .feld input,.feld textarea{width:100%;min-height:3rem;padding:.75rem 1rem;border:1.5px solid var(--feld-rand);border-radius:var(--radius-klein);background:var(--karte);color:var(--text);font:inherit;transition:border-color var(--dauer-kurz),box-shadow var(--dauer-kurz)}
 .feld textarea{resize:vertical}
+.feld__hinweis{display:block;font-size:1rem;line-height:1.4;color:var(--text-leise)}
 .feld input:hover,.feld textarea:hover{border-color:var(--text)}
 .formular .knopf{justify-self:start}
 .formular .formular__status,.formular .formular__hinweis{color:var(--text-leise);font-size:var(--text-s)}

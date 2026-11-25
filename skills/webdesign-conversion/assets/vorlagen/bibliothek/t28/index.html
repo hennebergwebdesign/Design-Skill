@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Training und Coaching, Markenname</title>
-<meta name="description" content="Beispieltext: Training und Coaching mit festem Plan, sichtbarem Fortschritt und persönlicher Betreuung. Vor dem Einsatz durch den echten Text der Marke ersetzen.">
+<meta name="description" content="Beispieltext: Training und Coaching mit festem Plan, sichtbarem Fortschritt und persönlicher Betreuung. Probetraining anfragen. Durch echten Text ersetzen.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../_basis/schriften.css">
 <link rel="stylesheet" href="marke.css">
@@ -75,6 +75,7 @@
   <section class="held" id="top" aria-labelledby="h-held">
     <div class="held__text" data-staffel>
       <p class="kicker" data-zeig>Training mit Plan</p>
+      <!-- Held nach Formel: H1 = [Zielgruppe] + [Problem] + [Lösung]; Unterzeile = Wie + konkretes Ergebnis; Bild zeigt das Ergebnis; ein Primär-CTA; ein Beleg (Bewertung, Zahl, Logo) im ersten Bildschirm -->
       <h1 id="h-held" data-zeig>Training, das zu deinem Alltag passt</h1>
       <p class="held__lead" data-zeig>Persönliche Trainingspläne, klare Zahlen zu deinem Fortschritt und ein Coach, der dich erreicht, wenn du ihn brauchst.</p>
       <div class="held__knoepfe" data-zeig>
@@ -352,10 +353,9 @@
         <div class="kontakt__raster">
           <div class="bild bild--b kontakt__bild" data-zeig="links"><img src="bilder/frau-dutt-weiss-640.webp" width="640" height="805" alt="Frau mit hochgesteckten dunklen Haaren im weißen Shirt" loading="lazy" decoding="async" style="object-position:50% 25%"></div>
           <form class="formular" data-formular data-zeig action="#" method="post" novalidate>
-            <div class="formular__feld"><label for="f-vorname">Vorname</label><input id="f-vorname" name="vorname" type="text" autocomplete="given-name" required></div>
-            <div class="formular__feld"><label for="f-nachname">Nachname</label><input id="f-nachname" name="nachname" type="text" autocomplete="family-name" required></div>
-            <div class="formular__feld"><label for="f-mail">E-Mail-Adresse</label><input id="f-mail" name="email" type="email" autocomplete="email" required></div>
-            <div class="formular__feld"><label for="f-ziel">Dein Ziel</label><input id="f-ziel" name="ziel" type="text" placeholder="zum Beispiel: Kraft aufbauen"></div>
+            <div class="formular__feld"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+            <div class="formular__feld"><label for="f-mail">E-Mail-Adresse</label><input id="f-mail" name="email" type="email" autocomplete="email" required><small class="feld__hinweis">Damit wir dir die Bestätigung schicken können.</small></div>
+            <div class="formular__feld formular__feld--breit"><label for="f-ziel">Dein Ziel</label><input id="f-ziel" name="ziel" type="text" placeholder="zum Beispiel: Kraft aufbauen"></div>
             <div class="formular__feld formular__feld--breit"><label for="f-text">Nachricht</label><textarea id="f-text" name="nachricht" rows="4"></textarea></div>
             <p class="formular__recht formular__feld--breit">Mit dem Absenden stimmst du der Verarbeitung deiner Angaben zur Beantwortung der Anfrage zu. Mehr dazu in der <a href="#fuss">Datenschutzerklärung</a>.</p>
             <button class="knopf formular__senden" type="submit">Nachricht senden</button>
