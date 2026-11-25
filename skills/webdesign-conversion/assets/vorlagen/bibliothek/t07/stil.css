@@ -268,3 +268,7 @@ section[id]{scroll-margin-top:var(--kopf-h)}
 
 /* Held dunkelt beim Scrollen ab (data-abdunkeln, --dunkel aus bewegung.js) */
 .held::after{content:"";position:absolute;inset:0;z-index:-1;background:var(--flaeche);opacity:calc(var(--dunkel,0) * .88);pointer-events:none}
+
+/* Fotos statt Platzhalterverläufe */
+.bild__foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+img.held__tiefe,img.bild__tiefe,img.bildband__tiefe{width:100%;height:112%;object-fit:cover;background:none;animation:none}
