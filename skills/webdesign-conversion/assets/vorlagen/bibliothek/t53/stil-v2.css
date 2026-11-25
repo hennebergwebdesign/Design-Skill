@@ -23,7 +23,6 @@
 .held2__buehne .schwebe{left:0;bottom:2.5rem;width:min(62%,15rem)}
 .held2__buehne .schwebe .posten{padding-top:.35rem}
 .held2__buehne .schwebe b.wert{font-family:var(--schrift-titel)}
-.hand{position:absolute;right:calc(50% - 14rem);bottom:-1rem;width:8rem;height:12rem;border-radius:5rem 5rem 0 0;background:linear-gradient(160deg,#d9b49c,#b98a6f);opacity:.0}
 @media (min-width:56rem){.held2__raster{grid-template-columns:1.05fr .95fr}.held2__buehne .schwebe{left:-2rem}}
 
 /* Merkmalsraster: sechs Karten, die letzte als Aufruf */

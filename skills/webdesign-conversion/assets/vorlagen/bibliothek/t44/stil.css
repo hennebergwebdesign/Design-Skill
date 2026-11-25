@@ -277,6 +277,7 @@ nav a[aria-current="location"]{text-decoration:none}
 .beitrag{position:relative;display:grid;align-content:end;aspect-ratio:4/4.6;border-radius:var(--radius-gross);overflow:hidden}
 .beitrag .bild{position:absolute;inset:0;border-radius:0;transition:transform .6s var(--kurve)}
 .beitrag:hover .bild{transform:scale(1.04)}
+.beitrag .bild[data-platzhalter]::after{inset:.75rem auto auto .75rem}
 .beitrag__zeit{position:absolute;z-index:4;top:.9rem;right:.9rem;padding:.2rem .7rem;border-radius:99px;background:var(--flaeche-karte);font-size:.875rem;font-weight:600}
 .beitrag__text{position:relative;z-index:4;display:grid;gap:.3rem;margin:.75rem;padding:1.1rem 1.25rem;border-radius:1.5rem;background:var(--flaeche-karte)}
 .beitrag__text h3{font-size:1.25rem;font-weight:500}

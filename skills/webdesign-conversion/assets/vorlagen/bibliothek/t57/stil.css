@@ -158,13 +158,13 @@ h3{font-size:clamp(1.2rem,1.05rem + .6vw,1.5rem);line-height:1.15}
 .coach__bild[data-platzhalter]::after{display:none}
 .coach__tag{display:grid;gap:.1rem;padding:.9rem 1rem;border-radius:0 0 18px 18px;background:var(--flaeche-alt)}
 .coach__tag p{font-size:1rem;color:var(--text-leise)}
-.coach[data-parallax]{transform:none!important}
+.coach{position:relative}
+@media (max-width:61.99rem){.coach[data-parallax]{transform:none!important}}
 @media (min-width:62rem){
   .trainer__feld{position:relative;height:150rem}
-  .trainer__kopf{position:sticky;top:calc(50svh - 5rem);margin-top:22rem;z-index:1}
+  .trainer__kopf{position:sticky;top:calc(50svh - 5rem);margin-top:22rem;z-index:2}
   .trainer__liste{display:block;margin:0;padding:0;overflow:visible}
   .coach{position:absolute;width:14rem}
-  .coach[data-parallax]{transform:revert-layer!important}
 }
 
 /* 6. Mitgliedschaft */
