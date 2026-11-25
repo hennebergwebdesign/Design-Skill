@@ -32,3 +32,6 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent-text` auf `--a
 
 ## Offen
 Formulare senden nichts. Preise, Namen, Stimmen und Antworten sind Beispiele, keine Belege. Das App Fenster ist ein Nachbau aus HTML, kein Screenshot, und gehört durch eine echte Ansicht des Produkts ersetzt. Die Bildspalten sind Platzhalterflächen und müssen echte Motive bekommen. Kontrast von Text über Fotos nach dem Einsetzen neu prüfen. Links im Fuß (Impressum, Datenschutz, Nutzungsbedingungen) sind Platzhalter.
+
+## Conversion (Playbook)
+- Telefon (`tel:` mit Platzhalternummer, `data-beispiel`) in der unteren Fußzeile. Regel in `stil.css`.

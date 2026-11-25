@@ -131,3 +131,7 @@
 /* Fuß 2: Verzeichnis mit mehr Spalten */
 .v2 .fuss__spalten{grid-template-columns:repeat(2,1fr)}
 @media (min-width:56rem){.v2 .fuss__spalten{grid-template-columns:repeat(5,1fr)}}
+
+/* Fragen: Akkordeon über die volle Breite des Rasters */
+.fragen__liste{max-width:56rem}
+.fragen__liste details>p{max-width:44rem}

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Fitnessstudio und Training, Markenname</title>
-<meta name="description" content="Beispieltext: Fitnessstudio mit Personal Training, Kursen und festem Plan. Mitgliedschaft ohne Schnickschnack, Team mit Herz. Vor dem Einsatz durch den echten Text der Marke ersetzen.">
+<meta name="description" content="Beispieltext: Fitnessstudio mit Personal Training, Kursen und festem Plan. Jetzt Probetraining anfragen.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../_basis/schriften.css">
 <link rel="stylesheet" href="marke.css">
@@ -192,6 +192,14 @@
   </section>
 
   <!-- 9. Beitreten: Bild mit Kontaktchips, Formular -->
+  <!-- 8a. Fragen: Einwände vorwegnehmen, der offene Eintrag ist dunkel -->
+  <section class="sektion fragen" id="faq" aria-labelledby="h-faq">
+    <div class="wrap">
+      <header class="mitte"><p class="kicker" data-zeig><span class="kicker__icon" aria-hidden="true"><svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#i-blitz"/></svg></span>Fragen</p><h2 id="h-faq" data-zeig>Alles, was du vor dem Start wissen solltest</h2></header>
+      <div class="fragen__liste" data-exklusiv><details class="frage" open data-zeig><summary><span class="frage__pm" aria-hidden="true"><span class="frage__plus"><svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></span><span class="frage__minus"><svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#i-minus"/></svg></span></span><span class="frage__text">Was kostet die Mitgliedschaft?</span></summary><div class="frage__antwort"><p data-beispiel>Beispielantwort: Es gibt zwei Tarife, monatlich oder jährlich zahlbar. Die Preise stehen vorab fest, ein Probetraining ist kostenlos.</p></div></details><details class="frage" data-zeig><summary><span class="frage__pm" aria-hidden="true"><span class="frage__plus"><svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></span><span class="frage__minus"><svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#i-minus"/></svg></span></span><span class="frage__text">Wie läuft das Probetraining ab?</span></summary><div class="frage__antwort"><p data-beispiel>Beispielantwort: Du kommst vorbei, ein Coach zeigt dir die Geräte und stellt mit dir einen ersten Plan auf. Das dauert etwa eine Stunde.</p></div></details><details class="frage" data-zeig><summary><span class="frage__pm" aria-hidden="true"><span class="frage__plus"><svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></span><span class="frage__minus"><svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#i-minus"/></svg></span></span><span class="frage__text">Muss ich schon fit sein?</span></summary><div class="frage__antwort"><p data-beispiel>Beispielantwort: Nein. Der Plan startet bei deinem Stand, und das Team passt Übungen und Gewichte an dich an.</p></div></details><details class="frage" data-zeig><summary><span class="frage__pm" aria-hidden="true"><span class="frage__plus"><svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></span><span class="frage__minus"><svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#i-minus"/></svg></span></span><span class="frage__text">Wie lange binde ich mich?</span></summary><div class="frage__antwort"><p data-beispiel>Beispielantwort: Du kannst monatlich kündigen. Im Probetraining legst du dich zu nichts verpflichtet fest.</p></div></details><details class="frage" data-zeig><summary><span class="frage__pm" aria-hidden="true"><span class="frage__plus"><svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></span><span class="frage__minus"><svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#i-minus"/></svg></span></span><span class="frage__text">Lohnt sich der Einstieg gerade jetzt?</span></summary><div class="frage__antwort"><p data-beispiel>Beispielantwort: Ja, jeder Zeitpunkt ist gut, an dem du anfängst. Im Probetraining klären wir, welcher Tarif zu deinem Ziel passt.</p></div></details></div>
+    </div>
+  </section>
+
   <section class="sektion beitreten" id="beitreten" aria-labelledby="h-beitreten">
     <div class="wrap beitreten__raster">
       <div class="beitreten__bild bild bild--a" data-platzhalter="Bild: Läuferin am Strand, Hochformat" role="img" aria-label="Platzhalter für ein Foto einer Läuferin am Strand" data-zeig>
@@ -201,13 +209,11 @@
         <p class="kicker " data-zeig><span class="kicker__icon" aria-hidden="true"><svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#i-hantel"/></svg></span>Kontakt</p>
         <h2 id="h-beitreten" data-zeig>Fragen oder gleich beitreten?</h2>
         <form class="formular" data-formular action="#" method="post" novalidate data-zeig>
-          <div class="formular__feld"><label for="f-vor">Vorname</label><input id="f-vor" name="vorname" type="text" autocomplete="given-name" placeholder="Dein Vorname" required></div>
-          <div class="formular__feld"><label for="f-nach">Nachname</label><input id="f-nach" name="nachname" type="text" autocomplete="family-name" placeholder="Dein Nachname" required></div>
-          <div class="formular__feld"><label for="f-mail">Mail</label><input id="f-mail" name="email" type="email" autocomplete="email" placeholder="du@beispiel.invalid" required></div>
-          <div class="formular__feld"><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" placeholder="Für den Rückruf"></div>
+          <div class="formular__feld formular__feld--breit"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" placeholder="Vor und Nachname" required></div>
+          <div class="formular__feld"><label for="f-mail">Mail</label><input id="f-mail" name="email" type="email" autocomplete="email" placeholder="du@beispiel.invalid" required><small class="feld__hinweis">Damit wir dir die Bestätigung schicken können.</small></div>
+          <div class="formular__feld"><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" placeholder="Für den Rückruf"><small class="feld__hinweis">Nur für Rückfragen zu deiner Anfrage.</small></div>
           <div class="formular__feld formular__feld--breit"><label for="f-tarif">Tarif</label><select id="f-tarif" name="tarif"><option>Basis</option><option>Premium</option><option>Weiß ich noch nicht</option></select></div>
-          <div class="formular__feld"><label for="f-ort">Standort</label><input id="f-ort" name="standort" type="text" placeholder="Dein Wunschstandort"></div>
-          <div class="formular__feld"><label for="f-datum">Wunschtermin</label><input id="f-datum" name="termin" type="date"></div>
+          <div class="formular__feld formular__feld--breit"><label for="f-text">Nachricht</label><textarea id="f-text" name="nachricht" rows="3" placeholder="Wunschstandort und Wunschtermin für das Probetraining"></textarea></div>
           <p class="formular__recht formular__feld--breit">Mit dem Absenden stimmst du der Verarbeitung deiner Angaben zur Beantwortung der Anfrage zu. Mehr dazu in der <a href="#fuss">Datenschutzerklärung</a>.</p>
           <button class="formular__senden formular__feld--breit" type="submit"><span>Platz sichern</span><span class="knopf__kreis" aria-hidden="true"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-doppel"/></svg></span></button>
           <p class="formular__meldung formular__feld--breit" data-formular-meldung role="status" hidden>Beispielformular: In dieser Vorlage wird nichts gesendet. Der Versand wird im Projekt angebunden.</p>

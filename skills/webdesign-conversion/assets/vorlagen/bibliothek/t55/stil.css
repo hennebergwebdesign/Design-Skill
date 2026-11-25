@@ -271,6 +271,7 @@ h3{font-size:var(--h3);line-height:1.05}
 .formular input,.formular textarea{width:100%;padding:.8rem 0;font:inherit;font-size:1rem;color:var(--text-auf-dunkel);background:transparent;border:0;border-bottom:1px solid var(--text-leise-dunkel);border-radius:0;resize:vertical}
 .formular input::placeholder,.formular textarea::placeholder{color:var(--text-leise-dunkel);opacity:1}
 .formular input:focus-visible,.formular textarea:focus-visible{outline:0;border-bottom-color:var(--akzent);box-shadow:0 2px 0 var(--akzent)}
+.feld__hinweis{font-size:1rem;line-height:1.35;color:var(--text-leise-dunkel)}
 .formular__recht{font-size:1rem;color:var(--text-leise-dunkel)}
 .formular__recht a{text-decoration:underline;text-underline-offset:.2em}
 .formular .knopf{justify-self:start;border:0}

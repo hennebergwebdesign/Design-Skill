@@ -251,3 +251,7 @@ nav a[aria-current="location"]{text-decoration:none}
 @media (min-width:48rem){.held__grund[data-platzhalter]::after{display:block}}
 .fuss__grund[data-platzhalter]::after{inset:1rem 1rem auto auto}
 .held__grund::before,.fuss__grund::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(10,14,18,.62),rgba(10,14,18,.78))}
+
+/* Telefon im Fuß */
+.fuss__unten a[href^="tel:"]{text-decoration:underline;text-underline-offset:.2em;font-weight:700}
+.fuss__unten a[href^="tel:"]:hover{color:var(--akzent)}

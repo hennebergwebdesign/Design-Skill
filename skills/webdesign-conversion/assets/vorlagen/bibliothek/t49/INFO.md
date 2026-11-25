@@ -30,3 +30,9 @@ Werte in `marke.css` ändern. Kontrast prüfen: `--akzent-text` auf `--akzent` (
 
 ## Offen
 Formulare senden nichts. Zahlen, Namen, Stimmen, Integrationen und Beiträge sind Beispiele, keine Belege. Der Text in den Oberflächenbildern skaliert mit dem Rahmen und ist auf dem Handy kleiner als 16 px, er ist Bild und für Bildschirmleser ausgeblendet. Die Preisseite und die Funktionsseite der Referenz sind erfasst, aber nicht gebaut (Tarifkarten gibt es in t48). Links im Fuß sind Platzhalter.
+
+## Conversion (Playbook)
+- Beschreibung auf unter 160 Zeichen gekürzt.
+- Neue Sektion Fragen (`#fragen`) vor dem Aufruf: fünf Einwände als Akkordeon aus `details` mit `data-exklusiv`. Neue Regeln `.faq__liste` in `stil.css`.
+- Telefon in der Akzentkarte des Aufrufs (`.aufruf__tel`).
+- Sektionsfolge: Fragen steht zwischen Ratgeber und Aufruf.

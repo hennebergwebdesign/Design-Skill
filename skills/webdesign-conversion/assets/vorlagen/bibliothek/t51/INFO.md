@@ -29,3 +29,7 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent` auf `--flaech
 
 ## Offen
 Formulare senden nichts. Preise, Vergleich, Stimmen, Namen, Telefon, Adresse und Logos sind Beispiele, keine Belege. Die Unterschrift ist ein erfundenes Beispiel, vor dem Einsatz durch die echte oder streichen. Kontrast von Text über Fotos im Held nach dem Einsetzen neu prüfen. Zwei Links im Fuß (Impressum, Datenschutz) sind Platzhalter. Die Tabelle scrollt auf dem Handy seitlich.
+
+## Conversion (Playbook)
+- Beschreibung auf unter 160 Zeichen gekürzt.
+- Feldhinweis unter E-Mail im Kontaktformular (`.feld__hinweis`). Das Formular hat zwei Felder. Auf Breiten ab 56 rem liegen die Felder jetzt nebeneinander und der Knopf in einer eigenen Zeile, statt als eine Pille, weil der Hinweis die Pille sonst verzerrt.

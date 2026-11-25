@@ -332,3 +332,7 @@ nav a[aria-current="location"]{text-decoration:none}
   .held__zelle,.pille,.kachel--icon{animation:none!important}
   .karte3:hover{transform:none}
 }
+
+/* Telefon im Schlussbereich */
+.fuss__tel a{display:inline-flex;align-items:center;min-height:2.75rem;color:var(--text);font-weight:600;text-decoration:underline;text-underline-offset:.2em}
+.fuss__tel a:hover{color:var(--akzent)}

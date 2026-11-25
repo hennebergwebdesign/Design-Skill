@@ -20,3 +20,14 @@ body.v3{background:var(--flaeche-dunkel)}
 .fuss--schlicht{padding:0;background:none}
 .fuss__leiste{display:flex;justify-content:space-between;align-items:center;gap:1rem;min-height:4rem;width:min(100% - 2*var(--rand),80rem);margin-inline:auto;color:var(--text-leise-dunkel)}
 @media (max-width:40rem){.fuss__leiste{justify-content:space-between}}
+
+/* Fragen unter der Warteliste: dunkle Karten im Ton der Seite */
+.fragen--warte{padding-top:var(--raum);color:var(--text-auf-dunkel)}
+.fragen--warte .frage{background:var(--flaeche-dunkel-2);box-shadow:inset 0 0 0 1px var(--linie-dunkel)}
+.fragen--warte .frage__icon{background:var(--flaeche-dunkel);box-shadow:inset 0 0 0 1px var(--linie-dunkel);color:var(--akzent)}
+.fragen--warte .frage[open] .frage__icon{background:var(--akzent);color:var(--akzent-text)}
+.fragen--warte .frage p{color:var(--text-leise-dunkel)}
+.fragen--warte :focus-visible{outline-color:var(--akzent)}
+.fuss__leiste a{color:var(--text-auf-dunkel);text-decoration:underline;text-underline-offset:.2em;display:inline-flex;align-items:center;min-height:2.75rem}
+.kopf--schlicht .kopf__leiste--schlicht{display:flex;align-items:center;justify-content:space-between}
+.fragen__ende{display:flex;justify-content:center;margin-top:2rem}

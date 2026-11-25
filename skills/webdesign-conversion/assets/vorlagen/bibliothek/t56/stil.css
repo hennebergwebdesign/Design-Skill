@@ -252,8 +252,10 @@ h3{font-size:clamp(1.05rem,1rem + .5vw,1.3rem);line-height:1.15}
 .formular{display:grid;gap:1rem;width:100%}
 .formular__feld{display:grid;gap:.35rem}
 .formular label{font-family:var(--schrift-titel);font-weight:600;font-size:.875rem;text-transform:uppercase}
-.formular input,.formular select{width:100%;min-height:3.25rem;padding:.7rem 1rem;font:inherit;font-size:1rem;color:var(--text);background:#fff;border:1px solid var(--text-leise);border-radius:10px}
-.formular input:focus-visible,.formular select:focus-visible{outline:3px solid var(--akzent);outline-offset:2px}
+.formular input,.formular select,.formular textarea{width:100%;min-height:3.25rem;padding:.7rem 1rem;font:inherit;font-size:1rem;color:var(--text);background:#fff;border:1px solid var(--text-leise);border-radius:10px}
+.formular input:focus-visible,.formular select:focus-visible,.formular textarea:focus-visible{outline:3px solid var(--akzent);outline-offset:2px}
+.formular textarea{min-height:5.5rem;resize:vertical}
+.feld__hinweis{font-size:1rem;line-height:1.35;color:var(--text-leise)}
 .formular__recht{font-size:1rem;color:var(--text-leise)}
 .formular__recht a{text-decoration:underline;text-underline-offset:.2em}
 .formular__senden{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:3.4rem;padding:.35rem .35rem .35rem 1.5rem;border-radius:999px;background:var(--flaeche-dunkel);color:var(--text-auf-dunkel);font-family:var(--schrift-titel);font-weight:700;font-size:.9rem;text-transform:uppercase}
@@ -298,3 +300,21 @@ h3{font-size:clamp(1.05rem,1rem + .5vw,1.3rem);line-height:1.15}
 .fuss__spalten a:hover{color:var(--akzent-hell)}
 .fuss__unten{margin-top:2.5rem;padding-top:1.25rem;border-top:1px solid var(--linie-dunkel)}
 @media (min-width:62rem){.fuss__oben{grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:4rem}.fuss__spalten{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+/* Fragen: Akkordeon, der offene Eintrag ist dunkel */
+.fragen{background:var(--flaeche-alt)}
+.fragen__liste{display:grid;gap:.5rem;max-width:44rem;margin:clamp(2rem,5vw,3.5rem) auto 0}
+.frage{border-radius:var(--radius-karte);transition:background-color var(--dauer-kurz)}
+.frage summary{display:flex;align-items:center;gap:1rem;min-height:3.5rem;padding:.6rem .75rem;cursor:pointer;list-style:none;font-family:var(--schrift-titel);font-weight:700;font-size:1rem;text-transform:uppercase;line-height:1.25}
+.frage summary::-webkit-details-marker{display:none}
+.frage__pm{display:inline-flex;align-items:center;justify-content:center;flex:none;width:2.25rem;height:2.25rem;border-radius:8px}
+.frage__minus{display:none}
+.frage[open]{background:var(--flaeche-dunkel);color:var(--text-auf-dunkel)}
+.frage[open] .frage__pm{background:var(--akzent);color:#fff}
+.frage[open] .frage__plus{display:none}
+.frage[open] .frage__minus{display:inline-flex}
+.frage__antwort{padding:.5rem 0 1rem;margin-inline:.75rem;border-top:1px solid var(--linie-dunkel)}
+.frage__antwort p{font-size:1rem;color:var(--text-leise-dunkel)}
+.js .frage[open] .frage__antwort{animation:frageauf var(--dauer-mittel) var(--kurve)}
+@keyframes frageauf{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.js .frage[open] .frage__antwort{animation:none}}

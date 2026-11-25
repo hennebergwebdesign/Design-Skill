@@ -278,3 +278,13 @@ strong{font-weight:700;color:var(--text)}
 .fuss__telefon{padding:1.25rem var(--rand) 2rem;border-top:1px solid var(--linie-dunkel);color:var(--text-leise-dunkel);text-align:center}
 .fuss__telefon a{display:inline-flex;align-items:center;min-height:2.75rem;color:var(--text-auf-dunkel);font-weight:600;text-decoration:underline;text-underline-offset:.2em}
 @media (min-width:56rem){.fuss__innen{grid-template-columns:1fr 1.5fr;gap:5rem}}
+
+/* Fragen: Akkordeon als weiche Karten */
+.faq__liste{display:grid;gap:.75rem;max-width:52rem;margin-inline:auto}
+.faq__liste details{border-radius:var(--radius-karte);background:var(--flaeche-alt)}
+.faq__liste summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:3.5rem;padding:.75rem 1.5rem;cursor:pointer;list-style:none;font-family:var(--schrift-titel);font-weight:700;font-size:1.125rem;letter-spacing:-.02em;border-radius:var(--radius-karte)}
+.faq__liste summary::-webkit-details-marker{display:none}
+.faq__plus{flex:none;transition:transform var(--dauer-mittel) var(--kurve);color:var(--akzent-tief)}
+.faq__liste details[open] .faq__plus{transform:rotate(45deg)}
+.faq__liste .antwort{padding:0 1.5rem 1.5rem;max-width:44rem;color:var(--text-leise)}
+@media (prefers-reduced-motion:reduce){.faq__plus{transition:none}}

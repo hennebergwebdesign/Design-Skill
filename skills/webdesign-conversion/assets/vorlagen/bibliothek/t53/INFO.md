@@ -33,3 +33,8 @@ Nur die Werte in `marke.css` ändern, beide Varianten folgen. Kontrast prüfen: 
 
 ## Offen
 Formulare senden nichts. Zahlen, Salden, Buchungen, Stimmen, Namen, Telefon, Adresse und Logos sind Beispiele, keine Belege. Die CSS Geräte sind schematisch, echte Produktbilder fehlen. Kontrast der schwebenden Karten über den Platzhaltern nach dem Einsetzen echter Bilder neu prüfen. Links im Fuß (Impressum, Datenschutz, Karriere, Widerruf) sind Platzhalter. Die Varianten sind nicht untereinander verlinkt, die Auswahl macht die Galerie.
+
+## Conversion (Playbook)
+- `v2.html`: Titel auf 60 Zeichen gekürzt.
+- `v2.html`: neue Sektion Fragen (`#fragen`) vor den Ratgeberartikeln, fünf Einwände mit dem vorhandenen Akkordeon (`.akkordeon`). Regel in `stil-v2.css`.
+- `index.html` hatte die Punkte schon.

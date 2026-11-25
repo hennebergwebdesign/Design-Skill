@@ -73,3 +73,18 @@
   .beitrag2__bild{aspect-ratio:auto;min-height:24rem}
   .beitrag2__text{padding:3rem 2.5rem}
 }
+
+/* Fragen: Akkordeon mit Symbol und Pfeil wie im Fächer der Variante 3 */
+.fragen__liste{display:grid;gap:0;max-width:46rem;margin:clamp(2rem,4vw,3rem) auto 0;border-top:1px solid var(--linie)}
+.fragen__liste .fach{border-bottom:1px solid var(--linie)}
+.fragen__liste .fach summary{display:flex;align-items:center;gap:.9rem;min-height:3.75rem;padding-block:.5rem;cursor:pointer;list-style:none;font-weight:600;font-size:var(--text-l)}
+.fragen__liste .fach summary::-webkit-details-marker{display:none}
+.fragen__liste .fach summary svg{width:1.4rem;height:1.4rem;flex:none}
+.fragen__liste .fach summary::after{content:"";margin-left:auto;flex:none;width:.6rem;height:.6rem;border:solid currentColor;border-width:0 2px 2px 0;transform:rotate(45deg);transition:transform var(--dauer-mittel) var(--kurve)}
+.fragen__liste .fach[open] summary::after{transform:rotate(-135deg)}
+.fragen__liste .fach__inhalt{padding:0 0 1.25rem 2.3rem;color:var(--text-leise);max-width:36rem}
+@media (prefers-reduced-motion:reduce){.fragen__liste .fach summary::after{transition:none}}
+
+/* Telefon im Schlussbereich */
+.cta .cta__tel{margin:1.25rem auto 0;font-size:1rem;color:var(--text-auf-dunkel)}
+.cta__tel a{display:inline-flex;align-items:center;min-height:2.75rem;font-weight:700;text-decoration:underline;text-underline-offset:.2em}

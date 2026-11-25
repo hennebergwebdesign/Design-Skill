@@ -30,3 +30,8 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent-tief` auf `--f
 
 ## Offen
 Formulare senden nichts. Kennzahlen, Namen, Stimmen, Preise, Tarifumfang und Logos sind Beispiele, keine Belege. Die Oberflächen in Held, Mittelteil und Tabelle sind aus HTML gebaut und nur Platzhalter für echte Produktbilder. Kontrast von Text über Verläufen nach dem Einsetzen echter Bilder neu prüfen. Links im Fuß (Impressum, Datenschutz, Netzwerke) sind Platzhalter. Die Referenz hat weitere Unterseiten (Über uns, Funktionen, Preise, Blog, Kontakt), die hier nicht gebaut sind.
+
+## Conversion (Playbook)
+- Beschreibung und Titel sind im Rahmen (Beschreibung unter 160 Zeichen).
+- Neue Sektion Fragen (`#fragen`) vor der Abschlusskarte: fünf Einwände (Preis, Dauer, Können, Risiko, Passung) als Akkordeon aus `details` mit `data-exklusiv`, Antworten als Beispielantwort mit `data-beispiel`. Neue Regeln `.faq__liste` in `stil.css`.
+- Sektionsfolge: Fragen steht zwischen Daten und Abschlusskarte.

@@ -60,6 +60,7 @@
 <header class="kopf kopf--schlicht">
   <div class="kopf__leiste kopf__leiste--schlicht">
     <a class="kopf__logo" href="index.html" aria-label="Markenname, zur Startseite"><svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg><span>Markenname</span></a>
+    <a class="knopf kopf__knopf" href="#f-mail-warte">Zugang sichern</a>
   </div>
 </header>
 
@@ -86,7 +87,23 @@
   <button class="pause" type="button" data-pause aria-pressed="false"><svg class="pause__aus" width="16" height="16" aria-hidden="true"><use href="#i-pause"/></svg><svg class="pause__an" width="16" height="16" aria-hidden="true"><use href="#i-play"/></svg><span class="sr-nur">Hintergrundbewegung anhalten</span></button>
 </main>
 
-<footer class="fuss fuss--schlicht"><div class="fuss__leiste"><p>© Jahr Markenname</p><ul class="fuss__sozial" aria-label="Soziale Netzwerke"><li><a href="#top" aria-label="Netzwerk A (Beispiel)"><svg width="18" height="18" aria-hidden="true"><use href="#i-camera"/></svg></a></li><li><a href="#top" aria-label="Netzwerk B (Beispiel)"><svg width="18" height="18" aria-hidden="true"><use href="#i-chat-circle"/></svg></a></li><li><a href="#top" aria-label="Netzwerk C (Beispiel)"><svg width="18" height="18" aria-hidden="true"><use href="#i-heart"/></svg></a></li></ul></div></footer>
+<section class="sektion fragen fragen--warte" id="fragen" aria-labelledby="h-fragen">
+  <div class="wrap fragen__innen">
+    <header class="mitte">
+      <h2 id="h-fragen" data-zeig>Häufige Fragen</h2>
+    </header>
+    <div class="fragen__liste" data-exklusiv>
+        <details class="frage"><summary><span>Was kostet der Zugang?</span><span class="frage__icon" aria-hidden="true"><svg width="18" height="18"><use href="#i-plus"/></svg></span></summary><p data-beispiel>Beispielantwort: Die Warteliste ist kostenlos und unverbindlich. Die Preise stehen zum Start fest und gelten zuerst für alle, die auf der Liste stehen.</p></details>
+        <details class="frage"><summary><span>Wann geht es los?</span><span class="frage__icon" aria-hidden="true"><svg width="18" height="18"><use href="#i-plus"/></svg></span></summary><p data-beispiel>Beispielantwort: Der Starttermin steht im Zähler oben. Wer sich einträgt, bekommt eine einzige Mail am Starttag.</p></details>
+        <details class="frage"><summary><span>Brauche ich technisches Wissen?</span><span class="frage__icon" aria-hidden="true"><svg width="18" height="18"><use href="#i-plus"/></svg></span></summary><p data-beispiel>Beispielantwort: Nein. Du verbindest deine Programme per Anmeldung, die Einrichtung dauert nur wenige Minuten.</p></details>
+        <details class="frage"><summary><span>Was passiert mit meiner Mailadresse?</span><span class="frage__icon" aria-hidden="true"><svg width="18" height="18"><use href="#i-plus"/></svg></span></summary><p data-beispiel>Beispielantwort: Wir nutzen sie nur für die Startmail und löschen sie auf Wunsch jederzeit. Es gibt keinen Newsletter.</p></details>
+        <details class="frage"><summary><span>Lohnt sich das für mein Geschäft?</span><span class="frage__icon" aria-hidden="true"><svg width="18" height="18"><use href="#i-plus"/></svg></span></summary><p data-beispiel>Beispielantwort: Wenn du Zahlen aus mehreren Programmen zusammensuchen musst, ja. Mit dem frühen Zugang kannst du es ohne Risiko ausprobieren.</p></details>
+    </div>
+    <p class="fragen__ende"><a class="knopf" href="#f-mail-warte">Frühen Zugang sichern</a></p>
+  </div>
+</section>
+
+<footer class="fuss fuss--schlicht"><div class="fuss__leiste"><p>© Jahr Markenname</p><p>Fragen? <a href="tel:+490000000000" data-beispiel>0000 000 000</a></p><ul class="fuss__sozial" aria-label="Soziale Netzwerke"><li><a href="#top" aria-label="Netzwerk A (Beispiel)"><svg width="18" height="18" aria-hidden="true"><use href="#i-camera"/></svg></a></li><li><a href="#top" aria-label="Netzwerk B (Beispiel)"><svg width="18" height="18" aria-hidden="true"><use href="#i-chat-circle"/></svg></a></li><li><a href="#top" aria-label="Netzwerk C (Beispiel)"><svg width="18" height="18" aria-hidden="true"><use href="#i-heart"/></svg></a></li></ul></div></footer>
 
 <script src="../_basis/bewegung.js"></script>
 <script src="stil.js"></script>

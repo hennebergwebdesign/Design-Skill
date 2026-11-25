@@ -32,3 +32,7 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--blau` auf `--flaeche`
 
 ## Offen
 Formulare senden nichts. Zahlen, Namen, Stimmen, Preise, Termin, Plätze und die Verzeichnisse unter Bekannt aus sind Beispiele, keine Belege; Sterne und Bewertung nur zeigen, wenn es sie wirklich gibt. Oberfläche, Dock, Karten und Kurven sind aus HTML und SVG gebaut und nur Platzhalter für echte Produktbilder. Die Referenz hinterlegt das Blau im Held mit einem Video, hier ersetzt ein CSS Verlauf es. Kontrast von Text über Verläufen nach dem Einsetzen echter Bilder neu prüfen. Das Stimmenband pausiert per Maus und Fokus, einen eigenen Pausenknopf hat es nicht. Weitere Unterseiten der Referenz (Über uns, Fahrplan, Kontakt, Rechtliches) sind nicht gebaut.
+
+## Conversion (Playbook)
+- `v3.html` (Warteliste): Knopf „Zugang sichern“ in der Kopfleiste, Fragen (`#fragen`, fünf Einwände, dunkle Karten im Ton der Seite) unter dem Held mit Knopf „Frühen Zugang sichern“ am Ende, Telefon in der Fußzeile. Regeln in `stil-v3.css`.
+- `index.html` und `v2.html` hatten die Punkte schon, nicht geändert.

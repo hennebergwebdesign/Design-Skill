@@ -85,3 +85,7 @@
   .mauer__spalte--b{grid-template-rows:1fr 1.35fr}
 }
 .held3 .bewertung{justify-content:center}
+
+/* Telefon im Schlussbereich */
+.cta .cta__tel{margin:1.25rem auto 0;font-size:1rem;color:var(--text-auf-dunkel)}
+.cta__tel a{display:inline-flex;align-items:center;min-height:2.75rem;font-weight:700;text-decoration:underline;text-underline-offset:.2em}

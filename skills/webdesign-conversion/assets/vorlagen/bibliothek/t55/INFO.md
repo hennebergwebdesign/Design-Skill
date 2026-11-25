@@ -29,3 +29,7 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent` auf `--flaech
 
 ## Offen
 Formulare senden nichts. Zahlen, Namen, Stimmen, Preise und die Aktion sind Beispiele, keine Belege. Das Video im Anspruch ist eine Fläche, der Pausenknopf hat keine Funktion. Kontrast von Text über Fotos nach dem Einsetzen neu prüfen. Die Überschriften stehen in Versalien: lange Wörter prüfen, bevor die Marke wechselt. Zwei Links im Fuß (Impressum, Datenschutz) sind Platzhalter.
+
+## Conversion (Playbook)
+- Beschreibung auf unter 160 Zeichen gekürzt.
+- Feldhinweise unter Mail und Telefon im Formular (`.feld__hinweis`), vier Felder.

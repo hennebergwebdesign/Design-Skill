@@ -230,3 +230,14 @@ h2{font-size:clamp(1.9rem,1rem + 3.2vw,3.5rem);font-weight:500;line-height:1.1;l
 .kopf__knopf .lang{display:none}
 @media (min-width:48rem){.kopf__knopf .lang{display:inline}}
 @media (max-width:47.99rem){.held__bild[data-platzhalter]::after{display:none}.logo{font-size:1.1rem}}
+
+/* Fragen: Akkordeon als weiße Zeilen auf Kachelgrund */
+.fragen{background:var(--flaeche-alt)}
+.faq__liste{display:grid;gap:.5rem;width:min(100%,var(--breite));margin-inline:auto}
+.faq__liste details{border-radius:var(--radius-karte);background:var(--weiss);box-shadow:inset 0 0 0 1px var(--linie)}
+.faq__liste summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:3.5rem;padding:.75rem 1.5rem;cursor:pointer;list-style:none;font-family:var(--schrift-titel);font-weight:600;font-size:1.125rem;letter-spacing:-.01em;border-radius:var(--radius-karte)}
+.faq__liste summary::-webkit-details-marker{display:none}
+.faq__plus{flex:none;transition:transform var(--dauer-mittel) var(--kurve);color:var(--akzent)}
+.faq__liste details[open] .faq__plus{transform:rotate(45deg)}
+.faq__liste .antwort{padding:0 1.5rem 1.5rem;max-width:44rem;color:var(--text-leise)}
+@media (prefers-reduced-motion:reduce){.faq__plus{transition:none}}

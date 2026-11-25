@@ -32,3 +32,6 @@ Werte in `marke.css` ändern. Kontrast prüfen: `--akzent-text` auf `--akzent` (
 
 ## Offen
 Formulare senden nichts. Zahlen, Namen, Stimmen, Preise, Beiträge und Logos sind Beispiele, keine Belege. Der Text in den Oberflächenbildern skaliert mit dem Rahmen, ist auf dem Handy kleiner als 16 px und für Bildschirmleser ausgeblendet. Ob die Referenz Pillen und Kacheln beim Scrollen per Physik oder per Scrollsteuerung bewegt, war aus der Erfassung nicht sicher zu erkennen, hier schweben die Pillen nur leicht. Links im Fuß sind Platzhalter.
+
+## Conversion (Playbook)
+- Telefon im Schlussbereich über dem Fuß (`.fuss__tel`).

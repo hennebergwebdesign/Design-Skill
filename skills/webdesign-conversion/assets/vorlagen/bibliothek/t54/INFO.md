@@ -35,3 +35,9 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--marke-text` auf `--fl
 
 ## Offen
 Formulare gibt es nicht, der Aufruf `#kontakt` ist ein Platz für Formular oder Terminbuchung. Alle Zahlen, Namen, Stimmen und Oberflächenkarten sind Beispiele, keine Belege. Logos sind Beispiellogos. Die Videostimme in v3 ist ein Standbild ohne Video. Kontrast von Text über Fotos nach dem Einsetzen neu prüfen. Links im Fuß (Impressum, Datenschutz, Netzwerke) sind Platzhalter. Reiter in v1 wechseln nur den Text, nicht das Bild.
+
+## Conversion (Playbook)
+- Beschreibung in `index.html` und `v2.html` auf unter 160 Zeichen gekürzt.
+- `index.html` und `v2.html`: neue Sektion Fragen (`#fragen`) vor dem Schlussbereich, fünf Einwände im Fächer Stil der Variante 3 (Symbol, Pfeil). Regeln `.fragen__liste` in `stil-v1.css` und `stil-v2.css`.
+- Telefon im Schlussbereich (`.cta__tel`) in allen drei Varianten.
+- Sektionsfolge: Fragen steht zwischen Ratgeber und Schlussbereich (v1 und v2).

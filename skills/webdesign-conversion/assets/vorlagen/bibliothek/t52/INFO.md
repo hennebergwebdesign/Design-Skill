@@ -29,3 +29,8 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent` auf `--flaech
 
 ## Offen
 Formulare senden nichts. Kennzahlen, Volumen, Stimmen, Wertungen, Namen, Telefon und Logos sind Beispiele, keine Belege; Wertungen nur zeigen, wenn es echte gibt. Die Kacheln der Reichweite zeigen Platzhalter statt Weltkarte. Kontrast von Text über Fotos im Held nach dem Einsetzen neu prüfen. Zwei Links im Fuß (Impressum, Datenschutz) sind Platzhalter. Karriere und Presse im Fuß führen ins Leere.
+
+## Conversion (Playbook)
+- Beschreibung auf unter 160 Zeichen gekürzt.
+- Neue Sektion Fragen (`#fragen`) am Ende vor dem Fuß, Sie Ansprache: fünf Einwände als Akkordeon aus `details` mit `data-exklusiv` auf Kachelgrund. Symbol `i-plus` in den Sprite aufgenommen. Regeln `.faq__liste` in `stil.css`.
+- Sektionsfolge: Fragen steht nach dem Blog.

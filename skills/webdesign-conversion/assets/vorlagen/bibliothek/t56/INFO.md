@@ -41,3 +41,9 @@ Nur die Werte in `marke.css` ändern, beide Varianten folgen. Kontrast prüfen: 
 
 ## Offen
 Formulare senden nichts. Zahlen, Namen, Stimmen, Preise, Siegel und Bewertungen sind Beispiele, keine Belege; Siegel nur zeigen, wenn der Betrieb sie wirklich führt. Fotos im Vorher Nachher nur mit Einwilligung der Person und ohne Heilversprechen (Werbung für Körperveränderungen ist rechtlich heikel, vorab prüfen). Die Überschriften stehen in Versalien und in einer breiten Schrift: lange Wörter bei der Schriftwahl prüfen. Die Variante 2 hat kein Formular, der Hauptknopf verweist auf den Aufruf. Telefonnummer im Kopf erscheint erst ab 26rem Breite, darunter im Menü. Zwei Links im Fuß (Impressum, Datenschutz) sind Platzhalter.
+
+## Conversion (Playbook)
+- Beschreibung in `index.html` und `v2.html` auf unter 160 Zeichen gekürzt.
+- `index.html`: neue Sektion Fragen (`#faq`) vor dem Formular, fünf Einwände im Akkordeon der Variante 2 (dunkler offener Eintrag), ohne Bild. Regeln `.frage` in `stil.css`.
+- Formular von sieben auf fünf Felder: Name, Mail, Telefon, Tarif, Nachricht. Standort und Wunschtermin gehören in die Nachricht. Feldhinweise unter Mail und Telefon.
+- Sektionsfolge: Fragen steht vor Beitreten.
