@@ -325,3 +325,6 @@ main + .fuss .news__hinweis,.fuss p{color:var(--text-leise-dunkel)}
 .beitrag,.fuss__raster>*{min-width:0}.beitrag h3,.fuss__news{overflow-wrap:break-word}
 .beitrag__text{grid-template-columns:minmax(0,1fr)}.beitrag__text>*{min-width:0}.beitrag h3{font-size:clamp(1.25rem,2.6vw,var(--h3))}
 @media (min-width:48em){.neues__raster{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:64em){.neues__raster{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+/* Fotos statt Platzhalterverläufe */
+.bild__foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
