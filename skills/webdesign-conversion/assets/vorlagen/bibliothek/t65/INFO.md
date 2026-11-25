@@ -33,6 +33,10 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent-tief` auf `--f
 Formulare senden nichts. Auszeichnung, Bewertung, Kennzahlen, Namen, Stimmen, Logos, Telefon und Adresse sind Beispiele, keine Belege. Der Auslauf der Bilder (Maske nach unten) ist auf die Platzhalter abgestimmt: Überschrift und Namen über echten Fotos auf Kontrast prüfen. Der festgehaltene Abschnitt ist nur im Desktopbrowser gesehen, das Umschalten beim Ändern der Fenstergröße ist im Skript vorgesehen, aber nicht auf echten Geräten geprüft. Zwei Links im Fuß (Impressum, Datenschutz) sind Platzhalter. Nur die Startseite ist gebaut, die Unterseiten der Referenz (Leistungen, Über uns, Fälle, Team, Kontakt) nicht.
 
 ## Conversion (Playbook)
-- Kommentar zur Heldformel vor der H1
-- Feldhinweise unter E-Mail und Telefon (`.feld__hinweis` in `stil.css`)
-- Alles andere (Kopfknopf, Telefon, FAQ, Beleg im Held) war schon da
+- Held: Unternehmer und Familien, die bei einer ernsten Rechtsfrage Klartext statt Juristendeutsch wollen
+- H1 "Klartext, wenn es im Betrieb oder zu Hause ernst wird", keine Ergebniszusage
+- Primär-CTA "Erstgespräch anfragen" an allen Stellen (vorher teils "Zusammenarbeiten", "Gespräch vereinbaren", "Nachricht senden")
+- Titel mit Keyword und Musterstadt, Beschreibung mit Problem, Nutzen und Aufruf
+- FAQ: Termin, Passung des Falls, Erstgespräch, Dauer, Kosten und Zeitpunkt der Kostennennung
+- Formularziel: Erstgespräch mit Thema und kurzer Schilderung, Hinweise unter Mail und Telefon
+- Plakette im Held bleibt als Beispiel markiert

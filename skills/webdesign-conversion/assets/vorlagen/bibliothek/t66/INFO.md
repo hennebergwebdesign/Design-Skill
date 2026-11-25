@@ -34,8 +34,9 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--text-leise` auf `--fl
 Formulare senden nichts. Bewertung, Zahlen, Fälle, Namen, Stimmen, Preise, Logos und Kontaktdaten sind Beispiele, keine Belege; die Fälle sind erfunden und müssen zu echten, freigegebenen Fällen werden. Die Kerbe ist ein `clip-path` mit festem Maß, bei anderen Bildformaten prüfen. Der Held liegt bei einem Foto unter einem dunklen Schleier, Kontrast von Text über echten Fotos neu prüfen. Die Bildfläche ist ein Bildplatz, kein Video, ein Video braucht Pausenknopf (WCAG 2.2.2). Zwei Links im Fuß sind Platzhalter. Nur die Startseite ist gebaut, die Unterseiten der Referenz nicht.
 
 ## Conversion (Playbook)
-- Kommentar zur Heldformel vor der H1
-- Primärknopf "Gespräch anfragen" in der Kopfzeile: über dem dunklen Held hell, nach dem Scrollen dunkel (`.kopf__knopf`)
-- Hauptnavigation (Panel) von acht auf sechs Punkte, Fälle und Ratgeber stehen im Fuß, der Schnellzugriff behält Ratgeber und ist jetzt eine Reihe von Links ohne Liste
-- Neuer Abschnitt "Fragen" vor dem Aufruf: fünf Einwände, Akkordeon mit rundem Plus (`.frage__plus`, nur CSS)
-- Telefon und Bewertung im Held waren schon da; das einzige Formular ist der Newsletter im Fuß, unverändert
+- Held: Unternehmen und Privatpersonen mit einer Rechtsfrage, die nicht warten kann; die H1 bleibt das Großwort "Klarheit", Zielgruppe und Problem stehen in der Unterzeile
+- Primär-CTA "Erstgespräch anfragen" in Kopfzeile und überall sonst (vorher "Gespräch anfragen" im Kopf)
+- Titel mit Keyword und Musterstadt, Beschreibung mit Problem, Nutzen und Aufruf
+- FAQ: Kosten, Dauer, Privatpersonen, Ausgang ohne Zusage, kleines Anliegen, als Beispielantwort markiert
+- Formularziel: kein Kontaktformular, nur Newsletter; Erstgespräch über Knopf, Telefon und Fuß
+- Bewertung im Held als Beispiel markiert; keine Erfolgsversprechen (Berufsrecht klären)

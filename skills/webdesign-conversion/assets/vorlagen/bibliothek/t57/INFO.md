@@ -33,8 +33,10 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent-text` auf `--a
 Formular (Newsletter) sendet nichts. Zahlen, Namen, Stimmen, Preise und das Angebot sind Beispiele, keine Belege. Der Film im Held und in der Mitte ist eine Fläche, die Pause hält nur die Drift des Platzhalters an. Das Team schwebt nur ab 62rem Breite, die Positionen (`style` an `.coach`) sind für sechs Karten gesetzt: bei mehr oder weniger Personen neu verteilen. Die Telefonnummer steht im Held und im Menü, nicht in der Kopfpille. Zwei Links im Fuß (Impressum, Datenschutz) sind Platzhalter.
 
 ## Conversion (Playbook)
-- Beschreibung auf 160 Zeichen gekürzt
-- Kommentar zur Heldformel vor der H1
-- Primärknopf "Probestunde" in der Kopfpille (`.kopf__cta`), mobil neben Logo und Menüknopf
-- Telefon, FAQ mit fünf Einwänden und Beleg im Held waren schon da
-- Newsletter Feld unverändert (nur E-Mail, kein Kontaktformular)
+- Held: Berufstätige und Wiedereinsteiger, Problem fehlender Platz im Alltag, Lösung Kurse mit Einstiegsstufe
+- H1 "Ein Kurs, der in deine Woche passt", Unterzeile nennt Level, Trainer und die Probestunde als Entscheidung
+- Primär-CTA "Probestunde buchen" in Kopfpille, Held, Banner und Stimmen
+- Titel mit Keyword und Musterstadt, Beschreibung mit Problem, Nutzen und Aufruf, beide in der Länge begrenzt
+- FAQ: Wiedereinstieg, Mitbringen, Lohnt sich bei seltenem Training, Tarif Personal Training, Buchung
+- Formularziel: kein Kontaktformular, nur der Newsletter; das Ziel der Seite ist die Probestunde über Tarifabschnitt und Telefon
+- Mitgliederzeile im Held bleibt als Beispiel markiert (data-beispiel), Zahl vor dem Einsatz ersetzen

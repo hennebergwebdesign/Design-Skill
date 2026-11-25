@@ -32,7 +32,10 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent` auf `--flaech
 Formulare senden nichts. Mitgliedschaften, Kennzahlen, Namen, Stimmen und Adresse sind Beispiele, keine Belege. Logos sind Beispiellogos. Kontrast von Text über Fotos nach dem Einsetzen neu prüfen (Schleier sind auf die Platzhalter abgestimmt). Newsletter braucht Double Opt-in und einen Eintrag in der Datenschutzerklärung. Drei Links im Fuß (Soziale Netzwerke) und Impressum, Datenschutz sind Platzhalter.
 
 ## Conversion (Playbook)
-- Beschreibung auf 160 Zeichen gekürzt
-- Kommentar zur Heldformel vor der H1
-- Feldhinweis unter Telefon im Rückrufformular (kein E-Mail Feld)
-- Kopfknopf, Telefon, FAQ waren schon da. Kein Beleg im Held: die Seite verspricht bewusst nichts, und Bewertungen oder Quoten sind im Berufsrecht der Kanzlei zu klären
+- Held: Privatleute und Unternehmen mit Streit um Erbe, Vertrag oder Immobilie, Lösung ehrliche Einschätzung mit fester Ansprechperson
+- H1 "Streit um Erbe oder Vertrag? Klarer Rat.", Unterzeile verspricht kein Ergebnis (Berufsrecht)
+- Primär-CTA "Erstgespräch anfragen" in Kopf, Held und Formular (Karte "Rückruf vereinbaren" bleibt als leiserer Weg)
+- Titel mit Keyword und Musterstadt, Beschreibung mit Problem, Nutzen und Aufruf
+- FAQ: Kosten des Erstgesprächs, Dauer, Erreichbarkeit, Beratungshilfe, Abwarten und Fristen, alle ohne Erfolgszusage
+- Formularziel: Erstgespräch mit Rückruf, Name, Telefon, kurzes Anliegen ohne vertrauliche Details
+- Kein Beleg im Held, bewusst: Bewertungen und Quoten vorher berufsrechtlich klären

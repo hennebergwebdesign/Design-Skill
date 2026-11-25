@@ -30,9 +30,10 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent-text` auf `--a
 Formulare senden nichts. Kennzahlen, Zufriedenheitswerte, Preise, Öffnungszeiten, Namen und Adresse sind Beispiele, keine Belege; Preise sind keine Preisliste. Preisangaben und Kassenleistungen vor dem Einsatz rechtlich prüfen. Die Preisliste lässt sich auf Dauer statt Preis umstellen, wie in t60. Kontrast von Text über Fotos nach dem Einsetzen neu prüfen (die Schleier sind auf die Platzhalter abgestimmt). Impressum und Datenschutz im Fuß sind Platzhalterlinks.
 
 ## Conversion (Playbook)
-- Beschreibung auf 160 Zeichen gekürzt
-- Kommentar zur Heldformel vor der H1
-- Neuer Abschnitt "Fragen" (Abschnitt 9) vor dem Fuß: fünf Einwände zu Preis, Dauer, Qualifikation, Risiko und Zeitpunkt, Akkordeon mit dem vorhandenen Pluszeichen (`.plus`), Beispielantworten mit `data-beispiel`
-- Beispielwert "4,9 von 5 aus 280 Bewertungen" als weiteres Merkmal im Held
-- Feldhinweise unter E-Mail und Telefon (`.feld__hinweis` in `stil.css`)
-- Kopfknopf und Telefon waren schon da. "Fragen" steht nicht im Menü (sechs Punkte), der Abschnitt ist über die Seite erreichbar
+- Held: Patienten, die schnelle Abfertigung und unklare Kosten kennen, Lösung Fachärzte, die erklären und vorab Preise nennen
+- H1 "Fachärzte, die sich Zeit nehmen" (Spans und Hervorhebung unverändert), Unterzeile nennt das Gespräch vor der Behandlung
+- Primär-CTA "Termin buchen" an allen Stellen, auch bei den drei Ablaufschritten (vorher "Kontakt aufnehmen")
+- Titel mit Keyword und Musterstadt, Beschreibung mit Problem, Nutzen und Aufruf
+- FAQ: Kosten, Dauer, Qualifikation, Risiko, Zeitpunkt, alle als Beispielantwort markiert
+- Formularziel: Terminwunsch mit Betreff, Hinweise unter Mail und Telefon, fünf Felder
+- Bewertung im Held als Beispiel gekennzeichnet

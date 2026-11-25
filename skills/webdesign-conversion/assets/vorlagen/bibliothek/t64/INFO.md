@@ -43,7 +43,10 @@ Nur die Werte in `marke.css` ändern, beide Varianten folgen. Kontrast prüfen: 
 Formulare senden nichts. Kennzahlen, Namen, Stimmen, Bewertung und Adresse sind Beispiele, keine Belege. Kontrast von Text über Fotos nach dem Einsetzen neu prüfen. Auf dem Handy unter 480 px zeigt die Leiste Telefon und Menü, der Hauptknopf steht im Held. Das Wortlicht dunkelt die noch nicht erreichten Wörter ab, bis zum Ende des Scrollens. Newsletter braucht Double Opt-in und einen Eintrag in der Datenschutzerklärung. Die Links im Fuß (Soziale Netzwerke, Impressum, Datenschutz) sind Platzhalter.
 
 ## Conversion (Playbook)
-- Beide Varianten (`index.html`, `v2.html`): Beschreibung auf 160 Zeichen gekürzt
-- Kommentar zur Heldformel vor der H1
-- Neuer Abschnitt "Fragen" in beiden Varianten vor dem Laufband und Fuß (Variante 1 nach Blog, Variante 2 nach Fälle): fünf Einwände zu Kosten, Ablauf, Zuständigkeit, Ausgang und Frist, Akkordeon mit Plus im Kreis, Serifentitel; CSS gemeinsam in `stil.css`, Hintergrund in `stil-v1.css`
-- Kopfknopf und Telefon waren schon da. Berufsrecht: Antworten sagen keinen Ausgang zu
+- Beide Varianten mit eigener H1, Titel und Beschreibung (kein doppelter Titel)
+- index (Variante 1): Privatleute in akuter rechtlicher Lage, H1 "Rechtlicher Ärger? Wir ordnen deine Lage"
+- v2 (Variante 2): Betrieb und Privat, H1 "Rechtsfrage im Betrieb oder privat? Klarer Rat"
+- Primär-CTA "Erstgespräch anfragen" in Kopf und Held beider Varianten
+- FAQ in beiden: Kosten, Ablauf, Zuständigkeit, Ausgang ohne Zusage, Zeitdruck, als Beispielantwort markiert
+- Formularziel: kein Kontaktformular, nur Newsletter; das Erstgespräch läuft über Telefon und Fußbereich
+- Kein Beleg im Held, bewusst (Berufsrecht klären)

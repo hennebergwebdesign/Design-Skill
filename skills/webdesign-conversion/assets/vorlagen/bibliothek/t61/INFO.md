@@ -32,8 +32,10 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent-text` auf `--a
 Formulare senden nichts. Zahlen, Bewertungen, Namen, Stimmen, Öffnungszeiten und Logos sind Beispiele, keine Belege; Logos sind Beispiellogos. Die Videoleiste im Bild ist Zierde (kein Anruf, aria-hidden). Termin und Datenschutz je Projekt anbinden und den Dienst im Datenschutz nennen. Kontrast von Text über Fotos nach dem Einsetzen neu prüfen. Impressum und Datenschutz im Fuß sind Platzhalterlinks.
 
 ## Conversion (Playbook)
-- Beschreibung auf 160 Zeichen gekürzt
-- Kommentar zur Heldformel vor der H1
-- Formular von sieben auf fünf Felder: Vor und Nachname zu "Name", Wunschtermin in die Nachricht (Platzhalter angepasst), Fachbereich über die ganze Breite
-- Feldhinweise unter E-Mail und Telefon (`.feld__hinweis` in `stil.css`)
-- Kopfknopf, Telefon, FAQ waren schon da
+- Held: Patienten mit Anliegen für mehrere Fachrichtungen, die Überweisungen von Praxis zu Praxis leid sind, Lösung alle Fachbereiche unter einem Dach
+- H1 "Fachärzte an einem Ort, mit Zeit für dich", Unterzeile nennt Diagnostik, Beratung, Behandlung und die Online-Buchung
+- Primär-CTA "Termin buchen" in Kopf, Held, Ablauf, Fachbereichen und Formular
+- Titel mit Keyword und Musterstadt, Beschreibung mit Problem, Nutzen und Aufruf
+- FAQ: Buchung, dringende Anliegen, Video, Behandelnde, Kostenübernahme durch die Kasse
+- Formularziel: Terminanfrage mit Fachbereich und Anliegen, Hinweise unter Mail und Telefon, fünf Felder
+- Patientenzahl im Held als Beispiel gekennzeichnet

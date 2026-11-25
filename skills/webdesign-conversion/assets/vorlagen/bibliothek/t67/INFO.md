@@ -32,7 +32,10 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent-text` auf `--a
 Kein Formular (die Referenz hat auf der Startseite keines), der Hauptknopf führt zum Fuß mit Telefon und Mail; ein Rückrufformular ist im Projekt zu ergänzen. Zahlen, Namen, Stimmen, Logos und Datum sind Beispiele, keine Belege. Der Rechtsgebietsname je Zeile (Unternehmen, Immobilien, Familie, Streit) ist ein Beispiel. Kontrast von Text über Fotos nach dem Einsetzen neu prüfen: Die Wortmarke im Held ist Seitenfarbe auf dem Foto und braucht im unteren Bilddrittel ein dunkles Motiv. Vier Links im Fuß sind Platzhalter.
 
 ## Conversion (Playbook)
-- Beschreibung auf 160 Zeichen gekürzt
-- Kommentar zur Heldformel vor der H1
-- Neuer Abschnitt "Fragen" vor dem Aufruf: fünf Einwände, Akkordeon mit Plus im Quadrat (vorhandenes Symbol `i-plus`), weißer Grund
-- Kopfknopf und Telefon waren schon da. Kein Beleg im Held (die Kennzahlen folgen im dunklen Abschnitt darunter)
+- Held: Privatpersonen, Gründerinnen und Unternehmen mit einer Rechtsfrage, die sie nicht einordnen können
+- H1 "Rechtsfrage im Alltag oder Betrieb? Wir ordnen sie", Unterzeile nennt Optionen, Zeitrahmen und Kosten nach dem Erstgespräch
+- Primär-CTA "Erstgespräch anfragen" in Kopf, Held und Schluss, unverändert
+- Titel mit Keyword und Musterstadt, Beschreibung mit Problem, Nutzen und Aufruf
+- FAQ war schon branchengerecht (Kosten, Ablauf, Rechtsgebiete, offener Ausgang, Zeitpunkt), keine Erfolgszusage
+- Formularziel: kein Formular auf der Seite; Erstgespräch über Knopf und Telefon
+- Kein Beleg im Held, bewusst (Berufsrecht klären)

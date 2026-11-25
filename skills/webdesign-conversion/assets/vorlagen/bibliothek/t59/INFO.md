@@ -33,8 +33,10 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent-text` auf `--a
 Formulare (Kontakt und Newsletter) senden nichts. Preise, Zahlen, Namen, Stimmen, Adressen, Öffnungszeiten, Bewertung und die Beispiellogos sind Beispiele, keine Belege. Der Held ist ein Standbild, ein Video wäre einzusetzen (mit Pause, Poster und ohne Ton). Die Bänder im Kontakt haben keine Falte wie die Referenz. Der Newsletter braucht ein Double Opt In und eine Datenschutzangabe. Kontrast von Text über Fotos nach dem Einsetzen neu prüfen. Drei Links im Fuß (Impressum, Datenschutz, Widerruf) und der Kartenlink sind Platzhalter.
 
 ## Conversion (Playbook)
-- Titel auf 55 Zeichen, Beschreibung auf 160 Zeichen gekürzt
-- Kommentar zur Heldformel vor der H1
-- Primärknopf "Probetraining" in der Kopfzeile (`.kopf__knopf`), im Menü bleiben sechs Punkte
-- Feldhinweise unter E-Mail und Telefon (`.feld__hinweis` in `stil.css`)
-- Beleg (Auszeichnung und Bewertung) im Held war schon da
+- Held: Trainierende, die ohne Plan nicht vorankommen, Lösung Coach mit Plan, der zum Alltag passt
+- H1 "Stärker werden mit Plan" (zwei Töne, Spans unverändert), Unterzeile beschreibt das Wie
+- Primär-CTA "Probetraining buchen" in Kopfzeile, Held, Schlussband und Formular, zeigt auf das Kontaktformular
+- Titel mit Keyword und Musterstadt, Beschreibung mit Problem, Nutzen und Aufruf
+- FAQ: Einsteiger an Gewichten, Mitgliedschaft, Personal Training oder Plan, Pause und Kündigung, Kurse, Mitbringen
+- Formularziel: Probetraining anfragen, Anliegen beginnt mit Probetraining, Feld "Dein Ziel", Hinweise unter Mail und Telefon
+- Auszeichnung und Bewertung im Held bleiben als Beispiel markiert

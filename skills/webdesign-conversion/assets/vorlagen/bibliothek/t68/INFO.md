@@ -33,7 +33,10 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent-text` auf `--a
 Formulare senden nichts. Gerichte, Preise, Zutaten, Bewertungswerte, Namen, Stimmen, Standorte und Lieferdienste sind Beispiele, keine Belege; Allergenkennzeichnung und Preisangaben (Preisangabenverordnung) sind je Betrieb zu ergänzen. Die Bühne mit dem wachsenden Bild und die Großschrift mit Fotos brauchen echte, helle bis mittlere Fotos, damit die Beschriftungen und die Überschrift lesbar bleiben; Kontrast von Text über Fotos nach dem Einsetzen neu prüfen. Die Kopfleiste verdeckt beim Anspringen eines Ankers den Abschnittsanfang um ihre Höhe (`scroll-margin-top` im Projekt ergänzen). Vier Links im Fuß und die Folgen Links sind Platzhalter.
 
 ## Conversion (Playbook)
-- Kommentar zur Heldformel vor der H1
-- Beleg im Held: Zeile mit Stern, "4,8 von 5 aus 210 Gästebewertungen" (Beispielwert, `data-beispiel`)
-- Reservierungsformular von sechs auf fünf Felder: Telefon Feld gestrichen (die Nummer steht im Held, in der Kontaktliste und im Fuß als Link), E-Mail über die ganze Breite mit Feldhinweis
-- Kopfknopf, FAQ waren schon da
+- Held: Gäste ohne Lust oder Zeit zum Kochen, Lösung gedeckter Tisch mit Hausgemachtem, online reserviert
+- H1 "Keine Lust zu kochen? Wir decken den Tisch" (Bildchip im Satz unverändert), Unterzeile nennt Tisch, Mitnehmen, Catering und Allergien
+- Primär-CTA "Tisch reservieren" in Kopf, Held und Formular (vorher "Tisch anfragen"); "Bestellen" an den Gerichten bleibt Kartenaktion
+- Titel mit Keyword und Musterstadt, Beschreibung mit Problem, Nutzen und Aufruf
+- FAQ: Reservierung, Allergien und Unverträglichkeiten, Parken, Feier, Lieferung
+- Formularziel: Tischreservierung (Name, E-Mail, Datum, Personen, besondere Wünsche), fünf Felder
+- Gästebewertung im Held als "(Beispiel)" gekennzeichnet
