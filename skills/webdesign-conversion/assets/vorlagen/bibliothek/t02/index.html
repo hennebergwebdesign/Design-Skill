@@ -55,8 +55,8 @@
 <main id="inhalt">
 
   <!-- 1 Held: Bildfläche mit Rahmen, Text unten links, Kennzahlkarte unten rechts -->
-  <section class="held bild" data-platzhalter="Platzhalter: Heldenbild" aria-labelledby="held-titel">
-    <div class="held__tiefe" aria-hidden="true"></div>
+  <section class="held bild" aria-labelledby="held-titel">
+    <img class="held__tiefe held__foto" src="bilder/person-geht-durch-grosse-helle-halle.webp" width="1600" height="2400" alt="" fetchpriority="high" decoding="async">
     <div class="held__inhalt">
       <div class="held__text">
         <h1 id="held-titel" class="held__titel">Wir machen aus komplexen Aufgaben einfache Lösungen</h1>
@@ -80,7 +80,8 @@
           <p class="held__zahl"><span data-zaehle="500">500</span>+</p>
           <p>Hier steht eine Aussage, die zur Kennzahl gehört und sie einordnet.</p>
         </div>
-        <div class="held__vorschau bild" data-platzhalter="Vorschau">
+        <div class="held__vorschau bild">
+          <img class="bild__foto" src="bilder/mann-mit-winkelschleifer-bei-der-arbeit.webp" width="600" height="900" alt="Handwerker arbeitet mit einem Winkelschleifer" loading="lazy" decoding="async">
           <button class="pause" type="button" data-pause aria-pressed="false" aria-label="Bewegung im Kopfbereich anhalten">
             <svg width="22" height="22" class="pause__aus"><use href="#i-pause"/></svg>
             <svg width="22" height="22" class="pause__an"><use href="#i-spiel"/></svg>
@@ -133,7 +134,7 @@
       <ul class="medien" data-staffel>
         <li class="medienkarte" data-zeig>
           <a href="#kontakt" class="medienkarte__link">
-            <div class="bild medienkarte__bild medienkarte__bild--1" data-platzhalter="Platzhalter: Bild oder Video"><span class="abspiel" aria-hidden="true"><svg width="22" height="22"><use href="#i-spiel"/></svg></span></div>
+            <div class="bild medienkarte__bild medienkarte__bild--1"><img class="bild__foto" src="bilder/drei-frauen-arbeiten-mit-laptops-am-tisch.webp" width="1000" height="667" alt="Drei Frauen arbeiten gemeinsam mit Laptops an einem Tisch" loading="lazy" decoding="async"><span class="abspiel" aria-hidden="true"><svg width="22" height="22"><use href="#i-spiel"/></svg></span></div>
             <h3>Erste Leistung</h3>
             <p>Kurze Beschreibung der Leistung und ihres Nutzens in ein bis zwei Sätzen.</p>
             <span class="mehr">Details ansehen <svg width="18" height="18" aria-hidden="true"><use href="#i-pfeil"/></svg></span>
@@ -141,7 +142,7 @@
         </li>
         <li class="medienkarte" data-zeig>
           <a href="#kontakt" class="medienkarte__link">
-            <div class="bild medienkarte__bild medienkarte__bild--2" data-platzhalter="Platzhalter: Bild oder Video"><span class="abspiel" aria-hidden="true"><svg width="22" height="22"><use href="#i-spiel"/></svg></span></div>
+            <div class="bild medienkarte__bild medienkarte__bild--2"><img class="bild__foto" src="bilder/zwei-personen-zeichnen-auf-whiteboard.webp" width="1000" height="667" alt="Zwei Personen skizzieren Ideen auf einem Whiteboard" loading="lazy" decoding="async"><span class="abspiel" aria-hidden="true"><svg width="22" height="22"><use href="#i-spiel"/></svg></span></div>
             <h3>Zweite Leistung</h3>
             <p>Kurze Beschreibung der Leistung und ihres Nutzens in ein bis zwei Sätzen.</p>
             <span class="mehr">Details ansehen <svg width="18" height="18" aria-hidden="true"><use href="#i-pfeil"/></svg></span>
@@ -149,7 +150,7 @@
         </li>
         <li class="medienkarte" data-zeig>
           <a href="#kontakt" class="medienkarte__link">
-            <div class="bild medienkarte__bild medienkarte__bild--3" data-platzhalter="Platzhalter: Bild oder Video"><span class="abspiel" aria-hidden="true"><svg width="22" height="22"><use href="#i-spiel"/></svg></span></div>
+            <div class="bild medienkarte__bild medienkarte__bild--3"><img class="bild__foto" src="bilder/mann-in-blauem-hemd-vor-industriemaschine.webp" width="1000" height="1500" alt="Mann im blauen Hemd steht vor einer Industriemaschine" loading="lazy" decoding="async"><span class="abspiel" aria-hidden="true"><svg width="22" height="22"><use href="#i-spiel"/></svg></span></div>
             <h3>Dritte Leistung</h3>
             <p>Kurze Beschreibung der Leistung und ihres Nutzens in ein bis zwei Sätzen.</p>
             <span class="mehr">Details ansehen <svg width="18" height="18" aria-hidden="true"><use href="#i-pfeil"/></svg></span>
@@ -189,11 +190,11 @@
       </div>
       <div class="loesung__bilder" aria-hidden="false">
         <div class="stapel">
-          <div class="bild stapel__bild stapel__bild--1" data-bildschicht data-platzhalter="Platzhalter: Bild 1"></div>
-          <div class="bild stapel__bild stapel__bild--2" data-bildschicht data-platzhalter="Platzhalter: Bild 2"></div>
-          <div class="bild stapel__bild stapel__bild--3" data-bildschicht data-platzhalter="Platzhalter: Bild 3"></div>
-          <div class="bild stapel__bild stapel__bild--4" data-bildschicht data-platzhalter="Platzhalter: Bild 4"></div>
-          <div class="bild stapel__bild stapel__bild--5" data-bildschicht data-platzhalter="Platzhalter: Bild 5"></div>
+          <div class="bild stapel__bild stapel__bild--1" data-bildschicht><img class="bild__foto" src="bilder/gruppe-im-sonnigen-buero-beim-meeting.webp" width="1000" height="667" alt="Menschen besprechen sich in einem sonnigen Büro" loading="lazy" decoding="async"></div>
+          <div class="bild stapel__bild stapel__bild--2" data-bildschicht><img class="bild__foto" src="bilder/menschen-mit-laptops-im-grossraumbuero.webp" width="1000" height="750" alt="Menschen arbeiten mit Laptops an gemeinsamen Tischen" loading="lazy" decoding="async"></div>
+          <div class="bild stapel__bild stapel__bild--3" data-bildschicht><img class="bild__foto" src="bilder/zwei-frauen-vor-weisser-tafel.webp" width="1000" height="662" alt="Zwei Frauen stehen im Gespräch vor einer weißen Tafel" loading="lazy" decoding="async"></div>
+          <div class="bild stapel__bild stapel__bild--4" data-bildschicht><img class="bild__foto" src="bilder/mann-bearbeitet-metallstueck-in-werkstatt.webp" width="1000" height="667" alt="Mann bearbeitet ein Metallstück in der Werkstatt" loading="lazy" decoding="async"></div>
+          <div class="bild stapel__bild stapel__bild--5" data-bildschicht><img class="bild__foto" src="bilder/mann-prueft-maschinen-in-fabrik.webp" width="1000" height="667" alt="Mann prüft Maschinen in einer Fabrikhalle" loading="lazy" decoding="async"></div>
         </div>
         <div class="stapel__karte" data-beispiel>
           <span class="icon-kachel"><svg width="24" height="24" aria-hidden="true"><use href="#i-ziel"/></svg></span>
@@ -265,7 +266,8 @@
           <p>Schreiben Sie uns für eine Beratung oder ein erstes Angebot.</p>
         </div>
       </div>
-      <div class="kontakt__bild bild" data-platzhalter="Platzhalter: Porträt oder Szene" data-zeig="skala">
+      <div class="kontakt__bild bild" data-zeig="skala">
+        <img class="bild__foto" src="bilder/mann-und-frau-stehen-nebeneinander.webp" width="1000" height="668" alt="Ein Mann und eine Frau stehen nebeneinander" loading="lazy" decoding="async">
         <div class="kontakt__unten">
           <p class="kontakt__zahl" data-beispiel><span data-zaehle="15">15</span>K+</p>
           <p class="kontakt__legende">Beispielwert, hier die Einordnung der Zahl</p>
