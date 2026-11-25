@@ -336,3 +336,9 @@ h2{font-size:var(--h2)}
   .karte,.knopf,.plus,.pfeil,.farbe__karte{transition:none}
 }
 .js .karte.ist-da:hover{transform:translateY(-4px)}
+
+/* Fotos statt Platzhalterverläufe */
+.bild__foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.panel__bild .bild__foto,.szene__bild .bild__foto{background:var(--flaeche-dunkel)}
+.abschluss__tafel .bild__foto{filter:brightness(.62)}
+.farbflaeche__tafel .bild__foto{filter:brightness(.55)}
