@@ -53,6 +53,11 @@
   Je Quelldatei, gezaehlt:
    20. backdrop-filter an vier oder mehr Stellen einer Datei. Glas gehoert auf fixierte oder
        sticky Elemente (26-geschmack-und-ki-tells.md, Abschnitt 9), nicht auf jede Karte. WARNUNG.
+  Je gebauter Seite, harte Grenze "Keine Kennzahlen unterhalb des Heldenbereichs":
+   21. Kennzahlen nach dem Heldenbereich: Zaehler (data-zaehler, data-count, countup, counter),
+       Klassen wie kennzahl, kpi, stats, fakten, metrics, oder drei und mehr kurze Zahlenwerte
+       ("1977", "100 %", "1000 h+", "40 Jahre") in einer Sektion. Preise mit Waehrung zaehlen
+       nicht. FEHLER. Der Heldenbereich selbst darf Zahlen tragen, alles danach nicht.
   8 bis 20 sind WARNUNGEN. 12, 13, 16 und 19 entfallen, wenn der Wert in marke.json steht:
   dann ist er eine Markenentscheidung, keine Voreinstellung.
 
@@ -269,6 +274,41 @@ function primaerbuttonsJeSektion(html) {
   return ergebnisse;
 }
 
+
+// ------------------------------------------------------------------ Kennzahlen
+
+const KENNZAHL_KLASSE = /(?:^|[-_])(?:kennzahlen?|kpis?|stats?|statistik|zahlenband|zahlenleiste|fakten|facts|metrics?|numbers|zaehler|counters?|countup)(?:$|[-_])/i;
+const KENNZAHL_ATTRIBUT = /\bdata-(?:zaehler|zähler|count|counter|countup|count-to|target-number)\b/i;
+/* Ein kurzer Zahlenwert als eigenes Element: "1977", "100 %", "1.000 h+", "40 Jahre", "16.000 qm".
+   Preise (Euro, Eurozeichen, "ab") sind keine Kennzahlen. */
+const ZAHL_MIT_EINHEIT = /^\s*(?:\d{1,3}(?:[.,]\d{3})+|\d+(?:[.,]\d+)?)\s*(?:%|\+|h\+?|qm|m²|mm|cm|kg|t|x|Jahre\+?|Jahr|Tage?|Stunden|Mitarbeiter(?:innen)?|Kunden|Projekte|Standorte|Felgen)\s*\+?\s*$/i;
+const ZAHLENWERT = { test: (t) => ZAHL_MIT_EINHEIT.test(t) || /^\s*(?:19|20)\d{2}\s*$/.test(t) || /^\s*\d{2,3}(?:[.]\d{3})*\s*\+?\s*$/.test(t) };
+
+/**
+ * Findet Kennzahlen unterhalb des Heldenbereichs. Der erste Abschnitt ist der Held,
+ * jeder weitere wird geprueft. Liefert eine Liste { sektion, art, auszug }.
+ */
+export function kennzahlenUnterHero(html) {
+  const abschnitte = abschnitteFinden(html);
+  const funde = [];
+  abschnitte.slice(1).forEach((a, i) => {
+    const teil = html.slice(a.von, a.bis);
+    const sektion = i + 2;
+    const tags = teil.match(/<[a-z][a-z0-9-]*\b[^>]*>/gi) || [];
+    const klasse = tags.find((t) => klassenVon(t).some((k) => KENNZAHL_KLASSE.test(k)));
+    if (klasse) funde.push({ sektion, art: 'Klasse', auszug: klasse.slice(0, 90) });
+    const attr = tags.find((t) => KENNZAHL_ATTRIBUT.test(t));
+    if (attr) funde.push({ sektion, art: 'Zähler', auszug: attr.slice(0, 90) });
+    let zahlen = 0;
+    for (const m of teil.matchAll(/<(strong|b|span|dd|dt|li|div|p|h[2-6])\b[^>]*>([^<]{1,24})<\/\1>/gi)) {
+      if (/[€$]/.test(m[2]) || !/\d/.test(m[2])) continue;
+      if (ZAHLENWERT.test(m[2])) zahlen++;
+    }
+    if (zahlen >= 3) funde.push({ sektion, art: `${zahlen} Zahlenwerte`, auszug: '' });
+  });
+  return funde;
+}
+
 // ------------------------------------------------------------------ Seiten
 
 /**
@@ -420,6 +460,15 @@ export function seiteAnalysieren(roh, kontext = {}) {
     });
   }
 
+  // 21 Kennzahlen unterhalb des Heldenbereichs, harte Grenze
+  for (const f of kennzahlenUnterHero(html)) {
+    fehler.push({
+      regel: 'kennzahlen-unter-hero',
+      meldung: `Kennzahlen unterhalb des Heldenbereichs (Sektion ${f.sektion}, ${f.art})${f.auszug ? `: ${f.auszug}` : ''}`,
+      tipp: 'Keine Kennzahlenleiste, keine Zähler, keine Zahlenkacheln nach dem Heldenbereich. Die Aussage als Satz, als Beleg am Angebot oder als Text im Vorteil schreiben. Siehe 26-geschmack-und-ki-tells.md.',
+    });
+  }
+
   return { fehler, warnungen };
 }
 
@@ -447,6 +496,11 @@ export function quelleAnalysieren(inhalt, kontext = {}) {
 
     const melde = (regel, meldung, tipp) => befunde.push({ zeile: nr, regel, meldung, tipp, auszug: zeile.trim().slice(0, 110) });
 
+    // 21 Zaehler im Quelltext (data-zaehler, CountUp)
+    if (/\bdata-(?:zaehler|count|counter|countup)\b|\bcountUp\b|\bCountUp\b/.test(zeile)) {
+      melde('kennzahlen-zaehler', 'Hochzählende Kennzahl im Quelltext',
+        'Harte Grenze: keine Kennzahlen unterhalb des Heldenbereichs. Zähler und Zahlenkacheln streichen.');
+    }
     // 8 overflow-x: hidden
     if (/overflow-x\s*:\s*hidden/i.test(zeile) || /(^|[\s"'`])overflow-x-hidden([\s"'`]|$)/.test(zeile)) {
       melde('overflow-hidden', 'overflow-x: hidden bricht position: sticky in allen Kindelementen',

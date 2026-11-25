@@ -128,7 +128,7 @@ und Beispiele in `26-geschmack-und-ki-tells.md` und `55-slop-detect-ki-muster-ve
 **Technik und Bewegung**
 
 19. Kein `transition: all`, kein `scale(0)`, Dauer unter 300 ms bei bedienbaren Elementen, Hover nur wo es etwas anzeigt. (`pruefe-motion`)
-20. Keine hochzählenden Kennzahlen mit falschem Startwert: Endwert im HTML.
+20. **Keine Kennzahlen unterhalb des Heldenbereichs:** keine Zahlenleiste, keine Zähler, keine Zahlenkacheln nach dem Held. (`pruefe-geschmack`, Fehler)
 21. Schrift selbst gehostet, keine Fremdserver vor Einwilligung. (`pruefe-seitenbasis`)
 
 **Wenn ein Entwurf trotzdem „nach KI" aussieht:** nicht weitere Effekte ergänzen, sondern subtrahieren

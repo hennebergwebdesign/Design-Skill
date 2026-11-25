@@ -4,7 +4,7 @@ description: "Vollständiges System für conversion-orientiertes Webdesign im DA
 license: MIT
 metadata:
   author: Henneberg Webdesign
-  version: 2.29.0
+  version: 2.30.0
 ---
 
 # Webdesign Conversion System
@@ -272,6 +272,14 @@ Diese Regeln gelten immer und werden nicht wegdiskutiert:
   der echte Bindestrich im Kompositum („E-Mail-Adresse") und die Unterstreichung eines
   Menüpunkts oder Links. Geprüft mit `scripts/pruefe-striche.mjs` (Zeichen, CSS, Markup,
   Tailwind), Begründung in `references/12-copywriting.md`.
+- **Keine Kennzahlen unterhalb des Heldenbereichs.** Keine Zahlenleiste direkt nach dem Held,
+  keine hochzählenden Zähler, keine Kacheln aus großer Zahl und kleinem Label (1977 mit seit,
+  100 % mit Qualität, 1000 h+ mit Prüfung) in irgendeiner Sektion nach dem Held. Der Heldenbereich
+  selbst darf Zahlen tragen. Ersatz: die Aussage als Satz, als Beleg am Angebot oder als Text im
+  Vorteil. Preise mit Währung sind keine Kennzahlen. Grund: Die Kennzahlenleiste ist der häufigste
+  Füllbaustein generierter Seiten, ihre Werte stammen oft ungeprüft aus dem Bestand, und der
+  Kunde hat sie ausdrücklich ausgeschlossen. Geprüft mit `scripts/pruefe-geschmack.mjs`
+  (Regel `kennzahlen-unter-hero`, Fehler), Katalog in `references/26-geschmack-und-ki-tells.md`.
 - **Keine Standardschrift ohne Vorgabe.** Liegt keine Kundenschrift vor, sind Inter,
   Roboto, Open Sans, Poppins, Montserrat, Lato und Plus Jakarta Sans gesperrt. Stattdessen
   zwei Kandidaten mit einer Begründung aus Branche und Zielgruppe vorschlagen. Schriften
