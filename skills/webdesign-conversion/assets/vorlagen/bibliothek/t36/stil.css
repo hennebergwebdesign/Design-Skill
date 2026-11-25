@@ -278,3 +278,4 @@ h3{font-size:var(--h3);line-height:1.2}
   .held__hinweis::after,.kreis::before{animation:none}
   .stimme.aktiv{animation:none}
 }
+.kat__bild .bild[data-platzhalter]::after{inset:.75rem auto auto .75rem}

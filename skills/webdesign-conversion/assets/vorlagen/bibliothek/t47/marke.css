@@ -1,0 +1,33 @@
+/* marke.css der Vorlage "Startseite blau": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Alle drei Varianten (index, v2, v3) lesen diese Datei. Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#ffffff;
+  --flaeche-alt:#eef0f5;
+  --flaeche-dunkel:#0a1544;
+  --text:#101626;
+  --text-leise:#4d576d;
+  --linie:#dde1ea;
+  --akzent:#ffb23e;           /* Hauptaktion: Fläche mit dunklem Text, auf Dunkel auch Text und Punkt */
+  --akzent-text:#1c1200;
+  --schrift-titel:'Outfit',system-ui,sans-serif;
+  --schrift-text:'Manrope',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:26px;
+  --radius-bild:22px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:30px;
+  --titel-gewicht:500;
+  --titel-spur:-0.035em;
+  --blau:#2457d6;             /* zweite Farbe auf Hell: Kicker, Namen, Haken (5,9 zu 1 auf --flaeche) */
+  --blau-hell:#8db4ff;        /* dieselbe Rolle auf Dunkel */
+  --flaeche-dunkel-2:#101f63;
+  --flaeche-blau:#1a3bb0;     /* mittlere Verlaufsfarbe der Blaufläche */
+  --flaeche-himmel:#1aa6f5;   /* hellster Ton der Bühne */
+  --text-auf-dunkel:#f4f6ff;
+  --text-leise-dunkel:#b9c3e6;
+  --linie-dunkel:#2b3c8f;
+  --warm:#ff9a6b;             /* Dämmerungston der Bühne */
+  --gut:#12805a;              /* Haken und positive Werte (5,0 zu 1 auf Weiß) */
+  --warn:#c4361f;
+}
