@@ -25,3 +25,4 @@ Alle Fotos von Unsplash, Unsplash Lizenz (https://unsplash.com/de/lizenz), abger
 ## Offen
 
 Offen: alle Produktbilder bleiben Platzhalter (5 Farben Produkt in Nebel, Sand, Koralle, Salbei, Tinte; vier Produkt im Einsatz; gewählte Farbe). Ein Stockfoto würde ein Produkt zeigen, das es nicht gibt. Hier gehören Fotos oder Renderings des echten Geräts hin. Die Stimmungsbilder zeigen Orte ohne Gerät und sind nicht belegt als deutsche Verhältnisse. Der Verlaufsfilm (folie__ton) ist dort entfernt, wo ein Foto liegt. Fotoseiten aus der Kennung der Suchseite abgeleitet, Beschreibungen eigene Kurzbeschreibungen.
+- Nachtrag 25.11.2026: Die vier Folien „Produkt im Einsatz" nutzen vorhandene Fotos dieser Vorlage als Vorschau (Quellen siehe Tabelle oben), werden vor Abgabe ersetzt.

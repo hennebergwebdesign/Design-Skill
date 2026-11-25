@@ -39,6 +39,7 @@ Alle Fotos von Unsplash, Unsplash Lizenz (https://unsplash.com/de/lizenz), abger
 - Das Schlussbild (Fassade, Kopenhagen laut Unsplash) ist ebenfalls eine Fremdaufnahme ohne Ortsbezug im Bild.
 - Heldbild und Schlussbild sind dekorativ (alt leer). Die zweite Galeriereihe ist die Kopie der ersten für die Endlosschleife und nutzt dieselben Dateien.
 
-| mann-blaues-hemd-640.webp | index.html, Zeile 273, Bild | Mann in blauem Hemd im Lokal | [@dannypostma](https://unsplash.com/de/@dannypostma) | [Seite](https://unsplash.com/de/fotos/qm6yxe7SjWg) | Unsplash Lizenz | 25.11.2026 |
+
+| mann-blaues-hemd-640.webp | index.html, Zeile 273, Bild | Mann in blauem Hemd im Lokal | [@dannypostma](https://unsplash.com/de/@dannypostma) | [Seite](https://unsplash.com/de/fotos/zNxOw2JFNKs) | Unsplash Lizenz | 25.11.2026 |
 | frau-lockig-blazer-640.webp | index.html, Zeile 278, Bild | Frau mit kurzem lockigem Haar im gestreiften Blazer | [@wocintechchat](https://unsplash.com/de/@wocintechchat) | [Seite](https://unsplash.com/de/fotos/SJvDxw0azqw) | Unsplash Lizenz | 25.11.2026 |
 - Nachtrag 25.11.2026: Personen und weitere Beispielfotos als Vorschau eingesetzt, werden vor Abgabe ersetzt.

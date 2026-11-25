@@ -18,5 +18,6 @@ Alle Fotos von Unsplash, Unsplash Lizenz (https://unsplash.com/de/lizenz), abger
 
 Bild: Porträt der Dozentin, Bild: Videostimme (echte Personen, bleiben Platzhalter). Das Foto Lernende am Laptop zeigt ein Laptop mit sichtbarem Herstellerlogo (Surface), das Foto Live Unterricht stammt von einem Firmenkonto (Compare Fibre); beide vor Livegang prüfen oder ersetzen. Zertifikat zeigt nur ein Notizbuch. Aufnahmeorte nicht belegt.
 
+
 | frau-lockig-blazer-640.webp | index.html, Zeile 299, Bild: Porträt der Dozentin | Frau mit kurzem lockigem Haar im gestreiften Blazer | [@wocintechchat](https://unsplash.com/de/@wocintechchat) | [Seite](https://unsplash.com/de/fotos/SJvDxw0azqw) | Unsplash Lizenz | 25.11.2026 |
 - Nachtrag 25.11.2026: Personen und weitere Beispielfotos als Vorschau eingesetzt, werden vor Abgabe ersetzt.

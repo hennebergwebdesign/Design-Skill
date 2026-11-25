@@ -15,11 +15,12 @@ Alle Fotos von Unsplash, Unsplash Lizenz (https://unsplash.com/de/lizenz), abger
 Gespräch vor Ort (echte Personen), 8 Teamfotos (echte Mitarbeiter), bleiben Platzhalter. Foto Einsatz vor Ort von Firmenkonto Raze Solar, vor Livegang prüfen. Aufnahmeorte nicht belegt, deutsche Verhältnisse nicht nachweisbar.
 * Nachtrag 25.11.2026: Gespräch vor Ort belegt; Team bleibt offen.
 
-| mann-blaues-hemd-640.webp | index.html, Zeile 184, Foto | Mann in blauem Hemd im Lokal | [@dannypostma](https://unsplash.com/de/@dannypostma) | [Seite](https://unsplash.com/de/fotos/qm6yxe7SjWg) | Unsplash Lizenz | 25.11.2026 |
+
+| mann-blaues-hemd-640.webp | index.html, Zeile 184, Foto | Mann in blauem Hemd im Lokal | [@dannypostma](https://unsplash.com/de/@dannypostma) | [Seite](https://unsplash.com/de/fotos/zNxOw2JFNKs) | Unsplash Lizenz | 25.11.2026 |
 | frau-lockig-blazer-640.webp | index.html, Zeile 188, Foto | Frau mit kurzem lockigem Haar im gestreiften Blazer | [@wocintechchat](https://unsplash.com/de/@wocintechchat) | [Seite](https://unsplash.com/de/fotos/SJvDxw0azqw) | Unsplash Lizenz | 25.11.2026 |
-| mann-bart-anzug-640.webp | index.html, Zeile 192, Foto | Mann mit Bart und dunklem Anzug | [@ernestflowerss](https://unsplash.com/de/@ernestflowerss) | [Seite](https://unsplash.com/de/fotos/OgH6DuGylRs) | Unsplash Lizenz | 25.11.2026 |
+| mann-bart-anzug-640.webp | index.html, Zeile 192, Foto | Mann mit Bart und dunklem Anzug | [@ernestflowerss](https://unsplash.com/de/@ernestflowerss) | [Seite](https://unsplash.com/de/fotos/2uqsukZ8Pzc) | Unsplash Lizenz | 25.11.2026 |
 | frau-lederjacke-640.webp | index.html, Zeile 196, Foto | Frau mit langem Haar und Lederjacke | [@fresh_studio](https://unsplash.com/de/@fresh_studio) | [Seite](https://unsplash.com/de/fotos/4BG2yKyCaWg) | Unsplash Lizenz | 25.11.2026 |
-| mann-brille-pullover-640.webp | index.html, Zeile 200, Foto | Mann mit Brille und grauem Pullover | [@silverkblack](https://unsplash.com/de/@silverkblack) | [Seite](https://unsplash.com/de/fotos/y-XZf_TNRms) | Unsplash Lizenz | 25.11.2026 |
+| mann-brille-pullover-640.webp | index.html, Zeile 200, Foto | Mann mit Brille und grauem Pullover | [@silverkblack](https://unsplash.com/de/@silverkblack) | [Seite](https://unsplash.com/de/fotos/bRwkQtLKNFQ) | Unsplash Lizenz | 25.11.2026 |
 | frau-blond-lachend-640.webp | index.html, Zeile 204, Foto | Lachende junge Frau mit lockigem blondem Haar | [@dougbagg_](https://unsplash.com/de/@dougbagg_) | [Seite](https://unsplash.com/de/fotos/9iLbXsMZ6ls) | Unsplash Lizenz | 25.11.2026 |
 | mann-weisses-shirt-640.webp | index.html, Zeile 208, Foto | Mann im weißen Shirt vor heller Wand | [@miracletwentyone](https://unsplash.com/de/@miracletwentyone) | [Seite](https://unsplash.com/de/fotos/iFgRcqHznqg) | Unsplash Lizenz | 25.11.2026 |
 | frau-dutt-weiss-640.webp | index.html, Zeile 212, Foto | Frau mit hochgesteckten dunklen Haaren im weißen Shirt | [@jakenackos](https://unsplash.com/de/@jakenackos) | [Seite](https://unsplash.com/de/fotos/IF9TK5Uy-KI) | Unsplash Lizenz | 25.11.2026 |

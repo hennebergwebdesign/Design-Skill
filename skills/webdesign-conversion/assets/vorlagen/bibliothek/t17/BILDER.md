@@ -18,9 +18,10 @@ Alle Fotos von Unsplash, Unsplash Lizenz (https://unsplash.com/de/lizenz), abger
 
 Offen: 3 kleine Symbolflächen (44 mal 44) bei den Kennzahlen, Beraterin hochformatig (Vorteile) und Beraterin im Profil (Zitat) bleiben Platzhalter, weil dort eine echte Beraterin gezeigt würde. Die Gesprächsbilder zeigen zwei Männer als Stimmung, nicht die Beraterin des Kunden. Auf dem Foto Steuerunterlagen sind Formulartexte eines amerikanischen Formulars lesbar, vor Einsatz beim Kunden tauschen (deutsche Verhältnisse). Fotoseiten aus der Kennung der Suchseite abgeleitet, Beschreibungen eigene Kurzbeschreibungen.
 
-| mann-blaues-hemd-240.webp | index.html, Zeile 52, Porträt | Mann in blauem Hemd im Lokal | [@dannypostma](https://unsplash.com/de/@dannypostma) | [Seite](https://unsplash.com/de/fotos/qm6yxe7SjWg) | Unsplash Lizenz | 25.11.2026 |
+
+| mann-blaues-hemd-240.webp | index.html, Zeile 52, Porträt | Mann in blauem Hemd im Lokal | [@dannypostma](https://unsplash.com/de/@dannypostma) | [Seite](https://unsplash.com/de/fotos/zNxOw2JFNKs) | Unsplash Lizenz | 25.11.2026 |
 | frau-lockig-blazer-240.webp | index.html, Zeile 52, Porträt | Frau mit kurzem lockigem Haar im gestreiften Blazer | [@wocintechchat](https://unsplash.com/de/@wocintechchat) | [Seite](https://unsplash.com/de/fotos/SJvDxw0azqw) | Unsplash Lizenz | 25.11.2026 |
-| mann-bart-anzug-240.webp | index.html, Zeile 52, Porträt | Mann mit Bart und dunklem Anzug | [@ernestflowerss](https://unsplash.com/de/@ernestflowerss) | [Seite](https://unsplash.com/de/fotos/OgH6DuGylRs) | Unsplash Lizenz | 25.11.2026 |
+| mann-bart-anzug-240.webp | index.html, Zeile 52, Porträt | Mann mit Bart und dunklem Anzug | [@ernestflowerss](https://unsplash.com/de/@ernestflowerss) | [Seite](https://unsplash.com/de/fotos/2uqsukZ8Pzc) | Unsplash Lizenz | 25.11.2026 |
 | frau-lederjacke-640.webp | index.html, Zeile 166, Bild: Beraterin, hochformatig | Frau mit langem Haar und Lederjacke | [@fresh_studio](https://unsplash.com/de/@fresh_studio) | [Seite](https://unsplash.com/de/fotos/4BG2yKyCaWg) | Unsplash Lizenz | 25.11.2026 |
 | frau-blond-lachend-640.webp | index.html, Zeile 295, Bild: Beraterin im Profil | Lachende junge Frau mit lockigem blondem Haar | [@dougbagg_](https://unsplash.com/de/@dougbagg_) | [Seite](https://unsplash.com/de/fotos/9iLbXsMZ6ls) | Unsplash Lizenz | 25.11.2026 |
 - Nachtrag 25.11.2026: Personen und weitere Beispielfotos als Vorschau eingesetzt, werden vor Abgabe ersetzt.

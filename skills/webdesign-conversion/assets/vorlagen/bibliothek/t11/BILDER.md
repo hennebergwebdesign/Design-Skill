@@ -22,5 +22,6 @@ Alle Fotos von Unsplash, Unsplash Lizenz (https://unsplash.com/de/lizenz), abger
 
 Offen: Ansprechpartner (Kontakt) bleibt Platzhalter, weil dort eine echte Person gezeigt würde. Die Bilder für Team und Gemeinsam zeigen anonyme Bauarbeiter als Stimmung, nicht das Team des Betriebs. Zwei Fotos stammen von Firmenkonten (Raze Solar, immo RENOVATION), Fotos zeigen Warnwesten ohne lesbare Marke, vor Einsatz prüfen. Fotoseiten sind aus der Kennung der Suchseite abgeleitet, Kennungen nicht einzeln geöffnet. Beschreibungen sind eigene Kurzbeschreibungen nach Ansicht des Bildes.
 
-| mann-blaues-hemd-640.webp | index.html, Zeile 244, Bild: Ansprechpartner | Mann in blauem Hemd im Lokal | [@dannypostma](https://unsplash.com/de/@dannypostma) | [Seite](https://unsplash.com/de/fotos/qm6yxe7SjWg) | Unsplash Lizenz | 25.11.2026 |
+
+| mann-blaues-hemd-640.webp | index.html, Zeile 244, Bild: Ansprechpartner | Mann in blauem Hemd im Lokal | [@dannypostma](https://unsplash.com/de/@dannypostma) | [Seite](https://unsplash.com/de/fotos/zNxOw2JFNKs) | Unsplash Lizenz | 25.11.2026 |
 - Nachtrag 25.11.2026: Personen und weitere Beispielfotos als Vorschau eingesetzt, werden vor Abgabe ersetzt.

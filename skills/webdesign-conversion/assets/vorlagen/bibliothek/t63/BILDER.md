@@ -4,13 +4,8 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 
 | Datei | Platz | Foto Titel | Fotograf (Profil) | Seite | Lizenz | Abruf |
 |---|---|---|---|---|---|---|
-| beratung-am-tisch-mit-unterlagen-und-stift.webp | Held | woman signing on white printer paper beside woman about to touch the documents | @gabriellefaithhenderson | https://unsplash.com/photos/HJckKnwCXxQ | Unsplash Lizenz | 25.11.2026 |
-| telefonat-am-fenster-im-buero.webp | Rechtsgebiete, Karte Unternehmen | Person gegenüber Frau mit schwarzem Smartphone | @lepetitpatte | https://unsplash.com/photos/4ElYB8zzjqQ | Unsplash Lizenz | 25.11.2026 |
-| wohngebaeude-mit-balkonen-in-der-daemmerung.webp | Rechtsgebiete, Karte Immobilien | Braunes Betongebäude unter blauem Himmel tagsüber | @alexandrelallemand | https://unsplash.com/photos/3I8Jv3-TNro | Unsplash Lizenz | 25.11.2026 |
-| laptop-auf-holzschreibtisch-vor-monitor.webp | Rechtsgebiete, Karte Digitales | MacBook Pro auf braunem Holztisch | @justin_morgan | https://unsplash.com/photos/bVoUMGH5gBY | Unsplash Lizenz | 25.11.2026 |
-| telefonat-am-schreibtisch-im-dachgeschoss.webp | Wissen | eine frau, die vor einem computer sitzt und mit einem handy spricht | @lynnvdbr | https://unsplash.com/photos/wIrTa_D3uNU | Unsplash Lizenz | 25.11.2026 |
-| frau-anzug-sonnenbrille-640.webp | index.html, Zeile 95, Bild: Anwältin im Gespräch, Hochformat | Frau im dunklen Anzug mit Sonnenbrille | [@mdesign85](https://unsplash.com/de/@mdesign85) | [Seite](https://unsplash.com/de/fotos/FJ37gnt6g50) | Unsplash Lizenz | 25.11.2026 |
-| mann-anzug-krawatte-640.webp | index.html, Zeile 150, Bild: Porträt, rund | Junger Mann im Anzug mit Krawatte | [@spliff_dj_joe](https://unsplash.com/de/@spliff_dj_joe) | [Seite](https://unsplash.com/de/fotos/-AGW3X5fTgM) | Unsplash Lizenz | 25.11.2026 |
+| frau-anzug-sonnenbrille-640.webp | index.html, Zeile 95, Bild: Anwältin im Gespräch, Hochformat | Frau im dunklen Anzug mit Sonnenbrille | [@mdesign85](https://unsplash.com/de/@mdesign85) | [Seite](https://unsplash.com/de/fotos/hYLXO9FBIc4) | Unsplash Lizenz | 25.11.2026 |
+| mann-anzug-krawatte-640.webp | index.html, Zeile 150, Bild: Porträt, rund | Junger Mann im Anzug mit Krawatte | [@spliff_dj_joe](https://unsplash.com/de/@spliff_dj_joe) | [Seite](https://unsplash.com/de/fotos/YGiy_bPfbtM) | Unsplash Lizenz | 25.11.2026 |
 | frau-lockig-blazer-640.webp | index.html, Zeile 173, Bild: Mitarbeiterin im Flur, Hochformat | Frau mit kurzem lockigem Haar im gestreiften Blazer | [@wocintechchat](https://unsplash.com/de/@wocintechchat) | [Seite](https://unsplash.com/de/fotos/SJvDxw0azqw) | Unsplash Lizenz | 25.11.2026 |
 
 ## Hinweise

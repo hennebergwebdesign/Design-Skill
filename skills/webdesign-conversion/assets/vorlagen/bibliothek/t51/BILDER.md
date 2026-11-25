@@ -4,15 +4,13 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 
 | Datei | Platz | Foto Titel | Fotograf (Profil) | Seite | Lizenz | Abruf |
 |---|---|---|---|---|---|---|
-| sessel-fenster-gartenblick.webp.webp | Hero, Kachel 1 (Sessel am Fenster) | Gemütlicher Sessel am Fenster mit Gartenblick | claybanks | https://unsplash.com/photos/CjmHORCoIfw | Unsplash Lizenz | 25.11.2026 |
-| lesen-am-fenster.webp.webp | Beratung, Berater liest im Sessel | Frau in schwarz-weißem Kleid Lesebuch | harlynkingm | https://unsplash.com/photos/LdGiM8JmIek | Unsplash Lizenz | 25.11.2026 |
-| hande-am-holztisch.webp.webp | Teiler, Team arbeitet am Tisch | Menschen, die tagsüber auf einem Stuhl vor dem Tisch sitzen | mainermedia | https://unsplash.com/photos/KdeqA3aTnBY | Unsplash Lizenz | 25.11.2026 |
-| druckrechner-gelb.webp.webp | Dienst, Steuerunterlagen mit Taschenrechner | Ein grauer Druckrechner auf hellgelbem Hintergrund | stellrweb | https://unsplash.com/photos/djb1whucfBY | Unsplash Lizenz | 25.11.2026 |
-| holztisch-skizzen.webp.webp | Dienst, Planungsrunde am Holztisch | Holztisch mit Skizzen, Bleistift und Stift | anniespratt | https://unsplash.com/photos/PoRcnaa6ark | Unsplash Lizenz | 25.11.2026 |
-| gebaeude-rundung-himmel.webp.webp | Kachel 3 (Gebäudespitze) | Low-Angle-Fotografie eines Stockwerks | michaelseh | https://unsplash.com/photos/S66mTqg0nM8 | Unsplash Lizenz | 25.11.2026 |
-| balkone-beton-himmel.webp.webp | Kachel 5 (Balkone) | Gebäude aus weißem und braunem Beton | trevoriscamera | https://unsplash.com/photos/yz8_w9qtwZY | Unsplash Lizenz | 25.11.2026 |
-| beratung-frau-cafe-laptop.webp | Dienst Bild | Frau in schwarzem Langarmhemd | @helenalopesph | https://unsplash.com/photos/_SzvRwdFo6o | Unsplash Lizenz | 25.11.2026 |
-| zimmerpflanze-weiss.webp | Preise Bild | grüne Blätter auf weißem Hintergrund | @anniespratt | https://unsplash.com/photos/v2TtUBqrQnE | Unsplash Lizenz | 25.11.2026 |
+| team-feier-im-buero-900.webp | index.html, Zeile 137, Team | Kollegen feiern gemeinsam im Büro | [@silverkblack](https://unsplash.com/de/@silverkblack) | [Seite](https://unsplash.com/de/fotos/WlfTYvvRG_w) | Unsplash Lizenz | 25.11.2026 |
+| mann-mit-kopfhoerer-am-rechner-900.webp | index.html, Zeile 171, Headset | Mann mit Kopfhörern am Bildschirm | [@jonathanborba](https://unsplash.com/de/@jonathanborba) | [Seite](https://unsplash.com/de/fotos/TnyHlxVnyhk) | Unsplash Lizenz | 25.11.2026 |
+| monitor-mit-webseite-900.webp | index.html, Zeile 241, Bildschirm | Monitor mit geöffneter Webseite auf einem hellen Schreibtisch | [@teddygraphics](https://unsplash.com/de/@teddygraphics) | [Seite](https://unsplash.com/de/fotos/KJ-us7cIsl0) | Unsplash Lizenz | 25.11.2026 |
+| fassade-mit-rohr-600.webp | index.html, Zeile 274, Fassade | Betonfassade mit Rohr vor blauem Himmel | [@justmejuliee](https://unsplash.com/de/@justmejuliee) | [Seite](https://unsplash.com/de/fotos/roJv_dmHKVA) | Unsplash Lizenz | 25.11.2026 |
+| vase-terrakotta-600.webp | index.html, Zeile 276, Terrakotta | Kleine Terrakottavase mit Zweigen auf hellem Grund | [@hudaigayiran](https://unsplash.com/de/@hudaigayiran) | [Seite](https://unsplash.com/de/fotos/6iFnJZOcBeo) | Unsplash Lizenz | 25.11.2026 |
+
+
 
 
 ## Hinweise
@@ -31,5 +29,5 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 * Bildschirm mit der fertigen Seite (Oberfläche)
 * Beitrag Unterlagen und Taschenrechner, Beitrag Treppenhalle
 * Kachel Fassade mit Rohr und Objekt auf Terrakotta
-* Nachtrag 25.11.2026: Beraterin und Zimmerpflanze belegt; Fassade, Terrakotta und Bildschirm bleiben offen.
 - Nachtrag 25.11.2026: Personen und weitere Beispielfotos als Vorschau eingesetzt, werden vor Abgabe ersetzt.
+- Nachtrag 25.11.2026: Szenen, Grafiken und Vorher Nachher Beispiele als Vorschau eingesetzt, werden vor Abgabe ersetzt.

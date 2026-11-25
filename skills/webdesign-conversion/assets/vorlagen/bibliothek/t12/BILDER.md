@@ -14,9 +14,10 @@ Alle Fotos von Unsplash, Unsplash Lizenz (https://unsplash.com/de/lizenz), abger
 
 Offen: Bild Team, Bild Kunde und 3 Avatare bei den Stimmen bleiben Platzhalter, weil dort echte Personen gezeigt würden. Beschreibungen sind eigene Kurzbeschreibungen nach Ansicht des Bildes. Fotoseiten sind aus der Kennung der Suchseite abgeleitet. Das Foto vom Monteur stammt von einem Firmenkonto (Raze Solar).
 
-| mann-blaues-hemd-640.webp | index.html, Zeile 112, Bild Team | Mann in blauem Hemd im Lokal | [@dannypostma](https://unsplash.com/de/@dannypostma) | [Seite](https://unsplash.com/de/fotos/qm6yxe7SjWg) | Unsplash Lizenz | 25.11.2026 |
+
+| mann-blaues-hemd-640.webp | index.html, Zeile 112, Bild Team | Mann in blauem Hemd im Lokal | [@dannypostma](https://unsplash.com/de/@dannypostma) | [Seite](https://unsplash.com/de/fotos/zNxOw2JFNKs) | Unsplash Lizenz | 25.11.2026 |
 | frau-lockig-blazer-640.webp | index.html, Zeile 252, Bild Kunde | Frau mit kurzem lockigem Haar im gestreiften Blazer | [@wocintechchat](https://unsplash.com/de/@wocintechchat) | [Seite](https://unsplash.com/de/fotos/SJvDxw0azqw) | Unsplash Lizenz | 25.11.2026 |
-| mann-bart-anzug-240.webp | index.html, Zeile 260, Porträt | Mann mit Bart und dunklem Anzug | [@ernestflowerss](https://unsplash.com/de/@ernestflowerss) | [Seite](https://unsplash.com/de/fotos/OgH6DuGylRs) | Unsplash Lizenz | 25.11.2026 |
+| mann-bart-anzug-240.webp | index.html, Zeile 260, Porträt | Mann mit Bart und dunklem Anzug | [@ernestflowerss](https://unsplash.com/de/@ernestflowerss) | [Seite](https://unsplash.com/de/fotos/2uqsukZ8Pzc) | Unsplash Lizenz | 25.11.2026 |
 | frau-lederjacke-240.webp | index.html, Zeile 264, Porträt | Frau mit langem Haar und Lederjacke | [@fresh_studio](https://unsplash.com/de/@fresh_studio) | [Seite](https://unsplash.com/de/fotos/4BG2yKyCaWg) | Unsplash Lizenz | 25.11.2026 |
-| mann-brille-pullover-240.webp | index.html, Zeile 268, Porträt | Mann mit Brille und grauem Pullover | [@silverkblack](https://unsplash.com/de/@silverkblack) | [Seite](https://unsplash.com/de/fotos/y-XZf_TNRms) | Unsplash Lizenz | 25.11.2026 |
+| mann-brille-pullover-240.webp | index.html, Zeile 268, Porträt | Mann mit Brille und grauem Pullover | [@silverkblack](https://unsplash.com/de/@silverkblack) | [Seite](https://unsplash.com/de/fotos/bRwkQtLKNFQ) | Unsplash Lizenz | 25.11.2026 |
 - Nachtrag 25.11.2026: Personen und weitere Beispielfotos als Vorschau eingesetzt, werden vor Abgabe ersetzt.

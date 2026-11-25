@@ -4,24 +4,11 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 
 | Datei | Platz | Foto Titel | Fotograf (Profil) | Seite | Lizenz | Abruf |
 |---|---|---|---|---|---|---|
-| kanzlei-besprechung-vertrag.webp.webp | Held | Geschäftsleute unterschreiben einen Vertrag an einem Tisch | @silverkblack | https://unsplash.com/photos/iPheGw7_UaI | Unsplash Lizenz | 25.11.2026 |
-| kanzlei-hammer-buch.webp.webp | Rahmen | Ein Holzhammer ruht auf einem geschlossenen Buch | @sasun1990 | https://unsplash.com/photos/NB1dUts3ROU | Unsplash Lizenz | 25.11.2026 |
-| kanzlei-konferenzraum-holz.webp.webp | Praxis 1 (beide Varianten) | ein Konferenzraum mit Holztisch und Stühlen | @thedigstudios | https://unsplash.com/photos/Yngqf938yNY | Unsplash Lizenz | 25.11.2026 |
-| kanzlei-sofa-gespraech.webp.webp | Praxis 2 (beide Varianten) | 2 Frauen sitzen auf schwarzem Sofa | @tiend_ | https://unsplash.com/photos/WY5kuE0R4-k | Unsplash Lizenz | 25.11.2026 |
-| kanzlei-konferenzraum-leinwand.webp.webp | Praxis 3 (beide Varianten) | ein Konferenzraum mit Leinwand und Stühlen | @thedigstudios | https://unsplash.com/photos/Le6lJeyCSrs | Unsplash Lizenz | 25.11.2026 |
-| kanzlei-konferenzraum-leder.webp.webp | Beitrag groß | Ein Konferenzraum mit einem großen Holztisch und Ledersesseln | @bennieray | https://unsplash.com/photos/znrDHyqHpSI | Unsplash Lizenz | 25.11.2026 |
-| kanzlei-unterschrift-holztisch.webp.webp | v2 Rahmen | eine Person, die mit einem Stift auf ein Blatt Papier schreibt | @colynarymedia | https://unsplash.com/photos/ZKkuYgbTRl8 | Unsplash Lizenz | 25.11.2026 |
-| kanzlei-vertrag-schreiben.webp.webp | v2 Mosaik 1 | Person, die auf Whitepaper schreibt | @signaturepro | https://unsplash.com/photos/wB9iWZKwljw | Unsplash Lizenz | 25.11.2026 |
-| kanzlei-hammer-dunkel.webp.webp | v2 Mosaik 2 | Holzhammer, der auf einer dunklen Oberfläche neben dem Buch ruht | @sasun1990 | https://unsplash.com/photos/FaTLrG5-ViE | Unsplash Lizenz | 25.11.2026 |
-| kanzlei-hammer-marmor.webp.webp | v2 Mosaik 3 | Holzhammer und Block auf Marmor | @tingeyinjurylawfirm | https://unsplash.com/photos/6sl88x150Xs | Unsplash Lizenz | 25.11.2026 |
-| kanzlei-unterschrift-zu-zweit.webp.webp | v2 Rahmen Beratung | Person im orangefarbenen Langarmhemd schreibt auf weißem Papier | @romaindancre | https://unsplash.com/photos/doplSDELX7E | Unsplash Lizenz | 25.11.2026 |
-| kanzlei-stuehle-konferenztisch.webp.webp | v2 Fälle 1 | Schwarze Bürostühle mit verchromten Armlehnen in einer Reihe an einem Konferenztisch | @michaelfousert | https://unsplash.com/photos/RNsKphkdBTk | Unsplash Lizenz | 25.11.2026 |
-| kanzlei-schreiben-papier.webp.webp | v2 Fälle 2 | Mann, der auf Papier schreibt | @amstram | https://unsplash.com/photos/OQMZwNd3ThU | Unsplash Lizenz | 25.11.2026 |
-| mann-anzug-krawatte-640.webp | index.html, Zeile 143, Bild: Porträt, Hochformat | Junger Mann im Anzug mit Krawatte | [@spliff_dj_joe](https://unsplash.com/de/@spliff_dj_joe) | [Seite](https://unsplash.com/de/fotos/-AGW3X5fTgM) | Unsplash Lizenz | 25.11.2026 |
-| frau-anzug-sonnenbrille-640.webp | index.html, Zeile 144, Bild: Porträt, Hochformat | Frau im dunklen Anzug mit Sonnenbrille | [@mdesign85](https://unsplash.com/de/@mdesign85) | [Seite](https://unsplash.com/de/fotos/FJ37gnt6g50) | Unsplash Lizenz | 25.11.2026 |
-| mann-schreibtisch-anzug-640.webp | index.html, Zeile 145, Bild: Porträt, Hochformat | Mann im Anzug am Schreibtisch | [@ratulpuri](https://unsplash.com/de/@ratulpuri) | [Seite](https://unsplash.com/de/fotos/U964WPbVsYo) | Unsplash Lizenz | 25.11.2026 |
+| mann-anzug-krawatte-640.webp | index.html, Zeile 143, Bild: Porträt, Hochformat | Junger Mann im Anzug mit Krawatte | [@spliff_dj_joe](https://unsplash.com/de/@spliff_dj_joe) | [Seite](https://unsplash.com/de/fotos/YGiy_bPfbtM) | Unsplash Lizenz | 25.11.2026 |
+| frau-anzug-sonnenbrille-640.webp | index.html, Zeile 144, Bild: Porträt, Hochformat | Frau im dunklen Anzug mit Sonnenbrille | [@mdesign85](https://unsplash.com/de/@mdesign85) | [Seite](https://unsplash.com/de/fotos/hYLXO9FBIc4) | Unsplash Lizenz | 25.11.2026 |
+| mann-schreibtisch-anzug-640.webp | index.html, Zeile 145, Bild: Porträt, Hochformat | Mann im Anzug am Schreibtisch | [@ratulpuri](https://unsplash.com/de/@ratulpuri) | [Seite](https://unsplash.com/de/fotos/zLx710peU_k) | Unsplash Lizenz | 25.11.2026 |
 | frau-lockig-blazer-640.webp | v2.html, Zeile 142, Bild: Porträt | Frau mit kurzem lockigem Haar im gestreiften Blazer | [@wocintechchat](https://unsplash.com/de/@wocintechchat) | [Seite](https://unsplash.com/de/fotos/SJvDxw0azqw) | Unsplash Lizenz | 25.11.2026 |
-| mann-bart-anzug-640.webp | v2.html, Zeile 143, Bild: Porträt | Mann mit Bart und dunklem Anzug | [@ernestflowerss](https://unsplash.com/de/@ernestflowerss) | [Seite](https://unsplash.com/de/fotos/OgH6DuGylRs) | Unsplash Lizenz | 25.11.2026 |
+| mann-bart-anzug-640.webp | v2.html, Zeile 143, Bild: Porträt | Mann mit Bart und dunklem Anzug | [@ernestflowerss](https://unsplash.com/de/@ernestflowerss) | [Seite](https://unsplash.com/de/fotos/2uqsukZ8Pzc) | Unsplash Lizenz | 25.11.2026 |
 | frau-lederjacke-640.webp | v2.html, Zeile 144, Bild: Porträt | Frau mit langem Haar und Lederjacke | [@fresh_studio](https://unsplash.com/de/@fresh_studio) | [Seite](https://unsplash.com/de/fotos/4BG2yKyCaWg) | Unsplash Lizenz | 25.11.2026 |
 
 ## Hinweise
