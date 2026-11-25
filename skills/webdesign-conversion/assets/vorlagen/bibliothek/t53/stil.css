@@ -271,3 +271,4 @@ h3{line-height:1.2}
 @media (min-width:48rem){.kopf__knopf .lang{display:inline}}
 dd{margin:0}
 .merkmal__bild{padding:1rem}
+@media (max-width:39.99rem){.schwebe--rechts{display:none}.schwebe--links{left:.5rem;bottom:-1rem;width:min(78%,15rem)}}
