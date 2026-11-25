@@ -271,6 +271,7 @@ main .cta__inhalt .kicker{margin:0;color:var(--text-leise-dunkel)}
 main .kontakt__lead{color:var(--text)}
 .feld{display:grid;gap:.4rem}
 .feld label{font-weight:600}
+.feld__hinweis{font-size:1rem;line-height:1.4;color:var(--text-leise)}
 .feld input,.feld textarea{width:100%;min-height:3rem;padding:.7rem .9rem;border:1px solid var(--text-leise);border-radius:var(--radius-bild);background:var(--flaeche);color:var(--text);font:inherit;transition:border-color var(--dauer-kurz),box-shadow var(--dauer-kurz)}
 .feld textarea{resize:vertical;min-height:7rem}
 .feld input:hover,.feld textarea:hover{border-color:var(--text)}

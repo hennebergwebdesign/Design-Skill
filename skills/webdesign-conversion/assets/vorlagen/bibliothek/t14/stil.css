@@ -234,6 +234,7 @@ input:focus-visible,textarea:focus-visible{outline:3px solid var(--akzent);outli
 .formular{display:grid;gap:1rem}
 .feld{display:grid;gap:.4rem}
 .feld label{font-weight:600}
+.feld__hinweis{font-size:1rem;line-height:1.4;color:var(--text-leise)}
 textarea{resize:vertical;min-height:8rem}
 .haken-feld{display:flex;align-items:flex-start;gap:.75rem}
 .haken-feld input{width:1.5rem;min-height:1.5rem;height:1.5rem;padding:0;flex:none;accent-color:var(--flaeche-dunkel);margin-top:.15rem}

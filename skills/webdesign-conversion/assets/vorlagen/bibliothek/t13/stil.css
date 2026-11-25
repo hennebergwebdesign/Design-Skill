@@ -315,6 +315,7 @@ input:focus-visible,textarea:focus-visible{outline:3px solid var(--akzent);outli
 .formular .knopf{align-self:flex-start}
 .formular__status{min-height:0;font-weight:600}
 .formular__status:empty{display:none}
+.feld__hinweis{font-size:1rem;line-height:1.4;color:var(--text-leise)}
 .formular__hinweis{font-size:.9375rem;color:var(--text-leise)}
 @media (min-width:62rem){
   .kontakt__raster{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:4rem}

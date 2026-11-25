@@ -46,6 +46,7 @@
   <div class="hero__schutz" aria-hidden="true"></div>
   <div class="hero__abdunkeln" aria-hidden="true"></div>
   <div class="wrap hero__innen">
+    <!-- Held nach Formel: H1 = [Zielgruppe] + [Problem] + [Lösung]; Unterzeile = Wie + konkretes Ergebnis; Bild zeigt das Ergebnis; ein Primär-CTA; ein Beleg (Bewertung, Zahl, Logo) im ersten Bildschirm -->
     <h1 id="hero-titel">Zahlen, auf denen Ihr Betrieb wachsen kann</h1>
     <div class="hero__unten">
       <div class="hero__runde">
@@ -336,8 +337,8 @@
       <form class="kontakt__form" action="#" method="post" data-beispielformular novalidate data-zeig>
         <p class="kontakt__lead">Beispieltext: Kurze Nachricht genügt. Wir melden uns innerhalb eines Werktags.</p>
         <div class="feld"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
-        <div class="feld"><label for="f-mail">E-Mail</label><input id="f-mail" name="email" type="email" autocomplete="email" required></div>
-        <div class="feld"><label for="f-tel">Telefon (freiwillig)</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel"></div>
+        <div class="feld"><label for="f-mail">E-Mail</label><input id="f-mail" name="email" type="email" autocomplete="email" required aria-describedby="h-mail"><small class="feld__hinweis" id="h-mail">Damit wir Ihnen die Bestätigung schicken können.</small></div>
+        <div class="feld"><label for="f-tel">Telefon (freiwillig)</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" aria-describedby="h-tel"><small class="feld__hinweis" id="h-tel">Nur für Rückfragen zu Ihrer Anfrage.</small></div>
         <div class="feld"><label for="f-text">Ihr Anliegen</label><textarea id="f-text" name="nachricht" rows="4"></textarea></div>
         <label class="haken"><input type="checkbox" name="datenschutz" required><span>Ich habe die <a href="#">Datenschutzhinweise</a> gelesen.</span></label>
         <button class="knopf" type="submit">Anfrage senden</button>

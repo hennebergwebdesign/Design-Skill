@@ -82,6 +82,7 @@ h3{font-weight:500;letter-spacing:-.01em}
 .held__kopf .kicker{margin-bottom:1.25rem}
 .held h1{font-size:clamp(2.4rem,1.3rem + 4.8vw,5rem);max-width:15ch;line-height:1.02}
 .held__text{margin-top:1.5rem;max-width:36rem;font-size:var(--text-l)}
+.held__beleg{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.25rem .75rem;margin-top:1.5rem;font-size:1rem;color:var(--text-leise-dunkel)}
 .held__aktion{display:flex;flex-wrap:wrap;gap:.5rem 1.75rem;align-items:center;justify-content:center;margin-top:2rem}
 .faecher{display:grid;grid-template-columns:.55fr 2.1fr .55fr;align-items:center;gap:.5rem;width:min(100% - 1rem,66rem);margin:clamp(2.5rem,6vw,4.5rem) auto clamp(2rem,5vw,3.5rem)}
 .faecher__k{border-radius:var(--radius-bild);box-shadow:0 18px 40px -20px color-mix(in srgb,var(--flaeche-dunkel-3) 85%,transparent);transform:translateX(calc((1 - var(--f,1)) * var(--x,0%))) rotate(calc((1 - var(--f,1)) * var(--r,0deg)));will-change:transform}
@@ -292,6 +293,7 @@ h3{font-weight:500;letter-spacing:-.01em}
 .feld{display:grid;gap:.35rem}
 .feld label{font-weight:600;font-size:var(--text-s)}
 .feld input,.feld select,.feld textarea{width:100%;min-height:3rem;padding:.7rem .9rem;border:1.5px solid var(--text-leise);border-radius:var(--radius-klein);background:var(--flaeche);color:var(--text);font:inherit;transition:box-shadow var(--dauer-kurz),border-color var(--dauer-kurz)}
+.feld__hinweis{font-size:1rem;line-height:1.4;color:var(--text-leise)}
 .feld textarea{resize:vertical;min-height:5.5rem}
 .feld input:hover,.feld select:hover,.feld textarea:hover{border-color:var(--text)}
 .feld input:focus-visible,.feld select:focus-visible,.feld textarea:focus-visible{outline:3px solid var(--akzent);outline-offset:2px;border-color:var(--text)}

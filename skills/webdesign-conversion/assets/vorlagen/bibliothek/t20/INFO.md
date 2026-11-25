@@ -36,3 +36,8 @@ Tokens setzen, Kontrast prüfen (Text auf Fläche und `--akzent-text` auf `--akz
 
 ## Icons
 Phosphor Icons (MIT), Strichstärke regular durchgehend, Sterne als fill, als Sprite am Seitenanfang (Lizenz in `../_basis/icons/LICENSE-Phosphor.txt`). Beispiellogos aus `../_basis/logos/`.
+
+## Conversion (Playbook)
+
+- Belegzeile mit Sternen und Beispielwert im Held (`.held__beleg`, `data-beispiel`).
+- Kommentar zur Heldformel vor der H1.

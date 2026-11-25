@@ -330,6 +330,7 @@ main>section:not(.held),.fuss{position:relative;z-index:1;background:var(--flaec
 .formular__zeile{display:grid;grid-template-columns:minmax(0,1fr);gap:1rem}
 .formular label{display:grid;gap:.4rem;font-weight:600;font-size:1rem}
 .formular input[type=text],.formular input[type=tel],.formular input[type=email],.formular select,.formular textarea,.fuss__mail input{width:100%;min-height:3rem;padding:.7rem .9rem;font:inherit;font-weight:400;font-size:1rem;color:var(--text);background:var(--flaeche);border:1px solid color-mix(in srgb,var(--text) 55%,var(--flaeche));border-radius:var(--radius-klein);transition:border-color var(--dauer-kurz),box-shadow var(--dauer-kurz)}
+.formular .feld__hinweis{font-size:1rem;font-weight:400;line-height:1.4;color:var(--text-leise)}
 .formular textarea{resize:vertical;min-height:7rem}
 .formular input:focus-visible,.formular select:focus-visible,.formular textarea:focus-visible{outline:3px solid var(--text);outline-offset:2px}
 .formular__zustimmung{display:flex!important;gap:.75rem;align-items:flex-start;min-height:2.75rem;font-weight:400!important;color:var(--text-leise)}

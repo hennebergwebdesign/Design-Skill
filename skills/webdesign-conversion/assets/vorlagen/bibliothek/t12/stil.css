@@ -232,9 +232,10 @@ h2,h3{font-weight:400}
 .kontakt{margin:0 .5rem;padding-block:var(--raum);background:var(--flaeche-alt);border-radius:var(--radius-flaeche)}
 .formular{padding:1.25rem;border-radius:var(--radius-karte)}
 .formular__raster{display:grid;gap:.75rem;margin-bottom:1rem}
-.feld{display:grid;gap:.35rem}
+.feld{display:grid;gap:.35rem;align-content:start}
 .feld label{font-size:var(--text-s);color:var(--auf-dunkel-leise)}
 .feld input,.feld select,.feld textarea{width:100%;min-height:3rem;padding:.7rem .9rem;font:inherit;color:var(--auf-dunkel);background:transparent;border:1px solid var(--linie-dunkel);border-radius:8px;transition:border-color var(--dauer-kurz)}
+.feld__hinweis{font-size:1rem;line-height:1.4;color:var(--auf-dunkel-leise)}
 .feld select option{color:var(--text);background:var(--karte)}
 .feld input:hover,.feld select:hover,.feld textarea:hover{border-color:var(--auf-dunkel-leise)}
 .feld input:focus-visible,.feld select:focus-visible,.feld textarea:focus-visible{outline:2px solid var(--lebhaft);outline-offset:1px;border-color:var(--lebhaft)}

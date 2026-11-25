@@ -71,6 +71,7 @@ h3{font-size:var(--h3);font-weight:600}
 .held h1{font-size:clamp(2.35rem,1.2rem + 5vw,5rem);font-weight:600;max-width:17ch;letter-spacing:-.03em}
 .held h1 .leise{color:var(--text-leise);font-weight:500}
 .held__satz{max-width:52ch;color:var(--text-leise);font-size:var(--text-l)}
+.held__beleg{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.25rem .75rem;font-size:1rem;color:var(--text-leise)}
 .held__knoepfe{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center}
 .held__buehne{position:relative;z-index:1;margin-top:clamp(2.5rem,6vw,4.5rem);perspective:1600px;width:min(100% - 2*var(--rand),64rem)}
 .held__bild{--p:1;width:100%;aspect-ratio:4/3;border-radius:var(--radius-karte) var(--radius-karte) 0 0;background:

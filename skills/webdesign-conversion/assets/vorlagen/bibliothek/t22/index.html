@@ -76,6 +76,7 @@
     <div class="held__schleier" aria-hidden="true"></div>
     <div class="wrap held__inhalt">
       <div class="held__links">
+        <!-- Held nach Formel: H1 = [Zielgruppe] + [Problem] + [Lösung]; Unterzeile = Wie + konkretes Ergebnis; Bild zeigt das Ergebnis; ein Primär-CTA; ein Beleg (Bewertung, Zahl, Logo) im ersten Bildschirm -->
         <h1 id="h-held">Probleme am Haus? Wir kümmern uns darum.</h1>
         <div class="held__knoepfe" data-zeig>
           <a class="knopf" href="#kontakt">Termin buchen</a>
@@ -420,14 +421,13 @@
       <form class="formular" action="#" method="post" data-beispielformular data-zeig>
         <div class="formular__zeile">
           <label>Name<input type="text" name="name" autocomplete="name" required></label>
-          <label>Telefon<input type="tel" name="telefon" autocomplete="tel" required></label>
+          <label>Telefon<input type="tel" name="telefon" autocomplete="tel" required aria-describedby="h-tel"><small class="feld__hinweis" id="h-tel">Nur für Rückfragen zu Ihrer Anfrage.</small></label>
         </div>
-        <label>E-Mail<input type="email" name="mail" autocomplete="email"></label>
-        <label>Adresse des Einsatzorts<input type="text" name="adresse" autocomplete="street-address"></label>
+        <label>E-Mail<input type="email" name="mail" autocomplete="email" aria-describedby="h-mail"><small class="feld__hinweis" id="h-mail">Damit wir Ihnen die Bestätigung schicken können.</small></label>
         <label>Gewünschte Leistung
           <select name="leistung"><option value="">Bitte wählen</option><option>Planung und Beratung</option><option>Installation und Montage</option><option>Wartung und Service</option><option>Notdienst</option><option>Modernisierung</option></select>
         </label>
-        <label>Was ist passiert?<textarea name="nachricht" rows="4"></textarea></label>
+        <label>Was ist passiert, und wo?<textarea name="nachricht" rows="4" placeholder="Kurz beschreiben und die Adresse des Einsatzorts nennen."></textarea></label>
         <label class="formular__zustimmung"><input type="checkbox" name="zustimmung" required><span>Ich bin einverstanden, dass Sie mich zur Anfrage kontaktieren. Beispieltext, Wortlaut mit der Datenschutzerklärung abstimmen.</span></label>
         <button class="knopf" type="submit">Anfrage senden<svg class="ic" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-rechts"/></svg></button>
         <p class="formular__status" role="status" data-status>Beispielformular: Es wird nichts gesendet.</p>

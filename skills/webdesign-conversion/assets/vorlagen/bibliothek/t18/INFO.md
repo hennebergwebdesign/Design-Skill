@@ -42,3 +42,7 @@ Nicht enthalten, weil die Referenz sie nicht hat: Preise, Stimmen.
 
 ## Icons
 Phosphor Icons (MIT, siehe `_basis/icons/LICENSE-Phosphor.txt`), durchgehend Strichstärke duotone, inline als SVG mit `currentColor` (App-Oberfläche im Telefon, Funktionen, Akkordeon).
+
+## Conversion (Playbook)
+
+- Kommentar zur Heldformel vor der H1. Beleg im Held nicht ergänzt: Text, Knöpfe und Telefonbühne füllen den ersten Bildschirm, die Vorlage kennt keine Bewertungszeile.

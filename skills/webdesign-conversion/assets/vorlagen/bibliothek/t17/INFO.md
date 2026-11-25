@@ -40,3 +40,8 @@ Tokens in `marke.css` setzen, Kontrast prüfen, Schrift aus `schriften.css` wäh
 
 ## Icons
 Phosphor Icons (MIT, siehe `_basis/icons/LICENSE-Phosphor.txt`), durchgehend Strichstärke light, inline als SVG mit `currentColor`; Plus und Minus im Akkordeon sind ebenfalls Phosphor.
+
+## Conversion (Playbook)
+
+- Feldhinweise unter E-Mail und Telefon (`.feld__hinweis`).
+- Kommentar zur Heldformel vor der H1.

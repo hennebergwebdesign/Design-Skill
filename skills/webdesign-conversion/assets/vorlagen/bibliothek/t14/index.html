@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Markenname, Orientierungscheck und persönliche Begleitung</title>
-<meta name="description" content="Beispieltext: Der Orientierungscheck zeigt in 15 Minuten, wo Ihr Vorhaben steht, und liefert einen Plan mit drei nächsten Schritten. Vor dem Einsatz durch den echten Text der Marke ersetzen.">
+<meta name="description" content="Beispieltext: Der Orientierungscheck zeigt in 15 Minuten, wo Ihr Vorhaben steht, mit Plan für drei Schritte. Jetzt starten. Text ersetzen.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../_basis/schriften.css">
 <link rel="stylesheet" href="../_basis/basis.css">
@@ -54,6 +54,7 @@
   <section class="held" id="top" aria-labelledby="h-held">
     <div class="wrap held__kopf" data-staffel>
       <p class="kicker" data-zeig>Orientierungscheck in 15 Minuten</p>
+      <!-- Held nach Formel: H1 = [Zielgruppe] + [Problem] + [Lösung]; Unterzeile = Wie + konkretes Ergebnis; Bild zeigt das Ergebnis; ein Primär-CTA; ein Beleg (Bewertung, Zahl, Logo) im ersten Bildschirm -->
       <h1 id="h-held" data-zeig>Wissen, wo Ihr Vorhaben steht, und was als Nächstes zählt</h1>
       <p class="held__text" data-zeig>Beispieltext: Der Check ordnet Ziel, Stand und Budget ein und liefert einen Plan mit drei konkreten nächsten Schritten, ohne Fachsprache und ohne Verkaufsdruck.</p>
       <div class="held__aktionen" data-zeig>
@@ -326,7 +327,7 @@
         </div>
         <form class="formular" action="#" data-vorlage-form data-zeig>
           <div class="feld"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" placeholder="Ihr Name" required></div>
-          <div class="feld"><label for="f-mail">E-Mail</label><input id="f-mail" name="email" type="email" autocomplete="email" placeholder="name@beispiel.de" required></div>
+          <div class="feld"><label for="f-mail">E-Mail</label><input id="f-mail" name="email" type="email" autocomplete="email" placeholder="name@beispiel.de" required aria-describedby="h-mail"><small class="feld__hinweis" id="h-mail">Damit wir Ihnen die Bestätigung schicken können.</small></div>
           <div class="feld"><label for="f-text">Nachricht</label><textarea id="f-text" name="nachricht" rows="5" placeholder="Worum geht es bei Ihrem Vorhaben?" required></textarea></div>
           <div class="haken-feld"><input id="f-dsgvo" name="datenschutz" type="checkbox" required><label for="f-dsgvo">Ich habe die <a href="#">Datenschutzerklärung</a> gelesen.</label></div>
           <button class="knopf" type="submit">Anfrage senden</button>

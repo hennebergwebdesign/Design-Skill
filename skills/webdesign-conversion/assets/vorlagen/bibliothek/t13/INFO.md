@@ -42,3 +42,9 @@
 
 ## Icons und Logos
 Icons: Phosphor Icons (MIT, Lizenz in `_basis/icons/LICENSE-Phosphor.txt`), durchgehend in der Strichstärke duotone (Referenz marketo-agency, runde Symbolflächen). Beispiellogos aus `_basis/logos.css` in der Logoleiste und bei den Erfolgsgeschichten, durch freigegebene Kundenlogos ersetzen.
+
+## Conversion (Playbook)
+
+- Beschreibung auf unter 160 Zeichen gekürzt.
+- Feldhinweis unter E-Mail (`.feld__hinweis`). Das Formular hat kein Telefonfeld.
+- Kommentar zur Heldformel vor der H1.

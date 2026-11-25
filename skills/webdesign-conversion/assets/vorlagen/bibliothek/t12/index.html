@@ -63,6 +63,7 @@
   <div class="held__kopf">
     <p class="bewertung"><svg width="20" height="20" aria-hidden="true"><use href="#stern"/></svg> <span data-beispiel>Beispiel: 4,8 von 5 Sternen</span></p>
     <div class="held__raster">
+      <!-- Held nach Formel: H1 = [Zielgruppe] + [Problem] + [Lösung]; Unterzeile = Wie + konkretes Ergebnis; Bild zeigt das Ergebnis; ein Primär-CTA; ein Beleg (Bewertung, Zahl, Logo) im ersten Bildschirm -->
       <h1 id="held-titel" class="held__titel"><span class="zeile"><span>Gute Arbeit,</span></span> <span class="zeile"><span>die man <span class="akzentwort">sofort</span> merkt.</span></span></h1>
       <div class="held__rechts" data-zeig>
         <p>Wir übernehmen, was Zeit kostet, und erledigen es zuverlässig, sauber und zu festen Terminen. Sie sagen uns, was gebraucht wird.</p>
@@ -312,11 +313,10 @@
   <div class="wrap zweispalt zweispalt--mitte kontakt__raster">
     <form class="formular dunkel" data-zeig action="#" method="post">
       <div class="formular__raster">
-        <div class="feld"><label for="f-vor">Vorname</label><input id="f-vor" name="vorname" autocomplete="given-name" required></div>
-        <div class="feld"><label for="f-nach">Nachname</label><input id="f-nach" name="nachname" autocomplete="family-name" required></div>
-        <div class="feld"><label for="f-mail">E-Mail</label><input id="f-mail" name="mail" type="email" autocomplete="email" required></div>
-        <div class="feld"><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel"></div>
-        <div class="feld feld--voll"><label for="f-art">Leistung</label><select id="f-art" name="leistung"><option>Privathaushalt</option><option>Betrieb</option><option>Einmalleistung</option></select></div>
+        <div class="feld"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+        <div class="feld"><label for="f-mail">E-Mail</label><input id="f-mail" name="mail" type="email" autocomplete="email" required aria-describedby="h-mail"><small class="feld__hinweis" id="h-mail">Damit wir Ihnen die Bestätigung schicken können.</small></div>
+        <div class="feld"><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" aria-describedby="h-tel"><small class="feld__hinweis" id="h-tel">Nur für Rückfragen zu Ihrer Anfrage.</small></div>
+        <div class="feld"><label for="f-art">Leistung</label><select id="f-art" name="leistung"><option>Privathaushalt</option><option>Betrieb</option><option>Einmalleistung</option></select></div>
         <div class="feld feld--voll"><label for="f-text">Nachricht</label><textarea id="f-text" name="nachricht" rows="4"></textarea></div>
       </div>
       <button class="knopf knopf--lebhaft" type="submit">Anfrage senden</button>

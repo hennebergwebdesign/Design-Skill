@@ -40,3 +40,7 @@
 
 ## Icons
 Phosphor Icons (MIT, siehe `_basis/icons/LICENSE-Phosphor.txt`), durchgehend Strichstärke thin, inline als SVG mit `currentColor`; Bewertungssterne in t16 als gefüllte Variante, weil ein Rating sonst leer wirkt.
+
+## Conversion (Playbook)
+
+- Kommentar zur Heldformel vor der H1. Beleg im Held nicht ergänzt: Das Plakatwort füllt den ersten Bildschirm, ein Beleg würde die Bühne stören.

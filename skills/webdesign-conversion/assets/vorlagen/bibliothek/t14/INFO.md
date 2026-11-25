@@ -44,3 +44,9 @@
 
 ## Icons
 Phosphor Icons (MIT, Lizenz in `_basis/icons/LICENSE-Phosphor.txt`), durchgehend in der Strichstärke bold (Referenz sportrik, kräftige Symbole). Die Vorlage hat keine Logoleiste.
+
+## Conversion (Playbook)
+
+- Beschreibung auf unter 160 Zeichen gekürzt.
+- Feldhinweis unter E-Mail im Kontaktformular (`.feld__hinweis`).
+- Kommentar zur Heldformel vor der H1. Ein Beleg im ersten Bildschirm fehlt bewusst: Der Held ist reiner Text mit Bildreihe, ein Sternesymbol gibt es in der Vorlage nicht.

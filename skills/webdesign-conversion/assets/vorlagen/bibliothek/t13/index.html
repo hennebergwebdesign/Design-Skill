@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Markenname, laufende Betreuung im Monatsabo</title>
-<meta name="description" content="Beispieltext: Laufende Betreuung zum festen Monatspreis, mit klarem Plan, festem Ansprechpartner und monatlichem Bericht. Vor dem Einsatz durch den echten Text der Marke ersetzen.">
+<meta name="description" content="Beispieltext: Laufende Betreuung zum festen Monatspreis, mit festem Ansprechpartner und Bericht. Jetzt anfragen. Durch den echten Text ersetzen.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../_basis/schriften.css">
 <link rel="stylesheet" href="../_basis/basis.css">
@@ -81,6 +81,7 @@
         <span class="sterne" role="img" aria-label="4,8 von 5 Sternen"><svg class="stern"><use href="#i-stern"/></svg><svg class="stern"><use href="#i-stern"/></svg><svg class="stern"><use href="#i-stern"/></svg><svg class="stern"><use href="#i-stern"/></svg><svg class="stern"><use href="#i-stern"/></svg></span>
         <span>4,8 von 5, Beispielwert</span>
       </p>
+      <!-- Held nach Formel: H1 = [Zielgruppe] + [Problem] + [Lösung]; Unterzeile = Wie + konkretes Ergebnis; Bild zeigt das Ergebnis; ein Primär-CTA; ein Beleg (Bewertung, Zahl, Logo) im ersten Bildschirm -->
       <h1 data-zeig>Laufende Betreuung, die Ihr Geschäft Monat für Monat voranbringt</h1>
       <p class="held__text" data-zeig>Statt Einzelaufträgen mit offenem Ende: ein fester Monatsbetrag, ein klarer Plan und ein Team, das jeden Monat liefert. Ohne lange Vertragsbindung.</p>
       <div class="held__aktionen" data-zeig>
@@ -427,7 +428,8 @@
             </div>
             <div class="feld">
               <label for="f-mail">E-Mail-Adresse</label>
-              <input id="f-mail" name="email" type="email" autocomplete="email" required>
+              <input id="f-mail" name="email" type="email" autocomplete="email" required aria-describedby="h-mail">
+              <small class="feld__hinweis" id="h-mail">Damit wir Ihnen die Bestätigung schicken können.</small>
             </div>
             <div class="feld">
               <label for="f-text">Ihre Nachricht</label>

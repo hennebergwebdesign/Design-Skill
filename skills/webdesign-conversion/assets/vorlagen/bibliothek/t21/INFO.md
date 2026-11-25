@@ -40,3 +40,8 @@ Tokens setzen, Kontrast prüfen (Text und Akzenttext mindestens 4,5 zu 1), Schri
 - Ohne Fotos wirken die Verlaufsflächen ruhig, aber unspezifisch.
 - Kontrast der Platzhalterbeschriftung ist über eigenen dunklen Grund gesichert, Text über echten Fotos muss nach dem Einsetzen neu geprüft werden.
 - Icons: Phosphor Icons (MIT, Lizenz in `_basis/icons/LICENSE-Phosphor.txt`), durchgehend Strichstärke light, Sterne fill, als Inline-Sprite. Das Logozeichen M ist ein eigenes Symbol.
+
+## Conversion (Playbook)
+
+- Feldhinweis unter E-Mail im Newsletterformular im Fuß (`.feld__hinweis`).
+- Kommentar zur Heldformel vor der H1.

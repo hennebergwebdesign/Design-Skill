@@ -375,6 +375,7 @@ details[open] .a-minus{display:block}
 .zeiten li{color:var(--text-leise-dunkel)}
 .newsletter{display:grid;gap:.5rem}
 .newsletter label{font-size:var(--text-s);color:var(--text-leise-dunkel)}
+.feld__hinweis{font-size:1rem;line-height:1.4;color:var(--text-leise-dunkel)}
 .newsletter input{width:100%;min-height:3rem;padding:.6rem .9rem;border-radius:var(--radius-klein);border:1.5px solid var(--rand-feld-dunkel);background:var(--flaeche-dunkel);color:var(--text-auf-dunkel);font:inherit;transition:border-color var(--dauer-kurz)}
 .newsletter input:hover{border-color:var(--text-auf-dunkel)}
 .newsletter .knopf{justify-content:center;margin-top:.5rem}

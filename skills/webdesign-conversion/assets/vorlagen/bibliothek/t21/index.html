@@ -80,6 +80,7 @@
         <span class="sterne" aria-hidden="true"><svg focusable="false"><use href="#i-stern"/></svg><svg focusable="false"><use href="#i-stern"/></svg><svg focusable="false"><use href="#i-stern"/></svg><svg focusable="false"><use href="#i-stern"/></svg><svg focusable="false"><use href="#i-stern"/></svg></span>
         <span>Platzhalter: Bewertung mit Quelle eintragen</span>
       </p>
+      <!-- Held nach Formel: H1 = [Zielgruppe] + [Problem] + [Lösung]; Unterzeile = Wie + konkretes Ergebnis; Bild zeigt das Ergebnis; ein Primär-CTA; ein Beleg (Bewertung, Zahl, Logo) im ersten Bildschirm -->
       <h1 id="h-held" data-zeig>Die richtige Lösung, sauber eingebaut und dauerhaft betreut</h1>
       <p class="held__text" data-zeig>Ein fester Ansprechpartner begleitet Sie vom Erstgespräch bis zur Wartung. Beispieltext, vor dem Einsatz durch den echten Text der Marke ersetzen.</p>
       <div class="held__aktion" data-zeig>
@@ -473,7 +474,8 @@
           <label for="nl-name">Name</label>
           <input id="nl-name" name="name" type="text" autocomplete="name">
           <label for="nl-mail">E-Mail</label>
-          <input id="nl-mail" name="email" type="email" autocomplete="email" inputmode="email">
+          <input id="nl-mail" name="email" type="email" autocomplete="email" inputmode="email" aria-describedby="nl-hinweis-mail">
+          <small class="feld__hinweis" id="nl-hinweis-mail">Damit wir Ihnen die Bestätigung schicken können.</small>
           <button class="knopf knopf--hell" type="submit">Anmelden</button>
           <p class="newsletter__hinweis">Beispielformular, es wird nichts gesendet. Vor dem Einsatz Einwilligung und Verweis auf die Datenschutzerklärung ergänzen.</p>
           <p class="newsletter__status" role="status" aria-live="polite"></p>

@@ -17,3 +17,9 @@ Name und Stern im Logo (Symbol `#stern`, drei Stellen), Texte, Bilder (`.bild` m
 ## Grenzen
 Formulare senden nichts (stil.js verhindert das Absenden, Backend und Einwilligung fehlen). Kennzahlen, Preise, Bewertung und Zitate sind Platzhalter, keine Belege. Preisumschalter braucht JavaScript (ohne bleibt Takt "einmalig" sichtbar). Impressum und Datenschutz sind nur Linkplatzhalter.
 - Icons: Phosphor Icons (MIT), durchgehend die Strichstärke fill (gefüllt, wie die Referenz), als Sprite im HTML (Lizenz: `../_basis/icons/LICENSE-Phosphor.txt`). Die Logoleiste zeigt erfundene Beispiellogos aus `../_basis/logos.css`, durch echte, freigegebene ersetzen.
+
+## Conversion (Playbook)
+
+- Formular auf fünf Felder: Vorname und Nachname zu "Name" zusammengefasst, Leistung und Telefon teilen sich eine Zeile.
+- Feldhinweise unter E-Mail und Telefon (`.feld__hinweis`, 1 rem, Farbe wie die Labels).
+- Kommentar zur Heldformel vor der H1. Beleg im Held (Sterne) und Kopfzeilen-CTA waren schon vorhanden.

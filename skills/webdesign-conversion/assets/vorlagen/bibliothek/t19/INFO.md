@@ -34,3 +34,9 @@ Werte in `marke.css` und die zwei Schriftzeilen ändern, Kontrast prüfen, Platz
 - Platzhalter sind Tonflächen, keine Porträts. Kontrast über den Bildverläufen nur bei den Text-auf-Verlauf-Stellen mit starkem Overlay ausgelegt, nicht nachgemessen.
 - Icons: Phosphor Icons (MIT), durchgehend duotone, Sterne gefüllt, als Inline-Sprite.
 - Rechtstexte, Heilmittelwerbung und Datenschutz sind vor Livegang zu prüfen.
+
+## Conversion (Playbook)
+
+- Feldhinweis unter Telefon (`.feld__hinweis`).
+- Belegzeile mit Sternen und Beispielwert im Held (`.held__beleg`, `data-beispiel`).
+- Kommentar zur Heldformel vor der H1.

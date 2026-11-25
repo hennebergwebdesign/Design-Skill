@@ -40,3 +40,9 @@
 - Das Karussell der Leistungen und der Stimmen hat keine Selbstfahrt. Die Fallbeispiele wechseln nur auf Klick.
 - Das stehende Bild im Ablauf bleibt nicht stehen: die Textspalte ist nie höher als das Bild, ein Sticky Effekt wäre wirkungslos.
 - Nicht geprüft: Screenreader, Safari, echte Fotos hinter den Overlays (Kontrast neu messen), Leistung.
+
+## Conversion (Playbook)
+
+- Formular auf fünf Felder: Adresse des Einsatzorts in die Nachricht verlegt, Platzhalter der Nachricht entsprechend.
+- Feldhinweise unter Telefon und E-Mail (`.feld__hinweis`).
+- Kommentar zur Heldformel vor der H1.

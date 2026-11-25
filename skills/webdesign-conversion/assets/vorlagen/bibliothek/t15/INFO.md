@@ -42,3 +42,8 @@
 
 ## Icons
 Phosphor Icons (MIT, Lizenz in `_basis/icons/LICENSE-Phosphor.txt`), durchgehend in der Strichstärke light (Referenz vrtxs, feine Linien). Die Vorlage hat keine Logoleiste.
+
+## Conversion (Playbook)
+
+- Beschreibung auf unter 160 Zeichen gekürzt.
+- Kommentar zur Heldformel vor der H1. Beleg im Held nicht ergänzt: Der Held zeigt nur die Produktreihe, ein Beleg würde den Aufbau stören. Die Bestellung ist ein Beispielformular ohne Kontaktfelder.
