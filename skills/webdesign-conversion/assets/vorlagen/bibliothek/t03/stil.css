@@ -277,6 +277,7 @@ details[open] .plus{transform:rotate(45deg)}
 .formular__gitter{display:grid;gap:1.1rem 1.5rem}
 .feld{display:flex;flex-direction:column;gap:.35rem}
 .feld label{color:var(--text-hell-leise);font-size:1rem}
+.feld__hinweis{color:var(--text-hell-leise);font-size:1rem;line-height:1.4}
 .feld input,.feld select,.feld textarea{font:inherit;color:var(--text-hell);background:var(--feld-dunkel);border:1px solid var(--feldrand);border-radius:var(--radius-klein);min-height:2.75rem;padding:.6rem .8rem;width:100%;transition:border-color var(--dauer-kurz)}
 .feld input::placeholder,.feld textarea::placeholder{color:var(--text-hell-leise)}
 .feld input:hover,.feld select:hover,.feld textarea:hover{border-color:var(--text-hell-leise)}

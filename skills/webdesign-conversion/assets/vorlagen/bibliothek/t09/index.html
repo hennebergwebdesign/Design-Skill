@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Verlässliche Dienstleistung für Zuhause und Betrieb | Markenname</title>
+<title>Dienstleistung für Zuhause und Betrieb | Markenname</title>
 <meta name="description" content="Beispielseite für einen Dienstleister: klare Leistungen, feste Preise, Termin online anfragen. Vorlage mit Platzhaltertexten.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../_basis/schriften.css">
@@ -37,7 +37,6 @@
     <a class="logo" href="#top" aria-label="Markenname, zur Startseite"><span class="logo__zeichen" aria-hidden="true"></span>Markenname</a>
     <nav class="menue" id="menue" aria-label="Hauptmenü" data-menue-ziel data-offen="false">
       <ul>
-        <li><a href="#top" aria-current="true">Start</a></li>
         <li><a href="#ueber-uns">Über uns</a></li>
         <li><a href="#leistungen">Leistungen</a></li>
         <li><a href="#preise">Preise</a></li>
@@ -58,6 +57,7 @@
   <div class="wrap wrap--weit">
     <div class="bild held__bild" style="--platz:var(--platz-3)"><img class="bild__foto" src="bilder/helles-wohnzimmer-mit-offener-kueche.webp" width="1600" height="1067" alt="Helles Wohnzimmer mit Sofa und offener Küche" fetchpriority="high" decoding="async">
       <div class="held__text">
+        <!-- Held nach Formel: H1 = [Zielgruppe] + [Problem] + [Lösung]; Unterzeile = Wie + konkretes Ergebnis; Bild zeigt das Ergebnis; ein Primär-CTA; ein Beleg (Bewertung, Zahl, Logo) im ersten Bildschirm -->
         <h1 data-zeig>Verlässliche Arbeit für ein ruhigeres Zuhause</h1>
         <p data-zeig style="--i:2">Sie sagen uns, was zu tun ist. Wir erledigen es pünktlich, sauber und zu einem Preis, den Sie vorher kennen. Einmalig oder regelmäßig.</p>
         <a class="knopf" href="#termin" data-zeig style="--i:3">Termin anfragen <svg class="ico" width="20" height="20" aria-hidden="true"><use href="#pfeil"/></svg></a>
@@ -246,9 +246,9 @@
       <h2 id="h-termin">Jetzt Termin anfragen</h2>
       <form action="#" method="post" onsubmit="return false">
         <div class="felder">
-          <p><label for="f-vor">Vorname</label><input id="f-vor" name="vorname" autocomplete="given-name" required></p>
-          <p><label for="f-nach">Nachname</label><input id="f-nach" name="nachname" autocomplete="family-name" required></p>
-          <p><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel"></p>
+          <p><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></p>
+          <p><label for="f-mail">E-Mail</label><input id="f-mail" name="email" type="email" autocomplete="email" required><small class="feld__hinweis">Damit wir Ihnen die Bestätigung schicken können.</small></p>
+          <p><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel"><small class="feld__hinweis">Nur für Rückfragen zu Ihrer Anfrage.</small></p>
           <p><label for="f-art">Leistung</label><select id="f-art" name="leistung"><option>Privatkunden</option><option>Gewerbekunden</option><option>Sonderaufträge</option></select></p>
           <p class="felder__voll"><label for="f-text">Nachricht</label><textarea id="f-text" name="nachricht" rows="4"></textarea></p>
         </div>

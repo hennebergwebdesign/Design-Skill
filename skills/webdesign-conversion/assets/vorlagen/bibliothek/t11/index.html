@@ -54,12 +54,14 @@
 <section class="held" id="oben" aria-labelledby="h1">
   <div class="wrap">
     <div class="held__text">
+      <!-- Held nach Formel: H1 = [Zielgruppe] + [Problem] + [Lösung]; Unterzeile = Wie + konkretes Ergebnis; Bild zeigt das Ergebnis; ein Primär-CTA; ein Beleg (Bewertung, Zahl, Logo) im ersten Bildschirm -->
       <h1 id="h1" data-zeig>Aus Ihrem Vorhaben wird ein Ergebnis, das bleibt</h1>
       <p data-zeig style="--i:1">Wir planen, setzen um und betreuen langfristig, damit Ihr Objekt im Alltag funktioniert und an Wert gewinnt.</p>
       <div class="held__aktionen" data-zeig style="--i:2">
         <a class="knopf" href="#kontakt">Beratung vereinbaren <span class="knopf__pfeil" aria-hidden="true"><svg class="ikon" width="16" height="16" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-pfeil"/></svg></span></a>
         <a class="knopf knopf--rand" href="#leistungen">Leistungen ansehen <span class="knopf__pfeil" aria-hidden="true"><svg class="ikon" width="16" height="16" viewBox="0 0 256 256" aria-hidden="true"><use href="#i-pfeil"/></svg></span></a>
       </div>
+      <p class="held__beleg" data-zeig data-beispiel style="--i:3"><span class="stimme__sterne" aria-hidden="true"><svg class="ikon ikon--stern" viewBox="0 0 256 256"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256"><use href="#i-stern"/></svg><svg class="ikon ikon--stern" viewBox="0 0 256 256"><use href="#i-stern"/></svg></span>Beispielwert: 4,9 von 5 Sternen</p>
     </div>
     <div class="held__bild" data-zeig="skala"><div class="bild bild--a"><img class="bild__foto" src="bilder/zimmermann-auf-holzrahmen-vor-blauem-himmel.webp" width="1600" height="1067" alt="Handwerker arbeitet auf einem Holzrahmen vor blauem Himmel" fetchpriority="high" decoding="async"></div></div>
   </div>
@@ -239,6 +241,22 @@
   </div>
 </section>
 
+<section class="sektion fragen" id="fragen" aria-labelledby="h-fragen">
+  <div class="wrap">
+    <div class="mitte-kopf">
+      <p class="kicker" data-zeig>Häufige Fragen</p>
+      <h2 id="h-fragen" data-zeig style="--i:1">Antworten, bevor Sie anfragen</h2>
+    </div>
+    <div class="fragen__liste" data-exklusiv>
+      <details class="frage" data-zeig data-beispiel style="--i:0"><summary>Was kostet das und wie wird abgerechnet?<svg class="frage__pfeil" width="20" height="20" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><use href="#i-pfeil"/></svg></summary><p class="frage__antwort">Beispielantwort: Nach einem ersten Gespräch erhalten Sie ein schriftliches Angebot mit klar benanntem Umfang. Hier steht, ob Festpreis oder Aufwand gilt.</p></details>
+      <details class="frage" data-zeig data-beispiel style="--i:1"><summary>Wie lange dauert es von der Anfrage bis zum Ergebnis?<svg class="frage__pfeil" width="20" height="20" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><use href="#i-pfeil"/></svg></summary><p class="frage__antwort">Beispielantwort: Hier steht der übliche Ablauf in Schritten mit einem Zeitrahmen, den Sie vorab schriftlich bekommen.</p></details>
+      <details class="frage" data-zeig data-beispiel style="--i:2"><summary>Woran erkenne ich, dass Ihre Arbeit gut ist?<svg class="frage__pfeil" width="20" height="20" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><use href="#i-pfeil"/></svg></summary><p class="frage__antwort">Beispielantwort: Hier stehen die Maßstäbe des Betriebs und die Art, wie Zwischenstände gezeigt und abgenommen werden.</p></details>
+      <details class="frage" data-zeig data-beispiel style="--i:3"><summary>Was gilt, wenn etwas nicht passt?<svg class="frage__pfeil" width="20" height="20" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><use href="#i-pfeil"/></svg></summary><p class="frage__antwort">Beispielantwort: Hier steht, wie Mängel gemeldet und kostenlos behoben werden und welche Gewährleistung gilt.</p></details>
+      <details class="frage" data-zeig data-beispiel style="--i:4"><summary>Lohnt sich eine Anfrage auch jetzt schon?<svg class="frage__pfeil" width="20" height="20" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><use href="#i-pfeil"/></svg></summary><p class="frage__antwort">Beispielantwort: Ja, schon eine frühe, unverbindliche Beratung klärt Möglichkeiten, Kosten und einen sinnvollen Zeitpunkt.</p></details>
+    </div>
+  </div>
+</section>
+
 <section class="sektion sektion--alt kontakt" id="kontakt" aria-labelledby="h-kontakt">
   <div class="wrap kontakt__raster">
     <div class="bild bild--b kontakt__bild" data-zeig="skala"><img src="bilder/mann-blaues-hemd-640.webp" width="640" height="960" alt="Mann in blauem Hemd im Lokal" loading="lazy" decoding="async" style="object-position:50% 25%"></div>
@@ -252,6 +270,7 @@
         <input id="f-name" name="name" type="text" autocomplete="name" required>
         <label for="f-mail">E-Mail-Adresse</label>
         <input id="f-mail" name="email" type="email" autocomplete="email" required>
+        <small class="feld__hinweis">Damit wir Ihnen die Bestätigung schicken können.</small>
         <label for="f-text">Nachricht</label>
         <textarea id="f-text" name="nachricht" rows="5" placeholder="Worum geht es?"></textarea>
         <p class="form__hinweis">Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Angaben laut <a href="#">Datenschutzerklärung</a> zu.</p>
@@ -271,6 +290,7 @@
           <span>Musterbetrieb</span>
         </a>
         <p>Verlässliche Leistungen, sorgfältig ausgeführt und fair berechnet.</p>
+        <p class="fuss__tel"><a href="tel:+490000000000" data-beispiel>Telefon 0000 0000000</a></p>
         <ul class="fuss__social" aria-label="Soziale Netzwerke">
           <li><a href="#" aria-label="Facebook (Platzhalter)">f</a></li>
           <li><a href="#" aria-label="Instagram (Platzhalter)">ig</a></li>
@@ -279,7 +299,7 @@
       </div>
       <nav aria-label="Seiten">
         <h2 class="fuss__titel">Seiten</h2>
-        <ul><li><a href="#oben">Start</a></li><li><a href="#ueber">Über uns</a></li><li><a href="#leistungen">Leistungen</a></li><li><a href="#stimmen">Stimmen</a></li><li><a href="#kontakt">Kontakt</a></li></ul>
+        <ul><li><a href="#oben">Start</a></li><li><a href="#ueber">Über uns</a></li><li><a href="#leistungen">Leistungen</a></li><li><a href="#stimmen">Stimmen</a></li><li><a href="#fragen">Fragen</a></li><li><a href="#kontakt">Kontakt</a></li></ul>
       </nav>
       <nav aria-label="Rechtliches">
         <h2 class="fuss__titel">Rechtliches</h2>

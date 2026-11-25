@@ -67,6 +67,7 @@ main{display:block}
 .hero__titel{font-size:clamp(2.5rem,1.1rem + 6.2vw,6.25rem);line-height:1.04;max-width:13em;color:var(--auf-dunkel)}
 .wort{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.14em;margin-bottom:-.14em}
 .wort>span{display:inline-block;animation:hoch 1s var(--kurve) both;animation-delay:calc(var(--w) * 90ms + 150ms)} /* bewusst lang: große Überschrift, nicht bedient */
+.hero__aktion{margin-top:clamp(1.5rem,3vw,2.25rem)}
 .hero__liste{display:grid;grid-template-columns:repeat(2,1fr);gap:0 var(--spalte);padding-bottom:clamp(1.25rem,3vw,2.5rem)}
 .hero__liste li{position:relative}
 .hero__liste li::before{content:"";position:absolute;inset:0 0 auto 0;height:1px;background:var(--linie-dunkel);transform-origin:left;animation:linie 1.2s var(--kurve) both;animation-delay:calc(var(--i) * 120ms + 700ms)} /* bewusst lang: Linie, nicht bedient */
@@ -182,6 +183,7 @@ main{display:block}
 
 /* Abschluss */
 .abschluss__titel{font-size:clamp(2.25rem,1rem + 5.4vw,6.25rem);line-height:1.05;max-width:13em}
+.abschluss__aktion{margin-top:clamp(1.5rem,3vw,2.25rem)}
 .zeilenlink{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:clamp(3rem,8vw,7rem);padding:1.5rem .75rem;border-block:1px solid var(--text);font-size:clamp(1.5rem,1rem + 2vw,2.75rem);font-weight:var(--titel-gewicht);letter-spacing:-.02em;background:linear-gradient(var(--flaeche-dunkel),var(--flaeche-dunkel)) left/0 100% no-repeat;transition:background-size .6s var(--kurve),color var(--dauer-mittel),opacity var(--dauer-lang) var(--kurve),transform var(--dauer-lang) var(--kurve)}
 .zeilenlink:hover,.zeilenlink:focus-visible{background-size:100% 100%;color:var(--auf-dunkel)}
 .zeilenlink__pfeil{transition:transform var(--dauer-mittel) var(--kurve)}
@@ -225,3 +227,4 @@ main{display:block}
 /* Fotos statt Platzhalterverläufe */
 .bild__foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .hero__bild .bild__foto{filter:brightness(.6);object-position:22% center}
+.hero__beleg{display:inline-block;margin-top:1rem;padding:.4rem .85rem;border-radius:var(--radius-knopf);background:color-mix(in srgb,#000 60%,transparent);font-size:1rem;color:var(--auf-dunkel)}

@@ -32,3 +32,11 @@ Kein Sticky Abschnitt und kein Hintergrundvideo wie bei Vorlagen mit Scrollbühn
 
 ## Icons und Logos
 Icons: Phosphor Icons (MIT), durchgehend Strichstärke thin, als Sprite im Kopf der Seite (Lizenz in `../_basis/icons/LICENSE-Phosphor.txt`). Logos im Vertrauensband sind erfundene Beispiellogos aus `../_basis/logos/` (Maske in `currentColor`), beim Kunden durch echte, freigegebene Logos ersetzen.
+
+## Conversion (Playbook)
+
+- Hauptmenü von acht auf sechs Punkte: „Für wen“ und „Kontakt“ entfernt (Kontakt deckt der Knopf „Termin“ ab, der Abschnitt „Für wen“ bleibt per Scrollen erreichbar)
+- Formular von sechs auf fünf Felder: Organisation entfällt, der Platzhalter der Nachricht nennt sie
+- Feldhinweise unter E-Mail und Telefon (`.feld__hinweis`)
+- Belegzeile `.held__beleg` im Held (Beispielwert)
+- Held nach Formel als Kommentar vor der H1 ergänzt.

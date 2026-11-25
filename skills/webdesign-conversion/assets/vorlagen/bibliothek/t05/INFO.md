@@ -12,3 +12,10 @@
 
 **Grenzen:** Der Akzent hat gegen die Fläche nur etwa 2,5 zu 1, deshalb tragen Knöpfe dunklen Text und der Fokusring ist dunkel. Der Schieber hat keine Automatik und keine Wischgeste. Das Menü braucht JavaScript (ohne: Seitenübersicht im Kontaktbereich). Kein Formular enthalten.
 - Icons: Phosphor Icons (MIT, Lizenz in `_basis/icons/LICENSE-Phosphor.txt`), durchgehend Strichstärke regular, als Inline-Sprite am Seitenanfang
+
+## Conversion (Playbook)
+
+- Hauptnavigation auf sechs Punkte: die drei Profillinks (Profil A bis C) aus der Kopfzeile entfernt, sie stehen weiter im Kontaktbereich
+- Telefonlink (Platzhalter) in der Fußleiste
+- Belegzeile `.start__beleg` unter den Aktionen (Beispielwert)
+- Held nach Formel als Kommentar vor der H1 ergänzt.

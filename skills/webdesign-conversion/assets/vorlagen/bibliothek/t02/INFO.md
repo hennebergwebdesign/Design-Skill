@@ -34,3 +34,8 @@
 - Partnerband zeigt erfundene Beispiellogos (`_basis/logos.css`), vor Livegang durch freigegebene Kundenlogos ersetzen oder entfernen.
 - Icons: Phosphor Icons (MIT), durchgehend Strichstärke regular, als Sprite im Seitenanfang (Lizenz in `_basis/icons/LICENSE-Phosphor.txt`).
 - Kein Formular, kein Consent, keine Unterseiten.
+
+## Conversion (Playbook)
+
+- Telefonlink (Platzhalter, `data-beispiel`) in der Fußspalte „Seiten“
+- Held nach Formel als Kommentar vor der H1 ergänzt.

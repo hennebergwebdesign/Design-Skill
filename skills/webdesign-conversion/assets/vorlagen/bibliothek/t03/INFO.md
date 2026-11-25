@@ -26,3 +26,9 @@ Tokens und Schriftzeilen in `marke.css` ändern, `--akzent-ink` so wählen, dass
 
 ## Grenzen
 Der Akzent (Hellgrün) trägt Knöpfe nur auf dunklen Flächen. Auf hellen Flächen als Fläche zu schwach (Kontrast unter 3 zu 1). Das Hero Bild ist ein Verlauf, ohne Foto wirkt der Einstieg leer. Keine echte Karte, keine Videos. Die Tabs brauchen JavaScript, ohne stehen die Karten untereinander. Parallax liest den Scrollstand, bei sehr vielen Kacheln auf schwachen Geräten prüfen.
+
+## Conversion (Playbook)
+
+- Formular von sieben auf fünf Felder gekürzt (Wunschtermin und Einsatzort gehören in die Nachricht, Telefon ist optional)
+- Feldhinweise unter E-Mail und Telefon (`.feld__hinweis`)
+- Held nach Formel als Kommentar vor der H1 ergänzt.

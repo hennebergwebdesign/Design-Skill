@@ -40,3 +40,7 @@ Tokens in `marke.css` setzen, Kontrast prüfen (Akzenttext auf Akzent, blasse W�
 - Formular im Fuß hat keine Auswertung (`action="#"`). Ticketknöpfe führen zu Ankern, ein Shop fehlt.
 - Zitate, Namen, Preise und Orte sind Beispiele, keine Belege.
 - Icons: Phosphor Icons (MIT, Lizenz in `_basis/icons/LICENSE-Phosphor.txt`), durchgehend Strichstärke bold, als Inline-Sprite am Seitenanfang; Partnerlogos sind erfundene Beispiellogos aus `_basis/logos.css`, beim Kunden ersetzen
+
+## Conversion (Playbook)
+
+- Held nach Formel als Kommentar vor der H1 ergänzt.

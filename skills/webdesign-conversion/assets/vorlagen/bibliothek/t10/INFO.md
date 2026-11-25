@@ -37,3 +37,9 @@
 - Kein Video eingebaut, nur Fläche; bei Videoeinbau Pause, Poster und Datenmenge nach Kapitel 38 beachten
 - Die Zahlen in „Über uns" sind Beispielwerte, die Vorlage belegt nichts
 - Icons: Phosphor Icons (MIT), durchgehend die Strichstärke light, als Sprite im HTML (Lizenz: `../_basis/icons/LICENSE-Phosphor.txt`). Die Logos in den Stimmen sind erfundene Beispiellogos aus `../_basis/logos.css`, vor dem Livegang durch echte, freigegebene ersetzen.
+
+## Conversion (Playbook)
+
+- Primär-CTA im Held („Erstgespräch anfragen“, `.hero__aktion`) und im Schlussbereich (`.abschluss__aktion`)
+- Belegzeile `.hero__beleg` im Held (Beispielwert)
+- Held nach Formel als Kommentar vor der H1 ergänzt.

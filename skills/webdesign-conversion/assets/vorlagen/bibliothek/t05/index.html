@@ -33,11 +33,6 @@
       <svg class="logo__zeichen" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="10" fill="var(--akzent)"/><circle cx="16" cy="16" r="7" fill="var(--text)"/><circle cx="19" cy="13" r="3" fill="var(--akzent)"/></svg>
       <span class="logo__name">Atelier Beispiel</span>
     </a>
-    <ul class="kopf__links" aria-label="Profile">
-      <li><a href="#kontakt">Profil A</a></li>
-      <li><a href="#kontakt">Profil B</a></li>
-      <li><a href="#kontakt">Profil C</a></li>
-    </ul>
     <button class="menueknopf" type="button" aria-expanded="false" aria-controls="menue" aria-label="Menü" data-menue>
       <span class="menueknopf__balken" aria-hidden="true"><i></i><i></i></span>
       <span class="menueknopf__text">Menü</span>
@@ -61,12 +56,14 @@
 <section class="sektion start" id="start" aria-labelledby="h-start">
   <div class="raster" aria-hidden="true"><div class="raster__lage raster__lage--a" data-parallax="-0.25"></div><div class="raster__lage raster__lage--b" data-parallax="0.12"></div></div>
   <div class="wrap">
+    <!-- Held nach Formel: H1 = [Zielgruppe] + [Problem] + [Lösung]; Unterzeile = Wie + konkretes Ergebnis; Bild zeigt das Ergebnis; ein Primär-CTA; ein Beleg (Bewertung, Zahl, Logo) im ersten Bildschirm -->
     <h1 id="h-start" class="start__titel"><span class="zeile"><span>Gestaltung, die</span></span> <span class="zeile"><span>den Unterschied macht.</span></span></h1>
     <p class="lead start__lead">Beispieltext: Ein bis zwei Sätze, was Sie anbieten und für wen. Kurz, konkret und ohne Floskeln.</p>
     <div class="aktionen">
       <a class="textlink" href="mailto:name@beispiel.de"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg><span>E-Mail schreiben</span></a>
       <a class="knopf" href="#kontakt">Kontakt aufnehmen<span aria-hidden="true" class="pfeil"><svg class="ico" aria-hidden="true"><use href="#i-pfeil"/></svg></span></a>
     </div>
+    <p class="start__beleg" data-zeig data-beispiel><svg class="ico" aria-hidden="true"><use href="#i-haken"/></svg>Beispielwert: 120 abgeschlossene Projekte</p>
     <div class="start__bild" data-zeig="skala">
       <div class="bild"><img class="bild__innen" src="bilder/team-arbeitet-gemeinsam-an-grossem-tisch.webp" width="1600" height="1066" alt="Team arbeitet gemeinsam an einem großen Tisch" fetchpriority="high" decoding="async" data-parallax="-0.08"></div>
     </div>
@@ -313,7 +310,7 @@
 <footer class="fuss">
   <div class="wrap">
     <div class="fuss__leiste">
-      <ul class="fuss__links"><li><a href="#">Impressum</a></li><li><a href="#">Datenschutz</a></li></ul>
+      <ul class="fuss__links"><li><a href="tel:+490000000000" data-beispiel>Telefon 0000 0000000</a></li><li><a href="#">Impressum</a></li><li><a href="#">Datenschutz</a></li></ul>
       <p>Atelier Beispiel, Musterstraße 1, 12345 Musterstadt</p>
     </div>
   </div>

@@ -37,3 +37,8 @@
 - Drei Karten in Sektion 3 sind bewusst wie in der Aufbauvorlage; bei anderem Angebot Anzahl anpassen.
 - Sticky Überschrift im Ablauf nur ab 62rem, darunter normaler Fluss.
 - Nicht geprüft: Screenreader, Safari, echte Fotos als Hintergrund hinter Overlays (Kontrast neu messen).
+
+## Conversion (Playbook)
+
+- Telefonlink (Platzhalter, `data-beispiel`) in der Fußnavigation
+- Held nach Formel als Kommentar vor der H1 ergänzt.

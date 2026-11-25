@@ -207,10 +207,11 @@ h3{font-size:var(--h3);font-weight:600}
 .termin__formular{position:relative;overflow:hidden;background:var(--flaeche-dunkel);color:var(--text-auf-dunkel);border-radius:var(--radius-karte);padding:clamp(1.5rem,4vw,3rem);padding-top:clamp(4rem,8vw,5rem)}
 .termin__formular h2{font-size:clamp(2rem,1.3rem + 2.6vw,3.25rem);margin-bottom:1.5rem;max-width:12ch}
 .eckband{position:absolute;top:1.6rem;right:-3.2rem;width:14rem;transform:rotate(35deg);background:var(--akzent);color:var(--akzent-text);text-align:center;font-weight:700;font-size:var(--text-s);padding:.4rem .5rem;line-height:1.2}
-.felder{display:grid;gap:1rem;margin-bottom:1.5rem}
+.felder{display:grid;gap:1rem;margin-bottom:1.5rem;align-items:start}
 .felder p{display:grid;gap:.4rem}
 .felder label{font-weight:600;font-size:var(--text-s)}
 .felder input,.felder select,.felder textarea{font:inherit;color:var(--text-auf-dunkel);background:var(--flaeche-dunkel-2);border:1.5px solid var(--text-auf-dunkel-leise);border-radius:calc(var(--radius-karte) / 2);padding:.8rem 1rem;min-height:3rem;width:100%}
+.felder .feld__hinweis{color:var(--text-auf-dunkel-leise);font-size:1rem;line-height:1.4}
 .felder textarea{resize:vertical}
 .felder select{appearance:auto}
 .felder input:focus-visible,.felder select:focus-visible,.felder textarea:focus-visible{outline-color:var(--akzent-hell)}

@@ -183,7 +183,7 @@ html:not(.js) .stimme{grid-area:auto}
 .profile a{display:inline-flex;align-items:center;min-height:2.75rem;font-weight:500}
 .profile a:hover{text-decoration:underline;text-underline-offset:.2em}
 .fuss{padding:.5rem 0 1rem}
-.fuss__leiste{background:var(--flaeche-alt);border-radius:var(--radius-karte);padding:1rem 1.5rem;display:grid;gap:.5rem;justify-items:center;text-align:center;font-size:var(--text-s);color:var(--text-leise)}
+.fuss__leiste{background:var(--flaeche-alt);border-radius:var(--radius-karte);padding:1rem 1.5rem;display:grid;gap:.5rem;justify-items:center;text-align:center;font-size:1rem;color:var(--text-leise)}
 .fuss__links{display:flex;gap:1.25rem}
 .fuss__links a{display:inline-flex;align-items:center;min-height:2.75rem;text-decoration:underline;text-underline-offset:.2em}
 
@@ -249,3 +249,5 @@ html:not(.js) .stimme{grid-area:auto}
 /* Fotos statt Platzhalterverläufe */
 .bild__foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 img.bild__innen{width:100%;height:120%;object-fit:cover;background:none}
+.start__beleg{display:flex;align-items:center;gap:.5rem;margin-top:1.25rem;font-size:1rem;color:var(--text-leise)}
+.start__beleg .ico{width:1.1rem;height:1.1rem;color:var(--text)}

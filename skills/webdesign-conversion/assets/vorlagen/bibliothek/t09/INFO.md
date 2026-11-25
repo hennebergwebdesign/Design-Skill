@@ -41,3 +41,11 @@ Tokens setzen, Kontrast prüfen (weiße Schrift auf `--akzent` mindestens 4,5 zu
 
 ## Icons
 Phosphor Icons (MIT), durchgehend Strichstärke fill, als Sprite am Seitenanfang (Lizenz in `../_basis/icons/LICENSE-Phosphor.txt`). Die Laufbänder tragen Aussagen statt Kundenlogos, deshalb gibt es in dieser Vorlage keine Logoleiste; wer eine ergänzt, nimmt die Beispiellogos aus `../_basis/logos/` (Beispiel in `t07`).
+
+## Conversion (Playbook)
+
+- Titel auf 51 Zeichen gekürzt
+- Hauptmenü von sieben auf sechs Punkte: „Start“ entfällt (das Logo führt zum Seitenanfang)
+- Formular: Vor und Nachname zu „Name“, Pflichtfeld E-Mail ergänzt, fünf Felder insgesamt
+- Feldhinweise unter E-Mail und Telefon (`.feld__hinweis`)
+- Held nach Formel als Kommentar vor der H1 ergänzt. Kein Beleg im ersten Bildschirm ergänzt, weil dort nur das Bild steht und die H1 darunter beginnt.

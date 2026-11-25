@@ -210,7 +210,7 @@ section[id]{scroll-margin-top:var(--kopf-h)}
 .feld select{appearance:none;padding-right:2rem;cursor:pointer}
 .feld select option{background:var(--flaeche);color:var(--text)}
 .feld__pfeil{position:absolute;right:0;bottom:.75rem;pointer-events:none;color:var(--text-leise)}
-.formular__hinweis{color:var(--text-leise);font-size:1rem}
+.formular__hinweis,.feld__hinweis{color:var(--text-leise);font-size:1rem}
 
 /* Newsletter */
 .brief{position:relative;isolation:isolate;overflow:hidden;padding-block:clamp(4rem,9vw,7rem)}
@@ -272,3 +272,5 @@ section[id]{scroll-margin-top:var(--kopf-h)}
 /* Fotos statt Platzhalterverläufe */
 .bild__foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 img.held__tiefe,img.bild__tiefe,img.bildband__tiefe{width:100%;height:112%;object-fit:cover;background:none;animation:none}
+.held__beleg{display:flex;align-items:center;gap:.5rem;margin-top:1.25rem;font-size:1rem;color:var(--text-leise)}
+.held__beleg svg{flex:none;fill:currentColor;color:var(--akzent)}

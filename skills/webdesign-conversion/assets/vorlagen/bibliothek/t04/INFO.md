@@ -40,3 +40,8 @@
 - Ein einzelnes langes Wort als Name verkleinert das Großwort auf Mobil; zwei Wörter brechen um
 - Keine Bilder, Logos oder Belege enthalten; Stimmen und Zahlen sind Beispiele
 - Icons: Phosphor Icons (MIT, Lizenz in `_basis/icons/LICENSE-Phosphor.txt`), durchgehend Strichstärke light, als Inline-Sprite am Seitenanfang
+
+## Conversion (Playbook)
+
+- Telefonlink (Platzhalter, `data-beispiel`) in der Fußnavigation
+- Held nach Formel als Kommentar vor der H1 ergänzt. Kein Beleg im ersten Bildschirm ergänzt, weil die Karte „Erstgespräch planen“ und der Großschriftzug den Held füllen.
