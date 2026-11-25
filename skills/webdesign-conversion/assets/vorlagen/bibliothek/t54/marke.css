@@ -1,0 +1,39 @@
+/* marke.css der Vorlage "Finanz Plattform": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Gilt für alle drei Varianten (index.html, v2.html, v3.html).
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#ffffff;
+  --flaeche-alt:#f3f5f4;
+  --flaeche-dunkel:#04191c;
+  --text:#0e1a1c;
+  --text-leise:#4f5f5e;
+  --linie:#e1e6e3;
+  --akzent:#ff7a59;           /* Hauptaktion: Fläche mit dunklem Text */
+  --akzent-text:#1b0d08;
+  --schrift-titel:'Schibsted Grotesk',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:28px;
+  --radius-bild:24px;
+
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:500;
+  --titel-spur:-0.035em;
+  --flaeche-dunkel-2:#0b2428; /* Karten auf Dunkel */
+  --text-auf-dunkel:#f2f7f5;
+  --text-leise-dunkel:#a9bfbc;
+  --linie-dunkel:#1d3b3f;
+  --marke-tief:#0a4a47;       /* Mitte des Verlaufs im Held */
+  --marke-hell:#2b8f78;       /* helles Ende des Verlaufs, nur Fläche, nie Textgrund für Weiß */
+  --marke-text:#0a5a4c;       /* Marke als Text und Linie auf Hell (7 zu 1 auf Weiß) */
+  --tint:#e2f2ed;             /* Etikettenfläche */
+  --graf:#2b9d86;             /* Balken und Linien in den Beispieldiagrammen */
+  --graf-hell:#cfe8e1;
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#2d5f63;
+  --ton-2:#43556b;
+  --ton-3:#a56a4d;
+  --ton-4:#5d6f55;
+  --ton-5:#7a5a6b;
+  --ton-6:#14292d;
+}

@@ -1,0 +1,31 @@
+/* marke.css der Vorlage "Beratung hell, Bogenblätter": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#fbfaf5;
+  --flaeche-alt:#e8e9e1;       /* Salbeiblatt: Kopfleiste, Bänder, Karten */
+  --flaeche-dunkel:#171a1a;    /* feste Rolle: Tinte für Hauptknopf, Held, Preiskarte */
+  --text:#171a1a;
+  --text-leise:#4a4f4d;
+  --linie:#171a1a;
+  --akzent:#1f6f62;            /* Tannengrün: Symbole, Haken, Reiterknöpfe, Nach-oben-Knopf */
+  --akzent-text:#ffffff;
+  --schrift-titel:'Schibsted Grotesk',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:2rem;
+  --radius-bild:.25rem;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:3rem;
+  --titel-gewicht:500;
+  --titel-spur:-0.03em;
+  --flaeche-alt-2:#d9dbd0;     /* dunkleres Salbei: Mittelkarte, Hover */
+  --flaeche-hauch:#f0f1ea;     /* sehr helles Salbei: Band hinter den Karten */
+  --text-auf-dunkel:#fbfaf5;
+  --ton-1:#7d8a80;
+  --ton-2:#b9a58a;
+  --ton-3:#5d6b66;
+  --ton-4:#c9c4b4;
+  --ton-5:#8b8f86;
+  --ton-6:#2c3331;
+}
