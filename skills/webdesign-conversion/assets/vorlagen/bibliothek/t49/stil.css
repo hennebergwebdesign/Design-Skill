@@ -223,7 +223,7 @@ nav a[aria-current="location"]{text-decoration:none}
 .beitrag:hover{transform:translateY(-3px)}
 .beitrag .bild{position:absolute;inset:0;border-radius:0}
 .beitrag .bild[data-platzhalter]::after{inset:.75rem .75rem auto auto}
-.beitrag::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(8,20,24,.88),rgba(8,20,24,.15) 75%)}
+.beitrag::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(8,20,24,.88),rgba(8,20,24,.15) 75%),linear-gradient(180deg,rgba(8,20,24,.5),rgba(8,20,24,0) 32%)}
 .beitrag>*:not(.bild){position:relative;z-index:2}
 .beitrag__autor{display:flex;align-items:center;gap:.6rem;font-weight:600;position:absolute!important;left:1.5rem;top:1.25rem}
 .beitrag__autor i{width:2rem;height:2rem;border-radius:50%;background:linear-gradient(160deg,var(--ton-5),var(--ton-6));border:2px solid #fff}
