@@ -1,6 +1,6 @@
 # t55 Kraftstudio Risskante
 
-Prinzip nach der freigegebenen Referenz Fitova (Tor 1 erteilt, Startseite und Unterseitenkopf erfasst), als Aufbau, Raster, Sektionsfolge und Art der Bewegung nachgebaut. Text, Bild, Icon, Code, Marke, Schrift und Farbe sind eigen.
+Prinzip nach der freigegebenen Referenz Fitova (Tor 1 erteilt, Startseite erfasst, Unterseiten nur nach Überschriften und Länge), als Aufbau, Raster, Sektionsfolge und Art der Bewegung nachgebaut. Text, Bild, Icon, Code, Marke, Schrift und Farbe sind eigen.
 
 ## Eignung
 Kraftstudios, Studios mit Programmen, Personal Training, Coaching mit Paketen und weitere betreute Angebote mit Plänen, Preisliste und Gemeinschaft (Kampfsport, Athletik, Reha, Kurse). Die Seite lebt von starken Fotos (Gesichter, Bewegung) und einer Marke, die laut sein darf. Ansprache im Du, für Sie im Text ersetzen.

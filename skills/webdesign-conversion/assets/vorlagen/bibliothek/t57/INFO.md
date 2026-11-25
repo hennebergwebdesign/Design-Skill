@@ -1,6 +1,6 @@
 # t57 Studio hell Karten
 
-Prinzip nach der freigegebenen Referenz LiftHub (Tor 1 erteilt, Startseite erfasst, Unterseiten /about, /classes, /contact nur als Navigation gelesen), als Aufbau, Raster, Sektionsfolge und Art der Bewegung nachgebaut. Text, Bild, Icon, Code, Marke, Schrift und Farbe sind eigen.
+Prinzip nach der freigegebenen Referenz LiftHub (Tor 1 erteilt, Startseite erfasst, Unterseiten /about, /classes, /contact nicht geladen, nur als Linkziele gesehen), als Aufbau, Raster, Sektionsfolge und Art der Bewegung nachgebaut. Text, Bild, Icon, Code, Marke, Schrift und Farbe sind eigen.
 
 ## Eignung
 Studios mit Kursplan, Gruppentraining, Yoga, Boxen, Tanz, Reha und Coaching mit drei Tarifen. Heller, ruhiger Auftritt mit großen Radien, grauen Karten und genau einem Akzent. Trägt auch Praxen und Kursanbieter außerhalb des Sports. Ohne gutes Foto oder Video im Held verliert die Seite ihren Einstieg. Ansprache im Du, für Sie im Text ersetzen.
