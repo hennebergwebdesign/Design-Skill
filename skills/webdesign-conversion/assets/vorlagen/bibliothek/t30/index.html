@@ -58,9 +58,7 @@
 
   <!-- 1. Held: Vollbild, Bild dunkelt beim Scrollen ab -->
   <section class="held" id="top" aria-labelledby="h-held" data-abdunkeln>
-    <div class="held__bild" role="img" aria-label="Platzhalter für ein Foto einer Landschaft in der Abenddämmerung" data-platzhalter="Bild: Landschaft in der Dämmerung, Querformat">
-      <svg class="held__berge" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true" focusable="false" data-parallax="-0.06"><path d="M0 220 C140 150 260 120 420 170 S700 250 860 190 S1180 90 1440 180 V320 H0Z" fill="currentColor" opacity=".55"/><path d="M0 270 C180 220 330 210 520 250 S860 300 1040 245 S1320 230 1440 270 V320 H0Z" fill="currentColor"/></svg>
-    </div>
+    <div class="held__bild"><img src="bilder/gebirgsruecken-im-warmen-abendhimmel.webp" width="1600" height="1068" alt="Bergrücken im warmen Abendlicht" decoding="async"></div>
     <div class="held__schleier" aria-hidden="true"></div>
     <div class="wrap held__inhalt" data-staffel>
       <p class="bewertung bewertung--hell" data-zeig data-beispiel>
@@ -98,9 +96,9 @@
           </ul>
         </div>
         <div class="collage" aria-hidden="true">
-          <div class="bild bild--a collage__gross" data-platzhalter="Bild: Stadtansicht, Hochformat" data-zeig="skala"></div>
-          <div class="bild bild--b collage__klein1" data-platzhalter="Bild: Küste, Querformat" data-zeig="rechts"></div>
-          <div class="bild bild--c collage__klein2" data-platzhalter="Bild: Wanderin, Hochformat" data-zeig="rechts"></div>
+          <div class="bild bild--a collage__gross" data-zeig="skala"><img src="bilder/daecher-einer-europaeischen-stadt-von-oben.webp" width="1000" height="1500" alt="Dächer einer europäischen Stadt von oben" loading="lazy" decoding="async"></div>
+          <div class="bild bild--b collage__klein1" data-zeig="rechts"><img src="bilder/kuestenbucht-mit-klippen-und-strand.webp" width="1000" height="667" alt="Küstenbucht mit Klippen und Strand" loading="lazy" decoding="async"></div>
+          <div class="bild bild--c collage__klein2" data-zeig="rechts"><img src="bilder/wanderin-in-roter-jacke-vor-bergpanorama.webp" width="1000" height="1500" alt="Wanderin in roter Jacke vor einem weiten Bergpanorama" loading="lazy" decoding="async"></div>
         </div>
       </div>
       <ul class="zahlen" data-staffel data-beispiel>
@@ -122,7 +120,7 @@
     <ul class="karussell" data-reiter-spur tabindex="0" role="region" aria-label="Reiseziele, mit Pfeiltasten blättern">
       <li class="slide" data-beispiel>
         <article class="slide__innen">
-          <div class="bild bild--a slide__bild" data-platzhalter="Bild: Altstadt am Fluss, Hochformat" aria-hidden="true"></div>
+          <div class="bild bild--a slide__bild" aria-hidden="true"><img src="bilder/altstadtdaecher-im-gegenlicht.webp" width="1000" height="1500" alt="" loading="lazy" decoding="async"></div>
           <div class="slide__karte">
             <h3>Altstadt am Fluss</h3>
             <p>Gassen, Märkte und Abende am Wasser. Eine Reise für alle, die Kultur und Genuss verbinden möchten.</p>
@@ -133,7 +131,7 @@
       </li>
       <li class="slide" data-beispiel>
         <article class="slide__innen">
-          <div class="bild bild--b slide__bild" data-platzhalter="Bild: Bucht mit Booten, Hochformat" aria-hidden="true"></div>
+          <div class="bild bild--b slide__bild" aria-hidden="true"><img src="bilder/bucht-mit-ankernden-booten-vor-kuestenstadt.webp" width="1000" height="1250" alt="" loading="lazy" decoding="async"></div>
           <div class="slide__karte">
             <h3>Küste und Inseln</h3>
             <p>Türkisfarbenes Wasser, kleine Fähren und Zeit zum Nichtstun. Ideal für Paare und Familien.</p>
@@ -144,7 +142,7 @@
       </li>
       <li class="slide" data-beispiel>
         <article class="slide__innen">
-          <div class="bild bild--c slide__bild" data-platzhalter="Bild: Bergsee im Morgenlicht, Hochformat" aria-hidden="true"></div>
+          <div class="bild bild--c slide__bild" aria-hidden="true"><img src="bilder/bergsee-mit-gipfel-und-wolken.webp" width="1000" height="1500" alt="" loading="lazy" decoding="async"></div>
           <div class="slide__karte">
             <h3>Berge und Seen</h3>
             <p>Klare Luft, markierte Wege und Hütten mit Aussicht. Für alle, die draußen Energie tanken.</p>
@@ -155,7 +153,7 @@
       </li>
       <li class="slide" data-beispiel>
         <article class="slide__innen">
-          <div class="bild bild--d slide__bild" data-platzhalter="Bild: Wüstenlandschaft bei Sonnenaufgang, Hochformat" aria-hidden="true"></div>
+          <div class="bild bild--d slide__bild" aria-hidden="true"><img src="bilder/duenen-bei-sonnenaufgang.webp" width="1000" height="1250" alt="" loading="lazy" decoding="async"></div>
           <div class="slide__karte">
             <h3>Weite und Wüste</h3>
             <p>Dünen, Sternenhimmel und Stille. Eine Reise für alle, die Abstand zum Alltag suchen.</p>
@@ -173,7 +171,7 @@
 
   <!-- 4. Warum wir: dunkle Bildfläche, vier Vorteile -->
   <section class="sektion warum" aria-labelledby="h-warum">
-    <div class="warum__bild" aria-hidden="true" data-platzhalter="Bild: Bergsilhouette bei Nacht" data-parallax="0.08"></div>
+    <div class="warum__bild" aria-hidden="true" data-parallax="0.08"><img src="bilder/schneeberg-unter-sternenhimmel.webp" width="1600" height="1060" alt="" loading="lazy" decoding="async"></div>
     <div class="wrap">
       <div class="kopfzeile kopfzeile--hell">
         <h2 id="h-warum" data-licht>Warum wir der richtige Partner für deine Reise sind</h2>
@@ -199,7 +197,7 @@
       <ul class="paketliste" data-staffel>
         <li data-zeig>
           <article class="paket" data-beispiel>
-            <div class="bild bild--a paket__bild" data-platzhalter="Bild: Fluss mit Ausflugsboot, Querformat" aria-hidden="true"></div>
+            <div class="bild bild--a paket__bild" aria-hidden="true"><img src="bilder/flussschiffe-an-der-donau-in-passau.webp" width="1000" height="563" alt="" loading="lazy" decoding="async"></div>
             <div class="paket__text">
               <p class="paket__meta">5 Tage, 4 Nächte</p>
               <h3>Stadtreise am Fluss</h3>
@@ -211,7 +209,7 @@
         </li>
         <li data-zeig>
           <article class="paket" data-beispiel>
-            <div class="bild bild--b paket__bild" data-platzhalter="Bild: Tempel auf einer Insel, Querformat" aria-hidden="true"></div>
+            <div class="bild bild--b paket__bild" aria-hidden="true"><img src="bilder/haus-auf-felsformation-im-meer.webp" width="1000" height="667" alt="" loading="lazy" decoding="async"></div>
             <div class="paket__text">
               <p class="paket__meta">8 Tage, 7 Nächte</p>
               <h3>Inselzeit mit Strand</h3>
@@ -223,7 +221,7 @@
         </li>
         <li data-zeig>
           <article class="paket" data-beispiel>
-            <div class="bild bild--c paket__bild" data-platzhalter="Bild: Bergdorf am See, Querformat" aria-hidden="true"></div>
+            <div class="bild bild--c paket__bild" aria-hidden="true"><img src="bilder/bergdorf-am-see-vor-gebirge.webp" width="1000" height="667" alt="" loading="lazy" decoding="async"></div>
             <div class="paket__text">
               <p class="paket__meta">6 Tage, 5 Nächte</p>
               <h3>Bergwoche am See</h3>
@@ -302,7 +300,7 @@
 
   <!-- 9. Abschluss mit Newsletter -->
   <section class="abschluss" aria-labelledby="h-abschluss">
-    <div class="abschluss__bild" aria-hidden="true" data-platzhalter="Bild: Tempel im Abendlicht, Querformat"></div>
+    <div class="abschluss__bild" aria-hidden="true"><img src="bilder/tempel-auf-felsbogen-bei-sonnenuntergang.webp" width="1600" height="1200" alt="" loading="lazy" decoding="async"></div>
     <div class="wrap abschluss__raster">
       <div data-staffel>
         <p class="bewertung bewertung--hell" data-zeig data-beispiel><span class="sterne" aria-hidden="true"><svg width="16" height="16"><use href="#i-stern"/></svg><svg width="16" height="16"><use href="#i-stern"/></svg><svg width="16" height="16"><use href="#i-stern"/></svg><svg width="16" height="16"><use href="#i-stern"/></svg><svg width="16" height="16"><use href="#i-stern"/></svg></span>4,8 aus 1.240 Bewertungen</p>
