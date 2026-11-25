@@ -214,3 +214,6 @@ details[open] .plus{background:var(--akzent);color:var(--akzent-text)}
 
 /* Scrub-Aufstieg: nur aktiv, wenn stil.js läuft (Klasse live). Verschiebung über translate, damit Hover transform frei bleibt */
 .live [data-anheben]{opacity:var(--rise,1);translate:0 calc((1 - var(--rise,1)) * var(--weg,2.5rem))}
+
+/* Fotos statt Platzhalterverläufe */
+.bild__foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
