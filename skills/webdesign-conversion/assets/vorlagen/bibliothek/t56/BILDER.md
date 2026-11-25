@@ -14,6 +14,14 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 | kniebeuge-kettlebell.webp.webp | v2: Funktionelles Training | Eine Frau mit einem Wasserkocher in einem Fitnessstudio | meaganstonephotography | https://unsplash.com/photos/r951FqxHTao | Unsplash Lizenz | 25.11.2026 |
 | kreuzheben-langhantel.webp.webp | v2: Kraftdreikampf, Galerie Langhantel | Eine Frau, die in einem Fitnessstudio eine Langhantel hebt | weareambitious | https://unsplash.com/photos/1PM_MY1zbF4 | Unsplash Lizenz | 25.11.2026 |
 | haende-auf-matte.webp.webp | v2: Galerie Dehnen nach dem Satz | Unbekannte Person streckt sich | luna_activefitness | https://unsplash.com/photos/Z-ffKGdVha4 | Unsplash Lizenz | 25.11.2026 |
+| sport-strand-abendlicht.webp | index: Tarif Meer | Menschen am Strand während der goldenen Stunde | @georgebakos | https://unsplash.com/photos/CQIu3lBuDQs | Unsplash Lizenz | 25.11.2026 |
+| sport-frau-profil.webp | index: Mosaik Profil | Eine Frau mit langen Haaren lehnt an einem Geländer | @adam_berry | https://unsplash.com/photos/MeS_Wb5XwZ8 | Unsplash Lizenz | 25.11.2026 |
+| sport-laeufer-wald.webp | index: Mosaik Gelände | Ein Mann in Rot rennt durch einen Wald | @hendrikmorkel | https://unsplash.com/photos/PEuBo_tBHDw | Unsplash Lizenz | 25.11.2026 |
+| sport-laeufer-huegel.webp | v2: Bild im Bild | Mann läuft auf dem Berg | @asoggetti | https://unsplash.com/photos/GYr9A2CPMhY | Unsplash Lizenz | 25.11.2026 |
+| sport-dehnen-halle.webp | v2: breit Dehnen | woman in gray long sleeve shirt | @matt909 | https://unsplash.com/photos/8Naac6Zpy28 | Unsplash Lizenz | 25.11.2026 |
+| sport-frau-gegenlicht.webp | v2: Galerie Gegenlicht | Junge Frau im Schatten eines Sonnenuntergangs | @maks_d | https://unsplash.com/photos/vm1uyqPxM9Q | Unsplash Lizenz | 25.11.2026 |
+| sport-gruppe-warmup.webp | v2: Galerie Warm-up | Gruppe von Frauen | @kasparseglitis | https://unsplash.com/photos/Vdx-2lsuhm0 | Unsplash Lizenz | 25.11.2026 |
+| sport-beratung-tablet.webp | v2: Trainerin berät | Paar, das in einem Fitnessstudio auf Tablet schaut | @silverkblack | https://unsplash.com/photos/pqtmyYDnzkg | Unsplash Lizenz | 25.11.2026 |
 
 ## Hinweise
 
@@ -25,3 +33,4 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 
 * index: Vorher und Nachher, zweiter Tarif (Trainierende am Meer), Mosaik (Läuferin im Profil, im Gelände, Sportbrille), drei Coach Porträts, Läuferin am Strand, fünf Beitragsbilder (Plan, Ernährung, Erholung, Technik, Motivation)
 * v2: Hero Athletin lacht, Bild im Bild, zwei breite Bilder (Tätowierung, Dehnen), Galerie (Sonnenbrille, Läuferin im Gegenlicht, Gruppe Warm-up), Trainerin berät, fünf Beitragsbilder
+* Nachtrag 25.11.2026: oben als offen genannte Slots Tarif Meer, Mosaik Profil und Gelände sowie v2 Bild im Bild, Dehnen, Gegenlicht, Warm-up und Trainerin berät sind jetzt belegt. Weiter offen: Tätowierung, Sonnenbrille, Hochformat lacht, Porträts und Beitragsbilder.

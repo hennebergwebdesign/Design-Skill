@@ -10,6 +10,7 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 | kreuzheben-langhantel.webp.webp | Stimme 1, Mitglied mit Langhantel | Eine Frau, die in einem Fitnessstudio eine Langhantel hebt | weareambitious | https://unsplash.com/photos/1PM_MY1zbF4 | Unsplash Lizenz | 25.11.2026 |
 | seilspringen-studio.webp.webp | Stimme 2, Seilspringen | Frau springt Seil, während Mann im Fitnessstudio | silverkblack | https://unsplash.com/photos/d5Q4aBfZclM | Unsplash Lizenz | 25.11.2026 |
 | dehnung-auf-matte.webp.webp | Stimme 3, Dehnung | Frau legt sich hin | anniespratt | https://unsplash.com/photos/Q6vClAWRqFY | Unsplash Lizenz | 25.11.2026 |
+| sport-kabelzug-frau.webp | Collage A Kabelzug | Frau im schwarzen Sport-BH trainiert | @sulemakaroglu | https://unsplash.com/photos/YFmvjO3TP_s | Unsplash Lizenz | 25.11.2026 |
 
 ## Hinweise
 
@@ -22,3 +23,4 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 * Collage Frau am Kabelzug
 * vier Chip Porträts, drei Trainer Porträts
 * App Bildschirm (Oberfläche)
+* Nachtrag 25.11.2026: Slot Frau am Kabelzug belegt.

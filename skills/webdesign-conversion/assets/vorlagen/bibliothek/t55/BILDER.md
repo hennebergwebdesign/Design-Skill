@@ -15,6 +15,7 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 | haende-auf-matte.webp.webp | Beitrag, Bauchtrainer auf dem Boden | Unbekannte Person streckt sich | luna_activefitness | https://unsplash.com/photos/Z-ffKGdVha4 | Unsplash Lizenz | 25.11.2026 |
 | haende-auf-schwarzer-matte.webp.webp | Beitrag, Trinkflasche und Handtuch | ein Paar Füße mit Sandalen | mathildelangevin | https://unsplash.com/photos/aBJ3A-2LJyU | Unsplash Lizenz | 25.11.2026 |
 | hund-uebung-matte.webp.webp | Beitrag, Dehnübung auf der Matte | Frau in schwarzem Sport-BH und blauer Jeans | lgnwvr | https://unsplash.com/photos/amgv9YUg-MA | Unsplash Lizenz | 25.11.2026 |
+| sport-zwei-frauen-mauer.webp | Wandel Bild B | Zwei Frauen sitzen auf einer Mauer | @diseniatica | https://unsplash.com/photos/2wSpGuW0YQw | Unsplash Lizenz | 25.11.2026 |
 
 ## Hinweise
 
@@ -30,3 +31,4 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 * Zwei Trainierende im Gespräch
 * Vorher und Nachher
 * Trainer mit Kurzhantel, Porträt (Preise)
+* Nachtrag 25.11.2026: Slot Zwei Trainierende im Gespräch belegt.
