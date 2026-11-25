@@ -1,0 +1,300 @@
+/* stil.css der Vorlage "Fitness Kobalt Kontrast": Gestaltung, gilt für beide Varianten. Variante 1 steht hier, Variante 2 in stil-v2.css.
+   Farben nur aus den Tokens in marke.css, Mechanik aus ../_basis/basis.css. Mobil zuerst.
+   Bei reduzierter Bewegung und ohne JavaScript bleibt alles sichtbar. */
+:root{
+  --h1-w:clamp(2.1rem,.9rem + 5.2vw,5rem);
+  --h2-w:clamp(1.75rem,1rem + 3.3vw,3.5rem);
+}
+:focus-visible{outline-color:var(--akzent)}
+.dunkel :focus-visible,.held :focus-visible,.kopf :focus-visible,.fuss :focus-visible,.cta :focus-visible{outline-color:var(--akzent-hell)}
+h1,h2,h3{text-transform:uppercase}
+h1{font-size:var(--h1-w);line-height:1.02;letter-spacing:-.015em}
+h2{font-size:var(--h2-w);line-height:1.04}
+h3{font-size:clamp(1.05rem,1rem + .5vw,1.3rem);line-height:1.15}
+.zahl{font-family:var(--schrift-titel);font-weight:700;line-height:1;letter-spacing:-.02em}
+.akz{color:var(--akzent-hell)}
+.dunkel{background:var(--flaeche-dunkel);color:var(--text-auf-dunkel)}
+.dunkel p{color:var(--text-leise-dunkel)}
+.mitte{text-align:center;display:grid;justify-items:center;gap:1rem}
+.mitte h2{max-width:22ch}
+.hinweis{margin-top:1rem;text-align:center;font-size:1rem;color:var(--text-leise)}
+
+/* Knöpfe: Pille mit rundem Doppelpfeil */
+.knopf{padding:.35rem .35rem .35rem 1.5rem;gap:1.1rem;font-family:var(--schrift-titel);font-weight:700;font-size:.9rem;letter-spacing:.02em;text-transform:uppercase;min-height:3rem}
+.knopf__kreis{display:inline-flex;align-items:center;justify-content:center;flex:none;width:2.4rem;height:2.4rem;border-radius:50%;background:#fff;color:var(--akzent);transition:transform var(--dauer-kurz) var(--kurve)}
+.knopf:hover .knopf__kreis{transform:translateX(3px)}
+.knopf--hell{background:#fff;color:var(--text)}
+.knopf--hell .knopf__kreis{background:var(--akzent);color:#fff}
+.knopf--dunkel{background:var(--flaeche-dunkel);color:var(--text-auf-dunkel)}
+.knopf--dunkel .knopf__kreis{background:var(--akzent);color:#fff}
+.knopf--text{background:transparent;color:var(--akzent-hell);padding-left:.5rem}
+.knopf--text .knopf__kreis{background:var(--akzent);color:#fff}
+.knopfreihe{display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem;margin-top:1.75rem}
+.rund{display:inline-flex;align-items:center;justify-content:center;width:3rem;height:3rem;border-radius:50%;box-shadow:inset 0 0 0 1.5px var(--linie);transition:background-color var(--dauer-kurz),color var(--dauer-kurz)}
+.rund:hover{background:var(--flaeche-dunkel);color:#fff;box-shadow:none}
+.dunkel .rund{box-shadow:inset 0 0 0 1.5px var(--linie-dunkel)}
+.dunkel .rund:hover{background:var(--akzent);color:#fff}
+.rund[aria-disabled="true"]{opacity:.35;pointer-events:none}
+
+/* Kicker: runde Marke mit Symbol, Text in Versalien */
+.kicker{display:inline-flex;align-items:center;gap:.55rem;font-family:var(--schrift-titel);font-weight:700;font-size:1rem;letter-spacing:.04em;text-transform:uppercase;color:var(--text)}
+.kicker__icon{display:inline-flex;align-items:center;justify-content:center;flex:none;width:1.75rem;height:1.75rem;border-radius:50%;background:var(--flaeche-dunkel);color:var(--akzent-hell)}
+.dunkel .kicker,.kicker--hell,.cta .kicker{color:var(--text-auf-dunkel)}
+.dunkel .kicker__icon,.cta .kicker__icon{background:var(--akzent);color:#fff}
+.kopfzeile{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:1.25rem 2rem;margin-bottom:clamp(2rem,5vw,3.5rem)}
+.kopfzeile>div:first-child{display:grid;gap:1rem;max-width:34rem}
+.kopfzeile__rechts{display:flex;align-items:center;gap:1rem}
+
+/* Bildplatzhalter: dunkle Tonflächen mit hellem Lichtfleck */
+.bild{--lichter:radial-gradient(70% 60% at 75% 25%,color-mix(in srgb,var(--akzent-hell) 42%,transparent),transparent 70%)}
+.bild--a{--bild-grund:var(--lichter),linear-gradient(160deg,var(--ton-1),var(--ton-6))}
+.bild--b{--bild-grund:var(--lichter),linear-gradient(160deg,var(--ton-3),var(--ton-2))}
+.bild--c{--bild-grund:var(--lichter),linear-gradient(160deg,var(--ton-5),var(--ton-4))}
+.bild--d{--bild-grund:var(--lichter),linear-gradient(160deg,var(--ton-2),var(--ton-1))}
+.bild[data-platzhalter]::after{opacity:1;z-index:2;inset:.75rem .75rem auto auto;max-width:calc(100% - 1.5rem);padding:.3rem .65rem;border-radius:8px;background:color-mix(in srgb,var(--flaeche-dunkel) 82%,transparent);color:var(--text-auf-dunkel);font-size:1rem;line-height:1.3}
+
+/* Kopf: Logo links, Menü Mitte (ab 62rem), Telefon und Beitreten rechts */
+.kopf{position:absolute;top:0;left:0;right:0;z-index:60;padding:.75rem var(--rand) 0;pointer-events:none;color:var(--kopf-text,var(--text-auf-dunkel))}
+.js .kopf{position:fixed}
+.kopf>*{pointer-events:auto}
+.kopf__zeile{position:relative;display:flex;align-items:center;justify-content:space-between;gap:.5rem;max-width:var(--breite);margin-inline:auto}
+.kopf__logo{display:inline-flex;align-items:center;gap:.4rem;min-height:2.75rem;padding:.3rem .65rem .3rem .4rem;border-radius:999px;background:var(--kopf-chip,var(--flaeche-dunkel-2));font-family:var(--schrift-titel);font-weight:700;font-size:.8125rem;letter-spacing:.02em;text-transform:uppercase;white-space:nowrap}
+.kopf__zeichen{width:1.9rem;height:1.9rem;flex:none;color:var(--akzent-hell)}
+.kopf__rechts{display:flex;align-items:center;gap:.5rem}
+.kopf__tel{display:inline-flex;align-items:center;gap:.6rem;min-height:2.75rem;font-family:var(--schrift-titel);font-weight:600;font-size:.9rem}
+.kopf__tel-icon{display:inline-flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border-radius:50%;background:var(--kopf-chip,var(--flaeche-dunkel-2))}
+.kopf__tel-text{display:none}
+.kopf__knopf{min-height:2.75rem;padding:.25rem .3rem .25rem 1.1rem;gap:.7rem;font-size:.8125rem}
+.kopf__knopf .knopf__kreis{width:2.1rem;height:2.1rem;display:none}
+.kopf__knopf{padding:.25rem 1rem}
+.kopf__menue-tel{display:block}
+.kopf__tel{display:none}
+.kopf__rechts{gap:.4rem}
+@media (min-width:26rem){.kopf__tel{display:inline-flex}.kopf__menue-tel{display:none}}
+@media (min-width:30rem){.kopf__knopf .knopf__kreis{display:inline-flex}.kopf__knopf{padding:.25rem .3rem .25rem 1.1rem}.kopf__logo{font-size:.9rem;padding-inline:.45rem .85rem}.kopf__rechts{gap:.5rem}}
+.kopf__menueknopf{display:none;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border-radius:50%;background:var(--kopf-chip,var(--flaeche-dunkel-2))}
+.kopf__menueknopf .balken{position:relative;display:block;width:1.15rem;height:2px;background:currentColor;border-radius:2px;transform:translateY(-4px);transition:transform var(--dauer-mittel) var(--kurve)}
+.kopf__menueknopf .balken::before{content:"";position:absolute;left:0;top:8px;width:100%;height:2px;background:currentColor;border-radius:2px;transition:transform var(--dauer-mittel) var(--kurve)}
+.js .kopf__menueknopf{display:inline-flex}
+.kopf__menueknopf[aria-expanded="true"] .balken{transform:rotate(45deg)}
+.kopf__menueknopf[aria-expanded="true"] .balken::before{transform:translateY(-8px) rotate(-90deg)}
+.kopf__nav{position:absolute;left:0;right:0;top:100%;margin-top:.5rem}
+.kopf__menue{display:flex;flex-wrap:wrap;gap:0 .5rem;padding:.5rem;border-radius:var(--radius-karte);background:var(--kopf-chip,var(--flaeche-dunkel-2))}
+.kopf__menue a{display:flex;align-items:center;min-height:2.75rem;padding-inline:.9rem;font-weight:600}
+.kopf__menue a:hover{color:var(--akzent-hell)}
+.js .kopf__nav:not([data-offen="true"]){display:none}
+.js .kopf__menue{flex-direction:column;padding:.75rem;box-shadow:0 18px 32px color-mix(in srgb,#000 35%,transparent)}
+.js .kopf__menue a{min-height:3rem}
+@media (min-width:62rem){
+  .kopf__menueknopf,.js .kopf__menueknopf{display:none}
+  .kopf__nav,.js .kopf__nav,.js .kopf__nav:not([data-offen="true"]){position:static;display:block;margin:0}
+  .kopf__menue,.js .kopf__menue{flex-direction:row;flex-wrap:nowrap;gap:.1rem;padding:.25rem;border-radius:999px;box-shadow:none}
+  .kopf__menue a,.js .kopf__menue a{min-height:2.4rem;padding-inline:1rem;border-radius:999px}
+  nav a[aria-current="location"]{text-decoration:none;background:color-mix(in srgb,currentColor 14%,transparent)}
+  .kopf__menue-tel{display:none}
+  .kopf__tel-icon{display:none}
+  .kopf__tel-text{display:inline}
+  .kopf__tel{padding-inline:.5rem}
+  .kopf__knopf{font-size:.875rem}
+}
+
+/* 1. Held */
+.held{position:relative;min-height:max(40rem,100svh);display:flex;align-items:flex-end;overflow:hidden;background:var(--flaeche-dunkel);color:var(--text-auf-dunkel)}
+.held__bild{position:absolute;inset:0;border-radius:0;--bild-grund:radial-gradient(60% 70% at 72% 28%,color-mix(in srgb,var(--akzent-hell) 55%,var(--ton-1)),transparent 72%),linear-gradient(170deg,var(--ton-1),var(--flaeche-dunkel))}
+.held__bild[data-platzhalter]::after{inset:6rem 1rem auto auto}
+.held__schleier{position:absolute;inset:0;background:linear-gradient(0deg,color-mix(in srgb,var(--flaeche-dunkel) 70%,transparent),transparent 60%)}
+.held__innen{position:relative;z-index:1;width:min(100% - 2*var(--rand),var(--breite));margin-inline:auto;padding-block:8rem 2.5rem;display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:2rem}
+.held__text{display:grid;gap:1.5rem;justify-items:start;max-width:46rem}
+.held__knoepfe{display:flex;align-items:center;gap:.75rem}
+.rund--tel{color:var(--text-auf-dunkel);box-shadow:inset 0 0 0 1.5px var(--text-auf-dunkel)}
+.held__chip{display:inline-flex;gap:.35em;padding:.45rem .9rem;border-radius:999px;background:color-mix(in srgb,var(--flaeche-dunkel) 78%,transparent);font-family:var(--schrift-titel);font-weight:600;font-size:.9rem;text-transform:uppercase;color:var(--text-auf-dunkel)}
+.held__chip strong{color:var(--akzent-hell)}
+.siegel{display:none;gap:.75rem}
+.siegel li{display:flex;align-items:center;gap:.6rem;padding:.6rem 1rem;border-radius:var(--radius-karte);background:color-mix(in srgb,var(--flaeche-dunkel) 70%,transparent);font-family:var(--schrift-titel);font-weight:600;font-size:.875rem;text-transform:uppercase;line-height:1.2}
+.siegel svg{color:var(--akzent-hell)}
+.siegel small{display:block;font-family:var(--schrift-text);font-weight:400;font-size:1rem;text-transform:none;color:var(--text-leise-dunkel)}
+@media (min-width:48rem){.siegel{display:flex}}
+
+/* 2. Über uns */
+.ueber__raster{display:grid;gap:2rem;margin-top:clamp(2.5rem,6vw,4.5rem);align-items:start}
+.ueber__klein{aspect-ratio:1/1;max-width:14rem}
+.ueber__gross{aspect-ratio:4/5}
+.ueber__mitte{display:grid;gap:1.25rem;align-content:start}
+.grosszahl{display:flex;align-items:center;gap:1rem;padding-bottom:1.25rem;border-bottom:1px solid var(--linie)}
+.grosszahl .zahl{font-size:clamp(3.5rem,2.4rem + 4.4vw,6rem)}
+.grosszahl__text{font-family:var(--schrift-titel);font-weight:700;font-size:1rem;text-transform:uppercase;line-height:1.15;max-width:11ch}
+.ueber__fuss{display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.5rem;margin-top:.5rem}
+.bewertung{display:flex;align-items:center;gap:.75rem}
+.avatare{display:inline-flex}
+.avatare i{width:2.25rem;height:2.25rem;border-radius:50%;border:2px solid var(--flaeche);margin-left:-.6rem}
+.avatare i:first-child{margin-left:0}
+.avatar--1{background:linear-gradient(135deg,var(--ton-3),var(--ton-6))}
+.avatar--2{background:linear-gradient(135deg,var(--ton-5),var(--ton-2))}
+.avatar--3{background:linear-gradient(135deg,var(--ton-1),var(--ton-4))}
+.bewertung__sterne{display:flex;gap:.1rem;color:var(--akzent)}
+.bewertung p:last-child{font-size:1rem;color:var(--text-leise)}
+@media (min-width:62rem){
+  .ueber__raster{grid-template-columns:12.5rem minmax(0,1fr) minmax(0,22rem);gap:clamp(2rem,4vw,4rem)}
+  .ueber__mitte{padding-top:1rem}
+}
+
+/* 3. Leistungen */
+.dkarten{display:grid;gap:1rem}
+.dkarte{display:flex;flex-direction:column;justify-content:space-between;gap:2.5rem;height:100%;min-height:21rem;padding:1.5rem;border-radius:var(--radius-karte);background:var(--flaeche-dunkel-2);transition:transform var(--dauer-mittel) var(--kurve)}
+.dkarte:hover{transform:translateY(-4px)}
+.dkarte__icon{color:var(--akzent-hell)}
+.dkarte__text{display:grid;gap:.75rem}
+.dkarte p{font-size:1rem}
+.dkarte__link{justify-self:start;display:inline-flex;align-items:center;min-height:2.75rem;font-weight:700;text-decoration:underline;text-underline-offset:.25em;color:var(--akzent-hell)}
+.dkarte--akzent{background:var(--akzent);color:#fff}
+.dkarte--akzent .dkarte__icon,.dkarte--akzent .dkarte__link,.dkarte--akzent p{color:#fff}
+@media (min-width:40rem){.dkarten{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:62rem){.dkarten{grid-template-columns:repeat(4,minmax(0,1fr))}}
+
+/* 4. Warum wir */
+.warum__raster{display:grid;gap:2.5rem;align-items:center}
+.warum__bild{aspect-ratio:4/5;max-width:34rem}
+.warum__text{display:grid;gap:1.25rem;align-content:center;justify-items:start;max-width:36rem}
+.warum__zahlen{display:flex;align-items:flex-end;justify-content:space-between;gap:1.5rem;width:100%;margin-top:1rem;padding-top:1.5rem;border-top:1px solid var(--linie)}
+.warum__zahlen dl{display:grid;gap:1.5rem;margin:0}
+.warum__zahlen dl div{display:grid;gap:.4rem}
+.warum__zahlen dt{font-size:clamp(2.5rem,1.8rem + 3vw,4.25rem)}
+.warum__zahlen dd{margin:0;font-family:var(--schrift-titel);font-weight:600;font-size:.9rem;text-transform:uppercase}
+.warum__mini{aspect-ratio:4/3;width:min(11rem,40%)}
+@media (min-width:62rem){.warum__raster{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(3rem,7vw,7rem)}}
+
+/* 5. Vorher Nachher */
+.vorher{background:var(--flaeche-alt)}
+.vn{--pos:50%;position:relative;margin-top:clamp(2rem,5vw,3.5rem);aspect-ratio:4/5;border-radius:var(--radius-karte);overflow:hidden}
+.vn__bild{position:absolute;inset:0;border-radius:0}
+.vn__bild--nachher{clip-path:inset(0 0 0 var(--pos))}
+.vn__marke{position:absolute;bottom:1rem;z-index:3;padding:.5rem 1rem;border-radius:8px;background:var(--akzent);color:#fff;font-family:var(--schrift-titel);font-weight:700;font-size:.9rem;text-transform:uppercase}
+.vn__marke--vorher{left:1rem}
+.vn__marke--nachher{right:1rem}
+.vn input{position:absolute;inset:0;z-index:4;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize;touch-action:pan-y}
+.vn__griff{position:absolute;z-index:3;left:var(--pos);top:50%;width:3rem;height:3rem;margin:-1.5rem 0 0 -1.5rem;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#fff;color:var(--akzent);box-shadow:0 0 0 4px color-mix(in srgb,#fff 35%,transparent);pointer-events:none}
+.vn:focus-within .vn__griff{box-shadow:0 0 0 4px var(--akzent-hell)}
+@media (min-width:48rem){.vn{aspect-ratio:16/8}}
+
+/* 6. Preise */
+.umschalter-wrap{flex-wrap:wrap}
+.umschalter__hinweis{font-family:var(--schrift-titel);font-weight:600;font-size:.875rem;text-transform:uppercase;color:var(--text-auf-dunkel)}
+.umschalter{display:inline-flex;padding:.25rem;border-radius:999px;box-shadow:inset 0 0 0 1px var(--linie-dunkel)}
+.umschalter button{min-height:2.75rem;padding-inline:1.2rem;border-radius:999px;font-family:var(--schrift-titel);font-weight:600;font-size:.875rem;text-transform:uppercase;transition:background-color var(--dauer-kurz)}
+.umschalter button[aria-pressed="true"]{background:var(--akzent);color:#fff}
+.tarife{display:grid;gap:1rem}
+.tarif{display:grid;gap:1.5rem;padding:1.25rem;border-radius:var(--radius-karte);background:var(--flaeche-dunkel-2)}
+.tarif__bild{order:-1;aspect-ratio:16/10}
+.tarif__links{display:grid;gap:1rem;align-content:start;justify-items:start}
+.tarif__name{font-family:var(--schrift-titel);font-weight:700;font-size:1rem;text-transform:uppercase;color:var(--akzent-hell)}
+.tarif__preis{display:flex;align-items:baseline;gap:.5rem}
+.tarif__preis .zahl{font-size:clamp(2.25rem,1.6rem + 2.5vw,3.5rem);color:var(--text-auf-dunkel)}
+.tarif__einheit{font-size:1rem}
+.tarif__text{font-size:1rem}
+.tarif__titel{margin-top:.5rem;font-family:var(--schrift-titel);font-weight:700;font-size:.9rem;text-transform:uppercase;color:var(--text-auf-dunkel)}
+.tarif__liste{display:grid;gap:.6rem;font-size:1rem;color:var(--text-leise-dunkel)}
+.tarif__liste li{display:flex;align-items:center;gap:.6rem}
+.haken{display:inline-flex;align-items:center;justify-content:center;flex:none;width:1.4rem;height:1.4rem;border-radius:50%;background:var(--akzent);color:#fff}
+.tarif--akzent{background:var(--akzent);color:#fff}
+.tarif--akzent .tarif__name,.tarif--akzent .tarif__preis .zahl,.tarif--akzent .tarif__titel,.tarif--akzent p,.tarif--akzent .tarif__liste{color:#fff}
+.tarif--akzent .haken{background:#fff;color:var(--akzent)}
+@media (min-width:40rem){.tarif{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);padding:1.5rem}.tarif__bild{order:0;aspect-ratio:auto;min-height:100%}}
+@media (min-width:62rem){.tarife{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* 7. Stimmen: Mosaik */
+.mosaik{display:grid;gap:1rem;margin-top:clamp(2rem,5vw,3.5rem)}
+.mosaik__bild{aspect-ratio:16/10}
+.zitat{margin:0;display:flex;flex-direction:column;gap:1.25rem;min-height:18rem;padding:1.5rem;border-radius:var(--radius-karte)}
+.zitat--akzent{background:var(--akzent);color:#fff}
+.zitat--dunkel{background:var(--flaeche-dunkel);color:var(--text-auf-dunkel)}
+.zitat__marke{display:inline-flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border-radius:10px;background:var(--flaeche-dunkel);color:var(--akzent-hell)}
+.zitat--akzent .zitat__marke{background:#fff;color:var(--akzent)}
+.zitat blockquote{margin:0;flex:1}
+.zitat blockquote p{font-family:var(--schrift-titel);font-weight:600;font-size:clamp(1.05rem,1rem + .5vw,1.3rem);line-height:1.3;text-transform:uppercase}
+.zitat figcaption{display:flex;align-items:center;gap:.75rem}
+.zitat figcaption strong{display:block;font-family:var(--schrift-titel);text-transform:uppercase;font-size:.9rem}
+.zitat figcaption span span{font-size:1rem;opacity:.85}
+.avatar-gross{width:2.75rem;height:2.75rem;border-radius:50%;flex:none}
+@media (min-width:40rem){.mosaik{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:62rem){
+  .mosaik{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:20rem 19rem;gap:1rem}
+  .mosaik>*{min-height:0;aspect-ratio:auto}
+  .mosaik__bild--1{grid-column:1;grid-row:1}
+  .zitat--akzent{grid-column:2;grid-row:1}
+  .mosaik__bild--3{grid-column:3;grid-row:1}
+  .zitat--dunkel:nth-of-type(1){grid-column:1;grid-row:2}
+}
+.partner__titel{margin-top:clamp(3rem,6vw,5rem);text-align:center;font-family:var(--schrift-titel);font-weight:700;font-size:1rem;text-transform:uppercase}
+.pillen{display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem;max-width:56rem;margin:1.5rem auto 0}
+.pille{display:inline-flex;align-items:center;justify-content:center;min-height:3.25rem;padding:.5rem 1.6rem;border-radius:999px;box-shadow:inset 0 0 0 1px var(--linie);--logo-h:1.4rem}
+.pille--dunkel{background:var(--flaeche-dunkel);color:var(--text-auf-dunkel);box-shadow:none}
+
+/* 8. Team */
+.coaches{display:grid;gap:1rem}
+.coach{position:relative;margin:0}
+.coach__bild{aspect-ratio:4/5}
+.coach__tag{position:absolute;left:0;bottom:1.25rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;max-width:calc(100% - 1.5rem);padding:.7rem .7rem .7rem 1.25rem;border-radius:0 var(--radius-karte) var(--radius-karte) 0;background:var(--akzent);color:#fff}
+.coach__tag h3{font-size:1.05rem}
+.coach__tag p{font-size:1rem;color:#fff}
+.coach__link{display:inline-flex;align-items:center;justify-content:center;flex:none;width:2.75rem;height:2.75rem;border-radius:50%;background:#fff;color:var(--akzent)}
+@media (min-width:40rem){.coaches{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+/* 9. Beitreten */
+.beitreten__raster{display:grid;gap:2.5rem;align-items:stretch}
+.beitreten__bild{aspect-ratio:4/5;position:relative}
+.chips{position:absolute;left:1rem;right:1rem;bottom:1rem;display:flex;flex-wrap:wrap;gap:.5rem;z-index:3}
+.chip{display:inline-flex;align-items:center;gap:.7rem;padding:.6rem .9rem;border-radius:var(--radius-karte);background:#fff;color:var(--text);flex:1 1 12rem}
+.chip--akzent{background:var(--akzent);color:#fff}
+.chip__icon{display:inline-flex;flex:none}
+.chip small{display:block;font-size:1rem;opacity:.8}
+.chip a{font-family:var(--schrift-titel);font-weight:700;font-size:.9rem;overflow-wrap:anywhere}
+.beitreten__form{display:grid;gap:1.25rem;align-content:center;justify-items:start}
+.formular{display:grid;gap:1rem;width:100%}
+.formular__feld{display:grid;gap:.35rem}
+.formular label{font-family:var(--schrift-titel);font-weight:600;font-size:.875rem;text-transform:uppercase}
+.formular input,.formular select{width:100%;min-height:3.25rem;padding:.7rem 1rem;font:inherit;font-size:1rem;color:var(--text);background:#fff;border:1px solid var(--text-leise);border-radius:10px}
+.formular input:focus-visible,.formular select:focus-visible{outline:3px solid var(--akzent);outline-offset:2px}
+.formular__recht{font-size:1rem;color:var(--text-leise)}
+.formular__recht a{text-decoration:underline;text-underline-offset:.2em}
+.formular__senden{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:3.4rem;padding:.35rem .35rem .35rem 1.5rem;border-radius:999px;background:var(--flaeche-dunkel);color:var(--text-auf-dunkel);font-family:var(--schrift-titel);font-weight:700;font-size:.9rem;text-transform:uppercase}
+.formular__senden .knopf__kreis{background:var(--akzent);color:#fff}
+.formular__meldung{padding:.8rem 1rem;border-radius:12px;background:var(--flaeche-alt);font-size:1rem}
+.formular__meldung[hidden]{display:none}
+@media (min-width:40rem){.formular{grid-template-columns:repeat(2,minmax(0,1fr))}.formular__feld--breit{grid-column:1/-1}}
+@media (min-width:62rem){.beitreten__raster{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(3rem,6vw,6rem)}.beitreten__bild{aspect-ratio:auto;min-height:36rem}}
+
+/* Aufruf als Karte */
+.cta-wrap{padding-bottom:var(--raum)}
+.cta{position:relative;overflow:hidden;border-radius:calc(var(--radius-karte) + 6px);background:var(--flaeche-dunkel);color:var(--text-auf-dunkel);padding:clamp(3rem,8vw,6rem) 1.25rem;text-align:center}
+.cta__muster{position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgb(255 255 255/.1) 1.5px,transparent 0);background-size:1.6rem 1.6rem}
+.cta__innen{position:relative;display:grid;justify-items:center;gap:1.25rem}
+.cta h2{max-width:18ch}
+
+/* Blog: Spur */
+.spur{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 max(var(--rand),calc((100% - var(--breite))/2)) 1rem;scroll-padding-inline:max(var(--rand),calc((100% - var(--breite))/2));scrollbar-width:thin;overscroll-behavior-x:contain}
+.spur>li{flex:none;width:min(78vw,20rem);scroll-snap-align:start}
+.steuerung{display:flex;gap:.6rem}
+.steuerung[hidden]{display:none}
+.beitrag{display:grid;gap:.9rem;align-content:start}
+.beitrag__bild{aspect-ratio:4/3;border-radius:var(--radius-karte)}
+.beitrag__meta{position:absolute;left:0;bottom:.8rem;z-index:2;padding:.4rem .8rem;border-radius:0 8px 8px 0;background:var(--flaeche-dunkel);color:var(--text-auf-dunkel);font-family:var(--schrift-titel);font-weight:600;font-size:.8125rem;text-transform:uppercase}
+.beitrag__meta span{color:var(--akzent-hell)}
+.beitrag h3 a:hover{color:var(--akzent)}
+.beitrag__autor{display:flex;align-items:center;gap:.6rem;font-family:var(--schrift-titel);font-weight:600;font-size:.875rem;text-transform:uppercase}
+.avatar-klein{width:2rem;height:2rem;border-radius:50%;background:linear-gradient(135deg,var(--ton-5),var(--ton-2))}
+
+/* Fuß */
+.fuss__bildwrap{position:relative;overflow:hidden;height:clamp(14rem,40vw,34rem)}
+.fuss__bild{position:absolute;inset:-8% 0;border-radius:0}
+.fuss__bild[data-platzhalter]::after{inset:auto 1rem 2rem auto}
+.fuss__karte{background:var(--flaeche-dunkel);color:var(--text-auf-dunkel);padding-block:clamp(2.5rem,6vw,4.5rem) 1.25rem}
+.fuss__oben{display:grid;gap:2.5rem}
+.fuss__marke{display:grid;gap:1.25rem;justify-items:start;max-width:24rem}
+.fuss__marke p,.fuss__spalten li,.fuss__unten p{font-size:1rem;color:var(--text-leise-dunkel)}
+.kopf__logo--fuss{background:var(--flaeche-dunkel-2);color:var(--text-auf-dunkel)}
+.fuss__spalten{display:grid;gap:1.5rem 2rem;grid-template-columns:repeat(2,minmax(0,1fr))}
+.fuss__titel{margin-bottom:.5rem;font-family:var(--schrift-titel);font-weight:700;font-size:.9rem;text-transform:uppercase}
+.fuss__spalten a{display:inline-flex;align-items:center;min-height:2.5rem;overflow-wrap:anywhere}
+.fuss__spalten a:hover{color:var(--akzent-hell)}
+.fuss__unten{margin-top:2.5rem;padding-top:1.25rem;border-top:1px solid var(--linie-dunkel)}
+@media (min-width:62rem){.fuss__oben{grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:4rem}.fuss__spalten{grid-template-columns:repeat(3,minmax(0,1fr))}}

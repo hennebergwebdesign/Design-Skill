@@ -1,0 +1,334 @@
+/* stil.css der Vorlage "Produkt hell Raster": Gestaltung. Farben nur aus den Tokens in marke.css, Mechanik aus ../_basis/basis.css.
+   Mobil zuerst. Heller Grund mit Rasterlinien, ein roter Akzent, Titel in Versalien, schwarze Abschnitte mit rotem Schimmer am Rand.
+   Die Oberflächenbilder sind aus HTML gebaut (aria-hidden, Beispielwerte). Bei reduzierter Bewegung und ohne JavaScript bleibt alles sichtbar. */
+:root{--h1-m:clamp(2.3rem,.9rem + 6.2vw,6rem);--h2-m:clamp(1.9rem,1.1rem + 3.2vw,3.75rem);--luft:clamp(4.5rem,9vw,8rem)}
+:focus-visible{outline-color:var(--akzent)}
+.dunkel :focus-visible,.fuss :focus-visible,.leiste :focus-visible{outline-color:var(--akzent-auf-dunkel)}
+h1,h2{text-transform:uppercase}
+h1{font-size:var(--h1-m);line-height:.98}
+h2{font-size:var(--h2-m);line-height:1.02}
+h3{font-size:var(--h3);line-height:1.15}
+.sektion{padding-block:var(--luft)}
+.kicker{display:inline-flex;align-items:center;gap:.6rem;font-size:1rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--akzent)}
+.kicker::before{content:"";width:.5rem;height:.5rem;border-radius:50%;background:currentColor;flex:none}
+.kopfzeile{display:grid;gap:1rem;justify-items:start;max-width:46rem;margin-bottom:clamp(2.5rem,5vw,4rem)}
+.kopfzeile p:not(.kicker){color:var(--text-leise);font-size:var(--text-l);max-width:36rem}
+.dunkel .kopfzeile p:not(.kicker){color:var(--text-leise-dunkel)}
+
+/* Knöpfe: Hauptknopf schwarz mit rotem Pfeilfeld, zweiter Knopf ruhig grau */
+.knopf{justify-content:space-between;gap:1rem;font-size:1rem;font-weight:600;min-height:3.25rem;padding:.4rem .4rem .4rem 1.4rem;background:var(--tinte);color:#fff;box-shadow:0 8px 20px -8px rgba(16,16,18,.5)}
+.knopf:hover{box-shadow:0 12px 26px -8px rgba(16,16,18,.6)}
+.knopf__feld{display:grid;place-items:center;width:2.5rem;height:2.5rem;border-radius:9px;background:var(--akzent);color:#fff;flex:none}
+.knopf__feld svg{width:1.2rem;height:1.2rem}
+.knopf--ruhig{background:var(--flaeche-alt);color:var(--text);padding:.4rem 1.4rem;justify-content:center;box-shadow:inset 0 0 0 1px var(--linie)}
+.knopf--ruhig:hover{box-shadow:inset 0 0 0 1px var(--linie)}
+.knopf--hell{background:#fff;color:var(--text);padding:.4rem 1.4rem;justify-content:center}
+.knopf--klein{min-height:2.75rem;padding:.3rem .3rem .3rem 1rem}
+.knopf--klein .knopf__feld{width:2.1rem;height:2.1rem}
+.symbol{width:1.5rem;height:1.5rem;flex:none}
+
+/* Bildplatzhalter */
+.bild{--licht:radial-gradient(70% 60% at 76% 20%,color-mix(in srgb,#fff 28%,transparent),transparent 70%)}
+.bild--a{--bild-grund:var(--licht),linear-gradient(160deg,var(--ton-1),var(--ton-6))}
+.bild--b{--bild-grund:var(--licht),linear-gradient(200deg,var(--ton-2),var(--ton-6))}
+.bild--c{--bild-grund:var(--licht),linear-gradient(150deg,var(--ton-3),var(--ton-6))}
+.bild--d{--bild-grund:var(--licht),linear-gradient(210deg,var(--ton-4),var(--ton-6))}
+.bild--e{--bild-grund:var(--licht),linear-gradient(170deg,var(--ton-5),var(--ton-6))}
+.bild[data-platzhalter]::after{opacity:1;z-index:2;inset:.75rem .75rem auto auto;max-width:calc(100% - 1.5rem);padding:.3rem .65rem;border-radius:8px;background:rgba(255,255,255,.92);color:var(--text);font-size:1rem;line-height:1.3}
+
+/* Ankündigung und Kopf */
+.ansage{background:var(--akzent);color:var(--akzent-text);text-align:center;padding:.5rem var(--rand);font-weight:600;font-size:1rem}
+.kopf{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);border-bottom:1px solid var(--linie)}
+.kopf__leiste{position:relative;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;width:min(100% - 2*var(--rand),var(--breite));margin-inline:auto;padding-block:.6rem}
+.js .kopf__leiste{flex-wrap:nowrap}
+.kopf__logo{display:inline-flex;align-items:center;gap:.5rem;min-height:2.75rem;font-family:var(--schrift-titel);font-weight:700;font-size:1.5rem;letter-spacing:-.04em;margin-right:auto;white-space:nowrap}
+.kopf__zeichen{width:2rem;height:2rem}
+.kopf__knopf{white-space:nowrap}
+.kopf__burger{display:none;width:2.75rem;height:2.75rem;border-radius:10px;align-items:center;justify-content:center;background:var(--akzent-hell)}
+.js .kopf__burger{display:inline-flex}
+.burger,.burger::before{display:block;width:1.2rem;height:2px;background:var(--akzent);border-radius:2px;transition:transform var(--dauer-mittel) var(--kurve)}
+.burger{position:relative;transform:translateY(-4px)}
+.burger::before{content:"";position:absolute;left:0;top:8px}
+.kopf__burger[aria-expanded="true"] .burger{transform:rotate(45deg)}
+.kopf__burger[aria-expanded="true"] .burger::before{transform:translateY(-8px) rotate(-90deg)}
+.kopf__nav{order:5;flex-basis:100%}
+.kopf__menue{display:flex;flex-wrap:wrap;gap:0 .25rem}
+.kopf__menue a{display:flex;align-items:center;min-height:2.75rem;padding-inline:.9rem;border-radius:8px;font-weight:500;transition:background-color var(--dauer-kurz)}
+.kopf__menue a:hover,.kopf__menue a[aria-current="location"]{background:var(--flaeche-alt)}
+nav a[aria-current="location"]{text-decoration:none}
+.js .kopf__nav{position:absolute;top:100%;left:calc(-1 * var(--rand));right:calc(-1 * var(--rand));padding:.5rem var(--rand) 1rem;background:#fff;border-bottom:1px solid var(--linie);box-shadow:var(--schatten)}
+.js .kopf__nav:not([data-offen="true"]){display:none}
+.js .kopf__menue{flex-direction:column}
+.js .kopf__menue a{min-height:3rem}
+@media (min-width:62rem){
+  .kopf__logo{margin-right:2rem}
+  .kopf__nav,.js .kopf__nav,.js .kopf__nav:not([data-offen="true"]){position:static;display:block;order:0;flex-basis:auto;padding:0;background:none;border:0;box-shadow:none;margin-right:auto}
+  .kopf__burger,.js .kopf__burger{display:none}
+  .js .kopf__menue,.kopf__menue{flex-direction:row;flex-wrap:nowrap}
+  .kopf__knopf{order:6}
+}
+
+/* Pillen: kleine rote Etiketten mit Griffpunkt */
+.pille{position:absolute;display:inline-flex;align-items:center;padding:.45rem .9rem;border-radius:999px;background:var(--akzent);color:var(--akzent-text);font-weight:600;font-size:1rem;white-space:nowrap;box-shadow:0 10px 22px -10px color-mix(in srgb,var(--akzent) 70%,#000)}
+.pille::before{content:"";position:absolute;left:-.2rem;top:-.2rem;width:.45rem;height:.45rem;background:var(--akzent)}
+.pille--schwarz{background:var(--tinte);box-shadow:0 10px 22px -10px rgba(0,0,0,.6)}
+.pille--schwarz::before{background:var(--tinte)}
+
+/* 1. Held: Rasterhintergrund, Pillen am Rand, Oberfläche im roten Rahmen */
+.held{position:relative;overflow:hidden;padding-top:clamp(3rem,7vw,6rem)}
+.held__gitter{position:absolute;inset:0 0 auto 0;height:clamp(32rem,52vw,46rem);background-image:linear-gradient(var(--linie) 1px,transparent 1px),linear-gradient(90deg,var(--linie) 1px,transparent 1px);background-size:var(--zelle) var(--zelle);mask-image:linear-gradient(180deg,#000 55%,transparent);-webkit-mask-image:linear-gradient(180deg,#000 55%,transparent)}
+.held__zelle{position:absolute;width:var(--zelle);height:var(--zelle);background:var(--akzent-hell);animation:glimmen 7s cubic-bezier(.45,0,.55,1) infinite alternate}
+.held__zelle:nth-child(1){left:calc(var(--zelle) * 0);top:calc(var(--zelle) * 2)}
+.held__zelle:nth-child(2){left:calc(var(--zelle) * 1);top:calc(var(--zelle) * 3);animation-delay:-2s}
+.held__zelle:nth-child(3){right:calc(var(--zelle) * 0);top:calc(var(--zelle) * 2);animation-delay:-4s}
+.held__zelle:nth-child(4){right:calc(var(--zelle) * 1);top:calc(var(--zelle) * 3);animation-delay:-1s}
+@keyframes glimmen{from{opacity:.35}to{opacity:1}}
+.held__innen{position:relative;z-index:1;display:grid;justify-items:center;gap:1.5rem;text-align:center}
+.held__innen h1{max-width:14ch}
+.held__innen>p{max-width:34rem;font-size:var(--text-l);color:var(--text-leise)}
+.held__knoepfe{display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem}
+.held__pillen{display:none}
+@media (min-width:56rem){
+  .held__pillen{display:block}
+  .held__pillen .pille{animation:schweben 6s cubic-bezier(.45,0,.55,1) infinite alternate}
+  .held__pillen .p1{left:3%;top:9rem}.held__pillen .p2{right:4%;top:10rem;animation-delay:-2s}.held__pillen .p3{right:7%;top:23rem;animation-delay:-4s}
+}
+@keyframes schweben{from{transform:translateY(-6px)}to{transform:translateY(6px)}}
+.vertrauen{display:grid;justify-items:center;gap:1rem;margin-top:1.5rem;color:var(--text-leise)}
+.vertrauen__logos{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:1rem 2.25rem;color:var(--text)}
+.vertrauen__logos .beispiellogo{--logo-h:1.5rem}
+
+/* Oberflächenbilder aus HTML */
+.mock{container-type:inline-size}
+.mock__innen{font-size:clamp(.5rem,1.9cqw,.9rem);line-height:1.35;color:var(--text)}
+.rahmen{padding:1.2%;border-radius:1.4rem;background:linear-gradient(160deg,var(--akzent),#6f1c08);box-shadow:var(--schatten)}
+.fenster{background:#fff;border-radius:1em;overflow:hidden}
+.fenster__kopf{display:flex;align-items:center;gap:1em;padding:.9em 1.2em;border-bottom:1px solid var(--linie)}
+.fenster__kopf b{display:flex;align-items:center;gap:.5em;font-family:var(--schrift-titel);font-size:1.4em;letter-spacing:-.04em}
+.fenster__kopf b svg{width:1.4em;height:1.4em}
+.fenster__suche{flex:1;max-width:30em;padding:.5em .9em;border-radius:.6em;background:var(--flaeche-alt);color:var(--text-leise)}
+.tafel{display:grid;grid-template-columns:repeat(3,1fr);gap:1em;padding:1em;background:var(--flaeche-alt)}
+.tafel__spalte{display:grid;gap:.8em;align-content:start}
+.tafel__titel{font-weight:600;padding:.2em .2em .4em}
+.aufgabe{display:grid;gap:.5em;padding:.9em;border-radius:.7em;background:#fff;border:1px solid var(--linie)}
+.aufgabe small{color:var(--text-leise);font-size:.82em}
+.aufgabe__etikett{display:inline-block;justify-self:start;padding:.1em .6em;border-radius:.4em;background:var(--akzent-hell);color:var(--akzent);font-size:.78em;font-weight:600}
+.aufgabe__punkte{display:flex}
+.aufgabe__punkte i{width:1.6em;height:1.6em;border-radius:50%;border:2px solid #fff;margin-left:-.4em;background:linear-gradient(160deg,var(--ton-1),var(--ton-6))}
+.aufgabe__punkte i:first-child{margin-left:0}
+.aufgabe__punkte i:nth-child(2){background:linear-gradient(160deg,var(--ton-2),var(--ton-6))}
+.held__bild{margin-top:clamp(2.5rem,5vw,4rem)}
+
+/* 2. Problem und Werkzeuge */
+.aussage{display:grid;gap:2rem;justify-items:start}
+.aussage__satz{font-family:var(--schrift-titel);font-weight:500;font-size:clamp(1.6rem,1rem + 2.4vw,3rem);line-height:1.15;letter-spacing:-.03em;max-width:44rem;text-transform:none}
+.aussage__werkzeug{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;color:var(--text-leise);font-family:var(--schrift-titel);font-weight:500;font-size:clamp(1.4rem,1rem + 1.6vw,2.25rem);letter-spacing:-.03em}
+.aussage__werkzeug .beispiellogo{--logo-h:1.9rem;color:var(--text)}
+.aussage{position:relative}
+.aussage__pille{position:static}
+
+/* 3. Drei Karten mit kleinem Beispiel */
+.karten3{display:grid;gap:1rem;padding:.75rem;border-radius:var(--radius-karte);border:1px solid var(--linie);background:#fff}
+.karte3{display:grid;gap:1.5rem;align-content:space-between;padding:1.5rem;border-radius:calc(var(--radius-karte) - 4px);background:var(--flaeche-alt);box-shadow:inset 0 0 0 1px var(--linie);min-height:24rem;transition:transform var(--dauer-mittel) var(--kurve)}
+.karte3:hover{transform:translateY(-3px)}
+.karte3__kopf{display:grid;gap:.5rem}
+.karte3__titel{display:flex;align-items:center;gap:.9rem}
+.karte3__titel h3{font-weight:600;letter-spacing:-.02em}
+.karte3__icon{display:grid;place-items:center;width:2.75rem;height:2.75rem;border-radius:.8rem;background:var(--tinte);color:#fff;flex:none}
+.karte3__icon svg{width:1.4rem;height:1.4rem}
+.karte3 p{color:var(--text-leise)}
+.karte3__bild{padding:1rem;border-radius:.9rem;background:#fff;box-shadow:inset 0 0 0 1px var(--linie);display:grid;gap:.6rem}
+.zeile{display:flex;align-items:center;gap:.6rem;padding:.55rem .75rem;border-radius:.6rem;background:var(--flaeche-alt);font-size:1rem}
+.zeile--rot{background:var(--akzent-hell);color:var(--akzent);font-weight:600}
+.zeile i{width:1.1rem;height:1.1rem;border-radius:50%;border:2px solid var(--text-leise);flex:none}
+.sprechblase{padding:.55rem .8rem;border-radius:.8rem;font-size:1rem;background:var(--flaeche-alt)}
+.sprechblase--dunkel{background:var(--tinte);color:#fff;justify-self:end}
+.sprechblase--rot{background:var(--akzent);color:var(--akzent-text);justify-self:start}
+@media (min-width:56rem){.karten3{grid-template-columns:repeat(3,1fr)}}
+
+/* 4. Funktionszeilen */
+.uebersicht{display:grid;gap:1rem;justify-items:start}
+.funktionszeile{display:grid;gap:2rem;align-items:center;padding-block:clamp(2.5rem,5vw,4.5rem)}
+.funktionszeile__text{display:grid;gap:1rem;justify-items:start}
+.funktionszeile__text .kicker{color:#8a3a22}
+.funktionszeile__text p{color:var(--text-leise);max-width:26rem}
+.funktionszeile__text h3{font-size:clamp(1.6rem,1.1rem + 1.6vw,2.5rem);letter-spacing:-.03em;font-weight:600}
+.flaeche-rot{padding:clamp(1rem,3%,2rem) clamp(1rem,3%,2rem) 0;border-radius:1.2rem;background:linear-gradient(160deg,var(--akzent),#5f1707);overflow:hidden}
+.flaeche-rot .fenster{border-radius:1em 1em 0 0}
+.telefone{display:flex;justify-content:center;gap:5%;padding-top:2rem}
+.telefon{width:44%;aspect-ratio:9/17;border-radius:2em 2em 0 0;background:var(--tinte);padding:.5em .5em 0;color:#fff;font-size:clamp(.5rem,1.5cqw,.85rem);border:.2em solid #2a2a2e;border-bottom:0}
+.telefon:nth-child(2){margin-top:2.5rem}
+.telefon__innen{height:100%;border-radius:1.6em 1.6em 0 0;background:#f3e9dc;color:var(--text);padding:1.2em}
+.telefon__innen h4{font-size:1.5em;text-transform:none;letter-spacing:-.02em;margin-bottom:.6em}
+.telefon__zeile{display:flex;align-items:center;gap:.6em;padding:.6em 0;border-top:1px solid rgba(0,0,0,.1)}
+.telefon__zeile i{width:1em;height:1em;border-radius:50%;background:var(--akzent);flex:none}
+.knotenfeld{display:grid;gap:1.2em;padding:1.5em;background:var(--flaeche-alt);justify-items:center}
+.knoten{padding:.7em 1.2em;border-radius:.7em;background:#fff;border:1px solid var(--linie);font-weight:600;min-width:12em;text-align:center}
+.knoten--rot{background:var(--akzent);color:var(--akzent-text);border-color:var(--akzent)}
+.knotenfeld__strich{width:2px;height:1.4em;background:var(--text-leise);opacity:.5}
+@media (min-width:56rem){.funktionszeile{grid-template-columns:.8fr 1.2fr;gap:4rem}.funktionszeile--rueck .funktionszeile__text{order:2}.funktionszeile--rueck{grid-template-columns:1.2fr .8fr}.funktionszeile--rueck .flaeche-rot{order:1}}
+
+/* 5. Dunkler Abschnitt: Problemfeld, Lösung, Leiste */
+.dunkel{position:relative;background:var(--flaeche-dunkel);color:var(--text-auf-dunkel);background-image:linear-gradient(var(--linie-dunkel) 1px,transparent 1px),linear-gradient(90deg,var(--linie-dunkel) 1px,transparent 1px);background-size:var(--zelle) var(--zelle)}
+.dunkel::before{content:"";position:absolute;left:0;right:0;top:0;height:7rem;background:linear-gradient(180deg,var(--akzent),transparent);opacity:.9;pointer-events:none}
+.dunkel>*{position:relative}
+.pillenfeld{display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem;padding-block:clamp(5rem,9vw,8rem) 2rem}
+.pillenfeld .pille{position:static;background:var(--karte-dunkel);color:var(--text-auf-dunkel);box-shadow:inset 0 0 0 1px #4a2218,0 0 24px -6px rgba(214,58,20,.45);font-size:1.0625rem;padding:.6rem 1.1rem;border-radius:.9rem}
+.pillenfeld .pille::before{display:none}
+.problemsatz{max-width:62rem;margin-inline:auto;text-align:center;padding-bottom:clamp(4rem,8vw,7rem)}
+.problemsatz h2{font-size:clamp(1.8rem,1rem + 3vw,3.5rem)}
+.loesung{padding-block:clamp(3rem,6vw,5rem) clamp(4rem,8vw,7rem);text-align:center}
+.loesung h2 span{color:var(--akzent-auf-dunkel)}
+.loesung__raster{display:grid;gap:2rem 1.5rem;margin-top:3rem;max-width:68rem;margin-inline:auto}
+.loesung__punkt{display:grid;gap:1rem;justify-items:center}
+.loesung__punkt .pille{position:static;background:var(--karte-dunkel);color:var(--text-auf-dunkel);box-shadow:inset 0 0 0 1px #4a2218,0 0 24px -6px rgba(214,58,20,.45);font-size:1.25rem;padding:.7rem 1.4rem;border-radius:.9rem}
+.loesung__punkt .pille::before{display:none}
+.loesung__punkt p{color:var(--text-leise-dunkel);max-width:20rem}
+@media (min-width:48rem){.loesung__raster{grid-template-columns:repeat(3,1fr)}}
+@media (min-width:56rem){
+  .pillenfeld{display:block;position:relative;min-height:25rem;padding:0}
+  .pillenfeld .pille{position:absolute;animation:schweben 6s cubic-bezier(.45,0,.55,1) infinite alternate}
+  .pillenfeld .a1{left:4%;top:3rem}.pillenfeld .a2{left:40%;top:1.5rem;animation-delay:-1s}.pillenfeld .a3{right:6%;top:5rem;animation-delay:-3s}
+  .pillenfeld .a4{left:10%;top:18rem;animation-delay:-2s}.pillenfeld .a5{right:12%;top:17rem;animation-delay:-4s}.pillenfeld .a6{left:46%;top:22rem;animation-delay:-5s}
+  .problemsatz{margin-top:-15rem}
+}
+.leiste{background:var(--akzent-dunkel);color:var(--text-auf-dunkel);text-align:center;padding:1.25rem var(--rand);border-top:1px solid #5a1c0e;border-bottom:1px solid #5a1c0e;font-size:1.0625rem}
+.leiste span{color:var(--akzent-auf-dunkel)}
+
+/* 6. Integrationen: Kachelfeld mit Mittelpunkt */
+.kacheln{position:relative;display:grid;grid-template-columns:repeat(6,1fr);gap:.5rem}
+.kachel{aspect-ratio:1;border-radius:.7rem;background:var(--akzent-hell);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--akzent) 12%,transparent)}
+.kachel--icon{display:grid;place-items:center;background:#fff;box-shadow:var(--schatten);animation:heben 5s cubic-bezier(.45,0,.55,1) infinite alternate}
+.kachel--icon svg{width:46%;height:46%;color:var(--text)}
+@keyframes heben{from{transform:translateY(0)}to{transform:translateY(-.35rem)}}
+.kachel--nur-gross{display:none}
+.nabe{position:absolute;left:50%;top:50%;translate:-50% -50%;width:clamp(5.5rem,22%,11rem);aspect-ratio:1;border-radius:22%;background:var(--akzent);display:grid;place-items:center;box-shadow:0 24px 50px -16px color-mix(in srgb,var(--akzent) 80%,#000);z-index:2}
+.nabe svg{width:56%;height:56%}
+@media (min-width:48rem){.kacheln{grid-template-columns:repeat(12,1fr);gap:.75rem}.kachel--nur-gross{display:block}}
+
+/* 7. Beiträge: dunkles Feld mit Spur */
+.beitraege{position:relative;background:var(--flaeche-dunkel);background-image:linear-gradient(var(--linie-dunkel) 1px,transparent 1px),linear-gradient(90deg,var(--linie-dunkel) 1px,transparent 1px);background-size:var(--zelle) var(--zelle);padding-block:2.5rem 3.5rem;overflow:hidden}
+.beitraege::before,.beitraege::after{content:"";position:absolute;left:0;right:0;height:5rem;pointer-events:none}
+.beitraege::before{top:0;background:linear-gradient(180deg,var(--akzent),transparent);opacity:.9}
+.beitraege::after{bottom:0;background:linear-gradient(0deg,var(--akzent),transparent);opacity:.85}
+.spur{position:relative;z-index:1;display:flex;gap:1.5rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-block:3rem;padding-inline:var(--rand)}
+.spur::-webkit-scrollbar{display:none}
+.artikel{flex:0 0 min(86vw,21rem);scroll-snap-align:start;display:grid;gap:1rem;align-content:start;padding:1rem;border-radius:1.4rem;background:var(--tinte);color:var(--text-auf-dunkel);box-shadow:inset 0 0 0 1px #2a2a2e,0 0 0 6px #111113}
+.artikel .bild{aspect-ratio:4/3;border-radius:1rem}
+.artikel h3{font-size:1.25rem;font-weight:600;letter-spacing:-.02em;padding-inline:.25rem}
+.artikel p{color:var(--text-leise-dunkel);padding-inline:.25rem;font-size:1rem}
+.artikel__fuss{display:flex;align-items:center;gap:.75rem;justify-content:space-between;padding:.25rem}
+.artikel__person{display:flex;align-items:center;gap:.6rem;font-size:1rem}
+.artikel__person i{width:2.5rem;height:2.5rem;border-radius:.5rem;background:linear-gradient(160deg,var(--ton-1),var(--ton-6));flex:none}
+.artikel__person small{display:block;color:var(--text-leise-dunkel);font-size:1rem}
+.steuerung{display:flex;gap:.75rem;margin-top:1.5rem}
+.steuerung[hidden]{display:none}
+.pfeil{display:inline-grid;place-items:center;width:3.25rem;height:3.25rem;border-radius:12px;background:var(--flaeche-alt);box-shadow:inset 0 0 0 1px var(--linie);color:var(--text);transition:transform var(--dauer-kurz) var(--kurve),background-color var(--dauer-kurz)}
+.pfeil svg{width:1.4rem;height:1.4rem}
+.pfeil:hover{background:var(--akzent);color:#fff;transform:translateY(-2px)}
+.pfeil[aria-disabled="true"]{opacity:.4;pointer-events:none}
+
+/* 8. Preise */
+.umschalter{display:none;gap:.25rem;padding:.25rem;border-radius:12px;background:var(--flaeche-alt);box-shadow:inset 0 0 0 1px var(--linie)}
+.js .umschalter{display:inline-flex}
+.umschalter button{min-height:2.75rem;padding:.3rem 1.1rem;border-radius:9px;font-weight:600;text-transform:uppercase;font-size:1rem;letter-spacing:.03em}
+.umschalter button[aria-pressed="true"]{background:var(--tinte);color:#fff}
+.preisbox{border:1px solid var(--linie);border-radius:var(--radius-karte);padding:.75rem;background:#fff}
+.preisbox__raster{display:grid;gap:.75rem}
+.plan{display:grid;gap:1.25rem;align-content:start;padding:1.5rem;border-radius:calc(var(--radius-karte) - 4px)}
+.plan--start{background:var(--flaeche-alt)}
+.plan__kopf{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.75rem}
+.plan__kopf h3{font-size:1.75rem;font-weight:600}
+.plan__logo{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--schrift-titel);font-weight:700;font-size:1.5rem;letter-spacing:-.04em}
+.plan__logo svg{width:2rem;height:2rem}
+.plan__chip{display:inline-block;padding:.2rem .8rem;border-radius:8px;background:var(--tinte);color:#fff;font-size:1rem;font-weight:600;text-transform:uppercase}
+.plan>p{color:var(--text-leise)}
+.plan__preis{display:flex;align-items:baseline;gap:.4rem;padding-bottom:.75rem;border-bottom:1px solid var(--linie);font-family:var(--schrift-titel);font-weight:600;font-size:clamp(2.2rem,1.6rem + 2vw,3rem);letter-spacing:-.03em}
+.plan__preis span{font-family:var(--schrift-text);font-size:1.125rem;font-weight:500;color:var(--text-leise);letter-spacing:0}
+.plan__liste{display:grid;gap:.75rem}
+.plan__liste li{display:flex;gap:.7rem;align-items:flex-start}
+.plan__liste svg{flex:none;width:1.1rem;height:1.1rem;color:var(--akzent);margin-top:.3rem}
+.plan .knopf{width:100%}
+.plan--start .knopf{justify-content:center;padding:.4rem 1.4rem}
+.preisbox__unten{display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.5rem;padding:1.25rem 1.5rem 1rem}
+.preisbox__unten h3{font-size:1.5rem;font-weight:600}
+.preisbox__unten p{color:var(--text-leise);margin-right:auto}
+@media (min-width:56rem){.preisbox__raster{grid-template-columns:1fr 1fr;gap:1.25rem}}
+
+/* 9. Team */
+.zitatkarte{display:grid;border-radius:var(--radius-karte);background:var(--flaeche-alt);box-shadow:inset 0 0 0 1px var(--linie);overflow:hidden}
+.zitatkarte .bild{min-height:22rem;border-radius:0}
+.zitatkarte__text{display:grid;gap:2rem;align-content:space-between;padding:2rem}
+.zitatkarte__text h3{font-size:clamp(1.6rem,1.1rem + 1.8vw,2.75rem);font-weight:500;letter-spacing:-.03em}
+.zitatkarte blockquote{font-size:var(--text-l);line-height:1.4}
+.zitatkarte__person{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-top:1rem;border-top:1px solid var(--linie)}
+.zitatkarte__person b{display:block;font-size:1.25rem}
+.zitatkarte__person small{color:var(--text-leise);font-size:1rem}
+.zitatkarte__person .beispiellogo{--logo-h:2rem}
+.gruender{display:grid;gap:1rem;margin-top:1.5rem}
+.gruender__titel{color:var(--text-leise);font-size:1rem;margin-top:2rem}
+.gruender__raster{display:grid;gap:.75rem;padding:.75rem;border:1px solid var(--linie);border-radius:var(--radius-karte)}
+.mensch{display:grid;border-radius:calc(var(--radius-karte) - 4px);background:var(--flaeche-alt);overflow:hidden;box-shadow:inset 0 0 0 1px var(--linie)}
+.mensch .bild{aspect-ratio:4/4.4;border-radius:0}
+.mensch div:last-child{padding:1rem 1.1rem}
+.mensch b{display:block;font-size:1.25rem;font-weight:600}
+.mensch small{color:var(--text-leise);font-size:1rem}
+@media (min-width:56rem){.zitatkarte{grid-template-columns:.8fr 1.2fr}.zitatkarte .bild{min-height:30rem}.zitatkarte__text{padding:3rem}.gruender__raster{grid-template-columns:repeat(3,1fr)}}
+
+/* 10. Stimmen: Kachelfeld mit Logos */
+.stimmenfeld{display:grid;border:1px solid var(--linie);border-radius:var(--radius-karte);overflow:hidden;background:#fff}
+.stimmenfeld>*{display:grid;align-content:space-between;gap:1.5rem;padding:1.75rem;border-top:1px solid var(--linie)}
+.stimmenfeld>*:first-child{border-top:0}
+.stimmenfeld__logo{display:none;place-items:center;background:#fff}
+.stimmenfeld__logo--grau{background:var(--flaeche-alt)}
+.stimmenfeld__logo .beispiellogo{--logo-h:2.1rem;color:var(--text)}
+.sf-kopf{display:flex;align-items:center;gap:.75rem;font-family:var(--schrift-titel);font-weight:700;font-size:1.5rem;letter-spacing:-.03em}
+.sf-kopf .beispiellogo{--logo-h:1.9rem}
+.sf-quelle{display:flex;align-items:center;gap:.75rem}
+.sf-quelle i{width:2.6rem;height:2.6rem;border-radius:.5rem;background:linear-gradient(160deg,var(--ton-2),var(--ton-6));flex:none}
+.sf-quelle b{display:block}
+.sf-quelle small{color:var(--text-leise);font-size:1rem}
+@media (min-width:48rem){
+  .stimmenfeld{grid-template-columns:repeat(3,1fr)}
+  .stimmenfeld>*{border-top:0;border-left:1px solid var(--linie);min-height:15rem}
+  .stimmenfeld__logo{display:grid}
+  .stimmenfeld>*:nth-child(3n+1){border-left:0}
+  .stimmenfeld>*:nth-child(n+4){border-top:1px solid var(--linie)}
+}
+
+/* 11. Fragen */
+.faq{border-top:1px solid var(--linie)}
+.faq details{border-bottom:1px solid var(--linie)}
+.faq summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:3.75rem;padding:1rem .5rem;cursor:pointer;list-style:none;font-size:var(--text-l);letter-spacing:-.01em;font-weight:500}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary svg{flex:none;width:1.25rem;height:1.25rem;transition:transform var(--dauer-mittel) var(--kurve)}
+.faq details[open] summary svg{transform:rotate(45deg)}
+.faq summary:hover{color:var(--akzent)}
+.faq__antwort{padding:0 .5rem 1.5rem;color:var(--text-leise);max-width:46rem}
+
+/* Fuß */
+.fuss{border-top:1px solid var(--linie);padding-top:clamp(3.5rem,7vw,6rem)}
+.fuss__raster{display:grid;grid-template-columns:minmax(0,1fr);gap:3rem;padding-bottom:3rem}
+.fuss__aufruf{display:grid;grid-template-columns:minmax(0,1fr);gap:1.25rem;align-content:start;max-width:30rem}
+.fuss__aufruf h2{font-size:clamp(1.9rem,1.2rem + 2.6vw,3.25rem);text-transform:none;font-weight:500}
+.fuss__aufruf>p{color:var(--text-leise)}
+.mail{display:flex;gap:.5rem;padding:.4rem;border-radius:14px;background:var(--flaeche-alt);box-shadow:inset 0 0 0 1px var(--linie)}
+.mail input{flex:1;min-width:0;min-height:2.75rem;padding:0 .75rem;border:0;background:transparent;font:inherit;font-size:1rem;color:var(--text)}
+.mail input::placeholder{color:var(--text-leise);opacity:1}
+.mail .knopf{padding-left:1.1rem;min-height:2.75rem}
+.mail__meldung{font-size:1rem;font-weight:600}
+.fuss__rechts{display:grid;grid-template-columns:minmax(0,1fr);gap:2.5rem;justify-items:start}
+.fuss__zeichen{width:clamp(6rem,16vw,11rem);height:auto}
+.fuss__links{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem 1.5rem;width:100%}
+.fuss__links a{display:inline-flex;align-items:center;gap:.6rem;min-height:2.5rem;text-transform:uppercase;font-size:1rem;letter-spacing:.02em;transition:color var(--dauer-kurz)}
+.fuss__links a::before{content:"";width:.4rem;height:.4rem;background:var(--akzent);flex:none}
+.fuss__links a:hover{color:var(--akzent)}
+.fuss__unten{background:var(--tinte);color:var(--text-auf-dunkel);padding:.9rem var(--rand);font-size:1rem}
+.fuss__unten div{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 2rem;width:min(100% - 2*var(--rand),var(--breite));margin-inline:auto;padding-inline:0}
+@media (min-width:56rem){.fuss__raster{grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:5rem}.fuss__links{grid-template-columns:repeat(3,1fr)}}
+
+@media (min-width:62rem){:root{--zelle:6rem}}
+@media (prefers-reduced-motion:reduce){
+  .held__zelle,.pille,.kachel--icon{animation:none!important}
+  .karte3:hover{transform:none}
+}

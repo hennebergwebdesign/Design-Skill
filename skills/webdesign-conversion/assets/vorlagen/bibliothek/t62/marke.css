@@ -1,0 +1,32 @@
+/* marke.css der Vorlage "Klinik Großschrift": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#f6f4ee;
+  --flaeche-alt:#ebe7dd;
+  --flaeche-dunkel:#0f1b26;
+  --text:#0f1b26;
+  --text-leise:#4b535e;
+  --linie:#d8d3c6;
+  --akzent:#ff8467;           /* Hauptaktion: Fläche mit dunklem Text, auf Dunkel auch als Text */
+  --akzent-text:#1c0e09;
+  --schrift-titel:'Archivo',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:10px;
+  --radius-karte:14px;
+  --radius-bild:14px;
+
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:700;
+  --titel-spur:-0.02em;
+  --flaeche-dunkel-2:#172636;
+  --text-auf-dunkel:#f6f4ee;
+  --text-leise-dunkel:#b8c2cc;
+  --linie-dunkel:#2b3b4d;
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#3c607a;
+  --ton-2:#8a6650;
+  --ton-3:#587468;
+  --ton-4:#a89070;
+  --ton-5:#2f4458;
+  --ton-6:#cbbd9f;
+}

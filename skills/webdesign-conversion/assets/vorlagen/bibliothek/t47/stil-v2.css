@@ -1,0 +1,21 @@
+/* stil-v2.css: Variante "Nach dem Start". Ergänzt stil.css um die drei Schritte, die Zahlenleiste unter den Logos
+   und das zweite Knopfpaar im Held. */
+.knopf--dunkel-fl{background:color-mix(in srgb,var(--text-auf-dunkel) 14%,transparent);color:var(--text-auf-dunkel);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--text-auf-dunkel) 28%,transparent)}
+.knopf--dunkel-fl:hover{background:color-mix(in srgb,var(--text-auf-dunkel) 24%,transparent);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--text-auf-dunkel) 40%,transparent)}
+.held__aktion{flex-direction:row}
+.zahlenband{padding-block:1rem var(--raum)}
+.zahlenreihe--oben{margin-top:0}
+
+.schritte{padding-bottom:var(--raum)}
+.schritte__karte{position:relative;overflow:hidden;display:grid;justify-items:center;text-align:center;gap:1.25rem;padding:clamp(2rem,6vw,4.5rem) clamp(1rem,4vw,3rem);border-radius:var(--radius-gross);color:var(--text-auf-dunkel);background:radial-gradient(60% 50% at 50% 100%,color-mix(in srgb,#3d7bff 70%,transparent),transparent 70%),linear-gradient(180deg,var(--flaeche-dunkel),var(--flaeche-blau))}
+.schritte__liste{position:relative;display:grid;gap:2.5rem;margin-top:1.5rem;max-width:62rem}
+.schritte__liste li{display:grid;justify-items:center;gap:.75rem}
+.schritte__liste p{color:var(--text-leise-dunkel);max-width:20rem}
+.schritte__ikone{display:grid;place-items:center;width:4.5rem;height:4.5rem;border-radius:20px;background:#fff;color:var(--flaeche-dunkel);box-shadow:0 12px 30px color-mix(in srgb,#000 30%,transparent)}
+.schritte__liste li:nth-child(2) .schritte__ikone{background:var(--akzent);color:var(--akzent-text)}
+.schritte__liste li:nth-child(3) .schritte__ikone{background:#8db4ff}
+@media (min-width:56rem){
+  .schritte__liste{grid-template-columns:repeat(3,1fr);gap:3rem}
+  .schritte__liste::before{content:"";position:absolute;left:16%;right:16%;top:2.25rem;border-top:2px dashed color-mix(in srgb,var(--text-auf-dunkel) 40%,transparent)}
+  .schritte__ikone{position:relative}
+}

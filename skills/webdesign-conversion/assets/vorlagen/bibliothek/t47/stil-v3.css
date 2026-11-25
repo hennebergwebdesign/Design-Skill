@@ -1,0 +1,22 @@
+/* stil-v3.css: Variante "Warteliste". Ein Bildschirm, keine Navigation, Zähler und Mailfeld im Mittelpunkt. */
+body.v3{background:var(--flaeche-dunkel)}
+.kopf--schlicht{position:absolute;top:1rem;left:0;right:0;pointer-events:auto}
+.js .kopf--schlicht{position:absolute}
+.kopf__leiste--schlicht{max-width:none;width:min(100% - 2*var(--rand),80rem);padding:0;background:none;box-shadow:none;border-radius:0;color:var(--text-auf-dunkel)}
+.kopf--schlicht .kopf__zeichen{color:var(--akzent)}
+.warte{position:relative;overflow:hidden;margin:.5rem;border-radius:var(--radius-gross);min-height:calc(100svh - 5rem);display:grid;align-items:center;color:var(--text-auf-dunkel);background:linear-gradient(180deg,var(--flaeche-dunkel) 0%,#0c1a66 40%,var(--flaeche-blau) 100%)}
+.warte__innen{position:relative;display:grid;justify-items:center;text-align:center;gap:1.4rem;width:min(100% - 2*var(--rand),44rem);margin-inline:auto;padding-block:7rem 5rem}
+.warte h1{font-size:clamp(3rem,1.5rem + 7vw,6.5rem);line-height:1}
+.warte__text{max-width:32rem;font-size:var(--text-l);color:var(--text-leise-dunkel)}
+.zaehler--gross{gap:.6rem}
+.zaehler--gross .zaehler__zahl{min-width:4.25rem;padding:1rem .5rem;font-size:clamp(2rem,1.4rem + 2.5vw,3.5rem);background:color-mix(in srgb,var(--flaeche-dunkel) 55%,transparent);color:var(--text-auf-dunkel);box-shadow:inset 0 0 0 1px var(--linie-dunkel)}
+.zaehler--gross .zaehler__name{color:var(--text-leise-dunkel)}
+.zaehler--gross .zaehler__punkt{margin-top:1.6rem;background:radial-gradient(circle at 50% 22%,var(--text-leise-dunkel) 0 .125rem,transparent .14rem),radial-gradient(circle at 50% 78%,var(--text-leise-dunkel) 0 .125rem,transparent .14rem)}
+.warte__termin{display:block;font-weight:600}
+.punkt-gut{display:inline-block;width:.55rem;height:.55rem;margin-right:.6rem;vertical-align:middle;border-radius:50%;background:#37d39a}
+.warte__form{width:100%;display:grid;justify-items:center;border-top:1px solid var(--linie-dunkel);padding-top:1.75rem}
+.warte__klein{flex-basis:100%;color:var(--text-leise-dunkel);font-size:1rem}
+.warte .pause{bottom:1rem}
+.fuss--schlicht{padding:0;background:none}
+.fuss__leiste{display:flex;justify-content:space-between;align-items:center;gap:1rem;min-height:4rem;width:min(100% - 2*var(--rand),80rem);margin-inline:auto;color:var(--text-leise-dunkel)}
+@media (max-width:40rem){.fuss__leiste{justify-content:space-between}}

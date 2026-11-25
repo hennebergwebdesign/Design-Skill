@@ -1,0 +1,39 @@
+/* marke.css der Vorlage "Software Start hell": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#fbfaf7;
+  --flaeche-alt:#f3f1ec;
+  --flaeche-karte:#ffffff;
+  --flaeche-dunkel:#10131c;
+  --text:#0f1320;
+  --text-leise:#555b6a;
+  --linie:#e6e3dc;
+  --akzent:#ff7a45;           /* Hauptaktion: Fläche mit dunklem Text, nie als Text auf Hell */
+  --akzent-text:#1b0d06;
+  --schrift-titel:'Outfit',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:28px;
+  --radius-bild:28px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:36px;
+  --titel-gewicht:500;
+  --titel-spur:-0.045em;
+  --akzent-tief:#b83a0a;      /* Akzent auf Hell: Text und Linie (5,6 zu 1 auf --flaeche) */
+  --text-auf-dunkel:#f6f4ef;
+  --text-leise-dunkel:#b4b8c4;
+  /* Pastellflächen der Stufen und Karten */
+  --pastell-pfirsich:#fdeedf;
+  --pastell-mint:#e3f5ea;
+  --pastell-himmel:#e4edfb;
+  --pastell-butter:#fdf4d3;
+  --pastell-rose:#fce6e6;
+  /* Platzhalter-Töne für Bildflächen und Formen (später durch Fotos und Illustrationen ersetzen) */
+  --ton-1:#e9906a;
+  --ton-2:#3d7f78;
+  --ton-3:#f0c36a;
+  --ton-4:#5a74b8;
+  --ton-5:#d9777a;
+  --ton-6:#7aa37a;
+}

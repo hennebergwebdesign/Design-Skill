@@ -1,6 +1,6 @@
 # t37 Akademie mit Kursen
 
-Prinzip nach der freigegebenen Referenz beautco.webflow.io (Startseite, Tor 1 erteilt), als Aufbau, Raster, Sektionsfolge und Art der Bewegung nachgebaut. Text, Bild, Icon, Code, Marke, Schrift und Farbe sind eigen.
+Prinzip nach der freigegebenen Referenz Beautyco (Startseite, Tor 1 erteilt), als Aufbau, Raster, Sektionsfolge und Art der Bewegung nachgebaut. Text, Bild, Icon, Code, Marke, Schrift und Farbe sind eigen.
 
 ## Eignung
 Akademien, Schulen und Kursanbieter mit mehreren buchbaren Programmen (Beauty, Handwerk, Coaching, Fitness, Gastronomie), die Vorher-Nachher-Arbeitsproben und Absolventenstimmen zeigen können. Ansprache im Du, für Sie im Text ersetzen. Ohne eigene Arbeitsproben und Porträts verliert die Seite ihre Beweisführung.

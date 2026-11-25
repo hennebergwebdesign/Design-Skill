@@ -1,0 +1,32 @@
+/* marke.css der Vorlage "Studio Kobalt": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Die ganze Seite ist dunkel, der Akzent steht als Fläche (Knopf, Panel, Band) mit heller Schrift.
+   Kontrast prüfen: --akzent-text auf --akzent, --akzent-hell auf --flaeche (Text und Linie auf Dunkel), je mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#050608;
+  --flaeche-alt:#101217;
+  --flaeche-karte:#1b1d24;
+  --flaeche-dunkel:#050608;   /* feste Rolle der Basis, hier gleich der Seite */
+  --text:#f6f7fb;
+  --text-leise:#aeb3c2;
+  --linie:#2b2f3a;
+  --akzent:#2f4bff;           /* Hauptaktion: Fläche mit heller Schrift */
+  --akzent-text:#ffffff;
+  --schrift-titel:'Lexend',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:4px;
+  --radius-karte:6px;
+  --radius-bild:6px;
+
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:800;
+  --titel-spur:0;
+  --akzent-hell:#9aa9ff;      /* Akzent als Text, Linie und Zeichen auf Dunkel */
+  --flaeche-grau:#25272f;     /* noch nicht erreichte Schritte, ruhige Flächen */
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#1c2a6b;
+  --ton-2:#10163a;
+  --ton-3:#2a3a8f;
+  --ton-4:#1b1e2b;
+  --ton-5:#22305f;
+  --ton-6:#07080d;
+}

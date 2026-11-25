@@ -1,6 +1,6 @@
 # t38 Studio mit Terminbuchung
 
-Prinzip nach der freigegebenen Referenz hairlux-wbs.webflow.io (Startseite und Variante /home-2, Tor 1 erteilt), als Aufbau, Raster, Sektionsfolge und Art der Bewegung nachgebaut. Text, Bild, Icon, Code, Marke, Schrift und Farbe sind eigen. Zwei Varianten teilen `marke.css`, `stil.css`, `stil.js`, Kopf und Fuß.
+Prinzip nach der freigegebenen Referenz HairLux (Startseite und zweite Startseite, Tor 1 erteilt), als Aufbau, Raster, Sektionsfolge und Art der Bewegung nachgebaut. Text, Bild, Icon, Code, Marke, Schrift und Farbe sind eigen. Zwei Varianten teilen `marke.css`, `stil.css`, `stil.js`, Kopf und Fuß.
 
 ## Eignung
 Friseur, Kosmetik, Nagel, Massage, Fotostudio und andere Dienstleister, die nach Termin arbeiten und Leistungen, Preise, Team und Öffnungszeiten zeigen. Ansprache im Du, für Sie im Text ersetzen. Ohne eigene Fotos von Team und Arbeit wirkt die Seite leer, die Platzhalter tragen sie nicht.

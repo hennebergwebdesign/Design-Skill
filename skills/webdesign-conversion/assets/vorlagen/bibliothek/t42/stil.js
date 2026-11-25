@@ -29,4 +29,36 @@
     addEventListener('resize', stand);
     stand();
   });
+
+  // 3. Hero-Karten (Variante 3): eine Karte offen, wechselt alle 5 Sekunden, bleibt bei Mauszeiger, Fokus und Klick stehen.
+  //    Ohne JavaScript und bei reduzierter Bewegung sind alle Karten geöffnet bzw. nur per Klick umschaltbar.
+  document.querySelectorAll('[data-karussell]').forEach((liste) => {
+    const karten = [...liste.querySelectorAll('.k3')];
+    let i = Math.max(0, karten.findIndex((k) => k.classList.contains('ist-aktiv'))), stopp = false, timer = null;
+    const zeige = (n) => { i = n; karten.forEach((k, j) => { const an = j === n; k.classList.toggle('ist-aktiv', an); k.querySelector('button').setAttribute('aria-expanded', String(an)); }); };
+    karten.forEach((k, j) => k.querySelector('button').addEventListener('click', () => { stopp = true; zeige(j); }));
+    if (reduziert) return;
+    ['mouseenter', 'focusin'].forEach((e) => liste.addEventListener(e, () => { stopp = true; }));
+    timer = setInterval(() => { if (!stopp && !document.hidden) zeige((i + 1) % karten.length); }, 5000);
+  });
+
+  // 4. Reiter (Variante 3): Pfeiltasten wechseln, nur ein Feld sichtbar. Ohne JavaScript stehen beide Felder untereinander.
+  document.querySelectorAll('[data-reiter-satz]').forEach((satz) => {
+    const tabs = [...satz.querySelectorAll('[role="tab"]')], tafeln = tabs.map((t) => document.getElementById(t.getAttribute('aria-controls')));
+    const waehle = (n, fokus) => { tabs.forEach((t, j) => { t.setAttribute('aria-selected', String(j === n)); t.tabIndex = j === n ? 0 : -1; tafeln[j].hidden = j !== n; }); if (fokus) tabs[n].focus(); };
+    tabs.forEach((t, j) => {
+      t.addEventListener('click', () => waehle(j, false));
+      t.addEventListener('keydown', (e) => { if (e.key === 'ArrowRight') { e.preventDefault(); waehle((j + 1) % tabs.length, true); } if (e.key === 'ArrowLeft') { e.preventDefault(); waehle((j + tabs.length - 1) % tabs.length, true); } });
+    });
+    waehle(0, false);
+  });
+
+  // 5. Preisumschalter (Variante 3): tauscht die Zahlen zwischen monatlich und jährlich. Ohne JavaScript steht der Monatspreis im HTML.
+  document.querySelectorAll('[data-preisschalter]').forEach((knopf) => {
+    const lauf = () => {
+      const jahr = knopf.getAttribute('aria-checked') === 'true';
+      document.querySelectorAll('[data-monat]').forEach((e) => { e.textContent = jahr ? e.dataset.jahr : e.dataset.monat; });
+    };
+    knopf.addEventListener('click', () => { knopf.setAttribute('aria-checked', String(knopf.getAttribute('aria-checked') !== 'true')); lauf(); });
+  });
 })();

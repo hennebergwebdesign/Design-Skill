@@ -1,6 +1,6 @@
 # t51 Beratung hell, Bogenblätter
 
-Prinzip nach der freigegebenen Referenz Corporatex (corporatex-template.webflow.io, Tor 1 erteilt), als Aufbau, Raster, Sektionsfolge und Art der Bewegung nachgebaut. Text, Bild, Icon, Code, Marke, Schrift und Farbe sind eigen.
+Prinzip nach der freigegebenen Referenz Corporatex (Tor 1 erteilt), als Aufbau, Raster, Sektionsfolge und Art der Bewegung nachgebaut. Text, Bild, Icon, Code, Marke, Schrift und Farbe sind eigen.
 
 ## Eignung
 Beratung, Steuer, Finanzen, Recht, Agentur und andere Dienstleister mit erklärungsbedürftigem Angebot und gestaffelten Paketen. Funktioniert hell und ruhig, mit warmem Papierton, Salbeiflächen und runden Blättern, die über den vorigen Abschnitt schieben. Ansprache im Du, für Sie im Text ersetzen. Ohne ein gutes Porträtfoto im Held verliert die Seite ihren Einstieg.

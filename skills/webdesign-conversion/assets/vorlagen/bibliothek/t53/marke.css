@@ -1,0 +1,33 @@
+/* marke.css der Vorlage "Finanzdienst, Rundbänder" (beide Varianten): Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#ffffff;
+  --flaeche-alt:#f5f4f0;       /* Karten und Bänder auf Hell */
+  --flaeche-dunkel:#16181a;    /* feste Rolle: dunkler Abschnitt, Fuß, Gerätegehäuse */
+  --text:#16181a;
+  --text-leise:#51565c;
+  --linie:#dcdde0;
+  --akzent:#f0b429;            /* Safran: Hauptknopf (mit dunklem Text), Akzentband, Zahlenreste */
+  --akzent-text:#1a1400;
+  --schrift-titel:'Bricolage Grotesque',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:2rem;
+  --radius-bild:2rem;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:4.5rem;
+  --titel-gewicht:700;
+  --titel-spur:-0.03em;
+  --akzent-tief:#7a5200;       /* Akzent als Text oder Linie auf Hell (6,6 zu 1 auf Weiß) */
+  --flaeche-dunkel-2:#22262a;
+  --text-auf-dunkel:#ffffff;
+  --text-leise-dunkel:#b9bec4;
+  --linie-dunkel:#3a3f45;
+  --ton-1:#c9b27a;
+  --ton-2:#5d6a6e;
+  --ton-3:#e6d3a3;
+  --ton-4:#2b3236;
+  --ton-5:#8e9aa0;
+  --ton-6:#d8d4c8;
+}

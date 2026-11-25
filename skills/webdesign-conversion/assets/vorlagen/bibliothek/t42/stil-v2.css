@@ -43,7 +43,7 @@
 .produkt2__raster{display:grid;gap:3rem;align-items:center}
 .produkt2__bild{position:relative;min-height:30rem;overflow:hidden}
 .produkt2__licht{position:absolute;left:8%;top:22%;width:9rem;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--akzent) 70%,transparent),transparent 68%)}
-.produkt2__telefon{position:absolute;left:4%;top:3%;width:min(64%,17rem);margin:0;rotate:-14deg}
+.produkt2__telefon{position:absolute;left:12%;top:3%;width:min(64%,17rem);margin:0;rotate:-14deg}
 .produkt2__mini{padding:.7rem .9rem;margin-top:.6rem;box-shadow:none;border:1px solid var(--linie)}
 .produkt2__mini strong,.produkt2__mini .ui__klein{white-space:nowrap}
 .produkt2__karte{position:absolute;right:0;bottom:6%;width:min(58%,15rem);max-width:none;aspect-ratio:1.5/1;rotate:12deg}
@@ -59,7 +59,7 @@
 .ueberweisung__raster{display:grid;gap:3rem;align-items:center}
 .ueberweisung__text{display:grid;gap:1.5rem;justify-items:start}
 .ueberweisung__karte{position:relative;display:grid}
-.punktkarte{position:absolute;inset:-12% -8%;background:radial-gradient(circle,color-mix(in srgb,var(--text) 38%,transparent) 1.6px,transparent 2.2px) 0 0/15px 15px;-webkit-mask:radial-gradient(60% 55% at 50% 45%,#000 25%,transparent 72%);mask:radial-gradient(60% 55% at 50% 45%,#000 25%,transparent 72%);opacity:.55}
+.punktkarte{position:absolute;inset:-12% 0;background:radial-gradient(circle,color-mix(in srgb,var(--text) 38%,transparent) 1.6px,transparent 2.2px) 0 0/15px 15px;-webkit-mask:radial-gradient(60% 55% at 50% 45%,#000 25%,transparent 72%);mask:radial-gradient(60% 55% at 50% 45%,#000 25%,transparent 72%);opacity:.55}
 .ueberweisung__ui{position:relative;width:min(100%,27rem);justify-self:end;padding:0}
 .ueberweisung__ui>*{margin-inline:1.25rem}
 .ueberweisung__titel{margin:0!important;padding:1.1rem 1.25rem;text-align:center;font-weight:500;border-bottom:1px solid var(--linie)}
@@ -114,7 +114,7 @@
 /* Video, Aussage, Paneele */
 .dunkel2{padding-block:clamp(2.5rem,6vw,5rem)}
 .aussage-huelle{position:relative;padding-bottom:7rem}
-.aussage-huelle::after{content:"";position:absolute;z-index:-1;left:50%;bottom:-14rem;width:150%;height:24rem;transform:translateX(-50%);border-radius:50%;border-top:2px solid color-mix(in srgb,var(--akzent) 60%,#fff);background:radial-gradient(60% 50% at 50% 2%,color-mix(in srgb,var(--akzent) 38%,transparent),transparent 72%)}
+.aussage-huelle::after{content:"";position:absolute;z-index:-1;left:50%;bottom:-19rem;width:150%;height:24rem;transform:translateX(-50%);border-radius:50%;border-top:2px solid color-mix(in srgb,var(--akzent) 60%,#fff);background:radial-gradient(60% 50% at 50% 2%,color-mix(in srgb,var(--akzent) 38%,transparent),transparent 72%)}
 .videorahmen{position:relative;min-height:16rem;border-radius:1.5rem}
 .videorahmen__wort{display:none}
 @media (min-width:36rem){.videorahmen__wort{display:inline}}

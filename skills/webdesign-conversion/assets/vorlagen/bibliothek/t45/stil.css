@@ -216,7 +216,7 @@ h3{font-size:var(--h3);line-height:1.2;letter-spacing:-.02em}
 .pfeile{display:none;gap:.5rem;justify-content:flex-end}
 .js .pfeile{display:flex}
 .pfeile button{display:grid;place-items:center;width:3rem;height:3rem;border-radius:14px;background:var(--flaeche-alt);box-shadow:inset 0 0 0 1px var(--linie);transition:transform var(--dauer-kurz) var(--kurve),background-color var(--dauer-kurz)}
-.pfeile button:hover{transform:translateY(-2px);background:var(--linie)}
+@media (hover:hover) and (pointer:fine){.pfeile button:hover{transform:translateY(-2px);background:var(--linie)}}
 .bildkarte{display:flex;align-items:flex-end;min-height:22rem;padding:1.5rem;border-radius:var(--radius-gross)}
 .bildkarte__name{font-size:var(--text-l);margin-bottom:2.25rem}
 .kachel{display:grid;align-content:end;gap:.35rem;min-height:11rem;padding:1.5rem;border-radius:var(--radius-gross);color:var(--text-auf-dunkel)}
@@ -320,3 +320,6 @@ h3{font-size:var(--h3);line-height:1.2;letter-spacing:-.02em}
 
 /* Beispielformulare: Hinweis statt Versand */
 [data-formular-meldung][hidden]{display:none}
+
+/* Reduzierte Bewegung: Bänder stehen still, Einblenden entfällt (basis.css), Symbolband bleibt als Reihe sichtbar */
+@media (prefers-reduced-motion:reduce){.ikonenband__spur{animation:none}.ikonenband{overflow-x:auto}.ikonenband__spur+.ikonenband__spur{display:none}}

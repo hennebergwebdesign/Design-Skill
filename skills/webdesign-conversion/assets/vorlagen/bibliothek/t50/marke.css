@@ -1,0 +1,38 @@
+/* marke.css der Vorlage "Produkt hell Raster": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#ffffff;
+  --flaeche-alt:#f6f4f2;
+  --flaeche-dunkel:#0b0b0c;
+  --text:#101012;
+  --text-leise:#5a5a60;
+  --linie:#e8e5e1;
+  --akzent:#d63a14;           /* Akzent: Fläche mit weißem Text, auf Hell auch Text und Linie */
+  --akzent-text:#ffffff;
+  --schrift-titel:'Hanken Grotesk',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:12px;
+  --radius-karte:20px;
+  --radius-bild:16px;
+
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:700;
+  --titel-spur:-0.035em;
+  --tinte:#0b0b0c;                /* Hauptknopf und dunkle Flächen */
+  --akzent-hell:#fde8e1;          /* helle Tönung für Rasterzellen und Kacheln */
+  --akzent-auf-dunkel:#ff7452;    /* Akzent als Text auf Schwarz */
+  --akzent-dunkel:#3a0f07;        /* dunkelrote Leiste */
+  --text-auf-dunkel:#f4f2f0;
+  --text-leise-dunkel:#b9b6b2;
+  --linie-dunkel:#2a2a2e;
+  --karte-dunkel:#141416;
+  --zelle:5.5rem;                 /* Kantenlänge einer Rasterzelle */
+  --schatten:0 20px 44px -20px rgba(16,16,18,.35),0 2px 6px rgba(16,16,18,.06);
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#b8826a;
+  --ton-2:#3a4a52;
+  --ton-3:#8a6a4a;
+  --ton-4:#5a4a44;
+  --ton-5:#6a7a72;
+  --ton-6:#1a1a1c;
+}

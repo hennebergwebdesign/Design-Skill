@@ -1,0 +1,139 @@
+/* stil-v3.css: Variante 3 "App mit Karten". Held mit Telefon und drei wechselnden Karten, Währungsliste mit Akkordeon,
+   dunkle Auswertungskarten, riesige Laufschrift mit Reitern, Stimmenspur, Preisumschalter. */
+
+/* Held */
+.held3{min-height:max(40rem,calc(100svh - 1.5rem))}
+.held3__innen{position:relative;display:grid;gap:2rem;align-content:end;padding-block:8rem 2.5rem}
+.held3__text{display:grid;gap:1.25rem;justify-items:start}
+.held3 h1{font-size:clamp(2.5rem,1.4rem + 4vw,4.25rem);line-height:1;letter-spacing:-.045em;max-width:11ch}
+.held3__text p{max-width:30rem;color:var(--text-leise-dunkel);font-size:var(--text-l)}
+.held3__telefon{position:relative;display:grid;place-items:center;min-height:24rem}
+.held3__geraet{width:min(100%,16rem);rotate:-3deg}
+.held3__ergebnis{display:grid;place-items:center;align-content:center;gap:.4rem;height:100%;padding-top:2rem;text-align:center}
+.held3__kugel{position:absolute;right:12%;top:6%;width:4.5rem;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 32% 30%,#e9fff7,var(--akzent) 45%,var(--ton-1))}
+.held3__karten{display:grid;gap:.75rem;align-content:end}
+.k3{border-radius:1.25rem;color:var(--akzent-text)}
+.k3--blau{background:var(--ton-2);color:#fff}
+.k3--lime{background:var(--akzent-2)}
+.k3--signal{background:var(--signal)}
+.k3__kopf{display:flex;align-items:center;justify-content:space-between;gap:1rem;width:100%;min-height:3.75rem;padding:.8rem 1.25rem;text-align:left;font-family:var(--schrift-titel);font-weight:500;font-size:var(--text-l);letter-spacing:-.02em;border-radius:inherit}
+.k3__detail{display:grid;gap:.75rem;justify-items:start;padding:0 1.25rem 1.25rem}
+.k3__titel{font-family:var(--schrift-titel);font-weight:500;font-size:clamp(1.25rem,1rem + 1vw,1.6rem);line-height:1.15;letter-spacing:-.02em}
+.k3__detail p:not(.k3__titel){opacity:.92}
+.k3__tag{display:inline-flex;align-items:center;min-height:2.75rem;padding:.4rem 1.1rem;border-radius:99px;background:#fff;color:var(--text);font-weight:500}
+.js .k3:not(.ist-aktiv) .k3__detail{display:none}
+.js .k3.ist-aktiv .k3__detail{animation:k3-ein .45s var(--kurve) both}
+@keyframes k3-ein{from{opacity:0}to{opacity:1}}
+@media (min-width:62rem){
+  .held3__innen{grid-template-columns:1fr 1.05fr 1fr;align-items:end;gap:1.5rem;padding-block:9rem 3.5rem}
+  .held3__telefon{min-height:38rem;align-self:end}
+  .held3__geraet{width:min(100%,19rem)}
+  .held3__text{align-self:center}
+}
+@media (prefers-reduced-motion:reduce){.js .k3.ist-aktiv .k3__detail{animation:none}}
+
+/* Währungen */
+.waehrung__raster{display:grid;gap:3rem;align-items:center}
+.waehrung__liste{position:relative;display:grid;gap:.75rem;padding:1.25rem;border-radius:var(--radius-gross);background:var(--flaeche-alt);overflow:hidden}
+.waehrung__liste .punktkarte{inset:0;opacity:.6}
+.waehrung__zeile{position:relative;display:grid;grid-template-columns:auto 1fr auto;gap:1rem;align-items:center}
+.waehrung__zeile .rund{--rt:var(--text);box-shadow:none;border:1px solid var(--linie)}
+.waehrung__betrag{text-align:right}
+.waehrung__text{display:grid;gap:2rem;justify-items:start}
+.akkordeon{width:100%;display:grid;gap:.5rem;border-left:2px solid var(--linie);padding-left:1.25rem}
+.akkordeon details{border-bottom:1px solid var(--linie)}
+.akkordeon summary{display:grid;grid-template-columns:auto 1fr auto;gap:1rem;align-items:center;min-height:3.75rem;padding-block:.75rem;cursor:pointer;list-style:none;font-weight:500}
+.akkordeon summary::-webkit-details-marker{display:none}
+.akkordeon .iconkachel{width:3rem;height:3rem;background:transparent;border:1px solid var(--linie)}
+.akkordeon__zeichen{transition:transform var(--dauer-mittel) var(--kurve)}
+.akkordeon details[open] .akkordeon__zeichen{transform:rotate(45deg)}
+.akkordeon p{padding:0 0 1.25rem 4rem;max-width:34rem}
+@media (min-width:62rem){.waehrung__raster{grid-template-columns:1fr 1fr;gap:5rem}.waehrung__liste{padding:2rem}}
+
+/* Geldbörse */
+.boerse__raster{display:grid;gap:3rem;align-items:center}
+.boerse__text{display:grid;gap:1.5rem;justify-items:start}
+.boerse__zahlen{display:flex;gap:3rem;margin:1.5rem 0 0}
+.boerse__zahlen div{display:grid;gap:.4rem}
+.boerse__zahlen dt{order:2;font-weight:500}
+.boerse__zahlen dd{margin:0;order:1;font-size:clamp(2rem,1.4rem + 2.2vw,3.25rem)}
+.boerse__bild{position:relative;min-height:26rem;overflow:hidden;border-radius:var(--radius-gross);background:radial-gradient(60% 50% at 50% 100%,color-mix(in srgb,var(--ton-1) 80%,transparent),transparent 72%),var(--flaeche-dunkel)}
+.boerse__telefon{position:absolute;left:50%;top:2.5rem;width:min(52%,15rem);translate:-50% 0;aspect-ratio:9/16}
+.boerse__karte{position:absolute;left:50%;bottom:-3rem;width:min(78%,19rem);aspect-ratio:1.62/1;translate:-50% 0}
+@media (min-width:62rem){.boerse__raster{grid-template-columns:1fr 1fr;gap:5rem}.boerse__bild{min-height:34rem}}
+
+/* Drei Karten */
+.drei__raster{display:grid;gap:1rem;counter-reset:s}
+.drei__karte{position:relative;display:grid;gap:1rem;align-content:start;padding:1.5rem 1.5rem 4.5rem;border-radius:var(--radius-gross);background:var(--flaeche-karte);box-shadow:0 30px 60px -48px color-mix(in srgb,var(--flaeche-dunkel) 60%,transparent)}
+.drei__bild{display:grid;place-items:center;min-height:11rem;margin-bottom:1rem;border-radius:1.25rem;background:radial-gradient(circle,color-mix(in srgb,var(--akzent) 16%,transparent),transparent 70%),var(--flaeche)}
+.drei__nr{position:absolute;left:1.5rem;bottom:1.5rem;display:grid;place-items:center;width:3rem;height:3rem;border-radius:50%;border:1px solid var(--linie);font-size:.95rem;font-weight:500}
+@media (min-width:48rem){.drei__raster{grid-template-columns:repeat(3,1fr)}}
+
+/* Dunkle Karten */
+.paneele3{padding-block:clamp(2.5rem,6vw,5rem)}
+.paneele3__raster{display:grid;gap:1rem}
+.p3{display:grid;gap:1.5rem;align-content:start;padding:1.5rem;border-radius:var(--radius-gross);background:var(--flaeche-dunkel-2);border:1px solid var(--linie-dunkel)}
+.p3>h3{text-align:center;font-size:var(--text-l);letter-spacing:-.02em;max-width:22ch;margin-inline:auto}
+.p3__bild{position:relative;min-height:14rem}
+.p3__saldo{width:78%}
+.p3__balken{position:absolute;right:0;top:2.5rem;width:46%;padding:.9rem;border-radius:.9rem;background:linear-gradient(150deg,var(--ton-2),var(--akzent));box-shadow:0 20px 40px -24px #000}
+.p3__balken .balken{--f:#fff}
+.p3__balken .balken i{background:color-mix(in srgb,#fff 55%,transparent)}
+.p3__balken .balken i.an{background:#fff}
+.p3__lime{display:flex;align-items:center;gap:.8rem;margin-bottom:1rem;padding:.9rem 1.1rem;border-radius:1rem;background:var(--akzent-2);color:var(--akzent-text);font-weight:500}
+.p3__top{box-shadow:none}
+.p3--breit{align-items:center}
+.p3__text{display:grid;gap:1.5rem;justify-items:start}
+.p3__text h3{font-size:clamp(1.5rem,1.1rem + 1.4vw,2.25rem);max-width:12ch}
+.laptop{position:relative;width:100%}
+.laptop__schirm{display:grid;gap:1rem;padding:1.25rem;border:.5rem solid #26332d;border-bottom-width:.6rem;border-radius:1rem 1rem .3rem .3rem;background:linear-gradient(160deg,#0e1a16,#18302a)}
+.laptop__schirm .balken{--f:#2b4a40}
+.laptop__schirm .balken i.an{--f:var(--akzent)}
+.laptop__fuss{width:108%;height:.9rem;margin-left:-4%;border-radius:0 0 1rem 1rem;background:linear-gradient(#3a4a43,#26332d)}
+@media (min-width:48rem){.paneele3__raster{grid-template-columns:1fr 1fr}.p3--breit{grid-column:1/-1;grid-template-columns:1fr 1.2fr;padding:2rem}}
+
+/* Erlebnis */
+.erlebnis{padding-bottom:clamp(2.5rem,6vw,5rem)}
+.laufschrift--dunkel{color:var(--text-auf-dunkel);font-size:clamp(3rem,1.6rem + 8vw,9rem)}
+.erlebnis__innen{display:grid;gap:2.5rem;justify-items:center}
+.erlebnis h2{max-width:18ch}
+.reiter{display:grid;gap:1.25rem;justify-items:center;width:100%}
+.reiter__liste{display:flex;gap:.5rem}
+.reiter__liste button{min-height:2.75rem;padding:.4rem 1.2rem;border-radius:99px;font-weight:500;color:var(--text-leise-dunkel);transition:color var(--dauer-kurz)}
+.reiter__liste button[aria-selected="true"]{background:var(--flaeche-dunkel-3);color:var(--text-auf-dunkel);box-shadow:inset 0 0 0 1px var(--linie-dunkel)}
+.reiter__tafel{max-width:34rem;text-align:center;color:var(--text-leise-dunkel)}
+.js .reiter__tafel[hidden]{display:none}
+.laptop--gross{width:min(100%,46rem)}
+.laptop--gross .laptop__schirm{min-height:16rem;align-content:end}
+.anbindungen{display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem}
+.anbindungen li{display:grid;place-items:center;width:3.75rem;height:3.75rem;border-radius:50%;background:#fff;color:var(--text);font-family:var(--schrift-titel);font-weight:600;font-size:1.2rem}
+.anbindungen li.b{background:var(--akzent-2)}
+.anbindungen li.c{background:var(--akzent)}
+
+/* Stimmenspur */
+.stimmen3__spur{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:.5rem}
+.stimmen3__spur::-webkit-scrollbar{display:none}
+.stimmen3__spur .stimme{flex:0 0 min(85%,22rem);scroll-snap-align:start}
+.pfeile{display:flex;justify-content:center;gap:.75rem;margin-top:1.5rem}
+.pfeile__knopf{display:grid;place-items:center;width:3.25rem;height:3.25rem;border-radius:50%;background:var(--knopf);color:#fff;transition:transform var(--dauer-kurz) var(--kurve)}
+.pfeile__knopf:hover{transform:scale(1.06)}
+.pfeile__knopf[aria-disabled="true"]{opacity:.35;cursor:default}
+@media (min-width:62rem){.stimmen3__spur .stimme{flex-basis:calc((100% - 2rem) / 3)}}
+
+/* Preise */
+.umschalter{display:flex;align-items:center;justify-content:center;gap:1rem;margin-bottom:2.5rem;font-weight:500}
+.umschalter__knopf{position:relative;width:3.5rem;height:2rem;border-radius:99px;background:var(--knopf)}
+.umschalter__knopf span{position:absolute;left:.25rem;top:.25rem;width:1.5rem;height:1.5rem;border-radius:50%;background:var(--akzent);transition:transform var(--dauer-mittel) var(--kurve)}
+.umschalter__knopf[aria-checked="true"] span{transform:translateX(1.5rem)}
+.preise__raster{display:grid;gap:1rem;align-items:start}
+.tarif{display:grid;gap:1rem;align-content:start;padding:1.75rem;border-radius:var(--radius-gross);background:var(--flaeche-karte);box-shadow:0 30px 60px -48px color-mix(in srgb,var(--flaeche-dunkel) 60%,transparent)}
+.tarif__name{display:flex;align-items:center;justify-content:space-between;gap:1rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.95rem}
+.tarif__hinweis{padding:.15rem .7rem;border-radius:99px;background:var(--knopf);color:#fff;font-size:.875rem;letter-spacing:0;text-transform:none;font-weight:500}
+.tarif__preis{display:flex;align-items:baseline;gap:.75rem}
+.tarif__preis .ui__zahl{font-size:clamp(2.25rem,1.8rem + 1.6vw,3.25rem)}
+.tarif__preis s{color:var(--text-leise);font-size:1.25rem}
+.haken--einspaltig{grid-template-columns:1fr;padding-block:1rem;border-top:1px solid var(--linie)}
+.haken--einspaltig svg{color:var(--text)}
+.haken--einspaltig .aus{color:var(--text-leise)}
+.haken--einspaltig .aus svg{color:var(--text-leise);opacity:.55}
+@media (min-width:62rem){.preise__raster{grid-template-columns:repeat(3,1fr)}}

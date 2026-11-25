@@ -4,7 +4,7 @@
 :root{--h2-m:clamp(1.85rem,1.3rem + 3vw,3.5rem);--spalte:1.5rem}
 :focus-visible{outline-color:var(--akzent-tief)}
 .dunkel :focus-visible,.kopf :focus-visible,.fuss :focus-visible{outline-color:var(--akzent)}
-h2{font-size:var(--h2-m);line-height:1.05;hyphens:auto;overflow-wrap:break-word}
+h2{font-size:var(--h2-m);line-height:1.05;overflow-wrap:break-word}
 h3{font-size:var(--h3);line-height:1.15}
 .dunkel{background:var(--flaeche-dunkel);color:var(--text-auf-dunkel)}
 .leise{color:var(--text-leise)}

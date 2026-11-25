@@ -1,0 +1,273 @@
+/* stil.css der Vorlage "Finanzdienst, Rundbänder": Gemeinsames beider Varianten und die Gestaltung von Variante 1 (index.html).
+   Variante 2 (v2.html) lädt danach stil-v2.css. Werte kommen aus marke.css. */
+:root{--breite:76rem;--rand:clamp(1.25rem,5vw,4rem);--blatt:2.5rem}
+@media (min-width:48rem){:root{--blatt:4.5rem}}
+body{background:var(--flaeche)}
+.sektion{padding-block:clamp(4rem,9vw,7.5rem)}
+h2{font-size:clamp(2rem,1.1rem + 3.3vw,3.75rem);line-height:1.08}
+h3{line-height:1.2}
+.leise{color:var(--text-leise)}
+.dunkel .leise{color:var(--text-leise-dunkel)}
+
+/* Knöpfe: Pille, Safran als Hauptknopf */
+.knopf{min-height:3.25rem;padding:.8rem 1.6rem;font-size:1.0625rem;font-weight:700;background:var(--akzent);color:var(--akzent-text);transition:transform var(--dauer-kurz) var(--kurve),box-shadow var(--dauer-kurz)}
+.knopf:hover{transform:translateY(-2px);box-shadow:0 10px 22px color-mix(in srgb,var(--akzent) 45%,transparent)}
+.knopf svg{width:1.25rem;height:1.25rem;transition:transform var(--dauer-kurz) var(--kurve)}
+.knopf:hover svg{transform:translate(2px,-2px)}
+.knopf--hell{background:var(--flaeche);color:var(--text);box-shadow:0 2px 14px color-mix(in srgb,#000 12%,transparent)}
+.knopf--hell:hover{box-shadow:0 8px 22px color-mix(in srgb,#000 18%,transparent)}
+.knopf--dunkel{background:var(--flaeche-dunkel);color:var(--text-auf-dunkel)}
+.knopf--dunkel:hover{box-shadow:0 10px 22px color-mix(in srgb,#000 30%,transparent)}
+.knopf--klein{min-height:2.75rem;padding:.5rem 1.2rem;font-size:1rem}
+.knoepfe{display:flex;flex-wrap:wrap;gap:.75rem}
+.etikett{display:inline-block;font-weight:700;color:var(--akzent-tief)}
+.dunkel .etikett{color:var(--akzent)}
+.weiterlink{display:inline-flex;align-items:center;gap:.4rem;min-height:2.75rem;font-weight:600}
+.weiterlink svg{width:1.125rem;height:1.125rem;transition:transform var(--dauer-kurz) var(--kurve)}
+.weiterlink:hover svg{transform:translate(2px,-2px)}
+
+/* Kopf: transparent über dem Held, mobil Logo, Knopf, Burger */
+.kopf{position:absolute;top:0;left:0;right:0;z-index:50;padding:.9rem var(--rand) 0;pointer-events:none}
+.js .kopf{position:fixed;padding:0}
+.kopf>*{pointer-events:auto}
+.kopf__leiste{position:relative;padding-block:.4rem}
+.js .kopf__leiste{padding:.5rem var(--rand);transition:background-color var(--dauer-mittel),box-shadow var(--dauer-mittel)}
+.js.gescrollt .kopf__leiste{background:var(--flaeche);box-shadow:0 6px 24px color-mix(in srgb,#000 10%,transparent)}
+.kopf__innen{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;width:100%;max-width:var(--breite);margin-inline:auto}
+.js .kopf__innen{flex-wrap:nowrap}
+.logo{display:inline-flex;align-items:center;gap:.55rem;min-height:2.75rem;margin-right:auto;font-family:var(--schrift-titel);font-weight:700;font-size:1.375rem;letter-spacing:-.04em;white-space:nowrap}
+.logo svg{width:2rem;height:2rem;border-radius:.6rem;background:var(--flaeche-dunkel);color:var(--akzent);padding:.3rem}
+.kopf__tel{display:none;align-items:center;gap:.4rem;min-height:2.75rem;padding-inline:.5rem;font-weight:600;white-space:nowrap}
+.kopf__tel svg{width:1.25rem;height:1.25rem}
+.kopf__knopf{min-height:2.75rem;padding:.5rem 1.1rem;font-size:1rem;white-space:nowrap}
+.kopf__burger{display:none;width:2.75rem;height:2.75rem;border-radius:50%;align-items:center;justify-content:center;background:var(--flaeche-alt)}
+.js .kopf__burger{display:inline-flex}
+.burger,.burger::before{display:block;width:1.2rem;height:2px;background:currentColor;border-radius:2px;transition:transform var(--dauer-mittel) var(--kurve)}
+.burger{position:relative;transform:translateY(-4px)}
+.burger::before{content:"";position:absolute;left:0;top:8px}
+.kopf__burger[aria-expanded="true"] .burger{transform:rotate(45deg)}
+.kopf__burger[aria-expanded="true"] .burger::before{transform:translateY(-8px) rotate(-90deg)}
+.kopf__nav{order:5;flex-basis:100%}
+.kopf__menue{display:flex;flex-wrap:wrap;gap:0 .25rem}
+.kopf__menue a{display:flex;align-items:center;min-height:2.75rem;padding-inline:.75rem;font-weight:500;font-size:1.0625rem}
+.kopf__menue a:hover{text-decoration:underline;text-underline-offset:.35em}
+.js .kopf__nav{position:absolute;top:calc(100% + .25rem);left:var(--rand);right:var(--rand);padding:.5rem 1rem 1rem;border-radius:var(--radius-karte);background:var(--flaeche);color:var(--text);box-shadow:0 18px 40px color-mix(in srgb,#000 22%,transparent)}
+.js .kopf__nav:not([data-offen="true"]){display:none}
+.js .kopf__menue{flex-direction:column}
+.js .kopf__menue a{min-height:3rem}
+.kopf__navtel{display:flex;align-items:center;gap:.5rem;min-height:3rem;margin-top:.5rem;padding-inline:.75rem;font-weight:700;border-top:1px solid var(--linie)}
+.kopf__navtel svg{width:1.25rem;height:1.25rem}
+@media (min-width:64rem){
+  .kopf__burger,.js .kopf__burger{display:none}
+  .kopf__nav,.js .kopf__nav,.js .kopf__nav:not([data-offen="true"]){position:static;display:block;order:0;flex-basis:auto;padding:0;background:none;border-radius:0;box-shadow:none;color:inherit;margin-left:1.5rem}
+  .js .kopf__menue{flex-direction:row}
+  .kopf__menue{flex-wrap:nowrap}
+  .kopf__navtel{display:none}
+  .kopf__tel{display:inline-flex}
+}
+
+/* Held 1: zentrierter Text, Gerät über dunklem Band mit runder Unterkante */
+.held1{padding-top:clamp(8rem,16vw,10.5rem);text-align:center}
+.held1__text{display:grid;justify-items:center;gap:1.25rem}
+.held1 h1{max-width:17ch;font-size:clamp(2.5rem,1rem + 6.4vw,5.5rem);font-weight:700;line-height:1.02;letter-spacing:-.04em}
+.held1 p{max-width:34rem;font-size:var(--text-l);color:var(--text-leise)}
+.held1 .knoepfe{justify-content:center;margin-top:.5rem}
+.buehne{position:relative;margin-top:clamp(2.5rem,6vw,4rem)}
+.buehne__dunkel{position:absolute;left:0;right:0;bottom:0;top:clamp(5rem,20vw,16rem);border-radius:0 0 var(--blatt) var(--blatt);background:var(--flaeche-dunkel);background-image:repeating-radial-gradient(circle at 20% 120%,transparent 0 22px,rgba(255,255,255,.035) 22px 23px)}
+.buehne__inhalt{position:relative;display:grid;justify-items:center;gap:clamp(2rem,5vw,3.5rem);padding-bottom:clamp(2.5rem,6vw,4.5rem)}
+.vertrauen{display:grid;justify-items:center;gap:1.25rem;color:var(--text-auf-dunkel);text-align:center}
+.vertrauen p{font-size:var(--text-l);font-weight:600}
+.logoreihe{display:flex;flex-wrap:wrap;justify-content:center;gap:1.25rem clamp(1.5rem,4vw,3.5rem);--logo-h:1.75rem;opacity:.9}
+
+/* Geräte aus CSS: Rahmen, Schirm mit angedeuteter Oberfläche, schwebende Karten */
+.geraet{position:relative}
+.geraet__rahmen{position:relative;padding:.5rem;border-radius:1.6rem;background:var(--flaeche-dunkel);box-shadow:0 0 0 2px #50565a inset,0 28px 60px color-mix(in srgb,#000 30%,transparent)}
+.geraet__schirm{position:relative;overflow:hidden;border-radius:1.1rem;background:#fff;--bild-grund:#fff}
+.ui{display:grid;height:100%;grid-template-columns:22% 1fr;font-size:.5rem;color:#aab0b5}
+.ui__seite{display:grid;align-content:start;gap:.5rem;padding:.8rem .6rem;border-right:1px solid #eceef0}
+.ui__seite i,.ui__zeile i{display:block;height:.45rem;border-radius:1rem;background:#e6e8ea}
+.ui__seite i:first-child{width:60%;height:.6rem;background:#16181a;margin-bottom:.5rem}
+.ui__haupt{display:grid;align-content:start;gap:.6rem;padding:.9rem}
+.ui__kopf{height:.7rem;width:35%;border-radius:1rem;background:#16181a}
+.ui__zeile{display:grid;grid-template-columns:1.2rem 1fr 18%;align-items:center;gap:.6rem;padding:.35rem 0;border-bottom:1px solid #eceef0}
+.ui__zeile b{width:1.2rem;height:1.2rem;border-radius:50%;background:#d9dde0}
+.ui__zeile i:last-child{height:.5rem;background:#16181a}
+.ui__kachel{height:3.2rem;border-radius:.5rem;background:linear-gradient(135deg,var(--akzent),#f7d777)}
+.geraet--tablet{width:min(100%,50rem)}
+.geraet--tablet .geraet__schirm{aspect-ratio:16/10}
+.geraet--telefon{width:min(100%,17rem)}
+.geraet--telefon .geraet__rahmen{padding:.45rem;border-radius:2.6rem}
+.geraet--telefon .geraet__schirm{aspect-ratio:9/19;border-radius:2.2rem}
+.geraet--telefon .geraet__schirm::before{content:"";position:absolute;top:.5rem;left:50%;z-index:2;width:32%;height:.95rem;transform:translateX(-50%);border-radius:1rem;background:var(--flaeche-dunkel)}
+.geraet--telefon .ui{grid-template-columns:1fr;font-size:.55rem}
+.geraet--telefon .ui__haupt{padding:2rem .9rem .9rem}
+.geraet--telefon .ui__kachel{height:6rem;border-radius:.8rem;background:linear-gradient(135deg,#16181a,#3b4247)}
+.schwebe{position:absolute;z-index:3;display:grid;gap:.5rem;padding:1rem 1.1rem;border-radius:1rem;background:var(--flaeche);color:var(--text);text-align:left;font-size:1rem;box-shadow:0 14px 34px color-mix(in srgb,#000 22%,transparent)}
+.schwebe strong{font-family:var(--schrift-titel);font-size:1.0625rem}
+.schwebe p{font-size:1rem;line-height:1.4}
+.schwebe .posten{display:flex;justify-content:space-between;gap:1.5rem;padding-top:.5rem;border-top:1px solid var(--linie)}
+.schwebe--links{left:-1rem;bottom:-1.5rem;width:min(70%,17rem)}
+.schwebe--rechts{right:-1rem;bottom:1.5rem;width:min(60%,14rem)}
+@media (min-width:56rem){.schwebe--links{left:-4rem;bottom:-2rem}.schwebe--rechts{right:-3rem;bottom:2.5rem}}
+.schwebe .summe{font-family:var(--schrift-titel);font-size:1.5rem;font-weight:700;letter-spacing:-.03em}
+
+/* Abgrenzung: Bild links, zwei Aussagen rechts */
+.abgrenzung__raster{display:grid;gap:2.5rem;align-items:center}
+.abgrenzung__bild{aspect-ratio:1/1;border-radius:var(--radius-karte);--bild-grund:linear-gradient(140deg,#d8d4c8,#5d6a6e)}
+.abgrenzung h2{max-width:14ch}
+.aussage{display:grid;gap:.6rem;padding-block:1.5rem;border-bottom:1px solid var(--linie)}
+.aussage:last-child{border-bottom:0}
+.aussage h3{font-size:1.5rem;letter-spacing:-.02em}
+.aussage p{color:var(--text-leise);max-width:32rem}
+.abgrenzung__text{display:grid;gap:1rem}
+@media (min-width:56rem){.abgrenzung__raster{grid-template-columns:1fr 1fr;gap:clamp(3rem,7vw,6rem)}}
+
+/* Merkmale: zwei große Karten, eine breite */
+.merkmale{display:grid;gap:1rem}
+.merkmal{display:grid;align-content:space-between;gap:1.5rem;padding:clamp(1.5rem,3vw,2.5rem);border-radius:var(--radius-karte);background:var(--flaeche-alt);overflow:hidden}
+.merkmal__bild{display:grid;place-items:center;min-height:16rem;border-radius:1.25rem;background:var(--flaeche-alt)}
+.merkmal svg.icon{width:2.5rem;height:2.5rem;margin-bottom:.75rem}
+.merkmal h3{font-size:1.75rem;letter-spacing:-.025em}
+.merkmal p{margin-top:.5rem;color:var(--text-leise);max-width:30rem}
+.karten-stapel{position:relative;width:min(100%,22rem);aspect-ratio:1.7/1}
+.bankkarte{position:absolute;width:76%;aspect-ratio:1.586/1;padding:1rem;border-radius:1rem;display:flex;flex-direction:column;justify-content:space-between;font-family:var(--schrift-titel);font-weight:600;letter-spacing:.06em;box-shadow:0 14px 30px color-mix(in srgb,#000 25%,transparent)}
+.bankkarte--dunkel{left:0;top:0;transform:rotate(-8deg);background:linear-gradient(135deg,#16181a,#3b4247);color:#fff}
+.bankkarte--hell{right:0;bottom:0;transform:rotate(6deg);background:linear-gradient(135deg,var(--akzent),#f7d777);color:var(--akzent-text)}
+.bankkarte small{font-size:.75rem;font-weight:500}
+.bankkarte span{display:block;font-size:1rem}
+@media (min-width:56rem){.merkmale{grid-template-columns:1fr 1fr;gap:1.25rem}.merkmal--breit{grid-column:1/-1;grid-template-columns:1fr 1fr;align-items:center}}
+.merkmal--breit .geraet--telefon{margin:0 auto;width:min(100%,14rem)}
+.merkmal--breit .merkmal__bild{min-height:0;padding:1.5rem 1rem 0;align-items:end;overflow:hidden}
+.merkmal--breit .geraet--telefon .geraet__rahmen{border-bottom-left-radius:0;border-bottom-right-radius:0}
+
+/* Ablauf: Überschrift links, Karte mit Telefon, Akkordeon rechts */
+.ablauf__kopf{margin-bottom:clamp(2rem,5vw,3.5rem)}
+.ablauf__kopf h2{max-width:20ch}
+.ablauf__raster{display:grid;gap:2rem;align-items:start}
+.ablauf__karte{display:grid;place-items:end center;min-height:24rem;padding:2rem 1rem 0;border-radius:var(--radius-karte);background:var(--flaeche-alt);overflow:hidden}
+.ablauf__karte .geraet--telefon{width:min(100%,15rem)}
+.ablauf__karte .geraet__rahmen{border-bottom-left-radius:0;border-bottom-right-radius:0}
+.akkordeon details{border-bottom:1px solid var(--linie)}
+.akkordeon details:first-child{border-top:1px solid var(--linie)}
+.akkordeon summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:4.5rem;font-family:var(--schrift-titel);font-size:clamp(1.25rem,1.1rem + .6vw,1.75rem);font-weight:600;letter-spacing:-.02em;cursor:pointer;list-style:none}
+.akkordeon summary::-webkit-details-marker{display:none}
+.akkordeon summary svg{flex:none;width:1.5rem;height:1.5rem;color:var(--text-leise);transition:transform var(--dauer-mittel) var(--kurve)}
+.akkordeon details[open] summary svg{transform:rotate(45deg)}
+.akkordeon details>p{padding-bottom:1.5rem;max-width:32rem;color:var(--text-leise)}
+@media (min-width:56rem){.ablauf__raster{grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem)}}
+
+/* Zahlen: dunkler Block mit Bild links, versetzte Zahlen rechts */
+.zahlenblock{background:var(--flaeche-dunkel);color:var(--text-auf-dunkel);border-radius:var(--blatt) var(--blatt) var(--blatt) var(--blatt);overflow:hidden}
+.zahlenblock__raster{display:grid}
+.zahlenblock__bild{min-height:20rem;border-radius:0;--bild-grund:linear-gradient(150deg,#e6d3a3,#5d6a6e)}
+.zahlen{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;padding:clamp(2rem,6vw,5rem) clamp(1.25rem,5vw,4rem)}
+.zahl{display:grid;gap:.75rem;align-content:start}
+.zahl h3{font-size:1.125rem;font-weight:600}
+.zahl dd{font-family:var(--schrift-titel);font-size:clamp(2.5rem,1.5rem + 4vw,5rem);font-weight:600;letter-spacing:-.04em;line-height:1}
+.zahl p{padding-top:1rem;border-top:1px solid var(--text-auf-dunkel);color:var(--text-auf-dunkel);font-size:1rem}
+@media (min-width:48rem){.zahlen{gap:2.5rem 3rem}.zahl:nth-child(even){margin-top:4rem}}
+@media (min-width:64rem){.zahlenblock__raster{grid-template-columns:.9fr 1.1fr}.zahlenblock__bild{min-height:100%}}
+
+/* Zielgruppen: Reiter mit Text und Bild */
+.zielgruppen__kopf{display:grid;justify-items:center;gap:1rem;max-width:44rem;margin:0 auto clamp(1.5rem,4vw,2.5rem);text-align:center}
+.zielgruppen__kopf p{color:var(--text-leise);font-size:var(--text-l)}
+.reiter{display:none}
+.js .reiter{display:flex;justify-content:center;gap:clamp(.25rem,2vw,2rem);border-bottom:1px solid var(--linie);margin-bottom:clamp(1.5rem,4vw,3rem)}
+.reiter button{position:relative;min-height:3.5rem;padding-inline:1rem;font-size:1.25rem;font-weight:500;color:var(--text-leise);transition:color var(--dauer-kurz)}
+.reiter button:hover{color:var(--text)}
+.reiter button[aria-selected="true"]{color:var(--text);font-weight:700}
+.reiter button[aria-selected="true"]::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;background:var(--akzent)}
+.tafel{display:grid;gap:1.5rem;align-items:center;padding-block:1.5rem}
+.tafel[hidden]{display:none}
+.tafel+.tafel{border-top:1px solid var(--linie)}
+.js .tafel+.tafel{border-top:0}
+.tafel__text{display:grid;gap:1rem;justify-items:start}
+.tafel__text h3{font-size:clamp(1.75rem,1.2rem + 2vw,2.75rem);letter-spacing:-.03em;max-width:16ch}
+.tafel__text p{max-width:28rem;color:var(--text-leise)}
+.tafel__bild{position:relative}
+.tafel__bild>.bild{aspect-ratio:4/3}
+.tafel:nth-of-type(1) .tafel__bild>.bild{--bild-grund:linear-gradient(150deg,#d8d4c8,#8e9aa0)}
+.tafel:nth-of-type(2) .tafel__bild>.bild{--bild-grund:linear-gradient(200deg,#e6d3a3,#5d6a6e)}
+.tafel:nth-of-type(3) .tafel__bild>.bild{--bild-grund:linear-gradient(120deg,#5d6a6e,#2b3236)}
+.tafel__bild .schwebe{left:-1rem;bottom:1.5rem;width:min(70%,15rem)}
+.posten{display:flex;align-items:center;gap:.75rem}
+.posten b{display:grid;place-items:center;width:2.25rem;height:2.25rem;border-radius:50%;background:var(--flaeche-alt);font-family:var(--schrift-titel)}
+@media (min-width:56rem){.tafel{grid-template-columns:1fr 1.1fr;gap:clamp(2rem,6vw,6rem)}.tafel__bild .schwebe{left:-3rem}}
+
+/* Aufruf: Safranband mit Karte und Formular */
+.aufruf{position:relative;margin-block:clamp(1rem,3vw,2rem);border-radius:var(--blatt);background:var(--akzent);color:var(--akzent-text);overflow:hidden}
+.aufruf::before{content:"";position:absolute;inset:0;background-image:repeating-radial-gradient(circle at 85% -20%,transparent 0 26px,rgba(255,255,255,.18) 26px 27px);pointer-events:none}
+.aufruf__innen{position:relative;display:grid;justify-items:center;gap:1.5rem;padding:clamp(3rem,8vw,6rem) var(--rand);text-align:center}
+.aufruf h2{max-width:20ch;font-size:clamp(2rem,1.2rem + 3.2vw,3.75rem)}
+.aufruf p{max-width:34rem;font-size:var(--text-l)}
+.mailform{display:grid;gap:.6rem;width:min(100%,32rem)}
+.mailform label{font-weight:700;text-align:left}
+.mailform__zeile{display:grid;gap:.6rem}
+.mailform input{min-height:3.5rem;padding:.5rem 1.4rem;font:inherit;font-size:1.0625rem;color:var(--text);background:#fff;border:2px solid transparent;border-radius:999px}
+.mailform input::placeholder{color:var(--text-leise);opacity:1}
+.mailform input:focus-visible{outline:3px solid var(--flaeche-dunkel);outline-offset:2px}
+.mailform .knopf{justify-content:center;background:var(--flaeche-dunkel);color:var(--text-auf-dunkel)}
+.mailform .knopf:hover{box-shadow:0 10px 22px color-mix(in srgb,#000 30%,transparent)}
+.formular__meldung{padding:.8rem 1.1rem;border-radius:1rem;background:#fff;color:var(--text);font-size:1rem;text-align:left}
+.formular__meldung[hidden]{display:none}
+.mailrecht{font-size:1rem;max-width:32rem}
+.mailrecht a{text-decoration:underline}
+@media (min-width:40rem){.mailform__zeile{grid-template-columns:1fr auto}}
+
+/* Stimmen: große Karten im Reiter mit Pfeilen */
+.stimmen__kopf{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:1rem 2rem;margin-bottom:clamp(1.5rem,4vw,2.5rem)}
+.stimmen__kopf h2{max-width:16ch}
+.pfeile{display:flex;gap:.5rem}
+.pfeil{display:grid;place-items:center;width:3rem;height:3rem;border-radius:50%;background:var(--flaeche-alt);transition:background-color var(--dauer-kurz),transform var(--dauer-kurz) var(--kurve)}
+.pfeil:hover{background:var(--akzent)}
+.pfeil[aria-disabled="true"]{opacity:.4;pointer-events:none}
+.pfeil svg{width:1.375rem;height:1.375rem}
+.spur{display:flex;gap:1.25rem;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:.5rem;scrollbar-width:none}
+.spur::-webkit-scrollbar{display:none}
+.stimme{display:grid;gap:1.25rem;flex:0 0 min(88%,52rem);padding:clamp(1.25rem,3vw,2.5rem);border-radius:var(--radius-karte);background:var(--flaeche-alt);scroll-snap-align:start}
+.stimme__portrait{aspect-ratio:1/1;border-radius:1.25rem;--bild-grund:linear-gradient(150deg,#c9b27a,#5d6a6e)}
+.stimme:nth-child(2) .stimme__portrait{--bild-grund:linear-gradient(200deg,#d8d4c8,#2b3236)}
+.stimme:nth-child(3) .stimme__portrait{--bild-grund:linear-gradient(120deg,#e6d3a3,#8e9aa0)}
+.stimme__text{display:grid;align-content:space-between;gap:1.5rem}
+.stimme blockquote{display:grid;gap:1rem}
+.stimme blockquote p:first-child{font-family:var(--schrift-titel);font-size:clamp(1.375rem,1.1rem + 1vw,2rem);font-weight:600;letter-spacing:-.025em;line-height:1.2}
+.stimme blockquote p+p{color:var(--text-leise)}
+.stimme__fuss{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.stimme__name{font-family:var(--schrift-titel);font-size:1.25rem;font-weight:700}
+.stimme__name span{display:block;font-family:var(--schrift-text);font-size:1rem;font-weight:400;color:var(--text-leise)}
+.stimme .beispiellogo{--logo-h:1.5rem;color:var(--text)}
+@media (min-width:48rem){.stimme{grid-template-columns:.8fr 1.2fr;align-items:stretch}.stimme__portrait{aspect-ratio:auto;min-height:18rem}}
+
+/* Beiträge */
+.beitraege__kopf{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:1rem 2rem;margin-bottom:clamp(1.5rem,4vw,3rem)}
+.beitraege__kopf h2{max-width:16ch}
+.beitraege{display:grid;gap:2.5rem 2rem}
+.beitrag{display:grid;gap:1rem;align-content:start;padding-bottom:1.5rem;border-bottom:1px solid var(--linie)}
+.beitrag__bild{position:relative;aspect-ratio:3/2}
+.beitrag:nth-child(1) .beitrag__bild{--bild-grund:linear-gradient(140deg,#d8d4c8,#5d6a6e)}
+.beitrag:nth-child(2) .beitrag__bild{--bild-grund:linear-gradient(200deg,#e6d3a3,#8e9aa0)}
+.beitrag__marke{position:absolute;top:1rem;right:1rem;z-index:1;padding:.55rem 1.1rem;border-radius:999px;background:var(--akzent);color:var(--akzent-text);font-weight:600}
+.beitrag h3{font-size:clamp(1.375rem,1.1rem + 1vw,2rem);letter-spacing:-.025em;max-width:26ch}
+.beitrag__fuss{display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-leise)}
+.beitrag__fuss a{color:var(--text)}
+@media (min-width:48rem){.beitraege{grid-template-columns:1fr 1fr}}
+
+/* Fuß: dunkle Fläche mit runder Oberkante */
+.fuss{margin-top:clamp(4rem,8vw,7rem);padding:clamp(3rem,7vw,5rem) 0 1.5rem;border-radius:var(--blatt) var(--blatt) 0 0;background:var(--flaeche-dunkel);color:var(--text-auf-dunkel)}
+.fuss :focus-visible{outline-color:#fff}
+.fuss__kopf{display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:1.5rem 2rem;padding-bottom:clamp(2rem,5vw,3rem);border-bottom:1px solid var(--linie-dunkel)}
+.fuss__kopf>div{display:grid;gap:1rem;max-width:26rem}
+.fuss__kopf p{color:var(--text-leise-dunkel)}
+.fuss .logo svg{background:var(--akzent);color:var(--akzent-text)}
+.fuss__spalten{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem 1rem;padding-block:clamp(2rem,5vw,3rem)}
+.fuss__spalten h2{margin-bottom:.4rem;font-family:var(--schrift-text);font-size:1.0625rem;font-weight:700;letter-spacing:0}
+.fuss__spalten a{display:flex;align-items:center;min-height:2.75rem;color:var(--text-leise-dunkel)}
+.fuss__spalten a:hover{color:#fff}
+.fuss__adr{font-style:normal;color:var(--text-leise-dunkel);display:grid}
+@media (min-width:56rem){.fuss__spalten{grid-template-columns:repeat(4,1fr)}}
+.fuss__klein{display:flex;flex-wrap:wrap;justify-content:center;gap:0 1.25rem;padding-top:1.25rem;border-top:1px solid var(--linie-dunkel);text-align:center;color:var(--text-leise-dunkel)}
+.fuss__klein a{display:inline-flex;align-items:center;min-height:2.75rem;text-decoration:underline;text-underline-offset:.25em}
+.kopf__knopf .lang{display:none}
+@media (min-width:48rem){.kopf__knopf .lang{display:inline}}
+dd{margin:0}
+.merkmal__bild{padding:1rem}
