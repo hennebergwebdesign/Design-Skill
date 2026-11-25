@@ -10,6 +10,9 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 | beratung-dokumente-tisch.webp.webp | Block Dokumente | Zwei Personen prüfen Dokumente am Sitzungstisch | @vantaymedia | https://unsplash.com/photos/TFFn3BYLc5s | Unsplash Lizenz | 25.11.2026 |
 | beratung-justitia-blau.webp.webp | Aufruf | Statue der Gerechtigkeit hält Schuppen vor blauem Hintergrund | @sasun1990 | https://unsplash.com/photos/zbQ5UaREHx4 | Unsplash Lizenz | 25.11.2026 |
 | beratung-tisch-unterlagen.webp.webp | Kontakt | Ein Mann und eine Frau sitzen an einem weißen Tisch | @carrieallenllc | https://unsplash.com/photos/1H1LBKvD7ew | Unsplash Lizenz | 25.11.2026 |
+| frau-anzug-sonnenbrille-640.webp | index.html, Zeile 141, Bild: Porträt der Kanzleileitung | Frau im dunklen Anzug mit Sonnenbrille | [@mdesign85](https://unsplash.com/de/@mdesign85) | [Seite](https://unsplash.com/de/fotos/FJ37gnt6g50) | Unsplash Lizenz | 25.11.2026 |
+| mann-anzug-krawatte-640.webp | index.html, Zeile 246, Bild: Porträt mit Regal | Junger Mann im Anzug mit Krawatte | [@spliff_dj_joe](https://unsplash.com/de/@spliff_dj_joe) | [Seite](https://unsplash.com/de/fotos/-AGW3X5fTgM) | Unsplash Lizenz | 25.11.2026 |
+| frau-lockig-blazer-640.webp | index.html, Zeile 251, Bild: Porträt mit Büchern | Frau mit kurzem lockigem Haar im gestreiften Blazer | [@wocintechchat](https://unsplash.com/de/@wocintechchat) | [Seite](https://unsplash.com/de/fotos/SJvDxw0azqw) | Unsplash Lizenz | 25.11.2026 |
 
 ## Hinweise
 
@@ -22,3 +25,4 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 
 * Leistung 3 (Hände mit Schiene beim Arztbesuch), bewusst ohne Foto, Verletzungsmotive vermieden
 * Porträt Kanzleileitung und zwei Personenporträts
+- Nachtrag 25.11.2026: Personen und weitere Beispielfotos als Vorschau eingesetzt, werden vor Abgabe ersetzt.

@@ -17,6 +17,12 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 | kanzlei-unterschrift-zu-zweit.webp.webp | v2 Rahmen Beratung | Person im orangefarbenen Langarmhemd schreibt auf weißem Papier | @romaindancre | https://unsplash.com/photos/doplSDELX7E | Unsplash Lizenz | 25.11.2026 |
 | kanzlei-stuehle-konferenztisch.webp.webp | v2 Fälle 1 | Schwarze Bürostühle mit verchromten Armlehnen in einer Reihe an einem Konferenztisch | @michaelfousert | https://unsplash.com/photos/RNsKphkdBTk | Unsplash Lizenz | 25.11.2026 |
 | kanzlei-schreiben-papier.webp.webp | v2 Fälle 2 | Mann, der auf Papier schreibt | @amstram | https://unsplash.com/photos/OQMZwNd3ThU | Unsplash Lizenz | 25.11.2026 |
+| mann-anzug-krawatte-640.webp | index.html, Zeile 143, Bild: Porträt, Hochformat | Junger Mann im Anzug mit Krawatte | [@spliff_dj_joe](https://unsplash.com/de/@spliff_dj_joe) | [Seite](https://unsplash.com/de/fotos/-AGW3X5fTgM) | Unsplash Lizenz | 25.11.2026 |
+| frau-anzug-sonnenbrille-640.webp | index.html, Zeile 144, Bild: Porträt, Hochformat | Frau im dunklen Anzug mit Sonnenbrille | [@mdesign85](https://unsplash.com/de/@mdesign85) | [Seite](https://unsplash.com/de/fotos/FJ37gnt6g50) | Unsplash Lizenz | 25.11.2026 |
+| mann-schreibtisch-anzug-640.webp | index.html, Zeile 145, Bild: Porträt, Hochformat | Mann im Anzug am Schreibtisch | [@ratulpuri](https://unsplash.com/de/@ratulpuri) | [Seite](https://unsplash.com/de/fotos/U964WPbVsYo) | Unsplash Lizenz | 25.11.2026 |
+| frau-lockig-blazer-640.webp | v2.html, Zeile 142, Bild: Porträt | Frau mit kurzem lockigem Haar im gestreiften Blazer | [@wocintechchat](https://unsplash.com/de/@wocintechchat) | [Seite](https://unsplash.com/de/fotos/SJvDxw0azqw) | Unsplash Lizenz | 25.11.2026 |
+| mann-bart-anzug-640.webp | v2.html, Zeile 143, Bild: Porträt | Mann mit Bart und dunklem Anzug | [@ernestflowerss](https://unsplash.com/de/@ernestflowerss) | [Seite](https://unsplash.com/de/fotos/OgH6DuGylRs) | Unsplash Lizenz | 25.11.2026 |
+| frau-lederjacke-640.webp | v2.html, Zeile 144, Bild: Porträt | Frau mit langem Haar und Lederjacke | [@fresh_studio](https://unsplash.com/de/@fresh_studio) | [Seite](https://unsplash.com/de/fotos/4BG2yKyCaWg) | Unsplash Lizenz | 25.11.2026 |
 
 ## Hinweise
 
@@ -29,3 +35,4 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 ## Offen
 
 * 3 Porträts Team in index.html und v2.html
+- Nachtrag 25.11.2026: Personen und weitere Beispielfotos als Vorschau eingesetzt, werden vor Abgabe ersetzt.

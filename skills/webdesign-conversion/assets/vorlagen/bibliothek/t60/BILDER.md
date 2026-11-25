@@ -15,6 +15,13 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 | praxis-wartebereich-gelb.webp.webp | Galerie 2 | eine gelbe Couch in einem Wohnzimmer neben einem Schreibtisch | @musemindagency | https://unsplash.com/photos/BDw9Sp6FBaw | Unsplash Lizenz | 25.11.2026 |
 | praxis-empfang-holz.webp.webp | Galerie 3 | braun und weiß gestrichenes Wohnzimmer | @paris_interieurs | https://unsplash.com/photos/YhJkERWHFnU | Unsplash Lizenz | 25.11.2026 |
 | praxis-behandlungsraum.webp.webp | Galerie 4 | ein Krankenhauszimmer mit medizinischen Geräten | @karibjorn | https://unsplash.com/photos/yJsMOVwazRU | Unsplash Lizenz | 25.11.2026 |
+| frau-lockig-blazer-640.webp | index.html, Zeile 173, Bild: Porträt Ärztin | Frau mit kurzem lockigem Haar im gestreiften Blazer | [@wocintechchat](https://unsplash.com/de/@wocintechchat) | [Seite](https://unsplash.com/de/fotos/SJvDxw0azqw) | Unsplash Lizenz | 25.11.2026 |
+| frau-dutt-weiss-640.webp | index.html, Zeile 174, Bild: Porträt Ärztin | Frau mit hochgesteckten dunklen Haaren im weißen Shirt | [@jakenackos](https://unsplash.com/de/@jakenackos) | [Seite](https://unsplash.com/de/fotos/IF9TK5Uy-KI) | Unsplash Lizenz | 25.11.2026 |
+| arzt-grau-lachend-640.webp | index.html, Zeile 175, Bild: Porträt Arzt | Mann im weißen Kittel mit grauem Haar | [@vidak](https://unsplash.com/de/@vidak) | [Seite](https://unsplash.com/de/fotos/znrDHyqHpSI) | Unsplash Lizenz | 25.11.2026 |
+| frau-lederjacke-640.webp | index.html, Zeile 223, Bild: Ärztin und Arzt mit Unterlagen, Querformat | Frau mit langem Haar und Lederjacke | [@fresh_studio](https://unsplash.com/de/@fresh_studio) | [Seite](https://unsplash.com/de/fotos/4BG2yKyCaWg) | Unsplash Lizenz | 25.11.2026 |
+| arzt-kittel-bart-640.webp | index.html, Zeile 376, Bild 5 | Junger Arzt im weißen Kittel mit Bart | [@mreke88](https://unsplash.com/de/@mreke88) | [Seite](https://unsplash.com/de/fotos/RNsKphkdBTk) | Unsplash Lizenz | 25.11.2026 |
+| frau-locken-lachend-640.webp | index.html, Zeile 377, Bild 6 | Lächelnde Frau mit dunklen Locken | [@nolanrmanning](https://unsplash.com/de/@nolanrmanning) | [Seite](https://unsplash.com/de/fotos/Ll9YOG20UFI) | Unsplash Lizenz | 25.11.2026 |
+| arzt-stethoskop-weissbart-640.webp | index.html, Zeile 378, Bild 7 | Älterer Arzt im weißen Kittel mit Stethoskop | [@nappystudio](https://unsplash.com/de/@nappystudio) | [Seite](https://unsplash.com/de/fotos/GOCjrkYokms) | Unsplash Lizenz | 25.11.2026 |
 
 ## Hinweise
 
@@ -28,3 +35,4 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 * 3 Porträts Team (Ärztin, Ärztin, Arzt)
 * Profilbild Ärztin und Arzt mit Unterlagen
 * Galerie 5, 6 und 7 (Bild 5 bis Bild 7)
+- Nachtrag 25.11.2026: Personen und weitere Beispielfotos als Vorschau eingesetzt, werden vor Abgabe ersetzt.

@@ -14,6 +14,9 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 | kanzlei-hammer-marmor.webp.webp | Beitrag 1 | Holzhammer und Block auf Marmor | @tingeyinjurylawfirm | https://unsplash.com/photos/6sl88x150Xs | Unsplash Lizenz | 25.11.2026 |
 | kanzlei-fueller-papier.webp.webp | Beitrag 2 | schwarzer und silberner Füllfederhalter | @alvaroserrano | https://unsplash.com/photos/hjwKMkehBco | Unsplash Lizenz | 25.11.2026 |
 | kanzlei-vertrag-schreiben.webp.webp | Beitrag 3 | Person, die auf Whitepaper schreibt | @signaturepro | https://unsplash.com/photos/wB9iWZKwljw | Unsplash Lizenz | 25.11.2026 |
+| mann-anzug-krawatte-640.webp | index.html, Zeile 239, Bild: Porträt | Junger Mann im Anzug mit Krawatte | [@spliff_dj_joe](https://unsplash.com/de/@spliff_dj_joe) | [Seite](https://unsplash.com/de/fotos/-AGW3X5fTgM) | Unsplash Lizenz | 25.11.2026 |
+| frau-anzug-sonnenbrille-640.webp | index.html, Zeile 247, Bild: Porträt | Frau im dunklen Anzug mit Sonnenbrille | [@mdesign85](https://unsplash.com/de/@mdesign85) | [Seite](https://unsplash.com/de/fotos/FJ37gnt6g50) | Unsplash Lizenz | 25.11.2026 |
+| mann-schreibtisch-anzug-640.webp | index.html, Zeile 255, Bild: Porträt | Mann im Anzug am Schreibtisch | [@ratulpuri](https://unsplash.com/de/@ratulpuri) | [Seite](https://unsplash.com/de/fotos/U964WPbVsYo) | Unsplash Lizenz | 25.11.2026 |
 
 ## Hinweise
 
@@ -26,3 +29,4 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 ## Offen
 
 * 3 Porträts (Folie, Zeilen 239, 247, 255)
+- Nachtrag 25.11.2026: Personen und weitere Beispielfotos als Vorschau eingesetzt, werden vor Abgabe ersetzt.

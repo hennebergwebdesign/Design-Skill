@@ -38,6 +38,8 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 | restaurant-getraenk-eis.webp.webp | Galerie Getränk mit Eis | gefülltes klares Steinglas mit Eis | @picoftasty | https://unsplash.com/photos/nqX0Iv-j3zg | Unsplash Lizenz | 25.11.2026 |
 | restaurant-gruppe-mittag.webp.webp | Stimmen | Eine Gruppe von Menschen, die um einen Tisch sitzen | @sweetlifediabetes | https://unsplash.com/photos/sQ3r1oIsaBY | Unsplash Lizenz | 25.11.2026 |
 | restaurant-garten-tisch.webp.webp | Angebote | Menschen, die an einem Außentisch sitzen | @vlmrv | https://unsplash.com/photos/qSWpTzl0too | Unsplash Lizenz | 25.11.2026 |
+| koch-schuerze-brille-640.webp | index.html, Zeile 257, Foto: Porträt Küchenleitung | Mann mit Brille und dunkler Schürze | [@mstyazhkin](https://unsplash.com/de/@mstyazhkin) | [Seite](https://unsplash.com/de/fotos/hjwKMkehBco) | Unsplash Lizenz | 25.11.2026 |
+| frau-locken-lachend-640.webp | index.html, Zeile 258, Foto: Porträt Betriebsleitung | Lächelnde Frau mit dunklen Locken | [@nolanrmanning](https://unsplash.com/de/@nolanrmanning) | [Seite](https://unsplash.com/de/fotos/Ll9YOG20UFI) | Unsplash Lizenz | 25.11.2026 |
 
 ## Hinweise
 
@@ -48,3 +50,4 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 ## Offen
 
 * Porträt Küchenleitung und Betriebsleitung (Team): bleiben Platzhalter, keine Personen als Mitarbeitende.
+- Nachtrag 25.11.2026: Personen und weitere Beispielfotos als Vorschau eingesetzt, werden vor Abgabe ersetzt.

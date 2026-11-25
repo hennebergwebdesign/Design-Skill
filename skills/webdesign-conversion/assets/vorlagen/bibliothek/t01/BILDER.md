@@ -23,3 +23,6 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel, Fotograf und Lizenzverw
 * Avatargruppe unter dem Leitsatz (drei kleine Kreise): bleibt Verlauf. Porträts würden als echte Kunden gelesen, und das Motiv ist ohne Personenbild nicht zu treffen.
 * Kein Platz hat eine Motivbeschreibung im Platzhalter, die Motive sind aus `INFO.md` (Bau, Energie, Handwerk, Planung) und den Beispieltiteln der Karten abgeleitet.
 * Held und Bildtafel sind dekorativ (`alt=""`), die Bilder dahinter tragen Text.
+
+| mann-blaues-hemd-240.webp | index.html, Zeile 73, Porträt | Mann in blauem Hemd im Lokal | [@dannypostma](https://unsplash.com/de/@dannypostma) | [Seite](https://unsplash.com/de/fotos/qm6yxe7SjWg) | Unsplash Lizenz | 25.11.2026 |
+- Nachtrag 25.11.2026: Personen und weitere Beispielfotos als Vorschau eingesetzt, werden vor Abgabe ersetzt.

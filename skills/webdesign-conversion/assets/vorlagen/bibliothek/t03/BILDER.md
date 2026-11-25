@@ -36,3 +36,10 @@ Alle Fotos von Unsplash, Unsplash Lizenz (https://unsplash.com/de/lizenz), abger
 - Karte im Fuß und fünf Avatare bei den Stimmen bleiben Platzhalter (keine Porträts als Stimmen).
 - Held und Hintergrund des Terminbereichs sind dekorativ (alt leer). Das Terminbild ist zugeschnitten, weil auf dem Hemd Text stand.
 - Das Heldbild zeigt eine Limousine ohne Menschen, die Marke ist nicht lesbar.
+
+| mann-blaues-hemd-240.webp | index.html, Zeile 319, Porträt | Mann in blauem Hemd im Lokal | [@dannypostma](https://unsplash.com/de/@dannypostma) | [Seite](https://unsplash.com/de/fotos/qm6yxe7SjWg) | Unsplash Lizenz | 25.11.2026 |
+| frau-lockig-blazer-240.webp | index.html, Zeile 320, Porträt | Frau mit kurzem lockigem Haar im gestreiften Blazer | [@wocintechchat](https://unsplash.com/de/@wocintechchat) | [Seite](https://unsplash.com/de/fotos/SJvDxw0azqw) | Unsplash Lizenz | 25.11.2026 |
+| mann-bart-anzug-240.webp | index.html, Zeile 321, Porträt | Mann mit Bart und dunklem Anzug | [@ernestflowerss](https://unsplash.com/de/@ernestflowerss) | [Seite](https://unsplash.com/de/fotos/OgH6DuGylRs) | Unsplash Lizenz | 25.11.2026 |
+| frau-lederjacke-240.webp | index.html, Zeile 322, Porträt | Frau mit langem Haar und Lederjacke | [@fresh_studio](https://unsplash.com/de/@fresh_studio) | [Seite](https://unsplash.com/de/fotos/4BG2yKyCaWg) | Unsplash Lizenz | 25.11.2026 |
+| mann-brille-pullover-240.webp | index.html, Zeile 323, Porträt | Mann mit Brille und grauem Pullover | [@silverkblack](https://unsplash.com/de/@silverkblack) | [Seite](https://unsplash.com/de/fotos/y-XZf_TNRms) | Unsplash Lizenz | 25.11.2026 |
+- Nachtrag 25.11.2026: Personen und weitere Beispielfotos als Vorschau eingesetzt, werden vor Abgabe ersetzt.

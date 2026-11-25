@@ -25,6 +25,13 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 | fa-stethoskop-gelb.webp.webp | Preisliste 5 | eine Nahaufnahme eines Sprechers | @etactics | https://unsplash.com/photos/z5iSCz0qKXY | Unsplash Lizenz | 25.11.2026 |
 | fa-aerztin-beratung.webp.webp | Preisliste 6 | Der Arzt berät sich mit dem Patienten in der Arztpraxis | @silverkblack | https://unsplash.com/photos/iyeUwItlIPk | Unsplash Lizenz | 25.11.2026 |
 | fa-arzt-notizen.webp.webp | Preise | Der Arzt schreibt Notizen, während der Patient gegenüber sitzt | @silverkblack | https://unsplash.com/photos/XjpH81N6rDc | Unsplash Lizenz | 25.11.2026 |
+| arzt-grau-lachend-640.webp | index.html, Zeile 236, Porträt | Mann im weißen Kittel mit grauem Haar | [@vidak](https://unsplash.com/de/@vidak) | [Seite](https://unsplash.com/de/fotos/znrDHyqHpSI) | Unsplash Lizenz | 25.11.2026 |
+| frau-lockig-blazer-640.webp | index.html, Zeile 237, Porträt | Frau mit kurzem lockigem Haar im gestreiften Blazer | [@wocintechchat](https://unsplash.com/de/@wocintechchat) | [Seite](https://unsplash.com/de/fotos/SJvDxw0azqw) | Unsplash Lizenz | 25.11.2026 |
+| arzt-kittel-bart-640.webp | index.html, Zeile 238, Porträt | Junger Arzt im weißen Kittel mit Bart | [@mreke88](https://unsplash.com/de/@mreke88) | [Seite](https://unsplash.com/de/fotos/RNsKphkdBTk) | Unsplash Lizenz | 25.11.2026 |
+| frau-dutt-weiss-640.webp | index.html, Zeile 239, Porträt | Frau mit hochgesteckten dunklen Haaren im weißen Shirt | [@jakenackos](https://unsplash.com/de/@jakenackos) | [Seite](https://unsplash.com/de/fotos/IF9TK5Uy-KI) | Unsplash Lizenz | 25.11.2026 |
+| arzt-stethoskop-weissbart-640.webp | index.html, Zeile 240, Porträt | Älterer Arzt im weißen Kittel mit Stethoskop | [@nappystudio](https://unsplash.com/de/@nappystudio) | [Seite](https://unsplash.com/de/fotos/GOCjrkYokms) | Unsplash Lizenz | 25.11.2026 |
+| frau-lederjacke-640.webp | index.html, Zeile 241, Porträt | Frau mit langem Haar und Lederjacke | [@fresh_studio](https://unsplash.com/de/@fresh_studio) | [Seite](https://unsplash.com/de/fotos/4BG2yKyCaWg) | Unsplash Lizenz | 25.11.2026 |
+| arzt-profil-kittel-640.webp | index.html, Zeile 242, Porträt | Mann im weißen Kittel im Profil vor dunklem Grund | [@marcussantosr](https://unsplash.com/de/@marcussantosr) | [Seite](https://unsplash.com/de/fotos/Yngqf938yNY) | Unsplash Lizenz | 25.11.2026 |
 
 ## Hinweise
 
@@ -37,3 +44,4 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 ## Offen
 
 * 7 Porträts der Ärzte (Zeilen 236 bis 242)
+- Nachtrag 25.11.2026: Personen und weitere Beispielfotos als Vorschau eingesetzt, werden vor Abgabe ersetzt.
