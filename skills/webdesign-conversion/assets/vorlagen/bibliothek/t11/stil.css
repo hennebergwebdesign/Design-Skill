@@ -198,3 +198,6 @@ textarea{resize:vertical}
 .knopf__pfeil .ikon{width:1rem;height:1rem}
 .ikon--stern{width:1.1rem;height:1.1rem}
 .ikon--leistung{width:2.25rem;height:2.25rem;color:var(--akzent)}
+
+/* Fotos statt Platzhalterverläufe */
+.bild__foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
