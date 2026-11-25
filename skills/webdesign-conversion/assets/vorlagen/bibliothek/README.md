@@ -18,6 +18,11 @@ In ein Astro-Projekt übernehmen: `index.html` in eine Seite überführen, `_bas
 
 Hat eine Referenz mehrere Startseiten, ist es **ein** Template mit Varianten: `tNN/index.html` ist Variante 1, `v2.html` und `v3.html` die weiteren. Marke (`marke.css`) und Gemeinsames (`stil.css`, `stil.js`) gelten für alle, das Besondere liegt in `stil-v2.css` und `stil-v3.css`. In `ansicht.html` erscheint die Variantenauswahl in der Leiste (`?t=t42&v=2`), in der Galerie das Abzeichen „n Varianten“. Varianten tragen t34, t38, t42, t47, t53, t54, t56 und t64. Eine neue Variante eintragen: Datei anlegen, Namen in `tNN/KARTE.json` unter `varianten` ergänzen und in `ansicht.html` in der Zuordnung `V` nachtragen.
 
+## Conversion Raster (Stand 25.11.2026)
+
+Jede Vorlage und Variante erfüllt nach dem Website Conversion Playbook 2027 (That's it. Marketing) diese messbaren Punkte, jeweils im eigenen Stil der Vorlage umgesetzt:
+Titel höchstens 60 und Beschreibung höchstens 160 Zeichen, Primär-CTA in der Kopfzeile und mindestens zweimal je Seite, Hauptnavigation höchstens 6 Punkte, Telefon sichtbar, Einwand-FAQ (`details`, Antworten als Beispiel markiert), Kontaktformular höchstens 5 Felder mit Feldhinweis unter E-Mail und Telefon (`.feld__hinweis`, mindestens 16 px), Bilder höchstens 200 KB, Heldformel als Kommentar vor der H1. Nicht übernommen: F-Muster (Fehlbild), Exit-Intent-Popup, Kennzahlen des Playbooks (unbelegt). Beispielbelege im Held tragen `data-beispiel`. Nachprüfen: pro Seite Titel, Beschreibung, Knöpfe, `details`, `tel:`, Felderzahl und Bildgewicht zählen.
+
 ## Was sie sind und was nicht
 
 * **Eigenständige Umsetzung** nach dem Prinzip von rund siebzig Referenzseiten (Aufbau, Raster, Sektionsfolge, Art der Bewegung). Kein Text, kein Bild,

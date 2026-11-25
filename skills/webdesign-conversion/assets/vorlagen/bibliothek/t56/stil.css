@@ -61,7 +61,7 @@ h3{font-size:clamp(1.05rem,1rem + .5vw,1.3rem);line-height:1.15}
 .kopf__logo{display:inline-flex;align-items:center;gap:.4rem;min-height:2.75rem;padding:.3rem .65rem .3rem .4rem;border-radius:999px;background:var(--kopf-chip,var(--flaeche-dunkel-2));font-family:var(--schrift-titel);font-weight:700;font-size:.8125rem;letter-spacing:.02em;text-transform:uppercase;white-space:nowrap}
 .kopf__zeichen{width:1.9rem;height:1.9rem;flex:none;color:var(--akzent-hell)}
 .kopf__rechts{display:flex;align-items:center;gap:.5rem}
-.kopf__tel{display:inline-flex;align-items:center;gap:.6rem;min-height:2.75rem;font-family:var(--schrift-titel);font-weight:600;font-size:.9rem}
+.kopf__tel{display:inline-flex;align-items:center;gap:.6rem;min-height:2.75rem;font-family:var(--schrift-titel);font-weight:600;font-size:1rem}
 .kopf__tel-icon{display:inline-flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border-radius:50%;background:var(--kopf-chip,var(--flaeche-dunkel-2))}
 .kopf__tel-text{display:none}
 .kopf__knopf{min-height:2.75rem;padding:.25rem .3rem .25rem 1.1rem;gap:.7rem;font-size:.8125rem}
@@ -94,7 +94,7 @@ h3{font-size:clamp(1.05rem,1rem + .5vw,1.3rem);line-height:1.15}
   .kopf__menue-tel{display:none}
   .kopf__tel-icon{display:none}
   .kopf__tel-text{display:inline}
-  .kopf__tel{padding-inline:.5rem}
+  .kopf__tel{padding-inline:1rem;border-radius:999px;background:var(--kopf-chip,var(--flaeche-dunkel-2))}
   .kopf__knopf{font-size:.875rem}
 }
 
