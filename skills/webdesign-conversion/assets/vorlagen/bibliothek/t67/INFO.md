@@ -6,7 +6,7 @@ Prinzip nach der freigegebenen Referenz lexma-template.webflow.io (Startseite), 
 Kanzleien, Steuer- und Unternehmensberatung, Notariate, Versicherungs- und Finanzberatung und andere Dienstleister, die Vertrauen über Ruhe, Klarheit und Erfahrung aufbauen. Eckige Formen und viel Weißraum, wenig Dekor. Ansprache im Du, für Sie im Text ersetzen (Kanzleien siedeln oft im Sie). Berufsrechtliche Vorgaben für Werbung (bei Rechtsanwälten etwa die Regeln zur Sachlichkeit und zu Erfolgsaussagen) sind je Kanzlei zu prüfen; die Beispieltexte versprechen bewusst kein Ergebnis.
 
 ## Sektionsfolge
-Dunkle Kopfleiste über die ganze Breite, Held (Überschrift links, Text, Hauptknopf und Telefon rechts), breites Bild, das halb auf dunklem und halb auf hellem Grund liegt, mit ausgestanzter Wortmarke am unteren Bildrand, Über uns (Leitsatz, Bildkarte mit Kennzahl, Text und vier Vorzugszeilen), Leistungen als Zeilen mit Linie, Kennzahlen im dunklen Abschnitt mit Logolaufband, Anspruch (Text mit drei Zeilen links, hohes Bild rechts), Stimmen (Faktenkarte und dunkle Karte mit Wechsler), Beiträge (drei Karten), Aufruf mit zwei Zahlenkarten, Fuß mit großer, verblassender Wortmarke.
+Dunkle Kopfleiste über die ganze Breite, Held (Überschrift links, Text, Hauptknopf und Telefon rechts), breites Bild, das halb auf dunklem und halb auf hellem Grund liegt, mit ausgestanzter Wortmarke am unteren Bildrand, Über uns (Leitsatz, Bildkarte mit Kennzahl, Text und vier Vorzugszeilen), Leistungen als Zeilen mit Linie, Kennzahlen im dunklen Abschnitt mit Logolaufband, Anspruch (Text mit drei Zeilen links, hohes Bild rechts), Stimmen (Faktenkarte und dunkle Karte mit Wechsler), Beiträge (drei Karten), Fragen (Akkordeon, fünf Einwände), Aufruf mit zwei Zahlenkarten, Fuß mit großer, verblassender Wortmarke.
 
 ## Animationen
 | Wo | Was | Wie |
@@ -30,3 +30,9 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent-text` auf `--a
 
 ## Offen
 Kein Formular (die Referenz hat auf der Startseite keines), der Hauptknopf führt zum Fuß mit Telefon und Mail; ein Rückrufformular ist im Projekt zu ergänzen. Zahlen, Namen, Stimmen, Logos und Datum sind Beispiele, keine Belege. Der Rechtsgebietsname je Zeile (Unternehmen, Immobilien, Familie, Streit) ist ein Beispiel. Kontrast von Text über Fotos nach dem Einsetzen neu prüfen: Die Wortmarke im Held ist Seitenfarbe auf dem Foto und braucht im unteren Bilddrittel ein dunkles Motiv. Vier Links im Fuß sind Platzhalter.
+
+## Conversion (Playbook)
+- Beschreibung auf 160 Zeichen gekürzt
+- Kommentar zur Heldformel vor der H1
+- Neuer Abschnitt "Fragen" vor dem Aufruf: fünf Einwände, Akkordeon mit Plus im Quadrat (vorhandenes Symbol `i-plus`), weißer Grund
+- Kopfknopf und Telefon waren schon da. Kein Beleg im Held (die Kennzahlen folgen im dunklen Abschnitt darunter)

@@ -33,3 +33,9 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent-text` auf `--a
 
 ## Offen
 Formulare senden nichts. Preise, Zahlen, Namen, Stimmen, Adressen, Öffnungszeiten und die Beispiellogos sind Beispiele, keine Belege. Die App Knöpfe zeigen auf keinen Store. Kontrast von Text über Fotos nach dem Einsetzen neu prüfen (Schleier sind auf die Platzhalter abgestimmt). Drei Links im Fuß (Impressum, Datenschutz, Widerruf) sind Platzhalter, Rechtstexte fehlen bewusst. Tarife brauchen im echten Einsatz Pflichtangaben (Laufzeit, Kündigung, Gesamtpreis).
+
+## Conversion (Playbook)
+- Titel auf 48 Zeichen, Beschreibung auf 160 Zeichen gekürzt
+- Kommentar zur Heldformel vor der H1
+- Feldhinweise unter E-Mail und Telefon (`.feld__hinweis` in `stil.css`)
+- Kopfknopf, Telefon, FAQ waren schon da. Kein eigener Beleg im Held: die zwei Merkmale (Preise, Probezeit) stehen dort, die Partnerzeile folgt direkt darunter

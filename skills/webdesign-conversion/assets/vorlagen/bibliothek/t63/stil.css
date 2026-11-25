@@ -231,7 +231,8 @@ h3{font-size:var(--h3);line-height:1.2}
 .rueckruf{margin-top:3rem;padding:1.5rem;border-radius:var(--radius-karte);background:var(--flaeche-dunkel-2);box-shadow:inset 0 0 0 1px var(--linie-dunkel)}
 .rueckruf h3{font-weight:500}
 .formular{display:grid;gap:1rem;margin-top:1.25rem}
-.formular__feld{display:grid;gap:.4rem}
+.formular__feld{display:grid;gap:.4rem;align-content:start}
+.formular .feld__hinweis{font-size:1rem;line-height:1.4;color:var(--text-leise-dunkel)}
 .formular label{font-size:1rem;font-weight:500}
 .formular input,.formular textarea,.newsletter input{width:100%;min-height:3rem;padding:.75rem 1rem;font:inherit;font-size:1rem;color:var(--text-auf-dunkel);background:var(--flaeche-dunkel);border:1.5px solid color-mix(in srgb,var(--text-auf-dunkel) 55%,var(--flaeche-dunkel));border-radius:var(--radius-knopf)}
 .formular textarea{resize:vertical;min-height:6rem}

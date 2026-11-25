@@ -309,7 +309,8 @@ html:not(.js) .buehne__haftet{position:relative;top:0;height:min(70svh,40rem)}
 .termin h2{margin:1rem auto 0;max-width:14ch;font-size:clamp(2.25rem,1.3rem + 3.6vw,4.25rem)}
 .termin__text{margin:1rem auto 0;max-width:30rem;color:var(--text-leise-dunkel);font-size:var(--text-l)}
 .termin__form{display:grid;gap:1rem;max-width:44rem;margin:2rem auto 0;text-align:left}
-.feld{display:grid;gap:.4rem}
+.feld{display:grid;gap:.4rem;align-content:start}
+.termin .feld__hinweis{font-size:1rem;line-height:1.4;color:var(--text-leise-dunkel)}
 .termin label{font-size:1rem;font-weight:600}
 .termin input{width:100%;min-height:3rem;padding:.75rem 1rem;font:inherit;font-size:1rem;color:var(--text);background:#fff;border:1.5px solid #fff;border-radius:12px}
 .termin input::placeholder{color:var(--text-leise);opacity:1}
@@ -321,7 +322,7 @@ html:not(.js) .buehne__haftet{position:relative;top:0;height:min(70svh,40rem)}
 .termin__meldung[hidden]{display:none}
 .termin__tel{margin-top:1.5rem}
 .termin__tel a{display:inline-flex;align-items:center;gap:.6rem;min-height:2.75rem;font-weight:600;text-decoration:underline;text-underline-offset:.3em}
-@media (min-width:40rem){.termin__form{grid-template-columns:1fr 1fr auto;align-items:end}.termin__recht,.termin__meldung{grid-column:1 / -1}.termin__senden{align-self:end;min-height:3rem}}
+@media (min-width:40rem){.termin__form{grid-template-columns:1fr 1fr auto;align-items:start}.termin__recht,.termin__meldung{grid-column:1 / -1}.termin__senden{align-self:start;margin-top:2.05rem;min-height:3.2rem}}
 
 /* Fuß */
 .fuss{padding-top:var(--raum);background:var(--flaeche);overflow:hidden}

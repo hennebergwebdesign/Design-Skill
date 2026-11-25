@@ -76,6 +76,8 @@ h3{font-size:var(--h3);line-height:1.2}
 .held__inline{display:inline-block;width:1.9em;height:.78em;border-radius:999px;vertical-align:-.04em;margin-inline:.06em}
 .held__lead{font-size:var(--text-l);color:var(--text-leise);max-width:34rem}
 .held__knoepfe{display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem}
+.held__beleg{display:flex;align-items:center;gap:.5rem;color:var(--text-leise)}
+.held__beleg strong{color:var(--text)}
 .held__tel{color:var(--text-leise)}
 .held__tel a{color:var(--akzent);font-weight:700;text-decoration:underline;text-underline-offset:.25em;display:inline-block;padding-block:.5rem}
 .buehne__medium{height:clamp(17rem,62vw,40rem);margin-inline:var(--rand);border-radius:var(--radius-gross)}
@@ -222,7 +224,8 @@ h3{font-size:var(--h3);line-height:1.2}
 .formkarte h2{font-size:clamp(1.75rem,1.4rem + 1.2vw,2.25rem);margin-bottom:.5rem}
 .formkarte__text{color:var(--text-leise);margin-bottom:1.5rem}
 .formular{display:grid;grid-template-columns:1fr;gap:1rem}
-.formular__feld{display:grid;gap:.4rem}
+.formular__feld{display:grid;gap:.4rem;align-content:start}
+.formular .feld__hinweis{font-size:1rem;line-height:1.4;color:var(--text-leise)}
 .formular label{font-weight:700;font-size:1rem}
 .formular input,.formular textarea{width:100%;min-height:3rem;padding:.7rem 1rem;border:1px solid var(--feld-rand);border-radius:12px;background:var(--weiss);color:var(--text);font:inherit}
 .formular textarea{resize:vertical}

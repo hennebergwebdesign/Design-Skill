@@ -303,9 +303,10 @@ h3{font-size:var(--h3);line-height:1.15}
 .kontakt__formular h3{text-transform:uppercase;font-size:clamp(1.5rem,1.2rem + 1.2vw,2rem)}
 .kontakt__formular>p{margin-top:.75rem;color:var(--text-leise)}
 .formular{display:grid;gap:1.25rem;margin-top:1.5rem}
-.formular__feld{display:grid;gap:.1rem}
+.formular__feld{display:grid;gap:.1rem;align-content:start}
 .formular label{font-size:1rem;font-weight:600;color:var(--text-leise)}
 .formular input,.formular select,.formular textarea{width:100%;min-height:3rem;padding:.6rem 0;font:inherit;font-size:1rem;color:var(--text);background:transparent;border:0;border-bottom:1.5px solid color-mix(in srgb,var(--text) 50%,var(--flaeche));border-radius:0}
+.formular .feld__hinweis{display:block;margin-top:.25rem;font-size:1rem;line-height:1.4;color:var(--text-leise)}
 .formular textarea{resize:vertical;min-height:5.5rem}
 .formular select option{background:var(--flaeche-alt);color:var(--text)}
 .formular input::placeholder,.formular textarea::placeholder{color:var(--text-leise);opacity:1}

@@ -45,6 +45,7 @@ h3{font-size:var(--h3);line-height:1.15}
 .js .kopf__innen{flex-wrap:nowrap;height:100%;padding-block:0}
 .kopf__logo{display:inline-flex;align-items:center;min-height:2.75rem;font-family:var(--schrift-titel);font-weight:600;font-size:1.375rem;letter-spacing:-.01em;margin-right:auto;white-space:nowrap}
 .kopf__punkt{color:var(--akzent-hell)}
+.kopf__knopf{min-height:2.75rem;padding:.3rem .9rem;white-space:nowrap}
 .kopf__nav{order:9;flex-basis:100%}
 .kopf__menue{display:flex;flex-wrap:wrap;gap:0 .25rem}
 .kopf__menue a{display:flex;align-items:center;min-height:2.75rem;padding-inline:.75rem;font-weight:500;transition:color var(--dauer-kurz)}
@@ -255,9 +256,10 @@ h3{font-size:var(--h3);line-height:1.15}
 .kontakt__text>p:not(.kicker){color:var(--text-leise);max-width:36rem}
 .kontakt__text h2{max-width:16ch}
 .formular{display:grid;gap:1.25rem;margin-top:.75rem}
-.formular__feld{display:grid;gap:.1rem}
+.formular__feld{display:grid;gap:.1rem;align-content:start}
 .formular label{font-size:1rem;font-weight:500;color:var(--text-leise)}
 .formular input,.formular select,.formular textarea{width:100%;min-height:3rem;padding:.6rem 0;font:inherit;font-size:1rem;color:var(--text);background:transparent;border:0;border-bottom:1.5px solid color-mix(in srgb,var(--text) 50%,var(--flaeche));border-radius:0}
+.formular .feld__hinweis{display:block;margin-top:.25rem;font-size:1rem;line-height:1.4;color:var(--text-leise)}
 .formular textarea{resize:vertical;min-height:6rem}
 .formular select option{background:var(--flaeche-alt);color:var(--text)}
 .formular input::placeholder,.formular textarea::placeholder{color:var(--text-leise);opacity:1}

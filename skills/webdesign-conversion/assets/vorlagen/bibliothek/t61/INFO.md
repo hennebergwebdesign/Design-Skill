@@ -30,3 +30,10 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent-text` auf `--a
 
 ## Offen
 Formulare senden nichts. Zahlen, Bewertungen, Namen, Stimmen, Öffnungszeiten und Logos sind Beispiele, keine Belege; Logos sind Beispiellogos. Die Videoleiste im Bild ist Zierde (kein Anruf, aria-hidden). Termin und Datenschutz je Projekt anbinden und den Dienst im Datenschutz nennen. Kontrast von Text über Fotos nach dem Einsetzen neu prüfen. Impressum und Datenschutz im Fuß sind Platzhalterlinks.
+
+## Conversion (Playbook)
+- Beschreibung auf 160 Zeichen gekürzt
+- Kommentar zur Heldformel vor der H1
+- Formular von sieben auf fünf Felder: Vor und Nachname zu "Name", Wunschtermin in die Nachricht (Platzhalter angepasst), Fachbereich über die ganze Breite
+- Feldhinweise unter E-Mail und Telefon (`.feld__hinweis` in `stil.css`)
+- Kopfknopf, Telefon, FAQ waren schon da

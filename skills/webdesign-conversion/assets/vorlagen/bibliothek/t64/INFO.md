@@ -16,8 +16,8 @@ Kanzleien, Notariate, Steuerberatung, Unternehmensberatung und Beratungen mit ge
 **Berufsrecht:** Die Beispieltexte machen bewusst keine Erfolgszusage und keine Erfolgsquote. Stimmen, Weiterempfehlungsquote, Fallbeispiele und Fachanwaltstitel nur setzen, wenn Berufsrecht (BRAO, BORA, UWG) und Zustimmung der Mandanten das erlauben, Fälle nur anonymisiert. Die Vorlage ist keine Rechtsberatung.
 
 ## Sektionsfolge
-**Variante 1:** Kopfleiste (transparent, beim Scrollen dunkel), Vollbildheld, Aussage mit Wortlicht und Kennzahlen, Über uns (Rahmenbild, drei Zeilen), Rechtsgebiete (dunkle Zeilen), Team, Stimmen, Blog, Laufband, Fuß mit Newsletter.
-**Variante 2:** Kopfleiste mit mittigem Logo, dunkler Held, Laufband, Über uns (zentrierter Kopf, drei Spalten), Rechtsgebiete (dunkle Zeilen), Team, Warum wir, Fälle, Fuß mit Newsletter.
+**Variante 1:** Kopfleiste (transparent, beim Scrollen dunkel), Vollbildheld, Aussage mit Wortlicht und Kennzahlen, Über uns (Rahmenbild, drei Zeilen), Rechtsgebiete (dunkle Zeilen), Team, Stimmen, Blog, Fragen, Laufband, Fuß mit Newsletter.
+**Variante 2:** Kopfleiste mit mittigem Logo, dunkler Held, Laufband, Über uns (zentrierter Kopf, drei Spalten), Rechtsgebiete (dunkle Zeilen), Team, Warum wir, Fälle, Fragen, Fuß mit Newsletter.
 
 ## Animationen
 | Wo | Was | Wie |
@@ -41,3 +41,9 @@ Nur die Werte in `marke.css` ändern, beide Varianten folgen. Kontrast prüfen: 
 
 ## Offen
 Formulare senden nichts. Kennzahlen, Namen, Stimmen, Bewertung und Adresse sind Beispiele, keine Belege. Kontrast von Text über Fotos nach dem Einsetzen neu prüfen. Auf dem Handy unter 480 px zeigt die Leiste Telefon und Menü, der Hauptknopf steht im Held. Das Wortlicht dunkelt die noch nicht erreichten Wörter ab, bis zum Ende des Scrollens. Newsletter braucht Double Opt-in und einen Eintrag in der Datenschutzerklärung. Die Links im Fuß (Soziale Netzwerke, Impressum, Datenschutz) sind Platzhalter.
+
+## Conversion (Playbook)
+- Beide Varianten (`index.html`, `v2.html`): Beschreibung auf 160 Zeichen gekürzt
+- Kommentar zur Heldformel vor der H1
+- Neuer Abschnitt "Fragen" in beiden Varianten vor dem Laufband und Fuß (Variante 1 nach Blog, Variante 2 nach Fälle): fünf Einwände zu Kosten, Ablauf, Zuständigkeit, Ausgang und Frist, Akkordeon mit Plus im Kreis, Serifentitel; CSS gemeinsam in `stil.css`, Hintergrund in `stil-v1.css`
+- Kopfknopf und Telefon waren schon da. Berufsrecht: Antworten sagen keinen Ausgang zu

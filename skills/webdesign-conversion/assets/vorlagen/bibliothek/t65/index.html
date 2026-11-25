@@ -80,6 +80,7 @@
         </div>
         <div class="held__bild bild bild--a"><img src="bilder/beratung-lounge-hell.webp" width="1600" height="1067" alt="Heller Loungebereich mit Sofas und Pflanzen" loading="lazy" decoding="async"></div>
         <div class="held__text">
+          <!-- Held nach Formel: H1 = [Zielgruppe] + [Problem] + [Lösung]; Unterzeile = Wie + konkretes Ergebnis; Bild zeigt das Ergebnis; ein Primär-CTA; ein Beleg (Bewertung, Zahl, Logo) im ersten Bildschirm -->
           <h1 id="h-held" data-zeig>Beratung, die Haltung zeigt und Klartext spricht</h1>
           <div class="held__zeile" data-zeig>
             <a class="knopf" href="#kontakt"><span class="punkt" aria-hidden="true"></span>Erstgespräch anfragen</a>
@@ -285,8 +286,8 @@
           <h2 id="h-kontakt">Erstgespräch anfragen</h2>
           <form class="formular" data-formular action="#" method="post" novalidate>
             <div class="formular__feld"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" placeholder="Vor und Nachname" required></div>
-            <div class="formular__feld"><label for="f-mail">E-Mail</label><input id="f-mail" name="email" type="email" autocomplete="email" placeholder="du@beispiel.invalid" required></div>
-            <div class="formular__feld"><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" placeholder="Für den Rückruf"></div>
+            <div class="formular__feld"><label for="f-mail">E-Mail</label><input id="f-mail" name="email" type="email" autocomplete="email" placeholder="du@beispiel.invalid" required><small class="feld__hinweis">Damit wir dir die Bestätigung schicken können.</small></div>
+            <div class="formular__feld"><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" placeholder="Für den Rückruf"><small class="feld__hinweis">Nur für Rückfragen zu deiner Anfrage.</small></div>
             <div class="formular__feld"><label for="f-thema">Thema</label>
               <select id="f-thema" name="thema" required>
                 <option value="">Bitte wählen</option>

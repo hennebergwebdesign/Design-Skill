@@ -32,3 +32,9 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent-text` auf `--a
 
 ## Offen
 Formulare senden nichts. Bewertung, Zeiten, Telefon, Namen, Stimmen, Dauer und Adresse sind Beispiele, keine Belege. Preise stehen bewusst nicht in den Terminarten, dort steht die Dauer. Die echte Terminbuchung (Praxissoftware, Doctolib oder ähnlich) ist je Projekt anzubinden und im Datenschutz zu nennen. Kontrast von Text über Fotos nach dem Einsetzen neu prüfen. Impressum und Datenschutz im Fuß sind Platzhalterlinks.
+
+## Conversion (Playbook)
+- Beschreibung auf 160 Zeichen gekürzt
+- Kommentar zur Heldformel vor der H1
+- Feldhinweis unter Telefon im Terminformular (es hat kein E-Mail Feld), Knopf in der Reihe neu ausgerichtet
+- Kopfknopf mit Telefon, FAQ und Bewertung im Held waren schon da

@@ -6,7 +6,7 @@ Prinzip nach der freigegebenen Referenz vitalex-ttm.webflow.io (Tor 1 erteilt), 
 Kliniken, Facharztzentren, Zahnarztpraxen und Gesundheitsdienste mit mehreren Leistungsfeldern, die selbstbewusst und kontrastreich auftreten wollen. Dunkler Einstieg mit Versalschrift, danach hell und ruhig. Termin steht im Kopf (Telefon und Hauptknopf immer sichtbar, auch auf dem Handy), im Held, im Buchungsabschnitt und im Formular. Braucht gute Bilder von Menschen und Räumen. Ansprache im Du, für ein medizinisches Haus in der Regel auf Sie umstellen. Keine Heilversprechen und keine Spitzenstellung (kein "Nummer eins") im Beispieltext, bei echten Texten Heilmittelwerbegesetz und Berufsordnung beachten.
 
 ## Sektionsfolge
-Dunkler Kopf mit Vollbildmenü, Held (Vollbild, riesige Versalschrift mit Akzentwort, Zeile mit Text, Merkmalen und Bildausschnitt), Laufband mit Beispielwerten je Fachbereich, Über uns (Treppe aus Kennzahlkarten, Aussage, Vertrauenszeile), Leistungen (hohes Bild bleibt stehen, sechs Karten, auf dem Handy eine Spur), Ablauf (großes Laufband, drei Schritte A bis C mit Stufenanzeige), Buchung (dunkles Vollbild mit Öffnungszeiten und Hauptknopf), Preise (helle Karte mit Preisliste, hohes Bild), Team (sieben Porträts in zwei Reihen), dunkler Fuß mit Kontaktformular und Großschrift der Marke.
+Dunkler Kopf mit Vollbildmenü, Held (Vollbild, riesige Versalschrift mit Akzentwort, Zeile mit Text, Merkmalen und Bildausschnitt), Laufband mit Beispielwerten je Fachbereich, Über uns (Treppe aus Kennzahlkarten, Aussage, Vertrauenszeile), Leistungen (hohes Bild bleibt stehen, sechs Karten, auf dem Handy eine Spur), Ablauf (großes Laufband, drei Schritte A bis C mit Stufenanzeige), Buchung (dunkles Vollbild mit Öffnungszeiten und Hauptknopf), Preise (helle Karte mit Preisliste, hohes Bild), Team (sieben Porträts in zwei Reihen), Fragen (Akkordeon mit Pluszeichen, fünf Einwände), dunkler Fuß mit Kontaktformular und Großschrift der Marke.
 
 ## Animationen
 | Wo | Was | Wie |
@@ -28,3 +28,11 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent-text` auf `--a
 
 ## Offen
 Formulare senden nichts. Kennzahlen, Zufriedenheitswerte, Preise, Öffnungszeiten, Namen und Adresse sind Beispiele, keine Belege; Preise sind keine Preisliste. Preisangaben und Kassenleistungen vor dem Einsatz rechtlich prüfen. Die Preisliste lässt sich auf Dauer statt Preis umstellen, wie in t60. Kontrast von Text über Fotos nach dem Einsetzen neu prüfen (die Schleier sind auf die Platzhalter abgestimmt). Impressum und Datenschutz im Fuß sind Platzhalterlinks.
+
+## Conversion (Playbook)
+- Beschreibung auf 160 Zeichen gekürzt
+- Kommentar zur Heldformel vor der H1
+- Neuer Abschnitt "Fragen" (Abschnitt 9) vor dem Fuß: fünf Einwände zu Preis, Dauer, Qualifikation, Risiko und Zeitpunkt, Akkordeon mit dem vorhandenen Pluszeichen (`.plus`), Beispielantworten mit `data-beispiel`
+- Beispielwert "4,9 von 5 aus 280 Bewertungen" als weiteres Merkmal im Held
+- Feldhinweise unter E-Mail und Telefon (`.feld__hinweis` in `stil.css`)
+- Kopfknopf und Telefon waren schon da. "Fragen" steht nicht im Menü (sechs Punkte), der Abschnitt ist über die Seite erreichbar

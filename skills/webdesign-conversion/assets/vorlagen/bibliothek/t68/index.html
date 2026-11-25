@@ -60,12 +60,14 @@
   <section class="held" id="top" aria-labelledby="h-held">
     <div class="held__text">
       <p class="kicker" data-zeig>Frisch und herzlich</p>
+      <!-- Held nach Formel: H1 = [Zielgruppe] + [Problem] + [Lösung]; Unterzeile = Wie + konkretes Ergebnis; Bild zeigt das Ergebnis; ein Primär-CTA; ein Beleg (Bewertung, Zahl, Logo) im ersten Bildschirm -->
       <h1 id="h-held" data-zeig>Essen, das sich anfühlt wie <span class="held__inline bild bild--c" aria-hidden="true"></span> eine warme Umarmung</h1>
       <p class="held__lead" data-zeig>Zieh dir einen Stuhl heran und genieß den Geschmack von Hausgemachtem, mit Sorgfalt gekocht, damit dein Tag ein bisschen heller wird.</p>
       <div class="held__knoepfe" data-zeig>
         <a class="knopf" href="#kontakt">Tisch reservieren</a>
         <a class="knopf knopf--rand" href="#speisekarte">Speisekarte ansehen</a>
       </div>
+      <p class="held__beleg" data-zeig data-beispiel><span class="stern"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-star"/></svg></span><span><strong>4,8 von 5</strong> aus 210 Gästebewertungen</span></p>
       <p class="held__tel" data-zeig>Lieber anrufen? <a href="tel:+490000000000">Telefon 0000 000 000</a></p>
     </div>
     <div class="buehne" data-fortschritt>
@@ -343,8 +345,7 @@
         <p class="formkarte__text">Wir melden uns kurz mit der Bestätigung deines Termins oder einem Alternativvorschlag.</p>
         <form class="formular" data-formular action="#" method="post" novalidate>
           <div class="formular__feld formular__feld--breit"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" placeholder="Vor und Nachname" required></div>
-          <div class="formular__feld"><label for="f-mail">E-Mail</label><input id="f-mail" name="email" type="email" autocomplete="email" placeholder="du@beispiel.invalid" required></div>
-          <div class="formular__feld"><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" placeholder="Für Rückfragen"></div>
+          <div class="formular__feld formular__feld--breit"><label for="f-mail">E-Mail</label><input id="f-mail" name="email" type="email" autocomplete="email" placeholder="du@beispiel.invalid" required><small class="feld__hinweis">Damit wir dir die Bestätigung schicken können.</small></div>
           <div class="formular__feld"><label for="f-datum">Wunschtermin</label><input id="f-datum" name="datum" type="date" required></div>
           <div class="formular__feld"><label for="f-personen">Personen</label><input id="f-personen" name="personen" type="number" min="1" max="30" placeholder="2" required></div>
           <div class="formular__feld formular__feld--breit"><label for="f-text">Nachricht</label><textarea id="f-text" name="nachricht" rows="4" placeholder="Kinderstuhl, Allergien, besonderer Anlass?"></textarea></div>

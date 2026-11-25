@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Fachärzte unter einem Dach, Markenname</title>
-<meta name="description" content="Beispieltext: Fachärztliches Zentrum mit Sprechstunde, Diagnostik und klaren Preisen. Termine online oder per Telefon. Vor dem Einsatz durch den echten Text des Hauses ersetzen.">
+<meta name="description" content="Beispieltext: Fachärzte unter einem Dach mit Sprechstunde, Diagnostik und klaren Preisen. Termin online oder per Telefon.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../_basis/schriften.css">
 <link rel="stylesheet" href="marke.css">
@@ -67,6 +67,7 @@
     <div class="wrap held__innen">
       <div class="held__kopf" data-staffel>
         <p class="held__zeile" data-zeig><span class="punkt" aria-hidden="true"></span>Fachärzte unter einem Dach</p>
+        <!-- Held nach Formel: H1 = [Zielgruppe] + [Problem] + [Lösung]; Unterzeile = Wie + konkretes Ergebnis; Bild zeigt das Ergebnis; ein Primär-CTA; ein Beleg (Bewertung, Zahl, Logo) im ersten Bildschirm -->
         <h1 id="h-held" data-zeig><span class="leicht">Ärzte, die</span><span class="schwer">sich <span class="hl">Zeit</span> nehmen</span></h1>
         <p data-zeig><a class="knopf" href="#kontakt">Termin buchen<svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a></p>
       </div>
@@ -77,6 +78,7 @@
           <li>Termine am Abend</li>
           <li>Videosprechstunde</li>
           <li>Klare Preise</li>
+          <li>4,9 von 5 aus 280 Bewertungen</li>
         </ul>
         <div class="bild held__ausschnitt bild--b" data-zeig="skala"><img src="bilder/fa-arzt-gespraech.webp" width="800" height="450" alt="Ein Arzt im Gespräch am Schreibtisch" loading="lazy" decoding="async"></div>
       </div>
@@ -247,6 +249,22 @@
       </div>
     </div>
   </section>
+  <!-- 9. Fragen: Einwände vor dem Termin, Akkordeon mit Pluszeichen -->
+  <section class="sektion faq" id="fragen" aria-labelledby="h-faq">
+    <div class="wrap">
+      <header class="faq__kopf">
+        <p class="ueber__kicker" data-zeig><span class="punkt" aria-hidden="true"></span>Fragen</p>
+        <h2 id="h-faq" data-zeig>Was du vor dem Termin wissen willst</h2>
+      </header>
+      <div class="faq__liste" data-exklusiv>
+        <details class="frage" data-zeig open><summary><span>Was kostet ein Termin?</span><span class="plus" aria-hidden="true"><svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></span></summary><p class="antwort" data-beispiel>Beispielantwort: Kassenleistungen rechnen wir mit der Versichertenkarte ab. Selbstzahlerleistungen stehen mit festem Preis in der Liste, vorab und ohne Überraschung.</p></details>
+        <details class="frage" data-zeig><summary><span>Wie lange dauert ein Besuch?</span><span class="plus" aria-hidden="true"><svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></span></summary><p class="antwort" data-beispiel>Beispielantwort: Ein erstes Gespräch dauert etwa eine halbe Stunde. Bei Untersuchungen nennen wir dir vorab den Zeitrahmen.</p></details>
+        <details class="frage" data-zeig><summary><span>Sind die Ärztinnen und Ärzte Fachärzte?</span><span class="plus" aria-hidden="true"><svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></span></summary><p class="antwort" data-beispiel>Beispielantwort: Ja, jeder Fachbereich wird von einer Fachärztin oder einem Facharzt geleitet. Die Qualifikationen stehen im Team.</p></details>
+        <details class="frage" data-zeig><summary><span>Was passiert, wenn mir die Behandlung nicht passt?</span><span class="plus" aria-hidden="true"><svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></span></summary><p class="antwort" data-beispiel>Beispielantwort: Du kannst jederzeit nachfragen, eine zweite Meinung einholen oder abbrechen. Wir erklären jeden Schritt vorher.</p></details>
+        <details class="frage" data-zeig><summary><span>Passt ein Termin gerade jetzt?</span><span class="plus" aria-hidden="true"><svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></span></summary><p class="antwort" data-beispiel>Beispielantwort: Wir bieten Termine am Abend und Videosprechstunden an. Bei dringenden Fällen rufst du uns an, wir finden schnell einen Platz.</p></details>
+      </div>
+    </div>
+  </section>
 </main>
 
 <!-- Fuß mit Kontaktformular -->
@@ -268,8 +286,8 @@
       <h2 class="fuss__h">Fragen oder Terminwunsch?</h2>
       <form class="formular" data-formular action="#" method="post" novalidate>
         <div class="feld"><label for="f-name">Name <span aria-hidden="true">*</span></label><input id="f-name" name="name" type="text" autocomplete="name" placeholder="Dein Name" required></div>
-        <div class="feld"><label for="f-mail">E-Mail <span aria-hidden="true">*</span></label><input id="f-mail" name="email" type="email" autocomplete="email" placeholder="du@beispiel.invalid" required></div>
-        <div class="feld"><label for="f-tel">Telefon <span aria-hidden="true">*</span></label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" placeholder="Für den Rückruf" required></div>
+        <div class="feld"><label for="f-mail">E-Mail <span aria-hidden="true">*</span></label><input id="f-mail" name="email" type="email" autocomplete="email" placeholder="du@beispiel.invalid" required><small class="feld__hinweis">Damit wir dir die Bestätigung schicken können.</small></div>
+        <div class="feld"><label for="f-tel">Telefon <span aria-hidden="true">*</span></label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" placeholder="Für den Rückruf" required><small class="feld__hinweis">Nur für Rückfragen zu deiner Anfrage.</small></div>
         <div class="feld"><label for="f-betreff">Betreff</label><select id="f-betreff" name="betreff"><option>Terminwunsch</option><option>Frage zu Leistungen</option><option>Frage zu Preisen</option><option>Sonstiges</option></select></div>
         <div class="feld feld--breit"><label for="f-text">Dein Anliegen</label><textarea id="f-text" name="nachricht" rows="4" placeholder="Worum geht es? Bitte keine Details zu Diagnosen nennen."></textarea></div>
         <p class="formular__recht feld--breit">Mit dem Absenden stimmst du der Verarbeitung deiner Angaben zur Beantwortung der Anfrage zu. Mehr dazu in der <a href="#kontakt">Datenschutzerklärung</a>.</p>

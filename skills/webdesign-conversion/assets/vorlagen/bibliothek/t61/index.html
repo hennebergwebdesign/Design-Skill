@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Medizinisches Zentrum mit Fachärzten, Markenname</title>
-<meta name="description" content="Beispieltext: Medizinisches Zentrum mit mehreren Fachbereichen, Videosprechstunde und Terminbuchung online. Vor dem Einsatz durch den echten Text des Hauses ersetzen.">
+<meta name="description" content="Beispieltext: Medizinisches Zentrum mit mehreren Fachbereichen und Videosprechstunde. Termin online buchen.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../_basis/schriften.css">
 <link rel="stylesheet" href="marke.css">
@@ -70,6 +70,7 @@
     <div class="held__kreuz held__kreuz--2" aria-hidden="true"><svg width="32" height="32" focusable="false"><use href="#i-zeichen"/></svg></div>
     <div class="held__raster">
       <div class="held__text" data-staffel>
+        <!-- Held nach Formel: H1 = [Zielgruppe] + [Problem] + [Lösung]; Unterzeile = Wie + konkretes Ergebnis; Bild zeigt das Ergebnis; ein Primär-CTA; ein Beleg (Bewertung, Zahl, Logo) im ersten Bildschirm -->
         <h1 id="h-held" data-zeig>Moderne Medizin mit Zeit für dich</h1>
         <p class="held__lead" data-zeig>Fachärzte, Diagnostik und Beratung an einem Ort. Du buchst online, wir nehmen uns Zeit für dein Anliegen.</p>
         <div class="held__aktion" data-zeig>
@@ -312,13 +313,11 @@
       </div>
       <div class="termin__karte" data-zeig>
         <form class="formular" data-formular action="#" method="post" novalidate>
-          <div class="feld"><label for="f-vor">Vorname</label><input id="f-vor" name="vorname" type="text" autocomplete="given-name" placeholder="Vorname" required></div>
-          <div class="feld"><label for="f-nach">Nachname</label><input id="f-nach" name="nachname" type="text" autocomplete="family-name" placeholder="Nachname" required></div>
-          <div class="feld"><label for="f-mail">E-Mail</label><input id="f-mail" name="email" type="email" autocomplete="email" placeholder="du@beispiel.invalid" required></div>
-          <div class="feld"><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" placeholder="Für Rückfragen"></div>
-          <div class="feld"><label for="f-art">Fachbereich</label><select id="f-art" name="fachbereich"><option>Allgemeinmedizin</option><option>Vorsorge</option><option>Hautmedizin</option><option>Diagnostik</option><option>Kinder und Jugend</option><option>Videosprechstunde</option></select></div>
-          <div class="feld"><label for="f-tag">Wunschtermin</label><input id="f-tag" name="wunschtermin" type="date"></div>
-          <div class="feld feld--breit"><label for="f-text">Nachricht</label><textarea id="f-text" name="nachricht" rows="4" placeholder="Worum geht es? Bitte keine Details zu Diagnosen nennen."></textarea></div>
+          <div class="feld feld--breit"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" placeholder="Vor und Nachname" required></div>
+          <div class="feld"><label for="f-mail">E-Mail</label><input id="f-mail" name="email" type="email" autocomplete="email" placeholder="du@beispiel.invalid" required><small class="feld__hinweis">Damit wir dir die Bestätigung schicken können.</small></div>
+          <div class="feld"><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" placeholder="Für Rückfragen"><small class="feld__hinweis">Nur für Rückfragen zu deiner Anfrage.</small></div>
+          <div class="feld feld--breit"><label for="f-art">Fachbereich</label><select id="f-art" name="fachbereich"><option>Allgemeinmedizin</option><option>Vorsorge</option><option>Hautmedizin</option><option>Diagnostik</option><option>Kinder und Jugend</option><option>Videosprechstunde</option></select></div>
+          <div class="feld feld--breit"><label for="f-text">Nachricht</label><textarea id="f-text" name="nachricht" rows="4" placeholder="Worum geht es? Gern mit Wunschtermin. Bitte keine Details zu Diagnosen nennen."></textarea></div>
           <p class="formular__recht feld--breit">Mit dem Absenden stimmst du der Verarbeitung deiner Angaben zur Terminvereinbarung zu. Mehr dazu in der <a href="#fuss">Datenschutzerklärung</a>.</p>
           <button class="knopf formular__senden feld--breit" type="submit">Termin buchen</button>
           <p class="formular__meldung feld--breit" data-formular-meldung role="status" hidden>Beispielformular: In dieser Vorlage wird nichts gesendet. Der Versand wird im Projekt angebunden.</p>

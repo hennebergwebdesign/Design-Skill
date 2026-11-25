@@ -244,3 +244,17 @@ h3{font-size:var(--h3);line-height:1.2}
 .wechsler__steuerung[hidden]{display:none}
 .held__bild::after{content:"";position:absolute;inset:auto 0 0 0;height:60%;z-index:1;pointer-events:none;background:linear-gradient(0deg,color-mix(in srgb,var(--flaeche-dunkel) 78%,transparent),transparent)}
 .held__marke{z-index:2}
+
+/* Fragen */
+.faq{background:#fff}
+.faq__liste{display:grid;max-width:56rem;border-top:1px solid var(--linie)}
+.frage{border-bottom:1px solid var(--linie)}
+.frage summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:3.5rem;padding:1.1rem 0;font-family:var(--schrift-titel);font-weight:var(--titel-gewicht);letter-spacing:var(--titel-spur);font-size:clamp(1.25rem,1.1rem + .6vw,1.5rem);line-height:1.25;cursor:pointer;list-style:none}
+.frage summary::-webkit-details-marker{display:none}
+.frage summary:focus-visible{outline:3px solid var(--akzent-tief);outline-offset:3px}
+.frage .plus{display:grid;place-items:center;flex:none;width:2.25rem;height:2.25rem;box-shadow:inset 0 0 0 1px var(--text);transition:background-color var(--dauer-kurz)}
+.frage .plus svg{transition:transform var(--dauer-kurz) var(--kurve)}
+.frage:hover .plus{background:var(--akzent)}
+.frage[open] .plus{background:var(--akzent)}
+.frage[open] .plus svg{transform:rotate(45deg)}
+.frage .antwort{max-width:42rem;padding:0 3.5rem 1.5rem 0;color:var(--text-leise)}

@@ -31,3 +31,10 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent-text` auf `--a
 
 ## Offen
 Formular (Newsletter) sendet nichts. Zahlen, Namen, Stimmen, Preise und das Angebot sind Beispiele, keine Belege. Der Film im Held und in der Mitte ist eine Fläche, die Pause hält nur die Drift des Platzhalters an. Das Team schwebt nur ab 62rem Breite, die Positionen (`style` an `.coach`) sind für sechs Karten gesetzt: bei mehr oder weniger Personen neu verteilen. Die Telefonnummer steht im Held und im Menü, nicht in der Kopfpille. Zwei Links im Fuß (Impressum, Datenschutz) sind Platzhalter.
+
+## Conversion (Playbook)
+- Beschreibung auf 160 Zeichen gekürzt
+- Kommentar zur Heldformel vor der H1
+- Primärknopf "Probestunde" in der Kopfpille (`.kopf__cta`), mobil neben Logo und Menüknopf
+- Telefon, FAQ mit fünf Einwänden und Beleg im Held waren schon da
+- Newsletter Feld unverändert (nur E-Mail, kein Kontaktformular)

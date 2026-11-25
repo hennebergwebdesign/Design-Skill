@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Fitnessstudio mit Training, Betreuung und Tarifen, Markenname</title>
-<meta name="description" content="Beispieltext: Ein Studio für alle, die ohne Druck trainieren wollen, mit Betreuung, klaren Tarifen und einem Probetraining. Vor dem Einsatz durch den echten Text der Marke ersetzen.">
+<title>Fitnessstudio | Training ohne Druck | Markenname</title>
+<meta name="description" content="Beispieltext: Studio für alle, die ohne Druck trainieren wollen, mit Betreuung und klaren Tarifen. Jetzt Probetraining anfragen.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../_basis/schriften.css">
 <link rel="stylesheet" href="marke.css">
@@ -80,6 +80,7 @@
     <div class="wrap held__innen">
       <div class="held__text" data-staffel>
         <p class="kicker" data-zeig>Ohne Druck, ohne Show</p>
+        <!-- Held nach Formel: H1 = [Zielgruppe] + [Problem] + [Lösung]; Unterzeile = Wie + konkretes Ergebnis; Bild zeigt das Ergebnis; ein Primär-CTA; ein Beleg (Bewertung, Zahl, Logo) im ersten Bildschirm -->
         <h1 id="h-held" data-zeig><span class="t-hell">Trainiere wie</span> <span class="t-fett">du leben willst</span></h1>
         <p class="held__lead" data-zeig>Einfache Einheiten, die zu deinen Zielen passen, begleitet von Trainerinnen und Trainern, die dir zuhören.</p>
         <div class="held__knoepfe" data-zeig>
@@ -341,8 +342,8 @@
         <p>Wir antworten innerhalb eines Werktags und finden mit dir einen Termin für das Probetraining.</p>
         <form class="formular" data-formular action="#" method="post" novalidate>
           <div class="formular__feld formular__feld--breit"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" placeholder="Vor und Nachname" required></div>
-          <div class="formular__feld"><label for="f-mail">Mail</label><input id="f-mail" name="email" type="email" autocomplete="email" placeholder="du@beispiel.invalid" required></div>
-          <div class="formular__feld"><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" placeholder="Für den Rückruf"></div>
+          <div class="formular__feld"><label for="f-mail">Mail</label><input id="f-mail" name="email" type="email" autocomplete="email" placeholder="du@beispiel.invalid" required><small class="feld__hinweis">Damit wir dir die Bestätigung schicken können.</small></div>
+          <div class="formular__feld"><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" placeholder="Für den Rückruf"><small class="feld__hinweis">Nur für Rückfragen zu deiner Anfrage.</small></div>
           <div class="formular__feld formular__feld--breit"><label for="f-thema">Anliegen</label><select id="f-thema" name="anliegen"><option>Probetraining</option><option>Personal Training</option><option>Tarife</option><option>Sonstiges</option></select></div>
           <div class="formular__feld formular__feld--breit"><label for="f-text">Nachricht</label><textarea id="f-text" name="nachricht" rows="3" placeholder="Was möchtest du erreichen?"></textarea></div>
           <p class="formular__recht formular__feld--breit">Mit dem Absenden stimmst du der Verarbeitung deiner Angaben zur Beantwortung der Anfrage zu. Mehr dazu in der <a href="#fuss">Datenschutzerklärung</a>.</p>
