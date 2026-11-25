@@ -224,7 +224,7 @@ nav a[aria-current="location"]{text-decoration:none}
 @media (min-width:62rem){.preise__raster{grid-template-columns:repeat(3,1fr);gap:1.5rem}}
 
 /* 8. Aussage: riesiger Satz mit schwebenden Bildern */
-.aussage{position:relative;padding-block:clamp(4rem,12vw,10rem);overflow:clip}
+.aussage{position:relative;padding-block:clamp(9rem,12vw,10rem);overflow:clip}
 .aussage__satz{position:relative;z-index:2;max-width:15ch;margin-inline:auto;text-align:center;font-size:clamp(2.5rem,1.2rem + 6vw,6.5rem);line-height:1.08}
 .aussage__bild{position:absolute;z-index:1;width:clamp(5rem,20vw,13rem);aspect-ratio:1;rotate:var(--w,-8deg);border-radius:1.5rem}
 .aussage__bild--1{left:-1rem;top:1rem;--w:-7deg}
@@ -252,10 +252,10 @@ nav a[aria-current="location"]{text-decoration:none}
 
 /* 10. Stimmen: Spalten laufen gegenläufig */
 .stimmen{overflow:clip}
-.stimmen__fenster{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;height:min(52rem,110svh);overflow:hidden;-webkit-mask:linear-gradient(180deg,transparent,#000 10%,#000 90%,transparent);mask:linear-gradient(180deg,transparent,#000 10%,#000 90%,transparent)}
+.stimmen__fenster{display:grid;grid-template-columns:1fr;gap:1rem;height:min(52rem,110svh);overflow:hidden;-webkit-mask:linear-gradient(180deg,transparent,#000 10%,#000 90%,transparent);mask:linear-gradient(180deg,transparent,#000 10%,#000 90%,transparent)}
 .stimmen__spalte{display:flex;flex-direction:column;gap:1rem;animation:hoch 46s linear infinite}
 .stimmen__spalte:nth-child(even){animation-direction:reverse}
-.stimmen__spalte:nth-child(n+3){display:none}
+.stimmen__spalte:nth-child(n+2){display:none}
 .stimmen__fenster:hover .stimmen__spalte{animation-play-state:paused}
 @keyframes hoch{to{transform:translateY(calc(-50% - .5rem))}}
 .stimme{display:grid;gap:1rem;align-content:start;padding:1.5rem;border-radius:var(--radius-karte);border:1px solid var(--linie);background:var(--flaeche-karte)}
@@ -265,9 +265,13 @@ nav a[aria-current="location"]{text-decoration:none}
 .sterne{display:flex;gap:.15rem;color:#e8a317}
 .sterne svg{width:1.1rem;height:1.1rem}
 .stimme__rolle{color:var(--text-leise);font-size:.95rem}
+@media (min-width:36rem){
+  .stimmen__fenster{grid-template-columns:repeat(2,1fr)}
+  .stimmen__spalte:nth-child(2){display:flex}
+}
 @media (min-width:62rem){
   .stimmen__fenster{grid-template-columns:repeat(4,1fr)}
-  .stimmen__spalte:nth-child(n+3){display:flex}
+  .stimmen__spalte:nth-child(n+2){display:flex}
 }
 
 /* 11. Ratgeber */
@@ -325,3 +329,4 @@ nav a[aria-current="location"]{text-decoration:none}
   .js .funk__karte:not([hidden]){animation:none}
   .tarif{transform:none}
 }
+#preise{overflow-x:clip}
