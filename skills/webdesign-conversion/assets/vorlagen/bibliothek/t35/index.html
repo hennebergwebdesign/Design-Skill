@@ -23,6 +23,7 @@
   <symbol id="i-clock" viewBox="0 0 256 256" fill="currentColor"><path d="M128,20A108,108,0,1,0,236,128,108.12,108.12,0,0,0,128,20Zm0,192a84,84,0,1,1,84-84A84.09,84.09,0,0,1,128,212Zm68-84a12,12,0,0,1-12,12H128a12,12,0,0,1-12-12V72a12,12,0,0,1,24,0v44h44A12,12,0,0,1,196,128Z"/></symbol>
   <symbol id="i-map-pin" viewBox="0 0 256 256" fill="currentColor"><path d="M128,60a44,44,0,1,0,44,44A44.05,44.05,0,0,0,128,60Zm0,64a20,20,0,1,1,20-20A20,20,0,0,1,128,124Zm0-112a92.1,92.1,0,0,0-92,92c0,77.36,81.64,135.4,85.12,137.83a12,12,0,0,0,13.76,0,259,259,0,0,0,42.18-39C205.15,170.57,220,136.37,220,104A92.1,92.1,0,0,0,128,12Zm31.3,174.71A249.35,249.35,0,0,1,128,216.89a249.35,249.35,0,0,1-31.3-30.18C80,167.37,60,137.31,60,104a68,68,0,0,1,136,0C196,137.31,176,167.37,159.3,186.71Z"/></symbol>
   <symbol id="i-envelope" viewBox="0 0 256 256" fill="currentColor"><path d="M224,44H32A12,12,0,0,0,20,56V192a20,20,0,0,0,20,20H216a20,20,0,0,0,20-20V56A12,12,0,0,0,224,44Zm-96,83.72L62.85,68h130.3ZM92.79,128,44,172.72V83.28Zm17.76,16.28,9.34,8.57a12,12,0,0,0,16.22,0l9.34-8.57L193.15,188H62.85ZM163.21,128,212,83.28v89.44Z"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 256 256" fill="currentColor"><path d="M228,128a12,12,0,0,1-12,12H140v76a12,12,0,0,1-24,0V140H40a12,12,0,0,1,0-24h76V40a12,12,0,0,1,24,0v76h76A12,12,0,0,1,228,128Z"/></symbol>
 </svg>
 <header class="kopf" id="top">
   <div class="wrap kopf__leiste">
@@ -45,6 +46,7 @@
 <section class="held" aria-labelledby="h-held">
   <div class="held__text dunkel">
     <div>
+      <!-- Held nach Formel: H1 = [Zielgruppe] + [Problem] + [Lösung]; Unterzeile = Wie + konkretes Ergebnis; Bild zeigt das Ergebnis; ein Primär-CTA; ein Beleg (Bewertung, Zahl, Logo) im ersten Bildschirm -->
       <h1 id="h-held" data-zeig>Frische Küche für jeden Anlass</h1>
       <p class="held__lead" data-zeig>Beispieltext: Echte Aromen, ehrlich zubereitet, in einem Raum, in dem man gern sitzen bleibt.</p>
       <p class="held__knopf" data-zeig><a class="knopf" href="#karte">Karte ansehen und bestellen</a></p>
@@ -183,6 +185,22 @@
   </div>
 </section>
 
+<section class="faq" id="fragen" aria-labelledby="h-fragen">
+  <div class="wrap">
+    <header class="kopfzeile">
+      <p class="kicker" data-zeig>Häufige Fragen</p>
+      <h2 id="h-fragen" data-zeig>Gut zu wissen vor dem Besuch</h2>
+    </header>
+    <div class="faq__liste" data-exklusiv data-zeig data-beispiel>
+        <details><summary>Was kostet ein Abend bei euch?<svg class="faq__plus" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary><p class="antwort">Beispielantwort: Hauptgerichte liegen zwischen 14 und 28 Euro. Die aktuelle Karte mit allen Preisen findest du hier oben.</p></details>
+        <details><summary>Wie lange sollten wir einplanen?<svg class="faq__plus" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary><p class="antwort">Beispielantwort: Für ein Abendessen rechnest du mit etwa zwei Stunden. Für größere Runden planen wir gern mehr Zeit ein.</p></details>
+        <details><summary>Kann die Küche auf Allergien und Wünsche eingehen?<svg class="faq__plus" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary><p class="antwort">Beispielantwort: Ja, sag uns bei der Reservierung Bescheid. Die Küche stellt sich auf Unverträglichkeiten, vegetarische und vegane Wünsche ein.</p></details>
+        <details><summary>Was passiert, wenn wir absagen müssen?<svg class="faq__plus" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary><p class="antwort">Beispielantwort: Bis 24 Stunden vorher kannst du kostenlos umbuchen oder stornieren. Ein kurzer Anruf oder eine Mail genügt.</p></details>
+        <details><summary>Lohnt sich die Reservierung auch spontan?<svg class="faq__plus" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary><p class="antwort">Beispielantwort: Ja, auch kurzfristige Anfragen prüfen wir sofort und melden uns noch am selben Tag mit einer Antwort.</p></details>
+    </div>
+  </div>
+</section>
+
 <section class="tisch" id="tisch" aria-labelledby="h-tisch">
   <div class="wrap">
     <header class="kopfzeile">
@@ -196,8 +214,8 @@
         <p>Beispieltext: Sichere dir deinen Platz, wir bestätigen dir den Termin persönlich.</p>
         <form class="formular" data-formular action="#" method="post" novalidate aria-label="Tischanfrage">
           <div class="formular__feld"><label for="r-vor">Vorname</label><input id="r-vor" name="vorname" type="text" autocomplete="given-name" required></div>
-          <div class="formular__feld"><label for="r-tel">Telefon</label><input id="r-tel" name="telefon" type="tel" autocomplete="tel"></div>
-          <div class="formular__feld"><label for="r-mail">E-Mail</label><input id="r-mail" name="email" type="email" autocomplete="email" required></div>
+          <div class="formular__feld"><label for="r-tel">Telefon</label><input id="r-tel" name="telefon" type="tel" autocomplete="tel"><small class="feld__hinweis">Nur für Rückfragen zu deiner Anfrage.</small></div>
+          <div class="formular__feld"><label for="r-mail">E-Mail</label><input id="r-mail" name="email" type="email" autocomplete="email" required><small class="feld__hinweis">Damit wir dir die Bestätigung schicken können.</small></div>
           <div class="formular__feld"><label for="r-text">Nachricht</label><textarea id="r-text" name="nachricht" rows="3" placeholder="Wunschtermin, Personenzahl, Besonderes"></textarea></div>
           <p class="formular__recht">Mit dem Absenden stimmst du der Verarbeitung deiner Angaben zur Beantwortung der Anfrage zu. Mehr dazu in der <a href="#fuss">Datenschutzerklärung</a>.</p>
           <button class="knopf formular__knopf" type="submit">Tisch anfragen</button>

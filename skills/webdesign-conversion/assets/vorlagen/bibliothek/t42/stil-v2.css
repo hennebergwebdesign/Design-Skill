@@ -147,3 +147,6 @@
 .sicher__bild>img,.videorahmen>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;border-radius:inherit}
 .sicher__text{position:relative;z-index:2}
 .videorahmen__innen{position:relative;z-index:2}
+
+.held2__text .held__beleg{justify-items:center;margin-top:0}
+.held2__text .bewertung p,.held2__text .bewertung span{max-width:none}

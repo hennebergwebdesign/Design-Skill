@@ -6,7 +6,7 @@ Prinzip nach der freigegebenen Referenz Ambrosia (Tor 1 erteilt), als Aufbau, Ra
 Restaurants mit Anspruch, Weinbars, Manufakturküchen und Gastronomie mit eigener Geschichte, die sich wie ein Magazin lesen soll: Großschrift, feine Linien, versetzte Bilder, viel Luft. Lebt von Fotos mit Stimmung und von einem Namen, der groß stehen darf. Ansprache im Du, für Sie im Text ersetzen. Mit schwachen Fotos wirkt die Seite leer.
 
 ## Sektionsfolge
-Kopf (Logofeld, Pille, Menü, Reservieren), Held mit Namen in Großschrift und Hinweislinie, Öffnungszeile, Bogenstreifen aus Bildern mit Olivlinie, Über uns (Etikett links, Text rechts, Filmplatzhalter), dunkles Laufband mit Schlagworten, Kategorien (zwei Spalten, rechts versetzt, Großtitel über dem Bild), Reservierungsbanner mit senkrechtem Rand, Karte mit Reitern und drehendem Punktkreis, Stimmen mit Rundbildern, Küche (großes Bild, Namen, Geschichte), Warum wir (Liste, Text, Porträt), gekippte Karte „Heute frisch“ auf Bild, Bilderreihe mit versetzten Rahmen, Journal, Aufruf mit zwei Links, Fuß mit angeschnittenem Namen.
+Kopf (Logofeld, Pille, Menü, Reservieren), Held mit Namen in Großschrift und Hinweislinie, Öffnungszeile, Bogenstreifen aus Bildern mit Olivlinie, Über uns (Etikett links, Text rechts, Filmplatzhalter), dunkles Laufband mit Schlagworten, Kategorien (zwei Spalten, rechts versetzt, Großtitel über dem Bild), Reservierungsbanner mit senkrechtem Rand, Karte mit Reitern und drehendem Punktkreis, Stimmen mit Rundbildern, Küche (großes Bild, Namen, Geschichte), Warum wir (Liste, Text, Porträt), gekippte Karte „Heute frisch“ auf Bild, Bilderreihe mit versetzten Rahmen, Journal, Aufruf mit zwei Links, Fuß mit angeschnittenem Namen. Neu: Fragen (Akkordeon) vor dem abschließenden Aufruf.
 
 ## Animationen
 | Wo | Was | Wie |
@@ -31,3 +31,8 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent` auf `--flaech
 
 ## Offen
 Es gibt kein Formular: Reservierung und Anfragen laufen über Mailtos als Platzhalter. Preise, Zeiten, Namen, Stimmen, Standorte und Auszeichnung sind Beispiele, keine Belege. Der Imagefilm ist ein Platzhalter ohne Video. Die Kategorie Links und die Pfeile in „Heute frisch“ führen nur zu Abschnitten der Seite. Der Bogen des Streifens ist ein `clip-path` und schneidet Bildinhalt an den Rändern ab, bei Fotos mit Motiv am Rand prüfen. Kontrast von Text über Fotos (Banner, Aufruf, Platzhalterhinweise) nach dem Einsetzen neu prüfen.
+
+## Conversion (Playbook)
+- Fragen als Akkordeon (`#fragen`) vor dem Aufruf Tisch buchen, fünf Beispielantworten
+- Beleg unter der Unterzeile im Held (Stern mit Beispielwert), Kommentar zur Heldenformel vor der H1
+- Das Symbol `#i-plus` wurde der Spritesheet ergänzt

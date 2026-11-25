@@ -33,3 +33,6 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent-text` auf `--a
 
 ## Offen
 Alle Zahlen, Namen, Preise, Bewertungen und Tarife sind Beispiele, keine Belege; die Beispiellogos sind Beispiellogos. Der Newsletter-Formular sendet nichts. Die gestapelten Stufen und die Formen sind Ersatz für die dreidimensionalen Figuren der Referenz und brauchen eigene Illustrationen, wenn die Marke sie will. Kontrast von Text über Bildern nach dem Einsetzen neu prüfen. Die Funktionsreiter sind auf Handybreite eine Liste untereinander und brauchen dort keine Bedienung. Drei Links im Fuß (Impressum, Datenschutz, App laden) sind Platzhalter. Rechtliche Angaben je Angebot (Preisangaben, Widerruf, Datenschutz) fehlen bewusst.
+
+## Conversion (Playbook)
+- Nur der Kommentar zur Heldenformel vor der H1 ergänzt. Beleg im Held, Fragen, Telefon und Knopf in der Kopfzeile waren schon vorhanden.

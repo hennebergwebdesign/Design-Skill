@@ -239,3 +239,10 @@ h3{font-size:clamp(1.25rem,1.1rem + .5vw,1.6rem);line-height:1.2}
 .mitglied .bild{--umgebung:var(--flaeche-alt);--kerbe:2.25rem}
 .angebote__bild{--umgebung:var(--sand)}
 @media (min-width:56rem){.angebote__bild{--umgebung:var(--flaeche)}}
+
+/* Primärknopf in der Kopfzeile (Conversion) */
+.kopf__knopf{min-height:2.75rem;padding:.4rem 1rem;margin-left:.5rem;white-space:nowrap}
+.kopf__knopf-lang{display:none}
+@media (max-width:39.99rem){.kopf__logo{font-size:1.2rem;gap:.4rem}.kopf__zeichen{width:2rem;height:2rem}.kopf__leiste{gap:.4rem}.kopf__knopf{margin-left:.15rem;padding-inline:.8rem}}
+@media (min-width:40rem){.kopf__knopf-kurz{display:none}.kopf__knopf-lang{display:inline}}
+.held__beleg svg{color:var(--akzent)}

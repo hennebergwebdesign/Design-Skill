@@ -204,3 +204,15 @@ h3{font-size:var(--h3);line-height:1.15}
 .haken svg{color:var(--akzent);flex:none}
 
 .buehne .leise,.fuss .leise{color:var(--text-leise-dunkel)}
+
+/* Fragen und Einwände (Conversion): Akkordeon im Stil der Vorlage */
+.fragen{background:var(--flaeche)}
+.faq__liste{display:grid;max-width:48rem;margin:2rem auto 0;text-align:left;border-top:1.5px solid var(--linie)}
+.fragen details{border-bottom:1.5px solid var(--linie)}
+.fragen summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:3.5rem;padding:.9rem 0;font-size:1.125rem;font-weight:600;color:var(--text);cursor:pointer;list-style:none}
+.fragen summary::-webkit-details-marker{display:none}
+.fragen summary:focus-visible{outline:3px solid var(--akzent-tief);outline-offset:2px}
+.faq__plus{flex:none;transition:transform var(--dauer-kurz,.2s) var(--kurve,ease)}
+.fragen details[open] .faq__plus{transform:rotate(45deg)}
+.fragen .antwort{padding:0 0 1.25rem;max-width:40rem;color:var(--text-leise)}
+@media (prefers-reduced-motion:reduce){.faq__plus{transition:none}}

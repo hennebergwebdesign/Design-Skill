@@ -285,3 +285,9 @@ h3{font-size:clamp(1.15rem,1rem + .6vw,1.6rem);line-height:1.1}
 .szene__buehne{background:var(--flaeche)}
 @media (min-width:64rem){.szene__buehne{background:var(--flaeche)}}
 .bento2__a .karte__grund::after{inset:auto .75rem .75rem auto!important}
+
+/* Beleg im Held, Telefon im Fuß (Conversion) */
+.held__text .held__beleg{display:flex;align-items:center;gap:.5rem;font-size:1rem;color:#eaf1f5}
+.held__beleg svg{flex:none;color:var(--akzent)}
+.fuss__tel{display:inline-flex;align-items:center;min-height:2.75rem;font-weight:600;color:var(--text-auf-dunkel)}
+.fuss__tel:hover,.fuss__tel:focus-visible{text-decoration:underline}

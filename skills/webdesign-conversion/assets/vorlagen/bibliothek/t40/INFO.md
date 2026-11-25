@@ -31,3 +31,6 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: weißer Text auf `--verl
 
 ## Offen
 Formulare senden nichts. Zahlen, Namen, Stimmen, Logos und Adresse sind Beispiele, keine Belege. Die Beispielkarten im Laufband und in den Leistungskarten sind erfundene Oberflächen, keine Produktabbildungen. Kontrast von Text über echten Fotos nach dem Einsetzen neu prüfen. Texte in den Beispielkarten sind teils kleiner als 16 Pixel, sie sind Abbildungen, kein Fließtext. Bei einer Finanzdienstleistung rechtliche Pflichtangaben (Erlaubnis, Aufsicht) ergänzen.
+
+## Conversion (Playbook)
+- Beleg im Held (Stern mit Beispielwert, dunkle Schrift wegen des Kontrasts auf dem Verlauf), Kommentar zur Heldenformel vor der H1

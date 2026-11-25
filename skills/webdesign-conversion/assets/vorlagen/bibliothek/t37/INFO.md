@@ -27,3 +27,6 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent` auf `--flaech
 
 ## Offen
 Beispielwerte (Bewertung, Abschlussquote, Preise, Namen, Stimmen, Adresse) sind Beispiele, keine Belege. Siegel wie "staatlich anerkannt" nur zeigen, wenn sie wirklich gelten. Die Referenz zeigt Videostimmen mit Abspielknopf, hier stehen Bildkarten ohne Video, damit kein Knopf ohne Funktion bleibt. Kontrast von Text über Fotos nach dem Einsetzen neu prüfen. Links im Fuß (Datenschutz, Impressum) sind Platzhalter. Kurspreise nach Preisangabenverordnung mit Bruttoangabe führen.
+
+## Conversion (Playbook)
+- Nur der Kommentar zur Heldenformel vor der H1 ergänzt. Der Beleg im Held, die Fragen, Telefon und der Knopf in der Kopfzeile waren schon vorhanden.

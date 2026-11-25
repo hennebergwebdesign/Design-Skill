@@ -9,7 +9,7 @@ Friseur, Kosmetik, Nagel, Massage, Fotostudio und andere Dienstleister, die nach
 Fester dunkler Kopf mit Telefonknopf, Held geteilt (links Text auf Dunkel, rechts Bild), großer Anspruchssatz mit Bild, Leistungen als wischbare Spur mit Pfeilen, Sandband mit Bildkarte und dunkler Angebotskarte, drei Ablaufkarten, Studio mit drehendem Siegel, Mosaik über dunklem Band, Stimmenfolie mit Pfeilen, Team als Laufband neben dunkler Karte mit Öffnungszeiten, Fragen, Kontaktleiste, Fuß.
 
 ## Variante 2, Vollbild mit Preisliste (`v2.html`)
-Held als Vollbild mit Verlauf von links, Laufband in Akzentfarbe, Über uns mit Aufzählung, Kennzahlen, dunkles Feld mit vier Hauptleistungen, Ablauf in Nummern neben Terminformular (Siegel an der Ecke), Willkommensangebot im dunklen Feld mit zwei versetzten Bildern, Preisliste mit Reitern, Aufruf in Sand mit freigestelltem Personenbild, Ratgeber, Kontaktleiste, Fuß.
+Held als Vollbild mit Verlauf von links, Laufband in Akzentfarbe, Über uns mit Aufzählung, Kennzahlen, dunkles Feld mit vier Hauptleistungen, Ablauf in Nummern neben Terminformular (Siegel an der Ecke), Willkommensangebot im dunklen Feld mit zwei versetzten Bildern, Preisliste mit Reitern, Aufruf in Sand mit freigestelltem Personenbild, Ratgeber, Kontaktleiste, Fuß. Neu: Fragen als Akkordeon vor dem Schlussaufruf.
 
 ## Animationen
 | Wo | Was | Wie |
@@ -36,3 +36,9 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent-tief` auf `--f
 
 ## Offen
 Beispielwerte (Preise, Angebote, Kennzahlen, Namen, Stimmen, Zeiten, Adresse) sind Beispiele, keine Belege. Das Formular in V2 sendet nichts. Preise nach Preisangabenverordnung mit Bruttoangabe führen. Die Leistungsnamen sind neutral gehalten und für den Betrieb zu präzisieren. Die Kerbe hat gerundete Innenecke, aber scharfe Außenecken (die Referenz rundet beide). Die Referenz zeigt Muster aus Werkzeugen als Hintergrund im Fuß und in Bändern, hier fehlen sie. Links im Fuß (Datenschutz, Impressum) sind Platzhalter. Kontrast von Text über Fotos nach dem Einsetzen neu prüfen.
+
+## Conversion (Playbook)
+- Variante 1 und 2: Primärknopf in der Kopfzeile (auf dem Handy kurz als „Termin“), Telefonkreis bleibt
+- Variante 1: zwei Fragen zu Preis und Absage ergänzt (Antworten als Beispiel markiert), Variante 2: Fragen als Akkordeon vor dem Schlussaufruf neu (`#fragen`, fünf Fragen)
+- Beleg im Held (Sterne mit Beispielwert) und Kommentar zur Heldenformel in beiden Varianten
+- Variante 2: Terminformular von sechs auf fünf Felder (Datum und Uhrzeit als ein Feld „Wunschtermin“), Feldhinweise unter E-Mail und Telefon; Schriftgrößen von Label und Rechtshinweis auf 1 rem

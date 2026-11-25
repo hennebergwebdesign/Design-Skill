@@ -83,9 +83,11 @@
   <!-- 1. Held: zentrierter Titel, ein dunkler Knopf, darunter eine breite Bildszene mit schwebenden Karten -->
   <section class="held" id="top" aria-labelledby="h-held">
     <div class="wrap held__innen">
+      <!-- Held nach Formel: H1 = [Zielgruppe] + [Problem] + [Lösung]; Unterzeile = Wie + konkretes Ergebnis; Bild zeigt das Ergebnis; ein Primär-CTA; ein Beleg (Bewertung, Zahl, Logo) im ersten Bildschirm -->
       <h1 id="h-held" data-zeig>Rechnungen automatisieren, Wachstum vereinfachen</h1>
       <p class="held__text" data-zeig>Gemacht für Teams, denen Tempo, Genauigkeit und eine saubere Anbindung an ihre Werkzeuge wichtig sind.</p>
       <a class="knopf knopf--gross" href="#kontakt" data-zeig>Jetzt ausprobieren</a>
+      <p class="held__beleg" data-zeig data-beispiel><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><span>4,8 von 5 Sternen (Beispielwert)</span></p>
     </div>
     <div class="szene">
       <div class="bild szene__bild" data-platzhalter="Bild: weite Landschaft oder Büroansicht, Querformat" role="img" aria-label="Platzhalter für ein breites Bild"><span class="szene__huegel szene__huegel--a" aria-hidden="true"></span><span class="szene__huegel szene__huegel--b" aria-hidden="true"></span></div>
@@ -325,6 +327,22 @@
         <li data-zeig><a class="beitrag" href="#journal"><span class="beitrag__meta">4 Min. Lesezeit · 9. Oktober</span><span class="bild bild--b"><img src="bilder/schreibtischglobus-in-blau-vor-dunklem-grund.webp" width="1000" height="667" alt="" loading="lazy" decoding="async"></span><h3>Mehrere Währungen klug handhaben</h3><p>So gestalten internationale Teams Zahlungen schneller und planbarer.</p></a></li>
         <li data-zeig><a class="beitrag" href="#journal"><span class="beitrag__meta">6 Min. Lesezeit · 29. September</span><span class="bild bild--c"><img src="bilder/junger-setzling-waechst-aus-dunklem-boden.webp" width="1000" height="667" alt="" loading="lazy" decoding="async"></span><h3>Einsichten, die Wachstum treiben</h3><p>Wie klare Übersichten und kluge Auswertungen bessere Entscheidungen stützen.</p></a></li>
       </ul>
+    </div>
+  </section>
+
+  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen">
+    <div class="wrap">
+      <header class="kopfblock">
+        <h2 id="h-fragen" data-zeig>Gut zu wissen, bevor du startest</h2>
+        <p class="kopfblock__text" data-zeig>Die Antworten auf die Fragen, die wir vor dem Start am häufigsten hören.</p>
+      </header>
+      <div class="faq__liste" data-exklusiv data-zeig data-beispiel>
+        <details><summary>Was kostet das und gibt es versteckte Gebühren?<svg class="faq__plus" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary><p class="antwort">Beispielantwort: Die Tarife stehen oben, der Preis gilt pro Monat. Zusätzliche Kosten nennen wir vor dem Start, nicht erst danach.</p></details>
+        <details><summary>Wie lange dauert die Einrichtung?<svg class="faq__plus" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary><p class="antwort">Beispielantwort: Meist ein bis zwei Tage bis zur ersten Rechnung. Größere Teams planen wir gemeinsam in Schritten.</p></details>
+        <details><summary>Funktioniert das mit meiner Buchhaltung?<svg class="faq__plus" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary><p class="antwort">Beispielantwort: Ja, die gängigen Werkzeuge lassen sich anbinden. Welche genau, zeigen wir dir im Gespräch an deinem Beispiel.</p></details>
+        <details><summary>Kann ich jederzeit kündigen?<svg class="faq__plus" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary><p class="antwort">Beispielantwort: Ja, monatlich. Deine Daten kannst du vorher exportieren, dafür brauchst du keinen Support.</p></details>
+        <details><summary>Lohnt sich das auch für ein kleines Team?<svg class="faq__plus" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary><p class="antwort">Beispielantwort: Ja, schon ab wenigen Rechnungen im Monat. Du wechselst den Tarif, sobald dein Team wächst.</p></details>
+      </div>
     </div>
   </section>
 

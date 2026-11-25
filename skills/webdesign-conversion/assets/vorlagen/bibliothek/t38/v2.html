@@ -59,6 +59,7 @@
       <span class="kopf__tel-kreis" aria-hidden="true"><svg width="18" height="18" focusable="false"><use href="#i-phone"/></svg></span>
       <span class="kopf__tel-text" data-beispiel>+49 000 0000000</span>
     </a>
+    <a class="knopf kopf__knopf" href="#termin"><span class="kopf__knopf-kurz">Termin</span><span class="kopf__knopf-lang">Termin buchen</span></a>
     <button class="kopf__burger" type="button" data-menue aria-expanded="false" aria-controls="hauptnav">
       <span class="sr-nur">Menü öffnen oder schließen</span>
       <span class="burger" aria-hidden="true"></span>
@@ -72,9 +73,11 @@
     <div class="bild held2__bild" data-parallax="0.06"><img src="bilder/herrenschnitt-nacken.webp" width="1600" height="1067" alt="Friseur schneidet Haare am Nacken eines Kunden" loading="lazy" decoding="async"></div>
     <div class="held2__schleier" aria-hidden="true"></div>
     <div class="wrap held2__innen">
+      <!-- Held nach Formel: H1 = [Zielgruppe] + [Problem] + [Lösung]; Unterzeile = Wie + konkretes Ergebnis; Bild zeigt das Ergebnis; ein Primär-CTA; ein Beleg (Bewertung, Zahl, Logo) im ersten Bildschirm -->
       <h1 id="h-held" data-zeig>Erlebe Qualität wie noch nie zuvor</h1>
       <p data-zeig>Unser Team bringt Genauigkeit, Kreativität und Sorgfalt in jeden Termin und sorgt für ein Ergebnis, das zu dir passt.</p>
       <p class="held2__knoepfe" data-zeig><a class="knopf" href="#termin">Termin vereinbaren</a><a class="textlink textlink--hell" href="#leistungen2">Leistungen ansehen<svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a></p>
+      <p class="held__zeile held__beleg" data-zeig data-beispiel><svg width="26" height="26" aria-hidden="true" focusable="false"><use href="#i-star"/></svg>4,8 von 5 Sternen (Beispielwert)</p>
     </div>
   </section>
 
@@ -158,11 +161,10 @@
         <h3>Jetzt Termin anfragen</h3>
         <form class="formular" data-formular action="#" method="post" novalidate>
           <div class="formular__feld"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" placeholder="Vor und Nachname" required></div>
-          <div class="formular__feld"><label for="f-mail">E-Mail</label><input id="f-mail" name="email" type="email" autocomplete="email" placeholder="du@beispiel.invalid" required></div>
-          <div class="formular__feld"><label for="f-datum">Wunschdatum</label><input id="f-datum" name="datum" type="date"></div>
-          <div class="formular__feld"><label for="f-zeit">Uhrzeit</label><input id="f-zeit" name="zeit" type="time"></div>
-          <div class="formular__feld formular__feld--breit"><label for="f-art">Leistung</label><select id="f-art" name="leistung"><option>Bitte wählen</option><option>Schnitt</option><option>Farbe</option><option>Pflege</option><option>Anlass</option></select></div>
-          <div class="formular__feld formular__feld--breit"><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" placeholder="Für den Rückruf"></div>
+          <div class="formular__feld"><label for="f-mail">E-Mail</label><input id="f-mail" name="email" type="email" autocomplete="email" placeholder="du@beispiel.invalid" required><small class="feld__hinweis">Damit wir dir die Bestätigung schicken können.</small></div>
+          <div class="formular__feld"><label for="f-datum">Wunschtermin</label><input id="f-datum" name="termin" type="datetime-local"></div>
+          <div class="formular__feld"><label for="f-art">Leistung</label><select id="f-art" name="leistung"><option>Bitte wählen</option><option>Schnitt</option><option>Farbe</option><option>Pflege</option><option>Anlass</option></select></div>
+          <div class="formular__feld formular__feld--breit"><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" placeholder="Für den Rückruf"><small class="feld__hinweis">Nur für Rückfragen zu deiner Anfrage.</small></div>
           <p class="formular__recht formular__feld--breit">Mit dem Absenden stimmst du der Verarbeitung deiner Angaben zur Beantwortung der Anfrage zu. Mehr dazu in der <a href="#fuss">Datenschutzerklärung</a>.</p>
           <button class="knopf knopf--dunkel formular__senden formular__feld--breit" type="submit">Termin anfragen</button>
           <p class="formular__meldung formular__feld--breit" data-formular-meldung role="status" hidden>Beispielformular: In dieser Vorlage wird nichts gesendet. Der Versand wird im Projekt angebunden.</p>
@@ -254,6 +256,22 @@
   </section>
 
   <!-- 9. Aufruf in Sand mit Personenbild -->
+  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen">
+    <div class="wrap fragen__raster">
+      <div class="fragen__kopf">
+        <h2 id="h-fragen" data-zeig>Häufige Fragen</h2>
+        <p data-zeig>Du hast Fragen zu Preisen, Ablauf oder Ergebnis? Hier haben wir die häufigsten gesammelt.</p>
+      </div>
+      <div class="fragen__liste" data-exklusiv data-staffel data-beispiel>
+        <details class="frage" data-zeig><summary><span>Was kostet ein Termin?</span><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary><p>Beispielantwort: Die Preise stehen in der Preisliste, je nach Leistung ab etwa 30 Euro. Vor dem Termin nennen wir dir den genauen Betrag.</p></details>
+        <details class="frage" data-zeig><summary><span>Wie lange dauert ein Termin?</span><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary><p>Beispielantwort: Meist zwischen 45 Minuten und drei Stunden. Bei der Buchung siehst du die geplante Dauer.</p></details>
+        <details class="frage" data-zeig><summary><span>Wie erfahren seid ihr, und wie arbeitet ihr?</span><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary><p>Beispielantwort: Unser Team ist geschult und arbeitet nach festen Abläufen. Bei der Beratung zeigen wir dir vorab, was möglich ist.</p></details>
+        <details class="frage" data-zeig><summary><span>Was ist, wenn mir das Ergebnis nicht gefällt?</span><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary><p>Beispielantwort: Sag es uns noch im Termin, dann bessern wir nach. Auch danach kannst du dich melden, wir finden eine Lösung.</p></details>
+        <details class="frage" data-zeig><summary><span>Kann ich kurzfristig noch einen Termin bekommen?</span><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary><p>Beispielantwort: Oft ja. Ruf an oder schreib uns, wir nennen dir den nächsten freien Termin.</p></details>
+      </div>
+    </div>
+  </section>
+
   <section class="aufruf2" aria-labelledby="h-aufruf">
     <div class="wrap aufruf2__feld">
       <div class="aufruf2__text">

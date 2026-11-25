@@ -30,3 +30,7 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent-text` auf `--a
 
 ## Offen
 Beispielwerte (Kontostand, Zahlen, Namen, Stimmen, Siegel) sind Beispiele, keine Belege; das Siegel "Beispielsiegel" nur durch eine echte, belegbare Auszeichnung ersetzen. Beispiellogos sind keine Kunden. Das Formular im Fuß sendet nichts. Die Referenz lässt das Bild in der Szene weich in den Aufruf wachsen, hier wächst eine Fläche aus dem Stapel (Näherung). Kontrast von Text über Fotos und über den Bühnenverläufen nach dem Einsetzen neu prüfen. Auf sehr kleinen Höhen (unter 600 Pixel, Querformat am Handy) sind die Bühnen eng. Links im Fuß (Datenschutz, Impressum) sind Platzhalter.
+
+## Conversion (Playbook)
+- Beleg im Held (Stern mit Beispielwert), Kommentar zur Heldenformel vor der H1
+- Telefonnummer (Beispiel) im Fuß, Beschreibung auf unter 160 Zeichen gekürzt

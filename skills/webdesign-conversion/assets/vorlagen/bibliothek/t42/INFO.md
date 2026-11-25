@@ -14,8 +14,8 @@ Alle drei teilen `marke.css` (Marke einmal einstellen, alle folgen), `stil.css` 
 Finanz-App, Konto und Karte, Zahlungsdienste, Buchhaltungswerkzeuge, Anlage- und Kreditberatung für Selbständige und kleine Betriebe. Auch für jedes Produkt, das sich über Oberflächen mit Zahlen erklärt (Dashboards, Auswertungen). Ansprache im Du, für Sie im Text ersetzen. Ohne eigene Produktbilder tragen die Kartenmotive aus Flächen die Seite, mit echten Screenshots ersetzt man sie je Stelle. Rechtliche Angaben zu Finanzprodukten (Pflichtangaben, Risikohinweise, Aufsicht) gehören je Kunde dazu und fehlen hier bewusst.
 
 ## Sektionsfolge
-**1 Karte im Fokus:** schwebende Kopfleiste, dunkle Bühne mit großer Zeile links und schwebender Bankkarte rechts, Logolaufband, Bildkarte mit Telefon neben Text und zwei Kennzahlen, vier Karten im Wechsel breit und schmal, riesige Laufschrift, Sammelzahlung mit Funktionsliste und Auswertungsrahmen, dunkle Bühne mit drei Auswertungskarten, Belegkarte neben Text, vier Werkzeugkarten, sechs Stimmen in drei versetzten Spalten, Aufruf und Fuß.
-**2 Bühne und Orbit:** mittiger Held, darunter ein Kartenfeld aus Karte und Zahlenkarten, das beim Scrollen aufsteigt, Logolaufband, schräges Telefon neben Text, Auslandsüberweisung (Abbild) mit Punktekarte, zwei Karten neben einer hohen Bildkarte, Halbkreise mit Anbindungen, Video mit Wortlicht und zwei dunkle Funktionspaneele, drei Stimmen, Aufruf und Fuß.
+**1 Karte im Fokus:** schwebende Kopfleiste, dunkle Bühne mit großer Zeile links und schwebender Bankkarte rechts, Logolaufband, Bildkarte mit Telefon neben Text und zwei Kennzahlen, vier Karten im Wechsel breit und schmal, riesige Laufschrift, Sammelzahlung mit Funktionsliste und Auswertungsrahmen, dunkle Bühne mit drei Auswertungskarten, Belegkarte neben Text, vier Werkzeugkarten, sechs Stimmen in drei versetzten Spalten, Aufruf und Fuß. Neu: Fragen (Akkordeon) vor dem Fuß.
+**2 Bühne und Orbit:** mittiger Held, darunter ein Kartenfeld aus Karte und Zahlenkarten, das beim Scrollen aufsteigt, Logolaufband, schräges Telefon neben Text, Auslandsüberweisung (Abbild) mit Punktekarte, zwei Karten neben einer hohen Bildkarte, Halbkreise mit Anbindungen, Video mit Wortlicht und zwei dunkle Funktionspaneele, drei Stimmen, Aufruf und Fuß. Neu: Fragen (Akkordeon) vor dem Fuß.
 **3 App mit Karten:** Held mit Telefon in der Mitte und drei farbigen Karten rechts (eine offen, wechselt von selbst), Logolaufband, Währungsliste neben Text und Akkordeon, Text und zwei Zahlen neben dunkler Bildfläche, drei nummerierte Karten, dunkle Bühne mit zwei Karten und einer breiten, riesige Laufschrift mit Reitern, Laptop und Anbindungen, Stimmenspur mit Pfeilen, Preisumschalter mit drei Tarifen, Aufruf und Fuß.
 
 ## Animationen
@@ -46,3 +46,8 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent-tief` auf `--f
 
 ## Offen
 Alle Zahlen, Namen, Kartennummern, Preise, Bewertungen und Tarife sind Beispiele, keine Belege; die Beispiellogos sind Beispiellogos. Die Auslandsüberweisung in Variante 2 ist ein Abbild ohne Funktion (kein Formular), der Videoknopf zeigt nur einen Hinweis, die Preise in Variante 3 haben keinen Bestellweg. Die drei Kartenmotive je Variante sind aus Flächen und Text gebaut, keine Fotos; die Platzhalterflächen (`data-platzhalter`) brauchen Bilder. Kontrast von Text über Bildern nach dem Einsetzen neu prüfen. Die Varianten 1 bis 3 haben je eigene Stilteile, die Marke gilt für alle. Zwei Links im Fuß (Impressum, Datenschutz, Geschäftsbedingungen) sind Platzhalter. Ein Hinweis zu den Finanzangaben (Pflichtangaben, Aufsicht) fehlt je Kunde.
+
+## Conversion (Playbook)
+- Fragen als Akkordeon (`#fragen`, fünf Beispielantworten) in Variante 1 und 2; Variante 3 hatte schon ein Akkordeon
+- Beleg (Avatare und Bewertung wie in Variante 1) im Held von Variante 2 und 3, Kommentar zur Heldenformel in allen drei Varianten
+- Beschreibung von Variante 2 auf unter 160 Zeichen gekürzt

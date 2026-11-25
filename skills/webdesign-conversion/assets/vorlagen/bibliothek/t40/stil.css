@@ -328,3 +328,7 @@ small{font-size:.875rem}
   .faecher__karte--links:hover,.faecher__karte--rechts:hover{transform:rotate(0) translateY(0)}
 }
 @media (prefers-reduced-motion:reduce){.faecher__karte{transition:none}}
+
+/* Beleg im Held (Conversion) */
+.held__beleg{display:flex;align-items:center;justify-content:center;gap:.5rem;font-size:1rem;font-weight:600;color:var(--text)}
+.held__beleg svg{flex:none}

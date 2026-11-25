@@ -188,3 +188,21 @@ button.pfeil-rund[aria-disabled="true"]{opacity:.4;cursor:default}
   .band__spur[aria-hidden="true"]{display:none}
   .fuss__gross{translate:0 0}
 }
+
+/* Fragen und Einwände (Conversion): Akkordeon im Stil der Vorlage */
+.faq{padding-block:var(--raum)}
+.faq__liste{display:grid;max-width:48rem;margin:2rem auto 0;text-align:left;border-top:1.5px solid var(--linie)}
+.faq details{border-bottom:1.5px solid var(--linie)}
+.faq summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:3.5rem;padding:.9rem 0;font-size:1.125rem;font-weight:600;color:var(--text);cursor:pointer;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:focus-visible{outline:3px solid var(--akzent-tief);outline-offset:2px}
+.faq__plus{flex:none;transition:transform var(--dauer-kurz,.2s) var(--kurve,ease)}
+.faq details[open] .faq__plus{transform:rotate(45deg)}
+.faq .antwort{padding:0 0 1.25rem;max-width:40rem;color:var(--text-leise)}
+@media (prefers-reduced-motion:reduce){.faq__plus{transition:none}}
+.faq .wrap{text-align:center}
+.held__beleg{display:flex;justify-content:center;align-items:center;gap:.6rem;margin-top:-1.25rem;margin-bottom:clamp(2rem,4vw,3rem);font-size:1rem;font-weight:600}
+.sterne{display:inline-flex;gap:.15rem;color:var(--akzent)}
+
+/* Feldhinweis unter E-Mail und Telefon */
+.feld__hinweis{display:block;font-size:1rem;line-height:1.4;color:var(--text-leise)}

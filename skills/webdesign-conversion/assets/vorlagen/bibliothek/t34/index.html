@@ -55,8 +55,10 @@
 <main id="inhalt">
 <section class="held dunkel" id="top" aria-labelledby="h-held">
   <div class="wrap">
+    <!-- Held nach Formel: H1 = [Zielgruppe] + [Problem] + [Lösung]; Unterzeile = Wie + konkretes Ergebnis; Bild zeigt das Ergebnis; ein Primär-CTA; ein Beleg (Bewertung, Zahl, Logo) im ersten Bildschirm -->
     <h1 id="h-held" data-zeig>Gekocht mit Zeit</h1>
     <a class="knopf held__knopf" href="#ueber" data-zeig>Mehr über uns <svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a>
+    <p class="held__beleg" data-zeig data-beispiel><span class="sterne" aria-hidden="true"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-star"/></svg></span> 4,8 von 5 Sternen (Beispielwert)</p>
   </div>
   <div class="band bogenband" aria-label="Gerichte aus unserer Küche">
     <div class="band__spur">
@@ -153,7 +155,7 @@
       <div data-zeig>
         <form class="formular" data-formular action="#" method="post" novalidate aria-label="Tischanfrage">
           <div class="formular__feld"><label for="r-name">Dein Name</label><input id="r-name" name="name" type="text" autocomplete="name" placeholder="Vor und Nachname" required></div>
-          <div class="formular__feld"><label for="r-mail">Mail oder Telefon</label><input id="r-mail" name="kontakt" type="text" autocomplete="email" placeholder="Wie erreichen wir dich?" required></div>
+          <div class="formular__feld"><label for="r-mail">Mail oder Telefon</label><input id="r-mail" name="kontakt" type="text" autocomplete="email" placeholder="Wie erreichen wir dich?" required><small class="feld__hinweis">Nur für Rückfragen zu deiner Anfrage.</small></div>
           <div class="formular__feld"><label for="r-pers">Personen</label><select id="r-pers" name="personen"><option>2 Personen</option><option>3 Personen</option><option>4 Personen</option><option>5 bis 8 Personen</option><option>Mehr, bitte anrufen</option></select></div>
           <div class="formular__feld"><label for="r-tag">Tag</label><input id="r-tag" name="tag" type="date" required></div>
           <div class="formular__feld"><label for="r-zeit">Uhrzeit</label><input id="r-zeit" name="zeit" type="time" required></div>
@@ -221,6 +223,19 @@
       <li class="person" data-zeig style="text-align:left"><div><h3>Beispielname Drei</h3><p>Service und Reservierung</p></div><div class="bild bogen bild--d"><img src="bilder/koch-stirnband-640.webp" width="640" height="960" alt="Junger Koch mit weißem Stirnband" loading="lazy" decoding="async" style="object-position:50% 25%"></div></li>
       <li class="person" data-zeig style="text-align:left"><div><h3>Beispielname Vier</h3><p>Patisserie</p></div><div class="bild bogen bild--e"><img src="bilder/frau-braun-lachend-640.webp" width="640" height="960" alt="Lächelnde Frau in heller Strickjacke" loading="lazy" decoding="async" style="object-position:50% 25%"></div></li>
     </ul>
+  </div>
+</section>
+<section class="faq" id="fragen" aria-labelledby="h-fragen">
+  <div class="wrap">
+    <p class="kicker" data-zeig>Gut zu wissen</p>
+    <h2 id="h-fragen" data-zeig>Fragen vor dem Besuch</h2>
+    <div class="faq__liste" data-exklusiv data-zeig data-beispiel>
+      <details><summary>Was kostet ein Abend bei euch?<svg class="faq__plus" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary><p class="antwort">Beispielantwort: Hauptgerichte liegen zwischen 12 und 19 Euro, die aktuelle Karte hängt am Eingang und steht hier oben.</p></details>
+      <details><summary>Wie lange sollten wir einplanen?<svg class="faq__plus" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary><p class="antwort">Beispielantwort: Für ein Abendessen rechnest du mit etwa zwei Stunden, zum Mittag reicht eine Stunde.</p></details>
+      <details><summary>Kocht ihr auch vegetarisch, vegan oder ohne Gluten?<svg class="faq__plus" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary><p class="antwort">Beispielantwort: Ja, jede Woche gibt es mehrere Gerichte dafür. Sag bei der Reservierung kurz Bescheid, dann stellt die Küche sich darauf ein.</p></details>
+      <details><summary>Was passiert, wenn wir absagen müssen?<svg class="faq__plus" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary><p class="antwort">Beispielantwort: Bis zum Vortag kannst du kostenlos umbuchen oder stornieren, ein kurzer Anruf genügt.</p></details>
+      <details><summary>Lohnt sich eine Reservierung auch unter der Woche?<svg class="faq__plus" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary><p class="antwort">Beispielantwort: Ja, an Freitagen und Samstagen ist es abends voll, unter der Woche halten wir dir trotzdem gern deinen Wunschtisch frei.</p></details>
+    </div>
   </div>
 </section>
 </main>

@@ -277,3 +277,17 @@ small{font-size:.9375rem}
   .fuss__raster{grid-template-columns:1.2fr 1.6fr 1.4fr}
   .fuss__news{grid-column:auto}
 }
+
+/* Fragen und Einwände (Conversion): Akkordeon im Stil der Vorlage */
+.fragen{background:var(--flaeche-alt)}
+.faq__liste{display:grid;max-width:48rem;margin:2rem auto 0;text-align:left;border-top:1.5px solid var(--linie)}
+.fragen details{border-bottom:1.5px solid var(--linie)}
+.fragen summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:3.5rem;padding:.9rem 0;font-size:1.125rem;font-weight:600;color:var(--text);cursor:pointer;list-style:none}
+.fragen summary::-webkit-details-marker{display:none}
+.fragen summary:focus-visible{outline:3px solid var(--akzent);outline-offset:2px}
+.faq__plus{flex:none;transition:transform var(--dauer-kurz,.2s) var(--kurve,ease)}
+.fragen details[open] .faq__plus{transform:rotate(45deg)}
+.fragen .antwort{padding:0 0 1.25rem;max-width:40rem;color:var(--text-leise)}
+@media (prefers-reduced-motion:reduce){.faq__plus{transition:none}}
+.held__beleg{display:flex;align-items:center;justify-content:center;gap:.5rem;font-size:1rem;color:var(--text-leise)}
+.held__beleg svg{flex:none;color:var(--akzent)}

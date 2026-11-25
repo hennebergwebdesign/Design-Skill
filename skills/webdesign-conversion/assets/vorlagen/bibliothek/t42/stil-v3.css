@@ -137,3 +137,6 @@
 .haken--einspaltig .aus{color:var(--text-leise)}
 .haken--einspaltig .aus svg{color:var(--text-leise);opacity:.55}
 @media (min-width:62rem){.preise__raster{grid-template-columns:repeat(3,1fr)}}
+
+.held3__text .held__beleg{margin-top:.5rem}
+.held3__text .bewertung span{max-width:none}

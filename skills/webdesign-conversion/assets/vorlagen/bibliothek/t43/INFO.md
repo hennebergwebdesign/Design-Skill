@@ -6,7 +6,7 @@ Prinzip nach der freigegebenen Referenz ledgerly-fintech-template.webflow.io (St
 Buchhaltung, Rechnungsstellung, Steuerberatung, Zahlungssoftware und Dienstleister, die mit Belegen und Abläufen werben. Ruhig, hell und sachlich, mit dunklen Bändern als Rhythmus. Trägt auch ohne Produktbilder, weil die Oberflächen aus einfachen Karten bestehen. Ansprache im Du, für Sie im Text ersetzen.
 
 ## Sektionsfolge
-Einfache weiße Kopfleiste (Menü mittig, Telefon, Hauptknopf), Held mit großem Titel und breiter Bildszene mit schwebenden Karten, vier Karten mit Oberflächen, Logoband, sechs Zellen mit Rahmenlinien, dunkles Band mit zwei wechselnden Zeilen (Rechnung, Umsatzkurve), sechs Spalten mit Knopf, dunkle Partnerliste (Bühne bleibt stehen, Zeilen hellen auf), drei Tarife (der mittlere dunkel), dunkle Stimmen (Bewertungskarte und wischbare Zitate), Journal mit drei Beiträgen, Aufruf auf breiter Bildfläche, dunkler Fuß.
+Einfache weiße Kopfleiste (Menü mittig, Telefon, Hauptknopf), Held mit großem Titel und breiter Bildszene mit schwebenden Karten, vier Karten mit Oberflächen, Logoband, sechs Zellen mit Rahmenlinien, dunkles Band mit zwei wechselnden Zeilen (Rechnung, Umsatzkurve), sechs Spalten mit Knopf, dunkle Partnerliste (Bühne bleibt stehen, Zeilen hellen auf), drei Tarife (der mittlere dunkel), dunkle Stimmen (Bewertungskarte und wischbare Zitate), Journal mit drei Beiträgen, Aufruf auf breiter Bildfläche, dunkler Fuß. Neu: Fragen (Akkordeon) vor dem Schlussaufruf.
 
 ## Animationen
 | Wo | Was | Wie |
@@ -27,3 +27,7 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent` auf `--flaech
 
 ## Offen
 Formulare senden nichts. Preise, Zahlen, Namen, Bewertung, Logos und Adresse sind Beispiele, keine Belege. Die Oberflächen (Zahlungsliste, Überweisung, Rechnung, Kurve) sind erfundene Illustrationen. Die Landschaft im Held ist ein Platzhalter aus Verläufen, kein Bild. Texte in den Beispieloberflächen sind teils kleiner als 16 Pixel. Kontrast der Aufrufzeile über einem späteren Foto neu prüfen (der Schleier ist auf den Platzhalter abgestimmt).
+
+## Conversion (Playbook)
+- Fragen als Akkordeon (`#fragen`, fünf Beispielantworten) vor dem Schlussaufruf
+- Beleg im Held (Stern mit Beispielwert), Kommentar zur Heldenformel vor der H1

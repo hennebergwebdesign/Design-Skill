@@ -6,7 +6,7 @@ Prinzip nach der freigegebenen Referenz Eatly (Tor 1 erteilt), als Aufbau, Raste
 Restaurant, Café, Bäckerei mit Sitzplätzen und Catering mit Karte, Tischreservierung und Veranstaltungen. Ruhige, eckige Seite mit viel Fläche und wenig Schmuck, gedacht für Betriebe mit guten Fotos von Tellern, Menschen und Raum. Ansprache im Du, für Sie im Text ersetzen.
 
 ## Sektionsfolge
-Klebende Kopfleiste (Logo, Menü, Hauptknopf), Held aus zwei Flächen mit schmalem Spalt (Text auf Dunkel, Foto), Gästezeile mit Bewertung, Wer wir sind (gekipptes Foto, Text, Zitatkasten), Spezialitäten als Liste mit Preislinie, sechs Bildkacheln, Galerie als Laufband auf dunklem Grund, Veranstaltung mit Zähler auf einer Bildbühne, Stimmen als Spur mit Pfeilen, Reservierung (Foto und Formularkarte), Fuß auf Dunkel mit Newsletter und angeschnittenem Markennamen.
+Klebende Kopfleiste (Logo, Menü, Hauptknopf), Held aus zwei Flächen mit schmalem Spalt (Text auf Dunkel, Foto), Gästezeile mit Bewertung, Wer wir sind (gekipptes Foto, Text, Zitatkasten), Spezialitäten als Liste mit Preislinie, sechs Bildkacheln, Galerie als Laufband auf dunklem Grund, Veranstaltung mit Zähler auf einer Bildbühne, Stimmen als Spur mit Pfeilen, Reservierung (Foto und Formularkarte), Fuß auf Dunkel mit Newsletter und angeschnittenem Markennamen. Neu: Fragen (Akkordeon) vor der Reservierung.
 
 ## Animationen
 | Wo | Was | Wie |
@@ -28,3 +28,9 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent` auf `--flaech
 
 ## Offen
 Formulare senden nichts. Preise, Gästezahl, Namen, Stimmen, Termin und Adresse sind Beispiele, keine Belege. Der Zähler zielt auf ein Beispieldatum (24.12.2026) und zeigt Striche, sobald es vorbei ist; im Projekt `data-ziel` pflegen oder den Zähler entfernen. Die Karte hat keine Kategorien und keine Detailseiten. Kontrast von Text über Fotos (Kacheln, Platzhalterhinweise) nach dem Einsetzen neu prüfen.
+
+## Conversion (Playbook)
+- Fragen als Akkordeon (`#fragen`) vor dem Reservierungsformular, fünf Beispielantworten
+- Feldhinweise unter Telefon und E-Mail im Formular
+- Kommentar zur Heldenformel vor der H1, Beleg im Held (Gästezeile) war schon vorhanden
+- Das Symbol `#i-plus` wurde der Spritesheet ergänzt

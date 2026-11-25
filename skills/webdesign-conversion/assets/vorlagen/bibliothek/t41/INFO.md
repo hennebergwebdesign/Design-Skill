@@ -28,3 +28,6 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent-text` auf `--a
 
 ## Offen
 Formulare senden nichts. Preise, Namen, Stimmen, Logos, Kurse und Kennzahlen sind Beispiele, keine Belege. Die Oberflächen, Kerzenchart und Anzeige sind erfundene Illustrationen, keine Produktabbildungen. Die Anbindungskacheln zeigen Symbole, keine echten Marken. Texte in den Beispieloberflächen sind teils kleiner als 16 Pixel. Der Preisumschalter steht über den Karten, nicht in der mittleren Karte. Kontrast des Glühens hinter dem Aufruf nach dem Austausch der Farben neu messen.
+
+## Conversion (Playbook)
+- Beleg im Held (Stern mit Beispielwert), Kommentar zur Heldenformel vor der H1, Beschreibung auf unter 160 Zeichen gekürzt

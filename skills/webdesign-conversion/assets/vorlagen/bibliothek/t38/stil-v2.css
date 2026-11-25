@@ -65,10 +65,10 @@
 .siegel-rund--ecke{left:auto;right:-.5rem;top:-2rem;bottom:auto;width:7rem}
 .formular{display:grid;gap:1rem;grid-template-columns:1fr}
 .formular__feld{display:grid;gap:.35rem}
-.formular label{font-weight:500;font-size:.95rem}
+.formular label{font-weight:500;font-size:1rem}
 .formular input,.formular select{width:100%;min-height:3rem;padding:.7rem .9rem;border:0;border-radius:10px;background:color-mix(in srgb,var(--text) 7%,var(--flaeche-alt));color:var(--text);font:inherit;box-shadow:inset 0 0 0 1px var(--linie)}
 .formular input:focus-visible,.formular select:focus-visible{outline:3px solid var(--akzent-tief);outline-offset:2px}
-.formular__recht{font-size:.9rem;color:var(--text-leise)}
+.formular__recht{font-size:1rem;color:var(--text-leise)}
 .formular__recht a{text-decoration:underline}
 .formular__senden{width:100%;justify-content:center}
 .formular__meldung{padding:.8rem 1rem;border-radius:10px;background:var(--sand);color:var(--text)}
@@ -147,3 +147,7 @@
   .aufruf2__bild{justify-self:end;width:min(100%,26rem);min-height:24rem}
 }
 @media (max-width:39.99rem){.leistung2 .bild{width:4.75rem}}
+
+/* Feldhinweis unter E-Mail und Telefon */
+.feld__hinweis{display:block;font-size:1rem;line-height:1.4;color:var(--text-leise)}
+.held2__innen .held__beleg{margin-top:.25rem}

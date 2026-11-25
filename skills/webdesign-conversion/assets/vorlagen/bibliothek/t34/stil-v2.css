@@ -82,3 +82,6 @@
 .insta__raster .bild{aspect-ratio:1/1;border-radius:12px}
 .insta__raster .bild[data-platzhalter]::after{display:none}
 @media (min-width:48rem){.insta__raster{grid-template-columns:repeat(6,1fr);gap:.75rem}.insta__raster li:nth-child(even){margin-top:1.5rem}}
+
+.held2 .held__beleg{display:flex;justify-content:center;align-items:center;gap:.6rem;margin-top:1.25rem;font-size:1rem;font-weight:600}
+.held2 .sterne{color:var(--akzent-tief)}

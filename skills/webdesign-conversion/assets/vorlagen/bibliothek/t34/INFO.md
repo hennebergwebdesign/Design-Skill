@@ -15,7 +15,7 @@ Kopf, Fuß, Logo und Name sind in beiden gleich. Die Links „Variante 1, Varian
 
 ## Sektionsfolge
 **Variante 1:** Kopf (Logo mittig, Doppellinie, Menü, Hauptknopf), Held, Bogenband, Über uns (drei Bögen mit Zeichenkreis), Karte (acht Karten), Tisch reservieren (Formular, Bogenbild, Zeiten), Galerie (Spur mit Pfeilen), Stimmen (Zitat, zwei gekippte Bilder), Team (vier gekippte Karten), Fuß (Newsletter, vier Spalten, Großschrift).
-**Variante 2:** Kopf, Held mit zwei Bögen, Über uns (Bild, Text, drei Kennzahlen), Karte als Liste, Feier (Rahmen, Großtitel, Bogenbild, zwei Spalten), Termine (vier Karten, versetzt), Partnerband, Neuigkeiten (Text und vier versetzte Karten), Bilderreihe, Fuß.
+**Variante 2:** Kopf, Held mit zwei Bögen, Über uns (Bild, Text, drei Kennzahlen), Karte als Liste, Feier (Rahmen, Großtitel, Bogenbild, zwei Spalten), Termine (vier Karten, versetzt), Partnerband, Neuigkeiten (Text und vier versetzte Karten), Bilderreihe, Fuß. Neu: Fragen (Akkordeon mit fünf Beispielantworten) nach dem Team, vor dem Fuß.
 
 ## Animationen
 | Wo | Was | Wie |
@@ -40,3 +40,8 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent-tief` auf `--f
 
 ## Offen
 Formulare senden nichts. Preise, Zeiten, Kennzahlen, Namen, Stimmen, Termine und Adresse sind Beispiele, keine Belege. Die Logos in Variante 2 sind Beispiellogos. Die Pfeile an den Karten führen nur zum Reservierungsabschnitt, es gibt keine Detailseiten. Kontrast von Text über Fotos nach dem Einsetzen neu prüfen. Die Platzhalterbeschriftung ist nur ein Hinweis und verschwindet mit dem Foto.
+
+## Conversion (Playbook)
+- Fragen vor dem Besuch als Akkordeon (`#fragen`, fünf Fragen zu Preis, Dauer, Küche, Absage, Reservierung), Antworten als Beispiel markiert, in beiden Varianten
+- Beleg im Held (Sterne mit Beispielwert) und Kommentar zur Heldenformel vor der H1
+- Feldhinweis unter Mail oder Telefon im Reservierungsformular (`.feld__hinweis`), Formular bleibt bei fünf Feldern
