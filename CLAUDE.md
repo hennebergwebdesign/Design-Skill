@@ -187,6 +187,8 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 
 ## Offene Punkte
 
+- Die Bibliothek trägt Beispielfotos (Unsplash) auch für Personen und Szenen. Beispielfotos (Unsplash) vor Abgabe ersetzen, Nachweis je Vorlage in `bilder/BILDER.md`.
+
 - Version 4.26.0: Die Bibliothek ist branchenneutral. Branchenvarianten (Farbe, Bildwelt, Folge nach `branchenprofile.json`) sind nicht gebaut. Kontrast über Bildern und Verläufen und Eingabefeldränder sind nicht nachgemessen.
 - Version 4.23.0: Kapitel 55, `slop-pruefung.md`, Kapitel 56, `tracking-einbauen.md`, `assets/tracking/`, `pruefe-slop.mjs` und `pruefe-tracking.mjs` sind an keinem Kundenprojekt erprobt, die zwei neuen
   Evalfälle (`slop-vor-auslieferung-pruefen`, `tracking-nur-nach-einwilligung`) sind **nicht gelaufen**, das Δ ist eine Vermutung. **Gelaufen ist:** der Original-CLI von Slop Detect in der npm-Fassung
