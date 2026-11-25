@@ -18,7 +18,8 @@ Nur `marke.css`. Kontrast nach Wechsel prüfen.
 Formular sendet nichts. Preise, Bewertung, Kennzahlen und Zitate sind Beispiele, keine Belege. Bilder sind Verlaufsplatzhalter. Kontrast über Bildern nicht gemessen.
 
 ## Conversion (Playbook)
-- FAQ vor dem Kontakt: fünf Einwandfragen als Linienliste mit Plus, das sich beim Öffnen dreht
-- Formular von sieben auf fünf Felder gekürzt (Budget und Anzahl Reisende gehören jetzt in die Nachricht), Feldhinweise unter E-Mail und Telefon
-- Sektionsfolge: nach den Kacheln neu Fragen, dann Kontakt
-- Held: Kommentar mit der Heldenformel vor der H1
+- Held: Reisende mit knapper Zeit, Lösung ist eine fertig geplante Tour mit festem Preis und Begleitung
+- Primär-CTA: Reise anfragen (Kopfzeile, Held, Pakete, Formular); die Karten der Touren bleiben Diese Reise anfragen
+- Titel und Beschreibung mit Keyword Reisebüro und Ort Musterstadt
+- FAQ: Preis und Leistungen, Planung und Angebotsfrist, Qualität der Unterkünfte, Storno, Kurzfristiges und kleine Gruppen
+- Formular: fünf Felder, Reisewünsche als Textfeld

@@ -32,6 +32,8 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: weiße Schrift auf `--ve
 Formulare senden nichts. Preise, Zahlen, Stimmen, Namen und Adresse sind Beispiele. Kontrast über den Bildflächen nach dem Einsetzen der Fotos neu prüfen.
 
 ## Conversion (Playbook)
-- Beschreibung gekürzt
-- Formular: Vor- und Nachname zu einem Feld Name zusammengefasst (jetzt vier Felder plus Nachricht), Feldhinweis unter E-Mail (`.feld__hinweis`)
-- Held: Kommentar mit der Heldenformel vor der H1
+- Held: Berufstätige mit wenig Zeit, Lösung ist ein persönlicher Plan mit Coach und sichtbarem Fortschritt
+- Primär-CTA: Probetraining buchen (Kopfzeile, Held, Beratung, Abschluss, Formular)
+- Titel und Beschreibung mit Keyword Personal Training und Ort Musterstadt
+- FAQ: Wiedereinstieg, Kosten und Bindung nach dem Probetraining, Plan zum Arbeitsalltag, Erreichbarkeit des Coachs, Kündigung
+- Formular: Name, E-Mail, Ziel, Wunschzeiten, Hinweis zur Terminbestätigung

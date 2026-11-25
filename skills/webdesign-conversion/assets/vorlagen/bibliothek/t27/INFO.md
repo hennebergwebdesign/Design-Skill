@@ -41,4 +41,8 @@ Tokens in `marke.css` setzen, Kontrast prüfen, Schrift aus `schriften.css` wäh
 - Icons: Phosphor Icons (MIT, Lizenz in `_basis/icons/LICENSE-Phosphor.txt`), durchgehend Strichstärke light, Sterne fill, als Inline-Sprite.
 
 ## Conversion (Playbook)
-- Held: Kommentar mit der Heldenformel vor der H1 (sonst keine Lücke)
+- Held: Berufstätige ohne Zeit für Theorie, Lösung ist ein Kurs mit Praxisaufgaben im eigenen Tempo
+- Primär-CTA: Platz sichern (Kopfzeile, Held, Preiskarte, Abschlüsse, Fußformular)
+- Titel und Beschreibung ohne Ort (Online-Angebot), Keyword Online-Kurs für Berufstätige
+- FAQ: Zeitaufwand bei Vollzeit, Vorwissen, Zugang, Praxisprojekte, Zertifikat, Rückgabe und Widerruf (alle als Beispielantwort markiert, Bedingungen vom Anbieter einzutragen)
+- Preis, Garantie und Kennzahlen bleiben Beispielwerte

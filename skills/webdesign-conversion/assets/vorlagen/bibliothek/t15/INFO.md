@@ -45,5 +45,8 @@ Phosphor Icons (MIT, Lizenz in `_basis/icons/LICENSE-Phosphor.txt`), durchgehend
 
 ## Conversion (Playbook)
 
-- Beschreibung auf unter 160 Zeichen gekürzt.
-- Kommentar zur Heldformel vor der H1. Beleg im Held nicht ergänzt: Der Held zeigt nur die Produktreihe, ein Beleg würde den Aufbau stören. Die Bestellung ist ein Beispielformular ohne Kontaktfelder.
+- Held: Menschen, die draußen Musik hören, Problem Steckdose und Regen, Lösung kabelloser, spritzwassergeschützter Lautsprecher (Produkt als Beispiel)
+- Primär-CTA überall "Jetzt bestellen" (Kopf, Preisleiste, Kaufkarte, Abschluss)
+- Titel "Lautsprecher Modell Eins | Regenfest | Marke Muster", Beschreibung mit Problem, Nutzen und Handlung; Produktseite ohne Ortsbezug
+- FAQ: erste Frage jetzt Preiseinwand, übrige Fragen zu Akku, Koppeln, Schutzklasse, Eintausch, Garantie mit Beispielwerten
+- Formularziel: keine Anfrage, Kauf über Farbwahl; Stimmen als "Käufer" beschriftet, alle als Beispiel markiert

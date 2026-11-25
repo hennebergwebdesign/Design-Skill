@@ -37,4 +37,8 @@
 - Nicht geprüft: Screenreader, Safari, echte Fotos hinter den Overlays (Kontrast neu messen).
 
 ## Conversion (Playbook)
-- Held: Kommentar mit der Heldenformel vor der H1 (sonst keine Lücke)
+- Held: Hausbesitzer und Vermieter mit defekter Heizung, Lösung ist der Festpreis nach der Besichtigung vor dem Auftrag
+- Primär-CTA: Angebot anfragen (Kopfzeile, Held, Abschnitte, Abschluss); die Paketknöpfe bleiben Paketauswahl
+- Titel und Beschreibung mit Keyword Heizung Klima und Ort Musterstadt
+- FAQ: Kosten der aufgeschobenen Wartung, Notdienst bei Ausfall, Ersatz oder Reparatur, Umfang der Wartung, Festpreis, Raumluft
+- Newsletterfeld im Fuß: Wartungstipps

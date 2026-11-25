@@ -39,5 +39,9 @@ Phosphor Icons (MIT), Strichstärke regular durchgehend, Sterne als fill, als Sp
 
 ## Conversion (Playbook)
 
-- Belegzeile mit Sternen und Beispielwert im Held (`.held__beleg`, `data-beispiel`).
-- Kommentar zur Heldformel vor der H1.
+- Held: Betriebe mit Handarbeit zwischen Anfrage, Angebot und Rechnung, Lösung ein selbst gebauter Ablauf ohne Code
+- Primär-CTA überall "Kostenlos starten" (Kopf, Held, Preise, Abschluss, Formular), Sekundär "Vorführung buchen"
+- Titel "Abläufe automatisieren | Ohne Programmieren | Markenname", Beschreibung mit Problem, Nutzen und Handlung
+- FAQ: erste Frage jetzt Einwand "lohnt sich das für kleine Betriebe", übrige zu Einrichtung, Daten, Kündigung, Fehlerfall (Beispielantworten)
+- Formularziel: Start per E-Mail-Adresse, ein Feld
+- Beleg im Held: Kundenbewertung als Beispielwert markiert

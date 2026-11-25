@@ -91,6 +91,7 @@ main>section:not(.held),.fuss{position:relative;z-index:1;background:var(--flaec
 .js .held h1 .w{display:inline-block;animation:wort-ein .8s var(--kurve) both;animation-delay:calc(var(--i) * 70ms + 250ms)}
 @keyframes wort-ein{from{opacity:0;transform:translateY(.5em)}to{opacity:1;transform:none}}
 .held__knoepfe,.abschluss__knoepfe{display:flex;flex-wrap:wrap;gap:.75rem}
+.held__unter{max-width:34rem;font-size:1.125rem;line-height:1.5}
 .held__punkte{display:flex;flex-direction:column;gap:.5rem;font-size:1rem}
 .held__punkte li{display:flex;align-items:center;gap:.6rem}
 .held__punkte .ic{color:var(--akzent)}

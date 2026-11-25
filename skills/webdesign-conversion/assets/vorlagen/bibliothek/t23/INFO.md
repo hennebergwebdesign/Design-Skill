@@ -35,4 +35,8 @@
 - Nicht geprüft: Screenreader, Safari, echte Fotos hinter Overlays (Kontrast neu messen), Leistung.
 
 ## Conversion (Playbook)
-- Held: Kommentar mit der Heldenformel vor der H1 (sonst keine Lücke)
+- Held: Hausbesitzer mit Ausfallrisiko bei Heizung und Elektrik, Lösung ist der Wartungsplan zum festen Preis
+- Primär-CTA: Wartung anfragen (Kopfzeile, Held, Abschluss, Fuß)
+- Titel und Beschreibung mit Keyword Wartungsvertrag und Ort Musterstadt
+- FAQ: Kosten ohne Vertrag, Prüfumfang, Paketwechsel, mehrere Anlagen, Notfall am Wochenende (alle als Beispielantwort markiert)
+- Formular im Fuß: E-Mail für die Wartungsanfrage

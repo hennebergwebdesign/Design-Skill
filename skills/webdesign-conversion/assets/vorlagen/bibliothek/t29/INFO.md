@@ -29,6 +29,9 @@ Name und Zeichen im Reiter und im Fuß, Texte, Telefonbild (CSS, durch echtes Pr
 Das Formular sendet nichts (`stil.js` verhindert das Absenden, Backend und Einwilligung fehlen). Bewertung, Preise, Zahlen und Zitate sind Platzhalter, keine Belege. Die Schrift ist Archivo in hohem Gewicht, die Referenz nutzt eine schmalere Plakatschrift, lange Wörter brechen deshalb früher um. Der Fächer verdeckt auf Desktop Teile der seitlichen Zitate, bis man sie berührt oder anwählt. Impressum und Datenschutz sind nur Linkplatzhalter.
 
 ## Conversion (Playbook)
-- Kopfzeile: Primär-CTA Gespräch als Pillenknopf im Nav-Container (im Mobilpanel sichtbar)
-- Neue Sektion Fragen vor dem Kontakt: fünf Einwandfragen als Akkordeon aus Pastellkarten (`data-exklusiv`), Sektionsfolge: Preise, Stimmen, Fragen, Abschluss
-- Held: Kommentar mit der Heldenformel vor der H1
+- Held: Selbstständige und kleine Betriebe mit wachsendem Papierkram, Lösung ist Büroservice zum festen Preis
+- Primär-CTA: Gespräch vereinbaren (Kopfzeile, Held, Preise, Mailzeile)
+- Titel und Beschreibung mit Keyword Büroservice und Ort Musterstadt
+- FAQ: Kosten, Start und Vorbereitung, Vertraulichkeit der Unterlagen, Nachbesserung, kleiner Einstieg
+- Mailzeile: Mail für den Gesprächstermin
+- Leistungen im Held sind Beispieltext, an den echten Umfang anpassen

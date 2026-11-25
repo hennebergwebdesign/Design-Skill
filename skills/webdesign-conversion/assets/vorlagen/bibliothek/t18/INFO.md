@@ -45,4 +45,9 @@ Phosphor Icons (MIT, siehe `_basis/icons/LICENSE-Phosphor.txt`), durchgehend Str
 
 ## Conversion (Playbook)
 
-- Kommentar zur Heldformel vor der H1. Beleg im Held nicht ergänzt: Text, Knöpfe und Telefonbühne füllen den ersten Bildschirm, die Vorlage kennt keine Bewertungszeile.
+- Held: Menschen, die am Monatsende nicht wissen, wohin ihr Geld ging, Lösung Konto, Karten und Sparziele in einer App (Du-Ansprache beibehalten)
+- Primär-CTA überall "Konto eröffnen" (Kopf, Held, Abschluss), war schon konkret
+- Titel "Finanz-App für Budget und Sparziele | Markenname", Beschreibung mit Problem, Nutzen und Handlung; kein Ortsbezug, weil App
+- FAQ: Kosten, Sicherheit, Konten verbinden, Einwand "Geld ist knapp", Kündigung (Beispielantworten, rechtliche Fassung ersetzen)
+- Formularziel: Kontoeröffnung per E-Mail-Adresse, ein Feld
+- Beleg: Zahlen im Abschnitt App sind als Beispielwert markiert; Kurse im Held als Beispielwerte

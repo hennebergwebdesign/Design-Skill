@@ -43,4 +43,9 @@ Phosphor Icons (MIT, siehe `_basis/icons/LICENSE-Phosphor.txt`), durchgehend Str
 
 ## Conversion (Playbook)
 
-- Kommentar zur Heldformel vor der H1. Beleg im Held nicht ergänzt: Das Plakatwort füllt den ersten Bildschirm, ein Beleg würde die Bühne stören.
+- Held: Hausbesitzer mit ungenutzter Rasenfläche oder Garten ohne Zeit zur Pflege, Lösung Planung, Bau und Pflege; die sichtbare H1 ist das Markenwort, der Satz mit Zielgruppe und Lösung steht für Screenreader im H1
+- Primär-CTA überall "Beratung buchen" (Kopf, Rückrufformular im Held, Abschluss)
+- Titel "Gartenbau Musterstadt | Planung und Pflege | Markenname", Beschreibung mit Problem, Nutzen und Handlung
+- FAQ: Pflanzzeit, Planungskosten, Pflegevertrag, Bauzeit, Kosten des Wartens (Beispielantworten)
+- Formularziel: Rückruf für die Beratung vor Ort, ein Feld (Telefon)
+- Beleg: Bewertungszeile im Abschnitt Über uns als Beispielwert markiert

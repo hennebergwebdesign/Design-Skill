@@ -40,4 +40,9 @@
 - Nicht geprüft: Screenreader, Safari, echte Fotos hinter den Schleiern (Kontrast neu messen), echte Geräte, Leistung.
 
 ## Conversion (Playbook)
-- Held: Kommentar mit der Heldenformel vor der H1 (sonst keine Lücke)
+- Held: Hausbesitzer und Betriebe, deren Heizung oder Klima ausfällt, Lösung ist die schnelle Einschätzung mit zwei Wegen und Preis
+- Primär-CTA: Einschätzung anfragen (Kopfzeile, Held, Abschnitt, Abschluss)
+- Titel und Beschreibung mit Keyword Heizung Klima und Ort Musterstadt
+- FAQ: Kosten des Wartens, Reparatur oder Austausch, Ausfallzeit beim Tausch, Notdienst abends, Nutzen der Wartung
+- Rückrufformular im Fuß: Telefonnummer, Knopf wie der Primär-CTA
+- Bewertungsbeleg im Bildstreifen als Beispielwert markiert

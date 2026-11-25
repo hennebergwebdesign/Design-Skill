@@ -37,6 +37,9 @@ Werte in `marke.css` und die zwei Schriftzeilen ändern, Kontrast prüfen, Platz
 
 ## Conversion (Playbook)
 
-- Feldhinweis unter Telefon (`.feld__hinweis`).
-- Belegzeile mit Sternen und Beispielwert im Held (`.held__beleg`, `data-beispiel`).
-- Kommentar zur Heldformel vor der H1.
+- Held: Patienten, die schwer an einen Termin kommen, Lösung Terminanfrage online mit festen Ansprechpersonen (Hausarztpraxis als Beispiel)
+- Primär-CTA überall "Termin anfragen" (Kopf, Held, Leistungen, Ablauf, Formular)
+- Titel "Hausarztpraxis Musterstadt | Online-Termin | Praxisname", Beschreibung mit Problem, Nutzen und Handlung
+- FAQ: Termin, Video, Kassen, Notfall (echte Nummern 112 und 116 117), Mitbringen, Warten mit Beschwerden (Beispielantworten)
+- Formularziel: Terminanfrage mit Wunschzeit und Anliegen, vier Felder plus Einwilligung; Hinweis auf Notruf bleibt
+- Beleg im Held: Patientenbewertung als Beispielwert markiert

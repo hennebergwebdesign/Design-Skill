@@ -43,5 +43,9 @@ Phosphor Icons (MIT, siehe `_basis/icons/LICENSE-Phosphor.txt`), durchgehend Str
 
 ## Conversion (Playbook)
 
-- Feldhinweise unter E-Mail und Telefon (`.feld__hinweis`).
-- Kommentar zur Heldformel vor der H1.
+- Held: mittelständische Betriebe ohne klare Zahlen, Lösung lesbare Monatsauswertung mit Planung (Branche Unternehmensberatung als Beispiel)
+- Primär-CTA überall "Erstgespräch anfragen" (Kopf, Held, Aufruf, Formular)
+- Titel "Unternehmensberatung Musterstadt | Klare Zahlen | Kontor", Beschreibung mit Problem, Nutzen und Handlung
+- FAQ aus Sicht von Geschäftsführern: Betriebsgröße, Ablauf, Kosten fehlender Zahlen, Kapital, Datensicherheit (Beispielantworten)
+- Formularziel: Terminvorschlag für das Erstgespräch, vier Felder plus Einwilligung
+- Beleg im Held: Zahl begleiteter Betriebe als Beispielwert markiert

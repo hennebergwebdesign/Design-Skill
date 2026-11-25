@@ -78,6 +78,7 @@ h3{font-size:var(--h3);line-height:1.15}
 .held__plaketten svg{color:var(--akzent);flex:none}
 .held h1{font-size:clamp(2.75rem,1.2rem + 6.2vw,6.25rem);line-height:1;letter-spacing:-.04em;max-width:11ch}
 .held__knoepfe{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}
+.held__lead{max-width:34rem;margin-top:1.25rem;font-size:1.125rem;line-height:1.5;color:var(--text-auf-dunkel)}
 @media (min-width:62rem){.held__innen{padding-bottom:4rem;gap:2rem}.held__plaketten{order:-1}}
 
 /* 2. Vertrauen */

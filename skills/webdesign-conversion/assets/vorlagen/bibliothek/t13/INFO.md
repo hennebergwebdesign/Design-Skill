@@ -45,6 +45,9 @@ Icons: Phosphor Icons (MIT, Lizenz in `_basis/icons/LICENSE-Phosphor.txt`), durc
 
 ## Conversion (Playbook)
 
-- Beschreibung auf unter 160 Zeichen gekürzt.
-- Feldhinweis unter E-Mail (`.feld__hinweis`). Das Formular hat kein Telefonfeld.
-- Kommentar zur Heldformel vor der H1.
+- Held: Selbstständige und kleine Betriebe, deren Website mangels Zeit veraltet, Lösung laufende Betreuung zum festen Monatsbetrag
+- Primär-CTA überall "Erstgespräch anfragen" (Kopf, Held, Pakete, Formular)
+- Titel "Website-Betreuung Musterstadt | Monatspreis | Markenname", Beschreibung mit Problem, Nutzen und Handlung
+- FAQ: Abo gegen Einmalprojekt, Bindung, erste Wochen, Kosten des Nichtstuns, Zuständigkeit (Beispielantworten)
+- Formularziel: Erstgespräch, Feld "Was soll Ihre Website leisten?", drei Felder plus Einwilligung
+- Beleg im Held: Bewertung der Abo-Kunden und Beispielstimme, beides als Beispiel markiert

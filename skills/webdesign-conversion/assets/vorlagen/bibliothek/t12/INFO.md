@@ -20,6 +20,9 @@ Formulare senden nichts (stil.js verhindert das Absenden, Backend und Einwilligu
 
 ## Conversion (Playbook)
 
-- Formular auf fünf Felder: Vorname und Nachname zu "Name" zusammengefasst, Leistung und Telefon teilen sich eine Zeile.
-- Feldhinweise unter E-Mail und Telefon (`.feld__hinweis`, 1 rem, Farbe wie die Labels).
-- Kommentar zur Heldformel vor der H1. Beleg im Held (Sterne) und Kopfzeilen-CTA waren schon vorhanden.
+- Held: Hausbesitzer und kleine Betriebe mit liegengebliebenen Mängeln, Lösung Handwerker mit festem Termin
+- Primär-CTA überall "Termin anfragen" (Kopf, Held, Abschnitte, Pakete, Formular)
+- Titel "Handwerker Musterstadt | Reparatur und Umbau | Klarwerk", Beschreibung mit Problem und Handlungsaufforderung
+- FAQ aus Handwerkssicht: Anwesenheit, Kosten des Wartens, Ablauf, fester Preis, Arbeit im laufenden Betrieb (alles Beispielantworten)
+- Formularziel: Terminanfrage mit Art des Auftrags und Schilderung des Mangels, fünf Felder
+- Beleg im Held: Bewertung als Beispiel markiert; Formularhinweise: Terminbestätigung, kein Werbeanruf

@@ -43,6 +43,9 @@
 
 ## Conversion (Playbook)
 
-- Formular auf fünf Felder: Adresse des Einsatzorts in die Nachricht verlegt, Platzhalter der Nachricht entsprechend.
-- Feldhinweise unter Telefon und E-Mail (`.feld__hinweis`).
-- Kommentar zur Heldformel vor der H1.
+- Held: Hausbesitzer und Gewerbe mit Defekt an Strom, Wasser oder Heizung, Lösung Besuch mit Preis vor Beginn und Notdienst; neue Unterzeile im Held (eine CSS-Zeile `.held__unter` in stil.css)
+- Primär-CTA überall "Termin buchen" (Kopf, Held, Abschluss, Formular); "Paket anfragen" bleibt als Baustein-Knopf
+- Titel "Haustechnik Musterstadt | Notdienst, Wartung | Markenname", Beschreibung mit Problem, Nutzen und Handlung
+- FAQ: Anfahrt, Preis, Kosten des Aufschiebens, Gewährleistung, Wartungspaket (Beispielantworten)
+- Formularziel: Terminbuchung mit Schaden und Einsatzort, fünf Felder
+- Beleg im Held: Betriebsangaben und Stimme als Beispiel markiert

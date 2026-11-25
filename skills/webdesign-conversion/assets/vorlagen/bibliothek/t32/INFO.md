@@ -31,8 +31,8 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: weiße Schrift auf `--zi
 Formulare senden nichts. Bewertung, Siegel, Kennzahlen, Stimmen, Namen, Telefon, WhatsApp und Adresse sind Beispiele und keine Belege; Siegel nur zeigen, wenn der Betrieb sie wirklich führt. Kontrast über den Bildflächen nach dem Einsetzen der Fotos neu prüfen. Der Ratgeber verlinkt nur auf den Termin.
 
 ## Conversion (Playbook)
-- Beschreibung auf unter 160 Zeichen gekürzt
-- Neue Sektion Fragen vor dem Termin: fünf Einwandfragen als Karten mit Plus in Ziegelfarbe
-- Feldhinweise unter Mailadresse und Telefon im Terminformular
-- Sektionsfolge: nach den Stimmen neu Fragen, dann Termin
-- Held: Kommentar mit der Heldenformel vor der H1
+- Held: Hausbesitzer mit undichtem oder altem Dach, Lösung ist die Prüfung vor Ort mit Festpreis vor Baubeginn
+- Primär-CTA: Dach prüfen lassen (Kopfzeile, Held, Termin, Abschluss)
+- Titel und Beschreibung mit Keyword Dachdecker und Ort Musterstadt
+- FAQ: Kosten, Dauer, Nachweise, Gewährleistung und Sturmschaden, Kosten des Wartens
+- Formular: Name, Mail, Objektadresse, Telefon, Art des Anliegens, Feldhinweise

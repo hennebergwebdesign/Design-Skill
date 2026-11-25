@@ -38,6 +38,8 @@
 - Nicht geprüft: Screenreader, Safari, echte Fotos hinter den dunklen Flächen (Kontrast neu messen), echte Geräte.
 
 ## Conversion (Playbook)
-- Beschreibung auf 160 Zeichen gekürzt, Nutzen und Handlungsaufforderung ergänzt
-- Feldhinweis unter Telefon im Rückrufformular (`.feld__hinweis`)
-- Held: Kommentar mit der Heldenformel vor der H1
+- Held: Hausbesitzer mit ausgefallener Heizung, Lösung ist ein erreichbares Team, das kommt und vorab erklärt
+- Primär-CTA: Rückruf anfordern (Kopfzeile und Formular), im Held selbst steht kein Knopf
+- Titel und Beschreibung mit Keyword Heizung und Klima und Ort Musterstadt
+- FAQ: Einzugsgebiet, Notfall bei Heizungsausfall, Angebot und Kosten des Wartens, Fördermittel
+- Formular: Name, Telefon, Anliegen (was ausgefallen ist oder geplant wird), Hinweis zur Nutzung der Nummer

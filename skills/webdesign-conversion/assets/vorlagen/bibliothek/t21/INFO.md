@@ -43,5 +43,9 @@ Tokens setzen, Kontrast prüfen (Text und Akzenttext mindestens 4,5 zu 1), Schri
 
 ## Conversion (Playbook)
 
-- Feldhinweis unter E-Mail im Newsletterformular im Fuß (`.feld__hinweis`).
-- Kommentar zur Heldformel vor der H1.
+- Held: Hausbesitzer und Betriebe mit veralteter Elektrik oder ohne Wallbox, Lösung Planung, Einbau und Wartung mit festem Ansprechpartner (Elektrobetrieb als Beispiel)
+- Primär-CTA überall "Termin vereinbaren" (Held, Tafel, Abschluss); "Wartung anfragen" bleibt als Baustein-Knopf
+- Titel "Elektriker Musterstadt | Einbau und Wartung | Mustermarke", Beschreibung mit Problem, Nutzen und Handlung
+- FAQ: Ablauf, Preis, Kosten des Wartens, Gewährleistung, Wartung (Beispielantworten)
+- Formularziel: Terminvorschlag per Mail (Abschluss ohne Formular, Link zur Mail), Newsletterformular unverändert
+- Beleg im Held: Kundenbewertung als Beispielwert markiert

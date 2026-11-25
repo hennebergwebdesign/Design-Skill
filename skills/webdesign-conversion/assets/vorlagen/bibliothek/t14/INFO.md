@@ -47,6 +47,9 @@ Phosphor Icons (MIT, Lizenz in `_basis/icons/LICENSE-Phosphor.txt`), durchgehend
 
 ## Conversion (Playbook)
 
-- Beschreibung auf unter 160 Zeichen gekürzt.
-- Feldhinweis unter E-Mail im Kontaktformular (`.feld__hinweis`).
-- Kommentar zur Heldformel vor der H1. Ein Beleg im ersten Bildschirm fehlt bewusst: Der Held ist reiner Text mit Bildreihe, ein Sternesymbol gibt es in der Vorlage nicht.
+- Held: Gründerinnen und Gründer, die nicht wissen, was zuerst zählt, Lösung Orientierungscheck mit drei nächsten Schritten
+- Primär-CTA überall "Check starten" (Kopf, Held, Abschluss, Kontaktformular); die Paketknöpfe bleiben Auswahl ("Start wählen" usw.)
+- Titel "Gründungsberatung Musterstadt | Erster Check | Markenname", Beschreibung mit Problem, Nutzen und Handlung
+- FAQ: Nutzen, später Zeitpunkt, Kosten ohne Plan, Vorkenntnisse, Datensicherheit (Beispielantworten)
+- Formularziel: Check anfordern, Feld "Ihr Vorhaben in zwei Sätzen"; Abschlussformular nur E-Mail
+- Beleg im Held: Kennzahlenkarte und Beispielstimme, als Beispiel markiert

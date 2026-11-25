@@ -18,6 +18,8 @@ Nur `marke.css`. Kontrast nach Wechsel prüfen.
 Formulare senden nichts. Kennzahlen, Stimmen und Logos sind Beispiele, keine Belege. Bilder sind Verlaufsplatzhalter. Kontrast über Bildern nicht gemessen.
 
 ## Conversion (Playbook)
-- Neue Sektion Fragen vor dem Abschluss: fünf Einwandfragen als Karten mit Plus
-- Sektionsfolge: nach den Bereichen neu Fragen, dann Abschluss
-- Held: Kommentar mit der Heldenformel vor der H1
+- Held: Büros und Praxen mit unzuverlässiger Reinigung, Lösung sind feste Teams nach Plan mit Festpreisangebot
+- Primär-CTA: Angebot anfragen (Kopfzeile, Held, Leistungen, Abschluss, Fußformular); die Zeilenknöpfe bleiben Anfragen
+- Titel und Beschreibung mit Keyword Gebäudereinigung und Ort Musterstadt
+- FAQ: Kosten, Einstieg, Zugang und Qualitätskontrolle, Mängel und Schäden, kleine Flächen
+- Fußformular: Mailadresse für das Angebot
