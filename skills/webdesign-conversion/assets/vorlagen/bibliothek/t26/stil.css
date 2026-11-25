@@ -294,3 +294,9 @@ a:hover .mehr{text-decoration-color:var(--akzent)}
   .held__bild-innen,.held .w>span,.held .kicker,.held__text,.held__knoepfe,.schnell>li,.antwort,.preis .preis__betrag,.preis .preis__einheit{animation:none}
   .preiskarte,.pkarte{transition:none}
 }
+
+/* Fotos statt Platzhalterverläufe */
+.bild__foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+.held__bild .bild__foto{filter:brightness(.62)}
+.film__bild .bild__foto{filter:brightness(.6)}
