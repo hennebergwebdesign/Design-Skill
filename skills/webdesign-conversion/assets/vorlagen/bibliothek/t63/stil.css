@@ -259,3 +259,7 @@ h3{font-size:var(--h3);line-height:1.2}
   .fuss__daten{grid-template-columns:repeat(3,auto);justify-content:start;gap:5rem}
   .newsletter{grid-template-columns:1fr 1fr;gap:4rem}
 }
+
+.held__bild img,.gebiet>img,.wissen__bild img{position:absolute;inset:0;z-index:0}
+.held__bild img{object-position:center 40%}
+.held__schleier{background:linear-gradient(0deg,color-mix(in srgb,var(--flaeche-dunkel) 92%,transparent) 0%,color-mix(in srgb,var(--flaeche-dunkel) 68%,transparent) 55%,color-mix(in srgb,var(--flaeche-dunkel) 50%,transparent) 100%)}
