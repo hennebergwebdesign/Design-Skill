@@ -1,6 +1,6 @@
 # Template-Bibliothek
 
-Achtundzwanzig eigenständige Seitenvorlagen, branchenneutral, ohne Build, ohne Abhängigkeit, ohne Fremdserver. Jede Vorlage ist ein Ordner
+Dreiunddreißig eigenständige Seitenvorlagen, branchenneutral, ohne Build, ohne Abhängigkeit, ohne Fremdserver. Jede Vorlage ist ein Ordner
 (`t01` bis `t33`, Überblick in `index.html`) mit `index.html`, `marke.css`, `stil.css` und `INFO.md`. Gemeinsam genutzt wird `_basis/`.
 
 ## Benutzen
@@ -8,7 +8,7 @@ Achtundzwanzig eigenständige Seitenvorlagen, branchenneutral, ohne Build, ohne 
 1. `index.html` dieses Ordners im Browser öffnen (Galerie, nur für den internen Gebrauch). Filter nach Helligkeit und Branche, Vorschau wahlweise Desktop oder Mobil. Eine Vorlage öffnet in einem neuen Tab (`ansicht.html`), zuerst in der Desktopansicht, mit Umschalter Tablet und Mobil, **Marke testen** (Akzent, Schriften, Ecken live überschreiben, Werte für `marke.css` kopieren, Kontrastwert) und **Vorlage übernehmen** (kopiert den `cp` Befehl für Vorlage und `_basis`). Die Markenvorschau ändert keine Datei.
 2. Den Ordner der Vorlage samt `_basis/` in das Projekt kopieren. Die Pfade sind relativ (`../_basis/…`), beide Ordner bleiben nebeneinander.
 3. **Marke einsetzen:** nur `marke.css` der Vorlage ändern (Farben, Radien, die zwei Schriftzeilen). Alle Gestaltung zieht ihre Werte aus diesen Tokens.
-4. Texte und Bilder ersetzen. Bilder sind Platzhalterflächen (`class="bild" data-platzhalter="…"`), dort `<img>` einsetzen.
+4. Texte und Bilder ersetzen. t01 bis t28 bringen Beispielfotos mit (`tNN/bilder/`, Nachweis in `tNN/BILDER.md`, selbst gehostet, Unsplash Lizenz). Sie zeigen die Wirkung und sind für die Auslieferung zu ersetzen oder je Kunde neu zu prüfen. Wo noch Platzhalterflächen stehen (`class="bild" data-platzhalter="…"`, so in t30 bis t33 und in einzelnen Plätzen anderer Vorlagen), dort `<img>` einsetzen. Die Regeln dazu stehen in `BILDSUCHE-PROMPT.md`.
 5. Vor der Auslieferung die Prüfskripte des Plugins laufen lassen (`pruefe-striche`, `pruefe-kontrast`, `pruefe-seitenbasis`, `pruefe-breakpoints`).
 
 In ein Astro-Projekt übernehmen: `index.html` in eine Seite überführen, `_basis/` und `marke.css` nach `public/` oder `src/styles/`, Schriften in

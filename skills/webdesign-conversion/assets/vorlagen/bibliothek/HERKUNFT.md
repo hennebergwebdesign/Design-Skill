@@ -60,6 +60,6 @@ Layout, Design, Prinzip und Animation; übernommen ist das Prinzip, nicht die Au
 ## Was nicht gemessen ist
 
 Safari, echte Geräte, Screenreader, Leistung auf schwachen Geräten, Kontrast über Bildern, Formularversand (keiner sendet), Hover- und Tastaturläufe durch alle Elemente. Die
-Platzhalterbilder sind Verläufe, die Wirkung hängt an echten Fotos. Bewegung ist teils aus Beobachtung der Referenz geschätzt (Timing, Easing).
+Stand 25.11.2026: t01 bis t28 tragen Stockfotos von Unsplash (Unsplash Lizenz), selbst gehostet unter `tNN/bilder/`, mit Nachweis je Vorlage in `tNN/BILDER.md`. Fotograf und Beschreibung stammen von der Suchergebnisseite, nicht von der Einzelseite; Aufnahmeorte und deutsche Verhältnisse sind nicht geprüft. t20 hat bewusst keine Fotos (App Oberfläche), t29 bis t33 noch keine, dort sind es Verläufe. Die Wirkung hängt an echten Kundenfotos. Bewegung ist teils aus Beobachtung der Referenz geschätzt (Timing, Easing).
 
-* t29 bis t33: Erfassung der Referenzen über Bildschirmaufnahmen des Inhabers und Playwright. Gemessen bei 390 und 1440 Pixel: kein Überlauf, keine Konsolenfehler, `pruefe-striche` ohne Befund. Stockbilder sind noch nicht eingebaut, Ablauf in `BILDSUCHE-PROMPT.md`.
+* t29 bis t33: Erfassung der Referenzen über Bildschirmaufnahmen des Inhabers und Playwright. Gemessen bei 390 und 1440 Pixel: kein Überlauf, keine Konsolenfehler, `pruefe-striche` ohne Befund. Stockbilder fehlen noch, Ablauf in `BILDSUCHE-PROMPT.md`.
