@@ -24,7 +24,7 @@ In ein Astro-Projekt übernehmen: `index.html` in eine Seite überführen, `_bas
 
 ## Vorschaubilder erneuern
 
-Die Galerie lädt keine Seiten, sondern kleine JPEG Bilder aus `vorschau/` (99 Dateien, zusammen etwa 10 MB, Bilder außerhalb des Bildschirms laden erst beim Scrollen). Nach einer Änderung an einer Vorlage neu erzeugen, aus dem Repository Stamm: `node scripts/bibliothek-vorschau.mjs` (braucht Playwright, startet einen lokalen Server, Bewegung auf reduziert).
+Die Galerie lädt keine Seiten, sondern kleine WebP Bilder aus `vorschau/` (99 Dateien, zusammen etwa 5 MB). Geladen wird nach Bedarf: die Desktopvorschau beim Scrollen, die Abschnittsübersicht erst beim Überfahren, die Mobilansicht erst nach dem Umschalten (gemessen: 24 Bilder beim Öffnen, 1 beim Überfahren). Nach einer Änderung an einer Vorlage neu erzeugen, aus dem Repository Stamm: `node scripts/bibliothek-vorschau.mjs` (braucht Playwright, startet einen lokalen Server, Bewegung auf reduziert).
 
 ## Bewegung
 
