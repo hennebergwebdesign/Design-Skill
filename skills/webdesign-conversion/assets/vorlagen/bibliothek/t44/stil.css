@@ -316,7 +316,7 @@ nav a[aria-current="location"]{text-decoration:none}
   .schwebt{animation:none}
   .stimmen__fenster{height:auto;overflow:visible;-webkit-mask:none;mask:none}
   .stimmen__spalte{animation:none}
-  .stimmen__spalte[aria-hidden="true"]{display:none!important}
+  .stimmen__spalte .stimme[aria-hidden="true"]{display:none}
   .stufe{position:static}
   .js .funk__karte:not([hidden]){animation:none}
   .tarif{transform:none}

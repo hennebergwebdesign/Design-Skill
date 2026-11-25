@@ -1,0 +1,34 @@
+/* marke.css der Vorlage "Studio hell Karten": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#ffffff;
+  --flaeche-alt:#f4f3ef;        /* graue Karten */
+  --flaeche-dunkel:#0f0f10;
+  --flaeche-dunkel-2:#1b1b1d;
+  --text:#101011;
+  --text-leise:#56554f;
+  --linie:#e3e1da;
+  --akzent:#ffcf33;             /* Hauptaktion: Fläche mit dunklem Text, nie als Text auf Hell */
+  --akzent-text:#17130a;
+  --akzent-tief:#7a5c00;        /* Akzent auf Hell: Text und Symbole (5,9 zu 1 auf Weiß) */
+  --schrift-titel:'Outfit',system-ui,sans-serif;
+  --schrift-text:'Manrope',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:22px;
+  --radius-bild:22px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:32px;
+  --titel-gewicht:600;
+  --titel-spur:-0.025em;
+  --text-auf-dunkel:#f6f5f1;
+  --text-leise-dunkel:#b5b3aa;
+  --linie-dunkel:#2e2e31;
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#4a4a52;
+  --ton-2:#2a2d33;
+  --ton-3:#6b6a63;
+  --ton-4:#3a3b40;
+  --ton-5:#8a887f;
+  --ton-6:#16161a;
+}

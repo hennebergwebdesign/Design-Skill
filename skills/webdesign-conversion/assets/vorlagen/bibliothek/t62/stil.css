@@ -166,7 +166,7 @@ section[id],footer[id]{scroll-margin-top:var(--kopf-h)}
 }
 
 /* 5. Ablauf */
-.ablauf{position:relative;padding-block:var(--raum);overflow:hidden}
+.ablauf{position:relative;padding-block:var(--raum)}
 .ablauf__haftet{display:grid;gap:2rem}
 .lauftext{display:flex;gap:2rem;overflow:hidden;font-family:var(--schrift-titel);font-weight:800;text-transform:uppercase;font-size:clamp(2.5rem,1rem + 6.5vw,7rem);line-height:1;color:#c3beaf;white-space:nowrap;user-select:none}
 .lauftext__spur{display:flex;flex:none;gap:2rem;animation:lauf 45s linear infinite}
