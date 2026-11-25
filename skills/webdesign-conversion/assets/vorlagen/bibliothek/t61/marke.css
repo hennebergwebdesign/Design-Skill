@@ -1,0 +1,39 @@
+/* marke.css der Vorlage "Klinik Pastellkarten": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#ffffff;
+  --flaeche-alt:#f4f6f9;
+  --flaeche-dunkel:#101a2c;
+  --text:#111827;
+  --text-leise:#4a5565;
+  --linie:#e1e7ee;
+  --akzent:#1b4b91;           /* Hauptaktion: Fläche mit weißem Text, Symbolscheiben */
+  --akzent-text:#ffffff;
+  --schrift-titel:'Outfit',system-ui,sans-serif;
+  --schrift-text:'Manrope',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:24px;
+  --radius-bild:24px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:36px;
+  --titel-gewicht:560;
+  --titel-spur:-0.03em;
+  --text-auf-dunkel:#f2f5fa;
+  --text-leise-dunkel:#b4bfd0;
+  --linie-dunkel:#2a3750;
+  --flaeche-dunkel-2:#18253c;
+  /* Pastelltöne der Karten und des Heldenfelds (Himmel, Minze, Sand) */
+  --ton-himmel:#e3effa;
+  --ton-minze:#e1f3e9;
+  --ton-sand:#fbeee0;
+  --panel-von:#d9e9f7;
+  --panel-bis:#fdeee2;
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#a9c9e8;
+  --ton-2:#8fc2a8;
+  --ton-3:#e8c9a3;
+  --ton-4:#c3d8ee;
+  --ton-5:#b8dccb;
+  --ton-6:#f1dcc4;
+}

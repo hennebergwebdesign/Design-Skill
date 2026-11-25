@@ -227,3 +227,6 @@ h2{font-size:clamp(1.9rem,1rem + 3.2vw,3.5rem);font-weight:500;line-height:1.1;l
 @media (min-width:56rem){.fuss__kontakt{grid-template-columns:repeat(3,1fr)}.fuss__zelle + .fuss__zelle{border-top:0;border-left:1px solid var(--linie-dunkel)}}
 .fuss__klein{display:flex;flex-wrap:wrap;justify-content:center;gap:0 1.25rem;padding:1.5rem 1rem;text-align:center;color:var(--text-leise-dunkel)}
 .fuss__klein a{display:inline-flex;align-items:center;min-height:2.75rem;text-decoration:underline;text-underline-offset:.25em}
+.kopf__knopf .lang{display:none}
+@media (min-width:48rem){.kopf__knopf .lang{display:inline}}
+@media (max-width:47.99rem){.held__bild[data-platzhalter]::after{display:none}.logo{font-size:1.1rem}}

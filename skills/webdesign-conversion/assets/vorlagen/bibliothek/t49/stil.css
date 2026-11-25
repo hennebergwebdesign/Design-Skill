@@ -114,7 +114,8 @@ nav a[aria-current="location"]{text-decoration:none}
 .held__punkte{display:flex;flex-wrap:wrap;gap:1rem 2.5rem;margin-top:1rem}
 .held__punkte li{display:flex;align-items:center;gap:.75rem;max-width:14rem;color:var(--text-leise);font-size:1rem}
 .held__punkte .symbol{width:2rem;height:2rem;color:var(--akzent)}
-.held__deko{position:absolute;width:.75rem;height:.75rem;border-radius:50%;background:var(--punkt);left:1rem;top:5rem}
+.held__deko{position:absolute;width:.75rem;height:.75rem;border-radius:50%;background:var(--punkt);right:1.25rem;top:1.5rem}
+@media (min-width:62rem){.held__deko{right:auto;left:1rem;top:5rem}}
 .held .mock{width:100%;max-width:44rem;justify-self:center}
 .held .mock__innen{aspect-ratio:1.12}
 .m1-grund{right:0;top:7%;bottom:0;left:20%}

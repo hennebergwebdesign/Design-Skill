@@ -1,0 +1,37 @@
+/* marke.css der Vorlage "Finanzwerkzeug mit Bühnen": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#ffffff;
+  --flaeche-alt:#f4f5f6;
+  --flaeche-dunkel:#171717;
+  --text:#121416;
+  --text-leise:#565c62;
+  --linie:#e1e4e7;
+  --akzent:#7fcdf5;            /* Hauptaktion: Fläche mit dunklem Text, auf Dunkel auch Text und Punkt */
+  --akzent-text:#0a1620;
+  --schrift-titel:'Archivo',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:24px;
+  --radius-bild:24px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:32px;
+  --titel-gewicht:700;
+  --titel-spur:-0.035em;
+  --akzent-tief:#0a5a94;       /* Akzent auf Hell: Text und Linie (7,1 zu 1 auf Weiß) */
+  --flaeche-dunkel-2:#232628;  /* Karten auf Dunkel */
+  --text-auf-dunkel:#f4f6f7;
+  --text-leise-dunkel:#aeb6bb;
+  --linie-dunkel:#34383b;
+  --himmel-1:#3d8fc4;
+  --himmel-2:#7fcdf5;
+  --himmel-3:#1f5f8f;
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#2b6f9e;
+  --ton-2:#5fb3e0;
+  --ton-3:#0f2a3d;
+  --ton-4:#7b828a;
+  --ton-5:#c7e7f7;
+  --ton-6:#101820;
+}

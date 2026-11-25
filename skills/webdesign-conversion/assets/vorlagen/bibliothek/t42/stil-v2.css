@@ -115,7 +115,10 @@
 .dunkel2{padding-block:clamp(2.5rem,6vw,5rem)}
 .aussage-huelle{position:relative;padding-bottom:7rem}
 .aussage-huelle::after{content:"";position:absolute;z-index:-1;left:50%;bottom:-14rem;width:150%;height:24rem;transform:translateX(-50%);border-radius:50%;border-top:2px solid color-mix(in srgb,var(--akzent) 60%,#fff);background:radial-gradient(60% 50% at 50% 2%,color-mix(in srgb,var(--akzent) 38%,transparent),transparent 72%)}
-.videorahmen{position:relative;min-height:18rem;aspect-ratio:16/8.4;border-radius:1.5rem}
+.videorahmen{position:relative;min-height:16rem;border-radius:1.5rem}
+.videorahmen__wort{display:none}
+@media (min-width:36rem){.videorahmen__wort{display:inline}}
+@media (min-width:48rem){.videorahmen{aspect-ratio:16/8.4;min-height:0}}
 .videorahmen__innen{position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:center;gap:clamp(.75rem,3vw,2rem);font-family:var(--schrift-titel);font-size:var(--text-l);font-weight:500}
 .videorahmen__knopf{display:grid;place-items:center;flex:none;width:5rem;height:5rem;border-radius:50%;border:2px solid color-mix(in srgb,#fff 55%,transparent);background:color-mix(in srgb,var(--flaeche-dunkel) 70%,transparent);color:#fff;transition:transform var(--dauer-kurz) var(--kurve)}
 .videorahmen__knopf:hover{transform:scale(1.06)}

@@ -1,0 +1,35 @@
+/* marke.css der Vorlage "Kanzlei Dunkelknopf": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#f6f6f3;
+  --flaeche-alt:#ebece7;
+  --flaeche-dunkel:#171c26;
+  --text:#171c26;
+  --text-leise:#555b66;
+  --linie:#d9dad4;
+  --akzent:#1b2433;           /* Hauptaktion: dunkle Fläche mit hellem Text, nie als Kontur */
+  --akzent-text:#ffffff;
+  --schrift-titel:'Newsreader',Georgia,serif;
+  --schrift-text:'Schibsted Grotesk',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:14px;
+  --radius-bild:14px;
+
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:400;
+  --titel-spur:-0.015em;
+  --akzent-warm:#c2562b;      /* nur für Zierpunkte, Skala und große Zeichen, nicht für kleinen Text */
+  --karte:#ffffff;
+  --text-auf-dunkel:#f1f1ec;
+  --text-leise-dunkel:#b4bac4;
+  --linie-dunkel:#2c3443;
+  --flaeche-dunkel-2:#222938;
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#7a6a58;
+  --ton-2:#3d4756;
+  --ton-3:#a08a6a;
+  --ton-4:#5a4a3c;
+  --ton-5:#8b8f93;
+  --ton-6:#1c2230;
+  --seide:linear-gradient(135deg,#cdbfa6,#efe6d3 38%,#b9a98c 70%,#e3d8c2);
+}

@@ -1,0 +1,33 @@
+/* marke.css der Vorlage "Fitness Kobalt Kontrast": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Gilt für beide Varianten (index.html und v2.html). Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#ffffff;
+  --flaeche-alt:#f0f1f4;
+  --flaeche-dunkel:#13141a;
+  --flaeche-dunkel-2:#1e2028;
+  --text:#0e0f14;
+  --text-leise:#545966;
+  --linie:#e0e2e8;
+  --akzent:#2f5bff;           /* Hauptaktion: Fläche mit weißem Text, auf Hell auch Text (5,2 zu 1 auf Weiß) */
+  --akzent-text:#ffffff;
+  --schrift-titel:'Lexend',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:14px;
+  --radius-bild:14px;
+
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:700;
+  --titel-spur:-0.01em;
+  --akzent-hell:#93a9ff;      /* Akzent als Text und Linie auf Dunkel (7,9 zu 1 auf --flaeche-dunkel) */
+  --text-auf-dunkel:#f5f6fa;
+  --text-leise-dunkel:#b4b8c6;
+  --linie-dunkel:#2e313c;
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#1e3a9e;
+  --ton-2:#2a2f45;
+  --ton-3:#5a6c9a;
+  --ton-4:#3b3f52;
+  --ton-5:#8a93ad;
+  --ton-6:#14151c;
+}
