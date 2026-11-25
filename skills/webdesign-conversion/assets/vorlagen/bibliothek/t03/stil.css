@@ -317,3 +317,6 @@ details[open] .plus{transform:rotate(45deg)}
   .tabs--an .paket.ist-da-tab,.tabs--an .paket.ist-da-tab .liste-plus li,.antwort{animation:none}
   .rolle::after,.rolle::before,.knopf__pfeil{transition:none}
 }
+
+/* Fotos statt Platzhalterverläufe */
+.bild__foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
