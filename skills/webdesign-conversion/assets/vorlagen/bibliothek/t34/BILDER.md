@@ -51,6 +51,10 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 | gast-lacht-essen.webp | index Frau lacht | Frau trägt graues Hemd | @outcast_india | https://unsplash.com/photos/w3WAeMEBXQE | Unsplash Lizenz | 25.11.2026 |
 | frau-isst-lampenlicht.webp | v2 Bogen | Frau hält Gabel im Vordertisch | @pablomerchanm | https://unsplash.com/photos/Orz90t6o0e4 | Unsplash Lizenz | 25.11.2026 |
 | kaffee-foto-handy.webp | v2 Essen fotografieren | Frau, die ein Foto von Kaffeegetränken | @silverkblack | https://unsplash.com/photos/RIi3tPDTD8Y | Unsplash Lizenz | 25.11.2026 |
+| frau-locken-lachend-640.webp | index.html, Zeile 219, Bild: Porträt, Köchin mit Schürze | Lächelnde Frau mit dunklen Locken | [@nolanrmanning](https://unsplash.com/de/@nolanrmanning) | [Seite](https://unsplash.com/de/fotos/Ll9YOG20UFI) | Unsplash Lizenz | 25.11.2026 |
+| koch-schuerze-brille-640.webp | index.html, Zeile 220, Bild: Porträt, Koch mit Blech | Mann mit Brille und dunkler Schürze | [@mstyazhkin](https://unsplash.com/de/@mstyazhkin) | [Seite](https://unsplash.com/de/fotos/hjwKMkehBco) | Unsplash Lizenz | 25.11.2026 |
+| koch-stirnband-640.webp | index.html, Zeile 221, Bild: Porträt, Mann im Gastraum | Junger Koch mit weißem Stirnband | [@levimeirclancy](https://unsplash.com/de/@levimeirclancy) | [Seite](https://unsplash.com/de/fotos/kFshpy8OjPo) | Unsplash Lizenz | 25.11.2026 |
+| frau-braun-lachend-640.webp | index.html, Zeile 222, Bild: Porträt, Frau in der Küche | Lächelnde Frau in heller Strickjacke | [@brookebalentine](https://unsplash.com/de/@brookebalentine) | [Seite](https://unsplash.com/de/fotos/xSEFkIAopxA) | Unsplash Lizenz | 25.11.2026 |
 
 ## Hinweise
 
@@ -64,3 +68,4 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 
 * Porträts Team (index, vier Plätze), Frau lacht beim Essen (index Stimmen, v2 Held), Frau fotografiert ihr Essen und Sängerin (v2 Veranstaltungen): bewusst offen, keine echten Personen als Gäste oder Team.
 * Nachtrag 25.11.2026: Lachende Frau und Essen fotografieren belegt; Sängerin im Scheinwerferlicht bleibt offen.
+- Nachtrag 25.11.2026: Personen und weitere Beispielfotos als Vorschau eingesetzt, werden vor Abgabe ersetzt.

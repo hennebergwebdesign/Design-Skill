@@ -30,3 +30,6 @@ Alle Fotos von Unsplash, Unsplash Lizenz (https://unsplash.com/de/lizenz), abger
 
 Bild: Handschlag, Bild: Techniker lächelt (echte Personen, bleiben Platzhalter). Das Foto beim Platz Praxis zeigt eine Person an Röntgenbildern, die Aufnahme Hintergrund mit Außengeräten stammt laut Konto aus Singapur. Der Platz Beratung vor Ort zeigt nur einen Thermostat. Aufnahmeorte allgemein nicht belegt, deutsche Verhältnisse nicht nachweisbar.
 * Nachtrag 25.11.2026: Handschlag belegt; Techniker bleibt offen.
+
+| handwerker-gruenes-shirt-640.webp | index.html, Zeile 131, Bild: Techniker lächelt | Lächelnder Mann im grünen Shirt in der Werkstatt | [@ryan_le](https://unsplash.com/de/@ryan_le) | [Seite](https://unsplash.com/de/fotos/kainxT2wXFE) | Unsplash Lizenz | 25.11.2026 |
+- Nachtrag 25.11.2026: Personen und weitere Beispielfotos als Vorschau eingesetzt, werden vor Abgabe ersetzt.

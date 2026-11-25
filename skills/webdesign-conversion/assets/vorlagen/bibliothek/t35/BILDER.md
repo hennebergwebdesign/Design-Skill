@@ -27,6 +27,13 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 | tisch-mit-zitronen-und-blumen.webp | Tischreservierung | Zitronen und gelbe Blüten auf einer türkisfarbenen Tischdecke (gekürzt) | @itsbrunoagain | https://unsplash.com/photos/OhyYlHZhcVs | Unsplash Lizenz | 25.11.2026 |
 | gespraech-sofa-lokal.webp | Held Gespräch | eine Frau, die mit einem Glas | @ourwhiskyfoundation | https://unsplash.com/photos/wUIXNozjDaE | Unsplash Lizenz | 25.11.2026 |
 | koch-arbeit-kueche.webp | Über uns Koch | Mann in weißer Kochuniform | @elsbethcat | https://unsplash.com/photos/MT8K6aCsVqo | Unsplash Lizenz | 25.11.2026 |
+| koch-schuerze-brille-640.webp | index.html, Zeile 53, Bild: Porträt eines Gastes | Mann mit Brille und dunkler Schürze | [@mstyazhkin](https://unsplash.com/de/@mstyazhkin) | [Seite](https://unsplash.com/de/fotos/hjwKMkehBco) | Unsplash Lizenz | 25.11.2026 |
+| koch-stirnband-640.webp | index.html, Zeile 53, Bild: Porträt eines Gastes | Junger Koch mit weißem Stirnband | [@levimeirclancy](https://unsplash.com/de/@levimeirclancy) | [Seite](https://unsplash.com/de/fotos/kFshpy8OjPo) | Unsplash Lizenz | 25.11.2026 |
+| koch-schuerze-arbeit-640.webp | index.html, Zeile 53, Bild: Porträt eines Gastes | Mann in Schürze bei der Arbeit | [@akshat_jhingran](https://unsplash.com/de/@akshat_jhingran) | [Seite](https://unsplash.com/de/fotos/oCDvUGPSy94) | Unsplash Lizenz | 25.11.2026 |
+| mann-blaues-hemd-640.webp | index.html, Zeile 53, Bild: Porträt eines Gastes | Mann in blauem Hemd im Lokal | [@dannypostma](https://unsplash.com/de/@dannypostma) | [Seite](https://unsplash.com/de/fotos/qm6yxe7SjWg) | Unsplash Lizenz | 25.11.2026 |
+| mann-weste-stadt-640.webp | index.html, Zeile 175, Bild: Porträt, Mann im Sakko | Lächelnder Mann in heller Weste vor einer Straße | [@patersophie](https://unsplash.com/de/@patersophie) | [Seite](https://unsplash.com/de/fotos/F16B5nl7Qk8) | Unsplash Lizenz | 25.11.2026 |
+| frau-locken-lachend-640.webp | index.html, Zeile 176, Bild: Porträt, Frau im Gastraum | Lächelnde Frau mit dunklen Locken | [@nolanrmanning](https://unsplash.com/de/@nolanrmanning) | [Seite](https://unsplash.com/de/fotos/Ll9YOG20UFI) | Unsplash Lizenz | 25.11.2026 |
+| frau-braun-lachend-640.webp | index.html, Zeile 177, Bild: Porträt, Frau mit Schal | Lächelnde Frau in heller Strickjacke | [@brookebalentine](https://unsplash.com/de/@brookebalentine) | [Seite](https://unsplash.com/de/fotos/xSEFkIAopxA) | Unsplash Lizenz | 25.11.2026 |
 
 ## Hinweise
 
@@ -40,3 +47,4 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 
 * Porträts der Gäste (Zitat Wechsel, vier Plätze), Paar im Gespräch (Held), Koch in weißer Jacke, Porträts Team (drei Plätze): bewusst offen, keine echten Personen als Gäste oder Team.
 * Nachtrag 25.11.2026: Gespräch und Koch belegt.
+- Nachtrag 25.11.2026: Personen und weitere Beispielfotos als Vorschau eingesetzt, werden vor Abgabe ersetzt.

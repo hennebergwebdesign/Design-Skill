@@ -20,6 +20,7 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 | eingang-wischeimer.webp | Projekte 4; Blog, Beitrag 1 | Gelber Wisch-Eimer und Nassboden-Schild bei Glastüren | @hazelikespollo | https://unsplash.com/photos/PkFdlMAl85Q | Unsplash Lizenz | 25.11.2026 |
 | mikrofaser-textur.webp | Blog, Beitrag 2 | blau-weißes Strickgewebe | @mitchel3uo | https://unsplash.com/photos/T3RuVobebbE | Unsplash Lizenz | 25.11.2026 |
 
+
 ## Hinweise
 
 * Mehrere Fotos stehen an mehr als einem Platz (siehe Spalte Platz), weil es für viele Plätze nicht genug passende Motive mit Unsplash Lizenz gab. Vor Abgabe durch eigene Fotos des Betriebs ersetzen.
@@ -32,3 +33,4 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 
 * Foto Team bei der Arbeit (Hochformat, mit Plakette): bleibt Platzhalter.
 * Sechs Porträts der Kundenstimmen: Personen, bleiben offen, damit niemand als echte Person erscheint.
+- Nachtrag 25.11.2026: Personen und weitere Beispielfotos als Vorschau eingesetzt, werden vor Abgabe ersetzt.

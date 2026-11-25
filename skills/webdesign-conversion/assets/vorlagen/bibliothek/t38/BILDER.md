@@ -18,6 +18,10 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 | fade-schnitt.webp.webp | v2: Leistung Anlass | Mann im weißen Kleid Hemd schneiden Haare des Mannes | demoya | https://unsplash.com/photos/Q82AM6BWBPM | Unsplash Lizenz | 25.11.2026 |
 | friseur-rasiermesser.webp.webp | v2: Ratgeber 1 | Selektive Fokusfotografie einer Person, die die Haare eines Mannes schneidet | jibarox | https://unsplash.com/photos/ia5aE4JL8_A | Unsplash Lizenz | 25.11.2026 |
 | lockenwickler-pinsel.webp.webp | v2: Ratgeber 2 | Nahaufnahme einer Frau, die ihr Haar bürstet | arizonanthony | https://unsplash.com/photos/IlVv8R0QImo | Unsplash Lizenz | 25.11.2026 |
+| mann-blaues-hemd-640.webp | index.html, Zeile 192, Bild: Porträt, Hochformat | Mann in blauem Hemd im Lokal | [@dannypostma](https://unsplash.com/de/@dannypostma) | [Seite](https://unsplash.com/de/fotos/qm6yxe7SjWg) | Unsplash Lizenz | 25.11.2026 |
+| frau-lockig-blazer-640.webp | index.html, Zeile 200, Bild: Porträt, Hochformat | Frau mit kurzem lockigem Haar im gestreiften Blazer | [@wocintechchat](https://unsplash.com/de/@wocintechchat) | [Seite](https://unsplash.com/de/fotos/SJvDxw0azqw) | Unsplash Lizenz | 25.11.2026 |
+| mann-bart-anzug-640.webp | index.html, Zeile 208, Bild: Porträt, Hochformat | Mann mit Bart und dunklem Anzug | [@ernestflowerss](https://unsplash.com/de/@ernestflowerss) | [Seite](https://unsplash.com/de/fotos/OgH6DuGylRs) | Unsplash Lizenz | 25.11.2026 |
+| mann-brille-pullover-640.webp | v2.html, Zeile 264, Bild: Fachkraft freigestellt, Hochformat | Mann mit Brille und grauem Pullover | [@silverkblack](https://unsplash.com/de/@silverkblack) | [Seite](https://unsplash.com/de/fotos/y-XZf_TNRms) | Unsplash Lizenz | 25.11.2026 |
 
 ## Hinweise
 
@@ -29,3 +33,4 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 
 * index: drei Porträts der Folie (Stimmen)
 * v2: freigestelltes Personenbild im Aufruf (Hochformat, Fachkraft freigestellt)
+- Nachtrag 25.11.2026: Personen und weitere Beispielfotos als Vorschau eingesetzt, werden vor Abgabe ersetzt.

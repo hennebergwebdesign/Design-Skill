@@ -15,6 +15,10 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 | notizblock-mit-stift-und-kaffee-auf-steintisch.webp | Ratgeber, Beitrag Planung | einen Notizblock, einen Stift, eine Sonnenbrille, ein Handy und eine Tasse Kaffee | @kellysikkema | https://unsplash.com/photos/PUTcQQaCI_Q | Unsplash Lizenz | 25.11.2026 |
 | hande-am-runden-tisch-mit-kaffee-und-notizen.webp | Ratgeber, Beitrag Zusammenarbeit | Person mit silbernem und schwarzem Stift und weißer Keramikplatte | @socialcut | https://unsplash.com/photos/oxpcUfH0_bg | Unsplash Lizenz | 25.11.2026 |
 | tabelle-mit-farbmarkierungen-auf-dem-bildschirm.webp | Ratgeber, Beitrag Auswertung | weißer, roter und blauer Kalender | @lenscapewithme | https://unsplash.com/photos/yo5wIVapll0 | Unsplash Lizenz | 25.11.2026 |
+| mann-blaues-hemd-240.webp | index.html, Zeile 280, Bild | Mann in blauem Hemd im Lokal | [@dannypostma](https://unsplash.com/de/@dannypostma) | [Seite](https://unsplash.com/de/fotos/qm6yxe7SjWg) | Unsplash Lizenz | 25.11.2026 |
+| frau-lockig-blazer-640.webp | index.html, Zeile 289, Bild: Porträt, Hochformat | Frau mit kurzem lockigem Haar im gestreiften Blazer | [@wocintechchat](https://unsplash.com/de/@wocintechchat) | [Seite](https://unsplash.com/de/fotos/SJvDxw0azqw) | Unsplash Lizenz | 25.11.2026 |
+| mann-bart-anzug-640.webp | index.html, Zeile 290, Bild: Porträt, Hochformat | Mann mit Bart und dunklem Anzug | [@ernestflowerss](https://unsplash.com/de/@ernestflowerss) | [Seite](https://unsplash.com/de/fotos/OgH6DuGylRs) | Unsplash Lizenz | 25.11.2026 |
+| frau-lederjacke-640.webp | index.html, Zeile 291, Bild: Porträt, Hochformat | Frau mit langem Haar und Lederjacke | [@fresh_studio](https://unsplash.com/de/@fresh_studio) | [Seite](https://unsplash.com/de/fotos/4BG2yKyCaWg) | Unsplash Lizenz | 25.11.2026 |
 
 ## Hinweise
 
@@ -26,3 +30,4 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 
 * Aussage, Bild 6 (unten rechts): bleibt Platzhalter, es fehlte ein sechstes passendes Motiv.
 * Drei Teamporträts: Personen, bleiben offen, damit niemand als echte Person erscheint.
+- Nachtrag 25.11.2026: Personen und weitere Beispielfotos als Vorschau eingesetzt, werden vor Abgabe ersetzt.

@@ -26,6 +26,9 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 | leerer-gastraum-am-abend.webp | Galerie, leerer Gastraum | Klarglastasse auf braunem Holztisch | @amseaman | https://unsplash.com/photos/sQopSb2K0CU | Unsplash Lizenz | 25.11.2026 |
 | strasse-frau-telefon-kaffee.webp | Held Straße | Frau, die am Telefon spricht | @silverkblack | https://unsplash.com/photos/nN56e3xn9iU | Unsplash Lizenz | 25.11.2026 |
 | limonade-holztisch.webp | Limonaden | Hochwinkelfotografie von Trinkgläsern | @ghantavicow | https://unsplash.com/photos/DH8rHIFHMhY | Unsplash Lizenz | 25.11.2026 |
+| mann-blaues-hemd-640.webp | index.html, Zeile 183, Bild: Porträt | Mann in blauem Hemd im Lokal | [@dannypostma](https://unsplash.com/de/@dannypostma) | [Seite](https://unsplash.com/de/fotos/qm6yxe7SjWg) | Unsplash Lizenz | 25.11.2026 |
+| frau-lockig-blazer-640.webp | index.html, Zeile 183, Bild: Porträt | Frau mit kurzem lockigem Haar im gestreiften Blazer | [@wocintechchat](https://unsplash.com/de/@wocintechchat) | [Seite](https://unsplash.com/de/fotos/SJvDxw0azqw) | Unsplash Lizenz | 25.11.2026 |
+| mann-bart-anzug-640.webp | index.html, Zeile 183, Bild: Porträt | Mann mit Bart und dunklem Anzug | [@ernestflowerss](https://unsplash.com/de/@ernestflowerss) | [Seite](https://unsplash.com/de/fotos/OgH6DuGylRs) | Unsplash Lizenz | 25.11.2026 |
 
 ## Hinweise
 
@@ -39,3 +42,4 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 
 * Frau mit Getränk und Smartphone, Porträts (drei Plätze), Frau mit Blumenkopfschmuck, Zwei Limonaden am Tisch, Mann mit Mütze im Dampf: bewusst offen, keine echten Personen und keine passenden Motive gefunden.
 * Nachtrag 25.11.2026: Straße und Limonaden belegt; Blumenkopfschmuck und Mann im Dampf bleiben offen.
+- Nachtrag 25.11.2026: Personen und weitere Beispielfotos als Vorschau eingesetzt, werden vor Abgabe ersetzt.

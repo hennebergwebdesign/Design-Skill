@@ -8,6 +8,10 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 | schreibtisch-mit-diagrammen-und-taschenrechner.webp | Beitrag "Zahlen, die zählen" | Büroschreibtisch mit Smartphone und Finanzdiagrammen | @jakubzerdzicki | https://unsplash.com/photos/heiYgqp0Tsk | Unsplash Lizenz | 25.11.2026 |
 | junge-setzlinge-in-dunkler-erde.webp | Beitrag "Klein anfangen" | eine Pflanze, die in einem Topf wächst | @onehundredseventyfive | https://unsplash.com/photos/VaGU4lyb0gg | Unsplash Lizenz | 25.11.2026 |
 | treppe-mit-gelaender-vor-betonwand.webp | Beitrag "Dranbleiben lohnt" | eine Treppe, die zu einem Gebäude führt | @freys | https://unsplash.com/photos/64XscJ01Oyk | Unsplash Lizenz | 25.11.2026 |
+| frau-lockig-blazer-640.webp | index.html, Zeile 253, Bild: Porträt Gründerin | Frau mit kurzem lockigem Haar im gestreiften Blazer | [@wocintechchat](https://unsplash.com/de/@wocintechchat) | [Seite](https://unsplash.com/de/fotos/SJvDxw0azqw) | Unsplash Lizenz | 25.11.2026 |
+| mann-blaues-hemd-640.webp | index.html, Zeile 262, Bild: Porträt | Mann in blauem Hemd im Lokal | [@dannypostma](https://unsplash.com/de/@dannypostma) | [Seite](https://unsplash.com/de/fotos/qm6yxe7SjWg) | Unsplash Lizenz | 25.11.2026 |
+| frau-lederjacke-640.webp | index.html, Zeile 263, Bild: Porträt | Frau mit langem Haar und Lederjacke | [@fresh_studio](https://unsplash.com/de/@fresh_studio) | [Seite](https://unsplash.com/de/fotos/4BG2yKyCaWg) | Unsplash Lizenz | 25.11.2026 |
+| mann-bart-anzug-640.webp | index.html, Zeile 264, Bild: Porträt | Mann mit Bart und dunklem Anzug | [@ernestflowerss](https://unsplash.com/de/@ernestflowerss) | [Seite](https://unsplash.com/de/fotos/OgH6DuGylRs) | Unsplash Lizenz | 25.11.2026 |
 
 ## Hinweise
 
@@ -18,3 +22,4 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 ## Offen
 
 * Porträt Gründerin und drei Nutzerporträts: Personen, bleiben offen, damit niemand als echte Person erscheint.
+- Nachtrag 25.11.2026: Personen und weitere Beispielfotos als Vorschau eingesetzt, werden vor Abgabe ersetzt.

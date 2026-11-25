@@ -13,6 +13,9 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 | smartphone-in-hand.webp.webp | Anmeldung am Handy | Eine Person, die ein Smartphone mit einem Marmormuster-Case hält | jaehunpark | https://unsplash.com/photos/9_SaFlgwFdA | Unsplash Lizenz | 25.11.2026 |
 | nagelpflege-haende.webp.webp | Übung an Modellen | Frau macht Maniküre | rush_intime | https://unsplash.com/photos/pVw3XzhdKJg | Unsplash Lizenz | 25.11.2026 |
 | pinsel-in-hand.webp.webp | Aufruf am Arbeitsplatz | Person mit braunem und weißem Make-up-Pinsel | kellysikkema | https://unsplash.com/photos/KJ-us7cIsl0 | Unsplash Lizenz | 25.11.2026 |
+| frau-lockig-blazer-640.webp | index.html, Zeile 253, Bild: Porträt einer Absolventin | Frau mit kurzem lockigem Haar im gestreiften Blazer | [@wocintechchat](https://unsplash.com/de/@wocintechchat) | [Seite](https://unsplash.com/de/fotos/SJvDxw0azqw) | Unsplash Lizenz | 25.11.2026 |
+| mann-blaues-hemd-640.webp | index.html, Zeile 264, Bild: Porträt eines Absolventen | Mann in blauem Hemd im Lokal | [@dannypostma](https://unsplash.com/de/@dannypostma) | [Seite](https://unsplash.com/de/fotos/qm6yxe7SjWg) | Unsplash Lizenz | 25.11.2026 |
+| frau-lederjacke-640.webp | index.html, Zeile 275, Bild: Porträt einer Absolventin | Frau mit langem Haar und Lederjacke | [@fresh_studio](https://unsplash.com/de/@fresh_studio) | [Seite](https://unsplash.com/de/fotos/4BG2yKyCaWg) | Unsplash Lizenz | 25.11.2026 |
 
 ## Hinweise
 
@@ -24,3 +27,4 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 * Vorher und Nachher (vier Plätze, Ergebnisbilder dürfen nicht erfunden werden)
 * Zertifikat in der Hand (kein Foto ohne lesbaren Text gefunden)
 * Drei Porträts von Absolventinnen und Absolventen
+- Nachtrag 25.11.2026: Personen und weitere Beispielfotos als Vorschau eingesetzt, werden vor Abgabe ersetzt.

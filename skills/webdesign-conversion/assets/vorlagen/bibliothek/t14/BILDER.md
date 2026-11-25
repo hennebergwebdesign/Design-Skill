@@ -20,3 +20,6 @@ Alle Fotos von Unsplash, Unsplash Lizenz (https://unsplash.com/de/lizenz), abger
 ## Offen
 
 Offen: Porträt bei der Stimme (Stimme aus der Praxis) bleibt Platzhalter, weil dort eine echte Person gezeigt würde. Das Foto im Kontaktbereich (zwei Frauen auf dem Sofa) stammt von einem Konto namens Samsung UK, vor Einsatz beim Kunden prüfen oder tauschen. Die Bildkachel mit dem Wanderer und die Fotos zeigen Orte, die nicht belegt als deutsche Verhältnisse sind. Fotoseiten aus der Kennung der Suchseite abgeleitet, Beschreibungen eigene Kurzbeschreibungen.
+
+| mann-blaues-hemd-640.webp | index.html, Zeile 218, Bild: Porträt | Mann in blauem Hemd im Lokal | [@dannypostma](https://unsplash.com/de/@dannypostma) | [Seite](https://unsplash.com/de/fotos/qm6yxe7SjWg) | Unsplash Lizenz | 25.11.2026 |
+- Nachtrag 25.11.2026: Personen und weitere Beispielfotos als Vorschau eingesetzt, werden vor Abgabe ersetzt.

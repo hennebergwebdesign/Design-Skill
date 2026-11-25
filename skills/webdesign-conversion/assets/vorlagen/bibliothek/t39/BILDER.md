@@ -19,6 +19,10 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 | laptop-esstisch.webp.webp | Szene groß, Zahlung am Küchentisch | Ein Laptop auf einem Tisch | kellysikkema | https://unsplash.com/photos/7rq8zzRBWG0 | Unsplash Lizenz | 25.11.2026 |
 | freunde-park-gehen.webp | Gruppe 2 | Vier Freunde, die zusammen | @silverkblack | https://unsplash.com/photos/ymczKuCuf84 | Unsplash Lizenz | 25.11.2026 |
 | freunde-park-gruppe.webp | Gruppe 3 | Vier lächelnde Freunde | @silverkblack | https://unsplash.com/photos/lYckmNl4eCY | Unsplash Lizenz | 25.11.2026 |
+| mann-blaues-hemd-640.webp | index.html, Zeile 119, Bild: Teammitglied freigestellt | Mann in blauem Hemd im Lokal | [@dannypostma](https://unsplash.com/de/@dannypostma) | [Seite](https://unsplash.com/de/fotos/qm6yxe7SjWg) | Unsplash Lizenz | 25.11.2026 |
+| frau-lockig-blazer-640.webp | index.html, Zeile 168, Bild: Porträt, Hochformat | Frau mit kurzem lockigem Haar im gestreiften Blazer | [@wocintechchat](https://unsplash.com/de/@wocintechchat) | [Seite](https://unsplash.com/de/fotos/SJvDxw0azqw) | Unsplash Lizenz | 25.11.2026 |
+| mann-bart-anzug-640.webp | index.html, Zeile 257, Bild: Porträt | Mann mit Bart und dunklem Anzug | [@ernestflowerss](https://unsplash.com/de/@ernestflowerss) | [Seite](https://unsplash.com/de/fotos/OgH6DuGylRs) | Unsplash Lizenz | 25.11.2026 |
+| frau-lederjacke-640.webp | index.html, Zeile 260, Bild: Porträt | Frau mit langem Haar und Lederjacke | [@fresh_studio](https://unsplash.com/de/@fresh_studio) | [Seite](https://unsplash.com/de/fotos/4BG2yKyCaWg) | Unsplash Lizenz | 25.11.2026 |
 
 ## Hinweise
 
@@ -33,3 +37,4 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 * Meilensteine Karten (Zahlen auf Fläche, zwei Plätze)
 * Zahlung Hand mit Karte und Handy (Telefon Attrappe liegt darüber)
 * Nachtrag 25.11.2026: Die zwei Gruppenbilder belegt.
+- Nachtrag 25.11.2026: Personen und weitere Beispielfotos als Vorschau eingesetzt, werden vor Abgabe ersetzt.

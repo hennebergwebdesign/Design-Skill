@@ -12,6 +12,9 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 | kaffee-notizbuch.webp.webp | Motivwand Typ f, Galerie m-f | Schokoladengetränk im Becher in der Nähe | sixteenmilesout | https://unsplash.com/photos/_47k56_LdDQ | Unsplash Lizenz | 25.11.2026 |
 | schreibtisch-abendlicht.webp.webp | Hero Hintergrund | schwarz-silberner Laptop auf braunem Holztisch | nublson | https://unsplash.com/photos/9_AChhXcrc8 | Unsplash Lizenz | 25.11.2026 |
 | schreibtisch-stifte-kaffee.webp.webp | Fuß Hintergrund | Kaffee, Pflanze, Stifte und ein Lineal | kellysikkema | https://unsplash.com/photos/Qgm9Tk8BpWs | Unsplash Lizenz | 25.11.2026 |
+| mann-blaues-hemd-640.webp | index.html, Zeile 207, Bild: Porträt einer Person | Mann in blauem Hemd im Lokal | [@dannypostma](https://unsplash.com/de/@dannypostma) | [Seite](https://unsplash.com/de/fotos/qm6yxe7SjWg) | Unsplash Lizenz | 25.11.2026 |
+| frau-lockig-blazer-640.webp | index.html, Zeile 215, Bild: Porträt einer Person | Frau mit kurzem lockigem Haar im gestreiften Blazer | [@wocintechchat](https://unsplash.com/de/@wocintechchat) | [Seite](https://unsplash.com/de/fotos/SJvDxw0azqw) | Unsplash Lizenz | 25.11.2026 |
+| mann-bart-anzug-640.webp | index.html, Zeile 223, Bild: Porträt einer Person | Mann mit Bart und dunklem Anzug | [@ernestflowerss](https://unsplash.com/de/@ernestflowerss) | [Seite](https://unsplash.com/de/fotos/OgH6DuGylRs) | Unsplash Lizenz | 25.11.2026 |
 
 ## Hinweise
 
@@ -22,3 +25,4 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 ## Offen
 
 * Drei Porträts der Stimmen
+- Nachtrag 25.11.2026: Personen und weitere Beispielfotos als Vorschau eingesetzt, werden vor Abgabe ersetzt.
