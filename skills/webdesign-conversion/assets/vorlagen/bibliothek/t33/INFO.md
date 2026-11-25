@@ -37,3 +37,4 @@ Formulare senden nichts. Bewertung, Siegel, Kennzahlen, Namen, Stimmen und Adres
 - Titel und Beschreibung mit Keyword Heizung Lüftung und Ort Musterstadt
 - Keine Einwand-FAQ vorhanden: die Details sind Leistungskacheln, eine FAQ-Sektion ist offen
 - Formular: Mail für die Terminbestätigung, Frage nach dem Zustand der Anlage
+- Einwand FAQ `#fragen` vor dem Kontakt: Kosten des Wartens, Notdienst, Termin, Ablauf, kleine Reparaturen (Beispielantworten, `data-beispiel`).
