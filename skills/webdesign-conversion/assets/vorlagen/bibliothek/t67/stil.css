@@ -242,3 +242,5 @@ h3{font-size:var(--h3);line-height:1.2}
   .leistung__bild,.leistung__inhalt{transition:none}
 }
 .wechsler__steuerung[hidden]{display:none}
+.held__bild::after{content:"";position:absolute;inset:auto 0 0 0;height:60%;z-index:1;pointer-events:none;background:linear-gradient(0deg,color-mix(in srgb,var(--flaeche-dunkel) 78%,transparent),transparent)}
+.held__marke{z-index:2}
