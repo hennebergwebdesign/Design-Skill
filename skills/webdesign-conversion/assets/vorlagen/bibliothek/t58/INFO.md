@@ -1,6 +1,6 @@
 # t58 Studio Nachtschicht
 
-Prinzip nach der freigegebenen Referenz Hyperfit (hyperfit.webflow.io, Tor 1 erteilt), als Aufbau, Raster, Sektionsfolge und Art der Bewegung nachgebaut. Text, Bild, Icon, Code, Marke, Schrift und Farbe sind eigen.
+Prinzip nach der freigegebenen Referenz Hyperfit (Tor 1 erteilt), als Aufbau, Raster, Sektionsfolge und Art der Bewegung nachgebaut. Text, Bild, Icon, Code, Marke, Schrift und Farbe sind eigen.
 
 ## Eignung
 Fitnessstudios, Boxen, Yoga und Kursstudios, Personal Trainer und alle Angebote mit Tarifen, Team und Probetermin. Ganz dunkle Seite mit einer kräftigen Signalfarbe, gedacht für starke Fotos von Menschen im Training. Ohne gutes Bildmaterial verliert sie ihren Kern. Eine Alternative mit heller, ruhiger Seite und Programmliste ist t28. Ansprache im Du, für Sie im Text ersetzen.
