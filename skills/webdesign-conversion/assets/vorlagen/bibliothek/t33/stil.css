@@ -284,3 +284,4 @@ figcaption strong{color:var(--text-auf-dunkel);font-weight:600}
   .aufruf__bild{transform:none!important}
   .kachel[open] .kachel__text{animation:none}
 }
+.kachel-bild>img,.ergebnis>img{position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;border-radius:inherit}
