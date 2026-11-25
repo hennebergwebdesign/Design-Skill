@@ -276,3 +276,9 @@ h2{font-size:var(--h2-m)}
 @media (min-width:48rem){.fuss__innen{grid-template-columns:repeat(2,1fr)}.fuss__links{grid-column:1/-1}}
 @media (min-width:62rem){.fuss__innen{grid-template-columns:1.6fr .7fr .7fr 1.2fr;column-gap:2.5rem}.fuss__links{grid-column:auto}}
 @media (prefers-reduced-motion:reduce){.js .held h1 .h-zeile>span{animation:none}.zeile .bild::before,.p .bild::before,.beitrag .bild::before{transition:none}}
+
+/* Beispielfotos: Bild über den Verlaufsflächen der Platzhalter */
+.bild>img{position:relative;z-index:1}
+.held__bild>img{position:absolute;inset:0;object-position:center 35%}
+.zeile:hover .bild>img{transform:scale(1.05)}
+.bild>img{transition:transform var(--dauer-lang) var(--kurve)}
