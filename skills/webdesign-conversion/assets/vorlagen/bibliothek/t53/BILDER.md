@@ -7,6 +7,8 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 | besprechung-am-tisch.webp.webp | index: Abgrenzung; v2: Abgrenzung | Menschen, die am Tisch sitzen | heymemento | https://unsplash.com/photos/2pPw5Glro5I | Unsplash Lizenz | 25.11.2026 |
 | besprechungsraum-laptops.webp.webp | index: Besprechungstisch; v2: Fall 3 | Menschen, die mit einem Laptop in der Nähe eines Tisches sitzen | campaign_creators | https://unsplash.com/photos/qCi_MzVODoU | Unsplash Lizenz | 25.11.2026 |
 | gespraech-im-cafe.webp.webp | index: Beitrag 1; v2: Fall 1, Beitrag | people sitting on chair | reddfrancisco | https://unsplash.com/photos/5U_28ojjgms | Unsplash Lizenz | 25.11.2026 |
+| buero-frau-telefon.webp | index Frau am Telefon | Frau, die am Schreibtisch mit Telefon | @silverkblack | https://unsplash.com/photos/QzY81G7dbOo | Unsplash Lizenz | 25.11.2026 |
+| mann-laptop-sofa.webp | v2 Schritte | Ein Mann mit Bart und Brille | @silverkblack | https://unsplash.com/photos/C3hCD8008qE | Unsplash Lizenz | 25.11.2026 |
 
 ## Hinweise
 
@@ -17,3 +19,4 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 
 * index: Zwei Personen am Laptop, Frau am Telefon, Gründer lächelnd, drei Porträts, Frau mit Telefon und Stift
 * v2: Mann mit Laptop im Sessel, Gründer mit verschränkten Armen
+* Nachtrag 25.11.2026: Frau am Telefon und Mann mit Laptop belegt; Gründerporträts bleiben offen.

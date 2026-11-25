@@ -25,6 +25,8 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 | glaeser-und-kerzen-am-abend.webp | Ereignis, Hintergrund | Kerzen und Weingläser auf einem Tisch an einem schwach beleuchteten Ort (gekürzt) | @raulmermans | https://unsplash.com/photos/3J689M7eWAc | Unsplash Lizenz | 25.11.2026 |
 | lange-tafel-im-garten.webp | Ereignis, Bild (Familie am Tisch) | Tischdekoration für den Außenbereich mit floralem Tafelaufsatz (gekürzt) | @itsbrunoagain | https://unsplash.com/photos/h6dodyNh95c | Unsplash Lizenz | 25.11.2026 |
 | tisch-mit-zitronen-und-blumen.webp | Tischreservierung | Zitronen und gelbe Blüten auf einer türkisfarbenen Tischdecke (gekürzt) | @itsbrunoagain | https://unsplash.com/photos/OhyYlHZhcVs | Unsplash Lizenz | 25.11.2026 |
+| gespraech-sofa-lokal.webp | Held Gespräch | eine Frau, die mit einem Glas | @ourwhiskyfoundation | https://unsplash.com/photos/wUIXNozjDaE | Unsplash Lizenz | 25.11.2026 |
+| koch-arbeit-kueche.webp | Über uns Koch | Mann in weißer Kochuniform | @elsbethcat | https://unsplash.com/photos/MT8K6aCsVqo | Unsplash Lizenz | 25.11.2026 |
 
 ## Hinweise
 
@@ -37,3 +39,4 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 ## Offen
 
 * Porträts der Gäste (Zitat Wechsel, vier Plätze), Paar im Gespräch (Held), Koch in weißer Jacke, Porträts Team (drei Plätze): bewusst offen, keine echten Personen als Gäste oder Team.
+* Nachtrag 25.11.2026: Gespräch und Koch belegt.

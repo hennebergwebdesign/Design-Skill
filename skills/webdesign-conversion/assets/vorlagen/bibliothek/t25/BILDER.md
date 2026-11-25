@@ -13,3 +13,4 @@ Alle Fotos von Unsplash, Unsplash Lizenz (https://unsplash.com/de/lizenz), abger
 ## Offen
 
 Gespräch vor Ort (echte Personen), 8 Teamfotos (echte Mitarbeiter), bleiben Platzhalter. Foto Einsatz vor Ort von Firmenkonto Raze Solar, vor Livegang prüfen. Aufnahmeorte nicht belegt, deutsche Verhältnisse nicht nachweisbar.
+* Nachtrag 25.11.2026: Gespräch vor Ort belegt; Team bleibt offen.

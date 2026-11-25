@@ -24,6 +24,8 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 | mosaiktisch-im-garten.webp | Galerie, Mosaiktisch | Ein runder Mosaiktisch mit bunten Fliesenmustern neben (gekürzt) | @naturalist_boat | https://unsplash.com/photos/UKQc_X0SQZs | Unsplash Lizenz | 25.11.2026 |
 | sitzbank-und-runde-tische.webp | Galerie, Lederbank | Leere Restauranttische mit Flaschen und Gläsern | @i_am_vitality | https://unsplash.com/photos/PPbHT8jKj88 | Unsplash Lizenz | 25.11.2026 |
 | leerer-gastraum-am-abend.webp | Galerie, leerer Gastraum | Klarglastasse auf braunem Holztisch | @amseaman | https://unsplash.com/photos/sQopSb2K0CU | Unsplash Lizenz | 25.11.2026 |
+| strasse-frau-telefon-kaffee.webp | Held Straße | Frau, die am Telefon spricht | @silverkblack | https://unsplash.com/photos/nN56e3xn9iU | Unsplash Lizenz | 25.11.2026 |
+| limonade-holztisch.webp | Limonaden | Hochwinkelfotografie von Trinkgläsern | @ghantavicow | https://unsplash.com/photos/DH8rHIFHMhY | Unsplash Lizenz | 25.11.2026 |
 
 ## Hinweise
 
@@ -36,3 +38,4 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 ## Offen
 
 * Frau mit Getränk und Smartphone, Porträts (drei Plätze), Frau mit Blumenkopfschmuck, Zwei Limonaden am Tisch, Mann mit Mütze im Dampf: bewusst offen, keine echten Personen und keine passenden Motive gefunden.
+* Nachtrag 25.11.2026: Straße und Limonaden belegt; Blumenkopfschmuck und Mann im Dampf bleiben offen.

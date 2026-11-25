@@ -48,6 +48,9 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 | dessert-im-glas-holz.webp | v2 Instagram 4 | ein Glas Eis und Kekse auf einem Holztisch | @captntartine | https://unsplash.com/photos/DUfcyQIDjdk | Unsplash Lizenz | 25.11.2026 |
 | frittierte-baellchen-in-schale.webp | v2 Instagram 5 | frittiertes Essen auf schwarzem Keramikteller | @mintsrecipes | https://unsplash.com/photos/zPZ3n-2DwHo | Unsplash Lizenz | 25.11.2026 |
 | glas-mit-gurke-und-eis.webp | v2 Instagram 6 | Klarglasflasche mit Wasser | @mariushaak | https://unsplash.com/photos/nZ1T7HVIHzk | Unsplash Lizenz | 25.11.2026 |
+| gast-lacht-essen.webp | index Frau lacht | Frau trägt graues Hemd | @outcast_india | https://unsplash.com/photos/w3WAeMEBXQE | Unsplash Lizenz | 25.11.2026 |
+| frau-isst-lampenlicht.webp | v2 Bogen | Frau hält Gabel im Vordertisch | @pablomerchanm | https://unsplash.com/photos/Orz90t6o0e4 | Unsplash Lizenz | 25.11.2026 |
+| kaffee-foto-handy.webp | v2 Essen fotografieren | Frau, die ein Foto von Kaffeegetränken | @silverkblack | https://unsplash.com/photos/RIi3tPDTD8Y | Unsplash Lizenz | 25.11.2026 |
 
 ## Hinweise
 
@@ -60,3 +63,4 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 ## Offen
 
 * Porträts Team (index, vier Plätze), Frau lacht beim Essen (index Stimmen, v2 Held), Frau fotografiert ihr Essen und Sängerin (v2 Veranstaltungen): bewusst offen, keine echten Personen als Gäste oder Team.
+* Nachtrag 25.11.2026: Lachende Frau und Essen fotografieren belegt; Sängerin im Scheinwerferlicht bleibt offen.

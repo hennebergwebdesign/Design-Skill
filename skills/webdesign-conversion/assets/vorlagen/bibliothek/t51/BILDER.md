@@ -11,6 +11,8 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 | holztisch-skizzen.webp.webp | Dienst, Planungsrunde am Holztisch | Holztisch mit Skizzen, Bleistift und Stift | anniespratt | https://unsplash.com/photos/PoRcnaa6ark | Unsplash Lizenz | 25.11.2026 |
 | gebaeude-rundung-himmel.webp.webp | Kachel 3 (Gebäudespitze) | Low-Angle-Fotografie eines Stockwerks | michaelseh | https://unsplash.com/photos/S66mTqg0nM8 | Unsplash Lizenz | 25.11.2026 |
 | balkone-beton-himmel.webp.webp | Kachel 5 (Balkone) | Gebäude aus weißem und braunem Beton | trevoriscamera | https://unsplash.com/photos/yz8_w9qtwZY | Unsplash Lizenz | 25.11.2026 |
+| beratung-frau-cafe-laptop.webp | Dienst Bild | Frau in schwarzem Langarmhemd | @helenalopesph | https://unsplash.com/photos/_SzvRwdFo6o | Unsplash Lizenz | 25.11.2026 |
+| zimmerpflanze-weiss.webp | Preise Bild | grüne Blätter auf weißem Hintergrund | @anniespratt | https://unsplash.com/photos/v2TtUBqrQnE | Unsplash Lizenz | 25.11.2026 |
 
 ## Hinweise
 
@@ -28,3 +30,4 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 * Bildschirm mit der fertigen Seite (Oberfläche)
 * Beitrag Unterlagen und Taschenrechner, Beitrag Treppenhalle
 * Kachel Fassade mit Rohr und Objekt auf Terrakotta
+* Nachtrag 25.11.2026: Beraterin und Zimmerpflanze belegt; Fassade, Terrakotta und Bildschirm bleiben offen.

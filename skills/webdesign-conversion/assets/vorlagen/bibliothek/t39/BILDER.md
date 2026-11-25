@@ -17,6 +17,8 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 | schreibtisch-stifte-kaffee.webp.webp | Szene Kachel 6 | Kaffee, Pflanze, Stifte und ein Lineal | kellysikkema | https://unsplash.com/photos/Qgm9Tk8BpWs | Unsplash Lizenz | 25.11.2026 |
 | kaffee-notizbuch.webp.webp | Szene Kachel 7 | Schokoladengetränk im Becher in der Nähe | sixteenmilesout | https://unsplash.com/photos/_47k56_LdDQ | Unsplash Lizenz | 25.11.2026 |
 | laptop-esstisch.webp.webp | Szene groß, Zahlung am Küchentisch | Ein Laptop auf einem Tisch | kellysikkema | https://unsplash.com/photos/7rq8zzRBWG0 | Unsplash Lizenz | 25.11.2026 |
+| freunde-park-gehen.webp | Gruppe 2 | Vier Freunde, die zusammen | @silverkblack | https://unsplash.com/photos/ymczKuCuf84 | Unsplash Lizenz | 25.11.2026 |
+| freunde-park-gruppe.webp | Gruppe 3 | Vier lächelnde Freunde | @silverkblack | https://unsplash.com/photos/lYckmNl4eCY | Unsplash Lizenz | 25.11.2026 |
 
 ## Hinweise
 
@@ -30,3 +32,4 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 * Porträt Bühne und drei Porträts bzw. Gruppenfotos in der Stimmenfolge
 * Meilensteine Karten (Zahlen auf Fläche, zwei Plätze)
 * Zahlung Hand mit Karte und Handy (Telefon Attrappe liegt darüber)
+* Nachtrag 25.11.2026: Die zwei Gruppenbilder belegt.
