@@ -251,3 +251,7 @@ h3{font-size:clamp(1.2rem,1.05rem + .6vw,1.5rem);line-height:1.15}
 .news__meldung[hidden]{display:none}
 .fuss__unten{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 2rem;margin-top:2.5rem;padding-top:1.25rem;border-top:1px solid var(--linie-dunkel)}
 @media (min-width:62rem){.fuss__oben{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) minmax(0,1.4fr);gap:3rem}}
+
+/* Beispielfotos */
+.held__bild img,.film__bild img,.banner__bild img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.held__bild img{object-position:center 40%}
