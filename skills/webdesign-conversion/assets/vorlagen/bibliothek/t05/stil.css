@@ -245,3 +245,7 @@ html:not(.js) .stimme{grid-area:auto}
 .zeile-ak[open] *{color:inherit}
 .zeile-ak[open] .plus{background:var(--akzent-text);color:var(--akzent)}
 .panel,.kontakt__raster>*{min-width:0}.seitenliste a{overflow-wrap:anywhere}
+
+/* Fotos statt Platzhalterverläufe */
+.bild__foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+img.bild__innen{width:100%;height:120%;object-fit:cover;background:none}
