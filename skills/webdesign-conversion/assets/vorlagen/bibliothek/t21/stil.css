@@ -387,3 +387,6 @@ details[open] .a-minus{display:block}
 @media (min-width:40rem){.fuss__spalten{grid-template-columns:repeat(2,minmax(0,1fr))}.fuss__kopf{grid-template-columns:auto minmax(0,1fr);align-items:center;gap:2rem}.fuss__kontakt{grid-template-columns:repeat(3,auto);justify-content:space-between}}
 @media (min-width:62rem){.fuss__spalten{grid-template-columns:repeat(4,minmax(0,1fr))}}
 @media (max-width:39.99rem){.fuss__kontakt{grid-template-columns:minmax(0,1fr)}}
+
+/* Fotos statt Platzhalterverläufe */
+.bild__foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
