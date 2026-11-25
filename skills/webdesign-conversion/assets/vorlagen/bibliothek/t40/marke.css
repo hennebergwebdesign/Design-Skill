@@ -1,0 +1,33 @@
+/* marke.css der Vorlage "Finanzen hell": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#ffffff;
+  --flaeche-alt:#f6f7f7;
+  --flaeche-dunkel:#071a1c;
+  --text:#0a1819;
+  --text-leise:#4d5b5c;
+  --linie:#e3e8e8;
+  --akzent:#0d7a78;           /* Hauptaktion und Hervorhebung */
+  --akzent-text:#ffffff;
+  --schrift-titel:'Hanken Grotesk',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:14px;
+  --radius-karte:28px;
+  --radius-bild:22px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:40px;
+  --titel-gewicht:600;
+  --titel-spur:-0.045em;
+  --verlauf-tief:#07454d;     /* Verläufe: tiefer Ton (Text darauf weiß) */
+  --verlauf-mitte:#14908a;
+  --verlauf-hell:#bfe9dd;
+  --verlauf-warm:#f1d3b8;     /* warmer Auslauf statt Violett */
+  --akzent-hell:#e3f4ef;      /* Chips und Symbolflächen */
+  --tinte:#0a1819;            /* dunkler Knopf */
+  --text-auf-dunkel:#f2f7f6;
+  --text-leise-dunkel:#a9bcbc;
+  --linie-dunkel:#1f3436;
+  --positiv:#0b7a4b;
+  --negativ:#b3402f;
+}

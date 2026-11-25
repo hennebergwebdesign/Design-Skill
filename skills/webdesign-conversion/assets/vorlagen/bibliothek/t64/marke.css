@@ -1,0 +1,33 @@
+/* marke.css der Vorlage "Kanzlei Messing und Nachtblau": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Gilt für beide Varianten (index.html und v2.html). Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#f4f2ee;
+  --flaeche-alt:#ebe7df;
+  --flaeche-dunkel:#111e27;
+  --text:#14212b;
+  --text-leise:#52606a;
+  --linie:#d8d3c8;
+  --akzent:#b39a63;           /* Hauptaktion: Fläche mit dunklem Text, auf Dunkel auch Text und Punkt */
+  --akzent-text:#111e27;
+  --schrift-titel:'Newsreader',Georgia,serif;
+  --schrift-text:'Manrope',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:14px;
+  --radius-bild:14px;
+
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:480;
+  --titel-spur:-0.01em;
+  --akzent-tief:#7a6334;      /* Akzent auf Hell: Text und Linie (5,0 zu 1 auf --flaeche) */
+  --flaeche-dunkel-2:#1a2b37; /* Karten und Zeilen auf Dunkel */
+  --text-auf-dunkel:#f4f2ee;
+  --text-leise-dunkel:#b9c1c6;
+  --linie-dunkel:#2f4251;
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#4a4a3a;
+  --ton-2:#2c3f4c;
+  --ton-3:#6b5a3e;
+  --ton-4:#34404a;
+  --ton-5:#3c4d45;
+  --ton-6:#0e171e;
+}

@@ -1,0 +1,36 @@
+/* marke.css der Vorlage "Kraftstudio Risskante": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#efe9de;            /* helle Abschnitte: Papier */
+  --flaeche-alt:#e2dac9;
+  --flaeche-dunkel:#131211;     /* dunkle Abschnitte */
+  --flaeche-dunkel-2:#1e1c1a;   /* Karten auf Dunkel */
+  --stein:#2a2724;              /* zweiter dunkler Ton (Rasterabschnitte) */
+  --text:#161412;
+  --text-leise:#5a544b;
+  --linie:#cfc6b4;
+  --akzent:#ff5a2c;             /* Hauptaktion: Fläche mit dunklem Text, auf Dunkel auch Text und Punkt */
+  --akzent-text:#160a05;
+  --akzent-tief:#a8330e;        /* Akzent auf Hell: Text und Linie */
+  --schrift-titel:'Bricolage Grotesque',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:16px;
+  --radius-bild:14px;
+
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:800;
+  --titel-spur:-0.025em;
+  --text-auf-dunkel:#f4efe6;
+  --text-leise-dunkel:#b9b2a6;
+  --linie-dunkel:#3a3632;
+  --karte-hell:#d9d2c2;         /* Kartenton auf Dunkel (Leistungen, Stimmen) */
+  --karte-hell-2:#565044;
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#5a3a2a;
+  --ton-2:#2c3236;
+  --ton-3:#7a4a30;
+  --ton-4:#3a362e;
+  --ton-5:#46504c;
+  --ton-6:#1a1816;
+}

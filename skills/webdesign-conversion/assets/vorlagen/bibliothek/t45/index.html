@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abläufe automatisieren ohne Code, Markenname</title>
+<meta name="description" content="Beispieltext: Wir bauen Abläufe, die Routinearbeit selbst erledigen, ohne eine Zeile Code. Vor dem Einsatz durch den echten Text der Marke ersetzen.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../_basis/schriften.css">
+<link rel="stylesheet" href="marke.css">
+<link rel="stylesheet" href="../_basis/basis.css">
+<link rel="stylesheet" href="../_basis/logos.css">
+<link rel="stylesheet" href="stil.css">
+</head>
+<body id="top">
+<a class="sprunglink" href="#inhalt">Zum Inhalt springen</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-arrow-right" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></symbol>
+  <symbol id="i-arrow-left" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"/></symbol>
+  <symbol id="i-arrow-up-right" viewBox="0 0 256 256" fill="currentColor"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 256 256" fill="currentColor"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></symbol>
+  <symbol id="i-check-circle" viewBox="0 0 256 256" fill="currentColor"><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></symbol>
+  <symbol id="i-lightning" viewBox="0 0 256 256" fill="currentColor"><path d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z"/></symbol>
+  <symbol id="i-gear" viewBox="0 0 256 256" fill="currentColor"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Zm88-29.84q.06-2.16,0-4.32l14.92-18.64a8,8,0,0,0,1.48-7.06,107.21,107.21,0,0,0-10.88-26.25,8,8,0,0,0-6-3.93l-23.72-2.64q-1.48-1.56-3-3L186,40.54a8,8,0,0,0-3.94-6,107.71,107.71,0,0,0-26.25-10.87,8,8,0,0,0-7.06,1.49L130.16,40Q128,40,125.84,40L107.2,25.11a8,8,0,0,0-7.06-1.48A107.6,107.6,0,0,0,73.89,34.51a8,8,0,0,0-3.93,6L67.32,64.27q-1.56,1.49-3,3L40.54,70a8,8,0,0,0-6,3.94,107.71,107.71,0,0,0-10.87,26.25,8,8,0,0,0,1.49,7.06L40,125.84Q40,128,40,130.16L25.11,148.8a8,8,0,0,0-1.48,7.06,107.21,107.21,0,0,0,10.88,26.25,8,8,0,0,0,6,3.93l23.72,2.64q1.49,1.56,3,3L70,215.46a8,8,0,0,0,3.94,6,107.71,107.71,0,0,0,26.25,10.87,8,8,0,0,0,7.06-1.49L125.84,216q2.16.06,4.32,0l18.64,14.92a8,8,0,0,0,7.06,1.48,107.21,107.21,0,0,0,26.25-10.88,8,8,0,0,0,3.93-6l2.64-23.72q1.56-1.48,3-3L215.46,186a8,8,0,0,0,6-3.94,107.71,107.71,0,0,0,10.87-26.25,8,8,0,0,0-1.49-7.06Zm-16.1-6.5a73.93,73.93,0,0,1,0,8.68,8,8,0,0,0,1.74,5.48l14.19,17.73a91.57,91.57,0,0,1-6.23,15L187,173.11a8,8,0,0,0-5.1,2.64,74.11,74.11,0,0,1-6.14,6.14,8,8,0,0,0-2.64,5.1l-2.51,22.58a91.32,91.32,0,0,1-15,6.23l-17.74-14.19a8,8,0,0,0-5-1.75h-.48a73.93,73.93,0,0,1-8.68,0,8,8,0,0,0-5.48,1.74L100.45,215.8a91.57,91.57,0,0,1-15-6.23L82.89,187a8,8,0,0,0-2.64-5.1,74.11,74.11,0,0,1-6.14-6.14,8,8,0,0,0-5.1-2.64L46.43,170.6a91.32,91.32,0,0,1-6.23-15l14.19-17.74a8,8,0,0,0,1.74-5.48,73.93,73.93,0,0,1,0-8.68,8,8,0,0,0-1.74-5.48L40.2,100.45a91.57,91.57,0,0,1,6.23-15L69,82.89a8,8,0,0,0,5.1-2.64,74.11,74.11,0,0,1,6.14-6.14A8,8,0,0,0,82.89,69L85.4,46.43a91.32,91.32,0,0,1,15-6.23l17.74,14.19a8,8,0,0,0,5.48,1.74,73.93,73.93,0,0,1,8.68,0,8,8,0,0,0,5.48-1.74L155.55,40.2a91.57,91.57,0,0,1,15,6.23L173.11,69a8,8,0,0,0,2.64,5.1,74.11,74.11,0,0,1,6.14,6.14,8,8,0,0,0,5.1,2.64l22.58,2.51a91.32,91.32,0,0,1,6.23,15l-14.19,17.74A8,8,0,0,0,199.87,123.66Z"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 256 256" fill="currentColor"><path d="M208,80H176V56a48,48,0,0,0-96,0V80H48A16,16,0,0,0,32,96V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V96A16,16,0,0,0,208,80ZM96,56a32,32,0,0,1,64,0V80H96ZM208,208H48V96H208V208Zm-68-56a12,12,0,1,1-12-12A12,12,0,0,1,140,152Z"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 256 256" fill="currentColor"><path d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"/></symbol>
+  <symbol id="i-graph" viewBox="0 0 256 256" fill="currentColor"><path d="M200,152a31.84,31.84,0,0,0-19.53,6.68l-23.11-18A31.65,31.65,0,0,0,160,128c0-.74,0-1.48-.08-2.21l13.23-4.41A32,32,0,1,0,168,104c0,.74,0,1.48.08,2.21l-13.23,4.41A32,32,0,0,0,128,96a32.59,32.59,0,0,0-5.27.44L115.89,81A32,32,0,1,0,96,88a32.59,32.59,0,0,0,5.27-.44l6.84,15.4a31.92,31.92,0,0,0-8.57,39.64L73.83,165.44a32.06,32.06,0,1,0,10.63,12l25.71-22.84a31.91,31.91,0,0,0,37.36-1.24l23.11,18A31.65,31.65,0,0,0,168,184a32,32,0,1,0,32-32Zm0-64a16,16,0,1,1-16,16A16,16,0,0,1,200,88ZM80,56A16,16,0,1,1,96,72,16,16,0,0,1,80,56ZM56,208a16,16,0,1,1,16-16A16,16,0,0,1,56,208Zm56-80a16,16,0,1,1,16,16A16,16,0,0,1,112,128Zm88,72a16,16,0,1,1,16-16A16,16,0,0,1,200,200Z"/></symbol>
+  <symbol id="i-sparkle" viewBox="0 0 256 256" fill="currentColor"><path d="M197.58,129.06,146,110l-19-51.62a15.92,15.92,0,0,0-29.88,0L78,110l-51.62,19a15.92,15.92,0,0,0,0,29.88L78,178l19,51.62a15.92,15.92,0,0,0,29.88,0L146,178l51.62-19a15.92,15.92,0,0,0,0-29.88ZM137,164.22a8,8,0,0,0-4.74,4.74L112,223.85,91.78,169A8,8,0,0,0,87,164.22L32.15,144,87,123.78A8,8,0,0,0,91.78,119L112,64.15,132.22,119a8,8,0,0,0,4.74,4.74L191.85,144ZM144,40a8,8,0,0,1,8-8h16V16a8,8,0,0,1,16,0V32h16a8,8,0,0,1,0,16H184V64a8,8,0,0,1-16,0V48H152A8,8,0,0,1,144,40ZM248,88a8,8,0,0,1-8,8h-8v8a8,8,0,0,1-16,0V96h-8a8,8,0,0,1,0-16h8V72a8,8,0,0,1,16,0v8h8A8,8,0,0,1,248,88Z"/></symbol>
+  <symbol id="i-rocket-launch" viewBox="0 0 256 256" fill="currentColor"><path d="M223.85,47.12a16,16,0,0,0-15-15c-12.58-.75-44.73.4-71.41,27.07L132.69,64H74.36A15.91,15.91,0,0,0,63,68.68L28.7,103a16,16,0,0,0,9.07,27.16l38.47,5.37,44.21,44.21,5.37,38.49a15.94,15.94,0,0,0,10.78,12.92,16.11,16.11,0,0,0,5.1.83A15.91,15.91,0,0,0,153,227.3L187.32,193A15.91,15.91,0,0,0,192,181.64V123.31l4.77-4.77C223.45,91.86,224.6,59.71,223.85,47.12ZM74.36,80h42.33L77.16,119.52,40,114.34Zm74.41-9.45a76.65,76.65,0,0,1,59.11-22.47,76.46,76.46,0,0,1-22.42,59.16L128,164.68,91.32,128ZM176,181.64,141.67,216l-5.19-37.17L176,139.31Zm-74.16,9.5C97.34,201,82.29,224,40,224a8,8,0,0,1-8-8c0-42.29,23-57.34,32.86-61.85a8,8,0,0,1,6.64,14.56c-6.43,2.93-20.62,12.36-23.12,38.91,26.55-2.5,36-16.69,38.91-23.12a8,8,0,1,1,14.56,6.64Z"/></symbol>
+  <symbol id="i-shield-check" viewBox="0 0 256 256" fill="currentColor"><path d="M208,40H48A16,16,0,0,0,32,56v56c0,52.72,25.52,84.67,46.93,102.19,23.06,18.86,46,25.26,47,25.53a8,8,0,0,0,4.2,0c1-.27,23.91-6.67,47-25.53C198.48,196.67,224,164.72,224,112V56A16,16,0,0,0,208,40Zm0,72c0,37.07-13.66,67.16-40.6,89.42A129.3,129.3,0,0,1,128,223.62a128.25,128.25,0,0,1-38.92-21.81C61.82,179.51,48,149.3,48,112l0-56,160,0ZM82.34,141.66a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32l-56,56a8,8,0,0,1-11.32,0Z"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 256 256" fill="currentColor"><path d="M128,24h0A104,104,0,1,0,232,128,104.12,104.12,0,0,0,128,24Zm88,104a87.61,87.61,0,0,1-3.33,24H174.16a157.44,157.44,0,0,0,0-48h38.51A87.61,87.61,0,0,1,216,128ZM102,168H154a115.11,115.11,0,0,1-26,45A115.27,115.27,0,0,1,102,168Zm-3.9-16a140.84,140.84,0,0,1,0-48h59.88a140.84,140.84,0,0,1,0,48ZM40,128a87.61,87.61,0,0,1,3.33-24H81.84a157.44,157.44,0,0,0,0,48H43.33A87.61,87.61,0,0,1,40,128ZM154,88H102a115.11,115.11,0,0,1,26-45A115.27,115.27,0,0,1,154,88Zm52.33,0H170.71a135.28,135.28,0,0,0-22.3-45.6A88.29,88.29,0,0,1,206.37,88ZM107.59,42.4A135.28,135.28,0,0,0,85.29,88H49.63A88.29,88.29,0,0,1,107.59,42.4ZM49.63,168H85.29a135.28,135.28,0,0,0,22.3,45.6A88.29,88.29,0,0,1,49.63,168Zm98.78,45.6a135.28,135.28,0,0,0,22.3-45.6h35.66A88.29,88.29,0,0,1,148.41,213.6Z"/></symbol>
+  <symbol id="i-envelope" viewBox="0 0 256 256" fill="currentColor"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm-96,85.15L52.57,64H203.43ZM98.71,128,40,181.81V74.19Zm11.84,10.85,12,11.05a8,8,0,0,0,10.82,0l12-11.05,58,53.15H52.57ZM157.29,128,216,74.18V181.82Z"/></symbol>
+  <symbol id="i-chat-circle" viewBox="0 0 256 256" fill="currentColor"><path d="M128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></symbol>
+  <symbol id="i-chart-bar" viewBox="0 0 256 256" fill="currentColor"><path d="M224,200h-8V40a8,8,0,0,0-8-8H152a8,8,0,0,0-8,8V80H96a8,8,0,0,0-8,8v40H48a8,8,0,0,0-8,8v64H32a8,8,0,0,0,0,16H224a8,8,0,0,0,0-16ZM160,48h40V200H160ZM104,96h40V200H104ZM56,144H88v56H56Z"/></symbol>
+  <symbol id="i-package" viewBox="0 0 256 256" fill="currentColor"><path d="M223.68,66.15,135.68,18a15.88,15.88,0,0,0-15.36,0l-88,48.17a16,16,0,0,0-8.32,14v95.64a16,16,0,0,0,8.32,14l88,48.17a15.88,15.88,0,0,0,15.36,0l88-48.17a16,16,0,0,0,8.32-14V80.18A16,16,0,0,0,223.68,66.15ZM128,32l80.34,44-29.77,16.3-80.35-44ZM128,120,47.66,76l33.9-18.56,80.34,44ZM40,90l80,43.78v85.79L40,175.82Zm176,85.78h0l-80,43.79V133.82l32-17.51V152a8,8,0,0,0,16,0V107.55L216,90v85.77Z"/></symbol>
+  <symbol id="i-magnifying-glass" viewBox="0 0 256 256" fill="currentColor"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"/></symbol>
+  <symbol id="i-desktop" viewBox="0 0 256 256" fill="currentColor"><path d="M208,40H48A24,24,0,0,0,24,64V176a24,24,0,0,0,24,24h72v16H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16H136V200h72a24,24,0,0,0,24-24V64A24,24,0,0,0,208,40ZM48,56H208a8,8,0,0,1,8,8v80H40V64A8,8,0,0,1,48,56ZM208,184H48a8,8,0,0,1-8-8V160H216v16A8,8,0,0,1,208,184Z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 256 256" fill="currentColor"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></symbol>
+  <symbol id="i-x" viewBox="0 0 256 256" fill="currentColor"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></symbol>
+  <symbol id="i-list" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"/></symbol>
+  <symbol id="i-target" viewBox="0 0 256 256" fill="currentColor"><path d="M221.87,83.16A104.1,104.1,0,1,1,195.67,49l22.67-22.68a8,8,0,0,1,11.32,11.32l-96,96a8,8,0,0,1-11.32-11.32l27.72-27.72a40,40,0,1,0,17.87,31.09,8,8,0,1,1,16-.9,56,56,0,1,1-22.38-41.65L184.3,60.39a87.88,87.88,0,1,0,23.13,29.67,8,8,0,0,1,14.44-6.9Z"/></symbol>
+  <symbol id="i-handshake" viewBox="0 0 256 256" fill="currentColor"><path d="M254.3,107.91,228.78,56.85a16,16,0,0,0-21.47-7.15L182.44,62.13,130.05,48.27a8.14,8.14,0,0,0-4.1,0L73.56,62.13,48.69,49.7a16,16,0,0,0-21.47,7.15L1.7,107.9a16,16,0,0,0,7.15,21.47l27,13.51,55.49,39.63a8.06,8.06,0,0,0,2.71,1.25l64,16a8,8,0,0,0,7.6-2.1l55.07-55.08,26.42-13.21a16,16,0,0,0,7.15-21.46Zm-54.89,33.37L165,113.72a8,8,0,0,0-10.68.61C136.51,132.27,116.66,130,104,122L147.24,80h31.81l27.21,54.41ZM41.53,64,62,74.22,36.43,125.27,16,115.06Zm116,119.13L99.42,168.61l-49.2-35.14,28-56L128,64.28l9.8,2.59-45,43.68-.08.09a16,16,0,0,0,2.72,24.81c20.56,13.13,45.37,11,64.91-5L188,152.66Zm62-57.87-25.52-51L214.47,64,240,115.06Zm-87.75,92.67a8,8,0,0,1-7.75,6.06,8.13,8.13,0,0,1-1.95-.24L80.41,213.33a7.89,7.89,0,0,1-2.71-1.25L51.35,193.26a8,8,0,0,1,9.3-13l25.11,17.94L126,208.24A8,8,0,0,1,131.82,217.94Z"/></symbol>
+  <symbol id="i-wallet" viewBox="0 0 256 256" fill="currentColor"><path d="M216,64H56a8,8,0,0,1,0-16H192a8,8,0,0,0,0-16H56A24,24,0,0,0,32,56V184a24,24,0,0,0,24,24H216a16,16,0,0,0,16-16V80A16,16,0,0,0,216,64Zm0,128H56a8,8,0,0,1-8-8V78.63A23.84,23.84,0,0,0,56,80H216Zm-48-60a12,12,0,1,1,12,12A12,12,0,0,1,168,132Z"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 256 256" fill="currentColor"><path d="M243.31,136,144,36.69A15.86,15.86,0,0,0,132.69,32H40a8,8,0,0,0-8,8v92.69A15.86,15.86,0,0,0,36.69,144L136,243.31a16,16,0,0,0,22.63,0l84.68-84.68a16,16,0,0,0,0-22.63Zm-96,96L48,132.69V48h84.69L232,147.31ZM96,84A12,12,0,1,1,84,72,12,12,0,0,1,96,84Z"/></symbol>
+  <symbol id="i-credit-card" viewBox="0 0 256 256" fill="currentColor"><path d="M224,48H32A16,16,0,0,0,16,64V192a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V64A16,16,0,0,0,224,48Zm0,16V88H32V64Zm0,128H32V104H224v88Zm-16-24a8,8,0,0,1-8,8H168a8,8,0,0,1,0-16h32A8,8,0,0,1,208,168Zm-64,0a8,8,0,0,1-8,8H120a8,8,0,0,1,0-16h16A8,8,0,0,1,144,168Z"/></symbol>
+  <symbol id="i-calendar-blank" viewBox="0 0 256 256" fill="currentColor"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z"/></symbol>
+  <symbol id="i-wifi-high" viewBox="0 0 256 256" fill="currentColor"><path d="M140,204a12,12,0,1,1-12-12A12,12,0,0,1,140,204ZM237.08,87A172,172,0,0,0,18.92,87,8,8,0,0,0,29.08,99.37a156,156,0,0,1,197.84,0A8,8,0,0,0,237.08,87ZM205,122.77a124,124,0,0,0-153.94,0A8,8,0,0,0,61,135.31a108,108,0,0,1,134.06,0,8,8,0,0,0,11.24-1.3A8,8,0,0,0,205,122.77Zm-32.26,35.76a76.05,76.05,0,0,0-89.42,0,8,8,0,0,0,9.42,12.94,60,60,0,0,1,70.58,0,8,8,0,1,0,9.42-12.94Z"/></symbol>
+  <symbol id="i-download-simple" viewBox="0 0 256 256" fill="currentColor"><path d="M224,144v64a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V144a8,8,0,0,1,16,0v56H208V144a8,8,0,0,1,16,0Zm-101.66,5.66a8,8,0,0,0,11.32,0l40-40a8,8,0,0,0-11.32-11.32L136,124.69V32a8,8,0,0,0-16,0v92.69L93.66,98.34a8,8,0,0,0-11.32,11.32Z"/></symbol>
+</svg>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="i-zeichen" viewBox="0 0 32 32"><rect width="32" height="32" rx="9" fill="currentColor"/><path d="M8 11h9a4 4 0 0 1 0 8H12" fill="none" stroke="#04140f" stroke-width="3" stroke-linecap="round"/><circle cx="23" cy="21" r="3" fill="#04140f"/></symbol></svg>
+
+<header class="kopf">
+  <div class="wrap kopf__leiste">
+    <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
+      <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg>
+      <span>Markenname</span>
+    </a>
+    <nav class="kopf__nav" id="hauptnav" aria-label="Hauptnavigation" data-menue-ziel>
+      <ul class="kopf__menue">
+        <li><a href="#top">Start</a></li>
+        <li><a href="#funktionen">Leistungen</a></li>
+        <li><a href="#ablauf">Ablauf</a></li>
+        <li><a href="#preise">Preise</a></li>
+        <li><a href="#stimmen">Stimmen</a></li>
+      </ul>
+    </nav>
+    <div class="kopf__rechts"><a class="kopf__login" href="#fuss">Anmelden</a><a class="knopf kopf__knopf" href="#abschluss">Termin buchen</a></div>
+    <button class="kopf__burger" type="button" data-menue aria-expanded="false" aria-controls="hauptnav">
+      <span class="sr-nur">Menü öffnen oder schließen</span>
+      <span class="burger" aria-hidden="true"></span>
+    </button>
+  </div>
+</header>
+
+<main id="inhalt">
+
+  <!-- 1. Held: dunkel, mittig, drei Karten ragen in den hellen Teil -->
+  <section class="held" aria-labelledby="h-held">
+    <div class="held__licht" aria-hidden="true"></div>
+    <div class="wrap held__innen">
+      <p class="kicker" data-zeig>Routine abgeben, Zeit zurückholen</p>
+      <h1 id="h-held" data-zeig>Abläufe automatisieren, ohne eine Zeile Code</h1>
+      <p class="held__text" data-zeig>Wir verbinden deine Programme, bauen die Abläufe dazwischen und übergeben dir ein System, das Wiederholungen selbst erledigt.</p>
+      <p data-zeig><a class="knopf knopf--gross" href="#abschluss">Kostenloses Erstgespräch <svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a></p>
+    </div>
+    <div class="wrap held__karten" data-staffel>
+      <article class="hk hk--ablauf bild bild--a" data-zeig data-platzhalter="Bild: Ablaufdiagramm mit Auslöser und Aktionen" data-beispiel>
+        <div class="knoten knoten--oben" aria-hidden="true"><svg width="26" height="26"><use href="#i-chat-circle"/></svg></div>
+        <p class="hk__zeile" aria-hidden="true">Nachricht eingegangen</p>
+        <div class="knoten-karte" aria-hidden="true"><svg width="26" height="26"><use href="#i-sparkle"/></svg><span><b>Assistent</b>prüft und sortiert</span></div>
+        <div class="knoten-paar" aria-hidden="true"><span><svg width="22" height="22"><use href="#i-graph"/></svg>Modell</span><span><svg width="22" height="22"><use href="#i-package"/></svg>Ablage</span></div>
+      </article>
+      <article class="hk hk--fenster bild bild--b" data-zeig data-platzhalter="Bild: Oberfläche des Ablaufbaukastens" data-beispiel>
+        <div class="fenster" aria-hidden="true">
+          <div class="fenster__leiste"><span></span><span></span><span></span><b>Team Büro / Neuer Ablauf</b></div>
+          <div class="fenster__rumpf">
+            <div class="fenster__seite"><i></i><i></i><i></i><i></i></div>
+            <div class="fenster__feld">
+              <div class="fenster__frage">Was soll automatisch passieren?</div>
+              <div class="fenster__paar"><div><em>Auslöser</em>Wähle das Ereignis</div><div><em>Aktion</em>Wähle die Aufgabe</div></div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <div class="hk-spalte">
+        <article class="hk hk--liste bild bild--b" data-zeig data-platzhalter="Bild: Auswahl von Auslösern" data-beispiel>
+          <div class="pillenreihe" aria-hidden="true"><span>Anfrage prüfen</span><span class="an">Rechnung ablegen</span><span>Termin bestätigen</span></div>
+        </article>
+        <article class="hk hk--text" data-zeig>
+          <h2 class="hk__titel">Auslöser, die mitdenken</h2>
+          <ul class="hk__liste"><li>Über 1.000 anbindbare Programme</li><li>Ziehen, ablegen, fertig</li><li>Aktionen starten von selbst</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Anspruch: ein Satz, darunter das Laufband mit Beispiellogos -->
+  <section class="sektion anspruch" aria-labelledby="h-anspruch">
+    <div class="wrap anspruch__innen">
+      <h2 class="sr-nur" id="h-anspruch">Unser Anspruch</h2>
+      <p class="anspruch__satz" data-zeig>Wir haben einen Baukasten entwickelt, mit dem Teams und Betriebe ihre wiederkehrenden Aufgaben selbst abgeben. Programme verbinden, Abläufe ziehen, Aufgaben erledigen lassen, ohne dass jemand programmiert.</p>
+      <div class="band anspruch__logos" data-beispiel role="group" aria-label="Beispiele für Kunden, Beispiellogos">
+        <div class="band__spur">
+          <span class="beispiellogo logo-nordwerk" role="img" aria-label="Nordwerk (Beispiel)"></span><span class="beispiellogo logo-lichtbau" role="img" aria-label="Lichtbau (Beispiel)"></span><span class="beispiellogo logo-talgrund" role="img" aria-label="Talgrund (Beispiel)"></span><span class="beispiellogo logo-fjordstein" role="img" aria-label="Fjordstein (Beispiel)"></span><span class="beispiellogo logo-kronwerk" role="img" aria-label="Kronwerk (Beispiel)"></span><span class="beispiellogo logo-sonnenfeld" role="img" aria-label="Sonnenfeld (Beispiel)"></span>
+        </div>
+        <div class="band__spur" aria-hidden="true">
+          <span class="beispiellogo logo-nordwerk"></span><span class="beispiellogo logo-lichtbau"></span><span class="beispiellogo logo-talgrund"></span><span class="beispiellogo logo-fjordstein"></span><span class="beispiellogo logo-kronwerk"></span><span class="beispiellogo logo-sonnenfeld"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Funktionen: Raster 7 zu 5 und 5 zu 7 -->
+  <section class="sektion funktionen" id="funktionen" aria-labelledby="h-funktionen">
+    <div class="wrap">
+      <header class="mitte">
+        <p class="kicker kicker--hell" data-zeig>Verbinden, automatisieren, wachsen</p>
+        <h2 id="h-funktionen" data-zeig>Intelligente Abläufe für mühelose Arbeit</h2>
+      </header>
+      <div class="funktionen__raster" data-staffel data-beispiel>
+        <article class="fkarte fkarte--7" data-zeig>
+          <div class="bild bild--c fkarte__bild" data-platzhalter="Bild: mehrstufiger Ablauf"><span class="dekor-knoten" aria-hidden="true"><svg width="30" height="30"><use href="#i-sparkle"/></svg></span></div>
+          <div class="fkarte__text"><h3>Mehrstufige Abläufe</h3><p>Verknüpfe viele Schritte zu einem Ablauf. Aus einer Anfrage wird Angebot, Terminvorschlag und Eintrag im System.</p></div>
+        </article>
+        <article class="fkarte fkarte--5" data-zeig>
+          <div class="bild bild--d fkarte__bild" data-platzhalter="Bild: Benachrichtigungen"><span class="dekor-knoten dekor-knoten--rund" aria-hidden="true"><svg width="30" height="30"><use href="#i-bell"/></svg></span></div>
+          <div class="fkarte__text"><h3>Eigene Hinweise und Warnungen</h3><p>Du erfährst per Mail, Chat oder in der Oberfläche, wenn etwas Aufmerksamkeit braucht.</p></div>
+        </article>
+        <article class="fkarte fkarte--5" data-zeig>
+          <div class="bild bild--e fkarte__bild" data-platzhalter="Bild: Schloss, Sicherheit"><span class="dekor-knoten dekor-knoten--schloss" aria-hidden="true"><svg width="34" height="34"><use href="#i-lock"/></svg></span></div>
+          <div class="fkarte__text"><h3>Sicher und verlässlich</h3><p>Daten bleiben verschlüsselt. Hosting in der EU und ein Vertrag zur Auftragsverarbeitung gehören dazu.</p></div>
+        </article>
+        <article class="fkarte fkarte--7" data-zeig>
+          <div class="bild bild--e fkarte__bild" data-platzhalter="Bild: Oberfläche zum Ziehen und Ablegen"><span class="dekor-leiste" aria-hidden="true"><i></i><i></i><i></i></span></div>
+          <div class="fkarte__text"><h3>Ablaufbauer mit Ziehen und Ablegen</h3><p>Baue Abläufe in einer Oberfläche zum Anfassen. Es braucht keine Programmierung.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Ablauf: Titel bleibt stehen, drei Schritte stapeln sich nach und nach -->
+  <section class="ablauf" id="ablauf" aria-labelledby="h-ablauf">
+    <div class="wrap">
+      <header class="mitte ablauf__kopf">
+        <p class="kicker kicker--hell">In drei Schritten zum Ablauf</p>
+        <h2 id="h-ablauf">So läuft es in drei einfachen Schritten</h2>
+      </header>
+      <ol class="ablauf__liste" data-beispiel>
+        <li class="schritt schritt--1">
+          <div class="schritt__bild bild bild--c" data-platzhalter="Bild: Auslöser wählen" aria-hidden="true"></div>
+          <span class="schritt__zahl" aria-hidden="true">1</span>
+          <h3>Auslöser wählen</h3>
+          <p>Du startest mit einem Ereignis aus einem Programm, das du schon nutzt: eine neue Mail, eine Formularanfrage oder ein hochgeladenes Dokument.</p>
+        </li>
+        <li class="schritt schritt--2">
+          <div class="schritt__bild bild bild--d" data-platzhalter="Bild: Aktionen festlegen" aria-hidden="true"></div>
+          <span class="schritt__zahl" aria-hidden="true">2</span>
+          <h3>Aktionen festlegen</h3>
+          <p>Ziehe Aufgaben in den Ablauf, etwa eine Nachricht senden, eine Tabelle füllen oder eine Schnittstelle anstoßen.</p>
+        </li>
+        <li class="schritt schritt--3">
+          <div class="schritt__bild bild bild--e" data-platzhalter="Bild: Ablauf läuft" aria-hidden="true"></div>
+          <span class="schritt__zahl" aria-hidden="true">3</span>
+          <h3>Laufen lassen</h3>
+          <p>Schalte den Ablauf frei und lehne dich zurück. Du siehst jeden Lauf und kannst jederzeit nachbessern, ohne Programmierung.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 5. Warum wir: dunkel, geneigtes Produktbild, Zitat, vier Vorteile -->
+  <section class="sektion warum" aria-labelledby="h-warum">
+    <div class="warum__licht" aria-hidden="true"></div>
+    <div class="wrap warum__innen">
+      <div class="warum__kopf">
+        <p class="kicker" data-zeig>Gebaut für Tempo und Einfachheit</p>
+        <h2 id="h-warum" data-zeig>Warum du bei uns gut aufgehoben bist</h2>
+        <p data-zeig><a class="knopf" href="#abschluss">Erstgespräch vereinbaren</a></p>
+      </div>
+      <div class="warum__bild bild bild--f" data-platzhalter="Bild: geneigte Produktansicht mit Ablauf und Knotenauswahl" data-parallax="0.06" data-beispiel>
+        <div class="fenster fenster--dunkel" aria-hidden="true">
+          <div class="fenster__leiste"><span></span><span></span><span></span><b>Team Büro / Neuer Ablauf</b></div>
+          <div class="fenster__rumpf"><div class="fenster__seite"><i></i><i></i><i></i><i></i></div><div class="fenster__feld"><div class="knoten-paar knoten-paar--breit"><span><svg width="22" height="22"><use href="#i-chat-circle"/></svg>Nachricht</span><span><svg width="22" height="22"><use href="#i-sparkle"/></svg>Assistent</span><span><svg width="22" height="22"><use href="#i-package"/></svg>Ablage</span></div></div></div>
+        </div>
+      </div>
+      <blockquote class="warum__zitat" data-zeig data-beispiel>
+        <p>Wir haben das so gebaut, dass jede und jeder die Kraft der Automatisierung nutzen kann, auch ohne technisches Vorwissen. Wer Zeit gewinnt, trifft bessere Entscheidungen.</p>
+        <footer><span class="avatar" aria-hidden="true">MM</span><span>Beispielname, Gründung und Geschäftsführung</span></footer>
+      </blockquote>
+      <ul class="warum__vorteile" data-staffel data-beispiel>
+        <li data-zeig><span class="ikone" aria-hidden="true"><svg width="22" height="22"><use href="#i-sparkle"/></svg></span><div><h3>Hilfe, die mitdenkt</h3><p>Schlaue Auslöser und lernfähige Regeln erledigen Wiederkehrendes präzise.</p></div></li>
+        <li data-zeig><span class="ikone" aria-hidden="true"><svg width="22" height="22"><use href="#i-gear"/></svg></span><div><h3>Einfach ohne Code</h3><p>Komplexe Abläufe, bildlich gebaut, ohne Verwirrung.</p></div></li>
+        <li data-zeig><span class="ikone" aria-hidden="true"><svg width="22" height="22"><use href="#i-shield-check"/></svg></span><div><h3>Sicherheit auf Firmenniveau</h3><p>Verschlüsselte Daten, nachvollziehbare Zugriffe, Hosting in Europa.</p></div></li>
+        <li data-zeig><span class="ikone" aria-hidden="true"><svg width="22" height="22"><use href="#i-rocket-launch"/></svg></span><div><h3>Wächst mit dir</h3><p>Vom Einzelbetrieb bis zum Konzern, jede Größe bleibt bedienbar.</p></div></li>
+      </ul>
+      <header class="mitte warum__integr">
+        <p class="kicker" data-zeig>Alles verbinden</p>
+        <h2 data-zeig>Läuft mit über 1.000 Programmen, die du schon nutzt</h2>
+        <p class="warum__lead" data-zeig>Von Büroanwendungen über Kundenverwaltung bis zum Cloudspeicher: Wir binden an, was dein Betrieb schon einsetzt. Ohne Code, ohne Umwege.</p>
+        <p data-zeig><a class="knopf" href="#abschluss">Alle Anbindungen ansehen</a></p>
+      </header>
+    </div>
+    <div class="ikonenband" aria-hidden="true" data-beispiel>
+      <div class="ikonenband__spur"><span><svg width="34" height="34"><use href="#i-lightning"/></svg></span><span class="c2"><svg width="34" height="34"><use href="#i-envelope"/></svg></span><span class="c3"><svg width="34" height="34"><use href="#i-chart-bar"/></svg></span><span class="c4"><svg width="34" height="34"><use href="#i-wallet"/></svg></span><span class="c5"><svg width="34" height="34"><use href="#i-globe"/></svg></span><span class="c6"><svg width="34" height="34"><use href="#i-calendar-blank"/></svg></span><span><svg width="34" height="34"><use href="#i-package"/></svg></span><span class="c2"><svg width="34" height="34"><use href="#i-chat-circle"/></svg></span><span class="c3"><svg width="34" height="34"><use href="#i-credit-card"/></svg></span><span class="c4"><svg width="34" height="34"><use href="#i-tag"/></svg></span></div>
+      <div class="ikonenband__spur"><span><svg width="34" height="34"><use href="#i-lightning"/></svg></span><span class="c2"><svg width="34" height="34"><use href="#i-envelope"/></svg></span><span class="c3"><svg width="34" height="34"><use href="#i-chart-bar"/></svg></span><span class="c4"><svg width="34" height="34"><use href="#i-wallet"/></svg></span><span class="c5"><svg width="34" height="34"><use href="#i-globe"/></svg></span><span class="c6"><svg width="34" height="34"><use href="#i-calendar-blank"/></svg></span><span><svg width="34" height="34"><use href="#i-package"/></svg></span><span class="c2"><svg width="34" height="34"><use href="#i-chat-circle"/></svg></span><span class="c3"><svg width="34" height="34"><use href="#i-credit-card"/></svg></span><span class="c4"><svg width="34" height="34"><use href="#i-tag"/></svg></span></div>
+    </div>
+  </section>
+
+  <!-- 6. Stimmen: Zitat mit Pfeilen, Bildkarte, drei Kennzahlkacheln -->
+  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen">
+    <div class="wrap">
+      <header class="mitte">
+        <p class="kicker kicker--hell" data-zeig>Beliebt bei Teams</p>
+        <h2 id="h-stimmen" data-zeig>Das sagen unsere Kundinnen und Kunden</h2>
+      </header>
+      <div class="stimmen__raster" data-staffel data-beispiel>
+        <div class="zitatkarte" data-zeig data-zitate>
+          <div class="zitatkarte__fenster" aria-live="polite">
+            <figure class="zitat" data-zitat>
+              <blockquote><p>Die Einrichtung dauerte Minuten, die Vorschläge trafen genau. Ich habe Stunden an Handarbeit gegen ein paar Handgriffe getauscht. Automatisieren ist einfach geworden.</p></blockquote>
+              <figcaption><span class="avatar avatar--hell" aria-hidden="true">BM</span><span><b>Beispielname Eins</b>Leitung Büro und Organisation</span></figcaption>
+            </figure>
+            <figure class="zitat" data-zitat>
+              <blockquote><p>Seit der Umstellung landen Rechnungen von selbst am richtigen Ort. Niemand sucht mehr Anhänge in alten Mails.</p></blockquote>
+              <figcaption><span class="avatar avatar--hell" aria-hidden="true">BZ</span><span><b>Beispielname Zwei</b>Buchhaltung, Handwerksbetrieb</span></figcaption>
+            </figure>
+            <figure class="zitat" data-zitat>
+              <blockquote><p>Der erste Ablauf stand am selben Nachmittag. Danach haben wir ihn selbst erweitert, ohne Hilfe von außen.</p></blockquote>
+              <figcaption><span class="avatar avatar--hell" aria-hidden="true">BD</span><span><b>Beispielname Drei</b>Geschäftsführung, Dienstleister</span></figcaption>
+            </figure>
+          </div>
+          <div class="pfeile" data-pfeile>
+            <button type="button" data-zurueck aria-label="Vorherige Stimme"><svg width="20" height="20" aria-hidden="true"><use href="#i-arrow-left"/></svg></button>
+            <button type="button" data-weiter aria-label="Nächste Stimme"><svg width="20" height="20" aria-hidden="true"><use href="#i-arrow-right"/></svg></button>
+          </div>
+        </div>
+        <article class="bildkarte bild bild--g" data-zeig data-platzhalter="Bild: Kundin am Arbeitsplatz">
+          <p class="bildkarte__name"><b>Beispielname</b>, Projektleitung</p>
+        </article>
+        <article class="kachel kachel--blau" data-zeig><p class="kachel__zahl"><span data-zaehle="25">25</span> Tsd.+</p><p>Abläufe in Betrieb</p></article>
+        <article class="kachel kachel--dunkel" data-zeig><h3>Vertraut von <span class="zahlwort">56 Tsd.</span> Nutzern</h3><div class="avatare" aria-hidden="true"><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span></div><p><a class="textlink" href="#abschluss">Mehr über uns <svg width="18" height="18" aria-hidden="true"><use href="#i-arrow-right"/></svg></a></p></article>
+        <article class="kachel kachel--warm" data-zeig><p class="kachel__zahl"><span data-zaehle="50">50</span>+</p><p>Länder mit Nutzern</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Preise: links Überschrift und Basis, rechts dunkle Hauptkarte mit Jahresschalter -->
+  <section class="sektion preise" id="preise" aria-labelledby="h-preise">
+    <div class="wrap preise__raster">
+      <div class="preise__links">
+        <p class="kicker kicker--hell" data-zeig>Einfach und klar</p>
+        <h2 id="h-preise" data-zeig>Finde den passenden Tarif</h2>
+        <article class="tarif tarif--hell" data-zeig data-beispiel>
+          <h3>Basis</h3>
+          <p class="tarif__lead">Für Einzelpersonen und kleine Aufgaben.</p>
+          <p class="tarif__merkmale-titel">Enthalten:</p>
+          <ul class="tarif__liste"><li>Bis zu 5 Abläufe</li><li>1.000 Aufgaben im Monat</li><li>Grundlegende Anbindungen</li><li>Ablaufbauer mit Ziehen und Ablegen</li><li>Hilfe über die Gemeinschaft</li></ul>
+          <div class="tarif__fuss"><p class="tarif__preis"><span class="zahl">0 €</span><span>/Monat</span></p><a class="knopf" href="#abschluss">Loslegen</a></div>
+        </article>
+      </div>
+      <article class="tarif tarif--dunkel" data-zeig data-beispiel data-preise>
+        <div class="tarif__kopf">
+          <div><h3>Profi</h3><p class="tarif__lead">Für wachsende Betriebe und Vielnutzer.</p></div>
+          <label class="schalter"><input type="checkbox" role="switch" data-jahr><span class="schalter__spur" aria-hidden="true"></span><span>Jährlich</span><span class="schalter__rabatt">20 % Rabatt</span></label>
+        </div>
+        <div class="tarif__fuss tarif__fuss--oben"><p class="tarif__preis"><span class="zahl" data-preis data-monat="45" data-jahr-wert="36">45 €</span><span>/Monat</span></p><a class="knopf knopf--hell" href="#abschluss">Mit Profi starten</a></div>
+        <div class="tarif__box"><p class="tarif__merkmale-titel">Enthalten:</p>
+          <ul class="tarif__liste"><li>Unbegrenzte Abläufe</li><li>10.000 Aufgaben im Monat</li><li>Hochwertige Anbindungen</li><li>Bevorzugte Hilfe und Einrichtung</li><li>Rollen und feine Berechtigungen</li><li>Vereinbarte Reaktionszeiten, eigene Anbindungen</li></ul></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 8. Daten: Bild links, Text rechts -->
+  <section class="sektion daten" aria-labelledby="h-daten">
+    <div class="wrap daten__raster">
+      <div class="daten__bild bild bild--i" data-zeig="links" data-platzhalter="Bild: Tabelle mit Ergebnissen der Abläufe" data-beispiel>
+        <div class="fenster fenster--tabelle">
+          <div class="fenster__leiste" aria-hidden="true"><span></span><span></span><span></span><b>Hauptübersicht</b></div>
+          <div class="tabellenfeld">
+            <table>
+              <caption class="sr-nur">Beispieltabelle mit Ergebnissen</caption>
+              <thead><tr><th scope="col">Vorname</th><th scope="col">Name</th><th scope="col">Datum</th><th scope="col">Status</th></tr></thead>
+              <tbody>
+                <tr><td>Anna</td><td>Muster</td><td>12.03.</td><td><span class="status">Eingetragen</span></td></tr>
+                <tr><td>Ben</td><td>Beispiel</td><td>09.03.</td><td><span class="status">Eingetragen</span></td></tr>
+                <tr><td>Clara</td><td>Probe</td><td>02.03.</td><td><span class="status">Eingetragen</span></td></tr>
+                <tr><td>David</td><td>Vorlage</td><td>27.02.</td><td><span class="status">Eingetragen</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="daten__text" data-zeig="rechts">
+        <p class="kicker kicker--hell">Daten ordnen</p>
+        <h2 id="h-daten">Ergebnisse der Abläufe in klugen Tabellen speichern</h2>
+        <p class="daten__lead">Jeder Lauf legt seine Daten automatisch in einer durchsuchbaren Tabelle ab. Keine verstreuten Dateien mehr, nur klare, geordnete Einsichten.</p>
+        <ul class="daten__liste" data-beispiel>
+          <li><span class="ikone ikone--hell" aria-hidden="true"><svg width="20" height="20"><use href="#i-list"/></svg></span>Tabellen mit Suche</li>
+          <li><span class="ikone ikone--hell" aria-hidden="true"><svg width="20" height="20"><use href="#i-clock"/></svg></span>Aktuelle Werte</li>
+          <li><span class="ikone ikone--hell" aria-hidden="true"><svg width="20" height="20"><use href="#i-download-simple"/></svg></span>Export und Abgleich</li>
+          <li><span class="ikone ikone--hell" aria-hidden="true"><svg width="20" height="20"><use href="#i-gear"/></svg></span>Automatisch speichern</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Abschluss: dunkle Karte, ragt in den Fuß -->
+  <section class="abschluss" id="abschluss" aria-labelledby="h-abschluss">
+    <div class="wrap">
+      <div class="abschluss__karte" data-zeig>
+        <div class="abschluss__text">
+          <h2 id="h-abschluss">Hol dir die Kraft der Automatisierung ohne Code</h2>
+          <ul class="abschluss__haken"><li><svg width="20" height="20" aria-hidden="true"><use href="#i-check-circle"/></svg>Abläufe schnell bauen</li><li><svg width="20" height="20" aria-hidden="true"><use href="#i-check-circle"/></svg>Programme einfach verbinden</li><li><svg width="20" height="20" aria-hidden="true"><use href="#i-check-circle"/></svg>Die Technik arbeiten lassen</li></ul>
+        </div>
+        <form class="mailzeile" data-formular action="#" method="post" novalidate>
+          <label class="sr-nur" for="f-mail">Mail</label>
+          <input id="f-mail" name="email" type="email" autocomplete="email" placeholder="du@beispiel.invalid" required>
+          <button class="knopf" type="submit">Jetzt starten</button>
+          <p class="formular__meldung" data-formular-meldung role="status" hidden>Beispielformular: In dieser Vorlage wird nichts gesendet. Der Versand wird im Projekt angebunden.</p>
+          <p class="mailzeile__tel">Oder ruf an: <a href="tel:+490000000000" data-beispiel>0000 000 000</a></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="fuss" id="fuss">
+  <div class="wrap fuss__innen">
+    <div class="fuss__marke">
+      <a class="kopf__logo" href="#top" aria-label="Markenname, nach oben">
+        <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg>
+        <span>Markenname</span>
+      </a>
+      <p>Wir bauen Abläufe, die Routinearbeit erledigen, damit du Zeit für das hast, was nur Menschen können.</p>
+      <p class="fuss__klein">© Jahr Markenname. Alle Rechte vorbehalten.</p>
+    </div>
+    <nav class="fuss__spalten" aria-label="Fußnavigation">
+      <div><p class="fuss__titel">Seiten</p><ul><li><a href="#top">Start</a></li><li><a href="#funktionen">Leistungen</a></li><li><a href="#ablauf">Ablauf</a></li><li><a href="#preise">Preise</a></li><li><a href="#stimmen">Stimmen</a></li><li><a href="#abschluss">Kontakt</a></li></ul></div>
+      <div><p class="fuss__titel">Rechtliches</p><ul><li><a href="#fuss">Impressum</a></li><li><a href="#fuss">Datenschutz</a></li><li><a href="#fuss">Allgemeine Bedingungen</a></li></ul></div>
+      <div><p class="fuss__titel">Folgen</p><ul><li><a href="#fuss">Netzwerk A (Beispiel)</a></li><li><a href="#fuss">Netzwerk B (Beispiel)</a></li><li><a href="#fuss">Netzwerk C (Beispiel)</a></li></ul></div>
+    </nav>
+  </div>
+  <p class="fuss__wort" aria-hidden="true">Markenname</p>
+</footer>
+
+<script src="../_basis/bewegung.js"></script>
+<script src="stil.js"></script>
+</body>
+</html>

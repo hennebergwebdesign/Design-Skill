@@ -1,0 +1,41 @@
+/* marke.css der Vorlage "Finanz App, drei Varianten": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Alle drei Varianten (index.html, v2.html, v3.html) lesen diese eine Datei.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#eef1ef;
+  --flaeche-alt:#e3e8e5;
+  --flaeche-karte:#ffffff;
+  --flaeche-dunkel:#06100d;
+  --text:#0b1411;
+  --text-leise:#4f5d58;
+  --linie:#d5ddd9;
+  --akzent:#27d3a2;           /* Glanzpunkt: auf Dunkel Text, Zeichen und Fläche; auf Hell nur Fläche mit dunklem Text */
+  --akzent-text:#04130e;
+  --schrift-titel:'Schibsted Grotesk',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:22px;
+  --radius-bild:22px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:32px;
+  --titel-gewicht:500;
+  --titel-spur:-0.035em;
+  --knopf:#0b1411;            /* Hauptknopf auf Hell: dunkle Fläche */
+  --knopf-text:#ffffff;
+  --akzent-tief:#0b7a5e;      /* Akzent auf Hell: Text und Linie (4,7 zu 1 auf --flaeche) */
+  --akzent-2:#c9e64a;         /* zweite Signalfläche (Limette), nur Fläche mit dunklem Text */
+  --signal:#f26a4f;           /* dritte Signalfläche (Koralle), nur Fläche mit dunklem Text */
+  --flaeche-dunkel-2:#101b17; /* Karten auf Dunkel */
+  --flaeche-dunkel-3:#17251f;
+  --text-auf-dunkel:#f4f8f6;
+  --text-leise-dunkel:#aebbb6;
+  --linie-dunkel:#24332d;
+  /* Töne für Bildplatzhalter und die Bankkarte (später durch Fotos und echte Kartenmotive ersetzen) */
+  --ton-1:#0f5f66;
+  --ton-2:#1b4f9c;
+  --ton-3:#1c7c68;
+  --ton-4:#2a3a34;
+  --ton-5:#3d6f78;
+  --ton-6:#0a1a16;
+}

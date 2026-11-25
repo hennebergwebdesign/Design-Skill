@@ -1,0 +1,35 @@
+/* marke.css der Vorlage "Kanzlei Kartenraster": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#f6f3f2;
+  --flaeche-alt:#ece6e3;
+  --flaeche-dunkel:#2a1c19;
+  --text:#1f1a19;
+  --text-leise:#5a504d;
+  --linie:#ddd4d0;
+  --akzent:#a9532f;           /* Hauptaktion: Fläche mit weißem Text, Rahmen und Linien */
+  --akzent-text:#ffffff;
+  --schrift-titel:'Hanken Grotesk',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:12px;
+  --radius-karte:14px;
+  --radius-bild:14px;
+
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:350;
+  --titel-spur:-0.02em;
+  --akzent-hell:#e8946f;      /* Akzent als Text und Linie auf Dunkel (7,2 zu 1 auf --flaeche-dunkel) */
+  --knopf-dunkel:#23201f;     /* Hauptknopf der hellen Flächen */
+  --flaeche-dunkel-2:#382724; /* Karten und Zeilen auf Dunkel */
+  --text-auf-dunkel:#f6f3f2;
+  --text-leise-dunkel:#c9bdb8;
+  --linie-dunkel:#4a3835;
+  --fuss-unten:#1d1b1c;       /* Ende des Fußverlaufs */
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#5a3b30;
+  --ton-2:#2f3a42;
+  --ton-3:#7a5846;
+  --ton-4:#3b3a33;
+  --ton-5:#44524c;
+  --ton-6:#1d1514;
+}

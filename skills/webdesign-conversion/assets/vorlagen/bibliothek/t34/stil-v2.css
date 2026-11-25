@@ -1,0 +1,84 @@
+/* stil-v2.css der Vorlage "Bistro mit Bogenbildern", Variante 2 "Doppelbogen hell": heller Held mit zwei gekippten Bogenbildern,
+   Karte als Liste, gerahmte Feier, versetzte Termine und Beiträge. Lädt nach stil.css. */
+
+/* Held: zwei Bögen, die sich unten treffen */
+.held2{padding:clamp(1.5rem,4vw,3.5rem) 0 var(--raum);text-align:center;overflow:hidden}
+.held2__bilder{position:relative;width:min(100% - 2*var(--rand) - 1.5rem,56rem);height:clamp(15rem,40vw,32rem);margin:0 auto clamp(3rem,7vw,6rem)}
+.held2__bilder .bild{position:absolute;bottom:0;width:49%;height:100%}
+.held2__bilder .bild:nth-child(1){left:0;rotate:-9deg;transform-origin:100% 100%}
+.held2__bilder .bild:nth-child(2){right:0;rotate:9deg;transform-origin:0 100%}
+.held2 h1{font-weight:300;text-transform:uppercase;font-size:clamp(2.4rem,1rem + 7.4vw,8rem);line-height:.95;letter-spacing:-.01em;max-width:16ch;margin:0 auto clamp(1.25rem,2.5vw,2rem)}
+
+/* Über uns: Bild, Text und Kennzahlen */
+.ueber2{padding-block:var(--raum)}
+.ueber2__raster{display:grid;gap:2.5rem;align-items:center}
+.ueber2__bild{aspect-ratio:4/4.6}
+.ueber2 h2{margin-bottom:1.25rem}
+.ueber2 p{color:var(--text-leise-dunkel);margin-bottom:1.5rem;max-width:36rem}
+.zahlen{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2rem 0 0;padding-top:1.75rem;border-top:1px solid var(--linie-dunkel-2)}
+.zahlen dt{order:2;font-size:1rem;color:var(--text-leise-dunkel)}
+.zahlen div{display:flex;flex-direction:column}
+.zahlen dd{margin:0;font-family:var(--schrift-titel);font-size:clamp(2.1rem,1.2rem + 2.6vw,3.5rem);line-height:1.05;color:var(--akzent)}
+@media (min-width:62rem){.ueber2__raster{grid-template-columns:.9fr 1.1fr;gap:4rem}}
+
+/* Karte als Liste */
+.karte2{padding-block:var(--raum)}
+.liste2{display:grid;gap:1.5rem 3.5rem;margin-top:2.5rem}
+.posten{display:grid;grid-template-columns:5.5rem 1fr;gap:1.1rem;align-items:start}
+.posten .bild{aspect-ratio:1/1;border-radius:16px}
+.posten .bild[data-platzhalter]::after{display:none}
+.posten__kopf{display:flex;justify-content:space-between;gap:1rem;align-items:baseline}
+.posten h3{font-size:1.25rem}
+.posten__preis{font-weight:700;white-space:nowrap}
+.posten p{margin-top:.25rem;color:var(--text-leise)}
+@media (min-width:48rem){.liste2{grid-template-columns:repeat(2,1fr)}}
+
+/* Feier: Rahmen mit Doppellinie, Großtitel, Bogenbild zwischen zwei Spalten */
+.feier{position:relative;padding-block:var(--raum)}
+.feier::before{content:"";position:absolute;inset:clamp(.5rem,1.5vw,1.25rem);border:3px double color-mix(in srgb,var(--akzent) 55%,transparent);pointer-events:none}
+.feier .wrap{position:relative}
+.feier h2{font-weight:300;text-transform:uppercase;font-size:clamp(1.6rem,.4rem + 6.2vw,6.5rem);line-height:1;color:var(--text-leise-dunkel);max-width:14ch;margin-inline:auto}
+.feier__raster{display:grid;gap:2rem;margin-top:3rem;justify-items:center;align-items:end}
+.feier__bild{width:min(100%,19rem);aspect-ratio:3/3.5}
+.feier__spalte{display:grid;gap:.6rem}
+.feier__spalte h3{font-size:1.25rem}
+.feier__spalte p{color:var(--text-leise-dunkel)}
+.feier__spalte a{text-decoration:underline;text-underline-offset:.2em}
+.feier__knopf{margin-top:2.5rem}
+@media (min-width:48rem){.feier__raster{grid-template-columns:1fr auto 1fr}.feier__spalte{padding-bottom:2rem}}
+
+/* Termine */
+.veranstaltungen{padding-block:var(--raum)}
+.veranstaltungen__text{max-width:36rem;margin:1rem auto 0;color:var(--text-leise)}
+.termine{display:grid;gap:2rem 1.25rem;margin-top:3rem}
+.termin{display:grid;gap:.75rem;justify-items:center}
+.termin .bild{width:100%;aspect-ratio:1/1.1;border-radius:28px}
+.termin:nth-child(even) .bild{aspect-ratio:1/.9}
+.termin p{color:var(--text-leise)}
+@media (min-width:36rem){.termine{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:62rem){.termine{grid-template-columns:repeat(4,1fr);align-items:start}.termin:nth-child(even){margin-top:2.5rem}}
+.partner{margin-top:clamp(3rem,6vw,5rem);padding-top:2rem;border-top:3px double var(--linie)}
+.partner>p{font-weight:600;margin-bottom:1.5rem}
+.partner .band{color:var(--text-leise);--band-abstand:3.5rem}
+
+/* Neuigkeiten: Text links, versetzte Karten rechts */
+.news2{padding-block:var(--raum)}
+.news2__raster{display:grid;gap:2.5rem}
+.news2__text p{margin:1.25rem 0 1.5rem;color:var(--text-leise-dunkel);max-width:26rem}
+.beitraege{display:grid;gap:1.25rem}
+.beitrag{display:grid;gap:1rem;align-content:start;padding:1.25rem;border-radius:var(--radius-karte);background:var(--flaeche);color:var(--text)}
+.beitrag :focus-visible{outline-color:var(--akzent-tief)}
+.beitrag__tag{justify-self:start;padding:.2rem .8rem;border-radius:999px;box-shadow:inset 0 0 0 1px currentColor;font-size:1rem}
+.beitrag__kopf{display:flex;justify-content:space-between;gap:1rem;align-items:flex-start}
+.beitrag h3{font-size:1.25rem}
+.beitrag .bild{aspect-ratio:1/1.05}
+@media (min-width:36rem){.beitraege{grid-template-columns:repeat(2,1fr)}.beitrag:nth-child(even){margin-top:2.5rem}}
+@media (min-width:62rem){.news2__raster{grid-template-columns:.7fr 1.3fr;gap:3rem}}
+
+/* Bilderreihe */
+.insta{padding-block:var(--raum)}
+.insta h2{margin-bottom:2rem}
+.insta__raster{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;padding-inline:var(--rand)}
+.insta__raster .bild{aspect-ratio:1/1;border-radius:12px}
+.insta__raster .bild[data-platzhalter]::after{display:none}
+@media (min-width:48rem){.insta__raster{grid-template-columns:repeat(6,1fr);gap:.75rem}.insta__raster li:nth-child(even){margin-top:1.5rem}}

@@ -1,0 +1,33 @@
+/* marke.css der Vorlage "Kanzlei klar": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#f6f5f1;
+  --flaeche-alt:#e5ecf0;
+  --flaeche-dunkel:#12263a;
+  --text:#101a25;
+  --text-leise:#4a5661;
+  --linie:#d6dbde;
+  --akzent:#e2b866;           /* Hauptaktion: Fläche mit dunklem Text, auf Dunkel auch als Text und Zeichen */
+  --akzent-text:#18120a;
+  --schrift-titel:'Schibsted Grotesk',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:2px;
+  --radius-karte:2px;
+  --radius-bild:0;
+
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:400;
+  --titel-spur:-0.025em;
+  --akzent-tief:#7d5a10;      /* Akzent auf Hell: Text und Fokusring */
+  --flaeche-dunkel-2:#19324a; /* Karten und Felder auf Dunkel */
+  --text-auf-dunkel:#f4f1ea;
+  --text-leise-dunkel:#b4c0cb;
+  --linie-dunkel:#2c4660;
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#3a4a5c;
+  --ton-2:#1a2b3d;
+  --ton-3:#6b5d49;
+  --ton-4:#2a3a4a;
+  --ton-5:#53606d;
+  --ton-6:#0f1c2a;
+}

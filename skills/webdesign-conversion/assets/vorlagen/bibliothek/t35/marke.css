@@ -1,0 +1,33 @@
+/* marke.css der Vorlage "Restaurant ruhig und eckig": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#fbf6ec;
+  --flaeche-alt:#f3e9d8;
+  --flaeche-dunkel:#2b1a14;     /* Kakao: Held, Galerie, Fuß */
+  --text:#2a1c16;
+  --text-leise:#5d4d44;
+  --linie:#e3d4bc;
+  --akzent:#b8431f;             /* Hauptaktion: Terrakotta mit weißem Text, auf Hell auch Text (5 zu 1) */
+  --akzent-text:#ffffff;
+  --schrift-titel:'Outfit',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:0;
+  --radius-karte:0;
+  --radius-bild:0;
+
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:400;
+  --titel-spur:-0.02em;
+  --akzent-hell:#f2a37a;        /* Akzent auf Dunkel: Text, Punkte, Sterne */
+  --text-auf-dunkel:#fbf6ec;
+  --text-leise-dunkel:#d9c9bb;
+  --linie-dunkel:#5a3d31;
+  --flaeche-karte:#fffaf1;      /* Karten auf Hell */
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#8c5a38;
+  --ton-2:#4a5a42;
+  --ton-3:#b98a4e;
+  --ton-4:#5a3a2c;
+  --ton-5:#7a8a68;
+  --ton-6:#2b1a14;
+}

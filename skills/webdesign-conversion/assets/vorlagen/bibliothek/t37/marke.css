@@ -1,0 +1,33 @@
+/* marke.css der Vorlage "Akademie mit Kursen": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#ffffff;
+  --flaeche-alt:#f4f0ea;
+  --flaeche-dunkel:#1d3530;
+  --text:#1b1f1d;
+  --text-leise:#5a625e;
+  --linie:#e3ddd3;
+  --akzent:#b8431f;            /* Hauptaktion: Fläche mit weißem Text, auf Hell auch Text und Linie (5,4 zu 1 auf Weiß) */
+  --akzent-text:#ffffff;
+  --schrift-titel:'Newsreader',Georgia,serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:12px;
+  --radius-karte:24px;
+  --radius-bild:20px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:28px;
+  --titel-gewicht:400;
+  --titel-spur:-0.02em;
+  --akzent-hell:#f2a889;       /* Akzent auf Dunkel: Sterne und Punkte */
+  --text-auf-dunkel:#f7f4ee;
+  --text-leise-dunkel:#c3d0cb;
+  --linie-dunkel:#35504a;
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#7a5a44;
+  --ton-2:#3f5a52;
+  --ton-3:#a07a5e;
+  --ton-4:#c9a98f;
+  --ton-5:#566f67;
+  --ton-6:#2a2623;
+}

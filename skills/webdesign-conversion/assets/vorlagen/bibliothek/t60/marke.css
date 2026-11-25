@@ -1,0 +1,35 @@
+/* marke.css der Vorlage "Praxis Terminfokus": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#ffffff;
+  --flaeche-alt:#eef5f3;
+  --flaeche-dunkel:#0d3836;
+  --text:#13211f;
+  --text-leise:#4a5956;
+  --linie:#d6e3e0;
+  --akzent:#0e6b66;           /* Hauptaktion: Fläche mit weißem Text */
+  --akzent-text:#ffffff;
+  --schrift-titel:'Schibsted Grotesk',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:22px;
+  --radius-bild:22px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:36px;
+  --titel-gewicht:450;
+  --titel-spur:-0.035em;
+  --signal:#f4cf57;           /* Signalfarbe für Punkte, Symbolscheiben und die Kapsel im Kopf, immer mit dunklem Text */
+  --signal-text:#2a2205;
+  --akzent-hell:#d3ebe7;      /* helle Tönung des Akzents für Ringe und Hover */
+  --text-auf-dunkel:#f3f8f7;
+  --text-leise-dunkel:#b9cdc9;
+  --linie-dunkel:#245450;
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#8fb8b1;
+  --ton-2:#5f9a93;
+  --ton-3:#d9c9a3;
+  --ton-4:#a9c7c1;
+  --ton-5:#7aa8b6;
+  --ton-6:#c3d9d4;
+}

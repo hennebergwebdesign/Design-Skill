@@ -1,0 +1,36 @@
+/* marke.css der Vorlage "Automatisierung dunkel": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#ffffff;
+  --flaeche-alt:#f3f4f7;
+  --flaeche-dunkel:#0a0c10;
+  --text:#10131a;
+  --text-leise:#4b5262;
+  --linie:#e1e4ea;
+  --akzent:#3be0b0;           /* Hauptaktion: Fläche mit dunklem Text, auf Dunkel auch Text und Punkt */
+  --akzent-text:#04140f;
+  --schrift-titel:'Schibsted Grotesk',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:22px;
+  --radius-bild:22px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:30px;
+  --titel-gewicht:600;
+  --titel-spur:-0.035em;
+  --akzent-tief:#0a6a50;      /* Akzent auf Hell: Text und Linie (6,3 zu 1 auf --flaeche) */
+  --flaeche-dunkel-2:#12161d; /* Karten auf Dunkel */
+  --flaeche-dunkel-3:#1a202a;
+  --text-auf-dunkel:#f3f5f8;
+  --text-leise-dunkel:#aeb6c4;
+  --linie-dunkel:#262d39;
+  /* Platzhalter-Töne für Bildflächen (später durch Bilder ersetzen) */
+  --ton-1:#0e5560;
+  --ton-2:#1d3c73;
+  --ton-3:#b4532a;
+  --ton-4:#1c2431;
+  --ton-5:#2a7d6d;
+  --ton-6:#0a0c10;
+  --ton-7:#f0b27a;
+}

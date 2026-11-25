@@ -1,0 +1,78 @@
+/* stil-v2.css der Vorlage "Kanzlei Messing und Nachtblau", Variante 2 "Held mit Bildrahmen" (v2.html):
+   Mittiges Logo mit Menü als Panel, dunkler Held mit gerahmtem Bild und Laufband darunter, versetzte Kartenspalten, Team mit Namen im Bild, Warum wir, Fälle. Nach stil.css geladen. */
+.kopf__leiste{display:grid;grid-template-columns:1fr auto 1fr}
+.kopf__burger{display:inline-flex;justify-self:start}
+.kopf__logo{justify-self:center;margin-right:0;font-size:1.375rem}
+.kopf__rechts{justify-self:end}
+.kopf__knopf{display:none}
+.kopf__nav{grid-column:1 / -1}
+@media (min-width:30rem){.kopf__knopf{display:inline-flex}.kopf__telknopf{display:none}.kopf__logo{font-size:1.5rem}}
+@media (min-width:62rem){.kopf__telknopf{display:grid}.js .kopf__menue{flex-direction:row;flex-wrap:wrap;justify-content:center;gap:0 1.5rem}}
+.kopf__nav{padding:0}
+
+/* 1. Held */
+.held{position:relative;color:var(--text-auf-dunkel);background-color:var(--flaeche-dunkel);background-image:repeating-linear-gradient(45deg,transparent 0 44px,color-mix(in srgb,var(--text-auf-dunkel) 5%,transparent) 44px 45px),repeating-linear-gradient(-45deg,transparent 0 44px,color-mix(in srgb,var(--text-auf-dunkel) 5%,transparent) 44px 45px);overflow:hidden}
+.held__innen{display:grid;gap:3rem;align-items:center;padding-block:7.5rem 4rem}
+.held__text{display:grid;gap:1.25rem;justify-items:start}
+.held h1{font-size:clamp(2.5rem,1.2rem + 5.2vw,5rem);line-height:1.04;max-width:12ch}
+.held__text>p:not(.kicker){max-width:32rem;font-size:var(--text-l);color:var(--text-leise-dunkel)}
+.held__knoepfe{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.5rem;margin-top:.5rem}
+.held .rahmen{width:min(100%,26rem);justify-self:center}
+.held .rahmen__bild{aspect-ratio:4/5}
+@media (min-width:62rem){
+  .held__innen{grid-template-columns:1.1fr 1fr;padding-block:9rem 6rem}
+  .held .rahmen{justify-self:end;margin-right:1.5rem}
+}
+
+/* 2. Über uns: versetzte Spalten */
+.ueber{overflow-x:clip}
+.mitte__text{max-width:36rem;margin-inline:auto;color:var(--text-leise);font-size:var(--text-l)}
+.mitte{display:grid;gap:1.25rem;justify-items:center}
+header.mitte h2{max-width:18ch}
+.mosaik{display:grid;gap:1rem;margin-block:clamp(2.5rem,6vw,4rem) 0}
+.mosaik__spalte{display:grid;gap:1rem;align-content:start}
+.mosaik__bild{aspect-ratio:4/3;border-radius:var(--radius-karte)}
+.karte{padding:1.5rem;border-radius:var(--radius-karte)}
+.karte h3{font-size:clamp(1.375rem,1.1rem + 1vw,1.75rem)}
+.karte p{margin-top:.6rem}
+.karte--messing{background:var(--akzent);color:var(--akzent-text)}
+.karte--grau{background:var(--flaeche-alt);color:var(--text)}
+.karte--bild{position:relative;display:flex;align-items:flex-end;min-height:24rem;color:var(--text-auf-dunkel)}
+.karte--bild::before{content:"";position:absolute;inset:0;z-index:1;border-radius:inherit;background:linear-gradient(0deg,color-mix(in srgb,var(--flaeche-dunkel) 94%,transparent),color-mix(in srgb,var(--flaeche-dunkel) 15%,transparent) 75%)}
+.karte--bild>div{position:relative;z-index:2}
+.ueber p.mitte{margin-top:2.5rem;display:block;text-align:center}
+@media (min-width:48rem){
+  .mosaik{grid-template-columns:repeat(3,1fr);align-items:stretch}
+  .mosaik__spalte--mitte{margin-top:3rem}
+  .mosaik__spalte--mitte .karte--bild{min-height:32rem;height:100%}
+  .mosaik__spalte:not(.mosaik__spalte--mitte):last-child{margin-top:1.5rem}
+}
+
+/* 4. Team: Name im Bild */
+.team__raster{display:grid;gap:1rem}
+.team__karte{position:relative;display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;aspect-ratio:3/4;padding:1.25rem;border-radius:var(--radius-karte);overflow:hidden;color:#fff}
+.team__foto{position:absolute;inset:0;border-radius:0}
+.team__karte::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,color-mix(in srgb,var(--flaeche-dunkel) 92%,transparent),transparent 55%)}
+.team__name,.team__karte .rund{position:relative;z-index:2}
+.team__name h3{font-size:clamp(1.5rem,1.2rem + 1vw,2rem)}
+.team__karte .rund:hover{transform:translate(2px,-2px)}
+@media (min-width:48rem){.team__raster{grid-template-columns:repeat(3,1fr)}}
+
+/* 5. Warum wir */
+.warum__paar{display:grid;gap:3rem;align-items:center;margin-top:clamp(2.5rem,6vw,4rem)}
+.warum .rahmen{width:min(100%,28rem)}
+.warum__liste{display:grid;gap:.75rem}
+.warum__liste li{display:flex;gap:1.25rem;align-items:flex-start;padding:1.5rem;border-radius:var(--radius-karte);background:#fff;box-shadow:inset 0 0 0 1px var(--linie)}
+.warum__liste h3{font-size:clamp(1.375rem,1.1rem + 1vw,1.75rem)}
+.warum__liste p{margin-top:.5rem;color:var(--text-leise)}
+.punkte__zeichen{display:grid;place-items:center;flex:none;width:3.25rem;height:3.25rem;border-radius:50%;background:var(--flaeche-alt);color:var(--akzent-tief)}
+@media (min-width:62rem){.warum__paar{grid-template-columns:1fr 1.2fr;gap:5rem}}
+
+/* 6. Fälle: helle Titelkarte überlappt das Bild */
+.faelle{background:#fff}
+.faelle__raster{display:grid;gap:2.5rem}
+.faelle__bild{aspect-ratio:4/3;border-radius:var(--radius-karte)}
+.faelle__karte{position:relative;z-index:2;width:calc(100% - 2rem);margin:-4rem 0 0 auto;padding:1.5rem;border-radius:var(--radius-karte);background:var(--flaeche);box-shadow:0 14px 30px color-mix(in srgb,var(--flaeche-dunkel) 14%,transparent)}
+.faelle__karte h3{font-size:clamp(1.375rem,1.1rem + 1vw,1.875rem);margin-bottom:.75rem}
+.faelle__hinweis{margin-top:2.5rem;color:var(--text-leise);max-width:40rem}
+@media (min-width:48rem){.faelle__raster{grid-template-columns:repeat(2,1fr);gap:1.5rem}}

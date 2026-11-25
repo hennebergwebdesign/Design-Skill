@@ -1,0 +1,339 @@
+/* stil.css der Vorlage "Praxis Terminfokus": Gestaltung. Farben nur aus den Tokens in marke.css, Mechanik aus ../_basis/basis.css.
+   Mobil zuerst. Hell durchgehend, helle Tönung für Unterschied und Termine, dunkles Petrol nur für den Terminabschnitt.
+   Bei reduzierter Bewegung und ohne JavaScript bleibt alles sichtbar. */
+:root{--h2-m:clamp(2rem,1.3rem + 3vw,3.5rem);--kopf-h:4.5rem}
+:focus-visible{outline-color:var(--akzent)}
+.termin :focus-visible,.fuss :focus-visible{outline-color:var(--signal)}
+h2{font-size:var(--h2-m);line-height:1.06}
+h3{font-size:var(--h3);line-height:1.15;font-weight:500}
+.zahl{font-family:var(--schrift-titel);font-weight:450;letter-spacing:-.03em;line-height:1}
+.mitte{text-align:center}
+.mitte h2{margin:1rem auto 0;max-width:20ch}
+.mitte--knopf{margin-top:2.5rem}
+.sektion{scroll-margin-top:var(--kopf-h)}
+
+/* Kicker: runder Punkt, kein Strich, keine Pille */
+.kicker{display:inline-flex;align-items:center;gap:.6rem;font-size:1rem;font-weight:600;color:var(--text)}
+.kicker::before{content:"";width:.6rem;height:.6rem;border-radius:50%;background:var(--signal);box-shadow:0 0 0 2px var(--text);flex:none}
+.kicker--dunkel{color:var(--text-auf-dunkel)}
+.kicker--dunkel::before{box-shadow:none}
+
+/* Knöpfe */
+.knopf{justify-content:center;text-align:center;font-size:1rem}
+.knopf--mit-pfeil{justify-content:space-between;gap:1.1rem;padding:.4rem .4rem .4rem 1.4rem}
+.pfeilscheibe{display:grid;place-items:center;flex:none;width:2.25rem;height:2.25rem;border-radius:50%;background:#fff;color:var(--akzent);transition:transform var(--dauer-kurz) var(--kurve)}
+.knopf:hover .pfeilscheibe,.zeile:hover .pfeilscheibe{transform:translate(2px,-2px)}
+.knopf--dunkel{background:var(--text);color:#fff}
+.knopf--ruhig{background:var(--flaeche-alt);color:var(--text);box-shadow:inset 0 0 0 1px var(--linie)}
+.knopf--ruhig .pfeilscheibe{background:#fff}
+.knopf--hell{background:#fff;color:var(--text)}
+.knopf--hell .pfeilscheibe{background:var(--akzent);color:#fff}
+.knopf:hover{box-shadow:0 8px 20px color-mix(in srgb,var(--text) 22%,transparent)}
+.knopf--ruhig:hover{box-shadow:inset 0 0 0 1px var(--linie),0 8px 20px color-mix(in srgb,var(--text) 14%,transparent)}
+
+/* Bildplatzhalter: helle Töne mit Lichtfleck, Beschriftung als Hinweis, nie als Inhalt */
+.bild{--lichter:radial-gradient(70% 60% at 78% 22%,rgba(255,255,255,.55),transparent 70%)}
+.bild--a{--bild-grund:var(--lichter),linear-gradient(160deg,var(--ton-2),var(--ton-4))}
+.bild--b{--bild-grund:var(--lichter),linear-gradient(160deg,var(--ton-3),var(--ton-1))}
+.bild--c{--bild-grund:var(--lichter),linear-gradient(160deg,var(--ton-5),var(--ton-6))}
+.bild--d{--bild-grund:var(--lichter),linear-gradient(160deg,var(--ton-1),var(--ton-3))}
+.bild--e{--bild-grund:var(--lichter),linear-gradient(160deg,var(--ton-4),var(--ton-5))}
+.bild[data-platzhalter]::after{opacity:1;z-index:2;inset:.75rem .75rem auto auto;max-width:calc(100% - 1.5rem);padding:.3rem .65rem;border-radius:8px;background:rgba(255,255,255,.88);color:var(--text);font-size:1rem;line-height:1.3}
+
+/* Kopf: ruhige Leiste, bleibt oben stehen, Termin und Telefon immer sichtbar */
+.kopf{position:sticky;top:0;z-index:50;background:var(--flaeche)}
+.gescrollt .kopf{box-shadow:0 1px 0 var(--linie)}
+.kopf__leiste{position:relative;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;min-height:var(--kopf-h);padding-block:.5rem}
+.kopf__logo{display:inline-flex;align-items:center;gap:.5rem;min-height:2.75rem;margin-right:auto;font-family:var(--schrift-titel);font-weight:500;font-size:1.125rem;letter-spacing:-.03em;white-space:nowrap}
+.kopf__zeichen{width:1.75rem;height:1.75rem;color:var(--akzent)}
+.kapsel{display:flex;align-items:center;gap:.25rem;padding:.25rem;border-radius:var(--radius-knopf);background:var(--signal);color:var(--signal-text)}
+.kapsel__haupt{min-height:2.75rem;padding:.25rem .25rem .25rem 1.1rem;gap:.7rem;white-space:nowrap}
+.kapsel__haupt .pfeilscheibe{width:2rem;height:2rem}
+.kapsel__tel{display:flex;align-items:center;justify-content:center;gap:.5rem;min-width:2.75rem;min-height:2.75rem;padding-inline:.6rem;border-radius:var(--radius-knopf);font-weight:600;white-space:nowrap}
+.kapsel__tel-text{display:none}
+.kapsel__tel:hover{background:rgba(255,255,255,.45)}
+.pfeilscheibe--hell{background:#fff}
+.mobil-aus{display:none}
+.kopf__burger{display:none;width:2.75rem;height:2.75rem;border-radius:50%;align-items:center;justify-content:center;background:var(--flaeche-alt);transition:background-color var(--dauer-kurz)}
+.kopf__burger:hover{background:var(--akzent-hell)}
+.js .kopf__burger{display:inline-flex}
+.burger,.burger::before{display:block;width:1.25rem;height:2px;background:var(--text);border-radius:2px;transition:transform var(--dauer-kurz) var(--kurve)}
+.burger{position:relative}
+.burger::before{content:"";position:absolute;left:0;top:-6px;width:100%}
+.kopf__burger[aria-expanded="true"] .burger{transform:rotate(45deg)}
+.kopf__burger[aria-expanded="true"] .burger::before{transform:translateY(6px) rotate(-90deg)}
+.kopf__nav{order:5;flex-basis:100%}
+.kopf__menue{display:flex;flex-wrap:wrap;gap:0 .25rem}
+.kopf__menue a{display:flex;align-items:center;min-height:2.75rem;padding-inline:.75rem;font-weight:500;transition:color var(--dauer-kurz)}
+.kopf__menue a:hover{color:var(--akzent)}
+.js .kopf__nav{position:absolute;top:100%;left:0;right:0;padding:.5rem 1rem 1rem;border-radius:0 0 var(--radius-karte) var(--radius-karte);background:var(--flaeche);box-shadow:0 18px 32px color-mix(in srgb,var(--text) 14%,transparent)}
+.js .kopf__nav:not([data-offen="true"]){display:none}
+.js .kopf__menue{flex-direction:column}
+.js .kopf__menue a{min-height:3rem}
+@media (max-width:39.99rem){.kapsel__haupt{padding-right:1.1rem}.kapsel__haupt .pfeilscheibe{display:none}}
+@media (min-width:30rem){.mobil-aus{display:inline}}
+@media (min-width:64rem){
+  .kopf__leiste{flex-wrap:nowrap;gap:1.5rem}
+  .kopf__logo{margin-right:0}
+  .kopf__burger,.js .kopf__burger{display:none}
+  .kopf__nav,.js .kopf__nav,.js .kopf__nav:not([data-offen="true"]){position:static;display:block;order:0;flex-basis:auto;margin-inline:auto;padding:0;background:none;border-radius:0;box-shadow:none}
+  .js .kopf__menue{flex-direction:row}
+  .kopf__menue{flex-wrap:nowrap}
+  .kapsel__tel-text{display:inline}
+  .kapsel__tel{padding-inline:.9rem}
+}
+
+/* 1. Held */
+.held{padding-block:clamp(1.5rem,4vw,3rem) var(--raum)}
+.held__raster{display:grid;gap:3rem;align-items:center}
+.held h1{font-size:clamp(2.6rem,1.3rem + 4.6vw,5rem);line-height:1.02;max-width:11ch}
+.held__lead{margin-top:1.25rem;max-width:34rem;font-size:var(--text-l);color:var(--text-leise)}
+.held__aktion{margin-top:2rem}
+.vertrauen{display:flex;align-items:center;gap:.9rem;margin-top:2rem}
+.vertrauen p{display:grid;gap:.15rem;font-size:1rem;color:var(--text-leise)}
+.vertrauen strong{color:var(--text)}
+.sterne{display:flex;gap:.15rem;color:#c58a00}
+.avatare{display:flex;flex:none}
+.avatare i{width:2.75rem;height:2.75rem;border-radius:50%;border:2px solid var(--flaeche);margin-left:-.7rem}
+.avatare i:first-child{margin-left:0}
+.avatar--1{background:linear-gradient(160deg,var(--ton-2),var(--ton-4))}
+.avatar--2{background:linear-gradient(160deg,var(--ton-3),var(--ton-1))}
+.avatar--3{background:linear-gradient(160deg,var(--ton-5),var(--ton-6))}
+.held__buehne{position:relative;padding-bottom:2.5rem}
+.held__ringe{position:absolute;left:-18%;top:-16%;width:75%;aspect-ratio:1;border-radius:50%;background:repeating-radial-gradient(circle,transparent 0 12px,var(--akzent-hell) 12px 14px);-webkit-mask-image:radial-gradient(circle,#000 30%,transparent 70%);mask-image:radial-gradient(circle,#000 30%,transparent 70%)}
+.held__bild{position:relative;aspect-ratio:4/3.3}
+.terminkarte{position:absolute;right:1rem;bottom:0;left:1rem;padding:1.1rem 1.25rem;border-radius:var(--radius-karte);background:#fff;box-shadow:0 18px 40px color-mix(in srgb,var(--text) 16%,transparent)}
+.terminkarte__titel{display:flex;align-items:center;gap:.5rem;font-weight:600;color:var(--akzent)}
+.terminkarte__zeiten{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.8rem}
+.terminkarte__zeiten a{display:inline-flex;align-items:center;min-height:2.75rem;padding-inline:1rem;border-radius:var(--radius-knopf);background:var(--flaeche-alt);box-shadow:inset 0 0 0 1px var(--linie);font-weight:600;transition:background-color var(--dauer-kurz),transform var(--dauer-kurz) var(--kurve)}
+.terminkarte__zeiten a:hover{background:var(--akzent-hell);transform:translateY(-2px)}
+.terminkarte__fuss{display:flex;align-items:center;gap:.5rem;margin-top:.8rem;font-size:1rem;color:var(--text-leise)}
+.terminkarte__fuss .punkt{width:.6rem;height:.6rem;border-radius:50%;background:var(--akzent)}
+@media (min-width:40rem){.terminkarte{left:auto;width:21rem;right:-1rem;bottom:0}}
+@media (min-width:64rem){.held__raster{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:4rem}.terminkarte{right:-1.5rem}}
+
+/* 2. Über uns und die wachsende Bildbühne */
+.ueber__kopf{padding-top:var(--raum);max-width:54rem}
+.ueber__satz{margin-top:1.25rem;font-family:var(--schrift-titel);font-weight:420;font-size:clamp(1.25rem,1rem + 1.4vw,2.1rem);line-height:1.3;letter-spacing:-.015em;text-wrap:balance}
+.buehne{--p:var(--fortschritt,1);--q:min(1,calc(var(--p) * 1.7));margin-top:clamp(2rem,5vw,4rem)}
+.js .buehne{height:220vh}
+.buehne__haftet{position:sticky;top:var(--kopf-h);height:calc(100svh - var(--kopf-h));display:grid;place-items:end center;padding-bottom:2rem;overflow:hidden}
+.buehne__bild{position:absolute;inset:0;border-radius:0;clip-path:inset(calc((1 - var(--q)) * 14%) calc((1 - var(--q)) * 30%) round calc((1 - var(--q)) * 12rem));will-change:clip-path}
+.buehne__knopf{position:relative;z-index:3}
+.buehne__haftet .knopf--mit-pfeil{background:var(--akzent)}
+@media (prefers-reduced-motion:reduce){
+  .js .buehne{height:auto}
+  .buehne__haftet{position:relative;top:0;height:min(70svh,40rem)}
+  .buehne__bild{clip-path:none}
+}
+html:not(.js) .buehne__haftet{position:relative;top:0;height:min(70svh,40rem)}
+
+/* 3. Leistungen und Team: auf dem Handy eine Spur mit Pfeilen, ab Desktop ein Raster */
+.spur{display:flex;gap:1rem;margin:clamp(2rem,5vw,3.5rem) calc(-1 * var(--rand)) 0;padding:0 var(--rand) .5rem;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--rand);scrollbar-width:none}
+.spur::-webkit-scrollbar{display:none}
+.spur>li{flex:0 0 min(86%,22rem);scroll-snap-align:start}
+.steuerung{display:flex;justify-content:center;gap:.75rem;margin-top:1.25rem}
+.steuerung[hidden]{display:none}
+.rund{display:grid;place-items:center;width:3rem;height:3rem;border-radius:50%;background:#fff;color:var(--akzent);box-shadow:inset 0 0 0 1.5px var(--akzent);transition:transform var(--dauer-kurz) var(--kurve),background-color var(--dauer-kurz)}
+.rund:hover{background:var(--akzent-hell);transform:translateY(-2px)}
+.rund[aria-disabled="true"]{opacity:.4;pointer-events:none}
+.zeile{display:grid;gap:.9rem;height:100%;padding:1.25rem;border-radius:var(--radius-karte);background:var(--flaeche-alt);box-shadow:inset 0 0 0 1px transparent;transition:box-shadow var(--dauer-mittel)}
+.zeile:hover{box-shadow:inset 0 0 0 1.5px var(--akzent-hell)}
+.zeile__nr{order:1;font-size:1rem;color:var(--text-leise)}
+.zeile__titel{order:2}
+.zeile__text{order:3;color:var(--text-leise)}
+.zeile__bild{order:4;aspect-ratio:16/10;border-radius:14px}
+.zeile__bild[data-platzhalter]::after,.person__bild[data-platzhalter]::after{display:none}
+.zeile__mehr{order:5;display:inline-flex;align-items:center;gap:.75rem;min-height:2.75rem;font-weight:600}
+@media (min-width:60rem){
+  .leistungen .spur{display:grid;overflow:visible;margin-inline:0;padding:0;gap:1rem}
+  .leistungen .spur>li{flex:none}
+  .zeile{grid-template-columns:3rem minmax(0,1.2fr) auto minmax(0,1.5fr) 9.5rem;align-items:center;gap:1.5rem;padding:1.25rem 1.5rem}
+  .zeile__nr,.zeile__titel,.zeile__text,.zeile__bild,.zeile__mehr{order:0}
+  .zeile__nr{align-self:start}
+  .zeile__bild{aspect-ratio:9/8;border-radius:14px}
+  .zeile__text{font-size:1rem}
+}
+.person h3{margin-top:1rem;font-size:1.25rem}
+.person p{color:var(--text-leise)}
+.person__bild{aspect-ratio:4/4.6}
+@media (min-width:60rem){.spur--team{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));overflow:visible;margin-inline:0;padding:0;gap:1.25rem}.spur--team>li{flex:none}}
+
+/* 4. Unser Unterschied */
+.unterschied{position:relative;overflow:hidden;background:var(--flaeche-alt)}
+.unterschied__ringe{position:absolute;left:50%;top:50%;width:min(72rem,150vw);aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:repeating-radial-gradient(circle,var(--akzent-hell) 0 2px,transparent 2px 9px);-webkit-mask-image:radial-gradient(circle,transparent 50%,#000 51%,#000 62%,transparent 63%);mask-image:radial-gradient(circle,transparent 50%,#000 51%,#000 62%,transparent 63%)}
+.unterschied__raster{position:relative;display:grid;gap:1rem}
+.unterschied__kopf{margin-bottom:1rem}
+.vorteil{padding:1.5rem;border-radius:var(--radius-karte);background:#fff;box-shadow:0 8px 24px color-mix(in srgb,var(--text) 7%,transparent)}
+.vorteil__titel{display:flex;align-items:center;gap:.6rem;font-weight:600;color:var(--text)}
+.vorteil__titel svg{color:var(--akzent);flex:none}
+.vorteil p:last-child{margin-top:.6rem;color:var(--text-leise)}
+@media (min-width:60rem){
+  .unterschied__raster{grid-template-columns:repeat(12,minmax(0,1fr));gap:1.5rem}
+  .unterschied__kopf{grid-column:4 / 10;grid-row:2;margin:clamp(3rem,7vw,6rem) 0}
+  .vorteil--1{grid-column:1 / 5;grid-row:1}
+  .vorteil--2{grid-column:9 / 13;grid-row:1}
+  .vorteil--3{grid-column:2 / 6;grid-row:3}
+  .vorteil--4{grid-column:8 / 12;grid-row:3}
+}
+
+/* 6. Arztporträt */
+.spot__raster{display:grid;gap:2rem;margin-top:clamp(2rem,5vw,3.5rem);align-items:center}
+.spot__bild{aspect-ratio:4/3.2}
+.spot__text{display:grid;gap:1.5rem;color:var(--text-leise)}
+.haken{display:grid;gap:.8rem;color:var(--text)}
+.haken li{display:flex;align-items:center;gap:.7rem}
+.haken svg{flex:none;color:var(--akzent)}
+.haken--klein{gap:.6rem;font-size:1rem}
+.zitat{padding-left:1.1rem;border-left:3px solid var(--akzent);font-size:var(--text-l);color:var(--text);font-family:var(--schrift-titel);line-height:1.3;letter-spacing:-.01em}
+@media (min-width:60rem){.spot__raster{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:3.5rem}}
+
+/* 7. Praxisprofil */
+.profil__karte{display:grid;gap:2rem;padding:clamp(1.5rem,4vw,3.5rem);border-radius:var(--radius-gross);background:var(--flaeche-alt);align-items:center}
+.profil__text{display:grid;gap:1.25rem;justify-items:start}
+.profil__text p{color:var(--text-leise)}
+.profil__text h2{max-width:16ch}
+.merkmale{display:grid;grid-template-columns:1fr 1fr;gap:.6rem 1rem;width:100%;padding:1rem 1.1rem;border-radius:var(--radius-karte);background:#fff;color:var(--text)}
+.merkmale li{display:flex;align-items:center;gap:.5rem;font-size:1rem}
+.merkmale svg{flex:none;color:var(--akzent)}
+.profil__bild{aspect-ratio:4/3.1}
+@media (min-width:60rem){.profil__karte{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:3.5rem}}
+@media (max-width:30rem){.merkmale{grid-template-columns:1fr}}
+
+/* 8. Ablauf */
+.ablauf__raster{position:relative;display:grid;gap:1.25rem;margin-top:clamp(2rem,5vw,3.5rem);justify-items:center}
+.ablauf__ring{display:grid;place-items:center;padding:.7rem 1.6rem;border-radius:var(--radius-knopf);background:var(--akzent-hell);font-family:var(--schrift-titel);font-weight:500;color:var(--text)}
+.ablauf__liste{display:grid;gap:1rem;width:100%}
+.schritt{position:relative;display:grid;grid-template-columns:1fr auto;gap:.2rem 1rem;padding:1.4rem;border-radius:var(--radius-karte);background:var(--flaeche-alt)}
+.schritt svg{color:var(--akzent)}
+.schritt__nr{justify-self:end;font-size:1rem;color:var(--text-leise)}
+.schritt h3{grid-column:1 / -1;margin-top:1.5rem;font-size:1.25rem}
+.schritt p{grid-column:1 / -1;margin-top:.4rem;color:var(--text-leise)}
+@media (min-width:60rem){
+  .ablauf__ring{position:absolute;left:50%;top:50%;z-index:2;width:11rem;height:11rem;padding:0;border-radius:50%;background:#fff;box-shadow:0 0 0 .9rem var(--akzent-hell),0 0 0 1.6rem var(--flaeche-alt);transform:translate(-50%,-50%)}
+  .ablauf__ring::after{content:"";position:absolute;inset:-.9rem;border-radius:50%;box-shadow:0 0 0 2px var(--akzent);opacity:0;animation:halo 4.5s var(--kurve) infinite}
+  .ablauf__liste{grid-template-columns:1fr 1fr;column-gap:15rem;row-gap:1.25rem}
+}
+@keyframes halo{0%{transform:scale(1);opacity:.5}70%,100%{transform:scale(1.3);opacity:0}}
+
+/* 9. Alles an einem Ort */
+.ort__kopf{display:grid;gap:1.25rem;align-items:end;margin-bottom:clamp(2rem,5vw,3.5rem)}
+.ort__kopf h2{margin-top:1rem;max-width:14ch}
+.ort__kopf>p{color:var(--text-leise);max-width:32rem}
+.ort__bild{aspect-ratio:4/3}
+.ort__tiefe{position:absolute;inset:-8% 0;background:radial-gradient(50% 50% at 30% 40%,rgba(255,255,255,.4),transparent 70%),radial-gradient(40% 40% at 75% 65%,color-mix(in srgb,var(--akzent) 25%,transparent),transparent 70%);will-change:transform}
+@media (min-width:60rem){.ort__kopf{grid-template-columns:1fr 1fr;gap:4rem}.ort__bild{aspect-ratio:21/9}}
+
+/* 10. Stimmen */
+.stimmen__karte{position:relative;max-width:48rem;margin:clamp(2rem,5vw,3.5rem) auto 0;padding:2.5rem 1.25rem 5.25rem;border:1.5px solid var(--linie);border-radius:var(--radius-gross);text-align:center}
+.stimmen__liste{display:grid;gap:3rem}
+.js .stimmen__liste{gap:0}
+.js .stimme{grid-area:1 / 1;opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity var(--dauer-mittel),transform var(--dauer-mittel) var(--kurve),visibility 0s linear var(--dauer-mittel)}
+.js .stimme[data-aktiv]{opacity:1;visibility:visible;transform:none;transition-delay:0s}
+.stimme{display:grid;justify-items:center;align-content:start;gap:1.25rem}
+.stimme__avatar{position:relative;display:block;width:5.5rem;height:5.5rem}
+.stimme__avatar i{display:block;width:100%;height:100%;border-radius:50%;background:linear-gradient(160deg,var(--ton-2),var(--ton-4))}
+.stimme__avatar--2 i{background:linear-gradient(160deg,var(--ton-3),var(--ton-1))}
+.stimme__avatar--3 i{background:linear-gradient(160deg,var(--ton-5),var(--ton-6))}
+.stimme__herz{position:absolute;right:-.2rem;bottom:-.1rem;display:grid;place-items:center;width:2rem;height:2rem;border-radius:50%;background:var(--signal);color:var(--signal-text);box-shadow:0 0 0 3px var(--flaeche)}
+.stimme blockquote{font-family:var(--schrift-titel);font-size:clamp(1.25rem,1.05rem + .9vw,1.75rem);line-height:1.3;letter-spacing:-.015em;max-width:30rem;text-wrap:balance}
+.stimme__name{display:grid;gap:.15rem;color:var(--text-leise)}
+.stimme__name strong{color:var(--text)}
+.stimmen__pfeil{position:absolute;bottom:1.25rem;box-shadow:inset 0 0 0 1.5px var(--akzent)}
+.stimmen__pfeil[hidden]{display:none}
+.stimmen__pfeil--links{left:1.25rem}
+.stimmen__pfeil--rechts{right:1.25rem}
+@media (min-width:48rem){
+  .stimmen__karte{padding:3.5rem 5.5rem}
+  .stimmen__pfeil{top:50%;bottom:auto;margin-top:-1.5rem;box-shadow:inset 0 0 0 1.5px var(--akzent),0 0 0 .6rem var(--flaeche)}
+  .stimmen__pfeil--links{left:-1.5rem}
+  .stimmen__pfeil--rechts{right:-1.5rem}
+}
+
+/* 11. Terminarten */
+.termine{background:var(--flaeche-alt)}
+.karten3{display:grid;grid-template-columns:minmax(0,1fr);gap:1.25rem;margin-top:clamp(2rem,5vw,3.5rem)}
+.karten3>li{display:flex}
+.tarif{position:relative;display:flex;flex-direction:column;gap:1.25rem;width:100%;padding:1.5rem;border-radius:var(--radius-karte);background:#fff;box-shadow:inset 0 0 0 1px var(--linie)}
+.tarif--stark{box-shadow:inset 0 0 0 2.5px var(--akzent)}
+.tarif__marke{position:absolute;top:1rem;right:1rem;padding:.25rem .75rem;border-radius:var(--radius-knopf);background:var(--signal);color:var(--signal-text);font-size:1rem;font-weight:600}
+.tarif__kopf{display:flex;align-items:flex-start;gap:.9rem}
+.tarif__kopf>span:last-child{display:grid;gap:.15rem}
+.tarif__kopf strong{font-family:var(--schrift-titel);font-weight:500;font-size:1.25rem;letter-spacing:-.02em}
+.tarif__kopf>span:last-child>span{color:var(--text-leise);font-size:1rem}
+.scheibe{display:grid;place-items:center;flex:none;width:2.75rem;height:2.75rem;border-radius:50%;background:var(--signal);color:var(--signal-text)}
+.scheibe--gross{width:3.5rem;height:3.5rem}
+.tarif--stark .tarif__kopf{padding-right:0}
+@media (min-width:40rem){.tarif--stark .tarif__kopf{padding-right:7.5rem}}
+@media (max-width:39.99rem){.tarif__marke{position:static;justify-self:start;margin-bottom:-.5rem}}
+.tarif__dauer{display:flex;align-items:baseline;gap:.5rem;color:var(--text-leise)}
+.tarif__dauer .zahl{font-size:2.75rem;color:var(--text)}
+.tarif .haken{padding:1rem 1.1rem;border-radius:16px;background:var(--flaeche-alt)}
+.tarif .knopf{margin-top:auto}
+.termine__hinweis{margin-top:1.5rem;color:var(--text-leise);font-size:1rem}
+@media (min-width:60rem){.karten3{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+/* 12. Fragen */
+.faq__raster{display:grid;gap:1.5rem;margin-top:clamp(2rem,5vw,3.5rem);align-items:start}
+.faq__karte{display:grid;justify-items:center;gap:.9rem;padding:2rem 1.5rem;border-radius:var(--radius-karte);background:var(--flaeche-alt);text-align:center;box-shadow:0 12px 30px color-mix(in srgb,var(--text) 8%,transparent)}
+.faq__karte p{color:var(--text-leise)}
+.faq__karte .knopf{margin-top:.6rem}
+.faq__liste{display:grid;gap:.75rem}
+.faq details{border-radius:16px;box-shadow:inset 0 0 0 1px var(--linie);background:#fff;transition:box-shadow var(--dauer-kurz)}
+.faq details[open]{box-shadow:inset 0 0 0 1.5px var(--akzent)}
+.faq summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:3.5rem;padding:.75rem 1.25rem;font-weight:500;cursor:pointer;list-style:none;border-radius:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:hover{background:var(--flaeche-alt)}
+.faq__plus{display:grid;place-items:center;flex:none;width:2rem;height:2rem;border-radius:50%;box-shadow:inset 0 0 0 1.5px currentColor;transition:transform var(--dauer-kurz) var(--kurve)}
+.faq details[open] .faq__plus{transform:rotate(45deg)}
+.faq details p{padding:0 1.25rem 1.25rem;color:var(--text-leise);max-width:46rem}
+@media (min-width:60rem){.faq__raster{grid-template-columns:minmax(0,.45fr) minmax(0,1fr);gap:2rem}.faq__karte{position:sticky;top:calc(var(--kopf-h) + 1.5rem)}}
+
+/* 13. Termin: Fächer aus gekippten Bildkarten */
+.termin{--r:clamp(14rem,24vw,21rem);position:relative;overflow:hidden;padding-bottom:var(--raum);background:var(--flaeche-dunkel);color:var(--text-auf-dunkel);scroll-margin-top:var(--kopf-h)}
+.termin__fach{position:absolute;inset:0 0 auto 0;height:calc(var(--r) + 12rem);pointer-events:none}
+.termin__fach .bild{--s:1;position:absolute;left:50%;top:calc(var(--r) + 6rem);width:clamp(5.25rem,10vw,9.5rem);aspect-ratio:5/4;border-radius:16px;transform:translate(-50%,-50%) rotate(calc(var(--a) * var(--s))) translateY(calc(var(--r) * -1));transition:transform .9s var(--kurve);box-shadow:0 10px 24px rgba(0,0,0,.25)}
+.termin__fach .bild::after{display:none}
+.termin__fach .bild:nth-child(1){--a:-72deg}
+.termin__fach .bild:nth-child(2){--a:-48deg}
+.termin__fach .bild:nth-child(3){--a:-24deg}
+.termin__fach .bild:nth-child(4){--a:0deg}
+.termin__fach .bild:nth-child(5){--a:24deg}
+.termin__fach .bild:nth-child(6){--a:48deg}
+.termin__fach .bild:nth-child(7){--a:72deg}
+.js .termin__fach .bild{--s:.35}
+.js .termin__fach.ist-da .bild{--s:1}
+@media (max-width:40rem){.termin__fach .bild:nth-child(1),.termin__fach .bild:nth-child(7){display:none}}
+@media (prefers-reduced-motion:reduce){.js .termin__fach .bild{--s:1}}
+.termin__innen{position:relative;padding-top:calc(var(--r) + 3rem);text-align:center}
+.termin h2{margin:1rem auto 0;max-width:14ch;font-size:clamp(2.25rem,1.3rem + 3.6vw,4.25rem)}
+.termin__text{margin:1rem auto 0;max-width:30rem;color:var(--text-leise-dunkel);font-size:var(--text-l)}
+.termin__form{display:grid;gap:1rem;max-width:44rem;margin:2rem auto 0;text-align:left}
+.feld{display:grid;gap:.4rem}
+.termin label{font-size:1rem;font-weight:600}
+.termin input{width:100%;min-height:3rem;padding:.75rem 1rem;font:inherit;font-size:1rem;color:var(--text);background:#fff;border:1.5px solid #fff;border-radius:12px}
+.termin input::placeholder{color:var(--text-leise);opacity:1}
+.termin input:focus-visible{outline:3px solid var(--signal);outline-offset:2px}
+.termin__senden{justify-self:stretch}
+.termin__recht,.termin__meldung{font-size:1rem;color:var(--text-leise-dunkel)}
+.termin__recht a{text-decoration:underline}
+.termin__meldung{padding:.8rem 1rem;border-radius:12px;background:#fff;color:var(--text)}
+.termin__meldung[hidden]{display:none}
+.termin__tel{margin-top:1.5rem}
+.termin__tel a{display:inline-flex;align-items:center;gap:.6rem;min-height:2.75rem;font-weight:600;text-decoration:underline;text-underline-offset:.3em}
+@media (min-width:40rem){.termin__form{grid-template-columns:1fr 1fr auto;align-items:end}.termin__recht,.termin__meldung{grid-column:1 / -1}.termin__senden{align-self:end;min-height:3rem}}
+
+/* Fuß */
+.fuss{padding-top:var(--raum);background:var(--flaeche);overflow:hidden}
+.fuss__raster{display:grid;gap:2rem;padding-bottom:2.5rem;border-bottom:1px solid var(--linie)}
+.fuss__zeilen a{display:flex;align-items:center;justify-content:space-between;min-height:3rem;border-bottom:1px solid var(--linie);transition:color var(--dauer-kurz)}
+.fuss__zeilen a:hover{color:var(--akzent)}
+.fuss__spalten{display:grid;grid-template-columns:repeat(auto-fit,minmax(9.5rem,1fr));gap:1.5rem}
+.fuss__titel{font-family:var(--schrift-titel);font-weight:500;font-size:1.125rem;margin-bottom:.5rem}
+.fuss__spalten a{display:inline-flex;align-items:center;min-height:2.75rem;color:var(--text-leise);transition:color var(--dauer-kurz)}
+.fuss__spalten a:hover{color:var(--akzent)}
+.fuss address{display:grid;font-style:normal;color:var(--text-leise)}
+.fuss address>span{display:flex;align-items:center;min-height:2rem}
+.fuss__marke{margin-top:2rem;font-family:var(--schrift-titel);font-weight:600;font-size:clamp(2.75rem,13vw,12.5rem);line-height:.95;letter-spacing:-.05em;color:var(--akzent);white-space:nowrap;-webkit-mask-image:linear-gradient(to bottom,#000 15%,transparent 92%);mask-image:linear-gradient(to bottom,#000 15%,transparent 92%)}
+.fuss__unten{padding-block:1.5rem 2rem;border-top:1px solid var(--linie);font-size:1rem;color:var(--text-leise)}
+@media (min-width:60rem){.fuss__raster{grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:4rem}}

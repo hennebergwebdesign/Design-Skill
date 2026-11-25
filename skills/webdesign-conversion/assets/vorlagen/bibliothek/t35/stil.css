@@ -1,0 +1,199 @@
+/* stil.css der Vorlage "Restaurant ruhig und eckig": Gestaltung. Farben nur aus den Tokens in marke.css, Mechanik aus ../_basis/basis.css.
+   Mobil zuerst. Helle Abschnitte mit dunklen Bändern (Held, Galerie, Fuß). Bei reduzierter Bewegung und ohne JavaScript bleibt alles sichtbar. */
+:root{--h2-m:clamp(1.9rem,1.2rem + 2.6vw,3.25rem);--ring-grund:var(--flaeche)}
+:focus-visible{outline-color:var(--akzent)}
+.dunkel :focus-visible{outline-color:var(--akzent-hell)}
+h1,h2,h3{letter-spacing:var(--titel-spur)}
+h2{font-size:var(--h2-m);line-height:1.15;font-weight:400}
+h3{font-size:var(--h3);font-weight:500;line-height:1.2}
+.dunkel{background:var(--flaeche-dunkel);color:var(--text-auf-dunkel)}
+.mitte{text-align:center}
+
+/* Knöpfe: eckig, kleine Ecke oben rechts */
+.knopf{justify-content:center;text-align:center;font-size:1rem;font-weight:600;background:linear-gradient(225deg,var(--flaeche-dunkel) 0 .55rem,transparent .55rem),var(--akzent)}
+.dunkel .knopf{background:linear-gradient(225deg,var(--akzent) 0 .55rem,transparent .55rem),var(--text-auf-dunkel);color:var(--flaeche-dunkel)}
+.kicker{display:inline-flex;align-items:center;gap:.6rem;font-size:1rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--akzent)}
+.kicker::before{content:"";width:.5rem;height:.5rem;border-radius:50%;background:currentColor;flex:none}
+.dunkel .kicker{color:var(--akzent-hell)}
+.kopfzeile{display:grid;justify-items:center;gap:.75rem;margin-bottom:clamp(2rem,4vw,3.5rem);text-align:center}
+.kopfzeile h2{max-width:24ch}
+.pfeil-eck{display:grid;place-items:center;flex:none;width:2.75rem;height:2.75rem;background:var(--flaeche);color:var(--text);box-shadow:inset 0 0 0 1px var(--text);transition:transform var(--dauer-kurz) var(--kurve)}
+.pfeil-eck:hover{transform:translateY(-2px)}
+.pfeil-eck[aria-disabled="true"]{opacity:.4;cursor:default}
+.textlink{display:inline-flex;align-items:center;gap:.5rem;min-height:2.75rem;font-weight:600;color:var(--akzent)}
+.textlink:hover{text-decoration:underline;text-underline-offset:.25em}
+
+/* Bildplatzhalter */
+.bild{--licht:radial-gradient(70% 60% at 72% 22%,color-mix(in srgb,var(--akzent-hell) 30%,transparent),transparent 70%)}
+.bild--a{--bild-grund:var(--licht),linear-gradient(160deg,var(--ton-2),var(--ton-6))}
+.bild--b{--bild-grund:var(--licht),linear-gradient(160deg,var(--ton-1),var(--ton-4))}
+.bild--c{--bild-grund:var(--licht),linear-gradient(160deg,var(--ton-5),var(--ton-2))}
+.bild--d{--bild-grund:var(--licht),linear-gradient(160deg,var(--ton-3),var(--ton-1))}
+.bild--e{--bild-grund:var(--licht),linear-gradient(160deg,var(--ton-4),var(--ton-6))}
+.bild--f{--bild-grund:var(--licht),linear-gradient(160deg,var(--ton-2),var(--ton-5))}
+.bild[data-platzhalter]::after{opacity:1;z-index:2;inset:auto auto .75rem .75rem;max-width:calc(100% - 1.5rem);padding:.3rem .6rem;background:color-mix(in srgb,var(--flaeche-dunkel) 82%,transparent);color:var(--text-auf-dunkel);font-size:1rem;line-height:1.3}
+
+/* Kopf: ruhige Leiste, oben klebend */
+.kopf{position:sticky;top:0;z-index:50;background:var(--flaeche);box-shadow:0 1px 0 var(--linie)}
+.kopf__leiste{position:relative;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.25rem 1rem;min-height:3.5rem;padding-block:.35rem}
+.kopf__logo{display:inline-flex;align-items:center;gap:.5rem;min-height:2.75rem;margin-right:auto;font-family:var(--schrift-titel);font-weight:700;font-size:1.5rem;letter-spacing:-.03em}
+.kopf__zeichen{width:1.5rem;height:1.5rem;color:var(--akzent)}
+.kopf__nav{order:5;flex-basis:100%}
+.kopf__menue{display:flex;flex-wrap:wrap;gap:0 .25rem}
+.kopf__menue a{display:flex;align-items:center;min-height:2.75rem;padding-inline:.6rem;font-weight:500}
+.kopf__menue a:hover{color:var(--akzent)}
+.kopf__knopf{min-height:2.75rem;padding:.4rem 1rem;white-space:nowrap}
+.kopf__burger{display:none;width:2.75rem;height:2.75rem;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1px var(--text)}
+.js .kopf__burger{display:inline-flex}
+.burger,.burger::before{display:block;width:1.2rem;height:2px;background:currentColor;transition:transform var(--dauer-mittel) var(--kurve)}
+.burger{position:relative;transform:translateY(-4px)}
+.burger::before{content:"";position:absolute;left:0;top:8px}
+.kopf__burger[aria-expanded="true"] .burger{transform:rotate(45deg)}
+.kopf__burger[aria-expanded="true"] .burger::before{transform:translateY(-8px) rotate(-90deg)}
+.js .kopf__nav{position:absolute;top:100%;left:0;right:0;padding:.5rem 1rem 1rem;background:var(--flaeche-dunkel);color:var(--text-auf-dunkel);box-shadow:0 18px 32px color-mix(in srgb,#000 35%,transparent)}
+.js .kopf__nav:not([data-offen="true"]){display:none}
+.js .kopf__menue a:hover{color:var(--akzent-hell)}
+.js .kopf__nav :focus-visible{outline-color:var(--akzent-hell)}
+@media (min-width:62rem){
+  .kopf__leiste{flex-wrap:nowrap}
+  .kopf__nav,.js .kopf__nav,.js .kopf__nav:not([data-offen="true"]){position:static;display:block;order:0;flex-basis:auto;padding:0;background:none;color:inherit;box-shadow:none}
+  .js .kopf__menue a:hover{color:var(--akzent)}
+  .js .kopf__nav :focus-visible{outline-color:var(--akzent)}
+  .kopf__burger,.js .kopf__burger{display:none}
+}
+
+/* Held: zwei Flächen mit schmalem Spalt */
+.held{display:grid;gap:6px;padding:6px}
+.held__text{display:grid;align-content:space-between;gap:2rem;padding:clamp(1.5rem,4vw,2.5rem);min-height:26rem}
+.held h1{font-size:clamp(2.4rem,1.2rem + 4.4vw,4.75rem);line-height:1.12;font-weight:400;max-width:12ch}
+.held__lead{margin-top:1.25rem;max-width:34rem;font-size:var(--text-l);color:var(--text-leise-dunkel)}
+.held__knopf{margin-top:1.75rem}
+.gaeste{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1rem}
+.gaeste__bilder{display:flex}
+.gaeste__bilder .bild{width:3rem;height:3rem;border-radius:50%;margin-left:-.6rem;box-shadow:0 0 0 2px var(--flaeche-dunkel)}
+.gaeste__bilder .bild:first-child{margin-left:0}
+.gaeste__bilder .bild[data-platzhalter]::after{display:none}
+.gaeste__wert{display:inline-flex;align-items:center;gap:.6rem;padding:.35rem 1rem .35rem .4rem;border-radius:999px;background:color-mix(in srgb,var(--text-auf-dunkel) 12%,var(--flaeche-dunkel))}
+.gaeste__stern{display:grid;place-items:center;width:1.9rem;height:1.9rem;border-radius:50%;background:var(--text-auf-dunkel);color:#c58a00}
+.held__bild{min-height:20rem;order:-1}
+@media (min-width:62rem){.held{grid-template-columns:1fr 1fr;min-height:min(49rem,calc(100svh - 3.5rem))}.held__bild{order:0;min-height:0}}
+
+/* Wer wir sind */
+.ueber{padding-block:var(--raum)}
+.ueber__raster{display:grid;gap:2.5rem;align-items:center}
+.ueber__foto{width:min(90%,24rem);aspect-ratio:1/1.1;rotate:-4deg;box-shadow:0 0 0 5px var(--flaeche-dunkel);margin-inline:auto}
+.ueber__text{display:grid;gap:1rem;justify-items:start;color:var(--text-leise);max-width:34rem}
+.zitat{padding:1.75rem;background:var(--flaeche-dunkel);color:var(--text-auf-dunkel);font-size:var(--text-l);line-height:1.4}
+.zitat cite{display:block;margin-top:1.25rem;font-style:normal;font-size:1rem;color:var(--text-leise-dunkel)}
+@media (min-width:62rem){.ueber__raster{grid-template-columns:1fr 1.1fr .9fr;gap:3rem}}
+
+/* Karte */
+.menue{padding-block:var(--raum);background:var(--flaeche-karte)}
+.posten-liste{display:grid;gap:1.5rem 4rem}
+.posten{display:grid;grid-template-columns:3.5rem 1fr;gap:1rem;align-items:start}
+.posten .bild{aspect-ratio:1/1.1}
+.posten .bild[data-platzhalter]::after{display:none}
+.posten__kopf{display:flex;align-items:baseline;gap:.75rem}
+.posten h3{font-size:1.1rem;font-weight:500}
+.posten__linie{flex:1;min-width:1rem;border-bottom:1px dotted color-mix(in srgb,var(--text) 55%,transparent)}
+.posten__preis{font-weight:700}
+.posten p{margin-top:.2rem;color:var(--text-leise)}
+.menue__fuss{display:flex;justify-content:center;margin-top:2.5rem}
+@media (min-width:48rem){.posten-liste{grid-template-columns:repeat(2,1fr)}}
+
+/* Spezialitäten */
+.spezial{padding-block:var(--raum)}
+.spezial .kopfzeile{margin-bottom:2rem}
+.spezial__knopf{margin-bottom:2.5rem}
+.kacheln{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem}
+.kachel{position:relative;overflow:hidden;aspect-ratio:1/1.05}
+.kachel .bild{position:absolute;inset:0;transition:transform var(--dauer-lang) var(--kurve)}
+.kachel:hover .bild{transform:scale(1.04)}
+.kachel .bild[data-platzhalter]::after{display:none}
+.kachel::after{content:"";position:absolute;inset:auto 0 0;height:55%;background:linear-gradient(to top,color-mix(in srgb,var(--flaeche-dunkel) 85%,transparent),transparent);pointer-events:none}
+.kachel h3{position:absolute;z-index:2;left:.75rem;right:.75rem;bottom:.75rem;font-size:1rem;font-weight:500;color:var(--text-auf-dunkel)}
+@media (min-width:48rem){.kacheln{grid-template-columns:repeat(3,1fr)}}
+@media (min-width:62rem){.kacheln{grid-template-columns:repeat(6,1fr);gap:.5rem}.kachel{aspect-ratio:1/1.1}}
+
+/* Galerie: Laufband auf dunklem Grund */
+.galerie{padding-top:var(--raum);padding-bottom:clamp(5rem,12vw,9rem)}
+.galerie .kopfzeile{padding-inline:var(--rand)}
+.galerie .band{--band-abstand:.75rem}
+.galerie .bild{flex:none;width:clamp(11rem,18vw,16rem);aspect-ratio:1/1.05}
+.galerie .bild[data-platzhalter]::after{display:none}
+
+/* Veranstaltung mit Zähler */
+.ereignis{padding-block:var(--raum)}
+.ereignis__buehne{position:relative;display:grid;padding:clamp(1rem,4vw,3.5rem);overflow:hidden}
+.ereignis__grund{position:absolute;inset:0;z-index:0}
+.ereignis__grund[data-platzhalter]::after{display:none}
+.ereignis__karte{position:relative;z-index:1;display:grid;gap:1.5rem;padding:clamp(1rem,2.5vw,1.75rem);background:var(--flaeche-karte)}
+.ereignis__bild{aspect-ratio:4/3}
+.ereignis__text{display:grid;gap:.75rem;align-content:space-between}
+.ereignis__text p{color:var(--text-leise)}
+.zaehler{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem}
+.zaehler div{padding:.6rem .75rem;background:var(--flaeche-alt)}
+.zaehler dt{font-size:1rem;color:var(--text-leise)}
+.zaehler dd{margin:0;font-family:var(--schrift-titel);font-size:1.5rem;line-height:1.2;font-variant-numeric:tabular-nums}
+@media (min-width:48rem){.ereignis__karte{grid-template-columns:1.2fr 1fr;gap:2rem}.ereignis__buehne{padding:3.5rem}}
+
+/* Stimmen: Spur mit Pfeilen */
+.stimmen{padding-bottom:var(--raum)}
+.spur-gruppe{position:relative;width:min(100% - 2*var(--rand),60rem);margin-inline:auto}
+.spur{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}
+.spur::-webkit-scrollbar{display:none}
+.spur>*{flex:none;width:100%;scroll-snap-align:center}
+.stimme{display:grid;background:var(--flaeche-karte)}
+.stimme .bild{aspect-ratio:4/3}
+.stimme__text{display:grid;gap:1rem;align-content:space-between;padding:1.5rem}
+.stimme__stern{display:flex;gap:.15rem;color:#c58a00}
+.stimme blockquote{font-size:var(--text-l);line-height:1.5}
+.stimme figcaption strong{display:block;font-weight:600}
+.stimme figcaption span{color:var(--text-leise)}
+.spur-steuerung{display:flex;justify-content:center;gap:.5rem;margin-top:1rem}
+.spur-steuerung[hidden]{display:none}
+@media (min-width:48rem){.stimme{grid-template-columns:.9fr 1.1fr}.stimme .bild{aspect-ratio:auto;min-height:21rem}}
+
+/* Reservierung */
+.tisch{padding-block:var(--raum);background:var(--flaeche-karte)}
+.tisch__raster{display:grid;gap:1.5rem;align-items:stretch}
+.tisch__bild{min-height:18rem}
+.tisch__bild[data-platzhalter]::after{display:none}
+.formular-karte{padding:clamp(1.25rem,3vw,2rem);background:var(--flaeche-alt);box-shadow:inset 0 0 0 1px var(--linie)}
+.formular-karte h3{font-size:1.4rem}
+.formular-karte>p{margin-top:.5rem;color:var(--text-leise)}
+.formular{display:grid;gap:1rem;margin-top:1.25rem}
+.formular__feld{display:grid;gap:.2rem}
+.formular label{font-size:1rem;font-weight:600}
+.formular input,.formular textarea{width:100%;min-height:3rem;padding:.6rem .25rem;font:inherit;font-size:1rem;color:var(--text);background:transparent;border:0;border-bottom:1.5px solid color-mix(in srgb,var(--text) 55%,var(--flaeche-alt));border-radius:0}
+.formular textarea{min-height:6rem;resize:vertical}
+.formular input::placeholder,.formular textarea::placeholder{color:var(--text-leise);opacity:1}
+.formular input:focus-visible,.formular textarea:focus-visible{outline:3px solid var(--akzent);outline-offset:2px}
+.formular__recht{font-size:1rem;color:var(--text-leise)}
+.formular__recht a{text-decoration:underline}
+.formular__knopf{justify-self:start}
+.formular__meldung{padding:.8rem 1rem;background:var(--flaeche);font-size:1rem}
+.formular__meldung[hidden]{display:none}
+@media (min-width:62rem){.tisch__raster{grid-template-columns:1.1fr 1fr;gap:1.5rem}}
+
+/* Fuß */
+.fuss{padding-top:clamp(3rem,6vw,4.5rem);overflow:hidden}
+.fuss__raster{display:grid;gap:2rem 1.5rem;grid-template-columns:1fr 1fr}
+.fuss h3{font-size:1.1rem;font-weight:500;margin-bottom:.75rem}
+.fuss li,.fuss p{color:var(--text-leise-dunkel)}
+.fuss a{display:inline-flex;align-items:center;min-height:2.75rem;text-underline-offset:.2em}
+.fuss a:hover{text-decoration:underline}
+.fuss__news{grid-column:1 / -1}
+.news{display:flex;gap:.5rem;margin-top:1rem}
+.news input{flex:1;min-width:0;min-height:3rem;padding:.5rem .9rem;font:inherit;font-size:1rem;color:var(--text-auf-dunkel);background:color-mix(in srgb,var(--text-auf-dunkel) 10%,var(--flaeche-dunkel));border:1px solid var(--linie-dunkel);border-radius:0}
+.news input::placeholder{color:var(--text-leise-dunkel);opacity:1}
+.news .knopf{min-height:3rem;padding-inline:1.1rem}
+.fuss__recht{margin-top:2rem;display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 1.5rem}
+.fuss__wort{margin-top:1rem;height:clamp(4rem,12.5vw,13rem);overflow:hidden;font-family:var(--schrift-titel);font-weight:700;font-size:clamp(3.5rem,16vw,17.5rem);line-height:.95;letter-spacing:-.05em;color:var(--text-auf-dunkel);white-space:nowrap;user-select:none}
+@media (min-width:48rem){.fuss__raster{grid-template-columns:repeat(3,1fr) 1.6fr}.fuss__news{grid-column:auto}}
+
+@media (prefers-reduced-motion:reduce){
+  .band{overflow-x:auto}
+  .band__spur[aria-hidden="true"]{display:none}
+  .kachel .bild{transition:none}
+}

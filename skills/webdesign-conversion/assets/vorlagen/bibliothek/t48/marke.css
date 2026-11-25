@@ -1,0 +1,32 @@
+/* marke.css der Vorlage "App dunkel Neon": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#0e1417;
+  --flaeche-alt:#161e22;
+  --flaeche-dunkel:#0e1417;
+  --text:#f3f6f1;
+  --text-leise:#adb9bb;
+  --linie:#26333a;
+  --akzent:#c6f432;           /* Hauptaktion: Fläche mit dunklem Text, auf Dunkel auch Text und Punkt */
+  --akzent-text:#11160a;
+  --schrift-titel:'Archivo',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:20px;
+  --radius-bild:16px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:28px;
+  --titel-gewicht:800;
+  --titel-spur:-0.01em;
+  --karte:#1a242a;            /* Karten auf Dunkel */
+  --karte-2:#2b383f;          /* Zeilen, Umschalter, Schaltflächen */
+  --ziffer:#3b4a51;           /* große Ziffern, nur Zierde */
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#2d5560;
+  --ton-2:#6a3a3a;
+  --ton-3:#8a6a2a;
+  --ton-4:#2f4a3a;
+  --ton-5:#3a4a6a;
+  --ton-6:#141c20;
+}

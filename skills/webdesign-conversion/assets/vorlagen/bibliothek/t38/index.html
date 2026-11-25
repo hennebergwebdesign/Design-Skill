@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Studio mit Terminbuchung, Markenname</title>
+<meta name="description" content="Beispieltext: Persönliche Beratung, feste Termine und sorgfältige Arbeit im Studio. Vor dem Einsatz durch den echten Text der Marke ersetzen.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../_basis/schriften.css">
+<link rel="stylesheet" href="marke.css">
+<link rel="stylesheet" href="../_basis/basis.css">
+<link rel="stylesheet" href="stil.css">
+</head>
+<body>
+<a class="sprunglink" href="#inhalt">Zum Inhalt springen</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-phone" viewBox="0 0 256 256" fill="currentColor"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/></symbol>
+  <symbol id="i-envelope" viewBox="0 0 256 256" fill="currentColor"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm-96,85.15L52.57,64H203.43ZM98.71,128,40,181.81V74.19Zm11.84,10.85,12,11.05a8,8,0,0,0,10.82,0l12-11.05,58,53.15H52.57ZM157.29,128,216,74.18V181.82Z"/></symbol>
+  <symbol id="i-map-pin" viewBox="0 0 256 256" fill="currentColor"><path d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z"/></symbol>
+  <symbol id="i-arrow-up-right" viewBox="0 0 256 256" fill="currentColor"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></symbol>
+  <symbol id="i-arrow-left" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128Z"/></symbol>
+  <symbol id="i-check-circle" viewBox="0 0 256 256" fill="currentColor"><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></symbol>
+  <symbol id="i-calendar-blank" viewBox="0 0 256 256" fill="currentColor"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z"/></symbol>
+  <symbol id="i-sparkle" viewBox="0 0 256 256" fill="currentColor"><path d="M197.58,129.06,146,110l-19-51.62a15.92,15.92,0,0,0-29.88,0L78,110l-51.62,19a15.92,15.92,0,0,0,0,29.88L78,178l19,51.62a15.92,15.92,0,0,0,29.88,0L146,178l51.62-19a15.92,15.92,0,0,0,0-29.88ZM137,164.22a8,8,0,0,0-4.74,4.74L112,223.85,91.78,169A8,8,0,0,0,87,164.22L32.15,144,87,123.78A8,8,0,0,0,91.78,119L112,64.15,132.22,119a8,8,0,0,0,4.74,4.74L191.85,144ZM144,40a8,8,0,0,1,8-8h16V16a8,8,0,0,1,16,0V32h16a8,8,0,0,1,0,16H184V64a8,8,0,0,1-16,0V48H152A8,8,0,0,1,144,40ZM248,88a8,8,0,0,1-8,8h-8v8a8,8,0,0,1-16,0V96h-8a8,8,0,0,1,0-16h8V72a8,8,0,0,1,16,0v8h8A8,8,0,0,1,248,88Z"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 256 256" fill="currentColor"><path d="M178,40c-20.65,0-38.73,8.88-50,23.89C116.73,48.88,98.65,40,78,40a62.07,62.07,0,0,0-62,62c0,70,103.79,126.66,108.21,129a8,8,0,0,0,7.58,0C136.21,228.66,240,172,240,102A62.07,62.07,0,0,0,178,40ZM128,214.8C109.74,204.16,32,155.69,32,102A46.06,46.06,0,0,1,78,56c19.45,0,35.78,10.36,42.6,27a8,8,0,0,0,14.8,0c6.82-16.67,23.15-27,42.6-27a46.06,46.06,0,0,1,46,46C224,155.61,146.24,204.15,128,214.8Z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 256 256" fill="currentColor"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></symbol>
+  <symbol id="i-paint-brush" viewBox="0 0 256 256" fill="currentColor"><path d="M232,32a8,8,0,0,0-8-8c-44.08,0-89.31,49.71-114.43,82.63A60,60,0,0,0,32,164c0,30.88-19.54,44.73-20.47,45.37A8,8,0,0,0,16,224H92a60,60,0,0,0,57.37-77.57C182.3,121.31,232,76.08,232,32ZM92,208H34.63C41.38,198.41,48,183.92,48,164a44,44,0,1,1,44,44Zm32.42-94.45q5.14-6.66,10.09-12.55A76.23,76.23,0,0,1,155,121.49q-5.9,4.94-12.55,10.09A60.54,60.54,0,0,0,124.42,113.55Zm42.7-2.68a92.57,92.57,0,0,0-22-22c31.78-34.53,55.75-45,69.9-47.91C212.17,55.12,201.65,79.09,167.12,110.87Z"/></symbol>
+  <symbol id="i-drop" viewBox="0 0 256 256" fill="currentColor"><path d="M174,47.75a254.19,254.19,0,0,0-41.45-38.3,8,8,0,0,0-9.18,0A254.19,254.19,0,0,0,82,47.75C54.51,79.32,40,112.6,40,144a88,88,0,0,0,176,0C216,112.6,201.49,79.32,174,47.75ZM128,216a72.08,72.08,0,0,1-72-72c0-57.23,55.47-105,72-118,16.53,13,72,60.75,72,118A72.08,72.08,0,0,1,128,216Zm55.89-62.66a57.6,57.6,0,0,1-46.56,46.55A8.75,8.75,0,0,1,136,200a8,8,0,0,1-1.32-15.89c16.57-2.79,30.63-16.85,33.44-33.45a8,8,0,0,1,15.78,2.68Z"/></symbol>
+  <symbol id="i-users" viewBox="0 0 256 256" fill="currentColor"><path d="M117.25,157.92a60,60,0,1,0-66.5,0A95.83,95.83,0,0,0,3.53,195.63a8,8,0,1,0,13.4,8.74,80,80,0,0,1,134.14,0,8,8,0,0,0,13.4-8.74A95.83,95.83,0,0,0,117.25,157.92ZM40,108a44,44,0,1,1,44,44A44.05,44.05,0,0,1,40,108Zm210.14,98.7a8,8,0,0,1-11.07-2.33A79.83,79.83,0,0,0,172,168a8,8,0,0,1,0-16,44,44,0,1,0-16.34-84.87,8,8,0,1,1-5.94-14.85,60,60,0,0,1,55.53,105.64,95.83,95.83,0,0,1,47.22,37.71A8,8,0,0,1,250.14,206.7Z"/></symbol>
+  <symbol id="i-smiley" viewBox="0 0 256 256" fill="currentColor"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216ZM80,108a12,12,0,1,1,12,12A12,12,0,0,1,80,108Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,176,108Zm-1.07,48c-10.29,17.79-27.4,28-46.93,28s-36.63-10.2-46.92-28a8,8,0,1,1,13.84-8c7.47,12.91,19.21,20,33.08,20s25.61-7.1,33.07-20a8,8,0,0,1,13.86,8Z"/></symbol>
+  <symbol id="i-certificate" viewBox="0 0 256 256" fill="currentColor"><path d="M128,136a8,8,0,0,1-8,8H72a8,8,0,0,1,0-16h48A8,8,0,0,1,128,136Zm-8-40H72a8,8,0,0,0,0,16h48a8,8,0,0,0,0-16Zm112,65.47V224A8,8,0,0,1,220,231l-24-13.74L172,231A8,8,0,0,1,160,224V200H40a16,16,0,0,1-16-16V56A16,16,0,0,1,40,40H216a16,16,0,0,1,16,16V86.53a51.88,51.88,0,0,1,0,74.94ZM160,184V161.47A52,52,0,0,1,216,76V56H40V184Zm56-12a51.88,51.88,0,0,1-40,0v38.22l16-9.16a8,8,0,0,1,7.94,0l16,9.16Zm16-48a36,36,0,1,0-36,36A36,36,0,0,0,232,124Z"/></symbol>
+  <symbol id="i-seal-check" viewBox="0 0 256 256" fill="currentColor"><path d="M225.86,102.82c-3.77-3.94-7.67-8-9.14-11.57-1.36-3.27-1.44-8.69-1.52-13.94-.15-9.76-.31-20.82-8-28.51s-18.75-7.85-28.51-8c-5.25-.08-10.67-.16-13.94-1.52-3.56-1.47-7.63-5.37-11.57-9.14C146.28,23.51,138.44,16,128,16s-18.27,7.51-25.18,14.14c-3.94,3.77-8,7.67-11.57,9.14C88,40.64,82.56,40.72,77.31,40.8c-9.76.15-20.82.31-28.51,8S41,67.55,40.8,77.31c-.08,5.25-.16,10.67-1.52,13.94-1.47,3.56-5.37,7.63-9.14,11.57C23.51,109.72,16,117.56,16,128s7.51,18.27,14.14,25.18c3.77,3.94,7.67,8,9.14,11.57,1.36,3.27,1.44,8.69,1.52,13.94.15,9.76.31,20.82,8,28.51s18.75,7.85,28.51,8c5.25.08,10.67.16,13.94,1.52,3.56,1.47,7.63,5.37,11.57,9.14C109.72,232.49,117.56,240,128,240s18.27-7.51,25.18-14.14c3.94-3.77,8-7.67,11.57-9.14,3.27-1.36,8.69-1.44,13.94-1.52,9.76-.15,20.82-.31,28.51-8s7.85-18.75,8-28.51c.08-5.25.16-10.67,1.52-13.94,1.47-3.56,5.37-7.63,9.14-11.57C232.49,146.28,240,138.44,240,128S232.49,109.73,225.86,102.82Zm-11.55,39.29c-4.79,5-9.75,10.17-12.38,16.52-2.52,6.1-2.63,13.07-2.73,19.82-.1,7-.21,14.33-3.32,17.43s-10.39,3.22-17.43,3.32c-6.75.1-13.72.21-19.82,2.73-6.35,2.63-11.52,7.59-16.52,12.38S132,224,128,224s-9.15-4.92-14.11-9.69-10.17-9.75-16.52-12.38c-6.1-2.52-13.07-2.63-19.82-2.73-7-.1-14.33-.21-17.43-3.32s-3.22-10.39-3.32-17.43c-.1-6.75-.21-13.72-2.73-19.82-2.63-6.35-7.59-11.52-12.38-16.52S32,132,32,128s4.92-9.15,9.69-14.11,9.75-10.17,12.38-16.52c2.52-6.1,2.63-13.07,2.73-19.82.1-7,.21-14.33,3.32-17.43S70.51,56.9,77.55,56.8c6.75-.1,13.72-.21,19.82-2.73,6.35-2.63,11.52-7.59,16.52-12.38S124,32,128,32s9.15,4.92,14.11,9.69,10.17,9.75,16.52,12.38c6.1,2.52,13.07,2.63,19.82,2.73,7,.1,14.33.21,17.43,3.32s3.22,10.39,3.32,17.43c.1,6.75.21,13.72,2.73,19.82,2.63,6.35,7.59,11.52,12.38,16.52S224,124,224,128,219.08,137.15,214.31,142.11ZM173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34Z"/></symbol>
+  <symbol id="i-handshake" viewBox="0 0 256 256" fill="currentColor"><path d="M254.3,107.91,228.78,56.85a16,16,0,0,0-21.47-7.15L182.44,62.13,130.05,48.27a8.14,8.14,0,0,0-4.1,0L73.56,62.13,48.69,49.7a16,16,0,0,0-21.47,7.15L1.7,107.9a16,16,0,0,0,7.15,21.47l27,13.51,55.49,39.63a8.06,8.06,0,0,0,2.71,1.25l64,16a8,8,0,0,0,7.6-2.1l55.07-55.08,26.42-13.21a16,16,0,0,0,7.15-21.46Zm-54.89,33.37L165,113.72a8,8,0,0,0-10.68.61C136.51,132.27,116.66,130,104,122L147.24,80h31.81l27.21,54.41ZM41.53,64,62,74.22,36.43,125.27,16,115.06Zm116,119.13L99.42,168.61l-49.2-35.14,28-56L128,64.28l9.8,2.59-45,43.68-.08.09a16,16,0,0,0,2.72,24.81c20.56,13.13,45.37,11,64.91-5L188,152.66Zm62-57.87-25.52-51L214.47,64,240,115.06Zm-87.75,92.67a8,8,0,0,1-7.75,6.06,8.13,8.13,0,0,1-1.95-.24L80.41,213.33a7.89,7.89,0,0,1-2.71-1.25L51.35,193.26a8,8,0,0,1,9.3-13l25.11,17.94L126,208.24A8,8,0,0,1,131.82,217.94Z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 256 256" fill="currentColor"><path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"/></symbol>
+  <symbol id="i-logo" viewBox="0 0 32 32"><path d="M9 22L23 8M9 10l14 12" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/></symbol>
+</svg>
+
+<header class="kopf">
+  <div class="wrap kopf__leiste">
+    <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
+      <span class="kopf__zeichen"><svg width="22" height="22" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-logo"/></svg></span>
+      <span>Markenname</span>
+    </a>
+    <nav class="kopf__nav" id="hauptnav" aria-label="Hauptnavigation" data-menue-ziel>
+      <ul class="kopf__menue">
+        <li><a href="#ueber">Über uns</a></li>
+        <li><a href="#leistungen">Leistungen</a></li>
+        <li><a href="#preise">Preise</a></li>
+        <li><a href="#stimmen">Stimmen</a></li>
+        <li><a href="#fragen">Fragen</a></li>
+      </ul>
+    </nav>
+    <a class="kopf__tel" href="tel:+490000000000" aria-label="Anrufen: +49 000 0000000">
+      <span class="kopf__tel-kreis" aria-hidden="true"><svg width="18" height="18" focusable="false"><use href="#i-phone"/></svg></span>
+      <span class="kopf__tel-text" data-beispiel>+49 000 0000000</span>
+    </a>
+    <button class="kopf__burger" type="button" data-menue aria-expanded="false" aria-controls="hauptnav">
+      <span class="sr-nur">Menü öffnen oder schließen</span>
+      <span class="burger" aria-hidden="true"></span>
+    </button>
+  </div>
+</header>
+
+<main id="inhalt">
+  <!-- 1. Held geteilt: links dunkle Fläche mit Text, rechts Bild -->
+  <section class="held" id="top" aria-labelledby="h-held">
+    <div class="held__text-seite">
+      <div class="held__text">
+        <h1 id="h-held" data-zeig>Zeig dich von deiner besten Seite mit Markenname</h1>
+        <p data-zeig>Unsere erfahrenen Fachleute widmen sich ganz deinem Anliegen und machen daraus ein Ergebnis, das zu dir passt.</p>
+        <p data-zeig><a class="knopf" href="#kontakt">Termin vereinbaren</a></p>
+        <p class="held__zeile" data-zeig><svg width="26" height="26" aria-hidden="true" focusable="false"><use href="#i-sparkle"/></svg>Präzise Arbeit mit erprobten Verfahren</p>
+      </div>
+    </div>
+    <div class="bild held__bild" data-platzhalter="Bild: Fachkraft bei der Arbeit, Porträt, Hochformat" role="img" aria-label="Platzhalter für ein Foto einer Fachkraft bei der Arbeit"></div>
+  </section>
+
+  <!-- 2. Anspruch mit Bild -->
+  <section class="sektion anspruch" id="ueber" aria-labelledby="h-anspruch">
+    <div class="wrap">
+      <h2 id="h-anspruch" class="anspruch__satz" data-zeig>Unser Team ist in den neuesten Verfahren geschult, damit du mit einem guten Gefühl und einem überzeugenden Ergebnis gehst.</h2>
+      <div class="anspruch__raster">
+        <div class="anspruch__text">
+          <ul class="anspruch__punkte" data-staffel data-beispiel>
+            <li data-zeig><span class="punkt-icon"><svg width="26" height="26" aria-hidden="true" focusable="false"><use href="#i-certificate"/></svg></span>Über 10 Jahre Erfahrung im Beruf</li>
+            <li data-zeig><span class="punkt-icon"><svg width="26" height="26" aria-hidden="true" focusable="false"><use href="#i-sparkle"/></svg></span>Stets auf Stand bei Trends und Technik</li>
+            <li data-zeig><span class="punkt-icon"><svg width="26" height="26" aria-hidden="true" focusable="false"><use href="#i-heart"/></svg></span>Eine ruhige, angenehme Atmosphäre</li>
+          </ul>
+          <p data-zeig><a class="knopf knopf--dunkel" href="#leistungen">Mehr über uns</a></p>
+        </div>
+        <div class="bild kerbe anspruch__bild" data-zeig="skala" data-platzhalter="Bild: Teamarbeit im Studio, Querformat" role="img" aria-label="Platzhalter für ein Foto der Teamarbeit"><a class="kerbe__knopf" href="#leistungen" aria-label="Zu den Leistungen"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"/></svg></a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Leistungen als Spur mit Pfeilen -->
+  <section class="sektion leistungen" id="leistungen" aria-labelledby="h-leistungen" data-reiter-gruppe>
+    <div class="wrap">
+      <header class="leistungen__kopf">
+        <h2 id="h-leistungen" data-zeig>Unsere Leistungen</h2>
+        <div class="reiter-steuerung" data-reiter-steuerung>
+          <button type="button" class="rund-knopf" data-reiter="zurueck" aria-label="Zurück"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-arrow-left"/></svg></button>
+          <button type="button" class="rund-knopf" data-reiter="weiter" aria-label="Weiter"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></button>
+        </div>
+      </header>
+    </div>
+    <ul class="spur" data-reiter-spur tabindex="0" aria-label="Leistungen, seitlich wischbar">
+      <li class="kerbe leistungskarte" data-beispiel><span class="leistungskarte__icon" aria-hidden="true"><svg width="40" height="40" focusable="false"><use href="#i-sparkle"/></svg></span><h3>Schnitt und Styling</h3><p>Wir bieten maßgeschneiderte Leistungen, die zu deinem Stil und deinem Alltag passen.</p><a class="kerbe__knopf" href="#preise" aria-label="Schnitt und Styling, zu den Preisen"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"/></svg></a></li>
+      <li class="kerbe leistungskarte" data-beispiel><span class="leistungskarte__icon" aria-hidden="true"><svg width="40" height="40" focusable="false"><use href="#i-paint-brush"/></svg></span><h3>Farbe und Akzente</h3><p>Ob dezente Akzente oder eine kräftige Veränderung: Wir beraten dich und setzen es sauber um.</p><a class="kerbe__knopf" href="#preise" aria-label="Farbe und Akzente, zu den Preisen"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"/></svg></a></li>
+      <li class="kerbe leistungskarte" data-beispiel><span class="leistungskarte__icon" aria-hidden="true"><svg width="40" height="40" focusable="false"><use href="#i-drop"/></svg></span><h3>Pflege und Kur</h3><p>Pflegende Behandlungen mit hochwertigen Produkten für Glanz und Gesundheit.</p><a class="kerbe__knopf" href="#preise" aria-label="Pflege und Kur, zu den Preisen"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"/></svg></a></li>
+      <li class="kerbe leistungskarte" data-beispiel><span class="leistungskarte__icon" aria-hidden="true"><svg width="40" height="40" focusable="false"><use href="#i-smiley"/></svg></span><h3>Anlass und Event</h3><p>Für Hochzeit, Fest oder Auftritt: Ein Look, der den ganzen Tag hält und fotogen bleibt.</p><a class="kerbe__knopf" href="#preise" aria-label="Anlass und Event, zu den Preisen"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"/></svg></a></li>
+    </ul>
+  </section>
+
+  <!-- 4. Angebote: Sandband mit Bildkarte und dunkler Karte -->
+  <section class="angebote" id="angebote" aria-labelledby="h-angebote">
+    <div class="wrap angebote__raster">
+      <div class="bild kerbe angebote__bild" data-zeig data-platzhalter="Bild: Fachkraft im Gespräch mit Kunde, Querformat" role="img" aria-label="Platzhalter für ein Foto eines Beratungsgesprächs"></div>
+      <div class="kerbe angebote__karte" data-zeig>
+        <h2 id="h-angebote">Exklusive Angebote</h2>
+        <p>Mit unseren Angeboten erlebst du unsere Leistungen zu einem besonderen Preis.</p>
+        <dl class="angebote__liste" data-beispiel>
+          <div><dt>Neukunden:</dt><dd>20 Prozent Nachlass auf die erste Behandlung</dd></div>
+          <div><dt>Paket:</dt><dd>Vergünstigtes Bündel aus Schnitt, Farbe und Pflege</dd></div>
+          <div><dt>Empfehlung:</dt><dd>Prämie, wenn du eine Freundin oder einen Freund mitbringst</dd></div>
+        </dl>
+        <p><a class="knopf knopf--hell" href="#kontakt">Angebote ansehen</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. So läuft es ab -->
+  <section class="sektion ablauf" id="ablauf" aria-labelledby="h-ablauf">
+    <div class="wrap">
+      <h2 id="h-ablauf" class="mitte-titel" data-zeig>So läuft es ab</h2>
+      <ol class="ablauf__raster" data-staffel>
+        <li class="kerbe schritt-karte" data-zeig><span class="schritt-karte__icon" aria-hidden="true"><svg width="30" height="30" focusable="false"><use href="#i-calendar-blank"/></svg></span><h3>Termin buchen</h3><p>Wähle Leistung und Wunschzeit über das Formular oder ruf uns an.</p></li>
+        <li class="kerbe schritt-karte" data-zeig><span class="schritt-karte__icon" aria-hidden="true"><svg width="30" height="30" focusable="false"><use href="#i-users"/></svg></span><h3>Persönliche Beratung</h3><p>Wir stimmen jede Behandlung auf deine Wünsche und dein Anliegen ab.</p></li>
+        <li class="kerbe schritt-karte" data-zeig><span class="schritt-karte__icon" aria-hidden="true"><svg width="30" height="30" focusable="false"><use href="#i-seal-check"/></svg></span><h3>Wohlfühlen und Ergebnis</h3><p>Entspann dich in ruhiger Umgebung, während unser Team sorgfältig arbeitet.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 6. Über das Studio mit drehendem Siegel -->
+  <section class="sektion studio" aria-labelledby="h-studio">
+    <div class="wrap studio__raster">
+      <div class="studio__bildblock">
+        <div class="bild kerbe studio__bild" data-zeig="skala" data-platzhalter="Bild: Studioeinblick, Querformat" role="img" aria-label="Platzhalter für ein Foto vom Studio"></div>
+        <svg class="siegel-rund" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+          <circle cx="60" cy="60" r="58" fill="var(--flaeche-dunkel)"/>
+          <circle cx="60" cy="60" r="51" fill="none" stroke="var(--akzent)" stroke-width="1.5"/>
+          <defs><path id="kreis-pfad" d="M60 60m-40 0a40 40 0 1 1 80 0a40 40 0 1 1 -80 0"/></defs>
+          <g class="siegel-rund__text"><text fill="var(--akzent)" font-size="10.500" letter-spacing="2.200" font-family="var(--schrift-titel)" font-weight="600"><textPath href="#kreis-pfad">MARKENNAME STUDIO · BEISPIEL · SEIT 20XX ·</textPath></text></g>
+          <path d="M60 46l4 9 10 1-7.500 6.500 2.500 9.500-9-5.500-9 5.500 2.500-9.500L46 56l10-1z" fill="var(--akzent)"/>
+        </svg>
+      </div>
+      <div class="studio__text">
+        <h2 id="h-studio" data-zeig>Wo Stil auf Sorgfalt trifft</h2>
+        <p data-zeig>Bei uns darf sich jeder Gast sicher, gepflegt und gut aufgehoben fühlen.</p>
+        <ul class="studio__pillen" data-zeig data-beispiel>
+          <li><span class="rund-icon rund-icon--dunkel" aria-hidden="true"><svg width="18" height="18" focusable="false"><use href="#i-sparkle"/></svg></span>Schönes Ergebnis</li>
+          <li><span class="rund-icon rund-icon--dunkel" aria-hidden="true"><svg width="18" height="18" focusable="false"><use href="#i-drop"/></svg></span>Hochwertige Produkte</li>
+        </ul>
+        <p data-zeig><a class="knopf" href="#kontakt">Standort ansehen</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Galerie: Mosaik über dunklem Band -->
+  <section class="galerie" id="galerie" aria-label="Eindrücke aus dem Studio">
+    <div class="wrap galerie__raster" data-staffel>
+      <div class="bild galerie__a" data-zeig data-platzhalter="Bild: Arbeit am Platz" role="img" aria-label="Platzhalter für ein Foto"></div>
+      <div class="bild galerie__b" data-zeig data-platzhalter="Bild: Detail der Arbeit, Querformat" role="img" aria-label="Platzhalter für ein Foto"></div>
+      <div class="bild galerie__c" data-zeig data-platzhalter="Bild: Zwei Personen im Studio, Querformat" role="img" aria-label="Platzhalter für ein Foto"></div>
+      <div class="kerbe galerie__karte" data-zeig>
+        <h2>Wo Kreativität auf Handwerk trifft und jeder Look gelingt.</h2>
+        <p><a class="knopf knopf--dunkel" href="#galerie">Galerie ansehen</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Stimmen als Folie -->
+  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen" data-folien>
+    <div class="wrap">
+      <h2 id="h-stimmen" class="mitte-titel" data-zeig>Was unsere Gäste sagen</h2>
+      <div class="folien" data-beispiel>
+        <figure class="folie" data-folie>
+          <div class="bild kerbe folie__bild bild--p1" data-platzhalter="Bild: Porträt, Hochformat" role="img" aria-label="Platzhalter für ein Porträtfoto"></div>
+          <div class="folie__text">
+            <p class="sterne" aria-label="5 von 5 Sternen"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-star"/></svg></p>
+            <blockquote>Bei Markenname steht die Zufriedenheit der Gäste an erster Stelle. Ich habe mich vom ersten Moment an gut beraten gefühlt und bin mit dem Ergebnis rundum glücklich.</blockquote>
+            <p class="folie__meta"><span><strong>Leistung:</strong> Schnitt und Farbe</span><span><strong>Name:</strong> Lisa B.</span></p>
+          </div>
+        </figure>
+        <figure class="folie" data-folie>
+          <div class="bild kerbe folie__bild bild--p2" data-platzhalter="Bild: Porträt, Hochformat" role="img" aria-label="Platzhalter für ein Porträtfoto"></div>
+          <div class="folie__text">
+            <p class="sterne" aria-label="5 von 5 Sternen"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-star"/></svg></p>
+            <blockquote>Pünktlich, freundlich und sehr genau. Der Termin war schnell gebucht, und die Arbeit hat meine Erwartungen übertroffen.</blockquote>
+            <p class="folie__meta"><span><strong>Leistung:</strong> Pflege und Kur</span><span><strong>Name:</strong> Tom K.</span></p>
+          </div>
+        </figure>
+        <figure class="folie" data-folie>
+          <div class="bild kerbe folie__bild bild--p3" data-platzhalter="Bild: Porträt, Hochformat" role="img" aria-label="Platzhalter für ein Porträtfoto"></div>
+          <div class="folie__text">
+            <p class="sterne" aria-label="5 von 5 Sternen"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-star"/></svg></p>
+            <blockquote>Für meine Hochzeit wurde alles genau abgestimmt, und es hat den ganzen Tag gehalten. Ich komme gern wieder.</blockquote>
+            <p class="folie__meta"><span><strong>Leistung:</strong> Anlass und Event</span><span><strong>Name:</strong> Nina S.</span></p>
+          </div>
+        </figure>
+        <div class="folien__steuerung" data-folien-steuerung hidden>
+          <button type="button" class="rund-knopf" data-folien="zurueck" aria-label="Vorherige Stimme"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-arrow-left"/></svg></button>
+          <button type="button" class="rund-knopf" data-folien="weiter" aria-label="Nächste Stimme"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Team und Öffnungszeiten -->
+  <section class="sektion team" id="team" aria-label="Team und Öffnungszeiten">
+    <div class="wrap team__raster">
+      <div class="kerbe team__karte" data-zeig>
+        <h2>Unser Team</h2>
+        <div class="band team__band" data-beispiel>
+          <ul class="band__spur team__spur" style="--band-dauer:36s;--band-abstand:1rem">
+            <li class="mitglied"><span class="bild kerbe bild--p1" role="img" aria-label="Platzhalter für ein Porträtfoto"></span><strong>Sara Beispiel</strong><small>Leitung</small></li>
+            <li class="mitglied"><span class="bild kerbe bild--p2" role="img" aria-label="Platzhalter für ein Porträtfoto"></span><strong>Jan Beispiel</strong><small>Fachkraft</small></li>
+            <li class="mitglied"><span class="bild kerbe bild--p3" role="img" aria-label="Platzhalter für ein Porträtfoto"></span><strong>Eva Beispiel</strong><small>Fachkraft</small></li>
+            <li class="mitglied"><span class="bild kerbe bild--p4" role="img" aria-label="Platzhalter für ein Porträtfoto"></span><strong>Carlo Beispiel</strong><small>Auszubildender</small></li>
+          </ul>
+          <ul class="band__spur team__spur" aria-hidden="true" style="--band-dauer:36s;--band-abstand:1rem">
+            <li class="mitglied"><span class="bild kerbe bild--p1"></span><strong>Sara Beispiel</strong><small>Leitung</small></li>
+            <li class="mitglied"><span class="bild kerbe bild--p2"></span><strong>Jan Beispiel</strong><small>Fachkraft</small></li>
+            <li class="mitglied"><span class="bild kerbe bild--p3"></span><strong>Eva Beispiel</strong><small>Fachkraft</small></li>
+            <li class="mitglied"><span class="bild kerbe bild--p4"></span><strong>Carlo Beispiel</strong><small>Auszubildender</small></li>
+          </ul>
+        </div>
+        <p class="team__knoepfe"><a class="knopf" href="#team">Alle ansehen</a><a class="textlink" href="#kontakt">Bewirb dich bei uns</a></p>
+      </div>
+      <div class="kerbe zeiten-karte" data-zeig>
+        <h2>Öffnungszeiten</h2>
+        <p>Unsere Zeiten passen zu vollen Terminkalendern, mit frühen und späten Terminen.</p>
+        <dl class="zeiten zeiten--gross" data-beispiel><div><dt>Mo bis Fr:</dt><dd>9 bis 19 Uhr</dd></div><div><dt>Sa und So:</dt><dd>10 bis 18 Uhr</dd></div></dl>
+        <p><a class="knopf knopf--hell" href="#kontakt">Termin buchen</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Fragen -->
+  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen">
+    <div class="wrap fragen__raster">
+      <div class="fragen__kopf">
+        <h2 id="h-fragen" data-zeig>Häufige Fragen</h2>
+        <p data-zeig>Du hast Fragen zu Leistungen, Preisen oder zur Pflege danach? Hier haben wir die häufigsten gesammelt.</p>
+      </div>
+      <div class="fragen__liste" data-exklusiv data-staffel>
+        <details class="frage" open data-zeig><summary><span>Welche Leistungen bietet ihr an?</span><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary><p>Beispieltext: Wir bieten Schnitt, Farbe, Pflege und Anlassstyling. Die komplette Liste mit Preisen findest du unter Leistungen.</p></details>
+        <details class="frage" data-zeig><summary><span>Wie buche ich einen Termin?</span><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary><p>Beispieltext: Online über das Formular oder telefonisch zu den Öffnungszeiten. Wir bestätigen den Termin per Mail.</p></details>
+        <details class="frage" data-zeig><summary><span>Welche Produkte verwendet ihr?</span><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary><p>Beispieltext: Wir arbeiten mit hochwertigen Markenprodukten. Auf Wunsch nennen wir dir vorab die Inhaltsstoffe.</p></details>
+        <details class="frage" data-zeig><summary><span>Wie lange dauert ein Termin?</span><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary><p>Beispieltext: Das hängt von der Leistung ab, meist zwischen 45 Minuten und drei Stunden. Bei der Buchung siehst du die geplante Dauer.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<section class="kontaktleiste" id="kontakt" aria-labelledby="h-kontakt">
+  <div class="wrap kontaktleiste__innen">
+    <h2 id="h-kontakt">Kontakt</h2>
+    <ul class="kontaktleiste__liste" data-beispiel>
+      <li><span class="rund-icon" aria-hidden="true"><svg width="22" height="22" focusable="false"><use href="#i-phone"/></svg></span><a href="tel:+490000000000">+49 000 0000000</a></li>
+      <li><span class="rund-icon" aria-hidden="true"><svg width="22" height="22" focusable="false"><use href="#i-envelope"/></svg></span><a href="mailto:info@beispiel.invalid">info@beispiel.invalid</a></li>
+      <li><span class="rund-icon" aria-hidden="true"><svg width="22" height="22" focusable="false"><use href="#i-map-pin"/></svg></span><span>Musterstraße 1, 12345 Musterstadt</span></li>
+    </ul>
+  </div>
+</section>
+<footer class="fuss" id="fuss">
+  <div class="wrap fuss__raster">
+    <div class="fuss__marke">
+      <a class="kopf__logo" href="#top" aria-label="Markenname, nach oben"><span class="kopf__zeichen"><svg width="22" height="22" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-logo"/></svg></span><span>Markenname</span></a>
+      <p>Wir begleiten dich mit Sorgfalt und festen Terminen. Platzhaltertext, durch den Leitsatz der Marke ersetzen.</p>
+      <h2 class="fuss__titel fuss__titel--akzent">Öffnungszeiten</h2>
+      <dl class="zeiten" data-beispiel><div><dt>Mo bis Fr:</dt><dd>9 bis 19 Uhr</dd></div><div><dt>Sa und So:</dt><dd>10 bis 18 Uhr</dd></div></dl>
+    </div>
+    <nav aria-label="Seiten">
+      <h2 class="fuss__titel">Seiten</h2>
+      <ul class="fuss__spalten"><li><a href="index.html">Startseite</a></li><li><a href="v2.html">Startseite, Variante 2</a></li><li><a href="#ueber">Über uns</a></li><li><a href="#leistungen">Leistungen</a></li><li><a href="#preise">Preise</a></li><li><a href="#stimmen">Stimmen</a></li><li><a href="#fragen">Fragen</a></li><li><a href="#kontakt">Kontakt</a></li></ul>
+    </nav>
+    <nav aria-label="Rechtliches">
+      <h2 class="fuss__titel">Rechtliches</h2>
+      <ul><li><a href="#fuss">Datenschutz</a></li><li><a href="#fuss">Impressum</a></li><li><a href="#fuss">Geschäftsbedingungen</a></li></ul>
+    </nav>
+  </div>
+  <div class="wrap fuss__unten"><p>© Markenname. Alle Rechte vorbehalten.</p></div>
+</footer>
+
+<script src="../_basis/bewegung.js"></script>
+<script src="stil.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+/* marke.css der Vorlage "Kanzlei Serifenwärme": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#ffffff;
+  --flaeche-alt:#f3f0e9;
+  --flaeche-dunkel:#15302a;
+  --text:#16231f;
+  --text-leise:#55615b;
+  --linie:#e4dfd3;
+  --akzent:#dca43c;           /* Hauptaktion: Fläche mit dunklem Text, auf Dunkel auch als Text und Punkt */
+  --akzent-text:#1b1405;
+  --schrift-titel:'Newsreader',Georgia,serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:14px;
+  --radius-karte:24px;
+  --radius-bild:24px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:34px;
+  --titel-gewicht:400;
+  --titel-spur:-0.02em;
+  --akzent-tief:#8a5a06;      /* Akzent auf Hell: Text, Zahlen, Linie (5,9 zu 1 auf Weiß, 5,2 zu 1 auf --flaeche-alt) */
+  --flaeche-dunkel-2:#1d3b34;
+  --text-auf-dunkel:#f5f2ea;
+  --text-leise-dunkel:#b9c6c0;
+  --linie-dunkel:#31504a;
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#5b4a36;
+  --ton-2:#2f4a44;
+  --ton-3:#8a6d44;
+  --ton-4:#3c4a55;
+  --ton-5:#6b6a58;
+  --ton-6:#1d2a27;
+}

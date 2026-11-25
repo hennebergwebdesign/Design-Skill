@@ -1,0 +1,100 @@
+/* stil-v1.css der Vorlage "Kanzlei Messing und Nachtblau", Variante 1 "Held im Vollbild" (index.html):
+   Vollbildheld, Aussage mit Wortlicht und Kennzahlenkarten, Bild im Rahmen mit Text, Team unter dem Bild, gestapelte Stimmen, Blog. Nach stil.css geladen. */
+.kopf__telknopf{display:grid}
+@media (min-width:30rem){.kopf__knopf{display:inline-flex}}
+.kopf__knopf{display:none}
+@media (min-width:62rem){
+  .kopf__burger,.js .kopf__burger{display:none}
+  .kopf__nav,.js .kopf__nav,.js .kopf__nav:not([data-offen="true"]){position:static;display:block;order:0;flex-basis:auto;padding:0;background:none;border-radius:0;box-shadow:none}
+  .js .kopf__menue{flex-direction:row}
+  .kopf__menue{flex-wrap:nowrap}
+  .kopf__tel{display:none}
+  .kopf__leiste{display:grid;grid-template-columns:1fr auto 1fr}
+  .kopf__logo{margin-right:0}
+  .kopf__rechts{justify-self:end}
+}
+
+/* 1. Held */
+.held{position:relative;display:flex;align-items:flex-end;min-height:max(36rem,100svh);overflow:hidden;color:var(--text-auf-dunkel);background:var(--flaeche-dunkel)}
+.held__bild{position:absolute;inset:0;border-radius:0}
+.held__bild[data-platzhalter]::after{inset:6rem 1rem auto auto}
+.held__schleier{position:absolute;inset:0;background:linear-gradient(0deg,color-mix(in srgb,var(--flaeche-dunkel) 94%,transparent) 0%,color-mix(in srgb,var(--flaeche-dunkel) 50%,transparent) 60%,color-mix(in srgb,var(--flaeche-dunkel) 25%,transparent) 100%)}
+.held__schleier::after{content:"";position:absolute;inset:0;background:var(--flaeche-dunkel);opacity:calc(var(--dunkel,0) * .7)}
+.held__innen{position:relative;z-index:1;display:grid;gap:1.25rem;justify-items:start;padding-block:9rem 3.5rem}
+.held h1{font-size:clamp(2.5rem,1.2rem + 5.6vw,5.5rem);line-height:1.02;max-width:14ch}
+.held__text{max-width:34rem;font-size:var(--text-l)}
+.held__knoepfe{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.5rem;margin-top:.5rem}
+
+/* 2. Einleitung */
+.einleitung__satz{font-size:clamp(2rem,1.2rem + 3.6vw,4.25rem);line-height:1.12;max-width:26ch;letter-spacing:var(--titel-spur)}
+.zahlen{display:grid;gap:.75rem;margin-top:clamp(2.5rem,6vw,4rem)}
+.zahlen li{display:flex;align-items:center;gap:1.25rem;padding:1.5rem;border-radius:8px;background:#fff}
+.zahlen__kreis{display:grid;place-items:center;flex:none;width:4.5rem;height:4.5rem;border-radius:50%;background:var(--akzent);color:var(--akzent-text)}
+.zahlen__wert{font-size:clamp(2rem,1.5rem + 1.6vw,2.75rem)}
+.zahlen__text{margin-top:.25rem;color:var(--text-leise)}
+@media (min-width:48rem){.zahlen{grid-template-columns:repeat(3,1fr)}}
+
+/* 3. Über uns */
+.ueber__paar{display:grid;gap:3rem;align-items:center}
+.ueber .rahmen{width:min(100%,32rem)}
+.rahmen__zahl{position:absolute;z-index:3;left:1.25rem;bottom:1.25rem;display:grid;padding:.75rem 1rem;border-radius:10px;background:color-mix(in srgb,var(--flaeche-dunkel) 88%,transparent);color:var(--text-auf-dunkel)}
+.rahmen__zahl .zahl{font-size:2.25rem}
+.ueber__text{display:grid;gap:1.25rem;justify-items:start}
+.ueber__text h2{max-width:14ch}
+.ueber__text>p:not(.kicker){max-width:32rem;color:var(--text-leise);font-size:var(--text-l)}
+.punkte{width:100%;max-width:32rem}
+.punkte li{display:flex;align-items:center;gap:1rem;padding-block:1rem;border-bottom:1px solid var(--linie);font-weight:600}
+.punkte li:first-child{border-top:1px solid var(--linie)}
+.punkte__zeichen{display:grid;place-items:center;flex:none;width:3rem;height:3rem;border-radius:50%;box-shadow:inset 0 0 0 1px var(--akzent-tief);color:var(--akzent-tief)}
+@media (min-width:62rem){.ueber__paar{grid-template-columns:1fr 1fr;gap:5rem}}
+
+/* 5. Team */
+.team__raster{display:grid;gap:1.5rem}
+.team__bild{aspect-ratio:4/5;border-radius:var(--radius-karte)}
+.team__raster h3{margin-top:1rem;text-align:center;font-size:clamp(1.5rem,1.2rem + 1vw,2rem)}
+.team__raster p{text-align:center;color:var(--text-leise)}
+@media (min-width:48rem){.team__raster{grid-template-columns:repeat(3,1fr)}}
+
+/* 6. Stimmen: Karten stapeln sich beim Scrollen (Sticky, ab 992 px) */
+.stimmen__paar{display:grid;gap:2.5rem}
+.stimmen__kopf{display:grid;gap:1.25rem;align-content:start;justify-items:start}
+.stimmen__kopf h2{max-width:14ch}
+.stimmen__text{max-width:26rem;color:var(--text-leise)}
+.stimmen__werte{display:flex;flex-wrap:wrap;gap:1rem 3rem;padding-top:1.25rem;border-top:1px solid var(--linie);width:100%}
+.stimmen__werte dt{color:var(--text-leise)}
+.stimmen__werte dd{margin:0}
+.stimmen__werte .zahl{margin-top:.5rem;font-size:3rem}
+.stimmen__sterne,.stimme__sterne{display:flex;gap:.15rem;color:var(--akzent)}
+.stimmen__stapel{display:grid;gap:1rem}
+.stimme{padding:1.5rem;border-radius:var(--radius-karte);background:#fff;box-shadow:inset 0 0 0 1px var(--linie),0 14px 30px color-mix(in srgb,var(--flaeche-dunkel) 8%,transparent)}
+.stimme figcaption{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1rem}
+.stimme figcaption>span:nth-child(2){display:grid;margin-right:auto}
+.stimme figcaption strong{font-weight:600}
+.stimme figcaption span span{color:var(--text-leise)}
+.stimme__bild{width:3.25rem;height:3.25rem;border-radius:50%;background:linear-gradient(160deg,var(--ton-3),var(--ton-6))}
+.stimme blockquote{margin-top:1.25rem}
+.stimme blockquote p{font-family:var(--schrift-titel);font-size:clamp(1.25rem,1.1rem + .7vw,1.625rem);line-height:1.4}
+@media (min-width:62rem){
+  .stimmen__paar{grid-template-columns:1fr 1.1fr;gap:5rem;align-items:start}
+  .stimmen__kopf{position:sticky;top:7rem}
+  .stimmen__stapel{display:block}
+  .stimmen__stapel li{position:sticky;margin-bottom:2rem}
+  .stimmen__stapel li:nth-child(1){top:7rem}
+  .stimmen__stapel li:nth-child(2){top:9rem}
+  .stimmen__stapel li:nth-child(3){top:11rem;margin-bottom:0}
+}
+
+/* 7. Blog */
+.blog__raster{display:grid;gap:1rem}
+.beitrag{display:grid;align-content:space-between;gap:1rem;padding:1.5rem;border-radius:var(--radius-karte);background:#fff;box-shadow:inset 0 0 0 1px var(--linie)}
+.beitrag__meta{display:flex;gap:.6rem;color:var(--text-leise)}
+.beitrag h3{margin-top:.5rem;font-size:clamp(1.375rem,1.1rem + 1vw,1.875rem)}
+.beitrag h3 a:hover{text-decoration:underline;text-underline-offset:.2em}
+.beitrag--gross{position:relative;min-height:24rem;align-content:end;color:var(--text-auf-dunkel)}
+.beitrag--gross::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,color-mix(in srgb,var(--flaeche-dunkel) 94%,transparent),color-mix(in srgb,var(--flaeche-dunkel) 15%,transparent) 75%)}
+.beitrag--gross .beitrag__meta{color:var(--text-auf-dunkel)}
+.beitrag__innen{position:relative;z-index:2}
+@media (min-width:62rem){
+  .blog__raster{grid-template-columns:1.4fr 1fr;grid-template-rows:1fr 1fr}
+  .beitrag--gross{grid-row:1 / 3;min-height:34rem}
+}

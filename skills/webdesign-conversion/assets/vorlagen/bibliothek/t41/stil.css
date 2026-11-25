@@ -1,0 +1,296 @@
+/* stil.css der Vorlage "Analyse dunkel": Gestaltung. Farben nur aus den Tokens in marke.css, Mechanik aus ../_basis/basis.css.
+   Mobil zuerst. Schwarze Seite, Karten als feste dunkle Flächen, ein warmer Akzent mit Glühen am Seitenanfang und -ende.
+   Bei reduzierter Bewegung und ohne JavaScript bleibt alles sichtbar. */
+:root{--h2-m:clamp(2rem,1.3rem + 3vw,3.5rem);color-scheme:dark}
+h1,h2,h3,h4{font-weight:var(--titel-gewicht);letter-spacing:var(--titel-spur)}
+h2{font-size:var(--h2-m);line-height:1.04}
+h3{font-size:clamp(1.25rem,1.1rem + .6vw,1.625rem);line-height:1.15;letter-spacing:-.025em}
+small{font-size:.9375rem}
+.zahl{font-family:var(--schrift-titel);font-weight:500;letter-spacing:-.04em;line-height:1}
+.sektion{padding-block:var(--raum)}
+
+/* Knöpfe */
+.knopf{justify-content:center;text-align:center;font-size:1rem;font-weight:600;background:linear-gradient(180deg,var(--akzent-hell),var(--akzent));box-shadow:0 0 0 1px color-mix(in srgb,var(--akzent) 60%,#000),0 8px 24px color-mix(in srgb,var(--akzent) 28%,transparent)}
+.knopf:hover{box-shadow:0 0 0 1px var(--akzent),0 10px 30px color-mix(in srgb,var(--akzent) 45%,transparent)}
+.knopf--gross{min-height:3.25rem;padding-inline:1.75rem}
+.knopf--rand{background:transparent;color:var(--text);box-shadow:inset 0 0 0 1px var(--linie)}
+.knopf--rand:hover{box-shadow:inset 0 0 0 1px var(--text-leise)}
+.knopf--breit{display:flex;width:100%}
+.knopf--klein{min-height:2.75rem;padding:.4rem 1rem}
+.knopf{color:var(--akzent-text)}
+.knopf--rand{color:var(--text)}
+.kicker{display:inline-flex;align-items:center;gap:.6rem;font-size:1rem;font-weight:500;color:var(--text-leise)}
+.kicker::before{content:"";width:.5rem;height:.5rem;border-radius:50%;background:var(--akzent);flex:none}
+.kopfblock{display:flex;flex-direction:column;align-items:center;text-align:center;gap:1rem;max-width:46rem;margin-inline:auto;margin-bottom:clamp(2.5rem,6vw,4rem)}
+.kopfblock__text{color:var(--text-leise);font-size:var(--text-l);max-width:36rem}
+.symbol{display:inline-flex;flex:none;width:3.25rem;height:3.25rem;align-items:center;justify-content:center;border-radius:50%;background:linear-gradient(180deg,var(--akzent-hell),var(--akzent));color:var(--akzent-text)}
+.symbol--klein{width:2.5rem;height:2.5rem}
+.avatar{display:inline-block;flex:none;width:3rem;height:3rem;border-radius:50%}
+.avatar::after{display:none!important}
+.bild{--lichter:radial-gradient(70% 60% at 75% 20%,color-mix(in srgb,var(--akzent) 45%,transparent),transparent 70%)}
+.bild--a{--bild-grund:var(--lichter),linear-gradient(160deg,#3a2a20,#0f0d0c)}
+.bild--b{--bild-grund:var(--lichter),linear-gradient(160deg,#2c3a3a,#0d1111)}
+.bild--c{--bild-grund:var(--lichter),linear-gradient(160deg,#4a3b2c,#14100c)}
+.bild[data-platzhalter]::after{opacity:1;z-index:2;inset:.75rem .75rem auto auto;max-width:calc(100% - 1.5rem);padding:.3rem .65rem;border-radius:8px;background:color-mix(in srgb,#000 75%,transparent);color:var(--text);font-size:1rem;line-height:1.3}
+.kerzen{display:block;width:100%;height:100%}
+.kerzen .h{fill:var(--positiv);stroke:var(--positiv);stroke-width:1.5;vector-effect:non-scaling-stroke}
+.kerzen .t{fill:var(--akzent);stroke:var(--akzent);stroke-width:1.5;vector-effect:non-scaling-stroke}
+.kerzen path{fill:none}
+
+/* Kopf */
+.kopf{position:absolute;top:0;left:0;right:0;z-index:50;padding:.75rem .75rem 0;pointer-events:none}
+.js .kopf{position:fixed}
+.kopf>*{pointer-events:auto}
+.kopf__leiste{position:relative;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;max-width:50rem;margin-inline:auto;padding:.4rem .4rem .4rem 1rem;border-radius:999px;background:var(--karte);box-shadow:inset 0 0 0 1px var(--linie),0 14px 34px color-mix(in srgb,#000 55%,transparent)}
+.js .kopf__leiste{flex-wrap:nowrap}
+.kopf__logo{display:inline-flex;align-items:center;gap:.6rem;min-height:2.75rem;font-family:var(--schrift-titel);font-weight:600;font-size:1.125rem;letter-spacing:-.03em;margin-right:auto;white-space:nowrap}
+.kopf__zeichen{width:1.75rem;height:1.75rem;color:var(--akzent)}
+.kopf__tel{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-width:2.75rem;min-height:2.75rem;border-radius:999px;background:var(--karte-hoch);color:var(--akzent);font-weight:600}
+.kopf__tel:hover{background:var(--linie)}
+.kopf__tel-text{display:none}
+.kopf__knopf{display:none;min-height:2.75rem;padding:.4rem 1.1rem;white-space:nowrap}
+.kopf__burger{display:none;width:2.75rem;height:2.75rem;border-radius:50%;align-items:center;justify-content:center;background:var(--karte-hoch)}
+.js .kopf__burger{display:inline-flex}
+.burger,.burger::before{display:block;width:1.2rem;height:2px;background:var(--text);border-radius:2px;transition:transform var(--dauer-mittel) var(--kurve)}
+.burger{position:relative;transform:translateY(-4px)}
+.burger::before{content:"";position:absolute;left:0;top:8px}
+.kopf__burger[aria-expanded="true"] .burger{transform:rotate(45deg)}
+.kopf__burger[aria-expanded="true"] .burger::before{transform:translateY(-8px) rotate(-90deg)}
+.kopf__nav{order:9;flex-basis:100%}
+.kopf__menue{display:flex;flex-wrap:wrap;gap:0 .25rem}
+.kopf__menue a{display:flex;align-items:center;min-height:2.75rem;padding-inline:.8rem;font-weight:500;color:var(--text-leise);border-radius:999px}
+.kopf__menue a:hover,.kopf__menue a[aria-current="location"]{color:var(--text)}
+.kopf nav a[aria-current="location"]{text-decoration:none}
+.js .kopf__nav{position:absolute;top:calc(100% + .5rem);left:0;right:0;padding:.5rem 1rem 1rem;border-radius:var(--radius-karte);background:var(--karte);box-shadow:inset 0 0 0 1px var(--linie),0 18px 40px #000}
+.js .kopf__nav:not([data-offen="true"]){display:none}
+.js .kopf__menue{flex-direction:column}
+.js .kopf__menue a{min-height:3rem}
+@media (min-width:36rem){.kopf__knopf{display:inline-flex}}
+@media (min-width:64rem){
+  .kopf__leiste{max-width:none;width:max-content;flex-wrap:nowrap;padding-left:1.1rem;gap:.35rem}
+  .kopf__burger,.js .kopf__burger{display:none}
+  .kopf__nav,.js .kopf__nav,.js .kopf__nav:not([data-offen="true"]){position:static;display:block;order:0;flex-basis:auto;padding:0;background:none;border-radius:0;box-shadow:none}
+  .js .kopf__menue{flex-direction:row}
+  .kopf__menue{flex-wrap:nowrap}
+  .kopf__logo{margin-right:1.5rem}
+  .kopf__tel{padding-inline:.9rem}
+}
+@media (min-width:80rem){.kopf__tel-text{display:inline}}
+
+/* 1. Held */
+.held{position:relative;overflow:hidden;padding-top:8rem;background:var(--flaeche)}
+.held__vorhang{position:absolute;inset:0;background:
+  linear-gradient(180deg,transparent 40%,color-mix(in srgb,var(--akzent) 22%,transparent) 78%,color-mix(in srgb,var(--akzent) 70%,transparent) 100%),
+  repeating-linear-gradient(90deg,transparent 0 7%,color-mix(in srgb,var(--akzent) 9%,transparent) 8.5%,transparent 10%,transparent 12%,color-mix(in srgb,var(--akzent) 5%,transparent) 13%,transparent 16%);
+  -webkit-mask-image:linear-gradient(180deg,#000 40%,transparent 100%);mask-image:linear-gradient(180deg,#000 40%,transparent 100%);opacity:.9}
+.held__innen{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:1.4rem;padding-bottom:clamp(3rem,7vw,5rem)}
+.held h1{font-size:clamp(2.4rem,1.2rem + 5vw,4.75rem);font-weight:500;letter-spacing:-.05em;line-height:1;max-width:15ch}
+.held__text{max-width:38rem;color:var(--text-leise);font-size:var(--text-l)}
+.held__knoepfe{display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem}
+.held__buehne{position:relative;padding-top:1rem}
+.oberflaeche{position:relative;z-index:2;margin-inline:auto;max-width:62rem;border-radius:var(--radius-gross) var(--radius-gross) 0 0;background:var(--karte);box-shadow:inset 0 0 0 1px var(--linie),0 -20px 80px color-mix(in srgb,var(--akzent) 25%,transparent);overflow:hidden;height:clamp(14rem,34vw,26rem)}
+.oberflaeche__kopf{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.25rem;padding:1rem 1.25rem;border-bottom:1px solid var(--linie);font-size:.9375rem;color:var(--text-leise)}
+.oberflaeche__logo{display:inline-flex;align-items:center;gap:.5rem;color:var(--text);font-weight:600}
+.oberflaeche__logo svg{color:var(--akzent)}
+.oberflaeche__feld{display:none;padding:.3rem .7rem;border-radius:8px;background:var(--karte-hoch)}
+.oberflaeche__haupt{display:grid;grid-template-columns:1fr;gap:1rem;padding:1rem 1.25rem}
+.oberflaeche__seite{display:none;flex-direction:column;gap:.5rem;font-size:.9375rem;color:var(--text-leise)}
+.oberflaeche__seite li{padding:.4rem .7rem;border-radius:8px}
+.oberflaeche__seite li.an{background:var(--karte-hoch);color:var(--text)}
+.oberflaeche__chart{height:12rem;position:relative}
+.oberflaeche__zahl{font-family:var(--schrift-titel);font-size:1.5rem;letter-spacing:-.03em;margin-bottom:.5rem}
+.oberflaeche__zahl small{color:var(--positiv);font-size:1rem}
+.oberflaeche__chart .kerzen{height:calc(100% - 2.5rem)}
+.muenze{position:absolute;z-index:3;bottom:-2rem;width:clamp(5rem,15vw,12rem);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 32% 28%,var(--akzent-hell),var(--akzent) 45%,var(--akzent-tief) 80%);box-shadow:0 20px 60px color-mix(in srgb,var(--akzent) 45%,transparent),inset 0 0 0 6px color-mix(in srgb,#fff 18%,transparent)}
+.muenze::after{content:"";position:absolute;inset:18%;border-radius:50%;box-shadow:inset 0 0 0 3px color-mix(in srgb,#000 22%,transparent)}
+.muenze--l{left:-1.5rem}
+.muenze--r{right:-1.5rem;bottom:2rem}
+
+/* 2. Vertrauen */
+.vertrauen{padding-block:clamp(2.5rem,6vw,4.5rem);color:var(--text-leise);text-align:center}
+.vertrauen__titel{margin-bottom:2rem;padding-inline:var(--rand);color:var(--text);font-weight:500;font-size:var(--text-l)}
+.logoband{--band-abstand:4rem;--band-dauer:40s;--logo-h:1.75rem;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+
+/* 3. Vorteile */
+.drei-spalten{display:grid;gap:1rem}
+.spalte{display:flex;flex-direction:column;gap:1rem}
+.kachel-gross{position:relative;padding:1.5rem;border-radius:var(--radius-karte);background:var(--karte);box-shadow:inset 0 0 0 1px var(--linie);display:flex;flex-direction:column;gap:.75rem;min-height:11rem}
+.kachel-gross h3{padding-right:3.5rem}
+.kachel-gross p{color:var(--text-leise);margin-top:auto}
+.kachel-gross__icon{position:absolute;top:1.4rem;right:1.4rem;color:var(--akzent)}
+.anzeige{display:flex;flex-direction:column;align-items:center;gap:.5rem;padding:1.5rem;border-radius:var(--radius-karte);background:linear-gradient(180deg,var(--akzent-hell),var(--akzent));color:var(--akzent-text);box-shadow:0 20px 60px color-mix(in srgb,var(--akzent) 22%,transparent)}
+.anzeige h3{font-weight:600}
+.anzeige__tacho{width:min(20rem,100%);height:auto;margin-block:1.5rem 0}
+.anzeige__stand{font-weight:700;font-size:1.125rem;padding:.3rem 1rem;border-radius:999px;background:color-mix(in srgb,#000 12%,transparent)}
+.anzeige__skala{display:flex;flex-wrap:wrap;justify-content:center;gap:.25rem .9rem;font-size:.9375rem;margin-top:.5rem}
+
+/* 4. Funktionen */
+.bento{display:grid;gap:1rem}
+.bento__karte{display:flex;flex-direction:column;gap:.6rem;padding:clamp(1.25rem,3vw,1.9rem);border-radius:var(--radius-gross);background:var(--karte);box-shadow:inset 0 0 0 1px var(--linie);overflow:hidden}
+.bento__karte>p{color:var(--text-leise);max-width:34rem}
+.chartfeld{margin-top:1rem;padding:1rem;border-radius:18px;background:var(--flaeche);box-shadow:inset 0 0 0 1px var(--linie);height:15rem;display:flex;flex-direction:column;gap:.5rem}
+.chartfeld .kerzen,.chartfeld .linienchart{flex:1;min-height:0}
+.chartfeld__kopf{display:flex;flex-wrap:wrap;gap:.25rem 1rem;font-size:.9375rem;color:var(--text-leise)}
+.chartfeld__zeit{display:flex;gap:.4rem;justify-content:flex-end;font-size:.9375rem}
+.chartfeld__zeit li{padding:.25rem .6rem;border-radius:8px;color:var(--text-leise)}
+.chartfeld__zeit li.an{background:var(--karte-hoch);color:var(--text)}
+.linienchart{width:100%;height:100%}
+.bento__karte--licht{background:radial-gradient(70% 55% at 50% 30%,color-mix(in srgb,var(--akzent) 28%,var(--karte)),var(--karte) 75%);justify-content:flex-end;min-height:26rem}
+.lichtkegel{position:relative;flex:1;display:flex;align-items:center;justify-content:center;min-height:13rem}
+.lichtkegel__strahl{position:absolute;top:-3rem;left:50%;width:10rem;height:100%;transform:translateX(-50%);background:linear-gradient(180deg,transparent,color-mix(in srgb,var(--akzent-hell) 80%,transparent) 55%,transparent);clip-path:polygon(40% 0,60% 0,100% 100%,0 100%);opacity:.7}
+.lichtkegel__knoepfe{position:relative;display:flex;gap:.6rem;padding:.5rem;border-radius:999px;background:var(--flaeche);box-shadow:inset 0 0 0 1px var(--linie);color:var(--akzent-text)}
+.lichtkegel__knoepfe svg{width:3rem;height:3rem;padding:.8rem;border-radius:50%;background:linear-gradient(180deg,var(--akzent-hell),var(--akzent))}
+.bento__karte--vorher{justify-content:flex-end}
+.signale{display:flex;flex-direction:column;gap:.5rem;margin-bottom:1rem}
+.signale li{display:flex;gap:.75rem;align-items:center;padding:.6rem .8rem;border-radius:12px;background:var(--karte-hoch)}
+.signale strong{display:block;font-size:1rem}
+.signale small{display:block;color:var(--text-leise)}
+.signale__punkt{flex:none;width:.9rem;height:.9rem;border-radius:50%;background:var(--negativ)}
+.signale__an .signale__punkt{background:var(--positiv)}
+.signale__aus{opacity:.65}
+
+/* 5. Prinzipien */
+.prinzip-liste{display:grid;gap:1rem}
+.prinzip{display:flex;flex-direction:column;align-items:flex-start;gap:.8rem;padding:1.5rem;border-radius:var(--radius-karte);background:linear-gradient(180deg,color-mix(in srgb,var(--akzent) 10%,var(--karte)),var(--karte) 45%);box-shadow:inset 0 0 0 1px var(--linie)}
+.prinzip p{color:var(--text-leise)}
+
+/* 6. Ablauf */
+.ablauf__raster{display:grid;gap:2rem}
+.aufrufkarte{display:flex;flex-direction:column;gap:1rem;padding:1.5rem;border-radius:var(--radius-gross);background:linear-gradient(180deg,color-mix(in srgb,var(--akzent) 22%,var(--karte)),var(--karte) 60%);box-shadow:inset 0 0 0 1px var(--linie)}
+.aufrufkarte>p{color:var(--text-leise)}
+.aufrufkarte__bild{aspect-ratio:16/9;border-radius:18px}
+.ablauf__schritte{display:flex;flex-direction:column;gap:2.5rem}
+.ablauf__kopf{display:flex;flex-direction:column;align-items:flex-start;gap:1rem}
+.schritt{display:flex;flex-direction:column;gap:.75rem}
+.schritt>p{color:var(--text-leise);max-width:34rem}
+.schritt__feld{margin-top:.5rem;min-height:15rem;padding:1.25rem;border-radius:var(--radius-karte);background:var(--karte);box-shadow:inset 0 0 0 1px var(--linie);display:flex;flex-direction:column;gap:.6rem}
+.schritt__feld .kerzen{flex:1;min-height:9rem}
+.schritt__feld--form{align-items:center;justify-content:center}
+.schritt__logo{display:inline-flex;align-items:center;gap:.5rem;font-weight:600;margin-bottom:.5rem}
+.schritt__logo svg{color:var(--akzent)}
+.feld{width:min(16rem,100%);padding:.7rem 1rem;border-radius:999px;background:var(--karte-hoch);color:var(--text-leise);font-size:.9375rem}
+.schritt__feld--netz{align-items:center;justify-content:center}
+.schritt__feld--netz svg{width:min(26rem,100%);height:auto}
+
+/* 7. Anbindungen */
+.anbindungen{overflow:hidden}
+.kachelfeld{position:relative;display:flex;flex-direction:column;gap:1rem}
+.kachelband{--band-abstand:1rem;--band-dauer:50s;-webkit-mask-image:linear-gradient(90deg,transparent,#000 15%,#000 85%,transparent);mask-image:linear-gradient(90deg,transparent,#000 15%,#000 85%,transparent)}
+.kachelband .band__spur{justify-content:flex-start;min-width:auto}
+.kachelband--zurueck .band__spur{animation-direction:reverse}
+.kachel{display:inline-flex;flex:none;align-items:center;justify-content:center;width:5rem;height:5rem;border-radius:22px;background:var(--karte-hoch);box-shadow:inset 0 0 0 1px var(--linie);color:var(--akzent)}
+.ring{position:absolute;left:50%;top:50%;z-index:2;display:flex;align-items:center;justify-content:center;width:7.5rem;height:7.5rem;transform:translate(-50%,-50%);border-radius:50%;background:var(--flaeche);box-shadow:0 0 0 6px var(--akzent),0 0 60px color-mix(in srgb,var(--akzent) 55%,transparent);color:var(--akzent)}
+
+/* 8. Preise */
+.umschalter{display:inline-flex;padding:.25rem;border-radius:999px;background:var(--karte);box-shadow:inset 0 0 0 1px var(--linie)}
+.umschalter button{min-height:2.75rem;padding:.4rem 1.2rem;border-radius:999px;font-weight:600;color:var(--text-leise);transition:background-color var(--dauer-kurz),color var(--dauer-kurz)}
+.umschalter button[aria-pressed="true"]{background:var(--text);color:var(--flaeche)}
+.tarife{display:grid;gap:1rem;align-items:start}
+.tarif{position:relative;display:flex;flex-direction:column;gap:1rem;padding:1.5rem;border-radius:var(--radius-gross);background:var(--karte);box-shadow:inset 0 0 0 1px var(--linie)}
+.tarif h3{display:flex;align-items:center;gap:.75rem}
+.tarif__preis{font-size:1.25rem;color:var(--text-leise)}
+.tarif__preis .zahl{font-size:clamp(2.5rem,2rem + 2vw,3.5rem);color:var(--text)}
+.tarif__preis small{font-size:1rem}
+.tarif__fuer{color:var(--text-leise)}
+.haken{display:flex;flex-direction:column;gap:.6rem;margin-block:.5rem}
+.haken li{position:relative;padding-left:1.75rem}
+.haken li::before{content:"";position:absolute;left:.15rem;top:.45rem;width:.5rem;height:.9rem;border:solid var(--akzent);border-width:0 2.5px 2.5px 0;transform:rotate(40deg) scale(.8)}
+.tarif--hervor{background:linear-gradient(180deg,var(--akzent-tief),color-mix(in srgb,var(--akzent) 30%,var(--karte)) 55%,var(--karte));box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--akzent) 70%,transparent),0 24px 70px color-mix(in srgb,var(--akzent) 20%,transparent)}
+.tarif--hervor .tarif__fuer,.tarif--hervor .tarif__preis{color:var(--text)}
+.tarif--hervor .tarif__fuer{opacity:.9}
+.tarif__marke{align-self:flex-start;padding:.25rem .8rem;border-radius:999px;background:var(--flaeche);font-size:.9375rem;font-weight:600}
+
+/* 9. Stimmen */
+.stimmen{overflow:hidden}
+.stimmenfeld{display:flex;flex-direction:column;gap:1rem}
+.stimmband{--band-abstand:1rem;--band-dauer:70s;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.stimmband .band__spur{justify-content:flex-start;align-items:stretch;min-width:auto}
+.stimmband--zurueck .band__spur{animation-direction:reverse}
+.stimme{flex:none;width:min(21rem,80vw);display:flex;flex-direction:column;justify-content:space-between;gap:1.5rem;padding:1.5rem;border-radius:var(--radius-karte);background:var(--karte);box-shadow:inset 0 0 0 1px var(--linie);white-space:normal}
+.stimme blockquote{font-size:1.0625rem}
+.stimme__person{display:flex;align-items:center;gap:.75rem}
+.stimme__person strong{display:block}
+.stimme__person small{color:var(--text-leise);font-size:1rem}
+
+/* 10. Fragen */
+.faq__liste{display:flex;flex-direction:column;gap:.75rem;max-width:52rem;margin-inline:auto}
+.frage{border-radius:var(--radius-karte);background:var(--karte);box-shadow:inset 0 0 0 1px var(--linie)}
+.frage[open]{box-shadow:inset 0 0 0 1px var(--akzent)}
+.frage[open] summary{color:var(--akzent)}
+.frage summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:3.5rem;padding:1rem 1.5rem;font-weight:500;font-size:1.125rem;cursor:pointer;list-style:none;border-radius:var(--radius-karte)}
+.frage summary::-webkit-details-marker{display:none}
+.frage p{padding:0 1.5rem 1.4rem;color:var(--text-leise);max-width:44rem}
+.frage__plus{position:relative;flex:none;width:1.1rem;height:1.1rem}
+.frage__plus::before,.frage__plus::after{content:"";position:absolute;left:0;top:50%;width:100%;height:2px;margin-top:-1px;background:currentColor;border-radius:2px;transition:transform var(--dauer-mittel) var(--kurve)}
+.frage__plus::after{transform:rotate(90deg)}
+.frage[open] .frage__plus::after{transform:rotate(0)}
+
+/* 11. Journal */
+.journal__raster{display:grid;gap:2.5rem}
+.journal__fest{display:flex;flex-direction:column;align-items:flex-start;gap:1rem}
+.journal__liste{display:flex;flex-direction:column;gap:1rem}
+.beitrag a{display:grid;gap:1rem;padding:1.25rem;border-radius:var(--radius-karte);background:var(--karte);box-shadow:inset 0 0 0 1px var(--linie);transition:box-shadow var(--dauer-kurz)}
+.beitrag a:hover{box-shadow:inset 0 0 0 1px var(--akzent)}
+.beitrag__text{display:flex;flex-direction:column;gap:.6rem}
+.beitrag__text p:not(.beitrag__meta){color:var(--text-leise)}
+.beitrag__meta{display:flex;justify-content:space-between;gap:1rem;margin-top:auto;padding-top:.75rem;font-size:1rem;color:var(--text-leise)}
+.beitrag__meta span{padding:.25rem .8rem;border-radius:8px;background:var(--karte-hoch);color:var(--text)}
+.beitrag .bild{min-height:11rem;order:-1}
+
+/* 12. Aufruf */
+.aufruf{position:relative;overflow:hidden;text-align:center;padding-top:var(--raum)}
+.aufruf__glut{position:absolute;left:50%;bottom:-20%;width:140%;aspect-ratio:1.4;transform:translateX(-50%);background:radial-gradient(closest-side,color-mix(in srgb,var(--akzent) 65%,transparent),color-mix(in srgb,var(--akzent) 18%,transparent) 55%,transparent);pointer-events:none}
+.aufruf__innen{position:relative;display:flex;flex-direction:column;align-items:center;gap:1.4rem;padding-bottom:clamp(15rem,34vw,24rem);z-index:2}
+.aufruf h2{font-size:clamp(2.2rem,1.2rem + 4vw,4rem);max-width:17ch;letter-spacing:-.045em}
+.aufruf__text{max-width:34rem;color:var(--text-leise);font-size:var(--text-l)}
+.scheibe{position:absolute;left:50%;bottom:-12rem;z-index:1;width:min(30rem,70vw);aspect-ratio:1;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle at 35% 25%,var(--akzent-hell),var(--akzent) 40%,var(--akzent-tief) 80%);box-shadow:0 0 120px color-mix(in srgb,var(--akzent) 60%,transparent),inset 0 0 0 10px color-mix(in srgb,#fff 15%,transparent)}
+.mailzeile{display:flex;flex-wrap:wrap;gap:.5rem;padding:.4rem;border-radius:999px;background:var(--karte);box-shadow:inset 0 0 0 1px var(--linie);width:min(100%,32rem)}
+.mailzeile input{flex:1 1 12rem;min-width:0;min-height:3rem;padding:.4rem 1.1rem;border:0;border-radius:999px;background:transparent;font:inherit;color:var(--text)}
+.mailzeile input::placeholder{color:var(--text-leise)}
+.formular-hinweis{flex-basis:100%;padding:.25rem 1rem;font-size:.9375rem;color:var(--text-leise);text-align:left}
+
+/* Fuß */
+.fuss{position:relative;z-index:1;background:var(--flaeche);box-shadow:0 -1px 0 var(--linie)}
+.fuss__raster{display:grid;gap:2rem;padding-block:clamp(2.5rem,6vw,4rem)}
+.fuss__marke{display:flex;flex-direction:column;gap:1rem;max-width:24rem}
+.fuss__marke p{color:var(--text-leise)}
+.fuss__spalten{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+.fuss__titel{font-weight:600;margin-bottom:.5rem}
+.fuss__spalten li a{display:flex;align-items:center;min-height:2.75rem;color:var(--text-leise);overflow-wrap:anywhere}
+.fuss__spalten li a:hover{color:var(--text);text-decoration:underline;text-underline-offset:.25em}
+.fuss__unten{padding-block:1.25rem 2rem;border-top:1px solid var(--linie);color:var(--text-leise);font-size:.9375rem}
+
+@media (min-width:48rem){
+  .drei-spalten{grid-template-columns:1fr 1fr}
+  .drei-spalten .anzeige{grid-column:1/-1;order:-1}
+  .bento{grid-template-columns:repeat(2,1fr)}
+  .bento__karte--breit{grid-column:span 2}
+  .prinzip-liste{grid-template-columns:repeat(2,1fr)}
+  .tarife{grid-template-columns:repeat(3,1fr)}
+  .beitrag a{grid-template-columns:1fr 14rem}
+  .beitrag .bild{order:0;min-height:0}
+  .oberflaeche__feld{display:inline-block}
+  .oberflaeche__haupt{grid-template-columns:10rem 1fr}
+  .oberflaeche__seite{display:flex}
+  .fuss__raster{grid-template-columns:1fr 2fr}
+  .fuss__spalten{grid-template-columns:repeat(3,1fr)}
+}
+@media (min-width:64rem){
+  .drei-spalten{grid-template-columns:1fr 1.15fr 1fr}
+  .drei-spalten .anzeige{grid-column:auto;order:0}
+  .bento{grid-template-columns:7fr 5fr}
+  .bento__karte--breit{grid-column:auto}
+  .bento__karte--breit:last-child{grid-column:span 1}
+  .bento{grid-template-columns:repeat(12,1fr)}
+  .bento__karte--breit:first-child{grid-column:span 8}
+  .bento__karte--licht{grid-column:span 4}
+  .bento__karte--vorher{grid-column:span 4}
+  .bento__karte--breit:last-child{grid-column:span 8}
+  .prinzip-liste{grid-template-columns:repeat(3,1fr)}
+  .ablauf__raster{grid-template-columns:22rem 1fr;gap:4rem;align-items:start}
+  .ablauf__fest{position:sticky;top:6.5rem}
+  .journal__raster{grid-template-columns:22rem 1fr;gap:4rem;align-items:start}
+  .journal__fest{position:sticky;top:6.5rem}
+  .kachel{width:6rem;height:6rem}
+}
+.aufrufkarte__titel{font-family:var(--schrift-titel);font-size:clamp(1.5rem,1.2rem + 1vw,2rem);font-weight:500;letter-spacing:-.03em;line-height:1.1}

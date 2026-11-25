@@ -1,0 +1,36 @@
+/* marke.css der Vorlage "Studio mit Terminbuchung": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Gilt für beide Varianten (index.html und v2.html).
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#f5f2ee;
+  --flaeche-alt:#fdfcfb;          /* Karten */
+  --flaeche-dunkel:#12262b;
+  --text:#14201f;
+  --text-leise:#4f5b58;
+  --linie:#ddd6cd;
+  --akzent:#ff9f5a;               /* Hauptaktion: Fläche mit dunklem Text, auf Dunkel auch Text und Punkt */
+  --akzent-text:#12262b;
+  --schrift-titel:'Schibsted Grotesk',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:12px;
+  --radius-karte:20px;
+  --radius-bild:20px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:28px;
+  --titel-gewicht:600;
+  --titel-spur:-0.03em;
+  --akzent-tief:#a8480e;          /* Akzent auf Hell: Text und Linie (5,2 zu 1 auf --flaeche) */
+  --sand:#f1d5b0;                 /* helles Farbband */
+  --flaeche-dunkel-2:#1b363c;     /* Flächen auf Dunkel */
+  --text-auf-dunkel:#f6f3ee;
+  --text-leise-dunkel:#bccbc8;
+  --linie-dunkel:#2f4a50;
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#8a5a3c;
+  --ton-2:#2f4d54;
+  --ton-3:#b98a63;
+  --ton-4:#3b3a36;
+  --ton-5:#5d7a7a;
+  --ton-6:#10201f;
+}

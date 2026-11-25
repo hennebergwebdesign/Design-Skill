@@ -1,0 +1,127 @@
+/* stil.css der Vorlage "Kanzlei Messing und Nachtblau": Gemeinsames beider Varianten. Farben nur aus den Tokens in marke.css, Mechanik aus ../_basis/basis.css.
+   Variantenspezifisches steht in stil-v1.css (index.html) und stil-v2.css (v2.html). Mobil zuerst.
+   Bei reduzierter Bewegung und ohne JavaScript bleibt alles sichtbar. */
+:root{--h2-m:clamp(2rem,1.2rem + 3.2vw,3.75rem);--voll:min(100% - 2*var(--rand),76rem)}
+:focus-visible{outline-color:var(--akzent-tief)}
+.dunkel :focus-visible,.held :focus-visible,.kopf :focus-visible,.fuss :focus-visible{outline-color:var(--akzent)}
+h1,h2,h3{font-weight:var(--titel-gewicht)}
+h2{font-size:var(--h2-m);line-height:1.1}
+h3{font-size:var(--h3);line-height:1.2}
+.zahl{font-family:var(--schrift-titel);font-weight:var(--titel-gewicht);letter-spacing:-.01em;line-height:1}
+.mitte{text-align:center}
+.muster{background-color:var(--flaeche);background-image:repeating-linear-gradient(45deg,transparent 0 44px,color-mix(in srgb,var(--akzent) 10%,transparent) 44px 45px),repeating-linear-gradient(-45deg,transparent 0 44px,color-mix(in srgb,var(--akzent) 10%,transparent) 44px 45px)}
+.dunkel{background:var(--flaeche-dunkel);color:var(--text-auf-dunkel)}
+
+/* Knöpfe */
+.knopf{justify-content:center;text-align:center;font-weight:600;font-size:1rem}
+.knopf:hover{box-shadow:0 8px 20px color-mix(in srgb,#000 25%,transparent)}
+.knopf--dunkel{background:var(--flaeche-dunkel);color:var(--text-auf-dunkel)}
+.rund{display:grid;place-items:center;flex:none;width:2.75rem;height:2.75rem;border-radius:50%;background:var(--akzent);color:var(--akzent-text);transition:transform var(--dauer-kurz) var(--kurve)}
+.textlink{display:inline-flex;align-items:center;gap:.75rem;min-height:3rem;font-weight:600}
+.textlink .rund{background:color-mix(in srgb,var(--text-auf-dunkel) 16%,transparent);color:var(--text-auf-dunkel)}
+.textlink:hover .rund{transform:translateY(3px)}
+.textlink:hover span:last-child{text-decoration:underline}
+.kicker{display:inline-flex;align-items:center;gap:.6rem;font-size:1rem;font-weight:600;color:var(--akzent-tief)}
+.kicker::before{content:"";width:.5rem;height:.5rem;border-radius:50%;background:currentColor;flex:none}
+.kicker--hell{color:var(--akzent)}
+
+/* Bildplatzhalter */
+.bild{--lichter:radial-gradient(70% 60% at 72% 24%,color-mix(in srgb,var(--akzent) 32%,transparent),transparent 70%)}
+.bild--a{--bild-grund:var(--lichter),linear-gradient(160deg,var(--ton-3),var(--ton-6))}
+.bild--b{--bild-grund:var(--lichter),linear-gradient(160deg,var(--ton-2),var(--ton-6))}
+.bild--c{--bild-grund:var(--lichter),linear-gradient(160deg,var(--ton-5),var(--ton-4))}
+.bild--d{--bild-grund:var(--lichter),linear-gradient(160deg,var(--ton-1),var(--ton-2))}
+.held__bild,.rahmen__bild,.praxis__bild{--bild-grund:var(--lichter),linear-gradient(160deg,var(--ton-3),var(--ton-6))}
+.bild[data-platzhalter]::after{opacity:1;z-index:2;inset:.75rem .75rem auto auto;max-width:calc(100% - 1.5rem);padding:.3rem .65rem;border-radius:8px;background:color-mix(in srgb,var(--flaeche-dunkel) 85%,transparent);color:var(--text-auf-dunkel);font-size:1rem;line-height:1.3}
+
+/* Kopf: Leiste über dem Inhalt, ohne JavaScript scrollt sie mit, mit JavaScript bleibt sie stehen und bekommt beim Scrollen eine dunkle Fläche */
+.kopf{position:absolute;top:0;left:0;right:0;z-index:50;color:var(--text-auf-dunkel)}
+.js .kopf{position:fixed}
+.kopf::before{content:"";position:absolute;inset:0;background:var(--flaeche-dunkel);box-shadow:0 8px 24px color-mix(in srgb,#000 30%,transparent);opacity:0;pointer-events:none;transition:opacity var(--dauer-mittel)}
+.gescrollt .kopf::before{opacity:1}
+.kopf__leiste{position:relative;display:flex;align-items:center;gap:.5rem;width:min(100% - 1.5rem,80rem);min-height:4.5rem;margin-inline:auto}
+.kopf__logo{display:inline-flex;align-items:center;gap:.6rem;min-height:2.75rem;margin-right:auto;font-family:var(--schrift-titel);font-weight:600;font-size:1.5rem;letter-spacing:-.01em;white-space:nowrap}
+.kopf__zeichen{width:2rem;height:2rem;color:var(--akzent)}
+.kopf__rechts{display:inline-flex;align-items:center;gap:.5rem}
+.kopf__telknopf{background:color-mix(in srgb,var(--text-auf-dunkel) 16%,transparent);color:var(--text-auf-dunkel)}
+.kopf__knopf{min-height:2.75rem;padding:.4rem 1.1rem}
+.kopf__burger{display:none;width:2.75rem;height:2.75rem;border-radius:50%;align-items:center;justify-content:center;background:color-mix(in srgb,var(--text-auf-dunkel) 16%,transparent)}
+.js .kopf__burger{display:inline-flex}
+.burger,.burger::before{display:block;width:1.2rem;height:2px;background:currentColor;border-radius:2px;transition:transform var(--dauer-mittel) var(--kurve)}
+.burger{position:relative;transform:translateY(-4px)}
+.burger::before{content:"";position:absolute;left:0;top:8px}
+.kopf__burger[aria-expanded="true"] .burger{transform:rotate(45deg)}
+.kopf__burger[aria-expanded="true"] .burger::before{transform:translateY(-8px) rotate(-90deg)}
+.kopf__nav{order:9;flex-basis:100%;padding-bottom:.75rem}
+.kopf__menue{display:flex;flex-wrap:wrap;gap:0 .5rem}
+.kopf__menue a{display:flex;align-items:center;min-height:2.75rem;padding-inline:.75rem;font-weight:500}
+.kopf__menue a:hover{color:var(--akzent)}
+.kopf__tel{padding:.5rem .75rem}
+.kopf__tel a{display:inline-flex;align-items:center;min-height:2.75rem;text-decoration:underline;text-underline-offset:.2em}
+.js .kopf__nav{position:absolute;top:100%;left:0;right:0;padding:.5rem 1rem 1rem;border-radius:0 0 var(--radius-karte) var(--radius-karte);background:var(--flaeche-dunkel);box-shadow:0 18px 32px color-mix(in srgb,#000 45%,transparent)}
+.js .kopf__nav:not([data-offen="true"]){display:none}
+.js .kopf__menue{flex-direction:column}
+.js .kopf__menue a{min-height:3rem}
+
+/* Abschnittskopf: Überschrift links, Knopf rechts */
+.kopfzeile{display:grid;gap:1.25rem;align-items:end;margin-bottom:clamp(2rem,5vw,3.5rem)}
+.kopfzeile h2{margin-top:.75rem;max-width:16ch}
+.kopfzeile .knopf{justify-self:start}
+@media (min-width:48rem){.kopfzeile{grid-template-columns:1fr auto}.kopfzeile .knopf{justify-self:end}}
+
+/* Rahmen: Bild mit Messingrand und versetzter dünner Linie dahinter */
+.rahmen{position:relative;margin:0 .9rem .9rem 0}
+.rahmen::after{content:"";position:absolute;inset:.9rem -.9rem -.9rem .9rem;z-index:0;border:1px solid var(--text-leise);border-radius:28px;pointer-events:none}
+.rahmen--dunkel::after{border-color:var(--text-leise-dunkel)}
+.rahmen__bild{position:relative;z-index:1;aspect-ratio:4/5;border:.6rem solid var(--akzent);border-radius:28px}
+
+/* Rechtsgebiete: nummerierte Zeilen */
+.praxis__liste{display:grid}
+.praxis__zeile{display:grid;grid-template-columns:auto 1fr;gap:1rem 1.25rem;align-items:start;padding-block:2rem;border-top:1px solid var(--linie-dunkel)}
+.praxis__zeile:last-child{border-bottom:1px solid var(--linie-dunkel)}
+.praxis__nr{display:grid;place-items:center;width:2.75rem;height:2.75rem;border-radius:50%;box-shadow:inset 0 0 0 1px var(--text-leise-dunkel);color:var(--text-auf-dunkel);font-size:1rem;transition:background-color var(--dauer-kurz),color var(--dauer-kurz)}
+.praxis__zeile:hover .praxis__nr{background:var(--akzent);color:var(--akzent-text);box-shadow:none}
+.praxis__text h3{font-size:clamp(1.5rem,1.2rem + 1.4vw,2.25rem)}
+.praxis__text p{margin-top:.75rem;max-width:34rem;color:var(--text-leise-dunkel)}
+.praxis__bild{grid-column:1 / -1;aspect-ratio:16/9;border-radius:var(--radius-karte)}
+.praxis__bild[data-platzhalter]::after{inset:.5rem .5rem auto auto}
+@media (min-width:48rem){
+  .praxis__zeile{grid-template-columns:auto 1fr 16rem;align-items:center;gap:2rem}
+  .praxis__bild{grid-column:auto;aspect-ratio:4/3}
+}
+
+/* Beitragslinks */
+.beitrag__mehr{display:inline-flex;align-items:center;gap:.5rem;min-height:2.75rem;font-weight:600}
+.beitrag__mehr svg{transition:transform var(--dauer-kurz) var(--kurve)}
+.beitrag__mehr:hover svg{transform:translateX(4px)}
+
+/* Laufband mit Messingfläche */
+.lauf{--band-abstand:2.5rem;--band-dauer:36s;padding-block:1.5rem;background:var(--akzent);color:var(--akzent-text);font-family:var(--schrift-titel);font-size:clamp(1.5rem,1.1rem + 1.6vw,2.25rem);font-weight:var(--titel-gewicht)}
+.lauf .band__spur{gap:var(--band-abstand);align-items:center;white-space:nowrap}
+.lauf svg{flex:none}
+
+/* Fuß */
+.fuss{background:var(--flaeche-dunkel);color:var(--text-auf-dunkel);padding-block:clamp(3rem,7vw,5rem) 1.5rem}
+.fuss__oben{display:grid;gap:2rem}
+.fuss__marke{display:grid;gap:1rem;align-content:start}
+.fuss__marke .kopf__logo{margin-right:0}
+.fuss__marke p{max-width:20rem;color:var(--text-leise-dunkel)}
+.newsletter h2{font-size:clamp(1.5rem,1.1rem + 1.6vw,2.25rem)}
+.newsletter__form{display:grid;gap:.75rem;margin-top:1rem}
+.newsletter input{width:100%;min-height:3rem;padding:.75rem 1.25rem;font:inherit;font-size:1rem;color:var(--text-auf-dunkel);background:var(--flaeche-dunkel-2);border:1.5px solid color-mix(in srgb,var(--text-auf-dunkel) 55%,var(--flaeche-dunkel));border-radius:var(--radius-knopf)}
+.newsletter input::placeholder{color:var(--text-leise-dunkel);opacity:1}
+.newsletter input:focus-visible{outline:3px solid var(--akzent);outline-offset:2px}
+.newsletter__recht{font-size:1rem;color:var(--text-leise-dunkel)}
+.newsletter__recht a{text-decoration:underline}
+.formular__meldung{padding:.8rem 1rem;border-radius:var(--radius-karte);background:var(--flaeche-dunkel-2);font-size:1rem}
+.formular__meldung[hidden]{display:none}
+.fuss__spalten{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem 1rem;margin-top:3rem;padding-top:2.5rem;border-top:1px solid var(--linie-dunkel)}
+.fuss__titel{font-family:var(--schrift-titel);font-size:1.25rem;font-weight:600;margin-bottom:.6rem}
+.fuss__spalten p,.fuss__spalten a{color:var(--text-leise-dunkel)}
+.fuss__spalten a{display:inline-flex;align-items:center;min-height:2.5rem;overflow-wrap:anywhere;transition:color var(--dauer-kurz)}
+.fuss__spalten a:hover,.fuss__unten a:hover{color:var(--akzent)}
+.fuss__unten{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem 1.5rem;margin-top:2.5rem;padding-top:1.25rem;border-top:1px solid var(--linie-dunkel);color:var(--text-leise-dunkel)}
+.fuss__sozial{display:flex;gap:1.25rem}
+.fuss__unten a{display:inline-flex;align-items:center;min-height:2.75rem}
+@media (min-width:48rem){.fuss__spalten{grid-template-columns:repeat(4,1fr)}.newsletter__form{grid-template-columns:1fr auto}.newsletter__recht,.newsletter__form .formular__meldung{grid-column:1 / -1}}
+@media (min-width:62rem){.fuss__oben{grid-template-columns:1fr 1.2fr;gap:5rem}}

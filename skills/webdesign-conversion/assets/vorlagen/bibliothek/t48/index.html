@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inhalte im Team verwalten, Markenname</title>
+<meta name="description" content="Beispieltext: Eine Plattform, auf der Teams Bilder, Videos und Dateien sammeln, finden und freigeben. Vor dem Einsatz durch den echten Text der Marke ersetzen.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../_basis/schriften.css">
+<link rel="stylesheet" href="marke.css">
+<link rel="stylesheet" href="../_basis/basis.css">
+<link rel="stylesheet" href="stil.css">
+</head>
+<body>
+<a class="sprunglink" href="#inhalt">Zum Inhalt springen</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-zeichen" viewBox="0 0 32 32" fill="currentColor"><rect x="4" y="6" width="17" height="5" rx="2.5"/><rect x="9" y="13.5" width="19" height="5" rx="2.5"/><rect x="4" y="21" width="17" height="5" rx="2.5"/></symbol>
+  <symbol id="i-lightning" viewBox="0 0 256 256" fill="currentColor"><path d="M213.85,125.46l-112,120a8,8,0,0,1-13.69-7l14.66-73.33L45.19,143.49a8,8,0,0,1-3-13l112-120a8,8,0,0,1,13.69,7L153.18,90.9l57.63,21.61a8,8,0,0,1,3,12.95Z"/></symbol>
+  <symbol id="i-sparkle" viewBox="0 0 256 256" fill="currentColor"><path d="M208,144a15.78,15.78,0,0,1-10.42,14.94L146,178l-19,51.62a15.92,15.92,0,0,1-29.88,0L78,178l-51.62-19a15.92,15.92,0,0,1,0-29.88L78,110l19-51.62a15.92,15.92,0,0,1,29.88,0L146,110l51.62,19A15.78,15.78,0,0,1,208,144ZM152,48h16V64a8,8,0,0,0,16,0V48h16a8,8,0,0,0,0-16H184V16a8,8,0,0,0-16,0V32H152a8,8,0,0,0,0,16Zm88,32h-8V72a8,8,0,0,0-16,0v8h-8a8,8,0,0,0,0,16h8v8a8,8,0,0,0,16,0V96h8a8,8,0,0,0,0-16Z"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 256 256" fill="currentColor"><path d="M208,80H176V56a48,48,0,0,0-96,0V80H48A16,16,0,0,0,32,96V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V96A16,16,0,0,0,208,80Zm-80,84a12,12,0,1,1,12-12A12,12,0,0,1,128,164Zm32-84H96V56a32,32,0,0,1,64,0Z"/></symbol>
+  <symbol id="i-users" viewBox="0 0 256 256" fill="currentColor"><path d="M164.47,195.63a8,8,0,0,1-6.7,12.37H10.23a8,8,0,0,1-6.7-12.37,95.83,95.83,0,0,1,47.22-37.71,60,60,0,1,1,66.5,0A95.83,95.83,0,0,1,164.47,195.63Zm87.91-.15a95.87,95.87,0,0,0-47.13-37.56A60,60,0,0,0,144.7,54.59a4,4,0,0,0-1.33,6A75.83,75.83,0,0,1,147,150.53a4,4,0,0,0,1.07,5.53,112.32,112.32,0,0,1,29.85,30.83,23.92,23.92,0,0,1,3.65,16.47,4,4,0,0,0,3.95,4.64h60.3a8,8,0,0,0,7.73-5.93A8.22,8.22,0,0,0,252.38,195.48Z"/></symbol>
+  <symbol id="i-chat-circle" viewBox="0 0 256 256" fill="currentColor"><path d="M232,128A104,104,0,0,1,79.12,219.82L45.07,231.17a16,16,0,0,1-20.24-20.24l11.35-34.05A104,104,0,1,1,232,128Z"/></symbol>
+  <symbol id="i-magnifying-glass" viewBox="0 0 256 256" fill="currentColor"><path d="M168,112a56,56,0,1,1-56-56A56,56,0,0,1,168,112Zm61.66,117.66a8,8,0,0,1-11.32,0l-50.06-50.07a88,88,0,1,1,11.32-11.31l50.06,50.06A8,8,0,0,1,229.66,229.66ZM112,184a72,72,0,1,0-72-72A72.08,72.08,0,0,0,112,184Z"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 256 256" fill="currentColor"><path d="M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM184,136H136v48a8,8,0,0,1-16,0V136H72a8,8,0,0,1,0-16h48V72a8,8,0,0,1,16,0v48h48a8,8,0,0,1,0,16Z"/></symbol>
+  <symbol id="i-arrow-left" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H120v64a8,8,0,0,1-13.66,5.66l-72-72a8,8,0,0,1,0-11.32l72-72A8,8,0,0,1,120,56v64h96A8,8,0,0,1,224,128Z"/></symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72A8,8,0,0,1,136,200V136H40a8,8,0,0,1,0-16h96V56a8,8,0,0,1,13.66-5.66l72,72A8,8,0,0,1,221.66,133.66Z"/></symbol>
+  <symbol id="i-check-circle" viewBox="0 0 256 256" fill="currentColor"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></symbol>
+  <symbol id="i-quotes" viewBox="0 0 256 256" fill="currentColor"><path d="M116,72v88a48.05,48.05,0,0,1-48,48,8,8,0,0,1,0-16,32,32,0,0,0,32-32v-8H40a16,16,0,0,1-16-16V72A16,16,0,0,1,40,56h60A16,16,0,0,1,116,72ZM216,56H156a16,16,0,0,0-16,16v64a16,16,0,0,0,16,16h60v8a32,32,0,0,1-32,32,8,8,0,0,0,0,16,48.05,48.05,0,0,0,48-48V72A16,16,0,0,0,216,56Z"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 256 256" fill="currentColor"><path d="M240,102c0,70-103.79,126.66-108.21,129a8,8,0,0,1-7.58,0C119.79,228.66,16,172,16,102A62.07,62.07,0,0,1,78,40c20.65,0,38.73,8.88,50,23.89C139.27,48.88,157.35,40,178,40A62.07,62.07,0,0,1,240,102Z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 256 256" fill="currentColor"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm56,112H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48a8,8,0,0,1,0,16Z"/></symbol>
+  <symbol id="i-gear" viewBox="0 0 256 256" fill="currentColor"><path d="M216,130.16q.06-2.16,0-4.32l14.92-18.64a8,8,0,0,0,1.48-7.06,107.6,107.6,0,0,0-10.88-26.25,8,8,0,0,0-6-3.93l-23.72-2.64q-1.48-1.56-3-3L186,40.54a8,8,0,0,0-3.94-6,107.29,107.29,0,0,0-26.25-10.86,8,8,0,0,0-7.06,1.48L130.16,40Q128,40,125.84,40L107.2,25.11a8,8,0,0,0-7.06-1.48A107.6,107.6,0,0,0,73.89,34.51a8,8,0,0,0-3.93,6L67.32,64.27q-1.56,1.49-3,3L40.54,70a8,8,0,0,0-6,3.94,107.71,107.71,0,0,0-10.87,26.25,8,8,0,0,0,1.49,7.06L40,125.84Q40,128,40,130.16L25.11,148.8a8,8,0,0,0-1.48,7.06,107.6,107.6,0,0,0,10.88,26.25,8,8,0,0,0,6,3.93l23.72,2.64q1.49,1.56,3,3L70,215.46a8,8,0,0,0,3.94,6,107.71,107.71,0,0,0,26.25,10.87,8,8,0,0,0,7.06-1.49L125.84,216q2.16.06,4.32,0l18.64,14.92a8,8,0,0,0,7.06,1.48,107.21,107.21,0,0,0,26.25-10.88,8,8,0,0,0,3.93-6l2.64-23.72q1.56-1.48,3-3L215.46,186a8,8,0,0,0,6-3.94,107.71,107.71,0,0,0,10.87-26.25,8,8,0,0,0-1.49-7.06ZM128,168a40,40,0,1,1,40-40A40,40,0,0,1,128,168Z"/></symbol>
+  <symbol id="i-rocket-launch" viewBox="0 0 256 256" fill="currentColor"><path d="M101.85,191.14C97.34,201,82.29,224,40,224a8,8,0,0,1-8-8c0-42.29,23-57.34,32.86-61.85a8,8,0,0,1,6.64,14.56c-6.43,2.93-20.62,12.36-23.12,38.91,26.55-2.5,36-16.69,38.91-23.12a8,8,0,1,1,14.56,6.64Zm122-144a16,16,0,0,0-15-15c-12.58-.75-44.73.4-71.4,27.07h0L88,108.7A8,8,0,0,1,76.67,97.39l26.56-26.57A4,4,0,0,0,100.41,64H74.35A15.9,15.9,0,0,0,63,68.68L28.7,103a16,16,0,0,0,9.07,27.16l38.47,5.37,44.21,44.21,5.37,38.49a15.94,15.94,0,0,0,10.78,12.92,16.11,16.11,0,0,0,5.1.83A15.91,15.91,0,0,0,153,227.3L187.32,193A16,16,0,0,0,192,181.65V155.59a4,4,0,0,0-6.83-2.82l-26.57,26.56a8,8,0,0,1-11.71-.42,8.2,8.2,0,0,1,.6-11.1l49.27-49.27h0C223.45,91.86,224.6,59.71,223.85,47.12Z"/></symbol>
+  <symbol id="i-shield-check" viewBox="0 0 256 256" fill="currentColor"><path d="M208,40H48A16,16,0,0,0,32,56v56c0,52.72,25.52,84.67,46.93,102.19,23.06,18.86,46,25.26,47,25.53a8,8,0,0,0,4.2,0c1-.27,23.91-6.67,47-25.53C198.48,196.67,224,164.72,224,112V56A16,16,0,0,0,208,40Zm-34.32,69.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/>FEHLT imagesFEHLT folder</symbol>
+  <symbol id="i-play" viewBox="0 0 256 256" fill="currentColor"><path d="M240,128a15.74,15.74,0,0,1-7.6,13.51L88.32,229.65a16,16,0,0,1-16.2.3A15.86,15.86,0,0,1,64,216.13V39.87a15.86,15.86,0,0,1,8.12-13.82,16,16,0,0,1,16.2.3L232.4,114.49A15.74,15.74,0,0,1,240,128Z"/></symbol>
+  <symbol id="i-trophy" viewBox="0 0 256 256" fill="currentColor"><path d="M232,64H208V48a8,8,0,0,0-8-8H56a8,8,0,0,0-8,8V64H24A16,16,0,0,0,8,80V96a40,40,0,0,0,40,40h3.65A80.13,80.13,0,0,0,120,191.61V216H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16H136V191.58c31.94-3.23,58.44-25.64,68.08-55.58H208a40,40,0,0,0,40-40V80A16,16,0,0,0,232,64ZM48,120A24,24,0,0,1,24,96V80H48v32q0,4,.39,8ZM232,96a24,24,0,0,1-24,24h-.5a81.81,81.81,0,0,0,.5-8.9V80h24Z"/></symbol>
+</svg>
+
+<header class="kopf">
+  <div class="kopf__leiste">
+    <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
+      <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg>
+      <span>Markenname</span>
+    </a>
+    <nav class="kopf__nav" id="hauptnav" aria-label="Hauptnavigation" data-menue-ziel>
+      <ul class="kopf__menue">
+        <li><a href="#funktionen">Funktionen</a></li>
+        <li><a href="#galerie">Galerie</a></li>
+        <li><a href="#einsatz">Einsatz</a></li>
+        <li><a href="#preise">Preise</a></li>
+      </ul>
+    </nav>
+    <a class="knopf kopf__knopf" href="#kontakt">Loslegen</a>
+    <button class="kopf__burger" type="button" data-menue aria-expanded="false" aria-controls="hauptnav">
+      <span class="sr-nur">Menü öffnen oder schließen</span>
+      <span class="burger" aria-hidden="true"></span>
+    </button>
+  </div>
+</header>
+
+<main id="inhalt">
+  <!-- 1. Held: mittig, darunter fünf gegenläufige Bildspalten und das App Fenster -->
+  <section class="held" id="top" aria-labelledby="h-held">
+    <div class="bild held__grund" data-platzhalter="Bild: dunkle Szenerie, Querformat" aria-hidden="true"></div>
+    <div class="wrap held__innen">
+      <div class="held__kopf" data-staffel>
+        <h1 id="h-held" data-zeig>Alle Inhalte Deines Teams an einem Ort</h1>
+        <p data-zeig>Sammle, finde und teile Bilder, Videos und Dateien, ohne Suchen und ohne Chaos.</p>
+        <div class="reihe-mitte" data-zeig>
+          <a class="knopf" href="#kontakt">Kostenlos testen</a>
+          <a class="knopf knopf--ruhig" href="#kontakt">Demo buchen</a>
+        </div>
+      </div>
+    </div>
+    <div class="spalten" aria-hidden="true">
+      <div class="spalte"><div class="spalte__spur"><div class="spalte__haelfte"><span class="bild bild--a h-1" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--b h-3" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--c h-5" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--d h-2" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--e h-4" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--f h-1" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--a h-3" data-platzhalter="Bild: Beispielmotiv"></span></div><div class="spalte__haelfte"><span class="bild bild--a h-1" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--b h-3" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--c h-5" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--d h-2" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--e h-4" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--f h-1" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--a h-3" data-platzhalter="Bild: Beispielmotiv"></span></div></div></div>
+      <div class="spalte spalte--ab"><div class="spalte__spur"><div class="spalte__haelfte"><span class="bild bild--c h-4" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--d h-1" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--e h-3" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--f h-5" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--a h-2" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--b h-4" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--c h-1" data-platzhalter="Bild: Beispielmotiv"></span></div><div class="spalte__haelfte"><span class="bild bild--c h-4" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--d h-1" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--e h-3" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--f h-5" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--a h-2" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--b h-4" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--c h-1" data-platzhalter="Bild: Beispielmotiv"></span></div></div></div>
+      <div class="spalte"><div class="spalte__spur"><div class="spalte__haelfte"><span class="bild bild--e h-2" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--f h-4" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--a h-1" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--b h-3" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--c h-5" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--d h-2" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--e h-4" data-platzhalter="Bild: Beispielmotiv"></span></div><div class="spalte__haelfte"><span class="bild bild--e h-2" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--f h-4" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--a h-1" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--b h-3" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--c h-5" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--d h-2" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--e h-4" data-platzhalter="Bild: Beispielmotiv"></span></div></div></div>
+      <div class="spalte spalte--ab"><div class="spalte__spur"><div class="spalte__haelfte"><span class="bild bild--a h-5" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--b h-2" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--c h-4" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--d h-1" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--e h-3" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--f h-5" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--a h-2" data-platzhalter="Bild: Beispielmotiv"></span></div><div class="spalte__haelfte"><span class="bild bild--a h-5" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--b h-2" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--c h-4" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--d h-1" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--e h-3" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--f h-5" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--a h-2" data-platzhalter="Bild: Beispielmotiv"></span></div></div></div>
+      <div class="spalte"><div class="spalte__spur"><div class="spalte__haelfte"><span class="bild bild--c h-3" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--d h-5" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--e h-2" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--f h-4" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--a h-1" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--b h-3" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--c h-5" data-platzhalter="Bild: Beispielmotiv"></span></div><div class="spalte__haelfte"><span class="bild bild--c h-3" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--d h-5" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--e h-2" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--f h-4" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--a h-1" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--b h-3" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--c h-5" data-platzhalter="Bild: Beispielmotiv"></span></div></div></div>
+    </div>
+    <div class="wrap held__innen">
+      <div class="app" aria-hidden="true" data-beispiel data-zeig>
+        <div class="app__seite">
+          <p class="app__marke"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg>Markenname</p>
+          <p class="app__suche"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-magnifying-glass"/></svg>Suchen</p>
+          <ul class="app__liste">
+            <li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-sparkle"/></svg>Entdecken</li>
+            <li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-heart"/></svg>Favoriten</li>
+            <li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-play"/></svg>Videos</li>
+            <li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-trophy"/></svg>Beliebt</li>
+          </ul>
+          <p class="app__gruppe">Bibliothek</p>
+          <ul class="app__liste">
+            <li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-users"/></svg>Mein Team</li>
+            <li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-clock"/></svg>Zuletzt</li>
+            <li><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-gear"/></svg>Einstellungen</li>
+          </ul>
+        </div>
+        <div class="app__haupt">
+          <span class="bild bild--a" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--c" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--d" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--b" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--f" data-platzhalter="Bild: Beispielmotiv"></span><span class="bild bild--e" data-platzhalter="Bild: Beispielmotiv"></span>
+          <p class="app__eingabe">Beschreibe, was Du suchst<span class="app__senden"><svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Funktionen: vier Karten, jede zweite tiefer -->
+  <section class="sektion funktionen" id="funktionen" aria-labelledby="h-funktionen">
+    <div class="wrap">
+      <div class="kopfzeile" data-staffel>
+        <p class="kicker" data-zeig>Funktionen</p>
+        <h2 id="h-funktionen" data-zeig>Aus Ideen wird Ergebnis</h2>
+        <p data-zeig>Beispieltext: Alles, was Dein Team braucht, um Inhalte zu sammeln, zu ordnen und weiterzugeben, ohne Umwege und ohne Wartezeit.</p>
+      </div>
+      <div class="karten4" data-staffel>
+        <article class="karte4" data-zeig data-beispiel>
+          <svg width="56" height="56" aria-hidden="true" focusable="false" class="karte4__icon"><use href="#i-lightning"/></svg>
+          <div><h3>Schneller Start</h3><p>Konto anlegen, Team einladen, Inhalte hochladen. Nach wenigen Minuten ist alles auffindbar.</p></div>
+        </article>
+        <article class="karte4" data-zeig data-beispiel>
+          <svg width="56" height="56" aria-hidden="true" focusable="false" class="karte4__icon"><use href="#i-sparkle"/></svg>
+          <div><h3>Kluge Werkzeuge</h3><p>Sortieren, verschlagworten und zuschneiden geht per Klick und spart dem Team die Handarbeit.</p></div>
+        </article>
+        <article class="karte4" data-zeig data-beispiel>
+          <svg width="56" height="56" aria-hidden="true" focusable="false" class="karte4__icon"><use href="#i-lock"/></svg>
+          <div><h3>Klare Rechte</h3><p>Du bestimmst, wer sehen, ändern und freigeben darf. Jede Änderung bleibt nachvollziehbar.</p></div>
+        </article>
+        <article class="karte4" data-zeig data-beispiel>
+          <svg width="56" height="56" aria-hidden="true" focusable="false" class="karte4__icon"><use href="#i-users"/></svg>
+          <div><h3>Gute Betreuung</h3><p>Du erreichst eine echte Person, die Deine Arbeitsweise kennt und bei Fragen konkret hilft.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Galerie: Mosaik -->
+  <section class="sektion" id="galerie" aria-labelledby="h-galerie">
+    <div class="wrap">
+      <div class="kopfzeile" data-staffel>
+        <p class="kicker" data-zeig>Galerie</p>
+        <h2 id="h-galerie" data-zeig>Ein Blick in die Bibliothek</h2>
+      </div>
+      <div class="mosaik" data-staffel>
+        <div class="bild bild--a m-a" data-zeig data-platzhalter="Bild: Beispielmotiv klein" role="img" aria-label="Platzhalter für ein Bild"></div>
+        <div class="bild bild--b m-b" data-zeig data-platzhalter="Bild: Beispielmotiv klein" role="img" aria-label="Platzhalter für ein Bild"></div>
+        <div class="bild bild--c m-c" data-zeig data-platzhalter="Bild: Beispielmotiv hoch" role="img" aria-label="Platzhalter für ein Bild"></div>
+        <div class="bild bild--d m-d" data-zeig data-platzhalter="Bild: Beispielmotiv breit" role="img" aria-label="Platzhalter für ein Bild"></div>
+        <div class="bild bild--e m-e" data-zeig data-platzhalter="Bild: Beispielmotiv breit" role="img" aria-label="Platzhalter für ein Bild"></div>
+        <div class="bild bild--f m-f" data-zeig data-platzhalter="Bild: Beispielmotiv breit" role="img" aria-label="Platzhalter für ein Bild"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Einsatz: sechs nummerierte Karten -->
+  <section class="sektion" id="einsatz" aria-labelledby="h-einsatz">
+    <div class="wrap">
+      <div class="kopfzeile" data-staffel>
+        <p class="kicker" data-zeig>Einsatz</p>
+        <h2 id="h-einsatz" data-zeig>Für wen es gemacht ist</h2>
+        <p data-zeig>Beispieltext: So nutzen unterschiedliche Teams die Plattform im Alltag.</p>
+      </div>
+      <div class="einsatz__raster" data-staffel>
+        <article class="fall" data-zeig data-beispiel>
+          <span class="fall__ziffer" aria-hidden="true">1</span>
+          <h3>Gestalter und Agenturen</h3>
+          <p>Sammle Entwürfe, Vorlagen und Freigaben an einem Ort, statt sie in Mails zu suchen.</p>
+        </article>
+        <article class="fall" data-zeig data-beispiel>
+          <span class="fall__ziffer" aria-hidden="true">2</span>
+          <h3>Marketing und Redaktion</h3>
+          <p>Halte Kampagnenmaterial, Texte und Bilder in einem gemeinsamen, aktuellen Stand.</p>
+        </article>
+        <article class="fall" data-zeig data-beispiel>
+          <span class="fall__ziffer" aria-hidden="true">3</span>
+          <h3>Entwicklung und Produkt</h3>
+          <p>Teile Oberflächenentwürfe und Assets mit dem Team, ohne Versionen zu verwechseln.</p>
+        </article>
+        <article class="fall" data-zeig data-beispiel>
+          <span class="fall__ziffer" aria-hidden="true">4</span>
+          <h3>Handel und Marken</h3>
+          <p>Pflege Produktbilder und Kataloge einmal und nutze sie in jedem Kanal.</p>
+        </article>
+        <article class="fall" data-zeig data-beispiel>
+          <span class="fall__ziffer" aria-hidden="true">5</span>
+          <h3>Betriebe und Teams</h3>
+          <p>Lege Pläne, Fotos und Dokumente ab, damit jeder im Team sie sofort findet.</p>
+        </article>
+        <article class="fall" data-zeig data-beispiel>
+          <span class="fall__ziffer" aria-hidden="true">6</span>
+          <h3>Schulung und Forschung</h3>
+          <p>Ordne Material für Kurse und Projekte und gib es gezielt für Gruppen frei.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Stimmen: eine große Karte, wischbar, mit Pfeilen -->
+  <section class="sektion" id="stimmen" aria-labelledby="h-stimmen">
+    <div class="wrap" data-reiter-gruppe>
+      <div class="kopfzeile" data-staffel>
+        <p class="kicker" data-zeig>Stimmen</p>
+        <h2 id="h-stimmen" data-zeig>Was Teams über uns sagen</h2>
+      </div>
+      <ul class="stimmen__spur" data-reiter-spur data-beispiel data-zeig tabindex="0" aria-label="Kundenstimmen, seitlich wischen">
+        <li class="stimme">
+          <div class="bild bild--a stimme__bild" data-platzhalter="Bild: Porträt einer Person" role="img" aria-label="Platzhalter für ein Porträtfoto"></div>
+          <div class="stimme__text">
+            <svg width="72" height="72" aria-hidden="true" focusable="false" class="stimme__zeichen"><use href="#i-quotes"/></svg>
+            <blockquote><p>Wir haben die Einführung nach zwei Wochen abgeschlossen und suchen seitdem nichts mehr. Das Team arbeitet endlich am selben Stand.</p></blockquote>
+            <p><span class="stimme__name">Mira Beispiel</span><br><span class="stimme__rolle">Geschäftsführerin, Beispielbetrieb, Musterstadt</span></p>
+          </div>
+        </li>
+        <li class="stimme">
+          <div class="bild bild--c stimme__bild" data-platzhalter="Bild: Porträt einer Person" role="img" aria-label="Platzhalter für ein Porträtfoto"></div>
+          <div class="stimme__text">
+            <svg width="72" height="72" aria-hidden="true" focusable="false" class="stimme__zeichen"><use href="#i-quotes"/></svg>
+            <blockquote><p>Die Freigaben laufen jetzt an einer Stelle zusammen. Rückfragen per Mail sind fast verschwunden.</p></blockquote>
+            <p><span class="stimme__name">Jonas Muster</span><br><span class="stimme__rolle">Leiter Marketing, Beispiel GmbH, Beispielstadt</span></p>
+          </div>
+        </li>
+        <li class="stimme">
+          <div class="bild bild--d stimme__bild" data-platzhalter="Bild: Porträt einer Person" role="img" aria-label="Platzhalter für ein Porträtfoto"></div>
+          <div class="stimme__text">
+            <svg width="72" height="72" aria-hidden="true" focusable="false" class="stimme__zeichen"><use href="#i-quotes"/></svg>
+            <blockquote><p>Neue Kolleginnen finden sich am ersten Tag zurecht. Das hat unsere Einarbeitung spürbar verkürzt.</p></blockquote>
+            <p><span class="stimme__name">Lena Probe</span><br><span class="stimme__rolle">Inhaberin, Studio Beispiel, Musterhausen</span></p>
+          </div>
+        </li>
+      </ul>
+      <div class="steuerung" data-reiter-steuerung>
+        <button class="pfeil" type="button" data-reiter="zurueck" aria-label="Vorherige Stimme"><svg width="24" height="24" aria-hidden="true" focusable="false"><use href="#i-arrow-left"/></svg></button>
+        <button class="pfeil" type="button" data-reiter="weiter" aria-label="Nächste Stimme"><svg width="24" height="24" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Preise: Umschalter, drei Karten, die mittlere hervorgehoben -->
+  <section class="sektion" id="preise" aria-labelledby="h-preise">
+    <div class="wrap">
+      <div class="kopfzeile" data-staffel>
+        <p class="kicker" data-zeig>Preise</p>
+        <h2 id="h-preise" data-zeig>Tarife, die mitwachsen</h2>
+        <p data-zeig>Beispieltext: Keine versteckten Kosten. Wähle den Tarif, der zu Deinem Team passt, und wechsle jederzeit.</p>
+      </div>
+      <div class="umschalter" data-umschalter role="group" aria-label="Abrechnungszeitraum">
+        <button type="button" data-art="monat" aria-pressed="true">Monatlich</button>
+        <button type="button" data-art="jahr" aria-pressed="false">Jährlich</button>
+      </div>
+      <div class="preise" data-staffel>
+        <article class="preis" data-zeig data-beispiel>
+          <h3 class="preis__name">Start</h3>
+          <p class="preis__text">Für Einzelne und kleine Vorhaben.</p>
+          <p class="preis__betrag"><span aria-hidden="true">€</span><strong data-monat="9" data-jahr="7">9</strong><span>pro Monat</span></p>
+          <div>
+            <p class="preis__kopf">Das ist enthalten</p>
+          </div>
+          <ul class="preis__liste"><li><svg width="24" height="24" aria-hidden="true" focusable="false"><use href="#i-check-circle"/></svg><span>75 Uploads pro Monat</span></li><li><svg width="24" height="24" aria-hidden="true" focusable="false"><use href="#i-check-circle"/></svg><span>Hohe Bildqualität</span></li><li><svg width="24" height="24" aria-hidden="true" focusable="false"><use href="#i-check-circle"/></svg><span>Einfache Bearbeitung</span></li><li><svg width="24" height="24" aria-hidden="true" focusable="false"><use href="#i-check-circle"/></svg><span>Support per Mail</span></li></ul>
+          <a class="knopf  knopf--voll" href="#kontakt">Jetzt starten</a>
+        </article>
+        <article class="preis preis--hervor" data-zeig data-beispiel>
+          <h3 class="preis__name">Team</h3>
+          <p class="preis__text">Für Teams, die täglich zusammenarbeiten.</p>
+          <p class="preis__betrag"><span aria-hidden="true">€</span><strong data-monat="19" data-jahr="15">19</strong><span>pro Monat</span></p>
+          <div>
+            <p class="preis__kopf">Das ist enthalten</p>
+          </div>
+          <ul class="preis__liste"><li><svg width="24" height="24" aria-hidden="true" focusable="false"><use href="#i-check-circle"/></svg><span>2500 Uploads pro Monat</span></li><li><svg width="24" height="24" aria-hidden="true" focusable="false"><use href="#i-check-circle"/></svg><span>Volle Auflösung</span></li><li><svg width="24" height="24" aria-hidden="true" focusable="false"><use href="#i-check-circle"/></svg><span>Erweiterte Bearbeitung</span></li><li><svg width="24" height="24" aria-hidden="true" focusable="false"><use href="#i-check-circle"/></svg><span>Freigaben und Rechte</span></li><li><svg width="24" height="24" aria-hidden="true" focusable="false"><use href="#i-check-circle"/></svg><span>Auswertung der Nutzung</span></li></ul>
+          <a class="knopf knopf--dunkel knopf--voll" href="#kontakt">Jetzt starten</a>
+        </article>
+        <article class="preis" data-zeig data-beispiel>
+          <h3 class="preis__name">Betrieb</h3>
+          <p class="preis__text">Für Organisationen mit hohem Bedarf.</p>
+          <p class="preis__betrag"><span aria-hidden="true">€</span><strong data-monat="49" data-jahr="39">49</strong><span>pro Monat</span></p>
+          <div>
+            <p class="preis__kopf">Das ist enthalten</p>
+          </div>
+          <ul class="preis__liste"><li><svg width="24" height="24" aria-hidden="true" focusable="false"><use href="#i-check-circle"/></svg><span>Unbegrenzte Uploads</span></li><li><svg width="24" height="24" aria-hidden="true" focusable="false"><use href="#i-check-circle"/></svg><span>Video in hoher Qualität</span></li><li><svg width="24" height="24" aria-hidden="true" focusable="false"><use href="#i-check-circle"/></svg><span>Alle Funktionen</span></li><li><svg width="24" height="24" aria-hidden="true" focusable="false"><use href="#i-check-circle"/></svg><span>Schnittstelle zu Deinen Systemen</span></li><li><svg width="24" height="24" aria-hidden="true" focusable="false"><use href="#i-check-circle"/></svg><span>Eigene Betreuung</span></li></ul>
+          <a class="knopf  knopf--voll" href="#kontakt">Jetzt starten</a>
+        </article>
+      </div>
+      <p class="mitte" style="margin-top:1.5rem;color:var(--text-leise)" data-hinweis-jahr hidden>Beispieltext: Jährliche Zahlung, Betrag je Monat.</p>
+    </div>
+  </section>
+
+  <!-- 7. FAQ -->
+  <section class="sektion" id="faq" aria-labelledby="h-faq">
+    <div class="wrap">
+      <div class="kopfzeile" data-staffel>
+        <p class="kicker" data-zeig>Fragen</p>
+        <h2 id="h-faq" data-zeig>Häufige Fragen</h2>
+        <p data-zeig>Beispieltext: Die wichtigsten Antworten, bevor Du uns schreiben musst.</p>
+      </div>
+      <div class="faq" data-exklusiv data-zeig>
+        <details><summary>Was kann ich mit der Plattform ablegen?<svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary><p class="faq__antwort">Bilder, Videos, Dokumente und Entwürfe. Das ist ein Beispieltext und wird durch die echte Antwort der Marke ersetzt.</p></details>
+        <details><summary>Wie fange ich an?<svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary><p class="faq__antwort">Du legst ein Konto an, lädst Dein Team ein und ziehst die ersten Dateien in die Bibliothek. Beispieltext.</p></details>
+        <details><summary>Welche Dateiarten gehen?<svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary><p class="faq__antwort">Die üblichen Bild-, Video- und Dokumentformate. Die genaue Liste gehört hier hinein, sobald sie feststeht.</p></details>
+        <details><summary>Gibt es eine Grenze für Speicher und Nutzer?<svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary><p class="faq__antwort">Die Grenzen hängen vom Tarif ab und stehen in der Preisübersicht. Beispieltext.</p></details>
+        <details><summary>Darf ich die Inhalte geschäftlich nutzen?<svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></summary><p class="faq__antwort">Deine eigenen Inhalte gehören Dir. Die genauen Bedingungen stehen in den Nutzungsbedingungen. Beispieltext.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Aufruf: Akzentkarte mit E-Mail Feld -->
+  <section class="sektion" id="kontakt" aria-labelledby="h-kontakt" style="padding-bottom:0">
+    <div class="wrap">
+      <div class="aufruf" data-zeig>
+        <span class="schwebt schwebt--1 bild bild--a" aria-hidden="true"></span>
+        <span class="schwebt schwebt--2 bild bild--b" aria-hidden="true"></span>
+        <span class="schwebt schwebt--3 bild bild--c" aria-hidden="true"></span>
+        <span class="schwebt schwebt--4 bild bild--d" aria-hidden="true"></span>
+        <span class="schwebt schwebt--5 bild bild--e" aria-hidden="true"></span>
+        <h2 id="h-kontakt">Starte heute mit Deinem Team</h2>
+        <p>Beispieltext: Trage Deine E-Mail Adresse ein, wir melden uns mit dem Zugang.</p>
+        <form class="mail" data-formular novalidate>
+          <label class="sr-nur" for="mail">E-Mail Adresse</label>
+          <input id="mail" name="mail" type="email" autocomplete="email" placeholder="Deine E-Mail Adresse" required>
+          <button class="knopf knopf--hell" type="submit">Senden</button>
+        </form>
+        <p class="mail__meldung" data-formular-meldung hidden role="status">Diese Vorlage sendet nichts. Den Versand legt das Projekt fest.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="fuss">
+  <div class="bild fuss__grund" data-platzhalter="Bild: dunkle Szenerie, Querformat" aria-hidden="true"></div>
+  <div class="wrap fuss__innen">
+    <div class="fuss__raster">
+      <div>
+        <a class="fuss__logo" href="#top" aria-label="Markenname, nach oben">
+          <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg>
+          <span>Markenname</span>
+        </a>
+        <p class="fuss__text">Beispieltext: Wir bauen Werkzeuge, mit denen Teams ihre Inhalte ordnen, finden und gemeinsam nutzen.</p>
+      </div>
+      <div class="fuss__spalten">
+        <nav aria-label="Menü im Fuß">
+          <h3>Menü</h3>
+          <ul>
+            <li><a href="#funktionen">Funktionen</a></li>
+            <li><a href="#galerie">Galerie</a></li>
+            <li><a href="#einsatz">Einsatz</a></li>
+            <li><a href="#preise">Preise</a></li>
+            <li><a href="#faq">Fragen</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Rechtliches">
+          <h3>Rechtliches</h3>
+          <ul>
+            <li><a href="#top">Impressum</a></li>
+            <li><a href="#top">Datenschutz</a></li>
+            <li><a href="#top">Nutzungsbedingungen</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="fuss__unten">
+      <p>© Markenname, alle Rechte vorbehalten</p>
+      <p>Beispieltext, Links im Fuß sind Platzhalter</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../_basis/bewegung.js"></script>
+<script src="stil.js"></script>
+</body>
+</html>

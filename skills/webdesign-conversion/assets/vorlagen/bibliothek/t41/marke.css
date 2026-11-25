@@ -1,0 +1,28 @@
+/* marke.css der Vorlage "Analyse dunkel": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#09090a;
+  --flaeche-alt:#121214;
+  --flaeche-dunkel:#09090a;
+  --text:#f4f1ec;
+  --text-leise:#a9a49c;
+  --linie:#2a2a2e;
+  --akzent:#ff8a3d;           /* Hauptaktion und Hervorhebung, auf Dunkel auch Text */
+  --akzent-text:#1d0e04;
+  --schrift-titel:'Schibsted Grotesk',system-ui,sans-serif;
+  --schrift-text:'Schibsted Grotesk',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:22px;
+  --radius-bild:18px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:32px;
+  --titel-gewicht:500;
+  --titel-spur:-0.035em;
+  --karte:#141416;            /* Karten auf der Fläche */
+  --karte-hoch:#1b1b1e;       /* Felder in Karten */
+  --akzent-tief:#c2561a;      /* Verlauf nach unten */
+  --akzent-hell:#ffc08a;      /* Lichtpunkte im Verlauf */
+  --positiv:#5ad19a;
+  --negativ:#ff7a6b;
+}

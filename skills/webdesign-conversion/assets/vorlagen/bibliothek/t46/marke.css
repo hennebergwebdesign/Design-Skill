@@ -1,0 +1,35 @@
+/* marke.css der Vorlage "Studio hell": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#ffffff;
+  --flaeche-alt:#f5f3ef;
+  --flaeche-dunkel:#121110;
+  --text:#14120f;
+  --text-leise:#5a554d;
+  --linie:#e8e4dc;
+  --akzent:#ff6a3d;           /* Hauptaktion: Fläche mit dunklem Text, auf Dunkel auch Text */
+  --akzent-text:#1b0a03;
+  --schrift-titel:'Bricolage Grotesque',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:28px;
+  --radius-bild:20px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:32px;
+  --titel-gewicht:700;
+  --titel-spur:-0.045em;
+  --akzent-tief:#b23a0c;      /* Akzent auf Hell: Text und Linie (5,5 zu 1 auf --flaeche) */
+  --flaeche-dunkel-2:#1d1b19;
+  --text-auf-dunkel:#f7f4ee;
+  --text-leise-dunkel:#b3ada2;
+  --linie-dunkel:#34312d;
+  --verlauf-held:#ffe3cc;     /* unterer Ton des Heldverlaufs */
+  /* Platzhalter-Töne für Bildflächen (später durch Bilder ersetzen) */
+  --ton-1:#ffe0c2;
+  --ton-2:#cfe3ff;
+  --ton-3:#cdeedd;
+  --ton-4:#fff0b8;
+  --ton-5:#ffd4d0;
+  --ton-6:#e9e1d3;
+}

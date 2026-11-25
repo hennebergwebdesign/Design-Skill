@@ -1,0 +1,35 @@
+/* marke.css der Vorlage "Bistro mit Bogenbildern": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#f7f0e3;
+  --flaeche-alt:#efe5d2;
+  --flaeche-dunkel:#14281d;     /* Tannengrün: Held der Variante 1, Team, Feier */
+  --text:#17211b;
+  --text-leise:#4e574f;
+  --linie:#d9ccb2;
+  --akzent:#f0b27a;             /* Hauptaktion auf Dunkel: Fläche mit dunklem Text, auch Zahlen und Linien */
+  --akzent-text:#1a1208;
+  --schrift-titel:'Newsreader',Georgia,serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:28px;
+  --radius-bild:20px;
+
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:600;
+  --titel-spur:-0.015em;
+  --flaeche-dunkel-2:#0e2133;   /* Tintenblau: Karte, Über uns, Neuigkeiten */
+  --knopf-dunkel:#0e2133;       /* Hauptknopf auf Hell: dunkle Fläche mit hellem Text */
+  --akzent-tief:#8a4a14;        /* Akzent auf Hell als Text (6 zu 1 auf --flaeche) */
+  --text-auf-dunkel:#f7f0e3;
+  --text-leise-dunkel:#c3cbc2;
+  --linie-dunkel:#2f4638;
+  --linie-dunkel-2:#243a52;
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#8a5a34;
+  --ton-2:#3c5a3f;
+  --ton-3:#b0793f;
+  --ton-4:#4a3b2c;
+  --ton-5:#5e7a5f;
+  --ton-6:#1f3328;
+}

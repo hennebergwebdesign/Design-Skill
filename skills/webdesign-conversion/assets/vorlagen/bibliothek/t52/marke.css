@@ -1,0 +1,34 @@
+/* marke.css der Vorlage "Konzern, Stapelkarten": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#f4f5f6;
+  --flaeche-alt:#eceef0;       /* Kacheln, Kartenhintergrund */
+  --flaeche-dunkel:#1b1e23;    /* feste Rolle: dunkler Abschnitt, Hauptknopf, Fuß */
+  --text:#1b1e23;
+  --text-leise:#555b63;
+  --linie:#d5d9de;
+  --akzent:#1d4ed8;            /* Kobaltblau: Links, Symbole, Fokus, Sterne */
+  --akzent-text:#ffffff;
+  --schrift-titel:'Archivo',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:.4rem;
+  --radius-karte:.5rem;
+  --radius-bild:.5rem;
+
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:600;
+  --titel-spur:-0.035em;
+  --weiss:#ffffff;
+  --flaeche-dunkel-2:#262a31;  /* Kacheln und Zellen auf Dunkel */
+  --text-auf-dunkel:#f4f5f6;
+  --text-leise-dunkel:#b4bac2;
+  --linie-dunkel:#3a3f47;
+  --akzent-hell:#9db8ff;       /* Akzent als Text auf Dunkel */
+  --stern:#d98a00;
+  --ton-1:#33414f;
+  --ton-2:#7a8794;
+  --ton-3:#1d2a44;
+  --ton-4:#9aa5b1;
+  --ton-5:#4a5560;
+  --ton-6:#121821;
+}

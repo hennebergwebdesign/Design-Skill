@@ -1,0 +1,261 @@
+/* stil.css der Vorlage "Kanzlei Kartenraster": Gestaltung. Farben nur aus den Tokens in marke.css, Mechanik aus ../_basis/basis.css.
+   Mobil zuerst. Helle Seite, dunkle Karten im Wechsel mit hellen Bildkarten, Fuß auf Verlauf von Braun nach Schwarz.
+   Bei reduzierter Bewegung und ohne JavaScript bleibt alles sichtbar. */
+:root{--h2-m:clamp(2rem,1.3rem + 2.8vw,3.5rem);--voll:min(100% - 1.5rem,90rem)}
+:focus-visible{outline-color:var(--akzent)}
+.held :focus-visible,.haltung__karte :focus-visible,.ablauf__karte :focus-visible,.wissen__karte :focus-visible,.fuss :focus-visible{outline-color:var(--akzent-hell)}
+h1,h2,h3{font-weight:var(--titel-gewicht)}
+h2{font-size:var(--h2-m);line-height:1.08}
+h3{font-size:var(--h3);line-height:1.2}
+.mitte{text-align:center}
+.zahl{font-family:var(--schrift-titel);font-weight:350;letter-spacing:-.02em;line-height:1}
+
+/* Knöpfe und runde Pfeilknöpfe */
+.knopf{justify-content:center;text-align:center;font-weight:500;font-size:1rem}
+.knopf--dunkel{background:var(--knopf-dunkel);color:#fff}
+.knopf--weiss{background:#fff;color:var(--knopf-dunkel)}
+.knopf:hover{box-shadow:0 8px 20px color-mix(in srgb,#000 22%,transparent)}
+.rund{display:grid;place-items:center;flex:none;width:2.75rem;height:2.75rem;border-radius:50%;background:#fff;color:var(--knopf-dunkel);box-shadow:0 0 0 1px var(--linie);transition:transform var(--dauer-kurz) var(--kurve)}
+.rund:hover{transform:translateY(-2px)}
+.rund:active{transform:scale(.95)}
+.rund[aria-disabled="true"]{opacity:.4}
+.rund--hell{box-shadow:none}
+.kicker{display:inline-flex;align-items:center;gap:.6rem;font-size:1rem;font-weight:500;color:var(--akzent)}
+.kicker::before{content:"";width:.5rem;height:.5rem;border-radius:50%;background:currentColor;flex:none}
+.kicker--hell{color:var(--akzent-hell)}
+
+/* Bildplatzhalter: Tonflächen mit Lichtfleck, Beschriftung als Hinweis oben rechts, nie als Inhalt */
+.bild{--lichter:radial-gradient(70% 60% at 75% 25%,color-mix(in srgb,var(--akzent-hell) 30%,transparent),transparent 70%)}
+.bild--a{--bild-grund:var(--lichter),linear-gradient(160deg,var(--ton-3),var(--ton-6))}
+.bild--b{--bild-grund:var(--lichter),linear-gradient(160deg,var(--ton-2),var(--ton-6))}
+.bild--c{--bild-grund:var(--lichter),linear-gradient(160deg,var(--ton-5),var(--ton-4))}
+.bild--d{--bild-grund:var(--lichter),linear-gradient(160deg,var(--ton-1),var(--ton-2))}
+.held__bild,.haltung__bild,.ablauf__bild,.wissen__bild,.warum__bild{--bild-grund:var(--lichter),linear-gradient(160deg,var(--ton-3),var(--ton-6))}
+.bild[data-platzhalter]::after{opacity:1;z-index:2;inset:1rem 1rem auto auto;max-width:calc(100% - 2rem);padding:.3rem .65rem;border-radius:8px;background:color-mix(in srgb,var(--flaeche-dunkel) 85%,transparent);color:var(--text-auf-dunkel);font-size:1rem;line-height:1.3}
+
+/* Kopf: weiße Leiste, ohne JavaScript scrollt sie mit */
+.kopf{position:absolute;top:0;left:0;right:0;z-index:50;padding:.75rem .75rem 0;pointer-events:none}
+.js .kopf{position:fixed}
+.kopf>*{pointer-events:auto}
+.kopf__leiste{position:relative;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;min-height:3.5rem;padding:.4rem .5rem .4rem 1rem;border-radius:var(--radius-karte);background:#fff;color:var(--knopf-dunkel);box-shadow:0 8px 24px color-mix(in srgb,#000 14%,transparent)}
+.js .kopf__leiste{flex-wrap:nowrap}
+.kopf__logo{display:inline-flex;align-items:center;gap:.6rem;min-height:2.75rem;margin-right:auto;font-family:var(--schrift-titel);font-weight:500;font-size:1.125rem;letter-spacing:.06em;white-space:nowrap}
+.kopf__zeichen{width:1.5rem;height:1.5rem;color:var(--akzent)}
+.kopf__tel{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-width:2.75rem;min-height:2.75rem;border-radius:var(--radius-knopf);font-weight:500}
+.kopf__tel span{display:none}
+.kopf__knopf{display:none;min-height:2.75rem;padding:.4rem 1rem;white-space:nowrap}
+.kopf__burger{display:none;width:2.75rem;height:2.75rem;border-radius:50%;align-items:center;justify-content:center;background:var(--flaeche-alt);transition:background-color var(--dauer-kurz)}
+.js .kopf__burger{display:inline-flex}
+.burger,.burger::before{display:block;width:1.2rem;height:2px;background:currentColor;border-radius:2px;transition:transform var(--dauer-mittel) var(--kurve)}
+.burger{position:relative;transform:translateY(-4px)}
+.burger::before{content:"";position:absolute;left:0;top:8px}
+.kopf__burger[aria-expanded="true"] .burger{transform:rotate(45deg)}
+.kopf__burger[aria-expanded="true"] .burger::before{transform:translateY(-8px) rotate(-90deg)}
+.kopf__nav{order:5;flex-basis:100%}
+.kopf__menue{display:flex;flex-wrap:wrap;gap:0 .5rem}
+.kopf__menue a{display:flex;align-items:center;min-height:2.75rem;padding-inline:.75rem;font-weight:500}
+.kopf__menue a:hover{color:var(--akzent)}
+.js .kopf__nav{position:absolute;top:calc(100% + .5rem);left:0;right:0;padding:.5rem 1rem 1rem;border-radius:var(--radius-karte);background:#fff;box-shadow:0 18px 32px color-mix(in srgb,#000 22%,transparent)}
+.js .kopf__nav:not([data-offen="true"]){display:none}
+.js .kopf__menue{flex-direction:column}
+.js .kopf__menue a{min-height:3rem}
+@media (min-width:30rem){.kopf__knopf{display:inline-flex}}
+@media (min-width:62rem){
+  .kopf__leiste{padding-left:1.25rem;flex-wrap:nowrap}
+  .kopf__logo{margin-right:0;flex:1 1 0}
+  .kopf__burger,.js .kopf__burger{display:none}
+  .kopf__nav,.js .kopf__nav,.js .kopf__nav:not([data-offen="true"]){position:static;display:block;order:0;flex-basis:auto;padding:0;background:none;border-radius:0;box-shadow:none}
+  .js .kopf__menue{flex-direction:row}
+  .kopf__menue{flex-wrap:nowrap}
+  .kopf__tel{padding-inline:.75rem}
+  .kopf__tel span{display:inline}
+  .kopf__tel{flex:1 1 0;justify-content:flex-end}
+  .kopf__knopf{order:6}
+}
+
+/* 1. Held: gerahmte Bildkarte */
+.held{padding:5rem .75rem 0}
+.held__rahmen{position:relative;display:flex;align-items:flex-end;min-height:max(34rem,calc(100svh - 6rem));overflow:hidden;border-radius:var(--radius-karte);color:var(--text-auf-dunkel);background:var(--flaeche-dunkel)}
+.held__bild{position:absolute;inset:0;border-radius:0}
+.held__bild[data-platzhalter]::after{inset:1rem 1rem auto auto}
+.held__schleier{position:absolute;inset:0;background:linear-gradient(0deg,color-mix(in srgb,var(--flaeche-dunkel) 92%,transparent) 0%,color-mix(in srgb,var(--flaeche-dunkel) 45%,transparent) 55%,color-mix(in srgb,var(--flaeche-dunkel) 20%,transparent) 100%)}
+.held__innen{position:relative;z-index:1;display:grid;gap:1.25rem;justify-items:start;padding:7rem 1.25rem 7.5rem}
+.held h1{font-size:clamp(2.5rem,1.2rem + 5.2vw,5rem);line-height:1.02;max-width:12ch}
+.held__text{max-width:34rem;font-size:var(--text-l);color:var(--text-auf-dunkel)}
+.held__karte{position:absolute;z-index:2;left:.75rem;right:.75rem;bottom:.75rem;display:flex;align-items:center;gap:.9rem;min-height:3.5rem;padding:.5rem .6rem .5rem 1rem;border-radius:var(--radius-karte);background:#fff;color:var(--knopf-dunkel);font-weight:500}
+.held__karte>span:nth-child(2){margin-right:auto}
+.held__punkte{display:flex;gap:.3rem}
+.held__punkte i{width:.5rem;height:.5rem;border-radius:50%;background:color-mix(in srgb,var(--akzent) 25%,#fff)}
+.held__punkte i.an{background:var(--akzent)}
+.held__avatar{width:2.5rem;height:2.5rem;border-radius:50%;background:linear-gradient(160deg,var(--ton-3),var(--ton-6));box-shadow:0 0 0 2px #fff,0 0 0 4px var(--akzent-hell)}
+@media (min-width:48rem){
+  .held__innen{padding:9rem 3rem 4rem;gap:1.5rem}
+  .held__karte{left:auto;right:1.5rem;bottom:1.5rem;width:20rem}
+}
+
+/* 2. Vertrauen */
+.vertrauen{padding-block:3.5rem 0}
+.vertrauen__titel{font-family:var(--schrift-text);font-size:1rem;font-weight:400;text-align:center;color:var(--text-leise);line-height:1.5;letter-spacing:0}
+.vertrauen__kacheln{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem;margin-top:1.5rem}
+.vertrauen__kacheln li{display:grid;place-items:center;min-height:3.5rem;padding:.75rem 1.4rem;border-radius:8px;background:#fff;color:var(--text)}
+.vertrauen__kacheln .beispiellogo{--logo-h:1.5rem}
+
+/* 3. Haltung */
+.haltung__paar,.ablauf__paar,.wissen__paar{width:var(--voll);display:grid;gap:.75rem}
+.haltung__bild{min-height:24rem;border-radius:var(--radius-karte)}
+.haltung__karte,.ablauf__karte,.wissen__karte{display:flex;flex-direction:column;gap:1.5rem;padding:clamp(1.5rem,4vw,3rem);border-radius:var(--radius-karte);background:var(--flaeche-dunkel);color:var(--text-auf-dunkel)}
+.haltung__karte{justify-content:space-between;align-items:flex-start}
+.haltung__karte h2{max-width:14ch;margin-top:.75rem}
+.haltung__text{display:grid;gap:1rem;color:var(--text-leise-dunkel);font-size:var(--text-m)}
+@media (min-width:48rem){.haltung__paar,.ablauf__paar,.wissen__paar{grid-template-columns:1fr 1fr}.haltung__karte{min-height:34rem}}
+
+/* 4. Rechtsgebiete */
+.rechtsgebiete{background:#fff}
+.rechtsgebiete h2{max-width:20ch;margin-inline:auto}
+.gebiete{display:grid;gap:.5rem;margin-top:clamp(2rem,5vw,3.5rem)}
+.gebiet{position:relative;display:flex;align-items:flex-end;min-height:22rem;height:100%;color:#fff}
+.gebiet::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,color-mix(in srgb,var(--flaeche-dunkel) 92%,transparent),color-mix(in srgb,var(--flaeche-dunkel) 20%,transparent) 70%)}
+.gebiet[data-platzhalter]::after{inset:1rem 1rem auto auto;max-width:calc(100% - 2rem)}
+.gebiet__text{position:relative;z-index:2;width:100%;padding:1.25rem}
+.gebiet h3{font-weight:500}
+.gebiet h3 a{display:block;min-height:2.75rem}
+.gebiet h3 a:hover{text-decoration:underline;text-underline-offset:.2em}
+.gebiet__liste{display:grid;gap:.1rem;margin-top:.5rem;color:var(--text-auf-dunkel)}
+.gebiet__liste li{display:flex;align-items:center;gap:.6rem;min-height:1.9rem}
+.gebiet__liste li::before{content:"";width:.5rem;height:.5rem;border-radius:50%;background:var(--akzent-hell);flex:none}
+.gebiete__fuss{display:grid;justify-items:center;gap:1.25rem;margin-top:2.5rem;text-align:center}
+.gebiete__linie{width:0;height:4rem;border-left:2px dotted var(--text-leise)}
+.gebiete__fuss p{max-width:24rem}
+.gebiete__hinweis{display:inline-flex;align-items:center;gap:.5rem;color:var(--text-leise)}
+@media (min-width:40rem){.gebiete{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:62rem){
+  .gebiete{grid-template-columns:repeat(4,1fr)}
+  .gebiet{min-height:26rem}
+}
+/* Liste erscheint beim Überfahren und bei Tastaturfokus; ohne Maus, ohne JavaScript und bei reduzierter Bewegung steht sie immer da */
+@media (min-width:62rem) and (hover:hover) and (prefers-reduced-motion:no-preference){
+  .gebiet__text{transform:translateY(8rem);transition:transform var(--dauer-mittel) var(--kurve)}
+  .gebiet__liste{opacity:0;transition:opacity var(--dauer-mittel) var(--kurve)}
+  .gebiet:hover .gebiet__text,.gebiet:focus-within .gebiet__text{transform:none}
+  .gebiet:hover .gebiet__liste,.gebiet:focus-within .gebiet__liste{opacity:1}
+}
+
+/* 5. Warum wir */
+.warum{overflow-x:clip}
+.warum__paar{display:grid;gap:3rem;align-items:center}
+.warum__text{display:grid;gap:1.25rem;justify-items:start}
+.warum__text p{max-width:30rem;color:var(--text-leise);font-size:var(--text-l)}
+.warum__rund{position:relative;width:min(78%,26rem);margin-inline:auto}
+.warum__bild{aspect-ratio:1;border-radius:50%}
+.warum__bild[data-platzhalter]::after{inset:auto auto 22% 50%;transform:translateX(-50%);width:max-content}
+.ring{position:absolute;border-radius:50%;border:1px solid var(--akzent);pointer-events:none}
+.ring--1{inset:-12% -14% -12% -6%}
+.ring--2{inset:-5% -4% -4% -10%}
+.zahlenleiste{margin-top:3rem;padding:clamp(1.5rem,3vw,2.25rem) 1.5rem;border-radius:var(--radius-karte);border-top:.9rem solid var(--akzent);background:var(--flaeche-dunkel);color:var(--text-auf-dunkel);display:grid;gap:1.5rem;text-align:center}
+.zahlenleiste div{display:flex;flex-direction:column-reverse;gap:.5rem}
+.zahlenleiste dd{margin:0;font-size:clamp(2.5rem,1.4rem + 3vw,3.75rem)}
+.zahlenleiste dt{color:var(--text-leise-dunkel)}
+@media (min-width:62rem){
+  .warum__paar{grid-template-columns:1fr 1fr;gap:4rem}
+  .warum__rund{margin-inline:auto 4rem}
+  .zahlenleiste{grid-template-columns:repeat(3,1fr);width:min(100%,56rem);margin-inline:auto}
+  .zahlenleiste div+div{border-left:1px solid var(--linie-dunkel)}
+}
+
+/* 6. Ablauf */
+.ablauf{background:#fff}
+.ablauf__karte h2{max-width:16ch}
+.ablauf__karte .knopf{align-self:flex-start}
+.schritte{display:grid;gap:1.75rem}
+.schritte li{position:relative;display:grid;grid-template-columns:3rem 1fr;gap:1rem}
+.schritte li:not(:last-child)::after{content:"";position:absolute;left:1.4rem;top:3.25rem;bottom:-1.5rem;width:2px;background:var(--akzent)}
+.schritt__nr{display:grid;place-items:center;width:3rem;height:3rem;border-radius:50%;background:var(--akzent);color:var(--akzent-text);font-weight:500}
+.schritte h3{font-size:var(--text-l);font-weight:500}
+.schritte p{margin-top:.5rem;color:var(--text-leise-dunkel)}
+.ablauf__bild{min-height:24rem;border-radius:var(--radius-karte)}
+
+/* 7. Stimmen */
+.stimmen{overflow-x:clip}
+.stimmen__paar{display:grid;grid-template-columns:minmax(0,1fr);gap:2.5rem;align-items:center}
+.stimmen__kreis{position:relative;width:min(72%,26rem);aspect-ratio:1;margin-inline:auto}
+.avatar{position:absolute;display:block;border-radius:50%;box-shadow:0 0 0 3px var(--flaeche)}
+.avatar.a1{left:20%;top:6%;width:22%;aspect-ratio:1;background:linear-gradient(160deg,var(--ton-3),var(--ton-6))}
+.avatar.a2{left:52%;top:2%;width:14%;aspect-ratio:1;background:linear-gradient(160deg,var(--ton-5),var(--ton-6))}
+.avatar.a3{left:66%;top:18%;width:24%;aspect-ratio:1;background:linear-gradient(160deg,var(--ton-2),var(--ton-6))}
+.avatar.a4{left:34%;top:34%;width:30%;aspect-ratio:1;background:linear-gradient(160deg,var(--ton-1),var(--ton-6))}
+.avatar.a5{left:8%;top:52%;width:16%;aspect-ratio:1;background:linear-gradient(160deg,var(--ton-4),var(--ton-6))}
+.avatar.a6{left:50%;top:68%;width:22%;aspect-ratio:1;background:linear-gradient(160deg,var(--ton-3),var(--ton-2))}
+.avatar.klein{position:static;width:3.25rem;height:3.25rem;box-shadow:none}
+.stimmen__karte{min-width:0;padding:1.5rem;border-radius:var(--radius-karte);background:#fff;box-shadow:0 18px 40px color-mix(in srgb,var(--flaeche-dunkel) 10%,transparent)}
+.stimmen__spur{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:1.5rem;scrollbar-width:none}
+.stimmen__spur::-webkit-scrollbar{display:none}
+.stimmen__spur li{flex:0 0 100%;scroll-snap-align:start}
+.stimmen__spur figure{display:grid;gap:1.25rem}
+.stimmen blockquote p{font-size:var(--text-l);line-height:1.45;font-weight:400}
+.stimmen figcaption{display:grid;color:var(--text-leise)}
+.stimmen figcaption strong{color:var(--text);font-weight:500}
+.steuerung{display:flex;justify-content:flex-end;gap:.5rem;margin-top:1.25rem}
+.steuerung[hidden]{display:none}
+@media (min-width:62rem){.stimmen__paar{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:5rem}.stimmen__karte{padding:2.5rem}}
+
+/* 8. Fragen */
+.fragen__huelle{width:min(100% - 2*var(--rand),44rem)}
+.akkordeon{display:grid;gap:.5rem;margin-top:clamp(2rem,5vw,3rem)}
+.frage summary{display:flex;align-items:stretch;gap:.5rem;list-style:none;cursor:pointer}
+.frage summary::-webkit-details-marker{display:none}
+.frage summary>span:first-child{flex:1;display:flex;align-items:center;min-height:3.25rem;padding:.5rem 1.5rem;border-radius:999px;background:#fff;font-weight:500;transition:background-color var(--dauer-kurz),color var(--dauer-kurz)}
+.frage__zeichen{display:grid;place-items:center;flex:none;width:3.25rem;height:3.25rem;border-radius:50%;background:#fff;color:var(--knopf-dunkel);transition:background-color var(--dauer-kurz),transform var(--dauer-mittel) var(--kurve)}
+.frage[open] summary>span:first-child{background:var(--flaeche-dunkel);color:var(--text-auf-dunkel)}
+.frage[open] .frage__zeichen{background:var(--akzent);color:var(--akzent-text);transform:rotate(45deg)}
+.frage summary:hover>span:first-child{background:var(--flaeche-alt)}
+.frage[open] summary:hover>span:first-child{background:var(--flaeche-dunkel)}
+.frage__antwort{margin-top:.5rem;padding:1.25rem 1.5rem;border-radius:var(--radius-karte);background:#fff}
+
+/* 9. Wissen */
+.wissen__karte h2{max-width:14ch}
+.wissen__karte>p{max-width:28rem;color:var(--text-leise-dunkel)}
+.wissen__karte .knopf{align-self:flex-start}
+.beitraege{margin-top:1rem;border-top:1px solid var(--linie-dunkel)}
+.beitraege a{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:4.25rem;padding-block:.75rem;border-bottom:1px solid var(--linie-dunkel);font-weight:500}
+.beitraege a:hover .rund{transform:translateX(3px)}
+.wissen__bild{min-height:26rem;border-radius:var(--radius-karte)}
+
+/* 10. Kontakt und Fuß */
+.fuss{margin-top:var(--raum);padding-block:clamp(3rem,8vw,6rem) 1.5rem;background:linear-gradient(180deg,var(--flaeche-dunkel-2) 0%,var(--fuss-unten) 60%);color:var(--text-auf-dunkel)}
+.fuss__kopf{display:flex;align-items:center;gap:1rem}
+.fuss__titel{font-size:clamp(2.25rem,1.3rem + 3.6vw,4.25rem);letter-spacing:var(--titel-spur)}
+.fuss__daten{display:grid;gap:1.75rem;margin-top:clamp(2rem,5vw,3.5rem)}
+.fuss__label{display:flex;align-items:center;gap:.5rem;margin-bottom:.4rem;color:var(--text-leise-dunkel)}
+.fuss__label--zweit{margin-top:1.25rem}
+.fuss__daten a{display:inline-block;padding-block:.3rem;text-decoration:underline;text-underline-offset:.2em}
+.rueckruf{margin-top:3rem;padding:1.5rem;border-radius:var(--radius-karte);background:var(--flaeche-dunkel-2);box-shadow:inset 0 0 0 1px var(--linie-dunkel)}
+.rueckruf h3{font-weight:500}
+.formular{display:grid;gap:1rem;margin-top:1.25rem}
+.formular__feld{display:grid;gap:.4rem}
+.formular label{font-size:1rem;font-weight:500}
+.formular input,.formular textarea,.newsletter input{width:100%;min-height:3rem;padding:.75rem 1rem;font:inherit;font-size:1rem;color:var(--text-auf-dunkel);background:var(--flaeche-dunkel);border:1.5px solid color-mix(in srgb,var(--text-auf-dunkel) 55%,var(--flaeche-dunkel));border-radius:var(--radius-knopf)}
+.formular textarea{resize:vertical;min-height:6rem}
+.formular input::placeholder,.formular textarea::placeholder,.newsletter input::placeholder{color:var(--text-leise-dunkel);opacity:1}
+.formular input:focus-visible,.formular textarea:focus-visible,.newsletter input:focus-visible{outline:3px solid var(--akzent-hell);outline-offset:2px}
+.formular__recht,.newsletter__recht{font-size:1rem;color:var(--text-leise-dunkel)}
+.formular__recht a,.newsletter__recht a{text-decoration:underline}
+.formular__meldung{padding:.8rem 1rem;border-radius:var(--radius-knopf);background:var(--flaeche-dunkel);font-size:1rem}
+.formular__meldung[hidden]{display:none}
+.fuss__marke{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;margin-top:3rem}
+.fuss__marke .kopf__logo{margin-right:0}
+.fuss__marke .kopf__zeichen{color:var(--akzent-hell)}
+.fuss__links{display:flex;flex-wrap:wrap;gap:.25rem 1rem}
+.fuss__links a,.fuss__unten a{display:inline-flex;align-items:center;min-height:2.75rem}
+.fuss__links a:hover,.fuss__unten a:hover{text-decoration:underline;text-underline-offset:.2em}
+.newsletter{display:grid;gap:1.5rem;margin-top:2.5rem;padding-top:2.5rem;border-top:1px solid var(--linie-dunkel)}
+.newsletter h2{font-size:clamp(1.75rem,1.2rem + 2vw,2.75rem);max-width:16ch}
+.newsletter p{margin-top:.75rem;color:var(--text-leise-dunkel);max-width:26rem}
+.newsletter__form{display:grid;gap:.75rem;align-content:start}
+.newsletter__form p{margin-top:0}
+.fuss__unten{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem 1.5rem;margin-top:2.5rem;padding-top:1.25rem;border-top:1px solid var(--linie-dunkel);color:var(--text-leise-dunkel)}
+.fuss__unten ul{display:flex;gap:1.25rem}
+@media (min-width:40rem){.formular{grid-template-columns:1fr 1fr}.formular__feld--breit,.formular .knopf{grid-column:1 / -1}.rueckruf{padding:2rem}}
+@media (min-width:62rem){
+  .fuss__daten{grid-template-columns:repeat(3,auto);justify-content:start;gap:5rem}
+  .newsletter{grid-template-columns:1fr 1fr;gap:4rem}
+}

@@ -1,0 +1,36 @@
+/* marke.css der Vorlage "Rechnungswesen hell": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#ffffff;
+  --flaeche-alt:#f6f6f3;
+  --flaeche-dunkel:#17181a;
+  --text:#17181a;
+  --text-leise:#5b5f63;
+  --linie:#e5e5e0;
+  --akzent:#1b7a52;           /* Hauptaktion, Haken und Hervorhebung auf Hell */
+  --akzent-text:#ffffff;
+  --schrift-titel:'Outfit',system-ui,sans-serif;
+  --schrift-text:'Outfit',system-ui,sans-serif;
+  --radius-knopf:12px;
+  --radius-karte:20px;
+  --radius-bild:20px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:28px;
+  --titel-gewicht:500;
+  --titel-spur:-0.03em;
+  --tinte:#17181a;            /* dunkler Hauptknopf auf Hell */
+  --karte-dunkel:#222427;     /* Flächen auf Dunkel */
+  --text-auf-dunkel:#f4f4f1;
+  --text-leise-dunkel:#a9acaf;
+  --linie-dunkel:#34363a;
+  --akzent-hell:#7fdcad;      /* Akzent als Text und Haken auf Dunkel */
+  --akzent-zart:#e4f3ea;      /* Chips und Symbolflächen auf Hell */
+  --gold:#e8a21a;             /* nur Sterne der Bewertung */
+  --ton-1:#9fc7a0;
+  --ton-2:#5f9a6a;
+  --ton-3:#cfe3d0;
+  --ton-4:#b8a88a;
+  --ton-5:#d8c9a6;
+  --ton-6:#7e9aa6;
+}

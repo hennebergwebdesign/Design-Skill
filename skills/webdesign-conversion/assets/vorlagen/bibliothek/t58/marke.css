@@ -1,0 +1,32 @@
+/* marke.css der Vorlage "Studio Nachtschicht": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Die ganze Seite ist dunkel. Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#09090a;
+  --flaeche-alt:#121214;
+  --flaeche-karte:#18181b;
+  --flaeche-dunkel:#09090a;   /* feste Rolle der Basis, hier gleich der Seite */
+  --text:#f5f5f0;
+  --text-leise:#b4b4ae;
+  --linie:#2b2b30;
+  --akzent:#d0f545;           /* Hauptaktion: Fläche mit dunklem Text, auf Dunkel auch als Text und Linie */
+  --akzent-text:#12160a;
+  --schrift-titel:'Archivo',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:22px;
+  --radius-bild:22px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:34px;
+  --titel-gewicht:900;
+  --titel-spur:-0.01em;
+  --flaeche-pille:#26262b;    /* Menüpillen und ruhige Knöpfe */
+  --akzent-tief:#8fb41a;      /* zweiter Ton für den Verlauf des App Bandes */
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#2a3320;
+  --ton-2:#1f2a33;
+  --ton-3:#3a3328;
+  --ton-4:#2b2b33;
+  --ton-5:#26352f;
+  --ton-6:#101113;
+}
