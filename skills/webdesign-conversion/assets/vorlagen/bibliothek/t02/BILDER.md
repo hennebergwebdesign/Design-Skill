@@ -20,3 +20,6 @@ Alle Fotos von Unsplash, Unsplash Lizenz (https://unsplash.com/de/lizenz), abger
 
 - Avatar im Zitat bleibt Verlaufsplatzhalter (bewusst, kein Porträt als Stimme).
 - Das Heldbild ist dekorativ (`alt=""`).
+
+| mann-blaues-hemd-240.webp | index.html, Zeile 258, Porträt | Mann in blauem Hemd im Lokal | [@dannypostma](https://unsplash.com/de/@dannypostma) | [Seite](https://unsplash.com/de/fotos/qm6yxe7SjWg) | Unsplash Lizenz | 25.11.2026 |
+- Nachtrag 25.11.2026: Personen und weitere Beispielfotos als Vorschau eingesetzt, werden vor Abgabe ersetzt.
