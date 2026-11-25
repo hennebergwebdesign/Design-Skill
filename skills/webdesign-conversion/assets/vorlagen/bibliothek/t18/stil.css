@@ -314,3 +314,6 @@ nav a[aria-current="location"]{text-decoration:none;background:var(--flaeche-dun
   .link-spiel:hover,.link-pfeil:hover,.schritt:hover,.reiter__knopf:hover,.fuss__spalte a:hover{transform:none}
   .f-karte:hover,.kachel:hover{translate:none}
 }
+
+/* Fotos statt Platzhalterverläufe */
+.bild__foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}

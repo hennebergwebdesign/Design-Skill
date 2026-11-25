@@ -371,3 +371,6 @@ input:focus-visible,textarea:focus-visible{outline:3px solid var(--akzent);outli
 
 /* Beschriftung der Platzhalter oben rechts, wo unten eine Karte liegt */
 .idee__bild .bild[data-platzhalter]::after,.leistungen__bild .bild[data-platzhalter]::after{inset:1rem 1rem auto auto}
+
+/* Fotos statt Platzhalterverläufe */
+.bild__foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
