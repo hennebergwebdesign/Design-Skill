@@ -14,6 +14,9 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 | coach-tablet-sofa.webp | Kurs Bild | Ein Mann sitzt auf einer Couch | @stevedimatteo | https://unsplash.com/photos/gObie1HkQV4 | Unsplash Lizenz | 25.11.2026 |
 | coach-beratung-fortschritt.webp | Schritt 2 Beratung | Der Trainer bespricht den Fortschritt | @silverkblack | https://unsplash.com/photos/5p8vhHUEEgY | Unsplash Lizenz | 25.11.2026 |
 | coach-kunde-trainingsplan.webp | Schritt 3 Tablet | Trainer und Kunde besprechen Trainingsplan | @silverkblack | https://unsplash.com/photos/6ESp0qoio_I | Unsplash Lizenz | 25.11.2026 |
+| trainer-poloshirt-640.webp | index.html, Zeile 161, Bild: Coach, Porträt | Lächelnder Mann im grauen Poloshirt | [@derickray](https://unsplash.com/de/@derickray) | [Seite](https://unsplash.com/de/fotos/f6QoaTtdyGw) | Unsplash Lizenz | 25.11.2026 |
+| frau-blond-lachend-640.webp | index.html, Zeile 166, Bild: Coach, Porträt | Lachende junge Frau mit lockigem blondem Haar | [@dougbagg_](https://unsplash.com/de/@dougbagg_) | [Seite](https://unsplash.com/de/fotos/9iLbXsMZ6ls) | Unsplash Lizenz | 25.11.2026 |
+| trainer-bart-top-640.webp | index.html, Zeile 171, Bild: Coach, Porträt | Mann mit Bart im Tanktop im Fitnessstudio | [@taiyoushounen](https://unsplash.com/de/@taiyoushounen) | [Seite](https://unsplash.com/de/fotos/bJPR7RsdBdU) | Unsplash Lizenz | 25.11.2026 |
 
 ## Hinweise
 
@@ -26,3 +29,4 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 * Coach am Bildschirm, drei Coach Porträts
 * Beratungsgespräch, Coach mit Tablet, Kontrolle der Messwerte
 * Nachtrag 25.11.2026: Slots Coach am Bildschirm, Beratungsgespräch und Coach mit Tablet belegt; Kontrolle der Messwerte bleibt offen.
+- Nachtrag 25.11.2026: Personen und weitere Beispielfotos als Vorschau eingesetzt, werden vor Abgabe ersetzt.

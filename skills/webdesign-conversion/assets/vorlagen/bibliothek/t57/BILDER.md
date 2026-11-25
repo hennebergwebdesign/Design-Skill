@@ -15,6 +15,12 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 | kampfseile-draussen.webp | Kurs Boxen und Kondition | Mann trainiert draußen mit Kampfseilen | @_karsten | https://unsplash.com/photos/0Wra5YYVQJE | Unsplash Lizenz | 25.11.2026 |
 | studio-hell-geraete.webp | Studio Rundgang | Modernes Fitnessstudio mit Laufbändern und Heimtrainern | @erandesign | https://unsplash.com/photos/X0rfCRWl690 | Unsplash Lizenz | 25.11.2026 |
 | seilzug-rueckansicht.webp | Banner | Frau in schwarzem Tanktop und schwarzer Leggings sitzt auf Trainingsgeräten | @sichpicsss | https://unsplash.com/photos/1cNqbX7XvRA | Unsplash Lizenz | 25.11.2026 |
+| trainer-poloshirt-640.webp | index.html, Zeile 119, Bild: Porträt Coach | Lächelnder Mann im grauen Poloshirt | [@derickray](https://unsplash.com/de/@derickray) | [Seite](https://unsplash.com/de/fotos/f6QoaTtdyGw) | Unsplash Lizenz | 25.11.2026 |
+| frau-blond-lachend-640.webp | index.html, Zeile 119, Bild: Porträt Coach | Lachende junge Frau mit lockigem blondem Haar | [@dougbagg_](https://unsplash.com/de/@dougbagg_) | [Seite](https://unsplash.com/de/fotos/9iLbXsMZ6ls) | Unsplash Lizenz | 25.11.2026 |
+| trainer-bart-top-640.webp | index.html, Zeile 119, Bild: Porträt Coach | Mann mit Bart im Tanktop im Fitnessstudio | [@taiyoushounen](https://unsplash.com/de/@taiyoushounen) | [Seite](https://unsplash.com/de/fotos/bJPR7RsdBdU) | Unsplash Lizenz | 25.11.2026 |
+| frau-locken-lachend-640.webp | index.html, Zeile 119, Bild: Porträt Coach | Lächelnde Frau mit dunklen Locken | [@nolanrmanning](https://unsplash.com/de/@nolanrmanning) | [Seite](https://unsplash.com/de/fotos/Ll9YOG20UFI) | Unsplash Lizenz | 25.11.2026 |
+| trainer-studio-gruppe-640.webp | index.html, Zeile 119, Bild: Porträt Coach | Lächelnder Mann im Trainingsstudio | [@rizlas](https://unsplash.com/de/@rizlas) | [Seite](https://unsplash.com/de/fotos/h6dodyNh95c) | Unsplash Lizenz | 25.11.2026 |
+| frau-braun-lachend-640.webp | index.html, Zeile 119, Bild: Porträt Coach | Lächelnde Frau in heller Strickjacke | [@brookebalentine](https://unsplash.com/de/@brookebalentine) | [Seite](https://unsplash.com/de/fotos/xSEFkIAopxA) | Unsplash Lizenz | 25.11.2026 |
 
 ## Hinweise
 
@@ -29,3 +35,4 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 * Sechs Coach Porträts: Personen, bleiben offen, damit niemand als echte Person erscheint.
 * Karte "Paar beim gemeinsamen Training" (Hochformat, enthält Text): bleibt Platzhalter.
 * Video im Held und Studio Rundgang: Standbild statt Video.
+- Nachtrag 25.11.2026: Personen und weitere Beispielfotos als Vorschau eingesetzt, werden vor Abgabe ersetzt.

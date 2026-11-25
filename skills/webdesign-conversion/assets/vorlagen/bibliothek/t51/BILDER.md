@@ -14,6 +14,7 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 | beratung-frau-cafe-laptop.webp | Dienst Bild | Frau in schwarzem Langarmhemd | @helenalopesph | https://unsplash.com/photos/_SzvRwdFo6o | Unsplash Lizenz | 25.11.2026 |
 | zimmerpflanze-weiss.webp | Preise Bild | grüne Blätter auf weißem Hintergrund | @anniespratt | https://unsplash.com/photos/v2TtUBqrQnE | Unsplash Lizenz | 25.11.2026 |
 
+
 ## Hinweise
 
 * Das Foto beim Lesen zeigt eine Silhouette am Fenster, die Vorlage nennt Berater; nur Atmosphäre.
@@ -31,3 +32,4 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 * Beitrag Unterlagen und Taschenrechner, Beitrag Treppenhalle
 * Kachel Fassade mit Rohr und Objekt auf Terrakotta
 * Nachtrag 25.11.2026: Beraterin und Zimmerpflanze belegt; Fassade, Terrakotta und Bildschirm bleiben offen.
+- Nachtrag 25.11.2026: Personen und weitere Beispielfotos als Vorschau eingesetzt, werden vor Abgabe ersetzt.

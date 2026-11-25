@@ -16,6 +16,9 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 | haende-auf-schwarzer-matte.webp.webp | Beitrag, Trinkflasche und Handtuch | ein Paar Füße mit Sandalen | mathildelangevin | https://unsplash.com/photos/aBJ3A-2LJyU | Unsplash Lizenz | 25.11.2026 |
 | hund-uebung-matte.webp.webp | Beitrag, Dehnübung auf der Matte | Frau in schwarzem Sport-BH und blauer Jeans | lgnwvr | https://unsplash.com/photos/amgv9YUg-MA | Unsplash Lizenz | 25.11.2026 |
 | sport-zwei-frauen-mauer.webp | Wandel Bild B | Zwei Frauen sitzen auf einer Mauer | @diseniatica | https://unsplash.com/photos/2wSpGuW0YQw | Unsplash Lizenz | 25.11.2026 |
+| trainer-poloshirt-640.webp | index.html, Zeile 196, Bild: Mitglied beim Bizepscurl, Porträt | Lächelnder Mann im grauen Poloshirt | [@derickray](https://unsplash.com/de/@derickray) | [Seite](https://unsplash.com/de/fotos/f6QoaTtdyGw) | Unsplash Lizenz | 25.11.2026 |
+| frau-blond-lachend-640.webp | index.html, Zeile 211, Bild: Mitglied mit Stirnband und Lächeln, Porträt | Lachende junge Frau mit lockigem blondem Haar | [@dougbagg_](https://unsplash.com/de/@dougbagg_) | [Seite](https://unsplash.com/de/fotos/9iLbXsMZ6ls) | Unsplash Lizenz | 25.11.2026 |
+| trainer-bart-top-640.webp | index.html, Zeile 239, Bild: Trainer mit Kurzhantel, Porträt | Mann mit Bart im Tanktop im Fitnessstudio | [@taiyoushounen](https://unsplash.com/de/@taiyoushounen) | [Seite](https://unsplash.com/de/fotos/bJPR7RsdBdU) | Unsplash Lizenz | 25.11.2026 |
 
 ## Hinweise
 
@@ -32,3 +35,4 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 * Vorher und Nachher
 * Trainer mit Kurzhantel, Porträt (Preise)
 * Nachtrag 25.11.2026: Slot Zwei Trainierende im Gespräch belegt.
+- Nachtrag 25.11.2026: Personen und weitere Beispielfotos als Vorschau eingesetzt, werden vor Abgabe ersetzt.
