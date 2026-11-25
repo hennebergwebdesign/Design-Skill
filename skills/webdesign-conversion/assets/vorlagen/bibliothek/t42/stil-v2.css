@@ -144,3 +144,6 @@
   .panel--umgekehrt .panel__bild{order:2}
   .panel__bild{min-height:22rem}
 }
+.sicher__bild>img,.videorahmen>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;border-radius:inherit}
+.sicher__text{position:relative;z-index:2}
+.videorahmen__innen{position:relative;z-index:2}
