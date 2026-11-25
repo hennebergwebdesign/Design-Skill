@@ -1,6 +1,6 @@
 # Herkunft und Grenzen der Bibliothek
 
-Stand 24.11.2026. Die achtundzwanzig Vorlagen sind **eigenständige Umsetzungen** nach dem Prinzip öffentlich erreichbarer Referenzseiten (t01 bis t12 am 24.11.2026, t13 bis t28 am 25.11.2026 nachgereicht). Der Inhaber der
+Stand 24.11.2026. Die dreiunddreißig Vorlagen sind **eigenständige Umsetzungen** nach dem Prinzip öffentlich erreichbarer Referenzseiten (t01 bis t12 am 24.11.2026, t13 bis t33 am 25.11.2026 nachgereicht). Der Inhaber der
 Agentur hat die Erfassung der Seiten ausdrücklich freigegeben und Weg 1 gewählt (eigene Templates, branchenneutral). Er wünschte einen Nachbau von
 Layout, Design, Prinzip und Animation; übernommen ist das Prinzip, nicht die Ausführung.
 
@@ -34,6 +34,11 @@ Layout, Design, Prinzip und Animation; übernommen ist das Prinzip, nicht die Au
 | t26 | ventraflow.webflow.io | 25.11.2026 |
 | t27 | ainova-template.webflow.io | 25.11.2026 |
 | t28 | fitedge.webflow.io | 25.11.2026 |
+| t29 | wilun.webflow.io | 25.11.2026 |
+| t30 | escapora.webflow.io | 25.11.2026 |
+| t31 | klener.webflow.io/home-pages/home-v1 | 25.11.2026 |
+| t32 | roofex.webflow.io | 25.11.2026 |
+| t33 | airstead.webflow.io | 25.11.2026 |
 
 ## Was übernommen ist, was nicht
 
@@ -46,8 +51,8 @@ Layout, Design, Prinzip und Animation; übernommen ist das Prinzip, nicht die Au
 
 ## Was gemessen ist
 
-* Je Vorlage im Browser (Chromium, Playwright) bei 390 und 1440 Pixel gesehen. Gemeinsamer Messlauf aller achtundzwanzig am 24.11.2026: **kein horizontales Überlaufen, keine
-  Konsolenfehler**. `pruefe-striche` ohne Befund bei allen achtundzwanzig.
+* Je Vorlage im Browser (Chromium, Playwright) bei 390 und 1440 Pixel gesehen. Gemeinsamer Messlauf von t01 bis t28 am 24.11.2026: **kein horizontales Überlaufen, keine
+  Konsolenfehler**. `pruefe-striche` ohne Befund bei allen.
 * Kontrast: ein gemeinsamer Lauf (Text gegen die nächste deckende Fläche) meldete Treffer, die nach Sichtprüfung Fehlalarme waren (Text über Bild, Verlauf oder Markerfläche).
   **Nicht flächendeckend nachgemessen** sind Text über Bildern und Verläufen und der Rand von Eingabefeldern. Bekannt: `t06` hat nicht gefüllte Überschriftwörter mit etwa 3,5 zu 1
   (Schätzung des Agenten), `t04` nutzt einen Verlaufstext im Großwort.
@@ -56,3 +61,5 @@ Layout, Design, Prinzip und Animation; übernommen ist das Prinzip, nicht die Au
 
 Safari, echte Geräte, Screenreader, Leistung auf schwachen Geräten, Kontrast über Bildern, Formularversand (keiner sendet), Hover- und Tastaturläufe durch alle Elemente. Die
 Platzhalterbilder sind Verläufe, die Wirkung hängt an echten Fotos. Bewegung ist teils aus Beobachtung der Referenz geschätzt (Timing, Easing).
+
+* t29 bis t33: Erfassung der Referenzen über Bildschirmaufnahmen des Inhabers und Playwright. Gemessen bei 390 und 1440 Pixel: kein Überlauf, keine Konsolenfehler, `pruefe-striche` ohne Befund. Stockbilder sind noch nicht eingebaut, Ablauf in `BILDSUCHE-PROMPT.md`.
