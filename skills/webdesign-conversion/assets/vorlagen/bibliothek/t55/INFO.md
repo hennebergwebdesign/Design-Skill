@@ -31,5 +31,9 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent` auf `--flaech
 Formulare senden nichts. Zahlen, Namen, Stimmen, Preise und die Aktion sind Beispiele, keine Belege. Das Video im Anspruch ist eine Fläche, der Pausenknopf hat keine Funktion. Kontrast von Text über Fotos nach dem Einsetzen neu prüfen. Die Überschriften stehen in Versalien: lange Wörter prüfen, bevor die Marke wechselt. Zwei Links im Fuß (Impressum, Datenschutz) sind Platzhalter.
 
 ## Conversion (Playbook)
-- Beschreibung auf unter 160 Zeichen gekürzt.
-- Feldhinweise unter Mail und Telefon im Formular (`.feld__hinweis`), vier Felder.
+- Held: Du mit guten Vorsätzen, die im Alltag untergehen; Problem Dranbleiben; Lösung fester Plan, Coach und Gruppe. H1: „Dranbleiben, mit Plan und Team.“
+- Primär CTA: Probetraining buchen in Kopfzeile, Held, Laufband und Formular; Programme und Preise bleiben sekundär.
+- Titel mit Ort Platzhalter (Musterstadt), Beschreibung nach Formel.
+- Neue Sektion Fragen (`#fragen`) vor dem Laufband, fünf Einwände (Preis, Fitnessstand, Bindung, Ablauf, Kontrollfrage „Lohnt sich der Einstieg gerade jetzt?“), Antworten als Beispielantwort. Regeln `.frage` in `stil.css`.
+- Formularziel: Probetraining mit Ziel und Wunschtermin, vier Felder, Feldhinweise unter Mail und Telefon.
+- Hinweis: Zusagen zu Preis und Laufzeit in den Antworten sind Beispiele.

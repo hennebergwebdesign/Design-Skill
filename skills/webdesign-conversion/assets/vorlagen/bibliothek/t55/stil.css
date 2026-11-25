@@ -288,3 +288,15 @@ h3{font-size:var(--h3);line-height:1.05}
 .fuss p{font-size:1rem;color:var(--text-leise-dunkel)}
 
 @media (prefers-reduced-motion:reduce){.js .prog[open] .prog__inhalt{animation:none}.spur{scroll-behavior:auto}}
+
+/* Fragen */
+.fragen__raster{display:grid;gap:2rem;padding-bottom:var(--raum)}
+.fragen__liste{display:grid;gap:0;max-width:48rem;border-top:1px solid var(--linie)}
+.frage{border-bottom:1px solid var(--linie)}
+.frage summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:4rem;padding-block:.6rem;cursor:pointer;list-style:none;font-family:var(--schrift-titel);font-weight:800;font-size:clamp(1.1rem,1rem + .8vw,1.5rem);line-height:1.2}
+.frage summary::-webkit-details-marker{display:none}
+.frage summary::after{content:"+";content:"+" / "";flex:none;font-size:1.75rem;line-height:1;color:var(--akzent-tief);transition:transform var(--dauer-kurz)}
+.frage[open] summary::after{transform:rotate(45deg)}
+.frage__antwort{padding:0 0 1.25rem;max-width:38rem;color:var(--text-leise)}
+@media (min-width:56rem){.fragen__raster{grid-template-columns:minmax(0,.8fr) minmax(0,1.3fr);gap:4rem}}
+@media (prefers-reduced-motion:reduce){.frage summary::after{transition:none}}

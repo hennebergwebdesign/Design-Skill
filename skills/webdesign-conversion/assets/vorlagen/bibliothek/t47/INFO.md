@@ -34,5 +34,9 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--blau` auf `--flaeche`
 Formulare senden nichts. Zahlen, Namen, Stimmen, Preise, Termin, Plätze und die Verzeichnisse unter Bekannt aus sind Beispiele, keine Belege; Sterne und Bewertung nur zeigen, wenn es sie wirklich gibt. Oberfläche, Dock, Karten und Kurven sind aus HTML und SVG gebaut und nur Platzhalter für echte Produktbilder. Die Referenz hinterlegt das Blau im Held mit einem Video, hier ersetzt ein CSS Verlauf es. Kontrast von Text über Verläufen nach dem Einsetzen echter Bilder neu prüfen. Das Stimmenband pausiert per Maus und Fokus, einen eigenen Pausenknopf hat es nicht. Weitere Unterseiten der Referenz (Über uns, Fahrplan, Kontakt, Rechtliches) sind nicht gebaut.
 
 ## Conversion (Playbook)
-- `v3.html` (Warteliste): Knopf „Zugang sichern“ in der Kopfleiste, Fragen (`#fragen`, fünf Einwände, dunkle Karten im Ton der Seite) unter dem Held mit Knopf „Frühen Zugang sichern“ am Ende, Telefon in der Fußzeile. Regeln in `stil-v3.css`.
-- `index.html` und `v2.html` hatten die Punkte schon, nicht geändert.
+- Held in allen drei Varianten: Zielgruppe Gründerinnen und Gründer mit Zahlen in vielen Programmen, Problem das Zusammensuchen, Lösung die Live Übersicht. H1 je Variante eigen (vor dem Start, nach dem Start, Warteliste).
+- Primär CTA: Frühen Zugang sichern in `index.html` und `v3.html` (Kopfzeile, Held, Abschluss), Kostenlos starten in `v2.html`.
+- Titel und Beschreibung nach Formel, ohne Ort (Software), je Variante mit eigenem Ziel.
+- FAQ je Variante: Start, Preis bei spätem Einstieg, Einrichtung ohne Umbau, fehlende Anbindung, Datensicherheit, Kontrollfrage „Was kostet es, wenn ich warte?“ oder „… weiter von Hand zusammensuche?“.
+- Formularziel: Warteliste oder kostenloser Start, ein Feld (Mail), Feldbeschriftung für Bildschirmlesegeräte passend zum Ziel.
+- Datum, Zähler, Startpreis und Teilnehmerzahlen bleiben Beispiele (`data-beispiel`).

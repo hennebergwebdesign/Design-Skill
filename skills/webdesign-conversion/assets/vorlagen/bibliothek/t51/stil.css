@@ -294,3 +294,6 @@ h2{font-size:clamp(2rem,1.2rem + 3vw,3.5rem)}
 .beitrag__bild[data-platzhalter]::after{inset:auto auto 1rem 1rem}
 .kopf__knopf .lang{display:none}
 @media (min-width:64rem){.kopf__knopf .lang{display:inline}}
+
+.fragen .akkordeon{max-width:46rem;margin-inline:auto}
+.fragen .akkordeon details>p{max-width:none}

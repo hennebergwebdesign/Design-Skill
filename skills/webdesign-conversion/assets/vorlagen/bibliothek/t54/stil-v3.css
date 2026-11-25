@@ -89,3 +89,6 @@
 /* Telefon im Schlussbereich */
 .cta .cta__tel{margin:1.25rem auto 0;font-size:1rem;color:var(--text-auf-dunkel)}
 .cta__tel a{display:inline-flex;align-items:center;min-height:2.75rem;font-weight:700;text-decoration:underline;text-underline-offset:.2em}
+
+.fragen__liste{max-width:46rem;margin:clamp(2rem,4vw,3rem) auto 0;border-top:1px solid var(--linie)}
+.fragen__liste .fach__inhalt{padding-left:0;max-width:36rem}

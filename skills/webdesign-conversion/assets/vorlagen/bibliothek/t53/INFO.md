@@ -35,6 +35,9 @@ Nur die Werte in `marke.css` ändern, beide Varianten folgen. Kontrast prüfen: 
 Formulare senden nichts. Zahlen, Salden, Buchungen, Stimmen, Namen, Telefon, Adresse und Logos sind Beispiele, keine Belege. Die CSS Geräte sind schematisch, echte Produktbilder fehlen. Kontrast der schwebenden Karten über den Platzhaltern nach dem Einsetzen echter Bilder neu prüfen. Links im Fuß (Impressum, Datenschutz, Karriere, Widerruf) sind Platzhalter. Die Varianten sind nicht untereinander verlinkt, die Auswahl macht die Galerie.
 
 ## Conversion (Playbook)
-- `v2.html`: Titel auf 60 Zeichen gekürzt.
-- `v2.html`: neue Sektion Fragen (`#fragen`) vor den Ratgeberartikeln, fünf Einwände mit dem vorhandenen Akkordeon (`.akkordeon`). Regel in `stil-v2.css`.
-- `index.html` hatte die Punkte schon.
+- Held in beiden Varianten: Zielgruppe Privatkunden, Gründende und kleine Betriebe, Problem unklare Gebühren und wechselnde Ansprechpartner, Lösung eine Anwendung mit fester Ansprechperson. `index.html`: „Dein Geld im Griff, jede Gebühr vorab klar“, `v2.html`: „Eine feste Ansprechperson für dein Geld“.
+- Primär CTA: Beratung anfragen an allen Stellen (Kopfzeile, Held, Tafeln, Formular, Fuß).
+- Titel mit Ort Platzhalter (Musterstadt), Beschreibung nach Formel, je Variante eigen.
+- FAQ für Finanzkunden: Gebühren, Einrichtung, Vorwissen, Sicherheit, Kontrollfrage „Was kostet es mich, wenn ich nichts ändere?“. `index.html` hat die Sektion Fragen (`#fragen`) jetzt auch (vorher nur `v2.html`), Regeln `.fragen__liste` in `stil.css`.
+- Formularziel: Terminbestätigung für eine Beratung, ein Feld (Mail).
+- Rechtlich heikel: Zusagen zu Gebühren, Sicherheit und Konditionen in den Antworten sind Beispiele und vor dem Einsatz prüfen zu lassen.

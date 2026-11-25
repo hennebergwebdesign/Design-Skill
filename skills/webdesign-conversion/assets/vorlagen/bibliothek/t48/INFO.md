@@ -34,4 +34,8 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent-text` auf `--a
 Formulare senden nichts. Preise, Namen, Stimmen und Antworten sind Beispiele, keine Belege. Das App Fenster ist ein Nachbau aus HTML, kein Screenshot, und gehört durch eine echte Ansicht des Produkts ersetzt. Die Bildspalten sind Platzhalterflächen und müssen echte Motive bekommen. Kontrast von Text über Fotos nach dem Einsetzen neu prüfen. Links im Fuß (Impressum, Datenschutz, Nutzungsbedingungen) sind Platzhalter.
 
 ## Conversion (Playbook)
-- Telefon (`tel:` mit Platzhalternummer, `data-beispiel`) in der unteren Fußzeile. Regel in `stil.css`.
+- Held: Zielgruppe Teams mit vielen Bildern, Videos und Dateien, Problem das Suchen in Ordnern und Mails, Lösung eine gemeinsame Bibliothek.
+- Primär CTA: Kostenlos testen in Kopfzeile, Held und Abschluss, Tarifknöpfe heißen Tarif wählen.
+- Titel und Beschreibung nach Formel, ohne Ort (Software).
+- FAQ aus Sicht eines Teams: Dateiarten, Import bestehender Ordner, Speichergrenzen, Eigentum an Inhalten, Kontrollfrage „Was kostet es, wenn wir weiter in Ordnern und Mails suchen?“.
+- Formularziel: Zugang zum kostenlosen Test per Mail, ein Feld.

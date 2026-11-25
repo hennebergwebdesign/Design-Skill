@@ -31,5 +31,9 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent` auf `--flaech
 Formulare senden nichts. Preise, Vergleich, Stimmen, Namen, Telefon, Adresse und Logos sind Beispiele, keine Belege. Die Unterschrift ist ein erfundenes Beispiel, vor dem Einsatz durch die echte oder streichen. Kontrast von Text über Fotos im Held nach dem Einsetzen neu prüfen. Zwei Links im Fuß (Impressum, Datenschutz) sind Platzhalter. Die Tabelle scrollt auf dem Handy seitlich.
 
 ## Conversion (Playbook)
-- Beschreibung auf unter 160 Zeichen gekürzt.
-- Feldhinweis unter E-Mail im Kontaktformular (`.feld__hinweis`). Das Formular hat zwei Felder. Auf Breiten ab 56 rem liegen die Felder jetzt nebeneinander und der Knopf in einer eigenen Zeile, statt als eine Pille, weil der Hinweis die Pille sonst verzerrt.
+- Held: Zielgruppe Inhaber und Geschäftsführung, Problem Entscheidungen ohne aufbereitete Zahlen, Lösung Kennzahlen aufbereiten und nächste Schritte benennen. H1 steht in zwei Zeilen.
+- Primär CTA: Erstgespräch anfragen in Kopfzeile, Held, Preisbereich und Kontaktformular; Pakete heißen Basis anfragen und Standard anfragen.
+- Titel mit Ort Platzhalter (Musterstadt), Beschreibung nach Formel.
+- Neue Sektion Fragen (`#fragen`) vor dem Kontakt, Akkordeon der Beratung wiederverwendet, fünf Einwände (Preis, Termin, Unterlagen, Passung, Kontrollfrage zum Warten), Antworten als Beispielantwort.
+- Formularziel: Terminvorschlag für ein Erstgespräch, zwei Felder, Feldhinweis unter der Mail bleibt.
+- Beschreibung auf unter 160 Zeichen, Felder auf Breiten ab 56 rem nebeneinander (unverändert).

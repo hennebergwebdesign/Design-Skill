@@ -30,5 +30,8 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent-tief` auf `--f
 Kennzahlen gibt es hier nicht, Namen, Stimmen, Preise und Tarifumfang sind Beispiele, keine Belege. Die Editoransichten, das Telefon und das Knotenbild sind aus HTML gebaut und nur Platzhalter für echte Produktbilder. Kontrast von Text über Verläufen nach dem Einsetzen echter Bilder neu prüfen. Links im Fuß sind Platzhalter. Die Referenz hat weitere Unterseiten (Funktionen, Preise, Über uns, Blog, Kontakt), die hier nicht gebaut sind.
 
 ## Conversion (Playbook)
-- Neue Sektion Fragen (`#fragen`) vor dem Abschluss: fünf Einwände als Akkordeon aus `details` mit `data-exklusiv`, Antworten als Beispielantwort mit `data-beispiel`. Neue Regeln `.faq__liste` in `stil.css`.
-- Sektionsfolge: Fragen steht zwischen App und Abschluss.
+- Held: Zielgruppe Freiberufler und kleine Agenturen im Team, Problem Dateichaos und veraltete Stände, Lösung gemeinsames Werkzeug in Echtzeit.
+- Primär CTA: Kostenlos starten, in Kopfzeile, Held und Abschluss. Kein Formular, der Knopf führt zur Anmeldung im Projekt.
+- Titel und Beschreibung nach Formel, ohne Ort (Software).
+- FAQ aus Sicht eines Designteams: Einstieg, Import bestehender Entwürfe, Kundenfreigabe per Link, Wechsel, Kontrollfrage zu Mails und Dateiversionen.
+- Hinweis: Zusagen zu Import und Kundenfreigabe in den Antworten sind Beispiele und müssen zum Produkt passen.

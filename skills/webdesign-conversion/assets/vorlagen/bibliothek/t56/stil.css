@@ -318,3 +318,5 @@ h3{font-size:clamp(1.05rem,1rem + .5vw,1.3rem);line-height:1.15}
 .js .frage[open] .frage__antwort{animation:frageauf var(--dauer-mittel) var(--kurve)}
 @keyframes frageauf{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){.js .frage[open] .frage__antwort{animation:none}}
+
+.held__unter{max-width:34rem;margin-top:1rem;font-size:var(--text-m,1.125rem);line-height:1.5;opacity:.92}

@@ -34,4 +34,9 @@ Werte in `marke.css` ändern. Kontrast prüfen: `--akzent-text` auf `--akzent` (
 Formulare senden nichts. Zahlen, Namen, Stimmen, Preise, Beiträge und Logos sind Beispiele, keine Belege. Der Text in den Oberflächenbildern skaliert mit dem Rahmen, ist auf dem Handy kleiner als 16 px und für Bildschirmleser ausgeblendet. Ob die Referenz Pillen und Kacheln beim Scrollen per Physik oder per Scrollsteuerung bewegt, war aus der Erfassung nicht sicher zu erkennen, hier schweben die Pillen nur leicht. Links im Fuß sind Platzhalter.
 
 ## Conversion (Playbook)
-- Telefon im Schlussbereich über dem Fuß (`.fuss__tel`).
+- Held: Zielgruppe Teams mit Aufgaben in Chats und Mails, Problem dass Dinge untergehen, Lösung ein gemeinsamer Arbeitsraum mit Namen, Termin und Zuständigkeit.
+- Primär CTA: Kostenlos starten in Kopfzeile, Held, Preise und Fuß; sekundär Demo ansehen.
+- Titel und Beschreibung nach Formel, ohne Ort (Software).
+- FAQ für Teams: Alltag, Umstieg im Team, Anbindungen, Datensicherheit, Kontrollfrage „Was kostet es, wenn Aufgaben weiter in Mails untergehen?“.
+- Formularziel: kostenloser Start per Mail, ein Feld. Der Fußtext passte vorher zu einem Mailwerkzeug und ist jetzt auf Aufgaben abgestimmt.
+- Logoleiste im Held als Beispiel beschriftet (`data-beispiel`).
