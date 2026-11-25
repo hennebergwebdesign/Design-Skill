@@ -287,3 +287,7 @@ details[open] .plus__zu{display:block}
 }
 /* Ohne JavaScript: nur das erste Leistungsbild zeigen */
 html:not(.js) .leistungen__bild~.leistungen__bild{visibility:hidden}
+
+/* Fotos statt Platzhalterverläufe */
+.bild__foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.aussage__grund .bild__foto{filter:brightness(.4) saturate(.9)}
