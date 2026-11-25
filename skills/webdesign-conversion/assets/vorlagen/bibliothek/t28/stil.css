@@ -307,3 +307,8 @@ h3{font-size:var(--h3)}
 .fuss__recht{color:var(--text-leise);padding-top:1rem;border-top:1px solid var(--linie)}
 @media (min-width:36rem){.fuss__spalten{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (min-width:62rem){.fuss__spalten{grid-template-columns:1.3fr repeat(3,minmax(0,1fr))}}
+
+/* Fotos statt Platzhalterverläufe */
+.bild__foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+.bento__bild .bild__foto{filter:brightness(.6)}
