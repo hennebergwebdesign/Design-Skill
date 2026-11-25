@@ -83,6 +83,8 @@ h3{font-size:var(--h3);line-height:1.15}
 .held h1{font-size:clamp(2.25rem,.6rem + 6.8vw,6.5rem);line-height:1;letter-spacing:0;max-width:14ch}
 .held__lead{max-width:34rem;color:var(--text);font-size:var(--text-l)}
 .held__innen .knoepfe{width:100%;margin-top:.75rem}
+.held__tel{color:var(--text)}
+.held__tel a{display:inline-flex;align-items:center;min-height:2.75rem;text-decoration:underline;text-underline-offset:.25em;font-weight:600}
 .auszeichnung{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem .6rem;font-size:1rem}
 .auszeichnung__zweig{flex:none;color:var(--text)}
 .auszeichnung__zweig--r{transform:scaleX(-1)}
@@ -277,7 +279,7 @@ h3{font-size:var(--h3);line-height:1.15}
 .aufruf__links,.aufruf__rechts{display:grid;gap:1.25rem;align-content:start;justify-items:start}
 .aufruf h2{max-width:14ch}
 .aufruf__rechts p{max-width:32rem}
-.aufruf .licht .wort{opacity:.45}
+.aufruf .licht .wort:not(.an){opacity:.5}
 .news{display:grid;gap:.75rem;width:100%;max-width:36rem}
 .news__zeile{display:flex;flex-wrap:wrap;gap:.5rem}
 .news input[type=email]{flex:1 1 14rem;min-height:3.25rem;padding:.6rem 1rem;font:inherit;font-size:1rem;color:#050608;background:#fff;border:0;border-radius:var(--radius-knopf)}

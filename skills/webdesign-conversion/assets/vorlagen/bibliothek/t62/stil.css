@@ -1,0 +1,282 @@
+/* stil.css der Vorlage "Klinik Großschrift": Gestaltung. Farben nur aus den Tokens in marke.css, Mechanik aus ../_basis/basis.css.
+   Mobil zuerst. Dunkel: Kopf, Held, Buchung, Fuß. Hell (warmes Weiß): alles dazwischen. Bei reduzierter Bewegung und ohne JavaScript bleibt alles sichtbar. */
+:root{--h2-m:clamp(2rem,1.2rem + 3.2vw,3.75rem);--kopf-h:4.25rem}
+:focus-visible{outline-color:var(--text)}
+.kopf :focus-visible,.held :focus-visible,.buchung :focus-visible,.fuss :focus-visible,.menue :focus-visible{outline-color:var(--text-auf-dunkel)}
+h2{font-size:var(--h2-m);line-height:1.05}
+h3{font-size:var(--h3);line-height:1.15;font-weight:650}
+.zahl{font-family:var(--schrift-titel);font-weight:700;letter-spacing:-.03em;line-height:1}
+.sektion{scroll-margin-top:var(--kopf-h)}
+section[id],footer[id]{scroll-margin-top:var(--kopf-h)}
+
+/* Knöpfe */
+.knopf{justify-content:center;gap:.7rem;text-align:center;font-size:1rem;font-weight:700}
+.knopf:hover{box-shadow:0 8px 20px color-mix(in srgb,#000 28%,transparent)}
+.knopf svg{transition:transform var(--dauer-kurz) var(--kurve)}
+.knopf:hover svg{transform:translateX(3px)}
+.punkt{flex:none;width:.5rem;height:.5rem;border-radius:50%;background:var(--akzent)}
+.mobil-aus{display:none}
+.rund{display:grid;place-items:center;width:3rem;height:3rem;border-radius:50%;background:#fff;color:var(--text);box-shadow:inset 0 0 0 1.5px var(--text);transition:transform var(--dauer-kurz) var(--kurve),background-color var(--dauer-kurz)}
+.rund:hover{background:var(--akzent);transform:translateY(-2px)}
+.rund[aria-disabled="true"]{opacity:.4;pointer-events:none}
+.plus{display:grid;place-items:center;flex:none;width:1.75rem;height:1.75rem;border-radius:50%;box-shadow:inset 0 0 0 1.5px currentColor;transition:transform var(--dauer-kurz) var(--kurve)}
+.ueber__kicker{display:inline-flex;align-items:center;gap:.6rem;font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em}
+.ueber__kicker--hell{color:#fff}
+
+/* Bildplatzhalter: dunkle, warme Töne mit Lichtfleck */
+.bild{--lichter:radial-gradient(70% 60% at 78% 22%,rgba(255,214,190,.45),transparent 70%)}
+.bild--a{--bild-grund:var(--lichter),linear-gradient(160deg,var(--ton-1),var(--ton-5))}
+.bild--b{--bild-grund:var(--lichter),linear-gradient(160deg,var(--ton-2),var(--ton-5))}
+.bild--c{--bild-grund:var(--lichter),linear-gradient(160deg,var(--ton-3),var(--ton-5))}
+.bild--d{--bild-grund:var(--lichter),linear-gradient(160deg,var(--ton-4),var(--ton-1))}
+.bild--e{--bild-grund:var(--lichter),linear-gradient(160deg,var(--ton-1),#0b141d)}
+.bild[data-platzhalter]::after{opacity:1;z-index:2;inset:.75rem .75rem auto auto;max-width:calc(100% - 1.5rem);padding:.3rem .65rem;border-radius:8px;background:rgba(15,27,38,.82);color:var(--text-auf-dunkel);font-size:1rem;line-height:1.3}
+.held__ausschnitt[data-platzhalter]::after,.ueber__bild[data-platzhalter]::after,.lkarte__bild[data-platzhalter]::after,.preisliste__bild[data-platzhalter]::after,.arzt__bild[data-platzhalter]::after{display:none}
+
+/* Kopf: dunkel, bleibt oben stehen, Telefon und Termin immer sichtbar, Menü als Vollbild */
+.kopf{position:sticky;top:0;z-index:60;background:var(--flaeche-dunkel);color:var(--text-auf-dunkel)}
+.kopf__leiste{position:relative;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;min-height:var(--kopf-h);padding-block:.5rem}
+.kopf__leiste>*:not(.menue){position:relative;z-index:2}
+.kopf__logo{display:inline-flex;align-items:center;gap:.5rem;min-height:2.75rem;margin-right:auto;font-family:var(--schrift-titel);font-weight:800;font-size:1.0625rem;letter-spacing:.02em;text-transform:uppercase;white-space:nowrap}
+.kopf__zeichen{width:1.75rem;height:1.75rem;color:var(--akzent)}
+.kopf__aktion{order:1;display:flex;align-items:center;gap:.25rem;padding:.25rem;border-radius:var(--radius-knopf);background:var(--akzent);color:var(--akzent-text)}
+.kopf__tel{display:flex;align-items:center;justify-content:center;gap:.5rem;min-width:2.75rem;min-height:2.75rem;padding-inline:.5rem;font-weight:700;white-space:nowrap}
+.kopf__tel-text{display:none}
+.kopf__knopf{min-height:2.75rem;padding:.4rem .9rem;background:var(--flaeche-dunkel);color:var(--text-auf-dunkel);white-space:nowrap}
+.kopf__knopf:hover{box-shadow:none;background:var(--flaeche-dunkel-2)}
+.kopf__menue-knopf{order:2;display:none;align-items:center;gap:.6rem;min-height:2.75rem;padding:.5rem .9rem;border-radius:var(--radius-knopf);background:var(--flaeche-dunkel-2);box-shadow:inset 0 0 0 1px var(--linie-dunkel);font-weight:700;transition:background-color var(--dauer-kurz)}
+.kopf__menue-knopf:hover{background:var(--linie-dunkel)}
+.js .kopf__menue-knopf{display:inline-flex}
+.kopf__menue-text--auf,.kopf__menue-knopf[aria-expanded="true"] .kopf__menue-text--zu{display:none}
+.kopf__menue-knopf[aria-expanded="true"] .kopf__menue-text--auf{display:inline}
+.kopf__menue-text{display:none}
+.kopf__menue-text--zu{display:inline}
+.burger,.burger::before,.burger::after{display:block;width:1.1rem;height:2px;background:currentColor;border-radius:2px;transition:transform var(--dauer-kurz) var(--kurve)}
+.burger{position:relative}
+.burger::before,.burger::after{content:"";position:absolute;left:0}
+.burger::before{top:-5px}
+.burger::after{top:5px}
+.kopf__menue-knopf[aria-expanded="true"] .burger{background:transparent}
+.kopf__menue-knopf[aria-expanded="true"] .burger::before{transform:translateY(5px) rotate(45deg)}
+.kopf__menue-knopf[aria-expanded="true"] .burger::after{transform:translateY(-5px) rotate(-45deg)}
+/* Menü: ohne JavaScript eine Zeile unter dem Kopf, mit JavaScript ein Vollbild */
+.menue{order:5;flex-basis:100%;z-index:1}
+.menue__liste{display:flex;flex-wrap:wrap;gap:0 .5rem}
+.menue__liste a{display:flex;align-items:center;gap:.5rem;min-height:2.75rem;padding-inline:.5rem;font-weight:600}
+.menue__nr{display:none}
+.js .menue{position:fixed;inset:0;display:none;padding:calc(var(--kopf-h) + 1.5rem) var(--rand) 2rem;background:var(--flaeche-dunkel);overflow:auto}
+.js .menue[data-offen="true"]{display:block;animation:menue-ein var(--dauer-mittel) var(--kurve)}
+@keyframes menue-ein{from{opacity:0}to{opacity:1}}
+.js .menue__liste{display:grid;gap:0;max-width:var(--breite);margin-inline:auto}
+.js .menue__liste a{gap:1.25rem;min-height:4rem;padding-inline:0;border-bottom:1px solid var(--linie-dunkel);font-family:var(--schrift-titel);font-weight:800;font-size:clamp(1.75rem,1rem + 4vw,3.5rem);text-transform:uppercase;letter-spacing:-.01em;transition:color var(--dauer-kurz)}
+.js .menue__liste a:hover{color:var(--akzent)}
+.js .menue__nr{display:inline;font-family:var(--schrift-text);font-weight:600;font-size:1rem;letter-spacing:.1em;color:var(--akzent)}
+.menue a[aria-current="location"]{text-decoration:none;color:var(--akzent)}
+@media (min-width:30rem){.mobil-aus{display:inline}.kopf__logo{font-size:1.25rem}.kopf__menue-text{display:inline}.kopf__menue-text--auf{display:none}.kopf__menue-knopf[aria-expanded="true"] .kopf__menue-text--zu{display:none}.kopf__menue-knopf[aria-expanded="true"] .kopf__menue-text--auf{display:inline}}
+@media (max-width:29.99rem){.kopf__menue-text{display:none!important}.kopf__menue-knopf{width:2.75rem;padding:.5rem;justify-content:center}}
+@media (min-width:64rem){
+  .kopf__leiste{flex-wrap:nowrap;gap:1rem}
+  .kopf__logo{margin-right:0}
+  .kopf__menue-knopf{order:1;margin-inline:auto}
+  .kopf__aktion{order:2}
+  .kopf__tel-text{display:inline}
+  .kopf__tel{padding-inline:.9rem}
+}
+
+/* 1. Held */
+.held{position:relative;display:flex;min-height:calc(100svh - var(--kopf-h));overflow:hidden;background:var(--flaeche-dunkel);color:var(--text-auf-dunkel)}
+.held__bild{position:absolute;inset:0;border-radius:0;--bild-grund:radial-gradient(60% 70% at 72% 32%,rgba(255,200,170,.38),transparent 70%),linear-gradient(160deg,var(--ton-1),var(--ton-5) 55%,#0b141d)}
+.held__schleier{position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,27,38,.82),rgba(15,27,38,.15) 75%),linear-gradient(0deg,rgba(15,27,38,.85),transparent 55%);opacity:calc(.7 + var(--dunkel,0) * .3)}
+.held__innen{position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:2.5rem;padding-block:2.5rem 2rem}
+.held__zeile{display:inline-flex;align-items:center;gap:.6rem;font-weight:600}
+.held h1{margin-top:1.25rem;font-size:clamp(2.4rem,.5rem + 8.4vw,8rem);line-height:.96;text-transform:uppercase;letter-spacing:-.02em;text-wrap:balance}
+.held h1 .leicht{display:block;font-weight:300}
+.held h1 .schwer{display:block;font-weight:800}
+.hl{color:var(--akzent)}
+.held__kopf>p:last-child{margin-top:1.75rem}
+.held__fuss{display:grid;gap:1.5rem;align-items:end}
+.held__text{max-width:26rem;font-size:var(--text-l);color:var(--text-leise-dunkel)}
+.held__tags{display:flex;flex-wrap:wrap;gap:.5rem}
+.held__tags li{padding:.4rem .8rem;border-radius:8px;background:rgba(246,244,238,.14);box-shadow:inset 0 0 0 1px rgba(246,244,238,.25);font-size:1rem}
+.held__ausschnitt{width:100%;max-width:18rem;aspect-ratio:16/10;border:3px solid var(--flaeche);border-radius:12px}
+@media (min-width:60rem){.held__fuss{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) 16rem;gap:2rem}.held__ausschnitt{justify-self:end}}
+
+/* 2. Laufband mit Beispielwerten */
+.kennzahlband{padding-block:clamp(1.25rem,3vw,2rem);overflow:hidden}
+.kz__spur{--band-abstand:.75rem;--band-dauer:55s;list-style:none}
+.kz{flex:none;display:grid;gap:.5rem;width:11.5rem;padding:.8rem;border-radius:12px;background:#fff;box-shadow:inset 0 0 0 1px var(--linie)}
+.kz__kopf,.kz__fuss{display:flex;align-items:center;justify-content:space-between;gap:.5rem;font-size:1rem}
+.kz__kopf span:first-child{font-weight:600}
+.kz__sterne{color:#a86a0a;letter-spacing:-.1em;font-size:.875rem}
+.kz__icon{justify-self:start;margin-block:.25rem;color:var(--linie)}
+.kz__fuss span{color:var(--text-leise)}
+.kennzahlband__hinweis{margin-top:.9rem;text-align:center;font-size:1rem;color:var(--text-leise)}
+
+/* 3. Über uns */
+.ueber__raster{display:grid;gap:2.5rem;align-items:center}
+.treppe{display:grid;gap:.5rem;justify-items:end}
+.treppe__karte{display:grid;gap:.5rem;padding:1rem 1.25rem;border-radius:14px;background:#fff;box-shadow:inset 0 0 0 1px var(--linie)}
+.treppe__karte:nth-child(1){width:62%}
+.treppe__karte:nth-child(2){width:100%}
+.treppe__karte:nth-child(3){width:82%}
+.treppe__karte:nth-child(4){width:70%}
+.treppe__karte .zahl{font-size:clamp(2rem,1.5rem + 1.6vw,2.75rem)}
+.treppe__karte p:last-child{font-size:1rem;color:var(--text-leise)}
+.treppe__karte--dunkel{background:var(--flaeche-dunkel);color:var(--text-auf-dunkel);box-shadow:none}
+.treppe__karte--dunkel p:last-child{color:var(--text-leise-dunkel)}
+.treppe__karte--akzent{background:var(--akzent);color:var(--akzent-text);box-shadow:none}
+.treppe__karte--akzent p:last-child{color:var(--akzent-text)}
+.ueber__text{display:grid;gap:1.25rem;justify-items:start}
+.ueber__text h2{max-width:26ch;font-size:clamp(1.625rem,1.1rem + 2vw,2.75rem);font-weight:650;line-height:1.15}
+.ueber__vertrauen{display:flex;align-items:center;gap:.9rem}
+.ueber__vertrauen p{display:grid;gap:.15rem}
+.ueber__sterne{color:#a86a0a;letter-spacing:-.05em}
+.avatare{display:flex;flex:none}
+.avatare i{width:2.75rem;height:2.75rem;border-radius:50%;border:2px solid var(--flaeche);margin-left:-.7rem}
+.avatare i:first-child{margin-left:0}
+.avatar--1{background:linear-gradient(160deg,var(--ton-1),var(--ton-5))}
+.avatar--2{background:linear-gradient(160deg,var(--ton-2),var(--ton-4))}
+.avatar--3{background:linear-gradient(160deg,var(--ton-3),var(--ton-6))}
+.ueber__bild{width:100%;max-width:34rem;aspect-ratio:16/9}
+@media (min-width:60rem){.ueber__raster{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:4rem}}
+
+/* 4. Leistungen */
+.leistungen__raster{display:grid;gap:1.5rem}
+.leistungen__bild{height:16rem}
+.leistungen__inhalt{display:grid;gap:1.25rem;align-content:start;min-width:0}
+.leistungen__inhalt h2{max-width:18ch}
+.spur{display:flex;gap:1rem;margin:.5rem calc(-1 * var(--rand)) 0;padding:0 var(--rand) .5rem;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--rand);scrollbar-width:none}
+.spur::-webkit-scrollbar{display:none}
+.spur>li{flex:0 0 min(84%,19rem);scroll-snap-align:start}
+.steuerung{display:flex;justify-content:center;gap:.75rem}
+.steuerung[hidden]{display:none}
+.lkarte{display:flex;flex-direction:column;gap:.5rem;height:100%;padding:1rem;border-radius:14px;background:#fff;box-shadow:inset 0 0 0 1px var(--linie)}
+.lkarte__bild{aspect-ratio:4/3;border-radius:10px;margin-bottom:.5rem}
+.lkarte__tags{font-size:1rem;color:var(--text-leise)}
+.lkarte p:not(.lkarte__tags){color:var(--text-leise)}
+.lkarte__mehr{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:auto;padding-top:.9rem;border-top:1px solid var(--linie);min-height:3.25rem;font-weight:700}
+.lkarte__mehr:hover .plus{transform:rotate(90deg)}
+.leistungen__fuss{color:var(--text-leise)}
+.leistungen__fuss a{color:var(--text);font-weight:700;text-decoration:underline;text-underline-offset:.25em}
+@media (min-width:64rem){
+  .leistungen__raster{grid-template-columns:minmax(0,.62fr) minmax(0,2fr);gap:3rem;align-items:start}
+  .leistungen__bild{position:sticky;top:calc(var(--kopf-h) + 1.5rem);height:calc(100svh - var(--kopf-h) - 3rem);min-height:26rem}
+  .spur{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));overflow:visible;margin-inline:0;padding:0;gap:1rem}
+  .spur>li{flex:none}
+}
+
+/* 5. Ablauf */
+.ablauf{position:relative;padding-block:var(--raum);overflow:hidden}
+.ablauf__haftet{display:grid;gap:2rem}
+.lauftext{display:flex;gap:2rem;overflow:hidden;font-family:var(--schrift-titel);font-weight:800;text-transform:uppercase;font-size:clamp(2.5rem,1rem + 6.5vw,7rem);line-height:1;color:#c3beaf;white-space:nowrap;user-select:none}
+.lauftext__spur{display:flex;flex:none;gap:2rem;animation:lauf 45s linear infinite}
+.lauftext__stern{font-weight:300}
+@keyframes lauf{to{transform:translateX(calc(-100% - 2rem))}}
+.ablauf__buehne{display:grid;gap:2rem}
+.ablauf__schritte{display:grid;gap:3rem}
+.schritt{display:grid;gap:1.5rem;align-items:center}
+.schritt__text{display:grid;gap:1rem;justify-items:start}
+.schritt__buchstabe{display:grid;place-items:center;width:3rem;height:3rem;border-radius:50%;background:#fff;box-shadow:inset 0 0 0 1px var(--linie);font-weight:800}
+.schritt h3{max-width:20ch;font-size:clamp(1.5rem,1rem + 1.6vw,2.5rem);font-weight:650}
+.schritt p{max-width:30rem;color:var(--text-leise)}
+.schritt .knopf{background:var(--flaeche-dunkel);color:var(--text-auf-dunkel)}
+.schritt .knopf svg{color:var(--akzent)}
+.schritt__bild{aspect-ratio:4/3}
+.stufen{display:none}
+@media (min-width:60rem){.schritt{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:3rem}}
+/* gepinnt: JavaScript setzt die Klasse, wenn genug Platz ist und keine reduzierte Bewegung gewünscht wird */
+.gepinnt.ablauf{height:330vh;padding-block:0}
+.gepinnt .ablauf__haftet{position:sticky;top:var(--kopf-h);height:calc(100svh - var(--kopf-h));align-content:center;gap:2rem;overflow:hidden}
+.gepinnt .ablauf__buehne{grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:2rem}
+.gepinnt .ablauf__schritte{position:relative;display:block;min-height:min(46svh,26rem)}
+.gepinnt .schritt{position:absolute;inset:0;opacity:0;visibility:hidden;transform:translateY(14px);transition:opacity var(--dauer-mittel),transform var(--dauer-mittel) var(--kurve),visibility 0s linear var(--dauer-mittel)}
+.gepinnt .schritt[data-aktiv]{opacity:1;visibility:visible;transform:none;transition-delay:0s}
+.gepinnt .schritt__bild{height:min(46svh,26rem);aspect-ratio:auto}
+.gepinnt .stufen{display:grid;gap:0}
+.stufen li{position:relative;display:grid;justify-items:center}
+.stufen li+li{padding-top:2rem}
+.stufen li+li::before{content:"";position:absolute;top:0;left:50%;width:2px;height:2rem;margin-left:-1px;background:var(--linie)}
+.stufen button{display:grid;place-items:center;width:3rem;height:3rem;border-radius:50%;background:var(--flaeche-alt);color:var(--text-leise);font-weight:800;transition:background-color var(--dauer-kurz),color var(--dauer-kurz),transform var(--dauer-kurz) var(--kurve)}
+.stufen button:hover{transform:scale(1.06)}
+.stufen button[data-aktiv]{background:#fff;color:var(--text);box-shadow:inset 0 0 0 2px var(--text)}
+
+/* 6. Buchung */
+.buchung{position:relative;display:flex;align-items:flex-end;min-height:38rem;overflow:hidden;color:#fff;background:var(--flaeche-dunkel)}
+.buchung__bild{position:absolute;inset:0;border-radius:0}
+.buchung__schleier{position:absolute;inset:0;background:linear-gradient(0deg,rgba(15,27,38,.88),rgba(15,27,38,.35))}
+.buchung__innen{position:relative;display:grid;gap:1.5rem;padding-block:var(--raum)}
+.buchung h2{font-size:clamp(2.4rem,.6rem + 7.4vw,7rem);line-height:.96;text-transform:uppercase;letter-spacing:-.02em;text-wrap:balance}
+.buchung h2 .leicht{display:block;font-weight:300}
+.buchung h2 .schwer{display:block;font-weight:800}
+.buchung__fuss{display:grid;gap:1.5rem;align-items:end;margin-top:1rem}
+.zeiten__titel{margin-bottom:.5rem;font-weight:700}
+.zeiten dl{display:grid}
+.zeiten dl>div{display:flex;justify-content:space-between;gap:1rem;padding-block:.7rem;border-top:1px solid rgba(255,255,255,.35)}
+.zeiten dt{color:rgba(255,255,255,.9)}
+.zeiten dd{margin:0;font-weight:700}
+.buchung__text{max-width:26rem;color:rgba(255,255,255,.92)}
+@media (min-width:60rem){.buchung__fuss{grid-template-columns:minmax(0,1fr) minmax(0,1fr) auto;gap:3rem}}
+
+/* 7. Preise */
+.preise__raster{display:grid}
+.preise__karte{display:grid;gap:1.25rem;align-content:start;padding:var(--raum) var(--rand);background:var(--flaeche-alt)}
+.preise__karte h2{max-width:20ch}
+.preisliste{display:grid;gap:1.5rem 2.5rem;margin-top:1rem}
+.preisliste li{display:flex;gap:1rem;align-items:flex-start}
+.preisliste__bild{flex:none;width:4.5rem;height:4.5rem;border-radius:10px}
+.preisliste li>div:last-child{display:grid;gap:.3rem;flex:1;min-width:0}
+.preisliste__kopf{display:flex;align-items:baseline;gap:.5rem}
+.preisliste__kopf strong{font-weight:650}
+.preisliste__linie{flex:1;min-width:1rem;border-bottom:2px dotted var(--linie)}
+.preisliste__preis{font-weight:800}
+.preisliste p:not(.preisliste__kopf){color:var(--text-leise);font-size:1rem}
+.preise__hinweis{color:var(--text-leise);font-size:1rem}
+.preise__bild{min-height:22rem;border-radius:0}
+@media (min-width:48rem){.preisliste{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:64rem){.preise__raster{grid-template-columns:minmax(0,1.9fr) minmax(0,1fr)}.preise__karte{padding-right:3rem}.preise__bild{min-height:0}}
+
+/* 8. Team */
+.team__kopf{display:grid;gap:1rem;justify-items:center;text-align:center}
+.team__kopf h2{max-width:18ch}
+.team__raster{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem;margin-top:clamp(2rem,5vw,3.5rem)}
+.arzt{position:relative}
+.arzt__bild{aspect-ratio:4/5;border-radius:10px}
+.arzt__name{position:absolute;inset:auto 0 0 0;display:grid;gap:.1rem;padding:2.5rem .9rem .8rem;border-radius:0 0 10px 10px;background:linear-gradient(0deg,rgba(15,27,38,.88),transparent);color:#fff}
+.arzt__name strong{font-family:var(--schrift-titel);font-weight:700;font-size:1.0625rem}
+.arzt__name span{font-size:1rem;color:rgba(255,255,255,.9)}
+.arzt__link{position:absolute;top:.6rem;left:.6rem;display:grid;place-items:center;width:2.75rem;height:2.75rem;border-radius:50%;background:#fff;color:var(--text);transition:transform var(--dauer-kurz) var(--kurve),background-color var(--dauer-kurz)}
+.arzt__link:hover{background:var(--akzent);transform:translateY(-2px)}
+.team__zitat{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem 2rem;margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--linie)}
+.team__zitat p{max-width:30rem;color:var(--text-leise)}
+.team__zitat a{display:inline-flex;align-items:center;min-height:2.75rem;font-weight:700;text-decoration:underline;text-underline-offset:.25em}
+@media (min-width:48rem){.team__raster{grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}.team__raster>li:nth-child(5){grid-column:2}}
+
+/* Fuß */
+.fuss{background:var(--flaeche-dunkel);color:var(--text-auf-dunkel);overflow:hidden}
+.fuss__raster{display:grid;gap:3rem;padding-block:var(--raum) 3rem}
+.fuss__links{display:grid;gap:2.5rem;align-content:start}
+.fuss__spalten{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.fuss__titel{margin-bottom:.5rem;font-family:var(--schrift-titel);font-weight:700;font-size:1.125rem}
+.fuss__spalten a{display:inline-flex;align-items:center;min-height:2.75rem;color:var(--text-leise-dunkel);transition:color var(--dauer-kurz)}
+.fuss__spalten a:hover{color:#fff}
+.fuss__kontakt{display:grid;gap:.4rem;justify-items:start;color:var(--text-leise-dunkel)}
+.fuss__tel{font-family:var(--schrift-titel);font-weight:700;font-size:clamp(1.75rem,1.2rem + 2vw,2.5rem);color:var(--text-auf-dunkel)}
+.fuss__mail{display:inline-flex;align-items:center;min-height:2.75rem;color:var(--text-auf-dunkel);text-decoration:underline;text-underline-offset:.25em}
+.fuss__h{font-size:clamp(1.5rem,1.1rem + 1.4vw,2.25rem);margin-bottom:1.25rem}
+.formular{display:grid;gap:1rem}
+.feld{display:grid;gap:.4rem}
+.formular label{font-size:1rem;font-weight:600}
+.formular label span{color:var(--akzent)}
+.formular input,.formular select,.formular textarea{width:100%;min-height:3rem;padding:.75rem 1rem;font:inherit;font-size:1rem;color:var(--text-auf-dunkel);background:var(--flaeche-dunkel-2);border:1.5px solid #6d7f96;border-radius:10px}
+.formular textarea{resize:vertical;min-height:7rem}
+.formular input::placeholder,.formular textarea::placeholder{color:var(--text-leise-dunkel);opacity:1}
+.formular input:focus-visible,.formular select:focus-visible,.formular textarea:focus-visible{outline:3px solid var(--akzent);outline-offset:2px;border-color:var(--akzent)}
+.formular__recht{font-size:1rem;color:var(--text-leise-dunkel)}
+.formular__recht a{text-decoration:underline}
+.formular__meldung{padding:.8rem 1rem;border-radius:10px;background:var(--flaeche-dunkel-2);color:var(--text-auf-dunkel);font-size:1rem;box-shadow:inset 0 0 0 1px var(--linie-dunkel)}
+.formular__meldung[hidden]{display:none}
+.fuss .formular .knopf{min-height:3.25rem}
+.fuss__marke{margin:1rem 0 0;padding-inline:var(--rand);font-family:var(--schrift-titel);font-weight:800;text-transform:uppercase;font-size:clamp(2.5rem,12vw,13rem);line-height:.82;letter-spacing:-.03em;color:var(--akzent);white-space:nowrap;overflow:hidden;-webkit-mask-image:linear-gradient(to bottom,#000 25%,transparent 100%);mask-image:linear-gradient(to bottom,#000 25%,transparent 100%)}
+.fuss__unten{padding-block:1.5rem 2rem;border-top:1px solid var(--linie-dunkel);font-size:1rem;color:var(--text-leise-dunkel)}
+@media (min-width:40rem){.formular{grid-template-columns:1fr 1fr}.feld--breit{grid-column:1 / -1}}
+@media (min-width:64rem){.fuss__raster{grid-template-columns:minmax(0,.9fr) minmax(0,1.3fr);gap:5rem}}
