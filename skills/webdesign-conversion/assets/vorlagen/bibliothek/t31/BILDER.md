@@ -21,6 +21,13 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 | mikrofaser-textur.webp | Blog, Beitrag 2 | blau-weißes Strickgewebe | @mitchel3uo | https://unsplash.com/photos/T3RuVobebbE | Unsplash Lizenz | 25.11.2026 |
 
 
+| mann-blaues-hemd-640.webp | index.html, Zeile 211, Porträt 1 | Mann in blauem Hemd im Lokal | [@dannypostma](https://unsplash.com/de/@dannypostma) | [Seite](https://unsplash.com/de/fotos/qm6yxe7SjWg) | Unsplash Lizenz | 25.11.2026 |
+| frau-lockig-blazer-640.webp | index.html, Zeile 212, Porträt 2 | Frau mit kurzem lockigem Haar im gestreiften Blazer | [@wocintechchat](https://unsplash.com/de/@wocintechchat) | [Seite](https://unsplash.com/de/fotos/SJvDxw0azqw) | Unsplash Lizenz | 25.11.2026 |
+| mann-bart-anzug-640.webp | index.html, Zeile 213, Porträt 3 | Mann mit Bart und dunklem Anzug | [@ernestflowerss](https://unsplash.com/de/@ernestflowerss) | [Seite](https://unsplash.com/de/fotos/OgH6DuGylRs) | Unsplash Lizenz | 25.11.2026 |
+| frau-lederjacke-640.webp | index.html, Zeile 214, Porträt 4 | Frau mit langem Haar und Lederjacke | [@fresh_studio](https://unsplash.com/de/@fresh_studio) | [Seite](https://unsplash.com/de/fotos/4BG2yKyCaWg) | Unsplash Lizenz | 25.11.2026 |
+| mann-brille-pullover-640.webp | index.html, Zeile 215, Porträt 5 | Mann mit Brille und grauem Pullover | [@silverkblack](https://unsplash.com/de/@silverkblack) | [Seite](https://unsplash.com/de/fotos/y-XZf_TNRms) | Unsplash Lizenz | 25.11.2026 |
+| frau-blond-lachend-640.webp | index.html, Zeile 216, Porträt 6 | Lachende junge Frau mit lockigem blondem Haar | [@dougbagg_](https://unsplash.com/de/@dougbagg_) | [Seite](https://unsplash.com/de/fotos/9iLbXsMZ6ls) | Unsplash Lizenz | 25.11.2026 |
+
 ## Hinweise
 
 * Mehrere Fotos stehen an mehr als einem Platz (siehe Spalte Platz), weil es für viele Plätze nicht genug passende Motive mit Unsplash Lizenz gab. Vor Abgabe durch eigene Fotos des Betriebs ersetzen.
@@ -33,4 +40,5 @@ Alle Fotos von Unsplash, abgerufen am 25.11.2026. Titel und Lizenz stehen so auf
 
 * Foto Team bei der Arbeit (Hochformat, mit Plakette): bleibt Platzhalter.
 * Sechs Porträts der Kundenstimmen: Personen, bleiben offen, damit niemand als echte Person erscheint.
+- Nachtrag 25.11.2026: Personen und weitere Beispielfotos als Vorschau eingesetzt, werden vor Abgabe ersetzt.
 - Nachtrag 25.11.2026: Personen und weitere Beispielfotos als Vorschau eingesetzt, werden vor Abgabe ersetzt.
