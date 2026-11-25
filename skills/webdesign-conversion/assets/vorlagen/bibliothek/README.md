@@ -1,7 +1,7 @@
 # Template-Bibliothek
 
-Dreiunddreißig eigenständige Seitenvorlagen, branchenneutral, ohne Build, ohne Abhängigkeit, ohne Fremdserver. Jede Vorlage ist ein Ordner
-(`t01` bis `t33`, Überblick in `index.html`) mit `index.html`, `marke.css`, `stil.css` und `INFO.md`. Gemeinsam genutzt wird `_basis/`.
+Achtundsechzig eigenständige Seitenvorlagen, branchenneutral, ohne Build, ohne Abhängigkeit, ohne Fremdserver. Jede Vorlage ist ein Ordner
+(`t01` bis `t68`, Überblick in `index.html`) mit `index.html`, `marke.css`, `stil.css` und `INFO.md`. Gemeinsam genutzt wird `_basis/`.
 
 ## Benutzen
 
@@ -14,9 +14,13 @@ Dreiunddreißig eigenständige Seitenvorlagen, branchenneutral, ohne Build, ohne
 In ein Astro-Projekt übernehmen: `index.html` in eine Seite überführen, `_basis/` und `marke.css` nach `public/` oder `src/styles/`, Schriften in
 `public/fonts/`. Das Gerüst des Bauablaufs liefert Kopf, Fuß, Rechtstexte und Consent, die Vorlagen liefern die Gestaltung der Startseite.
 
+## Varianten
+
+Hat eine Referenz mehrere Startseiten, ist es **ein** Template mit Varianten: `tNN/index.html` ist Variante 1, `v2.html` und `v3.html` die weiteren. Marke (`marke.css`) und Gemeinsames (`stil.css`, `stil.js`) gelten für alle, das Besondere liegt in `stil-v2.css` und `stil-v3.css`. In `ansicht.html` erscheint die Variantenauswahl in der Leiste (`?t=t42&v=2`), in der Galerie das Abzeichen „n Varianten“. Varianten tragen t34, t38, t42, t47, t53, t54, t56 und t64. Eine neue Variante eintragen: Datei anlegen, Namen in `tNN/KARTE.json` unter `varianten` ergänzen und in `ansicht.html` in der Zuordnung `V` nachtragen.
+
 ## Was sie sind und was nicht
 
-* **Eigenständige Umsetzung** nach dem Prinzip von dreiunddreißig Referenzseiten (Aufbau, Raster, Sektionsfolge, Art der Bewegung). Kein Text, kein Bild,
+* **Eigenständige Umsetzung** nach dem Prinzip von rund siebzig Referenzseiten (Aufbau, Raster, Sektionsfolge, Art der Bewegung). Kein Text, kein Bild,
   kein Icon, kein Code der Referenzen ist übernommen. Die Referenzen sind in `HERKUNFT.md` genannt und wurden vom Inhaber zur Erfassung freigegeben.
 * **Keine fertigen Seiten:** Beispieltexte sind Platzhalter, Beispielzahlen sind keine Belege. Rechtstexte, Consent, Formularversand, echte Bilder und
   Meta-Angaben je Kunde fehlen bewusst.
@@ -24,7 +28,7 @@ In ein Astro-Projekt übernehmen: `index.html` in eine Seite überführen, `_bas
 
 ## Vorschaubilder erneuern
 
-Die Galerie lädt keine Seiten, sondern kleine WebP Bilder aus `vorschau/` (99 Dateien, zusammen etwa 5 MB). Geladen wird nach Bedarf: die Desktopvorschau beim Scrollen, die Abschnittsübersicht erst beim Überfahren, die Mobilansicht erst nach dem Umschalten (gemessen: 24 Bilder beim Öffnen, 1 beim Überfahren). Nach einer Änderung an einer Vorlage neu erzeugen, aus dem Repository Stamm: `node scripts/bibliothek-vorschau.mjs` (braucht Playwright, startet einen lokalen Server, Bewegung auf reduziert).
+Die Galerie lädt keine Seiten, sondern kleine WebP Bilder aus `vorschau/` (204 Dateien). Geladen wird nach Bedarf: die Desktopvorschau beim Scrollen, die Abschnittsübersicht erst beim Überfahren, die Mobilansicht erst nach dem Umschalten (gemessen: 24 Bilder beim Öffnen, 1 beim Überfahren). Nach einer Änderung an einer Vorlage neu erzeugen, aus dem Repository Stamm: `node scripts/bibliothek-vorschau.mjs` (braucht Playwright, startet einen lokalen Server, Bewegung auf reduziert).
 
 ## Bewegung
 
