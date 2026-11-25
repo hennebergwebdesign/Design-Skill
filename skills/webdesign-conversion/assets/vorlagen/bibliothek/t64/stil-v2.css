@@ -76,3 +76,4 @@ header.mitte h2{max-width:18ch}
 .faelle__karte h3{font-size:clamp(1.375rem,1.1rem + 1vw,1.875rem);margin-bottom:.75rem}
 .faelle__hinweis{margin-top:2.5rem;color:var(--text-leise);max-width:40rem}
 @media (min-width:48rem){.faelle__raster{grid-template-columns:repeat(2,1fr);gap:1.5rem}}
+.karte--bild>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;border-radius:inherit}
