@@ -1,0 +1,34 @@
+/* marke.css der Vorlage "Gastro warm": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#f9f4ec;
+  --flaeche-alt:#efe7da;
+  --flaeche-dunkel:#17385c;   /* Kopfleiste, Stimmenkarte, Fuß: bewusst gleich --akzent */
+  --text:#1c1a22;
+  --text-leise:#5a5560;
+  --linie:#ddd2c1;
+  --akzent:#17385c;           /* Hauptaktion: Fläche mit hellem Text, auf Hell auch Text und Linie */
+  --akzent-text:#f9f4ec;
+  --schrift-titel:'Bricolage Grotesque',system-ui,sans-serif;
+  --schrift-text:'Manrope',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:22px;
+  --radius-bild:22px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:30px;
+  --titel-gewicht:500;
+  --titel-spur:-0.02em;
+  --akzent-warm:#e8a15a;      /* nur Zeichen: Sterne, Punkt, Lichtfleck, nie als Textfarbe auf Hell */
+  --text-auf-dunkel:#f9f4ec;
+  --text-leise-dunkel:#c3d0de;
+  --linie-dunkel:#2f5278;
+  --weiss:#ffffff;
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#b5653a;
+  --ton-2:#8a7a3a;
+  --ton-3:#d9a35b;
+  --ton-4:#4a6a5a;
+  --ton-5:#6b3f35;
+  --ton-6:#2a4a6b;
+}

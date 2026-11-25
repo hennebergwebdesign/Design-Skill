@@ -1,0 +1,32 @@
+/* marke.css der Vorlage "Restaurant Magazin": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#f3ebe1;
+  --flaeche-alt:#fbf5ee;
+  --flaeche-dunkel:#0f1b17;     /* Waldschwarz: Laufband, Banner, Fuß */
+  --text:#14201c;
+  --text-leise:#4f5a55;
+  --linie:#d6cabb;
+  --akzent:#5b6b2e;             /* Hauptaktion und Linien auf Hell: Olivfläche mit weißem Text, auch Text (5 zu 1) */
+  --akzent-text:#ffffff;
+  --schrift-titel:'Newsreader',Georgia,serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:0;
+  --radius-bild:0;
+
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:400;
+  --titel-spur:-0.02em;
+  --akzent-hell:#b8c77a;        /* Akzent auf Dunkel: Linien, Text, Markierung */
+  --text-auf-dunkel:#f3ebe1;
+  --text-leise-dunkel:#c4cbc3;
+  --linie-dunkel:#2c3b35;
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#7a5a3a;
+  --ton-2:#2f4a3f;
+  --ton-3:#a67b45;
+  --ton-4:#3d3328;
+  --ton-5:#5d7260;
+  --ton-6:#0f1b17;
+}

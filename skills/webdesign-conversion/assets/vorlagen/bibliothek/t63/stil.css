@@ -16,7 +16,7 @@ h3{font-size:var(--h3);line-height:1.2}
 .knopf--weiss{background:#fff;color:var(--knopf-dunkel)}
 .knopf:hover{box-shadow:0 8px 20px color-mix(in srgb,#000 22%,transparent)}
 .rund{display:grid;place-items:center;flex:none;width:2.75rem;height:2.75rem;border-radius:50%;background:#fff;color:var(--knopf-dunkel);box-shadow:0 0 0 1px var(--linie);transition:transform var(--dauer-kurz) var(--kurve)}
-.rund:hover{transform:translateY(-2px)}
+.rund:hover{box-shadow:0 6px 14px color-mix(in srgb,#000 22%,transparent)}
 .rund:active{transform:scale(.95)}
 .rund[aria-disabled="true"]{opacity:.4}
 .rund--hell{box-shadow:none}
@@ -217,7 +217,7 @@ h3{font-size:var(--h3);line-height:1.2}
 .wissen__karte .knopf{align-self:flex-start}
 .beitraege{margin-top:1rem;border-top:1px solid var(--linie-dunkel)}
 .beitraege a{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:4.25rem;padding-block:.75rem;border-bottom:1px solid var(--linie-dunkel);font-weight:500}
-.beitraege a:hover .rund{transform:translateX(3px)}
+@media (hover:hover){.beitraege a:hover .rund{transform:translateX(3px)}}
 .wissen__bild{min-height:26rem;border-radius:var(--radius-karte)}
 
 /* 10. Kontakt und Fuß */

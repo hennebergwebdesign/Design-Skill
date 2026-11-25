@@ -62,17 +62,19 @@ h3{font-size:var(--h3);line-height:1.05}
 .kopf>*{pointer-events:auto}
 .kopf__zeile{position:relative;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem;max-width:var(--breite);margin-inline:auto}
 .js .kopf__zeile{flex-wrap:nowrap}
-.kopf__logo{display:inline-flex;align-items:center;gap:.55rem;min-height:2.75rem;padding:.3rem .9rem;border-radius:10px;background:var(--flaeche-dunkel-2);box-shadow:inset 0 0 0 1px var(--linie-dunkel);font-family:var(--schrift-titel);font-weight:800;font-size:1rem;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
+.kopf__logo{display:inline-flex;align-items:center;gap:.55rem;min-height:2.75rem;padding:.3rem .75rem;border-radius:10px;background:var(--flaeche-dunkel-2);box-shadow:inset 0 0 0 1px var(--linie-dunkel);font-family:var(--schrift-titel);font-weight:800;font-size:.875rem;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
 .kopf__logo svg{color:var(--akzent)}
+.kopf__zeichen{display:none}
+@media (min-width:30rem){.kopf__zeichen{display:block}}
 .kopf__rechts{display:flex;align-items:center;gap:.5rem}
 .kopf__tel{display:none;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border-radius:10px;background:var(--flaeche-dunkel-2);box-shadow:inset 0 0 0 1px var(--linie-dunkel);color:var(--akzent)}
-.kopf__knopf{min-height:2.75rem;padding:.3rem 1rem;font-size:.875rem;white-space:nowrap}
+.kopf__knopf{min-height:2.75rem;padding:.3rem .85rem;font-size:.8125rem;letter-spacing:.02em;white-space:nowrap}
 .kopf__menueknopf{display:none;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border-radius:10px;background:var(--flaeche-dunkel-2);box-shadow:inset 0 0 0 1px var(--linie-dunkel)}
-.kopf__menueknopf span{position:relative;display:block;width:1.15rem;height:2px;background:var(--text-auf-dunkel);border-radius:2px;transform:translateY(-4px);transition:transform var(--dauer-mittel) var(--kurve)}
-.kopf__menueknopf span::before{content:"";position:absolute;left:0;top:8px;width:100%;height:2px;background:var(--text-auf-dunkel);border-radius:2px;transition:transform var(--dauer-mittel) var(--kurve)}
+.kopf__menueknopf .balken{position:relative;display:block;width:1.15rem;height:2px;background:var(--text-auf-dunkel);border-radius:2px;transform:translateY(-4px);transition:transform var(--dauer-mittel) var(--kurve)}
+.kopf__menueknopf .balken::before{content:"";position:absolute;left:0;top:8px;width:100%;height:2px;background:var(--text-auf-dunkel);border-radius:2px;transition:transform var(--dauer-mittel) var(--kurve)}
 .js .kopf__menueknopf{display:inline-flex}
-.kopf__menueknopf[aria-expanded="true"] span{transform:rotate(45deg)}
-.kopf__menueknopf[aria-expanded="true"] span::before{transform:translateY(-8px) rotate(-90deg)}
+.kopf__menueknopf[aria-expanded="true"] .balken{transform:rotate(45deg)}
+.kopf__menueknopf[aria-expanded="true"] .balken::before{transform:translateY(-8px) rotate(-90deg)}
 .kopf__nav{order:9;flex-basis:100%;position:absolute;left:0;right:0;top:100%}
 .kopf__menue{display:flex;flex-wrap:wrap;gap:0 .5rem;padding:.5rem;border-radius:var(--radius-karte);background:var(--flaeche-dunkel-2);box-shadow:inset 0 0 0 1px var(--linie-dunkel)}
 .kopf__menue a{display:flex;align-items:center;min-height:2.75rem;padding-inline:.9rem;font-weight:600}
@@ -81,7 +83,7 @@ h3{font-size:var(--h3);line-height:1.05}
 .js .kopf__nav:not([data-offen="true"]){display:none}
 .js .kopf__menue{flex-direction:column;padding:.75rem;box-shadow:inset 0 0 0 1px var(--linie-dunkel),0 18px 32px color-mix(in srgb,#000 50%,transparent)}
 .js .kopf__menue a{min-height:3rem}
-@media (min-width:30rem){.kopf__tel{display:inline-flex}.kopf__knopf{font-size:1rem;padding:.3rem 1.2rem}}
+@media (min-width:30rem){.kopf__tel{display:inline-flex}.kopf__knopf{font-size:1rem;padding:.3rem 1.2rem}.kopf__logo{font-size:1rem;padding-inline:.9rem}}
 @media (min-width:62rem){
   .kopf__menueknopf,.js .kopf__menueknopf{display:none}
   .kopf__nav,.js .kopf__nav,.js .kopf__nav:not([data-offen="true"]){position:static;display:block;margin:0;order:0;flex-basis:auto}
@@ -188,8 +190,8 @@ h3{font-size:var(--h3);line-height:1.05}
 .stimmen .spur>li{width:min(86vw,26rem)}
 .skarte{margin:0;display:flex;flex-direction:column;gap:1.25rem;width:100%;padding:1.5rem;border-radius:var(--radius-karte);background:var(--karte-hell);color:var(--text)}
 .skarte--dunkel{background:var(--karte-hell-2);color:var(--text-auf-dunkel)}
-.skarte--dunkel .klammer{color:var(--text-auf-dunkel)}
 .skarte .klammer{font-size:1rem;color:var(--text)}
+.skarte--dunkel .klammer{color:var(--text-auf-dunkel)}
 .skarte blockquote{margin:0}
 .skarte figcaption{display:flex;align-items:center;gap:.9rem}
 .skarte figcaption strong{display:block;font-family:var(--schrift-titel);text-transform:uppercase;font-size:1.0625rem}
@@ -200,11 +202,11 @@ h3{font-size:var(--h3);line-height:1.05}
 
 /* 8. Preise */
 .preise__kopf{display:grid;gap:2rem;align-items:start}
-.preise__bild{aspect-ratio:4/5;width:min(14rem,60%)}
+.preise__bild{aspect-ratio:4/5;width:min(12rem,50%)}
 .tarife{margin-top:clamp(2.5rem,6vw,5rem);border-radius:var(--radius-karte);background:color-mix(in srgb,var(--flaeche) 35%,#fff);box-shadow:inset 0 0 0 1px var(--linie)}
 .tarif{display:grid;gap:1rem;padding:1.5rem}
 .tarif+.tarif{border-top:1px solid var(--linie)}
-.tarif h3{font-size:clamp(1.5rem,1.2rem + 1.4vw,2.1rem)}
+.tarif h3{font-size:clamp(1.35rem,1.1rem + 1vw,1.8rem)}
 .tarif__mitte{display:grid;gap:.75rem;align-content:start}
 .tarif__mitte .klammer{font-size:1rem}
 .tags{display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;font-size:1rem}
@@ -216,7 +218,7 @@ h3{font-size:var(--h3);line-height:1.05}
 .aktion{display:flex;flex-direction:column;gap:.5rem;margin-top:2.5rem;max-width:44rem;margin-inline:auto 0}
 .aktion .zahl{font-size:clamp(1.75rem,1.2rem + 2vw,3rem);text-transform:uppercase}
 @media (min-width:62rem){
-  .preise__kopf{grid-template-columns:14rem minmax(0,1fr);gap:clamp(3rem,10vw,10rem)}
+  .preise__kopf{grid-template-columns:12rem minmax(0,1fr);gap:clamp(3rem,10vw,10rem)}
   .tarife{max-width:62rem;margin-inline:auto}
   .tarif{grid-template-columns:minmax(0,.9fr) minmax(0,1.3fr) 9rem;gap:2rem;align-items:center;padding:2rem 2.25rem}
   .tarif__preis{flex-direction:column;align-items:flex-end;gap:1.25rem}

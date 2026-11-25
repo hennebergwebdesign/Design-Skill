@@ -1,0 +1,140 @@
+/* stil-v2.css: Variante 2 "Bühne und Orbit". Mittiger Held mit aufsteigendem Kartenfeld (Sticky), Telefon, Auslandsüberweisung,
+   Halbkreise mit Anbindungen, Video mit Wortlicht, zwei dunkle Funktionspaneele. */
+
+/* Held: Text oben mittig, Kartenfeld darunter. Ohne JavaScript und bei reduzierter Bewegung steht alles ruhig untereinander. */
+.held2{--fortschritt:1}
+.held2.buehne{overflow:clip}
+.held2__buehne{position:relative;display:grid;gap:2.5rem;justify-items:center;padding-block:8rem 2.5rem}
+.held2__ringe{position:absolute;inset:0;pointer-events:none;overflow:clip}
+.held2__ringe span{position:absolute;left:50%;top:70%;aspect-ratio:1;border-radius:50%;border:1px solid color-mix(in srgb,#fff 16%,transparent);translate:-50% -50%}
+.held2__ringe span:nth-child(1){width:min(52rem,120vw)}
+.held2__ringe span:nth-child(2){width:min(78rem,170vw)}
+.held2__ringe span:nth-child(3){width:min(104rem,230vw);opacity:.6}
+.held2__text{position:relative;z-index:2;display:grid;gap:1.5rem;justify-items:center;text-align:center}
+.held2 h1{font-size:clamp(2.5rem,1.4rem + 4.6vw,5rem);line-height:1;letter-spacing:-.045em;max-width:15ch}
+.held2__text p{max-width:36rem;color:var(--text-leise-dunkel);font-size:var(--text-l)}
+.held2__feld{position:relative;z-index:1;display:grid;gap:1rem}
+.held2__karte{justify-self:center;width:min(100%,16rem)}
+.held2__links,.held2__rechts{display:grid;gap:1rem;align-content:end}
+.held2__paar{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.held2__kachel{display:grid;place-items:center;gap:.6rem;align-content:center;min-height:8.5rem;padding:1rem;border-radius:1.1rem;text-align:center;font-size:.875rem}
+.held2__kachel--akzent{background:linear-gradient(150deg,var(--ton-2),var(--akzent));color:var(--akzent-text);font-weight:500}
+.held2__kachel--hell{background:#fff}
+.held2__einkommen .ui__zahl{font-size:2rem}
+.held2__spur{position:relative;display:flex;height:3.25rem;margin-top:1.25rem;border-radius:.6rem;background:var(--flaeche)}
+.held2__spur i{border-radius:.6rem;background:repeating-linear-gradient(135deg,var(--knopf) 0 7px,#26332d 7px 9px)}
+.held2__spur b{position:absolute;left:.9rem;top:50%;translate:0 -50%;color:#fff;font-weight:500;font-size:1rem}
+.held2__woche{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.held2__zwei{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-top:1.25rem}
+.held2__zwei span{padding:.7rem;border-radius:.8rem;background:var(--flaeche)}
+.held2__zwei strong{color:var(--text);font-size:1.1rem}
+@media (min-width:62rem){
+  .held2__feld{grid-template-columns:1fr 1fr 1fr;gap:1.75rem;align-items:end}
+  .held2__karte{width:100%;max-width:none;align-self:end}
+}
+@media (min-width:62rem) and (prefers-reduced-motion:no-preference){
+  .js .held2{height:215svh;--fortschritt:0}
+  .js .held2__buehne{position:sticky;top:0;padding-block:8rem 4rem}
+  .js .held2__feld{transform:translateY(calc((1 - min(1, var(--fortschritt) * 2.4)) * 42svh))}
+  .js .held2__ringe span{transform:scale(calc(.7 + var(--fortschritt) * .45))}
+}
+
+/* Produkt: schräges Telefon */
+.produkt2__raster{display:grid;gap:3rem;align-items:center}
+.produkt2__bild{position:relative;min-height:30rem;overflow:hidden}
+.produkt2__licht{position:absolute;left:8%;top:22%;width:9rem;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--akzent) 70%,transparent),transparent 68%)}
+.produkt2__telefon{position:absolute;left:4%;top:3%;width:min(64%,17rem);margin:0;rotate:-14deg}
+.produkt2__mini{padding:.7rem .9rem;margin-top:.6rem;box-shadow:none;border:1px solid var(--linie)}
+.produkt2__mini strong,.produkt2__mini .ui__klein{white-space:nowrap}
+.produkt2__karte{position:absolute;right:0;bottom:6%;width:min(58%,15rem);max-width:none;aspect-ratio:1.5/1;rotate:12deg}
+.produkt2__text{display:grid;gap:1.5rem;justify-items:start}
+@media (min-width:62rem){
+  .produkt2__raster{grid-template-columns:1fr 1fr;gap:5rem}
+  .produkt2__bild{min-height:42rem}
+  .produkt2__telefon{left:0;top:0;width:min(66%,19rem)}
+  .produkt2__karte{width:min(52%,18rem);right:0;bottom:12%}
+}
+
+/* Auslandsüberweisung */
+.ueberweisung__raster{display:grid;gap:3rem;align-items:center}
+.ueberweisung__text{display:grid;gap:1.5rem;justify-items:start}
+.ueberweisung__karte{position:relative;display:grid}
+.punktkarte{position:absolute;inset:-12% -8%;background:radial-gradient(circle,color-mix(in srgb,var(--text) 38%,transparent) 1.6px,transparent 2.2px) 0 0/15px 15px;-webkit-mask:radial-gradient(60% 55% at 50% 45%,#000 25%,transparent 72%);mask:radial-gradient(60% 55% at 50% 45%,#000 25%,transparent 72%);opacity:.55}
+.ueberweisung__ui{position:relative;width:min(100%,27rem);justify-self:end;padding:0}
+.ueberweisung__ui>*{margin-inline:1.25rem}
+.ueberweisung__titel{margin:0!important;padding:1.1rem 1.25rem;text-align:center;font-weight:500;border-bottom:1px solid var(--linie)}
+.feld{display:grid;gap:.25rem;margin-block:.9rem;padding:.7rem .9rem;border:1px solid var(--linie);border-radius:.8rem;background:var(--flaeche)}
+.feld__wert{display:flex;align-items:center;justify-content:space-between;gap:1rem;font-weight:500}
+.feld__wert span{display:inline-flex;align-items:center;gap:.4rem;color:var(--text-leise);font-weight:400}
+.ueberweisung__ui .ui__zeile{margin-block:.6rem}
+.ueberweisung__knopf{display:block;margin-block:1.1rem 1.25rem!important;padding:.95rem;border-radius:99px;background:var(--knopf);color:#fff;font-weight:500;text-align:center}
+@media (min-width:62rem){.ueberweisung__raster{grid-template-columns:1fr 1fr;gap:5rem}}
+
+/* Sichere Zahlungen */
+.sicher__raster{display:grid;gap:1rem}
+.sicher__links{display:grid;gap:1rem;align-content:start}
+.sicher__ringe{padding:1.5rem}
+.sicher__vier{display:grid;grid-template-columns:1fr;gap:1.1rem;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--linie)}
+.sicher__vier p{display:flex;align-items:center;gap:.9rem}
+.sicher__donut{display:grid;gap:1.25rem;align-items:center;justify-items:start;padding:1.5rem}
+.sicher__donut h3{margin-bottom:.5rem}
+.ring--gross{--wand:1.2rem;--f:var(--akzent-tief)}
+.ring--gross b{position:relative;z-index:1;text-align:center;font-family:var(--schrift-titel);font-weight:500;font-size:1.7rem;letter-spacing:-.03em;line-height:1.05}
+.ring--gross small{display:block;margin-top:.1rem;font-family:var(--schrift-text);font-weight:400;font-size:.875rem;letter-spacing:0;color:var(--text-leise)}
+.sicher__bild{position:relative;display:flex;align-items:flex-end;min-height:30rem;padding:1.5rem;border-radius:var(--radius-gross)}
+.sicher__text{position:relative;z-index:2;display:grid;gap:1rem;justify-items:start;color:var(--text-auf-dunkel)}
+.sicher__text h3{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem;font-size:clamp(1.5rem,1.1rem + 1.4vw,2.25rem)}
+.sicher__text .avatare i{border-color:var(--ton-6)}
+.sicher__bild::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,color-mix(in srgb,var(--flaeche-dunkel) 90%,transparent),transparent 62%)}
+@media (min-width:48rem){
+  .sicher__vier{grid-template-columns:1fr 1fr;column-gap:2rem}
+  .sicher__donut{grid-template-columns:auto 1fr;gap:2rem}
+}
+@media (min-width:62rem){
+  .sicher__raster{grid-template-columns:2fr 1fr}
+  .sicher__bild{min-height:38rem;padding:2rem}
+}
+
+/* Anbindungen: Halbkreise */
+.orbit{padding-top:clamp(3rem,7vw,6rem);overflow:clip}
+.orbit__feld{position:relative;height:clamp(18rem,50vw,32rem);overflow:hidden}
+.orbit__bogen{position:absolute;left:50%;bottom:0;aspect-ratio:1;border-radius:50%;border:1px solid var(--linie);translate:-50% 50%}
+.orbit__bogen--1{width:min(20rem,48vw);border-style:dashed;border-color:color-mix(in srgb,var(--text) 30%,transparent)}
+.orbit__bogen--2{width:min(36rem,84vw);background:color-mix(in srgb,#fff 45%,transparent)}
+.orbit__bogen--3{width:min(54rem,126vw);background:color-mix(in srgb,#fff 30%,transparent)}
+.orbit__punkt{position:absolute;left:50%;bottom:0;display:grid;place-items:center;width:3.25rem;height:3.25rem;border-radius:50%;background:#fff;color:var(--text);font-family:var(--schrift-titel);font-weight:600;box-shadow:0 12px 24px -12px color-mix(in srgb,#000 45%,transparent);transform:translate(-50%,50%) rotate(var(--w)) translateY(calc(var(--r) * -1)) rotate(calc(var(--w) * -1));animation:schweben 8s ease-in-out infinite}
+.orbit__punkt--b{background:var(--akzent-2);animation-delay:-2s}
+.orbit__punkt--c{background:var(--akzent);animation-delay:-4s}
+.orbit__text{position:relative;z-index:1;display:grid;justify-items:center;gap:1.5rem;margin-top:-3rem;padding-bottom:clamp(3rem,7vw,6rem);text-align:center}
+.orbit__text h2{max-width:20ch}
+@media (prefers-reduced-motion:reduce){.orbit__punkt{animation:none}}
+
+/* Video, Aussage, Paneele */
+.dunkel2{padding-block:clamp(2.5rem,6vw,5rem)}
+.dunkel2::before{content:"";position:absolute;z-index:-1;left:50%;top:48%;width:150%;height:34rem;transform:translateX(-50%);border-radius:50%;border-top:2px solid color-mix(in srgb,var(--akzent) 60%,#fff);background:radial-gradient(60% 50% at 50% 2%,color-mix(in srgb,var(--akzent) 38%,transparent),transparent 72%)}
+.videorahmen{position:relative;min-height:18rem;aspect-ratio:16/8.4;border-radius:1.5rem}
+.videorahmen__innen{position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:center;gap:clamp(.75rem,3vw,2rem);font-family:var(--schrift-titel);font-size:var(--text-l);font-weight:500}
+.videorahmen__knopf{display:grid;place-items:center;flex:none;width:5rem;height:5rem;border-radius:50%;border:2px solid color-mix(in srgb,#fff 55%,transparent);background:color-mix(in srgb,var(--flaeche-dunkel) 70%,transparent);color:#fff;transition:transform var(--dauer-kurz) var(--kurve)}
+.videorahmen__knopf:hover{transform:scale(1.06)}
+.videorahmen__hinweis{position:absolute;z-index:3;left:1rem;right:1rem;bottom:1rem;padding:.7rem 1rem;border-radius:.8rem;background:#fff;color:var(--text);font-size:var(--text-s)}
+.aussage{max-width:22ch;margin:clamp(3rem,7vw,6rem) auto;text-align:center;font-family:var(--schrift-titel);font-weight:500;font-size:clamp(2rem,1.2rem + 4vw,4.25rem);line-height:1.08;letter-spacing:-.04em;text-wrap:balance}
+.dunkel2__panels{display:grid;gap:1rem}
+.panel{display:grid;gap:2rem;align-items:center;padding:1.25rem;border-radius:var(--radius-gross);background:var(--flaeche-dunkel-2);border:1px solid var(--linie-dunkel)}
+.panel__text{display:grid;gap:1.25rem;justify-items:start;padding:.5rem}
+.panel__text h3{font-size:clamp(1.5rem,1.1rem + 1.4vw,2.25rem);max-width:14ch}
+.panel__text .leise{max-width:30rem}
+.panel__text .haken{width:100%;padding-top:1.25rem;border-top:1px solid var(--linie-dunkel)}
+.panel__bild{position:relative;display:grid;gap:1rem;min-height:18rem;padding:1rem;align-content:center}
+.panel__betrag{position:relative;z-index:1;display:grid;gap:.4rem;width:min(100%,19rem);padding:1rem 1.1rem;border-radius:1.1rem;background:var(--akzent-2);color:var(--akzent-text);rotate:-3deg;box-shadow:0 20px 40px -24px #000}
+.panel__betrag .ui__klein{color:var(--akzent-text);opacity:.8}
+.panel__aktionen{display:flex;gap:.6rem;margin-top:.4rem}
+.panel__aktionen i{display:grid;place-items:center;width:2.5rem;height:2.5rem;border-radius:50%;background:#fff}
+.panel__chart{margin-left:auto;width:min(100%,19rem)}
+.panel__karte{max-width:19rem;rotate:-7deg}
+.panel__donut{display:flex;align-items:center;gap:1rem;margin-left:auto;width:min(100%,21rem);rotate:3deg}
+.panel__donut .ring{--ring-innen:#fff}
+@media (min-width:62rem){
+  .panel{grid-template-columns:1fr 1fr;padding:2rem;gap:3rem}
+  .panel--umgekehrt .panel__bild{order:2}
+  .panel__bild{min-height:22rem}
+}

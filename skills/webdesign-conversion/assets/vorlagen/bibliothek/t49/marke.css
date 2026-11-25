@@ -1,0 +1,36 @@
+/* marke.css der Vorlage "SaaS hell Dashboard": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#ffffff;
+  --flaeche-alt:#f2f5f7;
+  --flaeche-dunkel:#0c2a2e;
+  --text:#10222a;
+  --text-leise:#4d5f66;
+  --linie:#dde4e8;
+  --akzent:#0f766e;           /* Hauptaktion und Akzentflächen: Fläche mit weißem Text, auf Hell auch Text und Linie */
+  --akzent-text:#ffffff;
+  --schrift-titel:'Schibsted Grotesk',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:10px;
+  --radius-karte:14px;
+  --radius-bild:14px;
+
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:700;
+  --titel-spur:-0.025em;
+  --akzent-hell:#d9f0ed;          /* helle Tönung des Akzents für Symbolkacheln */
+  --akzent-auf-dunkel:#6fe0d1;    /* Akzent als Text auf --flaeche-dunkel */
+  --flaeche-dunkel-2:#1b4046;     /* aktive Karte auf Dunkel */
+  --text-auf-dunkel:#eef6f6;
+  --text-leise-dunkel:#b4c8ca;
+  --linie-dunkel:#2a4a50;
+  --punkt:#f2b52e;                /* kleine Zierpunkte */
+  --schatten:0 18px 40px -18px rgba(16,34,42,.28),0 2px 6px rgba(16,34,42,.06);
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#38545c;
+  --ton-2:#6a4a3a;
+  --ton-3:#3d5f52;
+  --ton-4:#4a4f6a;
+  --ton-5:#7a6a3a;
+  --ton-6:#16252b;
+}

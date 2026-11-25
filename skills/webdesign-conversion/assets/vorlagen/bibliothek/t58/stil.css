@@ -51,10 +51,10 @@ h3{font-size:var(--h3);line-height:1.15}
 
 /* Kopf: bleibt stehen, über dem Held transparent */
 .kopf{position:sticky;top:0;z-index:50;height:var(--kopf-h);transition:background-color var(--dauer-mittel)}
-.gescrollt .kopf{background:color-mix(in srgb,var(--flaeche) 94%,transparent);box-shadow:0 1px 0 var(--linie)}
+.gescrollt .kopf{background:var(--flaeche);box-shadow:0 1px 0 var(--linie)}
 .kopf__innen{position:relative;display:flex;align-items:center;justify-content:space-between;gap:.5rem;height:100%}
 .kopf__logo{display:inline-flex;align-items:center;gap:.5rem;min-height:2.75rem;font-family:var(--schrift-titel);font-weight:800;font-size:1.25rem;letter-spacing:-.01em;margin-right:auto;white-space:nowrap}
-.kopf__zeichen{width:1.75rem;height:1.75rem;color:var(--akzent)}
+.kopf__zeichen{flex:none;width:1.75rem;height:1.75rem;color:var(--akzent)}
 .kopf__knopf{white-space:nowrap}
 .kopf__knopf>span:first-child{min-height:2.75rem;padding:.4rem 1rem}
 .kopf__knopf .knopf__kreis{display:none;width:2.75rem;height:2.75rem}
@@ -128,7 +128,7 @@ h3{font-size:var(--h3);line-height:1.15}
 .collage__bild{aspect-ratio:4/3;border-radius:var(--radius-gross)}
 .chips{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
 .chip figure{display:grid;gap:.5rem;justify-items:start}
-.chip__bild{width:5.5rem;aspect-ratio:1/1.1;border-radius:16px}
+.chip__bild{width:5.5rem;aspect-ratio:1/1.1;border-radius:16px;box-shadow:0 0 0 3px var(--flaeche)}
 .chip figcaption{position:relative;z-index:3;padding:.4rem .9rem;border-radius:999px;background:var(--flaeche-karte);box-shadow:inset 0 0 0 1px var(--linie);font-size:1rem;font-weight:600;text-transform:uppercase;letter-spacing:.01em;line-height:1.25}
 .chip{transform:none!important}
 @media (min-width:62rem){
@@ -208,11 +208,11 @@ h3{font-size:var(--h3);line-height:1.15}
 
 /* 7. Ablauf */
 .schritte{display:grid;gap:1rem}
-.schritt{display:flex;flex-direction:column;gap:.75rem;min-height:18rem;padding:1.75rem;border-radius:var(--radius-karte);background:var(--flaeche-karte);box-shadow:inset 0 0 0 1px var(--linie);transition:transform var(--dauer-mittel) var(--kurve),box-shadow var(--dauer-mittel)}
+.schritt{display:flex;flex-direction:column;gap:.75rem;min-height:14rem;padding:1.75rem;border-radius:var(--radius-karte);background:var(--flaeche-karte);box-shadow:inset 0 0 0 1px var(--linie);transition:transform var(--dauer-mittel) var(--kurve),box-shadow var(--dauer-mittel)}
 .schritt:hover{transform:translateY(-4px);box-shadow:inset 0 0 0 1px var(--akzent)}
 .schritt__nr{font-size:clamp(2.5rem,2rem + 2vw,3.25rem);font-weight:500;margin-bottom:auto;padding-bottom:2rem}
 .schritt h3{font-size:clamp(1.25rem,1.1rem + .6vw,1.5rem);font-weight:800}
-.schritt p{color:var(--text-leise)}
+.schritt p{color:var(--text-leise);min-height:4.8em}
 @media (min-width:48rem){.schritte{grid-template-columns:repeat(2,1fr)}.schritt:last-child{grid-column:1 / -1}}
 @media (min-width:62rem){
   .schritte{grid-template-columns:repeat(6,1fr);gap:1.25rem}
@@ -332,8 +332,9 @@ h3{font-size:var(--h3);line-height:1.15}
 .handy__schirm{width:100%;height:100%;border-radius:0}
 @media (min-width:62rem){
   .app{padding-top:calc(var(--raum) + 2rem)}
-  .app__band{grid-template-columns:1.2fr 1fr;align-items:center;padding:3.5rem 4rem;overflow:visible}
-  .handy{width:17rem;margin:-6rem 0 -3.5rem;justify-self:end;aspect-ratio:9/17}
+  .app__band{grid-template-columns:1.2fr 1fr;align-items:end;padding:3.5rem 4rem 0;overflow:visible}
+  .app__text{align-self:center;padding-bottom:3.5rem}
+  .handy{width:17rem;margin:-6rem 0 0;justify-self:end;aspect-ratio:9/17;border-bottom:0;border-radius:2.2rem 2.2rem 0 0}
 }
 
 /* Fuß */

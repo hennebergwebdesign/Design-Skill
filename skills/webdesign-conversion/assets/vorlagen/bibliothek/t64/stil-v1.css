@@ -1,8 +1,8 @@
 /* stil-v1.css der Vorlage "Kanzlei Messing und Nachtblau", Variante 1 "Held im Vollbild" (index.html):
    Vollbildheld, Aussage mit Wortlicht und Kennzahlenkarten, Bild im Rahmen mit Text, Team unter dem Bild, gestapelte Stimmen, Blog. Nach stil.css geladen. */
 .kopf__telknopf{display:grid}
-@media (min-width:30rem){.kopf__knopf{display:inline-flex}}
 .kopf__knopf{display:none}
+@media (min-width:30rem){.kopf__knopf{display:inline-flex}}
 @media (min-width:62rem){
   .kopf__burger,.js .kopf__burger{display:none}
   .kopf__nav,.js .kopf__nav,.js .kopf__nav:not([data-offen="true"]){position:static;display:block;order:0;flex-basis:auto;padding:0;background:none;border-radius:0;box-shadow:none}

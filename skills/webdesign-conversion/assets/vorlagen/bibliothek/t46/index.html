@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Entwürfe in wenigen Klicks, Markenname</title>
+<meta name="description" content="Beispieltext: Gestalten, Prototypen bauen und im Team in Echtzeit arbeiten, in einem Werkzeug. Vor dem Einsatz durch den echten Text der Marke ersetzen.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../_basis/schriften.css">
+<link rel="stylesheet" href="marke.css">
+<link rel="stylesheet" href="../_basis/basis.css">
+<link rel="stylesheet" href="../_basis/logos.css">
+<link rel="stylesheet" href="stil.css">
+</head>
+<body id="top">
+<a class="sprunglink" href="#inhalt">Zum Inhalt springen</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-arrow-right" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></symbol>
+  <symbol id="i-arrow-up-right" viewBox="0 0 256 256" fill="currentColor"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 256 256" fill="currentColor"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></symbol>
+  <symbol id="i-x" viewBox="0 0 256 256" fill="currentColor"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></symbol>
+  <symbol id="i-lightning" viewBox="0 0 256 256" fill="currentColor"><path d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z"/></symbol>
+  <symbol id="i-shield-check" viewBox="0 0 256 256" fill="currentColor"><path d="M208,40H48A16,16,0,0,0,32,56v56c0,52.72,25.52,84.67,46.93,102.19,23.06,18.86,46,25.26,47,25.53a8,8,0,0,0,4.2,0c1-.27,23.91-6.67,47-25.53C198.48,196.67,224,164.72,224,112V56A16,16,0,0,0,208,40Zm0,72c0,37.07-13.66,67.16-40.6,89.42A129.3,129.3,0,0,1,128,223.62a128.25,128.25,0,0,1-38.92-21.81C61.82,179.51,48,149.3,48,112l0-56,160,0ZM82.34,141.66a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32l-56,56a8,8,0,0,1-11.32,0Z"/></symbol>
+  <symbol id="i-users" viewBox="0 0 256 256" fill="currentColor"><path d="M117.25,157.92a60,60,0,1,0-66.5,0A95.83,95.83,0,0,0,3.53,195.63a8,8,0,1,0,13.4,8.74,80,80,0,0,1,134.14,0,8,8,0,0,0,13.4-8.74A95.83,95.83,0,0,0,117.25,157.92ZM40,108a44,44,0,1,1,44,44A44.05,44.05,0,0,1,40,108Zm210.14,98.7a8,8,0,0,1-11.07-2.33A79.83,79.83,0,0,0,172,168a8,8,0,0,1,0-16,44,44,0,1,0-16.34-84.87,8,8,0,1,1-5.94-14.85,60,60,0,0,1,55.53,105.64,95.83,95.83,0,0,1,47.22,37.71A8,8,0,0,1,250.14,206.7Z"/></symbol>
+  <symbol id="i-rocket-launch" viewBox="0 0 256 256" fill="currentColor"><path d="M223.85,47.12a16,16,0,0,0-15-15c-12.58-.75-44.73.4-71.41,27.07L132.69,64H74.36A15.91,15.91,0,0,0,63,68.68L28.7,103a16,16,0,0,0,9.07,27.16l38.47,5.37,44.21,44.21,5.37,38.49a15.94,15.94,0,0,0,10.78,12.92,16.11,16.11,0,0,0,5.1.83A15.91,15.91,0,0,0,153,227.3L187.32,193A15.91,15.91,0,0,0,192,181.64V123.31l4.77-4.77C223.45,91.86,224.6,59.71,223.85,47.12ZM74.36,80h42.33L77.16,119.52,40,114.34Zm74.41-9.45a76.65,76.65,0,0,1,59.11-22.47,76.46,76.46,0,0,1-22.42,59.16L128,164.68,91.32,128ZM176,181.64,141.67,216l-5.19-37.17L176,139.31Zm-74.16,9.5C97.34,201,82.29,224,40,224a8,8,0,0,1-8-8c0-42.29,23-57.34,32.86-61.85a8,8,0,0,1,6.64,14.56c-6.43,2.93-20.62,12.36-23.12,38.91,26.55-2.5,36-16.69,38.91-23.12a8,8,0,1,1,14.56,6.64Z"/></symbol>
+  <symbol id="i-chat-circle" viewBox="0 0 256 256" fill="currentColor"><path d="M128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></symbol>
+  <symbol id="i-sparkle" viewBox="0 0 256 256" fill="currentColor"><path d="M197.58,129.06,146,110l-19-51.62a15.92,15.92,0,0,0-29.88,0L78,110l-51.62,19a15.92,15.92,0,0,0,0,29.88L78,178l19,51.62a15.92,15.92,0,0,0,29.88,0L146,178l51.62-19a15.92,15.92,0,0,0,0-29.88ZM137,164.22a8,8,0,0,0-4.74,4.74L112,223.85,91.78,169A8,8,0,0,0,87,164.22L32.15,144,87,123.78A8,8,0,0,0,91.78,119L112,64.15,132.22,119a8,8,0,0,0,4.74,4.74L191.85,144ZM144,40a8,8,0,0,1,8-8h16V16a8,8,0,0,1,16,0V32h16a8,8,0,0,1,0,16H184V64a8,8,0,0,1-16,0V48H152A8,8,0,0,1,144,40ZM248,88a8,8,0,0,1-8,8h-8v8a8,8,0,0,1-16,0V96h-8a8,8,0,0,1,0-16h8V72a8,8,0,0,1,16,0v8h8A8,8,0,0,1,248,88Z"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 256 256" fill="currentColor"><path d="M128,24h0A104,104,0,1,0,232,128,104.12,104.12,0,0,0,128,24Zm88,104a87.61,87.61,0,0,1-3.33,24H174.16a157.44,157.44,0,0,0,0-48h38.51A87.61,87.61,0,0,1,216,128ZM102,168H154a115.11,115.11,0,0,1-26,45A115.27,115.27,0,0,1,102,168Zm-3.9-16a140.84,140.84,0,0,1,0-48h59.88a140.84,140.84,0,0,1,0,48ZM40,128a87.61,87.61,0,0,1,3.33-24H81.84a157.44,157.44,0,0,0,0,48H43.33A87.61,87.61,0,0,1,40,128ZM154,88H102a115.11,115.11,0,0,1,26-45A115.27,115.27,0,0,1,154,88Zm52.33,0H170.71a135.28,135.28,0,0,0-22.3-45.6A88.29,88.29,0,0,1,206.37,88ZM107.59,42.4A135.28,135.28,0,0,0,85.29,88H49.63A88.29,88.29,0,0,1,107.59,42.4ZM49.63,168H85.29a135.28,135.28,0,0,0,22.3,45.6A88.29,88.29,0,0,1,49.63,168Zm98.78,45.6a135.28,135.28,0,0,0,22.3-45.6h35.66A88.29,88.29,0,0,1,148.41,213.6Z"/></symbol>
+  <symbol id="i-desktop" viewBox="0 0 256 256" fill="currentColor"><path d="M208,40H48A24,24,0,0,0,24,64V176a24,24,0,0,0,24,24h72v16H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16H136V200h72a24,24,0,0,0,24-24V64A24,24,0,0,0,208,40ZM48,56H208a8,8,0,0,1,8,8v80H40V64A8,8,0,0,1,48,56ZM208,184H48a8,8,0,0,1-8-8V160H216v16A8,8,0,0,1,208,184Z"/></symbol>
+  <symbol id="i-device-mobile" viewBox="0 0 256 256" fill="currentColor"><path d="M176,16H80A24,24,0,0,0,56,40V216a24,24,0,0,0,24,24h96a24,24,0,0,0,24-24V40A24,24,0,0,0,176,16ZM72,64H184V192H72Zm8-32h96a8,8,0,0,1,8,8v8H72V40A8,8,0,0,1,80,32Zm96,192H80a8,8,0,0,1-8-8v-8H184v8A8,8,0,0,1,176,224Z"/></symbol>
+  <symbol id="i-download-simple" viewBox="0 0 256 256" fill="currentColor"><path d="M224,144v64a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V144a8,8,0,0,1,16,0v56H208V144a8,8,0,0,1,16,0Zm-101.66,5.66a8,8,0,0,0,11.32,0l40-40a8,8,0,0,0-11.32-11.32L136,124.69V32a8,8,0,0,0-16,0v92.69L93.66,98.34a8,8,0,0,0-11.32,11.32Z"/></symbol>
+  <symbol id="i-paint-brush" viewBox="0 0 256 256" fill="currentColor"><path d="M232,32a8,8,0,0,0-8-8c-44.08,0-89.31,49.71-114.43,82.63A60,60,0,0,0,32,164c0,30.88-19.54,44.73-20.47,45.37A8,8,0,0,0,16,224H92a60,60,0,0,0,57.37-77.57C182.3,121.31,232,76.08,232,32ZM92,208H34.63C41.38,198.41,48,183.92,48,164a44,44,0,1,1,44,44Zm32.42-94.45q5.14-6.66,10.09-12.55A76.23,76.23,0,0,1,155,121.49q-5.9,4.94-12.55,10.09A60.54,60.54,0,0,0,124.42,113.55Zm42.7-2.68a92.57,92.57,0,0,0-22-22c31.78-34.53,55.75-45,69.9-47.91C212.17,55.12,201.65,79.09,167.12,110.87Z"/></symbol>
+  <symbol id="i-ruler" viewBox="0 0 256 256" fill="currentColor"><path d="M235.32,73.37,182.63,20.69a16,16,0,0,0-22.63,0L20.68,160a16,16,0,0,0,0,22.63l52.69,52.68a16,16,0,0,0,22.63,0L235.32,96A16,16,0,0,0,235.32,73.37ZM84.68,224,32,171.31l32-32,26.34,26.35a8,8,0,0,0,11.32-11.32L75.31,128,96,107.31l26.34,26.35a8,8,0,0,0,11.32-11.32L107.31,96,128,75.31l26.34,26.35a8,8,0,0,0,11.32-11.32L139.31,64l32-32L224,84.69Z"/></symbol>
+  <symbol id="i-compass" viewBox="0 0 256 256" fill="currentColor"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216ZM172.42,72.84l-64,32a8.05,8.05,0,0,0-3.58,3.58l-32,64A8,8,0,0,0,80,184a8.1,8.1,0,0,0,3.58-.84l64-32a8.05,8.05,0,0,0,3.58-3.58l32-64a8,8,0,0,0-10.74-10.74ZM138,138,97.89,158.11,118,118l40.15-20.07Z"/></symbol>
+  <symbol id="i-lightbulb" viewBox="0 0 256 256" fill="currentColor"><path d="M176,232a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h80A8,8,0,0,1,176,232Zm40-128a87.55,87.55,0,0,1-33.64,69.21A16.24,16.24,0,0,0,176,186v6a16,16,0,0,1-16,16H96a16,16,0,0,1-16-16v-6a16,16,0,0,0-6.23-12.66A87.59,87.59,0,0,1,40,104.49C39.74,56.83,78.26,17.14,125.88,16A88,88,0,0,1,216,104Zm-16,0a72,72,0,0,0-73.74-72c-39,.92-70.47,33.39-70.26,72.39a71.65,71.65,0,0,0,27.64,56.3A32,32,0,0,1,96,186v6h64v-6a32.15,32.15,0,0,1,12.47-25.35A71.65,71.65,0,0,0,200,104Zm-16.11-9.34a57.6,57.6,0,0,0-46.56-46.55,8,8,0,0,0-2.66,15.78c16.57,2.79,30.63,16.85,33.44,33.45A8,8,0,0,0,176,104a9,9,0,0,0,1.35-.11A8,8,0,0,0,183.89,94.66Z"/></symbol>
+  <symbol id="i-target" viewBox="0 0 256 256" fill="currentColor"><path d="M221.87,83.16A104.1,104.1,0,1,1,195.67,49l22.67-22.68a8,8,0,0,1,11.32,11.32l-96,96a8,8,0,0,1-11.32-11.32l27.72-27.72a40,40,0,1,0,17.87,31.09,8,8,0,1,1,16-.9,56,56,0,1,1-22.38-41.65L184.3,60.39a87.88,87.88,0,1,0,23.13,29.67,8,8,0,0,1,14.44-6.9Z"/></symbol>
+  <symbol id="i-handshake" viewBox="0 0 256 256" fill="currentColor"><path d="M254.3,107.91,228.78,56.85a16,16,0,0,0-21.47-7.15L182.44,62.13,130.05,48.27a8.14,8.14,0,0,0-4.1,0L73.56,62.13,48.69,49.7a16,16,0,0,0-21.47,7.15L1.7,107.9a16,16,0,0,0,7.15,21.47l27,13.51,55.49,39.63a8.06,8.06,0,0,0,2.71,1.25l64,16a8,8,0,0,0,7.6-2.1l55.07-55.08,26.42-13.21a16,16,0,0,0,7.15-21.46Zm-54.89,33.37L165,113.72a8,8,0,0,0-10.68.61C136.51,132.27,116.66,130,104,122L147.24,80h31.81l27.21,54.41ZM41.53,64,62,74.22,36.43,125.27,16,115.06Zm116,119.13L99.42,168.61l-49.2-35.14,28-56L128,64.28l9.8,2.59-45,43.68-.08.09a16,16,0,0,0,2.72,24.81c20.56,13.13,45.37,11,64.91-5L188,152.66Zm62-57.87-25.52-51L214.47,64,240,115.06Zm-87.75,92.67a8,8,0,0,1-7.75,6.06,8.13,8.13,0,0,1-1.95-.24L80.41,213.33a7.89,7.89,0,0,1-2.71-1.25L51.35,193.26a8,8,0,0,1,9.3-13l25.11,17.94L126,208.24A8,8,0,0,1,131.82,217.94Z"/></symbol>
+  <symbol id="i-package" viewBox="0 0 256 256" fill="currentColor"><path d="M223.68,66.15,135.68,18a15.88,15.88,0,0,0-15.36,0l-88,48.17a16,16,0,0,0-8.32,14v95.64a16,16,0,0,0,8.32,14l88,48.17a15.88,15.88,0,0,0,15.36,0l88-48.17a16,16,0,0,0,8.32-14V80.18A16,16,0,0,0,223.68,66.15ZM128,32l80.34,44-29.77,16.3-80.35-44ZM128,120,47.66,76l33.9-18.56,80.34,44ZM40,90l80,43.78v85.79L40,175.82Zm176,85.78h0l-80,43.79V133.82l32-17.51V152a8,8,0,0,0,16,0V107.55L216,90v85.77Z"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 256 256" fill="currentColor"><path d="M243.31,136,144,36.69A15.86,15.86,0,0,0,132.69,32H40a8,8,0,0,0-8,8v92.69A15.86,15.86,0,0,0,36.69,144L136,243.31a16,16,0,0,0,22.63,0l84.68-84.68a16,16,0,0,0,0-22.63Zm-96,96L48,132.69V48h84.69L232,147.31ZM96,84A12,12,0,1,1,84,72,12,12,0,0,1,96,84Z"/></symbol>
+  <symbol id="i-wallet" viewBox="0 0 256 256" fill="currentColor"><path d="M216,64H56a8,8,0,0,1,0-16H192a8,8,0,0,0,0-16H56A24,24,0,0,0,32,56V184a24,24,0,0,0,24,24H216a16,16,0,0,0,16-16V80A16,16,0,0,0,216,64Zm0,128H56a8,8,0,0,1-8-8V78.63A23.84,23.84,0,0,0,56,80H216Zm-48-60a12,12,0,1,1,12,12A12,12,0,0,1,168,132Z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 256 256" fill="currentColor"><path d="M239.18,97.26A16.38,16.38,0,0,0,224.92,86l-59-4.76L143.14,26.15a16.36,16.36,0,0,0-30.27,0L90.11,81.23,31.08,86a16.46,16.46,0,0,0-9.37,28.86l45,38.83L53,211.75a16.38,16.38,0,0,0,24.5,17.82L128,198.49l50.53,31.08A16.4,16.4,0,0,0,203,211.75l-13.76-58.07,45-38.83A16.43,16.43,0,0,0,239.18,97.26Zm-15.34,5.47-48.7,42a8,8,0,0,0-2.56,7.91l14.88,62.8a.37.37,0,0,1-.17.48c-.18.14-.23.11-.38,0l-54.72-33.65a8,8,0,0,0-8.38,0L69.09,215.94c-.15.09-.19.12-.38,0a.37.37,0,0,1-.17-.48l14.88-62.8a8,8,0,0,0-2.56-7.91l-48.7-42c-.12-.1-.23-.19-.13-.5s.18-.27.33-.29l63.92-5.16A8,8,0,0,0,103,91.86l24.62-59.61c.08-.17.11-.25.35-.25s.27.08.35.25L153,91.86a8,8,0,0,0,6.75,4.92l63.92,5.16c.15,0,.24,0,.33.29S224,102.63,223.84,102.73Z"/></symbol>
+  <symbol id="i-list" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"/></symbol>
+  <symbol id="i-gear" viewBox="0 0 256 256" fill="currentColor"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Zm88-29.84q.06-2.16,0-4.32l14.92-18.64a8,8,0,0,0,1.48-7.06,107.21,107.21,0,0,0-10.88-26.25,8,8,0,0,0-6-3.93l-23.72-2.64q-1.48-1.56-3-3L186,40.54a8,8,0,0,0-3.94-6,107.71,107.71,0,0,0-26.25-10.87,8,8,0,0,0-7.06,1.49L130.16,40Q128,40,125.84,40L107.2,25.11a8,8,0,0,0-7.06-1.48A107.6,107.6,0,0,0,73.89,34.51a8,8,0,0,0-3.93,6L67.32,64.27q-1.56,1.49-3,3L40.54,70a8,8,0,0,0-6,3.94,107.71,107.71,0,0,0-10.87,26.25,8,8,0,0,0,1.49,7.06L40,125.84Q40,128,40,130.16L25.11,148.8a8,8,0,0,0-1.48,7.06,107.21,107.21,0,0,0,10.88,26.25,8,8,0,0,0,6,3.93l23.72,2.64q1.49,1.56,3,3L70,215.46a8,8,0,0,0,3.94,6,107.71,107.71,0,0,0,26.25,10.87,8,8,0,0,0,7.06-1.49L125.84,216q2.16.06,4.32,0l18.64,14.92a8,8,0,0,0,7.06,1.48,107.21,107.21,0,0,0,26.25-10.88,8,8,0,0,0,3.93-6l2.64-23.72q1.56-1.48,3-3L215.46,186a8,8,0,0,0,6-3.94,107.71,107.71,0,0,0,10.87-26.25,8,8,0,0,0-1.49-7.06Zm-16.1-6.5a73.93,73.93,0,0,1,0,8.68,8,8,0,0,0,1.74,5.48l14.19,17.73a91.57,91.57,0,0,1-6.23,15L187,173.11a8,8,0,0,0-5.1,2.64,74.11,74.11,0,0,1-6.14,6.14,8,8,0,0,0-2.64,5.1l-2.51,22.58a91.32,91.32,0,0,1-15,6.23l-17.74-14.19a8,8,0,0,0-5-1.75h-.48a73.93,73.93,0,0,1-8.68,0,8,8,0,0,0-5.48,1.74L100.45,215.8a91.57,91.57,0,0,1-15-6.23L82.89,187a8,8,0,0,0-2.64-5.1,74.11,74.11,0,0,1-6.14-6.14,8,8,0,0,0-5.1-2.64L46.43,170.6a91.32,91.32,0,0,1-6.23-15l14.19-17.74a8,8,0,0,0,1.74-5.48,73.93,73.93,0,0,1,0-8.68,8,8,0,0,0-1.74-5.48L40.2,100.45a91.57,91.57,0,0,1,6.23-15L69,82.89a8,8,0,0,0,5.1-2.64,74.11,74.11,0,0,1,6.14-6.14A8,8,0,0,0,82.89,69L85.4,46.43a91.32,91.32,0,0,1,15-6.23l17.74,14.19a8,8,0,0,0,5.48,1.74,73.93,73.93,0,0,1,8.68,0,8,8,0,0,0,5.48-1.74L155.55,40.2a91.57,91.57,0,0,1,15,6.23L173.11,69a8,8,0,0,0,2.64,5.1,74.11,74.11,0,0,1,6.14,6.14,8,8,0,0,0,5.1,2.64l22.58,2.51a91.32,91.32,0,0,1,6.23,15l-14.19,17.74A8,8,0,0,0,199.87,123.66Z"/></symbol>
+  <symbol id="i-play" viewBox="0 0 256 256" fill="currentColor"><path d="M232.4,114.49,88.32,26.35a16,16,0,0,0-16.2-.3A15.86,15.86,0,0,0,64,39.87V216.13A15.94,15.94,0,0,0,80,232a16.07,16.07,0,0,0,8.36-2.35L232.4,141.51a15.81,15.81,0,0,0,0-27ZM80,215.94V40l143.83,88Z"/></symbol>
+  <symbol id="i-magnifying-glass" viewBox="0 0 256 256" fill="currentColor"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"/></symbol>
+</svg>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="i-zeichen" viewBox="0 0 32 32"><rect width="32" height="32" rx="9" fill="currentColor"/><path d="M9 23V9h7a5 5 0 0 1 0 10h-4" fill="none" stroke="#14120f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></symbol><symbol id="i-zeiger" viewBox="0 0 16 16"><path d="M1 1l12 5-5 2-2 5z" fill="currentColor"/></symbol></svg>
+
+<header class="kopf">
+  <div class="wrap kopf__leiste">
+    <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
+      <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg>
+      <span>Markenname</span>
+    </a>
+    <nav class="kopf__nav" id="hauptnav" aria-label="Hauptnavigation" data-menue-ziel>
+      <ul class="kopf__menue">
+        <li><a href="#werkzeug">Werkzeuge</a></li>
+        <li><a href="#ablauf">Ablauf</a></li>
+        <li><a href="#anbindungen">Anbindungen</a></li>
+        <li><a href="#stimmen">Stimmen</a></li>
+        <li><a href="#preise">Preise</a></li>
+      </ul>
+    </nav>
+    <div class="kopf__rechts"><a class="kopf__login" href="#fuss">Anmelden</a><a class="knopf kopf__knopf" href="#abschluss">Kostenlos testen</a></div>
+    <button class="kopf__burger" type="button" data-menue aria-expanded="false" aria-controls="hauptnav">
+      <span class="sr-nur">Menü öffnen oder schließen</span>
+      <span class="burger" aria-hidden="true"></span>
+    </button>
+  </div>
+</header>
+
+<main id="inhalt">
+
+  <!-- 1. Held: heller Verlauf, riesige Überschrift, zwei Karten mit Editoransicht -->
+  <section class="held" aria-labelledby="h-held">
+    <div class="wrap held__innen">
+      <p class="kicker" data-zeig>Neu: Entwürfe gemeinsam in Echtzeit</p>
+      <h1 id="h-held" data-zeig>Aus Ideen werden Entwürfe, in wenigen Klicks.</h1>
+      <p class="held__text" data-zeig>Gestalten, Prototypen bauen und gemeinsam arbeiten, alles in einem Werkzeug. Dein Team gewinnt <strong>Tempo ohne Hektik</strong>, mit <strong>klarer Zusammenarbeit</strong> und viel Spielraum.</p>
+      <p data-zeig><a class="knopf knopf--gross" href="#abschluss"><span>Kostenlos starten</span><span class="knopf__kreis" aria-hidden="true"><svg width="18" height="18" focusable="false"><use href="#i-arrow-right"/></svg></span></a></p>
+    </div>
+    <div class="wrap held__karten" data-staffel>
+      <div class="editor editor--breit" data-zeig data-beispiel>
+        <div class="editor__leiste" aria-hidden="true"><svg width="22" height="22"><use href="#i-sparkle"/></svg><span class="editor__pfad">Agentur <i>/</i> <b>Portfolio</b></span><span class="avatare"><i>A</i><i>B</i><i>C</i></span><span class="editor__teilen">Teilen</span></div>
+        <div class="editor__rumpf">
+          <div class="editor__werkzeuge" aria-hidden="true"><i class="an"></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="editor__flaeche">
+            <span class="editor__label" aria-hidden="true">Startseite, Held</span>
+            <div class="editor__rahmen bild bild--dunkel" data-platzhalter="Bild: Vorschau einer Kundenseite im Editor">
+              <div class="vorschau" aria-hidden="true"><b>Markenzeichen</b><span>Haltbar, langlebig, sauber gebaut</span><i></i></div>
+            </div>
+            <span class="zeiger zeiger--a" aria-hidden="true"><svg width="16" height="16"><use href="#i-zeiger"/></svg><em>Anna</em></span>
+            <span class="zeiger zeiger--b" aria-hidden="true"><svg width="16" height="16"><use href="#i-zeiger"/></svg><em>Ben</em></span>
+          </div>
+        </div>
+      </div>
+      <div class="editor editor--schmal" data-zeig data-beispiel>
+        <p class="editor__titel" aria-hidden="true">Markenname.</p>
+        <div class="editor__objekt bild bild--gelb" data-platzhalter="Bild: Objekt auf Sockel, Rahmen markiert"></div>
+        <div class="editor__ausrichten" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Logoband -->
+  <section class="logos" aria-label="Beispiele für Kunden, Beispiellogos">
+    <div class="band" data-beispiel>
+      <div class="band__spur">
+        <span class="beispiellogo logo-nordwerk" role="img" aria-label="Nordwerk (Beispiel)"></span><span class="beispiellogo logo-lichtbau" role="img" aria-label="Lichtbau (Beispiel)"></span><span class="beispiellogo logo-talgrund" role="img" aria-label="Talgrund (Beispiel)"></span><span class="beispiellogo logo-fjordstein" role="img" aria-label="Fjordstein (Beispiel)"></span><span class="beispiellogo logo-kronwerk" role="img" aria-label="Kronwerk (Beispiel)"></span><span class="beispiellogo logo-sonnenfeld" role="img" aria-label="Sonnenfeld (Beispiel)"></span><span class="beispiellogo logo-mareal" role="img" aria-label="Mareal (Beispiel)"></span><span class="beispiellogo logo-quellwerk" role="img" aria-label="Quellwerk (Beispiel)"></span>
+      </div>
+      <div class="band__spur" aria-hidden="true">
+        <span class="beispiellogo logo-nordwerk"></span><span class="beispiellogo logo-lichtbau"></span><span class="beispiellogo logo-talgrund"></span><span class="beispiellogo logo-fjordstein"></span><span class="beispiellogo logo-kronwerk"></span><span class="beispiellogo logo-sonnenfeld"></span><span class="beispiellogo logo-mareal"></span><span class="beispiellogo logo-quellwerk"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Werkzeugkasten: drei gleiche Karten -->
+  <section class="sektion werkzeug" id="werkzeug" aria-labelledby="h-werkzeug">
+    <div class="wrap">
+      <header class="mitte">
+        <h2 id="h-werkzeug" data-zeig>Der Werkzeugkasten für Gestalter und Teams</h2>
+        <p class="mitte__text" data-zeig>Alles, was du zum Entwerfen, Testen und Abstimmen brauchst, in einer einzigen, einfachen Oberfläche.</p>
+      </header>
+      <div class="drei" data-staffel data-beispiel>
+        <article class="karte" data-zeig>
+          <div class="bild bild--rosa karte__bild" data-platzhalter="Bild: Werkzeugleiste und Farbfläche"><span class="deko-leiste" aria-hidden="true"><i></i><i></i><i></i><i class="an"></i><i></i></span></div>
+          <div class="karte__text"><h3>Editor zum Ziehen und Ablegen</h3><p>Gestalte ohne Umwege mit einer Oberfläche, die sich anfühlt wie Papier und Schere.</p></div>
+        </article>
+        <article class="karte" data-zeig>
+          <div class="bild bild--gelb karte__bild" data-platzhalter="Bild: Prototyp mit verbundenen Flächen"><span class="deko-fluss" aria-hidden="true"><i></i><i></i><i></i></span></div>
+          <div class="karte__text"><h3>Prototypen mit Klickstrecke</h3><p>Verwandle statische Entwürfe in anklickbare Abläufe, ohne eine Zeile Code zu schreiben.</p></div>
+        </article>
+        <article class="karte" data-zeig>
+          <div class="bild bild--blau karte__bild" data-platzhalter="Bild: Team um ein gemeinsames Dokument"><span class="deko-kreis" aria-hidden="true"><svg width="34" height="34"><use href="#i-chat-circle"/></svg></span></div>
+          <div class="karte__text"><h3>Zusammenarbeit in Echtzeit</h3><p>Arbeitet gleichzeitig am selben Entwurf und holt euch Rückmeldung, wenn sie gebraucht wird.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Ablauf: Überschrift und drei nummerierte Zeilen, rechts eine graue Fläche mit Editor -->
+  <section class="ablauf" id="ablauf" aria-labelledby="h-ablauf">
+    <div class="wrap ablauf__raster">
+      <div class="ablauf__text">
+        <h2 id="h-ablauf" data-zeig>Vereinfache deinen Ablauf</h2>
+        <ol class="ablauf__liste" data-staffel>
+          <li data-zeig><span class="ablauf__zahl" aria-hidden="true">01</span><div><h3>Projekt starten</h3><p>Lege einen neuen Entwurf an oder lade vorhandene Dateien hoch. Dein Arbeitsplatz steht in Sekunden.</p></div></li>
+          <li data-zeig><span class="ablauf__zahl" aria-hidden="true">02</span><div><h3>Mit Leichtigkeit gestalten</h3><p>Ziehe Bausteine auf die Fläche und passe sie an, bis das Bild stimmt.</p></div></li>
+          <li data-zeig><span class="ablauf__zahl" aria-hidden="true">03</span><div><h3>Exportieren und teilen</h3><p>Gib Ergebnisse an die Programme weiter, die dein Team ohnehin nutzt.</p></div></li>
+        </ol>
+      </div>
+      <div class="ablauf__flaeche" data-zeig="skala" data-beispiel>
+        <div class="editor editor--tief">
+          <div class="editor__leiste" aria-hidden="true"><svg width="22" height="22"><use href="#i-sparkle"/></svg><span class="editor__pfad">Agentur <i>/</i> <b>Portfolio</b></span><span class="avatare"><i>A</i><i>B</i></span><span class="editor__teilen">Teilen</span></div>
+          <div class="editor__rumpf editor__rumpf--seite">
+            <div class="editor__werkzeuge" aria-hidden="true"><i class="an"></i><i></i><i></i><i></i><i></i></div>
+            <div class="editor__flaeche editor__flaeche--mitte">
+              <div class="bild bild--blau-tief ablauf__telefon" data-platzhalter="Bild: Startbildschirm einer App"><p aria-hidden="true">Willkommen zurück, Alex.</p></div>
+            </div>
+            <div class="editor__eigenschaften" aria-hidden="true"><b>Position</b><span>X 228 &nbsp; Y 15</span><b>Aussehen</b><span>Deckkraft 100 %</span><b>Füllung</b><span>#FFFFFF</span><b>Export</b><span>PNG, SVG</span></div>
+          </div>
+        </div>
+        <p class="ablauf__sync">Abgleich mit deinen Programmen: <span class="mini" aria-hidden="true"><i></i><i></i><i></i><i></i></span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Anbindungen: Knotenbild mit gestrichelten Linien -->
+  <section class="sektion anbindungen" id="anbindungen" aria-labelledby="h-anbindungen">
+    <div class="wrap">
+      <header class="mitte">
+        <h2 id="h-anbindungen" data-zeig>Eine Plattform, unzählige Anbindungen</h2>
+        <p data-zeig><a class="knopf knopf--dunkel" href="#abschluss">Alle Anbindungen ansehen</a></p>
+      </header>
+      <div class="hub" aria-hidden="true" data-zeig="skala" data-beispiel>
+        <svg class="hub__linien" viewBox="0 0 100 100" preserveAspectRatio="none" focusable="false">
+          <path d="M50 50 C40 50 36 22 24 22"/><path d="M50 50 C40 50 36 50 24 50"/><path d="M50 50 C40 50 36 78 24 78"/>
+          <path d="M50 50 C60 50 64 22 76 22"/><path d="M50 50 C60 50 64 50 76 50"/><path d="M50 50 C60 50 64 78 76 78"/>
+        </svg>
+        <span class="hub__mitte"><svg width="40" height="40"><use href="#i-sparkle"/></svg></span>
+        <span class="hub__kachel k1" style="--x:24%;--y:22%"><svg width="28" height="28"><use href="#i-lightning"/></svg></span>
+        <span class="hub__kachel k2" style="--x:24%;--y:50%"><svg width="28" height="28"><use href="#i-globe"/></svg></span>
+        <span class="hub__kachel k3" style="--x:24%;--y:78%"><svg width="28" height="28"><use href="#i-package"/></svg></span>
+        <span class="hub__kachel k4" style="--x:76%;--y:22%"><svg width="28" height="28"><use href="#i-chat-circle"/></svg></span>
+        <span class="hub__kachel k5" style="--x:76%;--y:50%"><svg width="28" height="28"><use href="#i-wallet"/></svg></span>
+        <span class="hub__kachel k6" style="--x:76%;--y:78%"><svg width="28" height="28"><use href="#i-target"/></svg></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Vorteile: zwei große Karten, drei kleine -->
+  <section class="sektion vorteile" aria-labelledby="h-vorteile">
+    <div class="wrap">
+      <header class="mitte">
+        <h2 id="h-vorteile" data-zeig>Schalte deinen Ablauf mit neuen Funktionen frei</h2>
+      </header>
+      <div class="vorteile__raster" data-staffel data-beispiel>
+        <article class="karte karte--gross" data-zeig>
+          <div class="bild bild--rosa karte__bild karte__bild--hoch" data-platzhalter="Bild: Weltkarte mit zwei Cursorn"><span class="markierung markierung--a" aria-hidden="true">Anna</span><span class="markierung markierung--b" aria-hidden="true">Ben</span></div>
+          <div class="karte__text"><h3>Von überall erreichbar</h3><p>Öffne deine Projekte jederzeit und an jedem Ort, ohne Installation und ohne Wartezeit.</p></div>
+        </article>
+        <article class="karte karte--gross" data-zeig>
+          <div class="bild bild--gruen karte__bild karte__bild--hoch" data-platzhalter="Bild: Blitz und Schutzschild"><span class="deko-paar" aria-hidden="true"><svg width="64" height="64"><use href="#i-lightning"/></svg><svg width="64" height="64"><use href="#i-shield-check"/></svg></span></div>
+          <div class="karte__text"><h3>Schnell und sicher</h3><p>Hohe Geschwindigkeit, verschlüsselte Ablage und Versionsverlauf, damit nichts verloren geht.</p></div>
+        </article>
+        <article class="karte karte--klein" data-zeig><span class="ikone" aria-hidden="true"><svg width="24" height="24"><use href="#i-rocket-launch"/></svg></span><h3>Mühelos entwerfen</h3><p>Die Oberfläche und schlaue Helfer beschleunigen deinen kreativen Weg.</p></article>
+        <article class="karte karte--klein" data-zeig><span class="ikone" aria-hidden="true"><svg width="24" height="24"><use href="#i-gear"/></svg></span><h3>Prototypen ohne Aufwand</h3><p>Aus statischen Entwürfen werden in wenigen Klicks anklickbare Abläufe.</p></article>
+        <article class="karte karte--klein" data-zeig><span class="ikone" aria-hidden="true"><svg width="24" height="24"><use href="#i-download-simple"/></svg></span><h3>Export mit einem Klick</h3><p>Dateien, Maße und Übergabe für Entwickler, fertig vorbereitet.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Stimmen: links Überschrift, rechts Gesichter als Reiter -->
+  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen">
+    <div class="wrap stimmen__raster" data-reiter-satz data-beispiel>
+      <h2 id="h-stimmen" data-zeig>Beliebt bei Gestaltern und Teams</h2>
+      <div class="stimmen__rechts" data-zeig>
+        <div class="gesichter" role="tablist" aria-label="Stimmen auswählen">
+          <button type="button" role="tab" id="t-1" aria-controls="p-1" aria-selected="true"><span class="sr-nur">Stimme 1</span><span class="gesicht g1" aria-hidden="true">E</span></button>
+          <button type="button" role="tab" id="t-2" aria-controls="p-2" aria-selected="false" tabindex="-1"><span class="sr-nur">Stimme 2</span><span class="gesicht g2" aria-hidden="true">M</span></button>
+          <button type="button" role="tab" id="t-3" aria-controls="p-3" aria-selected="false" tabindex="-1"><span class="sr-nur">Stimme 3</span><span class="gesicht g3" aria-hidden="true">J</span></button>
+          <button type="button" role="tab" id="t-4" aria-controls="p-4" aria-selected="false" tabindex="-1"><span class="sr-nur">Stimme 4</span><span class="gesicht g4" aria-hidden="true">S</span></button>
+          <button type="button" role="tab" id="t-5" aria-controls="p-5" aria-selected="false" tabindex="-1"><span class="sr-nur">Stimme 5</span><span class="gesicht g5" aria-hidden="true">L</span></button>
+        </div>
+        <div class="stimme" role="tabpanel" id="p-1" aria-labelledby="t-1"><blockquote><p>Dieses Werkzeug hat verändert, wie unser Team zusammenarbeitet. Die Bearbeitung in Echtzeit und die Anbindungen machen alles viel runder.</p></blockquote><p class="stimme__name"><b>Beispielname Eins</b>, Gestaltung</p></div>
+        <div class="stimme" role="tabpanel" id="p-2" aria-labelledby="t-2"><blockquote><p>Vorher haben wir fünf Programme jongliert. Jetzt liegt alles an einem Ort, und Rückmeldungen landen direkt am Entwurf.</p></blockquote><p class="stimme__name"><b>Beispielname Zwei</b>, Produktleitung</p></div>
+        <div class="stimme" role="tabpanel" id="p-3" aria-labelledby="t-3"><blockquote><p>Als kleine Agentur zählt jede Stunde. Aus Entwurf wird Prototyp in einem Nachmittag, nicht in einer Woche.</p></blockquote><p class="stimme__name"><b>Beispielname Drei</b>, Agenturinhaberin</p></div>
+        <div class="stimme" role="tabpanel" id="p-4" aria-labelledby="t-4"><blockquote><p>Die Übergabe an die Entwicklung ist endlich ohne Rückfragen möglich. Maße, Farben und Dateien sind einfach da.</p></blockquote><p class="stimme__name"><b>Beispielname Vier</b>, Entwicklung</p></div>
+        <div class="stimme" role="tabpanel" id="p-5" aria-labelledby="t-5"><blockquote><p>Es ist zum Rückgrat unserer Entwurfsarbeit geworden. Neue Kolleginnen finden sich ohne Einweisung zurecht.</p></blockquote><p class="stimme__name"><b>Beispielname Fünf</b>, Teamleitung</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Preise -->
+  <section class="sektion preise" id="preise" aria-labelledby="h-preise">
+    <div class="wrap">
+      <header class="mitte">
+        <h2 id="h-preise" data-zeig>Tarife, die mit dir wachsen</h2>
+        <p class="mitte__text" data-zeig>Wähle einen Tarif, der zu dir passt. Starte kostenlos und wechsle jederzeit zu mehr Funktionen und Betreuung.</p>
+        <label class="schalter" data-zeig><span>Monatlich</span><input type="checkbox" role="switch" data-jahr><span class="schalter__spur" aria-hidden="true"></span><span>Jährlich <b class="schalter__rabatt">20 % Rabatt</b></span></label>
+      </header>
+      <div class="drei drei--preise" data-staffel data-preise data-beispiel>
+        <article class="tarif" data-zeig>
+          <div class="tarif__kopf"><div><h3>Starter</h3><p>Für Einzelne und neue Kreative.</p></div><p class="tarif__preis"><span class="zahl" data-preis data-monat="19" data-jahr-wert="15">19 €</span><span>/Monat</span></p></div>
+          <a class="knopf knopf--dunkel tarif__knopf" href="#abschluss">Loslegen</a>
+          <p class="tarif__titel">Enthalten:</p>
+          <ul class="tarif__liste"><li>1 aktives Projekt</li><li>Grundlegende Werkzeuge für die Zusammenarbeit</li><li>Begrenzte Prototypen</li><li>500 MB Speicher</li><li class="aus"><span class="sr-nur">Nicht enthalten: </span>Anbindungen an andere Programme</li><li class="aus"><span class="sr-nur">Nicht enthalten: </span>Hilfe durch die Gemeinschaft</li></ul>
+        </article>
+        <article class="tarif tarif--haupt" data-zeig>
+          <div class="tarif__kopf"><div><h3>Profi</h3><p>Für Freiberufler und kleine Teams.</p></div><p class="tarif__preis"><span class="zahl" data-preis data-monat="49" data-jahr-wert="39">49 €</span><span>/Monat</span></p></div>
+          <a class="knopf tarif__knopf" href="#abschluss">Loslegen</a>
+          <p class="tarif__titel">Enthalten:</p>
+          <ul class="tarif__liste"><li>Unbegrenzt viele Projekte</li><li>Zusammenarbeit in Echtzeit</li><li>Erweiterte Prototypen</li><li>Cloud mit Versionsverlauf</li><li>Anbindungen an andere Programme</li><li class="aus"><span class="sr-nur">Nicht enthalten: </span>Rückruf und Chat</li></ul>
+        </article>
+        <article class="tarif" data-zeig>
+          <div class="tarif__kopf"><div><h3>Business</h3><p>Für wachsende Teams und Agenturen.</p></div><p class="tarif__preis"><span class="zahl" data-preis data-monat="79" data-jahr-wert="63">79 €</span><span>/Monat</span></p></div>
+          <a class="knopf knopf--dunkel tarif__knopf" href="#abschluss">Loslegen</a>
+          <p class="tarif__titel">Enthalten:</p>
+          <ul class="tarif__liste"><li>Alles aus Profi</li><li>Teamverwaltung und Rechte</li><li>Erweiterte Sicherheitsregeln</li><li>Bevorzugte Anbindungen und Schnittstelle</li><li>Erweiterter Speicher</li><li>Betreuung rund um die Uhr</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. App: graue Fläche mit Telefon links, Text rechts -->
+  <section class="app" aria-labelledby="h-app">
+    <div class="wrap app__raster">
+      <div class="app__bild" data-zeig="links" data-beispiel>
+        <div class="telefon"><p class="telefon__titel" aria-hidden="true">Markenname</p><div class="bild bild--dunkel-karte telefon__bild" data-platzhalter="Bild: Bildschirm einer Bestell-App"><p aria-hidden="true">Willkommen in unserem Laden</p></div></div>
+        <div class="farbfeld" aria-hidden="true"><b>Farbstil</b><span><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+      </div>
+      <div class="app__text" data-zeig="rechts">
+        <h2 id="h-app">Die passende Lösung für jeden Ablauf</h2>
+        <p>Entdecke, wie sich das Werkzeug in deinen Alltag fügt, egal ob du freiberuflich arbeitest, ein Start-up führst oder in einem Konzern gestaltest.</p>
+        <ul class="app__liste" data-beispiel>
+          <li><svg width="18" height="18" aria-hidden="true"><use href="#i-arrow-right"/></svg>Gestaltung und Produkt</li>
+          <li><svg width="18" height="18" aria-hidden="true"><use href="#i-arrow-right"/></svg>Marketing Teams</li>
+          <li><svg width="18" height="18" aria-hidden="true"><use href="#i-arrow-right"/></svg>App und Web Entwicklung</li>
+          <li><svg width="18" height="18" aria-hidden="true"><use href="#i-arrow-right"/></svg>Produktteams</li>
+          <li><svg width="18" height="18" aria-hidden="true"><use href="#i-arrow-right"/></svg>Große Organisationen</li>
+          <li><svg width="18" height="18" aria-hidden="true"><use href="#i-arrow-right"/></svg>Agenturen</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Abschluss: Verlauf, zentrierter Aufruf, Editor ragt in den Fuß -->
+  <section class="abschluss" id="abschluss" aria-labelledby="h-abschluss">
+    <div class="wrap">
+      <div class="abschluss__text">
+        <h2 id="h-abschluss" data-zeig>Bring deinen kreativen Ablauf auf die nächste Stufe</h2>
+        <p data-zeig>Beschleunige deine Arbeit mit starken Werkzeugen und müheloser Zusammenarbeit, gedacht für Freiberufler und Teams.</p>
+        <p class="abschluss__knoepfe" data-zeig><a class="knopf knopf--gross" href="#top"><span>Kostenlos starten</span></a><a class="rund" href="#fuss" aria-label="Für Web herunterladen (Beispiel)"><svg width="22" height="22" aria-hidden="true"><use href="#i-desktop"/></svg></a><a class="rund" href="#fuss" aria-label="Für Mobilgeräte herunterladen (Beispiel)"><svg width="22" height="22" aria-hidden="true"><use href="#i-device-mobile"/></svg></a></p>
+      </div>
+      <div class="editor editor--gross" data-zeig data-beispiel>
+        <div class="editor__leiste" aria-hidden="true"><svg width="22" height="22"><use href="#i-sparkle"/></svg><span class="editor__pfad">Agentur <i>/</i> <b>Portfolio</b></span><span class="avatare"><i>A</i><i>B</i></span><span class="editor__teilen">Teilen</span></div>
+        <div class="editor__rumpf editor__rumpf--seite">
+          <div class="editor__ebenen" aria-hidden="true"><b>Ebenen</b><span>Seiten</span><span class="eins">Seite 1</span><span class="eins">Seite 2</span><span>Rechteck</span><span>Rahmen</span><span class="eins">Text hier</span></div>
+          <div class="editor__flaeche editor__flaeche--mitte"><div class="bild bild--rosa ablauf__telefon abschluss__vorschau" data-platzhalter="Bild: Entwurf im Editor"><p aria-hidden="true">Markenname.</p></div></div>
+          <div class="editor__eigenschaften" aria-hidden="true"><b>Position</b><span>X 226 &nbsp; Y 15</span><b>Maße</b><span>B 226 &nbsp; H 15</span><b>Füllung</b><span>#FFFFFF</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="fuss" id="fuss">
+  <div class="wrap fuss__innen">
+    <div class="fuss__marke">
+      <a class="kopf__logo" href="#top" aria-label="Markenname, nach oben">
+        <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg>
+        <span>Markenname</span>
+      </a>
+      <p>Ein Werkzeug, das Gestaltung leichter macht und Teams zusammenbringt.</p>
+      <p class="fuss__klein">© Jahr Markenname. Alle Rechte vorbehalten.</p>
+    </div>
+    <nav class="fuss__spalten" aria-label="Fußnavigation">
+      <div><p class="fuss__titel">Seiten</p><ul><li><a href="#top">Start</a></li><li><a href="#werkzeug">Werkzeuge</a></li><li><a href="#ablauf">Ablauf</a></li><li><a href="#preise">Preise</a></li><li><a href="#stimmen">Stimmen</a></li></ul></div>
+      <div><p class="fuss__titel">Rechtliches</p><ul><li><a href="#fuss">Impressum</a></li><li><a href="#fuss">Datenschutz</a></li><li><a href="#fuss">Allgemeine Bedingungen</a></li></ul></div>
+      <div><p class="fuss__titel">Folgen</p><ul><li><a href="#fuss">Netzwerk A (Beispiel)</a></li><li><a href="#fuss">Netzwerk B (Beispiel)</a></li><li><a href="#fuss">Netzwerk C (Beispiel)</a></li></ul></div>
+    </nav>
+  </div>
+  <p class="fuss__telefon">Fragen? <a href="tel:+490000000000" data-beispiel>0000 000 000</a></p>
+</footer>
+
+<script src="../_basis/bewegung.js"></script>
+<script src="stil.js"></script>
+</body>
+</html>

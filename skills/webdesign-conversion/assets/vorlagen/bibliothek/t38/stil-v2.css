@@ -1,0 +1,148 @@
+/* stil-v2.css der Vorlage "Studio mit Terminbuchung": Aufbau der Variante 2 (v2.html), geladen nach stil.css.
+   Farben und Radien kommen aus marke.css. */
+.mitte{text-align:center;margin-top:clamp(2rem,4vw,3rem)}
+.textlink--hell{color:var(--text-auf-dunkel);gap:.5rem}
+
+/* Held Vollbild */
+.held2{position:relative;isolation:isolate;display:flex;align-items:center;min-height:min(44rem,calc(100svh - var(--kopf-h) - 3.5rem));padding-block:clamp(3rem,8vw,6rem);color:var(--text-auf-dunkel);overflow:hidden;background:var(--flaeche-dunkel)}
+.held2__bild{position:absolute;inset:-6% 0;z-index:-2;border-radius:0;--bild-grund:radial-gradient(55% 70% at 78% 35%,color-mix(in srgb,var(--ton-3) 70%,transparent),transparent 70%),linear-gradient(150deg,var(--ton-2),var(--ton-6))}
+.held2__bild::after{display:none}
+.held2__schleier{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,color-mix(in srgb,var(--flaeche-dunkel) 92%,transparent) 0%,color-mix(in srgb,var(--flaeche-dunkel) 70%,transparent) 55%,color-mix(in srgb,var(--flaeche-dunkel) 25%,transparent) 100%)}
+.held2__innen{display:grid;gap:1.5rem;justify-items:start}
+.held2__innen h1{max-width:13ch}
+.held2__innen p:not(.held2__knoepfe){max-width:32rem;font-size:var(--text-l);color:var(--text-leise-dunkel)}
+.held2__knoepfe{display:flex;flex-wrap:wrap;align-items:center;gap:1.25rem 2rem}
+
+/* Laufband */
+.laufband{background:var(--akzent);color:var(--akzent-text);padding-block:1rem;overflow:hidden}
+.laufband .band{--band-abstand:3rem}
+.laufband li{display:inline-flex;align-items:center;gap:.7rem;white-space:nowrap;font-weight:600;font-size:1.05rem}
+.laufband .band__spur{list-style:none;margin:0;padding:0}
+
+/* Über uns */
+.ueber2__raster{display:grid;gap:2.5rem;align-items:center}
+.ueber2__text{display:grid;gap:1.25rem;justify-items:start}
+.ueber2__text>p{color:var(--text-leise);font-size:var(--text-l);max-width:28rem}
+.ueber2__liste{display:grid;gap:.6rem;padding-left:1.25rem;list-style:disc;max-width:28rem}
+.ueber2__liste li{padding-left:.25rem}
+.ueber2__liste li::marker{color:var(--akzent-tief)}
+.ueber2__bild{aspect-ratio:4/3;--umgebung:var(--flaeche);--bild-grund:var(--lichter),linear-gradient(160deg,var(--ton-3),var(--ton-6))}
+
+/* Kennzahlen */
+.zahlen2{padding-block:clamp(1.5rem,4vw,3rem) clamp(3rem,7vw,6rem)}
+.zahlen2__liste{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem 0;margin-block:0;text-align:center}
+.zahlen2__liste>div{display:flex;flex-direction:column-reverse;gap:.4rem;padding-inline:1rem}
+.zahlen2__liste dt{color:var(--text-leise)}
+.zahlen2__liste dd{margin:0;font-family:var(--schrift-titel);font-weight:600;font-size:clamp(2.75rem,1.8rem + 4vw,4.5rem);line-height:1;letter-spacing:-.03em}
+.zahlen2__liste b{color:var(--akzent-tief);font-weight:600}
+.zahlen2__liste>div:nth-child(even){border-left:1px solid var(--linie)}
+
+/* Hauptleistungen */
+.leistungen2__feld{display:grid;gap:clamp(1.75rem,4vw,2.5rem);padding:clamp(1.5rem,4vw,3rem);border-radius:var(--radius-gross);background:var(--flaeche-dunkel);color:var(--text-auf-dunkel)}
+.leistungen2__feld h2{text-align:center}
+.leistungen2__raster{display:grid;gap:1rem}
+.leistung2{display:flex;gap:1.1rem;align-items:center;padding:1.1rem;border-radius:var(--radius-karte);background:var(--flaeche-alt);color:var(--text)}
+.leistung2 .bild{flex:none;width:6.5rem;aspect-ratio:1;border-radius:14px}
+.leistung2 .bild::after{display:none}
+.leistung2 h3{margin-bottom:.35rem}
+.leistung2 p{color:var(--text-leise);font-size:.98rem}
+.leistung2__link{display:inline-flex;align-items:center;gap:.4rem;margin-top:.5rem;min-height:2.75rem;font-weight:600;color:var(--akzent-tief)}
+.leistung2__link:hover{gap:.7rem}
+.leistungen2__feld .mitte{margin:0}
+
+/* Ablauf und Formular */
+.termin2__raster{display:grid;gap:2.5rem;align-items:center}
+.termin2__schritte{display:grid;gap:2rem}
+.nummern{display:grid;gap:1.75rem}
+.nummern li{display:flex;gap:1rem;align-items:flex-start}
+.nummern__zahl{display:inline-flex;flex:none;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border-radius:50%;font-weight:700;background:var(--akzent);color:var(--akzent-text)}
+.nummern__zahl--2{background:var(--flaeche-dunkel);color:var(--text-auf-dunkel)}
+.nummern__zahl--3{background:var(--flaeche-alt);color:var(--text);box-shadow:inset 0 0 0 1px var(--linie)}
+.nummern h3{font-size:1.15rem;margin-bottom:.3rem;font-weight:600}
+.nummern p{color:var(--text-leise)}
+.formkarte{position:relative;padding:clamp(1.5rem,3vw,2.5rem);border-radius:var(--radius-karte);background:var(--flaeche-alt);box-shadow:0 1px 0 var(--linie)}
+.formkarte h3{font-size:clamp(1.5rem,1.2rem + 1vw,2rem);margin-bottom:1.25rem;padding-right:6rem}
+.siegel-rund--ecke{left:auto;right:-.5rem;top:-2rem;bottom:auto;width:7rem}
+.formular{display:grid;gap:1rem;grid-template-columns:1fr}
+.formular__feld{display:grid;gap:.35rem}
+.formular label{font-weight:500;font-size:.95rem}
+.formular input,.formular select{width:100%;min-height:3rem;padding:.7rem .9rem;border:0;border-radius:10px;background:color-mix(in srgb,var(--text) 7%,var(--flaeche-alt));color:var(--text);font:inherit;box-shadow:inset 0 0 0 1px var(--linie)}
+.formular input:focus-visible,.formular select:focus-visible{outline:3px solid var(--akzent-tief);outline-offset:2px}
+.formular__recht{font-size:.9rem;color:var(--text-leise)}
+.formular__recht a{text-decoration:underline}
+.formular__senden{width:100%;justify-content:center}
+.formular__meldung{padding:.8rem 1rem;border-radius:10px;background:var(--sand);color:var(--text)}
+
+/* Willkommensangebot */
+.willkommen{padding-block:clamp(2rem,5vw,4rem) clamp(1rem,3vw,2rem)}
+.willkommen__feld{position:relative;display:grid;gap:1.5rem;padding:clamp(1.5rem,4vw,3rem);border-radius:var(--radius-karte);background:var(--flaeche-dunkel);color:var(--text-auf-dunkel);text-align:center;justify-items:center}
+.willkommen__text{display:grid;gap:1rem;justify-items:center;max-width:26rem}
+.willkommen__text h2{font-size:clamp(1.6rem,1.2rem + 1.6vw,2.4rem);font-weight:500;line-height:1.2}
+.willkommen__text h2 span{color:var(--akzent)}
+.willkommen__text p{color:var(--text-leise-dunkel)}
+.willkommen__bild{width:min(100%,16rem);aspect-ratio:1;border-radius:var(--radius-bild)}
+.willkommen__bild--a{--bild-grund:var(--lichter),linear-gradient(160deg,var(--ton-5),var(--ton-6))}
+.willkommen__bild--b{--bild-grund:var(--lichter),linear-gradient(160deg,var(--ton-3),var(--ton-4))}
+
+/* Preisliste */
+.reiterliste{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;margin-bottom:1.5rem}
+.reiterliste[hidden]{display:none}
+.reiterliste [role="tab"]{display:inline-flex;align-items:center;min-height:2.75rem;padding:.5rem 1.1rem;border-radius:10px;background:var(--flaeche-alt);font-weight:600;transition:background-color var(--dauer-kurz),transform var(--dauer-kurz) var(--kurve)}
+.reiterliste [role="tab"]:hover{background:color-mix(in srgb,var(--akzent) 30%,var(--flaeche-alt))}
+.reiterliste [role="tab"][aria-selected="true"]{background:var(--akzent);color:var(--akzent-text)}
+.preistafel{display:grid;gap:1.5rem}
+.js .preistafel{gap:0}
+.preis-panel{padding:clamp(1rem,3vw,2rem);border-radius:var(--radius-karte);background:var(--flaeche-alt)}
+.preis-panel[hidden]{display:none}
+.preis-panel__titel{font-size:1.5rem;margin-bottom:.5rem}
+.js .preis-panel__titel{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;margin:0}
+.preisliste{display:grid;margin:0}
+.preisliste>div{display:grid;gap:.25rem .5rem;padding-block:1.1rem;border-bottom:1px solid var(--linie);align-items:baseline}
+.preisliste>div:last-child{border-bottom:0}
+.preisliste dt{font-weight:700;font-family:var(--schrift-titel)}
+.preisliste dd{margin:0}
+.preisliste__text{color:var(--text-leise)}
+.preisliste__preis{font-weight:600}
+
+/* Aufruf in Sand */
+.aufruf2{padding-block:clamp(1rem,3vw,2rem) 0}
+.aufruf2__feld{position:relative;display:grid;gap:1rem;border-radius:var(--radius-karte);background:var(--sand);overflow:hidden;padding:clamp(1.75rem,4vw,3.5rem) clamp(1.5rem,4vw,3.5rem) 0}
+.aufruf2__text{display:grid;gap:1.1rem;justify-items:start;max-width:30rem}
+.aufruf2__text p:not(:last-child){color:var(--text-leise)}
+.aufruf2__bild{min-height:20rem;width:min(100%,24rem);justify-self:center;border-radius:var(--radius-karte) var(--radius-karte) 0 0;--bild-grund:var(--lichter),linear-gradient(170deg,var(--ton-1),var(--ton-6))}
+
+/* Ratgeber */
+.ratgeber__kopf{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:clamp(1.5rem,4vw,2.5rem)}
+.ratgeber__raster{display:grid;gap:1.25rem}
+.beitrag{display:grid;grid-template-columns:minmax(0,1fr);grid-template-areas:"text" "bild" "knopf";gap:1.25rem 1.25rem;padding:1.25rem;border-radius:var(--radius-karte);background:var(--flaeche-alt);align-items:start}
+.beitrag>div:first-child{grid-area:text}
+.beitrag>a{grid-area:knopf;align-self:end;justify-self:start}
+.beitrag .bild{grid-area:bild;aspect-ratio:4/3;align-self:stretch;min-height:8rem;border-radius:14px}
+.beitrag .bild::after{display:none}
+.beitrag__datum{font-size:.95rem;color:var(--text-leise);margin-bottom:.5rem}
+
+@media (min-width:40rem){
+  .zahlen2__liste{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .zahlen2__liste>div+div{border-left:1px solid var(--linie)}
+  .leistungen2__raster{grid-template-columns:1fr 1fr}
+  .formular{grid-template-columns:1fr 1fr}
+  .formular__feld--breit{grid-column:1/-1}
+  .preisliste>div{grid-template-columns:minmax(8rem,1fr) minmax(0,2.4fr) auto;gap:1.5rem}
+  .preisliste__preis{text-align:right;min-width:7rem}
+  .ratgeber__raster{grid-template-columns:1fr 1fr}
+}
+@media (min-width:48rem){
+  .beitrag{grid-template-columns:minmax(0,1fr) minmax(8rem,38%);grid-template-areas:"text bild" "knopf bild"}
+}
+@media (min-width:56rem){
+  .ueber2__raster{grid-template-columns:1fr 1.1fr;gap:clamp(2rem,6vw,6rem)}
+  .termin2__raster{grid-template-columns:1fr 1.1fr;gap:clamp(2rem,6vw,6rem)}
+  .willkommen__feld{grid-template-columns:1fr 1.2fr 1fr;align-items:center;min-height:21rem;padding-block:4rem}
+  .willkommen__bild{position:absolute;width:clamp(11rem,18vw,16rem)}
+  .willkommen__bild--a{left:clamp(1.5rem,4vw,3rem);top:-1.5rem}
+  .willkommen__bild--b{right:clamp(1.5rem,4vw,3rem);bottom:-2.5rem}
+  .willkommen__text{grid-column:2}
+  .aufruf2__feld{grid-template-columns:1.2fr 1fr;align-items:end}
+  .aufruf2__text{padding-bottom:clamp(2rem,5vw,4rem);align-self:center}
+  .aufruf2__bild{justify-self:end;width:min(100%,26rem);min-height:24rem}
+}

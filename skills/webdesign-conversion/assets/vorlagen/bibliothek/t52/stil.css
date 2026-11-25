@@ -61,10 +61,10 @@ h2{font-size:clamp(1.9rem,1rem + 3.2vw,3.5rem);font-weight:500;line-height:1.1;l
 /* Held: gerahmtes Vollbild, Text unten links */
 .held{position:relative;margin:var(--rahmen);min-height:max(34rem,calc(100svh - 2 * var(--rahmen)));display:flex;align-items:flex-end;overflow:hidden;border-radius:var(--radius-karte);background:var(--flaeche-dunkel);color:var(--text-auf-dunkel)}
 .held__bild{position:absolute;inset:-3rem 0;border-radius:0;--bild-grund:linear-gradient(115deg,#121821 0%,#33414f 45%,#7a8794 100%)}
-.held__bild[data-platzhalter]::after{inset:6rem 1rem auto auto;color:#fff}
+.held__bild[data-platzhalter]::after{inset:auto 1.5rem 5rem auto;color:#fff}
 .held__schleier{position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,13,18,.82),rgba(10,13,18,.25) 60%,rgba(10,13,18,.35))}
 .held__dunkel{position:absolute;inset:0;background:#080a0e;opacity:calc(var(--dunkel,0) * .6)}
-.held__innen{position:relative;z-index:1;padding-block:7rem clamp(1.5rem,4vw,3rem);width:min(100% - 2 * (var(--rand) + .5rem),var(--breite))}
+.held__innen{position:relative;z-index:1;margin-inline:auto;padding-block:7rem clamp(1.5rem,4vw,3rem);width:min(100% - 2 * (var(--rand) + .5rem),var(--breite))}
 .held__chip{display:inline-flex;align-items:center;gap:.6rem;padding:.4rem .9rem;border-radius:.3rem;background:color-mix(in srgb,#000 45%,transparent);font-size:1rem;text-transform:uppercase}
 .held__chip::before{content:"";width:.5rem;height:.5rem;border-radius:50%;background:currentColor}
 .held h1{max-width:16ch;margin-top:1.25rem;font-size:clamp(2.5rem,1rem + 6vw,5.5rem);font-weight:600;line-height:1.02;letter-spacing:-.04em}
@@ -125,7 +125,7 @@ h2{font-size:clamp(1.9rem,1rem + 3.2vw,3.5rem);font-weight:500;line-height:1.1;l
 .kachel p{font-size:1.125rem}
 .kachel--blau{background:linear-gradient(160deg,#0b1730,#1d2a44 60%,#123a6b);color:var(--text-auf-dunkel)}
 .kachel--dunkel{background:var(--flaeche-dunkel);color:var(--text-auf-dunkel)}
-.kachel--bild{min-height:15rem;padding:0}
+.kachel--bild{min-height:15rem;padding:0;background:var(--bild-grund)}
 .kachel--bild.bild{border-radius:var(--radius-karte)}
 .kachel--breit{grid-column:1/-1}
 .kachel:nth-child(2){--bild-grund:linear-gradient(160deg,#9aa5b1,#33414f)}

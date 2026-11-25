@@ -65,7 +65,8 @@ h3{font-size:var(--h3);line-height:1.15}
   .kopf__burger,.js .kopf__burger{display:none}
   .js .kopf__menue{flex-direction:row}
   .kopf__menue{flex-wrap:nowrap;gap:.25rem}
-  .kopf__tel,.js }
+  .kopf__tel{display:none}
+}
 
 /* Dunkle Bühne (Held und Aufruf): abgerundete Fläche mit Lichtschein, Abstand zum Rand */
 .buehne{position:relative;margin:.75rem;border-radius:var(--radius-gross);overflow:hidden;isolation:isolate;
@@ -112,7 +113,7 @@ h3{font-size:var(--h3);line-height:1.15}
 .js .ist-da .balken i,.js .balken.ist-da i{transform:none}
 .monate{display:flex;justify-content:space-between;margin-top:.5rem;font-size:.875rem;color:var(--text-leise)}
 .ring{--p:70;position:relative;display:grid;place-items:center;flex:none;width:var(--d,3.5rem);aspect-ratio:1;border-radius:50%;background:conic-gradient(var(--f,var(--akzent-tief)) calc(var(--p) * 1%),color-mix(in srgb,var(--text) 10%,transparent) 0)}
-.ring::after{content:"";position:absolute;inset:.45rem;border-radius:50%;background:var(--ring-innen,var(--flaeche-karte))}
+.ring::after{content:"";position:absolute;inset:var(--wand,.45rem);border-radius:50%;background:var(--ring-innen,var(--flaeche-karte))}
 
 /* Bankkarte (Kartenmotiv aus Flächen, kein Foto) */
 .bankkarte{container-type:inline-size;position:relative;display:flex;flex-direction:column;justify-content:space-between;width:100%;max-width:23rem;aspect-ratio:5/7.2;padding:clamp(1.1rem,3vw,1.75rem);border-radius:26px;color:#fff;background:var(--karte,linear-gradient(150deg,var(--ton-2),var(--ton-1) 62%,var(--ton-3)));box-shadow:0 40px 70px -34px #000}
@@ -192,3 +193,12 @@ h3{font-size:var(--h3);line-height:1.15}
 .eb__zeichen{display:block}
 .bankkarte--signal{--karte:linear-gradient(150deg,var(--signal),#c9496a 55%,var(--ton-1))}
 .sr-sichtbar{position:static}
+.iconkachel--dunkel{background:var(--knopf);color:var(--akzent)}
+.titel-link{display:flex;align-items:center;gap:.6rem;margin-bottom:.75rem;font-size:var(--text-l);letter-spacing:-.02em}
+.paar{display:grid;gap:1.25rem;width:100%;padding-top:1.75rem;border-top:1px solid var(--linie)}
+.paar li{display:flex;align-items:center;gap:1rem;font-family:var(--schrift-titel);font-weight:500;font-size:var(--text-l);line-height:1.2}
+@media (min-width:62rem){.paar{grid-template-columns:1fr 1fr}}
+.held__beleg{display:grid;gap:1rem}
+.haken{display:grid;grid-template-columns:1fr 1fr;gap:1rem 1.5rem}
+.haken li{display:flex;align-items:center;gap:.6rem}
+.haken svg{color:var(--akzent);flex:none}

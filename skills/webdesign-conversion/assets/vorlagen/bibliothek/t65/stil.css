@@ -53,14 +53,14 @@ small{font-size:1rem}
 .kopf__knopf{display:none;min-height:2.75rem;padding:.4rem 1.1rem;white-space:nowrap}
 .kopf__nav{order:5;flex-basis:100%}
 .kopf__menue{display:flex;flex-wrap:wrap;gap:0 .25rem}
-.kopf__menue a{display:flex;align-items:center;min-height:2.75rem;padding-inline:.75rem;border-radius:10px;font-weight:500;transition:color var(--dauer-kurz)}
+.kopf__menue a{white-space:nowrap;display:flex;align-items:center;min-height:2.75rem;padding-inline:.75rem;border-radius:10px;font-weight:500;transition:color var(--dauer-kurz)}
 .kopf__menue a:hover{color:var(--akzent-tief)}
 nav a[aria-current="location"]{text-decoration:none;color:var(--akzent-tief)}
 .js .kopf__nav{position:absolute;top:calc(100% + .5rem);left:0;right:0;padding:.5rem 1rem 1rem;border-radius:var(--radius-karte);background:var(--karte);box-shadow:inset 0 0 0 1px var(--linie),0 18px 32px color-mix(in srgb,var(--text) 14%,transparent)}
 .js .kopf__nav:not([data-offen="true"]){display:none}
 .js .kopf__menue{flex-direction:column}
 .js .kopf__menue a{min-height:3rem}
-@media (min-width:60rem){
+@media (min-width:72rem){
   .kopf__knopf{display:inline-flex;order:6}
   .kopf__burger,.js .kopf__burger{display:none}
   .kopf__tel{display:none}
@@ -93,7 +93,7 @@ nav a[aria-current="location"]{text-decoration:none;color:var(--akzent-tief)}
 .leistung h3 a::after{content:"";position:absolute;left:-1rem;right:-1rem;top:-14rem;bottom:-5rem}
 .leistung p{margin:.75rem auto 0;max-width:30ch;color:var(--text-leise)}
 .leistung__bild{transition:transform var(--dauer-mittel) var(--kurve)}
-.leistung:hover .leistung__bild{transform:scale(1.02)}
+@media (hover:hover) and (pointer:fine){.leistung:hover .leistung__bild{transform:scale(1.02)}}
 .leistung{position:relative}
 @media (min-width:48rem){.leistungen__raster{grid-template-columns:repeat(3,1fr)}.leistung p{max-width:26ch}}
 
@@ -103,7 +103,7 @@ nav a[aria-current="location"]{text-decoration:none;color:var(--akzent-tief)}
 .schwerpunkte__reihe{position:absolute;left:0;right:0;--band-abstand:1.25rem;--band-dauer:44s;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
 .schwerpunkte__reihe--oben{top:calc(50% - 3.9rem)}
 .schwerpunkte__reihe--unten{top:calc(50% + .9rem)}
-.schwerpunkte__reihe--unten .band__spur{animation-direction:reverse;animation-duration:52s}
+.schwerpunkte__reihe--unten .band__spur{animation-direction:reverse;animation-duration:52s} /* bewusst langsam: große, nicht bediente Fläche */
 .band__spur{margin:0;padding:0;list-style:none}
 .schild{display:inline-flex;align-items:center;gap:.65rem;min-height:3rem;padding:.4rem 1rem;border-radius:12px;background:var(--karte);box-shadow:inset 0 0 0 1px var(--linie);color:var(--text);white-space:nowrap}
 .schild svg{color:var(--akzent-tief)}
@@ -173,9 +173,9 @@ nav a[aria-current="location"]{text-decoration:none;color:var(--akzent-tief)}
   .ueber__raster{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:4rem;align-items:start}
   .ueber__inhalt{min-height:30rem;justify-content:flex-start}
   .ueber--stick{padding-block:0;height:300vh}
-  .ueber--stick .ueber__raster{position:sticky;top:0;height:100vh;align-items:center}
+  .ueber--stick .ueber__raster{position:sticky;top:0;height:100vh;height:100svh;align-items:center}
   .ueber--stick .ueber__liste{display:grid;margin-top:1rem;min-height:11rem;width:100%}
-  .ueber--stick .aussage{grid-area:1/1;opacity:0;transform:translateY(16px);transition:opacity .4s var(--kurve),transform .4s var(--kurve);pointer-events:none}
+  .ueber--stick .aussage{grid-area:1/1;opacity:0;transform:translateY(16px);transition:opacity .28s var(--kurve),transform .28s var(--kurve);pointer-events:none}
   .ueber--stick .aussage.ist-aktiv{opacity:1;transform:none;pointer-events:auto}
   .ueber--stick .ueber__inhalt{min-height:0}
   .ueber--stick .ueber__anzeige{display:flex;flex-direction:column;gap:.4rem;position:absolute;right:0;top:50%;transform:translateY(-50%)}

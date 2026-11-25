@@ -55,7 +55,7 @@ header.mitte h2{max-width:18ch}
 .team__karte::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,color-mix(in srgb,var(--flaeche-dunkel) 92%,transparent),transparent 55%)}
 .team__name,.team__karte .rund{position:relative;z-index:2}
 .team__name h3{font-size:clamp(1.5rem,1.2rem + 1vw,2rem)}
-.team__karte .rund:hover{transform:translate(2px,-2px)}
+@media (hover:hover){.team__karte .rund:hover{transform:translate(2px,-2px)}}
 @media (min-width:48rem){.team__raster{grid-template-columns:repeat(3,1fr)}}
 
 /* 5. Warum wir */
