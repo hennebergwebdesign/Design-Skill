@@ -299,3 +299,7 @@ body{overflow-x:clip}
   .schiene__liste{scroll-behavior:auto}
   .stimme:hover,.lkarte:hover,.pkarte:hover,.schritt:hover,.wkarte:hover,.beitrag a:hover .beitrag__bild,.knopf:hover,.taste:hover:not(:disabled){transform:none}
 }
+
+/* Fotos statt Platzhalterverläufe */
+.bild__foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.held__bild .bild__foto{filter:brightness(.8)}
