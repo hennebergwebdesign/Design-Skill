@@ -67,6 +67,7 @@ h3{font-size:var(--h3);line-height:1.2}
 .held__strahlen{width:3.25rem;height:auto;margin:0 auto -.5rem;color:var(--text)}
 .held h1{font-weight:300;text-transform:uppercase;font-size:clamp(2.2rem,.6rem + 10.2vw,10.5rem);line-height:1;letter-spacing:-.01em}
 .held__unter{margin-top:.5rem;font-family:var(--schrift-titel);font-size:clamp(1.25rem,1rem + 1.2vw,2.25rem);text-transform:uppercase;letter-spacing:.02em}
+.held__cta{margin-top:1.25rem}
 .held__hinweis{position:relative;width:1px;height:3.5rem;margin:2rem auto 0;background:var(--linie)}
 .held__hinweis::after{content:"";position:absolute;left:-2px;top:0;width:5px;height:5px;border-radius:50%;background:var(--text);animation:fallen 2.2s var(--kurve) infinite}
 @keyframes fallen{0%{transform:translateY(0);opacity:0}15%{opacity:1}100%{transform:translateY(3.4rem);opacity:0}}

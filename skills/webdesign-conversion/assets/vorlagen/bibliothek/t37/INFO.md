@@ -29,4 +29,9 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent` auf `--flaech
 Beispielwerte (Bewertung, Abschlussquote, Preise, Namen, Stimmen, Adresse) sind Beispiele, keine Belege. Siegel wie "staatlich anerkannt" nur zeigen, wenn sie wirklich gelten. Die Referenz zeigt Videostimmen mit Abspielknopf, hier stehen Bildkarten ohne Video, damit kein Knopf ohne Funktion bleibt. Kontrast von Text über Fotos nach dem Einsetzen neu prüfen. Links im Fuß (Datenschutz, Impressum) sind Platzhalter. Kurspreise nach Preisangabenverordnung mit Bruttoangabe führen.
 
 ## Conversion (Playbook)
-- Nur der Kommentar zur Heldenformel vor der H1 ergänzt. Der Beleg im Held, die Fragen, Telefon und der Knopf in der Kopfzeile waren schon vorhanden.
+- Held: Beauty-Interessierte und Quereinsteiger, Problem Theorie ohne Praxis; H1 "Werde Beauty-Profi, mit echter Praxis ab Woche eins", Unterzeile mit Ergebnis (Abschluss, Arbeitsmappe)
+- Primär-CTA "Beratung buchen" im Kopf, Held und Aufruf; Kurskarten behalten "Anmelden" je Kurs, "Kurse ansehen" bleibt Sekundärknopf
+- Titel und Beschreibung mit Ortsplatzhalter "Musterstadt"
+- Beleg im Held als Absolventenbewertung, mit Beispielwert gekennzeichnet
+- Fragen zu Vorkenntnissen, Preis, Format, Berufseinstieg und Arbeit im eigenen Studio (ohne Zusage, Nachweise nach Bundesland), alle als Beispielantwort markiert
+- Kein Formular, die Anmeldung läuft über den Aufruf

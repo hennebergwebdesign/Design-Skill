@@ -48,6 +48,10 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent-tief` auf `--f
 Alle Zahlen, Namen, Kartennummern, Preise, Bewertungen und Tarife sind Beispiele, keine Belege; die Beispiellogos sind Beispiellogos. Die Auslandsüberweisung in Variante 2 ist ein Abbild ohne Funktion (kein Formular), der Videoknopf zeigt nur einen Hinweis, die Preise in Variante 3 haben keinen Bestellweg. Die drei Kartenmotive je Variante sind aus Flächen und Text gebaut, keine Fotos; die Platzhalterflächen (`data-platzhalter`) brauchen Bilder. Kontrast von Text über Bildern nach dem Einsetzen neu prüfen. Die Varianten 1 bis 3 haben je eigene Stilteile, die Marke gilt für alle. Zwei Links im Fuß (Impressum, Datenschutz, Geschäftsbedingungen) sind Platzhalter. Ein Hinweis zu den Finanzangaben (Pflichtangaben, Aufsicht) fehlt je Kunde.
 
 ## Conversion (Playbook)
-- Fragen als Akkordeon (`#fragen`, fünf Beispielantworten) in Variante 1 und 2; Variante 3 hatte schon ein Akkordeon
-- Beleg (Avatare und Bewertung wie in Variante 1) im Held von Variante 2 und 3, Kommentar zur Heldenformel in allen drei Varianten
-- Beschreibung von Variante 2 auf unter 160 Zeichen gekürzt
+- Held: Index für Selbständige und kleine Betriebe ("Zahlungen ohne Chaos. Eine Karte."), Variante 2 für Menschen, die Zahlen verstehen statt Tabellen pflegen, Variante 3 für Privatleute mit drei getrennten Apps; Unterzeile je Variante mit Ergebnis
+- Primär-CTA "Konto eröffnen" in allen drei Varianten (Kopf, Held, Abschnitte, Schluss), nur die schmale Kopfzeile behält "Loslegen"; "Mehr erfahren" bleibt Sekundärknopf
+- Titel und Beschreibung ohne Ortsbezug (App), je Variante eigen
+- Beleg im Held: Bewertungen mit Beispielwert gekennzeichnet
+- Fragen vor dem Start (Gebühren, Dauer, Sicherheit, Kündigung, Zielgruppe), Variante 2 mit Auswertungen und Buchhaltung, Variante 3 mit eigenem Fragenabschnitt zu Kredit, Anlage und Konto; alle als Beispielantwort markiert
+- Pflichtangaben und Risikohinweise je Anbieter ergänzen, keine Zusagen aus den Beispielantworten übernehmen
+- Kein Formular, Ziel ist die Kontoeröffnung

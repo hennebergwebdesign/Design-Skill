@@ -30,4 +30,9 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent-text` auf `--a
 Formulare senden nichts. Preise, Namen, Stimmen, Logos, Kurse und Kennzahlen sind Beispiele, keine Belege. Die Oberflächen, Kerzenchart und Anzeige sind erfundene Illustrationen, keine Produktabbildungen. Die Anbindungskacheln zeigen Symbole, keine echten Marken. Texte in den Beispieloberflächen sind teils kleiner als 16 Pixel. Der Preisumschalter steht über den Karten, nicht in der mittleren Karte. Kontrast des Glühens hinter dem Aufruf nach dem Austausch der Farben neu messen.
 
 ## Conversion (Playbook)
-- Beleg im Held (Stern mit Beispielwert), Kommentar zur Heldenformel vor der H1, Beschreibung auf unter 160 Zeichen gekürzt
+- Held: Analyse- und Strategieteams, Problem Datenflut ohne verständliche Signale; Kicker nennt die Zielgruppe, H1 "Marktsignale, die dein Team sofort versteht"
+- Primär-CTA "Demo anfragen" im Kopf, Held, Tarifen, Mittelteil und Formular; "Funktionen ansehen" und "Tarife ansehen" bleiben Sekundärknöpfe
+- Titel und Beschreibung ohne Ortsbezug (Software), Keyword Marktanalyse-Software am Anfang
+- Beleg im Held als Teambewertung (Beispielwert)
+- Fragen zu Besonderheit der Modelle, Aktualität der Daten, Vorkenntnissen, Export und Sicherheit, Antworten als Beispielantwort markiert, Herkunftsangaben nur belegt eintragen
+- Formular: Mailzeile mit einem Feld, Absenden "Demo anfragen"

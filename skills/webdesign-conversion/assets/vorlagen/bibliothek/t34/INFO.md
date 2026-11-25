@@ -42,6 +42,9 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent-tief` auf `--f
 Formulare senden nichts. Preise, Zeiten, Kennzahlen, Namen, Stimmen, Termine und Adresse sind Beispiele, keine Belege. Die Logos in Variante 2 sind Beispiellogos. Die Pfeile an den Karten führen nur zum Reservierungsabschnitt, es gibt keine Detailseiten. Kontrast von Text über Fotos nach dem Einsetzen neu prüfen. Die Platzhalterbeschriftung ist nur ein Hinweis und verschwindet mit dem Foto.
 
 ## Conversion (Playbook)
-- Fragen vor dem Besuch als Akkordeon (`#fragen`, fünf Fragen zu Preis, Dauer, Küche, Absage, Reservierung), Antworten als Beispiel markiert, in beiden Varianten
-- Beleg im Held (Sterne mit Beispielwert) und Kommentar zur Heldenformel vor der H1
-- Feldhinweis unter Mail oder Telefon im Reservierungsformular (`.feld__hinweis`), Formular bleibt bei fünf Feldern
+- Held: Gäste, die abends Zeit statt Hektik suchen; H1 "Gut essen ohne Eile" (Variante 2: Gastgeber von Feiern, "Feiern, ohne zu kochen"), Unterzeile mit Ergebnis
+- Primär-CTA "Tisch reservieren" im Kopf, im Held, im Formular und im Fuß, Sekundärknöpfe leiser ("Ganze Karte")
+- Titel und Beschreibung nach Formel mit "Musterstadt" als Ortsplatzhalter, je Variante eigen
+- Beleg im Held als Gästebewertung (Beispielwert), Kommentar zur Heldenformel nennt Zielgruppe, Problem und Lösung
+- Fragen vor dem Besuch (Preis, Dauer, Küche und Allergene, Absage, Reservierung), in Variante 2 mit Blick auf die Feier (Preis je Posten, Vorlauf), Antworten als Beispiel markiert
+- Formular Tisch: fünf Felder, Feldhinweis unter Kontakt, Absenden "Tisch reservieren"

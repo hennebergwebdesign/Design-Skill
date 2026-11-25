@@ -29,5 +29,9 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent` auf `--flaech
 Formulare senden nichts. Preise, Zahlen, Namen, Bewertung, Logos und Adresse sind Beispiele, keine Belege. Die Oberflächen (Zahlungsliste, Überweisung, Rechnung, Kurve) sind erfundene Illustrationen. Die Landschaft im Held ist ein Platzhalter aus Verläufen, kein Bild. Texte in den Beispieloberflächen sind teils kleiner als 16 Pixel. Kontrast der Aufrufzeile über einem späteren Foto neu prüfen (der Schleier ist auf den Platzhalter abgestimmt).
 
 ## Conversion (Playbook)
-- Fragen als Akkordeon (`#fragen`, fünf Beispielantworten) vor dem Schlussaufruf
-- Beleg im Held (Stern mit Beispielwert), Kommentar zur Heldenformel vor der H1
+- Held: Selbständige und kleine Teams, Problem Rechnungen von Hand nachhalten; H1 "Nie wieder Rechnungen von Hand schreiben", Unterzeile mit Ergebnis (schreibt, verschickt, gleicht ab)
+- Primär-CTA "Rechnung testen" im Kopf, Held, Mittelteil, Tarifen und Schluss; "Zu den Rechnungen" und "Termin vereinbaren" (Unternehmen) bleiben eigene Ziele
+- Titel und Beschreibung ohne Ortsbezug (Software), Keyword Rechnungssoftware am Anfang
+- Beleg im Held als Kundenbewertung (Beispielwert)
+- Fragen zu Kosten, Einrichtung, Buchhaltungsanbindung, Kündigung und kleinen Teams, Antworten als Beispielantwort markiert
+- Kein Formular außer Newsletter, Ziel ist der Test

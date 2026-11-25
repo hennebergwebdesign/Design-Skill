@@ -75,6 +75,7 @@ button.pfeil-rund[aria-disabled="true"]{opacity:.4;cursor:default}
 /* Variante 1: Held mit Bogenband */
 .held{padding-top:clamp(2rem,5vw,4.5rem);text-align:center;overflow:hidden}
 .held h1{font-weight:300;text-transform:uppercase;font-size:clamp(2.6rem,1rem + 9.4vw,9.5rem);line-height:.95;letter-spacing:-.01em;color:var(--akzent);max-width:20ch;margin-inline:auto}
+.held__lead{max-width:34rem;margin:clamp(1rem,2vw,1.5rem) auto 0;font-size:clamp(1.05rem,1rem + .4vw,1.3rem);line-height:1.5}
 .held__knopf{margin:clamp(1.5rem,3vw,2.5rem) 0 clamp(2rem,4vw,3.5rem)}
 .bogenband{--band-abstand:1.5rem;padding-bottom:clamp(2.5rem,5vw,4rem)}
 .bogenband .bild{flex:none;width:clamp(11rem,17vw,15.5rem);aspect-ratio:244/288}

@@ -32,5 +32,9 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent-text` auf `--a
 Beispielwerte (Kontostand, Zahlen, Namen, Stimmen, Siegel) sind Beispiele, keine Belege; das Siegel "Beispielsiegel" nur durch eine echte, belegbare Auszeichnung ersetzen. Beispiellogos sind keine Kunden. Das Formular im Fuß sendet nichts. Die Referenz lässt das Bild in der Szene weich in den Aufruf wachsen, hier wächst eine Fläche aus dem Stapel (Näherung). Kontrast von Text über Fotos und über den Bühnenverläufen nach dem Einsetzen neu prüfen. Auf sehr kleinen Höhen (unter 600 Pixel, Querformat am Handy) sind die Bühnen eng. Links im Fuß (Datenschutz, Impressum) sind Platzhalter.
 
 ## Conversion (Playbook)
-- Beleg im Held (Stern mit Beispielwert), Kommentar zur Heldenformel vor der H1
-- Telefonnummer (Beispiel) im Fuß, Beschreibung auf unter 160 Zeichen gekürzt
+- Held: Privatleute und Selbständige mit verstreuten Zahlen; H1 "Dein Geld im Blick, ohne Tabellen", Unterzeile mit Ergebnis (Eingänge sehen, Überweisung in Sekunden)
+- Primär-CTA "Konto eröffnen" im Kopf, Held, Kartenabschnitten, Bühne und Schluss; "Mehr erfahren" bleibt Sekundärknopf
+- Titel und Beschreibung ohne Ortsbezug (Produkt statt Ortsgeschäft), Keyword Konto-App am Anfang
+- Beleg im Held als App-Store-Bewertung (Beispielwert)
+- Fragen zu Start, Zahlungsarten, Gebühren (Preis-Kontrollfrage), Sicherheit, Ausland, Hilfe; Antworten als Beispielantwort markiert, Pflichtangaben je Anbieter ergänzen
+- Kein Formular außer Newsletter, Ziel der Seite ist die Kontoeröffnung

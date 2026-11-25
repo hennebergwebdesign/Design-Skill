@@ -33,6 +33,8 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent` auf `--flaech
 Es gibt kein Formular: Reservierung und Anfragen laufen über Mailtos als Platzhalter. Preise, Zeiten, Namen, Stimmen, Standorte und Auszeichnung sind Beispiele, keine Belege. Der Imagefilm ist ein Platzhalter ohne Video. Die Kategorie Links und die Pfeile in „Heute frisch“ führen nur zu Abschnitten der Seite. Der Bogen des Streifens ist ein `clip-path` und schneidet Bildinhalt an den Rändern ab, bei Fotos mit Motiv am Rand prüfen. Kontrast von Text über Fotos (Banner, Aufruf, Platzhalterhinweise) nach dem Einsetzen neu prüfen.
 
 ## Conversion (Playbook)
-- Fragen als Akkordeon (`#fragen`) vor dem Aufruf Tisch buchen, fünf Beispielantworten
-- Beleg unter der Unterzeile im Held (Stern mit Beispielwert), Kommentar zur Heldenformel vor der H1
-- Das Symbol `#i-plus` wurde der Spritesheet ergänzt
+- Held: Gäste, die Herkunft und einen ruhigen Abend suchen; die H1 bleibt bewusst der Markenname in Großschrift (Magazinlayout), die Formel steckt in der Unterzeile "Regional gekocht, ohne Eile serviert"
+- Primär-CTA "Tisch reservieren" neu im Held, in Kopf, Reservierungsbanner und Aufruf; Reservierung läuft über Mailto als Platzhalter
+- Titel und Beschreibung mit Ortsplatzhalter "Musterstadt"
+- Beleg im Held als Gästebewertung (Beispielwert)
+- Fragen vor dem Aufruf (Preis, Herkunft der Zutaten, Allergien, Absage, kurzfristiger Tisch), Antworten als Beispiel

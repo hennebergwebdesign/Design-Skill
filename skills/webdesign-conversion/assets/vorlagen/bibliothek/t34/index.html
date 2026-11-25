@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bistro Markenname, ehrliche Küche mit Zeit</title>
-<meta name="description" content="Beispieltext: Bistro mit saisonaler Küche, Tischreservierung und Veranstaltungen. Vor dem Einsatz durch den echten Text der Marke ersetzen.">
+<title>Bistro Musterstadt | Saisonküche, Tisch buchen | Markenname</title>
+<meta name="description" content="Gut essen ohne Eile: saisonale Gerichte, frisch gekocht. Tisch in zwei Minuten reserviert, auch für Gruppen und Feiern. Jetzt Tisch reservieren.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../_basis/schriften.css">
 <link rel="stylesheet" href="marke.css">
@@ -55,10 +55,11 @@
 <main id="inhalt">
 <section class="held dunkel" id="top" aria-labelledby="h-held">
   <div class="wrap">
-    <!-- Held nach Formel: H1 = [Zielgruppe] + [Problem] + [Lösung]; Unterzeile = Wie + konkretes Ergebnis; Bild zeigt das Ergebnis; ein Primär-CTA; ein Beleg (Bewertung, Zahl, Logo) im ersten Bildschirm -->
-    <h1 id="h-held" data-zeig>Gekocht mit Zeit</h1>
-    <a class="knopf held__knopf" href="#ueber" data-zeig>Mehr über uns <svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a>
-    <p class="held__beleg" data-zeig data-beispiel><span class="sterne" aria-hidden="true"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-star"/></svg></span> 4,8 von 5 Sternen (Beispielwert)</p>
+    <!-- Held: Zielgruppe Gäste, die abends Zeit statt Hektik suchen; Problem eilige Abende mit Essen nebenbei; Lösung saisonale Küche und ein Tisch, der für den Abend bleibt; Beleg Gästebewertung (Beispielwert). Text, Wert und Küche durch die Angaben des Hauses ersetzen. -->
+    <h1 id="h-held" data-zeig>Gut essen ohne Eile</h1>
+    <p class="held__lead" data-zeig>Die Küche kocht, was die Saison hergibt, und dein Tisch bleibt für den ganzen Abend deiner. Reserviere in zwei Minuten.</p>
+    <a class="knopf held__knopf" href="#tisch" data-zeig>Tisch reservieren <svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a>
+    <p class="held__beleg" data-zeig data-beispiel><span class="sterne" aria-hidden="true"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-star"/></svg></span> Gästebewertung: 4,8 von 5 Sternen (Beispielwert)</p>
   </div>
   <div class="band bogenband" aria-label="Gerichte aus unserer Küche">
     <div class="band__spur">
@@ -155,12 +156,12 @@
       <div data-zeig>
         <form class="formular" data-formular action="#" method="post" novalidate aria-label="Tischanfrage">
           <div class="formular__feld"><label for="r-name">Dein Name</label><input id="r-name" name="name" type="text" autocomplete="name" placeholder="Vor und Nachname" required></div>
-          <div class="formular__feld"><label for="r-mail">Mail oder Telefon</label><input id="r-mail" name="kontakt" type="text" autocomplete="email" placeholder="Wie erreichen wir dich?" required><small class="feld__hinweis">Nur für Rückfragen zu deiner Anfrage.</small></div>
+          <div class="formular__feld"><label for="r-mail">Mail oder Telefon</label><input id="r-mail" name="kontakt" type="text" autocomplete="email" placeholder="Wie erreichen wir dich?" required><small class="feld__hinweis">Nur für Rückfragen zu deinem Tisch, nie für Werbung.</small></div>
           <div class="formular__feld"><label for="r-pers">Personen</label><select id="r-pers" name="personen"><option>2 Personen</option><option>3 Personen</option><option>4 Personen</option><option>5 bis 8 Personen</option><option>Mehr, bitte anrufen</option></select></div>
           <div class="formular__feld"><label for="r-tag">Tag</label><input id="r-tag" name="tag" type="date" required></div>
           <div class="formular__feld"><label for="r-zeit">Uhrzeit</label><input id="r-zeit" name="zeit" type="time" required></div>
           <p class="formular__recht">Mit dem Absenden stimmst du der Verarbeitung deiner Angaben zur Beantwortung der Anfrage zu. Mehr dazu in der <a href="#kontakt">Datenschutzerklärung</a>.</p>
-          <button class="knopf knopf--dunkel formular__knopf" type="submit">Tisch anfragen <svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></button>
+          <button class="knopf knopf--dunkel formular__knopf" type="submit">Tisch reservieren <svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></button>
           <p class="formular__meldung" data-formular-meldung role="status" hidden>Beispielformular: In dieser Vorlage wird nichts gesendet. Der Versand wird im Projekt angebunden.</p>
         </form>
       </div>
@@ -259,7 +260,7 @@
       <div><h3>Adresse</h3><p>Beispielstraße 12<br>12345 Beispielstadt</p></div>
       <div><h3>Öffnungszeiten</h3><p><strong>Frühstück:</strong> 8 bis 11 Uhr<br><strong>Mittag:</strong> 12 bis 14 Uhr<br><strong>Abend:</strong> 18 bis 23 Uhr</p></div>
       <div><h3>Melde dich</h3><p><a href="tel:+490000000000">+49 (0) 000 000 000</a><br><a href="mailto:hallo@beispiel.invalid">hallo@beispiel.invalid</a></p></div>
-      <div><h3>Tisch buchen</h3><p>Reserviere in zwei Minuten, auch für Gruppen.</p><p style="margin-top:.9rem"><a class="knopf knopf--dunkel" href="#tisch" style="text-decoration:none">Reservieren</a></p></div>
+      <div><h3>Tisch buchen</h3><p>Reserviere in zwei Minuten, auch für Gruppen.</p><p style="margin-top:.9rem"><a class="knopf knopf--dunkel" href="#tisch" style="text-decoration:none">Tisch reservieren</a></p></div>
     </div>
   </div>
   <div class="fuss__gross" data-fussschrift aria-hidden="true">für den Moment,</div>

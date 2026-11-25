@@ -38,7 +38,9 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent-tief` auf `--f
 Beispielwerte (Preise, Angebote, Kennzahlen, Namen, Stimmen, Zeiten, Adresse) sind Beispiele, keine Belege. Das Formular in V2 sendet nichts. Preise nach Preisangabenverordnung mit Bruttoangabe führen. Die Leistungsnamen sind neutral gehalten und für den Betrieb zu präzisieren. Die Kerbe hat gerundete Innenecke, aber scharfe Außenecken (die Referenz rundet beide). Die Referenz zeigt Muster aus Werkzeugen als Hintergrund im Fuß und in Bändern, hier fehlen sie. Links im Fuß (Datenschutz, Impressum) sind Platzhalter. Kontrast von Text über Fotos nach dem Einsetzen neu prüfen.
 
 ## Conversion (Playbook)
-- Variante 1 und 2: Primärknopf in der Kopfzeile (auf dem Handy kurz als „Termin“), Telefonkreis bleibt
-- Variante 1: zwei Fragen zu Preis und Absage ergänzt (Antworten als Beispiel markiert), Variante 2: Fragen als Akkordeon vor dem Schlussaufruf neu (`#fragen`, fünf Fragen)
-- Beleg im Held (Sterne mit Beispielwert) und Kommentar zur Heldenformel in beiden Varianten
-- Variante 2: Terminformular von sechs auf fünf Felder (Datum und Uhrzeit als ein Feld „Wunschtermin“), Feldhinweise unter E-Mail und Telefon; Schriftgrößen von Label und Rechtshinweis auf 1 rem
+- Held: Kundschaft, die ihre Frisur nicht dem Zufall überlassen will; H1 "Eine Frisur, die zu dir passt und hält" (Variante 2: "Nie wieder eine Frisur, die nicht passt"), Unterzeile mit Beratung und nächstem Schritt
+- Primär-CTA "Termin anfragen" im Kopf (kurz "Termin"), Held, Terminformular, Angebotsband und Schluss, in beiden Varianten; Sekundärknöpfe leiser
+- Titel und Beschreibung mit Ortsplatzhalter "Musterstadt", je Variante eigen
+- Beleg im Held als Kundenbewertung (Beispielwert)
+- Fragen zu Leistungen, Buchung, Produkten, Dauer, Preis und Nachbesserung, alle als Beispielantwort markiert
+- Formular (Variante 2): fünf Felder, Hinweis unter E-Mail und Telefon, Absenden "Termin anfragen"

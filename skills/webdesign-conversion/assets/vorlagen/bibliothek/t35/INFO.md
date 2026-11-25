@@ -30,7 +30,9 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent` auf `--flaech
 Formulare senden nichts. Preise, Gästezahl, Namen, Stimmen, Termin und Adresse sind Beispiele, keine Belege. Der Zähler zielt auf ein Beispieldatum (24.12.2026) und zeigt Striche, sobald es vorbei ist; im Projekt `data-ziel` pflegen oder den Zähler entfernen. Die Karte hat keine Kategorien und keine Detailseiten. Kontrast von Text über Fotos (Kacheln, Platzhalterhinweise) nach dem Einsetzen neu prüfen.
 
 ## Conversion (Playbook)
-- Fragen als Akkordeon (`#fragen`) vor dem Reservierungsformular, fünf Beispielantworten
-- Feldhinweise unter Telefon und E-Mail im Formular
-- Kommentar zur Heldenformel vor der H1, Beleg im Held (Gästezeile) war schon vorhanden
-- Das Symbol `#i-plus` wurde der Spritesheet ergänzt
+- Held: Gäste, die einen ruhigen Tisch für Abend, Mittag oder Feier suchen; H1 "Ein ruhiger Tisch für jeden Anlass", Unterzeile mit Ergebnis (Reservierung in zwei Minuten)
+- Primär-CTA "Tisch reservieren" in Kopf, Held, Veranstaltungsband und Formular
+- Titel und Beschreibung mit Ortsplatzhalter "Musterstadt"
+- Beleg im Held: Gästezahl als Beispielwert gekennzeichnet
+- Fragen vor der Reservierung (Preis, Dauer, Allergien, Absage, spontaner Tisch), Antworten als Beispiel
+- Formular Reservierung: vier Felder, Hinweis unter Telefon und E-Mail, Feld "Wunsch und Hinweise" für Allergien

@@ -35,4 +35,9 @@ Nur die Werte in `marke.css` ändern. Kontrast prüfen: `--akzent-text` auf `--a
 Alle Zahlen, Namen, Preise, Bewertungen und Tarife sind Beispiele, keine Belege; die Beispiellogos sind Beispiellogos. Der Newsletter-Formular sendet nichts. Die gestapelten Stufen und die Formen sind Ersatz für die dreidimensionalen Figuren der Referenz und brauchen eigene Illustrationen, wenn die Marke sie will. Kontrast von Text über Bildern nach dem Einsetzen neu prüfen. Die Funktionsreiter sind auf Handybreite eine Liste untereinander und brauchen dort keine Bedienung. Drei Links im Fuß (Impressum, Datenschutz, App laden) sind Platzhalter. Rechtliche Angaben je Angebot (Preisangaben, Widerruf, Datenschutz) fehlen bewusst.
 
 ## Conversion (Playbook)
-- Nur der Kommentar zur Heldenformel vor der H1 ergänzt. Beleg im Held, Fragen, Telefon und Knopf in der Kopfzeile waren schon vorhanden.
+- Held: Teams mit verstreuter Abstimmung; H1 "Aufgaben ohne Chaos" (Display, kurz), Unterzeile nennt Zielgruppe und Ergebnis (jeder sieht das Nächste)
+- Primär-CTA "Test starten" im Kopf, Held und den drei Preisstufen; "Preise ansehen" bleibt Sekundärknopf
+- Titel und Beschreibung ohne Ortsbezug (App), Keyword Aufgaben-App am Anfang
+- Beleg im Held: Zahl der Teams mit Beispielwert gekennzeichnet
+- Fragen zu Nutzen gegenüber Chat und Tabellen, Testphase, Tarifwechsel, Preis und Sicherheit, Antworten als Beispielantwort markiert
+- Kein Formular außer Newsletter, Ziel ist der Test
