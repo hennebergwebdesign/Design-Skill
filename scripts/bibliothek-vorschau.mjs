@@ -4,14 +4,14 @@
 
   WARUM: Die Übersicht lud zwölf ganze Seiten in Iframes, samt Schriften, Skripten und Bewegung.
   Das war langsam. Jetzt zeigt sie je Vorlage drei kleine JPEG Bilder (hohe Seitenvorschau, Abschnittsübersicht beim Überfahren, Mobil). Dieses Skript erzeugt sie neu,
-  wenn sich eine Vorlage ändert. Ausgabe: <bibliothek>/vorschau/tNN-desktop.jpg, tNN-abschnitte.jpg und tNN-mobil.jpg.
+  wenn sich eine Vorlage ändert. Ausgabe: <bibliothek>/vorschau/tNN-desktop.webp, tNN-abschnitte.webp und tNN-mobil.webp (WebP, im Browser aus dem Screenshot kodiert, ohne zusätzliche Abhängigkeit).
 
   Aufruf: node scripts/bibliothek-vorschau.mjs [--qualitaet 80] [--nur t19,t20]
   Braucht Playwright (gefunden über lib/browser.mjs), sonst keine Abhängigkeit. Eigener lokaler
   Server, kein Netzzugriff. Bewegung ist auf "reduziert" gestellt, damit alle Inhalte stehen.
 */
 import { createServer } from 'node:http';
-import { readFile, mkdir, readdir } from 'node:fs/promises';
+import { readFile, writeFile, mkdir, readdir, unlink } from 'node:fs/promises';
 import { join, extname, normalize, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { playwrightLaden, PLAYWRIGHT_FEHLT, chromiumStarten } from './lib/browser.mjs';
@@ -61,12 +61,30 @@ async function bilderLaden(p) {
   await p.waitForTimeout(300);
 }
 const montage = await ctxD.newPage();
+/* Komprimieren: Screenshot (JPEG, zu gross für eine Galerie) wird im Browser über ein Canvas als WebP neu kodiert, etwa halb so gross bei gleicher Anmutung. */
+const WEBP = { seite: 0.72, abschnitte: 0.62, mobil: 0.72 };
+async function alsWebp(jpegPuffer, q) {
+  const b64 = await montage.evaluate(async ([daten, qual]) => {
+    const bild = new Image(); bild.src = 'data:image/jpeg;base64,' + daten; await bild.decode();
+    const c = document.createElement('canvas'); c.width = bild.naturalWidth; c.height = bild.naturalHeight;
+    c.getContext('2d').drawImage(bild, 0, 0);
+    const blob = await new Promise((r) => c.toBlob(r, 'image/webp', qual));
+    const buf = new Uint8Array(await blob.arrayBuffer()); let t = '';
+    for (let i = 0; i < buf.length; i += 0x8000) t += String.fromCharCode(...buf.subarray(i, i + 0x8000));
+    return btoa(t);
+  }, [jpegPuffer.toString('base64'), q]);
+  return Buffer.from(b64, 'base64');
+}
+async function speichern(t, art, jpegPuffer, q) {
+  await writeFile(join(wurzel, 'vorschau', `${t}-${art}.webp`), await alsWebp(jpegPuffer, q));
+  await unlink(join(wurzel, 'vorschau', `${t}-${art}.jpg`)).catch(() => {});
+}
 for (const t of ordner) {
   const url = `${basis}/${t}/index.html`;
   // hohe Seitenvorschau
   let p = await ctxS.newPage();
   await p.goto(url, { waitUntil: 'load' }); await p.evaluate(() => document.fonts.ready); await p.waitForTimeout(600); await bilderLaden(p);
-  await p.screenshot({ path: join(wurzel, 'vorschau', `${t}-desktop.jpg`), type: 'jpeg', quality: qualitaet, fullPage: true, clip: { x: 0, y: 0, width: SEITE.w, height: SEITE.h } });
+  await speichern(t, 'desktop', await p.screenshot({ type: 'jpeg', quality: 90, fullPage: true, clip: { x: 0, y: 0, width: SEITE.w, height: SEITE.h } }), WEBP.seite);
   await p.close();
   // Abschnittsübersicht
   p = await ctxK.newPage();
@@ -87,11 +105,11 @@ for (const t of ordner) {
   await montage.setViewportSize({ width: bw, height: bh });
   await montage.setContent(`<body style="margin:0;background:#101214;display:grid;grid-template-columns:repeat(${ABSCHNITTE.spalten},${kb}px);gap:${g}px;padding:${g}px;width:${bw}px;box-sizing:border-box">${bilder.map((b) => `<img src="${b}" width="${kb}" height="${kh}" style="display:block;border-radius:6px">`).join('')}</body>`);
   await montage.waitForTimeout(150);
-  await montage.screenshot({ path: join(wurzel, 'vorschau', `${t}-abschnitte.jpg`), type: 'jpeg', quality: qualitaet, clip: { x: 0, y: 0, width: bw, height: bh } });
+  await speichern(t, 'abschnitte', await montage.screenshot({ type: 'jpeg', quality: 90, clip: { x: 0, y: 0, width: bw, height: bh } }), WEBP.abschnitte);
   // Mobil
   p = await ctxM.newPage();
   await p.goto(url, { waitUntil: 'load' }); await p.evaluate(() => document.fonts.ready); await p.waitForTimeout(600); await bilderLaden(p);
-  await p.screenshot({ path: join(wurzel, 'vorschau', `${t}-mobil.jpg`), type: 'jpeg', quality: qualitaet });
+  await speichern(t, 'mobil', await p.screenshot({ type: 'jpeg', quality: 90 }), WEBP.mobil);
   await p.close();
   console.log(t);
 }
