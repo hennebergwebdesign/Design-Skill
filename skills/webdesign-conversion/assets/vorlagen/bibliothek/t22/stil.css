@@ -379,3 +379,6 @@ main>section:not(.held),.fuss{position:relative;z-index:1;background:var(--flaec
   .js .fall .fall__bild{transform:none}
   .held__bild-innen{transform:none}
 }
+
+/* Fotos statt Platzhalterverläufe */
+.bild__foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
