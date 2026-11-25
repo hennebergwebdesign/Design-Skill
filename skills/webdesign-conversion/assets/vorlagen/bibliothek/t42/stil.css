@@ -202,3 +202,5 @@ h3{font-size:var(--h3);line-height:1.15}
 .haken{display:grid;grid-template-columns:1fr 1fr;gap:1rem 1.5rem}
 .haken li{display:flex;align-items:center;gap:.6rem}
 .haken svg{color:var(--akzent);flex:none}
+
+.buehne .leise,.fuss .leise{color:var(--text-leise-dunkel)}

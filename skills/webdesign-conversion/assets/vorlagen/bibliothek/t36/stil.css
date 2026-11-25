@@ -32,14 +32,14 @@ h3{font-size:var(--h3);line-height:1.2}
 /* Kopf: Linienleiste mit Logofeld */
 .kopf{position:sticky;top:0;z-index:50;background:var(--flaeche);box-shadow:0 1px 0 var(--linie)}
 .kopf__leiste{position:relative;display:flex;flex-wrap:wrap;align-items:center;gap:.25rem .75rem;min-height:3.75rem}
-.kopf__logo{display:inline-flex;align-items:center;align-self:stretch;min-height:2.75rem;padding-inline:var(--rand) 1.25rem;font-family:var(--schrift-titel);font-size:1.6rem;letter-spacing:-.03em;box-shadow:1px 0 0 var(--linie)}
+.kopf__logo{display:inline-flex;align-items:center;align-self:stretch;min-height:2.75rem;padding-inline:var(--rand) .9rem;font-family:var(--schrift-titel);font-size:1.5rem;letter-spacing:-.03em;box-shadow:1px 0 0 var(--linie)}
 .kopf__seit{display:none;padding:.3rem 1rem;border-radius:999px;box-shadow:inset 0 0 0 1px var(--linie)}
 .kopf__nav{order:5;flex-basis:100%;padding-inline:var(--rand)}
 .kopf__menue{display:flex;flex-wrap:wrap;gap:0 .25rem}
 .kopf__menue a{display:flex;align-items:center;min-height:2.75rem;padding-inline:.6rem;font-weight:500}
 .kopf__menue a:hover{color:var(--akzent)}
-.kopf__aktion{display:flex;align-items:center;gap:.5rem;margin-left:auto;padding-right:var(--rand)}
-.kopf__knopf{min-height:2.75rem;padding:.4rem 1.25rem}
+.kopf__aktion{display:flex;align-items:center;gap:.4rem;margin-left:auto;padding-right:var(--rand)}
+.kopf__knopf{min-height:2.75rem;padding:.4rem 1rem}
 .kopf__burger{display:none;width:2.75rem;height:2.75rem;border-radius:50%;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1px var(--text)}
 .js .kopf__burger{display:inline-flex}
 .burger,.burger::before{display:block;width:1.2rem;height:2px;background:currentColor;transition:transform var(--dauer-mittel) var(--kurve)}
@@ -279,3 +279,5 @@ h3{font-size:var(--h3);line-height:1.2}
   .stimme.aktiv{animation:none}
 }
 .kat__bild .bild[data-platzhalter]::after{inset:.75rem auto auto .75rem}
+.film .bild[data-platzhalter]::after{display:none}
+.fuss__recht span:last-child{display:flex;gap:0 1.25rem}

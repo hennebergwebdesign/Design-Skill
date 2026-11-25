@@ -146,3 +146,4 @@
   .aufruf2__text{padding-bottom:clamp(2rem,5vw,4rem);align-self:center}
   .aufruf2__bild{justify-self:end;width:min(100%,26rem);min-height:24rem}
 }
+@media (max-width:39.99rem){.leistung2 .bild{width:4.75rem}}
