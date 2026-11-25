@@ -317,3 +317,10 @@ details[open]>.modul__inhalt{animation:auf .28s var(--kurve) both}
   .kopf{transition:none}
   .karte:hover,.zg:hover,.stimme:hover{transform:none}
 }
+
+/* Fotos statt Platzhalterverläufe */
+.bild__foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+.held__feld .bild__foto{z-index:-1;filter:brightness(.42)}
+.held__feld{isolation:isolate;overflow:hidden}
+.abschluss__bg .bild__foto{filter:brightness(.4)}
