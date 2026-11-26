@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Haushaltsbuch App Musterstadt | Ausgaben im Blick</title>
+<meta name="description" content="Die Haushaltsbuch App für alle Konten: Ausgaben sortieren, Sparziele verfolgen, Fälliges im Blick behalten. Jetzt App laden und in Ruhe ausprobieren.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../_basis/schriften.css">
+<link rel="stylesheet" href="marke.css">
+<link rel="stylesheet" href="../_basis/basis.css">
+<link rel="stylesheet" href="stil.css">
+<!-- Strukturierte Daten: Beispielwerte, vor der Auslieferung durch echte Angaben ersetzen. Keine Bewertungen erfunden. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "Markenname",
+  "description": "Haushaltsbuch App: Konten, Kreditkarten, Sparziele und Depot in einer Ansicht, Ausgaben automatisch sortiert.",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "iOS, Android",
+  "inLanguage": "de",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Markenname",
+    "telephone": "+490000000000",
+    "email": "hallo@beispiel.invalid",
+    "address": { "@type": "PostalAddress", "streetAddress": "Musterstraße 1", "postalCode": "00000", "addressLocality": "Musterstadt", "addressCountry": "DE" }
+  }
+}
+</script>
+</head>
+<body>
+<a class="sprunglink" href="#inhalt">Zum Inhalt springen</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-arrow-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+  <symbol id="i-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.500 1.500a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><path d="M8 5v14M16 5v14" stroke-width="2.600"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><path d="M8 5.500v13l11-6.500z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-suche" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.500"/><path d="m16 16 4.500 4.500"/></symbol>
+  <symbol id="i-schloss" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10" width="14" height="10" rx="2.500"/><path d="M8 10V7.500a4 4 0 0 1 8 0V10"/></symbol>
+  <symbol id="i-auge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><path d="M2.500 12S6 5.500 12 5.500 21.500 12 21.500 12 18 18.500 12 18.500 2.500 12 2.500 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-schild" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v5.500c0 4.500 3 8 7 9.500 4-1.500 7-5 7-9.500V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-zeichen" viewBox="0 0 32 32"><rect x="4" y="17" width="6" height="11" rx="2.500" fill="currentColor" fill-opacity=".55"/><rect x="13" y="10" width="6" height="18" rx="2.500" fill="currentColor" fill-opacity=".8"/><rect x="22" y="4" width="6" height="24" rx="2.500" fill="currentColor"/></symbol>
+</svg>
+
+<header class="kopf">
+  <div class="kopf__leiste">
+    <a class="kopf__logo" href="#top" aria-label="Markenname, nach oben"><svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg><span>Markenname</span></a>
+    <nav class="kopf__nav" id="hauptnav" aria-label="Hauptnavigation">
+      <ul class="kopf__menue" role="list">
+        <li><a href="#funktionen">Funktionen</a></li>
+        <li><a href="#sicherheit">Sicherheit</a></li>
+        <li><a href="#stimmen">Stimmen</a></li>
+        <li><a href="#fragen">Fragen</a></li>
+        <li class="kopf__tel"><a href="tel:+490000000000"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>Telefon 0000 000 000</a></li>
+      </ul>
+    </nav>
+    <a class="knopf kopf__knopf" href="#kontakt">App laden</a>
+    <button class="kopf__burger" type="button" data-menue aria-expanded="false" aria-controls="hauptnav">
+      <span class="sr-nur">Menü öffnen oder schließen</span>
+      <span class="burger" aria-hidden="true"></span>
+    </button>
+  </div>
+</header>
+
+<main id="inhalt">
+  <!-- 1. Held: zentrierte Überschrift, Handy aus HTML über einer Kachelwelle, Meldungskarten treiben seitlich -->
+  <section class="held" id="top" aria-labelledby="h-held">
+    <div class="held__text">
+      <!-- Heldformel: Zielgruppe Privatpersonen mit mehreren Konten, Karten und Sparzielen, Problem kein Überblick und Fälliges wird übersehen, Lösung eine App mit allen Konten in einer Ansicht, automatisch sortiert, mit Erinnerungen -->
+      <p class="kicker" data-zeig>Haushaltsbuch für Girokonto, Karte und Sparziele</p>
+      <h1 id="h-held" data-zeig>Behalte dein Geld im Blick. Jeden Monat.</h1>
+      <p class="held__lead" data-zeig>Markenname zeigt alle deine Konten in einer Ansicht, sortiert Ausgaben von selbst und erinnert dich an Rechnungen und Sparziele.</p>
+      <div class="held__knoepfe" data-zeig>
+        <a class="knopf" href="#kontakt">App laden <span class="knopf__punkt" aria-hidden="true"><svg width="20" height="20"><use href="#i-arrow-up-right"/></svg></span></a>
+        <a class="textlink" href="#funktionen">Funktionen ansehen</a>
+      </div>
+      <p class="held__tel" data-zeig>Fragen vorab? <a href="tel:+490000000000">0000 000 000</a>, Montag bis Freitag.</p>
+    </div>
+
+    <div class="buehne">
+      <div class="kacheln" aria-hidden="true">
+        <span class="kachel k-marine" style="--i:0"></span><span class="kachel k-weiss" style="--i:1"></span><span class="kachel k-koralle" style="--i:2"></span><span class="kachel k-weiss" style="--i:3"></span><span class="kachel k-sonne" style="--i:4"></span><span class="kachel k-marine" style="--i:5"></span><span class="kachel k-himmel" style="--i:6"></span><span class="kachel k-weiss" style="--i:7"></span>
+        <span class="kachel k-weiss" style="--i:1"></span><span class="kachel k-himmel" style="--i:2"></span><span class="kachel k-marine" style="--i:3"></span><span class="kachel k-koralle" style="--i:4"></span><span class="kachel k-weiss" style="--i:5"></span><span class="kachel k-sonne" style="--i:6"></span><span class="kachel k-weiss" style="--i:7"></span><span class="kachel k-marine" style="--i:8"></span>
+        <span class="kachel k-koralle" style="--i:2"></span><span class="kachel k-weiss" style="--i:3"></span><span class="kachel k-sonne" style="--i:4"></span><span class="kachel k-weiss" style="--i:5"></span><span class="kachel k-marine" style="--i:6"></span><span class="kachel k-himmel" style="--i:7"></span><span class="kachel k-weiss" style="--i:8"></span><span class="kachel k-koralle" style="--i:9"></span>
+      </div>
+
+      <div class="telefon" role="img" aria-label="Handy mit der App: Monatsbudget, Sparziele und Kontostand von drei Konten (Beispielwerte)">
+        <div class="telefon__schirm" aria-hidden="true">
+          <div class="app__leiste"><span>09:41</span><span class="app__insel"></span><span>●●●</span></div>
+          <p class="app__gruss">Hallo!</p>
+          <div class="app__karte">
+            <p class="app__zeile"><strong>Monatsbudget Mai</strong><span>1.840 €</span></p>
+            <p class="app__klein">noch 12 Tage, bis zu 153 € am Tag</p>
+            <div class="app__balken"><i style="--w:62%"></i></div>
+            <p class="app__klein">Sparziel Urlaub: 62 % erreicht</p>
+          </div>
+          <div class="app__karte">
+            <p class="app__zeile"><strong>Gesamt</strong><span>8.420,50 €</span></p>
+            <ul class="app__liste">
+              <li><i class="p-marine"></i><span>Girokonto</span><b>2.140,20 €</b></li>
+              <li><i class="p-koralle"></i><span>Tagesgeld</span><b>4.600,00 €</b></li>
+              <li><i class="p-sonne"></i><span>Depot</span><b>1.680,30 €</b></li>
+            </ul>
+          </div>
+          <div class="app__karte app__karte--leise">
+            <p class="app__zeile"><strong>Miete</strong><span>in 3 Tagen</span></p>
+          </div>
+        </div>
+      </div>
+
+      <aside class="meldung meldung--l" data-parallax="0.12" aria-hidden="true"><strong>Rechnung fällig</strong><span>Deine Kreditkartenabrechnung über 120 € ist in 2 Tagen fällig.</span></aside>
+      <aside class="meldung meldung--r" data-parallax="-0.08" aria-hidden="true"><strong>Sparziel</strong><span>Du hast die Hälfte deines Ziels Urlaub erreicht.</span></aside>
+      <aside class="meldung meldung--u" data-parallax="0.18" aria-hidden="true"><strong>Abo erinnert</strong><span>Dein Streaming Abo verlängert sich morgen um 9,99 €.</span></aside>
+    </div>
+    <p class="beispielhinweis">Alle Beträge in der Oberfläche sind Beispielwerte.</p>
+  </section>
+
+  <!-- 2. Zusammenfluss: Text leuchtet beim Scrollen auf, Karten fliegen von außen heran (sticky Szene am Desktop) -->
+  <section class="sammeln" aria-labelledby="h-sammeln" data-fortschritt>
+    <div class="sammeln__buehne">
+      <div class="sammeln__mitte">
+        <h2 id="h-sammeln" data-licht>Markenname verbindet deine Konten und zeigt dir, wohin dein Geld im Monat geht.</h2>
+        <p class="sammeln__klein">Umsätze werden nur gelesen, Überweisungen löst die App nie aus. Die Anbindung läuft über ein Verfahren, bei dem du jeden Zugriff selbst bestätigst.</p>
+      </div>
+      <ul class="sammeln__karten" role="list" aria-hidden="true">
+        <li class="sk sk--1" style="--dx:-320px;--dy:-120px;--r:-6deg"><p class="sk__titel">Kreditkarte</p><div class="sk__kreditkarte"><span>Beispielbank</span><b>-1.240,00 €</b><small>fällig am 02.06.</small></div></li>
+        <li class="sk sk--2" style="--dx:0px;--dy:-220px;--r:3deg"><p class="sk__titel">Konten</p><ul class="app__liste"><li><i class="p-marine"></i><span>Girokonto</span><b>2.140,20 €</b></li><li><i class="p-koralle"></i><span>Tagesgeld</span><b>4.600,00 €</b></li><li><i class="p-sonne"></i><span>Depot</span><b>1.680,30 €</b></li></ul></li>
+        <li class="sk sk--3" style="--dx:320px;--dy:-120px;--r:5deg"><p class="sk__titel">Cashflow im Mai</p><dl class="sk__werte"><div><dt>Eingang</dt><dd>3.120 €</dd></div><div><dt>Ausgang</dt><dd>2.240 €</dd></div><div><dt>Gespart</dt><dd>540 €</dd></div><div><dt>Rest</dt><dd>340 €</dd></div></dl></li>
+        <li class="sk sk--4" style="--dx:-320px;--dy:140px;--r:5deg"><p class="sk__titel">Wiederkehrend</p><ul class="app__liste"><li><i class="p-himmel"></i><span>Miete</span><b>3 Tage</b></li><li><i class="p-koralle"></i><span>Streaming</span><b>27 Tage</b></li><li><i class="p-sonne"></i><span>Versicherung</span><b>56 Tage</b></li></ul></li>
+        <li class="sk sk--5" style="--dx:0px;--dy:220px;--r:-3deg"><p class="sk__titel">Kategorien</p><ul class="app__liste"><li><i class="p-marine"></i><span>Essen und Trinken</span><b>312 €</b></li><li><i class="p-koralle"></i><span>Freizeit</span><b>148 €</b></li><li><i class="p-sonne"></i><span>Mobilität</span><b>96 €</b></li></ul></li>
+        <li class="sk sk--6" style="--dx:320px;--dy:140px;--r:-5deg"><p class="sk__titel">Sparziele</p><div class="app__balken"><i style="--w:62%"></i></div><p class="app__klein">Urlaub: 1.860 von 3.000 €</p><div class="app__balken app__balken--zwei"><i style="--w:38%"></i></div><p class="app__klein">Notgroschen: 1.140 von 3.000 €</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 3. Alles an einem Ort: treibende Zeichen, Buchungen, Kreditkarten, Sparziele -->
+  <section class="sektion ort" id="funktionen" aria-labelledby="h-ort">
+    <div class="ort__kopf wrap">
+      <ul class="zeichen" aria-hidden="true">
+        <li class="zeichen__e z1" data-parallax="0.2"><svg viewBox="0 0 48 48"><rect width="48" height="48" rx="14" fill="var(--marine)"/><path d="M14 30 24 14l10 16z" fill="var(--sonne)"/></svg></li>
+        <li class="zeichen__e z2" data-parallax="-0.12"><svg viewBox="0 0 48 48"><rect width="48" height="48" rx="14" fill="var(--koralle)"/><circle cx="24" cy="24" r="10" fill="var(--weiss)"/></svg></li>
+        <li class="zeichen__e z3" data-parallax="0.1"><svg viewBox="0 0 48 48"><rect width="48" height="48" rx="14" fill="var(--sonne)"/><rect x="13" y="13" width="22" height="22" rx="6" fill="var(--marine)"/></svg></li>
+        <li class="zeichen__e z4" data-parallax="-0.2"><svg viewBox="0 0 48 48"><rect width="48" height="48" rx="14" fill="var(--himmel)"/><path d="M14 24h20M24 14v20" stroke="var(--marine)" stroke-width="6" stroke-linecap="round"/></svg></li>
+        <li class="zeichen__e z5" data-parallax="0.14"><svg viewBox="0 0 48 48"><rect width="48" height="48" rx="14" fill="var(--marine)"/><circle cx="19" cy="24" r="8" fill="var(--koralle)"/><circle cx="29" cy="24" r="8" fill="var(--himmel)" fill-opacity=".85"/></svg></li>
+        <li class="zeichen__e z6" data-parallax="-0.1"><svg viewBox="0 0 48 48"><rect width="48" height="48" rx="14" fill="var(--weiss)"/><path d="M12 32 20 20l8 8 8-14" fill="none" stroke="var(--koralle)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+      </ul>
+      
+      <h2 class="ort__titel" data-zeig>Mehrere Konten. Eine Ansicht.</h2>
+      <p class="ort__lead" data-zeig>Eine App für Umsätze, Kontostände, Kreditkarten und Sparziele. Die Beispielzeichen oben stehen für deine Banken und Anbieter, echte Anbindungen und Logos kommen je Produkt dazu.</p>
+    </div>
+
+    <div class="wrap bento">
+      <article class="bk bk--breit" data-zeig>
+        <div class="bk__text"><h3>Jede Buchung automatisch sortiert</h3><p>Die App ordnet Umsätze Händlern und Kategorien zu, du korrigierst nur, was nicht passt.</p></div>
+        <ul class="buchungen" data-staffel role="img" aria-label="Drei Beispielbuchungen: Kino 11,90 Euro, Sparplan 150 Euro, Café 3,80 Euro">
+          <li class="buchung" data-zeig aria-hidden="true"><span class="buchung__name">Kino Musterstadt</span><span class="buchung__kat">Freizeit</span><b>-11,90 €</b></li>
+          <li class="buchung buchung--versetzt" data-zeig aria-hidden="true"><span class="buchung__name">Sparplan</span><span class="buchung__kat">Sparen</span><b>-150,00 €</b></li>
+          <li class="buchung buchung--versetzt2" data-zeig aria-hidden="true"><span class="buchung__name">Café am Markt</span><span class="buchung__kat">Essen und Trinken</span><b>-3,80 €</b></li>
+        </ul>
+      </article>
+
+      <article class="bk" data-zeig>
+        <div class="bk__text"><h3>Kreditkarten und Fristen im Griff</h3><p>Stand, Limit und Fälligkeit je Karte, damit keine Rechnung untergeht.</p></div>
+        <div class="karten" role="img" aria-label="Drei Kreditkarten zum seitlichen Wischen, Beispielwerte">
+          <ul class="karten__spur" aria-hidden="true">
+            <li class="kk kk--himmel"><span>Beispielbank</span><b>-1.772,00 €</b><small>Limit 3.000 €, fällig 02.06.</small></li>
+            <li class="kk kk--sonne"><span>Beispielkarte</span><b>-326,40 €</b><small>Limit 1.500 €, fällig 15.06.</small></li>
+            <li class="kk kk--koralle"><span>Zweitkarte</span><b>-58,00 €</b><small>Limit 800 €, fällig 20.06.</small></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="bk" data-zeig>
+        <div class="bk__text"><h3>Sparziele, die du siehst</h3><p>Lege fest, wofür du sparst, und verfolge, wie weit du bist.</p></div>
+        <div class="ziele" role="img" aria-label="Zwei Sparziele: Urlaub 62 Prozent, Notgroschen 38 Prozent, Beispielwerte">
+          <div aria-hidden="true">
+            <p class="app__zeile"><strong>Urlaub</strong><span>1.860 € von 3.000 €</span></p>
+            <div class="app__balken app__balken--gross"><i style="--w:62%"></i></div>
+            <p class="app__zeile"><strong>Notgroschen</strong><span>1.140 € von 3.000 €</span></p>
+            <div class="app__balken app__balken--gross app__balken--zwei"><i style="--w:38%"></i></div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 4. Suche: Postenband in drei Reihen, Suchfeld, Summe -->
+  <section class="suche" aria-labelledby="h-suche">
+    <input class="suche__schalter" type="checkbox" id="suche-pause" aria-label="Postenband anhalten">
+    <label class="suche__pause" for="suche-pause"><svg class="pause-ein" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-pause"/></svg><svg class="pause-aus" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-play"/></svg><span class="sr-nur">Postenband anhalten oder fortsetzen</span></label>
+    <div class="band-reihen" aria-hidden="true">
+      <div class="reihe reihe--1"><div class="reihe__spur">
+        <span class="posten" data-n="4" data-eur="31,60">Bäckerei</span><span class="posten" data-n="2" data-eur="64,00">Strom</span><span class="posten" data-n="9" data-eur="148,20">Supermarkt</span><span class="posten" data-n="1" data-eur="720,00">Miete</span><span class="posten" data-n="3" data-eur="41,70">Café</span><span class="posten" data-n="2" data-eur="19,98">Streaming</span><span class="posten" data-n="5" data-eur="212,40">Tankstelle</span><span class="posten" data-n="1" data-eur="29,90">Fitnessstudio</span>
+        <span class="posten" data-n="4" data-eur="31,60">Bäckerei</span><span class="posten" data-n="2" data-eur="64,00">Strom</span><span class="posten" data-n="9" data-eur="148,20">Supermarkt</span><span class="posten" data-n="1" data-eur="720,00">Miete</span><span class="posten" data-n="3" data-eur="41,70">Café</span><span class="posten" data-n="2" data-eur="19,98">Streaming</span><span class="posten" data-n="5" data-eur="212,40">Tankstelle</span><span class="posten" data-n="1" data-eur="29,90">Fitnessstudio</span>
+      </div></div>
+      <div class="reihe reihe--2"><div class="reihe__spur">
+        <span class="posten" data-n="2" data-eur="22,40">Apotheke</span><span class="posten" data-n="1" data-eur="49,00">Handyvertrag</span><span class="posten" data-n="6" data-eur="87,30">Drogerie</span><span class="posten" data-n="2" data-eur="58,00">Zugticket</span><span class="posten" data-n="1" data-eur="14,50">Buchhandlung</span><span class="posten" data-n="3" data-eur="36,00">Bibliothek</span><span class="posten" data-n="1" data-eur="95,00">Versicherung</span><span class="posten" data-n="4" data-eur="52,80">Lieferdienst</span>
+        <span class="posten" data-n="2" data-eur="22,40">Apotheke</span><span class="posten" data-n="1" data-eur="49,00">Handyvertrag</span><span class="posten" data-n="6" data-eur="87,30">Drogerie</span><span class="posten" data-n="2" data-eur="58,00">Zugticket</span><span class="posten" data-n="1" data-eur="14,50">Buchhandlung</span><span class="posten" data-n="3" data-eur="36,00">Bibliothek</span><span class="posten" data-n="1" data-eur="95,00">Versicherung</span><span class="posten" data-n="4" data-eur="52,80">Lieferdienst</span>
+      </div></div>
+      <div class="reihe reihe--3"><div class="reihe__spur">
+        <span class="posten" data-n="3" data-eur="26,70">Baumarkt</span><span class="posten" data-n="1" data-eur="18,00">Friseur</span><span class="posten" data-n="2" data-eur="39,80">Kino</span><span class="posten" data-n="1" data-eur="150,00">Sparplan</span><span class="posten" data-n="2" data-eur="12,40">Parkhaus</span><span class="posten" data-n="1" data-eur="64,90">Tierarzt</span><span class="posten" data-n="2" data-eur="31,00">Konzert</span><span class="posten" data-n="3" data-eur="45,60">Wochenmarkt</span>
+        <span class="posten" data-n="3" data-eur="26,70">Baumarkt</span><span class="posten" data-n="1" data-eur="18,00">Friseur</span><span class="posten" data-n="2" data-eur="39,80">Kino</span><span class="posten" data-n="1" data-eur="150,00">Sparplan</span><span class="posten" data-n="2" data-eur="12,40">Parkhaus</span><span class="posten" data-n="1" data-eur="64,90">Tierarzt</span><span class="posten" data-n="2" data-eur="31,00">Konzert</span><span class="posten" data-n="3" data-eur="45,60">Wochenmarkt</span>
+      </div></div>
+    </div>
+    <div class="suche__mitte">
+      <h2 id="h-suche" data-zeig>Alles finden. Alles zusammenzählen.</h2>
+      <div class="suchfeld" role="search" data-zeig>
+        <label class="sr-nur" for="suche-eingabe">Händler oder Kategorie suchen</label>
+        <svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-suche"/></svg>
+        <input id="suche-eingabe" type="search" placeholder="Zum Beispiel Café" autocomplete="off" data-suche>
+      </div>
+      <p class="suche__ergebnis" data-suche-ergebnis role="status">Tippe einen Händler, etwa Café, und sieh alle Buchungen und die Summe dieses Monats. Beispielwerte.</p>
+    </div>
+  </section>
+
+  <!-- 5. Vermögen und Depot: zwei Karten, Banner -->
+  <section class="sektion vermoegen" aria-labelledby="h-verm">
+    <div class="wrap">
+      <h2 class="mitte" id="h-verm" data-zeig>Dein Vermögen im Verlauf, nicht nur als Momentaufnahme</h2>
+      <div class="vm__raster">
+        <article class="bk" data-zeig>
+          <div class="bk__text"><h3>Vermögen auf einen Blick</h3><p>Guthaben und Verbindlichkeiten über die Monate, als Verlauf statt als einzelne Zahl.</p></div>
+          <div class="diagramm" role="img" aria-label="Säulendiagramm Vermögen: Februar 5.800 Euro, März 6.100 Euro, April 7.900 Euro, Beispielwerte">
+            <div class="diagramm__zeile" aria-hidden="true">
+              <div class="saeule"><i style="--h:62%" class="s-a"></i><i style="--h:22%" class="s-b"></i><span>Feb</span></div>
+              <div class="saeule"><i style="--h:66%" class="s-a"></i><i style="--h:20%" class="s-b"></i><span>Mär</span></div>
+              <div class="saeule"><i style="--h:92%" class="s-c"></i><i style="--h:40%" class="s-d"></i><span>Apr</span></div>
+            </div>
+          </div>
+        </article>
+        <article class="bk" data-zeig>
+          <div class="bk__text"><h3>Depot in einer Aufteilung</h3><p>Wie sich dein Depot zusammensetzt, ohne Kursprognose und ohne Anlageberatung.</p></div>
+          <div class="depot">
+            <p class="depot__summe">12.480,00 € <small>Beispielwert</small></p>
+            <div class="depot__balken" role="img" aria-label="Aufteilung: Aktien 58 Prozent, Fonds 40 Prozent, Sonstiges 2 Prozent, Beispielwerte"><i style="--w:58%" class="d-a"></i><i style="--w:40%" class="d-b"></i><i style="--w:2%" class="d-c"></i></div>
+            <ul class="depot__liste">
+              <li><i class="d-a"></i><span>Aktien</span><b>58 %</b></li>
+              <li><i class="d-b"></i><span>Fonds</span><b>40 %</b></li>
+              <li><i class="d-c"></i><span>Sonstiges</span><b>2 %</b></li>
+            </ul>
+          </div>
+        </article>
+      </div>
+      <aside class="banner" data-zeig>
+        <div><h3>Was als Nächstes kommt, entscheidest du mit</h3><p>Schlage Funktionen vor und stimme über Wünsche anderer ab.</p></div>
+        <a class="knopf knopf--koralle" href="#kontakt">Wunsch einreichen</a>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 6. Und noch mehr: Wischspur -->
+  <section class="sektion mehr" aria-labelledby="h-mehr" data-reiter-gruppe>
+    <div class="wrap mehr__kopf">
+      <div>
+        <h2 id="h-mehr" data-zeig>Und noch mehr</h2>
+        <p data-zeig>Kleine Funktionen, die den Alltag mit Geld leichter machen.</p>
+      </div>
+      <div class="pfeile" data-reiter-steuerung hidden>
+        <button class="pfeil" type="button" data-reiter="zurueck" aria-label="Vorherige Funktion" aria-disabled="true"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-arrow-left"/></svg></button>
+        <button class="pfeil" type="button" data-reiter="weiter" aria-label="Nächste Funktion"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></button>
+      </div>
+    </div>
+    <ul class="spur" data-reiter-spur data-staffel tabindex="0" role="list" aria-label="Weitere Funktionen, seitlich wischbar">
+      <li class="fk" data-zeig>
+        <div class="fk__bild" aria-hidden="true"><div class="minibalken"><i style="--h:40%"></i><i style="--h:64%"></i><i style="--h:90%" class="hoch"></i><i style="--h:52%"></i><i style="--h:30%"></i></div></div>
+        <h3>Ausgaben nach Händler</h3><p>Sieh, wie viel du pro Händler oder Kontakt ausgibst, mit Verlauf je Monat.</p>
+      </li>
+      <li class="fk" data-zeig>
+        <div class="fk__bild" aria-hidden="true"><dl class="sk__werte"><div><dt>Eingang</dt><dd>3.120 €</dd></div><div><dt>Ausgang</dt><dd>2.240 €</dd></div></dl></div>
+        <h3>Cashflow im Blick</h3><p>Eingang, Ausgang und Rest je Monat, damit du früh siehst, wohin es läuft.</p>
+      </li>
+      <li class="fk" data-zeig>
+        <div class="fk__bild" aria-hidden="true"><div class="app__karte app__karte--leise"><p class="app__zeile"><strong>Kontoauszug</strong><span>PDF, CSV</span></p></div></div>
+        <h3>Auszüge exportieren</h3><p>Kontoauszüge als Datei speichern und mit der Steuerberatung oder Bank teilen.</p>
+      </li>
+      <li class="fk" data-zeig>
+        <div class="fk__bild" aria-hidden="true"><div class="app__karte app__karte--leise"><p class="app__zeile"><strong>Notiz</strong><span>Mai</span></p><p class="app__klein">Reiseplanung, Anzahlung Unterkunft</p></div></div>
+        <h3>Notizen an Buchungen</h3><p>Halte fest, wofür eine Buchung war, und finde sie später über die Suche.</p>
+      </li>
+      <li class="fk" data-zeig>
+        <div class="fk__bild" aria-hidden="true"><ul class="app__liste"><li><i class="p-marine"></i><span>Alltag</span><b>Girokonto</b></li><li><i class="p-koralle"></i><span>Rücklage</span><b>Tagesgeld</b></li></ul></div>
+        <h3>Konten umbenennen</h3><p>Gib jedem Konto einen Namen oder Zweck, damit du beim Blick weißt, wofür es da ist.</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 7. Sticky Geschichte: drei Schritte, Handy wechselt den Schirm -->
+  <section class="schritte" id="ablauf" aria-labelledby="h-schritte" data-schritte>
+    <div class="schritte__buehne">
+      <h2 class="schritte__titel" id="h-schritte">Ein neuer Weg zum Überblick</h2>
+      <div class="schritte__innen">
+        <div class="telefon telefon--klein" role="img" aria-label="Handy, das nacheinander Buchungen, Auswertung und Rückblick zeigt (Beispielwerte)">
+          <div class="telefon__schirm" aria-hidden="true">
+            <div class="app__leiste"><span>09:41</span><span class="app__insel"></span><span>●●●</span></div>
+            <div class="sch s1">
+              <p class="app__gruss">Buchungen</p>
+              <ul class="app__liste app__liste--gross"><li><i class="p-koralle"></i><span>Supermarkt</span><b>-48,20 €</b></li><li><i class="p-himmel"></i><span>Tankstelle</span><b>-52,00 €</b></li><li><i class="p-sonne"></i><span>Café am Markt</span><b>-3,80 €</b></li><li><i class="p-marine"></i><span>Gehalt</span><b>+3.120 €</b></li></ul>
+            </div>
+            <div class="sch s2">
+              <p class="app__gruss">Auswertung Mai</p>
+              <div class="minibalken minibalken--gross"><i style="--h:44%"></i><i style="--h:70%"></i><i style="--h:95%" class="hoch"></i><i style="--h:58%"></i><i style="--h:36%"></i><i style="--h:62%"></i></div>
+              <p class="app__klein">Essen und Trinken war diesen Monat die größte Kategorie.</p>
+            </div>
+            <div class="sch s3">
+              <p class="app__gruss">Rückblick</p>
+              <div class="verlauf"><svg viewBox="0 0 200 90" preserveAspectRatio="none"><path d="M0 70 30 62 60 66 90 44 120 48 150 28 200 14" fill="none" stroke="var(--koralle)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <p class="app__klein">Dein Vermögen der letzten sechs Monate.</p>
+            </div>
+          </div>
+        </div>
+        <ol class="schritte__liste">
+          <li class="schritt" data-schritt-nr="1"><h3>Erfassen</h3><p>Umsätze kommen automatisch an und werden sortiert.</p></li>
+          <li class="schritt" data-schritt-nr="2"><h3>Auswerten</h3><p>Du siehst Kategorien, Händler und den Monatsverlauf.</p></li>
+          <li class="schritt" data-schritt-nr="3"><h3>Rückblicken</h3><p>Du erkennst Trends und passt dein Budget an, wenn es nötig ist.</p></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Sicherheit, dunkel -->
+  <section class="sicher" id="sicherheit" aria-labelledby="h-sicher">
+    <div class="wrap">
+      <h2 id="h-sicher" data-zeig>Sicher gedacht, nüchtern erklärt</h2>
+      <p class="sicher__lead" data-zeig>Beispieltexte, vor der Auslieferung mit der tatsächlichen Umsetzung abgleichen und rechtlich prüfen lassen.</p>
+      <ul class="sicher__raster" data-staffel role="list">
+        <li class="sicher__k" data-zeig><svg width="32" height="32" aria-hidden="true" focusable="false"><use href="#i-auge"/></svg><h3>Nur lesen, nie überweisen</h3><p>Die App sieht Umsätze und Kontostände. Sie kann kein Geld bewegen.</p></li>
+        <li class="sicher__k" data-zeig><svg width="32" height="32" aria-hidden="true" focusable="false"><use href="#i-schloss"/></svg><h3>Du bestätigst jeden Zugriff</h3><p>Eine Bank wird nur nach deiner Freigabe verbunden. Du kannst sie jederzeit trennen.</p></li>
+        <li class="sicher__k" data-zeig><svg width="32" height="32" aria-hidden="true" focusable="false"><use href="#i-schild"/></svg><h3>Deine Daten, deine Entscheidung</h3><p>Du kannst deine Daten exportieren und dein Konto samt Daten löschen lassen.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 9. Stimmen: zwei Bänder -->
+  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen">
+    <div class="wrap">
+      <h2 class="mitte" id="h-stimmen" data-zeig>Was Menschen über die App sagen</h2>
+      <p class="beispielhinweis">Beispielstimmen, erfunden. Im Projekt durch echte, freigegebene Stimmen ersetzen.</p>
+    </div>
+    <input class="band-schalter" type="checkbox" id="stimmen-pause" aria-label="Stimmenbänder anhalten">
+    <label class="band-pause" for="stimmen-pause"><svg class="pause-ein" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-pause"/></svg><svg class="pause-aus" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-play"/></svg><span class="sr-nur">Stimmenbänder anhalten oder fortsetzen</span></label>
+    <div class="stimmband stimmband--1" data-beispiel>
+      <ul class="stimmband__spur" role="list" tabindex="0" aria-label="Beispielstimmen, erste Reihe">
+        <li class="stimme"><blockquote><p>Seit der ersten Version dabei. Ich weiß endlich, wohin mein Geld im Monat geht.</p></blockquote><p class="stimme__name">Beispielperson A</p></li>
+        <li class="stimme"><blockquote><p>Klare Oberfläche, nichts Überflüssiges. Genau so soll ein Haushaltsbuch sein.</p></blockquote><p class="stimme__name">Beispielperson B</p></li>
+        <li class="stimme"><blockquote><p>Mir fehlt noch, dass der Kontostand öfter aktualisiert wird. Sonst läuft alles rund.</p></blockquote><p class="stimme__name">Beispielperson C</p></li>
+        <li class="stimme"><blockquote><p>Ich habe es meiner Familie gezeigt, jetzt nutzen wir es zu dritt für den Haushalt.</p></blockquote><p class="stimme__name">Beispielperson D</p></li>
+        <li class="stimme"><blockquote><p>Die Suche nach Händlern ist mein Lieblingsteil. Eine Summe, ein Blick.</p></blockquote><p class="stimme__name">Beispielperson E</p></li>
+      </ul>
+      <ul class="stimmband__spur" role="list" aria-hidden="true">
+        <li class="stimme"><blockquote><p>Seit der ersten Version dabei. Ich weiß endlich, wohin mein Geld im Monat geht.</p></blockquote><p class="stimme__name">Beispielperson A</p></li>
+        <li class="stimme"><blockquote><p>Klare Oberfläche, nichts Überflüssiges. Genau so soll ein Haushaltsbuch sein.</p></blockquote><p class="stimme__name">Beispielperson B</p></li>
+        <li class="stimme"><blockquote><p>Mir fehlt noch, dass der Kontostand öfter aktualisiert wird. Sonst läuft alles rund.</p></blockquote><p class="stimme__name">Beispielperson C</p></li>
+        <li class="stimme"><blockquote><p>Ich habe es meiner Familie gezeigt, jetzt nutzen wir es zu dritt für den Haushalt.</p></blockquote><p class="stimme__name">Beispielperson D</p></li>
+        <li class="stimme"><blockquote><p>Die Suche nach Händlern ist mein Lieblingsteil. Eine Summe, ein Blick.</p></blockquote><p class="stimme__name">Beispielperson E</p></li>
+      </ul>
+    </div>
+    <div class="stimmband stimmband--2" data-beispiel>
+      <ul class="stimmband__spur" role="list" tabindex="0" aria-label="Beispielstimmen, zweite Reihe">
+        <li class="stimme"><blockquote><p>Nach drei Monaten sehe ich, welche Abos ich nicht mehr brauche. Das war überfällig.</p></blockquote><p class="stimme__name">Beispielperson F</p></li>
+        <li class="stimme"><blockquote><p>Ich plane damit meinen Urlaub. Das Sparziel motiviert mich mehr als jede Tabelle.</p></blockquote><p class="stimme__name">Beispielperson G</p></li>
+        <li class="stimme"><blockquote><p>Gut, dass die App nur liest und nichts überweist. Das hat mich überzeugt.</p></blockquote><p class="stimme__name">Beispielperson H</p></li>
+        <li class="stimme"><blockquote><p>Der Rückblick am Monatsende ist kurz und hilfreich. Mehr brauche ich nicht.</p></blockquote><p class="stimme__name">Beispielperson I</p></li>
+        <li class="stimme"><blockquote><p>Endlich sind Girokonto, Karte und Depot in einer Ansicht. Das spart mir viel Gesuche.</p></blockquote><p class="stimme__name">Beispielperson J</p></li>
+      </ul>
+      <ul class="stimmband__spur" role="list" aria-hidden="true">
+        <li class="stimme"><blockquote><p>Nach drei Monaten sehe ich, welche Abos ich nicht mehr brauche. Das war überfällig.</p></blockquote><p class="stimme__name">Beispielperson F</p></li>
+        <li class="stimme"><blockquote><p>Ich plane damit meinen Urlaub. Das Sparziel motiviert mich mehr als jede Tabelle.</p></blockquote><p class="stimme__name">Beispielperson G</p></li>
+        <li class="stimme"><blockquote><p>Gut, dass die App nur liest und nichts überweist. Das hat mich überzeugt.</p></blockquote><p class="stimme__name">Beispielperson H</p></li>
+        <li class="stimme"><blockquote><p>Der Rückblick am Monatsende ist kurz und hilfreich. Mehr brauche ich nicht.</p></blockquote><p class="stimme__name">Beispielperson I</p></li>
+        <li class="stimme"><blockquote><p>Endlich sind Girokonto, Karte und Depot in einer Ansicht. Das spart mir viel Gesuche.</p></blockquote><p class="stimme__name">Beispielperson J</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 10. Einwand FAQ -->
+  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen">
+    <div class="wrap fragen__raster">
+      <h2 id="h-fragen" data-zeig>Häufige Fragen vor dem Download</h2>
+      <div class="fragen__liste" data-exklusiv data-beispiel>
+        <details><summary>Was kostet die App?</summary><p>Die Grundfunktionen sind kostenlos, erweiterte Funktionen kosten extra. Welche genau, steht vor dem Kauf in der App. Beispielantwort, je Produkt anpassen.</p></details>
+        <details><summary>Kann die App Geld überweisen oder abbuchen?</summary><p>Nein. Sie liest Umsätze und Kontostände, sie löst keine Zahlung aus. Beispielantwort, je Produkt anpassen.</p></details>
+        <details><summary>Welche Banken werden unterstützt?</summary><p>Eine aktuelle Liste steht in der App. Fehlt deine Bank, kannst du sie dort melden. Beispielantwort, je Produkt anpassen.</p></details>
+        <details><summary>Wo liegen meine Daten und wer sieht sie?</summary><p>Nur du siehst deine Auswertungen. Wo die Daten gespeichert werden und wie lange, steht in der Datenschutzerklärung. Beispielantwort, je Produkt anpassen.</p></details>
+        <details><summary>Gibt es die App für iPhone und Android?</summary><p>Ja, für beide. Gib unten dein Gerät an, dann schicken wir dir den passenden Link. Beispielantwort, je Produkt anpassen.</p></details>
+        <details><summary>Kann ich mein Konto wieder löschen?</summary><p>Ja, in den Einstellungen. Dabei werden deine Daten gelöscht, gesetzliche Aufbewahrungspflichten ausgenommen. Beispielantwort, rechtlich prüfen.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. Schluss mit Wortlicht und Formular -->
+  <section class="schluss" id="kontakt" aria-labelledby="h-schluss">
+    <div class="wrap schluss__raster">
+      <div class="schluss__text">
+        <h2 id="h-schluss" data-licht>Für alle, die mehr aus ihrem Geld machen wollen, ohne sich zu verzetteln.</h2>
+        <p>Wir schicken dir den Link zur App per E-Mail. Du kannst sie in Ruhe auf dem Handy öffnen.</p>
+        <ul class="schluss__daten" role="list">
+          <li><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><a href="tel:+490000000000">0000 000 000</a></li>
+          <li><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg><a href="mailto:hallo@beispiel.invalid">hallo@beispiel.invalid</a></li>
+        </ul>
+      </div>
+      <!-- Cloudflare Turnstile: im Projekt hier <div class="cf-turnstile" data-sitekey="PLATZHALTER"></div> einsetzen und serverseitig prüfen. Kein Schlüssel in der Vorlage -->
+      <form class="formular" data-formular action="#" method="post" novalidate>
+        <div class="formular__feld"><label for="f-name">Vorname</label><input id="f-name" name="vorname" type="text" autocomplete="given-name" placeholder="Dein Vorname"></div>
+        <div class="formular__feld"><label for="f-mail">E-Mail</label><input id="f-mail" name="email" type="email" autocomplete="email" placeholder="name@beispiel.invalid" required><small class="feld__hinweis">Dorthin schicken wir den Link zur App, sonst nichts.</small></div>
+        <div class="formular__feld"><label for="f-geraet">Dein Gerät</label><select id="f-geraet" name="geraet"><option>iPhone</option><option>Android</option></select><small class="feld__hinweis">Damit der Link zum passenden Store führt.</small></div>
+        <p class="formular__recht">Mit dem Absenden stimmst du zu, dass wir dir den Link senden. Mehr dazu in der <a href="#fuss">Datenschutzerklärung</a>.</p>
+        <button class="knopf formular__senden" type="submit">App laden <span class="knopf__punkt" aria-hidden="true"><svg width="20" height="20"><use href="#i-arrow-up-right"/></svg></span></button>
+        <p class="formular__meldung" data-formular-meldung role="status" hidden>Beispielformular: In dieser Vorlage wird nichts gesendet. Turnstile, Bestätigungsmail und Versand baut der Bauablauf.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="fuss" id="fuss">
+  <div class="wrap fuss__raster">
+    <nav aria-label="Seiten"><h3>Seiten</h3><ul role="list"><li><a href="#funktionen">Funktionen</a></li><li><a href="#sicherheit">Sicherheit</a></li><li><a href="#stimmen">Stimmen</a></li><li><a href="#fragen">Fragen</a></li></ul></nav>
+    <nav aria-label="Rechtliches"><h3>Rechtliches</h3><ul role="list"><li><a href="#fuss">Impressum</a></li><li><a href="#fuss">Datenschutz</a></li><li><a href="#fuss">AGB</a></li></ul></nav>
+    <div><h3>Kontakt</h3><address>Markenname<br>Musterstraße 1<br>00000 Musterstadt<br><a href="tel:+490000000000">0000 000 000</a><br><a href="mailto:hallo@beispiel.invalid">hallo@beispiel.invalid</a></address></div>
+    <p class="fuss__klein">© Markenname. Alle Rechte vorbehalten. Keine Anlageberatung, alle Darstellungen sind Beispiele.</p>
+  </div>
+  <p class="fuss__marke" aria-hidden="true">Markenname</p>
+</footer>
+
+<script src="../_basis/bewegung.js" defer></script>
+<script src="stil.js" defer></script>
+</body>
+</html>

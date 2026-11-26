@@ -1,0 +1,37 @@
+/* marke.css der Vorlage "Haushaltsbuch App Marine und Koralle": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast (selbst gerechnet, WCAG, Verhältnis zu 1):
+   --text #14202e auf --flaeche #f4f1ec          14,6 | auf Weiß 16,5 | auf --flaeche-alt 13,1
+   --text-leise #475364 auf --flaeche            6,9 | auf Weiß 7,8 | auf --flaeche-alt 6,2
+   --akzent-text #ffffff auf --akzent #12304d    13,5 (Hauptknopf)
+   --text auf --koralle #ff6b4a                  5,8 (Knopf auf Dunkel, Kacheln)
+   --text auf --sonne #ffc83d                    10,6 | --text auf --himmel #a9d6f0  10,5
+   --text-auf-dunkel #f4f1ec auf --flaeche-dunkel #0f2236  14,3 | --text-leise-dunkel #b9c4d0 auf Dunkel 9,1, auf Marine (Banner) 7,6; Feldrand #6b7684 auf Hell 4,1 (Rand, 3 zu 1 verlangt)
+   --koralle als Schrift auf Hell wird nicht verwendet (zu schwach), nur als Fläche und Zeichen. */
+:root{
+  --flaeche:#f4f1ec;
+  --flaeche-alt:#ebe5db;
+  --flaeche-dunkel:#0f2236;
+  --text:#14202e;
+  --text-leise:#475364;
+  --linie:#dcd5c9;
+  --akzent:#12304d;            /* Hauptaktion: Marine mit weißem Text */
+  --akzent-text:#ffffff;
+  --schrift-titel:'Bricolage Grotesque',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:24px;
+  --radius-bild:20px;
+
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:600;
+  --titel-spur:-0.035em;
+  --koralle:#ff6b4a;
+  --sonne:#ffc83d;
+  --himmel:#a9d6f0;
+  --marine:#12304d;
+  --weiss:#ffffff;
+  --text-auf-dunkel:#f4f1ec;
+  --text-leise-dunkel:#b9c4d0;
+  --linie-dunkel:#2c445c;
+  --feld-rand:#6b7684;
+}
