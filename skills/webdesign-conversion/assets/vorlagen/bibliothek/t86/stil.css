@@ -101,12 +101,13 @@ h3{font-size:clamp(1.2rem,1.1rem + .5vw,1.4rem);line-height:1.2}
 .reiter{padding-top:clamp(1.5rem,3vw,2.5rem)}
 .reiter__leiste{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:clamp(1.5rem,3vw,2.5rem)}
 .reiter__tab{min-height:2.75rem;padding:.4rem 1.25rem;border-radius:999px;background:var(--flaeche-alt);color:var(--text);font-weight:700;font-size:1rem;transition:background-color var(--dauer-kurz),color var(--dauer-kurz),transform var(--dauer-kurz) var(--kurve)}
-.reiter__tab:hover{transform:translateY(-1px);background:var(--wald-hell)}
+.reiter__tab[aria-selected="false"]:focus-visible{background:var(--wald-hell)}
+@media (hover:hover) and (pointer:fine){.reiter__tab:hover{transform:translateY(-1px);background:var(--wald-hell)}.reiter__tab[aria-selected="true"]:hover{background:var(--wald)}}
 .reiter__tab[aria-selected="true"]{background:var(--wald);color:var(--weiss)}
 .reiter__feld{display:grid;gap:clamp(1.5rem,3vw,2.5rem)}
 .reiter__feld+.reiter__feld{margin-top:clamp(3rem,6vw,5rem)}
 .reiter__feld[hidden]{display:none}
-.js .reiter__feld:not([hidden]){animation:feld-ein .5s var(--kurve)}
+.js .reiter__feld:not([hidden]){animation:feld-ein var(--dauer-mittel) var(--kurve)}
 @keyframes feld-ein{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 .reiter__text h2{max-width:44rem;font-weight:500;font-size:clamp(1.75rem,1.1rem + 2.2vw,2.9rem);line-height:1.15}
 .reiter__text p{margin-top:1.25rem;max-width:40rem;color:var(--text-leise);font-size:var(--text-l)}
@@ -147,7 +148,7 @@ h3{font-size:clamp(1.2rem,1.1rem + .5vw,1.4rem);line-height:1.2}
 .spur-steuerung{display:flex;gap:.5rem}
 .spur-steuerung[hidden]{display:none}
 .spur-steuerung button{display:grid;place-items:center;width:3rem;height:3rem;border-radius:50%;background:var(--flaeche-dunkel);color:var(--weiss);transition:transform var(--dauer-kurz) var(--kurve),opacity var(--dauer-kurz)}
-.spur-steuerung button:hover{transform:translateY(-2px)}
+@media (hover:hover) and (pointer:fine){.spur-steuerung button:hover{transform:translateY(-2px)}}
 .spur-steuerung button[aria-disabled="true"]{opacity:.35;cursor:default}
 .spur{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:1rem;scrollbar-width:thin}
 .geschichte{flex:0 0 min(85%,24rem);scroll-snap-align:start;display:flex;flex-direction:column;justify-content:space-between;gap:2rem;min-height:18rem;padding:1.75rem;border-radius:var(--radius-karte);background:var(--wald);color:var(--weiss)}
@@ -183,7 +184,7 @@ h3{font-size:clamp(1.2rem,1.1rem + .5vw,1.4rem);line-height:1.2}
 .kontakt__daten h2{max-width:28rem}
 .kontakt__wege{display:grid;gap:.75rem;margin-top:2rem}
 .kontakt__gross{display:flex;align-items:center;gap:1rem;min-height:4.5rem;padding:.75rem 1.5rem;border-radius:var(--radius-karte);background:var(--akzent);color:var(--akzent-text);font-family:var(--schrift-titel);font-weight:800;font-size:1.5rem;letter-spacing:-.01em;transition:transform var(--dauer-kurz) var(--kurve),box-shadow var(--dauer-kurz)}
-.kontakt__gross:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(20,22,19,.2)}
+@media (hover:hover) and (pointer:fine){.kontakt__gross:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(20,22,19,.2)}}
 .kontakt__gross--wald{background:var(--wald)}
 .kontakt__gross small{display:block;font-family:var(--schrift-text);font-weight:600;font-size:1rem;letter-spacing:0}
 .kontakt__gross svg{flex:none}

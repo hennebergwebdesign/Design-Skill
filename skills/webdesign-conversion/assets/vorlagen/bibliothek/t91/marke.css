@@ -1,0 +1,53 @@
+/* marke.css der Vorlage "Innenarchitektur dunkel und gold": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche, Akzenttext auf Akzent und Text auf Dunkel mindestens 4,5 zu 1.
+   Gold (--akzent) ist Fläche und Zeichen, auf Hell nie Textfarbe; als Text nur auf Dunkel (--gold-hell). */
+:root{
+  --flaeche:#f3f2ef;
+  --flaeche-alt:#e9e7e2;
+  --flaeche-dunkel:#151517;
+  --flaeche-dunkel-2:#202023;
+  --text:#17171a;
+  --text-leise:#54545a;
+  --linie:#d3d0c9;
+  --akzent:#c9a24a;           /* Hauptaktion: Goldfläche mit dunklem Text */
+  --akzent-text:#17171a;
+  --schrift-titel:'Outfit',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:8px;
+  --radius-karte:14px;
+  --radius-bild:12px;
+
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:500;
+  --titel-spur:-0.02em;
+  --gold-hell:#e0c07a;        /* Text und Zeichen auf Dunkel */
+  --text-auf-dunkel:#f3f2ef;
+  --text-leise-dunkel:#b9b8b4;
+  --linie-dunkel:#3a3a3e;
+  --weiss:#ffffff;
+  --feld-rand:#7a7a80;
+  /* Platzhalter-Töne für Bildflächen */
+  --ton-1:#6b675f;
+  --ton-2:#3c3c40;
+  --ton-3:#8d8579;
+  /* Isometrie: Materialfarben des Grundrisses (Seiten werden abgetönt) */
+  --iso-platte:#b9b6af;
+  --iso-b1:#dad6cd;
+  --iso-b2:#cdc9c0;
+  --iso-b3:#e4e0d7;
+  --iso-b4:#c3c9cc;
+  --iso-wand:#f7f6f3;
+  --iso-wand2:#e6e3dc;
+  --iso-sofa:#5a5a60;
+  --iso-tisch:#2b2b2f;
+  --iso-teppich:#bdb7aa;
+  --iso-regal:#3d3d42;
+  --iso-gold:#c9a24a;
+  --iso-pflanze:#6d7168;
+  --iso-kueche:#8c8c92;
+  --iso-hell:#f2f1ed;
+  --iso-hocker:#2e2e32;
+  --iso-bett:#d9d5cc;
+  --iso-bettkopf:#4b4b51;
+  --iso-wanne:#fbfaf8;
+}

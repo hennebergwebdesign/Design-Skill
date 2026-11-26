@@ -134,7 +134,7 @@ button:hover>.rundknopf,.rundknopf:hover{background:#2c539c}
 .angebot__knoepfe{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1.75rem;margin-top:1.75rem}
 .infokarten{display:grid;gap:1rem}
 .infokarte{display:grid;gap:.75rem;align-content:space-between;padding:1.15rem;border-radius:18px;background:var(--flaeche);box-shadow:inset 0 0 0 1px var(--linie)}
-.infokarte__kopf{display:flex;align-items:center;justify-content:space-between;gap:.5rem;font-family:var(--schrift-titel);font-weight:600;font-size:1.125rem;color:var(--akzent)}
+.infokarte__kopf{display:flex;flex-direction:column;align-items:flex-start;gap:.5rem;font-family:var(--schrift-titel);font-weight:600;font-size:1.125rem;color:var(--akzent)}
 .infokarte__tag{padding:.15rem .65rem;border-radius:999px;background:var(--weiss);box-shadow:inset 0 0 0 1px var(--linie);font-family:var(--schrift-text);font-weight:600;font-size:1rem;color:var(--text-leise)}
 .infokarte__text{color:var(--text-leise)}
 .infokarte__wert{display:flex;align-items:center;gap:.6rem;padding-top:.85rem;border-top:1px solid var(--linie);font-weight:700;color:var(--akzent)}
@@ -148,7 +148,8 @@ button:hover>.rundknopf,.rundknopf:hover{background:#2c539c}
 /* 4. Fachleute */
 .fachleute__raster{display:grid;gap:2.5rem;align-items:start}
 .fachleute__links{display:grid;gap:1rem}
-.fachleute__gross{margin:0;aspect-ratio:4/3;border-radius:var(--radius-gross)}
+.fachleute__gross{margin:0;aspect-ratio:16/10;border-radius:var(--radius-gross)}
+.fachleute__gross img{object-position:50% 0}
 .fachleute__unten{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 .fachleute__klein{position:relative;margin:0;aspect-ratio:1/1;border-radius:var(--radius-karte);overflow:hidden}
 .fachleute__kleinfoto{position:absolute;inset:0;border-radius:0}
@@ -168,8 +169,8 @@ button:hover>.rundknopf,.rundknopf:hover{background:#2c539c}
 .person p{color:var(--text-leise);line-height:1.35}
 @media (min-width:36rem){.personen{grid-template-columns:1fr 1fr}}
 @media (min-width:62rem){
-  .fachleute__raster{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2rem,4vw,4rem)}
-  .fachleute__rechts{align-content:center;padding-top:1rem}
+  .fachleute__raster{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2rem,4vw,4rem);align-items:center}
+  .fachleute__rechts{align-content:center}
 }
 
 /* 5. Stimmen */
@@ -207,7 +208,7 @@ button:hover>.rundknopf,.rundknopf:hover{background:#2c539c}
 .artikel__fuss{display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.5rem;margin-top:.5rem}
 .artikel__autor{display:inline-flex;align-items:center;gap:.7rem;line-height:1.3}
 .artikel__autor img{width:2.75rem;height:2.75rem;border-radius:50%;object-fit:cover}
-.artikel__autor span span{display:grid;color:var(--text-leise)}
+.artikel__autor>span{display:grid;color:var(--text-leise)}
 .artikel__autor b{color:var(--text)}
 .artikel.neu{animation:artikel-ein .55s var(--kurve)}
 @keyframes artikel-ein{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
@@ -249,7 +250,7 @@ button:hover>.rundknopf,.rundknopf:hover{background:#2c539c}
 .formular__notfall{font-size:1rem;color:var(--text-leise)}
 .kontakt__bild{position:relative;min-height:26rem;margin:0}
 .kontakt__foto{position:absolute;inset:0;border-radius:var(--radius-gross)}
-.kontakt__foto img{object-position:40% 40%}
+.kontakt__foto img{object-position:52% 50%}
 .kontakt__karte{position:absolute;left:1rem;right:1rem;bottom:1rem;display:grid;gap:.9rem;padding:1.15rem 1.25rem;border-radius:var(--radius-karte);background:var(--weiss);max-width:27rem}
 .kontakt__karte>p:first-child{font-family:var(--schrift-titel);font-weight:500;font-size:1.25rem;line-height:1.3}
 .kontakt__name{display:flex;align-items:center;gap:.7rem;line-height:1.3}

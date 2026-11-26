@@ -15,7 +15,7 @@ h3{font-size:var(--h3);line-height:1.2;font-weight:400}
 .knopf svg{flex:none;transition:transform var(--dauer-kurz) var(--kurve)}
 .knopf:hover svg{transform:translateX(3px)}
 .kopfzeile{display:grid;gap:1rem;max-width:44rem;margin-bottom:clamp(2rem,4vw,3.5rem)}
-.kopfzeile .kicker{margin-bottom:0}
+.kopfzeile>*+*{margin-top:0}
 .kopfzeile--mitte{margin-inline:auto;text-align:center;justify-items:center}
 .kopfzeile__text{color:var(--text-leise);font-size:var(--text-l);max-width:36rem}
 .kopfzeile__text a,.fragen__kopf a{color:var(--akzent);text-decoration:underline;text-underline-offset:.2em;text-decoration-thickness:1.5px}
@@ -177,8 +177,8 @@ h3{font-size:var(--h3);line-height:1.2;font-weight:400}
 /* 8. Vollbildabschnitt: ohne JavaScript, auf dem Handy und bei reduzierter Bewegung ein ruhiger Block, sonst wächst das Foto beim Scrollen */
 .voll{padding:0 .5rem .5rem}
 .voll__rahmen{position:relative;isolation:isolate;display:grid;place-items:center;min-height:36rem;border-radius:var(--radius-gross);overflow:hidden;color:#fff;background:var(--flaeche-dunkel)}
-.voll__rahmen>img{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:50% 85%}
-.voll__rahmen::before{content:"";position:absolute;inset:0;z-index:-1;background:color-mix(in srgb,#000 48%,transparent)}
+.voll__rahmen>img{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:50% 100%}
+.voll__rahmen::before{content:"";position:absolute;inset:0;z-index:-1;background:color-mix(in srgb,#000 30%,transparent)}
 .voll__inhalt{display:grid;justify-items:center;gap:1.75rem;width:min(100%,50rem);padding:3rem 1.25rem;text-align:center}
 .voll h2{font-size:clamp(2rem,1.2rem + 3.6vw,4.25rem);line-height:1.08;text-shadow:0 2px 24px color-mix(in srgb,#000 35%,transparent)}
 .nl{display:grid;gap:.75rem;width:min(100%,34rem);justify-items:stretch;padding:.5rem;border-radius:var(--radius-gross);background:color-mix(in srgb,#000 30%,transparent)}

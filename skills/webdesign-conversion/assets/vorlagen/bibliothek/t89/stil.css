@@ -11,7 +11,7 @@ section[id],footer[id]{scroll-margin-top:calc(var(--kopf-h) + .5rem)}
 .gescrollt .kopf{border-bottom-color:var(--linie)}
 .kopf__innen{width:min(100% - 2*var(--rand),var(--breite));margin-inline:auto;min-height:var(--kopf-h);display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:1.5rem}
 .logo{display:inline-flex;align-items:center;gap:.55rem;font-family:var(--schrift-titel);font-weight:700;font-size:1.25rem;letter-spacing:-.02em;min-height:2.75rem}
-.logo svg{color:var(--akzent)}
+.logo svg{flex:none;color:var(--akzent)}
 .fuss .logo svg{color:var(--akzent-hell)}
 .kopf__menue{display:flex;justify-content:center;align-items:center;gap:clamp(1rem,2.4vw,2.25rem)}
 .kopf__menue a{display:inline-flex;align-items:center;gap:.4rem;min-height:2.75rem;font-weight:600;font-size:1rem}
@@ -212,7 +212,7 @@ details[open]>summary .akk__pfeil,details[open]>summary svg:last-child{transform
 .formular__recht a{text-decoration:underline;text-underline-offset:.2em;color:var(--akzent);font-weight:600}
 .formular__senden{justify-self:start}
 .formular__meldung{font-size:1rem;padding:.75rem 1rem;border-radius:12px;background:var(--flaeche-alt)}
-@media (min-width:900px){.laden__raster{display:grid;gap:2rem;align-items:center}.laden__telefon{display:flex;justify-content:center;align-items:flex-start;height:clamp(20rem,52vw,26rem);overflow:hidden;padding-top:.5rem}}
+@media (min-width:900px){.laden__raster{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr)}.laden__telefon{height:30rem;align-self:end}}
 
 /* Fuß */
 .fuss{background:var(--flaeche-dunkel);color:var(--text-auf-dunkel);padding-block:clamp(3rem,6vw,5rem) 2rem}
