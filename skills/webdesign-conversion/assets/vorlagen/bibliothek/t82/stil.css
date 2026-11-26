@@ -285,7 +285,7 @@ nav a[aria-current="location"]{text-decoration-color:var(--akzent)}
 .frage summary::-webkit-details-marker{display:none}
 .frage summary svg{flex:none;color:var(--akzent);transition:transform var(--dauer-mittel) var(--kurve)}
 .frage[open] summary svg{transform:rotate(135deg)}
-.frage p{padding:0 2.5rem 1.2rem 0;color:var(--text-leise);animation:frage-auf .35s var(--kurve)}
+.frage p{padding:0 2.5rem 1.2rem 0;color:var(--text-leise);animation:frage-auf .28s var(--kurve)}
 @keyframes frage-auf{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
 @media (max-width:1000px){.fragen__raster{grid-template-columns:1fr}.fragen__bild{position:static;aspect-ratio:16/10}}
 
