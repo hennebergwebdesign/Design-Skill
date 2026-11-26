@@ -1,7 +1,7 @@
 # Template-Bibliothek
 
-Achtundsechzig eigenständige Seitenvorlagen, branchenneutral, ohne Build, ohne Abhängigkeit, ohne Fremdserver. Jede Vorlage ist ein Ordner
-(`t01` bis `t68`, Überblick in `index.html`) mit `index.html`, `marke.css`, `stil.css` und `INFO.md`. Gemeinsam genutzt wird `_basis/`.
+Achtundneunzig eigenständige Seitenvorlagen, branchenneutral, ohne Build, ohne Abhängigkeit, ohne Fremdserver. Jede Vorlage ist ein Ordner
+(`t01` bis `t98`, Überblick in `index.html`) mit `index.html`, `marke.css`, `stil.css` und `INFO.md`. Gemeinsam genutzt wird `_basis/`.
 
 ## Benutzen
 
@@ -21,7 +21,7 @@ Hat eine Referenz mehrere Startseiten, ist es **ein** Template mit Varianten: `t
 ## Conversion Raster (Stand 25.11.2026)
 
 Jede Vorlage und Variante erfüllt nach dem Website Conversion Playbook 2027 (That's it. Marketing) diese messbaren Punkte, jeweils im eigenen Stil der Vorlage umgesetzt:
-Titel höchstens 60 und Beschreibung höchstens 160 Zeichen, Primär-CTA in der Kopfzeile und mindestens zweimal je Seite, Hauptnavigation höchstens 6 Punkte, Telefon sichtbar, Einwand-FAQ (`details`, Antworten als Beispiel markiert), Kontaktformular höchstens 5 Felder mit Feldhinweis unter E-Mail und Telefon (`.feld__hinweis`, mindestens 16 px), Bilder höchstens 200 KB, Heldformel als Kommentar vor der H1. Nicht übernommen: F-Muster (Fehlbild), Exit-Intent-Popup, Kennzahlen des Playbooks (unbelegt). Beispielbelege im Held tragen `data-beispiel`. Nachprüfen: pro Seite Titel, Beschreibung, Knöpfe, `details`, `tel:`, Felderzahl und Bildgewicht zählen.
+Titel höchstens 60 und Beschreibung höchstens 160 Zeichen, Primär-CTA in der Kopfzeile und mindestens zweimal je Seite, Hauptnavigation höchstens 6 Punkte, Telefon sichtbar, Einwand-FAQ (`details`, Antworten als Beispiel markiert), Kontaktformular höchstens 5 Felder mit Feldhinweis unter E-Mail und Telefon (`.feld__hinweis`, mindestens 16 px), Bilder höchstens 200 KB, Heldformel als Kommentar vor der H1. Nicht übernommen: F-Muster (Fehlbild), Exit-Intent-Popup, Kennzahlen des Playbooks (unbelegt). Beispielbelege im Held tragen `data-beispiel`. Nachprüfen: `node scripts/bibliothek-conversion.mjs` (alle Vorlagen, oder `t69 t70` einzeln, `--ab t69`) zählt Title, Description, h1, Navigationspunkte, `tel:`, `details`, Felder je Formular, Feldhinweis, Primär CTA in Kopfzeile und mindestens dreimal auf der Seite und Bildgewicht (Fehler) sowie Heldformel als Kommentar und JSON-LD (Warnung). Die Prüfung ist bei jeder neuen Vorlage und Variante zu laufen, bevor sie eingetragen wird. Für t01 bis t68 meldet sie teils fehlende Feldhinweise, weil dort eine andere Klasse verwendet wurde; das ist nicht nachgemessen.
 
 ## Was sie sind und was nicht
 
@@ -33,7 +33,7 @@ Titel höchstens 60 und Beschreibung höchstens 160 Zeichen, Primär-CTA in der 
 
 ## Vorschaubilder erneuern
 
-Die Galerie lädt keine Seiten, sondern kleine WebP Bilder aus `vorschau/` (204 Dateien). Geladen wird nach Bedarf: die Desktopvorschau beim Scrollen, die Abschnittsübersicht erst beim Überfahren, die Mobilansicht erst nach dem Umschalten (gemessen: 24 Bilder beim Öffnen, 1 beim Überfahren). Nach einer Änderung an einer Vorlage neu erzeugen, aus dem Repository Stamm: `node scripts/bibliothek-vorschau.mjs` (braucht Playwright, startet einen lokalen Server, Bewegung auf reduziert).
+Die Galerie lädt keine Seiten, sondern kleine WebP Bilder aus `vorschau/` (294 Dateien). Geladen wird nach Bedarf: die Desktopvorschau beim Scrollen, die Abschnittsübersicht erst beim Überfahren, die Mobilansicht erst nach dem Umschalten (gemessen: 24 Bilder beim Öffnen, 1 beim Überfahren). Nach einer Änderung an einer Vorlage neu erzeugen, aus dem Repository Stamm: `node scripts/bibliothek-vorschau.mjs` (braucht Playwright, startet einen lokalen Server, Bewegung auf reduziert).
 
 ## Bewegung
 

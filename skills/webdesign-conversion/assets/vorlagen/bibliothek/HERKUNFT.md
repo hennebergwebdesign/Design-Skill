@@ -1,6 +1,6 @@
 # Herkunft und Grenzen der Bibliothek
 
-Stand 24.11.2026. Die achtundsechzig Vorlagen sind **eigenständige Umsetzungen** nach dem Prinzip öffentlich erreichbarer Referenzseiten (t01 bis t12 am 24.11.2026, t13 bis t68 am 25.11.2026 nachgereicht). Der Inhaber der
+Stand 26.11.2026. Die achtundneunzig Vorlagen sind **eigenständige Umsetzungen** nach dem Prinzip öffentlich erreichbarer Referenzseiten (t01 bis t12 am 24.11.2026, t13 bis t68 am 25.11.2026 nachgereicht, t69 bis t98 am 26.11.2026 nach Pinterest Screenshots des Inhabers). Der Inhaber der
 Agentur hat die Erfassung der Seiten ausdrücklich freigegeben und Weg 1 gewählt (eigene Templates, branchenneutral). Er wünschte einen Nachbau von
 Layout, Design, Prinzip und Animation; übernommen ist das Prinzip, nicht die Ausführung.
 
@@ -74,6 +74,36 @@ Layout, Design, Prinzip und Animation; übernommen ist das Prinzip, nicht die Au
 | t66 | fileon.webflow.io | 25.11.2026 |
 | t67 | lexma-template.webflow.io | 25.11.2026 |
 | t68 | lunabistro-template.webflow.io | 25.11.2026 |
+| t69 | Pinterest Screenshot des Inhabers (im Bild: Horizon Courts), keine Adresse bekannt | 26.11.2026 |
+| t70 | Pinterest Screenshot des Inhabers (im Bild: ClipGen), keine Adresse bekannt | 26.11.2026 |
+| t71 | Pinterest Screenshot des Inhabers (im Bild: CRÈME), keine Adresse bekannt | 26.11.2026 |
+| t72 | Pinterest Screenshot des Inhabers (Name im Bild nicht lesbar), keine Adresse bekannt | 26.11.2026 |
+| t73 | Pinterest Screenshot des Inhabers (im Bild: SixPay), keine Adresse bekannt | 26.11.2026 |
+| t74 | Pinterest Screenshot des Inhabers (im Bild: FinSuite), keine Adresse bekannt | 26.11.2026 |
+| t75 | Pinterest Screenshot des Inhabers (im Bild: Equita), keine Adresse bekannt | 26.11.2026 |
+| t76 | Pinterest Screenshot des Inhabers (Name im Bild nicht lesbar), keine Adresse bekannt | 26.11.2026 |
+| t77 | Pinterest Screenshot des Inhabers (im Bild: Augment), keine Adresse bekannt | 26.11.2026 |
+| t78 | Pinterest Screenshot des Inhabers (im Bild: goned), keine Adresse bekannt | 26.11.2026 |
+| t79 | Pinterest Screenshot des Inhabers (im Bild: Potshow), keine Adresse bekannt | 26.11.2026 |
+| t80 | Pinterest Screenshot des Inhabers (im Bild: Creatix), keine Adresse bekannt | 26.11.2026 |
+| t81 | Pinterest Screenshot des Inhabers (im Bild: FlowFix), keine Adresse bekannt | 26.11.2026 |
+| t82 | Pinterest Screenshot des Inhabers (im Bild: Spintip), keine Adresse bekannt | 26.11.2026 |
+| t83 | Pinterest Screenshot des Inhabers (im Bild: Horizon Tennis Club), keine Adresse bekannt | 26.11.2026 |
+| t84 | Pinterest Screenshot des Inhabers (im Bild: Greenify), keine Adresse bekannt | 26.11.2026 |
+| t85 | Pinterest Screenshot des Inhabers (im Bild: Healora), keine Adresse bekannt | 26.11.2026 |
+| t86 | Pinterest Screenshot des Inhabers (im Bild: Terra), keine Adresse bekannt | 26.11.2026 |
+| t87 | Pinterest Screenshot des Inhabers (im Bild: Future), keine Adresse bekannt | 26.11.2026 |
+| t88 | Pinterest Screenshot des Inhabers (im Bild: Travellah), keine Adresse bekannt | 26.11.2026 |
+| t89 | Pinterest Screenshot des Inhabers (im Bild: Goesyuk), keine Adresse bekannt | 26.11.2026 |
+| t90 | Pinterest Screenshot des Inhabers (im Bild: LuminArt), keine Adresse bekannt | 26.11.2026 |
+| t91 | Pinterest Screenshot des Inhabers (im Bild: Antra), keine Adresse bekannt | 26.11.2026 |
+| t92 | Pinterest Screenshot des Inhabers (im Bild: Oralis), keine Adresse bekannt | 26.11.2026 |
+| t93 | Pinterest Screenshot des Inhabers (im Bild: Automobil), keine Adresse bekannt | 26.11.2026 |
+| t94 | Pinterest Screenshot des Inhabers (im Bild: Kitchor), keine Adresse bekannt | 26.11.2026 |
+| t95 | Pinterest Screenshot des Inhabers (Name im Bild nicht lesbar), keine Adresse bekannt | 26.11.2026 |
+| t96 | Pinterest Screenshot des Inhabers (im Bild: Power), keine Adresse bekannt | 26.11.2026 |
+| t97 | Pinterest Screenshot des Inhabers (im Bild: Babun), keine Adresse bekannt | 26.11.2026 |
+| t98 | Pinterest Screenshot des Inhabers (im Bild: Uniqum), keine Adresse bekannt | 26.11.2026 |
 
 ## Was übernommen ist, was nicht
 
@@ -95,8 +125,10 @@ Layout, Design, Prinzip und Animation; übernommen ist das Prinzip, nicht die Au
 ## Was nicht gemessen ist
 
 Safari, echte Geräte, Screenreader, Leistung auf schwachen Geräten, Kontrast über Bildern, Formularversand (keiner sendet), Hover- und Tastaturläufe durch alle Elemente. Die
-Stand 25.11.2026: alle Vorlagen (t01 bis t68, auch v2 und v3) tragen Beispielfotos, auch Personen, Szenen und Vorher Nachher Paare (Letztere aus einem Foto entsättigt, nur Vorschau). Alle sind komprimierte Platzhalter für die Vorschau und werden vor Abgabe durch Kundenmaterial ersetzt. Ältere Angabe: t01 bis t28 tragen Stockfotos von Unsplash (Unsplash Lizenz), selbst gehostet unter `tNN/bilder/`, mit Nachweis je Vorlage in `tNN/BILDER.md`. Fotograf und Beschreibung stammen von der Suchergebnisseite, nicht von der Einzelseite; Aufnahmeorte und deutsche Verhältnisse sind nicht geprüft. t20 hat bewusst keine Fotos (App Oberfläche), t29 bis t33 wurden später ergänzt. Die Wirkung hängt an echten Kundenfotos. Bewegung ist teils aus Beobachtung der Referenz geschätzt (Timing, Easing).
+Stand 25.11.2026: alle Vorlagen (t01 bis t98, auch v2 und v3) tragen Beispielfotos, auch Personen, Szenen und Vorher Nachher Paare (Letztere aus einem Foto entsättigt, nur Vorschau). Alle sind komprimierte Platzhalter für die Vorschau und werden vor Abgabe durch Kundenmaterial ersetzt. Ältere Angabe: t01 bis t28 tragen Stockfotos von Unsplash (Unsplash Lizenz), selbst gehostet unter `tNN/bilder/`, mit Nachweis je Vorlage in `tNN/BILDER.md`. Fotograf und Beschreibung stammen von der Suchergebnisseite, nicht von der Einzelseite; Aufnahmeorte und deutsche Verhältnisse sind nicht geprüft. t20 hat bewusst keine Fotos (App Oberfläche), t29 bis t33 wurden später ergänzt. Die Wirkung hängt an echten Kundenfotos. Bewegung ist teils aus Beobachtung der Referenz geschätzt (Timing, Easing).
 
 * t29 bis t33: Erfassung der Referenzen über Bildschirmaufnahmen des Inhabers und Playwright. Gemessen bei 390 und 1440 Pixel: kein Überlauf, keine Konsolenfehler, `pruefe-striche` ohne Befund. Stockbilder fehlen noch, Ablauf in `BILDSUCHE-PROMPT.md`.
 
 * **t34 bis t68 (25.11.2026):** 35 Vorlagen nach 41 freigegebenen Referenzseiten, gebaut von parallel arbeitenden Agenten nach demselben Auftrag (Prinzip, nicht Kopie), je Referenz mit Playwright bei 1440 und 390 Pixel erfasst. Mehrere Startseiten-Varianten einer Referenz sind **ein** Template mit wählbaren Varianten (`tNN/index.html`, `v2.html`, `v3.html`, gemeinsame `marke.css`): t34, t38, t42, t47, t53, t54, t56, t64. Gemessen bei 390 und 1440 Pixel: kein Überlauf, keine Konsolenfehler, `pruefe-striche` ohne Befund, keine Webflow Klassen. **Ungemessen:** Kontrast über Bildern und Verläufen, Safari, Screenreader, echte Geräte. **Bewegung ist durchgehend aus Standbildern und Scrollschritten geschätzt**, die Webflow Interaktionen ließen sich nicht auslesen. Erfasst ist je Referenz nur die Startseite (und genannte Varianten), nicht die Unterseiten. Stockbilder fehlen, Platzhalterflächen (Ablauf in `BILDSUCHE-PROMPT.md`). Beispieltexte für Kanzlei und Praxis sind ohne Erfolgs oder Heilversprechen, Berufs und Werberecht bleibt je Kunde zu prüfen. Preise, Zahlen, Namen und Stimmen sind Beispiele.
+
+* **t69 bis t98 (26.11.2026):** 30 Vorlagen nach Pinterest Screenshots, die der Inhaber geliefert hat (Ganzseitenbilder von Webdesign Vorlagen, eine als PDF, vier ohne Bilddatei nur im Gespräch beschrieben). **Es gibt keine Adresse und keine Lizenzangabe zu diesen Quellen**, einige Bilder tragen Wasserzeichen von Downloadseiten für Vorlagen (nicht übernommen). Gebaut als Prinzip, nicht als Kopie: Aufbau, Raster, Sektionsfolge und Art der Bewegung nach dem Bild geschätzt, Text, Bild, Icon, Code, Schrift, Farbe und Marke eigen; Markennamen, Logos und Plattformen der Bilder sind nicht übernommen. Die Namen in der Tabelle stehen nur als Herkunftsnachweis, soweit im Bild lesbar. **Gebaut von parallel arbeitenden Agenten nach einem gemeinsamen Auftrag, je gegengeprüft mit Playwright bei 1440 und 390 Pixel** (keine Konsolenfehler, kein Überlauf, bei reduzierter Bewegung alles sichtbar) und mit `scripts/bibliothek-conversion.mjs` gegen das Conversion Raster. **Bewegung aus Standbildern geschätzt, keine Referenz wurde im Browser erfasst.** Bewusst umgedreht, weil Kapitel 26 es als KI Tell führt: farbige Akzentwörter, Pillen hinter Wörtern, kursive Serifenzeilen, handschriftliche Unterstreichung, Violettverläufe. **Ungemessen:** Kontrast von Text über Fotos, Safari, Screenreader, echte Geräte, Leistung der Scrollbühnen. **Fotos:** Die Bibliothek hat keine Fotos zu Tennis, Rad, Auto, Zahnbehandlung, Luftbild, Lampen oder Hardware; dort stehen Beispielfotos anderer Themen oder eigene SVG Formen. Bei mehreren Fotos fehlt schon in den Ursprungsvorlagen der Nachweis (Fotograf, Seite), das steht je Vorlage in `BILDER.md` als offen. Heikle Branchen (Psychotherapie, Zahnarzt, Finanzen, Bildung, Reise, Shop, Hardware mit Kamera) sind ohne Heil, Erfolgs oder Renditeversprechen formuliert, rechtlich nicht geprüft, je Vorlage in `INFO.md` unter Offen.
