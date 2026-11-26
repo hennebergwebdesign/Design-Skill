@@ -4,7 +4,7 @@ description: Baut komplette Kundenwebsites mit Astro und Cloudflare Pages nach A
 license: Proprietär, That's it. Marketing / VFDESIGN LTD
 metadata:
   author: That's it. Marketing / Henneberg Webdesign
-  version: 2.25.0
+  version: 2.26.0
 ---
 
 # Agentur Website Builder
@@ -341,9 +341,8 @@ Details zu Stack, Buildbefehl, Umgebungsvariablen und Cloudflare Einrichtung ste
 
 ## Pflege der CLAUDE.md
 
-Die `CLAUDE.md` im Projektrepo ist der laufende Projektstand, nicht ein Abschlussbericht.
-Sie wird bei jeder inhaltlichen Änderung nachgezogen, nicht nur am Projektende. Die
-bewährte Gliederung steht in
+Die `CLAUDE.md` im Projektrepo ist der laufende Projektstand, nicht ein Abschlussbericht, und bleibt unter 8 KB (nie über 10 KB, `scripts/pruefe-claudemd.mjs`): Verlauf und Detail stehen in `docs/`, siehe `references/token-sparsamkeit.md`.
+Sie wird bei jeder inhaltlichen Änderung nachgezogen. Die bewährte Gliederung steht in
 `../webdesign-conversion/references/14-projektstruktur-astro.md`. Mindestens diese
 Abschnitte:
 
@@ -400,6 +399,7 @@ Schwesterskill.
 | `references/referenzquellen-konfiguration.md` | eine Referenzquelle ergänzen, stilllegen oder ihr Suchmuster prüfen |
 | `references/designrecherche-beispiele.md` | beim ersten Durchlauf der Recherche, und bei jeder Störungsmeldung |
 | `references/arbeitsdisziplin.md` | immer, ab Phase 2: Annahmen aussprechen, Verwirrung melden, dünne Scheiben, Belege, nach Quelle bauen, Zweifel-Durchgang, Kontext führen |
+| `references/token-sparsamkeit.md` | immer beim Anlegen oder Ändern einer CLAUDE.md und bei langen Sitzungen: Größenregel, was nach docs/ gehört, Suchen vor Lesen |
 | `references/browser-pruefung-mit-playwright-cli.md` | eine Seite im Browser erkunden und testen: Handy, reduzierte Bewegung, Consent, Netzwerk, Formular, Bewegung Bild für Bild |
 | `references/sicherheitspruefung.md` | Phase 4 bis 6, jedes Projekt: Prüfung, Funde einsortieren, Missbrauch testen, Schlüssel aufgetaucht, Tiefenscan, Übergabe |
 | `references/zahlungen-umsetzung.md` | nur wenn die Seite Geld einnimmt (Stripe): Fragen, Dateien aus `assets/stripe/`, Umgebungsvariablen, Dashboard, Testplan |
