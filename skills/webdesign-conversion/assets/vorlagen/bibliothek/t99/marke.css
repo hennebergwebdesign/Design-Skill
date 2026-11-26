@@ -1,0 +1,32 @@
+/* marke.css der Vorlage "Labor Eisgrün und Petrol": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1.
+   Gerechnet (WCAG, 26.11.2026): --text auf --flaeche 13,9 | --text-leise auf --flaeche 7,1, auf --flaeche-alt 6,5, auf Weiß 7,5, auf --eis 5,8
+   --akzent-text auf --akzent 9,8 | Weiß auf --flaeche-dunkel 12,3 | --text-leise-dunkel auf --flaeche-dunkel 7,8 | --flaeche-dunkel auf --sand 8,3
+   --akzent auf --sand 6,7 | --text auf --eis 11,4 | --text auf --sand 10,0 | Eingabefeldrand --feld-rand auf Weiß 5,6 */
+:root{
+  --flaeche:#f3faf8;           /* sehr helles Eisgrün */
+  --flaeche-alt:#e2f2ed;
+  --flaeche-dunkel:#0b3a45;    /* kühles Petrol, Flächen und Fuß */
+  --text:#0e2c33;
+  --text-leise:#3d5962;
+  --linie:#c5ddd6;
+  --akzent:#0e4a57;            /* Hauptaktion: Petrol mit hellem Text */
+  --akzent-text:#ffffff;
+  --schrift-titel:'Outfit',system-ui,sans-serif;
+  --schrift-text:'Manrope',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:22px;
+  --radius-bild:20px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:36px;
+  --titel-gewicht:500;
+  --titel-spur:-0.025em;
+  --eis:#c9e9e0;               /* Eisgrün, kräftiger: Karten, Balkenfläche */
+  --sand:#e8d2a6;              /* Gegenakzent: Hervorhebung, Knopf auf Petrol, Marker, nie Textfarbe auf Hell */
+  --weiss:#ffffff;
+  --text-auf-dunkel:#ffffff;
+  --text-leise-dunkel:#b7d3d3;
+  --linie-dunkel:#2a5a65;
+  --feld-rand:#4f6d73;
+}
