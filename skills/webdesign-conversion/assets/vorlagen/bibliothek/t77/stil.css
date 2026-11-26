@@ -4,7 +4,7 @@
 section[id]{scroll-margin-top:calc(var(--kopf-hoehe) + .5rem)}
 :focus-visible{outline-color:var(--akzent)}
 .hell :focus-visible{outline-color:var(--text-hell)}
-h1{font-size:clamp(2.6rem,1.3rem + 5.6vw,5.75rem);line-height:1.02;letter-spacing:-.03em}
+h1{font-size:clamp(2.5rem,1.3rem + 4.6vw,4.75rem);line-height:1.04;letter-spacing:-.03em}
 h2{font-size:var(--h2-m);line-height:1.08}
 h3{font-size:var(--h3);line-height:1.2}
 .mitte{text-align:center;max-width:50rem;margin:0 auto clamp(2rem,4vw,3.5rem)}
@@ -75,7 +75,7 @@ nav a[aria-current="location"]{text-decoration-color:var(--akzent)}
 /* 1. Held */
 .held{position:relative;overflow:clip;padding-top:clamp(2.5rem,6vw,5rem);background:radial-gradient(60% 50% at 50% 0,color-mix(in srgb,var(--akzent) 13%,transparent),transparent 70%),var(--flaeche)}
 .held__kopf{text-align:center;display:grid;justify-items:center;gap:1.5rem}
-.held h1{max-width:18ch}
+.held h1{max-width:24ch}
 .held__text{max-width:38rem;font-size:var(--text-l);color:var(--text-leise)}
 .held__knoepfe{display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem}
 .held__tel{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.5rem;font-size:1rem;color:var(--text-leise)}

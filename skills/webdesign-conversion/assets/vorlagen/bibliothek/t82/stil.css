@@ -41,7 +41,7 @@ nav a[aria-current="location"]{text-decoration-color:var(--akzent)}
 /* Held */
 .held{padding-top:.5rem}
 .held__karte{position:relative;border-radius:var(--radius-gross);overflow:hidden;min-height:clamp(34rem,82vh,46rem);display:flex;flex-direction:column;justify-content:space-between;background:var(--ton-1);isolation:isolate}
-.held__bild{position:absolute;left:0;top:-6%;width:100%;height:112%;object-fit:cover;object-position:50% 40%;z-index:-2}
+.held__bild{position:absolute;left:0;top:-6%;width:100%;height:112%;object-fit:cover;object-position:50% 12%;z-index:-2}
 .held__schleier{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(7,18,20,.35) 0%,rgba(7,18,20,0) 28%,rgba(7,18,20,.55) 62%,rgba(7,18,20,.92) 100%)}
 .held__oben{display:flex;justify-content:flex-end;align-items:center;gap:1rem;padding:clamp(1rem,2.5vw,2rem)}
 .held__folgen span{font-family:var(--schrift-titel);font-weight:600;font-size:1.25rem;color:var(--akzent);text-shadow:0 1px 8px rgba(0,0,0,.6)}
@@ -58,6 +58,7 @@ nav a[aria-current="location"]{text-decoration-color:var(--akzent)}
 .store__knopf small{display:block;font-weight:500;font-size:1rem;color:var(--text-leise);margin-bottom:.1rem}
 .store__knopf:hover{transform:translateY(-2px);background:var(--karte-hoch)}
 @media (max-width:860px){
+  .held__schleier{background:linear-gradient(180deg,rgba(7,18,20,.4) 0%,rgba(7,18,20,.55) 30%,rgba(7,18,20,.9) 55%,rgba(7,18,20,.95) 100%)}
   .held__unten{grid-template-columns:1fr}
   .held__laden{justify-items:start}
   .held__karte{min-height:36rem}
@@ -138,7 +139,7 @@ nav a[aria-current="location"]{text-decoration-color:var(--akzent)}
 /* Telefon aus HTML und CSS */
 .telefon{--p:1;position:relative;width:clamp(13.5rem,18vw,16.5rem);aspect-ratio:9/18.5;flex:none;border-radius:2.4rem;background:var(--rahmen-telefon);padding:.55rem;box-shadow:0 30px 60px -20px rgba(0,0,0,.7),inset 0 0 0 2px #2a3d40;transform:perspective(900px) translateY(calc((1 - var(--p)) * 80px)) rotateZ(calc((1 - var(--p)) * -6deg)) rotateY(calc((1 - var(--p)) * 12deg));transform-origin:50% 100%;will-change:transform}
 .telefon__kerbe{position:absolute;top:.9rem;left:50%;width:32%;height:.9rem;border-radius:1rem;background:var(--rahmen-telefon);transform:translateX(-50%);z-index:3}
-.telefon__schirm{height:100%;border-radius:1.9rem;overflow:hidden;background:var(--flaeche);padding:2.6rem .7rem .8rem;display:flex;flex-direction:column;gap:.55rem;font-size:.8125rem;line-height:1.3}
+.telefon__schirm{height:100%;border-radius:1.9rem;overflow:hidden;background:var(--flaeche);color:var(--text);padding:2.6rem .7rem .8rem;display:flex;flex-direction:column;gap:.55rem;font-size:.8125rem;line-height:1.3}
 .telefon__kopf{display:flex;justify-content:space-between;gap:.4rem;font-weight:700;color:var(--text)}
 .telefon__zeit{color:var(--akzent)}
 .analyse{position:relative;flex:1 1 auto;min-height:0;border-radius:14px;overflow:hidden;background:var(--ton-1)}
@@ -206,7 +207,7 @@ nav a[aria-current="location"]{text-decoration-color:var(--akzent)}
 .stimme__rolle{color:var(--text-leise);font-weight:600}
 .stimme__kopf img{width:3rem;height:3rem;border-radius:50%;object-fit:cover}
 .stimme blockquote p{font-size:1.15rem;line-height:1.45}
-.stimme blockquote::before{content:"";display:block;width:1.8rem;height:1.3rem;margin-bottom:.8rem;background:radial-gradient(circle at 25% 50%,var(--akzent) 0 .55rem,transparent .6rem),radial-gradient(circle at 80% 50%,var(--akzent) 0 .55rem,transparent .6rem)}
+.stimme blockquote::before{content:"\201E";display:block;font-family:var(--schrift-titel);font-weight:700;font-size:3.5rem;line-height:1;height:2rem;margin-bottom:.2rem;color:var(--akzent)}
 .stimme__name{display:grid;color:var(--text-leise);font-size:1rem}
 .stimme__name b{color:var(--text)}
 @media (max-width:1000px){.stimmen__raster{grid-template-columns:1fr}}
@@ -290,7 +291,7 @@ nav a[aria-current="location"]{text-decoration-color:var(--akzent)}
 
 /* Fuß */
 .fuss{border-top:1px solid var(--linie);padding-block:2.5rem 2.5rem;margin-top:clamp(2rem,5vw,4rem)}
-.fuss__innen{display:grid;grid-template-columns:auto 1fr auto;gap:1.5rem 2rem;align-items:center}
+.fuss__innen{display:grid;grid-template-columns:auto 1fr auto auto;gap:1.5rem 2rem;align-items:center}
 .fuss__menue{display:flex;gap:.2rem 1.4rem;flex-wrap:wrap;justify-content:center}
 .fuss__menue a,.fuss__klein a,.fuss__tel a{display:inline-flex;align-items:center;min-height:2.75rem;color:var(--text)}
 .fuss__menue a:hover,.fuss__klein a:hover,.fuss__tel a:hover{color:var(--akzent)}

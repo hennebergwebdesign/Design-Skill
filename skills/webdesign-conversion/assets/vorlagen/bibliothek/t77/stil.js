@@ -36,7 +36,7 @@
 
   // 3. Wischspur mit Pfeilknöpfen: schiebt um eine Karte, am Anfang und Ende gesperrt, ohne Überstand verborgen
   document.querySelectorAll('[data-spur-gruppe]').forEach((gruppe) => {
-    const spur = gruppe.querySelector('[data-spur]'), steuerung = gruppe.querySelector('[data-spur-steuerung]');
+    const spur = gruppe.querySelector('[data-spurliste]'), steuerung = gruppe.querySelector('[data-spur-steuerung]');
     if (!spur || !steuerung) return;
     const zurueck = steuerung.querySelector('[data-spur="zurueck"]'), weiter = steuerung.querySelector('[data-spur="weiter"]');
     const stand = () => {

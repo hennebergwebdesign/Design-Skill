@@ -1,0 +1,261 @@
+/* stil.css der Vorlage "Kreativagentur schwarz und Limette": Gestaltung. Alle Werte kommen aus marke.css.
+   Regeln: Limette nie als Text auf Weiß, auf Limette immer Schwarz. Bewegung nur über transform und opacity. */
+section[id]{scroll-margin-top:6.5rem}
+h2{font-size:clamp(1.9rem,1rem + 2.8vw,3.25rem)}
+.wrap{--breite:76rem}
+
+/* Kopfleiste: schwarze Kapsel, Menü links, Wortmarke mittig, Menü und Knopf rechts */
+.kopf{position:fixed;inset:.85rem 0 auto;z-index:50;pointer-events:none}
+.kopf__leiste{pointer-events:auto;position:relative;display:flex;align-items:center;gap:.5rem;width:min(100% - 1.5rem,68rem);margin-inline:auto;min-height:3.75rem;padding:.4rem .5rem .4rem .5rem;border-radius:999px;background:var(--flaeche);box-shadow:0 0 0 1px var(--linie),0 14px 30px rgb(0 0 0 / .35)}
+.kopf__logo{order:2;flex:1;display:flex;align-items:center;justify-content:center;gap:.5rem;font-family:var(--schrift-titel);font-weight:700;font-size:1.15rem;letter-spacing:-.01em;min-height:2.75rem}
+.kopf__zeichen{width:1.6rem;height:1.6rem;color:var(--akzent)}
+.kopf__knopf{order:3;display:inline-flex;gap:0;min-height:2.75rem;padding:.55rem 1.2rem;font-size:1rem;white-space:nowrap}
+.kopf__lang{display:none}
+.kopf__burger{order:1;display:none;width:2.75rem;height:2.75rem;border-radius:50%;align-items:center;justify-content:center;background:var(--flaeche-karte);transition:background-color var(--dauer-kurz)}
+.kopf__burger:hover{background:var(--linie)}
+.js .kopf__burger{display:inline-flex}
+.burger,.burger::before{display:block;width:1.2rem;height:2px;background:var(--text);border-radius:2px;transition:transform var(--dauer-mittel) var(--kurve)}
+.burger{position:relative;transform:translateY(-4px)}
+.burger::before{content:"";position:absolute;left:0;top:8px}
+.kopf__burger[aria-expanded="true"] .burger{transform:rotate(45deg)}
+.kopf__burger[aria-expanded="true"] .burger::before{transform:translateY(-8px) rotate(-90deg)}
+.kopf__nav{order:4;flex-basis:100%}
+.kopf__menue{display:flex;flex-direction:column;padding:.25rem .5rem .5rem}
+.kopf__menue a{display:flex;align-items:center;gap:.6rem;min-height:3rem;padding:.4rem 1rem;border-radius:999px;font-weight:600;font-size:1.1rem}
+.kopf__menue a:hover{background:var(--flaeche-karte)}
+nav a[aria-current="location"]{text-decoration:none;background:var(--flaeche-karte)}
+.kopf__tel svg{color:var(--akzent)}
+.js .kopf__nav{position:absolute;top:calc(100% + .5rem);left:0;right:0;border-radius:var(--radius-karte);background:var(--flaeche-alt);box-shadow:0 0 0 1px var(--linie),0 18px 32px rgb(0 0 0 / .45)}
+.js .kopf__nav:not([data-offen="true"]){display:none}
+@media (min-width:34rem){.kopf__lang{display:inline}}
+@media (min-width:64rem){
+  .kopf__leiste{padding-left:1.5rem}
+  .kopf__burger,.js .kopf__burger{display:none}
+  .kopf__nav,.js .kopf__nav,.js .kopf__nav:not([data-offen="true"]){position:static;display:block;order:1;flex:1;flex-basis:auto;padding:0;background:none;border-radius:0;box-shadow:none}
+  .kopf__menue{flex-direction:row;align-items:center;gap:.15rem;padding:0}
+  .kopf__menue a{min-height:2.75rem;padding:.4rem .9rem;font-size:1rem;font-weight:500}
+  .kopf__rechts{margin-left:auto}
+  .kopf__tel{display:none}
+  .kopf__logo{position:absolute;left:50%;top:50%;translate:-50% -50%;flex:none;order:0}
+  .kopf__knopf{order:2}
+  nav a[aria-current="location"]{background:none;box-shadow:inset 0 -2px 0 var(--akzent);border-radius:0}
+}
+
+/* Knöpfe: Limette mit Schwarz, zweiter Knopf schwarz gefüllt */
+.knopf--dunkel{background:var(--flaeche);color:var(--text);box-shadow:inset 0 0 0 1px var(--linie)}
+.knopf--klein{min-height:2.75rem;padding:.5rem 1.2rem;font-size:1rem}
+.knopf{font-family:var(--schrift-titel);font-weight:600;font-size:1rem}
+
+/* 1. Held: weiße Fläche, große Rundung an der Unterkante */
+.held{position:relative;overflow:hidden;background:var(--flaeche-hell);color:var(--text-dunkel);border-radius:0 0 var(--radius-gross) var(--radius-gross);padding:7.5rem var(--rand) 0;text-align:center}
+.held :focus-visible{outline-color:var(--text-dunkel)}
+.held h1{max-width:18.5em;margin-inline:auto;font-size:clamp(2.1rem,1rem + 3.6vw,3.8rem);font-weight:600}
+.held__buehne{position:relative;display:grid;grid-template-columns:1fr 1fr;grid-template-areas:"links beleg" "bild bild";gap:1.25rem 1rem;align-items:end;width:min(100%,66rem);margin:2rem auto 0}
+.held__links{grid-area:links;text-align:left;display:grid;gap:.9rem;justify-items:start;align-self:center}
+.held__links p{font-size:1rem;line-height:1.55;color:var(--text-dunkel-leise);max-width:30ch}
+.held__funke{color:var(--akzent);animation:drehen 36s linear infinite;width:3.25rem;height:3.25rem}
+.held__tel{display:inline-flex;align-items:center;gap:.5rem;min-height:2.75rem;font-weight:700;text-decoration:underline;text-underline-offset:.25em;text-decoration-thickness:2px}
+.held__beleg{grid-area:beleg;display:grid;justify-items:end;text-align:right;align-self:center;gap:.15rem;font-size:1rem;color:var(--text-dunkel-leise)}
+.held__beleg strong{font-family:var(--schrift-titel);font-size:clamp(1.4rem,1rem + 1.2vw,2rem);line-height:1.1;color:var(--text-dunkel)}
+.held__sterne{display:flex;gap:.15rem;color:var(--text-dunkel)}
+.held__bild{grid-area:bild;position:relative;margin:0 auto;width:min(100%,24rem);aspect-ratio:4/4.7}
+.held__kreis{position:absolute;width:128%;aspect-ratio:1;left:-14%;bottom:-18%;border-radius:50%;background:var(--flaeche-hell-alt)}
+.held__bild img{position:relative;width:100%;height:100%;object-fit:cover;object-position:50% 12%;border-radius:999px 999px 0 0}
+.held__knoepfe{position:absolute;left:0;right:0;bottom:1.5rem;display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;padding-inline:.5rem}
+.held .knopf{box-shadow:0 8px 20px rgb(10 11 9 / .22)}
+.held .knopf--dunkel{box-shadow:0 8px 20px rgb(10 11 9 / .3)}
+@media (min-width:56rem){
+  .held{padding-top:8.5rem}
+  .held__buehne{grid-template-columns:1fr minmax(0,26rem) 1fr;grid-template-areas:"links bild beleg";gap:1rem 2rem}
+  .held__links p{font-size:1.05rem}
+  .held__funke{width:4.5rem;height:4.5rem}
+  .held__beleg{align-self:end;padding-bottom:5rem}
+}
+@keyframes drehen{to{transform:rotate(360deg)}}
+
+/* 2. Kennzahlenleiste in dunkler Kapsel */
+.zahlen{margin-top:clamp(2.5rem,5vw,4rem)}
+.zahlen__leiste{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:1.25rem 1rem;padding:1.5rem 1.25rem;border-radius:var(--radius-karte);background:var(--flaeche-alt);box-shadow:inset 0 0 0 1px var(--linie)}
+.zahlen__leiste li{display:grid;gap:.2rem;text-align:center}
+.zahlen__leiste strong{font-family:var(--schrift-titel);font-weight:600;font-size:clamp(1.9rem,1.2rem + 2vw,2.9rem);line-height:1.1;letter-spacing:-.02em}
+.zahlen__leiste li:nth-child(odd) strong,.zahlen__leiste li:nth-child(even) strong{color:var(--text)}
+.zahlen__leiste li>span:last-child{font-size:1rem;color:var(--text-leise)}
+@media (min-width:48rem){.zahlen__leiste{grid-template-columns:repeat(4,1fr);border-radius:999px;padding:1.6rem 2.5rem}.zahlen__leiste li+li{box-shadow:-1px 0 0 var(--linie)}}
+
+/* 3. Meisterwerke: zwei Schwarzweißfotos, Farbe beim Überfahren und Scrollen */
+.meister{margin-top:var(--raum)}
+.meister__kopf{display:grid;gap:1.25rem;align-items:start}
+.meister__kopf p{font-size:var(--text-l);color:var(--text-leise);max-width:42ch}
+.meister__bilder{display:grid;gap:1rem;margin-top:2.25rem;align-items:start}
+.sw{position:relative;margin:0;overflow:hidden;border-radius:var(--radius-bild);background:var(--flaeche-alt)}
+.sw--breit{aspect-ratio:16/11}
+.sw--hoch{aspect-ratio:3/3.6}
+.sw img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.sw__s{filter:grayscale(1) contrast(1.06)}
+.sw__f{opacity:var(--auf,0);transition:opacity .6s var(--kurve)}
+.sw:hover .sw__f,.sw:focus-within .sw__f{opacity:1}
+.sw__funke{position:absolute;left:1.25rem;top:1.25rem;color:var(--akzent)}
+.etikett{position:absolute;left:0;bottom:1.75rem;max-width:80%;padding:.75rem 1.25rem;background:var(--akzent);color:var(--akzent-text);font-family:var(--schrift-titel);font-weight:600;font-size:1rem;line-height:1.3;border-radius:0 12px 12px 0}
+@media (min-width:48rem){
+  .meister__kopf{grid-template-columns:1.1fr 1fr;gap:3rem;align-items:end}
+  .meister__bilder{grid-template-columns:7fr 5fr;gap:1.5rem}
+}
+
+/* 4. Leistungen: dunkle Karte, Liste mit aktiver Zeile, Text auf einer Ellipse */
+.leist{margin-top:var(--raum)}
+.leist__karte{position:relative;overflow:hidden;display:grid;gap:2rem;padding:clamp(1.5rem,4vw,3.5rem);padding-left:clamp(2.75rem,5vw,4.25rem);border-radius:var(--radius-gross);background:var(--flaeche-alt);box-shadow:inset 0 0 0 1px var(--linie)}
+.leist__karte::before{content:"";position:absolute;right:-12%;bottom:-25%;width:70%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgb(184 242 60 / .16),transparent 65%);pointer-events:none}
+.leist__karte>*{position:relative}
+.leist__tab{position:absolute;left:0;top:2.5rem;writing-mode:vertical-rl;rotate:180deg;padding:.9rem .5rem;background:var(--akzent);color:var(--akzent-text);font-family:var(--schrift-titel);font-weight:600;font-size:1rem;border-radius:12px 0 0 12px}
+.leist__links>p{margin-top:.9rem;color:var(--text-leise);max-width:40ch}
+.leist__liste{display:grid;gap:.6rem;margin-top:1.75rem}
+.zeile{display:flex;align-items:center;gap:1rem;width:100%;min-height:3.5rem;padding:.6rem 1.25rem;border-radius:999px;background:var(--flaeche);box-shadow:inset 0 0 0 1px #3d4336;text-align:left;font-family:var(--schrift-titel);font-weight:600;font-size:1.05rem;transition:background-color var(--dauer-kurz),color var(--dauer-kurz),transform var(--dauer-kurz) var(--kurve)}
+.zeile:hover{background:var(--flaeche-karte)}
+.zeile svg{margin-left:auto;flex:none}
+.zeile__nr{color:var(--akzent);font-size:.95rem}
+.aktiv>.zeile,.aktiv>.zeile:hover{background:var(--akzent);color:var(--akzent-text);box-shadow:none}
+.aktiv>.zeile .zeile__nr{color:var(--akzent-text)}
+.zeile__text{margin:.6rem 1.25rem 0;font-size:1rem;color:var(--text-leise)}
+.js .leist__liste li:not(.aktiv) .zeile__text{display:none}
+.leist__rechts{display:grid;gap:1rem;align-content:start}
+.leist__buehne{position:relative;width:min(100%,22rem);margin-inline:auto}
+.leist__foto{position:relative;aspect-ratio:4/4.6;overflow:hidden;border-radius:var(--radius-bild)}
+.leist__foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(.85);opacity:0;transition:opacity .35s var(--kurve)}
+.leist__foto img.aktiv{opacity:1}
+.leist__ring{position:absolute;left:50%;top:50%;width:132%;max-width:none;translate:-50% -50%;rotate:-24deg;pointer-events:none;z-index:1;overflow:visible}
+.leist__ring text{font-family:var(--schrift-titel);font-weight:600;font-size:21px;fill:var(--akzent);stroke:var(--flaeche);stroke-width:5px;paint-order:stroke;stroke-linejoin:round}
+.leist__kreisen{transform-origin:200px 150px;animation:drehen 48s linear infinite}
+.leist__kacheln{display:grid;gap:1rem;position:relative;z-index:2}
+.kachel{display:grid;gap:1rem;align-content:space-between;padding:1.4rem;border-radius:var(--radius-karte)}
+.kachel p{font-family:var(--schrift-titel);font-weight:500;font-size:1.1rem;line-height:1.35}
+.kachel--dunkel{background:var(--flaeche-karte);box-shadow:inset 0 0 0 1px var(--linie)}
+.kachel--limette{background:var(--akzent);color:var(--akzent-text)}
+.kachel--limette :focus-visible{outline-color:var(--akzent-text)}
+.kachel__link{display:inline-flex;align-items:center;justify-content:space-between;gap:.6rem;min-height:2.75rem;font-family:var(--schrift-titel);font-weight:700;font-size:1.1rem}
+.kachel__link svg{width:2.5rem;height:2.5rem;padding:.6rem;border-radius:50%;background:var(--text);color:var(--text-dunkel);transition:transform var(--dauer-kurz) var(--kurve)}
+.kachel--limette .kachel__link svg{background:var(--text-dunkel);color:var(--akzent)}
+.kachel__link:hover svg{transform:translate(2px,-2px)}
+@media (min-width:40rem){.leist__rechts{grid-template-columns:1.25fr 1fr;align-items:stretch}.leist__buehne{width:100%}.leist__kacheln{grid-template-rows:1fr 1fr}}
+@media (min-width:72rem){.leist__karte{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:3rem}}
+
+/* 5. Wortband groß mit Linie */
+.wortband{margin-block:var(--raum)}
+.band--gross{font-family:var(--schrift-titel);font-weight:700;font-size:clamp(2.6rem,1rem + 7.2vw,6.8rem);line-height:1.15;letter-spacing:-.03em;--band-abstand:2.5rem;--band-dauer:34s}
+.band--gross li{white-space:nowrap}
+.band__vier{display:flex;align-items:center;color:var(--akzent)}
+.band__vier svg{width:.5em;height:.5em}
+.wortband__linie{display:flex;align-items:center;gap:1rem;margin-top:1rem;color:var(--akzent)}
+.wortband__linie span{flex:1;height:1px;background:var(--text-leise)}
+.band__halt{display:block;margin:1.25rem auto 0;min-height:2.75rem;padding:.4rem 1.2rem;border-radius:999px;background:var(--flaeche-karte);color:var(--text);box-shadow:inset 0 0 0 1px var(--linie);font-size:1rem;font-weight:600;transition:background-color var(--dauer-kurz)}
+.band__halt:hover{background:var(--linie)}
+.band__halt[aria-pressed="true"]{background:var(--akzent);color:var(--akzent-text);box-shadow:none}
+.band--halt .band__spur{animation-play-state:paused}
+
+/* 6. Team: dunkle Karte, sechs weiße Karten */
+.team{margin-top:var(--raum)}
+.team__karte{position:relative;overflow:hidden;padding:clamp(1.5rem,4vw,3.5rem);border-radius:var(--radius-gross);background:var(--flaeche-alt);box-shadow:inset 0 0 0 1px var(--linie)}
+.team__karte::before{content:"";position:absolute;left:-10%;top:-20%;width:60%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgb(184 242 60 / .12),transparent 65%);pointer-events:none}
+.team__karte>*{position:relative}
+.team__kopf{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.team__text{margin-top:.75rem;color:var(--text-leise);max-width:46ch}
+.team__raster{display:grid;gap:1rem;margin-top:2rem}
+.tkarte{display:grid;gap:.9rem;align-content:start;padding:1.25rem;border-radius:24px;background:var(--flaeche-hell);color:var(--text-dunkel)}
+.tkarte>div{display:flex;flex-direction:column}
+.tkarte{grid-template-columns:3.75rem 1fr;align-items:center}
+.tkarte img{grid-row:1;width:3.75rem;height:3.75rem;border-radius:50%;object-fit:cover}
+.tkarte>div{grid-row:1}
+.tkarte>p:last-child{grid-column:1/-1;font-size:1rem;color:var(--text-dunkel-leise);line-height:1.5}
+.tkarte h3{font-size:1.15rem;font-weight:600}
+.tkarte__rolle{font-size:1rem;color:var(--text-dunkel-leise);font-weight:600}
+.tkarte :focus-visible{outline-color:var(--text-dunkel)}
+@media (min-width:44rem){.team__raster{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:68rem){.team__raster{grid-template-columns:repeat(3,1fr)}}
+
+/* 7. Stimmen: Wischspur */
+.stimmen{margin-top:var(--raum)}
+.stimmen__kopf{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.stimmen__pfeile{display:flex;gap:.5rem}
+.stimmen__pfeile button{display:grid;place-items:center;width:2.75rem;height:2.75rem;border-radius:50%;background:var(--flaeche-karte);box-shadow:inset 0 0 0 1px var(--linie);transition:background-color var(--dauer-kurz),opacity var(--dauer-kurz)}
+.stimmen__pfeile button:hover{background:var(--linie)}
+.stimmen__pfeile button[aria-disabled="true"]{opacity:.35;cursor:default}
+.stimmen__spur{display:flex;gap:1rem;margin-top:1.75rem;padding:.25rem max(var(--rand),calc((100vw - 76rem)/2)) 1.25rem;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:max(var(--rand),calc((100vw - 76rem)/2));scrollbar-width:thin;scrollbar-color:var(--linie) transparent}
+.stimme{flex:0 0 min(86vw,27rem);scroll-snap-align:start;display:flex;flex-direction:column;justify-content:space-between;gap:1.5rem;padding:1.75rem;border-radius:var(--radius-karte);background:var(--flaeche-alt);box-shadow:inset 0 0 0 1px var(--linie)}
+.stimme blockquote::before{content:"\201E";display:block;font-family:var(--schrift-titel);font-weight:700;font-size:3.5rem;line-height:.8;color:var(--akzent)}
+.stimme blockquote p{margin-top:.5rem;font-size:var(--text-l);line-height:1.5}
+.stimme footer{display:flex;align-items:center;gap:.9rem;font-size:1rem;color:var(--text-leise);line-height:1.4}
+.stimme footer strong{color:var(--text)}
+.stimme__ini{display:grid;place-items:center;flex:none;width:3rem;height:3rem;border-radius:50%;background:var(--akzent);color:var(--akzent-text);font-family:var(--schrift-titel);font-weight:700;font-size:1rem}
+.stimmen__spur:focus-visible{outline-offset:-3px}
+
+/* 8. Wortband schräg über der Seite */
+.schraeg{position:relative;margin-block:calc(var(--raum) * .75);padding-block:2.5rem;overflow-x:clip}
+.schraeg__rahmen{position:relative;isolation:isolate;width:112%;margin-left:-6%;rotate:-2.5deg}
+.schraeg__rahmen::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--akzent);rotate:4.5deg}
+.band--schraeg{padding-block:1rem;background:var(--flaeche-hell);color:var(--text-dunkel);font-family:var(--schrift-titel);font-weight:600;font-size:clamp(1.25rem,1rem + 1.2vw,2rem);--band-abstand:2rem;--band-dauer:40s}
+.band--schraeg li{white-space:nowrap;display:flex;align-items:center}
+.band--schraeg svg{color:var(--text-dunkel)}
+.schraeg__halt{margin-top:2.25rem}
+
+/* 9. Fragen */
+.fragen{margin-top:var(--raum);display:grid;gap:1.75rem}
+.fragen__liste details{border-bottom:1px solid var(--linie)}
+.fragen__liste details:first-child{border-top:1px solid var(--linie)}
+.fragen summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:3.5rem;padding:.8rem 0;cursor:pointer;list-style:none;font-family:var(--schrift-titel);font-weight:500;font-size:clamp(1.05rem,1rem + .4vw,1.3rem)}
+.fragen summary::-webkit-details-marker{display:none}
+.fragen summary svg{flex:none;color:var(--akzent);transition:transform var(--dauer-mittel) var(--kurve)}
+.fragen details[open] summary svg{transform:rotate(45deg)}
+.fragen details p{padding:0 0 1.25rem;color:var(--text-leise);max-width:60ch}
+@media (min-width:64rem){.fragen{grid-template-columns:1fr 1.4fr;gap:4rem;align-items:start}}
+
+/* 10. Kontakt */
+.kontakt{margin-top:var(--raum);--pad:clamp(1.5rem,4vw,3.5rem)}
+.kontakt__karte{position:relative;overflow:hidden;display:grid;gap:2rem;padding:var(--pad);border-radius:var(--radius-gross);background:var(--flaeche-alt);box-shadow:inset 0 0 0 1px var(--linie)}
+.kontakt__text>p{margin-top:.9rem;color:var(--text-leise);max-width:46ch}
+.formular{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:1.75rem;--feld-rand:#858c7a}
+.formular__feld{display:grid;gap:.4rem;align-content:start}
+.formular label{font-weight:700;font-size:1rem}
+.formular .feld__hinweis{font-size:1rem;line-height:1.4;color:var(--text-leise)}
+.formular input,.formular textarea{width:100%;min-height:3rem;padding:.7rem 1rem;border:1px solid var(--feld-rand);border-radius:14px;background:var(--flaeche);color:var(--text);font:inherit}
+.formular textarea{resize:vertical}
+.formular input::placeholder,.formular textarea::placeholder{color:var(--text-leise)}
+.formular__recht{font-size:1rem;color:var(--text-leise)}
+.formular__recht a{color:var(--akzent);text-decoration:underline;text-underline-offset:.2em}
+.formular__senden{justify-self:start}
+.formular__meldung{padding:.75rem 1rem;border-radius:14px;background:var(--flaeche);box-shadow:inset 0 0 0 1px var(--akzent)}
+.kontakt__bild{position:relative;margin:0 auto calc(-1 * var(--pad));width:min(100%,19rem);align-self:end}
+.kontakt__kreis{position:absolute;width:125%;aspect-ratio:1;left:-12.5%;bottom:-20%;border-radius:50%;background:var(--akzent)}
+.kontakt__bild img{position:relative;width:100%;aspect-ratio:3/3.9;object-fit:cover;object-position:50% 8%;border-radius:999px 999px 0 0}
+@media (min-width:40rem){.formular{grid-template-columns:1fr 1fr}.formular__feld--breit,.formular__recht,.formular__senden,.formular__meldung{grid-column:1/-1}}
+@media (min-width:64rem){.kontakt__karte{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:3rem}}
+
+/* Fuß: limettegrüne Fläche mit Schwarz */
+.fuss{margin-top:var(--raum);padding-bottom:1rem}
+.fuss__karte{padding:clamp(1.5rem,4vw,3.5rem);border-radius:var(--radius-gross);background:var(--akzent);color:var(--akzent-text)}
+.fuss :focus-visible{outline-color:var(--akzent-text)}
+.fuss__kopf{display:grid;gap:1rem;max-width:34rem}
+.fuss__logo{display:inline-flex;align-items:center;gap:.6rem;min-height:2.75rem;font-family:var(--schrift-titel);font-weight:700;font-size:1.6rem;letter-spacing:-.02em}
+.fuss__spalten{display:grid;grid-template-columns:1fr 1fr;gap:1.75rem 1rem;margin-top:2.25rem;padding-top:2rem;border-top:1px solid rgb(10 11 9 / .3)}
+.fuss h2{font-size:1.05rem;font-weight:700;margin-bottom:.5rem}
+.fuss ul a,.fuss__daten li{display:flex;align-items:center;gap:.5rem;min-height:2.75rem}
+.fuss ul a:hover{text-decoration:underline;text-underline-offset:.2em}
+.fuss__daten li{align-items:flex-start;padding-top:.6rem;min-height:0}
+.fuss__daten svg{flex:none;margin-top:.15rem}
+.fuss__unten{margin-top:2rem;font-size:1rem}
+@media (min-width:56rem){.fuss__spalten{grid-template-columns:repeat(4,1fr)}.fuss__kopf{grid-template-columns:auto 1fr;max-width:none;align-items:center;gap:2rem}.fuss__kopf p{max-width:44ch}}
+
+/* Ohne JavaScript und bei reduzierter Bewegung: Bänder stehen als umbrechende Reihe, alles bleibt sichtbar */
+.band__spur{animation:none}
+.js .band__spur{animation:band var(--band-dauer,30s) linear infinite}
+html:not(.js) .band{flex-wrap:wrap;overflow:visible}
+html:not(.js) .band__spur{flex-wrap:wrap;justify-content:center;min-width:0}
+html:not(.js) .band__spur[aria-hidden="true"]{display:none}
+html:not(.js) .leist__foto img:not(.aktiv){display:none}
+@media (prefers-reduced-motion:reduce){
+  .band{flex-wrap:wrap;overflow:visible}
+  .band__spur,.js .band__spur{flex-wrap:wrap;justify-content:center;min-width:0;animation:none}
+  .band__spur[aria-hidden="true"]{display:none}
+  .band__halt{display:none!important}
+  .held__funke,.leist__kreisen{animation:none}
+  .sw__f{transition:none}
+  .leist__foto img{transition:none}
+}
