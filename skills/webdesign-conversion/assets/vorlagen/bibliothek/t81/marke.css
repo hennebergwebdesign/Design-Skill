@@ -24,6 +24,7 @@
   --text-leise-dunkel:#b9c9da;
   --linie-dunkel:#27425f;
   --weiss:#ffffff;
+  --stern:#f2b232;          /* nur Zeichen: Sterne, nie als Textfarbe */
   --notruf:#0a7683;            /* Notdienstbanner, bewusst gleich Akzent */
   --schatten:0 14px 34px rgba(16,37,63,.12);
   /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
