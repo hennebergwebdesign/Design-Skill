@@ -1,0 +1,31 @@
+/* marke.css der Vorlage "Sport App dunkel": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche, Akzenttext auf Akzent mindestens 4,5 zu 1. Der Akzent (Limette) steht nur auf Dunkel,
+   nie als Text auf einer hellen Fläche. */
+:root{
+  --flaeche:#0b1a1d;
+  --flaeche-alt:#102226;
+  --flaeche-dunkel:#071214;
+  --text:#eaf3f0;
+  --text-leise:#a3b8b3;
+  --linie:#26413f;
+  --akzent:#c8f24f;           /* Hauptaktion, Zeichen und Überschrift auf Dunkel */
+  --akzent-text:#0b1a1d;      /* Text auf Limette */
+  --schrift-titel:'Familjen Grotesk',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:14px;
+  --radius-karte:22px;
+  --radius-bild:26px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:36px;
+  --titel-gewicht:600;
+  --titel-spur:-0.025em;
+  --karte:#13292d;            /* Kartenfläche auf --flaeche */
+  --karte-hoch:#1a3338;       /* Kartenfläche beim Heben und im Telefon */
+  --rahmen-telefon:#03090b;
+  --akzent-kalt:#5fd6c6;      /* nur Zeichen in der Analyse (Marker, Linie), nie Fließtext */
+  --ton-1:#1f4a4a;
+  --ton-2:#2d6b5e;
+  --ton-3:#3d7a4a;
+  --ton-4:#14383f;
+}

@@ -5,8 +5,8 @@ h2{font-size:var(--h2-m);line-height:1.08}
 h3{font-size:var(--h3);line-height:1.2}
 :focus-visible{outline-color:var(--akzent)}
 .kopf :focus-visible,.held__buehne :focus-visible,.abo :focus-visible,.fuss :focus-visible,.studio__akk :focus-visible{outline-color:var(--signal)}
-.kicker{display:inline-flex;align-items:center;gap:.6rem;font-size:1rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:1rem}
-.kicker::before{content:"";flex:none;width:.5rem;height:.5rem;border-radius:50%;background:var(--signal)}
+.kicker{display:block;font-size:1rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:1rem}
+.kicker::before{content:"";display:inline-block;vertical-align:.1em;width:.5rem;height:.5rem;margin-right:.6rem;border-radius:50%;background:var(--signal)}
 .kicker--hell{color:var(--text-auf-dunkel)}
 .mitte{text-align:center;max-width:44rem;margin:0 auto clamp(2rem,4vw,3.5rem)}
 .mitte--links{text-align:left;margin-left:0}
@@ -26,7 +26,7 @@ h3{font-size:var(--h3);line-height:1.2}
 .kopf{position:sticky;top:0;z-index:50;background:var(--flaeche);border-bottom:1px solid var(--linie)}
 .kopf__leiste{position:relative;display:flex;align-items:center;gap:.75rem;width:min(100% - 2*var(--rand),var(--breite));margin-inline:auto;padding:.5rem 0}
 .kopf__logo{display:inline-flex;align-items:center;gap:.6rem;min-height:2.75rem;font-family:var(--schrift-titel);font-weight:700;font-size:1.375rem;letter-spacing:-.03em;margin-right:auto;white-space:nowrap}
-.kopf__logo svg{color:var(--text)}
+.kopf__logo svg{flex:none;color:var(--text)}
 .kopf__knopf{min-height:2.75rem;padding:.4rem 1.1rem;white-space:nowrap}
 .kopf__nav{display:none}
 .kopf__menue{display:flex;gap:.25rem}
@@ -61,7 +61,7 @@ html:not(.js) .kopf__tel{display:block}
 .held__foto img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
 .js .held__foto img{animation:held-zoom 2.4s var(--kurve) both}
 @keyframes held-zoom{from{transform:scale(1.1)}to{transform:scale(1)}}
-.held__schleier{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.72))}
+.held__schleier{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.62),rgba(0,0,0,.74))}
 .held__text{position:relative;z-index:2;text-align:center;max-width:46rem;padding:3rem 1.25rem 7rem}
 .held__text h1{font-size:clamp(2.25rem,1rem + 5vw,4.75rem);line-height:1.04;margin-bottom:1.25rem}
 .held__lead{font-size:var(--text-l);color:rgba(255,255,255,.92);max-width:36rem;margin:0 auto 1.75rem}
@@ -284,4 +284,13 @@ html:not(.js) .kopf__tel{display:block}
   .pegel i{animation:none!important}
   .abo__mikro svg{transform:none!important}
   .folge__foto img,.cover__bild>svg:first-child,.studio__foto img,.sprecher__karte img{transition:none}
+}
+
+/* schmale Handys: Kopfzeile bleibt in einer Zeile */
+.kopf__burger{flex:none}
+@media (max-width:26rem){
+  .kopf__leiste{gap:.5rem}
+  .kopf__logo{font-size:1.125rem;gap:.4rem}
+  .kopf__logo svg{width:26px;height:26px}
+  .kopf__knopf{padding:.4rem .75rem;font-size:.9375rem}
 }

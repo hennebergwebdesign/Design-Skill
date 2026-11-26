@@ -1,0 +1,34 @@
+/* marke.css der Vorlage "Sanitär hell mit Petrol": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#ffffff;
+  --flaeche-alt:#e6f4f5;       /* helles Petrol: Ablauf, Qualitätsstreifen, Fragen */
+  --flaeche-dunkel:#10253f;    /* Marine: Leistungen, Team, Fuß */
+  --text:#10253f;
+  --text-leise:#4a5c70;
+  --linie:#cfe3e6;
+  --akzent:#0a7683;            /* Petrol: Hauptaktion (Fläche mit hellem Text), auf Hell auch Text und Linie */
+  --akzent-text:#ffffff;
+  --schrift-titel:'Outfit',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:12px;
+  --radius-karte:18px;
+  --radius-bild:22px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-organisch:3rem 11rem 3rem 3rem;   /* Heldfoto: eine große, weiche Ecke */
+  --titel-gewicht:600;
+  --titel-spur:-0.02em;
+  --akzent-hell:#6fd6dc;       /* nur auf Marine: Zeichen, Kicker, Hover */
+  --text-auf-dunkel:#ffffff;
+  --text-leise-dunkel:#b9c9da;
+  --linie-dunkel:#27425f;
+  --weiss:#ffffff;
+  --notruf:#0a7683;            /* Notdienstbanner, bewusst gleich Akzent */
+  --schatten:0 14px 34px rgba(16,37,63,.12);
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#0a7683;
+  --ton-2:#5aa9b3;
+  --ton-3:#10253f;
+  --ton-4:#27425f;
+}

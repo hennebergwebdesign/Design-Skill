@@ -27,7 +27,7 @@
   --cyan:#22d3ee;             /* nur Zeichen und Glanz: Punkt, Ring, Balken, nie als Textfarbe auf Hell */
   --gelb:#fde047;             /* nur das Wort im Untertitel, das gerade gesprochen wird */
   --text-auf-dunkel:#ffffff;
-  --text-leise-dunkel:#c9d9f5;
+  --text-leise-dunkel:#e4edfc;
   --linie-dunkel:#35549a;
   --weiss:#ffffff;
   --gut:#0e7a4f;              /* Haken in Funktionslisten, Kontrast auf Weiß 5,5 zu 1 */

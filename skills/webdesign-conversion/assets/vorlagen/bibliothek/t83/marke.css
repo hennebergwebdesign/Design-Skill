@@ -1,0 +1,37 @@
+/* marke.css der Vorlage "Tennisclub Waldgrün": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#f6f8f3;
+  --flaeche-alt:#e8efe4;
+  --flaeche-dunkel:#0c3526;   /* Kopfleiste, Hauptkarten, Bannerkarten: Waldgrün */
+  --text:#0e2419;
+  --text-leise:#46574d;
+  --linie:#d3ddcd;
+  --akzent:#0f4a34;           /* Hauptaktion auf Hell: Fläche mit hellem Text, auch Text und Linie */
+  --akzent-text:#ffffff;
+  --schrift-titel:'Lexend',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:28px;
+  --radius-bild:28px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:40px;
+  --titel-gewicht:600;
+  --titel-spur:-0.02em;
+  --limette:#c8f23c;          /* nur Fläche, Punkt, Ball und Text AUF Dunkel, nie als Text auf Hell oder Weiß */
+  --text-auf-limette:#0b2a1c;
+  --marine:#0c1f3d;           /* Fuß */
+  --text-auf-dunkel:#f4f8ef;
+  --text-leise-dunkel:#c4d6c6;
+  --linie-dunkel:#2c5a47;
+  --weiss:#ffffff;
+  --feld-rand:#66786d;
+  /* Platzhalter-Töne für Flächen (Platzgrafiken, Bildersatz) */
+  --ton-1:#1d6a4a;
+  --ton-2:#2f8a5f;
+  --ton-3:#0c3526;
+  --ton-4:#b9552e;
+  --ton-5:#1e3a63;
+  --ton-6:#dbe7d3;
+}

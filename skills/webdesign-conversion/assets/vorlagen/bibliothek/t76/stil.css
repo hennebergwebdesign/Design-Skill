@@ -6,9 +6,8 @@ h2{font-size:clamp(1.9rem,1.2rem + 2.6vw,3.25rem);line-height:1.05;text-transfor
 h3{font-size:1rem;line-height:1.3;text-transform:uppercase;letter-spacing:.02em}
 .kicker{font-size:1rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--text-leise);margin-bottom:1.25rem;text-align:center}
 .knopf{justify-content:center;font-weight:700;font-size:1rem;min-height:3rem}
-.knopf:hover{transform:translateY(-2px)}
 .knopf svg{flex:none;transition:transform var(--dauer-kurz) var(--kurve)}
-.knopf:hover svg{transform:translateX(3px)}
+@media (hover:hover) and (pointer:fine){.knopf:hover{transform:translateY(-2px)}.knopf:hover svg{transform:translateX(3px)}}
 .knopf--klein{min-height:2.75rem;padding:.55rem 1.25rem}
 .knopf--hell{background:var(--weiss);color:var(--text)}
 :focus-visible{outline-color:var(--text)}
@@ -66,7 +65,7 @@ h3{font-size:1rem;line-height:1.3;text-transform:uppercase;letter-spacing:.02em}
 .held__leiste{position:relative;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:var(--kopf-h);padding:0 var(--rand);background:var(--flaeche);border-top:1px solid var(--linie);font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
 .held__ort{text-align:right}
 .held__pfeil{position:absolute;left:50%;top:0;transform:translate(-50%,-50%);display:grid;place-items:center;width:4rem;height:4rem;border-radius:50%;background:var(--flaeche-dunkel);color:var(--text-auf-dunkel);transition:transform var(--dauer-mittel) var(--kurve)}
-.held__pfeil:hover{transform:translate(-50%,calc(-50% + 3px))}
+@media (hover:hover) and (pointer:fine){.held__pfeil:hover{transform:translate(-50%,calc(-50% + 3px))}}
 .held__pfeil:focus-visible{outline-color:var(--text);outline-offset:4px}
 @media (max-width:640px){.held__leiste span{display:none}.held__leiste{justify-content:center}}
 @media (min-width:768px){
@@ -108,10 +107,10 @@ h3{font-size:1rem;line-height:1.3;text-transform:uppercase;letter-spacing:.02em}
 .schnell__kopf{position:relative;z-index:1}
 .schnell__wort{font-size:clamp(3.2rem,12.4vw,12rem);line-height:.9;letter-spacing:-.045em;text-align:center;text-wrap:balance;position:relative;z-index:1}
 .schnell__stecker{position:absolute;z-index:3;left:56%;top:22%;width:clamp(6rem,15vw,15rem);transform:rotate(-8deg) translateY(calc((1 - var(--einlauf,1)) * -4rem));filter:drop-shadow(0 18px 22px color-mix(in srgb,#000 28%,transparent))}
-.kapsel{position:relative;margin-top:clamp(1.5rem,4vw,3rem);aspect-ratio:4/3;border-radius:var(--radius-gross);overflow:hidden;background:var(--flaeche-alt);transform:scale(calc(.82 + .18 * var(--einlauf,1)));transform-origin:50% 0}
+.kapsel{position:relative;margin-top:clamp(1.5rem,4vw,3rem);aspect-ratio:3/2;border-radius:var(--radius-gross);overflow:hidden;background:var(--flaeche-alt);transform:scale(calc(.82 + .18 * var(--einlauf,1)));transform-origin:50% 0}
 .kapsel img{width:100%;height:100%;object-fit:cover;object-position:75% 50%}
 .kapsel__pfeil{position:absolute;left:50%;bottom:8%;transform:translateX(-50%);display:grid;place-items:center;width:4rem;height:4rem;border-radius:50%;background:var(--weiss);color:var(--text);box-shadow:0 6px 20px color-mix(in srgb,#000 25%,transparent);transition:transform var(--dauer-mittel) var(--kurve)}
-.kapsel__pfeil:hover{transform:translateX(-50%) translateY(-3px)}
+@media (hover:hover) and (pointer:fine){.kapsel__pfeil:hover{transform:translateX(-50%) translateY(-3px)}}
 @media (min-width:768px){.kapsel{aspect-ratio:21/9}.kapsel img{object-position:70% 55%}.kapsel__pfeil{bottom:10%}}
 
 /* 5. So geht's */
@@ -147,7 +146,7 @@ h3{font-size:1rem;line-height:1.3;text-transform:uppercase;letter-spacing:.02em}
   .js .schritt:nth-child(1),.js .schritt:nth-child(4){grid-row:1;align-self:start}
   .js .schritt:nth-child(2),.js .schritt:nth-child(5){grid-row:1;align-self:center}
   .js .schritt:nth-child(3),.js .schritt:nth-child(6){grid-row:1;align-self:end}
-  .js .stufen .schritt{opacity:.22;transform:translateY(14px);transition:opacity .5s var(--kurve),transform .5s var(--kurve)}
+  .js .stufen .schritt{opacity:.22;transform:translateY(14px);transition:opacity var(--dauer-mittel) var(--kurve),transform var(--dauer-mittel) var(--kurve)}
   .js .stufen .schritt.an{opacity:1;transform:none}
 }
 
@@ -181,7 +180,7 @@ h3{font-size:1rem;line-height:1.3;text-transform:uppercase;letter-spacing:.02em}
 .anschluss__rechts p{max-width:34rem;color:var(--text-leise);line-height:1.6}
 .anschluss__link{display:inline-flex;align-items:center;gap:.6rem;min-height:2.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;width:fit-content;border-bottom:2px solid var(--text)}
 .anschluss__link svg{transition:transform var(--dauer-kurz) var(--kurve)}
-.anschluss__link:hover svg{transform:translateX(4px)}
+@media (hover:hover) and (pointer:fine){.anschluss__link:hover svg{transform:translateX(4px)}}
 @media (min-width:900px){.anschluss{grid-template-columns:1fr 1fr}.anschluss__rechts{padding-left:clamp(2rem,6vw,6rem)}}
 
 /* 8. Fragen */

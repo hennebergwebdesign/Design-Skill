@@ -1,0 +1,29 @@
+/* marke.css der Vorlage "Kreativagentur schwarz und Limette": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1.
+   Regel dieser Vorlage: Limette (--akzent) ist nie Textfarbe auf Weiß, auf Limette steht immer Schwarz. */
+:root{
+  --flaeche:#0a0b09;          /* Seitenhintergrund, fast schwarz */
+  --flaeche-alt:#151712;      /* dunkle Karten */
+  --flaeche-karte:#1d201a;    /* Kacheln und Zeilen in dunklen Karten */
+  --flaeche-dunkel:#0a0b09;   /* feste Rolle: dunkler Abschnitt */
+  --flaeche-hell:#ffffff;     /* weiße Flächen: Held, Teamkarten, schräges Band */
+  --flaeche-hell-alt:#eceee6;
+  --text:#f3f5ee;             /* Text auf Dunkel */
+  --text-leise:#b9beb0;       /* Nebentext auf Dunkel */
+  --text-dunkel:#0a0b09;      /* Text auf Weiß und auf Limette */
+  --text-dunkel-leise:#464b40;/* Nebentext auf Weiß */
+  --linie:#2d3127;
+  --linie-hell:#d9dcd0;
+  --akzent:#b8f23c;           /* Limette: Fläche mit schwarzem Text, auf Dunkel auch Zeichen und Text */
+  --akzent-text:#0a0b09;
+  --schrift-titel:'Lexend',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:32px;
+  --radius-bild:28px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:clamp(2.25rem,6vw,5rem);   /* Unterkante des Helds, große Karten */
+  --titel-gewicht:600;
+  --titel-spur:-0.025em;
+}

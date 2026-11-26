@@ -8,7 +8,7 @@ body{font-size:max(1rem,var(--text-m))}
 .knopf--mint{background:var(--mint);color:var(--mint-text)}
 .knopf--mint:hover{background:#d8f0e4}
 .rund{display:inline-flex;align-items:center;justify-content:center;width:3rem;height:3rem;border-radius:50%;box-shadow:inset 0 0 0 1.5px currentColor;flex:none;transition:transform var(--dauer-kurz) var(--kurve)}
-a:hover>.rund{transform:translateX(3px)}
+@media (hover:hover) and (pointer:fine){a:hover>.rund{transform:translateX(3px)}}
 h2{font-weight:300;font-size:clamp(2rem,1.2rem + 3vw,3.5rem);line-height:1.1}
 
 /* Kopf: schwarz, Uhr, Menü, Knopf */
@@ -16,7 +16,7 @@ h2{font-weight:300;font-size:clamp(2rem,1.2rem + 3vw,3.5rem);line-height:1.1}
 .gescrollt .kopf{box-shadow:0 1px 0 var(--linie-dunkel)}
 .kopf__leiste{position:relative;display:flex;align-items:center;gap:.75rem;min-height:var(--kopf-hoehe);width:min(100% - 2*var(--rand),var(--breite));margin-inline:auto}
 .kopf__logo{display:inline-flex;align-items:center;gap:.6rem;min-height:2.75rem;font-family:var(--schrift-titel);font-weight:500;font-size:1.375rem;letter-spacing:-.02em;margin-right:auto;white-space:nowrap}
-.kopf__zeichen{width:1.75rem;height:1.75rem;color:var(--text-auf-dunkel)}
+.kopf__zeichen{flex:none;width:1.75rem;height:1.75rem;color:var(--text-auf-dunkel)}
 .kopf__zeit{display:none;margin:0 auto 0 0;font-variant-numeric:tabular-nums;font-size:1rem;color:var(--text-leise-dunkel);white-space:nowrap}
 .kopf__knopf{min-height:2.75rem;padding:.4rem 1.2rem;white-space:nowrap}
 .kopf__burger{display:none;width:2.75rem;height:2.75rem;border-radius:50%;align-items:center;justify-content:center;background:color-mix(in srgb,var(--text-auf-dunkel) 14%,var(--flaeche-dunkel))}
@@ -81,7 +81,7 @@ h2{font-weight:300;font-size:clamp(2rem,1.2rem + 3vw,3.5rem);line-height:1.1}
 .kachel__zeichen{display:inline-flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border-radius:50%;background:var(--flaeche-dunkel);color:var(--text-auf-dunkel);flex:none}
 .kachel__zeichen--foto{position:absolute;top:1.25rem;left:1.25rem;background:var(--text-auf-dunkel);color:var(--flaeche-dunkel)}
 .kachel__zeichen--hell{background:var(--flaeche-dunkel)}
-.kachel__titel{margin-top:auto;font-family:var(--schrift-titel);font-weight:300;font-size:clamp(1.6rem,1.1rem + 1.1vw,2.1rem);line-height:1.1;letter-spacing:-.02em;hyphens:manual}
+.kachel__titel{margin-top:auto;font-family:var(--schrift-titel);font-weight:300;font-size:clamp(1.6rem,1.1rem + 1.1vw,2.1rem);line-height:1.1;letter-spacing:-.02em}
 .kachel__text{margin-top:.75rem;font-size:1rem;line-height:1.5;max-width:20rem}
 .kachel__mehr{display:inline-flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:1.5rem;min-height:3rem;font-weight:500;align-self:stretch}
 .kachel__zitat{margin-top:auto}
@@ -182,7 +182,8 @@ h2{font-weight:300;font-size:clamp(2rem,1.2rem + 3vw,3.5rem);line-height:1.1}
 .wissen__lead{margin-top:1rem;color:var(--text-leise);font-size:1rem}
 .artikel-liste{margin-top:clamp(2rem,4vw,3.5rem);border-bottom:1px solid var(--linie)}
 .artikel{position:relative;display:grid;gap:.75rem 2rem;padding-block:2.25rem;border-top:1px solid var(--linie);transition:transform var(--dauer-mittel) var(--kurve)}
-.artikel:hover,.artikel:focus-within{transform:translateY(-4px)}
+.artikel:focus-within{transform:translateY(-4px)}
+@media (hover:hover) and (pointer:fine){.artikel:hover{transform:translateY(-4px)}}
 .artikel__zahl{font-family:var(--schrift-titel);font-weight:300;font-size:clamp(1.75rem,1.2rem + 1.6vw,2.6rem);line-height:1;letter-spacing:-.025em}
 .artikel__zahl span{display:block;margin-top:.5rem;font-family:var(--schrift-text);font-size:1rem;letter-spacing:0;color:var(--text-leise)}
 .artikel h3{font-size:clamp(1.25rem,1rem + .9vw,1.75rem);font-weight:300;line-height:1.25;letter-spacing:-.01em;max-width:34rem}
@@ -190,7 +191,7 @@ h2{font-weight:300;font-size:clamp(2rem,1.2rem + 3vw,3.5rem);line-height:1.1}
 .artikel__link:focus-visible{outline-offset:6px}
 .artikel__mehr{display:inline-flex;align-items:center;gap:.6rem;margin-top:1.25rem;font-weight:500;font-size:1rem}
 .artikel__mehr svg{transition:transform var(--dauer-kurz) var(--kurve)}
-.artikel:hover .artikel__mehr svg{transform:translateX(4px)}
+@media (hover:hover) and (pointer:fine){.artikel:hover .artikel__mehr svg{transform:translateX(4px)}}
 .artikel__datum{font-size:1rem;color:var(--text-leise);font-variant-numeric:tabular-nums}
 @media (min-width:48rem){.artikel{grid-template-columns:13rem minmax(0,1fr) 8rem;align-items:start}.artikel__datum{text-align:right}}
 
@@ -242,8 +243,9 @@ h2{font-weight:300;font-size:clamp(2rem,1.2rem + 3vw,3.5rem);line-height:1.1}
 .fuss{background:var(--flaeche-dunkel);color:var(--text-auf-dunkel);padding-top:clamp(4rem,8vw,7rem)}
 .fuss__innen{display:grid;gap:3rem}
 .fuss__zeile{font-family:var(--schrift-titel);font-weight:300;font-size:clamp(2.5rem,1.2rem + 5vw,5.5rem);line-height:1.02;letter-spacing:-.035em;max-width:9em}
-.fuss__cta{display:inline-flex;align-items:center;gap:.75rem;margin-top:2.5rem;min-height:3rem;padding-bottom:.4rem;font-size:var(--text-l);box-shadow:0 1.5px 0 var(--text-auf-dunkel);transition:gap var(--dauer-kurz) var(--kurve)}
-.fuss__cta:hover{gap:1.25rem}
+.fuss__cta{display:inline-flex;align-items:center;gap:.75rem;margin-top:2.5rem;min-height:3rem;padding-bottom:.4rem;font-size:var(--text-l);box-shadow:0 1.5px 0 var(--text-auf-dunkel)}
+.fuss__cta svg{transition:transform var(--dauer-kurz) var(--kurve)}
+@media (hover:hover) and (pointer:fine){.fuss__cta:hover svg{transform:translateX(6px)}}
 .fuss__links{display:grid;grid-template-columns:1fr 1fr;gap:2rem 1.5rem;align-content:start}
 .fuss__links ul{display:grid;gap:.25rem}
 .fuss__links a{display:inline-flex;align-items:center;min-height:2.75rem;font-size:var(--text-l);font-weight:300}
