@@ -17,22 +17,11 @@ h1{font-family:'Schibsted Grotesk',system-ui,sans-serif;font-size:clamp(2.2rem,1
 header p:not(.hinweis){max-width:62ch;color:var(--seite-leise);font-size:1.125rem;margin:0}
 .hinweis{max-width:none;display:inline-flex;align-items:center;gap:.6rem;margin-top:1.5rem;padding:.6rem 1rem;border-radius:999px;background:var(--akzent-hell);color:var(--akzent);font-weight:600;font-size:.95rem}
 .hinweis svg{font-size:1.2rem}
-.leiste.zeile2{padding-top:0}.leiste .trenn{width:1px;height:1.5rem;background:var(--seite-linie);margin:0 .5rem}
-.leiste{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;padding:1rem 0 1.5rem}
-.leiste span{color:var(--seite-leise);font-size:.95rem;margin-right:.25rem}
-.leiste button{font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:999px;border:1px solid var(--linie);background:var(--karte);color:var(--text);cursor:pointer;min-height:44px}
-.leiste button[aria-pressed=true]{background:#16181a;border-color:#7fd1b0;color:#fff;box-shadow:inset 0 0 0 1px #7fd1b0}
-.leiste button:focus-visible{outline:3px solid #7fd1b0;outline-offset:2px}
-.leiste .gr{display:contents}
-@media (max-width:40rem){
-.leiste{flex-direction:column;flex-wrap:nowrap;align-items:stretch;gap:.25rem;padding:.75rem 0 .25rem}
-.leiste.zeile2{padding-top:.25rem}
-.leiste .trenn{display:none}
-.leiste .gr{display:flex;flex-wrap:nowrap;gap:.5rem;align-items:center;overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:none;margin-inline:-1.25rem;padding:.25rem 1.25rem;-webkit-overflow-scrolling:touch;mask-image:linear-gradient(90deg,transparent 0,#000 1.25rem,#000 calc(100% - 1.5rem),transparent 100%)}
-.leiste .gr::-webkit-scrollbar{display:none}
-.leiste .gr>span{flex:none;margin-right:.25rem}
-.leiste .gr>button{flex:none;white-space:nowrap;scroll-snap-align:start}
-}
+.leiste{display:flex;flex-wrap:wrap;gap:.75rem 1rem;padding:1rem 0 1.5rem}
+.leiste label{display:grid;gap:.25rem;color:var(--seite-leise);font-size:.85rem;flex:1 1 12rem;max-width:18rem}
+.leiste select{font:inherit;font-size:1rem;min-height:44px;padding:.5rem 2.25rem .5rem .9rem;border-radius:12px;border:1px solid var(--linie);background:var(--karte) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2316181a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right .7rem center/1.1rem;color:var(--text);appearance:none;-webkit-appearance:none;width:100%;cursor:pointer}
+.leiste select:focus-visible{outline:3px solid #7fd1b0;outline-offset:2px}
+@media (max-width:40rem){.leiste{display:grid;grid-template-columns:1fr 1fr;padding:.75rem 0 1rem}.leiste label{max-width:none}.leiste label:first-child{grid-column:1/-1}}
 .raster{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fill,minmax(min(100%,17.5rem),1fr));padding-bottom:5rem}
 .karte{color:var(--text);display:grid;grid-template-rows:auto 1fr;border:1px solid var(--linie);border-radius:18px;overflow:hidden;background:var(--karte);text-decoration:none;transition:transform .2s,box-shadow .2s,border-color .2s}
 .karte:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(0,0,0,.5)}
@@ -73,34 +62,31 @@ footer{border-top:1px solid var(--seite-linie);padding:2rem 0 3rem;color:var(--s
   <p class="hinweis"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>Jede Vorlage öffnet in einem neuen Tab, zuerst in der Desktopansicht.</p>
 </header>
 <main class="wrap">
-  <div class="leiste" role="group" aria-label="Nach Helligkeit filtern">
-    <div class="gr">
-      <span>Helligkeit:</span>
-      <button type="button" data-f="alle" aria-pressed="true">Alle</button>
-      <button type="button" data-f="hell" aria-pressed="false">Hell</button>
-      <button type="button" data-f="dunkel" aria-pressed="false">Dunkel</button>
-      <button type="button" data-f="beides" aria-pressed="false">Hell und dunkel</button>
-    </div>
-    <i class="trenn" aria-hidden="true"></i>
-    <div class="gr" role="group" aria-label="Vorschau umschalten">
-      <span>Vorschau:</span>
-      <button type="button" data-g="desktop" aria-pressed="true">Desktop</button>
-      <button type="button" data-g="mobil" aria-pressed="false">Mobil</button>
-    </div>
-  </div>
-  <div class="leiste zeile2" role="group" aria-label="Nach Branche filtern">
-    <div class="gr">
-    <span>Branche:</span>
-    <button type="button" data-b="alle" aria-pressed="true">Alle</button>
-    <button type="button" data-b="handwerk" aria-pressed="false">Handwerk und Bau</button>
-    <button type="button" data-b="dienst" aria-pressed="false">Dienstleistung</button>
-    <button type="button" data-b="beratung" aria-pressed="false">Beratung und Coaching</button>
-    <button type="button" data-b="portfolio" aria-pressed="false">Portfolio und Projekte</button>
-    <button type="button" data-b="event" aria-pressed="false">Event</button>
-    <button type="button" data-b="app" aria-pressed="false">App und Dienst</button>
-    <button type="button" data-b="gastro" aria-pressed="false">Gastro und Genuss</button>
-    <button type="button" data-b="beauty" aria-pressed="false">Beauty und Pflege</button>
-    </div>
+  <div class="leiste" role="group" aria-label="Filter">
+    <label>Branche
+      <select id="f-b">
+        <option value="alle">Alle Branchen</option>
+        <option value="handwerk">Handwerk und Bau</option>
+        <option value="dienst">Dienstleistung</option>
+        <option value="beratung">Beratung und Coaching</option>
+        <option value="portfolio">Portfolio und Projekte</option>
+        <option value="event">Event</option>
+        <option value="app">App und Dienst</option>
+        <option value="gastro">Gastro und Genuss</option>
+        <option value="beauty">Beauty und Pflege</option>
+      </select></label>
+    <label>Helligkeit
+      <select id="f-f">
+        <option value="alle">Alle</option>
+        <option value="hell">Hell</option>
+        <option value="dunkel">Dunkel</option>
+        <option value="beides">Hell und dunkel</option>
+      </select></label>
+    <label>Vorschau
+      <select id="f-g">
+        <option value="desktop">Desktop</option>
+        <option value="mobil">Mobil</option>
+      </select></label>
   </div>
   <div class="raster" id="raster" data-g="desktop">
     <a class="karte" href="ansicht.html?t=t01" data-branche="handwerk" target="_blank" rel="noopener" data-ton="hell">
@@ -667,8 +653,6 @@ footer{border-top:1px solid var(--seite-linie);padding:2rem 0 3rem;color:var(--s
   function anwenden(){document.querySelectorAll('.karte').forEach(function(k){
     var a=f.ton==='alle'||k.dataset.ton===f.ton, b=f.branche==='alle'||(' '+k.dataset.branche+' ').indexOf(' '+f.branche+' ')>-1;
     k.hidden=!(a&&b);});}
-  function gruppe(attr,fn){document.querySelectorAll('['+attr+']').forEach(function(b){b.addEventListener('click',function(){
-    document.querySelectorAll('['+attr+']').forEach(function(x){x.setAttribute('aria-pressed',x===b)});fn(b.getAttribute(attr));});});}
   /* Laden nach Bedarf: die Abschnittsübersicht erst beim Überfahren oder Fokus, die Mobilansicht erst, wenn sie gewählt ist und die Karte sichtbar wird. Die Desktopvorschau lädt der Browser selbst beim Scrollen (loading=lazy). */
   function laden(img){if(img&&img.dataset.src){img.src=img.dataset.src;delete img.dataset.src;}}
   document.querySelectorAll('.karte').forEach(function(k){
@@ -679,9 +663,9 @@ footer{border-top:1px solid var(--seite-linie);padding:2rem 0 3rem;color:var(--s
     if(!k.querySelector('.b-mobil[data-src]'))return;
     if(beob){beob.unobserve(k);beob.observe(k);}else laden(k.querySelector('.b-mobil'));});}
   mobilBeobachten();
-  gruppe('data-f',function(v){f.ton=v;anwenden();});
-  gruppe('data-b',function(v){f.branche=v;anwenden();});
-  gruppe('data-g',function(v){raster.dataset.g=v;if(v==='mobil')mobilBeobachten();});
+  document.getElementById('f-f').addEventListener('change',function(e){f.ton=e.target.value;anwenden();});
+  document.getElementById('f-b').addEventListener('change',function(e){f.branche=e.target.value;anwenden();});
+  document.getElementById('f-g').addEventListener('change',function(e){raster.dataset.g=e.target.value;if(e.target.value==='mobil')mobilBeobachten();});
 })();
 </script>
 </body>
