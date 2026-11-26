@@ -58,8 +58,8 @@ body{font-family:var(--schrift-text)}
 .held h1{font-size:clamp(2.2rem,1rem + 4.6vw,5rem);text-transform:uppercase;line-height:1;letter-spacing:-.01em;margin-bottom:1.25rem;color:var(--weiss)}
 .held__lead{font-size:var(--text-l);max-width:36rem;margin-bottom:1.75rem;color:var(--text-auf-dunkel)}
 .held__knoepfe{display:flex;flex-wrap:wrap;gap:.75rem;margin-bottom:1.5rem}
-.held__beleg{display:flex;align-items:center;gap:.6rem;margin-bottom:.5rem;font-size:1rem}
-.held__beleg .stern{color:var(--limette);display:inline-flex}
+.held__beleg{display:flex;align-items:flex-start;gap:.6rem;margin-bottom:.5rem;font-size:1rem}
+.held__beleg .stern{color:var(--limette);display:inline-flex;margin-top:.1rem}
 .held__tel{font-size:1rem;color:var(--text-leise-dunkel)}
 .held__tel a{white-space:nowrap;text-decoration:underline;text-underline-offset:.2em;color:var(--text-auf-dunkel);font-weight:600}
 .held__punkte{position:absolute;z-index:3;right:1rem;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:.6rem}
@@ -70,7 +70,7 @@ body{font-family:var(--schrift-text)}
 .held__name{position:absolute;z-index:3;right:1rem;bottom:1rem;padding:.4rem .95rem;border-radius:999px;background:rgba(6,30,21,.82);font-size:1rem;font-weight:600;display:none}
 .js .held__name{display:block}
 @media (min-width:48rem){.held__bilder::after{background:linear-gradient(90deg,rgba(6,30,21,.92) 0,rgba(6,30,21,.7) 42%,rgba(6,30,21,.1) 80%)}.held__punkte{right:1.75rem}.held__name{right:1.75rem;bottom:1.5rem}}
-@media (max-width:47.99rem){.held__text{padding-right:4.5rem}.held__name{right:1rem;bottom:auto;top:1rem}}
+@media (max-width:47.99rem){.held__text{padding-right:4.5rem}.js .held__name{display:none}}
 
 /* Wiedergabeknopf: Platzhalter, Pause Zustand über aria-pressed */
 .spielknopf{display:grid;place-items:center;width:5rem;height:5rem;border-radius:50%;background:var(--text-auf-limette);color:var(--weiss);transition:transform var(--dauer-kurz) var(--kurve)}

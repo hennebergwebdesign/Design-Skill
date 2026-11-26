@@ -1,0 +1,36 @@
+/* marke.css der Vorlage "Praxis hell mit Marineblau": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#f3f6fa;
+  --flaeche-alt:#e6edf6;
+  --flaeche-dunkel:#14264a;   /* Stimmenband, Fuß, Kachel im Held */
+  --text:#14213a;
+  --text-leise:#46556e;
+  --linie:#d3dce9;
+  --akzent:#1f3d78;           /* Hauptaktion: Fläche mit hellem Text, auf Hell auch Text und Linie */
+  --akzent-text:#ffffff;
+  --schrift-titel:'Outfit',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:20px;
+  --radius-bild:20px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:30px;
+  --titel-gewicht:500;
+  --titel-spur:-0.02em;
+  --akzent-hell:#8db4f0;      /* nur Zeichen und Text auf Dunkel: Sterne, Punkt, Pfeil, Fokus */
+  --text-auf-dunkel:#f3f6fa;
+  --text-leise-dunkel:#c5d3e8;
+  --linie-dunkel:#33497a;
+  --weiss:#ffffff;
+  --feld-rand:#6b7a92;
+  /* Verlauf über dem Heldfoto: dunkel links, damit weiße Schrift lesbar bleibt (mobil von oben) */
+  --verlauf-held:linear-gradient(100deg,rgba(20,38,74,.94) 0%,rgba(31,61,120,.84) 40%,rgba(31,61,120,.34) 72%,rgba(31,61,120,.12) 100%);
+  --verlauf-held-mobil:linear-gradient(180deg,rgba(20,38,74,.94) 0%,rgba(31,61,120,.86) 60%,rgba(31,61,120,.66) 100%);
+  /* Platzhalter-Töne für Bildflächen */
+  --ton-1:#3d6bb5;
+  --ton-2:#5b86c9;
+  --ton-3:#8db4f0;
+  --ton-4:#27487f;
+}

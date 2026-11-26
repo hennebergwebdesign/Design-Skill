@@ -1,0 +1,33 @@
+/* marke.css der Vorlage "App sportlich": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#ffffff;
+  --flaeche-alt:#f3f5f1;
+  --flaeche-dunkel:#17181a;   /* Lernabschnitt und Fuß */
+  --text:#111312;
+  --text-leise:#555a57;
+  --linie:#e3e6e1;
+  --akzent:#0e6b36;           /* Hauptaktion und grüner Abschnitt: Fläche mit hellem Text */
+  --akzent-text:#ffffff;
+  --schrift-titel:'Schibsted Grotesk',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:18px;
+  --radius-bild:28px;
+
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:560;
+  --titel-spur:-0.025em;
+  --akzent-hell:#7ee0a2;      /* nur auf Dunkel: Zeichen, Linie, Fokus */
+  --text-auf-dunkel:#ffffff;
+  --text-leise-dunkel:#c9cdca;
+  --text-auf-gruen:#ffffff;
+  --text-leise-gruen:#dcf2e4;
+  --linie-dunkel:#34373a;
+  --gerat:#111312;            /* Telefonrahmen und Store Knöpfe */
+  --karte-karte:#e9efe6;      /* Kartenfläche im Telefon */
+  --karte-wasser:#cfe3ee;
+  --karte-park:#d3e6cc;
+  --feld-rand:#6b716d;
+  --radius-gross:28px;
+}
