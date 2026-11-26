@@ -1,0 +1,33 @@
+/* marke.css der Vorlage "SaaS Agentur Nachtgrün": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast (nachgerechnet am 26.11.2026, WCAG): text auf flaeche 13,9 | text-leise auf flaeche 6,7, auf flaeche-alt 5,9, auf himmel 5,9 | akzent-text auf akzent 8,3 |
+   text-auf-dunkel auf flaeche-dunkel 13,8, auf dunkel-3 15,9 | text-leise-dunkel auf flaeche-dunkel 8,2, dunkel-2 6,7, dunkel-3 9,4 | mint auf flaeche-dunkel 9,8 | feld-rand auf dunkel-3 4,2 (Rand, Kontrast zum Feld selbst: Fläche hell). */
+:root{
+  --flaeche:#f6f3ec;
+  --flaeche-alt:#ebe6d9;
+  --flaeche-dunkel:#0b2a2c;
+  --text:#12282a;
+  --text-leise:#46595a;
+  --linie:#d7d0bf;
+  --akzent:#f7b32b;            /* Hauptaktion: Bernstein mit dunklem Text */
+  --akzent-text:#0b2a2c;
+  --schrift-titel:'Bricolage Grotesque',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:12px;
+  --radius-karte:28px;
+  --radius-bild:24px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:clamp(2rem,8vw,7rem);
+  --titel-gewicht:600;
+  --titel-spur:-0.03em;
+  --dunkel-2:#113a3c;          /* Karten auf der dunklen Bühne */
+  --dunkel-3:#071d1f;          /* tieferer Grund: Formularfläche, Fuß */
+  --mint:#8fe0c0;              /* Zeichen und Icons auf Dunkel, nie Fließtext auf Hell */
+  --koralle:#ff8a6b;           /* Zeichen und Blasen, nie Textfarbe */
+  --himmel:#cfeceb;            /* helle Karten, Mock Oberflächen */
+  --weiss:#ffffff;
+  --text-auf-dunkel:#eef6f2;
+  --text-leise-dunkel:#a9c4c0;
+  --linie-dunkel:#3c6663;      /* gestrichelte Rasterlinien, dekorativ */
+  --feld-rand:#6f7f7c;
+}
