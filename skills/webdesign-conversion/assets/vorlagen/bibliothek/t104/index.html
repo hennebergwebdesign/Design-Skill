@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rechnungen automatisch verarbeiten und bezahlen | Markenname</title>
+<meta name="description" content="Rechnungseingang, Freigabe und Zahllauf in einem Ablauf für den Mittelstand in Musterstadt. Mit Freigabegrenzen und Schnittstellen. Demo vereinbaren.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../_basis/schriften.css">
+<link rel="stylesheet" href="marke.css">
+<link rel="stylesheet" href="../_basis/basis.css">
+<link rel="stylesheet" href="stil.css">
+<!-- Strukturierte Daten: Beispielwerte, vor der Auslieferung durch echte Angaben ersetzen. Keine Bewertungen erfunden. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Markenname",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Web",
+  "description": "Software für Rechnungseingang, Freigabe und Zahlungen im Mittelstand, mit Freigabegrenzen und Schnittstellen zu Buchhaltung und Bank.",
+  "inLanguage": "de",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Markenname",
+    "telephone": "+490000000000",
+    "email": "hallo@beispiel.invalid",
+    "address": { "@type": "PostalAddress", "streetAddress": "Musterstraße 1", "postalCode": "00000", "addressLocality": "Musterstadt", "addressCountry": "DE" }
+  }
+}
+</script>
+</head>
+<body>
+<a class="sprunglink" href="#inhalt">Zum Inhalt springen</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-arrow-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+  <symbol id="i-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.500 1.500a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.200 7-11.500A7 7 0 0 0 5 9.500C5 14.800 12 21 12 21z"/><circle cx="12" cy="9.500" r="2.500"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.400" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.500 4.500 4.500L19 7.500"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.600" stroke-linecap="round"><path d="M8 5v14M16 5v14"/></symbol>
+  <symbol id="i-beleg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/></symbol>
+  <symbol id="i-globus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></symbol>
+  <symbol id="i-haus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V9l8-5 8 5v12M9 21v-6h6v6"/></symbol>
+  <symbol id="i-schild" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v6c0 4.500 3 7.500 7 9 4-1.500 7-4.500 7-9V6z"/><path d="m9 12 2.200 2.200L15.500 10"/></symbol>
+  <symbol id="i-netz" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="12" r="2.500"/><circle cx="18" cy="6" r="2.500"/><circle cx="18" cy="18" r="2.500"/><path d="m8.300 11 7.400-3.800M8.300 13l7.400 3.800"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.500v13l11-6.500z" fill="currentColor"/></symbol>
+  <symbol id="i-zeichen" viewBox="0 0 32 32"><rect x="3" y="7" width="16" height="6" rx="3" fill="currentColor"/><rect x="3" y="19" width="26" height="6" rx="3" fill="currentColor" fill-opacity=".55"/><circle cx="25" cy="10" r="4" fill="var(--akzent)"/></symbol>
+  <!-- Beispielzeichen für Anbindungen: neutrale Formen, keine Marken -->
+  <symbol id="z1" viewBox="0 0 120 40"><path d="M8 28 20 8l12 20z" fill="currentColor"/><rect x="42" y="14" width="64" height="12" rx="6" fill="currentColor" opacity=".4"/></symbol>
+  <symbol id="z2" viewBox="0 0 120 40"><circle cx="20" cy="20" r="12" fill="currentColor"/><circle cx="36" cy="20" r="12" fill="currentColor" opacity=".4"/><rect x="58" y="15" width="48" height="10" rx="5" fill="currentColor" opacity=".4"/></symbol>
+  <symbol id="z3" viewBox="0 0 120 40"><rect x="8" y="8" width="24" height="24" rx="5" fill="currentColor"/><path d="M46 12l14 16 14-16" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity=".55"/><rect x="82" y="15" width="26" height="10" rx="5" fill="currentColor" opacity=".4"/></symbol>
+  <symbol id="z4" viewBox="0 0 120 40"><path d="M20 6a14 14 0 1 0 0 28V6z" fill="currentColor"/><rect x="44" y="12" width="62" height="6" rx="3" fill="currentColor" opacity=".4"/><rect x="44" y="22" width="40" height="6" rx="3" fill="currentColor" opacity=".4"/></symbol>
+  <symbol id="z5" viewBox="0 0 120 40"><path d="M6 20h14M20 8v24M20 8l14 12-14 12" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><rect x="50" y="15" width="56" height="10" rx="5" fill="currentColor" opacity=".4"/></symbol>
+  <symbol id="z6" viewBox="0 0 120 40"><rect x="6" y="10" width="40" height="20" rx="10" fill="currentColor"/><circle cx="64" cy="20" r="10" fill="currentColor" opacity=".4"/><rect x="82" y="15" width="26" height="10" rx="5" fill="currentColor" opacity=".4"/></symbol>
+</svg>
+
+<header class="kopf">
+  <div class="kopf__leiste">
+    <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
+      <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg>
+      <span>Markenname</span>
+    </a>
+    <nav class="kopf__nav" id="hauptnav" aria-label="Hauptnavigation" data-menue-ziel>
+      <ul class="kopf__menue">
+        <li><a href="#funktionen">Funktionen</a></li>
+        <li><a href="#zahlungen">Zahlungen</a></li>
+        <li><a href="#anbindungen">Anbindungen</a></li>
+        <li><a href="#faelle">Fälle</a></li>
+        <li><a href="#fragen">Fragen</a></li>
+        <li class="kopf__tel"><a href="tel:+490000000000"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>Telefon 0000 000 000</a></li>
+      </ul>
+    </nav>
+    <a class="kopf__telknopf" href="tel:+490000000000"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>0000 000 000</a>
+    <a class="knopf kopf__knopf" href="#kontakt">Demo vereinbaren</a>
+    <button class="kopf__burger" type="button" data-menue aria-expanded="false" aria-controls="hauptnav">
+      <span class="sr-nur">Menü öffnen oder schließen</span>
+      <span class="burger" aria-hidden="true"></span>
+    </button>
+  </div>
+</header>
+
+<main id="inhalt">
+  <!-- 1. Held: dunkle Tafel mit großem Radius, links Satz und zwei Wegekarten, rechts Oberfläche aus HTML (Beleg läuft durch) -->
+  <section class="held" id="top" aria-labelledby="h-held">
+    <div class="held__innen">
+      <div class="held__text">
+        <!-- Heldformel: Zielgruppe Finanzleitung und Buchhaltung im Mittelstand, Problem Rechnungsstapel, Freigaben per Mail und Auslandszahlungen von Hand, Lösung ein automatischer Ablauf von der Rechnung bis zur Zahlung mit selbst gesetzten Freigabegrenzen -->
+        <h1 id="h-held" data-zeig>Rechnungen und Zahlungen, die ohne Nacharbeit durchlaufen</h1>
+        <p class="held__lead" data-zeig>Markenname erfasst Eingangsrechnungen, gleicht sie mit Bestellungen ab und führt Freigabe und Zahllauf zusammen. Die Regeln legen Sie fest.</p>
+        <div class="held__knoepfe" data-zeig>
+          <a class="knopf" href="#kontakt">Demo vereinbaren <span class="knopf__punkt" aria-hidden="true"><svg width="20" height="20"><use href="#i-arrow-up-right"/></svg></span></a>
+          <p class="held__tel">Lieber sprechen? <a href="tel:+490000000000">0000 000 000</a></p>
+        </div>
+        <ul class="wege" data-staffel role="list">
+          <li data-zeig><a class="weg" href="#funktionen"><span class="weg__kopf">Eingangsrechnungen <svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></span><span class="weg__text"><svg width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-beleg"/></svg>Von der PDF bis zur Buchung, mit Freigabestufen</span></a></li>
+          <li data-zeig><a class="weg weg--zwei" href="#zahlungen"><span class="weg__kopf">Zahlungen <svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></span><span class="weg__text"><svg width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-globus"/></svg>Inland und Ausland in einem Zahllauf</span></a></li>
+        </ul>
+        <label class="ruhe"><input type="checkbox" id="ruhe"><span>Bewegung auf der Seite anhalten</span></label>
+      </div>
+
+      <!-- Oberfläche: Beispiel, reines HTML und CSS. Signaturbewegung "Beleglauf": Zeilen, Schritte und Stempel blenden nacheinander ein und wieder aus (10 s, transform und opacity) -->
+      <div class="fluss" role="img" aria-label="Beispieloberfläche: Eine Rechnung wird erfasst, abgeglichen, freigegeben und bezahlt. Daneben ein Zahllauf und eine Übersicht offener Posten.">
+        <div class="fluss__karte fluss__rechnung" aria-hidden="true">
+          <p class="fluss__kopf"><span>Rechnung RE-2041</span><span class="fluss__marke">Beispiel</span></p>
+          <dl class="fluss__felder">
+            <div class="fluss__zeile" style="--d:.2s"><dt>Lieferant</dt><dd>Beispiel Metallbau GmbH</dd></div>
+            <div class="fluss__zeile" style="--d:.5s"><dt>Betrag</dt><dd>4.280,00 EUR</dd></div>
+            <div class="fluss__zeile" style="--d:.8s"><dt>Konto</dt><dd>3400 Wareneingang</dd></div>
+            <div class="fluss__zeile" style="--d:1.1s"><dt>Kostenstelle</dt><dd>120 Produktion</dd></div>
+          </dl>
+          <ol class="schritte">
+            <li class="schritt" style="--d:1.6s"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Erfasst</li>
+            <li class="schritt" style="--d:2.2s"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Abgeglichen</li>
+            <li class="schritt" style="--d:2.8s"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Freigegeben</li>
+            <li class="schritt schritt--ende" style="--d:3.5s"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Bezahlt</li>
+          </ol>
+        </div>
+        <div class="fluss__karte fluss__lauf" data-parallax="-0.05" aria-hidden="true">
+          <p class="fluss__kopf"><span>Zahllauf Freitag</span></p>
+          <ul>
+            <li style="--d:2s"><span>Beispiel Logistik</span><span>1.920,00</span></li>
+            <li style="--d:2.5s"><span>Beispiel Papier</span><span>610,50</span></li>
+            <li style="--d:3s"><span>Beispiel Software</span><span>389,00</span></li>
+          </ul>
+        </div>
+        <div class="fluss__karte fluss__ring" data-parallax="0.06" aria-hidden="true">
+          <svg viewBox="0 0 80 80" width="72" height="72" focusable="false"><circle cx="40" cy="40" r="30" fill="none" stroke="var(--flaeche-dunkel-2)" stroke-width="12"/><circle cx="40" cy="40" r="30" fill="none" stroke="var(--akzent)" stroke-width="12" stroke-dasharray="118 189" transform="rotate(-90 40 40)"/></svg>
+          <p><strong>62 %</strong><span>Posten fällig</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Funktionen: Wischspur mit Oberflächen auf Rasterfläche -->
+  <section class="sektion funktionen" id="funktionen" aria-labelledby="h-funktionen" data-reiter-gruppe>
+    <div class="wrap funktionen__kopf">
+      <div>
+        <p class="kicker" data-zeig>Funktionen</p>
+        <h2 id="h-funktionen" data-zeig>Automatisierung mit Grenzen, die Sie setzen</h2>
+        <p class="funktionen__lead" data-zeig>Vom Rechnungseingang über Abgleich und Freigabe bis zum Auszahlen: Die Software übernimmt Routine und fragt nach, sobald etwas von Ihren Regeln abweicht.</p>
+      </div>
+      <div class="pfeile" data-reiter-steuerung hidden>
+        <button class="pfeil" type="button" data-reiter="zurueck" aria-label="Vorherige Funktion" aria-disabled="true"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-arrow-left"/></svg></button>
+        <button class="pfeil" type="button" data-reiter="weiter" aria-label="Nächste Funktion"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></button>
+      </div>
+    </div>
+    <ul class="spur" data-reiter-spur data-staffel tabindex="0" role="list" aria-label="Funktionen, seitlich wischbar">
+      <li class="fkarte" data-zeig>
+        <article>
+          <div class="fkarte__buehne" aria-hidden="true">
+            <div class="mini mini--erfassung">
+              <p class="mini__titel">Rechnung RE-2041 (Beispiel)</p>
+              <p class="mini__feld"><span>Lieferant</span><b>Beispiel Metallbau</b></p>
+              <p class="mini__feld"><span>Betrag</span><b>4.280,00 EUR</b></p>
+              <p class="mini__feld mini__feld--neu"><span>Konto</span><b>3400</b></p>
+              <p class="mini__aktion"><span>Prüfen</span><span class="mini__haupt">Weiter</span></p>
+            </div>
+          </div>
+          <h3>Rechnungserfassung</h3>
+          <p>Felder werden aus PDF und E-Rechnung gelesen und vorbelegt. Unsicheres Lesen wird markiert, nichts wird still übernommen.</p>
+        </article>
+      </li>
+      <li class="fkarte" data-zeig>
+        <article>
+          <div class="fkarte__buehne" aria-hidden="true">
+            <div class="mini mini--abgleich">
+              <p class="mini__titel">Bestellung gegen Rechnung (Beispiel)</p>
+              <p class="mini__paar"><span>Bestellung<b>4.180,00</b></span><span>Rechnung<b>4.280,00</b></span></p>
+              <p class="mini__warn">Abweichung 100,00 EUR, zur Prüfung vorgelegt</p>
+            </div>
+          </div>
+          <h3>Bestellabgleich</h3>
+          <p>Rechnung, Bestellung und Wareneingang werden verglichen. Abweichungen über Ihrer Toleranz gehen an die zuständige Person.</p>
+        </article>
+      </li>
+      <li class="fkarte" data-zeig>
+        <article>
+          <div class="fkarte__buehne" aria-hidden="true">
+            <div class="mini mini--freigabe">
+              <p class="mini__titel">Freigabe ab 5.000 EUR (Beispiel)</p>
+              <ol>
+                <li><span class="mini__kopf">AB</span>Teamleitung<em>erledigt</em></li>
+                <li><span class="mini__kopf">CD</span>Finanzleitung<em class="offen">wartet</em></li>
+              </ol>
+            </div>
+          </div>
+          <h3>Freigabestufen</h3>
+          <p>Betragsgrenzen, Vertretung und Vier-Augen-Prinzip stellen Sie selbst ein. Jede Entscheidung bleibt mit Datum nachvollziehbar.</p>
+        </article>
+      </li>
+      <li class="fkarte" data-zeig>
+        <article>
+          <div class="fkarte__buehne" aria-hidden="true">
+            <div class="mini mini--auswertung">
+              <p class="mini__titel">Ausgaben nach Monat (Beispiel)</p>
+              <div class="mini__saeulen"><i style="--h:42%"></i><i style="--h:64%"></i><i style="--h:51%"></i><i style="--h:82%"></i><i style="--h:58%"></i></div>
+            </div>
+          </div>
+          <h3>Auswertung</h3>
+          <p>Offene Posten, Fristen und Ausgaben je Kostenstelle lassen sich filtern und exportieren, ohne Tabellen von Hand zu bauen.</p>
+        </article>
+      </li>
+    </ul>
+    <div class="wrap mitte-knopf"><a class="knopf knopf--dunkel" href="#kontakt">Alle Funktionen besprechen</a></div>
+  </section>
+
+  <!-- 3. Zahlungen: drei weiße Karten mit Oberfläche oben -->
+  <section class="sektion zahlungen" id="zahlungen" aria-labelledby="h-zahlungen">
+    <div class="wrap">
+      <h2 id="h-zahlungen" data-zeig>Wachsen, ohne dass der Aufwand mitwächst</h2>
+      <p class="zahlungen__lead" data-zeig>Mehrere Gesellschaften, Währungen und Länder laufen in einem Bestand zusammen, mit einheitlichen Regeln und einem gemeinsamen Bericht.</p>
+      <ul class="drei" data-staffel role="list">
+        <li class="zkarte" data-zeig>
+          <div class="zkarte__buehne zkarte__buehne--waehrung" aria-hidden="true">
+            <div class="chipzeile chipzeile--hin"><span>EUR 12.400,00</span><span>CHF 8.915,00</span><span>PLN 31.250,00</span><span>EUR 9.260,00</span><span>CHF 4.870,00</span></div>
+            <div class="chipzeile chipzeile--her"><span>SEK 50.432,00</span><span>EUR 24.850,00</span><span>GBP 6.730,00</span><span>SEK 18.200,00</span><span>EUR 7.015,00</span></div>
+            <div class="chipzeile chipzeile--hin"><span>CZK 91.300,00</span><span>EUR 15.890,00</span><span>USD 8.140,00</span><span>CZK 40.000,00</span><span>EUR 3.995,00</span></div>
+          </div>
+          <h3>Zahlungen ins Ausland</h3>
+          <p>Zahlungen an Lieferanten in vielen Ländern und Währungen laufen im selben Zahllauf wie die inländischen. Welche Verfahren verfügbar sind, klären wir im Gespräch.</p>
+          <a class="knopf knopf--rand" href="#kontakt">Mehr erfahren <svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a>
+        </li>
+        <li class="zkarte" data-zeig>
+          <div class="zkarte__buehne zkarte__buehne--gesellschaft" aria-hidden="true">
+            <ul class="gesell">
+              <li style="--d:0s"><svg width="18" height="18"><use href="#i-check"/></svg>Beispiel Holding GmbH</li>
+              <li style="--d:1.2s"><svg width="18" height="18"><use href="#i-check"/></svg>Beispiel Produktion GmbH</li>
+              <li style="--d:2.4s"><svg width="18" height="18"><use href="#i-check"/></svg>Beispiel Vertrieb GmbH</li>
+              <li style="--d:3.6s"><svg width="18" height="18"><use href="#i-check"/></svg>Beispiel Service GmbH</li>
+            </ul>
+          </div>
+          <h3>Mehrere Gesellschaften</h3>
+          <p>Verwalten Sie Rechnungen von Tochtergesellschaften, Standorten und Währungen in einem System, mit gemeinsamen Regeln und getrennten Rechten.</p>
+          <a class="knopf knopf--rand" href="#kontakt">Mehr erfahren <svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a>
+        </li>
+        <li class="zkarte" data-zeig>
+          <div class="zkarte__buehne zkarte__buehne--kontrolle" aria-hidden="true">
+            <ul class="regeln">
+              <li><span class="schalter schalter--an"></span>Vier-Augen-Prinzip ab 5.000 EUR</li>
+              <li><span class="schalter schalter--an"></span>Neue Bankverbindung prüfen</li>
+              <li><span class="schalter"></span>Zahllauf nur freitags</li>
+            </ul>
+          </div>
+          <h3>Kontrollen und Nachweise</h3>
+          <p>Bankdaten-Änderungen, Betragsgrenzen und Fristen sind als Regeln hinterlegt. Das Protokoll hilft bei Prüfungen, ersetzt aber nicht die Beratung durch Ihre Steuerberatung.</p>
+          <a class="knopf knopf--rand" href="#kontakt">Mehr erfahren <svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 4. Anbindungen: dunkle Tafel, Datenfluss und Zeichenband -->
+  <section class="tafel anbindungen" id="anbindungen" aria-labelledby="h-anbindungen">
+    <div class="tafel__innen">
+      <div class="anbindungen__text">
+        <h2 id="h-anbindungen" data-zeig>Schnittstellen zu den Systemen, die Sie schon haben</h2>
+        <p data-zeig>Buchhaltung, Warenwirtschaft, Bank, Personal und Nachrichtendienste lassen sich anbinden, über fertige Verbindungen oder eine offene Schnittstelle. Welche für Ihr System bereitstehen, klären wir vorab.</p>
+        <a class="knopf knopf--hell" href="#kontakt" data-zeig>Anbindung prüfen lassen</a>
+      </div>
+      <ul class="datenfluss" role="list" aria-label="Beispiel für den Datenfluss">
+        <li><span class="knoten">Postfach</span><span class="strecke" aria-hidden="true"><i style="--d:0s"></i></span><span class="knoten knoten--zentrum">Markenname</span></li>
+        <li><span class="knoten">Warenwirtschaft</span><span class="strecke" aria-hidden="true"><i style="--d:.9s"></i></span><span class="knoten knoten--zentrum">Markenname</span></li>
+        <li><span class="knoten knoten--zentrum">Markenname</span><span class="strecke" aria-hidden="true"><i style="--d:1.8s"></i></span><span class="knoten">Bank</span></li>
+        <li><span class="knoten knoten--zentrum">Markenname</span><span class="strecke" aria-hidden="true"><i style="--d:2.7s"></i></span><span class="knoten">Buchhaltung</span></li>
+      </ul>
+    </div>
+    <div class="zeichenband" data-beispiel>
+      <input class="zeichenband__schalter" type="checkbox" id="band-pause" aria-label="Zeichenband anhalten">
+      <label class="zeichenband__pause" for="band-pause"><svg class="pause-ein" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-pause"/></svg><svg class="pause-aus" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-play"/></svg><span class="sr-nur">Band anhalten oder fortsetzen</span></label>
+      <p class="zeichenband__titel">Beispielzeichen, keine Marken</p>
+      <div class="band">
+        <ul class="band__spur" role="list">
+          <li><svg width="120" height="40" role="img" aria-label="Beispielzeichen 1"><use href="#z1"/></svg></li><li><svg width="120" height="40" role="img" aria-label="Beispielzeichen 2"><use href="#z2"/></svg></li><li><svg width="120" height="40" role="img" aria-label="Beispielzeichen 3"><use href="#z3"/></svg></li><li><svg width="120" height="40" role="img" aria-label="Beispielzeichen 4"><use href="#z4"/></svg></li><li><svg width="120" height="40" role="img" aria-label="Beispielzeichen 5"><use href="#z5"/></svg></li><li><svg width="120" height="40" role="img" aria-label="Beispielzeichen 6"><use href="#z6"/></svg></li>
+        </ul>
+        <ul class="band__spur" role="list" aria-hidden="true">
+          <li><svg width="120" height="40"><use href="#z1"/></svg></li><li><svg width="120" height="40"><use href="#z2"/></svg></li><li><svg width="120" height="40"><use href="#z3"/></svg></li><li><svg width="120" height="40"><use href="#z4"/></svg></li><li><svg width="120" height="40"><use href="#z5"/></svg></li><li><svg width="120" height="40"><use href="#z6"/></svg></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Fälle: Wischspur mit Fotokarte und Zitat, alle Beispiele -->
+  <section class="sektion faelle" id="faelle" aria-labelledby="h-faelle" data-reiter-gruppe>
+    <div class="wrap funktionen__kopf">
+      <div>
+        <p class="kicker" data-zeig>Kundenfälle</p>
+        <h2 id="h-faelle" data-zeig>Finanzteams, die wieder Luft haben</h2>
+      </div>
+      <div class="pfeile" data-reiter-steuerung hidden>
+        <button class="pfeil" type="button" data-reiter="zurueck" aria-label="Vorheriger Fall" aria-disabled="true"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-arrow-left"/></svg></button>
+        <button class="pfeil" type="button" data-reiter="weiter" aria-label="Nächster Fall"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></button>
+      </div>
+    </div>
+    <ul class="spur spur--faelle" data-reiter-spur data-staffel data-beispiel tabindex="0" role="list" aria-label="Kundenfälle, seitlich wischbar">
+      <li class="fall" data-zeig>
+        <article class="fall__karte">
+          <div class="fall__foto"><img src="bilder/besprechungsraum-mit-grossem-tisch-und-teams.webp" width="1000" height="668" alt="Besprechung in einem Raum mit großem Tisch, mehrere Personen mit Laptops" loading="lazy" decoding="async"><h3>Beispielfall: Ein Maschinenbauer gibt Rechnungen in Tagen frei statt in Wochen</h3></div>
+          <div class="fall__text">
+            <p class="fall__firma">Beispiel Maschinenbau GmbH, Musterstadt</p>
+            <blockquote><p>„Früher lagen Rechnungen auf dem Schreibtisch, bis jemand unterschrieben hat. Jetzt sieht die Geschäftsführung unterwegs, was offen ist.“ (Beispielzitat)</p></blockquote>
+            <p class="fall__rolle">Leitung Rechnungswesen (Beispiel)</p>
+            <a class="knopf knopf--rand" href="#kontakt">Fall besprechen</a>
+          </div>
+        </article>
+      </li>
+      <li class="fall" data-zeig>
+        <article class="fall__karte">
+          <div class="fall__foto"><img src="bilder/drei-frauen-arbeiten-mit-laptops-am-tisch.webp" width="1000" height="667" alt="Drei Frauen sitzen mit Laptops um einen Holztisch und arbeiten zusammen" loading="lazy" decoding="async"><h3>Beispielfall: Ein Großhändler bezahlt Lieferanten in mehreren Währungen aus einem Lauf</h3></div>
+          <div class="fall__text">
+            <p class="fall__firma">Beispiel Großhandel KG, Musterstadt</p>
+            <blockquote><p>„Wir haben nicht mehr drei Listen für Auslandszahlungen, sondern einen Zahllauf mit klarer Freigabe.“ (Beispielzitat)</p></blockquote>
+            <p class="fall__rolle">Finanzleitung (Beispiel)</p>
+            <a class="knopf knopf--rand" href="#kontakt">Fall besprechen</a>
+          </div>
+        </article>
+      </li>
+      <li class="fall" data-zeig>
+        <article class="fall__karte">
+          <div class="fall__foto"><img src="bilder/gruppe-im-sonnigen-buero-beim-meeting.webp" width="1000" height="667" alt="Ein Team steht und sitzt in einem hellen Büro um eine Pinnwand und einen Laptop" loading="lazy" decoding="async"><h3>Beispielfall: Eine Gruppe mit vier Gesellschaften arbeitet mit einem gemeinsamen Regelwerk</h3></div>
+          <div class="fall__text">
+            <p class="fall__firma">Beispiel Gruppe GmbH, Musterstadt</p>
+            <blockquote><p>„Die Regeln gelten für alle Gesellschaften gleich, die Rechte bleiben getrennt. Das hat unseren Monatsabschluss ruhiger gemacht.“ (Beispielzitat)</p></blockquote>
+            <p class="fall__rolle">Controlling (Beispiel)</p>
+            <a class="knopf knopf--rand" href="#kontakt">Fall besprechen</a>
+          </div>
+        </article>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 6. Wirkung: dunkle Tafel mit drei Kennzahlen, alles Beispiele -->
+  <section class="tafel wirkung" id="wirkung" aria-labelledby="h-wirkung">
+    <div class="tafel__innen tafel__innen--eng">
+      <h2 id="h-wirkung" data-zeig>Wirkung im Alltag eines Finanzteams</h2>
+      <ul class="zahlen" data-staffel data-beispiel role="list">
+        <li data-zeig><p class="zahlen__vor">Beispiel</p><strong><span data-zaehle="85">85</span>&nbsp;%</strong><span>der Rechnungen ohne Handeingabe vorbelegt</span></li>
+        <li data-zeig><p class="zahlen__vor">Beispiel</p><strong><span data-zaehle="3">3</span>&nbsp;Tage</strong><span>vom Eingang bis zur Freigabe</span></li>
+        <li data-zeig><p class="zahlen__vor">Beispiel</p><strong><span data-zaehle="6">6</span>&nbsp;Std.</strong><span>weniger Abstimmung pro Woche</span></li>
+      </ul>
+      <p class="wirkung__fuss">Beispielwerte, nicht belegt. Je Kunde durch eigene, belegbare Angaben mit Quelle und Stand ersetzen. Ergebnisse hängen von Betrieb, Datenlage und Einführung ab.</p>
+    </div>
+  </section>
+
+  <!-- 7. Preise: helles Band -->
+  <section class="band-preise" id="preise" aria-labelledby="h-preise">
+    <div class="band-preise__innen">
+      <div>
+        <h2 id="h-preise" data-zeig>Pakete nach Belegvolumen</h2>
+        <p data-zeig>Sie starten mit dem, was Sie brauchen, und erweitern, wenn der Betrieb wächst. Ein konkretes Angebot erhalten Sie nach dem Gespräch (Beispieltext).</p>
+      </div>
+      <a class="knopf knopf--dunkel" href="#kontakt" data-zeig>Preise besprechen</a>
+    </div>
+  </section>
+
+  <!-- 8. Einwand FAQ -->
+  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen">
+    <div class="wrap fragen__raster">
+      <div>
+        <h2 id="h-fragen" data-zeig>Häufige Fragen vor der Demo</h2>
+        <p class="fragen__hinweis" data-zeig>Alle Antworten sind Beispiele und je Produkt anzupassen.</p>
+      </div>
+      <div class="fragen__liste" data-exklusiv data-beispiel>
+        <details><summary>Was kostet die Einführung?</summary><p>Das hängt von Belegvolumen, Zahl der Gesellschaften und Anbindungen ab. Nach der Demo nennen wir eine Spanne mit klaren Annahmen. Beispielantwort, je Produkt anpassen.</p></details>
+        <details><summary>Wie lange dauert es, bis der erste Zahllauf läuft?</summary><p>Für einen kleinen Betrieb rechnen wir in Wochen. Die Dauer hängt von der Anbindung Ihrer Buchhaltung ab und steht im Plan nach der Demo. Beispielantwort, je Produkt anpassen.</p></details>
+        <details><summary>Müssen wir unsere Buchhaltung wechseln?</summary><p>Nein, Markenname arbeitet neben Ihrem bestehenden System und übergibt Buchungen über die Anbindung. Welche Systeme verbunden sind, klären wir vorab. Beispielantwort, je Produkt anpassen.</p></details>
+        <details><summary>Wer legt die Freigabegrenzen fest?</summary><p>Sie. Betragsgrenzen, Vertretungen und Zuständigkeiten stellen Sie selbst ein, wir beraten bei der Aufteilung. Beispielantwort, je Produkt anpassen.</p></details>
+        <details><summary>Wie sicher sind unsere Daten, und wo liegen sie?</summary><p>Hier steht im Projekt der Standort der Rechenzentren, die Auftragsverarbeitung und die Verschlüsselung. Beispielantwort, je Produkt prüfen und rechtlich freigeben.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Kontakt: Demo, höchstens fünf Felder -->
+  <section class="tafel kontakt" id="kontakt" aria-labelledby="h-kontakt">
+    <div class="tafel__innen kontakt__innen">
+      <div class="kontakt__text">
+        <h2 id="h-kontakt" data-zeig>Bereit, Zeit und Nerven zu sparen?</h2>
+        <p data-zeig>Vereinbaren Sie eine Demo mit Ihren eigenen Beispielrechnungen. Wir zeigen, wie der Ablauf bei Ihnen aussähe, und sagen ehrlich, ob es passt.</p>
+        <ul class="kontakt__daten" role="list">
+          <li><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><a href="tel:+490000000000">0000 000 000</a></li>
+          <li><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg><a href="mailto:hallo@beispiel.invalid">hallo@beispiel.invalid</a></li>
+          <li><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-pin"/></svg><span>Musterstraße 1, 00000 Musterstadt</span></li>
+        </ul>
+        <div class="kontakt__kachel" aria-hidden="true" data-parallax="-0.04"><p>Zahlungen heute</p><strong>27.456,00 EUR</strong><span>Beispielwert</span></div>
+      </div>
+      <!-- Cloudflare Turnstile: im Projekt hier <div class="cf-turnstile" data-sitekey="PLATZHALTER"></div> einsetzen und serverseitig prüfen. Kein Schlüssel in der Vorlage -->
+      <form class="formular" data-formular action="#" method="post" novalidate data-zeig="skala">
+        <div class="formular__feld formular__feld--breit"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" placeholder="Vor und Nachname" required></div>
+        <div class="formular__feld"><label for="f-mail">E-Mail</label><input id="f-mail" name="email" type="email" autocomplete="email" placeholder="name@beispiel.invalid" required><small class="feld__hinweis">Dorthin schicken wir die Terminbestätigung.</small></div>
+        <div class="formular__feld"><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" placeholder="0000 000 000"><small class="feld__hinweis">Nur für Rückfragen zum Termin, freiwillig.</small></div>
+        <div class="formular__feld"><label for="f-menge">Rechnungen pro Monat</label><select id="f-menge" name="menge"><option>Bis 100</option><option>100 bis 500</option><option>500 bis 2.000</option><option>Mehr als 2.000</option></select></div>
+        <div class="formular__feld"><label for="f-anliegen">Ihr Anliegen</label><input id="f-anliegen" name="anliegen" type="text" placeholder="Zum Beispiel: Freigaben per Mail ablösen"></div>
+        <p class="formular__recht formular__feld--breit">Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Angaben zur Terminvereinbarung zu. Mehr dazu in der <a href="#fuss">Datenschutzerklärung</a>.</p>
+        <button class="knopf formular__senden" type="submit">Demo vereinbaren</button>
+        <p class="formular__bestaetigung formular__feld--breit">Nach dem Absenden erhalten Sie eine E-Mail mit der Bestätigung Ihrer Anfrage.</p>
+        <p class="formular__meldung formular__feld--breit" data-formular-meldung role="status" hidden>Beispielformular: In dieser Vorlage wird nichts gesendet. Turnstile, Bestätigungsmail und Versand baut der Bauablauf.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<!-- Fuß: hell, große Aussage, Linkspalten -->
+<footer class="fuss" id="fuss">
+  <div class="wrap fuss__raster">
+    <div class="fuss__links">
+      <a class="kopf__logo fuss__logo" href="#top" aria-label="Markenname, nach oben"><svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg><span>Markenname</span></a>
+      <p class="fuss__satz">Zahlungen im Griff, Belege ohne Stau</p>
+      <div class="fuss__knoepfe">
+        <a class="knopf" href="#kontakt">Demo vereinbaren <span class="knopf__punkt" aria-hidden="true"><svg width="20" height="20"><use href="#i-arrow-up-right"/></svg></span></a>
+        <a class="knopf knopf--dunkel" href="#fuss">Kundenzugang</a>
+      </div>
+      <address>Markenname<br>Musterstraße 1<br>00000 Musterstadt<br><a href="tel:+490000000000">0000 000 000</a><br><a href="mailto:hallo@beispiel.invalid">hallo@beispiel.invalid</a></address>
+    </div>
+    <div class="fuss__spalten">
+      <nav aria-label="Seiten"><h3>Seiten</h3><ul role="list"><li><a href="#funktionen">Funktionen</a></li><li><a href="#zahlungen">Zahlungen</a></li><li><a href="#anbindungen">Anbindungen</a></li><li><a href="#faelle">Kundenfälle</a></li><li><a href="#preise">Preise</a></li></ul></nav>
+      <nav aria-label="Rechtliches"><h3>Rechtliches</h3><ul role="list"><li><a href="#fuss">Impressum</a></li><li><a href="#fuss">Datenschutz</a></li><li><a href="#fuss">AGB</a></li><li><a href="#fuss">Auftragsverarbeitung</a></li></ul></nav>
+      <!-- Folgen: Platzhalterlinks, im Projekt durch echte Profile ersetzen -->
+      <nav aria-label="Folgen"><h3>Folgen</h3><ul role="list"><li><a href="#fuss"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-netz"/></svg>Netzwerk</a></li><li><a href="#fuss"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-play"/></svg>Videokanal</a></li><li><a href="#fuss"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg>Rundbrief</a></li></ul></nav>
+    </div>
+  </div>
+  <p class="wrap fuss__klein">© Markenname. Alle Rechte vorbehalten.</p>
+</footer>
+
+<script src="../_basis/bewegung.js" defer></script>
+<script src="stil.js" defer></script>
+</body>
+</html>

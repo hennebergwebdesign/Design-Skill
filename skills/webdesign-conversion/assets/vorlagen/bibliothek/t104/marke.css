@@ -1,0 +1,35 @@
+/* marke.css der Vorlage "Finanzautomatisierung Petrol und Koralle": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast (selbst nachgerechnet, WCAG): --text auf --flaeche 15,2 zu 1; --text-leise auf --flaeche 6,9, auf Weiß 7,6, auf --flaeche-alt 6,2, auf --himmel 5,8;
+   --akzent-text auf --akzent 7,5; --akzent auf --flaeche-dunkel 5,7 (Fläche und Zeichen, nie Fließtext auf Hell);
+   --text-auf-dunkel auf --flaeche-dunkel 12,9; --text-leise-dunkel auf --flaeche-dunkel 7,6 und auf --flaeche-dunkel-2 6,1;
+   --feld-rand auf Weiß 4,4 (Rand von Eingabefeldern, mindestens 3 zu 1). */
+:root{
+  --flaeche:#f1f4f2;
+  --flaeche-alt:#e3eae6;
+  --flaeche-dunkel:#0d2f33;
+  --flaeche-dunkel-2:#13403f;
+  --text:#11201f;
+  --text-leise:#44575a;
+  --linie:#d3dcd8;
+  --akzent:#ff7f5c;            /* Hauptaktion: Koralle, Text darauf dunkel */
+  --akzent-text:#1d0f0a;
+  --schrift-titel:'Schibsted Grotesk',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:28px;
+  --radius-bild:24px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:48px;
+  --titel-gewicht:500;
+  --titel-spur:-0.035em;
+  --weiss:#ffffff;
+  --himmel:#cfe3ee;            /* Band Preise */
+  --raster:#e7ecea;            /* Rasterfläche hinter den Oberflächen */
+  --gruen-flaeche:#d6efe3;     /* Status erledigt */
+  --gruen-text:#0b4a36;
+  --text-auf-dunkel:#eef5f3;
+  --text-leise-dunkel:#a9c2c0;
+  --linie-dunkel:#2a5654;
+  --feld-rand:#6b7c7e;
+}

@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zahlung per Bank für Händler in Musterstadt</title>
+<meta name="description" content="Bankzahlung für Onlinehändler und Fintechs: Kunden zahlen per Banklogin, Sie sparen Kartengebühren. Anbindung per Schnittstelle, Demo anfragen.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../_basis/schriften.css">
+<link rel="stylesheet" href="marke.css">
+<link rel="stylesheet" href="../_basis/basis.css">
+<link rel="stylesheet" href="stil.css">
+<!-- Strukturierte Daten: Beispielwerte, vor der Auslieferung durch echte Angaben ersetzen. Keine Bewertungen erfunden. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Markenname",
+  "description": "Zahlung per Bank für Onlinehändler und Zahlungsdienstleister: Banklogin statt Kartennummer, Anbindung per Schnittstelle.",
+  "areaServed": "Deutschland, Österreich, Schweiz",
+  "telephone": "+490000000000",
+  "email": "hallo@beispiel.invalid",
+  "address": { "@type": "PostalAddress", "streetAddress": "Musterstraße 1", "postalCode": "00000", "addressLocality": "Musterstadt", "addressCountry": "DE" },
+  "contactPoint": { "@type": "ContactPoint", "contactType": "sales", "telephone": "+490000000000", "availableLanguage": "de" }
+}
+</script>
+</head>
+<body>
+<a class="sprunglink" href="#inhalt">Zum Inhalt springen</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-pfeil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.900" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-tel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.500 1.500a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></symbol>
+  <symbol id="i-ort" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.200 7-11.500A7 7 0 0 0 5 9.500C5 14.800 12 21 12 21z"/><circle cx="12" cy="9.500" r="2.500"/></symbol>
+  <symbol id="i-haken" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.400" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.500 4.500 4.500L19 7.500"/></symbol>
+  <symbol id="i-schild" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v5.500c0 4.500 3 8 7 9.500 4-1.500 7-5 7-9.500V6z"/><path d="m9 12 2.200 2.200L15.500 10"/></symbol>
+  <symbol id="i-muenzen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="5.500"/><path d="M14 14.500a5.500 5.500 0 1 0 1-10.300M7.500 9h3"/></symbol>
+  <symbol id="i-blitz" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3 5 13.500h6L10 21l8-10.500h-6z"/></symbol>
+  <symbol id="i-bank" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.500 12 4l9 5.500M5 10v8M9.500 10v8M14.500 10v8M19 10v8M3 20h18"/></symbol>
+  <symbol id="i-warenkorb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2.500l2 11h10l2-8H7"/><circle cx="9" cy="19" r="1.400"/><circle cx="17" cy="19" r="1.400"/></symbol>
+  <symbol id="i-geldbeutel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7.500A2.500 2.500 0 0 1 6.500 5H18v3"/><rect x="4" y="8" width="16" height="11" rx="2.500"/><circle cx="16" cy="13.500" r="1.100"/></symbol>
+  <symbol id="i-kurve" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5M4 19h16M8 15l4-4 3 3 5-6"/></symbol>
+  <symbol id="i-vertrag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h5"/></symbol>
+  <symbol id="i-netz" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="12" r="2.500"/><circle cx="18" cy="6" r="2.500"/><circle cx="18" cy="18" r="2.500"/><path d="m8.300 11 7.400-3.800M8.300 13l7.400 3.800"/></symbol>
+  <symbol id="i-zeichen" viewBox="0 0 32 32"><rect width="32" height="32" rx="9" fill="currentColor"/><path d="M7 21 16 8l9 13z" fill="var(--akzent)"/><rect x="7" y="23" width="18" height="2.500" rx="1.200" fill="var(--salbei)"/></symbol>
+</svg>
+
+<header class="kopf">
+  <div class="kopf__leiste">
+    <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
+      <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg>
+      <span>Markenname</span>
+    </a>
+    <nav class="kopf__nav" id="hauptnav" aria-label="Hauptnavigation" data-menue-ziel>
+      <ul class="kopf__menue">
+        <li><a href="#vorteile">Vorteile</a></li>
+        <li><a href="#ablauf">Ablauf</a></li>
+        <li><a href="#schnittstelle">Schnittstelle</a></li>
+        <li><a href="#branchen">Branchen</a></li>
+        <li><a href="#fragen">Fragen</a></li>
+        <li class="kopf__tel"><a href="tel:+490000000000"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-tel"/></svg>0000 000 000</a></li>
+      </ul>
+    </nav>
+    <a class="knopf kopf__knopf" href="#kontakt">Demo anfragen</a>
+    <button class="kopf__burger" type="button" data-menue aria-expanded="false" aria-controls="hauptnav">
+      <span class="sr-nur">Menü öffnen oder schließen</span>
+      <span class="burger" aria-hidden="true"></span>
+    </button>
+  </div>
+</header>
+
+<main id="inhalt">
+  <!-- 1. Held: Satz links, rechts eine Bühne aus drei gekippten Oberflächenkarten (Warenkorb, Bankwahl, Bestätigung), die dem Zeiger folgen; darunter die Bankzeile -->
+  <section class="held" id="top" aria-labelledby="h-held">
+    <div class="held__innen">
+      <div class="held__text">
+        <!-- Heldformel: Zielgruppe Onlinehändler und Zahlungsverantwortliche im Mittelstand, Problem hohe Kartengebühren, Rückbuchungen und Abbrüche beim Bezahlen, Lösung Zahlung per Banklogin (Open Banking) über eine Schnittstelle, Demo -->
+        <h1 id="h-held" data-zeig>Ihre Kunden zahlen direkt per Bank</h1>
+        <p class="held__lead" data-zeig>Banklogin statt Kartennummer: Der Kunde gibt in seiner Banking App frei, Ihr System erhält die Meldung. Gebühren nennen wir vorab.</p>
+        <div class="held__knoepfe" data-zeig>
+          <a class="knopf knopf--gross" href="#kontakt">Demo anfragen <span class="knopf__pfeil" aria-hidden="true"><svg width="22" height="22"><use href="#i-pfeil"/></svg></span></a>
+          <a class="textlink" href="#ablauf">Ablauf ansehen</a>
+        </div>
+        <p class="held__tel" data-zeig>Lieber sprechen? <a href="tel:+490000000000">0000 000 000</a>, Montag bis Freitag.</p>
+      </div>
+
+      <div class="buehne" data-buehne data-zeig="rechts">
+        <p class="sr-nur">Beispieldarstellung des Bezahlvorgangs: Warenkorb mit Betrag, Auswahl der Bank, Bestätigung des Zahlungseingangs.</p>
+        <div class="buehne__szene" aria-hidden="true">
+          <div class="buehne__spur"></div>
+          <div class="flaeche flaeche--bank">
+            <p class="flaeche__titel">Bank wählen</p>
+            <ul class="bankwahl">
+              <li><svg width="30" height="30" viewBox="0 0 30 30"><circle cx="15" cy="15" r="11" fill="#13211e"/></svg><span>Bank A</span></li>
+              <li><svg width="30" height="30" viewBox="0 0 30 30"><rect x="4" y="4" width="22" height="22" rx="6" fill="#ff7a3d"/></svg><span>Bank B</span></li>
+              <li><svg width="30" height="30" viewBox="0 0 30 30"><path d="M15 4 26 25H4z" fill="#1f6b4f"/></svg><span>Bank C</span></li>
+              <li><svg width="30" height="30" viewBox="0 0 30 30"><path d="M15 3 26 15 15 27 4 15z" fill="#5b7f97"/></svg><span>Bank D</span></li>
+            </ul>
+          </div>
+          <div class="flaeche flaeche--shop">
+            <span class="flaeche__bild"><svg width="64" height="64" viewBox="0 0 64 64"><rect x="8" y="14" width="48" height="36" rx="10" fill="#cde2d0"/><circle cx="32" cy="32" r="10" fill="#13211e"/><circle cx="32" cy="32" r="4" fill="#f2e1a6"/></svg></span>
+            <p class="flaeche__titel">Kopfhörer, Beispiel</p>
+            <p class="flaeche__betrag">79,00 €</p>
+            <span class="flaeche__knopf">Mit Bank bezahlen</span>
+          </div>
+          <div class="flaeche flaeche--ok">
+            <span class="flaeche__haken"><svg width="26" height="26"><use href="#i-haken"/></svg></span>
+            <p class="flaeche__titel">Zahlung eingegangen</p>
+            <p class="flaeche__klein">79,00 € · Referenz BSP-0001</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="banken" data-zeig>
+      <p class="banken__text">Anbindung an viele Banken über eine Schnittstelle, die Auswahl hängt vom Land ab.</p>
+      <ul class="banken__zeichen" aria-label="Beispielzeichen, keine echten Banken" role="list">
+        <li aria-hidden="true"><svg width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="15" fill="currentColor"/></svg></li>
+        <li aria-hidden="true"><svg width="40" height="40" viewBox="0 0 40 40"><rect x="6" y="6" width="28" height="28" rx="8" fill="currentColor"/></svg></li>
+        <li aria-hidden="true"><svg width="40" height="40" viewBox="0 0 40 40"><path d="M20 5 35 33H5z" fill="currentColor"/></svg></li>
+        <li aria-hidden="true"><svg width="40" height="40" viewBox="0 0 40 40"><path d="M20 4 36 20 20 36 4 20z" fill="currentColor"/></svg></li>
+        <li aria-hidden="true"><svg width="40" height="40" viewBox="0 0 40 40"><path d="M12 6h16l8 14-8 14H12L4 20z" fill="currentColor"/></svg></li>
+      </ul>
+      <p class="banken__beispiel">Beispielzeichen, keine echten Banken.</p>
+    </div>
+  </section>
+
+  <!-- 2. Vorteile: dunkle Tafel, links drei Karten, die sich beim Scrollen stapeln, rechts der Satz bleibt stehen -->
+  <section class="vorteile" id="vorteile" aria-labelledby="h-vorteile">
+    <div class="vorteile__tafel">
+      <div class="vorteile__karten">
+        <article class="vkarte" style="--n:0">
+          <span class="vkarte__zeichen"><svg width="30" height="30" aria-hidden="true"><use href="#i-schild"/></svg></span>
+          <h3>Kein Kartennetz dazwischen</h3>
+          <p>Die Zahlung läuft von Konto zu Konto. Ein Chargeback Verfahren der Kartenanbieter gibt es dabei nicht.</p>
+        </article>
+        <article class="vkarte" style="--n:1">
+          <span class="vkarte__zeichen"><svg width="30" height="30" aria-hidden="true"><use href="#i-muenzen"/></svg></span>
+          <h3>Gebühren je Zahlung, offen gerechnet</h3>
+          <p>Wir rechnen Ihnen im Gespräch an Ihrem Warenkorb vor, was Bankzahlung gegenüber Karte kostet (Beispielrechnung).</p>
+        </article>
+        <article class="vkarte" style="--n:2">
+          <span class="vkarte__zeichen"><svg width="30" height="30" aria-hidden="true"><use href="#i-blitz"/></svg></span>
+          <h3>Eingang in Sekunden möglich</h3>
+          <p>Unterstützt die Bank Echtzeitüberweisung, melden wir den Eingang binnen Sekunden. Sonst nach der üblichen Laufzeit.</p>
+        </article>
+      </div>
+      <div class="vorteile__text">
+        <h2 id="h-vorteile">Zu hohe Kartengebühren?</h2>
+        <p>Bankzahlung ist für viele Händler eine Ergänzung zur Karte, nicht ihr Ersatz. Probieren Sie es an einem Teil Ihrer Zahlungen aus und vergleichen Sie.</p>
+        <a class="knopf" href="#kontakt">Demo anfragen <span class="knopf__pfeil" aria-hidden="true"><svg width="22" height="22"><use href="#i-pfeil"/></svg></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Anschluss: Überschrift in der Mitte, darunter ein Diagramm aus Bankkarten, Knoten und Ziel -->
+  <section class="netz" aria-labelledby="h-netz">
+    <div class="wrap">
+      <h2 id="h-netz" class="mitte" data-zeig>Ein Anschluss für viele Banken</h2>
+      <p class="mitte mitte--text" data-zeig>Sie binden einmal an. Wir kümmern uns um die einzelnen Bankanbindungen und melden Ihnen jede Zahlung in einem Format.</p>
+      <div class="diagramm" data-staffel>
+        <ul class="diagramm__links" role="list">
+          <li class="dkarte" data-zeig><svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="12" fill="#13211e"/></svg><span>Bank A, Beispiel</span></li>
+          <li class="dkarte" data-zeig><svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><rect x="5" y="5" width="24" height="24" rx="7" fill="#ff7a3d"/></svg><span>Bank B, Beispiel</span></li>
+          <li class="dkarte" data-zeig><svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><path d="M17 5 29 28H5z" fill="#1f6b4f"/></svg><span>Bank C, Beispiel</span></li>
+          <li class="dkarte" data-zeig><svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><path d="M17 4 30 17 17 30 4 17z" fill="#5b7f97"/></svg><span>Bank D, Beispiel</span></li>
+        </ul>
+        <svg class="diagramm__linien" viewBox="0 0 200 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <path d="M0 12 C 100 12, 100 50, 200 50"/><path d="M0 37 C 100 37, 100 50, 200 50"/><path d="M0 63 C 100 63, 100 50, 200 50"/><path d="M0 88 C 100 88, 100 50, 200 50"/>
+        </svg>
+        <div class="knoten" data-zeig="skala">
+          <span class="knoten__ring" aria-hidden="true"></span>
+          <span class="knoten__kern"><svg width="46" height="46" aria-hidden="true"><use href="#i-zeichen"/></svg></span>
+          <span class="knoten__name">Markenname</span>
+        </div>
+        <div class="ziel" data-zeig="rechts">
+          <svg width="34" height="34" aria-hidden="true"><use href="#i-warenkorb"/></svg>
+          <span>Ihr Shop und Ihre Buchhaltung</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Kontodaten: sandfarbene Tafel mit drei gekippten Karten, die sich beim Überfahren aufrichten -->
+  <section class="daten" aria-labelledby="h-daten">
+    <div class="daten__tafel" data-zeig="skala">
+      <div class="daten__text">
+        <h2 id="h-daten">Kontodaten nutzen, mit Zustimmung des Kunden</h2>
+        <p>Mit Freigabe Ihrer Kunden prüfen Sie Kontoinhaber und Konto vor der Auszahlung. Das senkt Fehlüberweisungen und erleichtert die Identitätsprüfung.</p>
+        <a class="knopf knopf--dunkel" href="#kontakt">Demo anfragen <span class="knopf__pfeil" aria-hidden="true"><svg width="22" height="22"><use href="#i-pfeil"/></svg></span></a>
+      </div>
+      <ul class="daten__karten" role="list">
+        <li class="dk dk--1"><span class="dk__zeichen" aria-hidden="true"><svg width="26" height="26"><use href="#i-haken"/></svg></span><h3>Kontoinhaber prüfen</h3><p>Name und Konto stimmen überein, bevor Geld fließt.</p></li>
+        <li class="dk dk--2"><span class="dk__zeichen" aria-hidden="true"><svg width="26" height="26"><use href="#i-kurve"/></svg></span><h3>Umsätze einsehen</h3><p>Nur mit Freigabe, nur für den vereinbarten Zweck.</p></li>
+        <li class="dk dk--3"><span class="dk__zeichen" aria-hidden="true"><svg width="26" height="26"><use href="#i-bank"/></svg></span><h3>Bankverbindung bestätigen</h3><p>Schluss mit Tippfehlern in der IBAN.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 5. Zahlungsformular: Telefon mit Formular in Markenfarbe, Farbwahl per Auswahlfeld (ohne JavaScript) -->
+  <section class="formular-bereich" id="ablauf" aria-labelledby="h-form">
+    <div class="wrap formular-bereich__raster" data-staffel>
+      <div class="telefonbuehne" data-zeig>
+        <div class="telefon" aria-hidden="true">
+          <div class="telefon__schirm">
+            <div class="telefon__kopf"><span>Bezahlen</span><span>79,00 €</span></div>
+            <div class="telefon__zeile"><span class="telefon__bild"></span><span><b>Kopfhörer</b><br>Beispiel, 1 Stück</span></div>
+            <div class="telefon__zeile"><span class="telefon__bild telefon__bild--2"></span><span><b>Versand</b><br>Beispiel, kostenlos</span></div>
+            <div class="telefon__bank">Bank A, Beispiel</div>
+            <div class="telefon__knopf">Zahlung freigeben</div>
+          </div>
+        </div>
+      </div>
+      <div class="formular-bereich__tafel" data-zeig>
+        <h2 id="h-form">Das Zahlungsformular in Ihrer Marke</h2>
+        <p>Farbe, Schrift und Reihenfolge der Schritte passen Sie an Ihren Shop an. Sie behalten die Kontrolle über den Weg zur Kasse, wir die Technik dahinter.</p>
+        <fieldset class="farbwahl">
+          <legend>Farbe des Formulars ausprobieren</legend>
+          <input type="radio" name="fw" id="fw-1" checked><label for="fw-1"><span class="farbwahl__punkt" style="--p:#1f6b4f"></span>Grün</label>
+          <input type="radio" name="fw" id="fw-2"><label for="fw-2"><span class="farbwahl__punkt" style="--p:#ff7a3d"></span>Orange</label>
+          <input type="radio" name="fw" id="fw-3"><label for="fw-3"><span class="farbwahl__punkt" style="--p:#13211e"></span>Tinte</label>
+        </fieldset>
+        <a class="knopf knopf--dunkel" href="#kontakt">Demo anfragen <span class="knopf__pfeil" aria-hidden="true"><svg width="22" height="22"><use href="#i-pfeil"/></svg></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Zahlweg im Vergleich: Umschalter Bankzahlung gegen Karte, je drei Schritte (reines CSS) -->
+  <section class="weg" aria-labelledby="h-weg">
+    <div class="wrap">
+      <h2 id="h-weg" class="mitte" data-zeig>Der Zahlweg im Vergleich</h2>
+      <div class="weg__schalter" data-zeig>
+        <input type="radio" name="zw" id="zw-bank" checked>
+        <input type="radio" name="zw" id="zw-karte">
+        <div class="weg__reiter" role="presentation">
+          <label for="zw-bank">Bankzahlung</label>
+          <label for="zw-karte">Kartenzahlung</label>
+        </div>
+        <ol class="weg__schritte weg__schritte--bank">
+          <li class="wschritt"><span class="wschritt__bild"><svg width="34" height="34" aria-hidden="true"><use href="#i-bank"/></svg></span><h3>Bank wählen</h3><p>Der Kunde wählt seine Bank und meldet sich dort an. Keine Kartennummer im Shop.</p></li>
+          <li class="wschritt"><span class="wschritt__bild"><svg width="34" height="34" aria-hidden="true"><use href="#i-schild"/></svg></span><h3>In der App freigeben</h3><p>Betrag und Empfänger sind vorbelegt. Die Freigabe erfolgt mit dem Verfahren der Bank.</p></li>
+          <li class="wschritt"><span class="wschritt__bild"><svg width="34" height="34" aria-hidden="true"><use href="#i-haken"/></svg></span><h3>Meldung an den Shop</h3><p>Ihr System erhält den Status der Zahlung. Die Ware geht raus, wenn Sie es festlegen.</p></li>
+        </ol>
+        <ol class="weg__schritte weg__schritte--karte">
+          <li class="wschritt"><span class="wschritt__bild"><svg width="34" height="34" aria-hidden="true"><use href="#i-vertrag"/></svg></span><h3>Kartendaten eingeben</h3><p>Nummer, Datum und Prüfziffer, oft auf dem Handy, oft mit Tippfehlern.</p></li>
+          <li class="wschritt"><span class="wschritt__bild"><svg width="34" height="34" aria-hidden="true"><use href="#i-netz"/></svg></span><h3>Prüfung im Kartennetz</h3><p>Der Kartenanbieter prüft und gibt frei, bei starker Kundenauthentifizierung mit zweitem Schritt.</p></li>
+          <li class="wschritt"><span class="wschritt__bild"><svg width="34" height="34" aria-hidden="true"><use href="#i-muenzen"/></svg></span><h3>Abrechnung später</h3><p>Das Geld erreicht Sie nach der Abrechnung, abzüglich der Gebühren. Rückbuchungen sind möglich.</p></li>
+        </ol>
+        <p class="weg__hinweis">Vereinfachte Darstellung als Beispiel. Abläufe und Fristen unterscheiden sich je Bank und Kartenanbieter.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Schnittstelle: Bühne mit Wechsel der Oberfläche beim Scrollen (Code, Umsatzliste, Auswertung) -->
+  <section class="stufen" id="schnittstelle" aria-labelledby="h-stufen" data-stufen>
+    <div class="stufen__buehne">
+      <div class="stufen__tafel">
+        <h2 id="h-stufen" class="stufen__titel">Eine Schnittstelle, ein Abgleich, ein Bericht</h2>
+        <div class="stufen__innen">
+          <ol class="stufen__liste">
+            <li class="stufe" data-s="0"><span class="stufe__nr" aria-hidden="true">01</span><div><h3>Für Entwickler gebaut</h3><p>Dokumentation, Beispieldaten und Codeausschnitte für den schnellen Start. Eine Testumgebung ist Teil der Demo.</p></div></li>
+            <li class="stufe" data-s="1"><span class="stufe__nr" aria-hidden="true">02</span><div><h3>Alle Zahlungen in einer Liste</h3><p>Von der Anfrage bis zum Eingang verfolgen Sie jede Zahlung und gleichen sie mit Ihrer Buchhaltung ab.</p></div></li>
+            <li class="stufe" data-s="2"><span class="stufe__nr" aria-hidden="true">03</span><div><h3>Auswertung nach Ihrem Zuschnitt</h3><p>Zahlungsdaten nach Zeitraum, Bank und Zahlweg. Sie entscheiden anhand eigener Zahlen.</p></div></li>
+          </ol>
+          <div class="stufen__flaeche" aria-hidden="true">
+            <div class="fenster pane" data-s="0">
+              <div class="fenster__kopf"><span></span><span></span><span></span><b>Zahlung anlegen (Beispiel)</b></div>
+<pre class="fenster__code"><span class="k"># Anfrage</span>
+curl -X POST https://api.beispiel.invalid/zahlungen \
+  -H "Authorization: Bearer $TOKEN" \
+  -d betrag=79.00 -d waehrung=EUR \
+  -d referenz=BSP-0001
+
+<span class="k"># Antwort</span>
+{ "status": "wartet_auf_freigabe",
+  "weiter_zu": "https://bank.beispiel.invalid/..." }</pre>
+            </div>
+            <div class="fenster pane" data-s="1">
+              <div class="fenster__kopf"><span></span><span></span><span></span><b>Zahlungen (Beispieldaten)</b></div>
+              <table class="tabelle"><tbody>
+                <tr><td>BSP-0004</td><td>118,40 €</td><td><i class="chip chip--ok">eingegangen</i></td></tr>
+                <tr><td>BSP-0003</td><td>24,90 €</td><td><i class="chip chip--ok">eingegangen</i></td></tr>
+                <tr><td>BSP-0002</td><td>310,00 €</td><td><i class="chip chip--offen">wartet</i></td></tr>
+                <tr><td>BSP-0001</td><td>79,00 €</td><td><i class="chip chip--ok">eingegangen</i></td></tr>
+                <tr><td>BSP-0000</td><td>59,00 €</td><td><i class="chip chip--fehl">abgebrochen</i></td></tr>
+              </tbody></table>
+            </div>
+            <div class="fenster pane" data-s="2">
+              <div class="fenster__kopf"><span></span><span></span><span></span><b>Auswertung (Beispieldaten)</b></div>
+              <div class="saeulen">
+                <span style="--h:.38"></span><span style="--h:.55"></span><span style="--h:.46"></span><span style="--h:.72"></span><span style="--h:.62"></span><span style="--h:.9"></span><span style="--h:.78"></span>
+              </div>
+              <p class="fenster__fuss">Zahlungen je Woche, erfundene Werte zur Darstellung</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Branchen: sechs Spalten mit Zeichen, Überschrift und Satz -->
+  <section class="branchen" id="branchen" aria-labelledby="h-branchen">
+    <div class="wrap">
+      <h2 id="h-branchen" class="mitte" data-zeig>Zahlung per Bank für jede Branche</h2>
+      <ul class="branchen__liste" data-staffel role="list">
+        <li class="bz" data-zeig><span class="bz__zeichen"><svg width="30" height="30" aria-hidden="true"><use href="#i-warenkorb"/></svg></span><h3>Onlinehandel</h3><p>Weniger Abbrüche an der Kasse, weil keine Kartendaten getippt werden müssen.</p></li>
+        <li class="bz" data-zeig><span class="bz__zeichen"><svg width="30" height="30" aria-hidden="true"><use href="#i-geldbeutel"/></svg></span><h3>Aufladen und Guthaben</h3><p>Konto oder Wallet aufladen, ohne Umweg über die Karte.</p></li>
+        <li class="bz" data-zeig><span class="bz__zeichen"><svg width="30" height="30" aria-hidden="true"><use href="#i-vertrag"/></svg></span><h3>Ratenkauf und Kredit</h3><p>Konto prüfen und Raten einziehen, nach Zustimmung des Kunden.</p></li>
+        <li class="bz" data-zeig><span class="bz__zeichen"><svg width="30" height="30" aria-hidden="true"><use href="#i-kurve"/></svg></span><h3>Geldanlage</h3><p>Sparpläne und Einzahlungen direkt vom Referenzkonto.</p></li>
+        <li class="bz" data-zeig><span class="bz__zeichen"><svg width="30" height="30" aria-hidden="true"><use href="#i-netz"/></svg></span><h3>Zahlungsdienstleister</h3><p>Bankzahlung als weiterer Zahlweg im eigenen Angebot.</p></li>
+        <li class="bz" data-zeig><span class="bz__zeichen"><svg width="30" height="30" aria-hidden="true"><use href="#i-schild"/></svg></span><h3>Versicherung</h3><p>Beiträge und Auszahlungen mit geprüftem Konto.</p></li>
+      </ul>
+      <p class="branchen__hinweis">Welche Anwendungsfälle für Sie zulässig sind, hängt von Ihrer Branche und Ihren Verträgen ab. Das klären wir im Gespräch.</p>
+    </div>
+  </section>
+
+  <!-- 9. Einwände: Akkordeon, Antworten sind Beispiele -->
+  <section class="fragen" id="fragen" aria-labelledby="h-fragen">
+    <div class="wrap fragen__raster">
+      <div class="fragen__kopf" data-zeig>
+        <h2 id="h-fragen">Häufige Fragen vor der Demo</h2>
+        <p>Die Antworten sind Beispiele und vor dem Einsatz durch Ihre eigenen Angaben zu ersetzen.</p>
+      </div>
+      <div class="fragen__liste" data-exklusiv data-zeig>
+        <details open><summary>Was kostet Bankzahlung gegenüber Karte?</summary><div class="antwort"><p><span class="beispiel-marke">Beispielantwort</span> Die Gebühr hängt von Zahlungsvolumen, Warenkorb und Zahlweg ab. Wir rechnen sie in der Demo an Ihren Zahlen durch, bevor Sie sich entscheiden.</p></div></details>
+        <details><summary>Wie sicher ist die Zahlung für meine Kunden?</summary><div class="antwort"><p><span class="beispiel-marke">Beispielantwort</span> Der Kunde meldet sich bei seiner Bank an und gibt dort frei. Zugangsdaten gehen nie an den Shop. Die Sicherheit hängt vom Verfahren der jeweiligen Bank ab.</p></div></details>
+        <details><summary>Wie lange dauert die Anbindung?</summary><div class="antwort"><p><span class="beispiel-marke">Beispielantwort</span> Für einen Shop mit gängigem System rechnen Entwickler oft mit einigen Tagen bis zur Testumgebung. Eine feste Zusage geben wir erst nach Blick in Ihr System.</p></div></details>
+        <details><summary>Was passiert bei einer Rückerstattung?</summary><div class="antwort"><p><span class="beispiel-marke">Beispielantwort</span> Sie lösen die Erstattung über die Schnittstelle oder Ihre Bank aus. Ein automatisches Chargeback wie bei der Karte gibt es nicht, Ihr Kundenservice bleibt zuständig.</p></div></details>
+        <details><summary>Welche Banken und Länder sind abgedeckt?</summary><div class="antwort"><p><span class="beispiel-marke">Beispielantwort</span> Die Liste hängt vom Land ab und wächst. Welche Banken Ihre Kunden nutzen, sehen wir gemeinsam an Ihren Bestellungen.</p></div></details>
+        <details><summary>Brauche ich eine eigene Zahlungserlaubnis?</summary><div class="antwort"><p><span class="beispiel-marke">Beispielantwort</span> Das hängt vom Modell ab. Als Händler nutzen Sie in der Regel unseren Dienst und brauchen keine eigene. Prüfen Sie das mit Ihrer Rechtsberatung.</p></div></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Kontakt: dunkle Tafel mit Ringen, Satz und Formular -->
+  <section class="kontakt" id="kontakt" aria-labelledby="h-kontakt">
+    <div class="kontakt__tafel">
+      <span class="ring ring--1" aria-hidden="true" data-zeig="skala"></span>
+      <span class="ring ring--2" aria-hidden="true" data-zeig="skala"></span>
+      <span class="ring ring--3" aria-hidden="true" data-zeig="skala"></span>
+      <div class="kontakt__innen">
+        <div class="kontakt__text" data-zeig>
+          <h2 id="h-kontakt">Starten Sie mit einer Demo</h2>
+          <p>Wir zeigen Ihnen den Bezahlvorgang an Ihrem Warenkorb und rechnen die Gebühren mit Ihren Zahlen durch. Unverbindlich und ohne Vertrag.</p>
+          <ul class="kontakt__daten" role="list">
+            <li><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-tel"/></svg><a href="tel:+490000000000">0000 000 000</a></li>
+            <li><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg><a href="mailto:hallo@beispiel.invalid">hallo@beispiel.invalid</a></li>
+            <li><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-ort"/></svg><span>Musterstraße 1, 00000 Musterstadt</span></li>
+          </ul>
+        </div>
+        <!-- Cloudflare Turnstile: im Projekt hier <div class="cf-turnstile" data-sitekey="PLATZHALTER"></div> einsetzen und serverseitig prüfen. Kein Schlüssel in der Vorlage -->
+        <form class="formular" data-formular action="#" method="post" novalidate data-zeig>
+          <div class="feld"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+          <div class="feld"><label for="f-firma">Unternehmen</label><input id="f-firma" name="firma" type="text" autocomplete="organization"></div>
+          <div class="feld"><label for="f-mail">E-Mail</label><input id="f-mail" name="email" type="email" autocomplete="email" placeholder="name@beispiel.invalid" required><small class="feld__hinweis">Dorthin schicken wir die Terminbestätigung.</small></div>
+          <div class="feld"><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel"><small class="feld__hinweis">Nur für Rückfragen zum Termin, freiwillig.</small></div>
+          <div class="feld"><label for="f-volumen">Zahlungen im Monat</label><select id="f-volumen" name="volumen"><option>Bis 500</option><option>500 bis 5.000</option><option>Über 5.000</option><option>Weiß ich noch nicht</option></select></div>
+          <p class="formular__recht">Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Angaben zur Terminvereinbarung zu. Mehr dazu in der <a href="#fuss">Datenschutzerklärung</a>.</p>
+          <button class="knopf formular__senden" type="submit">Demo anfragen</button>
+          <p class="formular__meldung" data-formular-meldung role="status" hidden>Beispielformular: In dieser Vorlage wird nichts gesendet. Turnstile, Bestätigungsmail und Versand baut der Bauablauf.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="fuss" id="fuss">
+  <div class="wrap fuss__raster">
+    <div class="fuss__marke">
+      <a class="kopf__logo" href="#top" aria-label="Markenname, nach oben"><svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg><span>Markenname</span></a>
+      <p>© Markenname GmbH, Musterstadt. Beispielseite, es werden keine Zahlungsdienste erbracht.</p>
+    </div>
+    <nav class="fuss__spalte" aria-label="Seiten"><h2>Seiten</h2><ul role="list"><li><a href="#vorteile">Vorteile</a></li><li><a href="#ablauf">Ablauf</a></li><li><a href="#schnittstelle">Schnittstelle</a></li><li><a href="#branchen">Branchen</a></li></ul></nav>
+    <nav class="fuss__spalte" aria-label="Kontakt"><h2>Kontakt</h2><ul role="list"><li><a href="#kontakt">Demo anfragen</a></li><li><a href="tel:+490000000000">0000 000 000</a></li><li><a href="mailto:hallo@beispiel.invalid">hallo@beispiel.invalid</a></li></ul></nav>
+    <nav class="fuss__spalte" aria-label="Rechtliches"><h2>Rechtliches</h2><ul role="list"><li><a href="#impressum">Impressum</a></li><li><a href="#datenschutz">Datenschutz</a></li><li><a href="#agb">Geschäftsbedingungen</a></li></ul></nav>
+  </div>
+</footer>
+
+<script src="../_basis/bewegung.js" defer></script>
+<script src="stil.js" defer></script>
+</body>
+</html>

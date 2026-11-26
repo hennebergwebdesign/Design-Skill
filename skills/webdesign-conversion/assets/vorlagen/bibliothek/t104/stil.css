@@ -1,0 +1,348 @@
+/* stil.css der Vorlage "Finanzautomatisierung Petrol und Koralle": Gestaltung. Farben nur aus den Tokens in marke.css, Mechanik aus ../_basis/basis.css.
+   Mobil zuerst. Alles bleibt ohne JavaScript, bei reduzierter Bewegung und auf dem Handy sichtbar und bedienbar. Bewegung nur mit transform und opacity. */
+:root{--rand:clamp(1rem,3.2vw,3rem);--breite:80rem;--h2-m:clamp(2rem,1.2rem + 2.8vw,3.5rem);--raum:clamp(3.5rem,7vw,6.5rem);--bleed:max(var(--rand),calc((100vw - var(--breite)) / 2))}
+h2{font-size:var(--h2-m);line-height:1.1}
+h3{font-size:var(--h3);line-height:1.2}
+.kicker{font-size:1rem;font-weight:600;color:var(--text-leise);margin-bottom:.75rem}
+.kicker--dunkel{color:var(--text-leise-dunkel)}
+
+/* Knöpfe: Koralle als Primär, Petrol als Zweitknopf, Pfeil im Kreis */
+.knopf{justify-content:center;text-align:center;font-size:1rem;font-weight:600;min-height:3rem;padding:.8rem 1.5rem;white-space:nowrap}
+.knopf:hover{box-shadow:0 8px 20px color-mix(in srgb,var(--flaeche-dunkel) 28%,transparent)}
+.knopf__punkt{display:inline-grid;place-items:center;width:2rem;height:2rem;margin:-.4rem -.9rem -.4rem 0;border-radius:50%;background:var(--akzent-text);color:var(--akzent);transition:transform var(--dauer-kurz) var(--kurve)}
+.knopf--dunkel{background:var(--flaeche-dunkel);color:var(--text-auf-dunkel)}
+.knopf--hell{background:var(--text-auf-dunkel);color:var(--flaeche-dunkel)}
+.knopf--rand{background:transparent;color:var(--text);box-shadow:inset 0 0 0 1.5px var(--text)}
+.knopf--rand:hover{background:var(--flaeche-dunkel);color:var(--text-auf-dunkel);box-shadow:inset 0 0 0 1.5px var(--flaeche-dunkel)}
+.kopf :focus-visible,.held :focus-visible,.tafel :focus-visible{outline-color:var(--akzent)}
+.knopf--dunkel:focus-visible{outline-color:var(--text)}
+
+/* Kopf: helle Leiste, ohne JavaScript scrollt sie mit, mit JavaScript bleibt sie oben */
+.kopf{position:absolute;top:0;left:0;right:0;z-index:50;padding:.75rem var(--rand) 0;pointer-events:none}
+.js .kopf{position:fixed}
+.kopf>*{pointer-events:auto}
+.kopf__leiste{position:relative;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;max-width:var(--breite);margin-inline:auto;padding:.4rem .4rem .4rem 1rem;border-radius:var(--radius-knopf);background:var(--flaeche);box-shadow:0 0 0 1px var(--linie)}
+.js .kopf__leiste{flex-wrap:nowrap}
+.js.gescrollt .kopf__leiste{box-shadow:0 0 0 1px var(--linie),0 12px 28px color-mix(in srgb,var(--flaeche-dunkel) 16%,transparent)}
+.kopf__leiste{transition:box-shadow var(--dauer-mittel)}
+.kopf__logo{display:inline-flex;align-items:center;gap:.6rem;min-height:2.75rem;font-family:var(--schrift-titel);font-weight:600;font-size:1.3rem;letter-spacing:-.03em;margin-right:auto;white-space:nowrap}
+.kopf__zeichen{flex:none;width:2rem;height:2rem;color:var(--flaeche-dunkel)}
+.kopf__telknopf{display:none}
+.kopf__knopf{min-height:2.75rem;padding:.4rem 1.25rem;white-space:nowrap}
+.kopf__burger{display:none;width:2.75rem;height:2.75rem;border-radius:50%;align-items:center;justify-content:center;background:var(--flaeche-alt)}
+.js .kopf__burger{display:inline-flex}
+.burger,.burger::before{display:block;width:1.2rem;height:2px;background:var(--text);border-radius:2px;transition:transform var(--dauer-mittel) var(--kurve)}
+.burger{position:relative;transform:translateY(-4px)}
+.burger::before{content:"";position:absolute;left:0;top:8px}
+.kopf__burger[aria-expanded="true"] .burger{transform:rotate(45deg)}
+.kopf__burger[aria-expanded="true"] .burger::before{transform:translateY(-8px) rotate(-90deg)}
+.kopf__nav{order:5;flex-basis:100%}
+.kopf__menue{display:flex;flex-wrap:wrap;gap:0 .5rem}
+.kopf__menue a{display:flex;align-items:center;gap:.5rem;min-height:2.75rem;padding-inline:.75rem;font-weight:600}
+.kopf__menue a:hover{text-decoration:underline;text-underline-offset:.35em}
+.js .kopf__nav{position:absolute;top:calc(100% + .5rem);left:0;right:0;padding:.5rem 1rem 1rem;border-radius:var(--radius-karte);background:var(--flaeche);box-shadow:0 0 0 1px var(--linie),0 18px 32px color-mix(in srgb,var(--flaeche-dunkel) 20%,transparent)}
+.js .kopf__nav:not([data-offen="true"]){display:none}
+.js .kopf__menue{flex-direction:column}
+.js .kopf__menue a{min-height:3rem;font-size:1.125rem}
+@media (min-width:62rem){
+  .kopf__burger,.js .kopf__burger{display:none}
+  .kopf__nav,.js .kopf__nav,.js .kopf__nav:not([data-offen="true"]){position:static;display:block;order:0;flex-basis:auto;padding:0;background:none;border-radius:0;box-shadow:none;margin-inline:auto}
+  .js .kopf__menue{flex-direction:row}
+  .kopf__menue{flex-wrap:nowrap}
+  .kopf__tel{display:none}
+  .kopf__telknopf{display:inline-flex;align-items:center;gap:.4rem;min-height:2.75rem;padding-inline:.75rem;font-weight:600}
+  .kopf__telknopf:hover{text-decoration:underline;text-underline-offset:.35em}
+  .kopf__leiste{padding:.4rem .4rem .4rem 1.25rem}
+}
+
+/* Dunkle Tafeln: Held, Anbindungen, Wirkung, Kontakt */
+.held,.tafel{position:relative;margin:.75rem;border-radius:var(--radius-gross);overflow:clip;background:var(--flaeche-dunkel);color:var(--text-auf-dunkel)}
+.tafel{margin-block:clamp(2rem,5vw,4rem)}
+.tafel__innen{display:grid;gap:2.5rem;padding:clamp(2rem,5vw,4.5rem) clamp(1.25rem,5vw,5rem)}
+.tafel__innen--eng{max-width:64rem;margin-inline:auto}
+.tafel h2{color:var(--text-auf-dunkel)}
+
+/* 1. Held */
+.held{margin-top:0;border-radius:0 0 var(--radius-gross) var(--radius-gross);margin-inline:0;min-height:min(46rem,100svh)}
+.held::before{content:"";position:absolute;inset:0;background:linear-gradient(var(--linie-dunkel) 1px,transparent 1px) 0 0/3.5rem 3.5rem,linear-gradient(90deg,var(--linie-dunkel) 1px,transparent 1px) 0 0/3.5rem 3.5rem;opacity:.35;-webkit-mask-image:linear-gradient(120deg,#000 0%,transparent 55%);mask-image:linear-gradient(120deg,#000 0%,transparent 55%)}
+.held__innen{position:relative;display:grid;gap:3rem;align-items:center;padding:7.5rem clamp(1.25rem,5vw,5rem) clamp(2rem,4vw,3.5rem);max-width:calc(var(--breite) + 10rem);margin-inline:auto}
+.held__text{display:grid;gap:1.5rem;justify-items:start;max-width:42rem}
+.held h1{font-size:clamp(2.25rem,1.1rem + 4.6vw,4.5rem);line-height:1.05;letter-spacing:-.04em}
+.held__lead{font-size:var(--text-l);color:var(--text-leise-dunkel);max-width:36rem}
+.held__knoepfe{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.25rem}
+.held__tel{color:var(--text-leise-dunkel)}
+.held__tel a{color:var(--text-auf-dunkel);text-decoration:underline;text-underline-offset:.2em;font-weight:700}
+.wege{display:grid;gap:.75rem;width:100%;margin-top:.5rem}
+.weg{display:grid;gap:.5rem;height:100%;padding:1.1rem 1.25rem;border-radius:var(--radius-karte);box-shadow:inset 0 0 0 1.5px var(--linie-dunkel);background:var(--flaeche-dunkel-2);transition:transform var(--dauer-mittel) var(--kurve),box-shadow var(--dauer-mittel)}
+.weg__kopf{display:flex;align-items:center;gap:.5rem;font-family:var(--schrift-titel);font-weight:500;font-size:1.3rem;letter-spacing:-.02em}
+.weg__kopf svg{transition:transform var(--dauer-kurz) var(--kurve)}
+.weg__text{display:flex;gap:.75rem;align-items:flex-start;color:var(--text-leise-dunkel)}
+.weg__text svg{flex:none;color:var(--akzent)}
+@media (min-width:36rem){.wege{grid-template-columns:1fr 1fr}}
+@media (min-width:62rem){.held__innen{grid-template-columns:1.05fr .95fr}}
+
+/* Oberfläche im Held: Beleglauf (Signaturbewegung), zehn Sekunden, nur transform und opacity */
+.fluss{position:relative;display:grid;gap:1rem;max-width:34rem;width:100%;justify-self:center}
+.fluss__karte{padding:1.1rem 1.25rem;border-radius:var(--radius-karte);background:var(--weiss);color:var(--text);box-shadow:0 18px 40px color-mix(in srgb,#000 35%,transparent)}
+.fluss__kopf{display:flex;justify-content:space-between;align-items:center;gap:1rem;font-weight:700;margin-bottom:.6rem}
+.fluss__marke{padding:.1rem .6rem;border-radius:var(--radius-knopf);background:var(--flaeche-alt);font-size:1rem;font-weight:600;color:var(--text-leise)}
+.fluss__felder{display:grid;gap:.1rem}
+.fluss__zeile{display:flex;justify-content:space-between;gap:1rem;padding:.4rem 0;border-bottom:1px solid var(--linie);font-size:1rem}
+.fluss__zeile dt{color:var(--text-leise)}
+.fluss__zeile dd{margin:0;font-weight:600;text-align:right}
+.schritte{display:grid;grid-template-columns:repeat(2,1fr);gap:.5rem;margin-top:.9rem}
+.schritt{display:flex;align-items:center;gap:.4rem;padding:.45rem .7rem;border-radius:var(--radius-knopf);background:var(--gruen-flaeche);color:var(--gruen-text);font-weight:600;font-size:1rem}
+.schritt--ende{background:var(--akzent);color:var(--akzent-text)}
+.fluss__lauf ul{display:grid;gap:.35rem}
+.fluss__lauf li{display:flex;justify-content:space-between;gap:1rem;padding:.4rem .75rem;border-radius:12px;background:var(--flaeche);font-size:1rem}
+.fluss__lauf li span+span{font-weight:700;font-variant-numeric:tabular-nums}
+.fluss__ring{display:flex;align-items:center;gap:1rem}
+.fluss__ring p{display:grid;gap:0}
+.fluss__ring strong{font-family:var(--schrift-titel);font-size:1.75rem;line-height:1.1}
+.fluss__ring span{color:var(--text-leise)}
+.fluss__ring svg{flex:none}
+.fluss__ring circle:first-child{stroke:var(--flaeche-alt)}
+@media (min-width:36rem){
+  .fluss{grid-template-columns:1fr 1fr;grid-template-areas:"re re" "la ri"}
+  .fluss__rechnung{grid-area:re}
+  .fluss__lauf{grid-area:la;transform:translateY(0)}
+  .fluss__ring{grid-area:ri;align-self:start}
+  .schritte{grid-template-columns:repeat(4,auto);justify-content:space-between}
+}
+@media (min-width:62rem){.fluss{justify-self:end}}
+/* Ein und Aus in zehn Sekunden: jede Zeile hat ihren eigenen Beginn (--d), das Ausblenden läuft in derselben Reihenfolge */
+.fluss__zeile,.schritt,.fluss__lauf li{animation:beleg 10s var(--kurve) var(--d,0s) infinite both}
+.schritt--ende{animation-name:beleg-stempel}
+@keyframes beleg{0%{opacity:0;transform:translateY(10px)}6%,86%{opacity:1;transform:none}94%,100%{opacity:0;transform:translateY(-6px)}}
+@keyframes beleg-stempel{0%{opacity:0;transform:scale(.8)}5%{opacity:1;transform:scale(1.06)}8%,86%{opacity:1;transform:none}94%,100%{opacity:0;transform:scale(.96)}}
+
+/* 2. Funktionen: Wischspur */
+.funktionen{overflow-x:clip}
+.funktionen__kopf{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:1.5rem;margin-bottom:clamp(1.5rem,3vw,2.5rem)}
+.funktionen__kopf>div:first-child{flex:1 1 20rem}
+.funktionen__kopf h2{max-width:20ch}
+.funktionen__lead,.zahlungen__lead{max-width:44rem;margin-top:1rem;font-size:var(--text-l);color:var(--text-leise)}
+.pfeile{display:flex;gap:.5rem;flex:none}
+.pfeil{display:grid;place-items:center;width:3rem;height:3rem;border-radius:50%;background:var(--flaeche-dunkel);color:var(--text-auf-dunkel);transition:transform var(--dauer-kurz) var(--kurve),opacity var(--dauer-kurz)}
+.pfeil:active{transform:scale(.95)}
+.pfeil[aria-disabled="true"]{opacity:.35;cursor:default}
+.spur{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--bleed);padding:.5rem var(--bleed) 1.5rem;scrollbar-width:none;overscroll-behavior-x:contain}
+.spur::-webkit-scrollbar{display:none}
+.spur>li{flex:none;scroll-snap-align:start}
+.fkarte{width:clamp(17rem,80vw,22rem)}
+.fkarte article{display:grid;grid-template-rows:auto auto 1fr;gap:.75rem;height:100%;padding:0 0 1.5rem;border-radius:var(--radius-karte);background:var(--weiss);overflow:clip;transition:transform var(--dauer-mittel) var(--kurve),box-shadow var(--dauer-mittel) var(--kurve)}
+.fkarte article>h3,.fkarte article>p{padding-inline:1.5rem}
+.fkarte article>p{color:var(--text-leise)}
+.fkarte__buehne{display:grid;place-items:center;height:15rem;padding:1.25rem;background:var(--raster);background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);background-size:1.5rem 1.5rem}
+.mini{width:100%;max-width:17rem;padding:.9rem 1rem;border-radius:16px;background:var(--weiss);box-shadow:0 10px 24px color-mix(in srgb,var(--flaeche-dunkel) 16%,transparent);font-size:1rem}
+.mini__titel{font-weight:700;margin-bottom:.5rem;font-size:1rem}
+.mini__feld{display:flex;justify-content:space-between;gap:.75rem;padding:.3rem 0;border-bottom:1px solid var(--linie)}
+.mini__feld span{color:var(--text-leise)}
+.mini__feld--neu b{padding:0 .5rem;border-radius:8px;background:var(--gruen-flaeche);color:var(--gruen-text)}
+.mini__aktion{display:flex;justify-content:space-between;gap:.5rem;margin-top:.7rem}
+.mini__aktion span{padding:.25rem .8rem;border-radius:var(--radius-knopf);box-shadow:inset 0 0 0 1.5px var(--text)}
+.mini__aktion .mini__haupt{background:var(--akzent);color:var(--akzent-text);box-shadow:none;font-weight:600}
+.mini__paar{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+.mini__paar span{display:grid;padding:.4rem .6rem;border-radius:10px;background:var(--flaeche);color:var(--text-leise)}
+.mini__paar b{color:var(--text);font-variant-numeric:tabular-nums}
+.mini__warn{margin-top:.6rem;padding:.4rem .6rem;border-radius:10px;background:#fde3d9;color:#6b2410;font-weight:600}
+.mini--freigabe ol{display:grid;gap:.4rem}
+.mini--freigabe li{display:flex;align-items:center;gap:.6rem}
+.mini__kopf{display:grid;place-items:center;flex:none;width:2.25rem;height:2.25rem;border-radius:50%;background:var(--himmel);font-weight:700;font-size:1rem}
+.mini--freigabe em{margin-left:auto;font-style:normal;padding:.1rem .6rem;border-radius:var(--radius-knopf);background:var(--gruen-flaeche);color:var(--gruen-text);font-weight:600}
+.mini--freigabe em.offen{background:#fde3d9;color:#6b2410}
+.mini__saeulen{display:flex;align-items:flex-end;gap:.5rem;height:6.5rem}
+.mini__saeulen i{flex:1;height:var(--h);border-radius:8px 8px 0 0;background:var(--flaeche-dunkel);transform-origin:50% 100%}
+.mini__saeulen i:nth-child(4){background:var(--akzent)}
+/* bewusst länger: große, nicht bediente Fläche, die einmal beim Sichtbarwerden wächst */
+.js .mini__saeulen i{transform:scaleY(.05);transition:transform .9s var(--kurve)}
+.js .mini__saeulen.ist-da i{transform:none}
+.js .mini__saeulen.ist-da i:nth-child(2){transition-delay:.08s}
+.js .mini__saeulen.ist-da i:nth-child(3){transition-delay:.16s}
+.js .mini__saeulen.ist-da i:nth-child(4){transition-delay:.24s}
+.js .mini__saeulen.ist-da i:nth-child(5){transition-delay:.32s}
+.mitte-knopf{display:flex;justify-content:center;margin-top:1rem}
+
+/* 3. Zahlungen: drei weiße Karten */
+.zahlungen{background:var(--flaeche)}
+.drei{display:grid;grid-template-columns:minmax(0,1fr);gap:1rem;margin-top:clamp(2rem,4vw,3rem)}
+.zkarte{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto 1fr auto;gap:1rem;justify-items:start;padding:0 1.5rem 1.5rem;border-radius:var(--radius-gross);background:var(--weiss);overflow:clip;transition:transform var(--dauer-mittel) var(--kurve),box-shadow var(--dauer-mittel) var(--kurve)}
+.zkarte>p{color:var(--text-leise)}
+.zkarte__buehne{width:calc(100% + 3rem);margin-inline:-1.5rem;height:14rem;display:grid;align-content:center;gap:.75rem;padding:1.25rem 0;background:var(--raster);overflow:clip}
+.zkarte__buehne--gesellschaft,.zkarte__buehne--kontrolle{padding-inline:1.5rem}
+.chipzeile{display:flex;gap:.75rem;width:max-content}
+.chipzeile span{padding:.55rem 1rem;border-radius:var(--radius-knopf);background:var(--weiss);font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap;box-shadow:0 4px 10px color-mix(in srgb,var(--flaeche-dunkel) 10%,transparent)}
+.chipzeile--hin{animation:drift-hin 40s linear infinite alternate}
+.chipzeile--her{animation:drift-her 40s linear infinite alternate}
+@keyframes drift-hin{from{transform:translateX(-2rem)}to{transform:translateX(-14rem)}}
+@keyframes drift-her{from{transform:translateX(-14rem)}to{transform:translateX(-2rem)}}
+.gesell{display:grid;gap:.5rem}
+.gesell li{display:flex;align-items:center;gap:.6rem;padding:.55rem .9rem;border-radius:14px;background:var(--weiss);font-weight:600;animation:gesell 5s ease-in-out var(--d,0s) infinite alternate}
+.gesell svg{flex:none;padding:3px;border-radius:50%;background:var(--gruen-flaeche);color:var(--gruen-text);width:1.4rem;height:1.4rem}
+@keyframes gesell{from{transform:translateX(0)}to{transform:translateX(8px)}}
+.regeln{display:grid;gap:.5rem}
+.regeln li{display:flex;align-items:center;gap:.75rem;padding:.6rem .9rem;border-radius:14px;background:var(--weiss);font-weight:600}
+.schalter{position:relative;flex:none;width:2.5rem;height:1.5rem;border-radius:var(--radius-knopf);background:var(--linie)}
+.schalter::after{content:"";position:absolute;left:3px;top:3px;width:1.125rem;height:1.125rem;border-radius:50%;background:var(--weiss);box-shadow:0 1px 3px rgba(0,0,0,.3);transition:transform var(--dauer-mittel) var(--kurve)}
+.schalter--an{background:var(--flaeche-dunkel)}
+.schalter--an::after{transform:translateX(1rem)}
+@media (min-width:56rem){.drei{grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch}}
+.drei>li{min-width:0}
+
+/* 4. Anbindungen */
+.anbindungen__text{display:grid;gap:1.25rem;justify-items:start;align-content:center;max-width:36rem}
+.anbindungen__text p{color:var(--text-leise-dunkel);font-size:var(--text-l)}
+.datenfluss{display:grid;gap:.75rem;align-content:center}
+.datenfluss li{display:grid;grid-template-columns:1fr minmax(2.5rem,5rem) 1fr;align-items:center;gap:.5rem}
+.knoten{display:grid;place-items:center;min-height:3.25rem;padding:.4rem .75rem;border-radius:16px;background:var(--flaeche-dunkel-2);box-shadow:inset 0 0 0 1px var(--linie-dunkel);font-weight:600;text-align:center}
+.knoten--zentrum{background:var(--text-auf-dunkel);color:var(--flaeche-dunkel);box-shadow:none}
+.strecke{position:relative;height:2px;background:var(--linie-dunkel);overflow:visible}
+.strecke i{position:absolute;left:0;top:-5px;width:12px;height:12px;border-radius:50%;background:var(--akzent);animation:punkt 2.8s var(--kurve) var(--d,0s) infinite;--weg:3rem}
+@keyframes punkt{0%{transform:translateX(0);opacity:0}15%{opacity:1}85%{opacity:1}100%{transform:translateX(var(--weg));opacity:0}}
+@media (min-width:36rem){.strecke i{--weg:4.4rem}}
+@media (min-width:62rem){.tafel__innen:has(.datenfluss){grid-template-columns:1fr 1fr;gap:4rem}}
+.zeichenband{position:relative;padding:0 clamp(1.25rem,5vw,5rem) 2rem;color:var(--text-leise-dunkel)}
+.zeichenband__titel{margin:0 0 1rem 3.75rem;font-size:1rem}
+.zeichenband__schalter{position:absolute;opacity:0;width:2.75rem;height:2.75rem;left:clamp(1.25rem,5vw,5rem);top:-.35rem;margin:0;z-index:2;cursor:pointer}
+.zeichenband__pause{position:absolute;left:clamp(1.25rem,5vw,5rem);top:-.35rem;display:grid;place-items:center;width:2.75rem;height:2.75rem;border-radius:50%;background:var(--akzent);color:var(--akzent-text);pointer-events:none}
+.zeichenband__schalter:focus-visible+.zeichenband__pause{outline:3px solid var(--text-auf-dunkel);outline-offset:3px}
+.zeichenband .pause-aus{display:none}
+.zeichenband__schalter:checked+.zeichenband__pause .pause-ein{display:none}
+.zeichenband__schalter:checked+.zeichenband__pause .pause-aus{display:block}
+.zeichenband .band{--band-abstand:3rem;--band-dauer:36s}
+.zeichenband .band__spur li{flex:none}
+.zeichenband:has(.zeichenband__schalter:checked) .band__spur{animation-play-state:paused}
+
+/* 5. Fälle: Fotokarte und Zitat */
+.faelle{overflow-x:clip}
+.spur--faelle>li{width:min(88vw,58rem)}
+.fall__karte{display:grid;height:100%;border-radius:var(--radius-gross);background:var(--weiss);overflow:clip;transition:transform var(--dauer-mittel) var(--kurve),box-shadow var(--dauer-mittel) var(--kurve)}
+.fall__foto{position:relative;min-height:16rem;display:grid;align-items:end;background:var(--flaeche-dunkel)}
+.fall__foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.fall__foto::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(7,28,31,.92) 0%,rgba(7,28,31,.7) 45%,rgba(7,28,31,.2) 100%)}
+.fall__foto h3{position:relative;z-index:2;padding:1.5rem;color:#fff;font-size:clamp(1.4rem,1.1rem + 1.2vw,2rem);line-height:1.15}
+.fall__text{display:grid;gap:1rem;align-content:center;justify-items:start;padding:1.5rem}
+.fall__firma{font-weight:700}
+.fall__text blockquote{font-size:var(--text-l);line-height:1.45}
+.fall__rolle{color:var(--text-leise)}
+@media (min-width:48rem){.fall__karte{grid-template-columns:1fr 1fr}.fall__text{padding:2.5rem}}
+
+/* 6. Wirkung */
+.wirkung{background:var(--flaeche-dunkel)}
+.zahlen{display:grid;gap:1.5rem}
+.zahlen li{display:grid;gap:.25rem;align-content:start}
+.zahlen__vor{font-size:1rem;color:var(--text-leise-dunkel)}
+.zahlen strong{font-family:var(--schrift-titel);font-weight:500;font-size:clamp(3rem,2rem + 5vw,5.5rem);line-height:1;letter-spacing:-.04em;color:var(--akzent)}
+.zahlen span:not([data-zaehle]){color:var(--text-auf-dunkel);font-size:var(--text-l);max-width:16rem}
+.wirkung__fuss{padding-top:1.5rem;border-top:1px solid var(--linie-dunkel);color:var(--text-leise-dunkel);font-size:1rem}
+@media (min-width:48rem){.zahlen{grid-template-columns:repeat(3,1fr);gap:2.5rem}}
+
+/* 7. Preise: helles Band */
+.band-preise{margin:.75rem;border-radius:var(--radius-gross);background:var(--himmel);color:var(--text)}
+.band-preise__innen{display:grid;gap:1.5rem;align-items:center;max-width:var(--breite);margin-inline:auto;padding:clamp(2rem,4vw,3.5rem) clamp(1.25rem,5vw,5rem)}
+.band-preise__innen>div{display:grid;gap:.75rem;max-width:44rem}
+.band-preise p:not(.kicker){color:var(--text-leise)}
+.band-preise .kicker{color:var(--text-leise);margin-bottom:0}
+.band-preise .knopf{justify-self:start}
+@media (min-width:48rem){.band-preise__innen{grid-template-columns:1fr auto}}
+
+/* 8. Fragen */
+.fragen__raster{display:grid;gap:2rem}
+.fragen__hinweis{margin-top:1rem;color:var(--text-leise)}
+.fragen__liste{display:grid;gap:.75rem;align-content:start}
+.fragen__liste details{border-radius:20px;background:var(--weiss);box-shadow:inset 0 0 0 1px var(--linie)}
+.fragen__liste summary{display:flex;justify-content:space-between;align-items:center;gap:1rem;min-height:3.5rem;padding:.75rem 1.25rem;cursor:pointer;font-weight:600;font-size:1.125rem;list-style:none}
+.fragen__liste summary::-webkit-details-marker{display:none}
+.fragen__liste summary::after{content:"+";flex:none;display:grid;place-items:center;width:2rem;height:2rem;border-radius:50%;background:var(--flaeche-alt);font-size:1.25rem;line-height:1;transition:transform var(--dauer-mittel) var(--kurve)}
+.fragen__liste details[open] summary::after{transform:rotate(45deg)}
+.fragen__liste details p{padding:0 1.25rem 1.25rem;color:var(--text-leise)}
+@media (min-width:62rem){.fragen__raster{grid-template-columns:.8fr 1.2fr;gap:4rem}}
+
+/* 9. Kontakt */
+.kontakt{margin-bottom:.75rem}
+.kontakt__innen{align-items:start}
+.kontakt__text{display:grid;gap:1.25rem;align-content:start}
+.kontakt__text>p{color:var(--text-leise-dunkel);font-size:var(--text-l);max-width:34rem}
+.kontakt__daten{display:grid;gap:.25rem}
+.kontakt__daten li{display:flex;align-items:center;gap:.75rem;min-height:2.75rem}
+.kontakt__daten svg{flex:none;color:var(--akzent)}
+.kontakt__daten a{text-decoration:underline;text-underline-offset:.2em}
+.kontakt__kachel{display:none;justify-self:start;padding:1rem 1.5rem;border-radius:var(--radius-karte);background:var(--flaeche-dunkel-2);box-shadow:inset 0 0 0 1px var(--linie-dunkel)}
+.kontakt__kachel p,.kontakt__kachel span{color:var(--text-leise-dunkel)}
+.kontakt__kachel strong{display:block;font-family:var(--schrift-titel);font-size:1.75rem;font-weight:500;color:var(--text-auf-dunkel)}
+@media (min-width:62rem){.kontakt__innen{grid-template-columns:.85fr 1.15fr;gap:4rem}.kontakt__kachel{display:block}}
+.formular{display:grid;grid-template-columns:1fr;gap:1rem;padding:clamp(1.25rem,3vw,2rem);border-radius:var(--radius-karte);background:var(--weiss);color:var(--text)}
+.formular__feld{display:grid;gap:.4rem;align-content:start}
+.formular .feld__hinweis{font-size:1rem;line-height:1.4;color:var(--text)}
+.formular label{font-weight:700;font-size:1rem}
+.formular input,.formular select{width:100%;min-height:3rem;padding:.7rem 1rem;border:1px solid var(--feld-rand);border-radius:14px;background:var(--weiss);color:var(--text);font:inherit}
+.formular input::placeholder{color:var(--text-leise)}
+.formular__recht{font-size:1rem}
+.formular__recht a{text-decoration:underline;text-underline-offset:.2em;font-weight:700}
+.formular__senden{justify-self:start}
+.formular__bestaetigung{font-size:1rem}
+.formular__meldung{padding:.75rem 1rem;border-radius:14px;background:var(--flaeche-alt);box-shadow:inset 0 0 0 1px var(--feld-rand)}
+.formular :focus-visible{outline-color:var(--flaeche-dunkel)}
+@media (min-width:36rem){.formular{grid-template-columns:1fr 1fr}.formular__feld--breit,.formular__recht,.formular__senden,.formular__bestaetigung,.formular__meldung{grid-column:1/-1}}
+
+/* Fuß: hell, große Aussage */
+.fuss{margin-top:2rem;padding:clamp(2.5rem,5vw,4.5rem) 0 0;border-top:1px solid var(--linie)}
+.fuss__raster{display:grid;gap:2.5rem}
+.fuss__raster>*{min-width:0}
+.fuss__links{display:grid;gap:1.5rem;align-content:start;justify-items:start}
+.fuss__satz{font-family:var(--schrift-titel);font-weight:500;font-size:clamp(2.25rem,1.2rem + 4vw,4.25rem);line-height:1.02;letter-spacing:-.04em;max-width:13ch}
+.fuss__knoepfe{display:flex;flex-wrap:wrap;gap:.75rem}
+.fuss address{font-style:normal;line-height:1.6;color:var(--text-leise)}
+.fuss address a{display:inline-flex;align-items:center;min-height:2.75rem;text-decoration:underline;text-underline-offset:.2em;color:var(--text)}
+.fuss__spalten{display:grid;grid-template-columns:1fr;gap:2rem;align-content:start}
+.fuss h3{font-family:var(--schrift-text);font-size:1.25rem;font-weight:600;letter-spacing:-.01em;margin-bottom:.5rem}
+.fuss__spalten a{display:inline-flex;align-items:center;gap:.5rem;min-height:2.75rem}
+.fuss__spalten a svg{flex:none}
+.fuss__spalten a:hover{text-decoration:underline;text-underline-offset:.3em}
+.fuss__klein{padding-block:2.5rem 1.5rem;color:var(--text-leise);font-size:1rem}
+@media (min-width:36rem){.fuss__spalten{grid-template-columns:repeat(3,1fr)}}
+@media (min-width:62rem){.fuss__raster{grid-template-columns:1fr 1fr;gap:4rem}}
+
+/* Überfahren: Karten heben sich, nur mit Maus (auf Touchgeräten bleibt kein hängender Zustand) */
+@media (hover:hover) and (pointer:fine){
+  .knopf:hover .knopf__punkt{transform:translate(2px,-2px)}
+  .weg:hover .weg__kopf svg{transform:translateX(4px)}
+  .pfeil:hover{transform:scale(1.07)}
+  .pfeil[aria-disabled="true"]:hover{transform:none}
+  .fkarte article:hover{transform:translateY(-6px);box-shadow:0 18px 32px color-mix(in srgb,var(--flaeche-dunkel) 16%,transparent)}
+  .zkarte:hover{transform:translateY(-6px);box-shadow:0 18px 32px color-mix(in srgb,var(--flaeche-dunkel) 14%,transparent)}
+  .fall__karte:hover{transform:translateY(-6px);box-shadow:0 18px 32px color-mix(in srgb,var(--flaeche-dunkel) 14%,transparent)}
+  .weg:hover{transform:translateY(-4px);box-shadow:inset 0 0 0 1.5px var(--akzent)}
+}
+@media (hover:hover) and (pointer:fine) and (prefers-reduced-motion:reduce){
+  .fkarte article:hover,.zkarte:hover,.fall__karte:hover,.weg:hover{transform:none}
+}
+
+/* Beispielkennzeichnung: sichtbar, aber ruhig */
+[data-beispiel]{position:relative}
+
+/* Bewegung anhalten (WCAG 2.2.2): Kontrollkästchen im Held, wirkt auf alle Schleifen der Seite, ohne JavaScript */
+.ruhe{display:inline-flex;align-items:center;gap:.6rem;min-height:2.75rem;cursor:pointer;color:var(--text-leise-dunkel);font-size:1rem}
+.ruhe input{width:1.5rem;height:1.5rem;margin:0;accent-color:var(--akzent);cursor:pointer}
+body:has(#ruhe:checked) :is(.fluss__zeile,.schritt,.fluss__lauf li,.chipzeile,.gesell li,.strecke i){animation:none}
+body:has(#ruhe:checked) .band__spur{animation-play-state:paused}
+body:has(#ruhe:checked) .strecke i{left:50%;opacity:1}
+@media (prefers-reduced-motion:reduce){
+  .ruhe{display:none}
+  .fluss__zeile,.schritt,.fluss__lauf li,.chipzeile,.gesell li,.strecke i{animation:none}
+  .strecke i{left:50%;opacity:1}
+  .js .mini__saeulen i{transform:none;transition:none}
+    .zeichenband__schalter,.zeichenband__pause{display:none}
+  .zeichenband__titel{margin-left:0}
+  .zeichenband .band__spur+.band__spur{display:none}
+  .zeichenband .band{overflow-x:auto}
+  .zahlen strong{transition:none}
+}
+
+/* sehr schmale Telefone: Zeichen im Kopf entfällt, damit Wortmarke, Knopf und Menüknopf nebeneinander passen */
+@media (max-width:26rem){
+  .kopf__leiste{padding-left:.9rem;gap:.35rem}
+  .kopf__logo{font-size:1.15rem}
+  .kopf__leiste .kopf__zeichen{display:none}
+  .kopf__knopf{padding-inline:1rem}
+}

@@ -1,0 +1,37 @@
+/* marke.css der Vorlage "Zahlung per Bank, Salbei und Tinte": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast (selbst nachgerechnet, WCAG): --text auf --flaeche 15,1 zu 1; --text-leise auf --flaeche 7,2, auf --flaeche-alt 6,6,
+   auf Salbei 5,8, Himmel 5,9, Butter 6,0, Sand 5,6; --akzent-text auf --akzent 7,3; --text-auf-dunkel auf Tinte 14,2;
+   --text-leise-dunkel auf Tinte 8,6; --akzent auf Tinte 6,0 (Knopf auf Tinte, Rand 3 zu 1 erfüllt);
+   --fokus auf --flaeche 7,6; --fokus-dunkel auf Tinte 9,3. */
+:root{
+  --flaeche:#f4f5ee;
+  --flaeche-alt:#e9ecdf;
+  --flaeche-dunkel:#0e2824;
+  --text:#13211e;
+  --text-leise:#46554f;
+  --linie:#d5d9c9;
+  --akzent:#ff7a3d;            /* Hauptaktion: Orange mit dunklem Text, nie weißer Text */
+  --akzent-text:#14100c;
+  --schrift-titel:'Familjen Grotesk',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:24px;
+  --radius-bild:20px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-tafel:32px;
+  --titel-gewicht:400;
+  --titel-spur:-0.035em;
+  --salbei:#cde2d0;            /* vier Flächen für Tafeln und Karten, Text darauf --text */
+  --butter:#f2e1a6;
+  --himmel:#d1e2ef;
+  --sand:#e7d8c3;
+  --weiss:#ffffff;
+  --text-auf-dunkel:#f4f5ee;
+  --text-leise-dunkel:#b4c4bd;
+  --linie-dunkel:#2c4a44;
+  --tinte-2:#173a34;           /* zweite dunkle Fläche (Fenster, Ringe) */
+  --fokus:#1b4d8f;
+  --fokus-dunkel:#ffb88f;
+  --ok:#1f6b4f;                /* Statuszeichen, immer mit Text */
+}
