@@ -1,0 +1,32 @@
+/* marke.css der Vorlage "Zahnarzt Marine": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#ffffff;
+  --flaeche-alt:#eef1f5;
+  --flaeche-dunkel:#0f2447;   /* Marine: Held, Unterschied, Diagnostikkarte, Fuß, bewusst gleich --akzent */
+  --text:#0f1b30;
+  --text-leise:#46526a;
+  --linie:#d8dee8;
+  --akzent:#0f2447;           /* Hauptaktion: Fläche mit hellem Text, auf Hell auch Text und Linie */
+  --akzent-text:#ffffff;
+  --schrift-titel:'Schibsted Grotesk',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:22px;
+  --radius-bild:22px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:36px;
+  --titel-gewicht:500;
+  --titel-spur:-0.025em;
+  --akzent-hell:#9cc4ff;      /* nur auf Marine: Punkte, Haken, Scanlinie, Zeichen */
+  --text-auf-dunkel:#ffffff;
+  --text-leise-dunkel:#c9d4e6;
+  --linie-dunkel:#2c4572;
+  --weiss:#ffffff;
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#3b5b8c;
+  --ton-2:#6f8fb8;
+  --ton-3:#a9bdd6;
+  --ton-4:#264271;
+}

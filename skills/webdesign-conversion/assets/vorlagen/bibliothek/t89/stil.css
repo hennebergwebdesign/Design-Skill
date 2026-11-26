@@ -41,7 +41,7 @@ section[id],footer[id]{scroll-margin-top:calc(var(--kopf-h) + .5rem)}
 .held{padding:.25rem clamp(.5rem,1.2vw,1rem) 0}
 .held__karte{position:relative;isolation:isolate;overflow:hidden;border-radius:var(--radius-gross);min-height:clamp(34rem,86vh,48rem);display:flex;justify-content:center;background:#2c3a2c}
 .held__bild{position:absolute;inset:0;overflow:hidden;z-index:-2}
-.held__bild img{position:absolute;left:0;top:-9%;width:100%;height:118%;object-fit:cover;object-position:50% 38%;will-change:transform}
+.held__bild img{position:absolute;left:0;top:-9%;width:100%;height:118%;object-fit:cover;object-position:50% 6%;will-change:transform}
 .held__karte::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(8,14,10,.82) 0,rgba(8,14,10,.62) 38%,rgba(8,14,10,.12) 72%,rgba(8,14,10,0) 100%)}
 .held__text{align-self:flex-start;text-align:center;color:var(--text-auf-dunkel);padding:clamp(2.5rem,6vw,4.5rem) var(--rand) 3rem;max-width:56rem}
 .held h1{font-size:clamp(2.25rem,1.1rem + 4.6vw,4.75rem);line-height:1.04;color:var(--text-auf-dunkel);margin-inline:auto}
@@ -59,7 +59,7 @@ section[id],footer[id]{scroll-margin-top:calc(var(--kopf-h) + .5rem)}
 .intro__zeile{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.5rem 3rem;margin-top:clamp(2.5rem,6vw,4.5rem)}
 .zahlen{display:flex;flex-wrap:wrap;gap:1.5rem clamp(1.5rem,4vw,3.5rem)}
 .zahlen li{display:grid;gap:.15rem}
-.zahlen strong{font-family:var(--schrift-titel);font-weight:600;font-size:clamp(1.75rem,1.2rem + 1.6vw,2.5rem);letter-spacing:-.02em;line-height:1.1;font-variant-numeric:tabular-nums}
+.zahlen strong{font-family:var(--schrift-titel);font-weight:600;font-size:clamp(1.75rem,1.2rem + 1.6vw,2.5rem);letter-spacing:-.02em;line-height:1.1;}
 .zahlen span{font-size:1rem;color:var(--text-leise)}
 .zahlen strong span{color:inherit;font-size:inherit}
 .intro__hinweis{margin-top:1.25rem;font-size:1rem;color:var(--text-leise)}
@@ -141,7 +141,7 @@ details[open]>summary .akk__pfeil,details[open]>summary svg:last-child{transform
 @keyframes schweben{0%,100%{translate:0 0}50%{translate:0 -.9rem}}
 
 /* 4. Lernabschnitt */
-.lern{display:grid;background:var(--flaeche-dunkel);color:var(--text-auf-dunkel);margin-top:var(--raum)}
+.lern{display:grid;background:var(--flaeche-dunkel);color:var(--text-auf-dunkel)}
 .lern :focus-visible{outline-color:var(--akzent-hell)}
 .lern__text{padding:clamp(3rem,7vw,6rem) var(--rand);display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:1.5rem}
 .lern h2{font-size:clamp(2rem,1.2rem + 2.8vw,3.5rem);color:var(--text-auf-dunkel);max-width:16ch}
@@ -183,18 +183,24 @@ details[open]>summary .akk__pfeil,details[open]>summary svg:last-child{transform
 .fragen__liste details p{padding:0 3rem 1.4rem 0;color:var(--text-leise);max-width:40rem}
 @media (min-width:900px){.fragen{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(3rem,7vw,7rem)}}
 
-/* 7. Laden */
-.laden{background:var(--akzent);color:var(--text-auf-gruen);overflow:hidden;padding-top:var(--raum)}
+/* 7. Kontakt */
+.kontakt{display:grid;gap:2rem;padding-block:0 var(--raum);align-items:start}
+.kontakt h2{font-size:clamp(2rem,1.2rem + 2.8vw,3.5rem);max-width:14ch}
+.kontakt__text>p{margin-top:1rem;color:var(--text-leise);max-width:28rem}
+.kontakt__tel a{display:inline-flex;align-items:center;gap:.6rem;min-height:3rem;color:var(--akzent);font-weight:700;font-size:1.125rem}
+.formkarte{padding:clamp(1.25rem,3vw,2rem);border-radius:var(--radius-gross);background:var(--flaeche-alt);color:var(--text)}
+.formkarte .formular{grid-template-columns:1fr}
+@media (min-width:900px){.kontakt{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(3rem,7vw,7rem)}.formkarte .formular{grid-template-columns:1fr 1fr}.formkarte .formular__recht,.formkarte .formular__senden,.formkarte .formular__meldung{grid-column:1/-1}}
+
+/* 8. Laden */
+.laden{background:var(--akzent);color:var(--text-auf-gruen);overflow:hidden;padding-top:clamp(3rem,6vw,5rem)}
 .laden :focus-visible{outline-color:#fff}
-.laden__raster{display:grid;gap:3rem;align-items:end}
-.laden__text{padding-bottom:var(--raum)}
+.laden__raster{display:grid;gap:2rem;align-items:center}
+.laden__text{padding-bottom:1rem}
 .laden h2{font-size:clamp(2.25rem,1.2rem + 3.6vw,4.25rem);color:var(--text-auf-gruen);max-width:14ch}
 .laden__text>p{margin-top:1.25rem;max-width:32rem;color:var(--text-leise-gruen);font-size:var(--text-l)}
 .laden .stores{justify-content:flex-start}
-.laden__telefon{display:flex;justify-content:center;align-self:end;height:clamp(24rem,60vw,34rem);overflow:hidden;align-items:flex-start;padding-top:1rem}
-.formkarte{margin-top:2.25rem;padding:clamp(1.25rem,3vw,1.75rem);border-radius:var(--radius-gross);background:var(--flaeche);color:var(--text);max-width:34rem}
-.formkarte :focus-visible{outline-color:var(--akzent)}
-.formkarte h3{font-size:1.5rem;margin-bottom:1rem}
+.laden__telefon{display:flex;justify-content:center;align-items:flex-start;height:clamp(20rem,52vw,26rem);overflow:hidden;padding-top:.5rem}
 .formular{display:grid;gap:1rem}
 .formular__feld{display:grid;gap:.4rem;align-content:start}
 .formular label{font-weight:700;font-size:1rem}
@@ -206,7 +212,7 @@ details[open]>summary .akk__pfeil,details[open]>summary svg:last-child{transform
 .formular__recht a{text-decoration:underline;text-underline-offset:.2em;color:var(--akzent);font-weight:600}
 .formular__senden{justify-self:start}
 .formular__meldung{font-size:1rem;padding:.75rem 1rem;border-radius:12px;background:var(--flaeche-alt)}
-@media (min-width:900px){.laden__raster{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr)}.laden__telefon{height:44rem;align-self:end}}
+@media (min-width:900px){.laden__raster{display:grid;gap:2rem;align-items:center}.laden__telefon{display:flex;justify-content:center;align-items:flex-start;height:clamp(20rem,52vw,26rem);overflow:hidden;padding-top:.5rem}}
 
 /* Fuß */
 .fuss{background:var(--flaeche-dunkel);color:var(--text-auf-dunkel);padding-block:clamp(3rem,6vw,5rem) 2rem}

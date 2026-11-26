@@ -184,6 +184,7 @@
                   <li><span class="s-datum"><b>2</b></span><span><b>Kurve anbremsen</b><small>6 Min.</small></span></li>
                   <li><span class="s-datum"><b>3</b></span><span><b>Kurvenlinie</b><small>5 Min.</small></span></li>
                 </ul>
+                <p class="s-knopf">Lektion ansehen</p>
               </div>
             </div>
           </div>
@@ -223,18 +224,15 @@
     </div>
   </section>
 
-  <!-- 7. Laden: grüner Abschnitt, Store Knöpfe, Link per E-Mail, Telefon schwebt -->
-  <section class="laden" id="laden" aria-labelledby="h-laden">
-    <div class="wrap laden__raster">
-      <div class="laden__text">
-        <h2 id="h-laden" data-zeig>Lade die App und fahr los</h2>
-        <p data-zeig>Aufzeichnen, planen, mit anderen fahren. Die App läuft auf iOS und Android, der Einstieg ist kostenlos.</p>
-        <div class="stores" data-zeig>
-          <a class="store" href="#laden"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-handy"/></svg>App laden für iOS</a>
-          <a class="store" href="#laden"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-handy"/></svg>App laden für Android</a>
-        </div>
+  <!-- 7. Kontakt: Download Link per E-Mail, bis zu fünf Felder -->
+  <section class="kontakt wrap" id="kontakt" aria-labelledby="h-kontakt">
+    <div class="kontakt__text">
+      <h2 id="h-kontakt" data-zeig>Link zur App direkt aufs Handy</h2>
+      <p data-zeig>Du sitzt am Rechner und willst die App auf dem Telefon? Wir schicken dir den Link. Für Vereine und Gruppen melden wir uns auf Wunsch persönlich.</p>
+      <p class="kontakt__tel" data-zeig><a href="tel:+490000000000"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-tel"/></svg>Telefon 0000 000 000</a></p>
+    </div>
+
         <div class="formkarte" data-zeig>
-          <h3>Oder Link per E-Mail erhalten</h3>
           <!-- Anbindung im Projekt: Versand über eine Funktion auf dem Server, Turnstile Widget hier einsetzen (Platzhalter), Einwilligung und Datenschutzhinweis je Kunde prüfen -->
           <form class="formular" data-formular action="#" method="post" novalidate>
             <div class="formular__feld"><label for="f-name">Vorname</label><input id="f-name" name="vorname" type="text" autocomplete="given-name" placeholder="Dein Vorname" required></div>
@@ -245,6 +243,18 @@
             <button class="knopf formular__senden" type="submit">Link zur App senden</button>
             <p class="formular__meldung" data-formular-meldung role="status" hidden>Beispielformular: In dieser Vorlage wird nichts gesendet. Der Versand wird im Projekt angebunden.</p>
           </form>
+        </div>
+  </section>
+
+  <!-- 8. Laden: grüner Abschnitt, Store Knöpfe, Telefon schwebt (unten angeschnitten) -->
+  <section class="laden" id="laden" aria-labelledby="h-laden">
+    <div class="wrap laden__raster">
+      <div class="laden__text">
+        <h2 id="h-laden" data-zeig>Lade die App und fahr los</h2>
+        <p data-zeig>Aufzeichnen, planen, mit anderen fahren. Die App läuft auf iOS und Android, der Einstieg ist kostenlos.</p>
+        <div class="stores" data-zeig>
+          <a class="store" href="#laden"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-handy"/></svg>App laden für iOS</a>
+          <a class="store" href="#laden"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-handy"/></svg>App laden für Android</a>
         </div>
       </div>
       <div class="laden__telefon" data-steig>
