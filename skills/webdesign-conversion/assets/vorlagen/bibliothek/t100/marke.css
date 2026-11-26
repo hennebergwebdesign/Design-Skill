@@ -1,0 +1,37 @@
+/* marke.css der Vorlage "Ärztevertretung Marine und Korall": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast (berechnet nach WCAG, Mindestwert 4,5 zu 1 für Text):
+   Weiß auf Marine 14,98 | Text auf Sand 13,67 | Text leise auf Sand 6,08, auf Weiß 7,01, auf Sand dunkel 5,53
+   Marine auf Korall (Knopf) 6,61 | Korall hell auf Marine 7,29 | Korall Text auf Sand 5,59, auf Weiß 6,44
+   Text leise dunkel auf Marine 9,93, auf Marine tief 11,56 | Weiß auf Marine tief 17,45 | Text auf Blauhell 13,21 */
+:root{
+  --flaeche:#f6eee0;
+  --flaeche-alt:#efe3cf;
+  --flaeche-dunkel:#091a31;
+  --text:#14233b;
+  --text-leise:#4b5a70;
+  --linie:#dccfb8;
+  --akzent:#0f2747;              /* Hauptaktion: Marine, Fläche mit weißem Text */
+  --akzent-text:#ffffff;
+  --schrift-titel:'Bricolage Grotesque',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:22px;
+  --radius-bild:22px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:40px;
+  --titel-gewicht:600;
+  --titel-spur:-0.03em;
+  --marine:#0f2747;
+  --marine-mittel:#1d4373;
+  --korall:#ff8c76;              /* Knopf auf Marine (Text Marine), Punkte, Zeichen */
+  --korall-kraeftig:#f26b57;     /* Flächen und Pins, nie als Textfarbe */
+  --korall-text:#a63a2b;         /* Korall als Textfarbe auf Sand und Weiß */
+  --blau-hell:#e3ecf7;
+  --weiss:#ffffff;
+  --text-auf-dunkel:#ffffff;
+  --text-leise-dunkel:#c9d3e3;
+  --linie-dunkel:#2a4468;
+  --feld-rand:#7d8798;
+  --karte-punkt:#8ea3c2;
+}

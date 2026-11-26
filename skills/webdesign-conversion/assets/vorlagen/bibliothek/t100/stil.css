@@ -1,0 +1,285 @@
+/* stil.css der Vorlage "Ärztevertretung Marine und Korall": Held als Marineblock mit Arzt, der aus dem Block ragt, Handymockups aus HTML und CSS,
+   Dienstkalender (Signatur), Punktekarte, drei Schritte mit Linie. Alle Werte aus marke.css. Bewegung nur transform und opacity. */
+:root{--kopf-h:4.5rem}
+.wrap{width:min(100% - 2*var(--rand), var(--breite));margin-inline:auto}
+h2{font-size:clamp(2rem,1.2rem + 3vw,3.5rem);line-height:1.04}
+h3{font-size:1.25rem;line-height:1.2}
+.kicker{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--schrift-text);font-weight:600;font-size:1rem;letter-spacing:.01em;margin-bottom:1rem;color:var(--text-leise-dunkel)}
+.kicker--hell{color:var(--korall-text)}
+.kicker__punkt{flex:none;width:.6rem;height:.6rem;border-radius:50%;background:var(--korall-kraeftig)}
+.knopf{min-height:3rem;font-weight:600}
+.knopf svg{flex:none}
+.knopf--korall{background:var(--korall);color:var(--marine)}
+.knopf--korall:hover{background:#ffa08d}
+.knopf--rand-hell{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.7)}
+.knopf:focus-visible{outline-offset:3px}
+.held :focus-visible,.schritte :focus-visible,.kontakt :focus-visible,.fuss :focus-visible{outline-color:#fff}
+.held .knopf--korall:focus-visible,.schritte .knopf--korall:focus-visible,.kontakt .knopf--korall:focus-visible{outline-color:#fff}
+
+/* Kopf: schwebende Leiste, beim Scrollen weiße Fläche (Deckkraft einer Schicht, kein Farbwechsel) */
+.kopf{position:absolute;top:0;left:0;right:0;z-index:50;padding:1rem var(--rand) 0;pointer-events:none}
+.js .kopf{position:fixed;padding-top:.75rem}
+.kopf>*{pointer-events:auto}
+.kopf__leiste{position:relative;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;max-width:var(--breite);margin-inline:auto;padding:.4rem .4rem .4rem 1rem;border-radius:var(--radius-karte);isolation:isolate}
+.js .kopf__leiste{flex-wrap:nowrap}
+.kopf__leiste::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:var(--weiss);box-shadow:0 10px 28px rgba(15,39,71,.14);opacity:0}
+.js.gescrollt .kopf__leiste::before{opacity:1}
+.kopf__leiste::before{transition:opacity var(--dauer-mittel) ease}
+.kopf__logo{display:inline-flex;align-items:center;gap:.6rem;min-height:2.75rem;font-family:var(--schrift-titel);font-weight:700;font-size:1.3rem;letter-spacing:-.03em;margin-right:auto;white-space:nowrap;color:var(--marine)}
+.kopf__zeichen{flex:none;width:2rem;height:2rem;color:var(--marine)}
+.kopf__knopf{min-height:2.75rem;padding:.4rem 1.1rem;white-space:nowrap}
+.kopf__burger{flex:none;display:none;width:2.75rem;height:2.75rem;border-radius:50%;align-items:center;justify-content:center;background:var(--marine)}
+.js .kopf__burger{display:inline-flex}
+.burger,.burger::before{display:block;width:1.2rem;height:2px;background:#fff;border-radius:2px;transition:transform var(--dauer-mittel) var(--kurve)}
+.burger{position:relative;transform:translateY(-4px)}
+.burger::before{content:"";position:absolute;left:0;top:8px}
+.kopf__burger[aria-expanded="true"] .burger{transform:rotate(45deg)}
+.kopf__burger[aria-expanded="true"] .burger::before{transform:translateY(-8px) rotate(-90deg)}
+.kopf__nav{order:5;flex-basis:100%}
+.kopf__menue{display:flex;flex-wrap:wrap;gap:0 .5rem}
+.kopf__menue a{display:flex;align-items:center;gap:.5rem;min-height:2.75rem;padding-inline:.75rem;font-weight:600;color:var(--text)}
+.kopf__menue a:hover{color:var(--korall-text)}
+.js .kopf__nav{position:absolute;top:calc(100% + .5rem);left:0;right:0;padding:.5rem 1rem 1rem;border-radius:var(--radius-karte);background:var(--weiss);box-shadow:0 18px 32px rgba(15,39,71,.2)}
+.js .kopf__nav:not([data-offen="true"]){display:none}
+.js .kopf__menue{flex-direction:column}
+.js .kopf__menue a{min-height:3rem;font-size:1.125rem}
+@media (max-width:29.99rem){.kopf__knopf{padding-inline:.8rem;font-size:.9rem}.kopf__logo{font-size:1rem;gap:.4rem}.kopf__zeichen{width:1.75rem;height:1.75rem}.kopf__leiste{padding-left:.6rem;gap:.35rem}}
+@media (max-width:26rem){.kopf__leiste .kopf__logo span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}}
+@media (min-width:62rem){
+  .kopf__burger,.js .kopf__burger{display:none}
+  .kopf__nav,.js .kopf__nav,.js .kopf__nav:not([data-offen="true"]){position:static;display:block;order:0;flex-basis:auto;padding:0;background:none;border-radius:0;box-shadow:none;margin-inline:auto}
+  .js .kopf__menue{flex-direction:row}
+  .kopf__menue{flex-wrap:nowrap}
+  .kopf__tel{display:none}
+  .kopf__leiste{padding:.5rem .5rem .5rem 1.25rem}
+}
+
+/* 1. Held: Marineblock, Arzt ragt oben heraus */
+.held{padding-top:6.25rem}
+.held__block{position:relative;display:grid;border-radius:var(--radius-gross);background:var(--marine);color:#fff}
+.held__deko{position:absolute;inset:0;border-radius:inherit;overflow:hidden;pointer-events:none}
+.held__kreis{position:absolute;border-radius:50%}
+.held__kreis--a{width:30rem;height:30rem;right:-8rem;bottom:-14rem;background:var(--marine-mittel)}
+.held__kreis--b{width:6.5rem;height:6.5rem;right:-2rem;top:-3rem;background:var(--korall-kraeftig);opacity:.9}
+.held__kreis--c{width:26rem;height:26rem;left:-9rem;top:-12rem;background:var(--marine-mittel)}
+.held__text{position:relative;z-index:2;display:grid;gap:1.25rem;justify-items:start;padding:clamp(2rem,5vw,4.5rem) clamp(1.25rem,4vw,3.5rem) 1.5rem}
+.held h1{font-size:clamp(2.3rem,1.3rem + 3.6vw,4.4rem);line-height:1.04;letter-spacing:-.035em;max-width:14ch}
+.held__lead{font-size:var(--text-l);color:var(--text-leise-dunkel);max-width:34rem}
+.held__knoepfe{display:flex;flex-wrap:wrap;gap:.75rem}
+.held__tel{color:var(--text-leise-dunkel)}
+.held__tel a{color:#fff;text-decoration:underline;text-underline-offset:.2em;font-weight:700}
+.held__buehne{position:relative;z-index:2;height:25rem;margin-top:.5rem}
+.held__person{position:absolute;bottom:0;left:50%;width:min(17rem,70%);height:100%;margin-left:calc(min(17rem,70%) / -2)}
+.held__foto{width:100%;height:100%;overflow:hidden;border-radius:999px 999px 0 0;background:var(--blau-hell);animation:steigen 1s var(--kurve) both}
+.held__foto img{width:100%;height:100%;object-fit:cover;object-position:50% 12%}
+@keyframes steigen{from{opacity:0;transform:translateY(2.5rem)}to{opacity:1;transform:none}}
+.held__blasen{display:none}
+.blase{position:absolute;display:flex;align-items:center;gap:.75rem;width:17rem;padding:.75rem 1rem .75rem .75rem;border-radius:18px;background:#fff;color:var(--text);box-shadow:0 14px 30px rgba(5,15,30,.28);font-size:1rem;line-height:1.35}
+.blase strong{font-weight:700}
+.blase__icon{flex:none;display:grid;place-items:center;width:2.5rem;height:2.5rem;border-radius:12px;background:var(--blau-hell);color:var(--marine)}
+.blase__icon--haken{background:var(--korall);color:var(--marine)}
+@media (min-width:56rem){
+  .held__block{grid-template-columns:1.15fr .85fr;min-height:34rem}
+  .held__text{padding-bottom:clamp(2rem,5vw,4.5rem);align-content:center}
+  .held__buehne{height:auto;margin:0}
+  .held__person{left:auto;right:clamp(1rem,4vw,3.5rem);margin-left:0;width:min(23rem,86%);height:calc(100% + 3rem)}
+  .held__blasen{display:block}
+  .blase--a{left:-1.5rem;top:38%}
+  .blase--b{left:1rem;top:58%}
+}
+
+/* Handymockups: Oberfläche aus HTML und CSS, keine Bilder */
+.handy{position:relative;flex:none;border-radius:2.1rem;background:var(--flaeche-dunkel);padding:.45rem;box-shadow:0 22px 44px rgba(9,26,49,.28)}
+.handy__schirm{text-align:left;display:grid;gap:.6rem;align-content:start;min-height:100%;padding:1rem .85rem;border-radius:1.7rem;background:#fff;color:var(--text);overflow:hidden}
+.handy__kopf{display:flex;align-items:center;justify-content:space-between;gap:.5rem}
+.handy__titel{font-family:var(--schrift-titel);font-weight:700;font-size:1.05rem;color:var(--marine)}
+.handy__marke{color:var(--marine)}
+.handy__filter{display:flex;gap:.4rem;flex-wrap:wrap}
+.handy__filter span{padding:.2rem .6rem;border-radius:999px;background:var(--blau-hell);color:var(--marine);font-size:.875rem;font-weight:600}
+.handy__liste{display:grid;gap:.6rem}
+.dkarte{display:grid;gap:.15rem;padding:.7rem .8rem;border-radius:14px;background:var(--flaeche);box-shadow:inset 0 0 0 1px var(--linie);font-size:.95rem;line-height:1.3}
+.dkarte strong{font-family:var(--schrift-titel);font-weight:700;color:var(--marine);font-size:1rem}
+.dkarte__tag{font-size:.875rem;font-weight:600;color:var(--korall-text)}
+.dkarte__meta{display:inline-flex;align-items:center;gap:.35rem;font-size:.875rem;color:var(--text-leise)}
+.dkarte--ok{display:flex;align-items:center;gap:.5rem;background:var(--marine);box-shadow:none}
+.dkarte--ok strong{color:#fff}
+.dkarte__haken{display:grid;place-items:center;width:1.6rem;height:1.6rem;border-radius:50%;background:var(--korall);color:var(--marine)}
+.handy--gross{width:15rem;min-height:27rem}
+.handy--klein{width:min(100%,13.5rem);height:15rem;margin-inline:auto;border-bottom-left-radius:0;border-bottom-right-radius:0;padding-bottom:0}
+.handy--klein .handy__schirm{height:100%;border-bottom-left-radius:0;border-bottom-right-radius:0}
+.handy--klein::after{content:"";position:absolute;inset:auto 0 0 0;height:55%;background:linear-gradient(180deg,transparent,var(--marine));pointer-events:none}
+.handy__schirm--mitte{justify-items:center;text-align:center;padding-top:1.5rem}
+.skel{display:block;padding:.5rem .7rem;border-radius:10px;background:var(--flaeche);box-shadow:inset 0 0 0 1px var(--linie);font-size:.875rem;color:var(--text);text-align:left}
+.skel--avatar{width:2.75rem;height:2.75rem;padding:0;border-radius:50%;background:var(--blau-hell);box-shadow:none}
+.skel--knopf{background:var(--marine);color:#fff;box-shadow:none;text-align:center;font-weight:600}
+.skel-label{font-size:.875rem;font-weight:600;color:var(--text-leise);margin-bottom:-.35rem}
+.ok-kreis{display:grid;place-items:center;width:3.5rem;height:3.5rem;border-radius:50%;background:var(--korall);color:var(--marine)}
+.ok-titel{font-family:var(--schrift-titel);color:var(--marine);font-size:1.05rem}
+
+/* 2. Ärzte */
+.aerzte__raster{display:grid;gap:clamp(2rem,5vw,4rem);align-items:center}
+.aerzte__buehne{position:relative;display:flex;align-items:flex-end;justify-content:center;gap:0;min-height:30rem;padding:2rem 1rem 0;border-radius:var(--radius-gross);background:var(--blau-hell);overflow:hidden}
+.aerzte__buehne::before{content:"";position:absolute;width:14rem;height:14rem;border-radius:50%;background:var(--korall);right:-3rem;top:-4rem}
+.aerzte__foto{position:relative;flex:none;align-self:flex-end;width:min(15rem,44%);aspect-ratio:2/3;overflow:hidden;border-radius:999px 999px 0 0;margin-right:-1.5rem;background:var(--flaeche-alt)}
+.aerzte__foto img{width:100%;height:100%;object-fit:cover;object-position:50% 10%}
+.aerzte__buehne .handy{align-self:center;position:relative;z-index:1;width:min(14rem,58%);margin-block:2rem}
+.aerzte__buehne .dkarte strong{overflow-wrap:anywhere}
+.aerzte__lead{font-size:var(--text-l);color:var(--text-leise);max-width:34rem;margin-bottom:1.5rem;margin-top:1rem}
+.vorteile{display:grid;gap:.75rem;margin-bottom:1.75rem}
+.vorteil{display:flex;gap:1rem;align-items:flex-start;padding:1rem 1.15rem;border-radius:var(--radius-karte);background:var(--weiss);box-shadow:inset 0 0 0 1px var(--linie);transition:transform var(--dauer-kurz) var(--kurve),box-shadow var(--dauer-kurz)}
+@media (hover:hover) and (pointer:fine){.vorteil:hover{transform:translateY(-3px);box-shadow:inset 0 0 0 1px var(--marine),0 12px 24px rgba(15,39,71,.1)}}
+.vorteil__icon{flex:none;display:grid;place-items:center;width:3rem;height:3rem;border-radius:14px;background:var(--marine);color:#fff}
+.vorteil h3{margin-bottom:.2rem}
+.vorteil p{color:var(--text-leise);font-size:1rem}
+@media (max-width:59.99rem){.aerzte__buehne{justify-content:flex-end}.aerzte__foto{position:absolute;left:1rem;bottom:0;width:10.5rem;margin:0}.aerzte__buehne .handy{width:min(14rem,72%)}}
+@media (min-width:60rem){.aerzte__raster{grid-template-columns:1fr 1fr}.aerzte__buehne{min-height:36rem}.aerzte__buehne .handy{width:15rem}.aerzte__foto{width:17rem;margin-right:-2.5rem}}
+
+/* 3. Einrichtungen: Dienstkalender, Dienste rasten ein */
+.einr{background:var(--flaeche-alt);border-radius:var(--radius-gross);margin-inline:.75rem}
+.einr__raster{display:grid;gap:clamp(2rem,5vw,4rem);align-items:center}
+.einr__lead{font-size:var(--text-l);color:var(--text-leise);margin:1rem 0 1.25rem;max-width:34rem}
+.haken-liste{display:grid;gap:.6rem;margin-bottom:1.75rem}
+.haken-liste li{display:flex;gap:.6rem;align-items:flex-start}
+.haken-liste svg{flex:none;margin-top:.15rem;padding:.2rem;border-radius:50%;background:var(--marine);color:#fff;width:1.5rem;height:1.5rem}
+.kal{margin:0;padding:clamp(1rem,2.5vw,1.75rem);border-radius:var(--radius-karte);background:var(--weiss);box-shadow:0 18px 40px rgba(15,39,71,.12)}
+.kal__kopf{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.25rem 1rem;margin-bottom:1rem}
+.kal__titel{font-family:var(--schrift-titel);font-weight:700;color:var(--marine);font-size:1.15rem}
+.kal__zahl{color:var(--text-leise);font-size:1rem}
+.kal__tabelle{display:grid;gap:.4rem}
+.kal__zeile{display:grid;grid-template-columns:3.4rem repeat(7,minmax(0,1fr));gap:.4rem;align-items:center}
+.kal__zeile--kopf{font-weight:700;font-size:1rem;text-align:center;color:var(--text-leise)}
+.kal__schicht{font-weight:600;font-size:1rem}
+.kal__zelle{display:grid;place-items:center;aspect-ratio:1;border-radius:12px;background:var(--flaeche)}
+.kal__chip,.kal__offen{display:grid;place-items:center;width:100%;height:100%;border-radius:12px}
+.kal__chip{background:var(--marine);color:#fff;box-shadow:0 6px 12px rgba(15,39,71,.25)}
+.kal__offen{box-shadow:inset 0 0 0 2px var(--korall-kraeftig);color:var(--korall-text)}
+.js .kal__chip[data-zeig]{transform:translateY(-1.4rem) scale(1.18);transition:opacity .35s ease,transform .55s cubic-bezier(.34,1.56,.64,1);transition-delay:calc(var(--i,0) * 110ms)}
+.js .kal__chip[data-zeig].ist-da{transform:none}
+.kal__legende{display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;align-items:center;margin-top:1rem;font-size:1rem;color:var(--text-leise)}
+.kal__legende span{display:inline-flex;align-items:center;gap:.5rem}
+.kal__marke{display:inline-block;width:1rem;height:1rem;border-radius:5px}
+.kal__marke--ok{background:var(--marine)}
+.kal__marke--offen{box-shadow:inset 0 0 0 2px var(--korall-kraeftig)}
+.kal__beispiel{margin-left:auto;font-weight:600}
+@media (min-width:60rem){.einr__raster{grid-template-columns:.9fr 1.1fr}}
+@media (max-width:29.99rem){.kal__zeile{grid-template-columns:2.6rem repeat(7,minmax(0,1fr));gap:.25rem}.kal__zelle,.kal__chip,.kal__offen{border-radius:8px}.kal__zeile--kopf{font-size:.9rem}.kal__schicht{font-size:.9rem}.kal__chip svg{width:14px;height:14px}.kal__offen svg{width:12px;height:12px}}
+
+/* 4. Karte */
+.karte__raster{display:grid;gap:clamp(2rem,5vw,4rem);align-items:center}
+.karte__lead{font-size:var(--text-l);color:var(--text-leise);margin:1rem 0 1.25rem;max-width:34rem}
+.regionen[hidden]{display:none}
+.regionen{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.5rem}
+.region{min-height:2.75rem;padding:.4rem 1.1rem;border-radius:999px;font-weight:600;background:var(--weiss);color:var(--text);box-shadow:inset 0 0 0 1.5px var(--feld-rand);transition:transform var(--dauer-kurz) var(--kurve)}
+@media (hover:hover) and (pointer:fine){.region:hover{transform:translateY(-2px)}}
+.region[aria-pressed="true"]{background:var(--marine);color:#fff;box-shadow:none}
+.aussagen{display:grid;gap:.75rem}
+.aussage{display:flex;gap:1rem;align-items:flex-start;padding:1rem 1.15rem;border-radius:var(--radius-karte);background:var(--weiss);box-shadow:inset 0 0 0 1px var(--linie);transition:transform var(--dauer-kurz) var(--kurve)}
+@media (hover:hover) and (pointer:fine){.aussage:hover{transform:translateY(-3px)}}
+.aussage__zahl{flex:none;display:grid;place-items:center;width:2.75rem;height:2.75rem;border-radius:50%;background:var(--korall);color:var(--marine)}
+.karte__bild{position:relative;margin:0;justify-self:center;width:min(100%,30rem)}
+.karte__svg{width:100%;height:auto;aspect-ratio:474/612}
+.karte__flaeche{position:relative}
+.pins{position:absolute;inset:0}
+.pin{position:absolute;display:grid;place-items:center;width:1.1rem;height:1.1rem;margin:-.55rem 0 0 -.55rem;transition:opacity .3s ease}
+.pin i{display:block;width:100%;height:100%;border-radius:50%;background:var(--korall-kraeftig);box-shadow:0 0 0 .25rem rgba(242,107,87,.28),0 0 0 2px #fff}
+.pin--foto{width:3rem;height:3rem;margin:-1.5rem 0 0 -1.5rem}
+.pin--foto img{width:100%;height:auto;aspect-ratio:1;border-radius:50%;object-fit:cover;object-position:50% 15%;box-shadow:0 0 0 3px #fff,0 0 0 6px var(--korall-kraeftig),0 8px 16px rgba(15,39,71,.25)}
+.js .pin[data-zeig]{transform:scale(.3)}
+.js .pin[data-zeig].ist-da{transform:none}
+.js .karte[data-region="nord"] .pin:not([data-region="nord"]),.js .karte[data-region="ost"] .pin:not([data-region="ost"]),.js .karte[data-region="west"] .pin:not([data-region="west"]),.js .karte[data-region="sued"] .pin:not([data-region="sued"]){opacity:.22}
+.karte__beispiel{margin-top:.75rem;text-align:center;font-size:1rem;color:var(--text-leise)}
+@media (min-width:60rem){.karte__raster{grid-template-columns:1fr 1fr}.karte__bild{order:-1}}
+@media (max-width:29.99rem){.pin--foto{width:2.4rem;height:2.4rem;margin:-1.2rem 0 0 -1.2rem}.pin{width:.9rem;height:.9rem;margin:-.45rem 0 0 -.45rem}}
+
+/* 5. Drei Schritte */
+.schritte{padding-block:0}
+.schritte__spur{position:relative}
+.schritte__block{position:relative;padding:clamp(2rem,5vw,4rem) clamp(1.25rem,4vw,3.5rem) clamp(2rem,4vw,3rem);border-radius:var(--radius-gross);background:var(--marine);color:#fff;text-align:center;overflow:hidden}
+.schritte__block>*{position:relative;z-index:1}
+.schritte__block>.held__deko{position:absolute;z-index:0}
+.schritte h2{max-width:18ch;margin-inline:auto;margin-bottom:2.5rem}
+.schritte__liste{display:grid;gap:2.5rem}
+.schritt{display:grid;justify-items:center;gap:.5rem}
+.schritt h3{font-size:1.35rem}
+.schritt p{max-width:20rem;color:var(--text-leise-dunkel)}
+.schritt__nr{display:grid;place-items:center;width:2.75rem;height:2.75rem;border-radius:50%;background:var(--korall);color:var(--marine);font-family:var(--schrift-titel);font-weight:700;font-size:1.25rem}
+.schritt .handy{margin-top:1rem}
+.schritte__linie{display:none}
+.schritte__cta{margin-top:2rem}
+@media (min-width:56rem){
+  .schritte__block{padding-bottom:0}
+  .schritte__liste{grid-template-columns:repeat(3,1fr);gap:1.5rem;position:relative}
+  .schritte__linie{display:block;position:absolute;left:calc(16.66% + 1.4rem);right:calc(16.66% + 1.4rem);top:0;height:0;pointer-events:none}
+  .schritte__cta{margin:0;padding-block:2rem 2.5rem;position:relative;z-index:2}
+}
+@media (min-width:56rem){
+  /* die Linie liegt auf halber Höhe der Nummern (Nummer 2,75 rem hoch, erstes Element jeder Spalte) */
+  .schritte__linie{top:calc(1.375rem - 1.5px)}
+  .schritte__linie i{display:block;height:3px;border-radius:3px;background:var(--korall);transform-origin:left center;transform:scaleX(var(--p,1))}
+  .schritt__nr{position:relative;z-index:2;box-shadow:0 0 0 .5rem var(--marine)}
+}
+
+/* 6. Kennzahlen */
+.zahlen{padding-block:var(--raum) 0}
+.zahlen__liste{display:grid;gap:1.5rem;text-align:center}
+.zahl{display:block;font-family:var(--schrift-titel);font-weight:700;font-size:clamp(3rem,2rem + 4vw,5rem);line-height:1;letter-spacing:-.04em;color:var(--marine)}
+.zahl__text{display:block;margin-top:.4rem;color:var(--text-leise);font-size:1.0625rem}
+.zahlen__hinweis{margin-top:1.5rem;text-align:center;font-size:1rem;color:var(--text-leise)}
+@media (min-width:44rem){.zahlen__liste{grid-template-columns:repeat(3,1fr)}}
+
+/* 7. Fragen */
+.fragen__raster{display:grid;gap:2rem}
+.fragen__kopf p:last-child{color:var(--text-leise);margin-top:1rem;max-width:26rem}
+.fragen__liste{display:grid;gap:.6rem}
+.fragen details{border-radius:var(--radius-karte);background:var(--weiss);box-shadow:inset 0 0 0 1px var(--linie);padding:0 1.25rem}
+.fragen summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:3.5rem;padding-block:.75rem;cursor:pointer;font-family:var(--schrift-titel);font-weight:600;font-size:1.15rem;list-style:none}
+.fragen summary::-webkit-details-marker{display:none}
+.fragen summary::after{content:"+";flex:none;display:grid;place-items:center;width:2rem;height:2rem;border-radius:50%;background:var(--marine);color:#fff;font-size:1.25rem;line-height:1;transition:transform var(--dauer-mittel) var(--kurve)}
+.fragen details[open] summary::after{transform:rotate(45deg)}
+.fragen details p{padding-bottom:1.25rem;color:var(--text-leise);max-width:46rem}
+@media (min-width:60rem){.fragen__raster{grid-template-columns:.8fr 1.2fr;align-items:start}.fragen__kopf{position:sticky;top:6rem}}
+
+/* 8. Kontakt */
+.kontakt{padding-bottom:var(--raum)}
+.kontakt__block{display:grid;gap:2rem;padding:clamp(1.5rem,5vw,4rem);border-radius:var(--radius-gross);background:var(--marine);color:#fff}
+.kontakt__text{display:grid;gap:1rem;align-content:start;justify-items:start}
+.kontakt__text p{color:var(--text-leise-dunkel);max-width:30rem}
+.kontakt__text .kicker{margin-bottom:0}
+.kontakt__wege{display:grid;gap:.6rem;margin-top:.5rem}
+.kontakt__wege li{display:flex;align-items:center;gap:.6rem}
+.kontakt__wege a{font-weight:700;text-decoration:underline;text-underline-offset:.2em}
+.formular{display:grid;grid-template-columns:1fr;gap:1rem;padding:clamp(1.25rem,3vw,2rem);border-radius:var(--radius-karte);background:var(--flaeche);color:var(--text)}
+.formular__feld{display:grid;gap:.4rem;align-content:start}
+.formular .feld__hinweis{font-size:1rem;line-height:1.4;color:var(--text)}
+.formular label{font-weight:700;font-size:1rem}
+.formular input,.formular textarea,.formular select{width:100%;min-height:3rem;padding:.7rem 1rem;border:1px solid var(--feld-rand);border-radius:14px;background:var(--weiss);color:var(--text);font:inherit}
+.formular input::placeholder{color:var(--text-leise)}
+.formular :focus-visible{outline-color:var(--marine)}
+.formular__recht,.formular__bestaetigung{font-size:1rem}
+.formular__recht a{text-decoration:underline;text-underline-offset:.2em;font-weight:700}
+.formular__senden{justify-self:start}
+.formular__meldung{padding:.75rem 1rem;border-radius:14px;background:var(--weiss);box-shadow:inset 0 0 0 1px var(--marine)}
+@media (min-width:36rem){.formular{grid-template-columns:1fr 1fr}.formular__feld--breit,.formular__recht,.formular__senden,.formular__bestaetigung,.formular__meldung{grid-column:1/-1}}
+@media (min-width:60rem){.kontakt__block{grid-template-columns:.85fr 1.15fr;align-items:center}}
+
+/* Fuß */
+.fuss{background:var(--flaeche-dunkel);color:var(--text-auf-dunkel);padding-block:clamp(2.5rem,5vw,4rem) 1.5rem}
+.fuss .kopf__logo,.fuss .kopf__zeichen{color:#fff}
+.fuss__raster{display:grid;gap:2rem}
+.fuss__marke{display:grid;gap:1rem;justify-items:start;max-width:22rem}
+.fuss__marke p{color:var(--text-leise-dunkel)}
+.fuss h3{font-size:1rem;font-family:var(--schrift-text);font-weight:700;margin-bottom:.75rem;color:var(--korall)}
+.fuss li a,.fuss__kontakt a{display:inline-flex;align-items:center;min-height:2.5rem;color:#fff;text-decoration:underline;text-underline-offset:.2em;text-decoration-color:rgba(255,255,255,.4)}
+.fuss__kontakt p{color:var(--text-leise-dunkel)}
+.fuss__klein{margin-top:2.5rem;padding-top:1.25rem;border-top:1px solid var(--linie-dunkel);color:var(--text-leise-dunkel);font-size:1rem}
+@media (min-width:56rem){.fuss__raster{grid-template-columns:1.4fr 1fr 1fr 1.2fr}}
+
+/* Sprunglinks und Anker unter der schwebenden Leiste */
+section[id]{scroll-margin-top:6rem}
+
+@media (prefers-reduced-motion:reduce){
+  .held__foto{animation:none}
+  .js .kal__chip[data-zeig],.js .pin[data-zeig]{transform:none;transition:none;opacity:1}
+  .kopf__leiste::before,.vorteil,.aussage,.region{transition:none}
+}
+@media (min-width:56rem){.held__kreis--b{width:9rem;height:9rem;left:42%;right:auto;top:-3rem}}
