@@ -22,7 +22,8 @@
   --akzent-hell:#9cc4ff;      /* nur auf Marine: Punkte, Haken, Scanlinie, Zeichen */
   --text-auf-dunkel:#ffffff;
   --text-leise-dunkel:#c9d4e6;
-  --linie-dunkel:#2c4572;
+  --linie-dunkel:#35507f;
+  --flaeche-tiefer:#0a1a36;   /* Fuß, eine Stufe unter dem Marine */
   --weiss:#ffffff;
   /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
   --ton-1:#3b5b8c;

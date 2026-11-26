@@ -48,7 +48,7 @@ section[id],footer[id]{scroll-margin-top:calc(var(--kopf-h) + .5rem)}
 .held__unter{margin:1.25rem auto 0;max-width:38rem;font-size:var(--text-l);color:#fff}
 .stores{display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem;margin-top:1.75rem}
 .store{display:inline-flex;align-items:center;gap:.6rem;min-height:3.25rem;padding:.7rem 1.35rem;border-radius:var(--radius-knopf);background:var(--gerat);color:#fff;font-weight:600;font-size:1rem;box-shadow:inset 0 0 0 1px rgba(255,255,255,.28);transition:transform var(--dauer-kurz) var(--kurve)}
-.store:hover{transform:translateY(-2px)}
+@media (hover:hover){.store:hover{transform:translateY(-2px)}}
 .store:active{transform:scale(.97)}
 .store:focus-visible{outline-color:var(--akzent-hell)}
 .held :focus-visible{outline-color:#fff}
@@ -132,7 +132,7 @@ details[open]>summary .akk__pfeil,details[open]>summary svg:last-child{transform
 
 /* Route zeichnet sich (stroke-dashoffset). Ohne JavaScript und bei reduzierter Bewegung ist sie gezeichnet. */
 .js .route{stroke-dasharray:1 1;stroke-dashoffset:1}
-.js .gezeichnet .aktiv .route{stroke-dashoffset:0;transition:stroke-dashoffset 1.9s var(--kurve) .15s}
+.js .gezeichnet .aktiv .route{stroke-dashoffset:0;transition:stroke-dashoffset 1.9s var(--kurve) .15s}/* bewusst lang: gezeichnete Linie, kein bedienbares Element */
 
 /* Telefon steigt beim Scrollen (--steig 0 bis 1, aus stil.js), kippt (--kipp), schwebt */
 [data-steig] .phone{transform:translateY(calc((1 - var(--steig,1)) * 5rem))}

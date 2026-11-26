@@ -174,7 +174,7 @@ h3{font-size:var(--h3);line-height:1.2}
 .haken svg{position:relative;width:1.2rem;height:1.2rem;color:var(--akzent-text)}
 @media (min-width:62rem){
   .uhrbuehne{flex-direction:row;align-items:flex-end;padding:0 1.25rem 1.25rem;gap:1.5rem}
-  .uhr{align-self:flex-end;width:11rem;margin-bottom:-2.5rem}
+  .uhr{align-self:center;width:11rem;margin:1rem 0}
   .liste{flex:1;min-width:0}
 }
 
@@ -320,3 +320,5 @@ h3{font-size:var(--h3);line-height:1.2}
   .js [data-schritt]:not(.hakt) .coach__fon .blase,.js .liste:not(.hakt) .haken::before,.js .liste:not(.hakt) .haken svg,.js .fuss__wort:not(.hakt) span{opacity:1;transform:none}
   .karte__i:hover,.karte__i:hover .karte__bild{transform:none}
 }
+.duo__bild--1 .chip{right:auto;bottom:auto;left:.6rem;top:.6rem}
+.uhr::after{display:none}

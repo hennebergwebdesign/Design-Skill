@@ -64,6 +64,12 @@ button:hover>.rundknopf,.rundknopf:hover{background:#2c539c}
 .js .kopf__nav:not([data-offen="true"]){display:none}
 .js .kopf__menue{flex-direction:column}
 .js .kopf__menue a{min-height:3rem;font-size:1.125rem}
+@media (max-width:29.99rem){
+  .kopf__leiste{gap:.35rem;padding-left:1rem}
+  .kopf__logo{font-size:1.2rem;gap:.45rem}
+  .kopf__zeichen{width:1.6rem;height:1.6rem}
+  .kopf__knopf{gap:.5rem;padding-left:.9rem}
+}
 @media (min-width:30rem){.kopf__lang{display:inline}}
 @media (min-width:62rem){
   .kopf__burger,.js .kopf__burger{display:none}
@@ -151,7 +157,7 @@ button:hover>.rundknopf,.rundknopf:hover{background:#2c539c}
 .fachleute__gross{margin:0;aspect-ratio:16/10;border-radius:var(--radius-gross)}
 .fachleute__gross img{object-position:50% 0}
 .fachleute__unten{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.fachleute__klein{position:relative;margin:0;aspect-ratio:1/1;border-radius:var(--radius-karte);overflow:hidden}
+.fachleute__klein{position:relative;margin:0;aspect-ratio:3/4;border-radius:var(--radius-karte);overflow:hidden}
 .fachleute__kleinfoto{position:absolute;inset:0;border-radius:0}
 .fachleute__klein figcaption{position:absolute;left:.6rem;right:.6rem;bottom:.6rem;display:grid;padding:.55rem .8rem;border-radius:14px;background:var(--flaeche-dunkel);color:var(--text-auf-dunkel);line-height:1.3}
 .fachleute__klein figcaption span{color:var(--text-leise-dunkel)}
@@ -258,6 +264,7 @@ button:hover>.rundknopf,.rundknopf:hover{background:#2c539c}
 .kontakt__name span{display:grid}
 .kontakt__name span b{color:var(--text)}
 .kontakt__name span{color:var(--text-leise)}
+@media (max-width:47.99rem){.kontakt__bild{min-height:0;display:grid;gap:.75rem}.kontakt__foto{position:relative;aspect-ratio:4/3}.kontakt__karte{position:static;max-width:none}}
 @media (min-width:62rem){.kontakt__raster{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:2rem}.kontakt__bild{min-height:40rem}}
 
 /* Fuß */
