@@ -155,11 +155,10 @@ nav a[aria-current="location"]{text-decoration-color:var(--akzent)}
 @keyframes telefon-bogen{0%,35%{stroke-dashoffset:100}70%,100%{stroke-dashoffset:0}}
 @keyframes telefon-marker{0%,30%{transform:scale(.2);opacity:0}45%{transform:scale(1.35);opacity:1}60%,100%{transform:scale(1);opacity:1}}
 .zeitleiste{position:relative;height:6px;border-radius:6px;background:var(--linie)}
-.zeitleiste__lauf{position:absolute;inset:0;border-radius:6px;background:var(--akzent);transform-origin:left;animation:telefon-lauf 5s linear infinite}
-.zeitleiste__kopf{position:absolute;left:0;top:50%;width:.9rem;height:.9rem;margin:-.45rem 0 0 -.45rem;border-radius:50%;background:var(--text);animation:telefon-kopf 5s linear infinite}
-@keyframes telefon-lauf{0%{transform:scaleX(.05)}100%{transform:scaleX(.62)}}
-@keyframes telefon-kopf{0%{transform:translateX(0)}100%{transform:translateX(calc(var(--zl,9rem) * 1))}}
-.zeitleiste{--zl:9.2rem}
+.zeitleiste__lauf{position:absolute;inset:0;border-radius:6px;background:var(--akzent);transform-origin:left;transform:scaleX(.62);animation:telefon-lauf 5s linear infinite}
+.zeitleiste__spur{position:absolute;inset:0;transform:translateX(62%);animation:telefon-kopf 5s linear infinite}
+.zeitleiste__kopf{position:absolute;left:0;top:50%;width:.9rem;height:.9rem;margin:-.45rem 0 0 -.45rem;border-radius:50%;background:var(--text)}
+@keyframes telefon-kopf{0%{transform:translateX(5%)}100%{transform:translateX(62%)}}
 .werte{display:grid;grid-template-columns:repeat(3,1fr);gap:.4rem}
 .werte li{background:var(--karte);border-radius:10px;padding:.4rem .3rem;text-align:center;display:grid}
 .werte b{color:var(--akzent);font-family:var(--schrift-titel);font-size:1rem}
