@@ -1,0 +1,28 @@
+/* marke.css der Vorlage "Produktagentur Graphit und Bernstein": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast (selbst gerechnet, WCAG): --text auf --flaeche 16,2 zu 1; --text-leise auf --flaeche 9,4, auf --flaeche-karte 8,7, auf --flaeche-hoch 7,9;
+   --akzent auf --flaeche 10,1 (Rahmen, Zeichen, Link); --akzent-text auf --akzent 10,2; --salbei auf --flaeche-karte 9,4; --akzent-text auf --salbei 10,2. */
+:root{
+  --flaeche:#11130f;
+  --flaeche-karte:#181b15;
+  --flaeche-hoch:#20241b;
+  --flaeche-alt:#181b15;
+  --flaeche-dunkel:#0b0c09;
+  --text:#f1efe6;
+  --text-leise:#b7b9aa;
+  --linie:#2e3326;
+  --akzent:#f0b53a;            /* Hauptaktion: Bernstein mit dunklem Text */
+  --akzent-text:#14110a;
+  --schrift-titel:'Bricolage Grotesque',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:12px;
+  --radius-karte:22px;
+  --radius-bild:18px;
+
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:600;
+  --titel-spur:-0.03em;
+  --salbei:#a9c79a;            /* zweite Fläche für Kennzeichen und Hervorhebung im Preis */
+  --kupfer:#d98a5a;            /* nur Zeichen in Beispieloberflächen */
+  --linie-stark:#454c38;
+  --weiss:#ffffff;
+}
