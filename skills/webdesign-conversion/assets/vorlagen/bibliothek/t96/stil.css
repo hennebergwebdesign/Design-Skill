@@ -30,9 +30,10 @@ h3{font-size:var(--h3);line-height:1.2}
 .kopf>*{pointer-events:auto}
 .kopf__leiste{position:relative;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;max-width:var(--breite);margin-inline:auto;padding:.5rem .5rem .5rem 1.25rem;border-radius:999px;background:var(--weiss);color:var(--text);box-shadow:0 10px 28px color-mix(in srgb,#000 14%,transparent)}
 .js .kopf__leiste{flex-wrap:nowrap}
-.kopf__logo{display:inline-flex;align-items:center;gap:.55rem;min-height:2.75rem;font-family:var(--schrift-titel);font-weight:800;font-size:1.3rem;letter-spacing:-.03em;margin-right:auto;white-space:nowrap}
+.kopf__logo{display:inline-flex;align-items:center;gap:.4rem;min-height:2.75rem;font-family:var(--schrift-titel);font-weight:800;font-size:1.15rem;letter-spacing:-.03em;margin-right:auto;white-space:nowrap}
 .kopf__zeichen{flex:none;width:1.75rem;height:1.75rem;padding:.25rem;border-radius:50%;background:var(--akzent);color:var(--limette)}
-.kopf__knopf{min-height:2.75rem;padding:.4rem 1.2rem;white-space:nowrap}
+.kopf__knopf{min-height:2.75rem;padding:.4rem .95rem;white-space:nowrap}
+@media (min-width:30rem){.kopf__logo{gap:.55rem;font-size:1.3rem}.kopf__knopf{padding:.4rem 1.2rem}}
 .kopf__burger{display:none;width:2.75rem;height:2.75rem;border-radius:50%;align-items:center;justify-content:center;background:var(--flaeche);transition:background-color var(--dauer-kurz)}
 .js .kopf__burger{display:inline-flex}
 .burger,.burger::before{display:block;width:1.2rem;height:2px;background:var(--text);border-radius:2px;transition:transform var(--dauer-mittel) var(--kurve)}
@@ -201,7 +202,7 @@ h3{font-size:var(--h3);line-height:1.2}
 .kabel__text{margin-top:1.25rem;max-width:28rem;color:var(--text-leise);font-size:var(--text-l)}
 .kabel__buehne{position:relative;display:grid;place-items:center;min-height:22rem;margin-top:.5rem;border-radius:var(--radius-karte);background:var(--buehne);overflow:hidden}
 .kabel__buehne .produkt{width:min(54vw,17rem);transform:rotate(-8deg);margin-block:1.5rem}
-.kabel__leitung{position:absolute;left:-200%;top:0;width:266.67%;height:100%;overflow:visible;pointer-events:none}
+.kabel__leitung{position:absolute;left:-200%;top:0;width:266.67%;max-width:none;height:100%;overflow:visible;pointer-events:none}
 .kabel__linie{fill:none;stroke:var(--text);stroke-width:12;stroke-linecap:round;stroke-dasharray:100;stroke-dashoffset:0;transition:stroke-dashoffset 1.8s var(--kurve)}
 .js .kabel__buehne:not(.ist-da) .kabel__linie{stroke-dashoffset:100}
 @media (min-width:48rem){
