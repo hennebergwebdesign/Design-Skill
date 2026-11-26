@@ -1,0 +1,31 @@
+/* marke.css der Vorlage "Pflegedienst Pflaume und Honig": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast (selbst nachgerechnet, WCAG): --text auf --flaeche 15,5 zu 1, auf --flaeche-alt 13,8, --text-leise auf --flaeche 7,1, auf --flaeche-alt 6,3, auf Weiß 7,7,
+   --akzent-text auf --akzent 10,2, Weiß auf --akzent 11,1, --text-leise-dunkel auf --akzent 7,9, --text auf --honig 9,4, --akzent auf --honig 6,2,
+   --akzent auf Weiß 11,1, --honig auf --akzent 6,2 (nur Zeichen, Fokusring und Knopf, nie Textfarbe auf Hell), Feldrand auf Weiß 5,0 (Mindestwert 3 zu 1). */
+:root{
+  --flaeche:#fbf4ea;
+  --flaeche-alt:#f3e6d4;
+  --flaeche-dunkel:#3a0f26;
+  --text:#2b1620;
+  --text-leise:#654c54;
+  --linie:#e6d6c0;
+  --akzent:#6e1a42;            /* Pflaumenrot: Karten, Fuß, Menüpanel, Fokusring auf Hell */
+  --akzent-text:#fbf4ea;
+  --schrift-titel:'Newsreader',Georgia,serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:24px;
+  --radius-bild:20px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:36px;
+  --titel-gewicht:500;
+  --titel-spur:-0.012em;
+  --honig:#f4b73c;             /* Gegenakzent: Knopf, Nummernkreis, Hervorhebung. Als Text nie auf Hell, auf Honig steht --text oder --akzent */
+  --rosa:#f2d9df;              /* sanfte Fläche, Ringe */
+  --weiss:#ffffff;
+  --feld-rand:#85686f;
+  --text-auf-dunkel:#fbf4ea;
+  --text-leise-dunkel:#ecd3dc;
+  --linie-dunkel:#8a3b62;
+}
