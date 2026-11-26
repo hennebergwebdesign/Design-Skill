@@ -50,7 +50,7 @@ body{font-family:var(--schrift-text)}
 .held__karte{position:relative;overflow:hidden;display:flex;align-items:flex-end;min-height:clamp(36rem,46vw,43rem);border-radius:var(--radius-gross);background:var(--flaeche-dunkel);color:var(--text-auf-dunkel)}
 .held__bilder{position:absolute;inset:0}
 .held__bilder::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(6,30,21,.94) 0,rgba(6,30,21,.78) 48%,rgba(6,30,21,.25) 100%)}
-.held__bild{position:absolute;inset:0;opacity:0;transition:opacity .7s var(--kurve)}
+.held__bild{position:absolute;inset:0;opacity:0;transition:opacity .7s var(--kurve)} /* bewusst: Fotowechsel, große Fläche, keine Bedienung */
 .held__bild.aktiv{opacity:1}
 .held__bild img{width:100%;height:100%;object-fit:cover}
 .held__bild--1 img{transform:scaleX(-1)}
@@ -142,6 +142,7 @@ body{font-family:var(--schrift-text)}
 .punkte i.an{background:var(--limette);box-shadow:0 0 0 1.5px var(--akzent)}
 .punkte i:nth-child(2){--j:1}.punkte i:nth-child(3){--j:2}.punkte i:nth-child(4){--j:3}.punkte i:nth-child(5){--j:4}.punkte i:nth-child(6){--j:5}.punkte i:nth-child(7){--j:6}.punkte i:nth-child(8){--j:7}.punkte i:nth-child(9){--j:8}.punkte i:nth-child(10){--j:9}
 .js .karte--zahl .punkte i.an{transform:scale(.2);opacity:0}
+/* bewusst: Punktereihe füllt sich, keine Bedienung */
 .js .karte--zahl.ist-da .punkte i.an{transform:none;opacity:1;transition:transform .5s var(--kurve) calc(var(--j,0) * 70ms + .3s),opacity .4s var(--kurve) calc(var(--j,0) * 70ms + .3s)}
 @media (prefers-reduced-motion:reduce){.js .karte--zahl .punkte i.an{transform:none;opacity:1}}
 @media (min-width:48rem){.club__kopf{grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:2rem;align-items:start}}
@@ -208,6 +209,7 @@ body{font-family:var(--schrift-text)}
 .stage__liste li{position:relative;padding-left:2rem;font-size:1rem}
 .stage__liste li::before{content:"";position:absolute;left:0;top:.1rem;width:1.3rem;height:1.3rem;border-radius:50%;background:var(--limette) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none' stroke='%230b2a1c' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M8 17l6 6 11-13'/%3E%3C/svg%3E") center/80% no-repeat}
 .stage .knopf{justify-self:start;margin-top:.5rem}
+/* bewusst: Inhaltswechsel der Hauptkarte, keine Bedienung */
 .stage.wechsel .stage__kopf,.stage.wechsel .stage__text,.stage.wechsel .stage__liste{animation:einblenden .4s var(--kurve)}
 @keyframes einblenden{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 .zeilen{display:grid;gap:.75rem}
@@ -286,15 +288,16 @@ body{font-family:var(--schrift-text)}
 .stimmen__worte{align-self:flex-start;display:grid;gap:.1rem;padding:1rem 1.25rem;border-radius:var(--radius-karte);background:var(--weiss);color:var(--text);box-shadow:0 20px 40px -26px rgba(8,40,28,.8)}
 .stimmen__worte[hidden]{display:none}
 .stimmen__worte button{display:flex;align-items:center;gap:.7rem;min-height:2.75rem;padding:.2rem .4rem;font-family:var(--schrift-titel);font-weight:400;font-size:clamp(1.3rem,1.1rem + .8vw,1.8rem);color:var(--text-leise);transition:color var(--dauer-kurz),transform var(--dauer-mittel) var(--kurve)}
-.stimmen__worte button::before{content:"";flex:none;width:.6rem;height:.6rem;border-radius:50%;background:var(--limette);box-shadow:0 0 0 1.5px var(--akzent);transform:scale(0);transition:transform var(--dauer-mittel) var(--kurve)}
+.stimmen__worte button::before{content:"";flex:none;width:.6rem;height:.6rem;border-radius:50%;background:var(--limette);box-shadow:0 0 0 1.5px var(--akzent);opacity:0;transform:scale(.5);transition:transform var(--dauer-mittel) var(--kurve),opacity var(--dauer-mittel) var(--kurve)}
 .stimmen__worte button:hover{color:var(--text)}
 .stimmen__worte button[aria-pressed="true"]{color:var(--akzent);font-weight:600;transform:translateX(.4rem)}
-.stimmen__worte button[aria-pressed="true"]::before{transform:scale(1)}
+.stimmen__worte button[aria-pressed="true"]::before{opacity:1;transform:scale(1)}
 .stimmen__zitate{display:grid;gap:.75rem;max-width:44rem}
 .zitat{margin:0;padding:1.25rem 1.5rem;border-radius:var(--radius-karte);background:var(--flaeche-dunkel);color:var(--text-auf-dunkel)}
 .zitat blockquote{font-size:clamp(1.1rem,1rem + .5vw,1.35rem);line-height:1.4;color:var(--weiss);margin-bottom:.75rem}
 .zitat figcaption{font-size:1rem;color:var(--text-leise-dunkel)}
 .js .zitat:not(.aktiv){display:none}
+/* bewusst: Zitatwechsel, keine Bedienung */
 .js .zitat.aktiv{animation:einblenden .4s var(--kurve)}
 @media (prefers-reduced-motion:reduce){.js .zitat.aktiv{animation:none}}
 @media (min-width:64rem){.stimmen__karte{min-height:34rem}.stimmen__zitate{align-self:flex-end;width:min(100%,44rem)}.stimmen__karte{position:relative}}

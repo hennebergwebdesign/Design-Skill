@@ -34,3 +34,8 @@
   --ton-3:#8db4f0;
   --ton-4:#27487f;
 }
+:root{
+  /* Signalfläche nur für den Notfallhinweis: warm, damit er sich vom Marineblau abhebt */
+  --signal-flaeche:#ffefc9;
+  --signal-text:#3d2700;
+}

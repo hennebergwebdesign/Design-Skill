@@ -1,0 +1,38 @@
+/* marke.css der Vorlage "Kfz Werkstatt Blau und Schwarz": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#ffffff;
+  --flaeche-alt:#eef2f8;
+  --flaeche-dunkel:#0d2147;      /* Marine: Leistungen, Kopfzeile unten, Fuß */
+  --schwarz:#0b0f18;             /* Held, Aktionsbanner */
+  --text:#101828;
+  --text-leise:#475467;
+  --linie:#d3dbe9;
+  --akzent:#1b52c4;              /* Hauptblau: Flächen mit hellem Text, auf Hell auch Text und Linie */
+  --akzent-dunkel:#143a8c;       /* Kacheln, Pfeilfelder */
+  --akzent-text:#ffffff;
+  --signal:#ffc20e;              /* Hauptknopf auf dunklem und blauem Grund */
+  --signal-text:#0b0f18;
+  --schrift-titel:'Archivo',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:4px;
+  --radius-karte:6px;
+  --radius-bild:4px;
+
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:800;
+  --titel-spur:-0.02em;
+  --text-auf-dunkel:#ffffff;
+  --text-leise-dunkel:#c9d6f0;
+  --linie-dunkel:#2b4575;
+  --akzent-hell:#8fb4ff;         /* Zeichen und Text auf Marine und Schwarz */
+  --weiss:#ffffff;
+  --feld-rand:#6b7a93;
+  /* Platzhalter-Töne für Bildflächen */
+  --ton-1:#1b52c4;
+  --ton-2:#143a8c;
+  --ton-3:#0d2147;
+  --ton-4:#2b4575;
+  --ton-5:#0b0f18;
+  --ton-6:#3b6fe0;
+}

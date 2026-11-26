@@ -255,12 +255,12 @@ nav a[aria-current="location"]{text-decoration:none;background:var(--flaeche-kar
 .band__spur{animation:none}
 .js .band__spur{animation:band var(--band-dauer,30s) linear infinite}
 html:not(.js) .band{flex-wrap:wrap;overflow:visible}
-html:not(.js) .band__spur{flex-wrap:wrap;justify-content:center;min-width:0}
+html:not(.js) .band__spur{flex:0 1 auto;max-width:100%;flex-wrap:wrap;justify-content:center;min-width:0}
 html:not(.js) .band__spur[aria-hidden="true"]{display:none}
 html:not(.js) .leist__foto img:not(.aktiv){display:none}
 @media (prefers-reduced-motion:reduce){
   .band{flex-wrap:wrap;overflow:visible}
-  .band__spur,.js .band__spur{flex-wrap:wrap;justify-content:center;min-width:0;animation:none}
+  .band__spur,.js .band__spur{flex:0 1 auto;max-width:100%;flex-wrap:wrap;justify-content:center;min-width:0;animation:none}
   .band__spur[aria-hidden="true"]{display:none}
   .band__halt{display:none!important}
   .held__funke,.leist__kreisen{animation:none}

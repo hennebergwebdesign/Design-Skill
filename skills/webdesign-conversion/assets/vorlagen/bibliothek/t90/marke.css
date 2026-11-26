@@ -1,0 +1,38 @@
+/* marke.css der Vorlage "Leuchtenshop warm": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#ffffff;
+  --flaeche-alt:#f6f4ee;
+  --flaeche-dunkel:#2a2c1f;   /* Olivschwarz: Kachel, Fuß, Konto Karte, bewusst gleich --akzent */
+  --text:#22241a;
+  --text-leise:#5b5d4e;
+  --linie:#dedbd0;
+  --akzent:#2a2c1f;           /* Hauptaktion: Fläche mit hellem Text, auf Hell auch Text und Linie */
+  --akzent-text:#ffffff;
+  --schrift-titel:'Outfit',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:26px;
+  --radius-bild:26px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:34px;
+  --titel-gewicht:400;
+  --titel-spur:-0.01em;
+  --akzent-warm:#f3b45c;      /* nur Licht und Zeichen: Schein, Flamme, Punkt, nie als Textfarbe auf Hell */
+  --text-auf-dunkel:#ffffff;
+  --text-leise-dunkel:#d3d3c4;
+  --linie-dunkel:#4a4d38;
+  --weiss:#ffffff;
+  --feld-rand:#77796a;
+  /* Produktflächen: helle Tonflächen, auf denen die Lampenformen stehen */
+  --ton-1:#e6dcc6;
+  --ton-2:#d6d8bf;
+  --ton-3:#ecd3b0;
+  --ton-4:#cfcbb0;
+  --ton-5:#e3d2cb;
+  --ton-6:#c6cbb3;
+  --lampe-dunkel:#2a2c1f;
+  --lampe-hell:#f6f1e4;
+  --lampe-mittel:#8d8f72;
+}
