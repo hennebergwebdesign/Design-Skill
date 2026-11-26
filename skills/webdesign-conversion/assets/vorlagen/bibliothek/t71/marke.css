@@ -1,0 +1,33 @@
+/* marke.css der Vorlage "Koch App dunkel": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche, Text auf Karte und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#0d0c0b;            /* Seitengrund, fast schwarz, warm */
+  --flaeche-alt:#1a1715;        /* dunkle Karten */
+  --flaeche-dunkel:#0d0c0b;
+  --text:#f4efe7;
+  --text-leise:#b9b1a5;
+  --linie:#3a3530;              /* Rand auf dunklem Grund */
+  --akzent:#f0b34a;             /* Hauptaktion: Safran, Fläche mit dunklem Text */
+  --akzent-text:#1b1306;
+  --schrift-titel:'Schibsted Grotesk',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:28px;
+  --radius-bild:22px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:36px;
+  --titel-gewicht:600;
+  --titel-spur:-0.045em;
+  --karte-hell:#f7f3ec;         /* weiße Karten (Schleifenvideo, Köche) */
+  --text-auf-karte:#161311;
+  --text-leise-auf-karte:#5b544b;
+  --linie-auf-karte:#d9d1c4;
+  --akzent-auf-karte:#a63f0e;   /* Brandorange: Text und Fokus auf heller Karte */
+  --feld-rand:#8a8277;          /* Rand der Eingabefelder auf Dunkel */
+  --weiss:#ffffff;
+  /* Platzhalter-Töne für Bildflächen */
+  --ton-1:#3b2a1f;
+  --ton-2:#2a2f24;
+  --ton-3:#4a3322;
+}

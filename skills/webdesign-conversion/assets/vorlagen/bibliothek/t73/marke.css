@@ -1,0 +1,35 @@
+/* marke.css der Vorlage "Finanz App, Tiefgrün und Limette": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. Limette steht nur auf Tiefgrün oder als Fläche mit dunklem Text,
+   nie als Textfarbe auf Weiß. */
+:root{
+  --flaeche:#ffffff;
+  --flaeche-alt:#f1f6ee;
+  --flaeche-dunkel:#0a2a21;   /* Tiefgrün: Kopfleiste, Held, Preisfläche, Abschluss, Fuß */
+  --text:#0e1d17;
+  --text-leise:#41544a;
+  --linie:#d6e2d7;
+  --akzent:#c9f53f;           /* Limette: Hauptaktion als Fläche mit dunklem Text, auf Dunkelgrün auch als Text */
+  --akzent-text:#0a2a21;
+  --schrift-titel:'Familjen Grotesk',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:14px;
+  --radius-karte:24px;
+  --radius-bild:24px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:38px;
+  --titel-gewicht:600;
+  --titel-spur:-0.03em;
+  --gruen-2:#12392e;          /* Fläche auf Tiefgrün (Karten, Telefonrahmen innen) */
+  --gruen-3:#1d5040;          /* Mittelgrün: Karten, Linien auf Dunkel */
+  --gruen-licht:#dff0dc;      /* helles Grün für Flächen mit dunklem Text */
+  --text-auf-dunkel:#f1f7ec;
+  --text-leise-dunkel:#b3c8bb;
+  --linie-dunkel:#27574a;
+  --weiss:#ffffff;
+  --fokus:#0a2a21;            /* Fokusring auf Hell; auf Dunkel setzt stil.css die Limette */
+  --feld-rand:#667a6f;
+  --sand:#eadfc8;             /* Kartenton, neutral warm */
+  --telefon-rahmen:#06130f;
+  --negativ:#9a3412;          /* Abbuchung im Mockup, Text auf Weiß 5,9 zu 1 */
+}

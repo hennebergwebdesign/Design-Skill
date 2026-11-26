@@ -1,0 +1,40 @@
+/* marke.css der Vorlage "Videotool Blau": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1, Weiß auf dem hellsten Punkt des Blauverlaufs ebenso. */
+:root{
+  --flaeche:#f4f7fd;
+  --flaeche-alt:#e8effb;
+  --flaeche-dunkel:#0a2468;   /* Kopfleiste, Stimmenkarte, Fuß */
+  --text:#0b1530;
+  --text-leise:#46526c;
+  --linie:#d3dcef;
+  --akzent:#1d4ed8;           /* Hauptaktion: Fläche mit hellem Text, auf Hell auch Text und Linie */
+  --akzent-text:#ffffff;
+  --schrift-titel:'Schibsted Grotesk',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:12px;
+  --radius-karte:22px;
+  --radius-bild:20px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:32px;
+  --radius-telefon:2.1rem;
+  --titel-gewicht:700;
+  --titel-spur:-0.025em;
+  /* Der Blauverlauf: tief, mittel, hell. Hell bleibt dunkel genug für weißen Text (mindestens 4,5 zu 1), nie Richtung Violett. */
+  --blau-tief:#0a2468;
+  --blau-mitte:#1747c9;
+  --blau-hell:#0b6cc0;
+  --cyan:#22d3ee;             /* nur Zeichen und Glanz: Punkt, Ring, Balken, nie als Textfarbe auf Hell */
+  --gelb:#fde047;             /* nur das Wort im Untertitel, das gerade gesprochen wird */
+  --text-auf-dunkel:#ffffff;
+  --text-leise-dunkel:#c9d9f5;
+  --linie-dunkel:#35549a;
+  --weiss:#ffffff;
+  --gut:#0e7a4f;              /* Haken in Funktionslisten, Kontrast auf Weiß 5,5 zu 1 */
+  --schatten:0 18px 40px -18px rgba(10,36,104,.35);
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#1747c9;
+  --ton-2:#0b6cc0;
+  --ton-3:#0a2468;
+  --ton-4:#1e88c8;
+}

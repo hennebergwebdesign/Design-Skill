@@ -1,0 +1,35 @@
+/* marke.css der Vorlage "Sportclub hell": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#f5f9ff;
+  --flaeche-alt:#e6f0fc;
+  --flaeche-dunkel:#0e2250;   /* Info-Karte, Stimmenwechsel, Fuß: Marine */
+  --text:#10213f;
+  --text-leise:#4c5d7a;
+  --linie:#d3e1f3;
+  --akzent:#1a62d6;           /* Hauptaktion: Fläche mit hellem Text, auf Hell auch Text und Linie */
+  --akzent-text:#ffffff;
+  --schrift-titel:'Outfit',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:22px;
+  --radius-bild:22px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:32px;
+  --titel-gewicht:500;
+  --titel-spur:-0.025em;
+  --akzent-himmel:#5ab9f5;    /* nur Zeichen und Flächen: Balken, Punkt, Platzlinien, nie als Textfarbe auf Hell */
+  --text-auf-dunkel:#f5f9ff;
+  --text-leise-dunkel:#bccae6;
+  --linie-dunkel:#2a4373;
+  --weiss:#ffffff;
+  --feld-rand:#6c7d9b;
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#2f7fd6;
+  --ton-2:#5ab9f5;
+  --ton-3:#0e2250;
+  --ton-4:#3b9c8a;
+  --ton-5:#b8573a;
+  --ton-6:#1a4b8c;
+}

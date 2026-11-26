@@ -1,0 +1,37 @@
+/* marke.css der Vorlage "Wellness waldgrün": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche, heller Text auf Waldgrün, Waldgrün auf Hellgrün, jeweils mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#f1ece2;
+  --flaeche-alt:#e7e0d1;
+  --flaeche-dunkel:#1f3b2c;   /* Kopfleiste, Stimmenkarte, Fuß: bewusst gleich --akzent */
+  --text:#1b2420;
+  --text-leise:#4f5a53;
+  --linie:#d2c9b6;
+  --akzent:#1f3b2c;           /* Hauptaktion: Fläche mit hellem Text, auf Hell auch Text und Linie */
+  --akzent-text:#f1ece2;
+  --schrift-titel:'Hanken Grotesk',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:22px;
+  --radius-bild:22px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:30px;
+  --titel-gewicht:300;
+  --titel-spur:-0.035em;
+  --gruen-licht:#d9e6ba;      /* helle Karte (Datenkarte, Zitatkarte), Text darauf: --akzent */
+  --gruen-signal:#a8c968;     /* nur Zeichen und Balken auf Dunkelgrün, nie als Textfarbe auf Hell */
+  --text-auf-dunkel:#f1ece2;
+  --text-leise-dunkel:#bccabb;
+  --linie-dunkel:#3b5846;
+  --weiss:#fdfbf6;
+  --feld-rand:#7a8279;
+  /* Flaschen im Sortiment (reine Flächen, später durch Produktfotos ersetzen) */
+  --flasche-1:#27472f;
+  --flasche-2:#2f4d6e;
+  --flasche-3:#d9743a;
+  --flasche-4:#8a6a3a;
+  --flasche-5:#4c6a4a;
+  --flasche-6:#b9553a;
+  --kachel:#e3dcce;
+}
