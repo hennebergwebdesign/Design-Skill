@@ -1,0 +1,35 @@
+/* marke.css der Vorlage "Zahnarzt Anthrazit und Salbei": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast gerechnet (WCAG, 25.11.2026): Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1.
+   --text auf --flaeche 14,0 | auf --flaeche-alt 12,3 | auf --salbei 10,8
+   --text-leise auf --flaeche 6,7 | auf --flaeche-alt 5,9 | auf --salbei 5,2 | auf --weiss 7,5
+   --akzent-text (weiß) auf --akzent (Koralle) 4,7 | --akzent-link auf --flaeche 5,4, auf --flaeche-alt 4,7 (auf --salbei nur 4,1, dort Text in --text)
+   --text-auf-dunkel auf --flaeche-dunkel 13,0 | --text-leise-dunkel auf --flaeche-dunkel 9,1, auf --salbei-tief 7,1
+   --akzent gegen --flaeche-dunkel als Knopfkante 3,2 (Bedienelement, mindestens 3 zu 1) */
+:root{
+  --flaeche:#f6f0e5;           /* warmer Sand, hell */
+  --flaeche-alt:#ebe2d0;       /* Sand */
+  --flaeche-dunkel:#22272a;    /* Anthrazit */
+  --text:#1e2326;
+  --text-leise:#4b5655;
+  --linie:#d9ceb8;
+  --akzent:#c05038;            /* gedecktes Koralle: nur Knöpfe und Bedienelemente */
+  --akzent-text:#ffffff;
+  --akzent-link:#a8412c;       /* dieselbe Farbe, dunkler, für Textlinks auf Hell */
+  --schrift-titel:'Schibsted Grotesk',system-ui,sans-serif;
+  --schrift-text:'Manrope',system-ui,sans-serif;
+  --radius-knopf:14px;
+  --radius-karte:24px;
+  --radius-bild:18px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:32px;
+  --titel-gewicht:600;
+  --titel-spur:-0.025em;
+  --salbei:#cfd8c6;            /* Salbei als Fläche */
+  --salbei-tief:#2f3b35;       /* dunkles Salbei für das Schlussband */
+  --weiss:#fffdf8;
+  --text-auf-dunkel:#f4ede1;
+  --text-leise-dunkel:#c5cbc3;
+  --linie-dunkel:#3d4549;
+  --feld-rand:#7a7468;         /* Rand der Eingabefelder, 4,6 zu 1 auf Weiß */
+}
