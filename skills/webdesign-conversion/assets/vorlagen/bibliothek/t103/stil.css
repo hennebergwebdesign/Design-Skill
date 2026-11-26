@@ -98,7 +98,7 @@ h3{font-size:var(--h3);line-height:1.2}
 .laufband .band{--band-abstand:1rem;--band-dauer:46s;padding-block:.25rem}
 .laufband .band__spur{justify-content:flex-start}
 .laufband:has(.laufband__schalter:checked) .band__spur{animation-play-state:paused}
-.laufband .band:hover .band__spur{animation-play-state:paused}
+@media (hover:hover) and (pointer:fine){.laufband .band:hover .band__spur{animation-play-state:paused}}
 .zahl{flex:none;width:clamp(15rem,70vw,19rem)}
 .zahl figure{position:relative;height:clamp(21rem,95vw,25rem);border-radius:var(--radius-karte);overflow:hidden;background:var(--flaeche-dunkel);color:#fff}
 .zahl img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform var(--dauer-mittel) var(--kurve)}

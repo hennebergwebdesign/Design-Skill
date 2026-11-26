@@ -125,7 +125,7 @@ h3{font-size:clamp(1.4rem,1.15rem + .9vw,1.8rem);line-height:1.15}
 .leist__raster{display:grid;gap:1.25rem;grid-template-columns:1fr}
 .leist__raster>li{display:grid}
 .karte{display:grid;grid-template-rows:auto auto 1fr auto;align-content:start;gap:.75rem;padding:1.5rem;border-radius:var(--radius-karte);background:var(--weiss);color:var(--text);overflow:hidden;transition:transform var(--dauer-mittel) var(--kurve);will-change:transform}
-.karte:hover{transform:translateY(-8px)}
+@media (hover:hover) and (pointer:fine){.karte:hover{transform:translateY(-8px)}}
 .karte p{color:var(--text-leise)}
 .karte__nr{display:grid;place-items:center;width:2.75rem;height:2.75rem;border-radius:50%;background:var(--honig);color:var(--text);font-weight:800;font-size:1rem}
 .karte__foto{position:relative;margin-top:.5rem;border-radius:16px;overflow:hidden}
@@ -179,7 +179,7 @@ h3{font-size:clamp(1.4rem,1.15rem + .9vw,1.8rem);line-height:1.15}
 .direkt__raster{display:grid;gap:1rem;margin-bottom:-3rem;padding-bottom:0}
 .direkt__raster>li{display:grid}
 .direkt__karte{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:1rem;padding:1.5rem;border-radius:var(--radius-karte);background:var(--weiss);color:var(--text);box-shadow:0 16px 32px color-mix(in srgb,var(--text) 14%,transparent);transition:transform var(--dauer-mittel) var(--kurve)}
-.direkt__karte:hover{transform:translateY(-6px)}
+@media (hover:hover) and (pointer:fine){.direkt__karte:hover{transform:translateY(-6px)}}
 .direkt__karte--honig{background:var(--honig)}
 .direkt__icon{color:var(--akzent)}
 .direkt__text{display:grid;gap:.15rem}
@@ -189,7 +189,7 @@ h3{font-size:clamp(1.4rem,1.15rem + .9vw,1.8rem);line-height:1.15}
 .direkt__text span{color:var(--text-leise)}
 .direkt__karte--honig .direkt__text span{color:var(--text)}
 .direkt__pfeil{color:var(--akzent);transition:transform var(--dauer-kurz) var(--kurve)}
-.direkt__karte:hover .direkt__pfeil{transform:translate(2px,-2px)}
+@media (hover:hover) and (pointer:fine){.direkt__karte:hover .direkt__pfeil{transform:translate(2px,-2px)}}
 .direkt__karte :focus-visible,.direkt__karte:focus-visible{outline-color:var(--akzent)}
 @media (min-width:48rem){.direkt__raster{grid-template-columns:1fr 1fr;gap:1.5rem}}
 @media (min-width:62rem){.direkt__raster{margin-bottom:-4rem}.direkt__karte{padding:1.75rem 2rem}}
@@ -212,7 +212,7 @@ h3{font-size:clamp(1.4rem,1.15rem + .9vw,1.8rem);line-height:1.15}
 .formular__recht a{text-decoration:underline;text-underline-offset:.2em;font-weight:700;color:var(--akzent)}
 .formular__meldung{padding:.75rem 1rem;border-radius:14px;background:var(--flaeche);box-shadow:inset 0 0 0 1.5px var(--akzent)}
 .rund{position:absolute;right:clamp(1.25rem,4vw,2.5rem);bottom:clamp(1.25rem,3vw,2rem);display:grid;place-items:center;width:5.5rem;height:5.5rem;border-radius:50%;background:var(--honig);color:var(--text);font-weight:800;font-size:1.0625rem;isolation:isolate;transition:transform var(--dauer-kurz) var(--kurve)}
-.rund:hover{transform:scale(1.06)}
+@media (hover:hover) and (pointer:fine){.rund:hover{transform:scale(1.06)}}
 .rund:active{transform:scale(.96)}
 .rund::after{content:"";position:absolute;inset:0;z-index:-1;border-radius:50%;background:var(--honig);opacity:0;animation:puls 2.8s ease-out infinite}
 @keyframes puls{0%{transform:scale(1);opacity:.55}70%,100%{transform:scale(1.55);opacity:0}}

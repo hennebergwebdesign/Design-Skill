@@ -12,7 +12,7 @@ h3{font-size:var(--h3);line-height:1.2}
 .knopf{justify-content:center;text-align:center;font-size:1rem;font-weight:600;min-height:3rem;padding-right:.5rem}
 .knopf:hover{box-shadow:0 8px 20px color-mix(in srgb,var(--akzent) 25%,transparent)}
 .knopf__punkt{display:inline-grid;place-items:center;width:2.25rem;height:2.25rem;border-radius:50%;background:var(--akzent-text);color:var(--akzent);transition:transform var(--dauer-kurz) var(--kurve)}
-.knopf:hover .knopf__punkt{transform:translate(2px,-2px)}
+@media (hover:hover) and (pointer:fine){.knopf:hover .knopf__punkt{transform:translate(2px,-2px)}}
 .knopf--koralle{background:var(--koralle);color:var(--text);padding-right:1.5rem}
 .knopf--koralle:focus-visible{outline-color:var(--sonne)}
 .textlink{display:inline-flex;align-items:center;min-height:3rem;padding-inline:.5rem;font-weight:600;text-decoration:underline;text-underline-offset:.3em;text-decoration-thickness:2px}
@@ -158,8 +158,8 @@ h3{font-size:var(--h3);line-height:1.2}
 .kk{flex:none;width:min(15rem,70%);display:grid;gap:.25rem;border-radius:1rem;padding:1rem;font-size:.8rem;color:var(--text);transition:transform var(--dauer-mittel) var(--kurve)}
 .kk b{font-size:1.2rem}
 .kk--himmel{background:var(--himmel)}.kk--sonne{background:var(--sonne)}.kk--koralle{background:var(--koralle)}
-.bk:hover .kk:nth-child(2){transform:translateY(-6px)}
-.bk:hover .kk:nth-child(3){transform:translateY(-12px)}
+@media (hover:hover) and (pointer:fine){.bk:hover .kk:nth-child(2){transform:translateY(-6px)}}
+@media (hover:hover) and (pointer:fine){.bk:hover .kk:nth-child(3){transform:translateY(-12px)}}
 .ziele{display:grid;gap:.75rem;font-size:.9rem}
 .ziele>div{display:grid;gap:.5rem}
 
@@ -219,11 +219,11 @@ h3{font-size:var(--h3);line-height:1.2}
 .mehr__kopf p{color:var(--text-leise);margin-top:.5rem}
 .pfeile{display:flex;gap:.5rem}
 .pfeil{display:grid;place-items:center;width:3rem;height:3rem;border-radius:50%;background:var(--akzent);color:var(--akzent-text);transition:transform var(--dauer-kurz) var(--kurve)}
-.pfeil:hover{transform:translateY(-2px)}
+@media (hover:hover) and (pointer:fine){.pfeil:hover{transform:translateY(-2px)}}
 .pfeil[aria-disabled="true"]{opacity:.35;cursor:default}
 .spur{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.5rem var(--bleed,var(--rand)) 1rem;scroll-padding-inline:var(--bleed,var(--rand));scrollbar-width:thin;--bleed:max(var(--rand),calc((100vw - var(--breite)) / 2))}
 .fk{flex:none;scroll-snap-align:start;width:min(19rem,80vw);display:grid;gap:.6rem;align-content:start;background:var(--weiss);border-radius:var(--radius-karte);padding:1rem 1rem 1.5rem;box-shadow:0 1px 0 var(--linie);transition:transform var(--dauer-mittel) var(--kurve)}
-.fk:hover{transform:translateY(-4px)}
+@media (hover:hover) and (pointer:fine){.fk:hover{transform:translateY(-4px)}}
 .fk h3{font-size:1.25rem;margin-top:.5rem}
 .fk p{color:var(--text-leise)}
 .fk__bild{display:grid;align-content:center;min-height:9rem;border-radius:1rem;background:var(--flaeche);padding:1rem;font-size:.8rem}
@@ -273,7 +273,7 @@ h3{font-size:var(--h3);line-height:1.2}
 .stimmband::-webkit-scrollbar{display:none}
 .stimmband__spur{display:flex;flex:none;gap:1rem;padding-right:1rem;list-style:none;animation:reihe 80s linear infinite}
 .stimmband--2 .stimmband__spur{animation-direction:reverse;animation-duration:90s}
-.stimmband:hover .stimmband__spur{animation-play-state:paused}
+@media (hover:hover) and (pointer:fine){.stimmband:hover .stimmband__spur{animation-play-state:paused}}
 .stimme{flex:none;width:min(21rem,78vw);display:grid;gap:.75rem;align-content:space-between;background:var(--weiss);border-radius:var(--radius-karte);padding:1.25rem;box-shadow:0 1px 0 var(--linie)}
 .stimme blockquote p{font-size:1.0625rem}
 .stimme__name{color:var(--text-leise);font-size:1rem;font-weight:600}

@@ -19,7 +19,7 @@ main>section{position:relative;overflow:clip}
 .knopf{justify-content:center;text-align:center;font-weight:700;font-size:1rem;padding:.4rem .5rem .4rem 1.5rem;min-height:3rem}
 .knopf:hover{box-shadow:0 8px 20px color-mix(in srgb,var(--akzent) 28%,transparent)}
 .knopf__punkt{display:inline-grid;place-items:center;width:2.25rem;height:2.25rem;border-radius:50%;background:var(--zitrone);color:var(--marine-dunkel);transition:transform var(--dauer-kurz) var(--kurve)}
-.knopf:hover .knopf__punkt{transform:translateX(3px)}
+@media (hover:hover) and (pointer:fine){.knopf:hover .knopf__punkt{transform:translateX(3px)}}
 .knopf:not(:has(.knopf__punkt)){padding-right:1.5rem}
 .knopf--rand{padding:.4rem 1.5rem;box-shadow:inset 0 0 0 2px var(--akzent);color:var(--akzent)}
 .knopf--rand:hover{box-shadow:inset 0 0 0 2px var(--akzent),0 8px 20px color-mix(in srgb,var(--akzent) 18%,transparent)}
