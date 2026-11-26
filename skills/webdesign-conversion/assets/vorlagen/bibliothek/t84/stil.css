@@ -145,6 +145,8 @@ h3{font-size:var(--h3);line-height:1.2}
 .hoch h3{font-size:1.125rem;margin-top:.5rem;font-weight:600}
 .hoch p{color:var(--text-leise-dunkel);font-size:1rem}
 @media (min-width:48rem){.dunkel__spur{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1rem,2vw,2rem);overflow:visible;margin-inline:0;padding-inline:0}.hoch{flex:none}}
+/* Mobil liegen die Karten in einer Wischspur: was außerhalb des Bildschirms steht, wird nicht von selbst eingeblendet, deshalb sofort sichtbar */
+@media (max-width:47.99rem){.js .dunkel__spur .hoch[data-zeig]{opacity:1;transform:none}}
 .dunkel__aussage{font-size:clamp(1.75rem,1.1rem + 2.6vw,3.25rem);line-height:1.15;max-width:22ch;margin:clamp(4rem,9vw,8rem) 0 clamp(3rem,7vw,6rem) auto;text-align:left;color:var(--text-auf-dunkel)}
 .dunkel .licht .wort{opacity:.3}
 .dunkel .licht .wort.an{opacity:1}
