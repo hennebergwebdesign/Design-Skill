@@ -90,7 +90,7 @@ a{color:inherit}
 .held h1{font-size:clamp(2.4rem,1.2rem + 5vw,5rem);line-height:1.05;text-wrap:balance;color:var(--weiss)}
 .held__lead{max-width:38rem;font-size:var(--text-l);color:var(--text)}
 .held__knoepfe{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.75rem 1.75rem;margin-top:.5rem}
-.held__beleg{display:inline-flex;align-items:center;gap:.6rem;color:var(--text)}
+.held__beleg{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;color:var(--text);text-align:left}
 .held__beleg .stern{color:var(--akzent);display:inline-flex}
 .held__tel{color:var(--text)}
 .held__tel a{text-decoration:underline;text-decoration-color:var(--akzent);text-underline-offset:.3em;text-decoration-thickness:2px;display:inline-block;padding-block:.6rem}

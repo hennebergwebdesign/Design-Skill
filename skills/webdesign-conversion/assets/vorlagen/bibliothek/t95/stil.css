@@ -20,7 +20,7 @@ h3{font-size:var(--h3);line-height:1.2}
 .knopf--rand:hover{box-shadow:inset 0 0 0 1.5px currentColor}
 .knopf--hell{background:var(--weiss);color:var(--text)}
 .knopf svg{flex:none;transition:transform var(--dauer-kurz) var(--kurve)}
-.knopf:hover svg{transform:translateX(3px)}
+@media (hover:hover) and (pointer:fine){.knopf:hover svg{transform:translateX(3px)}}
 
 /* Bildplatzhalter */
 .bild{--bild-grund:radial-gradient(70% 60% at 25% 20%,color-mix(in srgb,var(--szene-ocker) 45%,transparent),transparent 70%),linear-gradient(150deg,var(--ton-1),var(--ton-5))}
@@ -68,7 +68,7 @@ h3{font-size:var(--h3);line-height:1.2}
 .held__bild img{object-position:30% 35%}
 .held__verlauf{position:absolute;inset:0;z-index:-2;background:linear-gradient(to top,rgba(14,10,6,.9) 0,rgba(14,10,6,.7) 32%,rgba(14,10,6,.25) 62%,rgba(14,10,6,.1) 100%)}
 .held::after{content:"";position:absolute;inset:0;z-index:-1;background:#0e0a06;opacity:calc(var(--dunkel,0) * .55);pointer-events:none}
-.held__text{display:grid;justify-items:center;gap:1.25rem;text-align:center;max-width:62rem;margin-inline:auto;padding:8rem var(--rand) clamp(2.5rem,6vw,4.5rem)}
+.held__text{display:grid;justify-items:center;gap:1.25rem;text-align:center;max-width:62rem;margin-inline:auto;padding:8rem var(--rand) clamp(4.5rem,6vw,4.5rem)}
 .held h1{font-size:clamp(2.5rem,1.2rem + 6vw,6.25rem);line-height:1.04;letter-spacing:-.035em;font-weight:500;max-width:14ch}
 .held__lead{font-size:var(--text-l);max-width:38rem;color:#f4ece0}
 .held__knoepfe{display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem}
@@ -83,7 +83,7 @@ h3{font-size:var(--h3);line-height:1.2}
 .blase--ant{background:var(--ton,var(--szene-orange));border-radius:var(--radius-blase) var(--radius-blase) 6px var(--radius-blase)}
 .chips{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
 .chip{min-height:2.75rem;padding:.4rem 1.1rem;border-radius:999px;background:var(--weiss);color:var(--text);font-weight:700;font-size:1rem;box-shadow:0 6px 16px rgba(14,10,6,.22);transition:transform var(--dauer-kurz) var(--kurve),opacity var(--dauer-kurz)}
-.chip:hover{transform:translateY(-2px)}
+@media (hover:hover) and (pointer:fine){.chip:hover{transform:translateY(-2px)}}
 .chip[aria-pressed="true"]{background:var(--ton,var(--szene-orange))}
 .chip--status{pointer-events:none;display:inline-flex;align-items:center;gap:.5rem;background:var(--text);color:#fff}
 .chip--status i{width:.6rem;height:.6rem;border-radius:50%;background:var(--szene-lime)}
@@ -143,11 +143,11 @@ h3{font-size:var(--h3);line-height:1.2}
 .sprachen__liste{display:grid;grid-template-columns:repeat(2,1fr);gap:.25rem 1rem}
 .sprachen__liste li{display:flex;align-items:center;gap:.6rem;min-height:2.75rem;padding:.2rem .75rem;border-radius:12px;font-size:1.0625rem;font-weight:600;opacity:.72;transition:opacity var(--dauer-mittel) var(--kurve),transform var(--dauer-mittel) var(--kurve)}
 .sprachen__liste li::before{content:"";flex:none;width:.5rem;height:.5rem;border-radius:50%;background:var(--szene-ocker);opacity:.5}
-.sprachen__liste li:hover,.sprachen__liste li.an{opacity:1;transform:translateX(6px)}
-.sprachen__liste li:hover::before,.sprachen__liste li.an::before{opacity:1;background:var(--szene-lime)}
+.sprachen__liste li.an{opacity:1;transform:translateX(6px)}
+.sprachen__liste li.an::before{opacity:1;background:var(--szene-lime)}
 @media (min-width:36rem){.sprachen__liste{grid-template-columns:repeat(3,1fr)}}
 @media (min-width:62rem){.sprachen__liste{grid-template-columns:repeat(6,1fr)}}
-@media (prefers-reduced-motion:reduce){.sprachen__liste li{opacity:1;transition:none}.sprachen__liste li:hover{transform:none}}
+@media (prefers-reduced-motion:reduce){.sprachen__liste li{opacity:1;transition:none}.sprachen__liste li.an{transform:none}}
 
 /* Sammlung: dunkelgrün, Foto Collage driftet */
 .sammlung{background:var(--gruen);color:var(--text-auf-dunkel);padding-block:var(--raum);overflow-x:clip}
@@ -193,7 +193,7 @@ h3{font-size:var(--h3);line-height:1.2}
 .system{position:relative;isolation:isolate;overflow:clip;background:radial-gradient(90% 70% at 75% 0%,rgba(255,122,47,.22),transparent 60%),radial-gradient(70% 60% at 10% 100%,rgba(240,178,77,.14),transparent 60%),var(--nacht);color:var(--text-auf-dunkel);padding-block:calc(var(--raum) * 1.2)}
 .system::before,.system::after{content:"";position:absolute;inset:0;z-index:-1;background-size:480px 360px;pointer-events:none}
 .system::before{background-image:radial-gradient(1.6px 1.6px at 40px 60px,#fff 50%,transparent),radial-gradient(1.2px 1.2px at 120px 220px,#fff 50%,transparent),radial-gradient(1.8px 1.8px at 210px 110px,#ffe9c9 50%,transparent),radial-gradient(1.2px 1.2px at 300px 300px,#fff 50%,transparent),radial-gradient(1.6px 1.6px at 380px 40px,#fff 50%,transparent),radial-gradient(1.2px 1.2px at 440px 180px,#ffe9c9 50%,transparent),radial-gradient(1px 1px at 70px 320px,#fff 50%,transparent)}
-.system::after{background-image:radial-gradient(1.2px 1.2px at 90px 140px,#fff 50%,transparent),radial-gradient(1.8px 1.8px at 170px 20px,#fff 50%,transparent),radial-gradient(1.2px 1.2px at 250px 250px,#ffe9c9 50%,transparent),radial-gradient(1.6px 1.6px at 340px 150px,#fff 50%,transparent),radial-gradient(1px 1px at 420px 330px,#fff 50%,transparent),radial-gradient(1.4px 1.4px at 20px 250px,#fff 50%,transparent);background-position:130px 70px}
+.system::after{background-image:radial-gradient(1.2px 1.2px at 90px 140px,#fff 50%,transparent),radial-gradient(1.8px 1.8px at 170px 20px,#fff 50%,transparent),radial-gradient(1.2px 1.2px at 250px 250px,#ffe9c9 50%,transparent),radial-gradient(1.6px 1.6px at 340px 150px,#fff 50%,transparent),radial-gradient(1px 1px at 420px 330px,#fff 50%,transparent),radial-gradient(1.4px 1.4px at 20px 250px,#fff 50%,transparent);background-position:130px 70px;background-size:677px 503px}
 .system .lead{color:var(--text-leise-dunkel)}
 .system__karten{display:grid;gap:1rem;width:min(100% - 2*var(--rand),64rem);margin-inline:auto}
 .system__karte{padding:1.5rem;border-radius:var(--radius-karte);background:rgba(255,255,255,.08);box-shadow:inset 0 0 0 1px rgba(255,255,255,.16)}

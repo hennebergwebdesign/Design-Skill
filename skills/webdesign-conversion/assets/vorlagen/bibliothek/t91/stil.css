@@ -155,8 +155,8 @@ h3{font-size:var(--h3);line-height:1.2}
 .m-hocker{--c:var(--iso-hocker)}.m-bett{--c:var(--iso-bett)}.m-bettkopf{--c:var(--iso-bettkopf)}.m-wanne{--c:var(--iso-wanne)}
 .lampe circle{fill:var(--iso-gold);stroke:color-mix(in srgb,#000 25%,transparent);stroke-width:.6}
 .iso__bild .faden{fill:none;stroke:var(--text-leise);stroke-width:1}
-.iso[data-bereit] .iso__s{opacity:0;transform:translateY(-22px);transition:opacity .6s var(--kurve),transform .9s var(--kurve);transition-delay:calc(var(--s) * .3s)}
-.iso.gebaut .iso__s{opacity:1;transform:none}
+.iso[data-bereit] .iso__s{opacity:0;transform:translateY(-22px)}
+.iso.gebaut .iso__s{opacity:1;transform:none;transition:opacity .6s var(--kurve),transform .9s var(--kurve);transition-delay:calc(var(--s) * .3s)}
 .schritte{display:grid;gap:2rem}
 @media (min-width:36rem){.schritte{grid-template-columns:1fr 1fr}}
 @media (min-width:64rem){.schritte{grid-template-columns:repeat(4,1fr);gap:1.5rem;align-items:start}.schritt:nth-child(2){margin-top:2.5rem}.schritt:nth-child(3){margin-top:5rem}.schritt:nth-child(4){margin-top:7.5rem}}

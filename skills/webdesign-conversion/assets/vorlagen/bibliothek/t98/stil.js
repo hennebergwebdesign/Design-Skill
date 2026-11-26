@@ -29,10 +29,17 @@
     const k = f.querySelector('button'), h = f.querySelector('.film__hinweis');
     if (!k || !h) return;
     h.setAttribute('aria-live', 'polite');
-    k.addEventListener('click', () => { h.textContent = 'Platzhalter: Es ist noch kein Film hinterlegt. Im Projekt öffnet sich hier der Player, ohne Autostart und mit Pause Knopf.'; });
+    k.addEventListener('click', () => { h.textContent = 'Platzhalter: Es ist noch kein Film hinterlegt. Im Projekt öffnet sich hier der Player, Start nur auf Knopfdruck, mit Pause Knopf.'; });
   });
 
-  // 3. Formulare ohne Versand: zeigen nur den Hinweis, dass die Vorlage nichts sendet
+  // 3. Wortmarke im Fuß fährt ein, sobald sie sichtbar wird (ohne Beobachter oder bei reduzierter Bewegung sofort sichtbar)
+  document.querySelectorAll('.fuss__marke').forEach((m) => {
+    if (reduziert || !('IntersectionObserver' in window)) { m.classList.add('ist-da'); return; }
+    const io = new IntersectionObserver((e) => { if (e.some((x) => x.isIntersecting)) { m.classList.add('ist-da'); io.disconnect(); } }, { threshold: 0.05 });
+    io.observe(m);
+  });
+
+  // 4. Formulare ohne Versand: zeigen nur den Hinweis, dass die Vorlage nichts sendet
   document.querySelectorAll('[data-formular]').forEach((f) => f.addEventListener('submit', (e) => {
     e.preventDefault();
     const m = f.querySelector('[data-formular-meldung]');
