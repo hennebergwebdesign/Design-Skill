@@ -1,0 +1,36 @@
+/* marke.css der Vorlage "Reinigung Marine und Zitrone": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast (selbst nachgerechnet, WCAG 2.x), Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1:
+   --akzent-text auf --akzent 11,6 | --text auf --flaeche 14,9 | --text auf --flaeche-alt 13,3
+   --text-leise auf --flaeche 6,5, auf --weiss 7,0, auf --flaeche-alt 5,8
+   --zitrone auf --marine-dunkel 11,0 (Fläche oder Zeichen auf Dunkel), --text auf --zitrone 11,7 (Knopf auf Dunkel)
+   --text-auf-dunkel auf --marine-dunkel 15,2 | --text-leise-dunkel auf --marine-dunkel 10,3
+   --feld-rand auf --weiss siehe unten (Eingabefeldrand, Ziel mindestens 3 zu 1)
+   Zitrone ist nie Textfarbe auf Hell. */
+:root{
+  --flaeche:#f3f6fa;           /* sehr helles Blaugrau */
+  --flaeche-alt:#e3eaf2;
+  --flaeche-dunkel:#0b2742;
+  --text:#0f2236;
+  --text-leise:#4a5a6e;
+  --linie:#d3dde9;
+  --akzent:#123a63;            /* Hauptaktion: Marine mit weißem Text */
+  --akzent-text:#ffffff;
+  --schrift-titel:'Familjen Grotesk',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:28px;
+  --radius-bild:28px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:56px;         /* stark gerundeter Fotorahmen */
+  --titel-gewicht:600;
+  --titel-spur:-0.025em;
+  --marine-dunkel:#0b2742;
+  --marine-mittel:#2a5a8c;     /* große Kreise, nur Fläche */
+  --zitrone:#f7dc3c;           /* Gegenakzent: Fläche, Kreis, Knopf auf Dunkel, nie Text auf Hell */
+  --weiss:#ffffff;
+  --feld-rand:#5e7088;
+  --text-auf-dunkel:#ffffff;
+  --text-leise-dunkel:#c9d6e6;
+  --linie-dunkel:#2c4a6b;
+}

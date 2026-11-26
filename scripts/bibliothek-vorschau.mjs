@@ -36,7 +36,7 @@ const basis = `http://127.0.0.1:${server.address().port}`;
 
 const nurIdx = process.argv.indexOf('--nur');
 const nur = nurIdx > 0 ? process.argv[nurIdx + 1].split(',') : null;
-const ordner = (await readdir(wurzel)).filter((n) => /^t\d\d$/.test(n) && (!nur || nur.includes(n))).sort();
+const ordner = (await readdir(wurzel)).filter((n) => /^t\d{2,3}$/.test(n) && (!nur || nur.includes(n))).sort();
 await mkdir(join(wurzel, 'vorschau'), { recursive: true });
 const browser = await chromiumStarten(pw.chromium);
 /* Desktop: hohe Vorschau (oberer Seitenteil, Format 4 zu 5) und Abschnittsübersicht (acht gleichmäßig verteilte Ausschnitte der ganzen Seite in zwei Spalten, erscheint beim Überfahren).
