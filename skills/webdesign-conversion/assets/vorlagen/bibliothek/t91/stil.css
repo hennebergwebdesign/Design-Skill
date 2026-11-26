@@ -23,7 +23,7 @@ h3{font-size:var(--h3);line-height:1.2}
 
 /* Wasserzeichen: Dekor, Wort riesig und leise */
 .wz{position:absolute;left:3%;top:4%;z-index:0;font-family:var(--schrift-titel);font-weight:600;font-size:clamp(6rem,24vw,23rem);line-height:.8;letter-spacing:-.04em;color:color-mix(in srgb,var(--text) 6%,transparent);white-space:nowrap;pointer-events:none;user-select:none}
-.wz--dunkel{color:color-mix(in srgb,var(--text-auf-dunkel) 7%,transparent);top:auto;bottom:-1%;left:auto;right:2%}
+.wz--dunkel{color:color-mix(in srgb,var(--text-auf-dunkel) 7%,transparent);top:auto;bottom:-2%;left:2%;font-size:clamp(7rem,30vw,30rem)}
 
 /* Kopf: dunkle Leiste, ohne JavaScript scrollt sie mit */
 .kopf{position:absolute;top:0;left:0;right:0;z-index:50;color:var(--text-auf-dunkel)}
@@ -87,7 +87,7 @@ h3{font-size:var(--h3);line-height:1.2}
 .kopfzeile{display:grid;gap:1rem;align-items:end;margin-bottom:clamp(2rem,4vw,3.5rem)}
 .kopfzeile h2{max-width:18ch}
 .kopfzeile__text{color:var(--text-leise);font-size:var(--text-l);max-width:34rem}
-@media (min-width:62rem){.kopfzeile{grid-template-columns:1fr 1fr;gap:4rem}.kopfzeile__text{justify-self:end}}
+@media (min-width:62rem){.kopfzeile{grid-template-columns:1fr 1fr;gap:4rem}.kopfzeile__text,.kopfzeile>.link{justify-self:end}}
 .karten{display:grid;gap:1rem}
 @media (min-width:40rem){.karten{grid-template-columns:1fr 1fr}}
 @media (min-width:64rem){.karten{grid-template-columns:repeat(4,1fr)}}
@@ -330,7 +330,7 @@ h3{font-size:var(--h3);line-height:1.2}
 .fuss{position:relative;overflow:clip;background:var(--flaeche-dunkel);color:var(--text-auf-dunkel);padding-top:clamp(3rem,6vw,5rem)}
 .fuss__oben{display:grid;gap:2rem;grid-template-columns:1fr 1fr}
 .fuss__marke-kopf{grid-column:1/-1;display:grid;gap:.75rem;max-width:22rem}
-.fuss__logo{display:flex;align-items:center;gap:.6rem;font-family:var(--schrift-titel);font-size:1.5rem;font-weight:600;color:var(--text-auf-dunkel)}
+.fuss .fuss__logo{display:flex;align-items:center;gap:.6rem;font-family:var(--schrift-titel);font-size:1.5rem;font-weight:600;color:var(--text-auf-dunkel)}
 .fuss__logo svg{color:var(--gold-hell)}
 .fuss__marke-kopf p:last-child,.fuss p{color:var(--text-leise-dunkel);font-size:1rem}
 .fuss__titel{font-family:var(--schrift-text);font-size:1rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-auf-dunkel);margin-bottom:.5rem}
@@ -338,6 +338,6 @@ h3{font-size:var(--h3);line-height:1.2}
 .fuss ul a:hover,.fuss__tel a:hover{color:var(--gold-hell)}
 .fuss__tel a{display:inline-flex;align-items:center;min-height:2.75rem;font-weight:700;color:var(--text-auf-dunkel)}
 @media (min-width:62rem){.fuss__oben{grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:3rem}.fuss__marke-kopf{grid-column:auto}}
-.fuss__wort{margin-top:clamp(2rem,5vw,4rem);font-family:var(--schrift-titel);font-weight:600;font-size:min(16vw,20rem);line-height:.8;letter-spacing:-.04em;text-align:center;white-space:nowrap;color:color-mix(in srgb,var(--text-auf-dunkel) 10%,transparent);user-select:none}
+.fuss .fuss__wort{margin-top:clamp(2rem,5vw,4rem);font-family:var(--schrift-titel);font-weight:600;font-size:min(16vw,20rem);line-height:.8;letter-spacing:-.04em;text-align:center;white-space:nowrap;color:color-mix(in srgb,var(--text-auf-dunkel) 10%,transparent);user-select:none}
 .fuss__unten{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 1.5rem;padding-block:1.5rem 2rem;border-top:1px solid var(--linie-dunkel);margin-top:1.5rem}
 .fuss__unten ul{display:flex;gap:1.25rem}

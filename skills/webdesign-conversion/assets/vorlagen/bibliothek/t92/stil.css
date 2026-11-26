@@ -71,7 +71,7 @@ section[id]{scroll-margin-top:calc(var(--kopf-h) + .5rem)}
 /* 1. Held */
 .held{position:relative;isolation:isolate;overflow:clip;background:var(--flaeche-dunkel);color:var(--text-auf-dunkel);padding-block:clamp(3.5rem,9vw,7rem) clamp(2rem,5vw,3.5rem)}
 .held__bild{position:absolute;inset:0;z-index:-1;overflow:hidden}
-.held__bild img{width:100%;height:100%;object-fit:cover;object-position:62% 45%;transform-origin:70% 50%;animation:zoom 26s linear both}
+.held__bild img{width:100%;height:100%;object-fit:cover;object-position:62% 45%;transform-origin:70% 50%;animation:zoom 26s linear both} /* bewusst lang: langsamer Zoom auf einer großen, nicht bedienten Fläche */
 .held__bild::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,26,54,.9),rgba(15,36,71,.86))}
 @keyframes zoom{from{transform:scale(1)}to{transform:scale(1.14)}}
 .held__innen{display:grid;gap:clamp(2.5rem,6vw,5rem)}
@@ -97,8 +97,8 @@ section[id]{scroll-margin-top:calc(var(--kopf-h) + .5rem)}
 .kasten h2{margin:1rem auto 0;max-width:16ch}
 .kasten__text{margin:1.5rem auto 0;max-width:38rem;color:var(--text-leise);font-size:var(--text-l)}
 .kasten__knoepfe{display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem;margin-top:2rem}
-.scheibe{position:absolute;display:grid;place-items:center;width:5rem;height:5rem;border-radius:50%;background:var(--akzent);color:var(--akzent-hell)}
-.scheibe--1{left:1rem;top:-1.75rem}
+.scheibe{position:absolute;display:grid;place-items:center;width:4rem;height:4rem;border-radius:50%;background:var(--akzent);color:var(--akzent-hell)}
+.scheibe--1{left:.75rem;top:-2.25rem}
 .scheibe--2{right:1rem;bottom:-1.75rem}
 @media (min-width:900px){
   .kasten{border-radius:14rem}
@@ -166,14 +166,14 @@ section[id]{scroll-margin-top:calc(var(--kopf-h) + .5rem)}
 .karten{display:grid;gap:1.25rem}
 .karte{display:flex;flex-direction:column;background:var(--weiss);border-radius:var(--radius-karte);overflow:hidden;box-shadow:0 0 0 1px var(--linie)}
 .karte__bild{aspect-ratio:4/3;border-radius:0}
-.karte__bild img{transition:transform .6s var(--kurve)}
+.karte__bild img{transition:transform .3s var(--kurve)}
 .karte__text{display:flex;flex-direction:column;gap:.75rem;flex:1;padding:1.5rem}
 .karte__text p{color:var(--text-leise)}
 .karte__link{display:flex;justify-content:space-between;align-items:center;gap:1rem;min-height:44px;margin-top:auto;padding-top:.5rem;font-weight:600;color:var(--akzent)}
 .js .karte.ist-da,.karte{transition:transform .28s var(--kurve),box-shadow .28s var(--kurve)}
 .js .karte[data-zeig]{transition:opacity var(--dauer-lang) var(--kurve),transform var(--dauer-lang) var(--kurve)}
 .js .karte[data-zeig].ist-da{transition:transform .28s var(--kurve),box-shadow .28s var(--kurve),opacity .28s;transition-delay:0s}
-@media (hover:hover){
+@media (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
   .karte:hover,.js .karte.ist-da:hover{transform:translateY(-8px);box-shadow:0 0 0 1px var(--linie),0 22px 40px color-mix(in srgb,var(--akzent) 16%,transparent)}
   .karte:hover .karte__bild img{transform:scale(1.05)}
   .karte:hover .pfeilscheibe{transform:translate(2px,-2px)}
@@ -182,7 +182,8 @@ section[id]{scroll-margin-top:calc(var(--kopf-h) + .5rem)}
 
 /* 8. Unterschied: Vergleichstabelle in Marine */
 .tabelle{background:var(--flaeche-dunkel);color:var(--text-auf-dunkel);border-radius:var(--radius-gross);padding:clamp(.75rem,3vw,2.5rem)}
-.tabelle table{width:100%;border-collapse:collapse;font-size:1rem;hyphens:manual}
+.tabelle table{width:100%;table-layout:fixed;border-collapse:collapse;font-size:1rem}
+.tabelle th:first-child{width:48%}
 .tabelle th,.tabelle td{padding:.9rem .4rem;border-bottom:1px solid var(--linie-dunkel);text-align:center;vertical-align:middle}
 .tabelle thead th{font-family:var(--schrift-titel);font-size:1rem;font-weight:600;line-height:1.2;color:var(--text-leise-dunkel)}
 .tabelle tbody th{text-align:left;font-weight:500;padding-left:.75rem}
@@ -196,16 +197,16 @@ section[id]{scroll-margin-top:calc(var(--kopf-h) + .5rem)}
 .punkt--ja::after{content:"";position:absolute;left:50%;top:46%;width:.4rem;height:.75rem;border:solid var(--flaeche-dunkel);border-width:0 2.5px 2.5px 0;transform:translate(-50%,-50%) rotate(45deg)}
 .punkt--nein{box-shadow:inset 0 0 0 2px #6d86b3}
 .tabelle__hinweis{margin-top:1.25rem;color:var(--text-leise);font-size:1rem;max-width:48rem}
-.js .tabelle .punkt{opacity:0;transform:scale(.3);transition:opacity .4s var(--kurve),transform .5s var(--kurve);transition-delay:calc(var(--r,1) * 110ms + .25s)}
+.js .tabelle .punkt{opacity:0;transform:scale(.3);transition:opacity .3s var(--kurve),transform .5s var(--kurve);transition-delay:calc(var(--r,1) * 110ms + .25s)}
 .js .tabelle.ist-da .punkt{opacity:1;transform:none}
 @media (min-width:768px){.tabelle th,.tabelle td{padding-block:1.1rem}.tabelle tbody th{font-size:1.125rem}}
 
 /* 9. Diagnostik */
 .diagnostik{background:var(--flaeche-alt)}
 .diag__raster{display:grid;gap:1.25rem}
-.diag__gross{background:var(--flaeche-dunkel);color:var(--text-auf-dunkel);border-radius:var(--radius-gross);padding:clamp(1.5rem,4vw,3rem)}
+.diag__gross{display:flex;flex-direction:column;background:var(--flaeche-dunkel);color:var(--text-auf-dunkel);border-radius:var(--radius-gross);padding:clamp(1.5rem,4vw,3rem)}
 .diag__titel{font-size:clamp(1.5rem,1.1rem + 1.6vw,2.25rem);font-weight:500}
-.schema{margin-block:1.75rem;padding:1.25rem 1rem;border-radius:20px;background:color-mix(in srgb,#fff 7%,transparent);overflow:clip}
+.schema{flex:1;display:grid;align-items:center;margin-block:1.75rem;padding:1.25rem 1rem;border-radius:20px;background:color-mix(in srgb,#fff 7%,transparent);overflow:clip}
 .schema svg{width:100%;height:auto}
 .schema__zaehne{color:var(--text-auf-dunkel);opacity:.92}
 .schema__linie{fill:var(--akzent-hell)}
@@ -230,18 +231,18 @@ section[id]{scroll-margin-top:calc(var(--kopf-h) + .5rem)}
 .team__raster{display:grid;grid-template-columns:repeat(2,1fr);gap:.9rem}
 .person{position:relative;overflow:hidden;border-radius:var(--radius-karte)}
 .person__bild{aspect-ratio:3/4;border-radius:0}
-.person__bild img{object-position:50% 20%;transition:transform .6s var(--kurve)}
+.person__bild img{object-position:50% 20%;transition:transform .3s var(--kurve)}
 .person__band{position:absolute;left:.6rem;right:.6rem;bottom:.6rem;padding:.7rem .9rem;border-radius:14px;background:var(--flaeche-dunkel);color:var(--text-auf-dunkel);line-height:1.3}
 .person__band strong{display:block;font-family:var(--schrift-titel);font-weight:600;font-size:1.0625rem}
 .person__band span{display:block;margin-top:.15rem;color:var(--text-leise-dunkel);font-size:1rem;line-height:1.3}
-@media (hover:hover){.person:hover .person__bild img{transform:scale(1.05)}}
+@media (hover:hover) and (pointer:fine){.person:hover .person__bild img{transform:scale(1.05)}}
 @media (min-width:900px){.team__raster{grid-template-columns:repeat(4,1fr);gap:1.25rem}}
 
 /* 11. Stimmen: Wischspur */
 .stimmen{background:var(--flaeche-alt)}
 .steuerung{display:flex;gap:.6rem}
 .rundknopf{display:grid;place-items:center;width:3rem;height:3rem;border-radius:50%;background:var(--akzent);color:var(--akzent-text);transition:transform var(--dauer-kurz) var(--kurve),opacity var(--dauer-kurz)}
-.rundknopf:hover{transform:scale(1.06)}
+@media (hover:hover) and (pointer:fine){.rundknopf[aria-disabled="false"]:hover{transform:scale(1.06)}}
 .rundknopf[aria-disabled="true"]{opacity:.35;cursor:default;transform:none}
 .spur{--seite:max(var(--rand),calc((100% - var(--breite)) / 2));display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.5rem var(--seite) 1.25rem;scroll-padding-inline:var(--seite);scrollbar-width:thin;overscroll-behavior-x:contain}
 .stimme{flex:0 0 min(82vw,23rem);scroll-snap-align:start;display:flex;flex-direction:column;gap:1.1rem;background:var(--weiss);border-radius:var(--radius-karte);box-shadow:0 0 0 1px var(--linie);padding:.75rem .75rem 1.5rem}
@@ -261,7 +262,7 @@ section[id]{scroll-margin-top:calc(var(--kopf-h) + .5rem)}
 .paket h3{font-size:1.75rem;font-weight:600}
 .paket__text{color:var(--text-leise)}
 .paket__preis{padding-block:1rem;border-block:1px solid var(--linie);min-height:5.5rem}
-.paket__wert{display:block;animation:wechsel .35s var(--kurve) both}
+.paket__wert{display:block;animation:wechsel .3s var(--kurve) both}
 .paket__wert .zahl{font-size:3rem;color:var(--akzent);margin-right:.35rem}
 @keyframes wechsel{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 .js [data-paket-raster][data-modus="monat"] [data-fuer="jahr"],.js [data-paket-raster][data-modus="jahr"] [data-fuer="monat"]{display:none}
@@ -293,12 +294,12 @@ section[id]{scroll-margin-top:calc(var(--kopf-h) + .5rem)}
 .journal__raster{display:grid;gap:1.75rem}
 .beitrag a{display:block;border-radius:var(--radius-karte)}
 .beitrag__bild{aspect-ratio:3/2}
-.beitrag__bild img{transition:transform .6s var(--kurve)}
+.beitrag__bild img{transition:transform .3s var(--kurve)}
 .beitrag__symbol{color:var(--akzent)}
 .beitrag__tag{margin-top:1rem;color:var(--text-leise);font-size:1rem;font-weight:600}
 .beitrag h3{margin-top:.35rem;font-size:1.375rem;font-weight:600;letter-spacing:-.01em;text-wrap:balance}
 .beitrag__mehr{display:inline-flex;align-items:center;gap:.4rem;min-height:44px;margin-top:.5rem;font-weight:600;color:var(--akzent);text-decoration:underline;text-underline-offset:.25em}
-@media (hover:hover){.beitrag a:hover .beitrag__bild img{transform:scale(1.05)}}
+@media (hover:hover) and (pointer:fine){.beitrag a:hover .beitrag__bild img{transform:scale(1.05)}}
 @media (min-width:768px){.journal__raster{grid-template-columns:repeat(3,1fr)}}
 
 /* 15. Termin */
@@ -359,5 +360,4 @@ section[id]{scroll-margin-top:calc(var(--kopf-h) + .5rem)}
   .held__bild img{animation:none}
   .paket__wert{animation:none}
   .js .tabelle .punkt{opacity:1;transform:none;transition:none}
-  .karte:hover,.js .karte.ist-da:hover{transform:none}
 }

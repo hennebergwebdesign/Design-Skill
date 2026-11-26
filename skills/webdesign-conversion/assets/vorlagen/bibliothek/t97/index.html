@@ -119,8 +119,10 @@
       <form class="held__formular" data-formular action="#" method="post" novalidate data-zeig>
         <!-- Turnstile Platzhalter: Cloudflare Turnstile Widget hier einsetzen, Token serverseitig prüfen -->
         <label class="sr-nur" for="f-held-mail">Deine E-Mail-Adresse</label>
-        <input id="f-held-mail" name="email" type="email" autocomplete="email" placeholder="deine@beispiel.invalid" required aria-describedby="h-held-hinweis">
-        <button class="knopf" type="submit">Erstgespräch vereinbaren</button>
+        <div class="held__feld">
+          <input id="f-held-mail" name="email" type="email" autocomplete="email" placeholder="deine@beispiel.invalid" required aria-describedby="h-held-hinweis">
+          <button class="knopf" type="submit">Erstgespräch vereinbaren</button>
+        </div>
         <small class="feld__hinweis" id="h-held-hinweis">Du bekommst Terminvorschläge per E-Mail, keine Werbung ohne deine Zustimmung.</small>
         <p class="formular__meldung" data-formular-meldung role="status" hidden>Beispielformular: In dieser Vorlage wird nichts gesendet. Der Versand wird im Projekt angebunden. Danach kommt eine Bestätigung per E-Mail.</p>
       </form>
@@ -202,8 +204,8 @@
         <div class="bild leitfaden__foto" data-zeig>
           <img src="bilder/zwei-frauen-am-holztisch-im-beratungsgespraech.webp" width="1000" height="667" alt="Zwei Frauen am Holztisch im Beratungsgespräch mit Notizbuch und Laptop (Beispielfoto)" loading="lazy" decoding="async">
         </div>
-        <div class="plan" data-zeig="links">
-          <div data-parallax="0.05">
+        <div class="plan__halter" data-parallax="0.04">
+          <div class="plan" data-zeig="links">
             <p class="plan__titel">Dein Beratungsplan</p>
             <ul class="plan__liste">
               <li><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-haken"/></svg>Bestandsaufnahme</li>
@@ -442,7 +444,7 @@
           <svg class="sticker__rund" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
             <defs><path id="kreis" d="M100 100m-74 0a74 74 0 1 1 148 0a74 74 0 1 1-148 0"/></defs>
             <circle cx="100" cy="100" r="100" fill="currentColor"/>
-            <text class="sticker__schrift" font-size="21" font-weight="600" letter-spacing="1.800"><textPath href="#kreis" startOffset="0">Erstgespräch vereinbaren ✦ Erstgespräch vereinbaren ✦</textPath></text>
+            <text class="sticker__schrift" font-size="22" font-weight="600"><textPath href="#kreis" startOffset="0" textLength="455" lengthAdjust="spacing">Erstgespräch vereinbaren ✦</textPath></text>
           </svg>
           <span class="sticker__pfeil"><svg width="32" height="32" aria-hidden="true" focusable="false"><use href="#i-pfeil-ur"/></svg></span>
         </a>

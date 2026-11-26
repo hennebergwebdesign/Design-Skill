@@ -11,7 +11,6 @@ h3{font-size:var(--h3);line-height:1.2}
 
 /* Knöpfe: eckig, kräftig, Hauptknopf in Signalgelb auf dunklem Grund */
 .knopf{justify-content:center;text-align:center;font-weight:800;min-height:3rem;padding:.8rem 1.6rem;letter-spacing:.01em}
-.knopf:hover{transform:translateY(-2px);box-shadow:0 8px 20px color-mix(in srgb,#000 28%,transparent)}
 .knopf svg{flex:none}
 .knopf--signal{background:var(--signal);color:var(--signal-text)}
 .knopf--hell{background:var(--weiss);color:var(--akzent-dunkel)}
@@ -27,9 +26,7 @@ h3{font-size:var(--h3);line-height:1.2}
 /* Pfeilknöpfe der Spuren */
 .steuerung{display:flex;gap:.5rem}
 .pfeil{display:grid;place-items:center;width:3rem;height:3rem;border-radius:var(--radius-knopf);background:var(--akzent);color:var(--akzent-text);transition:transform var(--dauer-kurz) var(--kurve),opacity var(--dauer-kurz)}
-.pfeil:hover{transform:translateX(2px)}
 .pfeil[aria-disabled="true"]{opacity:.4;cursor:default}
-.pfeil[aria-disabled="true"]:hover{transform:none}
 .steuerung--hell .pfeil{background:var(--weiss);color:var(--akzent-dunkel)}
 .kachel .pfeil{background:var(--signal);color:var(--signal-text)}
 
@@ -47,7 +44,6 @@ h3{font-size:var(--h3);line-height:1.2}
 .kopf__infos svg{color:var(--akzent);flex:none}
 .kopf__infos small{display:block;font-size:1rem;color:var(--text-leise);font-weight:500}
 .kopf__infos a{font-weight:800;font-size:1.125rem}
-.kopf__infos a:hover{text-decoration:underline;text-underline-offset:.25em}
 .kopf__burger{display:none;width:3rem;height:3rem;place-items:center;border-radius:var(--radius-karte);background:var(--akzent);color:var(--akzent-text)}
 .js .kopf__burger{display:grid}
 .burger,.burger::before,.burger::after{display:block;width:1.5rem;height:2px;background:currentColor;border-radius:2px;transition:transform var(--dauer-mittel) var(--kurve),opacity var(--dauer-kurz)}
@@ -67,7 +63,7 @@ h3{font-size:var(--h3);line-height:1.2}
 
 /* ===== Held ===== */
 .held{position:relative;background:var(--schwarz);color:var(--text-auf-dunkel);overflow:clip;isolation:isolate}
-.held__bg{position:absolute;inset:0;z-index:-3;animation:held-zoom 2.4s var(--kurve) both}
+.held__bg{position:absolute;inset:0;z-index:-3;animation:held-zoom 2.4s var(--kurve) both} /* Eintrittszoom bewusst lang, große Fläche ohne Bedienung */
 .held__bg img{width:100%;height:100%;object-fit:cover;opacity:.5;transform:scale(calc(1.06 + var(--schub,0) * .1))}
 .held__bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,color-mix(in srgb,var(--schwarz) 96%,transparent) 0 42%,color-mix(in srgb,var(--flaeche-dunkel) 60%,transparent))}
 @keyframes held-zoom{from{transform:scale(1.14)}to{transform:scale(1)}}
@@ -163,7 +159,7 @@ h3{font-size:var(--h3);line-height:1.2}
 /* ===== Ablauf mit Pfeilfeldern ===== */
 .ablauf h2{margin-bottom:2.5rem;text-align:center}
 .schritte{display:grid;gap:0}
-.schritt{position:relative;display:grid;gap:.5rem;align-content:center;padding:2rem 2rem 3.4rem;color:var(--text-auf-dunkel);background:var(--akzent);min-height:13rem;clip-path:polygon(0 0,100% 0,100% calc(100% - 1.6rem),50% 100%,0 calc(100% - 1.6rem));margin-top:-1.6rem}
+.schritt{position:relative;display:grid;gap:.5rem;align-content:start;padding:2rem 2rem 3.4rem;color:var(--text-auf-dunkel);background:var(--akzent);min-height:13rem;clip-path:polygon(0 0,100% 0,100% calc(100% - 1.6rem),50% 100%,0 calc(100% - 1.6rem));margin-top:-1.6rem}
 .schritt:first-child{margin-top:0}
 .schritt--1{background:var(--schwarz)}
 .schritt--2{background:var(--akzent)}
@@ -186,10 +182,8 @@ h3{font-size:var(--h3);line-height:1.2}
 .karten{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:.5rem}
 .karten::-webkit-scrollbar,.beitraege::-webkit-scrollbar,.stimmen__spur::-webkit-scrollbar{display:none}
 .karte{flex:0 0 min(84%,22rem);scroll-snap-align:start;background:var(--weiss);color:var(--text);border-radius:var(--radius-karte);overflow:hidden;display:flex;flex-direction:column;transition:transform var(--dauer-mittel) var(--kurve),box-shadow var(--dauer-mittel)}
-.karte:hover{transform:translateY(-6px);box-shadow:0 20px 36px color-mix(in srgb,#000 30%,transparent)}
 .karte__bild{position:relative;aspect-ratio:3/2;overflow:hidden;background:var(--akzent-dunkel)}
-.karte__bild img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--kurve)}
-.karte:hover .karte__bild img{transform:scale(1.05)}
+.karte__bild img{width:100%;height:100%;object-fit:cover;transition:transform var(--dauer-mittel) var(--kurve)}
 .karte__bild--svg{display:grid;place-items:center;background:linear-gradient(150deg,var(--akzent),var(--flaeche-dunkel))}
 .karte__bild--svg>svg{width:78%;height:auto}
 .karte__icon{position:absolute;right:0;bottom:0;display:grid;place-items:center;width:3.5rem;height:3.5rem;background:var(--akzent);color:var(--akzent-text);clip-path:polygon(1.2rem 0,100% 0,100% 100%,0 100%)}
@@ -199,7 +193,6 @@ h3{font-size:var(--h3);line-height:1.2}
 .karte__text p{color:var(--text-leise)}
 .karte__link{display:inline-flex;align-items:center;gap:.5rem;min-height:2.75rem;font-weight:800;color:var(--akzent);margin-top:auto}
 .karte__link svg{transition:transform var(--dauer-kurz) var(--kurve)}
-.karte__link:hover svg{transform:translateX(4px)}
 @media (min-width:62rem){.karte{flex-basis:calc((100% - 2rem) / 3)}}
 
 /* ===== Termin und Stimmen ===== */
@@ -214,7 +207,7 @@ h3{font-size:var(--h3);line-height:1.2}
 .stimmen__hinweis{font-size:1rem;color:var(--text-leise);margin-bottom:1.25rem}
 .stimmen__spur{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
 .stimme{flex:0 0 100%;scroll-snap-align:start;display:grid;gap:1rem;padding-right:.5rem;align-content:start}
-.stimme__sterne{display:flex;gap:.2rem;color:#c98c00}
+.stimme__sterne{display:flex;gap:.2rem;color:#9a6700}
 .stimme blockquote{font-size:var(--text-l);line-height:1.5}
 .stimme__name{display:flex;gap:.8rem;align-items:center;line-height:1.35}
 .stimme__kuerzel{display:grid;place-items:center;width:3rem;height:3rem;border-radius:50%;background:var(--akzent);color:var(--akzent-text);font-weight:800;flex:none}
@@ -259,14 +252,11 @@ h3{font-size:var(--h3);line-height:1.2}
 .beitraege{display:flex;gap:1.25rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
 .beitrag{flex:0 0 min(84%,24rem);scroll-snap-align:start;display:flex;flex-direction:column;background:var(--weiss);border:1.5px solid var(--linie);border-radius:var(--radius-karte);overflow:hidden}
 .beitrag__bild{position:relative;display:block;aspect-ratio:3/2;overflow:hidden;background:var(--akzent-dunkel)}
-.beitrag__bild img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--kurve)}
-.beitrag__bild::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 40%,color-mix(in srgb,#fff 45%,transparent) 50%,transparent 60%);transform:translateX(-120%);transition:transform .8s var(--kurve)}
-.beitrag:hover .beitrag__bild::after{transform:translateX(120%)}
-.beitrag:hover .beitrag__bild img{transform:scale(1.05)}
+.beitrag__bild img{width:100%;height:100%;object-fit:cover;transition:transform var(--dauer-mittel) var(--kurve)}
+.beitrag__bild::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 40%,color-mix(in srgb,#fff 45%,transparent) 50%,transparent 60%);transform:translateX(-120%);transition:transform var(--dauer-mittel) var(--kurve)}
 .beitrag__text{padding:1.3rem;display:flex;flex-direction:column;gap:.6rem;flex:1}
 .beitrag__meta{font-size:1rem;color:var(--text-leise)}
 .beitrag h3{font-size:1.3rem;color:var(--akzent-dunkel)}
-.beitrag h3 a:hover{text-decoration:underline;text-underline-offset:.2em}
 .beitrag__text>p:not(.beitrag__meta){color:var(--text-leise)}
 @media (min-width:62rem){.beitrag{flex-basis:calc((100% - 2.5rem) / 3)}}
 
@@ -289,13 +279,11 @@ h3{font-size:var(--h3);line-height:1.2}
 .kontaktleiste__liste svg{flex:none;color:var(--signal)}
 .kontaktleiste__liste span{display:grid;line-height:1.35}
 .kontaktleiste__liste small{font-size:1rem;color:#eaf0ff}
-.kontaktleiste__liste a:hover{text-decoration:underline;text-underline-offset:.2em}
 @media (min-width:62rem){.kontaktleiste__liste{grid-template-columns:repeat(3,1fr)}.kontaktleiste__liste li{clip-path:none}}
 .fuss__innen{display:grid;gap:2.5rem;padding-block:clamp(3rem,6vw,4.5rem)}
 .fuss__spalte h2{font-size:1.25rem;margin-bottom:1rem;font-family:var(--schrift-titel)}
 .fuss__spalte ul{display:grid;gap:.15rem}
 .fuss__spalte li a{display:inline-flex;align-items:center;min-height:2.75rem;color:var(--text-leise-dunkel)}
-.fuss__spalte li a:hover{color:var(--text-auf-dunkel);text-decoration:underline;text-underline-offset:.25em}
 .fuss__spalte--marke p{color:var(--text-leise-dunkel);margin-top:1rem;max-width:22rem}
 .zeiten{display:grid;gap:.7rem;margin:0}
 .zeiten div{display:flex;justify-content:space-between;gap:1rem;border-bottom:1px solid var(--linie-dunkel);padding-bottom:.6rem}
@@ -305,7 +293,6 @@ h3{font-size:var(--h3);line-height:1.2}
 .fuss__unten-innen{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:.5rem 1.5rem}
 .fuss__unten ul{display:flex;flex-wrap:wrap;gap:0 1.25rem}
 .fuss__unten a{display:inline-flex;align-items:center;min-height:2.75rem}
-.fuss__unten a:hover{color:var(--text-auf-dunkel);text-decoration:underline}
 @media (min-width:62rem){.fuss__innen{grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:3rem}}
 
 /* ===== Feste Leiste auf dem Handy ===== */
@@ -338,3 +325,20 @@ html{scroll-padding-top:1rem}
 }
 [hidden]{display:none!important}
 .beitraege,.karten,.tipps,.stimmen__spur{position:relative}
+.schritt--1{z-index:3}.schritt--2{z-index:2}.schritt--3{z-index:1}
+
+@media (hover:hover) and (pointer:fine){
+  .knopf:hover{transform:translateY(-2px);box-shadow:0 8px 20px color-mix(in srgb,#000 28%,transparent)}
+  .pfeil:hover{transform:translateX(2px)}
+  .pfeil[aria-disabled="true"]:hover{transform:none}
+  .kopf__infos a:hover{text-decoration:underline;text-underline-offset:.25em}
+  .karte:hover{transform:translateY(-6px);box-shadow:0 20px 36px color-mix(in srgb,#000 30%,transparent)}
+  .karte:hover .karte__bild img{transform:scale(1.05)}
+  .karte__link:hover svg{transform:translateX(4px)}
+  .beitrag:hover .beitrag__bild::after{transform:translateX(120%)}
+  .beitrag:hover .beitrag__bild img{transform:scale(1.05)}
+  .beitrag h3 a:hover{text-decoration:underline;text-underline-offset:.2em}
+  .kontaktleiste__liste a:hover{text-decoration:underline;text-underline-offset:.2em}
+  .fuss__spalte li a:hover{color:var(--text-auf-dunkel);text-decoration:underline;text-underline-offset:.25em}
+  .fuss__unten a:hover{color:var(--text-auf-dunkel);text-decoration:underline}
+}

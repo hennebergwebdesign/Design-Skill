@@ -19,7 +19,7 @@
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <symbol id="i-zeichen" viewBox="0 0 32 32" fill="currentColor"><path d="M5 6l11 10L5 26h8l11-10L13 6H5Z"/><path d="M19 6l11 10-11 10h-3l8-10-8-10h3Z" opacity=".55"/></symbol>
-  <symbol id="i-werkzeug" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></symbol>
+  <symbol id="i-werkzeug" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15.5 4a4.5 4.5 0 0 0-3.9 6.7L4.5 17.8a1.8 1.8 0 0 0 2.6 2.6l7.1-7.1A4.5 4.5 0 0 0 20 8.5l-2.800 2.800-2.500-.5-.5-2.500L17.100 5.500A4.500 4.500 0 0 0 15.500 4Z"/></symbol>
   <symbol id="i-euro" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7.5a6 6 0 1 0 0 9M5 10.5h8M5 13.5h8"/></symbol>
   <symbol id="i-schild" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6l7-3Z"/><path d="M9 12l2 2 4-4"/></symbol>
   <symbol id="i-uhr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
@@ -88,7 +88,7 @@
         <p class="kicker kicker--dunkel">Kfz Werkstatt in Musterstadt</p>
         <!-- Held: Autofahrer in Musterstadt, deren Auto kaputt oder zerkratzt ist; Lösung ist Reparatur und Lackierung mit Festpreis vorab und festem Termin; Beleg ist die Kundenbewertung unter den Knöpfen (Beispiel), vor dem Einsatz durch echte Angaben ersetzen -->
         <h1 id="h-held">Auto kaputt oder zerkratzt? Wir bringen es zurück auf die Straße</h1>
-        <p class="held__lead">Inspektion, Reparatur, Lackierung und Reifenservice an einem Ort. Sie bekommen den Festpreis vorab und einen festen Termin, auch für alle Marken.</p>
+        <p class="held__lead">Inspektion, Lackierung und Reifen an einem Ort. Festpreis vorab, fester Termin, alle Marken willkommen.</p>
         <div class="held__knoepfe">
           <a class="knopf knopf--signal" href="#termin">Termin vereinbaren</a>
           <a class="knopf knopf--hell" href="tel:+490000000000"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-telefon"/></svg>Jetzt anrufen</a>
@@ -106,7 +106,7 @@
           <div><dt>Anrufen</dt><dd><a href="tel:+490000000000">0000 000 000</a></dd></div>
           <div><dt>Adresse</dt><dd>Musterstraße 1, 00000 Musterstadt</dd></div>
           <div><dt>Werkstatt</dt><dd>Mo bis Fr 7:30 bis 18:00 Uhr, Sa 8:00 bis 12:00 Uhr</dd></div>
-          <div><dt>Sonntag</dt><dd>geschlossen, Pannenhilfe über die Telefonnummer</dd></div>
+          <div><dt>So</dt><dd>geschlossen, Pannenhilfe über die Telefonnummer</dd></div>
         </dl>
       </li>
       <li class="kachel kachel--form" data-zeig>
@@ -114,7 +114,7 @@
         <form class="schnell" action="#" method="post" data-formular>
           <!-- Turnstile Platzhalter: <div class="cf-turnstile" data-sitekey="SITE_KEY"></div> im Projekt einsetzen, Versand serverseitig anbinden -->
           <div class="feld"><label for="s-name">Name</label><input id="s-name" name="name" type="text" autocomplete="name" required></div>
-          <div class="feld"><label for="s-tel">Telefon</label><input id="s-tel" name="telefon" type="tel" autocomplete="tel" required><small class="feld__hinweis">Wir rufen in den Öffnungszeiten zurück.</small></div>
+          <div class="feld"><label for="s-tel">Telefon</label><input id="s-tel" name="telefon" type="tel" autocomplete="tel" required><small class="feld__hinweis">Rückruf in den Öffnungszeiten.</small></div>
           <button class="knopf knopf--signal" type="submit">Termin vereinbaren</button>
           <p class="schnell__meldung" data-formular-meldung role="status" hidden>Beispielformular: In dieser Vorlage wird nichts gesendet. Der Versand wird im Projekt angebunden.</p>
         </form>
@@ -138,13 +138,12 @@
   <section class="sektion warum" id="warum" aria-labelledby="h-warum" data-lauf>
     <div class="wrap warum__innen">
       <div class="warum__text">
-        <p class="kicker" data-zeig>Unsere Stärken</p>
         <h2 id="h-warum" data-zeig>Warum Sie bei uns richtig sind</h2>
         <ul class="vorzuege" data-staffel>
           <li class="vorzug" data-zeig><span class="vorzug__icon"><svg width="34" height="34" aria-hidden="true" focusable="false"><use href="#i-werkzeug"/></svg></span><div><h3>Erfahrene Mechaniker</h3><p>Ihr Auto bekommt einen festen Ansprechpartner, vom Annehmen bis zur Übergabe.</p></div></li>
           <li class="vorzug" data-zeig><span class="vorzug__icon"><svg width="34" height="34" aria-hidden="true" focusable="false"><use href="#i-euro"/></svg></span><div><h3>Festpreis vorab</h3><p>Sie erfahren die Kosten, bevor wir schrauben. Mehrarbeit nur nach Ihrer Rückfrage.</p></div></li>
-          <li class="vorzug" data-zeig><span class="vorzug__icon"><svg width="34" height="34" aria-hidden="true" focusable="false"><use href="#i-schild"/></svg></span><div><h3>Alle Marken</h3><p>Wir arbeiten an Fahrzeugen aller Hersteller und halten Ihre Herstellergarantie im Blick.</p></div></li>
-          <li class="vorzug" data-zeig><span class="vorzug__icon"><svg width="34" height="34" aria-hidden="true" focusable="false"><use href="#i-uhr"/></svg></span><div><h3>Feste Termine</h3><p>Sie nennen den Wunschtag, wir bestätigen ihn. Kein Warten ohne Zeitangabe.</p></div></li>
+          <li class="vorzug" data-zeig><span class="vorzug__icon"><svg width="34" height="34" aria-hidden="true" focusable="false"><use href="#i-schild"/></svg></span><div><h3>Alle Marken</h3><p>Fahrzeuge aller Hersteller sind willkommen, die Herstellergarantie behalten wir im Blick.</p></div></li>
+          <li class="vorzug" data-zeig><span class="vorzug__icon"><svg width="34" height="34" aria-hidden="true" focusable="false"><use href="#i-uhr"/></svg></span><div><h3>Feste Termine</h3><p>Sie nennen den Wunschtag und bekommen die Bestätigung schriftlich.</p></div></li>
         </ul>
       </div>
       <div class="warum__auto" aria-hidden="true">
@@ -172,16 +171,15 @@
     <div class="aktion__links">
       <div class="aktion__bg" aria-hidden="true"><img src="bilder/techniker-mit-helm-am-verteiler.webp" width="1000" height="1333" alt="" loading="lazy" decoding="async"></div>
       <div class="aktion__text">
-        <p class="kicker kicker--dunkel" data-zeig>Beispielaktion</p>
         <h2 id="h-aktion" data-zeig>Bis zu 30 Prozent auf die Lackierung (Beispiel)</h2>
-        <p data-zeig>Lackschaden oder Parkrempler? In diesem Beispiel gilt die Aktion für Lackierarbeiten bis zum Beispieldatum. Konditionen, Preisangaben und Werbung sind je Betrieb festzulegen. Kein Zeitdruck, kein Zwang zum Entscheiden.</p>
+        <p data-zeig>Lackschaden oder Parkrempler? In diesem Beispiel gilt die Aktion für Lackierarbeiten bis zum Beispieldatum. Konditionen und Preisangaben legt jeder Betrieb selbst fest. Sie entscheiden in Ruhe.</p>
         <p data-zeig><a class="knopf knopf--signal" href="#termin">Termin vereinbaren</a></p>
       </div>
     </div>
     <div class="aktion__rechts">
       <div class="aktion__panel">
         <h3 data-zeig>Über die Werkstatt</h3>
-        <p data-zeig>Wir sind ein Familienbetrieb im Beispielstil: Annahme, Reparatur und Übergabe aus einer Hand. Hier steht später die echte Geschichte des Betriebs.</p>
+        <p data-zeig>Wir sind ein Familienbetrieb im Beispielstil: Vom ersten Anruf bis zur Übergabe kümmert sich ein Team. Hier steht später die echte Geschichte des Betriebs.</p>
         <ul class="haken" data-staffel>
           <li data-zeig><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-haken"/></svg>Kostenvoranschlag vor jeder Arbeit</li>
           <li data-zeig><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-haken"/></svg>Reparatur auch nach Unfall, mit Gutachten</li>
@@ -207,7 +205,7 @@
           <span class="schritt__nr" aria-hidden="true">1</span>
           <svg width="40" height="40" aria-hidden="true" focusable="false"><use href="#i-dokument"/></svg>
           <h3>Angebot anfordern</h3>
-          <p>Sie schildern den Schaden per Telefon, WhatsApp oder Formular. Wir nennen einen Festpreis.</p>
+          <p>Sie schildern den Schaden per Telefon, WhatsApp oder Formular und erhalten einen Festpreis.</p>
         </li>
         <li class="schritt schritt--2" data-zeig="links">
           <span class="schritt__nr" aria-hidden="true">2</span>
@@ -219,7 +217,7 @@
           <span class="schritt__nr" aria-hidden="true">3</span>
           <svg width="40" height="40" aria-hidden="true" focusable="false"><use href="#i-werkzeug"/></svg>
           <h3>Reparatur und Übergabe</h3>
-          <p>Wir reparieren, prüfen und erklären Ihnen die Arbeiten bei der Übergabe.</p>
+          <p>Reparatur und Prüfung übernimmt das Team, die Arbeiten erklärt es Ihnen bei der Übergabe.</p>
         </li>
       </ol>
     </div>
@@ -238,7 +236,7 @@
       <ul class="karten" data-spur tabindex="0" aria-label="Leistungen, seitlich wischbar">
         <li class="karte">
           <div class="karte__bild"><img src="bilder/techniker-mit-helm-am-verteiler.webp" width="1000" height="1333" alt="Techniker prüft mit einem Messgerät einen Verteiler" loading="lazy" decoding="async"><span class="karte__icon"><svg width="26" height="26" aria-hidden="true" focusable="false"><use href="#i-werkzeug"/></svg></span></div>
-          <div class="karte__text"><h3>Inspektion und Diagnose</h3><p>Wartung nach Herstellervorgabe, Fehlerspeicher auslesen, Bremsen und Fahrwerk prüfen.</p><a class="karte__link" href="#termin">Termin vereinbaren<svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-pfeil-r"/></svg></a></div>
+          <div class="karte__text"><h3>Inspektion und Diagnose</h3><p>Wartung nach Herstellervorgabe, dazu Fehlerspeicher, Bremsen und Fahrwerk im Check.</p><a class="karte__link" href="#termin">Termin vereinbaren<svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-pfeil-r"/></svg></a></div>
         </li>
         <li class="karte">
           <div class="karte__bild"><img src="bilder/haende-am-kaeltemittelanschluss.webp" width="1000" height="667" alt="Hände schließen ein Gerät an einen Kältemittelanschluss an" loading="lazy" decoding="async"><span class="karte__icon"><svg width="26" height="26" aria-hidden="true" focusable="false"><use href="#i-lampe"/></svg></span></div>
@@ -246,15 +244,15 @@
         </li>
         <li class="karte">
           <div class="karte__bild"><img src="bilder/elektriker-prueft-leitungen.webp" width="1600" height="1200" alt="Hände in Handschuhen prüfen Leitungen und Schütze mit einem Prüfstift" loading="lazy" decoding="async"><span class="karte__icon"><svg width="26" height="26" aria-hidden="true" focusable="false"><use href="#i-schild"/></svg></span></div>
-          <div class="karte__text"><h3>Fahrzeugelektrik</h3><p>Batterie, Lichtmaschine, Beleuchtung und Steuergeräte: Fehler finden und gezielt beheben.</p><a class="karte__link" href="#termin">Termin vereinbaren<svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-pfeil-r"/></svg></a></div>
+          <div class="karte__text"><h3>Fahrzeugelektrik</h3><p>Von der Batterie bis zum Steuergerät: Wir suchen den Fehler und beheben ihn gezielt.</p><a class="karte__link" href="#termin">Termin vereinbaren<svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-pfeil-r"/></svg></a></div>
         </li>
         <li class="karte">
           <div class="karte__bild karte__bild--svg" aria-hidden="true"><svg viewBox="0 0 320 200" focusable="false"><circle cx="160" cy="100" r="78" fill="var(--schwarz)"/><circle cx="160" cy="100" r="52" fill="none" stroke="var(--akzent-hell)" stroke-width="3" stroke-dasharray="6 8"/><circle cx="160" cy="100" r="34" fill="#c7d2e6"/><path d="M160 66v68M126 100h68M136 76l48 48M184 76l-48 48" stroke="var(--schwarz)" stroke-width="6"/><circle cx="160" cy="100" r="8" fill="var(--schwarz)"/></svg><span class="karte__icon"><svg width="26" height="26" aria-hidden="true" focusable="false"><use href="#i-rad"/></svg></span></div>
-          <div class="karte__text"><h3>Reifenservice</h3><p>Wechsel, Auswuchten, Einlagerung und Druckkontrolle. Zeichnung statt Foto, Bild des Betriebs einsetzen.</p><a class="karte__link" href="#termin">Termin vereinbaren<svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-pfeil-r"/></svg></a></div>
+          <div class="karte__text"><h3>Reifenservice</h3><p>Wechsel und Auswuchten, auf Wunsch Einlagerung. Zeichnung statt Foto, Bild des Betriebs einsetzen.</p><a class="karte__link" href="#termin">Termin vereinbaren<svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-pfeil-r"/></svg></a></div>
         </li>
         <li class="karte">
           <div class="karte__bild karte__bild--svg" aria-hidden="true"><svg viewBox="0 0 320 200" focusable="false"><rect x="40" y="46" width="48" height="110" rx="4" fill="#1b52c4" transform="rotate(-8 64 100)"/><rect x="92" y="40" width="48" height="116" rx="4" fill="#ffc20e" transform="rotate(-3 116 100)"/><rect x="146" y="38" width="48" height="118" rx="4" fill="#c7d2e6"/><rect x="200" y="40" width="48" height="116" rx="4" fill="#0b0f18" transform="rotate(3 224 100)"/><rect x="252" y="46" width="48" height="110" rx="4" fill="#ff5b4d" transform="rotate(8 276 100)"/></svg><span class="karte__icon"><svg width="26" height="26" aria-hidden="true" focusable="false"><use href="#i-lack"/></svg></span></div>
-          <div class="karte__text"><h3>Lackierung und Unfallschaden</h3><p>Kratzer, Dellen und Unfallinstandsetzung mit Farbton nach Fahrzeugcode. Zeichnung statt Foto.</p><a class="karte__link" href="#termin">Termin vereinbaren<svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-pfeil-r"/></svg></a></div>
+          <div class="karte__text"><h3>Lackierung und Unfallschaden</h3><p>Vom Kratzer bis zum Unfallschaden, Farbton nach Fahrzeugcode. Zeichnung statt Foto.</p><a class="karte__link" href="#termin">Termin vereinbaren<svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-pfeil-r"/></svg></a></div>
         </li>
       </ul>
     </div>
@@ -265,7 +263,7 @@
     <div class="wrap termin__innen">
       <div class="termin__form">
         <h2 id="h-termin" data-zeig>Termin vereinbaren</h2>
-        <p class="termin__lead" data-zeig>Fünf Angaben genügen. Wir melden uns in den Öffnungszeiten mit Festpreis und Terminbestätigung.</p>
+        <p class="termin__lead" data-zeig>Fünf Angaben genügen. Die Antwort mit Festpreis und Terminbestätigung kommt in den Öffnungszeiten.</p>
         <form class="formular" action="#" method="post" data-formular data-zeig>
           <!-- Turnstile Platzhalter: <div class="cf-turnstile" data-sitekey="SITE_KEY"></div> im Projekt einsetzen, Versand serverseitig anbinden -->
           <div class="feld"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
@@ -342,7 +340,7 @@
     </div>
     <div class="news-streifen__rechts">
       <p class="news-streifen__klein">Ein Ansprechpartner von Annahme bis Übergabe</p>
-      <p class="news-streifen__gross" data-zeig>Die beste Werkstatt ist die, die Sie anrufen können</p>
+      <p class="news-streifen__gross" data-zeig>Eine Werkstatt, die Sie anrufen können, wenn es drauf ankommt</p>
       <a class="knopf knopf--signal" href="#termin">Termin vereinbaren</a>
     </div>
   </section>
@@ -432,9 +430,9 @@
     <div class="fuss__spalte"><h2>Aktuelles</h2><ul><li><a href="#tipps">Batterie im Winter</a></li><li><a href="#tipps">Hauptuntersuchung</a></li><li><a href="#tipps">Reifenwechsel</a></li></ul></div>
     <div class="fuss__spalte"><h2>Öffnungszeiten</h2>
       <dl class="zeiten">
-        <div><dt>Montag bis Freitag</dt><dd>7:30 bis 18:00 Uhr</dd></div>
-        <div><dt>Samstag</dt><dd>8:00 bis 12:00 Uhr</dd></div>
-        <div><dt>Sonntag</dt><dd>geschlossen</dd></div>
+        <div><dt>Mo bis Fr</dt><dd>7:30 bis 18:00 Uhr</dd></div>
+        <div><dt>Sa</dt><dd>8:00 bis 12:00 Uhr</dd></div>
+        <div><dt>So</dt><dd>geschlossen</dd></div>
       </dl>
     </div>
   </div>
