@@ -1,0 +1,39 @@
+/* marke.css der Vorlage "Weiterbildung Schwarz Limette": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche, Akzenttext auf Akzent mindestens 4,5 zu 1. Limette nie als Textfarbe auf Hell. */
+:root{
+  --flaeche:#0a0b09;
+  --flaeche-alt:#121410;
+  --flaeche-dunkel:#0a0b09;
+  --text:#f3f5ec;
+  --text-leise:#b3b8a6;
+  --linie:#2c3025;
+  --akzent:#c6f24e;            /* Limette: Fläche mit dunklem Text, auf Dunkel auch Linie und Zeichen, nie Text auf Weiß */
+  --akzent-text:#0a0b09;
+  --schrift-titel:'Schibsted Grotesk',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:22px;
+  --radius-bild:18px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:32px;
+  --titel-gewicht:600;
+  --titel-spur:-0.025em;
+  --karte:#181b15;
+  --karte-hoch:#22261c;
+  --text-auf-dunkel:#f3f5ec;
+  --text-leise-dunkel:#b3b8a6;
+  --hell:#f2f3ec;
+  --hell-karte:#ffffff;
+  --text-hell:#11130d;
+  --text-leise-hell:#4a4f42;
+  --linie-hell:#d6d9ca;
+  --weiss:#ffffff;
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#2d3a1c;
+  --ton-2:#1f2a2e;
+  --ton-3:#3a2f1c;
+  --ton-4:#1c2a22;
+  --ton-5:#262626;
+  --ton-6:#333a1a;
+}

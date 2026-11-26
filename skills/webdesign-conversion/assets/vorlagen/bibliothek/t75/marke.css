@@ -1,0 +1,31 @@
+/* marke.css der Vorlage "Logistik rot, Bildwechsler": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#ffffff;
+  --flaeche-alt:#f4f1ee;
+  --flaeche-dunkel:#1d1b1a;   /* Infoleiste, Newsletterstreifen, Fuß, Karriere Kachel */
+  --text:#1d1b1a;
+  --text-leise:#4d4a48;
+  --linie:#e3ddd8;
+  --akzent:#c01610;           /* Hauptaktion und roter Vollflächenabschnitt: Weiß darauf 6,2 zu 1 */
+  --akzent-text:#ffffff;
+  --schrift-titel:'Archivo',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:4px;
+  --radius-karte:6px;
+  --radius-bild:4px;
+
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:800;
+  --titel-spur:-0.025em;
+  --akzent-dunkel:#8e0f0a;    /* Fläche auf Rot, Karriere Kachel Hover: Weiß darauf 9,4 zu 1 */
+  --weiss:#ffffff;
+  --text-auf-dunkel:#ffffff;
+  --text-leise-dunkel:#cfc9c4;
+  --linie-dunkel:#3b3836;
+  --feld-rand:#7a7572;
+  /* Platzhalter-Töne für Bildflächen */
+  --ton-1:#8e0f0a;
+  --ton-2:#3b3836;
+  --ton-3:#c01610;
+}

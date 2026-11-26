@@ -1,0 +1,35 @@
+/* marke.css der Vorlage "Podcast hell und schwarz": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche, Akzenttext auf Akzent, Signaltext auf Signal mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#f3f3f0;
+  --flaeche-alt:#e8e8e3;
+  --flaeche-dunkel:#0e0e0e;   /* Abonnierkarte, Fuß, Akkordeon: das Schwarz der Marke */
+  --text:#111111;
+  --text-leise:#4f4f49;
+  --linie:#d6d6cf;
+  --akzent:#111111;           /* Hauptaktion auf Hell: schwarze Fläche mit hellem Text */
+  --akzent-text:#ffffff;
+  --schrift-titel:'Familjen Grotesk',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:10px;
+  --radius-karte:18px;
+  --radius-bild:16px;
+
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:600;
+  --titel-spur:-0.03em;
+  --signal:#ff6b4a;           /* Hauptaktion auf Schwarz und Pegelbalken, nie als Textfarbe auf Hell */
+  --signal-text:#111111;
+  --weiss:#ffffff;
+  --text-auf-dunkel:#f3f3f0;
+  --text-leise-dunkel:#b9b9b1;
+  --linie-dunkel:#2e2e2b;
+  --feld-rand:#77776f;
+  /* Töne für Folgencover (gezeichnete Flächen, keine Fotos) */
+  --ton-1:#1b1b1a;
+  --ton-2:#ff6b4a;
+  --ton-3:#d9d5c7;
+  --ton-4:#2f4d43;
+  --ton-5:#284b63;
+  --ton-6:#8f877a;
+}

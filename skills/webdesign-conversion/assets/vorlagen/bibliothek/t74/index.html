@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Haushaltsbuch App kostenlos starten | Markenname</title>
+<meta name="description" content="Haushaltsbuch und Zahlungs App für Deutschland: Ausgaben sortieren, Sparziele setzen, Geld senden. Jetzt kostenlos starten.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../_basis/schriften.css">
+<link rel="stylesheet" href="marke.css">
+<link rel="stylesheet" href="../_basis/basis.css">
+<link rel="stylesheet" href="stil.css">
+<!-- Beispielwerte, vor dem Einsatz durch echte Angaben ersetzen (Name, Preis, Kategorie, Betriebssysteme) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Markenname",
+  "description": "Haushaltsbuch und Zahlungs App für Deutschland (Beispieltext).",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "iOS, Android, Web",
+  "inLanguage": "de",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR", "description": "Beispiel: kostenloser Einstieg" }
+}
+</script>
+</head>
+<body>
+<a class="sprunglink" href="#inhalt">Zum Inhalt springen</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-zeichen" viewBox="0 0 32 32" fill="currentColor"><rect x="5" y="17" width="5.5" height="10" rx="2.2"/><rect x="13.25" y="11" width="5.5" height="16" rx="2.2"/><rect x="21.5" y="5" width="5.5" height="22" rx="2.2"/></symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+  <symbol id="i-receive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+  <symbol id="i-swap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8h12l-3-3M17 16H5l3 3"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-note" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17V6l10-2v11"/><circle cx="6.5" cy="17.5" r="2.5"/><circle cx="16.5" cy="15.5" r="2.5"/></symbol>
+  <symbol id="i-film" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="14" rx="2.5"/><path d="M4 9h16M4 15h16M9 5v14M15 5v14"/></symbol>
+  <symbol id="i-bus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="13" rx="3"/><path d="M4 11h16M8 20v-3M16 20v-3"/></symbol>
+  <symbol id="i-ziel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4"/><path d="M12 12h.01"/></symbol>
+  <symbol id="i-table" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="14" rx="2.5"/><path d="M4 10h16M10 10v9"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="6" width="15" height="14" rx="2.5"/><path d="M4.5 11h15M9 4v4M15 4v4"/></symbol>
+  <symbol id="i-cloud" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a4 4 0 0 1-.6-7.95 5.5 5.5 0 0 1 10.6 1.1A3.5 3.5 0 0 1 17 18z"/></symbol>
+  <symbol id="i-receipt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2zM9 8h6M9 12h6"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5h14v10h-9l-4 4v-4H5z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="6" width="16" height="12" rx="2.5"/><path d="m4.5 8 7.5 5.5L19.500 8"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 19v-8M12 19V5M19 19v-11"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 19 6v5c0 5-3 8-7 10-4-2-7-5-7-10V6z"/><path d="m9 12 2.200 2.200L15 10"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16v-5a6 6 0 0 1 12 0v5l1.500 2h-15zM10 20.500h4"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="11" width="12" height="9" rx="2.5"/><path d="M9 11V8a3 3 0 0 1 6 0v3"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.500 4h3l1.500 4-2 1.500a10 10 0 0 0 5.500 5.500l1.500-2 4 1.500v3a2 2 0 0 1-2 2A15 15 0 0 1 4.500 6a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.800 2.800 5.800 6.300.9-4.600 4.400 1.100 6.300L12 17.200l-5.600 3 1.100-6.300L2.900 9.500l6.300-.9z"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="8.500"/><path d="M3.500 12h17M12 3.500c3 3.200 3 13.800 0 17M12 3.500c-3 3.200-3 13.800 0 17"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.500v13a1 1 0 0 0 1.500.9l10.500-6.500a1 1 0 0 0 0-1.700L9.500 4.600A1 1 0 0 0 8 5.500z"/></symbol>
+</svg>
+
+<header class="kopf">
+  <div class="kopf__leiste">
+    <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
+      <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg>
+      <span>Markenname</span>
+    </a>
+    <nav class="kopf__nav" id="hauptnav" aria-label="Hauptnavigation" data-menue-ziel>
+      <ul class="kopf__menue">
+        <li><a href="#funktionen">Funktionen</a></li>
+        <li><a href="#senden">Geld senden</a></li>
+        <li><a href="#karte">Karte</a></li>
+        <li><a href="#fragen">Fragen</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+        <li class="kopf__tel"><a href="tel:+490000000000"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>0000 000 000</a></li>
+      </ul>
+    </nav>
+    <a class="kopf__login" href="#kontakt">Anmelden</a>
+    <a class="knopf kopf__knopf" href="#kontakt">Kostenlos<span class="kopf__lang">&nbsp;starten</span></a>
+    <button class="kopf__burger" type="button" data-menue aria-expanded="false" aria-controls="hauptnav">
+      <span class="sr-nur">Menü öffnen oder schließen</span>
+      <span class="burger" aria-hidden="true"></span>
+    </button>
+  </div>
+</header>
+
+<main id="inhalt">
+
+  <!-- 1. Held: zweispaltig, links Text, rechts eine Beispiel Oberfläche der App -->
+  <section class="held" id="top" aria-labelledby="h-held">
+    <div class="wrap held__raster">
+      <div class="held__text">
+        <p class="etikett" data-zeig><span class="punkt" aria-hidden="true"></span>Haushaltsbuch und Zahlungen in einer App</p>
+        <!-- Held: Menschen, die am Monatsende nicht wissen, wohin das Geld ging; Problem ist fehlender Überblick über Umsätze und Abos; Lösung ist eine App, die Umsätze sortiert und Sparziele zeigt, Beleg folgt im Bewertungsband (Beispiel), vor dem Einsatz durch echte Angaben ersetzen -->
+        <h1 id="h-held" data-zeig>Wohin ging dein Geld? Ab jetzt weißt du es <span class="held__zeichen" aria-hidden="true"><svg width="28" height="28" focusable="false"><use href="#i-arrow-up-right"/></svg></span></h1>
+        <p class="held__lead" data-zeig>Verbinde dein Konto oder trage Ausgaben von Hand ein. Die App sortiert deine Umsätze, zeigt Abos und Sparziele und macht Überweisungen in wenigen Schritten.</p>
+        <div class="held__knoepfe" data-zeig>
+          <a class="knopf" href="#kontakt">Kostenlos starten<svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a>
+          <a class="textlink" href="#funktionen">So funktioniert es</a>
+        </div>
+        <p class="held__tel" data-zeig>Lieber erst sprechen? <a href="tel:+490000000000">Telefon 0000 000 000</a></p>
+      </div>
+
+      <figure class="dash" data-beispiel data-zeig="skala" aria-label="Beispiel Oberfläche der App mit Abokarte, Kontostand und Balkendiagramm">
+        <div class="abo abo--blau">
+          <span class="abo__icon" aria-hidden="true"><svg width="24" height="24" focusable="false"><use href="#i-note"/></svg></span>
+          <span class="abo__text"><strong>Klangbox Plus</strong><span>9,99 € pro Monat (Beispiel)</span></span>
+          <span class="abo__haken" aria-hidden="true"><svg width="20" height="20" focusable="false"><use href="#i-check"/></svg></span>
+        </div>
+        <div class="konto">
+          <p class="konto__label">Mein Kontostand</p>
+          <p class="konto__betrag"><span data-zaehle="2847.36">2.847,36</span> €</p>
+          <ul class="aktionen" aria-label="Aktionen der Beispiel Oberfläche">
+            <li><span class="aktion"><span class="aktion__kreis" aria-hidden="true"><svg width="22" height="22" focusable="false"><use href="#i-send"/></svg></span>Senden</span></li>
+            <li><span class="aktion"><span class="aktion__kreis" aria-hidden="true"><svg width="22" height="22" focusable="false"><use href="#i-receive"/></svg></span>Empfangen</span></li>
+            <li><span class="aktion"><span class="aktion__kreis" aria-hidden="true"><svg width="22" height="22" focusable="false"><use href="#i-swap"/></svg></span>Umrechnen</span></li>
+          </ul>
+          <p class="konto__kopf">Ausgaben je Monat</p>
+          <div class="diagramm diagramm--bedienbar" data-zeig>
+            <div class="saeulen" role="group" aria-label="Ausgaben je Monat, Beispielwerte. Auswahl zeigt den Betrag.">
+              <button class="sp" type="button" aria-pressed="false" aria-label="Januar 940 Euro" style="--h:46%;--n:0"><span class="sl"></span><span class="tip" aria-hidden="true">940 €</span><span class="sp__monat" aria-hidden="true">Jan</span></button>
+              <button class="sp" type="button" aria-pressed="false" aria-label="Februar 1.080 Euro" style="--h:60%;--n:1"><span class="sl"></span><span class="tip" aria-hidden="true">1.080 €</span><span class="sp__monat" aria-hidden="true">Feb</span></button>
+              <button class="sp" type="button" aria-pressed="false" aria-label="März 860 Euro" style="--h:40%;--n:2"><span class="sl"></span><span class="tip" aria-hidden="true">860 €</span><span class="sp__monat" aria-hidden="true">Mär</span></button>
+              <button class="sp" type="button" aria-pressed="true" aria-label="April 1.240 Euro" style="--h:78%;--n:3"><span class="sl"></span><span class="tip" aria-hidden="true">1.240 €</span><span class="sp__monat" aria-hidden="true">Apr</span></button>
+              <button class="sp" type="button" aria-pressed="false" aria-label="Mai 1.010 Euro" style="--h:56%;--n:4"><span class="sl"></span><span class="tip" aria-hidden="true">1.010 €</span><span class="sp__monat" aria-hidden="true">Mai</span></button>
+              <button class="sp" type="button" aria-pressed="false" aria-label="Juni 1.130 Euro" style="--h:68%;--n:5"><span class="sl"></span><span class="tip" aria-hidden="true">1.130 €</span><span class="sp__monat" aria-hidden="true">Jun</span></button>
+            </div>
+          </div>
+        </div>
+        <figcaption class="dash__hinweis">Beispieldaten, keine echten Konten</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 2. Bewertungsband: drei Beispielwerte aus neutralen Quellen -->
+  <section class="band-bew" aria-labelledby="h-bew" data-beispiel>
+    <div class="wrap band-bew__raster">
+      <h2 id="h-bew" class="band-bew__titel" data-zeig>Von Nutzerinnen und Nutzern bewertet (Beispielwerte)</h2>
+      <ul class="band-bew__liste" data-staffel>
+        <li class="bew" data-zeig><span class="bew__zahl">4,8</span><span class="bew__sterne" aria-hidden="true"><svg width="18" height="18" focusable="false"><use href="#i-star"/></svg><svg width="18" height="18" focusable="false"><use href="#i-star"/></svg><svg width="18" height="18" focusable="false"><use href="#i-star"/></svg><svg width="18" height="18" focusable="false"><use href="#i-star"/></svg><svg width="18" height="18" focusable="false"><use href="#i-star"/></svg></span><span class="bew__quelle"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-chat"/></svg><span><span class="sr-nur">Bewertung 4,8 von 5 bei </span>Bewertungsportal A</span></span></li>
+        <li class="bew" data-zeig><span class="bew__zahl">4,9</span><span class="bew__sterne" aria-hidden="true"><svg width="18" height="18" focusable="false"><use href="#i-star"/></svg><svg width="18" height="18" focusable="false"><use href="#i-star"/></svg><svg width="18" height="18" focusable="false"><use href="#i-star"/></svg><svg width="18" height="18" focusable="false"><use href="#i-star"/></svg><svg width="18" height="18" focusable="false"><use href="#i-star"/></svg></span><span class="bew__quelle"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-globe"/></svg><span><span class="sr-nur">Bewertung 4,9 von 5 bei </span>Bewertungsportal B</span></span></li>
+        <li class="bew" data-zeig><span class="bew__zahl">4,8</span><span class="bew__sterne" aria-hidden="true"><svg width="18" height="18" focusable="false"><use href="#i-star"/></svg><svg width="18" height="18" focusable="false"><use href="#i-star"/></svg><svg width="18" height="18" focusable="false"><use href="#i-star"/></svg><svg width="18" height="18" focusable="false"><use href="#i-star"/></svg><svg width="18" height="18" focusable="false"><use href="#i-star"/></svg></span><span class="bew__quelle"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-shield"/></svg><span><span class="sr-nur">Bewertung 4,8 von 5 bei </span>Bewertungsportal C</span></span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 3. Funktionen: Überschrift, Karte A (Auswertung) und Karte B (Ausgaben nach Kategorie) -->
+  <section class="sektion funktionen" id="funktionen" aria-labelledby="h-fkt">
+    <div class="wrap">
+      <h2 class="mitte" id="h-fkt" data-zeig>Alles für deine Finanzen an einem Ort</h2>
+
+      <article class="grosskarte" aria-labelledby="h-ausw">
+        <div class="grosskarte__bild" data-beispiel data-zeig="links">
+          <div class="saldo">
+            <p class="saldo__label">Gesamtsaldo</p>
+            <p class="saldo__betrag"><span data-zaehle="12480.5">12.480,50</span> €</p>
+            <div class="diagramm" data-zeig role="img" aria-label="Beispiel Balkendiagramm mit steigenden Monatswerten">
+              <div class="saeulen saeulen--flach" aria-hidden="true">
+                <span class="sl sl--verlauf" style="--h:34%;--n:0"></span><span class="sl sl--verlauf" style="--h:48%;--n:1"></span><span class="sl sl--verlauf" style="--h:42%;--n:2"></span><span class="sl sl--verlauf" style="--h:62%;--n:3"></span><span class="sl sl--verlauf" style="--h:56%;--n:4"></span><span class="sl sl--verlauf" style="--h:78%;--n:5"></span><span class="sl sl--verlauf" style="--h:90%;--n:6"></span>
+              </div>
+            </div>
+            <p class="saldo__hinweis">Beispieldaten</p>
+          </div>
+        </div>
+        <div class="grosskarte__text" data-zeig="rechts">
+          <h3 id="h-ausw">Deine Ausgaben in einer klaren Auswertung</h3>
+          <p>Jeder Umsatz landet automatisch in einer Kategorie. Du siehst auf einen Blick, was fest abgeht, was variabel ist und was am Monatsende übrig bleibt.</p>
+          <ul class="haken">
+            <li><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Kategorien automatisch</li>
+            <li><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Monatsbudget je Kategorie</li>
+            <li><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Sparziele mit Fortschritt</li>
+            <li><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Abos und Fixkosten erkannt</li>
+          </ul>
+          <a class="knopf" href="#kontakt">Kostenlos starten<svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a>
+        </div>
+      </article>
+
+      <article class="grosskarte grosskarte--tausch" aria-labelledby="h-ausg">
+        <div class="grosskarte__text" data-zeig="links">
+          <h3 id="h-ausg">Behalte jede Ausgabe im Blick, ohne zu tippen</h3>
+          <p>Abos, Einkäufe und Fahrten werden zugeordnet. Du legst Grenzen fest und bekommst eine Nachricht, bevor ein Budget leer ist.</p>
+          <a class="knopf" href="#kontakt">Kostenlos starten<svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a>
+        </div>
+        <div class="grosskarte__bild grosskarte__bild--plain" data-beispiel data-zeig="rechts">
+          <div class="abo abo--indigo">
+            <span class="abo__icon" aria-hidden="true"><svg width="24" height="24" focusable="false"><use href="#i-film"/></svg></span>
+            <span class="abo__text"><strong>Filmkanal Basis</strong><span>7,99 € pro Monat (Beispiel)</span></span>
+            <span class="abo__haken" aria-hidden="true"><svg width="20" height="20" focusable="false"><use href="#i-check"/></svg></span>
+          </div>
+          <div class="ringkarte">
+            <div class="diagramm ring" data-zeig role="img" aria-label="Beispiel Ringdiagramm: Freizeit 428 Euro, Mobilität 305 Euro, Sparen 395 Euro">
+              <svg viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+                <circle class="ring__grund" cx="50" cy="50" r="38" pathLength="100"/>
+                <circle class="ring__teil ring__teil--blau" cx="50" cy="50" r="38" pathLength="100" style="--l:36.5;--s:0"/>
+                <circle class="ring__teil ring__teil--marine" cx="50" cy="50" r="38" pathLength="100" style="--l:25.5;--s:38"/>
+                <circle class="ring__teil ring__teil--limette" cx="50" cy="50" r="38" pathLength="100" style="--l:33.5;--s:65"/>
+              </svg>
+              <p class="ring__mitte"><strong>1.128 €</strong><span>im Mai</span></p>
+            </div>
+            <ul class="kategorien">
+              <li><span class="kategorien__punkt kategorien__punkt--blau" aria-hidden="true"></span><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-film"/></svg><span class="kategorien__name">Freizeit</span><span class="kategorien__betrag">428 €</span></li>
+              <li><span class="kategorien__punkt kategorien__punkt--marine" aria-hidden="true"></span><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-bus"/></svg><span class="kategorien__name">Mobilität</span><span class="kategorien__betrag">305 €</span></li>
+              <li><span class="kategorien__punkt kategorien__punkt--limette" aria-hidden="true"></span><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-ziel"/></svg><span class="kategorien__name">Sparen</span><span class="kategorien__betrag">395 €</span></li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 4. Geld senden: drei Pastellkarten mit Mini Oberflächen -->
+  <section class="sektion senden" id="senden" aria-labelledby="h-senden">
+    <div class="wrap">
+      <h2 class="mitte" id="h-senden" data-zeig>Geld senden, wohin du willst</h2>
+      <ul class="pastell" data-staffel data-beispiel>
+        <li class="pk pk--blau" data-zeig>
+          <div class="pk__flaeche">
+            <p class="pk__kopf">Länder</p>
+            <ul class="liste">
+              <li><span class="avatar avatar--a" aria-hidden="true">FR</span><span class="liste__name">Frankreich</span><span class="liste__plus" aria-hidden="true"><svg width="18" height="18" focusable="false"><use href="#i-plus"/></svg></span></li>
+              <li><span class="avatar avatar--b" aria-hidden="true">PL</span><span class="liste__name">Polen</span><span class="liste__plus" aria-hidden="true"><svg width="18" height="18" focusable="false"><use href="#i-plus"/></svg></span></li>
+              <li><span class="avatar avatar--c" aria-hidden="true">ES</span><span class="liste__name">Spanien</span><span class="liste__plus" aria-hidden="true"><svg width="18" height="18" focusable="false"><use href="#i-plus"/></svg></span></li>
+            </ul>
+          </div>
+          <h3>Länder hinzufügen</h3>
+          <p>Wähle das Zielland, wir zeigen dir vorab, was die Überweisung kostet (Beispiel).</p>
+        </li>
+        <li class="pk pk--gruen" data-zeig>
+          <div class="pk__flaeche">
+            <p class="pk__kopf" id="w-kopf">Währung wählen</p>
+            <div class="waehrung" role="group" aria-labelledby="w-kopf" data-waehrung>
+              <button type="button" aria-pressed="true"><span class="waehrung__zeichen" aria-hidden="true">€</span><span class="waehrung__name">Euro</span><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-check"/></svg></button>
+              <button type="button" aria-pressed="false"><span class="waehrung__zeichen" aria-hidden="true">$</span><span class="waehrung__name">US-Dollar</span><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-check"/></svg></button>
+              <button type="button" aria-pressed="false"><span class="waehrung__zeichen" aria-hidden="true">£</span><span class="waehrung__name">Pfund</span><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-check"/></svg></button>
+            </div>
+          </div>
+          <h3>Währung umrechnen</h3>
+          <p>Wechsle die Währung mit einem Tipp. Den Kurs siehst du, bevor du bestätigst (Beispiel).</p>
+        </li>
+        <li class="pk pk--lila" data-zeig>
+          <div class="pk__flaeche">
+            <p class="pk__kopf">Freunde hinzufügen</p>
+            <ul class="liste">
+              <li><span class="avatar avatar--d" aria-hidden="true">AK</span><span class="liste__name">Anna K.</span><span class="liste__plus" aria-hidden="true"><svg width="18" height="18" focusable="false"><use href="#i-plus"/></svg></span></li>
+              <li><span class="avatar avatar--e" aria-hidden="true">BM</span><span class="liste__name">Ben M.</span><span class="liste__plus" aria-hidden="true"><svg width="18" height="18" focusable="false"><use href="#i-plus"/></svg></span></li>
+              <li><span class="avatar avatar--a" aria-hidden="true">CS</span><span class="liste__name">Chris S.</span><span class="liste__plus" aria-hidden="true"><svg width="18" height="18" focusable="false"><use href="#i-plus"/></svg></span></li>
+            </ul>
+          </div>
+          <h3>Kontakte speichern</h3>
+          <p>Speichere Freunde und Familie und teile Rechnungen mit zwei Tipps (Beispiel). Namen sind erfunden.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 5. Karte (3D Kippung) und Werkzeuge (Kreis) -->
+  <section class="sektion karte" id="karte" aria-labelledby="h-karte">
+    <div class="wrap">
+      <h2 class="mitte" id="h-karte" data-zeig>Mehr als ein Haushaltsbuch</h2>
+
+      <article class="grosskarte grosskarte--karten" aria-labelledby="h-exz">
+        <div class="grosskarte__bild grosskarte__bild--karten" data-beispiel data-kipp aria-hidden="true">
+          <div class="kartenstapel">
+            <div class="kk kk--marine"><span class="kk__chip"></span><span class="kk__nummer">0000 0000 0000</span><span class="kk__name">Beispiel Name</span></div>
+            <div class="kk kk--blau"><span class="kk__chip"></span><span class="kk__nummer">0000 0000 0000</span><span class="kk__name">Beispiel Name</span></div>
+          </div>
+        </div>
+        <div class="grosskarte__text" data-zeig="rechts">
+          <h3 id="h-exz">Bezahle mit Karte und behalte die Kontrolle</h3>
+          <ul class="punkte">
+            <li><span class="punkte__icon" aria-hidden="true"><svg width="24" height="24" focusable="false"><use href="#i-lock"/></svg></span><div><h4>Karte sperren in Sekunden</h4><p>Verloren oder unsicher? Sperre die Karte in der App und entsperre sie wieder (Beispiel).</p></div></li>
+            <li><span class="punkte__icon" aria-hidden="true"><svg width="24" height="24" focusable="false"><use href="#i-bell"/></svg></span><div><h4>Nachricht bei jeder Zahlung</h4><p>Du siehst sofort, wo und wie viel bezahlt wurde (Beispiel).</p></div></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="grosskarte grosskarte--tausch" aria-labelledby="h-werk">
+        <div class="grosskarte__text" data-zeig="links">
+          <h3 id="h-werk">Verbinde die Werkzeuge, die du schon nutzt</h3>
+          <p>Exportiere Umsätze in deine Tabelle, trage Fälligkeiten in den Kalender ein oder sende Belege an die Steuerablage. Welche Anbindungen es gibt, legt das Projekt fest.</p>
+          <a class="knopf" href="#kontakt">Kostenlos starten<svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a>
+        </div>
+        <div class="grosskarte__bild grosskarte__bild--plain" data-zeig="rechts" aria-hidden="true">
+          <div class="orbit">
+            <div class="orbit__ring">
+            <svg class="orbit__linien" viewBox="0 0 100 100" focusable="false">
+              <circle cx="50" cy="50" r="38" fill="none" stroke="currentColor" stroke-width=".5"/>
+              <path d="M50 50 50 12M50 50 82.900 31M50 50 82.900 69M50 50 50 88M50 50 17.100 69M50 50 17.100 31" stroke="currentColor" stroke-width=".5" fill="none"/>
+            </svg>
+              <span class="orbit__item" style="--w:0"><span class="orbit__sym"><svg width="24" height="24" focusable="false"><use href="#i-table"/></svg></span></span>
+              <span class="orbit__item" style="--w:60"><span class="orbit__sym"><svg width="24" height="24" focusable="false"><use href="#i-calendar"/></svg></span></span>
+              <span class="orbit__item" style="--w:120"><span class="orbit__sym"><svg width="24" height="24" focusable="false"><use href="#i-cloud"/></svg></span></span>
+              <span class="orbit__item" style="--w:180"><span class="orbit__sym"><svg width="24" height="24" focusable="false"><use href="#i-receipt"/></svg></span></span>
+              <span class="orbit__item" style="--w:240"><span class="orbit__sym"><svg width="24" height="24" focusable="false"><use href="#i-chat"/></svg></span></span>
+              <span class="orbit__item" style="--w:300"><span class="orbit__sym"><svg width="24" height="24" focusable="false"><use href="#i-mail"/></svg></span></span>
+            </div>
+            <span class="orbit__mitte"><svg width="40" height="40" focusable="false"><use href="#i-zeichen"/></svg></span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 6. Fragen (Einwände), Antworten sind Beispiele -->
+  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen">
+    <div class="wrap fragen__raster">
+      <div class="fragen__kopf" data-zeig>
+        <h2 id="h-fragen">Häufige Fragen</h2>
+        <p>Die Antworten sind Beispiele und werden mit dem Anbieter abgestimmt.</p>
+        <a class="knopf" href="#kontakt">Kostenlos starten<svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a>
+      </div>
+      <div class="fragen__liste" data-exklusiv>
+        <details class="frage" data-zeig><summary><span>Kostet die App etwas?</span><span class="plus" aria-hidden="true"><svg width="20" height="20" focusable="false"><use href="#i-plus"/></svg></span></summary><p>Beispielantwort: Der Einstieg ist kostenlos. Welche Funktionen später etwas kosten und in welcher Höhe, steht vor der Anmeldung auf einer Preisseite. Gebühren sind im Projekt einzutragen.</p></details>
+        <details class="frage" data-zeig><summary><span>Wie sicher sind meine Daten?</span><span class="plus" aria-hidden="true"><svg width="20" height="20" focusable="false"><use href="#i-plus"/></svg></span></summary><p>Beispielantwort: Die Verbindung ist verschlüsselt, Daten liegen auf Servern in der EU. Wer die Zahlungen ausführt und welche Aufsicht gilt, steht im Impressum und in der Datenschutzerklärung (im Projekt einzutragen).</p></details>
+        <details class="frage" data-zeig><summary><span>Muss ich mein Bankkonto verbinden?</span><span class="plus" aria-hidden="true"><svg width="20" height="20" focusable="false"><use href="#i-plus"/></svg></span></summary><p>Beispielantwort: Nein. Du kannst Ausgaben auch von Hand eintragen und das Konto später verbinden. Mit Verbindung sortiert die App deine Umsätze selbst.</p></details>
+        <details class="frage" data-zeig><summary><span>Wie lange dauert eine Überweisung ins Ausland?</span><span class="plus" aria-hidden="true"><svg width="20" height="20" focusable="false"><use href="#i-plus"/></svg></span></summary><p>Beispielantwort: Laufzeit und Kosten hängen vom Zielland und von der Währung ab. Beides siehst du, bevor du die Überweisung freigibst.</p></details>
+        <details class="frage" data-zeig><summary><span>Kann ich jederzeit kündigen?</span><span class="plus" aria-hidden="true"><svg width="20" height="20" focusable="false"><use href="#i-plus"/></svg></span></summary><p>Beispielantwort: Ja, in den Einstellungen mit einem Klick. Deine Daten kannst du vorher exportieren.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Banner (marine, flach) mit seitlich einfahrenden Karten -->
+  <section class="banner-sek" aria-labelledby="h-banner">
+    <div class="wrap">
+      <div class="banner" data-beispiel>
+        <div class="banner__karten" data-zeig="links" aria-hidden="true">
+          <div class="mk mk--ziel">
+            <span class="mk__icon"><svg width="22" height="22" focusable="false"><use href="#i-ziel"/></svg></span>
+            <span class="mk__text"><strong>Sparziel Urlaub</strong><span>640 von 1.000 €</span></span>
+            <span class="mk__leiste"><span></span></span>
+          </div>
+          <div class="mk mk--zahlung">
+            <span class="mk__icon"><svg width="22" height="22" focusable="false"><use href="#i-receipt"/></svg></span>
+            <span class="mk__text"><strong>Neue Zahlung</strong><span>Wochenmarkt, 23,40 €</span></span>
+          </div>
+        </div>
+        <div class="banner__text" data-zeig="rechts">
+          <h2 id="h-banner">Bereit, deine Finanzen in Ordnung zu bringen?</h2>
+          <p>Lege ein Konto an, sortiere die ersten Umsätze und setze dein erstes Sparziel.</p>
+          <a class="knopf knopf--blau" href="#kontakt">Kostenlos starten<svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Zwei Kacheln: Gespräch mit Formular (indigo, flach) und Demo (Limette) -->
+  <section class="sektion kontakt" id="kontakt" aria-label="Kontakt und Demo">
+    <div class="wrap kacheln">
+      <div class="kachel kachel--indigo" data-zeig>
+        <h2>Kurzes Gespräch vereinbaren</h2>
+        <p>Schreib uns, wir melden uns mit einem Terminvorschlag. Oder ruf an: <a href="tel:+490000000000">0000 000 000</a></p>
+        <!-- Turnstile Platzhalter: Bot Schutz (Cloudflare Turnstile) und serverseitige Prüfung baut der Bauablauf ein -->
+        <form class="formular" data-formular action="#" method="post" novalidate>
+          <div class="formular__feld"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" placeholder="Vor und Nachname" required></div>
+          <div class="formular__feld"><label for="f-mail">E-Mail</label><input id="f-mail" name="email" type="email" autocomplete="email" placeholder="du@beispiel.invalid" required><small class="feld__hinweis">Nur für die Antwort auf deine Anfrage, keine Werbung.</small></div>
+          <div class="formular__feld"><label for="f-tel">Telefon (freiwillig)</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" placeholder="0000 000 000"></div>
+          <div class="formular__feld"><label for="f-text">Dein Anliegen</label><textarea id="f-text" name="nachricht" rows="3" placeholder="Worum geht es?"></textarea></div>
+          <p class="formular__recht">Mit dem Absenden stimmst du der Verarbeitung deiner Angaben zur Beantwortung der Anfrage zu. Mehr dazu in der <a href="#fuss">Datenschutzerklärung</a>.</p>
+          <button class="knopf knopf--limette" type="submit">Gespräch anfragen</button>
+          <p class="formular__meldung" data-formular-meldung role="status" hidden>Beispielformular: In dieser Vorlage wird nichts gesendet. Der Versand wird im Projekt angebunden.</p>
+        </form>
+      </div>
+      <div class="kachel kachel--limette" id="demo" data-zeig>
+        <h2>Die App in einer Demo ansehen</h2>
+        <p>Sieh, wie Umsätze sortiert werden und wie ein Sparziel entsteht. Die Demo zeigt Beispieldaten.</p>
+        <div class="demo" data-beispiel aria-hidden="true">
+          <span class="demo__zeile demo__zeile--1"></span><span class="demo__zeile demo__zeile--2"></span><span class="demo__zeile demo__zeile--3"></span>
+          <span class="demo__play"><svg width="26" height="26" focusable="false"><use href="#i-play"/></svg></span>
+        </div>
+        <div class="kachel__knoepfe">
+          <a class="knopf knopf--dunkel" href="#demo">Demo ansehen<svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a>
+          <a class="knopf knopf--rand" href="tel:+490000000000">Anrufen</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="fuss" id="fuss">
+  <div class="wrap">
+    <div class="fuss__oben">
+      <div class="fuss__marke">
+        <a class="kopf__logo" href="#top" aria-label="Markenname, nach oben">
+          <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg>
+          <span>Markenname</span>
+        </a>
+        <p>Haushaltsbuch und Zahlungen für Deutschland. Alle Angaben auf dieser Seite sind Beispiele.</p>
+        <ul class="fuss__social">
+          <li><a href="#fuss" aria-label="Soziales Netzwerk A"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-globe"/></svg></a></li>
+          <li><a href="#fuss" aria-label="Soziales Netzwerk B"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-play"/></svg></a></li>
+          <li><a href="#fuss" aria-label="Soziales Netzwerk C"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-chat"/></svg></a></li>
+        </ul>
+      </div>
+      <nav class="fuss__spalten" aria-label="Fußnavigation">
+        <div><h2>Unternehmen</h2><ul><li><a href="#fuss">Über uns</a></li><li><a href="#fuss">Karriere</a></li><li><a href="#fuss">Presse</a></li></ul></div>
+        <div><h2>Produkt</h2><ul><li><a href="#funktionen">Funktionen</a></li><li><a href="#senden">Geld senden</a></li><li><a href="#karte">Karte</a></li></ul></div>
+        <div><h2>Ressourcen</h2><ul><li><a href="#fuss">Blog</a></li><li><a href="#fuss">Ratgeber</a></li><li><a href="#fragen">Fragen</a></li></ul></div>
+        <div><h2>Hilfe</h2><ul><li><a href="#kontakt">Kontakt</a></li><li><a href="tel:+490000000000">0000 000 000</a></li><li><a href="#fuss">Status</a></li></ul></div>
+      </nav>
+    </div>
+    <div class="fuss__unten"><p>© Markenname. Alle Texte sind Beispiele.</p><ul><li><a href="#fuss">Impressum</a></li><li><a href="#fuss">Datenschutz</a></li><li><a href="#fuss">AGB</a></li></ul></div>
+  </div>
+</footer>
+
+<script src="../_basis/bewegung.js"></script>
+<script src="stil.js"></script>
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ladeinfrastruktur für Gewerbe in Musterstadt | Markenname</title>
+<meta name="description" content="Wallbox Installation und Ladesäulen für Betriebe und Kommunen in Musterstadt: Standort prüfen, planen, installieren, betreiben. Jetzt Angebot anfragen.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../_basis/schriften.css">
+<link rel="stylesheet" href="marke.css">
+<link rel="stylesheet" href="../_basis/basis.css">
+<link rel="stylesheet" href="stil.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Electrician","name":"Markenname (Beispiel)","description":"Planung, Installation und Betrieb von Ladeinfrastruktur für Gewerbe und Kommunen (Beispieltext).","telephone":"+490000000000","email":"hallo@beispiel.invalid","address":{"@type":"PostalAddress","streetAddress":"Beispielstraße 1","postalCode":"00000","addressLocality":"Musterstadt","addressCountry":"DE"},"areaServed":"Musterstadt und Umgebung","openingHours":"Mo-Fr 08:00-17:00"}
+</script>
+</head>
+<body>
+<a class="sprunglink" href="#inhalt">Zum Inhalt springen</a>
+
+<!-- Gemeinsame Formen: Ladesäule, Stecker, Auto (abstrakt, eigene SVG) und Symbole -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="g-koerper" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#fdfdfe"/><stop offset=".55" stop-color="#e6e9ed"/><stop offset="1" stop-color="#bcc2cb"/></linearGradient>
+    <linearGradient id="g-sockel" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#b6bcc5"/><stop offset="1" stop-color="#8b929d"/></linearGradient>
+    <linearGradient id="g-glas" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#c6cfda"/><stop offset="1" stop-color="#9aa6b5"/></linearGradient>
+  </defs>
+  <symbol id="s-saeule" viewBox="0 0 200 520">
+    <ellipse cx="100" cy="514" rx="78" ry="6" fill="#000" opacity=".14"/>
+    <rect x="52" y="462" width="96" height="52" rx="6" fill="url(#g-sockel)"/>
+    <rect x="52" y="462" width="96" height="6" rx="3" fill="#fff" opacity=".35"/>
+    <path d="M48 44Q48 10 82 10H118Q152 10 152 44V422Q152 456 118 456H82Q48 456 48 422Z" fill="url(#g-koerper)"/>
+    <path d="M148 46V420Q148 452 118 452" fill="none" stroke="#2b6cff" stroke-width="4" stroke-linecap="round"/>
+    <path d="M52 46V420" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+    <rect x="66" y="56" width="68" height="56" rx="9" fill="#0d1016"/>
+    <rect x="72" y="130" width="56" height="6" rx="3" fill="#b9c0ca"/>
+    <rect x="72" y="146" width="34" height="6" rx="3" fill="#cdd2da"/>
+    <rect x="70" y="248" width="60" height="76" rx="16" fill="#d3d8df" stroke="#aeb5bf" stroke-width="2"/>
+    <circle cx="100" cy="286" r="14" fill="#9aa2ad"/><circle cx="100" cy="286" r="7" fill="#12151b"/>
+    <path d="M130 288C192 288 198 332 178 374S148 432 160 466" fill="none" stroke="#12151b" stroke-width="7" stroke-linecap="round"/>
+    <rect x="166" y="352" width="24" height="52" rx="11" fill="#12151b" transform="rotate(10 178 378)"/>
+    <rect x="171" y="360" width="5" height="30" rx="2.500" fill="#2b6cff" transform="rotate(10 178 378)"/>
+  </symbol>
+  <symbol id="s-stecker" viewBox="0 0 300 440">
+    <path d="M150 300C150 372 62 380 70 440" fill="none" stroke="#2b6cff" stroke-width="16" stroke-linecap="round"/>
+    <path d="M92 150Q92 118 126 118H174Q208 118 208 150L192 308Q189 340 160 340H140Q111 340 108 308Z" fill="#1b1f27"/>
+    <path d="M118 190H182M115 222H185M114 254H186" stroke="#2c323c" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="150" cy="96" r="94" fill="#14171d"/>
+    <circle cx="150" cy="96" r="80" fill="#262b34"/>
+    <path d="M150 12A84 84 0 0 1 234 96" fill="none" stroke="#2b6cff" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="150" cy="96" r="66" fill="#0f1217"/>
+    <g fill="#9aa3b0"><circle cx="150" cy="52" r="10"/><circle cx="108" cy="70" r="10"/><circle cx="192" cy="70" r="10"/><circle cx="96" cy="112" r="10"/><circle cx="204" cy="112" r="10"/><circle cx="124" cy="142" r="10"/><circle cx="176" cy="142" r="10"/></g>
+    <g fill="#e1e5ea"><circle cx="150" cy="52" r="4"/><circle cx="108" cy="70" r="4"/><circle cx="192" cy="70" r="4"/><circle cx="96" cy="112" r="4"/><circle cx="204" cy="112" r="4"/><circle cx="124" cy="142" r="4"/><circle cx="176" cy="142" r="4"/></g>
+  </symbol>
+  <symbol id="s-auto" viewBox="0 0 640 200">
+    <ellipse cx="320" cy="190" rx="300" ry="8" fill="#000" opacity=".12"/>
+    <path d="M22 142Q22 114 62 106L150 94Q200 40 292 36H402Q472 40 522 94L590 106Q628 114 628 142V152H22Z" fill="#f7f8fa" stroke="#c4cad2" stroke-width="2"/>
+    <path d="M205 94Q236 58 296 54H342V94Z" fill="url(#g-glas)"/>
+    <path d="M354 54H404Q448 60 488 94H354Z" fill="url(#g-glas)"/>
+    <path d="M590 112H616" stroke="#2b6cff" stroke-width="6" stroke-linecap="round"/>
+    <path d="M30 120H44" stroke="#c4cad2" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="150" cy="152" r="40" fill="#15181e"/><circle cx="150" cy="152" r="20" fill="#9aa3b0"/><circle cx="150" cy="152" r="7" fill="#15181e"/>
+    <circle cx="500" cy="152" r="40" fill="#15181e"/><circle cx="500" cy="152" r="20" fill="#9aa3b0"/><circle cx="500" cy="152" r="7" fill="#15181e"/>
+  </symbol>
+  <symbol id="i-arrow-down" viewBox="0 0 256 256" fill="currentColor"><path d="M208.49,152.49l-72,72a12,12,0,0,1-17,0l-72-72a12,12,0,0,1,17-17L116,187V40a12,12,0,0,1,24,0V187l51.51-51.52a12,12,0,0,1,17,17Z"/></symbol>
+  <symbol id="i-arrow-up-right" viewBox="0 0 256 256" fill="currentColor"><path d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"/></symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L132.69,61.66a12,12,0,0,1,17-17l72,72A12,12,0,0,1,221.66,133.66Z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 256 256" fill="currentColor"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/></symbol>
+  <symbol id="i-envelope" viewBox="0 0 256 256" fill="currentColor"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm-96,85.15L52.57,64H203.43ZM98.71,128,40,181.81V74.19Zm11.84,10.85,12,11.05a8,8,0,0,0,10.82,0l12-11.05,58,53.15H52.57ZM157.29,128,216,74.18V181.82Z"/></symbol>
+  <symbol id="i-map-pin" viewBox="0 0 256 256" fill="currentColor"><path d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 256 256" fill="currentColor"><path d="M216,48V208a16,16,0,0,1-16,16H168a16,16,0,0,1-16-16V48a16,16,0,0,1,16-16h32A16,16,0,0,1,216,48ZM88,32H56A16,16,0,0,0,40,48V208a16,16,0,0,0,16,16H88a16,16,0,0,0,16-16V48A16,16,0,0,0,88,32Z"/></symbol>
+  <symbol id="i-play" viewBox="0 0 256 256" fill="currentColor"><path d="M240,128a15.74,15.74,0,0,1-7.6,13.51L88.32,229.65a16,16,0,0,1-16.2.3A15.86,15.86,0,0,1,64,216.13V39.87a15.86,15.86,0,0,1,8.12-13.82,16,16,0,0,1,16.2.3L232.4,114.49A15.74,15.74,0,0,1,240,128Z"/></symbol>
+  <symbol id="i-zeichen" viewBox="0 0 32 32"><rect x="10" y="4" width="12" height="24" rx="4" fill="currentColor"/><path fill="var(--blau)" d="M17 8.500l-4.500 6.500h3.200l-1 5.500 4.800-7h-3.300z"/></symbol>
+</svg>
+
+<header class="kopf">
+  <div class="kopf__leiste">
+    <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
+      <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg>
+      <span>Markenname</span>
+    </a>
+    <nav class="kopf__nav" id="hauptnav" aria-label="Hauptnavigation" data-menue-ziel>
+      <ul class="kopf__menue">
+        <li><a href="#ueber">Über uns</a></li>
+        <li><a href="#vorteile">Vorteile</a></li>
+        <li><a href="#ablauf">Ablauf</a></li>
+        <li><a href="#fragen">Fragen</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+        <li class="kopf__tel"><a href="tel:+490000000000"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>0000 000 000</a></li>
+      </ul>
+    </nav>
+    <a class="knopf kopf__knopf" href="#kontakt">Angebot<span class="kopf__lang">&nbsp;anfragen</span></a>
+    <button class="kopf__burger" type="button" data-menue aria-expanded="false" aria-controls="hauptnav">
+      <span class="sr-nur">Menü öffnen oder schließen</span>
+      <span class="burger" aria-hidden="true"></span>
+    </button>
+  </div>
+</header>
+
+<main id="inhalt">
+  <!-- 1. Held: Großschrift, Säule steigt beim Scrollen von hinten nach vorn (Ebenen), Ladeanzeige zählt -->
+  <section class="held" id="top" aria-labelledby="h-held" data-fortschritt>
+    <div class="held__buehne">
+      <div class="held__text">
+        <!-- Held: Betriebe, Hausverwaltungen und Kommunen, die Ladepunkte brauchen, aber keinen klaren Plan für Netzanschluss, Förderung und Einbau haben; Lösung: Planung, Installation und Betrieb aus einer Hand; Beleg folgt unter "Warum wir" (Beispiel), vor dem Einsatz durch echte Angaben ersetzen -->
+        <h1 id="h-held">Ladepunkte für Ihren Betrieb, aus einer Hand geplant und installiert</h1>
+        <p class="held__lead">Für Betriebe, Hausverwaltungen und Kommunen: Wir klären Standort, Netzanschluss und Förderlage, bauen die Ladesäulen ein und betreuen sie im Betrieb.</p>
+        <div class="held__knoepfe">
+          <a class="knopf" href="#kontakt">Angebot anfragen</a>
+          <a class="held__tel" href="tel:+490000000000"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>0000 000 000</a>
+        </div>
+      </div>
+      <div class="held__bild" aria-hidden="true">
+        <div class="held__wort">LADEPUNKT</div>
+        <div class="saeule held__saeule">
+          <svg viewBox="0 0 200 520" focusable="false"><use href="#s-saeule"/></svg>
+          <div class="saeule__anzeige" data-beispiel><span class="saeule__zahl" data-zaehle>72</span><span class="saeule__proz">%</span></div>
+        </div>
+      </div>
+      <p class="held__rechts">Abstrakte Darstellung einer Ladesäule. Die Ladeanzeige ist ein Beispiel, kein Messwert.</p>
+      <div class="held__leiste">
+        <span>Elektrifizierung für Gewerbe und Kommunen</span>
+        <a class="held__pfeil" href="#ueber" aria-label="Weiter zu Über uns"><svg width="26" height="26" aria-hidden="true" focusable="false"><use href="#i-arrow-down"/></svg></a>
+        <span class="held__ort">Musterstadt und Umgebung</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Über uns: Satz in Versalien, Wörter hellen beim Scrollen auf, darunter fährt ein Auto ein -->
+  <section class="ueber" id="ueber" aria-labelledby="h-ueber">
+    <div class="wrap">
+      <p class="kicker" data-zeig>Über uns</p>
+      <h2 id="h-ueber" class="ueber__satz" data-licht>Wir planen, installieren und betreuen Ladeinfrastruktur für Betriebe und Kommunen, damit Laden im Alltag einfach funktioniert und jede Säule sauber abgerechnet wird.</h2>
+    </div>
+    <div class="auto" data-einlauf>
+      <svg viewBox="0 0 640 200" role="img" aria-label="Abstrakte Darstellung eines Elektroautos von der Seite"><use href="#s-auto"/></svg>
+    </div>
+  </section>
+
+  <!-- 3. Warum wir: drei Hochformatkarten -->
+  <section class="sektion vorteile" id="vorteile" aria-labelledby="h-vorteile">
+    <div class="wrap">
+      <div class="vorteile__kopf">
+        <h2 id="h-vorteile">Warum wir</h2>
+        <a class="knopf knopf--klein" href="#kontakt">Angebot anfragen</a>
+      </div>
+      <ul class="vorteile__raster" data-staffel>
+        <li class="karte" data-zeig>
+          <figure class="karte__bild"><img src="bilder/hand-steckt-ladekabel.webp" width="600" height="750" alt="Hand steckt ein Ladekabel an ein Elektroauto" loading="lazy" decoding="async"></figure>
+          <h3>Installation</h3>
+          <p>Der Einbau erfolgt durch Elektrofachpersonal, mit Abnahme und Dokumentation. Welche Nachweise Ihr Netzbetreiber verlangt, klären wir vorab.</p>
+        </li>
+        <li class="karte karte--dunkel" data-zeig>
+          <div class="karte__bild karte__bild--saeule" aria-hidden="true">
+            <div class="saeule"><svg viewBox="0 0 200 520" focusable="false"><use href="#s-saeule"/></svg><div class="saeule__anzeige" data-beispiel><span class="saeule__zahl">72</span><span class="saeule__proz">%</span></div></div>
+          </div>
+          <h3>Planung</h3>
+          <p>Wir zählen Fahrzeuge, Stellplätze und Netzreserve und planen so, dass Sie später erweitern können, ohne neu zu bauen.</p>
+        </li>
+        <li class="karte" data-zeig>
+          <figure class="karte__bild"><img src="bilder/solaranlage-flachdach.webp" width="1000" height="667" alt="Solaranlage auf einem Flachdach mit Blick auf die Stadt" loading="lazy" decoding="async"></figure>
+          <h3>Betrieb</h3>
+          <p>Wartung, Störungsmeldung und Abrechnung laufen über einen Ansprechpartner. Auf Wunsch binden wir Ihre Solaranlage ein.</p>
+        </li>
+      </ul>
+      <p class="vorteile__hinweis" data-beispiel>Beispieltexte: Leistungen, Nachweise und Reaktionszeiten sind je Betrieb zu ergänzen.</p>
+    </div>
+  </section>
+
+  <!-- 4. Schnell laden: Großschrift, Stecker überlappt, Kapsel mit Foto wächst -->
+  <section class="schnell" aria-labelledby="h-schnell" data-einlauf>
+    <div class="wrap schnell__kopf">
+      <h2 id="h-schnell" class="schnell__wort" data-parallax="0.06">Schnell laden</h2>
+      <svg class="schnell__stecker" viewBox="0 0 300 440" aria-hidden="true" focusable="false"><use href="#s-stecker"/></svg>
+    </div>
+    <div class="wrap">
+      <div class="kapsel">
+        <img src="bilder/wallbox-garagenwand.webp" width="1000" height="667" alt="Wallbox an einer Garagenwand neben einem weißen Elektroauto" loading="lazy" decoding="async">
+        <a class="kapsel__pfeil" href="#kontakt" aria-label="Zum Anfrageformular"><svg width="26" height="26" aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. So geht's: Wortband, darunter sechs Schritte links und rechts um die Säule, bauen sich nacheinander auf -->
+  <section class="ablauf" id="ablauf" aria-labelledby="h-ablauf" data-fortschritt>
+    <div class="ablauf__buehne">
+      <div class="wortband">
+        <div class="band" data-band aria-hidden="true">
+          <div class="band__spur"><span>So geht's</span><span>So geht's</span><span>So geht's</span><span>So geht's</span></div>
+          <div class="band__spur"><span>So geht's</span><span>So geht's</span><span>So geht's</span><span>So geht's</span></div>
+        </div>
+        <h2 id="h-ablauf" class="wortband__titel">So geht's</h2>
+        <button class="wortband__pause" type="button" data-band-pause aria-pressed="false" hidden><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-pause"/></svg><span>Band anhalten</span></button>
+      </div>
+      <div class="ablauf__raster">
+        <ol class="schritte">
+          <li class="schritt"><span class="schritt__nr">01</span><h3>Standort und Bedarf klären</h3><p>Wie viele Fahrzeuge, welche Stellplätze, wer lädt wann? Wir sehen uns den Ort an und fragen nach.</p></li>
+          <li class="schritt"><span class="schritt__nr">02</span><h3>Netzanschluss und Förderung prüfen</h3><p>Wir prüfen, ob Ihr Anschluss reicht und welche Programme in Frage kommen. Zusagen gibt der Fördergeber, nicht wir.</p></li>
+          <li class="schritt"><span class="schritt__nr">03</span><h3>Angebot und Planung</h3><p>Sie erhalten ein Angebot mit Leistung, Zeitplan und klaren Posten, ohne Kleingedrucktes.</p></li>
+          <li class="schritt"><span class="schritt__nr">04</span><h3>Installation</h3><p>Elektrofachpersonal baut Säulen, Zuleitung und Schutztechnik ein, mit möglichst wenig Störung im Betrieb.</p></li>
+          <li class="schritt"><span class="schritt__nr">05</span><h3>Abnahme und Inbetriebnahme</h3><p>Prüfung, Anmeldung beim Netzbetreiber und Einweisung Ihres Teams.</p></li>
+          <li class="schritt"><span class="schritt__nr">06</span><h3>Betrieb und Abrechnung</h3><p>Wartung, Störungsdienst und Abrechnung der Ladevorgänge aus einer Hand.</p></li>
+        </ol>
+        <div class="saeule ablauf__saeule" aria-hidden="true">
+          <svg viewBox="0 0 200 520" focusable="false"><use href="#s-saeule"/></svg>
+          <div class="saeule__anzeige" data-beispiel><span class="saeule__zahl" data-zaehle>72</span><span class="saeule__proz">%</span></div>
+          <span class="saeule__balken"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Vollbild: Luftbild mit Säulenreihe und Angebotskachel -->
+  <section class="vollbild" aria-labelledby="h-voll">
+    <img class="vollbild__bild" src="bilder/luftbild-strasse-stadt.webp" width="1000" height="563" alt="Luftbild einer Stadtstraße mit Fahrzeugen und Bäumen" loading="lazy" decoding="async">
+    <div class="vollbild__inhalt wrap">
+      <h2 id="h-voll" class="vollbild__titel">Elektromobilität einfach erleben</h2>
+      <div class="vollbild__reihe" aria-hidden="true">
+        <div class="saeule"><svg viewBox="0 0 200 520" focusable="false"><use href="#s-saeule"/></svg></div>
+        <div class="saeule"><svg viewBox="0 0 200 520" focusable="false"><use href="#s-saeule"/></svg></div>
+        <div class="saeule"><svg viewBox="0 0 200 520" focusable="false"><use href="#s-saeule"/></svg></div>
+        <div class="saeule"><svg viewBox="0 0 200 520" focusable="false"><use href="#s-saeule"/></svg></div>
+      </div>
+      <div class="angebot" data-beispiel>
+        <p class="angebot__klein">Beispielangebot</p>
+        <p class="angebot__text">Standort und Förderlage prüfen wir mit Ihnen. Ob und in welcher Höhe eine Förderung möglich ist, hängt vom Programm ab.</p>
+        <a class="knopf knopf--hell" href="#kontakt">Angebot anfragen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Anschlüsse: Foto und Form links, Text rechts -->
+  <section class="anschluss" aria-labelledby="h-anschluss">
+    <div class="anschluss__links" aria-hidden="true">
+      <div class="anschluss__flaeche"><svg class="anschluss__stecker" viewBox="0 0 300 440" focusable="false"><use href="#s-stecker"/></svg></div>
+    </div>
+    <div class="anschluss__rechts">
+      <h2 id="h-anschluss">Anschlüsse und Leistung</h2>
+      <p>Wechselstrom Wallboxen für Mitarbeitende und Dienstwagen, Gleichstrom Schnelllader für Flotten und Besucher: Welche Leistung sinnvoll ist, hängt von Netzanschluss, Standzeit und Fahrzeugen ab. Wir rechnen es mit Ihnen durch.</p>
+      <p>Gängige Anschlüsse für Europa sind Typ 2 und CCS. Wir bauen die Säulen so, dass Sie später Punkte ergänzen können.</p>
+      <a class="anschluss__link" href="#kontakt">Leistung für meinen Standort klären<svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a>
+    </div>
+  </section>
+
+  <!-- 8. Fragen -->
+  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen">
+    <div class="wrap fragen__raster">
+      <div class="fragen__kopf">
+        <h2 id="h-fragen">Fragen vor dem Auftrag</h2>
+        <p data-beispiel>Die Antworten sind Beispiele und je Betrieb anzupassen.</p>
+      </div>
+      <div class="fragen__liste" data-exklusiv>
+        <details open><summary>Was kostet eine Ladesäule für meinen Betrieb?</summary><p>Das hängt von Leistung, Zuleitung und Netzanschluss ab. Nach einem Termin vor Ort erhalten Sie ein Angebot mit einzelnen Posten. Preise nennen wir erst dann, nicht vorab pauschal (Beispieltext).</p></details>
+        <details><summary>Gibt es eine Förderung?</summary><p>Das kommt auf Programm, Standort und Zeitpunkt an. Wir prüfen mit Ihnen, was in Frage kommt, und bereiten Unterlagen vor. Die Entscheidung trifft der Fördergeber (Beispieltext).</p></details>
+        <details><summary>Reicht mein Netzanschluss aus?</summary><p>Oft ja, manchmal mit Lastmanagement. Wir prüfen Anschluss und Verbrauch und sagen Ihnen vor dem Angebot, ob der Netzbetreiber einbezogen werden muss (Beispieltext).</p></details>
+        <details><summary>Wie lange dauert es bis zur ersten Ladung?</summary><p>Die Dauer hängt von Planung, Genehmigung und Lieferzeit ab. Einen Zeitplan nennen wir im Angebot, nicht vorher (Beispieltext).</p></details>
+        <details><summary>Wer rechnet die Ladevorgänge ab?</summary><p>Auf Wunsch übernehmen wir Zugang, Abrechnung und Störungsdienst. Welche Modelle rechtlich möglich sind, klären wir im Gespräch (Beispieltext).</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Anfrage -->
+  <section class="kontakt" id="kontakt" aria-labelledby="h-kontakt">
+    <div class="wrap kontakt__raster">
+      <div class="kontakt__text">
+        <h2 id="h-kontakt">Angebot anfragen</h2>
+        <p>Sagen Sie uns kurz, wo geladen werden soll. Wir melden uns mit einem Terminvorschlag für den Standort.</p>
+        <ul class="kontakt__daten" data-beispiel>
+          <li><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><a href="tel:+490000000000">0000 000 000</a></li>
+          <li><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-envelope"/></svg><a href="mailto:hallo@beispiel.invalid">hallo@beispiel.invalid</a></li>
+          <li><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-map-pin"/></svg><span>Beispielstraße 1, 00000 Musterstadt</span></li>
+        </ul>
+      </div>
+      <!-- Turnstile Platzhalter: Cloudflare Turnstile Widget hier einbinden, serverseitig prüfen (siehe Bauablauf, formulare-und-resend.md) -->
+      <form class="formular" data-formular action="#" method="post" novalidate>
+        <div class="feld"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+        <div class="feld"><label for="f-mail">E-Mail</label><input id="f-mail" name="email" type="email" autocomplete="email" required><small class="feld__hinweis">Dorthin schicken wir den Terminvorschlag.</small></div>
+        <div class="feld"><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel"><small class="feld__hinweis">Nur für Rückfragen zum Standort, kein Werbeanruf.</small></div>
+        <div class="feld"><label for="f-art">Ich frage an für</label><select id="f-art" name="art"><option>einen Betrieb</option><option>eine Kommune</option><option>eine Hausverwaltung</option><option>etwas anderes</option></select></div>
+        <div class="feld feld--breit"><label for="f-text">Standort und Fahrzeuge</label><textarea id="f-text" name="nachricht" rows="3" placeholder="Ort, Zahl der Stellplätze, Zahl der Fahrzeuge"></textarea></div>
+        <p class="formular__recht">Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Angaben zur Beantwortung der Anfrage zu. Mehr dazu in der <a href="#fuss">Datenschutzerklärung</a>.</p>
+        <button class="knopf formular__senden" type="submit">Angebot anfragen<svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></button>
+        <p class="formular__meldung" data-formular-meldung role="status" hidden>Beispielformular: In dieser Vorlage wird nichts gesendet. Der Versand wird im Projekt angebunden.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="fuss" id="fuss">
+  <div class="wrap fuss__raster">
+    <p class="fuss__marke">Markenname</p>
+    <ul class="fuss__links">
+      <li><a href="#ueber">Über uns</a></li>
+      <li><a href="#ablauf">Ablauf</a></li>
+      <li><a href="#fragen">Fragen</a></li>
+      <li><a href="tel:+490000000000">0000 000 000</a></li>
+    </ul>
+    <p class="fuss__klein">© Markenname. Alle Texte sind Beispiele.</p>
+    <ul class="fuss__recht">
+      <li><a href="#fuss">Impressum</a></li>
+      <li><a href="#fuss">Datenschutz</a></li>
+    </ul>
+  </div>
+</footer>
+<script src="../_basis/bewegung.js"></script>
+<script src="stil.js"></script>
+</body>
+</html>

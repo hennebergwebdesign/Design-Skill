@@ -1,0 +1,32 @@
+/* marke.css der Vorlage "Vergütungssoftware, schwarz und Mint": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche, Akzenttext auf Akzent, Text auf Mint und auf der Zitatkarte mindestens 4,5 zu 1. Mint ist nur Fläche, nie Textfarbe. */
+:root{
+  --flaeche:#f5f2e9;
+  --flaeche-alt:#ece8dc;
+  --flaeche-dunkel:#0e1012;
+  --text:#141618;
+  --text-leise:#555955;
+  --linie:#d5d0c2;
+  --akzent:#0e1012;           /* Hauptaktion auf Hell: schwarze Fläche mit hellem Text */
+  --akzent-text:#f5f2e9;
+  --schrift-titel:'Hanken Grotesk',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:6px;
+  --radius-bild:6px;
+
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:300;
+  --titel-spur:-0.025em;
+  --mint:#c9ead8;             /* Fläche: Funktionskachel, Hauptknopf auf Dunkel, Kontaktkarte; nie Text */
+  --mint-text:#0e1012;        /* Text auf Mint */
+  --zitat-karte:#eadfcd;      /* Zitatkachel im Kopfbereich */
+  --text-auf-dunkel:#f5f2e9;
+  --text-leise-dunkel:#b3b7b0;
+  --linie-dunkel:#2c3033;
+  --weiss:#ffffff;
+  --feld-rand:#6d716c;
+  --ton-1:#b9d8c6;
+  --ton-2:#2c3033;
+  --ton-3:#d9ccb4;
+}

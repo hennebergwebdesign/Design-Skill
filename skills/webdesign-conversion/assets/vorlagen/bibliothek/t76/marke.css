@@ -1,0 +1,36 @@
+/* marke.css der Vorlage "Ladeinfrastruktur kühl": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#e8eaed;
+  --flaeche-alt:#dcdfe4;
+  --flaeche-dunkel:#0b0d11;
+  --text:#0d0f13;
+  --text-leise:#474d56;
+  --linie:#aeb5bf;
+  --akzent:#0d0f13;           /* Hauptaktion: schwarze Fläche mit weißem Text */
+  --akzent-text:#ffffff;
+  --schrift-titel:'Archivo',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:22px;
+  --radius-bild:22px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:999px;
+  --titel-gewicht:800;
+  --titel-spur:-0.03em;
+  --blau:#2b6cff;             /* nur Zeichen: Leuchtkante der Säule, Ladebalken, Punkt, nie als Textfarbe auf Hell */
+  --blau-hell:#8db6ff;        /* Zeichen und Text auf Dunkel */
+  --gross-wort:#f6f7f9;       /* Großschrift im Held, nur Dekor */
+  --text-auf-dunkel:#f2f4f7;
+  --text-leise-dunkel:#b9c0cb;
+  --linie-dunkel:#2c323c;
+  --weiss:#ffffff;
+  --feld-rand:#6b727d;
+  /* Platzhalter-Töne für Bildflächen */
+  --ton-1:#c9ced6;
+  --ton-2:#9aa3b0;
+  --ton-3:#5b6573;
+  --ton-4:#2b3340;
+  --ton-5:#1a1f28;
+}

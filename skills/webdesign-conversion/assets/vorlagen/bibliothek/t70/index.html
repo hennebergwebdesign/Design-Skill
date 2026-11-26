@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Videotool: Aus einem Video viele Clips | Markenname</title>
+<meta name="description" content="Aus einem langen Video werden Kurzclips mit Untertiteln im Hochformat, in Minuten statt Tagen. Jetzt kostenlos testen.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../_basis/schriften.css">
+<link rel="stylesheet" href="marke.css">
+<link rel="stylesheet" href="../_basis/basis.css">
+<link rel="stylesheet" href="stil.css">
+<!-- Strukturierte Daten: Beispielwerte, vor der Auslieferung durch echte Angaben ersetzen. Keine Bewertungen erfunden. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Markenname",
+  "applicationCategory": "MultimediaApplication",
+  "operatingSystem": "Web",
+  "description": "Webanwendung, die aus langen Videos kurze Clips im Hochformat mit Untertiteln erstellt.",
+  "inLanguage": "de",
+  "offers": [
+    { "@type": "Offer", "name": "Start", "price": "0", "priceCurrency": "EUR" },
+    { "@type": "Offer", "name": "Pro", "price": "29", "priceCurrency": "EUR" },
+    { "@type": "Offer", "name": "Team", "price": "99", "priceCurrency": "EUR" }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="sprunglink" href="#inhalt">Zum Inhalt springen</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-play" viewBox="0 0 256 256" fill="currentColor"><path d="M232.4,114.49,88.32,26.35a16,16,0,0,0-16.2-.3A15.86,15.86,0,0,0,64,39.87V216.13A15.94,15.94,0,0,0,80,232a16.07,16.07,0,0,0,8.36-2.35L232.4,141.51a15.81,15.81,0,0,0,0-27ZM80,215.94V40l143.83,88Z"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 256 256" fill="currentColor"><path d="M178,40c-20.65,0-38.73,8.88-50,23.89C116.73,48.88,98.65,40,78,40a62.07,62.07,0,0,0-62,62c0,70,103.79,126.66,108.21,129a8,8,0,0,0,7.58,0C136.21,228.66,240,172,240,102A62.07,62.07,0,0,0,178,40ZM128,214.8C109.74,204.16,32,155.69,32,102A46.06,46.06,0,0,1,78,56c19.45,0,35.78,10.36,42.6,27a8,8,0,0,0,14.8,0c6.82-16.67,23.15-27,42.6-27a46.06,46.06,0,0,1,46,46C224,155.61,146.24,204.15,128,214.8Z"/></symbol>
+  <symbol id="i-chat-circle" viewBox="0 0 256 256" fill="currentColor"><path d="M128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 256 256" fill="currentColor"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></symbol>
+  <symbol id="i-check-circle" viewBox="0 0 256 256" fill="currentColor"><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128Z"/></symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></symbol>
+  <symbol id="i-arrow-up-right" viewBox="0 0 256 256" fill="currentColor"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 256 256" fill="currentColor"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/></symbol>
+  <symbol id="i-users" viewBox="0 0 256 256" fill="currentColor"><path d="M117.25,157.92a60,60,0,1,0-66.5,0A95.83,95.83,0,0,0,3.53,195.63a8,8,0,1,0,13.4,8.74,80,80,0,0,1,134.14,0,8,8,0,0,0,13.4-8.74A95.83,95.83,0,0,0,117.25,157.92ZM40,108a44,44,0,1,1,44,44A44.05,44.05,0,0,1,40,108Zm210.14,98.7a8,8,0,0,1-11.07-2.33A79.83,79.83,0,0,0,172,168a8,8,0,0,1,0-16,44,44,0,1,0-16.34-84.87,8,8,0,1,1-5.94-14.85,60,60,0,0,1,55.53,105.64,95.83,95.83,0,0,1,47.22,37.71A8,8,0,0,1,250.14,206.7Z"/></symbol>
+  <symbol id="i-sparkle" viewBox="0 0 256 256" fill="currentColor"><path d="M197.58,129.06,146,110l-19-51.62a15.92,15.92,0,0,0-29.88,0L78,110l-51.62,19a15.92,15.92,0,0,0,0,29.88L78,178l19,51.62a15.92,15.92,0,0,0,29.88,0L146,178l51.62-19a15.92,15.92,0,0,0,0-29.88ZM137,164.22a8,8,0,0,0-4.74,4.74L112,223.85,91.78,169A8,8,0,0,0,87,164.22L32.15,144,87,123.78A8,8,0,0,0,91.78,119L112,64.15,132.22,119a8,8,0,0,0,4.74,4.74L191.85,144ZM144,40a8,8,0,0,1,8-8h16V16a8,8,0,0,1,16,0V32h16a8,8,0,0,1,0,16H184V64a8,8,0,0,1-16,0V48H152A8,8,0,0,1,144,40ZM248,88a8,8,0,0,1-8,8h-8v8a8,8,0,0,1-16,0V96h-8a8,8,0,0,1,0-16h8V72a8,8,0,0,1,16,0v8h8A8,8,0,0,1,248,88Z"/></symbol>
+  <symbol id="i-lightning" viewBox="0 0 256 256" fill="currentColor"><path d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 256 256" fill="currentColor"><path d="M239.18,97.26A16.38,16.38,0,0,0,224.92,86l-59-4.76L143.14,26.15a16.36,16.36,0,0,0-30.27,0L90.11,81.23,31.08,86a16.46,16.46,0,0,0-9.37,28.86l45,38.83L53,211.75a16.38,16.38,0,0,0,24.5,17.82L128,198.49l50.53,31.08A16.4,16.4,0,0,0,203,211.75l-13.76-58.07,45-38.83A16.43,16.43,0,0,0,239.18,97.26Zm-15.34,5.47-48.7,42a8,8,0,0,0-2.56,7.91l14.88,62.8a.37.37,0,0,1-.17.48c-.18.14-.23.11-.38,0l-54.72-33.65a8,8,0,0,0-8.38,0L69.09,215.94c-.15.09-.19.12-.38,0a.37.37,0,0,1-.17-.48l14.88-62.8a8,8,0,0,0-2.56-7.91l-48.7-42c-.12-.1-.23-.19-.13-.5s.18-.27.33-.29l63.92-5.16A8,8,0,0,0,103,91.86l24.62-59.61c.08-.17.11-.25.35-.25s.27.08.35.25L153,91.86a8,8,0,0,0,6.75,4.92l63.92,5.16c.15,0,.24,0,.33.29S224,102.63,223.84,102.73Z"/></symbol>
+  <symbol id="i-quotes" viewBox="0 0 256 256" fill="currentColor"><path d="M100,56H40A16,16,0,0,0,24,72v64a16,16,0,0,0,16,16h60v8a32,32,0,0,1-32,32,8,8,0,0,0,0,16,48.05,48.05,0,0,0,48-48V72A16,16,0,0,0,100,56Zm0,80H40V72h60ZM216,56H156a16,16,0,0,0-16,16v64a16,16,0,0,0,16,16h60v8a32,32,0,0,1-32,32,8,8,0,0,0,0,16,48.05,48.05,0,0,0,48-48V72A16,16,0,0,0,216,56Zm0,80H156V72h60Z"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 256 256" fill="currentColor"><path d="M200,32H160a16,16,0,0,0-16,16V208a16,16,0,0,0,16,16h40a16,16,0,0,0,16-16V48A16,16,0,0,0,200,32Zm0,176H160V48h40ZM96,32H56A16,16,0,0,0,40,48V208a16,16,0,0,0,16,16H96a16,16,0,0,0,16-16V48A16,16,0,0,0,96,32Zm0,176H56V48H96Z"/></symbol>
+  <symbol id="i-device-mobile" viewBox="0 0 256 256" fill="currentColor"><path d="M176,16H80A24,24,0,0,0,56,40V216a24,24,0,0,0,24,24h96a24,24,0,0,0,24-24V40A24,24,0,0,0,176,16ZM72,64H184V192H72Zm8-32h96a8,8,0,0,1,8,8v8H72V40A8,8,0,0,1,80,32Zm96,192H80a8,8,0,0,1-8-8v-8H184v8A8,8,0,0,1,176,224Z"/></symbol>
+  <symbol id="i-headphones" viewBox="0 0 256 256" fill="currentColor"><path d="M201.89,54.66A103.43,103.43,0,0,0,128.79,24H128A104,104,0,0,0,24,128v56a24,24,0,0,0,24,24H64a24,24,0,0,0,24-24V144a24,24,0,0,0-24-24H40.36A88,88,0,0,1,128,40h.67a87.71,87.71,0,0,1,87,80H192a24,24,0,0,0-24,24v40a24,24,0,0,0,24,24h16a24,24,0,0,0,24-24V128A103.41,103.41,0,0,0,201.89,54.66ZM64,136a8,8,0,0,1,8,8v40a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V136Zm152,48a8,8,0,0,1-8,8H192a8,8,0,0,1-8-8V144a8,8,0,0,1,8-8h24Z"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 256 256" fill="currentColor"><path d="M208,56H180.28L166.65,35.56A8,8,0,0,0,160,32H96a8,8,0,0,0-6.65,3.56L75.71,56H48A24,24,0,0,0,24,80V192a24,24,0,0,0,24,24H208a24,24,0,0,0,24-24V80A24,24,0,0,0,208,56Zm8,136a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V80a8,8,0,0,1,8-8H80a8,8,0,0,0,6.66-3.56L100.28,48h55.43l13.63,20.44A8,8,0,0,0,176,72h32a8,8,0,0,1,8,8ZM128,88a44,44,0,1,0,44,44A44.05,44.05,0,0,0,128,88Zm0,72a28,28,0,1,1,28-28A28,28,0,0,1,128,160Z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 256 256" fill="currentColor"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></symbol>
+  <symbol id="i-rocket-launch" viewBox="0 0 256 256" fill="currentColor"><path d="M223.85,47.12a16,16,0,0,0-15-15c-12.58-.75-44.73.4-71.41,27.07L132.69,64H74.36A15.91,15.91,0,0,0,63,68.68L28.7,103a16,16,0,0,0,9.07,27.16l38.47,5.37,44.21,44.21,5.37,38.49a15.94,15.94,0,0,0,10.78,12.92,16.11,16.11,0,0,0,5.1.83A15.91,15.91,0,0,0,153,227.3L187.32,193A15.91,15.91,0,0,0,192,181.64V123.31l4.77-4.77C223.45,91.86,224.6,59.71,223.85,47.12ZM74.36,80h42.33L77.16,119.52,40,114.34Zm74.41-9.45a76.65,76.65,0,0,1,59.11-22.47,76.46,76.46,0,0,1-22.42,59.16L128,164.68,91.32,128ZM176,181.64,141.67,216l-5.19-37.17L176,139.31Zm-74.16,9.5C97.34,201,82.29,224,40,224a8,8,0,0,1-8-8c0-42.29,23-57.34,32.86-61.85a8,8,0,0,1,6.64,14.56c-6.43,2.93-20.62,12.36-23.12,38.91,26.55-2.5,36-16.69,38.91-23.12a8,8,0,1,1,14.56,6.64Z"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 256 256" fill="currentColor"><path d="M128,24h0A104,104,0,1,0,232,128,104.12,104.12,0,0,0,128,24Zm88,104a87.61,87.61,0,0,1-3.33,24H174.16a157.44,157.44,0,0,0,0-48h38.51A87.61,87.61,0,0,1,216,128ZM102,168H154a115.11,115.11,0,0,1-26,45A115.27,115.27,0,0,1,102,168Zm-3.9-16a140.84,140.84,0,0,1,0-48h59.88a140.84,140.84,0,0,1,0,48ZM40,128a87.61,87.61,0,0,1,3.33-24H81.84a157.44,157.44,0,0,0,0,48H43.33A87.61,87.61,0,0,1,40,128ZM154,88H102a115.11,115.11,0,0,1,26-45A115.27,115.27,0,0,1,154,88Zm52.33,0H170.71a135.28,135.28,0,0,0-22.3-45.6A88.29,88.29,0,0,1,206.37,88ZM107.59,42.4A135.28,135.28,0,0,0,85.29,88H49.63A88.29,88.29,0,0,1,107.59,42.4ZM49.63,168H85.29a135.28,135.28,0,0,0,22.3,45.6A88.29,88.29,0,0,1,49.63,168Zm98.78,45.6a135.28,135.28,0,0,0,22.3-45.6h35.66A88.29,88.29,0,0,1,148.41,213.6Z"/></symbol>
+  <symbol id="i-envelope" viewBox="0 0 256 256" fill="currentColor"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm-96,85.15L52.57,64H203.43ZM98.71,128,40,181.81V74.19Zm11.84,10.85,12,11.05a8,8,0,0,0,10.82,0l12-11.05,58,53.15H52.57ZM157.29,128,216,74.18V181.82Z"/></symbol>
+  <symbol id="i-target" viewBox="0 0 256 256" fill="currentColor"><path d="M221.87,83.16A104.1,104.1,0,1,1,195.67,49l22.67-22.68a8,8,0,0,1,11.32,11.32l-96,96a8,8,0,0,1-11.32-11.32l27.72-27.72a40,40,0,1,0,17.87,31.09,8,8,0,1,1,16-.9,56,56,0,1,1-22.38-41.65L184.3,60.39a87.88,87.88,0,1,0,23.13,29.67,8,8,0,0,1,14.44-6.9Z"/></symbol>
+  <symbol id="i-timer" viewBox="0 0 256 256" fill="currentColor"><path d="M128,40a96,96,0,1,0,96,96A96.11,96.11,0,0,0,128,40Zm0,176a80,80,0,1,1,80-80A80.09,80.09,0,0,1,128,216ZM173.66,90.34a8,8,0,0,1,0,11.32l-40,40a8,8,0,0,1-11.32-11.32l40-40A8,8,0,0,1,173.66,90.34ZM96,16a8,8,0,0,1,8-8h48a8,8,0,0,1,0,16H104A8,8,0,0,1,96,16Z"/></symbol>
+  <symbol id="i-shield-check" viewBox="0 0 256 256" fill="currentColor"><path d="M208,40H48A16,16,0,0,0,32,56v56c0,52.72,25.52,84.67,46.93,102.19,23.06,18.86,46,25.26,47,25.53a8,8,0,0,0,4.2,0c1-.27,23.91-6.67,47-25.53C198.48,196.67,224,164.72,224,112V56A16,16,0,0,0,208,40Zm0,72c0,37.07-13.66,67.16-40.6,89.42A129.3,129.3,0,0,1,128,223.62a128.25,128.25,0,0,1-38.92-21.81C61.82,179.51,48,149.3,48,112l0-56,160,0ZM82.34,141.66a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32l-56,56a8,8,0,0,1-11.32,0Z"/></symbol>
+  <symbol id="i-zeichen" viewBox="0 0 32 32" fill="currentColor"><path d="M12 9.500v13a1 1 0 0 0 1.520.850l10.400-6.500a1 1 0 0 0 0-1.700l-10.400-6.500A1 1 0 0 0 12 9.500Z"/><circle cx="24.500" cy="8" r="2.500"/></symbol>
+</svg>
+
+<header class="kopf">
+  <div class="kopf__leiste">
+    <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
+      <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg>
+      <span>Markenname</span>
+    </a>
+    <nav class="kopf__nav" id="hauptnav" aria-label="Hauptnavigation" data-menue-ziel>
+      <ul class="kopf__menue">
+        <li><a href="#funktionen">Funktionen</a></li>
+        <li><a href="#ablauf">Ablauf</a></li>
+        <li><a href="#stimmen">Stimmen</a></li>
+        <li><a href="#preise">Preise</a></li>
+        <li><a href="#faq">Fragen</a></li>
+        <li class="kopf__tel"><a href="tel:+490000000000"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>Vertrieb 0000 000 000</a></li>
+      </ul>
+    </nav>
+    <a class="knopf knopf--hell kopf__knopf" href="#start">Kostenlos<span class="kopf__lang">&nbsp;testen</span></a>
+    <button class="kopf__burger" type="button" data-menue aria-expanded="false" aria-controls="hauptnav">
+      <span class="sr-nur">Menü öffnen oder schließen</span>
+      <span class="burger" aria-hidden="true"></span>
+    </button>
+  </div>
+</header>
+
+<main id="inhalt">
+  <!-- 1. Held: Blauverlauf, Überschrift, Linkfeld, darunter ein Fächer aus fünf Telefonen -->
+  <section class="held" id="top" aria-labelledby="h-held">
+    <div class="wrap held__text">
+      <p class="kicker" data-zeig><span class="kicker__punkt" aria-hidden="true"></span>Für Creator, Podcaster und Marketingteams</p>
+      <!-- Held: Creator, Podcaster und Teams mit langen Videos, die ungenutzt liegen, weil der Schnitt Tage kostet; Lösung ist ein Werkzeug, das Clips im Hochformat mit Untertiteln in Minuten erstellt; Beleg ist die Nutzerzahl unter dem Fächer (Beispiel), vor dem Einsatz durch echte Angaben ersetzen -->
+      <h1 id="h-held" data-zeig>Aus einem langen Video werden Clips für den ganzen Monat</h1>
+      <p class="held__lead" data-zeig>Du lädst dein Video hoch. Markenname findet die stärksten Momente, setzt Untertitel und schneidet im Hochformat. Du prüfst, passt an und lädst herunter.</p>
+      <form class="linkform" data-formular data-zeig action="#" method="post" novalidate>
+        <div class="linkform__zeile">
+          <label class="sr-nur" for="f-link">Link zu deinem Video</label>
+          <span class="linkform__feld"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-play"/></svg><input id="f-link" name="videolink" type="url" autocomplete="url" placeholder="Videolink einfügen"></span>
+          <button class="knopf" type="submit">Kostenlos testen</button>
+        </div>
+        <small class="feld__hinweis">Der erste Clip ist gratis. Dein Video bleibt privat und wird nur für deinen Clip genutzt.</small>
+        <p class="formular__meldung" data-formular-meldung role="status" hidden>Beispielformular: In dieser Vorlage wird nichts gesendet. Der Versand wird im Projekt angebunden.</p>
+      </form>
+      <p class="held__tel" data-zeig>Lieber sprechen? Vertrieb unter <a href="tel:+490000000000">0000 000 000</a>, Montag bis Freitag.</p>
+    </div>
+
+    <div class="fan" data-zeig role="img" aria-label="Fünf Beispielclips im Hochformat mit Untertiteln, fächerförmig angeordnet">
+      <div class="telefon telefon--1" aria-hidden="true"><div class="telefon__innen"><div class="telefon__schirm">
+        <img src="bilder/mann-weisses-shirt-640.webp" alt="" width="640" height="960" decoding="async">
+        <span class="wertung"><b data-zaehle="88">88</b></span>
+        <p class="untertitel"><span class="w">Drei</span> <span class="w an">Fehler</span> <span class="w">am</span> <span class="w">Anfang</span></p>
+      </div></div></div>
+      <div class="telefon telefon--2" aria-hidden="true"><div class="telefon__innen"><div class="telefon__schirm">
+        <img src="bilder/frau-lederjacke-640.webp" alt="" width="640" height="853" decoding="async">
+        <span class="wertung"><b data-zaehle="93">93</b></span>
+        <p class="untertitel"><span class="w">Das</span> <span class="w">wollte</span> <span class="w an">keiner</span> <span class="w">hören</span></p>
+      </div></div></div>
+      <div class="telefon telefon--3" aria-hidden="true"><div class="telefon__innen"><div class="telefon__schirm">
+        <img src="bilder/frau-blond-lachend-640.webp" alt="" width="640" height="960" decoding="async">
+        <span class="wertung"><b data-zaehle="97">97</b></span>
+        <ul class="aktion"><li><svg width="22" height="22" focusable="false"><use href="#i-heart"/></svg></li><li><svg width="22" height="22" focusable="false"><use href="#i-chat-circle"/></svg></li><li><svg width="22" height="22" focusable="false"><use href="#i-arrow-up-right"/></svg></li></ul>
+        <p class="untertitel untertitel--gross" data-untertitel><span class="w">Dein</span> <span class="w">Clip</span> <span class="w">ist</span> <span class="w">in</span> <span class="w an">Minuten</span> <span class="w">fertig</span></p>
+      </div></div></div>
+      <div class="telefon telefon--4" aria-hidden="true"><div class="telefon__innen"><div class="telefon__schirm">
+        <img src="bilder/mann-schwarzes-shirt-640.webp" alt="" width="640" height="853" decoding="async">
+        <span class="wertung"><b data-zaehle="91">91</b></span>
+        <p class="untertitel"><span class="w">Der</span> <span class="w an">Trick</span> <span class="w">mit</span> <span class="w">dem</span> <span class="w">Einstieg</span></p>
+      </div></div></div>
+      <div class="telefon telefon--5" aria-hidden="true"><div class="telefon__innen"><div class="telefon__schirm">
+        <img src="bilder/frau-locken-lachend-640.webp" alt="" width="640" height="800" decoding="async">
+        <span class="wertung"><b data-zaehle="86">86</b></span>
+        <p class="untertitel"><span class="w">So</span> <span class="w">geht</span> <span class="w an">Wachstum</span></p>
+      </div></div></div>
+    </div>
+    <p class="held__hinweis" data-beispiel>Beispielclips mit Beispielwerten. Die Fotos sind Platzhalter, die Wertung ist keine Messung.</p>
+  </section>
+
+  <!-- 2. Avatarband: Nutzer als Beispiel, langsames Band, pausierbar -->
+  <section class="band-sektion" aria-labelledby="h-band">
+    <div class="wrap">
+      <h2 id="h-band" class="band-sektion__titel">Hier entstehen Clips für Kanäle in ganz Deutschland</h2>
+      <p class="band-sektion__text" data-beispiel>Schließ dich <strong><span data-zaehle="50000">50.000</span> Creatorn, Podcastern und Teams</strong> an (Beispielzahl, kein Beleg).</p>
+      <div class="avatare" data-avatare>
+        <ul class="avatare__spur">
+          <li><img src="bilder/avatar-frau-blond-lachend-160.webp" alt="" width="160" height="160" loading="lazy" decoding="async"></li>
+          <li><img src="bilder/avatar-mann-bart-anzug-160.webp" alt="" width="160" height="160" loading="lazy" decoding="async"></li>
+          <li><img src="bilder/avatar-frau-locken-lachend-160.webp" alt="" width="160" height="160" loading="lazy" decoding="async"></li>
+          <li><img src="bilder/avatar-mann-brille-pullover-160.webp" alt="" width="160" height="160" loading="lazy" decoding="async"></li>
+          <li><img src="bilder/avatar-frau-dutt-weiss-160.webp" alt="" width="160" height="160" loading="lazy" decoding="async"></li>
+          <li><img src="bilder/avatar-mann-weisses-shirt-160.webp" alt="" width="160" height="160" loading="lazy" decoding="async"></li>
+          <li><img src="bilder/avatar-frau-lederjacke-160.webp" alt="" width="160" height="160" loading="lazy" decoding="async"></li>
+          <li><img src="bilder/avatar-mann-weste-stadt-160.webp" alt="" width="160" height="160" loading="lazy" decoding="async"></li>
+          <li><img src="bilder/avatar-frau-braun-lachend-160.webp" alt="" width="160" height="160" loading="lazy" decoding="async"></li>
+          <li><img src="bilder/avatar-mann-schwarzes-shirt-160.webp" alt="" width="160" height="160" loading="lazy" decoding="async"></li>
+          <li><img src="bilder/avatar-frau-lockig-blazer-160.webp" alt="" width="160" height="160" loading="lazy" decoding="async"></li>
+          <li><img src="bilder/avatar-mann-blaues-hemd-160.webp" alt="" width="160" height="160" loading="lazy" decoding="async"></li>
+        </ul>
+      </div>
+      <button class="ruhe" type="button" data-ruhe aria-pressed="false" hidden><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-pause"/></svg><span>Bewegung anhalten</span></button>
+    </div>
+  </section>
+
+  <!-- 3. Funktionen: drei Blöcke, Text und Bild wechseln die Seite -->
+  <section class="sektion funktionen" id="funktionen" aria-labelledby="h-funktionen">
+    <div class="wrap">
+      <header class="kopfzeile" data-zeig>
+        <p class="kicker kicker--hell"><span class="kicker__punkt" aria-hidden="true"></span>Funktionen</p>
+        <h2 id="h-funktionen">Alles, was du für gute Clips brauchst</h2>
+        <p>Ein Werkzeug von der Auswahl der besten Stellen bis zum fertigen Untertitel. Du musst nichts schneiden, kannst aber jeden Schritt von Hand ändern.</p>
+      </header>
+
+      <article class="block">
+        <div class="block__text" data-zeig="links">
+          <p class="block__marke"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-lightning"/></svg>Starke Einstiege</p>
+          <h3>Sofort ein Haken, ohne Schnittprogramm</h3>
+          <p>Markenname liest dein Transkript und markiert die Stellen, an denen Zuschauer hängen bleiben. Jeder Vorschlag bekommt eine Wertung, du siehst auf einen Blick, womit du starten solltest.</p>
+          <ul class="haken"><li>Mehrere Vorschläge je Video</li><li>Wertung als Orientierung, nicht als Garantie</li><li>Eigener Einstieg per Klick</li></ul>
+        </div>
+        <div class="block__bild" data-zeig="rechts" aria-hidden="true">
+          <div class="buehne buehne--eins">
+            <div class="mini mini--a"><img src="bilder/frau-braun-lachend-640.webp" alt="" width="640" height="960" loading="lazy" decoding="async"><span class="wertung wertung--klein"><b data-zaehle="87">87</b></span><p class="mini__text">Der erste Satz entscheidet</p></div>
+            <div class="mini mini--b"><img src="bilder/mann-bart-anzug-640.webp" alt="" width="640" height="853" loading="lazy" decoding="async"><span class="wertung wertung--klein"><b data-zaehle="99">99</b></span><p class="mini__text">Das sagt dir niemand</p></div>
+            <div class="mini mini--c"><img src="bilder/frau-dutt-weiss-640.webp" alt="" width="640" height="805" loading="lazy" decoding="async"><span class="wertung wertung--klein"><b data-zaehle="100">100</b></span><p class="mini__text">Warum du jetzt starten solltest</p></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="block block--umgekehrt">
+        <div class="block__text" data-zeig="rechts">
+          <p class="block__marke"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-target"/></svg>Passende Bildausschnitte</p>
+          <h3>Das Gesicht bleibt im Bild, auch wenn du dich bewegst</h3>
+          <p>Aus dem Querformat wird ein Hochformat. Der Ausschnitt folgt der sprechenden Person und springt bei Gesprächen zur nächsten Stimme. Du verschiebst den Rahmen, wenn du es anders willst.</p>
+          <ul class="haken"><li>Hochformat, Quadrat und Querformat</li><li>Mehrere Sprecher werden erkannt</li><li>Rahmen von Hand korrigierbar</li></ul>
+        </div>
+        <div class="block__bild" data-zeig="links" aria-hidden="true">
+          <div class="buehne buehne--zwei">
+            <div class="quelle">
+              <img src="bilder/mann-mit-kopfhoerern-vor-laptop.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async">
+              <span class="ausschnitt"><span class="ausschnitt__marke">9:16</span></span>
+            </div>
+            <div class="spur"><span class="spur__stueck spur__stueck--1"></span><span class="spur__stueck spur__stueck--2"></span><span class="spur__stueck spur__stueck--3"></span><span class="spur__stueck spur__stueck--4"></span></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="block">
+        <div class="block__text" data-zeig="links">
+          <p class="block__marke"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-sparkle"/></svg>Untertitel im Stil deiner Marke</p>
+          <h3>Untertitel in Sekunden, Wort für Wort hervorgehoben</h3>
+          <p>Die Sprache wird erkannt, die Wörter erscheinen im Takt. Du wählst Schrift, Farbe und Hervorhebung einmal und nutzt sie für jeden weiteren Clip. Tippfehler korrigierst du direkt im Text.</p>
+          <ul class="haken"><li>Deutsch und weitere Sprachen</li><li>Eigene Schriften und Farben speichern</li><li>Vorlagen für ruhige und laute Stile</li></ul>
+        </div>
+        <div class="block__bild" data-zeig="rechts" aria-hidden="true">
+          <div class="buehne buehne--drei">
+            <ul class="stile">
+              <li class="stil stil--a aktiv"><span>Das passt</span></li>
+              <li class="stil stil--b"><span>Das passt</span></li>
+              <li class="stil stil--c"><span>Das passt</span></li>
+              <li class="stil stil--d"><span>Das passt</span></li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 4. Zielgruppen: Fotostreifen -->
+  <section class="sektion zielgruppen" id="zielgruppen" aria-labelledby="h-zielgruppen">
+    <div class="wrap">
+      <header class="kopfzeile kopfzeile--links" data-zeig>
+        <p class="kicker kicker--hell"><span class="kicker__punkt" aria-hidden="true"></span>Für wen</p>
+        <h2 id="h-zielgruppen">Für alle, die mehr zu erzählen haben, als in ein Video passt</h2>
+        <p>Ob Podcast, Webinar oder Vortrag: Aus jedem langen Format holst du die Momente, die für sich allein funktionieren.</p>
+      </header>
+      <ul class="streifen" data-zeig tabindex="0" aria-label="Zielgruppen, seitlich wischbar">
+        <li class="karte-foto"><img src="bilder/mann-mit-kopfhoerern-vor-laptop.webp" alt="Mann mit Kopfhörern konzentriert vor einem Laptop" width="1600" height="1067" loading="lazy" decoding="async"><div class="karte-foto__text"><h3>Podcaster</h3><p>Aus jeder Folge fünf Clips für neue Hörer.</p></div></li>
+        <li class="karte-foto"><img src="bilder/videokonferenz-am-laptop.webp" alt="Laptop mit Videokonferenz und einer Tasse daneben" width="1000" height="749" loading="lazy" decoding="async"><div class="karte-foto__text"><h3>Webinar-Teams</h3><p>Die besten Antworten als eigene Clips.</p></div></li>
+        <li class="karte-foto"><img src="bilder/redner-vor-grossem-publikum.webp" alt="Redner vor einem großen Publikum im Saal" width="1000" height="667" loading="lazy" decoding="async"><div class="karte-foto__text"><h3>Speaker</h3><p>Vortrag aufnehmen, Kernsätze verbreiten.</p></div></li>
+        <li class="karte-foto"><img src="bilder/workshop-an-langem-tisch-mit-pflanzen.webp" alt="Gruppe arbeitet an einem langen Tisch mit Pflanzen" width="800" height="1200" loading="lazy" decoding="async"><div class="karte-foto__text"><h3>Kursanbieter</h3><p>Lektionen als Appetithappen für Interessenten.</p></div></li>
+        <li class="karte-foto"><img src="bilder/team-steht-gemeinsam-am-stehtisch.webp" alt="Team steht gemeinsam an einem Stehtisch" width="1000" height="613" loading="lazy" decoding="async"><div class="karte-foto__text"><h3>Agenturen</h3><p>Mehrere Kunden, jede Marke getrennt.</p></div></li>
+      </ul>
+      <p class="zielgruppen__cta" data-zeig><a class="knopf" href="#start">Kostenlos testen</a></p>
+    </div>
+  </section>
+
+  <!-- 5. Ablauf: drei Schritte mit Oberflächenkarten, eine Linie wächst mit -->
+  <section class="sektion ablauf" id="ablauf" aria-labelledby="h-ablauf">
+    <div class="wrap">
+      <header class="kopfzeile" data-zeig>
+        <p class="kicker kicker--hell"><span class="kicker__punkt" aria-hidden="true"></span>Ablauf</p>
+        <h2 id="h-ablauf">Vom Upload zum Post in drei Schritten</h2>
+        <p>Kein Einarbeiten, kein Export zwischendurch. Du bist nach dem ersten Video durch den ganzen Ablauf gegangen.</p>
+      </header>
+      <ol class="schritte" data-ablauf>
+        <li class="schritt" data-zeig>
+          <div class="schritt__karte" aria-hidden="true">
+            <div class="ui">
+              <p class="ui__zeile ui__zeile--fett">Video hinzufügen</p>
+              <div class="ui__feld"><svg width="20" height="20" focusable="false"><use href="#i-play"/></svg>Link oder Datei hier ablegen</div>
+              <div class="ui__lauf"><span class="ui__balken"></span></div>
+              <p class="ui__zeile">Wird geladen: Folge 41, 58 Minuten</p>
+            </div>
+          </div>
+          <div class="schritt__text">
+            <p class="schritt__nr">Schritt 1</p>
+            <h3>Hochladen oder Link einfügen</h3>
+            <p>Datei hineinziehen oder den Link zu deinem Video einfügen. Mehr ist es nicht.</p>
+          </div>
+        </li>
+        <li class="schritt" data-zeig>
+          <div class="schritt__karte" aria-hidden="true">
+            <div class="ui">
+              <p class="ui__zeile ui__zeile--fett">Fundstellen</p>
+              <p class="ui__treffer"><svg width="20" height="20" focusable="false"><use href="#i-check-circle"/></svg><span>Minute 04: Der erste Fehler</span><b>96</b></p>
+              <p class="ui__treffer"><svg width="20" height="20" focusable="false"><use href="#i-check-circle"/></svg><span>Minute 19: Die Gegenfrage</span><b>91</b></p>
+              <p class="ui__treffer"><svg width="20" height="20" focusable="false"><use href="#i-check-circle"/></svg><span>Minute 37: Das Beispiel</span><b>88</b></p>
+            </div>
+          </div>
+          <div class="schritt__text">
+            <p class="schritt__nr">Schritt 2</p>
+            <h3>Markenname findet die Momente</h3>
+            <p>Die Software hört zu, schneidet die stärksten Stellen heraus und setzt Untertitel. Das dauert meist nur wenige Minuten.</p>
+          </div>
+        </li>
+        <li class="schritt" data-zeig>
+          <div class="schritt__karte" aria-hidden="true">
+            <div class="ui">
+              <p class="ui__zeile ui__zeile--fett">Clip 3 von 8</p>
+              <div class="ui__zeitleiste"><span></span><span></span><span></span></div>
+              <p class="ui__zeile">Kanal A, Kanal B, Kanal C</p>
+              <p class="ui__taste">Planen</p>
+            </div>
+          </div>
+          <div class="schritt__text">
+            <p class="schritt__nr">Schritt 3</p>
+            <h3>Prüfen, anpassen, veröffentlichen</h3>
+            <p>Du siehst jeden Clip, änderst Text, Ausschnitt und Länge und lädst ihn herunter oder planst ihn für deine Kanäle.</p>
+          </div>
+        </li>
+      </ol>
+      <p class="ablauf__cta" data-zeig><a class="knopf" href="#start">Kostenlos testen</a></p>
+    </div>
+  </section>
+
+  <!-- 6. Stimmen: Porträtreihe, ein Zitat im Fokus -->
+  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen">
+    <div class="wrap">
+      <header class="kopfzeile" data-zeig>
+        <p class="kicker kicker--hell"><span class="kicker__punkt" aria-hidden="true"></span>Stimmen</p>
+        <h2 id="h-stimmen">Creator sparen Stunden, jede Woche</h2>
+        <p data-beispiel>Alle Stimmen unten sind Beispiele, Platzhalter für echte, freigegebene Kundenzitate.</p>
+      </header>
+      <div class="wand" data-wand>
+        <ul class="wand__reihe" data-zeig="skala">
+          <li><a class="portraet" href="#z1"><img src="bilder/frau-braun-lachend-640.webp" alt="Beispielfoto: Frau in heller Strickjacke" width="640" height="960" loading="lazy" decoding="async"><span class="portraet__name">Lena (Beispiel)</span></a></li>
+          <li><a class="portraet" href="#z2"><img src="bilder/frau-lederjacke-640.webp" alt="Beispielfoto: Frau mit langem Haar und Lederjacke" width="640" height="853" loading="lazy" decoding="async"><span class="portraet__name">Mara (Beispiel)</span></a></li>
+          <li><a class="portraet" href="#z3"><img src="bilder/mann-brille-pullover-640.webp" alt="Beispielfoto: Mann mit Brille und grauem Pullover" width="640" height="1138" loading="lazy" decoding="async"><span class="portraet__name">Jonas (Beispiel)</span></a></li>
+          <li><a class="portraet" href="#z4"><img src="bilder/mann-weisses-shirt-640.webp" alt="Beispielfoto: Mann im weißen Shirt" width="640" height="960" loading="lazy" decoding="async"><span class="portraet__name">Tarek (Beispiel)</span></a></li>
+          <li><a class="portraet" href="#z5"><img src="bilder/frau-dutt-weiss-640.webp" alt="Beispielfoto: Frau mit hochgesteckten Haaren" width="640" height="805" loading="lazy" decoding="async"><span class="portraet__name">Nele (Beispiel)</span></a></li>
+        </ul>
+        <div class="wand__zitate" data-beispiel>
+          <figure class="zitat" id="z1"><blockquote><p>Früher lag jede Podcastfolge eine Woche im Schnitt. Jetzt habe ich am gleichen Tag fünf Clips, die ich nur noch prüfe.</p></blockquote><figcaption><strong>Lena</strong>, Podcasterin (Beispiel)</figcaption></figure>
+          <figure class="zitat" id="z2"><blockquote><p>Die Untertitel stimmen fast immer, und sie sehen aus wie unsere Marke. Das hat mir die meiste Arbeit abgenommen.</p></blockquote><figcaption><strong>Mara</strong>, Kursanbieterin (Beispiel)</figcaption></figure>
+          <figure class="zitat" id="z3"><blockquote><p>Ich habe lange einen Cutter bezahlt. Für meine Vorträge reicht jetzt Markenname, und er kostet einen Bruchteil davon.</p></blockquote><figcaption><strong>Jonas</strong>, Speaker (Beispiel)</figcaption></figure>
+          <figure class="zitat" id="z4"><blockquote><p>Wir betreuen vier Kunden. Jede Marke hat ihre Vorlage, und niemand muss mehr Schriften suchen.</p></blockquote><figcaption><strong>Tarek</strong>, Agentur (Beispiel)</figcaption></figure>
+          <figure class="zitat" id="z5"><blockquote><p>Endlich ein Werkzeug, das mein Webinar nicht zerhackt, sondern die Antworten findet, die wirklich weiterhelfen.</p></blockquote><figcaption><strong>Nele</strong>, Webinar-Team (Beispiel)</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Preise: drei Karten, Umschalter monatlich oder jährlich -->
+  <section class="sektion preise" id="preise" aria-labelledby="h-preise">
+    <div class="wrap">
+      <header class="kopfzeile" data-zeig>
+        <p class="kicker kicker--hell"><span class="kicker__punkt" aria-hidden="true"></span>Preise</p>
+        <h2 id="h-preise">Mehr Inhalt, nicht mehr Kosten</h2>
+        <p data-beispiel>Alle Preise und Leistungen sind Beispiele und je Produkt festzulegen. Preise inklusive Mehrwertsteuer.</p>
+      </header>
+      <div class="tarife" data-tarife data-takt="monat">
+        <div class="umschalter" role="group" aria-label="Abrechnung wählen" data-zeig>
+          <button type="button" data-wahl="monat" aria-pressed="true">Monatlich</button>
+          <button type="button" data-wahl="jahr" aria-pressed="false">Jährlich<span class="umschalter__plus"> (2 Monate gratis, Beispiel)</span></button>
+        </div>
+        <ul class="tarife__liste" data-staffel>
+          <li class="tarif" data-zeig>
+            <h3>Start</h3>
+            <p class="tarif__preis"><span class="tarif__betrag"><span data-preis="monat">0</span><span data-preis="jahr">0</span> €</span><span class="tarif__takt"><span data-preis="monat">für immer</span><span data-preis="jahr">für immer</span></span></p>
+            <p class="tarif__text">Zum Ausprobieren und für kleine Kanäle.</p>
+            <ul class="haken haken--tarif"><li>3 Clips im Monat</li><li>Untertitel in Standardstilen</li><li>Wasserzeichen im Clip</li></ul>
+            <a class="knopf" href="#start">Kostenlos testen</a>
+          </li>
+          <li class="tarif tarif--stark" data-zeig>
+            <h3>Pro</h3>
+            <p class="tarif__preis"><span class="tarif__betrag"><span data-preis="monat">29</span><span data-preis="jahr">24</span> €</span><span class="tarif__takt"><span data-preis="monat">pro Monat</span><span data-preis="jahr">pro Monat, jährlich abgerechnet</span></span></p>
+            <p class="tarif__text">Für alle, die regelmäßig veröffentlichen.</p>
+            <ul class="haken haken--tarif"><li>60 Clips im Monat</li><li>Eigene Schriften und Farben</li><li>Ohne Wasserzeichen</li><li>Planung für deine Kanäle</li></ul>
+            <a class="knopf knopf--hell" href="#start">Kostenlos testen</a>
+          </li>
+          <li class="tarif" data-zeig>
+            <h3>Team</h3>
+            <p class="tarif__preis"><span class="tarif__betrag"><span data-preis="monat">99</span><span data-preis="jahr">82</span> €</span><span class="tarif__takt"><span data-preis="monat">pro Monat</span><span data-preis="jahr">pro Monat, jährlich abgerechnet</span></span></p>
+            <p class="tarif__text">Für Agenturen und Marketingteams.</p>
+            <ul class="haken haken--tarif"><li>Unbegrenzte Clips</li><li>Mehrere Marken und Plätze</li><li>Freigabe durch Kunden</li><li>Persönlicher Ansprechpartner</li></ul>
+            <a class="knopf" href="#start">Kostenlos testen</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Fragen -->
+  <section class="sektion fragen" id="faq" aria-labelledby="h-fragen">
+    <div class="wrap wrap--schmal">
+      <header class="kopfzeile" data-zeig>
+        <p class="kicker kicker--hell"><span class="kicker__punkt" aria-hidden="true"></span>Fragen</p>
+        <h2 id="h-fragen">Alles, was du vorher wissen willst</h2>
+        <p>Etwas fehlt? Schreib uns oder ruf an unter <a class="textlink" href="tel:+490000000000">0000 000 000</a>.</p>
+      </header>
+      <div class="fragen__liste" data-exklusiv data-beispiel>
+        <details class="frage" data-zeig><summary><span>Brauche ich Schnittkenntnisse?</span><span class="plus" aria-hidden="true"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></span></summary><p>Beispielantwort: Nein. Du lädst dein Video hoch, Markenname schlägt Clips vor, und du ziehst höchstens Anfang und Ende zurecht. Wer mehr will, bearbeitet Text, Ausschnitt und Stil von Hand.</p></details>
+        <details class="frage" data-zeig><summary><span>Was passiert mit meinem Video und meinen Daten?</span><span class="plus" aria-hidden="true"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></span></summary><p>Beispielantwort: Dein Material bleibt privat und wird nur für deine Clips verarbeitet. Die Verarbeitung erfolgt auf Servern in der EU, du kannst Videos jederzeit löschen. Die genauen Angaben stehen in der Datenschutzerklärung.</p></details>
+        <details class="frage" data-zeig><summary><span>Passen die Clips zu meiner Marke?</span><span class="plus" aria-hidden="true"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></span></summary><p>Beispielantwort: Ja. Du legst Schrift, Farben, Logo und Untertitelstil einmal fest und nutzt sie für jeden Clip. In den Teampaketen gibt es mehrere Marken nebeneinander.</p></details>
+        <details class="frage" data-zeig><summary><span>Wie gut sind die Untertitel auf Deutsch?</span><span class="plus" aria-hidden="true"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></span></summary><p>Beispielantwort: Die Spracherkennung versteht Hochdeutsch sehr gut. Bei Dialekt, Fachwörtern und Namen lohnt ein kurzer Blick. Du korrigierst Wörter direkt im Text, die Korrektur gilt für den ganzen Clip.</p></details>
+        <details class="frage" data-zeig><summary><span>Kann ich jederzeit kündigen?</span><span class="plus" aria-hidden="true"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></span></summary><p>Beispielantwort: Ja, monatlich und ohne Begründung, per Klick in deinem Konto. Bei jährlicher Abrechnung läuft der bezahlte Zeitraum bis zum Ende weiter.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Abschluss: Blauverlauf mit Anmeldung -->
+  <section class="abschluss" id="start" aria-labelledby="h-start">
+    <div class="wrap abschluss__raster">
+      <div class="abschluss__text" data-zeig>
+        <h2 id="h-start">Bereit für deinen ersten Clip?</h2>
+        <p>Trag dich ein und teste Markenname kostenlos. Du bekommst eine Bestätigung per E-Mail, danach kannst du dein erstes Video hochladen.</p>
+        <p class="abschluss__tel"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><span>Lieber persönlich? Vertrieb: <a href="tel:+490000000000">0000 000 000</a></span></p>
+      </div>
+      <div class="formkarte" data-zeig>
+        <!-- Turnstile: Platzhalter, Widget und serverseitige Prüfung baut der Bauablauf, kein Schlüssel in der Vorlage -->
+        <form class="formular" data-formular action="#" method="post" novalidate>
+          <div class="formular__feld formular__feld--breit"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" placeholder="Vor und Nachname" required></div>
+          <div class="formular__feld formular__feld--breit"><label for="f-mail">E-Mail</label><input id="f-mail" name="email" type="email" autocomplete="email" placeholder="du@beispiel.invalid" required><small class="feld__hinweis">Dorthin schicken wir deine Bestätigung. Kein Newsletter ohne dein Ja.</small></div>
+          <div class="formular__feld"><label for="f-kanal">Kanal oder Firma</label><input id="f-kanal" name="kanal" type="text" autocomplete="organization" placeholder="Podcast Beispiel"></div>
+          <div class="formular__feld"><label for="f-menge">Videos pro Monat</label><select id="f-menge" name="menge"><option>1 bis 4</option><option>5 bis 20</option><option>Mehr als 20</option></select></div>
+          <p class="formular__recht formular__feld--breit">Mit dem Absenden stimmst du der Verarbeitung deiner Angaben zur Einrichtung deines Zugangs zu. Mehr dazu in der <a href="#fuss">Datenschutzerklärung</a>.</p>
+          <button class="knopf formular__senden" type="submit">Kostenlos testen</button>
+          <p class="formular__bestaetigung formular__feld--breit">Nach dem Absenden bekommst du eine E-Mail mit dem Link zur Bestätigung.</p>
+          <p class="formular__meldung formular__feld--breit" data-formular-meldung role="status" hidden>Beispielformular: In dieser Vorlage wird nichts gesendet. Turnstile, Bestätigungsmail und Versand baut der Bauablauf.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="fuss" id="fuss">
+  <div class="wrap">
+    <h2 class="sr-nur">Weitere Links und rechtliche Hinweise</h2>
+    <div class="fuss__raster">
+      <div class="fuss__spalte"><h3>Produkt</h3><ul><li><a href="#funktionen">Funktionen</a></li><li><a href="#ablauf">Ablauf</a></li><li><a href="#preise">Preise</a></li></ul></div>
+      <div class="fuss__spalte"><h3>Hilfe</h3><ul><li><a href="#faq">Fragen</a></li><li><a href="#start">Kontakt</a></li><li><a href="#fuss">Status</a></li></ul></div>
+      <div class="fuss__spalte"><h3>Rechtliches</h3><ul><li><a href="#fuss">Impressum</a></li><li><a href="#fuss">Datenschutz</a></li><li><a href="#fuss">AGB</a></li></ul></div>
+      <div class="fuss__spalte"><h3>Vertrieb</h3><ul><li><a href="tel:+490000000000">Telefon 0000 000 000</a></li><li><a href="#start">Demo anfragen</a></li></ul></div>
+    </div>
+    <p class="fuss__marke" data-zeig aria-hidden="true">Markenname</p>
+    <div class="fuss__unten"><p>© Markenname. Alle Texte, Zahlen und Namen sind Beispiele.</p></div>
+  </div>
+</footer>
+
+<script src="../_basis/bewegung.js"></script>
+<script src="stil.js"></script>
+</body>
+</html>
