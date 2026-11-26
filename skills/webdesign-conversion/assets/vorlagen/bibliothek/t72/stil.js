@@ -43,7 +43,7 @@
       weiter.setAttribute('aria-disabled', String(i >= liste2.length - 1));
       return i;
     };
-    const zu = (i, art) => { const l = sichtbar(), p = l[Math.max(0, Math.min(l.length - 1, i))]; if (p) p.scrollIntoView({ behavior: art || weich, inline: 'center', block: 'nearest' }); };
+    const zu = (i, art) => { const l = sichtbar(), p = l[Math.max(0, Math.min(l.length - 1, i))]; if (p) spur.scrollTo({ left: p.offsetLeft + p.offsetWidth / 2 - spur.clientWidth / 2, behavior: art || weich }); };
     steuerung.hidden = false;
     spur.addEventListener('scroll', () => { if (!t) { t = true; requestAnimationFrame(mitteFinden); } }, { passive: true });
     addEventListener('resize', mitteFinden);

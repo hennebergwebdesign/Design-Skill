@@ -16,7 +16,7 @@ h4{font-family:var(--schrift-titel);font-weight:600;font-size:1.125rem;line-heig
 .knopf{justify-content:center;text-align:center;font-size:1rem;font-weight:700}
 .knopf:hover{box-shadow:0 10px 22px -8px color-mix(in srgb,var(--akzent) 55%,transparent)}
 .knopf svg{flex:none;transition:transform var(--dauer-kurz) var(--kurve)}
-.knopf:hover svg{transform:translateX(3px)}
+@media (hover:hover) and (pointer:fine){.knopf:hover svg{transform:translateX(3px)}}
 .knopf--blau{background:var(--blau);color:#fff}
 .knopf--limette{background:var(--limette);color:var(--text)}
 .knopf--limette:hover{box-shadow:0 10px 22px -8px rgba(0,0,0,.45)}
@@ -156,7 +156,7 @@ h4{font-family:var(--schrift-titel);font-weight:600;font-size:1.125rem;line-heig
 .ring svg{width:100%;height:auto;aspect-ratio:1}
 .ring circle{fill:none;stroke-width:13}
 .ring__grund{stroke:var(--flaeche-alt)}
-.ring__teil{stroke-linecap:butt;transform-origin:50px 50px;transform:rotate(calc(-90deg + var(--s)*3.6deg));stroke-dasharray:var(--l) 100;stroke-dashoffset:0;transition:stroke-dashoffset 1s var(--kurve);transition-delay:calc(var(--s)*8ms)}
+.ring__teil{stroke-linecap:butt;transform-origin:50px 50px;transform:rotate(calc(-90deg + var(--s)*3.6deg));stroke-dasharray:var(--l) 100;stroke-dashoffset:0;transition:stroke-dashoffset var(--dauer-wachsen) var(--kurve);transition-delay:calc(var(--s)*8ms)}
 .ring__teil--blau{stroke:var(--blau)}
 .ring__teil--marine{stroke:var(--flaeche-dunkel)}
 .ring__teil--limette{stroke:var(--limette)}
@@ -197,7 +197,7 @@ h4{font-family:var(--schrift-titel);font-weight:600;font-size:1.125rem;line-heig
 .avatar--e{background:#4639b5}
 .waehrung{display:grid;gap:.4rem}
 .waehrung button{display:flex;align-items:center;gap:.75rem;width:100%;min-height:3.25rem;padding:.25rem .9rem .25rem .3rem;border-radius:999px;background:var(--flaeche-alt);text-align:left;font-weight:600;transition:transform var(--dauer-kurz) var(--kurve),background-color var(--dauer-kurz)}
-.waehrung button:hover{transform:translateX(3px)}
+@media (hover:hover) and (pointer:fine){.waehrung button:hover{transform:translateX(3px)}}
 .waehrung__zeichen{display:grid;place-items:center;width:2.5rem;height:2.5rem;border-radius:50%;background:var(--weiss);font-family:var(--schrift-titel);font-weight:700;font-size:1.25rem}
 .waehrung__name{flex:1}
 .waehrung svg{opacity:0;transform:scale(.6);transition:opacity var(--dauer-kurz),transform var(--dauer-kurz) var(--kurve)}
@@ -205,8 +205,8 @@ h4{font-family:var(--schrift-titel);font-weight:600;font-size:1.125rem;line-heig
 .waehrung button[aria-pressed="true"] svg{opacity:1;transform:none}
 @media (min-width:56rem){
   .pastell{grid-template-columns:repeat(3,1fr)}
-  .pk:hover{transform:translateY(-8px);box-shadow:var(--schatten)}
 }
+@media (min-width:56rem) and (hover:hover) and (pointer:fine){.pk:hover{transform:translateY(-8px);box-shadow:var(--schatten)}}
 
 /* Karte C: Kreditkarten mit 3D Kippung, --kipp (0 bis 1) kommt aus stil.js */
 .grosskarte__bild--karten{min-height:17rem;perspective:1000px;place-items:center;overflow:hidden;--kipp:.7}
@@ -307,7 +307,7 @@ h4{font-family:var(--schrift-titel);font-weight:600;font-size:1.125rem;line-heig
 .fuss__marke p{color:var(--text-leise)}
 .fuss__social{display:flex;gap:.5rem}
 .fuss__social a{display:grid;place-items:center;width:2.75rem;height:2.75rem;border-radius:50%;background:var(--flaeche-alt);transition:transform var(--dauer-kurz) var(--kurve),background-color var(--dauer-kurz)}
-.fuss__social a:hover{transform:translateY(-2px);background:var(--pastell-blau)}
+@media (hover:hover) and (pointer:fine){.fuss__social a:hover{transform:translateY(-2px);background:var(--pastell-blau)}}
 .fuss__spalten{display:grid;grid-template-columns:1fr 1fr;gap:1.75rem 1rem}
 .fuss__spalten h2{font-family:var(--schrift-text);font-size:1rem;font-weight:700;letter-spacing:0;margin-bottom:.35rem}
 .fuss__spalten a{display:flex;align-items:center;min-height:2.75rem;color:var(--text-leise);transition:color var(--dauer-kurz)}
@@ -336,4 +336,4 @@ h4{font-family:var(--schrift-titel);font-weight:600;font-size:1.125rem;line-heig
 .diagramm--bedienbar{margin-top:2.25rem}
 .bew__quelle{grid-column:1/-1;justify-self:start;text-align:left}
 .grosskarte__bild--karten{min-height:20rem}
-.kartenstapel{width:min(78%,19rem)}
+.kartenstapel{width:min(62%,19rem)}

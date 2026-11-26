@@ -19,7 +19,7 @@
   --radius-gross:32px;
   --titel-gewicht:600;
   --titel-spur:-0.025em;
-  --blau:#2152d9;             /* Zeichen, Balken, Knopf auf Dunkel; als Text auf Weiß 5,9 zu 1 */
+  --blau:#2152d9;             /* Zeichen, Balken, Knopf auf Dunkel; als Text auf Weiß 6,4 zu 1 */
   --cyan:#1bb2d8;             /* nur Ende des Blau Verlaufs auf der Karte, nie Text */
   --limette:#c9f23f;          /* nur Fläche: Kachel, Konto, aktiver Eintrag, nie als Text auf Weiß; Text darauf ist dunkel */
   --indigo:#4639b5;           /* flache Einzelfläche (Abokarte, hervorgehobener Balken, Kachel), nie als Verlauf */

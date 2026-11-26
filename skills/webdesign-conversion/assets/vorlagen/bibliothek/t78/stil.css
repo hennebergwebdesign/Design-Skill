@@ -14,7 +14,7 @@ h2{font-weight:300;font-size:clamp(2rem,1.2rem + 3vw,3.5rem);line-height:1.1}
 /* Kopf: schwarz, Uhr, Menü, Knopf */
 .kopf{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--flaeche-dunkel);color:var(--text-auf-dunkel);transition:box-shadow var(--dauer-mittel)}
 .gescrollt .kopf{box-shadow:0 1px 0 var(--linie-dunkel)}
-.kopf__leiste{position:relative;display:flex;align-items:center;gap:.75rem;min-height:var(--kopf-hoehe);padding-inline:var(--rand);max-width:96rem;margin-inline:auto}
+.kopf__leiste{position:relative;display:flex;align-items:center;gap:.75rem;min-height:var(--kopf-hoehe);width:min(100% - 2*var(--rand),var(--breite));margin-inline:auto}
 .kopf__logo{display:inline-flex;align-items:center;gap:.6rem;min-height:2.75rem;font-family:var(--schrift-titel);font-weight:500;font-size:1.375rem;letter-spacing:-.02em;margin-right:auto;white-space:nowrap}
 .kopf__zeichen{width:1.75rem;height:1.75rem;color:var(--text-auf-dunkel)}
 .kopf__zeit{display:none;margin:0 auto 0 0;font-variant-numeric:tabular-nums;font-size:1rem;color:var(--text-leise-dunkel);white-space:nowrap}
@@ -51,7 +51,7 @@ h2{font-weight:300;font-size:clamp(2rem,1.2rem + 3vw,3.5rem);line-height:1.1}
 
 /* 1. Held */
 .held{position:relative;background:var(--flaeche-dunkel);color:var(--text-auf-dunkel);padding:calc(var(--kopf-hoehe) + clamp(2.5rem,6vw,5rem)) var(--rand) calc(var(--uebersteck) + clamp(2rem,4vw,3.5rem))}
-.held__innen{max-width:96rem;margin-inline:auto;display:grid;gap:2.5rem;align-items:end}
+.held__innen{width:min(100%,var(--breite));margin-inline:auto;display:grid;gap:2.5rem;align-items:end}
 .held__titel{font-size:clamp(2.75rem,.6rem + 8.4vw,8.25rem);font-weight:300;line-height:1.02;letter-spacing:-.035em;color:var(--text-auf-dunkel)}
 .zeile{display:block;overflow:hidden;padding-bottom:.1em;margin-bottom:-.1em}
 .zeile>span{display:block}
@@ -149,7 +149,7 @@ h2{font-weight:300;font-size:clamp(2rem,1.2rem + 3vw,3.5rem);line-height:1.1}
 }
 
 /* 6. Stimmen */
-.stimmen{padding-top:clamp(2rem,5vw,4rem);padding-bottom:clamp(3rem,6vw,5rem)}
+.stimmen{padding-top:clamp(2rem,5vw,4rem);padding-bottom:clamp(.5rem,2vw,1.5rem)}
 .stimmen__kopf{text-align:center;padding-bottom:clamp(1.5rem,4vw,3rem)}
 .stimmen__buehne{position:relative}
 .stimmen__bild{position:relative;overflow:hidden;height:clamp(18rem,44vw,40rem);background:var(--ton-2)}
@@ -229,7 +229,7 @@ h2{font-weight:300;font-size:clamp(2rem,1.2rem + 3vw,3.5rem);line-height:1.1}
 .formular__feld{display:grid;gap:.4rem;align-content:start}
 .formular .feld__hinweis{font-size:1rem;line-height:1.4;color:#33403a}
 .formular label{font-weight:600;font-size:1rem}
-.formular input,.formular select{width:100%;min-height:3rem;padding:.7rem 1rem;border:1px solid var(--feld-rand);border-radius:6px;background:var(--weiss);color:var(--text);font:inherit}
+.formular input,.formular select{width:100%;min-height:3.3rem;padding:.7rem 1rem;border:1px solid var(--feld-rand);border-radius:6px;background:var(--weiss);color:var(--text);font:inherit}
 .formular input::placeholder{color:var(--text-leise)}
 .formular__recht{font-size:1rem;color:#33403a}
 .formular__recht a{text-decoration:underline;text-underline-offset:.2em}

@@ -131,7 +131,9 @@ h3{font-size:var(--h3);line-height:1.2}
 .partner{display:grid;place-items:center;width:3rem;height:3rem;color:var(--feld-rand)}
 
 /* 3. Funktionen mit Reitern */
-.reiter{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem;margin-bottom:clamp(1.5rem,3vw,2.5rem)}
+.reiter{display:flex;flex-wrap:nowrap;justify-content:flex-start;gap:.5rem;margin:0 calc(-1*var(--rand)) clamp(1.5rem,3vw,2.5rem);padding:.25rem var(--rand);overflow-x:auto;scrollbar-width:none}
+.reiter__knopf{flex:none;white-space:nowrap}
+@media (min-width:62rem){.reiter{flex-wrap:wrap;justify-content:center;overflow:visible;margin-inline:0;padding-inline:0}}
 .reiter__knopf{min-height:3rem;padding:.5rem 1.25rem;border-radius:var(--radius-knopf);font-weight:700;background:var(--flaeche-alt);color:var(--text);transition:background-color var(--dauer-kurz),color var(--dauer-kurz),transform var(--dauer-kurz) var(--kurve)}
 .reiter__knopf:hover{background:var(--gruen-licht)}
 .reiter__knopf:active{transform:scale(.97)}
@@ -197,7 +199,8 @@ h3{font-size:var(--h3);line-height:1.2}
 .anlegen__text{display:grid;align-content:start;gap:1.25rem}
 .anlegen__text h2{font-size:clamp(1.9rem,1.3rem + 2.2vw,3rem)}
 .anlegen__buehne{position:relative;display:flex;justify-content:center;align-items:flex-start;height:clamp(24rem,70vw,31rem);padding-top:2.5rem;overflow:hidden;border-radius:var(--radius-gross);background:var(--flaeche-dunkel)}
-.anlegen__karte{position:absolute;left:50%;top:6rem;width:min(16rem,55%);margin-left:calc(-1*min(16rem,55%) - 3.5rem);font-size:.8rem;z-index:1;transform:rotate(-10deg)}
+.anlegen__karte{display:none;position:absolute;left:50%;top:6.5rem;width:15rem;margin-left:-17rem;font-size:.8rem;z-index:1;transform:rotate(-10deg)}
+@media (min-width:40rem){.anlegen__karte{display:block}}
 .anlegen__buehne .tel{position:relative;z-index:2}
 .ablauf{display:grid;gap:.75rem}
 .ablauf li{display:flex;align-items:center;gap:1rem;padding:1.1rem 1.25rem;border-radius:var(--radius-karte);background:var(--gruen-licht);font-weight:600}

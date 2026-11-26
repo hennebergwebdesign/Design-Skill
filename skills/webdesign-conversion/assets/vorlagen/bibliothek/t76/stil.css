@@ -19,7 +19,7 @@ h3{font-size:1rem;line-height:1.3;text-transform:uppercase;letter-spacing:.02em}
 .saeule svg{width:100%;height:100%}
 .saeule__anzeige{position:absolute;left:33%;top:10.8%;width:34%;height:10.8%;display:flex;align-items:center;justify-content:center;gap:.04em;color:var(--blau-hell);font-family:var(--schrift-titel);font-weight:800;font-size:17cqw;line-height:1;font-variant-numeric:tabular-nums}
 .saeule__proz{font-size:.6em}
-.saeule__balken{position:absolute;right:2%;top:8.5%;width:1.6%;height:80%;border-radius:4px;background:var(--blau);transform-origin:50% 100%;transform:scaleY(var(--fortschritt,1));opacity:.9}
+.saeule__balken{position:absolute;left:71.2%;top:9.5%;width:1.5%;height:70%;border-radius:4px;background:var(--blau);transform-origin:50% 100%;transform:scaleY(var(--fortschritt,1));opacity:.9}
 
 /* Kopf: schwebend, scrollt ohne JavaScript mit */
 .kopf{position:absolute;top:0;left:0;right:0;z-index:50;padding:.75rem var(--rand) 0}
@@ -72,13 +72,14 @@ h3{font-size:1rem;line-height:1.3;text-transform:uppercase;letter-spacing:.02em}
 @media (min-width:768px){
   .js .held{height:250vh}
   .js .held__buehne{position:sticky;top:0;height:100svh;min-height:0}
-  .held__text{position:absolute;left:0;top:clamp(6rem,15vh,8rem);padding-top:0}
+  .held__text{position:absolute;left:0;top:clamp(5.5rem,13vh,7.5rem);padding-top:0;max-width:40rem}
+  .held__text h1{font-size:clamp(1.6rem,1rem + 1.6vw,2.3rem)}
+  .held__leiste{position:absolute;left:0;right:0;bottom:0}
   .held__bild{position:absolute;inset:0 0 var(--kopf-h) 0;min-height:0;margin:0}
-  .held__wort{top:52%}
+  .held__wort{top:60%}
   .held__saeule{bottom:0;height:78%;transform:translate(-50%,calc((1 - var(--fortschritt,1)) * 34%))}
   .js .held:not(.vor) .held__saeule{z-index:1}
   .held__rechts{display:block;position:absolute;z-index:6;right:var(--rand);top:clamp(6.5rem,17vh,9rem);max-width:17rem;font-size:1rem;line-height:1.5}
-  .held__text{max-width:30rem}
 }
 
 /* 2. Über uns */
@@ -155,7 +156,7 @@ h3{font-size:1rem;line-height:1.3;text-transform:uppercase;letter-spacing:.02em}
 .vollbild__bild{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
 .vollbild::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(11,13,17,.55),rgba(11,13,17,.85))}
 .vollbild__inhalt{position:relative;z-index:2;display:grid;gap:2rem;align-content:space-between;padding-block:clamp(3rem,6vw,5rem)}
-.vollbild__titel{max-width:22rem;font-size:clamp(1.9rem,1.2rem + 2.6vw,3.25rem);justify-self:start}
+.vollbild__titel{font-size:clamp(1.7rem,1.1rem + 2.2vw,3rem);justify-self:start;overflow-wrap:anywhere}
 .vollbild__reihe{display:flex;align-items:flex-end;gap:clamp(.5rem,2vw,1.5rem);height:clamp(9rem,26vw,16rem);justify-self:center}
 .vollbild__reihe .saeule{height:100%}
 .vollbild__reihe .saeule:nth-child(2){height:92%}.vollbild__reihe .saeule:nth-child(3){height:84%}.vollbild__reihe .saeule:nth-child(4){height:76%}
@@ -165,8 +166,8 @@ h3{font-size:1rem;line-height:1.3;text-transform:uppercase;letter-spacing:.02em}
 .angebot .knopf--hell{background:var(--akzent);color:var(--akzent-text)}
 .angebot :focus-visible{outline-color:var(--text)}
 @media (min-width:900px){
-  .vollbild__inhalt{grid-template-columns:1fr 1fr;grid-template-rows:auto 1fr auto}
-  .vollbild__titel{grid-column:2;justify-self:end;text-align:right;max-width:26rem}
+  .vollbild__inhalt{grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:auto 1fr auto}
+  .vollbild__titel{grid-column:2;justify-self:end;text-align:right}
   .vollbild__reihe{grid-column:1;grid-row:2 / 4;justify-self:start;align-self:end}
   .angebot{grid-column:2;grid-row:3;justify-self:end}
 }
@@ -241,3 +242,4 @@ h3{font-size:1rem;line-height:1.3;text-transform:uppercase;letter-spacing:.02em}
   .wortband__pause{display:none}
   .js .stufen .schritt{opacity:1;transform:none}
 }
+.gescrollt .kopf__leiste{padding:.25rem .5rem .25rem 1rem;border-radius:var(--radius-knopf);background:color-mix(in srgb,var(--flaeche) 94%,transparent);box-shadow:0 8px 24px color-mix(in srgb,#000 12%,transparent)}
