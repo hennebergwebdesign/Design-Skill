@@ -18,50 +18,8 @@
 <body>
 <a class="sprunglink" href="#inhalt">Zum Inhalt springen</a>
 
-<!-- Gemeinsame Formen: Ladesäule, Stecker, Auto (abstrakt, eigene SVG) und Symbole -->
+<!-- Gemeinsame Symbole -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-  <defs>
-    <linearGradient id="g-koerper" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#fdfdfe"/><stop offset=".55" stop-color="#e6e9ed"/><stop offset="1" stop-color="#bcc2cb"/></linearGradient>
-    <linearGradient id="g-sockel" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#b6bcc5"/><stop offset="1" stop-color="#8b929d"/></linearGradient>
-    <linearGradient id="g-glas" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#c6cfda"/><stop offset="1" stop-color="#9aa6b5"/></linearGradient>
-  </defs>
-  <symbol id="s-saeule" viewBox="0 0 200 520">
-    <ellipse cx="100" cy="514" rx="78" ry="6" fill="#000" opacity=".14"/>
-    <rect x="52" y="462" width="96" height="52" rx="6" fill="url(#g-sockel)"/>
-    <rect x="52" y="462" width="96" height="6" rx="3" fill="#fff" opacity=".35"/>
-    <path d="M48 44Q48 10 82 10H118Q152 10 152 44V422Q152 456 118 456H82Q48 456 48 422Z" fill="url(#g-koerper)"/>
-    <path d="M148 46V420Q148 452 118 452" fill="none" stroke="#2b6cff" stroke-width="4" stroke-linecap="round"/>
-    <path d="M52 46V420" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".8"/>
-    <rect x="66" y="56" width="68" height="56" rx="9" fill="#0d1016"/>
-    <rect x="72" y="130" width="56" height="6" rx="3" fill="#b9c0ca"/>
-    <rect x="72" y="146" width="34" height="6" rx="3" fill="#cdd2da"/>
-    <rect x="70" y="248" width="60" height="76" rx="16" fill="#d3d8df" stroke="#aeb5bf" stroke-width="2"/>
-    <circle cx="100" cy="286" r="14" fill="#9aa2ad"/><circle cx="100" cy="286" r="7" fill="#12151b"/>
-    <path d="M130 288C192 288 198 332 178 374S148 432 160 466" fill="none" stroke="#12151b" stroke-width="7" stroke-linecap="round"/>
-    <rect x="166" y="352" width="24" height="52" rx="11" fill="#12151b" transform="rotate(10 178 378)"/>
-    <rect x="171" y="360" width="5" height="30" rx="2.500" fill="#2b6cff" transform="rotate(10 178 378)"/>
-  </symbol>
-  <symbol id="s-stecker" viewBox="0 0 300 440">
-    <path d="M150 300C150 372 62 380 70 440" fill="none" stroke="#2b6cff" stroke-width="16" stroke-linecap="round"/>
-    <path d="M92 150Q92 118 126 118H174Q208 118 208 150L192 308Q189 340 160 340H140Q111 340 108 308Z" fill="#1b1f27"/>
-    <path d="M118 190H182M115 222H185M114 254H186" stroke="#2c323c" stroke-width="7" stroke-linecap="round"/>
-    <circle cx="150" cy="96" r="94" fill="#14171d"/>
-    <circle cx="150" cy="96" r="80" fill="#262b34"/>
-    <path d="M150 12A84 84 0 0 1 234 96" fill="none" stroke="#2b6cff" stroke-width="5" stroke-linecap="round"/>
-    <circle cx="150" cy="96" r="66" fill="#0f1217"/>
-    <g fill="#9aa3b0"><circle cx="150" cy="52" r="10"/><circle cx="108" cy="70" r="10"/><circle cx="192" cy="70" r="10"/><circle cx="96" cy="112" r="10"/><circle cx="204" cy="112" r="10"/><circle cx="124" cy="142" r="10"/><circle cx="176" cy="142" r="10"/></g>
-    <g fill="#e1e5ea"><circle cx="150" cy="52" r="4"/><circle cx="108" cy="70" r="4"/><circle cx="192" cy="70" r="4"/><circle cx="96" cy="112" r="4"/><circle cx="204" cy="112" r="4"/><circle cx="124" cy="142" r="4"/><circle cx="176" cy="142" r="4"/></g>
-  </symbol>
-  <symbol id="s-auto" viewBox="0 0 640 200">
-    <ellipse cx="320" cy="190" rx="300" ry="8" fill="#000" opacity=".12"/>
-    <path d="M22 142Q22 114 62 106L150 94Q200 40 292 36H402Q472 40 522 94L590 106Q628 114 628 142V152H22Z" fill="#f7f8fa" stroke="#c4cad2" stroke-width="2"/>
-    <path d="M205 94Q236 58 296 54H342V94Z" fill="url(#g-glas)"/>
-    <path d="M354 54H404Q448 60 488 94H354Z" fill="url(#g-glas)"/>
-    <path d="M590 112H616" stroke="#2b6cff" stroke-width="6" stroke-linecap="round"/>
-    <path d="M30 120H44" stroke="#c4cad2" stroke-width="6" stroke-linecap="round"/>
-    <circle cx="150" cy="152" r="40" fill="#15181e"/><circle cx="150" cy="152" r="20" fill="#9aa3b0"/><circle cx="150" cy="152" r="7" fill="#15181e"/>
-    <circle cx="500" cy="152" r="40" fill="#15181e"/><circle cx="500" cy="152" r="20" fill="#9aa3b0"/><circle cx="500" cy="152" r="7" fill="#15181e"/>
-  </symbol>
   <symbol id="i-arrow-down" viewBox="0 0 256 256" fill="currentColor"><path d="M208.49,152.49l-72,72a12,12,0,0,1-17,0l-72-72a12,12,0,0,1,17-17L116,187V40a12,12,0,0,1,24,0V187l51.51-51.52a12,12,0,0,1,17,17Z"/></symbol>
   <symbol id="i-arrow-up-right" viewBox="0 0 256 256" fill="currentColor"><path d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"/></symbol>
   <symbol id="i-arrow-right" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L132.69,61.66a12,12,0,0,1,17-17l72,72A12,12,0,0,1,221.66,133.66Z"/></symbol>
@@ -113,11 +71,11 @@
       <div class="held__bild" aria-hidden="true">
         <div class="held__wort">LADEPUNKT</div>
         <div class="saeule held__saeule">
-          <svg viewBox="0 0 200 520" focusable="false"><use href="#s-saeule"/></svg>
+          <img src="bilder/ladesaeule-weiss-freigestellt.webp" width="333" height="1117" alt="" aria-hidden="true" decoding="async">
           <div class="saeule__anzeige" data-beispiel><span class="saeule__zahl" data-zaehle>72</span><span class="saeule__proz">%</span></div>
         </div>
       </div>
-      <p class="held__rechts">Abstrakte Darstellung einer Ladesäule. Die Ladeanzeige ist ein Beispiel, kein Messwert.</p>
+      <p class="held__rechts">Beispielbild einer Ladesäule (KI erzeugt). Die Ladeanzeige ist ein Beispiel, kein Messwert.</p>
       <div class="held__leiste">
         <span>Elektrifizierung für Gewerbe und Kommunen</span>
         <a class="held__pfeil" href="#ueber" aria-label="Weiter zu Über uns"><svg width="26" height="26" aria-hidden="true" focusable="false"><use href="#i-arrow-down"/></svg></a>
@@ -133,7 +91,7 @@
       <h2 id="h-ueber" class="ueber__satz" data-licht>Wir planen und bauen Ladeinfrastruktur für Betriebe und Kommunen und betreuen sie danach, damit Laden im Alltag einfach funktioniert und jede Säule sauber abgerechnet wird.</h2>
     </div>
     <div class="auto" data-einlauf>
-      <svg viewBox="0 0 640 200" role="img" aria-label="Abstrakte Darstellung eines Elektroautos von der Seite"><use href="#s-auto"/></svg>
+      <img src="bilder/elektroauto-weiss-seite-freigestellt.webp" width="1300" height="437" alt="Weißes Elektroauto von der Seite" loading="lazy" decoding="async">
     </div>
   </section>
 
@@ -146,19 +104,19 @@
       </div>
       <ul class="vorteile__raster" data-staffel>
         <li class="karte" data-zeig>
-          <figure class="karte__bild"><img src="bilder/hand-steckt-ladekabel.webp" width="600" height="750" alt="Hand steckt ein Ladekabel an ein Elektroauto" loading="lazy" decoding="async"></figure>
+          <figure class="karte__bild"><img src="bilder/ladesaeule-neben-elektroauto.webp" width="1024" height="1280" alt="Weißes Elektroauto neben einer Ladesäule vor einer Betonwand" loading="lazy" decoding="async"></figure>
           <h3>Installation</h3>
           <p>Der Einbau erfolgt durch Elektrofachpersonal, mit Abnahme und Dokumentation. Welche Nachweise Ihr Netzbetreiber verlangt, klären wir vorab.</p>
         </li>
         <li class="karte karte--dunkel" data-zeig>
           <div class="karte__bild karte__bild--saeule" aria-hidden="true">
-            <div class="saeule"><svg viewBox="0 0 200 520" focusable="false"><use href="#s-saeule"/></svg><div class="saeule__anzeige" data-beispiel><span class="saeule__zahl">72</span><span class="saeule__proz">%</span></div></div>
+            <div class="saeule"><img src="bilder/ladesaeule-weiss-freigestellt.webp" width="333" height="1117" alt="" aria-hidden="true" decoding="async" loading="lazy"><div class="saeule__anzeige" data-beispiel><span class="saeule__zahl">72</span><span class="saeule__proz">%</span></div></div>
           </div>
           <h3>Planung</h3>
           <p>Wir zählen Fahrzeuge und Stellplätze, messen die Netzreserve und planen so, dass Sie später erweitern können, ohne neu zu bauen.</p>
         </li>
         <li class="karte" data-zeig>
-          <figure class="karte__bild"><img src="bilder/solaranlage-flachdach.webp" width="1000" height="667" alt="Solaranlage auf einem Flachdach mit Blick auf die Stadt" loading="lazy" decoding="async"></figure>
+          <figure class="karte__bild"><img src="bilder/elektroauto-weiss-detail.webp" width="1024" height="1280" alt="Weißes Elektroauto in der Seitenansicht, Vorderrad und Tür" loading="lazy" decoding="async"></figure>
           <h3>Betrieb</h3>
           <p>Wartung und Störungsmeldung laufen über einen Ansprechpartner, die Abrechnung auf Wunsch auch. Eine vorhandene Solaranlage binden wir ein.</p>
         </li>
@@ -171,11 +129,11 @@
   <section class="schnell" aria-labelledby="h-schnell" data-einlauf>
     <div class="wrap schnell__kopf">
       <h2 id="h-schnell" class="schnell__wort" data-parallax="0.06">Schnell laden</h2>
-      <svg class="schnell__stecker" viewBox="0 0 300 440" aria-hidden="true" focusable="false"><use href="#s-stecker"/></svg>
+      <img class="schnell__stecker" src="bilder/ladestecker-spiralkabel-freigestellt.webp" width="445" height="1212" alt="" aria-hidden="true" loading="lazy" decoding="async">
     </div>
     <div class="wrap">
       <div class="kapsel">
-        <img src="bilder/wallbox-garagenwand.webp" width="1000" height="667" alt="Wallbox an einer Garagenwand neben einem weißen Elektroauto" loading="lazy" decoding="async">
+        <img src="bilder/hand-haelt-ladestecker.webp" width="1536" height="1024" alt="Hand hält einen Ladestecker mit blauem Spiralkabel" loading="lazy" decoding="async">
         <a class="kapsel__pfeil" href="#kontakt" aria-label="Zum Anfrageformular"><svg width="26" height="26" aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"/></svg></a>
       </div>
     </div>
@@ -202,7 +160,7 @@
           <li class="schritt"><span class="schritt__nr">06</span><h3>Betrieb und Abrechnung</h3><p>Wartung, Störungsdienst und Abrechnung der Ladevorgänge laufen bei uns zusammen.</p></li>
         </ol>
         <div class="saeule ablauf__saeule" aria-hidden="true">
-          <svg viewBox="0 0 200 520" focusable="false"><use href="#s-saeule"/></svg>
+          <img src="bilder/ladesaeule-weiss-freigestellt.webp" width="333" height="1117" alt="" aria-hidden="true" decoding="async" loading="lazy">
           <div class="saeule__anzeige" data-beispiel><span class="saeule__zahl" data-zaehle>72</span><span class="saeule__proz">%</span></div>
           <span class="saeule__balken"></span>
         </div>
@@ -210,17 +168,11 @@
     </div>
   </section>
 
-  <!-- 6. Vollbild: Luftbild mit Säulenreihe und Angebotskachel -->
+  <!-- 6. Vollbild: Foto mit Säulenreihe und Angebotskachel -->
   <section class="vollbild" aria-labelledby="h-voll">
-    <img class="vollbild__bild" src="bilder/luftbild-strasse-stadt.webp" width="1000" height="563" alt="Luftbild einer Stadtstraße mit Fahrzeugen und Bäumen" loading="lazy" decoding="async">
+    <img class="vollbild__bild" src="bilder/ladesaeulen-reihe-parkplatz.webp" width="1536" height="1024" alt="Reihe von Ladesäulen auf einem Parkplatz" loading="lazy" decoding="async">
     <div class="vollbild__inhalt wrap">
       <h2 id="h-voll" class="vollbild__titel">Elektromobilität einfach erleben</h2>
-      <div class="vollbild__reihe" aria-hidden="true">
-        <div class="saeule"><svg viewBox="0 0 200 520" focusable="false"><use href="#s-saeule"/></svg></div>
-        <div class="saeule"><svg viewBox="0 0 200 520" focusable="false"><use href="#s-saeule"/></svg></div>
-        <div class="saeule"><svg viewBox="0 0 200 520" focusable="false"><use href="#s-saeule"/></svg></div>
-        <div class="saeule"><svg viewBox="0 0 200 520" focusable="false"><use href="#s-saeule"/></svg></div>
-      </div>
       <div class="angebot" data-beispiel>
         <p class="angebot__klein">Beispielangebot</p>
         <p class="angebot__text">Standort und Förderlage prüfen wir mit Ihnen. Ob und in welcher Höhe eine Förderung möglich ist, hängt vom Programm ab.</p>
@@ -231,9 +183,9 @@
 
   <!-- 7. Anschlüsse: Foto und Form links, Text rechts -->
   <section class="anschluss" aria-labelledby="h-anschluss">
-    <div class="anschluss__links" aria-hidden="true">
-      <div class="anschluss__flaeche"><svg class="anschluss__stecker" viewBox="0 0 300 440" focusable="false"><use href="#s-stecker"/></svg></div>
-    </div>
+    <figure class="anschluss__links">
+      <img src="bilder/ladeanschluss-am-auto.webp" width="1024" height="1280" alt="Ladestecker steckt im Ladeanschluss eines weißen Elektroautos" loading="lazy" decoding="async">
+    </figure>
     <div class="anschluss__rechts">
       <h2 id="h-anschluss">Anschlüsse und Leistung</h2>
       <p>Wechselstrom Wallboxen für Mitarbeitende und Dienstwagen, Gleichstrom Schnelllader für Flotten und Besucher: Welche Leistung sinnvoll ist, hängt von Netzanschluss, Standzeit und Fahrzeugen ab. Wir rechnen es mit Ihnen durch.</p>

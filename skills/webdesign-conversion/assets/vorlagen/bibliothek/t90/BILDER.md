@@ -1,22 +1,28 @@
 # Bilder t90
 
-Alle Fotos sind Beispielfotos aus anderen Vorlagen der Bibliothek (Unsplash, Unsplash Lizenz, Zeile aus der BILDER.md der Ursprungsvorlage übernommen), hier nur zugeschnitten und neu als WebP gespeichert. Sie sind vor Abgabe zu ersetzen. Die Produktbilder der acht Leuchten sind keine Fotos, sondern eigene SVG Formen auf Tonflächen (in `index.html`).
+Alle Bilder sind für die Vorschau erzeugte Beispiele, keine Produktfotos eines Kunden. Die frühere Fassung mit Unsplash Fotos und SVG Lampenformen ist ersetzt; die alten Dateien sind gelöscht. Erzeugt wurden 11 Bilder in 11 Aufrufen (kein Bild verworfen, keine Wiederholung).
 
-| Datei | Platz | Foto Titel | Fotograf | Seite | Ursprung | Lizenz |
-|---|---|---|---|---|---|---|
-| lampe-hero.webp (Ausschnitt, gespiegelt) | Held, große Fotokarte | Eine Lampe und Bücher auf einem Tisch | Karolina Grabowska | https://unsplash.com/photos/ulh3-dLSXjI | t05/bilder/innenraum-mit-lampe-und-holzregal.webp | Unsplash Lizenz |
-| lampe-sideboard-quadrat.webp (Ausschnitt) | schwebende Produktkarte, Avatar, dunkle Kachel, Fotoreihe Über uns | Eine Lampe und Bücher auf einem Tisch | Karolina Grabowska | https://unsplash.com/photos/ulh3-dLSXjI | t05, wie oben | Unsplash Lizenz |
-| sofa-stehlampe-quer.webp (Ausschnitt) | Film Platzhalter (Poster) | brauner Mitteltisch aus Holz im Zimmer | Kirill | https://unsplash.com/photos/9uH-hM0VwPg | t04/bilder/graues-sofa-neben-stehlampe.webp | Unsplash Lizenz |
-| tisch-kerzen-quer.webp (Ausschnitt) | Beratung, Karte 01 | Tisch mit Kerzen | Mounish Raja | https://unsplash.com/photos/PyL-lApI1F8 | t15/bilder/gedeckter-tisch-mit-kerzen.webp | Unsplash Lizenz |
-| kerze-glas-quadrat.webp (Ausschnitt) | Avatar, Fotoreihe Über uns | Kerze und Glas | Alexandra Marta | https://unsplash.com/photos/fNyunAZExdA | t15/bilder/kerze-und-glas-auf-gedecktem-tisch.webp | Unsplash Lizenz |
-| vase-terrakotta-quadrat.webp (Ausschnitt) | Avatar, Fotoreihe Über uns | Kleine Terrakottavase mit Zweigen auf hellem Grund | @hudaigayiran | https://unsplash.com/de/fotos/6iFnJZOcBeo | t51/bilder/vase-terrakotta-600.webp | Unsplash Lizenz |
+| Datei | Platz | Herkunft | Prompt in einem Satz |
+|---|---|---|---|
+| held-lampe-buch-bett.webp | Held, große Fotokarte | KI erzeugt (Figma generate_image, Modell gpt-image-2.5-flare, 26.11.2026), keine Fremdquelle | Szene: warm leuchtende gerippte Glaslampe auf aufgeschlagenem Buch, Hand im Hintergrund, beige Bettwäsche |
+| tischlampe-pilz-mattglas.webp | Produktkarte Mara | KI erzeugt (Figma generate_image, Modell gpt-image-2.5-flare, 26.11.2026), keine Fremdquelle | Studiofoto: Tischlampe mit Pilzschirm aus mattem Glas auf beigem Grund |
+| stehlampe-stoffschirm.webp | Produktkarte Lotte | KI erzeugt (Figma generate_image, Modell gpt-image-2.5-flare, 26.11.2026), keine Fremdquelle | Studiofoto: Stehlampe mit Eichenschaft und Leinenschirm |
+| haengeleuchte-papier.webp | Produktkarte Ilse | KI erzeugt (Figma generate_image, Modell gpt-image-2.5-flare, 26.11.2026), keine Fremdquelle | Studiofoto: Hängeleuchte aus gerilltem Papier vor olivgrauer Wand |
+| laterne-schwarz-kerze.webp | Produktkarte Nero | KI erzeugt (Figma generate_image, Modell gpt-image-2.5-flare, 26.11.2026), keine Fremdquelle | Studiofoto: Laterne aus schwarzem Metall mit Kerze |
+| tischlampe-keramik-terrakotta.webp | Produktkarte Wilma | KI erzeugt (Figma generate_image, Modell gpt-image-2.5-flare, 26.11.2026), keine Fremdquelle | Studiofoto: Keramik Tischlampe in Terrakotta mit Leinenschirm |
+| wandleuchte-messing.webp | Produktkarte Fenn | KI erzeugt (Figma generate_image, Modell gpt-image-2.5-flare, 26.11.2026), keine Fremdquelle | Foto: Wandleuchte aus gebürstetem Messing an Putzwand |
+| kugelleuchte-opalglas.webp | Produktkarte Olga | KI erzeugt (Figma generate_image, Modell gpt-image-2.5-flare, 26.11.2026), keine Fremdquelle | Studiofoto: Kugelleuchte aus Opalglas auf Walnusssockel |
+| tischlampe-schwenkarm-metall.webp | Produktkarte Piet | KI erzeugt (Figma generate_image, Modell gpt-image-2.5-flare, 26.11.2026), keine Fremdquelle | Studiofoto: Schwenkarm Tischlampe aus dunklem Metall auf Holztisch, olivgrauer Grund |
+| regal-keramik-lampen-quer.webp | Beratung, Karte 01 (Ausschnitt aus der Regalszene) | KI erzeugt (Figma generate_image, Modell gpt-image-2.5-flare, 26.11.2026), keine Fremdquelle | Szene: Holzregal mit Keramikvasen und zwei Keramiklampen |
+| wohnzimmer-stehlampe-quer.webp | Film Platzhalter (Poster) | KI erzeugt (Figma generate_image, Modell gpt-image-2.5-flare, 26.11.2026), keine Fremdquelle | Szene: helles Wohnzimmer, graues Sofa, schwarze Stehlampe mit Opalkugel |
+| regal-lampe-quadrat.webp, pilzlampe-quadrat.webp, kugelleuchte-quadrat.webp, keramiklampe-quadrat.webp, schwenkarm-quadrat.webp | Avatare, Fotoreihe Über uns, schwebende Karte, dunkle Kachel | KI erzeugt (Figma generate_image, Modell gpt-image-2.5-flare, 26.11.2026), keine Fremdquelle | Quadratische Ausschnitte der oben genannten Bilder, kein eigener Erzeugungsvorgang |
 
 ## Hinweise
 
-* Die Lampe im Held ist im Foto aus; der Schein ist ein überlagerter Verlauf (opacity), kein Foto.
-* Das Porträt in Über uns ist ein Platzhalter, keine Person gezeigt. Die Avatare sind Beispielbilder, keine Kundenfotos.
-* Das Foto der Lampe ist gespiegelt (Held), damit die Lampe rechts steht.
+* Die Produktfotos zeigen die Lampen im ausgeschalteten Zustand. "Licht an" beim Überfahren ist kein zweites Bild, sondern ein warmer Überzug (`.pk__an`, `soft-light`) und ein Lichtschein (`.pk__schein`, `screen`), beides nur `opacity`.
+* Im Held leuchtet die Lampe schon im Foto, der pulsierende Schein darüber ist deshalb schwächer (Deckkraft 0,15 bis 0,4).
+* Das Porträt in Über uns ist ein Platzhalter, keine Person gezeigt.
 
 ## Offen
 
-* Echte Produktfotos je Leuchte (Hauptbild und zweites Bild im eingeschalteten Zustand) einsetzen, die SVG Formen sind nur Platzhalter.
+* Vor Abgabe durch echte Produktfotos des Kunden ersetzen. Kennzeichnung und Nutzungsrechte KI erzeugter Bilder je Einsatz prüfen.

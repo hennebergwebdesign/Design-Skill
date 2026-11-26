@@ -24,7 +24,7 @@ const args = process.argv.slice(2);
 const json = args.includes('--json');
 const abIdx = args.indexOf('--ab');
 const ab = abIdx > -1 ? args[abIdx + 1] : null;
-const wahl = args.filter((a, i) => /^t\d\d$/.test(a) && i !== abIdx + 1);
+const wahl = args.filter((a, i) => /^t\d\d$/.test(a) && !(abIdx > -1 && i === abIdx + 1));
 let ordner = readdirSync(wurzel).filter((n) => /^t\d\d$/.test(n)).sort();
 if (wahl.length) ordner = ordner.filter((n) => wahl.includes(n));
 if (ab) ordner = ordner.filter((n) => n >= ab);

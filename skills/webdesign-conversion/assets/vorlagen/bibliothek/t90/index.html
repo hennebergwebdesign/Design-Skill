@@ -29,13 +29,6 @@
 <a class="sprunglink" href="#inhalt">Zum Inhalt springen</a>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-  <defs>
-    <radialGradient id="schein">
-      <stop offset="0" stop-color="#f3b45c" stop-opacity=".85"/>
-      <stop offset=".45" stop-color="#f3b45c" stop-opacity=".32"/>
-      <stop offset="1" stop-color="#f3b45c" stop-opacity="0"/>
-    </radialGradient>
-  </defs>
   <symbol id="i-magnifying-glass" viewBox="0 0 256 256" fill="currentColor"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"/></symbol>
   <symbol id="i-heart" viewBox="0 0 256 256" fill="currentColor"><path d="M178,40c-20.65,0-38.73,8.88-50,23.89C116.73,48.88,98.65,40,78,40a62.07,62.07,0,0,0-62,62c0,70,103.79,126.66,108.21,129a8,8,0,0,0,7.58,0C136.21,228.66,240,172,240,102A62.07,62.07,0,0,0,178,40ZM128,214.8C109.74,204.16,32,155.69,32,102A46.06,46.06,0,0,1,78,56c19.45,0,35.78,10.36,42.6,27a8,8,0,0,0,14.8,0c6.82-16.67,23.15-27,42.6-27a46.06,46.06,0,0,1,46,46C224,155.61,146.24,204.15,128,214.8Z"/></symbol>
   <symbol id="i-arrow-right" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></symbol>
@@ -83,7 +76,7 @@
   <div class="held__foto">
     <div class="held__szene" aria-hidden="false">
       <div class="held__innen">
-        <img class="held__bild" src="bilder/lampe-hero.webp" alt="Handgefertigte Tischlampe mit heller Kuppel auf einem Sideboard, daneben ein Windlicht auf Büchern" width="1000" height="560" fetchpriority="high">
+        <img class="held__bild" src="bilder/held-lampe-buch-bett.webp" alt="Warm leuchtende, gerippte Glaslampe auf einem aufgeschlagenen Buch, im Hintergrund eine Hand auf beiger Bettwäsche" width="1536" height="1024" fetchpriority="high">
         <div class="held__schein" aria-hidden="true"></div>
       </div>
     </div>
@@ -99,11 +92,11 @@
     <p class="held__kontur" aria-hidden="true">Neue Kollektion</p>
     <article class="held__karte" aria-labelledby="hk-titel">
       <div class="held__karte-bild" aria-hidden="true">
-        <img src="bilder/lampe-sideboard-quadrat.webp" alt="" width="600" height="600" loading="lazy">
+        <img src="bilder/pilzlampe-quadrat.webp" alt="" width="480" height="480" loading="lazy">
       </div>
       <div>
-        <h2 id="hk-titel">Mara, die Kuppelleuchte</h2>
-        <p>Warmes, weiches Licht aus gebranntem Ton und Leinen.</p>
+        <h2 id="hk-titel">Mara, die Pilzleuchte</h2>
+        <p>Warmes, weiches Licht aus mattem Glas auf Keramikfuß.</p>
         <div class="held__karte-fuss">
           <p><span data-beispiel>129,00 €</span> <span class="held__karte-recht">inkl. MwSt. (Beispiel)</span></p>
           <button class="knopf" type="button" data-warenkorb>In den Warenkorb</button>
@@ -113,9 +106,9 @@
     <div class="held__fuss">
       <div class="held__avatare">
         <ul aria-label="Kundenfotos (Beispielbilder)">
-          <li><img src="bilder/kerze-glas-quadrat.webp" alt="" width="500" height="500" loading="lazy"></li>
-          <li><img src="bilder/vase-terrakotta-quadrat.webp" alt="" width="400" height="400" loading="lazy"></li>
-          <li><img src="bilder/lampe-sideboard-quadrat.webp" alt="" width="600" height="600" loading="lazy"></li>
+          <li><img src="bilder/kugelleuchte-quadrat.webp" alt="" width="480" height="480" loading="lazy"></li>
+          <li><img src="bilder/keramiklampe-quadrat.webp" alt="" width="480" height="480" loading="lazy"></li>
+          <li><img src="bilder/regal-lampe-quadrat.webp" alt="" width="480" height="480" loading="lazy"></li>
         </ul>
         <p>Zeig uns dein Licht: Fotos aus euren Wohnzimmern kommen hierher.</p>
       </div>
@@ -176,17 +169,14 @@
     <ul class="produkte" data-produkte data-staffel>
         <li class="pk" data-linie="Klassik" data-typ="tischlampe" data-zeig>
           <article class="pk__karte">
-            <div class="pk__bild" style="--bild-ton:var(--ton-1)">
-              <svg viewBox="0 0 300 375" role="img" aria-label="Tischleuchte Mara mit heller Kuppel auf Sockel" focusable="false">
-                <rect width="300" height="375" fill="var(--ton-1)"/>
-                <ellipse cx="150" cy="306" rx="58" ry="9" fill="#000" opacity=".14"/><rect x="118" y="290" width="64" height="14" rx="7" fill="var(--lampe-dunkel)"/><rect x="144" y="216" width="12" height="78" fill="var(--lampe-dunkel)"/><path d="M92 218C92 152 122 120 150 120C178 120 208 152 208 218Z" fill="var(--lampe-hell)"/>
-                <path class="pk__an" d="M92 218C92 152 122 120 150 120C178 120 208 152 208 218Z" fill="var(--akzent-warm)"/>
-                <circle class="pk__schein" cx="150" cy="190" r="130" fill="url(#schein)"/>
-              </svg>
+            <div class="pk__bild" style="--bild-ton:var(--ton-1);--sx:50%;--sy:31%">
+              <img src="bilder/tischlampe-pilz-mattglas.webp" alt="Tischleuchte Mara mit Pilzschirm aus mattem Glas auf Keramikfuß" width="720" height="900" loading="lazy">
+              <span class="pk__an" aria-hidden="true"></span>
+              <span class="pk__schein" aria-hidden="true"></span>
             </div>
             <div class="pk__text">
               <div class="pk__kopf"><h3>Mara</h3><p class="pk__preis"><span data-beispiel>129,00 €</span></p></div>
-              <p class="pk__kurz">Tischleuchte Kuppel, Keramikfuß</p>
+              <p class="pk__kurz">Tischleuchte Pilzschirm, mattes Glas</p>
               <p class="pk__recht">Kollektion Klassik, inkl. MwSt., zzgl. Versand (Beispielpreis)</p>
               <button class="knopf pk__knopf" type="button" data-warenkorb>In den Warenkorb</button>
             </div>
@@ -194,13 +184,10 @@
         </li>
         <li class="pk" data-linie="Handarbeit" data-typ="stehlampe" data-zeig>
           <article class="pk__karte">
-            <div class="pk__bild" style="--bild-ton:var(--ton-2)">
-              <svg viewBox="0 0 300 375" role="img" aria-label="Stehleuchte Lotte mit schlankem Schirm" focusable="false">
-                <rect width="300" height="375" fill="var(--ton-2)"/>
-                <ellipse cx="150" cy="336" rx="48" ry="9" fill="#000" opacity=".14"/><ellipse cx="150" cy="330" rx="40" ry="7" fill="var(--lampe-dunkel)"/><rect x="147" y="150" width="6" height="180" fill="var(--lampe-dunkel)"/><path d="M106 150L124 80H176L194 150Z" fill="var(--lampe-hell)"/>
-                <path class="pk__an" d="M106 150L124 80H176L194 150Z" fill="var(--akzent-warm)"/>
-                <circle class="pk__schein" cx="150" cy="150" r="125" fill="url(#schein)"/>
-              </svg>
+            <div class="pk__bild" style="--bild-ton:var(--ton-2);--sx:49%;--sy:13%">
+              <img src="bilder/stehlampe-stoffschirm.webp" alt="Stehleuchte Lotte mit Eichenschaft und Stoffschirm" width="720" height="900" loading="lazy">
+              <span class="pk__an" aria-hidden="true"></span>
+              <span class="pk__schein" aria-hidden="true"></span>
             </div>
             <div class="pk__text">
               <div class="pk__kopf"><h3>Lotte</h3><p class="pk__preis"><span data-beispiel>289,00 €</span></p></div>
@@ -212,13 +199,10 @@
         </li>
         <li class="pk" data-linie="Minimal" data-typ="pendelleuchte" data-zeig>
           <article class="pk__karte">
-            <div class="pk__bild" style="--bild-ton:var(--ton-3)">
-              <svg viewBox="0 0 300 375" role="img" aria-label="Pendelleuchte Ilse mit Kuppelschirm" focusable="false">
-                <rect width="300" height="375" fill="var(--ton-3)"/>
-                <rect x="149" y="0" width="2" height="112" fill="var(--lampe-dunkel)"/><rect x="140" y="106" width="20" height="18" rx="4" fill="var(--lampe-dunkel)"/><path d="M84 196C84 146 114 122 150 122C186 122 216 146 216 196Z" fill="var(--lampe-hell)"/><ellipse cx="150" cy="197" rx="40" ry="5" fill="var(--akzent-warm)" class="flamme"/>
-                <path class="pk__an" d="M84 196C84 146 114 122 150 122C186 122 216 146 216 196Z" fill="var(--akzent-warm)"/>
-                <circle class="pk__schein" cx="150" cy="215" r="120" fill="url(#schein)"/>
-              </svg>
+            <div class="pk__bild" style="--bild-ton:var(--ton-3);--sx:50%;--sy:70%">
+              <img src="bilder/haengeleuchte-papier.webp" alt="Hängeleuchte Ilse mit Kuppelschirm aus gerilltem Papier" width="720" height="900" loading="lazy">
+              <span class="pk__an" aria-hidden="true"></span>
+              <span class="pk__schein" aria-hidden="true"></span>
             </div>
             <div class="pk__text">
               <div class="pk__kopf"><h3>Ilse</h3><p class="pk__preis"><span data-beispiel>149,00 €</span></p></div>
@@ -230,13 +214,10 @@
         </li>
         <li class="pk" data-linie="Exklusiv" data-typ="laterne" data-zeig>
           <article class="pk__karte">
-            <div class="pk__bild" style="--bild-ton:var(--ton-4)">
-              <svg viewBox="0 0 300 375" role="img" aria-label="Laterne Nero mit Kerzenlicht" focusable="false">
-                <rect width="300" height="375" fill="var(--ton-4)"/>
-                <ellipse cx="150" cy="290" rx="50" ry="9" fill="#000" opacity=".14"/><path d="M116 138C116 90 184 90 184 138" fill="none" stroke="var(--lampe-dunkel)" stroke-width="4"/><rect x="108" y="134" width="84" height="10" rx="3" fill="var(--lampe-dunkel)"/><rect x="108" y="266" width="84" height="14" rx="3" fill="var(--lampe-dunkel)"/><path d="M112 138H188V268H112Z" fill="var(--lampe-hell)" opacity=".55"/><path d="M112 144V266M150 144V266M188 144V266" stroke="var(--lampe-dunkel)" stroke-width="3"/><rect x="143" y="214" width="14" height="50" rx="3" fill="var(--lampe-hell)"/><path d="M150 188C158 200 158 210 150 214C142 210 142 200 150 188Z" fill="var(--akzent-warm)" class="flamme"/>
-                <path class="pk__an" d="M112 138H188V268H112Z" fill="var(--akzent-warm)"/>
-                <circle class="pk__schein" cx="150" cy="205" r="115" fill="url(#schein)"/>
-              </svg>
+            <div class="pk__bild" style="--bild-ton:var(--ton-4);--sx:50%;--sy:62%">
+              <img src="bilder/laterne-schwarz-kerze.webp" alt="Laterne Nero aus schwarzem Metall mit Kerze" width="720" height="900" loading="lazy">
+              <span class="pk__an" aria-hidden="true"></span>
+              <span class="pk__schein" aria-hidden="true"></span>
             </div>
             <div class="pk__text">
               <div class="pk__kopf"><h3>Nero</h3><p class="pk__preis"><span data-beispiel>119,00 €</span></p></div>
@@ -248,17 +229,14 @@
         </li>
         <li class="pk" data-linie="Handarbeit" data-typ="tischlampe" data-zeig>
           <article class="pk__karte">
-            <div class="pk__bild" style="--bild-ton:var(--ton-5)">
-              <svg viewBox="0 0 300 375" role="img" aria-label="Tischleuchte Wilma mit Keramikbogen und Zylinderschirm" focusable="false">
-                <rect width="300" height="375" fill="var(--ton-5)"/>
-                <ellipse cx="150" cy="306" rx="56" ry="9" fill="#000" opacity=".14"/><path d="M110 304V272C110 238 128 206 150 206C172 206 190 238 190 272V304Z" fill="var(--lampe-hell)"/><ellipse cx="150" cy="268" rx="15" ry="22" fill="var(--bild-ton)"/><rect x="144" y="196" width="12" height="14" fill="var(--lampe-hell)"/><path d="M104 112H196V196Q196 200 192 200H108Q104 200 104 196Z" fill="var(--lampe-dunkel)"/>
-                <path class="pk__an" d="M104 112H196V196Q196 200 192 200H108Q104 200 104 196Z" fill="var(--akzent-warm)"/>
-                <circle class="pk__schein" cx="150" cy="170" r="125" fill="url(#schein)"/>
-              </svg>
+            <div class="pk__bild" style="--bild-ton:var(--ton-5);--sx:50%;--sy:32%">
+              <img src="bilder/tischlampe-keramik-terrakotta.webp" alt="Tischleuchte Wilma mit Terrakotta-Keramikfuß und Leinenschirm" width="720" height="900" loading="lazy">
+              <span class="pk__an" aria-hidden="true"></span>
+              <span class="pk__schein" aria-hidden="true"></span>
             </div>
             <div class="pk__text">
               <div class="pk__kopf"><h3>Wilma</h3><p class="pk__preis"><span data-beispiel>189,00 €</span></p></div>
-              <p class="pk__kurz">Tischleuchte, gebrannter Ton</p>
+              <p class="pk__kurz">Tischleuchte, gebrannter Ton, Leinenschirm</p>
               <p class="pk__recht">Kollektion Handarbeit, inkl. MwSt., zzgl. Versand (Beispielpreis)</p>
               <button class="knopf pk__knopf" type="button" data-warenkorb>In den Warenkorb</button>
             </div>
@@ -266,17 +244,14 @@
         </li>
         <li class="pk" data-linie="Minimal" data-typ="wandleuchte" data-zeig>
           <article class="pk__karte">
-            <div class="pk__bild" style="--bild-ton:var(--ton-6)">
-              <svg viewBox="0 0 300 375" role="img" aria-label="Wandleuchte Fenn mit Halbschirm" focusable="false">
-                <rect width="300" height="375" fill="var(--ton-6)"/>
-                <rect x="58" y="110" width="14" height="120" rx="7" fill="var(--lampe-dunkel)"/><rect x="70" y="176" width="14" height="6" fill="var(--lampe-dunkel)"/><path d="M76 142C140 142 192 160 192 222H76Z" fill="var(--lampe-hell)"/>
-                <path class="pk__an" d="M76 142C140 142 192 160 192 222H76Z" fill="var(--akzent-warm)"/>
-                <circle class="pk__schein" cx="150" cy="205" r="115" fill="url(#schein)"/>
-              </svg>
+            <div class="pk__bild" style="--bild-ton:var(--ton-6);--sx:50%;--sy:28%">
+              <img src="bilder/wandleuchte-messing.webp" alt="Wandleuchte Fenn aus gebürstetem Messing mit Zylinderschirm" width="720" height="900" loading="lazy">
+              <span class="pk__an" aria-hidden="true"></span>
+              <span class="pk__schein" aria-hidden="true"></span>
             </div>
             <div class="pk__text">
               <div class="pk__kopf"><h3>Fenn</h3><p class="pk__preis"><span data-beispiel>99,00 €</span></p></div>
-              <p class="pk__kurz">Wandleuchte mit Halbschirm</p>
+              <p class="pk__kurz">Wandleuchte aus Messing</p>
               <p class="pk__recht">Kollektion Minimal, inkl. MwSt., zzgl. Versand (Beispielpreis)</p>
               <button class="knopf pk__knopf" type="button" data-warenkorb>In den Warenkorb</button>
             </div>
@@ -284,17 +259,14 @@
         </li>
         <li class="pk" data-linie="Unikate" data-typ="tischlampe" data-zeig>
           <article class="pk__karte">
-            <div class="pk__bild" style="--bild-ton:var(--ton-1)">
-              <svg viewBox="0 0 300 375" role="img" aria-label="Globusleuchte Olga aus Glas, ein Unikat" focusable="false">
-                <rect width="300" height="375" fill="var(--ton-1)"/>
-                <ellipse cx="150" cy="306" rx="50" ry="9" fill="#000" opacity=".14"/><ellipse cx="150" cy="300" rx="36" ry="8" fill="var(--lampe-dunkel)"/><rect x="144" y="228" width="12" height="70" fill="var(--lampe-dunkel)"/><rect x="132" y="222" width="36" height="12" rx="4" fill="var(--lampe-dunkel)"/><path d="M150 118a56 56 0 1 0 .01 0Z" fill="var(--lampe-hell)"/><path d="M112 152C118 140 130 132 144 130" fill="none" stroke="var(--lampe-mittel)" stroke-width="3" opacity=".6"/>
-                <path class="pk__an" d="M150 118a56 56 0 1 0 .01 0Z" fill="var(--akzent-warm)"/>
-                <circle class="pk__schein" cx="150" cy="176" r="125" fill="url(#schein)"/>
-              </svg>
+            <div class="pk__bild" style="--bild-ton:var(--ton-1);--sx:50%;--sy:44%">
+              <img src="bilder/kugelleuchte-opalglas.webp" alt="Kugelleuchte Olga aus Opalglas auf Walnusssockel, ein Unikat" width="720" height="900" loading="lazy">
+              <span class="pk__an" aria-hidden="true"></span>
+              <span class="pk__schein" aria-hidden="true"></span>
             </div>
             <div class="pk__text">
               <div class="pk__kopf"><h3>Olga</h3><p class="pk__preis"><span data-beispiel>349,00 €</span></p></div>
-              <p class="pk__kurz">Globusleuchte, Mundblasglas</p>
+              <p class="pk__kurz">Kugelleuchte, Opalglas, Walnusssockel</p>
               <p class="pk__recht">Kollektion Unikate, inkl. MwSt., zzgl. Versand (Beispielpreis)</p>
               <button class="knopf pk__knopf" type="button" data-warenkorb>In den Warenkorb</button>
             </div>
@@ -302,17 +274,14 @@
         </li>
         <li class="pk" data-linie="Exklusiv" data-typ="tischlampe" data-zeig>
           <article class="pk__karte">
-            <div class="pk__bild" style="--bild-ton:var(--ton-2)">
-              <svg viewBox="0 0 300 375" role="img" aria-label="Pilzleuchte Piet in Dunkelolive" focusable="false">
-                <rect width="300" height="375" fill="var(--ton-2)"/>
-                <ellipse cx="150" cy="306" rx="50" ry="9" fill="#000" opacity=".14"/><ellipse cx="150" cy="300" rx="38" ry="8" fill="var(--lampe-dunkel)"/><path d="M138 196H162L158 298H142Z" fill="var(--lampe-dunkel)"/><path d="M78 196C78 148 118 128 150 128C182 128 222 148 222 196Z" fill="var(--lampe-dunkel)"/><path d="M96 190C98 160 120 144 150 142" fill="none" stroke="var(--lampe-hell)" stroke-width="3" opacity=".5"/>
-                <path class="pk__an" d="M78 196C78 148 118 128 150 128C182 128 222 148 222 196Z" fill="var(--akzent-warm)"/>
-                <circle class="pk__schein" cx="150" cy="200" r="135" fill="url(#schein)"/>
-              </svg>
+            <div class="pk__bild" style="--bild-ton:var(--ton-2);--sx:72%;--sy:25%">
+              <img src="bilder/tischlampe-schwenkarm-metall.webp" alt="Schwenkarmleuchte Piet aus dunklem Metall" width="720" height="900" loading="lazy">
+              <span class="pk__an" aria-hidden="true"></span>
+              <span class="pk__schein" aria-hidden="true"></span>
             </div>
             <div class="pk__text">
               <div class="pk__kopf"><h3>Piet</h3><p class="pk__preis"><span data-beispiel>169,00 €</span></p></div>
-              <p class="pk__kurz">Pilzleuchte, Metall lackiert</p>
+              <p class="pk__kurz">Schwenkarmleuchte, Metall lackiert</p>
               <p class="pk__recht">Kollektion Exklusiv, inkl. MwSt., zzgl. Versand (Beispielpreis)</p>
               <button class="knopf pk__knopf" type="button" data-warenkorb>In den Warenkorb</button>
             </div>
@@ -331,7 +300,7 @@
     <div class="werkstatt__raster">
       <figure class="video" data-video>
         <div class="video__bild">
-          <img src="bilder/sofa-stehlampe-quer.webp" alt="Helles Wohnzimmer mit grauem Sofa und schwarzer Stehleuchte mit runder Birne" width="900" height="720" loading="lazy">
+          <img src="bilder/wohnzimmer-stehlampe-quer.webp" alt="Helles Wohnzimmer mit grauem Sofa und schwarzer Stehleuchte mit Opalkugel" width="900" height="720" loading="lazy">
           <button class="video__knopf" type="button" data-video-knopf aria-pressed="false" aria-label="Filmbewegung anhalten"><svg width="26" height="26" aria-hidden="true" data-ikone="pause"><use href="#i-pause"/></svg><svg width="26" height="26" aria-hidden="true" data-ikone="play" hidden><use href="#i-play"/></svg></button>
         </div>
         <figcaption>Film aus der Werkstatt (Platzhalter, es ist kein Video eingebunden). Hier läuft später ein kurzer Film mit Poster und Pause.</figcaption>
@@ -344,7 +313,7 @@
             <p>Schick uns ein Foto und die Raumgröße, wir schlagen dir drei Leuchten vor.</p>
             <a class="knopf" href="#beratung">Lampe finden</a>
           </div>
-          <div class="faq__foto" aria-hidden="true"><img src="bilder/tisch-kerzen-quer.webp" alt="" width="800" height="640" loading="lazy"></div>
+          <div class="faq__foto" aria-hidden="true"><img src="bilder/regal-keramik-lampen-quer.webp" alt="" width="640" height="480" loading="lazy"></div>
         </div>
         <details>
           <summary><span class="faq__nr">02</span><span class="faq__frage">Wie entsteht eine Lampe?</span><span class="faq__plus" aria-hidden="true"></span></summary>
@@ -381,9 +350,9 @@
         <figcaption><strong>Beispielname</strong><span>Gründerin und Lichtmacherin (Beispiel)</span></figcaption>
       </figure>
       <ul class="ueber__fotos" data-staffel aria-label="Fotos aus der Werkstatt (Beispielbilder)">
-        <li data-zeig><img src="bilder/kerze-glas-quadrat.webp" alt="Kerze im Windlicht neben einem Weinglas" width="500" height="500" loading="lazy"></li>
-        <li data-zeig><img src="bilder/vase-terrakotta-quadrat.webp" alt="Kleine Terrakottavase mit trockenen Zweigen" width="400" height="400" loading="lazy"></li>
-        <li data-zeig><img src="bilder/lampe-sideboard-quadrat.webp" alt="Keramiklampe mit hellem Schirm auf einem Sideboard" width="600" height="600" loading="lazy"></li>
+        <li data-zeig><img src="bilder/regal-lampe-quadrat.webp" alt="Keramiklampe mit hellem Schirm neben Vasen im Regal" width="480" height="480" loading="lazy"></li>
+        <li data-zeig><img src="bilder/kugelleuchte-quadrat.webp" alt="Kugelleuchte aus Opalglas auf Walnusssockel" width="480" height="480" loading="lazy"></li>
+        <li data-zeig><img src="bilder/keramiklampe-quadrat.webp" alt="Tischleuchte mit Terrakotta-Keramikfuß und Leinenschirm" width="480" height="480" loading="lazy"></li>
       </ul>
     </div>
     <ul class="kacheln" data-staffel>
@@ -398,7 +367,7 @@
           <p>Beratung und Mengenpreise für Händler (Beispiel).</p>
           <a class="kachel__pfeil" href="#beratung" aria-label="Mehr zur Zusammenarbeit mit Läden"><svg width="20" height="20" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
         </div>
-        <div class="kachel__bild" aria-hidden="true"><img src="bilder/lampe-sideboard-quadrat.webp" alt="" width="600" height="600" loading="lazy"></div>
+        <div class="kachel__bild" aria-hidden="true"><img src="bilder/schwenkarm-quadrat.webp" alt="" width="480" height="480" loading="lazy"></div>
       </li>
       <li class="kachel" data-zeig>
         <h3>Zusammenarbeit mit Innenarchitektur</h3>

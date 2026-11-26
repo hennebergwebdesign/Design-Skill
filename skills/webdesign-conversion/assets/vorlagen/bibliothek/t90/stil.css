@@ -74,11 +74,11 @@ h3{font-size:var(--h3);line-height:1.2;font-weight:500}
 .held{display:grid;gap:.75rem;grid-template-columns:1fr 1fr;padding-top:.75rem}
 .held__foto{position:relative;grid-column:1/-1;display:grid;grid-template-columns:1fr;gap:1.25rem;align-content:space-between;min-height:36rem;padding:clamp(1.25rem,3vw,2.5rem);border-radius:var(--radius-gross);overflow:hidden;color:var(--text-auf-dunkel);background:var(--flaeche-dunkel);isolation:isolate}
 .held__szene{position:absolute;inset:0;z-index:-3;overflow:hidden}
-.held__innen{position:absolute;top:0;right:0;height:100%;aspect-ratio:1000/560;min-width:100%}
+.held__innen{position:absolute;top:0;right:-8%;height:100%;aspect-ratio:1536/1024;min-width:100%}
 .held__bild{width:100%;height:100%;object-fit:cover}
-.held__schein{position:absolute;left:79%;top:37%;width:48%;aspect-ratio:1;translate:-50% -50%;border-radius:50%;background:radial-gradient(closest-side,color-mix(in srgb,var(--akzent-warm) 75%,transparent),color-mix(in srgb,var(--akzent-warm) 25%,transparent) 55%,transparent);opacity:.7;animation:schein 9s ease-in-out infinite alternate;pointer-events:none}
-@keyframes schein{from{opacity:.4;transform:scale(.94)}to{opacity:.85;transform:scale(1.04)}}
-.held__schleier{position:absolute;inset:0;z-index:-1;background:linear-gradient(color-mix(in srgb,var(--flaeche-dunkel) 24%,transparent),color-mix(in srgb,var(--flaeche-dunkel) 24%,transparent)),linear-gradient(90deg,color-mix(in srgb,var(--flaeche-dunkel) 90%,transparent) 0%,color-mix(in srgb,var(--flaeche-dunkel) 84%,transparent) 62%,color-mix(in srgb,var(--flaeche-dunkel) 0%,transparent) 98%),linear-gradient(0deg,color-mix(in srgb,var(--flaeche-dunkel) 66%,transparent),transparent 34%)}
+.held__schein{position:absolute;left:82%;top:44%;width:30%;aspect-ratio:1;translate:-50% -50%;border-radius:50%;background:radial-gradient(closest-side,color-mix(in srgb,var(--akzent-warm) 75%,transparent),color-mix(in srgb,var(--akzent-warm) 25%,transparent) 55%,transparent);opacity:.3;animation:schein 9s ease-in-out infinite alternate;pointer-events:none}
+@keyframes schein{from{opacity:.15;transform:scale(.94)}to{opacity:.4;transform:scale(1.04)}}
+.held__schleier{position:absolute;inset:0;z-index:-1;background:linear-gradient(color-mix(in srgb,var(--flaeche-dunkel) 12%,transparent),color-mix(in srgb,var(--flaeche-dunkel) 12%,transparent)),linear-gradient(90deg,color-mix(in srgb,var(--flaeche-dunkel) 90%,transparent) 0%,color-mix(in srgb,var(--flaeche-dunkel) 84%,transparent) 62%,color-mix(in srgb,var(--flaeche-dunkel) 0%,transparent) 98%),linear-gradient(0deg,color-mix(in srgb,var(--flaeche-dunkel) 66%,transparent),transparent 34%)}
 .held h1{font-size:clamp(2rem,1.1rem + 3vw,3.4rem);font-weight:300;line-height:1.08;letter-spacing:.01em;text-transform:uppercase;max-width:21ch}
 .held__unter{margin-top:1.25rem;max-width:34rem;font-size:var(--text-l);color:var(--text-auf-dunkel)}
 .held__knoepfe{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1.5rem;margin-top:1.5rem}
@@ -153,13 +153,14 @@ h3{font-size:var(--h3);line-height:1.2;font-weight:500}
 .pk__karte{display:flex;flex-direction:column;gap:.9rem;height:100%;transition:transform var(--dauer-mittel) var(--kurve)}
 .pk__karte:focus-within{transform:translateY(-6px)}
 .pk__bild{position:relative;aspect-ratio:4/5;border-radius:var(--radius-bild);overflow:hidden;background:var(--bild-ton)}
-.pk__bild svg{width:100%;height:100%}
-.pk__an,.pk__schein,.flamme{opacity:0;transition:opacity var(--dauer-lang) var(--kurve)}
+.pk__bild img{width:100%;height:100%;object-fit:cover;display:block}
+.pk__an,.pk__schein{position:absolute;inset:0;pointer-events:none}
+.pk__an{background:color-mix(in srgb,var(--akzent-warm) 55%,transparent);mix-blend-mode:soft-light}
+.pk__schein{background:radial-gradient(circle at var(--sx,50%) var(--sy,35%),color-mix(in srgb,var(--akzent-warm) 80%,transparent),color-mix(in srgb,var(--akzent-warm) 28%,transparent) 28%,transparent 58%);mix-blend-mode:screen}
+.pk__an,.pk__schein{opacity:0;transition:opacity var(--dauer-lang) var(--kurve)}
 .pk__an{opacity:0}
-.pk__karte:focus-within .pk__an{opacity:.78}
+.pk__karte:focus-within .pk__an{opacity:1}
 .pk__karte:focus-within .pk__schein{opacity:1}
-.flamme{opacity:.5}
-.pk__karte:focus-within .flamme{opacity:1}
 .pk__text{display:flex;flex-direction:column;gap:.25rem;flex:1}
 .pk__kopf{display:flex;justify-content:space-between;align-items:baseline;gap:.5rem}
 .pk__kopf h3{font-size:1.25rem}
@@ -259,7 +260,7 @@ h3{font-size:var(--h3);line-height:1.2;font-weight:500}
 .fuss__klein a{display:inline-flex;align-items:center;min-height:2.75rem;text-decoration:underline;text-underline-offset:.25em}
 
 @media (prefers-reduced-motion:reduce){
-  .held__schein{animation:none;opacity:.7;transform:none}
+  .held__schein{animation:none;opacity:.3;transform:none}
   .held__karte,.video__bild img{animation:none;transform:none}
   .pk__karte,.kachel,.held__navkarte a,.held__ring{transition:none}
   .pk__karte:hover,.pk__karte:focus-within,.kachel:hover{transform:none}
@@ -278,9 +279,8 @@ h3{font-size:var(--h3);line-height:1.2;font-weight:500}
   .held__ring:hover{transform:scale(1.05)}
   .chips__liste button:hover,.reiter button:hover{transform:translateY(-2px);background:var(--flaeche-alt)}
   .pk__karte:hover{transform:translateY(-6px)}
-  .pk__karte:hover .pk__an{opacity:.78}
+  .pk__karte:hover .pk__an{opacity:1}
   .pk__karte:hover .pk__schein{opacity:1}
-  .pk__karte:hover .flamme{opacity:1}
   .video__knopf:hover{transform:scale(1.08)}
   .faq summary:hover .faq__plus{background:var(--linie)}
   .kachel:hover{transform:translateY(-4px)}

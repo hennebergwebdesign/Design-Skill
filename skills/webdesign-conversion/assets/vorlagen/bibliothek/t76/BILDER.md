@@ -1,19 +1,21 @@
 # Bilder t76
 
-Vier Fotos, alle Unsplash Lizenz (https://unsplash.com/de/lizenz), aus den Vorlagen t21 und t03 übernommen, Zeile aus deren `BILDER.md`, abgerufen am 25.11.2026. Beschreibung laut Unsplash, nicht geprüft. Aufnahmeorte nicht belegt, deutsche Verhältnisse nicht belegt. Fotos von Firmenkonten (JUICE) vor Livegang prüfen. Alle Fotos sind Beispiele und vor Abgabe zu ersetzen.
+Alle acht Bilder sind KI erzeugt (Figma generate_image, Modell gpt-image-2.5-flare, 26.11.2026), keine Fremdquelle. Beispiele für die Vorschau: vor Abgabe durch Produktfotos des Kunden ersetzen, Kennzeichnung und Nutzungsrechte je Einsatz prüfen. Auf den Bildern steht kein Text und kein Logo, Personen sind nicht erkennbar (nur eine Hand).
 
-| Datei | Platz | Beschreibung laut Unsplash | Fotograf | Seite | Quelle |
-|---|---|---|---|---|---|
-| wallbox-garagenwand.webp | Kapsel unter der Großschrift Schnell laden | Wallbox | JUICE | https://unsplash.com/photos/JkTjKEVcckg | t21/BILDER.md (Datei wallbox-an-garagenwand-mit-elektroauto.webp) |
-| hand-steckt-ladekabel.webp | Karte Installation (Vorteile) | Ladekabel am Elektroauto | JUICE | https://unsplash.com/photos/RI8SyIOg4EM | t21/BILDER.md (Datei hand-steckt-ladekabel-an-elektroauto.webp) |
-| solaranlage-flachdach.webp | Karte Betrieb (Vorteile) | Solaranlage Flachdach | Jeroen van de Water | https://unsplash.com/photos/aQOzmgcT6sI | t21/BILDER.md (Datei solaranlage-auf-flachdach-mit-stadtblick.webp) |
-| luftbild-strasse-stadt.webp | Vollbild mit Angebotskachel | Luftbild einer Straße in der Stadt | @ste7end | https://unsplash.com/de/fotos/yytfo1BzKFA | t03/BILDER.md (Datei luftbild-strasse-stadt-1000.webp) |
+| Datei | Platz | Nachweis | Prompt in einem Satz |
+|---|---|---|---|
+| ladesaeule-weiss-freigestellt.webp | Held, Karte Planung, So geht's (dreimal eingebunden) | KI erzeugt (Figma generate_image, Modell gpt-image-2.5-flare, 26.11.2026), keine Fremdquelle, freigestellt per Farbschlüssel | Weiße Ladesäule mit blauer Lichtkante, Display, schwarzem Spiralkabel und Betonsockel. Die Zahl 72 im Display ist im HTML mit einer dunklen Fläche überdeckt. |
+| ladestecker-spiralkabel-freigestellt.webp | Schnell laden, über der Großschrift | KI erzeugt (Figma generate_image, Modell gpt-image-2.5-flare, 26.11.2026), keine Fremdquelle, freigestellt per Farbschlüssel | Schwarzer Typ 2 Ladestecker mit blauem Spiralkabel, nah. |
+| elektroauto-weiss-seite-freigestellt.webp | Über uns, Auto fährt ein | KI erzeugt (Figma generate_image, Modell gpt-image-2.5-flare, 26.11.2026), keine Fremdquelle, freigestellt per Farbschlüssel | Weiße Elektrolimousine genau von der Seite. |
+| hand-haelt-ladestecker.webp | Kapsel unter der Großschrift | KI erzeugt (Figma generate_image, Modell gpt-image-2.5-flare, 26.11.2026), keine Fremdquelle | Hand im graublauen Ärmel hält einen Ladestecker mit blauem Spiralkabel, kühles Licht. |
+| ladesaeule-neben-elektroauto.webp | Karte Installation | KI erzeugt (Figma generate_image, Modell gpt-image-2.5-flare, 26.11.2026), keine Fremdquelle | Weißes Elektroauto neben einer Ladesäule mit blauer Lichtkante vor einer Betonwand. |
+| elektroauto-weiss-detail.webp | Karte Betrieb | KI erzeugt (Figma generate_image, Modell gpt-image-2.5-flare, 26.11.2026), keine Fremdquelle | Weiße Elektrolimousine von der Seite, Vorderrad und Tür, bewölkter Himmel. |
+| ladesaeulen-reihe-parkplatz.webp | Vollbild mit Angebotskachel | KI erzeugt (Figma generate_image, Modell gpt-image-2.5-flare, 26.11.2026), keine Fremdquelle | Reihe weißer Ladesäulen mit blauer Lichtkante auf einem leeren Parkplatz in Perspektive. |
+| ladeanschluss-am-auto.webp | Anschlüsse (geteilter Abschnitt) | KI erzeugt (Figma generate_image, Modell gpt-image-2.5-flare, 26.11.2026), keine Fremdquelle | Nahaufnahme eines steckenden Ladesteckers im Ladeanschluss eines weißen Autos. |
 
-## Kein Foto, sondern gebaut
-
-Ladesäule, Stecker und Auto sind eigene SVG Formen, abstrakt und nicht fotorealistisch. Ladeanzeige (Prozentzahl) ist ein Beispiel, kein Messwert.
+Die Säule (333 x 1117 Pixel) wurde in einer früheren Sitzung erzeugt und freigestellt, die übrigen sieben in dieser. Erzeugt wurden sieben Bilder neu, kein Versuch verworfen.
 
 ## Offen
 
-* Freigestellte Produktfotos der echten Säule und des Steckers einsetzen, dann die SVG Formen durch `<img>` mit transparentem Hintergrund (webp) ersetzen.
-* Die Karte "Planung" ist eine gebaute Fläche, hier kann ein Foto vom Standort stehen.
+* Die Karte "Planung" zeigt die Säule auf dunklem Verlauf, hier kann ein Foto vom Standort stehen.
+* Alle Bilder durch Produktfotos des Kunden ersetzen.
