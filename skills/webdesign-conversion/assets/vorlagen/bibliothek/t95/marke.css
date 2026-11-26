@@ -1,0 +1,52 @@
+/* marke.css der Vorlage "Gadget Szenen": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche, dunkler Text auf Szenenton und heller Text auf den dunklen Flächen mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#f7f2e9;
+  --flaeche-alt:#ede5d5;
+  --flaeche-dunkel:#1b1915;
+  --text:#1b1915;
+  --text-leise:#55504a;
+  --linie:#ddd3c0;
+  --akzent:#ff7a2f;            /* Hauptaktion Vorbestellen: Fläche mit dunklem Text, nie als Textfarbe auf Hell */
+  --akzent-text:#1b1915;
+  --schrift-titel:'Outfit',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:28px;
+  --radius-bild:32px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-blase:22px;
+  --titel-gewicht:500;
+  --titel-spur:-0.025em;
+  --weiss:#ffffff;
+  --text-auf-dunkel:#f7f2e9;
+  --text-leise-dunkel:#d2c8b6;
+  --linie-dunkel:#4a3a2c;
+  /* Je Szene ein warmer Ton: Blasen, Zeichen, Chips. Dunkler Text darauf. */
+  --szene-orange:#ff7a2f;
+  --szene-rosa:#ff8fb0;
+  --szene-ocker:#f0b24d;
+  --szene-koralle:#ff6b57;
+  --szene-lime:#c5ef55;
+  /* Flächentöne hinter den Szenen (sehr hell, aus dem Szenenton) */
+  --tint-orange:#fbe7d8;
+  --tint-rosa:#fbe3e8;
+  --tint-lime:#eef3d4;
+  --tint-koralle:#fbe2da;
+  /* Dunkle Flächen */
+  --braun:#3a2314;
+  --gruen:#0f2a1f;
+  --nacht:#090b12;
+  /* Gerät */
+  --geraet-1:#2c2c30;
+  --geraet-2:#0c0c0d;
+  --geraet-licht:#c5ef55;
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#b5653a;
+  --ton-2:#8a7a3a;
+  --ton-3:#d9a35b;
+  --ton-4:#4a6a5a;
+  --ton-5:#6b3f35;
+  --ton-6:#2a4a6b;
+}

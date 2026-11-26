@@ -16,14 +16,11 @@ h3{font-size:var(--h3);line-height:1.2}
 /* Knöpfe: Fläche mit rundem Pfeilknopf am Ende */
 .knopf{justify-content:center;text-align:center;font-size:1rem;font-weight:700;padding:.45rem .45rem .45rem 1.4rem}
 .knopf:not(:has(.knopf__pfeil)){padding-right:1.4rem}
-.knopf:hover{transform:translateY(-2px);box-shadow:0 8px 20px color-mix(in srgb,var(--akzent) 28%,transparent)}
 .knopf--hell{background:var(--weiss);color:var(--akzent)}
 .knopf__pfeil{display:grid;place-items:center;flex:none;width:2.25rem;height:2.25rem;border-radius:50%;background:var(--weiss);color:var(--akzent);transition:transform var(--dauer-kurz) var(--kurve)}
 .knopf--hell .knopf__pfeil{background:var(--akzent);color:var(--akzent-text)}
-.knopf:hover .knopf__pfeil{transform:translateX(3px)}
 .textlink{display:inline-flex;align-items:center;gap:.5rem;min-height:3rem;font-weight:700;color:var(--akzent);text-decoration:underline;text-underline-offset:.3em;text-decoration-thickness:1.5px}
 .textlink svg{transition:transform var(--dauer-kurz) var(--kurve)}
-.textlink:hover svg{transform:translateX(3px)}
 .rundknopf{display:grid;place-items:center;flex:none;width:3rem;height:3rem;border-radius:50%;background:var(--akzent);color:var(--akzent-text);transition:transform var(--dauer-kurz) var(--kurve),background-color var(--dauer-kurz)}
 button:hover>.rundknopf,.rundknopf:hover{background:#2c539c}
 .rundknopf:active{transform:scale(.95)}
@@ -43,7 +40,7 @@ button:hover>.rundknopf,.rundknopf:hover{background:#2c539c}
 .kopf__leiste{position:relative;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;max-width:var(--breite);margin-inline:auto;padding:.5rem .5rem .5rem 1.25rem;border-radius:var(--radius-karte);background:var(--weiss);color:var(--text);box-shadow:0 10px 30px color-mix(in srgb,var(--flaeche-dunkel) 22%,transparent)}
 .js .kopf__leiste{flex-wrap:nowrap}
 .kopf__logo{display:inline-flex;align-items:center;gap:.6rem;min-height:2.75rem;font-family:var(--schrift-titel);font-weight:600;font-size:1.375rem;letter-spacing:-.02em;margin-right:auto;white-space:nowrap;color:var(--akzent)}
-.kopf__zeichen{width:1.9rem;height:1.9rem}
+.kopf__zeichen{flex:none;width:1.9rem;height:1.9rem}
 .kopf__knopf{min-height:2.75rem;padding:.3rem .3rem .3rem 1.1rem;white-space:nowrap;gap:.75rem}
 .kopf__knopf .knopf__pfeil{width:2.1rem;height:2.1rem}
 .kopf__lang{display:none}
@@ -94,7 +91,7 @@ button:hover>.rundknopf,.rundknopf:hover{background:#2c539c}
 .held__tel{display:inline-flex;align-items:center;gap:.6rem;min-height:3rem;font-weight:700;text-decoration:underline;text-underline-offset:.3em;text-decoration-thickness:1.5px;color:#fff}
 .held__tel svg{flex:none}
 .held__unten{display:grid;gap:1rem;align-items:end}
-.held__kachel{width:fit-content;display:grid;gap:.15rem;padding:1.1rem 1.4rem;border-radius:var(--radius-karte);background:var(--flaeche-dunkel);box-shadow:inset 0 0 0 1px var(--linie-dunkel);animation:schweben .9s var(--kurve) .5s both}
+.held__kachel{width:fit-content;display:grid;gap:.15rem;padding:1.1rem 1.4rem;border-radius:var(--radius-karte);background:var(--flaeche-dunkel);box-shadow:inset 0 0 0 1px var(--linie-dunkel);animation:schweben .9s var(--kurve) .5s both /* bewusst langsam: große, nicht bediente Fläche */}
 .held__zahl{font-family:var(--schrift-titel);font-weight:500;font-size:clamp(2.5rem,2rem + 2vw,3.5rem);line-height:1;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
 .held__zahltext{max-width:17rem;margin-bottom:.6rem;color:var(--text-leise-dunkel)}
 @keyframes schweben{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:none}}
@@ -169,7 +166,6 @@ button:hover>.rundknopf,.rundknopf:hover{background:#2c539c}
 .fachleute__lead{color:var(--text-leise);font-size:var(--text-l);margin-top:1.25rem;max-width:36rem}
 .personen{display:grid;gap:.85rem}
 .person__karte{display:flex;align-items:center;gap:1rem;height:100%;padding:1rem;border-radius:18px;background:var(--weiss);box-shadow:inset 0 0 0 1px var(--linie);transition:transform var(--dauer-mittel) var(--kurve),box-shadow var(--dauer-mittel) var(--kurve)}
-.person__karte:hover{transform:translateY(-4px);box-shadow:inset 0 0 0 1px var(--linie),0 14px 28px color-mix(in srgb,var(--flaeche-dunkel) 14%,transparent)}
 .person img{flex:none;width:3.5rem;height:3.5rem;border-radius:50%;object-fit:cover}
 .person h3{font-size:1.125rem;line-height:1.2}
 .person p{color:var(--text-leise);line-height:1.35}
@@ -207,6 +203,7 @@ button:hover>.rundknopf,.rundknopf:hover{background:#2c539c}
 .artikel{display:grid;gap:1.25rem;padding:.75rem;border-radius:var(--radius-gross);background:var(--weiss);box-shadow:inset 0 0 0 1px var(--linie)}
 .artikel[hidden]{display:none}
 .artikel__bild{aspect-ratio:16/10;border-radius:calc(var(--radius-gross) - 8px)}
+.artikel__bild img{position:absolute;inset:0}
 .artikel__text{display:grid;gap:1rem;align-content:center;padding:.5rem .75rem 1rem}
 .artikel__datum{color:var(--text-leise);font-weight:600}
 .artikel h3{font-size:clamp(1.5rem,1.2rem + 1.2vw,2.25rem);line-height:1.15}
@@ -216,7 +213,7 @@ button:hover>.rundknopf,.rundknopf:hover{background:#2c539c}
 .artikel__autor img{width:2.75rem;height:2.75rem;border-radius:50%;object-fit:cover}
 .artikel__autor>span{display:grid;color:var(--text-leise)}
 .artikel__autor b{color:var(--text)}
-.artikel.neu{animation:artikel-ein .55s var(--kurve)}
+.artikel.neu{animation:artikel-ein .55s var(--kurve) /* bewusst: große Fläche, kein Bedienelement */}
 @keyframes artikel-ein{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
 .wechsler__steuerung{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:1.25rem}
 .wechsler__knopf{display:inline-flex;align-items:center;gap:.75rem;min-height:3rem;font-weight:700;color:var(--akzent)}
@@ -301,9 +298,16 @@ button:hover>.rundknopf,.rundknopf:hover{background:#2c539c}
   .fuss__unten{grid-template-columns:1fr auto;gap:2rem}
 }
 
+/* Heben nur mit Zeiger: auf Touchgeräten bleibt kein Hoverzustand hängen */
+@media (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+  .knopf:hover{transform:translateY(-2px);box-shadow:0 8px 20px color-mix(in srgb,var(--akzent) 28%,transparent)}
+  .knopf:hover .knopf__pfeil{transform:translateX(3px)}
+  .textlink:hover svg{transform:translateX(3px)}
+  .person__karte:hover{transform:translateY(-4px);box-shadow:inset 0 0 0 1px var(--linie),0 14px 28px color-mix(in srgb,var(--flaeche-dunkel) 14%,transparent)}
+}
+
 /* Ruhe bei reduzierter Bewegung: nichts zoomt, nichts schwebt, alles steht */
 @media (prefers-reduced-motion:reduce){
   .held__bild img,.held__kachel,.artikel.neu{animation:none}
-  .person__karte:hover{transform:none}
   .stimmen__spur{scroll-behavior:auto}
 }

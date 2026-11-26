@@ -1,0 +1,36 @@
+/* marke.css der Vorlage "Beratung Pastell und Schwarz": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#fbf3e8;
+  --flaeche-alt:#f4e7d5;
+  --flaeche-dunkel:#0f0e0d;
+  --text:#1b1815;
+  --text-leise:#5a5148;
+  --linie:#e3d5c0;
+  --akzent:#141210;            /* Hauptaktion: schwarze Fläche mit hellem Text */
+  --akzent-text:#fbf3e8;
+  --schrift-titel:'Lexend',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:28px;
+  --radius-bild:24px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:36px;
+  --titel-gewicht:400;
+  --titel-spur:-0.03em;
+  --pfirsich:#f7c8a6;          /* vier Pastellflächen: Karten, Versatzflächen, Artikel */
+  --blau:#bfe2f6;
+  --gelb:#fbe58a;
+  --mint:#c3ebd1;
+  --akzent-warm:#f6d23c;       /* Knopf auf Schwarz, Punkt, Sterne (Zeichen), nie Textfarbe auf Hell */
+  --weiss:#ffffff;
+  --text-auf-dunkel:#fbf3e8;
+  --text-leise-dunkel:#bdb4a8;
+  --linie-dunkel:#37332e;
+  /* Platzhalter-Töne für Bildflächen */
+  --ton-1:#e9a47a;
+  --ton-2:#8fc4e3;
+  --ton-3:#e8c84a;
+  --ton-4:#7fc79a;
+}

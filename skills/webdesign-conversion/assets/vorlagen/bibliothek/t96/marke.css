@@ -1,0 +1,34 @@
+/* marke.css der Vorlage "Smartwatch Zubehör, Limette": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche, Schwarz auf Limette und Weiß auf Schwarz mindestens 4,5 zu 1. Limette steht nie als Text auf Weiß oder Hellgrau. */
+:root{
+  --flaeche:#ececea;
+  --flaeche-alt:#dfdfdc;
+  --flaeche-dunkel:#0a0a0b;
+  --text:#0a0a0b;
+  --text-leise:#4b4b4f;
+  --linie:#c4c4c0;
+  --akzent:#0a0a0b;           /* Hauptaktion: schwarze Fläche mit weißem Text */
+  --akzent-text:#ffffff;
+  --schrift-titel:'Schibsted Grotesk',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:40px;
+  --radius-bild:28px;
+
+  /* Zusatztokens dieser Vorlage */
+  --limette:#c8ff2e;          /* Fläche, Ring, Zeichen. Text darauf immer --limette-text */
+  --limette-text:#0a0a0b;
+  --weiss:#ffffff;
+  --text-auf-dunkel:#f4f4f2;
+  --text-leise-dunkel:#b5b5b8;
+  --linie-dunkel:#2d2d31;
+  --feld-rand:#6d6d72;
+  --buehne:#e3e3e0;           /* Fläche hinter dem Produkt */
+  --titel-gewicht:800;
+  --titel-spur:-0.025em;
+  /* Produktfarben (Gehäuse und Armband), schalten im Konfigurator die Uhr um */
+  --prod-graphit:#2b2c30;  --band-graphit:#5a5b61;
+  --prod-nebel:#c4c4c0;    --band-nebel:#8a8b90;
+  --prod-weiss:#f5f5f2;    --band-weiss:#d2d3ce;
+  --prod-limette:#c8ff2e;  --band-limette:#0a0a0b;
+}

@@ -10,6 +10,7 @@ section[id],footer[id]{scroll-margin-top:calc(var(--kopf-h) + .5rem)}
 .kopf{position:sticky;top:0;z-index:60;background:var(--flaeche);border-bottom:1px solid transparent;transition:border-color var(--dauer-mittel)}
 .gescrollt .kopf{border-bottom-color:var(--linie)}
 .kopf__innen{width:min(100% - 2*var(--rand),var(--breite));margin-inline:auto;min-height:var(--kopf-h);display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:1.5rem}
+.kopf .knopf{white-space:nowrap}
 .logo{display:inline-flex;align-items:center;gap:.55rem;font-family:var(--schrift-titel);font-weight:700;font-size:1.25rem;letter-spacing:-.02em;min-height:2.75rem}
 .logo svg{flex:none;color:var(--akzent)}
 .fuss .logo svg{color:var(--akzent-hell)}
@@ -25,7 +26,8 @@ section[id],footer[id]{scroll-margin-top:calc(var(--kopf-h) + .5rem)}
 [aria-expanded="true"] .burger::before{transform:translateY(6px) rotate(45deg)}
 [aria-expanded="true"] .burger::after{transform:translateY(-6px) rotate(-45deg)}
 @media (max-width:1019px){
-  .kopf__innen{grid-template-columns:1fr auto}
+  .kopf__innen{grid-template-columns:1fr auto;gap:.75rem}
+  .kopf__knopf{padding-inline:1.1rem}
   .kopf__burger{display:inline-flex}
   .kopf__anmelden{display:none}
   .kopf__nav{position:fixed;inset:var(--kopf-h) 0 0 0;background:var(--flaeche);padding:1rem var(--rand) 2rem;transform:translateY(-8px);opacity:0;visibility:hidden;transition:opacity var(--dauer-mittel) var(--kurve),transform var(--dauer-mittel) var(--kurve),visibility 0s var(--dauer-mittel);overflow:auto}
@@ -84,7 +86,7 @@ details[open]>summary .akk__pfeil,details[open]>summary svg:last-child{transform
 /* Telefon aus HTML und CSS. Größe über --pw, alles darin in em. */
 .phone{--pw:clamp(15.5rem,24vw,19rem);width:var(--pw);font-size:calc(var(--pw) / 22);flex:none}
 .phone--klein{--pw:clamp(14rem,19vw,16.5rem)}
-.phone__rahmen{position:relative;aspect-ratio:9/18.6;border-radius:3.1em;background:var(--gerat);padding:.62em;box-shadow:0 1.6em 3em -1.2em rgba(0,0,0,.4),inset 0 0 0 .1em #3a3d3f}
+.phone__rahmen{position:relative;aspect-ratio:9/17.6;border-radius:3.1em;background:var(--gerat);padding:.62em;box-shadow:0 1.6em 3em -1.2em rgba(0,0,0,.4),inset 0 0 0 .1em #3a3d3f}
 .phone__insel{position:absolute;z-index:3;left:50%;top:1em;width:32%;height:1.5em;margin-left:-16%;border-radius:1em;background:var(--gerat)}
 .phone__schirm{position:relative;height:100%;border-radius:2.55em;background:#fff;color:#111312;overflow:hidden;padding:1em 1em 0;font-size:1em}
 .phone__schirm--dunkel{background:#191b1c;color:#fff}

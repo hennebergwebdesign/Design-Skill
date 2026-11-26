@@ -1,0 +1,38 @@
+/* marke.css der Vorlage "Finanzberatung Tannengrün": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche, Akzenttext auf Akzent, Gelbtext auf Gelb, Hellschrift auf Tannengrün mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#f8f5ec;          /* Cremeweiß */
+  --flaeche-alt:#e3ecda;      /* heller grüner Abschnitt (Stimmen) und Mittelkarte */
+  --flaeche-dunkel:#1c4a3b;   /* Tannengrün: Kennzahlen, Kontakt, bewusst gleich --akzent */
+  --text:#15241d;
+  --text-leise:#46564e;
+  --linie:#d9d5c2;
+  --akzent:#1c4a3b;           /* Hauptaktion: Fläche mit hellem Text, auf Hell auch Text und Linie */
+  --akzent-text:#f8f5ec;
+  --schrift-titel:'Outfit',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:22px;
+  --radius-bild:22px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:32px;
+  --titel-gewicht:500;
+  --titel-spur:-0.025em;
+  --gelb:#f6d85c;             /* Fläche für Hervorhebung und Zeichen, Text darauf immer --gelb-text */
+  --gelb-text:#15241d;
+  --gelb-weich:#fbefb4;       /* offener Eintrag im Akkordeon */
+  --schwarz:#121614;          /* nur Form hinter dem Porträt */
+  --weiss:#ffffff;
+  --text-auf-dunkel:#f8f5ec;
+  --text-leise-dunkel:#c9dacf;
+  --linie-dunkel:#3b6e5c;
+  --feldrand:#76867d;
+  /* Platzhalter-Töne für Bildflächen */
+  --ton-1:#1c4a3b;
+  --ton-2:#e3ecda;
+  --ton-3:#f6d85c;
+  --ton-4:#8aa593;
+  --ton-5:#121614;
+  --ton-6:#d9d5c2;
+}

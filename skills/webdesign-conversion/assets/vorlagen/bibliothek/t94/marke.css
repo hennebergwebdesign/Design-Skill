@@ -1,0 +1,31 @@
+/* marke.css der Vorlage "Küchenstudio dunkel und gold": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Die ganze Seite ist dunkel. Gold (--akzent) ist Fläche mit dunklem Text und Zeichen auf Dunkel, nie Textfarbe auf einer hellen Fläche.
+   Kontrast prüfen: --text und --text-leise auf --flaeche, --flaeche-alt und --flaeche-tief, --akzent auf --flaeche, --akzent-text auf --akzent. */
+:root{
+  --flaeche:#1e2128;
+  --flaeche-alt:#282c35;
+  --flaeche-tief:#14161b;
+  --text:#f0ece3;
+  --text-leise:#bcb9b0;
+  --linie:#3d424d;
+  --akzent:#d4aa55;           /* Hauptaktion: Goldfläche mit dunklem Text, auf Dunkel auch Text, Zeichen und Linie */
+  --akzent-text:#17140a;
+  --schrift-titel:'Schibsted Grotesk',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:4px;
+  --radius-karte:6px;
+  --radius-bild:4px;
+
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:600;
+  --titel-spur:-0.015em;
+  --akzent-stark:#e6c27a;     /* Gold für Hover und große Zahlen auf Dunkel */
+  --feld-rand:#8d929e;
+  --weiss:#ffffff;
+  --schleier:#0e1014;         /* Verlauf über Fotos, damit Text lesbar bleibt */
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#3a3f4a;
+  --ton-2:#2d313b;
+  --ton-3:#4a4234;
+  --ton-4:#252830;
+}
