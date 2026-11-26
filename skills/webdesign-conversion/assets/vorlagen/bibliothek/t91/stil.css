@@ -64,7 +64,7 @@ h3{font-size:var(--h3);line-height:1.2}
 .held{position:relative;isolation:isolate;display:grid;align-items:end;min-height:max(100svh,42rem);color:var(--text-auf-dunkel);background:var(--flaeche-dunkel);overflow:clip}
 .held__bild{position:absolute;inset:0;z-index:-1;overflow:hidden}
 .held__bild img{position:absolute;left:0;top:-10%;width:100%;height:120%;max-width:none;object-fit:cover}
-.held__bild::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,12,.66),rgba(10,10,12,.38) 42%,rgba(10,10,12,.86))}
+.held__bild::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,12,.66),rgba(10,10,12,.48) 42%,rgba(10,10,12,.86))}
 .held__innen{display:grid;gap:2rem;align-items:end;padding-top:8rem;padding-bottom:5.5rem}
 .held h1{font-size:clamp(2.5rem,1rem + 5.6vw,5.75rem);line-height:1.02;max-width:14ch}
 .held__text{display:grid;gap:1.5rem;justify-items:start}
@@ -243,7 +243,7 @@ h3{font-size:var(--h3);line-height:1.2}
 .video__rahmen{position:relative;display:grid;align-items:end;min-height:min(80svh,46rem);overflow:hidden;background:var(--flaeche-dunkel)}
 .video__bild{position:absolute;inset:0;overflow:hidden}
 .video__bild img{width:100%;height:100%;object-fit:cover}
-.video__bild::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,12,.35),rgba(10,10,12,.55) 45%,rgba(10,10,12,.88))}
+.video__bild::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,12,.46),rgba(10,10,12,.62) 45%,rgba(10,10,12,.9))}
 .video__text{position:relative;z-index:1;display:grid;gap:1rem;justify-items:start;max-width:46rem;padding:clamp(1.5rem,5vw,4rem)}
 .video h2{font-size:clamp(2.25rem,1.2rem + 4.6vw,5rem);line-height:1.04}
 .video__text p{font-size:var(--text-l);color:var(--text-auf-dunkel)}

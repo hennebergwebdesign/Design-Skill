@@ -67,7 +67,7 @@ h3{font-size:var(--h3);line-height:1.2}
 .konfig__produkt .produkt{--prod:inherit;--band:inherit}
 .anzeige{position:absolute;left:20.7%;top:26.6%;width:58.6%;height:46.8%;display:grid;place-content:center;justify-items:center;gap:1.5cqw;color:#fff;text-align:center;pointer-events:none}
 .anzeige__zeit{font-family:var(--schrift-titel);font-weight:800;font-size:15cqw;letter-spacing:-.04em;line-height:1}
-.anzeige__klein{font-size:5.6cqw;font-weight:600;color:#c9c9cc;letter-spacing:.06em;text-transform:uppercase}
+.anzeige__klein{font-size:max(1rem,5.6cqw);font-weight:600;color:#c9c9cc;letter-spacing:.06em;text-transform:uppercase}
 .anzeige__blitz{width:8cqw;height:8cqw;color:var(--limette);margin-top:2cqw}
 .anzeige__wert{font-family:var(--schrift-titel);font-weight:800;font-size:15cqw;letter-spacing:-.04em;line-height:1}
 .ring{place-content:center}
@@ -306,7 +306,8 @@ h3{font-size:var(--h3);line-height:1.2}
 .reise__bild{position:absolute;inset:0}
 .reise__bild img{width:100%;height:100%;object-fit:cover;object-position:60% 40%}
 .reise__bild::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,color-mix(in srgb,#000 55%,transparent),color-mix(in srgb,#000 38%,transparent) 45%,color-mix(in srgb,#000 74%,transparent))}
-.siegel--reise,.siegel--reise:is(*){top:2rem;left:var(--rand);right:auto}
+.siegel--reise{top:1.5rem;left:auto;right:var(--rand)}
+@media (min-width:62rem){.siegel--reise{left:var(--rand);right:auto;top:2rem}}
 .reise__raster{position:relative;display:grid;gap:2.5rem;align-items:end}
 .reise__titel{font-size:clamp(2.75rem,1rem + 7vw,8rem);text-transform:uppercase;letter-spacing:-.035em;line-height:.96;max-width:9ch}
 .reise__text{margin-top:1.25rem;max-width:30rem;font-size:var(--text-l)}
