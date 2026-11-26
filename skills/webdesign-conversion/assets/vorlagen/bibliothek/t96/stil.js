@@ -22,15 +22,14 @@
     pruefen();
   }
 
-  // 2. Konfigurator: Größe skaliert das Produkt und ändert den Preis, Farbe setzt --prod und --band (die SVG Uhr folgt über CSS Variablen)
+  // 2. Konfigurator: Größe skaliert das Produkt und ändert den Preis, Farbe schaltet das Bild der Uhr (ein Bild je Farbe, im HTML, ohne JavaScript steht das erste)
   document.querySelectorAll('[data-konfig]').forEach((k) => {
     const produkt = k.querySelector('[data-konfig-produkt]'), preis = k.querySelector('[data-konfig-preis]');
     const gName = k.querySelector('[data-konfig-groesse-name]'), fName = k.querySelector('[data-konfig-farbe-name]'), ansage = k.querySelector('[data-konfig-ansage]');
     const lesen = () => {
       const g = k.querySelector('input[name="groesse"]:checked'), f = k.querySelector('input[name="farbe"]:checked');
       if (!g || !f) return;
-      produkt.style.setProperty('--prod', `var(--prod-${f.value})`);
-      produkt.style.setProperty('--band', `var(--band-${f.value})`);
+      produkt.querySelectorAll('[data-farbbild]').forEach((b) => { b.hidden = b.dataset.farbbild !== f.value; });
       produkt.style.setProperty('--skala', g.dataset.skala || '1');
       preis.textContent = g.dataset.preis;
       gName.textContent = `${g.value} mm`;

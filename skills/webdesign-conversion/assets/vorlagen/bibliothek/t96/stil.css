@@ -58,18 +58,17 @@ h3{font-size:var(--h3);line-height:1.2}
   .kopf__leiste{padding:.6rem .6rem .6rem 1.5rem}
 }
 
-/* Das Produkt: eine SVG Uhr, Farben aus --prod und --band. Die Anzeige liegt als HTML darüber (Größen über cqw) */
-.produkt{--prod:var(--prod-graphit);--band:var(--band-graphit);position:relative;aspect-ratio:300/460;container-type:inline-size;width:100%}
-.produkt--graphit{--prod:var(--prod-graphit);--band:var(--band-graphit)}
-.produkt--nebel{--prod:var(--prod-nebel);--band:var(--band-nebel)}
-.produkt--held{--prod:var(--prod-nebel);--band:var(--band-graphit)}
-.produkt .uhr{position:absolute;inset:0;width:100%;height:100%;filter:drop-shadow(0 2.2cqw 3cqw color-mix(in srgb,#000 24%,transparent))}
-.konfig__produkt .produkt{--prod:inherit;--band:inherit}
+/* Das Produkt: ein freigestelltes Bild (KI erzeugt, siehe BILDER.md). Zähler und Ringe liegen als HTML über der Anzeige (Größen über cqw) */
+.produkt{position:relative;aspect-ratio:13/24;container-type:inline-size;width:100%}
+.produkt .uhr{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 2.2cqw 3cqw color-mix(in srgb,#000 24%,transparent))}
+.produkt .uhr[hidden]{display:none}
 .anzeige{position:absolute;left:20.7%;top:26.6%;width:58.6%;height:46.8%;display:grid;place-content:center;justify-items:center;gap:1.5cqw;color:#fff;text-align:center;pointer-events:none}
 .anzeige__zeit{font-family:var(--schrift-titel);font-weight:800;font-size:15cqw;letter-spacing:-.04em;line-height:1}
 .anzeige__klein{font-size:max(1rem,5.6cqw);font-weight:600;color:#c9c9cc;letter-spacing:.06em;text-transform:uppercase}
 .anzeige__blitz{width:8cqw;height:8cqw;color:var(--limette);margin-top:2cqw}
 .anzeige__wert{font-family:var(--schrift-titel);font-weight:800;font-size:15cqw;letter-spacing:-.04em;line-height:1}
+.anzeige--oliv{left:17%;top:27.5%;width:55%;height:40%}
+.anzeige--beige{left:18%;top:30%;width:50%;height:34%}
 .ring{place-content:center}
 .ring__svg{position:absolute;inset:3%;width:94%;height:94%}
 .ring__spur,.ring__wert{fill:none;stroke-width:7;stroke-linecap:round}
@@ -89,7 +88,7 @@ h3{font-size:var(--h3);line-height:1.2}
 .held__los:active{transform:scale(.97)}
 @media (hover:hover) and (pointer:fine){.held__los:hover{transform:translateY(-2px)}.held__los:hover .held__pfeil{transform:translateX(3px)}}
 .held__pfeil{display:grid;place-items:center;width:3rem;height:3rem;border-radius:50%;background:var(--limette);color:var(--limette-text);transition:transform var(--dauer-kurz) var(--kurve)}
-.held__produkt{position:relative;z-index:3;justify-self:center;width:min(62vw,17rem);margin-top:-1.5rem;transform:rotate(-7deg) scale(1.04)}
+.held__produkt{position:relative;z-index:3;justify-self:center;width:min(46vw,12.5rem);margin-top:-1.5rem;transform:rotate(-7deg) scale(1.04)}
 .held__fuss{position:relative;z-index:4;display:grid;gap:1.5rem}
 .held__punkte{display:grid;gap:.6rem;font-weight:600}
 .held__punkte li{display:flex;align-items:center;gap:.75rem;min-height:2.75rem}
@@ -111,7 +110,7 @@ h3{font-size:var(--h3);line-height:1.2}
   .held__buehne{display:block;height:min(100svh,58rem);min-height:40rem;padding:6.75rem var(--rand) 0;overflow-x:clip}
   .held__block{display:block}
   .held__los{position:absolute;right:var(--rand);bottom:.5rem;margin:0}
-  .held__produkt{position:absolute;left:50%;top:min(22svh,12rem);width:min(28vw,36svh);margin:0;--f:min(1,calc(var(--fortschritt,1) * 1.5));transform:translateX(-50%) translateY(calc((1 - var(--f)) * 22svh)) rotate(calc(5deg - 12deg * var(--f))) scale(calc(.88 + .16 * var(--f)));will-change:transform}
+  .held__produkt{position:absolute;left:50%;top:min(22svh,12rem);width:min(25vw,29svh);margin:0;--f:min(1,calc(var(--fortschritt,1) * 1.5));transform:translateX(-50%) translateY(calc((1 - var(--f)) * 22svh)) rotate(calc(5deg - 12deg * var(--f))) scale(calc(.88 + .16 * var(--f)));will-change:transform}
   .held__fuss{position:absolute;left:var(--rand);right:var(--rand);bottom:2rem;display:flex;justify-content:space-between;align-items:flex-end;gap:2rem}
   .held__punkte{max-width:19rem}
   .held__beleg{justify-items:end;text-align:right;grid-template-columns:auto auto}
@@ -142,8 +141,8 @@ h3{font-size:var(--h3);line-height:1.2}
 .stark__text{display:grid;gap:1rem;justify-items:start;max-width:30rem}
 .stark__text h3{font-size:clamp(1.35rem,1.1rem + .8vw,1.75rem)}
 .stark__text p{color:var(--text-leise-dunkel)}
-.stark__uhr{margin:0 auto;width:min(100%,38rem);height:clamp(9rem,26vw,15rem);overflow:hidden}
-.stark__quer{width:100%;height:auto;transform:translateY(2%) scale(1.02)}
+.stark__uhr{margin:0 auto;width:min(100%,38rem);height:clamp(9rem,26vw,15rem);overflow:hidden;display:grid;justify-items:center;align-items:start}
+.stark__quer{width:min(70vw,17rem);height:auto;transform:translateY(-15%);filter:drop-shadow(0 1.5rem 2rem rgb(0 0 0/.4))}
 .siegel{position:absolute;z-index:5;top:-2.25rem;right:1.25rem;width:clamp(5.5rem,10vw,8rem);aspect-ratio:1}
 .siegel__ring{position:absolute;inset:0;width:100%;height:100%;animation:drehen 26s linear infinite}
 .siegel__mitte{position:absolute;inset:26%;display:grid;place-items:center;border-radius:50%;background:var(--akzent);color:var(--limette)}
@@ -155,6 +154,7 @@ h3{font-size:var(--h3);line-height:1.2}
   .stark__display{grid-area:display;justify-self:end;width:min(100%,26rem)}
   .stark__text{grid-area:text;justify-self:end;width:min(100%,26rem)}
   .stark__uhr{grid-area:uhr;align-self:end;width:min(100%,56rem);height:22rem}
+  .stark__quer{width:28rem}
 }
 @media (prefers-reduced-motion:reduce){.siegel__ring{animation:none}}
 
@@ -201,7 +201,7 @@ h3{font-size:var(--h3);line-height:1.2}
 .kabel__text{margin-top:1.25rem;max-width:28rem;color:var(--text-leise);font-size:var(--text-l)}
 .kabel__buehne{position:relative;display:grid;place-items:center;min-height:22rem;margin-top:.5rem;border-radius:var(--radius-karte);background:var(--buehne);overflow:hidden}
 .kabel__buehne .produkt{width:min(54vw,17rem);transform:rotate(-8deg);margin-block:1.5rem}
-.kabel__leitung{position:absolute;left:-200%;top:0;width:266.67%;max-width:none;height:100%;overflow:visible;pointer-events:none}
+.kabel__leitung{position:absolute;left:-241%;top:0;width:321%;max-width:none;height:100%;overflow:visible;pointer-events:none}
 .kabel__linie{fill:none;stroke:var(--text);stroke-width:12;stroke-linecap:round;stroke-dasharray:100;stroke-dashoffset:0;transition:stroke-dashoffset 1.8s var(--kurve) /* bewusst lang: Kabel zeichnet sich beim Einblenden, nicht bedient */}
 .js .kabel__buehne:not(.ist-da) .kabel__linie{stroke-dashoffset:100}
 @media (min-width:48rem){
@@ -230,11 +230,12 @@ h3{font-size:var(--h3);line-height:1.2}
 .teil__text{padding:0 0 1.1rem 3.75rem;color:var(--text-leise);max-width:26rem}
 .js .teil:not([data-aktiv]) .teil__text{display:none}
 .teile__bild{position:relative;aspect-ratio:1/1;max-height:32rem;border-radius:var(--radius-bild);background:var(--buehne);overflow:hidden;display:grid;place-items:center}
-.teile__zoom{width:min(44%,15rem);transform-origin:50% 50%;transition:transform var(--dauer-mittel) var(--kurve)}
-.teile__bild .produkt{transform:rotate(-6deg)}
-.teile__bild[data-teil="gehaeuse"] .teile__zoom{transform:scale(1.3)}
-.teile__bild[data-teil="armband"] .teile__zoom{transform:translateY(-14%) scale(1.5);transform-origin:50% 100%}
-.teile__bild[data-teil="uhr"] .teile__zoom{transform:scale(2.1)}
+.teile__zoom{width:100%;transform-origin:0 0;transition:transform var(--dauer-mittel) var(--kurve)}
+.teile__zoom img{display:block;width:100%;height:auto}
+/* Ausschnitt per translate und scale (Ursprung links oben): bringt Gehäuse, Armband oder Uhr der einen Ansicht in die Mitte */
+.teile__bild[data-teil="gehaeuse"] .teile__zoom{transform:translate(24.7%,-5.2%) scale(2.3)}
+.teile__bild[data-teil="armband"] .teile__zoom{transform:translate(-2.8%,-30%) scale(1.6)}
+.teile__bild[data-teil="uhr"] .teile__zoom{transform:translate(-132.6%,-108%) scale(2.2)}
 .teile__marke{position:absolute;left:1rem;bottom:1rem;padding:.4rem .9rem;border-radius:999px;background:var(--akzent);color:var(--akzent-text);font-weight:600;font-size:1rem}
 .teile__unten{display:flex;justify-content:center}
 @media (min-width:48rem){
@@ -273,11 +274,11 @@ h3{font-size:var(--h3);line-height:1.2}
 .konfig__buehne{position:relative;display:grid;place-items:center;min-height:26rem;border-radius:var(--radius-karte);background:var(--buehne);overflow:hidden}
 .konfig__ring{position:absolute;width:min(80%,26rem);aspect-ratio:1;border-radius:50%;border:2px solid color-mix(in srgb,var(--text) 14%,transparent)}
 .konfig__ring::after{content:"";position:absolute;inset:12%;border-radius:50%;border:2px solid color-mix(in srgb,var(--text) 10%,transparent)}
-.konfig__produkt{position:relative;width:min(46vw,16rem);transform:rotate(-8deg) scale(var(--skala,1));transition:transform var(--dauer-mittel) var(--kurve)}
+.konfig__produkt{position:relative;width:min(40vw,13rem);transform:rotate(-8deg) scale(var(--skala,1));transition:transform var(--dauer-mittel) var(--kurve)}
 @media (min-width:62rem){
   .konfig__raster{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:4rem}
   .konfig__buehne{min-height:42rem}
-  .konfig__produkt{width:min(26vw,21rem)}
+  .konfig__produkt{width:min(21vw,16rem)}
 }
 
 /* 7. Fragen */
