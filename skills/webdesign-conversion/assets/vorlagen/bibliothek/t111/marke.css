@@ -1,0 +1,33 @@
+/* marke.css der Vorlage "Produktleuchte im Tagesverlauf": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast (selbst gerechnet, WCAG): siehe Zeilen unten, jeweils Text auf Fläche, Mindestwert 4,5 zu 1. */
+:root{
+  --flaeche:#eef1ea;            /* Salbeiweiß */
+  --flaeche-alt:#e0e7dd;
+  --flaeche-dunkel:#0e1a23;     /* Tinte */
+  --text:#14202a;               /* auf Fläche 14,5 zu 1, auf Fläche alt 13,1 zu 1 */
+  --text-leise:#44544d;         /* auf Fläche 7,0 zu 1, auf Fläche alt 6,4 zu 1 */
+  --linie:#c5cfc4;
+  --akzent:#14202a;             /* Hauptaktion: Tinte mit hellem Text (14,5 zu 1) */
+  --akzent-text:#eef1ea;
+  --schrift-titel:'Familjen Grotesk',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:12px;
+  --radius-karte:22px;
+  --radius-bild:18px;
+
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:500;
+  --titel-spur:-0.035em;
+  --sonne:#f0a35e;              /* Sonnenscheibe, Lichtschein, Zeitangabe auf Dunkel (auf Tinte 8,5 zu 1), nie Textfarbe auf Hell */
+  --sonne-tief:#d9772f;
+  --morgen:#cfe3ec;             /* Lichtfarben der Tagesstufen: Morgen kühl, Mittag klar, Abend warm, Nacht gedimmt */
+  --mittag:#fff6df;
+  --abend:#f6c88f;
+  --nacht:#d98a4a;
+  --nacht-grund:#16262f;        /* Karten auf Tinte */
+  --text-auf-dunkel:#eef1ea;    /* auf Tinte 15,5 zu 1 */
+  --text-leise-dunkel:#a9b8b2;  /* auf Tinte 8,6 zu 1, auf Nachtgrund 7,5 zu 1 */
+  --linie-dunkel:#2c3e49;
+  --feld-rand:#6b7b74;          /* Rand der Eingabefelder auf Fläche 3,9 zu 1 (Bedienelement, mindestens 3 zu 1) */
+  --weiss:#ffffff;
+}
