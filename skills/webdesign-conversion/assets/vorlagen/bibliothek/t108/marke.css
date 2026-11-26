@@ -1,0 +1,30 @@
+/* marke.css der Vorlage "Marktbeobachtung für Onlinehändler": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast (nachgerechnet, WCAG): akzent-text auf akzent 7,9 zu 1; text auf flaeche 14,6; text-leise auf flaeche 6,6, auf weiss 7,3, auf flaeche-alt 5,8;
+   text-auf-dunkel auf flaeche-dunkel 14,3; text-leise-dunkel auf flaeche-dunkel 7,6; akzent als Text auf flaeche (Links) 7,0. */
+:root{
+  --flaeche:#f3f6ef;
+  --flaeche-alt:#e6eddf;
+  --flaeche-dunkel:#0b2b24;
+  --text:#10211c;
+  --text-leise:#4a5c55;
+  --linie:#d3dccd;
+  --akzent:#0c5f4c;            /* Hauptaktion: tiefes Grün mit weißem Text */
+  --akzent-text:#ffffff;
+  --schrift-titel:'Schibsted Grotesk',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:14px;
+  --radius-karte:26px;
+  --radius-bild:20px;
+
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:600;
+  --titel-spur:-0.03em;
+  --weiss:#ffffff;
+  --koralle:#ff8057;           /* nur Fläche und Zeichen, nie Textfarbe */
+  --sonne:#f4c95d;
+  --himmel:#cfe8e2;
+  --gruen-hell:#2f9a7e;
+  --text-auf-dunkel:#f3f6ef;
+  --text-leise-dunkel:#b4cbc3;
+  --linie-dunkel:#2a4d44;
+}
