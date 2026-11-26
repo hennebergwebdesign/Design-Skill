@@ -1,10 +1,10 @@
 ---
 name: webdesign-conversion
-description: "Vollständiges System für conversion-orientiertes Webdesign im DACH-Raum. Deckt Homepages, Landingpages und Recruiting-Funnel ab: Strategie und Positionierung, Design und UX, Spacing und Rhythmus, Responsive Design mit Container Queries, Technik und Performance, Barrierefreiheit (BFSG/WCAG 2.2 AA), SEO, Conversion-Architektur, Copywriting, eigene Icon-Systeme, Motion mit GSAP und CSS, Marken-/CI-Extraktion aus bestehenden Seiten (Logo, Farben, Schrift), Referenzrecherche auf Premium-Designquellen (Awwwards, Dribbble, Land-book, recent.design, 21st.dev), Bildhintergründe und visuelle Sektionshierarchie sowie den rechtlichen und technischen Pflichtaufbau (Impressum, Datenschutzerklärung, Consent, 404-Seite, robots.txt, Sitemap, Weiterleitungen, Security-Header). Nutze diesen Skill beim Planen, Bauen, Überarbeiten oder Prüfen einer Website, Landingpage, Karriereseite oder Stellenanzeige, bei Fragen zu Ladezeit, Above the Fold, CTA, Formularen, Trust-Elementen, Abständen, Breakpoints, Meta-Titeln, interner Verlinkung, Designtokens, Icons, SVG, Animationen, Headlines, Buttontexten, Bewerberdaten, AGG, Markenübernahme aus einer bestehenden Website oder Rechtstexten."
+description: "Regelwerk für conversion orientiertes Webdesign im DACH Raum. Nutze diesen Skill beim Planen, Bauen, Überarbeiten oder Prüfen einer Website, Landingpage, Karriereseite oder Stellenanzeige, bei Fragen zu Ladezeit, Above the Fold, CTA, Formularen, Trust Elementen, Abständen, Breakpoints, Meta Titeln, interner Verlinkung, Designtokens, Icons, SVG, Animationen, Headlines, Buttontexten, Bewerberdaten, AGG, Rechtstexten und bei der Markenübernahme aus einer bestehenden Website. Deckt ab: Strategie und Positionierung, Design und UX, Responsive Design mit Container Queries, Performance, Barrierefreiheit (BFSG, WCAG 2.2 AA), SEO, Conversion Architektur, Copywriting, eigene Icon Systeme, Motion mit GSAP und CSS, Marken und CI Extraktion (Logo, Farben, Schrift), Referenzrecherche auf Premium Designquellen sowie den Pflichtaufbau mit Impressum, Datenschutz, Consent, 404, robots.txt, Sitemap, Weiterleitungen und Security Header."
 license: MIT
 metadata:
   author: Henneberg Webdesign
-  version: 2.29.0
+  version: 2.30.0
 ---
 
 # Webdesign Conversion System
