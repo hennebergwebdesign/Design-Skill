@@ -83,7 +83,7 @@ h3{font-size:var(--h3);line-height:1.2;font-weight:500}
 .held__bild{width:100%;height:100%;object-fit:cover}
 .held__schein{position:absolute;left:79%;top:37%;width:48%;aspect-ratio:1;translate:-50% -50%;border-radius:50%;background:radial-gradient(closest-side,color-mix(in srgb,var(--akzent-warm) 75%,transparent),color-mix(in srgb,var(--akzent-warm) 25%,transparent) 55%,transparent);opacity:.7;animation:schein 9s ease-in-out infinite alternate;pointer-events:none}
 @keyframes schein{from{opacity:.4;transform:scale(.94)}to{opacity:.85;transform:scale(1.04)}}
-.held__schleier{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,color-mix(in srgb,var(--flaeche-dunkel) 86%,transparent) 0%,color-mix(in srgb,var(--flaeche-dunkel) 70%,transparent) 38%,color-mix(in srgb,var(--flaeche-dunkel) 0%,transparent) 80%),linear-gradient(0deg,color-mix(in srgb,var(--flaeche-dunkel) 66%,transparent),transparent 34%)}
+.held__schleier{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,color-mix(in srgb,var(--flaeche-dunkel) 90%,transparent) 0%,color-mix(in srgb,var(--flaeche-dunkel) 84%,transparent) 52%,color-mix(in srgb,var(--flaeche-dunkel) 0%,transparent) 92%),linear-gradient(0deg,color-mix(in srgb,var(--flaeche-dunkel) 66%,transparent),transparent 34%)}
 .held h1{font-size:clamp(2rem,1.1rem + 3vw,3.4rem);font-weight:300;line-height:1.08;letter-spacing:.01em;text-transform:uppercase;max-width:21ch}
 .held__unter{margin-top:1.25rem;max-width:34rem;font-size:var(--text-l);color:var(--text-auf-dunkel)}
 .held__knoepfe{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1.5rem;margin-top:1.5rem}
