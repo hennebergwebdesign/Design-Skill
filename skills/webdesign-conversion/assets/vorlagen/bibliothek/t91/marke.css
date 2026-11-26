@@ -21,6 +21,7 @@
   --titel-gewicht:500;
   --titel-spur:-0.02em;
   --gold-hell:#e0c07a;        /* Text und Zeichen auf Dunkel */
+  --gold-tief:#8a6a1c;        /* Zeichen (Sterne) auf Hell, mindestens 3 zu 1 */
   --text-auf-dunkel:#f3f2ef;
   --text-leise-dunkel:#b9b8b4;
   --linie-dunkel:#3a3a3e;
