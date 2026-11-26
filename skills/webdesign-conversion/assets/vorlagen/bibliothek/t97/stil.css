@@ -319,3 +319,4 @@ h3{font-size:clamp(1.25rem,1.1rem + .6vw,1.5rem);line-height:1.2}
   .js .karte--mitte[data-zeig]{transform:translateY(24px)}
   .js .karte--mitte[data-zeig].ist-da{transform:none}
 }
+@media (max-width:47.99rem){.held>.stern--mittel{top:12.5rem!important;right:44%!important}}

@@ -203,7 +203,6 @@ h3{font-size:var(--h3);line-height:1.2}
 .kabel__linie{fill:none;stroke:var(--text);stroke-width:7;stroke-linecap:round;stroke-dasharray:100;stroke-dashoffset:0;vector-effect:non-scaling-stroke;transition:stroke-dashoffset 1.8s var(--kurve)}
 .js .kabel__buehne:not(.ist-da) .kabel__linie{stroke-dashoffset:100}
 .kabel__stecker{display:none}
-.kabel__tab{position:fixed;right:0;top:50%;z-index:30;display:none}
 @media (min-width:48rem){
   .kabel__raster{grid-template-columns:1fr 1.25fr;align-items:end;gap:3rem}
   .kabel__buehne{min-height:36rem;margin:0}
@@ -274,8 +273,6 @@ h3{font-size:var(--h3);line-height:1.2}
 .konfig__ring{position:absolute;width:min(80%,26rem);aspect-ratio:1;border-radius:50%;border:2px solid color-mix(in srgb,var(--text) 14%,transparent)}
 .konfig__ring::after{content:"";position:absolute;inset:12%;border-radius:50%;border:2px solid color-mix(in srgb,var(--text) 10%,transparent)}
 .konfig__produkt{position:relative;width:min(46vw,16rem);transform:rotate(-8deg) scale(var(--skala,1));transition:transform .4s var(--kurve)}
-.konfig__produkt .produkt{--prod:var(--prod-graphit);--band:var(--band-graphit)}
-.konfig__produkt{--p1:1}
 @media (min-width:62rem){
   .konfig__raster{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:4rem}
   .konfig__buehne{min-height:42rem}

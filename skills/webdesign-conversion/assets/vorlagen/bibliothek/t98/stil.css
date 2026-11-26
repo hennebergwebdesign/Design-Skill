@@ -226,6 +226,7 @@ h3{font-size:var(--h3);line-height:1.2}
 /* 12. Fuß */
 .fuss{background:var(--flaeche-dunkel);color:var(--text-auf-dunkel);padding-top:clamp(2rem,4vw,3.5rem);overflow:clip;border-radius:var(--radius-gross) var(--radius-gross) 0 0}
 .fuss__raster{display:grid;gap:2.5rem}
+.fuss__raster>*{min-width:0}
 .fuss__karte{display:grid;gap:1.25rem;align-content:start;justify-items:start;padding:clamp(1.25rem,3vw,2rem);border-radius:var(--radius-karte);background:#1c1a18;box-shadow:inset 0 0 0 1px var(--linie-dunkel)}
 .fuss__karte h2{font-size:clamp(1.8rem,1.2rem + 2vw,2.6rem)}
 .fuss__foto{width:100%;height:12rem;--bild-grund:linear-gradient(135deg,var(--ton-2),var(--ton-1))}
@@ -239,12 +240,13 @@ h3{font-size:var(--h3);line-height:1.2}
 .kapsel{display:inline-flex;gap:.5rem;padding:.5rem;border-radius:var(--radius-knopf);background:var(--blau)}
 .kapsel a{display:grid!important;place-items:center;width:2.75rem;height:2.75rem;min-height:0!important;border-radius:50%;background:var(--akzent);color:var(--akzent-text)!important;transition:transform var(--dauer-kurz) var(--kurve)}
 .kapsel a:hover{transform:translateY(-3px);color:var(--akzent-text)!important}
+.fuss__folgen{grid-column:1/-1}
 .fuss__klein{margin-top:1rem;color:var(--text-leise-dunkel);font-size:1rem}
 .fuss__marke{margin:clamp(1.5rem,3vw,2.5rem) 0 0;text-align:center;font-family:var(--schrift-titel);font-weight:400;font-size:min(14.2vw,14rem);line-height:.95;letter-spacing:-.05em;white-space:nowrap;user-select:none;color:#2e2a26;padding-bottom:.1em}
 .js .fuss__marke[data-zeig]{transform:translateY(28%)}
 .js .fuss__marke[data-zeig].ist-da{transform:none}
 .js .fuss__marke[data-zeig]{transition-duration:1.1s}
-@media (min-width:48rem){.fuss__spalten{grid-template-columns:repeat(4,auto);justify-content:space-between}}
+@media (min-width:48rem){.fuss__spalten{grid-template-columns:repeat(4,auto);justify-content:space-between}.fuss__folgen{grid-column:auto}}
 @media (min-width:62rem){.fuss__raster{grid-template-columns:.9fr 1.4fr;gap:4rem}.fuss__spalten{grid-template-columns:repeat(2,1fr)}}
 @media (min-width:80rem){.fuss__spalten{grid-template-columns:repeat(4,auto)}}
 

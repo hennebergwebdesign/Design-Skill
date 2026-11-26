@@ -128,7 +128,7 @@ h3{font-size:var(--h3);line-height:1.2}
   .js .szene__kopf .lead{font-size:1.0625rem}
   .js .szene__kopf .zeichen{width:2.5rem;height:2.5rem}
   .js .szene__rahmen{flex:1;min-height:0;width:min(100% - 1rem,96rem)}
-  .js .szene__foto{height:100%;aspect-ratio:auto;transform-origin:50% 0;transform:scale(calc(.6 + .4 * min(1,var(--fortschritt,1) / .7)));will-change:transform}
+  .js .szene__foto{height:100%;aspect-ratio:auto;transform-origin:50% 0;transform:scale(calc(.6 + .4 * min(1,var(--fortschritt,1) / .55)));will-change:transform}
   .js [data-ab]{--e:clamp(0,calc((var(--fortschritt,1) - var(--ab,0)) * 8),1);opacity:var(--e);transform:translateY(calc((1 - var(--e)) * 18px))}
 }
 @media (min-width:48rem) and (max-height:46rem){
@@ -306,6 +306,7 @@ h3{font-size:var(--h3);line-height:1.2}
 /* Bewegung pausieren: ein Knopf für alles, was sich von selbst bewegt */
 .pause{position:fixed;left:.75rem;bottom:.75rem;z-index:60;display:none;align-items:center;gap:.5rem;min-height:2.75rem;padding:.4rem 1rem;border-radius:999px;background:var(--text);color:#fff;font-size:1rem;font-weight:700;box-shadow:0 8px 20px rgba(14,10,6,.3)}
 .pause:focus-visible{outline-color:var(--szene-lime)}
+@media (min-width:48rem){.pause{left:50%;translate:-50% 0}}
 @media (prefers-reduced-motion:no-preference){.js .pause{display:inline-flex}}
 .pausiert *,.pausiert *::before,.pausiert *::after{animation-play-state:paused!important}
 

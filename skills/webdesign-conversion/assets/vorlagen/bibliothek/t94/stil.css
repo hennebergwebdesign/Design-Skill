@@ -127,7 +127,7 @@ a{color:inherit}
 .stilkarte{flex:0 0 min(78%,19rem);scroll-snap-align:start}
 .stilkarte a{position:relative;display:block;height:100%;min-height:27rem;overflow:hidden;border-radius:var(--radius-karte);background:var(--flaeche-alt)}
 .stilkarte img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s var(--kurve)}
-.stilkarte a::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,transparent 28%,color-mix(in srgb,var(--schleier) 94%,transparent) 100%)}
+.stilkarte a::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,color-mix(in srgb,var(--schleier) 25%,transparent) 0%,color-mix(in srgb,var(--schleier) 55%,transparent) 45%,color-mix(in srgb,var(--schleier) 95%,transparent) 100%)}
 .stilkarte__text{position:absolute;left:0;right:0;bottom:0;z-index:2;display:grid;gap:.6rem;padding:1.5rem;transition:transform .55s var(--kurve)}
 .stilkarte__titel{font-family:var(--schrift-titel);font-weight:600;font-size:var(--h3);line-height:1.15;color:var(--weiss)}
 .stilkarte__zeile{color:var(--text)}
