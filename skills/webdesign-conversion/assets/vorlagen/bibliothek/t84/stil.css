@@ -91,7 +91,6 @@ h3{font-size:var(--h3);line-height:1.2}
 .vorteile__kopf{display:grid;gap:1.25rem;align-content:start}
 .vorteile__kopf h2{font-size:clamp(1.75rem,1.2rem + 2vw,2.75rem);max-width:16ch}
 .vorteile__kopf p:not(.kicker){color:var(--text-leise);max-width:30rem}
-.vorteile__kopf .kicker{order:-1}
 .vorteile__liste{display:grid}
 .vorzug{position:relative;border-top:1px solid var(--linie);isolation:isolate}
 .vorzug:last-child{border-bottom:1px solid var(--linie)}
@@ -130,8 +129,6 @@ h3{font-size:var(--h3);line-height:1.2}
 .netz__foto--breit .bild{aspect-ratio:3/2}
 .netz__foto--hoch .bild{aspect-ratio:3/4}
 @media (min-width:48rem){
-  .netz__kopf{grid-template-columns:1fr 2fr}
-  .netz__kopf h2{margin-left:0}
   .netz__fotos{grid-template-columns:1.5fr 1fr;gap:clamp(1rem,2vw,2rem);align-items:start}
   .netz__foto--hoch{margin-top:clamp(2rem,6vw,5rem)}
   .netz__foto--breit .bild{aspect-ratio:4/3}
@@ -237,7 +234,7 @@ h3{font-size:var(--h3);line-height:1.2}
 .fuss__recht ul{display:flex;gap:1.5rem}
 .fuss__recht a{display:inline-flex;align-items:center;min-height:2.75rem}
 .fuss__wort{overflow:hidden;margin-top:1.5rem;line-height:.78;padding-bottom:.04em}
-.fuss__wort span{display:block;font-family:var(--schrift-titel);font-weight:600;font-size:17.4vw;letter-spacing:-.06em;white-space:nowrap;text-align:center;margin-inline:-.02em}
+.fuss__wort span{display:block;font-family:var(--schrift-titel);font-weight:600;font-size:15vw;letter-spacing:-.06em;white-space:nowrap;text-align:left;padding-left:var(--rand)}
 .js .fuss__wort span{transform:translateY(55%);opacity:0;transition:transform 1.1s var(--kurve),opacity .8s var(--kurve)}
 .js .fuss__wort.ist-da span{transform:none;opacity:1}
 .hochknopf{position:absolute;right:var(--rand);bottom:clamp(1rem,3vw,2.5rem);display:grid;place-items:center;width:3.5rem;height:3.5rem;border-radius:50%;background:var(--akzent);color:var(--akzent-text);box-shadow:0 0 0 1.5px var(--text);transition:transform var(--dauer-kurz) var(--kurve)}

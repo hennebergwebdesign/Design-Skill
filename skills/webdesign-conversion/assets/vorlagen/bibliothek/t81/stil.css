@@ -16,11 +16,8 @@ h3{font-size:clamp(1.25rem,1.1rem + .6vw,1.5rem);line-height:1.2}
 
 /* Knöpfe */
 .knopf{justify-content:center;text-align:center;font-size:1.0625rem;font-weight:700}
-.knopf:hover{transform:translateY(-2px);box-shadow:0 10px 22px color-mix(in srgb,var(--akzent) 30%,transparent)}
 .knopf--rand{background:transparent;color:var(--akzent);box-shadow:inset 0 0 0 1.5px var(--akzent)}
-.knopf--rand:hover{box-shadow:inset 0 0 0 1.5px var(--akzent),0 10px 22px color-mix(in srgb,var(--akzent) 18%,transparent)}
 .knopf--hell{background:var(--weiss);color:var(--text)}
-.knopf--hell:hover{box-shadow:0 10px 22px rgba(0,0,0,.25)}
 .knopf--auf-petrol{background:var(--text);color:var(--text-auf-dunkel)}
 .knopf--weiss{background:var(--weiss);color:var(--text)}
 .knopf svg{flex:none}
@@ -34,7 +31,6 @@ h3{font-size:clamp(1.25rem,1.1rem + .6vw,1.5rem);line-height:1.2}
 .notleiste p{font-weight:600}
 .notleiste ul{display:flex;flex-wrap:wrap;justify-content:center;gap:0 1.25rem}
 .notleiste a{display:inline-flex;align-items:center;gap:.5rem;min-height:2.75rem;font-weight:700}
-.notleiste a:hover{color:var(--akzent-hell)}
 .notleiste svg{color:var(--akzent-hell)}
 .notleiste ul{display:none}
 @media (min-width:48rem){.notleiste ul{display:flex}}
@@ -59,7 +55,6 @@ h3{font-size:clamp(1.25rem,1.1rem + .6vw,1.5rem);line-height:1.2}
 .js .kopf__leiste{flex-wrap:nowrap}
 .kopf__menue{display:flex;flex-wrap:wrap;gap:0 .25rem}
 .kopf__menue a{display:flex;align-items:center;min-height:2.75rem;padding-inline:.75rem;font-weight:600;transition:color var(--dauer-kurz)}
-.kopf__menue a:hover{color:var(--akzent)}
 .kopf__menue a[aria-current="location"]{text-decoration-color:var(--akzent)}
 .js .kopf__nav{position:absolute;top:100%;left:0;right:0;padding:.5rem 1rem 1rem;border-radius:0 0 var(--radius-karte) var(--radius-karte);background:var(--flaeche);box-shadow:var(--schatten),0 0 0 1px var(--linie)}
 .js .kopf__nav:not([data-offen="true"]){display:none}
@@ -114,12 +109,11 @@ h3{font-size:clamp(1.25rem,1.1rem + .6vw,1.5rem);line-height:1.2}
 .leistungen__raster{display:grid;gap:1rem}
 .karte{display:flex;flex-direction:column;gap:.75rem;padding:1.5rem;border-radius:var(--radius-karte);background:var(--weiss);color:var(--text);transition:translate var(--dauer-mittel) var(--kurve),box-shadow var(--dauer-mittel) var(--kurve)}
 .js .karte[data-zeig]{transition:opacity var(--dauer-lang) var(--kurve),transform var(--dauer-lang) var(--kurve),translate var(--dauer-mittel) var(--kurve),box-shadow var(--dauer-mittel) var(--kurve);transition-delay:calc(var(--i,0) * 80ms),calc(var(--i,0) * 80ms),0s,0s}
-.karte:hover,.karte:focus-within{translate:0 -8px;box-shadow:0 22px 40px rgba(0,0,0,.28)}
+.karte:focus-within{translate:0 -8px;box-shadow:0 22px 40px rgba(0,0,0,.28)}
 .karte__kreis{display:grid;place-items:center;width:3.5rem;height:3.5rem;border-radius:50%;background:var(--flaeche-alt);color:var(--akzent);margin-bottom:.5rem}
 .karte p{color:var(--text-leise);flex:1}
 .karte__link{display:inline-flex;align-items:center;gap:.4rem;min-height:2.75rem;font-weight:700;color:var(--akzent)}
 .karte__link svg{transition:transform var(--dauer-kurz) var(--kurve)}
-.karte__link:hover svg{transform:translateX(4px)}
 @media (min-width:36rem){.leistungen__raster{grid-template-columns:repeat(2,1fr)}}
 @media (min-width:64rem){.leistungen__raster{grid-template-columns:repeat(4,1fr)}}
 
@@ -144,8 +138,8 @@ h3{font-size:clamp(1.25rem,1.1rem + .6vw,1.5rem);line-height:1.2}
 .schritte li::after{background:var(--akzent);transform:scaleY(1);transition:transform .6s var(--kurve);transition-delay:calc(var(--i) * .9s + .35s)}
 .schritte li:last-child::before,.schritte li:last-child::after{display:none}
 .kreis{position:relative;z-index:1;display:grid;place-items:center;width:3.5rem;height:3.5rem;border-radius:50%;background:var(--flaeche);box-shadow:inset 0 0 0 3px var(--akzent);font-family:var(--schrift-titel);font-weight:700;font-size:1.375rem;color:var(--akzent)}
-.kreis::after{content:attr(data-n);position:absolute;inset:0;display:grid;place-items:center;border-radius:50%;background:var(--akzent);color:var(--akzent-text);transform:scale(1);transition:transform .45s var(--kurve);transition-delay:calc(var(--i) * .9s)}
-.js .schritte:not(.lauf) .kreis::after{transform:scale(0)}
+.kreis::after{content:attr(data-n);position:absolute;inset:0;display:grid;place-items:center;border-radius:50%;background:var(--akzent);color:var(--akzent-text);transform:scale(1);opacity:1;transition:transform .45s var(--kurve),opacity .3s linear;transition-delay:calc(var(--i) * .9s)}
+.js .schritte:not(.lauf) .kreis::after{transform:scale(.4);opacity:0}
 .js .schritte:not(.lauf) li::after{transform:scaleY(0)}
 .schritte h3{padding-top:.4rem}
 .schritte p{margin-top:.4rem;color:var(--text-leise);max-width:22rem}
@@ -169,7 +163,7 @@ h3{font-size:clamp(1.25rem,1.1rem + .6vw,1.5rem);line-height:1.2}
 .notdienst__bild{aspect-ratio:16/10;border-radius:var(--radius-organisch)}
 .knopf--puls{position:relative;isolation:isolate}
 .knopf--puls::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:var(--weiss);opacity:0;pointer-events:none}
-.js .notdienst.sichtbar .knopf--puls::before,.notdienst .knopf--puls:hover::before{animation:puls 2.4s ease-out 2}
+.js .notdienst.sichtbar .knopf--puls::before{animation:puls 2.4s ease-out 2}
 @keyframes puls{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.28,1.6);opacity:0}}
 @media (min-width:56rem){
   .notdienst__karte{grid-template-columns:1.1fr .9fr;align-items:center;gap:3rem}
@@ -193,7 +187,6 @@ h3{font-size:clamp(1.25rem,1.1rem + .6vw,1.5rem);line-height:1.2}
 .arbeiten__raster{display:grid;gap:1rem}
 .projekt{position:relative;margin:0;min-height:15rem;overflow:hidden;border-radius:var(--radius-bild);background:var(--flaeche-alt)}
 .projekt>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s var(--kurve)}
-.projekt:hover>img{transform:scale(1.04)}
 .projekt--gross{min-height:26rem}
 .projekt__karte{position:absolute;left:1rem;right:1rem;bottom:1rem;max-width:20rem;padding:1.25rem;border-radius:var(--radius-karte);background:var(--weiss);box-shadow:var(--schatten);transition:opacity var(--dauer-mittel) var(--kurve),transform var(--dauer-mittel) var(--kurve)}
 .projekt__karte h3{font-size:1.25rem;margin-bottom:.5rem}
@@ -240,12 +233,10 @@ h3{font-size:clamp(1.25rem,1.1rem + .6vw,1.5rem);line-height:1.2}
 .artikel{display:flex;flex-direction:column;gap:.5rem}
 .artikel__bild{aspect-ratio:4/3;border-radius:var(--radius-bild);margin-bottom:.5rem}
 .artikel__bild img{transition:transform .8s var(--kurve)}
-.artikel:hover .artikel__bild img{transform:scale(1.05)}
 .artikel__thema{display:flex;align-items:center;gap:.5rem;font-size:1rem;font-weight:700;color:var(--akzent)}
 .artikel__thema::before{content:"";width:.4rem;height:.4rem;border-radius:50%;background:currentColor}
 .artikel a{display:inline-flex;align-items:center;gap:.4rem;min-height:2.75rem;font-weight:700;color:var(--akzent)}
 .artikel a svg{transition:transform var(--dauer-kurz) var(--kurve)}
-.artikel a:hover svg{transform:translateX(4px)}
 @media (min-width:48rem){.ratgeber__raster{grid-template-columns:repeat(3,1fr)}}
 
 /* Fragen */
@@ -267,7 +258,6 @@ details[open] .plus{transform:rotate(45deg)}
 .kontakt__daten li{display:flex;align-items:center;gap:.75rem;min-height:2.75rem}
 .kontakt__daten li svg{flex:none;color:var(--akzent)}
 .kontakt__daten a{font-weight:700}
-.kontakt__daten a:hover{color:var(--akzent)}
 .formkarte{padding:clamp(1.25rem,3vw,2rem);border-radius:var(--radius-karte);background:var(--flaeche);box-shadow:var(--schatten),0 0 0 1px var(--linie)}
 .formular{display:grid;gap:1rem}
 .formular__feld{display:flex;flex-direction:column;gap:.35rem}
@@ -293,7 +283,6 @@ details[open] .plus{transform:rotate(45deg)}
 .fuss h2{font-size:1.125rem;margin-bottom:.75rem}
 .fuss li{color:var(--text-leise-dunkel)}
 .fuss a{display:inline-flex;align-items:center;min-height:2.75rem}
-.fuss ul a:hover{color:var(--akzent-hell)}
 .fuss__unten{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 1.5rem;margin-top:2.5rem;padding-top:1.25rem;border-top:1px solid var(--linie-dunkel);color:var(--text-leise-dunkel);font-size:1rem}
 .fuss__unten ul{display:flex;gap:1.25rem}
 @media (min-width:40rem){.fuss__raster{grid-template-columns:repeat(2,1fr)}}
@@ -305,6 +294,23 @@ details[open] .plus{transform:rotate(45deg)}
 .leiste-unten .knopf:not(.knopf--weiss){background:var(--akzent-hell);color:var(--text)}
 body{padding-bottom:4.5rem}
 @media (min-width:48rem){.leiste-unten{display:none}body{padding-bottom:0}}
+
+/* Hover nur bei Zeigergeräten, auf Touch löst ein Tipp sonst einen hängenden Zustand aus */
+@media (hover:hover) and (pointer:fine){
+  .knopf:hover{transform:translateY(-2px);box-shadow:0 10px 22px color-mix(in srgb,var(--akzent) 30%,transparent)}
+  .knopf--rand:hover{box-shadow:inset 0 0 0 1.5px var(--akzent),0 10px 22px color-mix(in srgb,var(--akzent) 18%,transparent)}
+  .knopf--hell:hover{box-shadow:0 10px 22px rgba(0,0,0,.25)}
+  .notleiste a:hover{color:var(--akzent-hell)}
+  .kopf__menue a:hover{color:var(--akzent)}
+  .karte:hover{translate:0 -8px;box-shadow:0 22px 40px rgba(0,0,0,.28)}
+  .karte__link:hover svg{transform:translateX(4px)}
+  .notdienst .knopf--puls:hover::before{animation:puls 2.4s ease-out 2}
+  .projekt:hover>img{transform:scale(1.04)}
+  .artikel:hover .artikel__bild img{transform:scale(1.05)}
+  .artikel a:hover svg{transform:translateX(4px)}
+  .kontakt__daten a:hover{color:var(--akzent)}
+  .fuss ul a:hover{color:var(--akzent-hell)}
+}
 
 /* Anker: Kopf verdeckt den Abschnittsanfang nicht */
 [id]{scroll-margin-top:5rem}

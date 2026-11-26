@@ -1,0 +1,31 @@
+/* marke.css der Vorlage "Coaching App Creme und Gelb": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche, --akzent-text auf --akzent (Gelb nie als Text auf Hell), Weiß auf Schwarz. */
+:root{
+  --flaeche:#f6f2e8;          /* Cremeweiß */
+  --flaeche-alt:#ebe6d9;      /* Karten */
+  --flaeche-dunkel:#0e0e0e;   /* Kopfleiste, große Karte, Fuß */
+  --text:#121212;
+  --text-leise:#58554b;
+  --linie:#d8d1c0;
+  --akzent:#ffd23f;           /* Hauptaktion: Fläche mit schwarzem Text, nie als Text auf Hell */
+  --akzent-text:#121212;
+  --schrift-titel:'Schibsted Grotesk',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:24px;
+  --radius-bild:24px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:32px;
+  --titel-gewicht:600;
+  --titel-gewicht-leicht:300;
+  --titel-spur:-0.03em;
+  --text-auf-dunkel:#ffffff;
+  --text-leise-dunkel:#c4c0b4;
+  --linie-dunkel:#34322d;
+  --karte-dunkel:#1b1a18;
+  --weiss:#ffffff;
+  --feld-rand:#7b776b;
+  --ton-1:#3a3a34;
+  --ton-2:#6d6a5c;
+}

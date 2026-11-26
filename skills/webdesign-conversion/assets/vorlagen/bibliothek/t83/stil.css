@@ -9,7 +9,7 @@ body{font-family:var(--schrift-text)}
 .knopf--dunkel{background:var(--flaeche-dunkel);color:var(--text-auf-dunkel);box-shadow:inset 0 0 0 1.5px var(--linie-dunkel)}
 .knopf--weiss{background:var(--weiss);color:var(--text)}
 .knopf svg{flex:none}
-.textlink{text-decoration:underline;text-underline-offset:.2em;color:var(--akzent);font-weight:600}
+.textlink{white-space:nowrap;text-decoration:underline;text-underline-offset:.2em;color:var(--akzent);font-weight:600}
 
 /* Kicker: runder Punkt statt Strich */
 .kicker{display:flex;align-items:center;gap:.6rem;margin-bottom:1rem;font-weight:600;font-size:1rem;color:var(--text-auf-dunkel)}
@@ -25,7 +25,7 @@ body{font-family:var(--schrift-text)}
 .kopf__menue{display:flex;flex-direction:column;gap:.25rem}
 .kopf__menue a{display:flex;align-items:center;gap:.5rem;min-height:2.75rem;padding:.4rem .9rem;border-radius:999px;font-weight:600;transition:background-color var(--dauer-kurz)}
 .kopf__menue a:hover{background:color-mix(in srgb,var(--text-auf-dunkel) 14%,transparent)}
-.kopf__knopf{min-height:2.75rem;padding:.5rem 1.2rem}
+.kopf__knopf{min-height:2.75rem;padding:.5rem 1.2rem;gap:0}
 .kopf__burger{display:none;width:2.75rem;height:2.75rem;border-radius:50%;align-items:center;justify-content:center;background:color-mix(in srgb,var(--text-auf-dunkel) 16%,var(--flaeche-dunkel))}
 .js .kopf__burger{display:inline-flex}
 .burger,.burger::before{display:block;width:1.2rem;height:2px;background:var(--text-auf-dunkel);border-radius:2px;transition:transform var(--dauer-mittel) var(--kurve)}
@@ -61,7 +61,7 @@ body{font-family:var(--schrift-text)}
 .held__beleg{display:flex;align-items:center;gap:.6rem;margin-bottom:.5rem;font-size:1rem}
 .held__beleg .stern{color:var(--limette);display:inline-flex}
 .held__tel{font-size:1rem;color:var(--text-leise-dunkel)}
-.held__tel a{text-decoration:underline;text-underline-offset:.2em;color:var(--text-auf-dunkel);font-weight:600}
+.held__tel a{white-space:nowrap;text-decoration:underline;text-underline-offset:.2em;color:var(--text-auf-dunkel);font-weight:600}
 .held__punkte{position:absolute;z-index:3;right:1rem;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:.6rem}
 .held__punkte[hidden]{display:none}
 .held__punkte button{width:2.75rem;height:2.75rem;border-radius:50%;background:rgba(6,30,21,.78);color:var(--weiss);font-weight:700;font-size:1rem;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.45);transition:background-color var(--dauer-kurz),transform var(--dauer-kurz) var(--kurve)}
@@ -70,7 +70,7 @@ body{font-family:var(--schrift-text)}
 .held__name{position:absolute;z-index:3;right:1rem;bottom:1rem;padding:.4rem .95rem;border-radius:999px;background:rgba(6,30,21,.82);font-size:1rem;font-weight:600;display:none}
 .js .held__name{display:block}
 @media (min-width:48rem){.held__bilder::after{background:linear-gradient(90deg,rgba(6,30,21,.92) 0,rgba(6,30,21,.7) 42%,rgba(6,30,21,.1) 80%)}.held__punkte{right:1.75rem}.held__name{right:1.75rem;bottom:1.5rem}}
-@media (max-width:47.99rem){.held__text{padding-right:4.5rem}}
+@media (max-width:47.99rem){.held__text{padding-right:4.5rem}.held__name{right:1rem;bottom:auto;top:1rem}}
 
 /* Wiedergabeknopf: Platzhalter, Pause Zustand über aria-pressed */
 .spielknopf{display:grid;place-items:center;width:5rem;height:5rem;border-radius:50%;background:var(--text-auf-limette);color:var(--weiss);transition:transform var(--dauer-kurz) var(--kurve)}
@@ -98,7 +98,7 @@ body{font-family:var(--schrift-text)}
 .merkmale li{display:flex;align-items:center;gap:.8rem;font-size:1rem;line-height:1.3}
 .merkmale svg{flex:none;color:var(--akzent)}
 .merkmale strong{display:block}
-.rundtour{position:relative;overflow:hidden;width:min(100%,16rem);aspect-ratio:1;border-radius:50%;justify-self:center;display:grid;place-items:center;background:var(--flaeche-dunkel);color:var(--text-auf-dunkel)}
+.rundtour{position:relative;overflow:hidden;width:16rem;max-width:100%;aspect-ratio:1;border-radius:50%;justify-self:center;display:grid;place-items:center;background:var(--flaeche-dunkel);color:var(--text-auf-dunkel)}
 .rundtour img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .rundtour__scrim{position:absolute;inset:0;background:rgba(6,30,21,.55)}
 .rundtour .spielknopf{position:relative;z-index:2}
@@ -336,8 +336,9 @@ body{font-family:var(--schrift-text)}
 .fuss__spalten{display:grid;gap:1.75rem;grid-template-columns:1fr 1fr}
 .fuss h3{font-family:var(--schrift-text);font-size:1rem;font-weight:700;margin-bottom:.75rem;color:var(--limette)}
 .fuss ul{display:grid;gap:.2rem}
-.fuss a{display:inline-flex;align-items:center;min-height:2.75rem;color:var(--text-auf-dunkel);text-underline-offset:.2em}
-.fuss a:hover{text-decoration:underline}
+.fuss a:not(.knopf){display:inline-flex;align-items:center;min-height:2.75rem;color:var(--text-auf-dunkel);text-underline-offset:.2em}
+.fuss .knopf{color:var(--text-auf-limette)}
+.fuss a:not(.knopf):hover{text-decoration:underline}
 .fuss address{display:grid;gap:.1rem;font-style:normal;font-size:1rem;color:var(--text-leise-dunkel)}
 .fuss__spalten>div:last-child{grid-column:1/-1}
 .fuss__marke{margin-top:clamp(2.5rem,5vw,4rem);font-family:var(--schrift-titel);font-weight:700;font-size:clamp(3rem,12.5vw,11rem);line-height:.95;letter-spacing:-.03em;color:var(--limette);white-space:nowrap}

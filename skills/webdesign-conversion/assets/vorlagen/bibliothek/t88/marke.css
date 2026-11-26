@@ -1,0 +1,34 @@
+/* marke.css der Vorlage "Reisebüro hell mit Fotokarten": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche und Akzenttext auf Akzent mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#f6f7f5;
+  --flaeche-alt:#eaeeed;
+  --flaeche-dunkel:#101c22;   /* Fuß und Menüpanel */
+  --text:#101a20;
+  --text-leise:#4b585f;
+  --linie:#d7dedf;
+  --akzent:#0b5470;           /* Hauptaktion: Fläche mit hellem Text, auf Hell auch Text und Linie */
+  --akzent-text:#ffffff;
+  --schrift-titel:'Outfit',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:22px;
+  --radius-bild:24px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:32px;
+  --titel-gewicht:300;
+  --titel-spur:-0.03em;
+  --akzent-warm:#f0b45c;      /* nur Zeichen: Punkt am Kicker, Sonnenfleck, nie als Textfarbe auf Hell */
+  --text-auf-dunkel:#f4f7f7;
+  --text-leise-dunkel:#b9c7cc;
+  --linie-dunkel:#2c4048;
+  --weiss:#ffffff;
+  /* Platzhalter-Töne für Bildflächen (später durch Fotos ersetzen) */
+  --ton-1:#3f7d8f;
+  --ton-2:#7ea08a;
+  --ton-3:#c9a56b;
+  --ton-4:#2f5668;
+  --ton-5:#8a6f5a;
+  --ton-6:#1f3b4a;
+}

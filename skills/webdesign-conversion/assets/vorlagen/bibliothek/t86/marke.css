@@ -1,0 +1,35 @@
+/* marke.css der Vorlage "Bauunternehmen Kapsel und Waldgrün": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast prüfen: Text auf Fläche, Akzenttext auf Akzent und Waldgrün mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#ffffff;
+  --flaeche-alt:#f3f4ee;
+  --flaeche-dunkel:#141613;   /* Kopfkapsel, Kennzahlkarte, Fuß */
+  --text:#161812;
+  --text-leise:#555a4d;
+  --linie:#dfe2d6;
+  --akzent:#c2410c;           /* Hauptaktion (Orange): Fläche mit weißem Text, auf Hell auch Text */
+  --akzent-text:#ffffff;
+  --schrift-titel:'Schibsted Grotesk',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:28px;
+  --radius-bild:28px;
+
+  /* Zusatztokens dieser Vorlage */
+  --radius-gross:36px;
+  --titel-gewicht:700;
+  --titel-spur:-0.03em;
+  --wald:#3b5a38;             /* Zweitfarbe (Waldgrün): Flächen mit hellem Text, Haken, Zeichen */
+  --wald-hell:#e4ebdc;
+  --akzent-hell:#f58f55;      /* Orange auf Dunkel (Text und Zeichen) */
+  --text-auf-dunkel:#f5f6f0;
+  --text-leise-dunkel:#b9bfae;
+  --linie-dunkel:#2c3027;
+  --weiss:#ffffff;
+  --feld-rand:#6d7364;
+  /* Platzhalter-Töne für Bildflächen */
+  --ton-1:#3b5a38;
+  --ton-2:#6d7a3f;
+  --ton-3:#c2410c;
+  --ton-4:#2c3027;
+}
