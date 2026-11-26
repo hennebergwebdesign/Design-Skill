@@ -1,0 +1,35 @@
+/* marke.css der Vorlage "Finanz App Koralle und Petrol": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast (selbst nachgerechnet, WCAG): --text auf --flaeche 16,6 zu 1; --text-leise auf --flaeche 6,6, auf --flaeche-alt 5,9, auf Weiß 7,0;
+   --text auf --koralle 6,3 (Held, Fließtext und Knopf); --akzent-text auf --akzent 15,4; --akzent auf --koralle (Knopf im Held) 5,8;
+   --text auf den drei Panelflächen 11,8 bis 12,6, --text-leise auf ihnen 6,7 bis 7,1; --text-leise-dunkel auf --flaeche-dunkel 8,8;
+   --koralle auf --flaeche-dunkel (Knopffläche mit dunklem Text) 5,8; Eingaberand --feld-rand auf Weiß 4,0 (Mindestwert für Bedienelemente 3,0). */
+:root{
+  --flaeche:#fff7ec;
+  --flaeche-alt:#f5ead8;
+  --flaeche-dunkel:#12222a;
+  --text:#17191c;
+  --text-leise:#555a5f;
+  --linie:#cdbfa8;
+  --akzent:#12222a;            /* Hauptaktion auf Hell: Petrol mit hellem Text */
+  --akzent-text:#fff7ec;
+  --schrift-titel:'Bricolage Grotesque',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:12px;
+  --radius-karte:6px;
+  --radius-bild:4px;
+
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:500;
+  --titel-spur:-0.035em;
+  --koralle:#ff6a4a;           /* Held und Knopf auf Dunkel */
+  --lila:#d8cdfb;              /* drei Panelflächen der Produktbühne */
+  --rose:#ffc9d4;
+  --sand:#f0d8a0;
+  --lila-hell:#ebe5ff;         /* Zifferzellen */
+  --weiss:#ffffff;
+  --text-auf-dunkel:#fff7ec;
+  --text-leise-dunkel:#b4c1c4;
+  --linie-dunkel:#2f4650;
+  --feld-rand:#7a7f84;
+  --kopf-hoehe:4.5rem;
+}
