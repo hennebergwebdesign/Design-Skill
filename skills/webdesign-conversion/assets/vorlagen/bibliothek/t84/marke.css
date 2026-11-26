@@ -1,0 +1,27 @@
+/* marke.css t84: DIE Datei zum Umfärben. Marke wechseln = nur diese Werte ändern (und bei Bedarf die zwei Schriftzeilen).
+   Kontrast geprüft: Text auf Fläche, Akzenttext auf Akzent und Text auf Dunkel jeweils mindestens 4,5 zu 1.
+   Regel: Die Limette ist Fläche (Knopf, aktive Zeile, Zeichen) und Text nur auf Dunkel, nie Text auf Weiß. */
+:root{
+  --flaeche:#ffffff;
+  --flaeche-alt:#f1f4ec;       /* abgesetzte helle Fläche, leicht grünlich */
+  --flaeche-dunkel:#0d1a13;    /* feste Rolle: dunkler Abschnitt, Schwarzgrün */
+  --text:#0d1a13;
+  --text-leise:#4a5b50;
+  --linie:#d9e0d3;
+  --akzent:#d3f26b;            /* Limette: Hauptaktion, Fläche */
+  --akzent-text:#0d1a13;
+  --text-auf-dunkel:#f2f6ec;
+  --text-leise-dunkel:#b7c5b9;
+  --linie-dunkel:#2a3b30;
+  --ton-1:#2f4a35;             /* Platzhalterflächen: Blattgrün */
+  --ton-2:#7b5d3e;             /* Platzhalterflächen: Ackererde */
+  --feld-rand:#6d7d72;
+  --schrift-titel:'Familjen Grotesk','Hanken Grotesk',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --titel-gewicht:500;
+  --titel-spur:-0.035em;
+  --radius-knopf:999px;
+  --radius-karte:20px;
+  --radius-bild:18px;
+  --bild-grund:linear-gradient(135deg,var(--ton-1),var(--ton-2));
+}
