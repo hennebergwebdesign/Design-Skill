@@ -1,0 +1,32 @@
+/* marke.css der Vorlage "Notizclip, Produktseite mit Bühnen": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast (selbst gerechnet, WCAG), jeweils Text auf Fläche, Mindestwert 4,5 zu 1, groß und Bedienelemente 3 zu 1. */
+:root{
+  --flaeche:#f4f2ee;            /* Papier */
+  --flaeche-alt:#e9e6df;
+  --flaeche-dunkel:#11151a;     /* Tinte, Bühne und Kopfzeile */
+  --karte-dunkel:#1b2128;       /* Karten auf Tinte */
+  --text:#161a20;               /* auf Fläche 15,6 zu 1, auf Fläche alt 14,0 zu 1 */
+  --text-leise:#4a525c;         /* auf Fläche 7,1 zu 1, auf Fläche alt 6,4 zu 1 */
+  --linie:#cfcac0;
+  --akzent:#1f4fd8;             /* Hauptaktion: Kobalt mit weißem Text (6,6 zu 1), auf Fläche 5,9 zu 1 */
+  --akzent-text:#ffffff;
+  --signal:#ffd23f;             /* Signalgelb: Kennziffern, aktive Chips und Leuchtpunkt auf Tinte (12,7 zu 1), nie Textfarbe auf Hell */
+  --text-auf-dunkel:#f4f2ee;    /* auf Tinte 16,4 zu 1, auf Karte dunkel 14,5 zu 1 */
+  --text-leise-dunkel:#a7b0ba;  /* auf Tinte 8,3 zu 1, auf Karte dunkel 7,4 zu 1 */
+  --linie-dunkel:#2c343d;
+  --feld-rand:#6b727b;          /* Rand der Eingabefelder auf Fläche 4,3 zu 1 (Bedienelement, mindestens 3 zu 1) */
+  --geraet-hell:#d9dde2;        /* Gerätekörper in der Zeichnung, Verlauf von hell nach dunkel */
+  --geraet-dunkel:#59626d;
+  --schrift-titel:'Schibsted Grotesk',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:10px;
+  --radius-karte:20px;
+  --radius-bild:18px;
+
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:600;
+  --titel-spur:-0.035em;
+  --buehne-held:210svh;         /* Scrollweg der Heldbühne */
+  --buehne-verben:380svh;       /* Scrollweg der Verbenbühne (vier Schritte) */
+  --kopfhoehe:3.75rem;
+}
