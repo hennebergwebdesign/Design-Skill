@@ -1,0 +1,45 @@
+/* marke.css der Vorlage "Fallstudie als Kennzahlen Erzählung": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast (selbst gerechnet, WCAG): Zeilen unten, jeweils Text auf Fläche, Mindestwert 4,5 zu 1 (groß 3 zu 1, Bedienelemente 3 zu 1). */
+:root{
+  --flaeche:#f6f4ef;            /* Papier */
+  --flaeche-alt:#ebe8e0;
+  --karte:#fffdf9;              /* Karten und Diagramme auf Papier */
+  --flaeche-dunkel:#0d1a3c;     /* Nachtblau: Kennzahlenraster und Abschluss */
+  --flaeche-dunkel-2:#14264f;   /* Karten auf Nachtblau */
+  --text:#101820;               /* auf Fläche 16,3 zu 1, auf Fläche alt 14,6, auf Karte 17,6 */
+  --text-leise:#49525c;         /* auf Fläche 7,2 zu 1, auf Fläche alt 6,5, auf Karte 7,8 */
+  --linie:#cdc9bd;              /* Rasterlinien, nur Zierde (1,5 zu 1), nie einziges Zeichen */
+  --akzent:#101820;             /* Hauptaktion: Tinte mit hellem Text (16,3 zu 1) */
+  --akzent-text:#f6f4ef;
+  --schrift-titel:'Hanken Grotesk',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:20px;
+  --radius-bild:20px;
+
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:600;
+  --titel-gewicht-leicht:300;   /* zweite Zeile der Überschrift, leichter statt farbig */
+  --titel-spur:-0.045em;
+  --kennzahl:#2438b5;           /* große Kennzahl auf Hell: auf Fläche 8,3 zu 1, auf Fläche alt 7,4, auf Karte 9,0 */
+  --signal:#ff7b5c;             /* hervorgehobene Zelle, Diagrammpunkt auf Dunkel: auf Nachtblau 6,7 zu 1, Text Tinte darauf 7,0 */
+  --signal-hell:#ffa58f;        /* Kennzahl auf Dunkel: auf Nachtblau 9,0 zu 1, auf Karte dunkel 7,8 */
+  --himmel-1:#163a86;           /* Held: Verlauf von oben links nach unten rechts, weißer Text darauf 9,4 zu 1 bis 5,0 zu 1 */
+  --himmel-2:#2d5dad;
+  --himmel-3:#3566b4;
+  --text-auf-dunkel:#f3f1ea;    /* auf Nachtblau 15,1 zu 1, auf Karte dunkel 13,1, auf Himmel 5,0 bis 9,4 */
+  --text-leise-dunkel:#aab6d6;  /* auf Nachtblau 8,4 zu 1, auf Karte dunkel 7,3, nie auf dem Himmel (2,8) */
+  --linie-dunkel:#2c3d6b;
+  --feld-rand:#6d7480;          /* Rand der Eingabefelder auf Karte 4,6 zu 1, auf Fläche 4,3 (Bedienelement, Mindestwert 3 zu 1) */
+  --weiss:#ffffff;
+  --kachel:#e4e9f3;             /* Übersichtskachel der Züge: Text auf Kachel 14,7 zu 1, Text leise 6,5 zu 1 */
+  --anz-1:#2438b5;              /* Flächen der Beispielanzeigen, weißer Text darauf mindestens 5,0 zu 1: Blau 9,1 */
+  --anz-2:#b8420a;              /* Orange, weißer Text 5,5 zu 1 */
+  --anz-3:#166a4e;              /* Grün, weißer Text 6,6 zu 1 */
+  --anz-4:#0d1a3c;              /* Nachtblau, weißer Text 17,0 zu 1 */
+  /* Schriftgrößen der Überschriften (Hero, Kapitelaussage, große Aussage), mobil kleiner */
+  --h1-fall:clamp(2.9rem,2rem + 3.6vw,5rem);
+  --h2-fall:clamp(2.1rem,1.2rem + 3.6vw,4.4rem);
+  --h2-gross:clamp(2.6rem,1rem + 6.4vw,6.6rem);
+  --zahl-gross:clamp(3.2rem,2rem + 4vw,5rem);
+}

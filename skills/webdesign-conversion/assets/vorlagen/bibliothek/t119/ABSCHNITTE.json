@@ -1,0 +1,142 @@
+[
+  {
+    "id": "kopf",
+    "name": "Kopfzeile mit Kapitelmenü",
+    "kategorie": "navigation",
+    "selektor": "header[data-abschnitt=\"kopf\"]",
+    "prinzip": "Nummerierte Menüpunkte zeigen die Kapitelfolge, Telefon und Hauptaktion bleiben immer erreichbar.",
+    "css": ".kopf",
+    "js": "bewegung.js (data-menue, Abschnittsanzeige)",
+    "hinweis": "marke.css, basis.css, .kopf und .knopf aus stil.css, Symbole i-tel und i-pfeil aus dem SVG Block"
+  },
+  {
+    "id": "held",
+    "name": "Blauer Held mit Aussage unten links",
+    "kategorie": "hero",
+    "selektor": "section[data-abschnitt=\"held\"]",
+    "prinzip": "Aussage, Hauptaktion und drei Kennzahlen stehen im ersten Bildschirm, bevor etwas gescrollt wird.",
+    "css": ".held, .laden__",
+    "js": null,
+    "hinweis": "marke.css (Himmel Tokens), Symbole i-tel, i-pfeil, i-runter, i-rad; Zeichnung .laden__ gehört dazu"
+  },
+  {
+    "id": "band",
+    "name": "Kennzahlenband am Heldrand",
+    "kategorie": "trust",
+    "selektor": "section[data-abschnitt=\"band\"]",
+    "prinzip": "Ein durchlaufendes Band trägt die Kernzahlen weiter, auch wenn der Held verlassen ist.",
+    "css": ".zb",
+    "js": "stil.js (Pause Knopf)",
+    "hinweis": "Symbole i-pause und i-play, Pause Knopf nicht weglassen (Anhaltemöglichkeit)"
+  },
+  {
+    "id": "betrieb",
+    "name": "Kapitel 01: der Betrieb",
+    "kategorie": "about",
+    "selektor": "section[data-abschnitt=\"betrieb\"]",
+    "prinzip": "Die Fallstudie beginnt beim Kunden, damit jede spätere Zahl einen Zusammenhang hat.",
+    "css": ".betrieb, .kap",
+    "js": "bewegung.js (data-zeig)",
+    "hinweis": "Kapitelkopf .kap (Regeln aus stil.css) und Symbol i-rad mitnehmen"
+  },
+  {
+    "id": "problem",
+    "name": "Kapitel 02: die Herausforderung",
+    "kategorie": "problem",
+    "selektor": "section[data-abschnitt=\"problem\"]",
+    "prinzip": "Große Aussage links, Erklärung rechts, dann je Problem eine Zeile mit Beschriftung: erst der Mangel, dann die Lösung.",
+    "css": ".prob, .kap",
+    "js": "bewegung.js (data-licht, data-zeig)",
+    "hinweis": "Nachtblau Tokens, .kap, Wortlicht aus bewegung.js"
+  },
+  {
+    "id": "zuege",
+    "name": "Kapitel 03: sechs Züge",
+    "kategorie": "features",
+    "selektor": "section[data-abschnitt=\"zuege\"]",
+    "prinzip": "Jede Maßnahme trägt ihre Kennzahl und ein eigenes Diagramm, die klebende Übersicht zeigt, wo man in der Reihe steht.",
+    "css": ".zug, .dg",
+    "js": "stil.js (Züge)",
+    "hinweis": "Diagramm Regeln .dg, Symbole i-z1 bis i-z6, .kap, Diagramme sind SVG mit Beispieldaten"
+  },
+  {
+    "id": "verlauf",
+    "name": "Kapitel 03.1: Verlauf mit klebender Tafel",
+    "kategorie": "cases",
+    "selektor": "section[data-abschnitt=\"verlauf\"]",
+    "prinzip": "Eine klebende Anzeigetafel folgt der gelesenen Phase und macht aus Text eine Entwicklung mit Zahlen.",
+    "css": ".verl, .skz, .dg--dunkel",
+    "js": "stil.js (Verlauf)",
+    "hinweis": "Nachtblau und Signal Tokens, Diagramm .dg, JS setzt --rest am Diagramm"
+  },
+  {
+    "id": "persona",
+    "name": "Kapitel 03.2: Anzeigen nach Lebenslage",
+    "kategorie": "portfolio",
+    "selektor": "section[data-abschnitt=\"persona\"]",
+    "prinzip": "Eine Reihe gleich gebauter Handy Anzeigen zeigt, dass jede Zielgruppe ihr eigenes Argument bekommt.",
+    "css": ".pers, .handy",
+    "js": "bewegung.js (data-zeig)",
+    "hinweis": "Anzeigenfarben --anz-1 bis --anz-4, Symbole i-g-*, i-rad, Region mit Tastaturfokus"
+  },
+  {
+    "id": "ergebnis",
+    "name": "Kapitel 04: drei Ergebnisse mit Beleg",
+    "kategorie": "cases",
+    "selektor": "section[data-abschnitt=\"ergebnis\"]",
+    "prinzip": "Neben jeder Kennzahl steht ihr Diagramm, so wird die Aussage nachprüfbar statt behauptet.",
+    "css": ".erg, .dg",
+    "js": "bewegung.js (data-zeig)",
+    "hinweis": "Diagramm Regeln .dg, .kap, Knopf .knopf"
+  },
+  {
+    "id": "neun",
+    "name": "Kapitel 04.1: neun Kennzahlen",
+    "kategorie": "benefits",
+    "selektor": "section[data-abschnitt=\"neun\"]",
+    "prinzip": "Ein Raster mit einer hervorgehobenen Zelle fasst das Ergebnis zusammen und lenkt den Blick auf die wichtigste Zahl.",
+    "css": ".neun",
+    "js": "bewegung.js (data-zaehle)",
+    "hinweis": "Nachtblau und Signal Tokens, .kap"
+  },
+  {
+    "id": "team",
+    "name": "Kapitel 05: Team mit Film",
+    "kategorie": "team",
+    "selektor": "section[data-abschnitt=\"team\"]",
+    "prinzip": "Personen als Liste mit Film daneben: die Auswahl macht Menschen vor dem ersten Gespräch greifbar.",
+    "css": ".team",
+    "js": "stil.js (Team)",
+    "hinweis": "Symbol i-play, Himmel Tokens; der Film ist ein Platzhalter"
+  },
+  {
+    "id": "faq",
+    "name": "Kapitel 06: Einwand Fragen",
+    "kategorie": "faq",
+    "selektor": "section[data-abschnitt=\"faq\"]",
+    "prinzip": "Die häufigsten Einwände werden vor dem Kontakt beantwortet, ein Eintrag ist offen.",
+    "css": ".faq",
+    "js": "bewegung.js (data-exklusiv)",
+    "hinweis": "details Markup, .kap"
+  },
+  {
+    "id": "formular",
+    "name": "Kapitel 06.1: Gespräch vereinbaren",
+    "kategorie": "forms",
+    "selektor": "section[data-abschnitt=\"formular\"]",
+    "prinzip": "Fünf Felder und ein Telefon als Alternative halten die Hürde niedrig.",
+    "css": ".form, .formular",
+    "js": "stil.js (Formular ohne Versand)",
+    "hinweis": "Feld Tokens (--feld-rand), Hinweise .feld__hinweis, Symbol i-tel"
+  },
+  {
+    "id": "abschluss",
+    "name": "Abschluss mit Wortmarke und Fuß",
+    "kategorie": "footer",
+    "selektor": "footer[data-abschnitt=\"abschluss\"]",
+    "prinzip": "Die riesige Wortmarke schließt die Geschichte als Signatur ab, darunter stehen Hauptaktion und Linkspalten.",
+    "css": ".abschluss",
+    "js": null,
+    "hinweis": "Nachtblau Tokens, Schrift Titel, Symbole i-tel und i-pfeil"
+  }
+]
