@@ -1,0 +1,37 @@
+/* marke.css der Vorlage "Strandgut mit Wortmarke": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast (selbst gerechnet, WCAG): siehe Zeilen unten, jeweils Text auf Fläche, Mindestwert 4,5 zu 1. */
+:root{
+  --flaeche:#f8f2e7;            /* Salzcreme */
+  --flaeche-alt:#efe3d0;        /* Sand */
+  --flaeche-blau:#d4e4ef;       /* Ostseedunst, das Farbband für das Wohnen */
+  --flaeche-dunkel:#10222c;     /* Nachtwasser */
+  --text:#1c2a31;               /* auf Fläche 13,2 zu 1, auf Sand 11,6, auf Dunst 11,3, auf Papier 14,4 */
+  --text-leise:#4d5a5e;         /* auf Fläche 6,4 zu 1, auf Sand 5,6, auf Dunst 5,5, auf Papier 7,0 */
+  --linie:#d8cab4;
+  --akzent:#1b4a66;             /* Hauptaktion: Tiefblau mit Creme (8,5 zu 1), auch Linkfarbe auf Fläche 8,5 */
+  --akzent-text:#f8f2e7;
+  --schrift-titel:'Newsreader',Georgia,serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:3px;
+  --radius-karte:3px;
+  --radius-bild:2px;
+
+  /* Zusatztokens dieser Vorlage */
+  --schrift-marke:'Archivo',system-ui,sans-serif;  /* Wortmarke in Großschrift, breit und schwer */
+  --titel-gewicht:400;
+  --titel-spur:-0.015em;
+  --papier:#fffcf6;             /* Karten und Abzüge */
+  --salz:#fffcf6;               /* Schrift auf Fotos, immer über dem Schleier */
+  --schleier:rgba(16,34,44,.62);/* Abdunklung unter Schrift auf Fotos */
+  --text-auf-dunkel:#f8f2e7;    /* auf Nachtwasser 14,6 zu 1 */
+  --text-leise-dunkel:#a8b9c0;  /* auf Nachtwasser 8,1 zu 1 */
+  --linie-dunkel:#2b4250;
+  --feld-rand:#6f7b7e;          /* Rand der Eingabefelder auf Papier 4,3 zu 1, auf Fläche 3,9 zu 1 (Bedienelement, mindestens 3 zu 1) */
+  --schatten-papier:0 1px 2px rgba(16,34,44,.18),0 14px 30px -12px rgba(16,34,44,.35);
+  --drehung:2.2deg;             /* Grundneigung der Abzüge und der Stimmkarte */
+  /* organisch gewellte Oberkante für Bildbänder, nur Dekoration, nie über Text oder Bedienelementen */
+  --kante:polygon(0 1.6rem,7% .7rem,16% 1.4rem,27% .4rem,38% 1.2rem,49% .2rem,60% 1.1rem,71% .5rem,83% 1.5rem,92% .6rem,100% 1.2rem,100% 100%,0 100%);
+  --riss-1:polygon(2% 6%,30% 0,64% 4%,100% 1%,97% 52%,100% 97%,58% 100%,22% 96%,0 100%,3% 48%);
+  --riss-2:polygon(0 3%,41% 0,76% 5%,98% 0,100% 40%,96% 100%,52% 97%,10% 100%,3% 62%);
+  --riss-3:polygon(4% 0,52% 4%,100% 0,98% 44%,100% 100%,44% 96%,0 100%,2% 38%);
+}
