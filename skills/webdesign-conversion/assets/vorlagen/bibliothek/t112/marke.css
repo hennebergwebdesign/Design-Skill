@@ -1,0 +1,39 @@
+/* marke.css der Vorlage "Wertegemeinschaft App mit Manifest Scrollgeschichte": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast (selbst gerechnet, WCAG): Text auf Fläche mindestens 4,5 zu 1, großer Text 3 zu 1, Bedienelemente 3 zu 1. Werte siehe INFO.md. */
+:root{
+  --flaeche:#f3f1ea;            /* Papierweiß */
+  --flaeche-alt:#e4e8df;
+  --flaeche-dunkel:#08241f;     /* Tannennacht */
+  --text:#14231f;               /* auf Fläche 14,4 zu 1, auf Fläche alt 13,1 zu 1 */
+  --text-leise:#4a5c55;         /* auf Fläche 6,3 zu 1, auf Fläche alt 5,7 zu 1 */
+  --linie:#c9d1c6;
+  --akzent:#0a3d36;             /* Hauptaktion auf Hell: Tannengrün mit hellem Text (10,7 zu 1) */
+  --akzent-text:#f3f1ea;
+  --schrift-titel:'Outfit',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:14px;
+  --radius-karte:26px;
+  --radius-bild:22px;
+
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:300;          /* leichte Überschriften, große Größen tragen die Aussage */
+  --titel-spur:-0.03em;
+  --verlauf-a:#0a3d36;          /* Vollflächenverlauf Tannengrün: weißer Text auf allen drei Stufen mindestens 5,3 zu 1 */
+  --verlauf-b:#0d5c47;          /* weiß darauf 8,0 zu 1 */
+  --verlauf-c:#137a5c;          /* weiß darauf 5,3 zu 1, hellste Textstufe */
+  --verlauf-licht:#1f9d70;      /* nur Lichtfleck hinter den Handys, nie hinter Text */
+  --muenze:#f2c14e;             /* Taler, Hauptaktion auf Verlauf (dunkler Text darauf 9,7 zu 1) */
+  --muenze-tief:#b8862a;
+  --muenze-text:#14231f;
+  --text-auf-dunkel:#f3f1ea;    /* auf Tannennacht 14,5 zu 1, auf Verlauf C 4,7 zu 1 */
+  --text-leise-dunkel:#a9c9bd;  /* auf Tannennacht 9,2 zu 1 */
+  --linie-dunkel:#24433b;
+  --karte-dunkel:#102f29;       /* Karten auf Tannennacht */
+  --feld-rand:#6b7d76;          /* Rand der Eingabefelder auf Weiß 4,4 zu 1 (Bedienelement, mindestens 3 zu 1) */
+  --weiss:#ffffff;
+  --kachel-1:#c9632f;           /* Branchenkacheln, nur Flächen unter Weiß, nie Textfarbe */
+  --kachel-2:#7a4a8a;
+  --kachel-3:#2f6f9a;
+  --kachel-4:#9a7a1f;
+  --kachel-5:#a63f52;
+}

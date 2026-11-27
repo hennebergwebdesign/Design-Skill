@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Betriebe vor Ort entdecken | Markenname App</title>
+<meta name="description" content="Die kostenlose App für Bäckereien, Werkstätten, Cafés und Höfe in deiner Nähe, die fair arbeiten und ausbilden. Entdecken, einkaufen, Punkte sammeln.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../_basis/schriften.css">
+<link rel="stylesheet" href="marke.css">
+<link rel="stylesheet" href="../_basis/basis.css">
+<link rel="stylesheet" href="stil.css">
+<!-- Strukturierte Daten: Beispielwerte, vor der Auslieferung durch echte Angaben ersetzen. Keine Bewertungen erfunden. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "Markenname",
+  "description": "App zum Entdecken von regionalen Handwerks und Gastronomiebetrieben, die gemeinsame Werte teilen, mit Punkten für Einkäufe vor Ort.",
+  "applicationCategory": "LifestyleApplication",
+  "operatingSystem": "iOS, Android",
+  "offers": { "@type": "Offer", "price": "0.00", "priceCurrency": "EUR" },
+  "publisher": { "@type": "Organization", "name": "Markenname", "telephone": "+490000000000", "email": "hallo@beispiel.invalid", "url": "https://beispiel.invalid/", "address": { "@type": "PostalAddress", "streetAddress": "Musterstraße 1", "postalCode": "00000", "addressLocality": "Musterstadt", "addressCountry": "DE" } }
+}
+</script>
+</head>
+<body id="top">
+<a class="sprunglink" href="#inhalt">Zum Inhalt springen</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <radialGradient id="g-muenze" cx=".35" cy=".3" r=".85"><stop offset="0" stop-color="#fbe3a0"/><stop offset=".5" stop-color="#f2c14e"/><stop offset="1" stop-color="#b8862a"/></radialGradient>
+  </defs>
+  <symbol id="i-pfeil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-runter" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+  <symbol id="i-tel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.500 1.500a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.200 7-11.500A7 7 0 0 0 5 9.500C5 14.800 12 21 12 21z"/><circle cx="12" cy="9.500" r="2.500"/></symbol>
+  <symbol id="i-haus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.500 12 4l8 7.500M6.500 10v9.500h11V10"/></symbol>
+  <symbol id="i-lupe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.500"/><path d="m16 16 4.500 4.500"/></symbol>
+  <symbol id="i-merk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10v16l-5-4-5 4z"/></symbol>
+  <symbol id="i-tausch" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h14l-3-3M20 16H6l3 3"/></symbol>
+  <symbol id="i-kreuz" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+  <symbol id="i-muenze" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="url(#g-muenze)"/><circle cx="32" cy="32" r="24" fill="none" stroke="#8a6416" stroke-opacity=".55" stroke-width="2"/><path d="M20 34 32 22l12 12M24 31v12h16V31" fill="none" stroke="#5a3f0c" stroke-width="3.500" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<header class="kopf" data-abschnitt="kopf" id="kopfzeile">
+  <div class="kopf__leiste">
+    <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite"><svg width="30" height="30" aria-hidden="true" focusable="false"><use href="#i-muenze"/></svg>Markenname</a>
+    <nav class="kopf__nav" id="hauptnav" aria-label="Hauptnavigation" data-menue-ziel>
+      <ul class="kopf__menue">
+        <li><a href="#branchen">Betriebe</a></li>
+        <li><a href="#funktionen">Funktionen</a></li>
+        <li><a href="#ablauf">So geht es</a></li>
+        <li><a href="#betriebe">Für Betriebe</a></li>
+        <li class="kopf__tel"><a href="tel:+490000000000"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-tel"/></svg>0000 000 000</a></li>
+      </ul>
+    </nav>
+    <a class="knopf knopf--muenze kopf__knopf" href="#schluss">App laden</a>
+    <button class="kopf__burger" type="button" data-menue aria-expanded="false" aria-controls="hauptnav">
+      <span class="sr-nur">Menü öffnen oder schließen</span>
+      <span class="burger" aria-hidden="true"></span>
+    </button>
+  </div>
+</header>
+
+<main id="inhalt">
+
+<!-- 1. Held: Vollflächenverlauf, große leichte Überschrift links, zwei überlappende Handys aus HTML und CSS rechts -->
+<!-- Heldformel: Menschen, die vor Ort einkaufen wollen (Zielgruppe), gute Betriebe sind schwer zu finden (Problem), eine App zeigt Betriebe mit gleichen Werten und belohnt den Einkauf (Lösung), kostenlos (Risiko weg) -->
+<section class="held" id="held" data-abschnitt="held" aria-labelledby="held-titel">
+  <div class="held__licht" aria-hidden="true"></div>
+  <div class="wrap held__raster">
+    <div class="held__text">
+      <h1 id="held-titel">Finde die Betriebe, die du unterstützen willst</h1>
+      <p class="held__unter">Die kostenlose App für Bäckereien, Werkstätten, Cafés und Höfe in deiner Nähe, die fair arbeiten. Entdecken, einkaufen, Punkte sammeln.</p>
+      <div class="held__aktion">
+        <a class="knopf knopf--muenze" href="#schluss">App laden</a>
+        <a class="knopf knopf--store" href="#schluss"><span class="knopf__klein">Laden im</span><span class="knopf__gross">App Store</span></a>
+        <a class="knopf knopf--store" href="#schluss"><span class="knopf__klein">Jetzt bei</span><span class="knopf__gross">Google Play</span></a>
+      </div>
+      <p class="held__beleg" data-beispiel>Beispielangabe: kostenlos für alle, Betriebe in Musterstadt und Umgebung.</p>
+    </div>
+    <div class="held__handys" aria-hidden="true">
+      <div class="handy handy--profil held__handy held__handy--vorn">
+        <div class="handy__rahmen"><span class="handy__insel"></span>
+          <div class="handy__schirm">
+            <div class="handy__kopf handy__kopf--brot">
+              <svg viewBox="0 0 120 70" focusable="false"><path d="M16 56c-8-4-10-20 4-30 14-9 66-9 80 0 14 10 12 26 4 30z" fill="#f0b768"/><path d="M38 30l8 14M58 28l8 16M78 30l8 14" stroke="#9a5a22" stroke-width="5" stroke-linecap="round" fill="none"/></svg>
+            </div>
+            <p class="handy__name">Bäckerei Musterhof</p>
+            <p class="handy__unter">Familienbetrieb in Musterstadt</p>
+            <ul class="handy__chips"><li>bildet aus</li><li>Mehl vom Hof</li><li>faire Löhne</li></ul>
+            <div class="handy__tasten"><span class="handy__taste"><svg width="22" height="22" focusable="false"><use href="#i-kreuz"/></svg></span><span class="handy__taste handy__taste--an"><svg width="22" height="22" focusable="false"><use href="#i-merk"/></svg></span></div>
+            <div class="handy__leiste"><svg width="20" height="20" focusable="false"><use href="#i-haus"/></svg><svg width="20" height="20" focusable="false"><use href="#i-lupe"/></svg><svg width="20" height="20" focusable="false"><use href="#i-tausch"/></svg><svg width="20" height="20" focusable="false"><use href="#i-merk"/></svg></div>
+          </div>
+        </div>
+      </div>
+      <div class="handy handy--punkte held__handy held__handy--hinten">
+        <div class="handy__rahmen"><span class="handy__insel"></span>
+          <div class="handy__schirm">
+            <svg class="handy__muenze" width="64" height="64" focusable="false"><use href="#i-muenze"/></svg>
+            <p class="handy__name">Deine Woche</p>
+            <p class="handy__zahl">12 Punkte</p>
+            <ul class="handy__liste"><li><span>Hofladen Beispiel</span><b>+4</b></li><li><span>Café Beispiel</span><b>+5</b></li><li><span>Schreinerei Beispiel</span><b>+3</b></li></ul>
+            <p class="handy__unter">Beispielwerte</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. Branchen: Bildkarten als überlappender, leicht gedrehter Fächer, Beschriftung auf der Karte -->
+<section class="branchen" id="branchen" data-abschnitt="branchen" aria-labelledby="branchen-titel">
+  <div class="wrap branchen__raster">
+    <div class="branchen__kopf">
+      <h2 id="branchen-titel" data-zeig>Wer gut arbeitet, wird selten laut. Wir machen ihn sichtbar.</h2>
+      <p data-zeig>Betriebe aus der Region, die nach Werten ausgewählt sind, nicht nach Werbebudget. Fünf Beispiele, was du hier findest.</p>
+    </div>
+    <ul class="branchen__faecher" role="list" data-staffel>
+      <li class="branchen__karte branchen__karte--1" style="--r:-6deg;--y:1.500rem" data-zeig>
+        <svg viewBox="0 0 120 120" aria-hidden="true" focusable="false"><path d="M18 78c-8-6-8-24 8-34 16-9 52-9 68 0 16 10 16 28 8 34z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/><path d="M42 50l7 16M62 48l7 18M82 50l6 16" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg>
+        <p>Bäckereien und Konditoreien</p>
+      </li>
+      <li class="branchen__karte branchen__karte--2" style="--r:3deg;--y:0rem" data-zeig>
+        <svg viewBox="0 0 120 120" aria-hidden="true" focusable="false"><path d="M26 44h52v26a20 20 0 0 1-20 20H46a20 20 0 0 1-20-20zM78 50h8a10 10 0 0 1 0 22h-8M40 22c0 6 6 6 6 12M56 22c0 6 6 6 6 12" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <p>Cafés und Restaurants</p>
+      </li>
+      <li class="branchen__karte branchen__karte--3" style="--r:-3deg;--y:2rem" data-zeig>
+        <svg viewBox="0 0 120 120" aria-hidden="true" focusable="false"><path d="M16 96h88M28 96V50l32-26 32 26v46M48 96V70h24v26" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <p>Schreinereien und Werkstätten</p>
+      </li>
+      <li class="branchen__karte branchen__karte--4" style="--r:5deg;--y:.500rem" data-zeig>
+        <svg viewBox="0 0 120 120" aria-hidden="true" focusable="false"><path d="M22 54h76l-8 40H30zM38 54l12-22M82 54 70 32M46 70v14M60 70v14M74 70v14" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <p>Hofläden und Direktvermarkter</p>
+      </li>
+      <li class="branchen__karte branchen__karte--5" style="--r:-4deg;--y:1.800rem" data-zeig>
+        <svg viewBox="0 0 120 120" aria-hidden="true" focusable="false"><path d="M32 36h46v52a8 8 0 0 1-8 8H40a8 8 0 0 1-8-8zM78 46h10a8 8 0 0 1 8 8v14a8 8 0 0 1-8 8H78M32 36c0-10 12-10 14-4 4-8 18-6 18 4" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <p>Brauereien und Weingüter</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- 3. Manifest: Bühne pinnt, je ein Satz pro Bildschirm, Taler fallen mit dem Scrollweg (--fortschritt), ohne Bewegung stehen alle Sätze untereinander -->
+<section class="manifest" id="manifest" data-abschnitt="manifest" data-fortschritt aria-labelledby="manifest-titel">
+  <div class="manifest__buehne">
+    <div class="manifest__muenzen" aria-hidden="true">
+      <span class="muenze manifest__muenze" style="--x:12%;--y:8%;--weg:150;--dreh:240;--g:64px"><svg width="64" height="64" focusable="false"><use href="#i-muenze"/></svg></span>
+      <span class="muenze manifest__muenze" style="--x:78%;--y:18%;--weg:210;--dreh:-180;--g:88px"><svg width="88" height="88" focusable="false"><use href="#i-muenze"/></svg></span>
+      <span class="muenze manifest__muenze" style="--x:44%;--y:30%;--weg:120;--dreh:300;--g:44px"><svg width="44" height="44" focusable="false"><use href="#i-muenze"/></svg></span>
+      <span class="muenze manifest__muenze" style="--x:90%;--y:52%;--weg:170;--dreh:200;--g:56px"><svg width="56" height="56" focusable="false"><use href="#i-muenze"/></svg></span>
+      <span class="muenze manifest__muenze" style="--x:26%;--y:64%;--weg:230;--dreh:-260;--g:76px"><svg width="76" height="76" focusable="false"><use href="#i-muenze"/></svg></span>
+      <span class="muenze manifest__muenze" style="--x:62%;--y:80%;--weg:140;--dreh:160;--g:48px"><svg width="48" height="48" focusable="false"><use href="#i-muenze"/></svg></span>
+    </div>
+    <ol class="manifest__saetze" role="list">
+      <li class="manifest__satz" style="--i:0"><h2 id="manifest-titel">Sichtbar ist heute, wer die lauteste Werbung zahlt.</h2></li>
+      <li class="manifest__satz" style="--i:1"><p>Nicht, wer morgens um vier den Teig knetet.</p></li>
+      <li class="manifest__satz" style="--i:2"><p>Dabei entscheidet jeder Einkauf, wer bleibt.</p></li>
+      <li class="manifest__satz" style="--i:3"><p>Wohin dein Geld geht, dorthin wächst die Region.</p></li>
+      <li class="manifest__satz" style="--i:4"><p>Zeig, was dir wichtig ist. Mit jedem Einkauf.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- 4. Aufruf: eine Aussage, ein Handy, Knöpfe zum Laden -->
+<section class="aufruf sektion" id="aufruf" data-abschnitt="aufruf" aria-labelledby="aufruf-titel">
+  <div class="wrap aufruf__raster">
+    <div class="aufruf__text">
+      <h2 id="aufruf-titel" data-zeig>Das ist mehr als ein Verzeichnis. Es ist ein Aufruf.</h2>
+      <p data-zeig>Mach deinen Einkauf zu einer Stimme für die Menschen, die deine Straße lebendig halten. Du findest, du kaufst, du siehst, was dein Geld vor Ort bewirkt.</p>
+      <div class="aufruf__aktion" data-zeig>
+        <a class="knopf" href="#schluss">App laden</a>
+        <a class="aufruf__tel" href="tel:+490000000000"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-tel"/></svg>Fragen? 0000 000 000</a>
+      </div>
+    </div>
+    <div class="aufruf__buehne" aria-hidden="true">
+      <div class="handy handy--karte" data-parallax="0.06">
+        <div class="handy__rahmen"><span class="handy__insel"></span>
+          <div class="handy__schirm">
+            <p class="handy__name">In deiner Nähe</p>
+            <ul class="handy__liste handy__liste--gross">
+              <li><span>Hofladen Beispiel<small>1,2 km, Direktvermarktung</small></span><b>+4</b></li>
+              <li><span>Café Beispiel<small>0,6 km, Fairtrade Kaffee</small></span><b>+5</b></li>
+              <li><span>Schreinerei Beispiel<small>2,8 km, bildet aus</small></span><b>+3</b></li>
+              <li><span>Bäckerei Beispiel<small>0,3 km, Familienbetrieb</small></span><b>+4</b></li>
+            </ul>
+            <p class="handy__unter">Beispielwerte</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Satzband: die Bühne pinnt, ein riesiger Satz läuft über den Scrollweg waagerecht durchs Bild -->
+<section class="satz" id="satz" data-abschnitt="satzband" data-fortschritt aria-labelledby="satz-titel">
+  <div class="satz__buehne">
+    <h2 class="satz__text" id="satz-titel">Hier wird aus deinen Werten ein Einkauf.</h2>
+  </div>
+</section>
+
+<!-- 6. Funktionen: fünf Funktionen als Raster mit Handy in der Mitte, auf dem Handy stapeln sich die Karten beim Scrollen -->
+<section class="funk sektion" id="funktionen" data-abschnitt="funktionen" aria-labelledby="funk-titel">
+  <div class="wrap">
+    <h2 class="funk__titel" id="funk-titel" data-zeig>Fünf Dinge, die die App für dich tut</h2>
+    <ul class="funk__raster" role="list">
+      <li class="funk__karte funk__karte--a">
+        <svg class="funk__bild" viewBox="0 0 160 100" aria-hidden="true" focusable="false"><circle cx="56" cy="50" r="30" fill="none" stroke="currentColor" stroke-width="5"/><path d="m78 72 24 22" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><circle cx="120" cy="30" r="8" fill="currentColor"/><circle cx="136" cy="52" r="5" fill="currentColor"/></svg>
+        <h3>Mühelos entdecken</h3>
+        <p>Suche nach Gewerk, Ort oder Wert. Die Karte zeigt, wer in deiner Nähe fair arbeitet und ausbildet.</p>
+      </li>
+      <li class="funk__karte funk__karte--b">
+        <svg class="funk__bild" viewBox="0 0 160 100" aria-hidden="true" focusable="false"><use href="#i-muenze" x="20" y="14" width="72" height="72"/><use href="#i-muenze" x="84" y="30" width="52" height="52"/></svg>
+        <h3>Punkte für gute Einkäufe</h3>
+        <p>Jeder Einkauf bei einem Mitgliedsbetrieb bringt Punkte. Du löst sie bei den Betrieben selbst ein.</p>
+      </li>
+      <li class="funk__karte funk__karte--mitte">
+        <div class="handy handy--empfehlung" aria-hidden="true">
+          <div class="handy__rahmen"><span class="handy__insel"></span>
+            <div class="handy__schirm">
+              <div class="handy__kopf handy__kopf--hof"><svg viewBox="0 0 120 70" focusable="false"><path d="M14 62h92M24 62V34l36-22 36 22v28M50 62V44h20v18" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <p class="handy__name">Passt zu dir</p>
+              <p class="handy__unter">Weil dir Ausbildung und kurze Wege wichtig sind. Beispiel.</p>
+              <ul class="handy__chips"><li>Region</li><li>Ausbildung</li><li>Handarbeit</li></ul>
+            </div>
+          </div>
+        </div>
+        <h3>Empfehlungen nach deinen Werten</h3>
+        <p>Du wählst, was dir wichtig ist. Die App schlägt Betriebe vor, die dazu passen, ohne bezahlte Plätze.</p>
+      </li>
+      <li class="funk__karte funk__karte--c">
+        <svg class="funk__bild" viewBox="0 0 160 100" aria-hidden="true" focusable="false"><path d="M44 12h56v76l-28-20-28 20z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/><path d="M60 34h24M60 48h16" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg>
+        <h3>Dein Merkzettel</h3>
+        <p>Speichere Betriebe, die du besuchen willst, und sieh später, wo du schon warst.</p>
+      </li>
+      <li class="funk__karte funk__karte--d">
+        <svg class="funk__bild" viewBox="0 0 160 100" aria-hidden="true" focusable="false"><path d="M24 20h112v52H72l-22 18V72H24z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/><path d="M44 40h72M44 54h44" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg>
+        <h3>Geschichten hinter dem Betrieb</h3>
+        <p>Lies, wer dort arbeitet, was sie antreibt und wie sie ausbilden. Kurz, persönlich, ohne Werbesprache.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- 7. Ablauf: was nach dem Download passiert, ein Schritt offen, die anderen eingeklappt -->
+<section class="ablauf sektion" id="ablauf" data-abschnitt="ablauf" aria-labelledby="ablauf-titel">
+  <div class="wrap ablauf__raster">
+    <div class="ablauf__kopf">
+      <h2 id="ablauf-titel" data-zeig>Was passiert nach dem Download?</h2>
+      <p data-zeig>Vier Schritte, die zusammen etwa drei Minuten dauern (Beispielangabe).</p>
+      <a class="knopf" href="#schluss" data-zeig>App laden</a>
+    </div>
+    <div class="ablauf__schritte" data-exklusiv>
+      <details open><summary><span class="ablauf__nr" aria-hidden="true">1</span>Ort und Werte wählen</summary><p>Du gibst deinen Ort an und wählst drei bis fünf Dinge, die dir wichtig sind, zum Beispiel Region, Ausbildung oder Handarbeit.</p></details>
+      <details><summary><span class="ablauf__nr" aria-hidden="true">2</span>Betriebe in deiner Nähe sehen</summary><p>Die Karte zeigt dir Betriebe, die zu deinen Werten passen, mit Weg, Öffnungszeiten und einer kurzen Geschichte.</p></details>
+      <details><summary><span class="ablauf__nr" aria-hidden="true">3</span>Einkaufen und Punkte sammeln</summary><p>Du kaufst wie immer ein und zeigst am Ende deinen Code. Der Betrieb bucht dir Punkte gut.</p></details>
+      <details><summary><span class="ablauf__nr" aria-hidden="true">4</span>Wirkung ansehen</summary><p>In deiner Übersicht siehst du, bei wie vielen Betrieben du in diesem Monat warst und wie viele Punkte du hast.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- 8. Für Betriebe: Aufnahme anfragen, fünf Felder -->
+<section class="betriebe" id="betriebe" data-abschnitt="betriebe" aria-labelledby="betriebe-titel">
+  <div class="wrap betriebe__raster">
+    <div class="betriebe__text">
+      <h2 id="betriebe-titel" data-zeig>Du führst einen Betrieb? Lass dich finden.</h2>
+      <p data-zeig>Die Aufnahme ist ein Gespräch, kein Formularkrieg. Wir fragen nach Ausbildung, Herkunft und Löhnen und rufen dich an, sobald dein Eintrag steht.</p>
+      <ul class="betriebe__daten" role="list">
+        <li><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-tel"/></svg><a href="tel:+490000000000">0000 000 000</a></li>
+        <li><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg><a href="mailto:betriebe@beispiel.invalid">betriebe@beispiel.invalid</a></li>
+        <li><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-pin"/></svg><span>Musterstraße 1, 00000 Musterstadt</span></li>
+      </ul>
+    </div>
+    <!-- Cloudflare Turnstile: im Projekt hier <div class="cf-turnstile" data-sitekey="PLATZHALTER"></div> einsetzen und serverseitig prüfen. Kein Schlüssel in der Vorlage -->
+    <form class="formular" data-formular action="#" method="post" novalidate data-zeig>
+      <div class="formular__feld formular__feld--breit"><label for="b-name">Name des Betriebs</label><input id="b-name" name="betrieb" type="text" autocomplete="organization" placeholder="Zum Beispiel Bäckerei Musterhof" required></div>
+      <div class="formular__feld formular__feld--breit"><label for="b-gewerk">Gewerk</label><select id="b-gewerk" name="gewerk"><option>Bäckerei oder Konditorei</option><option>Café oder Restaurant</option><option>Handwerk</option><option>Hofladen</option><option>Brauerei oder Weingut</option><option>Etwas anderes</option></select></div>
+      <div class="formular__feld"><label for="b-mail">E-Mail</label><input id="b-mail" name="email" type="email" autocomplete="email" placeholder="name@beispiel.invalid" required><small class="feld__hinweis">Dorthin schicken wir die Bestätigung.</small></div>
+      <div class="formular__feld"><label for="b-tel">Telefon</label><input id="b-tel" name="telefon" type="tel" autocomplete="tel" placeholder="0000 000 000"><small class="feld__hinweis">Nur für den Rückruf, freiwillig.</small></div>
+      <div class="formular__feld formular__feld--breit"><label for="b-text">Was macht euren Betrieb aus?</label><textarea id="b-text" name="nachricht" rows="3" placeholder="Zum Beispiel: Wir bilden seit 1998 aus und backen mit Mehl aus der Region."></textarea></div>
+      <p class="formular__recht formular__feld--breit">Mit dem Absenden stimmst du der Verarbeitung deiner Angaben für den Rückruf zu. Mehr dazu in der <a href="#fuss">Datenschutzerklärung</a>.</p>
+      <button class="knopf knopf--muenze formular__senden" type="submit">Aufnahme anfragen</button>
+      <p class="formular__meldung formular__feld--breit" data-formular-meldung role="status" hidden>Beispielformular: In dieser Vorlage wird nichts gesendet. Turnstile, Bestätigungsmail und Versand baut der Bauablauf.</p>
+    </form>
+  </div>
+</section>
+
+<!-- 9. Fragen: Einwände, Antworten sind Beispiele -->
+<section class="fragen sektion" id="fragen" data-abschnitt="fragen" aria-labelledby="fragen-titel">
+  <div class="wrap fragen__raster">
+    <h2 id="fragen-titel" data-zeig>Fragen, die vor dem Laden kommen</h2>
+    <div class="fragen__liste" data-exklusiv>
+      <details><summary>Kostet die App etwas?</summary><p>Nein, für Nutzerinnen und Nutzer ist sie kostenlos. Beispielantwort, je Projekt anpassen.</p></details>
+      <details><summary>Woher kommt euer Geld?</summary><p>Betriebe zahlen einen kleinen festen Monatsbeitrag für ihren Eintrag. Eine Platzierung gegen Geld gibt es nicht. Beispielantwort, Modell je Projekt festlegen.</p></details>
+      <details><summary>Wie werden Betriebe ausgewählt?</summary><p>Nach offenen Kriterien wie Ausbildung, Herkunft der Waren und fairer Bezahlung, geprüft im Gespräch. Beispielantwort.</p></details>
+      <details><summary>Was passiert mit meinen Daten?</summary><p>Wir speichern nur, was für Punkte und Empfehlungen nötig ist, und geben nichts zu Werbezwecken weiter. Beispielantwort, Datenschutzerklärung im Projekt prüfen.</p></details>
+      <details><summary>Wie löse ich Punkte ein?</summary><p>Direkt beim Betrieb, zum Beispiel als Rabatt auf den nächsten Einkauf. Was es gibt, legt jeder Betrieb selbst fest. Beispielantwort.</p></details>
+      <details><summary>Mein Lieblingsbetrieb fehlt. Was tun?</summary><p>Sag es uns über das Formular oben oder gib den Betrieben unseren Link weiter. Wir melden uns bei ihnen. Beispielantwort.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- 10. Schluss: eine große Handlung, Taler als Zeichen -->
+<section class="schluss" id="schluss" data-abschnitt="schluss" aria-labelledby="schluss-titel">
+  <span class="muenze schluss__muenze schluss__muenze--1" aria-hidden="true"><svg width="72" height="72" focusable="false"><use href="#i-muenze"/></svg></span>
+  <span class="muenze schluss__muenze schluss__muenze--2" aria-hidden="true"><svg width="48" height="48" focusable="false"><use href="#i-muenze"/></svg></span>
+  <div class="wrap schluss__inhalt">
+    <h2 id="schluss-titel" data-zeig>Machen wir die Region gemeinsam sichtbar.</h2>
+    <a class="knopf knopf--gross" href="#schluss" data-zeig>App laden</a>
+    <div class="schluss__stores" data-zeig>
+      <a class="knopf knopf--store" href="#schluss"><span class="knopf__klein">Laden im</span><span class="knopf__gross">App Store</span></a>
+      <a class="knopf knopf--store" href="#schluss"><span class="knopf__klein">Jetzt bei</span><span class="knopf__gross">Google Play</span></a>
+    </div>
+    <p class="schluss__beleg" data-beispiel>Die Knöpfe führen in der Vorlage nirgendwohin. Im Projekt: Store Links einsetzen.</p>
+  </div>
+</section>
+
+<!-- 11. Brief: Newsletter, ein Feld, Einwilligung mit Haken -->
+<section class="brief sektion" id="brief" data-abschnitt="brief" aria-labelledby="brief-titel">
+  <div class="wrap brief__raster">
+    <div class="brief__text">
+      <h2 id="brief-titel" data-zeig>Post vom Marktplatz</h2>
+      <p data-zeig>Einmal im Monat: neue Betriebe, Geschichten aus der Region und was gemeinsam passiert ist. Kein Spam, Abmeldung mit einem Klick.</p>
+    </div>
+    <form class="formular brief__formular" data-formular action="#" method="post" novalidate data-zeig>
+      <div class="formular__feld formular__feld--breit"><label for="n-mail">E-Mail</label><input id="n-mail" name="email" type="email" autocomplete="email" placeholder="name@beispiel.invalid" required><small class="feld__hinweis">Wir schicken dir zuerst eine Bestätigung.</small></div>
+      <div class="formular__feld formular__feld--breit formular__haken"><input id="n-ok" name="einwilligung" type="checkbox" required><label for="n-ok">Ja, ich möchte den Newsletter erhalten. Mehr dazu in der <a href="#fuss">Datenschutzerklärung</a>.</label></div>
+      <button class="knopf formular__senden" type="submit">Anmelden</button>
+      <p class="formular__meldung formular__feld--breit" data-formular-meldung role="status" hidden>Beispielformular: In dieser Vorlage wird nichts gesendet. Double Opt in und Versand baut der Bauablauf.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
+  <div class="wrap fuss__raster">
+    <div class="fuss__marke">
+      <p class="fuss__logo">Markenname</p>
+      <p>Die App für Betriebe vor Ort, entwickelt in Musterstadt.</p>
+      <a class="knopf knopf--muenze" href="#schluss">App laden</a>
+    </div>
+    <nav aria-label="Seite">
+      <p class="fuss__titel">Seite</p>
+      <ul role="list"><li><a href="#branchen">Betriebe</a></li><li><a href="#funktionen">Funktionen</a></li><li><a href="#ablauf">So geht es</a></li></ul>
+    </nav>
+    <nav aria-label="Hilfe">
+      <p class="fuss__titel">Hilfe</p>
+      <ul role="list"><li><a href="#fragen">Fragen</a></li><li><a href="#betriebe">Für Betriebe</a></li><li><a href="tel:+490000000000">0000 000 000</a></li></ul>
+    </nav>
+  </div>
+  <div class="wrap fuss__daten">
+    <p><strong>Datenschutz in dieser Vorlage:</strong> Sie setzt keine Cookies und lädt nichts von fremden Servern, deshalb zeigt sie keine Cookie Leiste. Kommen im Projekt Statistik oder Einbettungen dazu, gehört ein echter Einwilligungsdialog her, der erst nach Zustimmung lädt und "Alle akzeptieren" und "Nur notwendige" gleichwertig anbietet.</p>
+  </div>
+  <div class="wrap fuss__recht">
+    <p>© Markenname, Musterstadt. Alle Angaben dieser Vorlage sind Beispiele.</p>
+    <ul role="list"><li><a href="#">Impressum</a></li><li><a href="#">Datenschutz</a></li><li><a href="#">Barrierefreiheit</a></li></ul>
+  </div>
+</footer>
+
+<script src="../_basis/bewegung.js"></script>
+<script src="stil.js"></script>
+</body>
+</html>
