@@ -53,6 +53,27 @@ Steht in `docs/AENDERUNGSVERLAUF.md`, neueste Einträge oben. Nur gezielt nach d
 - Große Fremd Skills (zum Beispiel Scraper mit mehreren hundert KB Referenzen) nicht in das Kundenrepo unter `.claude/skills` legen. Sie gehören in ein eigenes Werkzeugrepo oder werden bei Bedarf installiert.
 - Doppelte Ordner mit gleichem Inhalt (zwei Fassungen desselben Skills) sind doppelte Beschreibungen. Eine Fassung behalten.
 
+## Globale Grundregeln für jede Sitzung
+
+Eine kleine Datei in `~/.claude/CLAUDE.md` gilt in jedem Projekt und ist damit die billigste Stelle, um Ausschweifung zu bremsen. Vorlage: `assets/token/CLAUDE-global.md` (rund 0,7 KB). Grund für die Kürze: Die Datei wird bei jedem Start jedes Projekts gelesen, jede Zeile kostet überall.
+
+| Punkt | Stand |
+|---|---|
+| Quelle | `drona23/claude-token-efficient` (MIT, laut Seite 6,1k Sterne). Gelesen wurde nur die Beschreibung auf der Repositoryseite, **nicht** die `CLAUDE.md` selbst (Abruf nicht freigegeben). Die Vorlage hier ist deshalb eine eigene Fassung nach den dort genannten Grundsätzen, kein Abdruck |
+| Was das Original laut Beschreibung verlangt | erst lesen, vollständige Lösung schreiben, einmal testen, nicht überbauen, knappe Antworten, gezielte Änderungen, unveränderte Dateien nicht neu lesen, keine Floskeln, Nutzeranweisungen haben Vorrang |
+| Gemessene Wirkung | In einem Fremdtest (ein Repo, eine Aufgabe, April 2026) lag die Einsparung bei etwa 40 Prozent. **Bei uns nicht gemessen**, als Größenordnung lesen, nicht als Versprechen |
+| Original zusätzlich | Wer es trotzdem will: erst die Datei im Repository lesen, dann einzeln übernehmen. Ein Profil des Repositories begrenzt Tool-Aufrufe auf 20, das kann bei Prüfschleifen bremsen und ist nicht Teil der Vorlage |
+
+Einrichten: `bash scripts/install-quellskills.sh --werkzeuge` fragt vorher und hängt die Vorlage nur an, wenn sie noch nicht in der Datei steht. Die Vorlage widerspricht keiner harten Grenze: "einmal bauen und prüfen" ersetzt nicht die Prüfskripte der Abnahme, es begrenzt nur Wiederholungen ohne Anlass.
+
+## MCP Server sparsam halten
+
+Jeder MCP Server legt die Beschreibung seiner Tools in jeden Kontext, auch wenn er nie aufgerufen wird. Der Firecrawl Server hat im vollen Profil 29 Tools. Regeln, jeweils mit Grund:
+
+- Globale Server nur für Werkzeuge, die in fast jedem Projekt laufen (Browser, aktuelle Dokumentation). Grund: Der Kontext zahlt sie in jedem Projekt, auch im Textprojekt.
+- Alles Projektspezifische im Projekt registrieren (`--scope project`) oder per `/mcp` in der Sitzung abschalten. Ein Leitfaden nennt das Abschalten ungenutzter Server den wirksamsten Einzelschritt (50 bis 90 Prozent weniger MCP Tokens, Selbstangabe des Autors, bei uns nicht gemessen).
+- `/context` zeigt, was gerade im Kontext liegt. Vor einer langen Aufgabe einmal ansehen.
+
 ## Arbeitsweise im Projekt
 
 - Suchen vor Lesen: erst `grep` oder Dateisuche, dann nur den Treffer mit Zeilenbereich lesen. Dateien über 300 Zeilen nie komplett öffnen, wenn ein Bereich reicht.

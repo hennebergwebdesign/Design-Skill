@@ -17,7 +17,7 @@ ZIEL=".claude/skills"
 UPDATE=0
 [ "${1:-}" = "--update" ] && UPDATE=1
 
-mkdir -p "$ZIEL"
+[ "${1:-}" = "--werkzeuge" ] || mkdir -p "$ZIEL"
 
 installiere() {
   local ordner="$1"; local beschreibung="$2"; shift 2
@@ -49,6 +49,66 @@ if [ "${1:-}" = "--zusatz" ]; then
   echo "Lizenz jeder gewählten Schrift prüfen, Selbsthosting ist Pflicht (Fontshare siehe 40-polierschleife-mit-kritiker.md)."
   echo "Weitere auf Zuruf: references/zusatzskills.md"
   ls -1 "$ZIEL" 2>/dev/null | grep -v '^\.ignore$'
+  exit "$FEHLER"
+fi
+
+# Globale Werkzeuge (27.11.2026): MCP Server und Grundregeln, gelten in jedem Projekt (--scope user).
+# Aufruf: bash scripts/install-quellskills.sh --werkzeuge   Beschreibung und Grenzen: references/zusatzskills.md
+# Die Befehle stammen aus den READMEs der Werkzeuge und sind nicht gelaufen. Agent Reach wird nie installiert.
+if [ "${1:-}" = "--werkzeuge" ]; then
+  command -v claude >/dev/null 2>&1 || { echo "claude (Claude Code CLI) nicht gefunden, Abbruch."; exit 1; }
+  command -v npx >/dev/null 2>&1 || { echo "npx (Node) nicht gefunden, Abbruch."; exit 1; }
+  echo "Registriert MCP Server global für alle Projekte (Scope user). Jeder Server legt seine Tool Beschreibungen"
+  echo "in jeden Kontext. Fremder Code läuft über npx beim Start. Schlüssel landen im Klartext in ~/.claude.json."
+  printf "Fortfahren? [j/N] "
+  read -r ANTWORT
+  [ "$ANTWORT" = "j" ] || { echo "Abgebrochen, nichts geändert."; exit 0; }
+
+  mcp_hinzu() {
+    local name="$1"; shift
+    if claude mcp list 2>/dev/null | grep -q "^${name}:"; then
+      echo "-> $name: bereits registriert, übersprungen"
+    else
+      echo "-> $name"
+      claude mcp add --scope user "$@" || FEHLER=1
+    fi
+  }
+
+  mcp_hinzu playwright playwright -- npx @playwright/mcp@latest
+  if [ -n "${CONTEXT7_API_KEY:-}" ]; then
+    mcp_hinzu context7 context7 -- npx -y @upstash/context7-mcp@latest --api-key "$CONTEXT7_API_KEY"
+  else
+    mcp_hinzu context7 context7 -- npx -y @upstash/context7-mcp@latest
+  fi
+  mcp_hinzu lighthouse lighthouse -- npx -y @danielsogl/lighthouse-mcp@latest
+  if [ -n "${FIRECRAWL_API_KEY:-}" ]; then
+    mcp_hinzu firecrawl -e FIRECRAWL_API_KEY="$FIRECRAWL_API_KEY" firecrawl -- npx -y firecrawl-mcp
+  else
+    echo "-> firecrawl: übersprungen (FIRECRAWL_API_KEY nicht gesetzt)"
+  fi
+  if [ -n "${GOOGLE_API_KEY:-}" ]; then
+    mcp_hinzu pagespeed-insights -e GOOGLE_API_KEY="$GOOGLE_API_KEY" pagespeed-insights -- npx -y -p pino-pretty -p pagespeed-insights-mcp pagespeed-insights-mcp
+  else
+    echo "-> pagespeed-insights: übersprungen (GOOGLE_API_KEY nicht gesetzt)"
+  fi
+
+  VORLAGE="$(cd "$(dirname "$0")/.." && pwd)/skills/agentur-website-builder/assets/token/CLAUDE-global.md"
+  GLOBAL="$HOME/.claude/CLAUDE.md"
+  if [ -f "$VORLAGE" ]; then
+    if [ -f "$GLOBAL" ] && grep -q "Arbeitsregeln (global, schlank)" "$GLOBAL"; then
+      echo "-> globale Grundregeln: stehen schon in $GLOBAL, übersprungen"
+    else
+      printf "Globale Grundregeln an %s anhängen? [j/N] " "$GLOBAL"
+      read -r ANTWORT2
+      if [ "$ANTWORT2" = "j" ]; then
+        mkdir -p "$HOME/.claude"
+        { [ -s "$GLOBAL" ] && printf "\n"; cat "$VORLAGE"; } >> "$GLOBAL"
+        echo "   angehängt"
+      fi
+    fi
+  fi
+  echo
+  echo "Prüfen: claude mcp list   (in der Sitzung: /mcp). Zum Entfernen: claude mcp remove <name> --scope user"
   exit "$FEHLER"
 fi
 

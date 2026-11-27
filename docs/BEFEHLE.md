@@ -59,6 +59,9 @@ claude plugin eval . --runs 1 --ablation none
 
 # Quell-Skills in ein Kundenprojekt nachinstallieren
 bash scripts/install-quellskills.sh
+
+# Globale Werkzeuge: MCP Server (Playwright, Context7, Lighthouse, optional Firecrawl und PageSpeed mit Schlüssel) und globale Grundregeln, fragt vorher, gilt in allen Projekten
+bash scripts/install-quellskills.sh --werkzeuge
 ```
 
 Alle Skripte laufen mit reinem Node, ohne Abhängigkeiten. Nur `pruefe-breakpoints.mjs`,

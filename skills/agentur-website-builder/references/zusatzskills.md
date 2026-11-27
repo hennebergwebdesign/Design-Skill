@@ -32,6 +32,37 @@ Geprüft heißt: Lizenzdatei gelesen, nach Skripten, Hooks, Prozessstart und Anw
 | MengTo/Skills | **nicht installieren** | `no-ai-design-slop` und `audit-ai-design-slop` nur zur Ansicht | decken sich mit 26 und 55. Die Effekt-Skills (WebGL, Shader, Partikel) nur auf ausdrücklichen Wunsch und mit Leistungsmessung |
 | designer-skills | **nicht installieren** | | allgemeine UX-Prozesse (Recherche, Design Ops, Prototypen), nicht Websites für Handwerk und Dienstleister. Die Plugins `design:*` der Umgebung decken Kritik und Handover |
 
+## Werkzeuge außerhalb der Skills: MCP Server und CLI
+
+Stand 27.11.2026, auf Wunsch des Inhabers. Gelesen wurden die Repositoryseiten (Lizenz, Tools, Schlüssel), **nicht** der Quelltext. Die Befehle stammen aus den READMEs und sind **nicht in dieser Umgebung gelaufen**.
+
+| Werkzeug | Zweck | Lizenz, Schlüssel | Was nach außen geht | Entscheidung |
+|---|---|---|---|---|
+| Playwright MCP (`@playwright/mcp`, Microsoft) | echter Browser, Geräteemulation (`--device`, `--mobile`), Screenshots | Quelle offiziell, Lizenz auf der Seite nicht gelesen | nichts, lokal | global. Für Prüfschleifen bleibt `playwright-cli` Standard (weniger Kontext, laut Quelle), siehe `browser-pruefung-mit-playwright-cli.md` |
+| Context7 (`@upstash/context7-mcp`) | aktuelle Dokumentation zu Astro, Tailwind, GSAP, Cloudflare | MIT, Schlüssel empfohlen (höhere Grenzen), nicht Pflicht | Frage, Bibliotheks-ID und Sprache an Upstash. Ob Projektdateien übertragen werden, steht nicht auf der Seite | global. Nie Kundendaten, Zugangsdaten oder Mailadressen in die Frage schreiben |
+| Lighthouse MCP (`@danielsogl/lighthouse-mcp`) | Core Web Vitals, Barrierefreiheit, SEO, Budgetprüfung | MIT, kein Schlüssel, Node 22 und Chrome nötig | Seite sagt dazu nichts | global. Ersetzt `pruefe-breakpoints` und die Abnahme nicht, es misst nur |
+| PageSpeed Insights MCP (`pagespeed-insights-mcp`, ruslanlap) | Labor und Felddaten von Google | Apache 2.0, **Google API Schlüssel Pflicht** | die geprüfte Adresse geht an Google, und Google ruft sie selbst ab | nur mit Schlüssel und nur für öffentlich erreichbare Seiten. Nicht für eine Kundenseite vor Freigabe. README nennt 6 Tools (Fassung 2), andere Quellen 18 oder 19 (Fassung 1) |
+| Firecrawl MCP (`firecrawl-mcp`, offiziell) | lesen, durchsuchen, crawlen, strukturiert extrahieren | MIT, Cloud braucht `FIRECRAWL_API_KEY`, ohne Schlüssel nur scrape, search und parse mit Begrenzung, Selbsthosting über `FIRECRAWL_API_URL` | die Adresse und der Seiteninhalt an den Dienst | global nur mit Schlüssel. **`maxCredits` immer setzen**: beim Tool `agent` liegt die Grenze sonst bei 2.500 Credits. Die Abrufregeln (robots.txt, eigene Seite, Freigabe) stehen in `firecrawl-recherche.md` und gelten weiter |
+| Agent Reach (`Panniantong/Agent-Reach`) | Web, YouTube, RSS, Exa Suche, Reddit, GitHub, viele Social Plattformen | MIT | Webseiten über Jina Reader (die Adresse geht an einen Dritten), Suche über Exa | **nicht automatisch**, Begründung unten |
+
+### Agent Reach: warum nicht in der Voreinstellung
+
+1. **Der Einstieg lässt den Agenten eine Installationsanleitung ausführen** (`docs/install.md`). Diese Datei wurde hier **nicht gelesen** (Abruf nicht freigegeben). Das widerspricht ohne Prüfung der Regel aus `arbeitsdisziplin.md`, Abschnitt 9a, fremden Anweisungen nicht blind zu folgen.
+2. **Für angemeldete Plattformen wird laut Seite die Login Sitzung aus Chrome kopiert**, meist die des Hauptkontos. Ein Bericht über das Projekt rät zu einem Wegwerfkonto und nennt Verstöße gegen die AGB von Twitter/X, LinkedIn und anderen als Risiko. Für Kundenkonten oder das Agenturkonto kommt das nicht in Frage.
+3. **Namensfalle:** Ein PyPI Paket `agent-reach` gehört laut Repositoryseite nicht zum Projekt. Manche Skill Verzeichnisse zeigen trotzdem `pip install agent-reach`. Nie so installieren.
+4. **Lücke:** Instagram und Facebook stehen nicht in den gelesenen Beschreibungen. Für die Kundenrecherche löst es also die häufigste Frage nicht.
+5. **Kein Freibrief gegen Sperren:** Zero-Config-Kanäle laufen ohne Anmeldung, aber ob eine Seite blockt, entscheidet die Seite. Umgehen von Schutzmaßnahmen ist nicht Teil des Agenturablaufs.
+
+Wenn trotzdem: Repository klonen, auf einen Commit festlegen, `docs/install.md`, `scripts/` und `test.sh` lesen, nur Kanäle ohne Anmeldung aktivieren (Web, YouTube, RSS, Exa, GitHub), kein Cookie Import, in einem eigenen Ordner statt global. Nutzen: YouTube Untertitel und RSS, nicht Kundenseiten.
+
+### Installation
+
+```bash
+bash scripts/install-quellskills.sh --werkzeuge
+```
+
+Der Schalter fragt vorher, registriert Playwright, Context7 und Lighthouse global (`claude mcp add --scope user`), Firecrawl und PageSpeed nur, wenn der Schlüssel in `FIRECRAWL_API_KEY` beziehungsweise `GOOGLE_API_KEY` steht, und bietet die globalen Grundregeln aus `token-sparsamkeit.md` an. Schlüssel landen dabei im Klartext in `~/.claude.json`: kein Schlüssel mit Zahlungsfunktion, nur eigene Konten mit Begrenzung. Agent Reach installiert er nie.
+
 ## Lücken im Skillset
 
 | Lücke | Stand | Weg |

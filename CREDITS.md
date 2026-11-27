@@ -647,3 +647,20 @@ Gelesen von Gewerbestrom: `CLAUDE.md` (vollständig), `public/assets/consent.js`
 * `bergside/awesome-design-skills` (MIT, 67 Stile): README und ein `SKILL.md` gelesen (`editorial`). Nicht eingebunden, siehe Kapitel 57 Abschnitt 7.
 * `AgriciDaniel/claude-seo` (MIT): `skills/seo-schema/SKILL.md` und Dateiliste gelesen, nichts übernommen außer dem Hinweis zu `FAQPage`. Python und API Anbindungen bleiben draußen.
 * Zusätzlich vorgelegt, nicht eingearbeitet: `website_entwurf_skill` (That's it. Marketing, schlanker Entwurfsskill, Vorbild für den Schnellpfad), `Skill_Website` und `SEO-GEO-SKILLS` (nur Dokumentation und `find-skills`).
+
+
+## Werkzeuge (27.11.2026)
+
+Auf Wunsch des Inhabers geprüft, **nur die Repositoryseiten gelesen, kein Quelltext, nichts in dieser Umgebung ausgeführt**. Eingeflossen sind Befehle und Grenzen in `agentur-website-builder/references/zusatzskills.md`, `token-sparsamkeit.md` und `scripts/install-quellskills.sh --werkzeuge`. Nichts davon ist mitgeliefert.
+
+| Quelle | Lizenz laut Seite | Was eingeflossen ist | Nicht gelesen |
+|---|---|---|---|
+| [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) | auf der Seite nicht gelesen | Installbefehl, Geräteemulation | Quelltext, Lizenzdatei |
+| [upstash/context7](https://github.com/upstash/context7) | MIT | Installbefehl, Schlüssel und Datenfluss laut Seite | Datenschutzerklärung von Upstash |
+| [danielsogl/lighthouse-mcp-server](https://github.com/danielsogl/lighthouse-mcp-server) | MIT | Installbefehl, Tools, Voraussetzungen | `SECURITY.md`, letzter Commit nicht ermittelbar |
+| [ruslanlap/pagespeed-insights-mcp](https://github.com/ruslanlap/pagespeed-insights-mcp) | Apache 2.0 | Installbefehl, Schlüsselpflicht, Toolzahl der Fassung 2 | `SECURITY.md`, letzter Commit nicht ermittelbar |
+| [firecrawl/firecrawl-mcp-server](https://github.com/firecrawl/firecrawl-mcp-server) | MIT | Schlüssel, Selbsthosting, Credit Grenzen | Seite nur bis Zeichen 100000 von 104636 |
+| [Panniantong/Agent-Reach](https://github.com/Panniantong/Agent-Reach) | MIT | nur die Begründung, warum es nicht voreingestellt ist | `docs/install.md`, `scripts/`, `test.sh` (Abruf nicht freigegeben) |
+| [drona23/claude-token-efficient](https://github.com/drona23/claude-token-efficient) | MIT | Grundsätze laut Beschreibung, eigene Fassung als `assets/token/CLAUDE-global.md` | die `CLAUDE.md` des Repositories (Abruf nicht freigegeben), Profile |
+
+**Nicht übernommen, mit Grund:** Agent Reach als Voreinstellung (Anleitung wird vom Agenten ausgeführt und nicht gelesen, Cookie Import aus Chrome, Namensfalle auf PyPI). Das 20-Aufrufe-Profil von claude-token-efficient (kann Prüfschleifen bremsen). Die Einsparungsangaben aus Fremdtests sind nicht nachgemessen.
