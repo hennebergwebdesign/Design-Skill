@@ -11,7 +11,7 @@ conversion_zweck: die primäre Handlung liegt im ersten Bildschirm und bleibt ü
 responsiv: Pillennavigation weicht auf ein Menü, Textblock rückt nach unten, Bild bleibt Hintergrund
 komplexitaet: niedrig
 barrierefreiheit: Kontrast nur über eine Abdunklungsschicht sicherstellen, Fokusring muss auf dem Bild sichtbar bleiben
-verwandt: [hero-schwebende-produktbilder]
+verwandt: [hero-schwebende-produktbilder, hero-wortmarke-angeschnitten, hero-foto-mit-textkasten]
 quelle_url: https://21st.dev/
 quelle_erfasst: 2026-09-17
 konfidenz: mittel

@@ -11,7 +11,7 @@ conversion_zweck: wer nach dem Lesen noch zögert, findet den Kontakt ohne zu su
 responsiv: einspaltig ab etwa 900 px, Kontextspalte über das Akkordeon, CTA bleibt am Ende sichtbar
 komplexitaet: niedrig
 barrierefreiheit: natives details/summary oder korrekte aria-expanded-Auszeichnung, Tastaturbedienung ohne Zusatzcode
-verwandt: []
+verwandt: [faq-als-chatverlauf]
 quelle_url: https://21st.dev/
 quelle_erfasst: 2026-09-17
 konfidenz: mittel

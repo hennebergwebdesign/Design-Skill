@@ -4,8 +4,8 @@
     "Die Wahrheit steht in muster/<id>.md, das hier ist die durchsuchbare Ableitung."
   ],
   "schema": 1,
-  "erzeugt": "2026-09-18",
-  "anzahl": 5,
+  "erzeugt": "2026-11-27",
+  "anzahl": 13,
   "muster": [
     {
       "id": "bewertungen-als-eigene-sektion",
@@ -38,10 +38,84 @@
       "konfidenz": "niedrig",
       "freigabe": "bestand",
       "verwandt": [
-        "partnerlogos-als-integrationsraster"
+        "partnerlogos-als-integrationsraster",
+        "fallstudienliste-mit-tags"
       ],
       "quelle_url": "https://21st.dev/",
       "aufgenommen": "2026-09-18"
+    },
+    {
+      "id": "fallstudienliste-mit-tags",
+      "name": "Fallstudien als Liste mit Bild, Tags und eigenem Weg",
+      "kategorie": "cases",
+      "sektionstyp": [
+        "cases",
+        "portfolio"
+      ],
+      "tags": [
+        "liste",
+        "tags",
+        "vorschaubild",
+        "fallstudie",
+        "abwechselnd"
+      ],
+      "stil": [
+        "clean",
+        "expressive"
+      ],
+      "branchenbezug": [
+        "agentur",
+        "beratung",
+        "bau",
+        "handwerk"
+      ],
+      "ux_zweck": "Arbeiten sind vergleichbar, Art und Umfang jeder Arbeit ist vor dem Öffnen erkennbar",
+      "conversion_zweck": "führt vom Überblick in genau eine Fallstudie, jede mit eigenem Weg",
+      "komplexitaet": "niedrig",
+      "responsiv": "unbekannt, nur Desktop erfasst",
+      "barrierefreiheit": "Die Vorschaubilder haben Alt Texte, der Link \"Fallstudie ansehen\" nennt im Namen das Projekt (aria-label), nicht sechsmal dasselbe",
+      "konfidenz": "mittel",
+      "freigabe": "global",
+      "verwandt": [
+        "bewertungen-als-eigene-sektion"
+      ],
+      "quelle_url": "https://www.phunk.com/",
+      "aufgenommen": "2026-11-27"
+    },
+    {
+      "id": "faq-als-chatverlauf",
+      "name": "FAQ als Gesprächsverlauf mit Frage und Antwort als Sprechblasen",
+      "kategorie": "faq",
+      "sektionstyp": [
+        "faq"
+      ],
+      "tags": [
+        "sprechblasen",
+        "gespraechsform",
+        "einwandbehandlung",
+        "titel-links"
+      ],
+      "stil": [
+        "clean",
+        "expressive"
+      ],
+      "branchenbezug": [
+        "software",
+        "dienstleistung",
+        "b2b"
+      ],
+      "ux_zweck": "Fragen und Antworten lesen sich wie ein Dialog, die Rollen sind ohne Beschriftung erkennbar",
+      "conversion_zweck": "Einwände wirken wie eine Antwort an die Besucherin oder den Besucher, nicht wie ein Kleingedrucktes",
+      "komplexitaet": "niedrig",
+      "responsiv": "unbekannt, nur bei 1440 Pixel gesehen, mobiles Umbrechen der Blasen nicht erfasst",
+      "barrierefreiheit": "Die Blasen sind nur Optik. Als Quelltext bleibt es eine Liste aus Frage und Antwort, am besten als details mit summary, sonst ist der Verlauf für Tastatur und Screenreader eine Wand aus Text",
+      "konfidenz": "mittel",
+      "freigabe": "global",
+      "verwandt": [
+        "faq-zweispaltig-mit-kontaktausweg"
+      ],
+      "quelle_url": "https://area.us/",
+      "aufgenommen": "2026-11-27"
     },
     {
       "id": "faq-zweispaltig-mit-kontaktausweg",
@@ -74,9 +148,49 @@
       "barrierefreiheit": "natives details/summary oder korrekte aria-expanded-Auszeichnung, Tastaturbedienung ohne Zusatzcode",
       "konfidenz": "mittel",
       "freigabe": "bestand",
-      "verwandt": [],
+      "verwandt": [
+        "faq-als-chatverlauf"
+      ],
       "quelle_url": "https://21st.dev/",
       "aufgenommen": "2026-09-18"
+    },
+    {
+      "id": "hero-foto-mit-textkasten",
+      "name": "Foto im Held mit der Aussage in einem hellen Textkasten",
+      "kategorie": "hero",
+      "sektionstyp": [
+        "hero"
+      ],
+      "tags": [
+        "foto",
+        "textkasten",
+        "kontrast",
+        "label",
+        "logoreihe"
+      ],
+      "stil": [
+        "corporate",
+        "expressive"
+      ],
+      "branchenbezug": [
+        "bau",
+        "industrie",
+        "b2b",
+        "handwerk"
+      ],
+      "ux_zweck": "die Aussage ist unabhängig vom Bildinhalt lesbar",
+      "conversion_zweck": "eine Aussage und eine Handlung im ersten Bildschirm, mit Beleg in der Logoreihe darunter",
+      "komplexitaet": "niedrig",
+      "responsiv": "Aussage geht von 90 auf 33 Pixel, der Kasten bleibt, Zeilen brechen enger, gemessen bei 390",
+      "barrierefreiheit": "Der Kasten ist die Kontrastlösung, Schrift schwarz auf hell mit mehr als 4,5 zu 1 unabhängig vom Foto. Der Kasten bricht pro Zeile, Zeilen müssen im Zoom lesbar bleiben",
+      "konfidenz": "mittel",
+      "freigabe": "global",
+      "verwandt": [
+        "hero-vollbild-pillennavigation",
+        "partnerlogos-als-integrationsraster"
+      ],
+      "quelle_url": "https://area.us/",
+      "aufgenommen": "2026-11-27"
     },
     {
       "id": "hero-schwebende-produktbilder",
@@ -146,10 +260,50 @@
       "konfidenz": "mittel",
       "freigabe": "bestand",
       "verwandt": [
-        "hero-schwebende-produktbilder"
+        "hero-schwebende-produktbilder",
+        "hero-wortmarke-angeschnitten",
+        "hero-foto-mit-textkasten"
       ],
       "quelle_url": "https://21st.dev/",
       "aufgenommen": "2026-09-18"
+    },
+    {
+      "id": "hero-wortmarke-angeschnitten",
+      "name": "Wortmarke als Bildelement, am Rand angeschnitten",
+      "kategorie": "hero",
+      "sektionstyp": [
+        "hero",
+        "footer"
+      ],
+      "tags": [
+        "wortmarke",
+        "anschnitt",
+        "grossschrift",
+        "bewegtbild",
+        "fuss"
+      ],
+      "stil": [
+        "expressive",
+        "luxus"
+      ],
+      "branchenbezug": [
+        "bau",
+        "immobilien",
+        "tourismus",
+        "gastronomie"
+      ],
+      "ux_zweck": "die Marke prägt sich ein, bevor ein Satz gelesen wird",
+      "conversion_zweck": "Wiedererkennung und Haltung im ersten Bildschirm, ohne den Platz der Aussage zu verbrauchen",
+      "komplexitaet": "niedrig",
+      "responsiv": "unbekannt, nur das Umbrechen der Aussage ist bei 390 Pixel gesehen, die Wortmarke selbst nicht eigens geprüft",
+      "barrierefreiheit": "Die Wortmarke bleibt echter Text oder ein SVG mit Titel, nie ein Bild ohne Alternative. Angeschnittene Schrift braucht Kontrast an der sichtbaren Kante, nicht am ganzen Wort",
+      "konfidenz": "hoch",
+      "freigabe": "global",
+      "verwandt": [
+        "hero-vollbild-pillennavigation"
+      ],
+      "quelle_url": "https://conwest.com/",
+      "aufgenommen": "2026-11-27"
     },
     {
       "id": "partnerlogos-als-integrationsraster",
@@ -182,10 +336,159 @@
       "konfidenz": "niedrig",
       "freigabe": "bestand",
       "verwandt": [
-        "bewertungen-als-eigene-sektion"
+        "bewertungen-als-eigene-sektion",
+        "hero-foto-mit-textkasten"
       ],
       "quelle_url": "https://21st.dev/",
       "aufgenommen": "2026-09-18"
+    },
+    {
+      "id": "problem-grosse-zahl-mit-quelle",
+      "name": "Das Problem als eine große Zahl mit Quellenzeile",
+      "kategorie": "problem",
+      "sektionstyp": [
+        "problem",
+        "trust"
+      ],
+      "tags": [
+        "kennzahl",
+        "quelle",
+        "foto",
+        "ausgangslage"
+      ],
+      "stil": [
+        "editorial",
+        "expressive"
+      ],
+      "branchenbezug": [
+        "landwirtschaft",
+        "industrie",
+        "energie",
+        "umwelt"
+      ],
+      "ux_zweck": "die Ausgangslage wird mit einer einzigen Zahl begreifbar",
+      "conversion_zweck": "das Problem ist belegt, bevor die Lösung auftaucht, und die Quelle macht die Zahl glaubwürdig",
+      "komplexitaet": "niedrig",
+      "responsiv": "unbekannt, nur Desktop erfasst",
+      "barrierefreiheit": "Zahl und Aussage stehen als Text, nicht als Bild. Kontrast der Quellenzeile ist klein gesetzt trotzdem mindestens 4,5 zu 1",
+      "konfidenz": "mittel",
+      "freigabe": "global",
+      "verwandt": [
+        "versuchsuebersicht-mit-transparenz"
+      ],
+      "quelle_url": "https://www.farmminerals.com/",
+      "aufgenommen": "2026-11-27"
+    },
+    {
+      "id": "produktkarten-auf-fotobuehne",
+      "name": "Produktkarten über einer großen Fotobühne",
+      "kategorie": "product",
+      "sektionstyp": [
+        "product",
+        "services"
+      ],
+      "tags": [
+        "fotobuehne",
+        "karussell",
+        "karten-ueber-bild",
+        "kategorie"
+      ],
+      "stil": [
+        "clean",
+        "refined"
+      ],
+      "branchenbezug": [
+        "onlinehandel",
+        "gesundheit",
+        "beratung",
+        "abo"
+      ],
+      "ux_zweck": "die Kategorie wird als Stimmung gezeigt, die Auswahl als konkrete Karten, beides in einem Bildschirm",
+      "conversion_zweck": "vom Gefühl zur Produktkarte ohne Seitenwechsel, jede Karte mit zwei Wegen, Kauf und Information",
+      "komplexitaet": "mittel",
+      "responsiv": "unbekannt, nur Desktop erfasst, Karussell bei 390 Pixel nicht geprüft",
+      "barrierefreiheit": "Karussell braucht Pfeile als Buttons mit Namen, Wischen allein reicht nicht, und ein Pausenmittel, wenn es sich bewegt. Text auf dem Foto liegt nicht direkt auf dem Bild, sondern auf einer Fläche oder Abdunklung",
+      "konfidenz": "mittel",
+      "freigabe": "global",
+      "verwandt": [
+        "schritte-auf-bildgrund"
+      ],
+      "quelle_url": "https://www.goodlifemeds.com/",
+      "aufgenommen": "2026-11-27"
+    },
+    {
+      "id": "schritte-auf-bildgrund",
+      "name": "Drei Schritte auf ruhigem Bildgrund mit großer Überschrift",
+      "kategorie": "process",
+      "sektionstyp": [
+        "process"
+      ],
+      "tags": [
+        "drei-schritte",
+        "bildgrund",
+        "abdunklung",
+        "versetzte-anordnung"
+      ],
+      "stil": [
+        "refined",
+        "luxus"
+      ],
+      "branchenbezug": [
+        "dienstleistung",
+        "beratung",
+        "abo",
+        "onlinehandel"
+      ],
+      "ux_zweck": "der Ablauf ist in drei Schritten überschaubar, der Bildgrund gibt Ruhe statt Diagramm",
+      "conversion_zweck": "nimmt die Angst vor dem Aufwand, bevor die Handlung verlangt wird",
+      "komplexitaet": "niedrig",
+      "responsiv": "unbekannt, nur Desktop erfasst",
+      "barrierefreiheit": "Text auf Bild nur über Abdunklung mit Tokenwert, die Reihenfolge der Schritte steht im Quelltext als nummerierte Liste, nicht nur in der Anordnung",
+      "konfidenz": "mittel",
+      "freigabe": "global",
+      "verwandt": [
+        "produktkarten-auf-fotobuehne"
+      ],
+      "quelle_url": "https://www.goodlifemeds.com/",
+      "aufgenommen": "2026-11-27"
+    },
+    {
+      "id": "versuchsuebersicht-mit-transparenz",
+      "name": "Laufende Versuche offen zeigen, mit Begründung, warum",
+      "kategorie": "trust",
+      "sektionstyp": [
+        "trust",
+        "cases"
+      ],
+      "tags": [
+        "versuche",
+        "standorte",
+        "transparenz",
+        "kennzahlen-tabelle",
+        "naechstes-update"
+      ],
+      "stil": [
+        "editorial",
+        "industriell"
+      ],
+      "branchenbezug": [
+        "landwirtschaft",
+        "technik",
+        "forschung",
+        "industrie"
+      ],
+      "ux_zweck": "der Stand der Belege ist sichtbar, auch dort, wo er noch nicht fertig ist",
+      "conversion_zweck": "Vertrauen durch ehrlichen Zwischenstand, bevor Ergebnisse vorliegen, mit klarem Weg zur Anfrage",
+      "komplexitaet": "mittel",
+      "responsiv": "unbekannt, nur Desktop erfasst",
+      "barrierefreiheit": "Karte mit Standorten braucht eine Textliste derselben Orte, nie die Karte allein. Kennzahlen als echte Tabelle mit Kopfzellen",
+      "konfidenz": "mittel",
+      "freigabe": "global",
+      "verwandt": [
+        "problem-grosse-zahl-mit-quelle"
+      ],
+      "quelle_url": "https://www.farmminerals.com/",
+      "aufgenommen": "2026-11-27"
     }
   ]
 }

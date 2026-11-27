@@ -30,3 +30,15 @@ Verfahren und Schwellen: `skills/webdesign-conversion/references/25-designmuster
 6. `README.md` und diese Datei nachziehen.
 7. `node scripts/pruefe-skill.mjs --inhalt`, danach ohne Fehler.
 
+
+## Eine Referenzseite als Vorlage und Baukasten aufnehmen
+
+Der übliche Weg bei genannten Adressen (Tor 1 durch Nennung des Inhabers). Ergebnis sind zwei Dinge: eine Vorlage in `assets/vorlagen/bibliothek/` und Muster in der Musterbibliothek.
+
+1. Adresse abrufen (`scripts/design-scan.mjs`) und mit Playwright bei 1440 und 390 Pixel scrollend erfassen. Liefert die Seite 403 (Cloudflare, Bot Schutz) oder rendert sie erst per JavaScript, ist das ein Befund: nicht aus der Erinnerung nachbauen, Screenshots vom Inhaber anfordern.
+2. Vorlage `tNNN` nach dem Format von `t111` bauen: Prinzip statt Kopie, eigene Marke, Beispielbranche, `ABSCHNITTE.json` je Vorlage (jeder Abschnitt mit `data-abschnitt`, Kategorie, Selektor, Prinzip, CSS, JS, Hinweis zum Herauslösen).
+3. `node scripts/bibliothek-abschnitte.mjs --pruefen`, danach `--schreiben` (erzeugt `ABSCHNITTE.md`, den Baukasten Index).
+4. Die tragenden Prinzipien als Muster nach `assets/musterbibliothek/muster/` (Pflichtfelder und Belege wie oben), `verwandt` beidseitig, `node scripts/pruefe-muster.mjs --index`.
+5. Galerie, Vorschaubilder, `HERKUNFT.md`, README Zähler und Änderungsverlauf nachziehen.
+
+Abschnitt wählen: `node scripts/bibliothek-abschnitte.mjs --kategorie faq` listet alle FAQ Abschnitte aller Vorlagen, `--seite t113 --abschnitt faq` liefert Selektor, CSS, JS und den Hinweis zum Herauslösen.

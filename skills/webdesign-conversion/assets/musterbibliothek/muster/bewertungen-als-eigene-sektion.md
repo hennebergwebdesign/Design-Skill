@@ -11,7 +11,7 @@ conversion_zweck: Einwand gegen die Glaubwürdigkeit direkt vor der Handlungsauf
 responsiv: drei Spalten auf Desktop, eine auf dem Handy, Zitatlänge bleibt begrenzt
 komplexitaet: niedrig
 barrierefreiheit: Zitate als blockquote mit cite, Sterne nicht nur farblich, sondern auch als Text
-verwandt: [partnerlogos-als-integrationsraster]
+verwandt: [partnerlogos-als-integrationsraster, fallstudienliste-mit-tags]
 quelle_url: https://21st.dev/
 quelle_erfasst: 2026-09-17
 konfidenz: niedrig

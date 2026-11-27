@@ -23,6 +23,7 @@ anderen Branche und einem anderen Stack. Nur die rechte kommt in die Bibliothek.
 - Der Qualitätsfilter
 - Die Grenze zur Kopie
 - Eigenes Ergebnis festschreiben
+- Abschnitte einzeln wählen (Baukasten)
 - Erweiterungspunkte, bewusst noch nicht gebaut
 - Verwandte Kapitel
 
@@ -181,6 +182,17 @@ Referenz kennt, die neue Seite als deren Kopie erkennen, ist die Grenze übersch
 Muster aus fremden Referenzen wachsen über Tor 2. Das **eigene, freigegebene Ergebnis** eines Projekts wird
 mit der Rückbauprobe festgehalten: `44-gutes-festschreiben-und-rueckbauprobe.md`. Es liegt im Projekt, nicht
 in dieser Bibliothek, solange es nicht durch Tor 2 gegangen ist.
+
+## Abschnitte einzeln wählen (Baukasten)
+
+Muster beschreiben das Prinzip, die Vorlagen unter `assets/vorlagen/bibliothek/` zeigen es ausgeführt. Ab `t112` liefert jede Vorlage `ABSCHNITTE.json`: jeder Abschnitt hat eine Kennung (`data-abschnitt`), eine Kategorie aus `taxonomie.json`, einen Selektor, das Prinzip in einem Satz und den Hinweis, was beim Herauslösen mitgenommen wird. So lässt sich „den Held von der einen, die FAQ von der anderen Seite" benennen und bauen, ohne die Vorlagen zu durchsuchen.
+
+```bash
+node scripts/bibliothek-abschnitte.mjs --kategorie faq
+node scripts/bibliothek-abschnitte.mjs --seite t113 --abschnitt faq
+```
+
+Ein Abschnitt wird als Prinzip in die Marke des Kunden gesetzt, nie mit Text, Bild oder Farbe der Vorlage. Der Index `bibliothek/ABSCHNITTE.md` ist erzeugt, nicht von Hand gepflegt. Ältere Vorlagen (`t01` bis `t111`) haben noch keine `ABSCHNITTE.json`, ihre Sektionsfolge steht in `INFO.md`.
 
 ## Erweiterungspunkte, bewusst noch nicht gebaut
 

@@ -11,7 +11,7 @@ conversion_zweck: den Einwand "passt das zu dem, was wir schon haben" ohne Text 
 responsiv: Rasterbreite über auto-fit statt fester Spaltenzahl, Logos behalten ihre optische Größe
 komplexitaet: niedrig
 barrierefreiheit: jedes Logo braucht einen Alternativtext mit dem Namen, nicht "Logo"
-verwandt: [bewertungen-als-eigene-sektion]
+verwandt: [bewertungen-als-eigene-sektion, hero-foto-mit-textkasten]
 quelle_url: https://21st.dev/
 quelle_erfasst: 2026-09-17
 konfidenz: niedrig
