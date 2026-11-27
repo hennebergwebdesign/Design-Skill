@@ -1,0 +1,36 @@
+/* marke.css der Vorlage "Produktfamilie im Feldversuch": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast (selbst gerechnet, WCAG): jeweils Text auf Fläche, Mindestwert 4,5 zu 1, großer Text 3 zu 1. */
+:root{
+  --flaeche:#f4efe5;            /* Creme */
+  --flaeche-alt:#e8e1d0;
+  --flaeche-dunkel:#1b2713;     /* Waldgrün tief (Held, Fuß) */
+  --text:#1d2915;               /* auf Fläche 13,3 zu 1, auf Fläche alt 11,7 zu 1 */
+  --text-leise:#4a5740;         /* auf Fläche 6,7 zu 1, auf Fläche alt 5,9 zu 1 */
+  --linie:#d6cfbc;
+  --akzent:#1b2713;             /* Hauptaktion auf Hell: Waldgrün tief mit hellem Text (13,6 zu 1) */
+  --akzent-text:#f4efe5;
+  --schrift-titel:'Hanken Grotesk',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:6px;
+  --radius-karte:4px;
+  --radius-bild:2px;
+
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:400;
+  --titel-spur:-0.03em;
+  --gruen:#44582c;              /* Grünfläche (Lösung, Anfrage): Text auf Dunkel 6,8 zu 1, leiser Text 4,9 zu 1 */
+  --gruen-mitte:#2a3a1d;        /* Verlauf im Held, Bodenschnitt: Text auf Dunkel 10,7 zu 1 */
+  --salbei:#a5b886;             /* Salbei: Fläche, Kacheln, blasse Riesenschrift (auf Grün 3,7 zu 1, nur großer Text) */
+  --salbei-hell:#cdd8b3;        /* helle Kachel, Text darauf 10,2 zu 1 */
+  --text-auf-dunkel:#f4efe5;    /* auf Waldgrün tief 13,6 zu 1, auf Grün 6,8 zu 1 */
+  --text-leise-dunkel:#c5d0b0;  /* auf Waldgrün tief 9,7 zu 1, auf Grün 4,9 zu 1 */
+  --linie-dunkel:#4d6136;
+  --feld-rand:#78806a;          /* Rand der Eingabefelder auf Weiß 4,1 zu 1 (Bedienelement, mindestens 3 zu 1) */
+  --pellet:#34342e;             /* gezeichnetes Produkt: dunkle Fläche, Prägung, Glanz */
+  --pellet-hell:#5a5a50;
+  --pellet-praegung:#22221d;
+  --erde-oben:#6b5a3e;          /* Bodenschnitt: Schichten von oben nach unten */
+  --erde-mitte:#4a3d28;
+  --erde-tief:#2e2619;
+  --weiss:#ffffff;
+}
