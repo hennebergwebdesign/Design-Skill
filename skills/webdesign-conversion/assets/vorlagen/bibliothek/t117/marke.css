@@ -1,0 +1,31 @@
+/* marke.css der Vorlage "Studiobühne mit Fallstudienliste": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast (selbst gerechnet, WCAG): siehe Zeilen unten, jeweils Text auf Fläche, Mindestwert 4,5 zu 1. */
+:root{
+  --flaeche:#030303;            /* Bühne, fast Schwarz */
+  --flaeche-alt:#0d1319;        /* Karten und Felder */
+  --flaeche-dunkel:#030303;     /* feste Rolle: dunkler Abschnitt (hier gleich Fläche) */
+  --text:#f1f4f8;               /* auf Fläche 18,7 zu 1, auf Karte 16,9 zu 1 */
+  --text-leise:#a3acb6;         /* auf Fläche 9,0 zu 1, auf Karte 8,1 zu 1 */
+  --linie:#1f2b36;
+  --akzent:#4aa3ff;             /* Hauptaktion: Fläche des Knopfs, dunkler Text darauf 7,3 zu 1; als Linie auf Fläche 7,8 zu 1 */
+  --akzent-text:#03101f;
+  --schrift-titel:'Schibsted Grotesk',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:24px;
+  --radius-bild:14px;
+
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:500;
+  --titel-spur:-0.03em;
+  --linie-hell:#2c3b4a;         /* Kartenrand beim Überfahren */
+  --licht:#1c6fd1;              /* Lichtverlauf an Abschnittsgrenzen, nur als Fläche, nie Textfarbe */
+  --licht-tief:#0a2c55;
+  --licht-hell:#7cc0ff;         /* Lichtkante, Fokusring-Ergänzung, auf Fläche 10,6 zu 1 */
+  --schalter-aus:#6b7785;       /* Schalter aus: Spur auf Karte 4,1 zu 1 (Bedienelement, mindestens 3 zu 1) */
+  --schalter-an:#4aa3ff;        /* Schalter an: Spur auf Karte 7,1 zu 1 */
+  --feld-rand:#6b7785;          /* Rand der Eingabefelder auf Karte 4,1 zu 1 */
+  --hell:#f1f4f8;               /* zweiter Knopf, dunkler Text darauf 17,3 zu 1 */
+  --text-auf-akzent:#03101f;
+  --weiss:#ffffff;
+}

@@ -1,0 +1,122 @@
+[
+ {
+  "id": "kopf",
+  "name": "Kopfzeile mit Pillenmenü",
+  "kategorie": "navigation",
+  "selektor": "header[data-abschnitt=kopf]",
+  "prinzip": "Menü in der Mitte, Primärknopf rechts bleiben beim Scrollen erreichbar und tragen Telefon und Handlung.",
+  "css": ".kopf__",
+  "js": "bewegung.js (data-menue, Abschnittsanzeige)",
+  "hinweis": "Tokens aus marke.css, Symbole i-marke und i-tel, .burger, bewegung.js. Ankerziele der Links anpassen."
+ },
+ {
+  "id": "held",
+  "name": "Held mit zentriertem Lichtverlauf",
+  "kategorie": "hero",
+  "selektor": "section[data-abschnitt=held]",
+  "prinzip": "Zentrierte Aussage mit Zielgruppe, Problem und Lösung auf ruhiger Bühne, der Lichtverlauf führt den Blick zur Überschrift und zu zwei Handlungen.",
+  "css": ".hero__",
+  "js": "bewegung.js (data-zeig, data-parallax)",
+  "hinweis": "--licht, --licht-tief, --licht-hell, Knopfklassen .knopf und .knopf--hell aus stil.css, Symbol i-tel."
+ },
+ {
+  "id": "einwilligung",
+  "name": "Einwilligungspanel mit Schaltern",
+  "kategorie": "forms",
+  "selektor": "section[data-abschnitt=einwilligung]",
+  "prinzip": "Datenschutzwahl liegt offen im ersten Bildschirm, nichts vorausgewählt, Ablehnen und Annehmen gleich gewichtet.",
+  "css": ".einw__ und .schalter__",
+  "js": "stil.js (Einwilligung, Demo ohne Speicherung)",
+  "hinweis": "--schalter-aus, --schalter-an, --flaeche-alt, .knopf Klassen. Im Projekt an das Consent Werkzeug anbinden."
+ },
+ {
+  "id": "intro",
+  "name": "Vorstellung mit Figur",
+  "kategorie": "about",
+  "selektor": "section[data-abschnitt=intro]",
+  "prinzip": "Eine kleine Figur und drei Sätze geben dem Studio ein Gesicht, bevor die Leistungen kommen.",
+  "css": ".intro__",
+  "js": "bewegung.js (data-zeig), CSS Keyframes schweben und lauschen",
+  "hinweis": "SVG Figur mit Verlaufsdefinitionen g-figur-schein und g-figur-leib, Lichtkante ::before."
+ },
+ {
+  "id": "leistungen",
+  "name": "Zwei Leistungskarten mit Oberfläche",
+  "kategorie": "services",
+  "selektor": "section[data-abschnitt=leistungen]",
+  "prinzip": "Zwei große, nummerierte Karten mit gezeigter Oberfläche oben erklären das Angebot, bevor man liest.",
+  "css": ".leist__",
+  "js": "bewegung.js (data-zeig, data-staffel)",
+  "hinweis": "--radius-karte, --radius-bild, --licht Tokens, .knopf."
+ },
+ {
+  "id": "werte",
+  "name": "Vier Werte als Karussell",
+  "kategorie": "benefits",
+  "selektor": "section[data-abschnitt=werte]",
+  "prinzip": "Vier gleich große Karten mit Nummer und Symbol machen Haltung in Sekunden erfassbar, Scroll Snap und Pfeile lassen den Rest zu.",
+  "css": ".werte__",
+  "js": "stil.js (Karussell Pfeile)",
+  "hinweis": "Klasse .werte__pfeil wird auch von stimmen genutzt. Ohne JavaScript bleibt die Reihe seitlich scrollbar."
+ },
+ {
+  "id": "projekte",
+  "name": "Fallstudienliste mit Tags und Link",
+  "kategorie": "cases",
+  "selektor": "section[data-abschnitt=projekte]",
+  "prinzip": "Jede Zeile gibt Bild, Branche, Titel, Kurztext und genau eine Handlung, die Überschrift bleibt oben stehen und gibt Orientierung.",
+  "css": ".proj__",
+  "js": "bewegung.js (data-zeig)",
+  "hinweis": "Sechs SVG Platzhalter im Inneren, Tags mit --licht-hell, sticky Überschrift ab 56rem, Symbol i-pfeil."
+ },
+ {
+  "id": "logos",
+  "name": "Kundenlogo Reihe",
+  "kategorie": "trust",
+  "selektor": "section[data-abschnitt=logos]",
+  "prinzip": "Eine ruhige Reihe gleich großer Felder zeigt Größenordnung der Kundschaft ohne Behauptung.",
+  "css": ".logos__",
+  "js": "bewegung.js (data-zeig, data-staffel)",
+  "hinweis": "Textplatzhalter durch freigegebene Logos (SVG) ersetzen, sonst Abschnitt streichen."
+ },
+ {
+  "id": "stimmen",
+  "name": "Stimmen als Karussell",
+  "kategorie": "testimonials",
+  "selektor": "section[data-abschnitt=stimmen]",
+  "prinzip": "Kurze Zitate mit Person und Betrieb auf Karten, seitlich blätterbar, als Beispiel gekennzeichnet.",
+  "css": ".stim__",
+  "js": "stil.js (Karussell Pfeile)",
+  "hinweis": "Nutzt .werte__pfeil aus dem Abschnitt werte, beim Herauslösen mitnehmen. Beispieltexte ersetzen."
+ },
+ {
+  "id": "faq",
+  "name": "Einwand FAQ",
+  "kategorie": "faq",
+  "selektor": "section[data-abschnitt=faq]",
+  "prinzip": "Die sechs häufigsten Einwände stehen vor dem Gespräch, jeweils eine Antwort offen, die anderen zu.",
+  "css": ".faq__",
+  "js": "bewegung.js (data-exklusiv)",
+  "hinweis": "details Elemente, Plus Zeichen als Hintergrund, Antworten als Beispiel."
+ },
+ {
+  "id": "abschluss",
+  "name": "Abschlusskarte mit Lichtverlauf und Formular",
+  "kategorie": "cta",
+  "selektor": "section[data-abschnitt=abschluss]",
+  "prinzip": "Ein Lichtverlauf von unten schließt die dunkle Bühne, die Karte bündelt Aussage, vier Felder und einen Knopf.",
+  "css": ".abschl__ und .feld",
+  "js": "stil.js (Formular ohne Versand)",
+  "hinweis": "Klasse .feld und .feld__hinweis, --licht Tokens, Telefonsymbol. Formular sendet nichts."
+ },
+ {
+  "id": "fuss",
+  "name": "Fuß mit Kontakt und Rechtlichem",
+  "kategorie": "footer",
+  "selektor": "footer[data-abschnitt=fuss]",
+  "prinzip": "Kontakt, Seiten und Pflichtangaben stehen ruhig an einer Stelle, der Knopf wiederholt die Handlung.",
+  "css": ".fuss__",
+  "js": null,
+  "hinweis": "Symbole i-marke, i-tel, i-mail, i-pin, .knopf."
+ }
+]
