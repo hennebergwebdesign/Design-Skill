@@ -1,0 +1,39 @@
+/* marke.css der Vorlage "Nachunternehmerprüfung im Bau": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast (selbst gerechnet, WCAG): siehe Zeilen unten, jeweils Text auf Fläche, Mindestwert 4,5 zu 1. */
+:root{
+  --flaeche:#fbfaf6;            /* Papierweiß */
+  --flaeche-alt:#f1eee4;        /* Sand, abgesetzter Abschnitt */
+  --flaeche-dunkel:#1c1e1d;     /* Schwarz der Bauplane */
+  --text:#1c1e1d;               /* auf Fläche 16,1 zu 1, auf Sand 14,4, auf Karte 11,2, auf Signalgelb 9,4 */
+  --text-leise:#55584f;         /* auf Fläche 7,0 zu 1, auf Sand 6,3, auf Karte 4,8 */
+  --linie:#d9d6cc;
+  --akzent:#1c1e1d;             /* Hauptaktion: Schwarz mit hellem Text (16,8 zu 1) */
+  --akzent-text:#ffffff;
+  --schrift-titel:'Hanken Grotesk',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:8px;
+  --radius-karte:10px;
+  --radius-bild:10px;
+
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:300;
+  --titel-gewicht-gross:200;    /* Anzeigegröße: sehr leichter Schnitt */
+  --titel-spur:-0.03em;
+  --karte:#d6d3c9;              /* graue Karte, Text darauf 11,2 zu 1 */
+  --karte-hell:#ffffff;         /* Zeilen und Blasen auf der Karte */
+  --signal:#f6b800;             /* Kennzahlkarte, Text darauf nur --text (9,4 zu 1), nie --text-leise (4,1) */
+  --marke:#0e5c47;              /* Baugrün: Logofläche, Telefonbild, weißer Text darauf 8,0 zu 1 */
+  --marke-text:#ffffff;
+  --text-auf-dunkel:#ffffff;    /* auf Schwarz 16,8 zu 1 */
+  --text-leise-dunkel:#b9bcb4;  /* auf Schwarz 8,7 zu 1, auf Chipgrund 5,6 */
+  --dunkel-karte:#2a2c2b;       /* Karten und Blasen auf Schwarz, weißer Text 14,1 zu 1 */
+  --chip:#3a3d3b;               /* Prüfpunkte auf Schwarz, weißer Text 11,0 zu 1 */
+  --linie-dunkel:#3f4240;
+  --licht-aus:#9a9c94;          /* Wortlicht, Ausgangsfarbe der Wörter vor dem Aufhellen (nur Übergang, Endzustand ist --text) */
+  --ok:#1f8f5f;                 /* Statuspunkte, nie allein: immer mit Wort daneben */
+  --warnung:#e0662b;
+  --offen:#f6b800;
+  --stumm:#8a8c84;
+  --feld-rand:#7d8076;          /* Rand der Eingabefelder auf Fläche 3,9 zu 1, auf Sand 3,5 (Bedienelement, mindestens 3 zu 1) */
+  --rahmen:15px;                /* Außenrand der Bildfläche im Held */
+}
