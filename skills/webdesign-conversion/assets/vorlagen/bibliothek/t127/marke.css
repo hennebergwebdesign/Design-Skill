@@ -1,0 +1,43 @@
+/* marke.css der Vorlage "Ökosystem aus Geräten und App": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast (selbst gerechnet, WCAG): siehe Zeilen unten, jeweils Text auf Fläche, Mindestwert 4,5 zu 1. */
+:root{
+  --flaeche:#f5f3ec;            /* warmes Sandweiß */
+  --flaeche-alt:#e8eee3;
+  --flaeche-dunkel:#1c2a23;     /* Waldtinte */
+  --text:#1a2620;               /* auf Fläche 14,1 zu 1, auf Fläche alt 13,2 zu 1 */
+  --text-leise:#46564d;         /* auf Fläche 7,0 zu 1, auf Fläche alt 6,6 zu 1 */
+  --linie:#cdd5c8;
+  --akzent:#1c2a23;             /* Hauptaktion: Waldtinte mit hellem Text (13,5 zu 1) */
+  --akzent-text:#f5f3ec;
+  --schrift-titel:'Schibsted Grotesk',system-ui,sans-serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:22px;
+  --radius-bild:22px;
+
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:500;
+  --titel-spur:-0.03em;
+  --schrift-mono:ui-monospace,'SF Mono',Menlo,Consolas,monospace;   /* Systemschrift für die technischen Zeilen, nichts wird geladen */
+  --radius-kopf:20px;
+  --mint:#cfe6d8;               /* Pastellflächen der Karten und des Seitenverlaufs, nie Textfarbe */
+  --salbei:#a9cdb9;
+  --pfirsich:#f3d4c0;
+  --himmel:#d6e6ee;
+  --verlauf-seite:linear-gradient(180deg,#e3efe6 0%,#f5f3ec 22%,#f3e6dc 48%,#e3efe6 74%,#f5f3ec 100%);
+  --blatt:#3f8f66;              /* Zeichnungen: Blatt, Blatt dunkel, Topf, Gerät, Wasser, Licht */
+  --blatt-dunkel:#276447;
+  --topf:#c98b66;
+  --geraet:#f1efe8;
+  --geraet-schatten:#cfcbbf;
+  --wasser:#8cc3dc;
+  --licht-warm:#f6d78c;
+  --marke-ton:#d8f0c2;          /* Aufmerksamkeitsfarbe auf Dunkel (Rahmen, Zeiger), auf Waldtinte 12,2 zu 1, nie Textfarbe auf Hell */
+  --nacht-grund:#26382f;        /* Karten auf Waldtinte */
+  --text-auf-dunkel:#f5f3ec;    /* auf Waldtinte 13,5 zu 1 */
+  --text-leise-dunkel:#b6c7bd;  /* auf Waldtinte 8,5 zu 1, auf Nachtgrund 7,0 zu 1 */
+  --linie-dunkel:#3b4e44;
+  --feld-rand:#69796f;          /* Rand der Eingabefelder auf Fläche 4,1 zu 1 (Bedienelement, mindestens 3 zu 1) */
+  --weiss:#ffffff;
+  --glas:rgba(255,255,255,.62); /* Karten auf Pastell, Text darauf wie auf Fläche */
+}

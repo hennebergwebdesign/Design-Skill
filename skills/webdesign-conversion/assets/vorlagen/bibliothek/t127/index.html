@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pflanzenpflege Set mit App für jede Pflanze | Markenname</title>
+<meta name="description" content="Messstab, Gießstation, Pflanzenlicht und eine App, die jede Pflanze einzeln kennt. Starterset ansehen, Rückruf anfragen, Lieferung nach Musterstadt.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../_basis/schriften.css">
+<link rel="stylesheet" href="marke.css">
+<link rel="stylesheet" href="../_basis/basis.css">
+<link rel="stylesheet" href="stil.css">
+<!-- Strukturierte Daten: Beispielwerte, vor der Auslieferung durch echte Angaben ersetzen. Keine Bewertungen erfunden. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Markenname Starterset Pflanzenpflege",
+  "description": "Starterset aus Messstab, Gießstation und Pflanzenlicht mit App für Pflanzenprofile, Gießplan und Messwerte.",
+  "image": "https://beispiel.invalid/bilder/starterset.webp",
+  "brand": { "@type": "Brand", "name": "Markenname" },
+  "offers": { "@type": "Offer", "price": "0.00", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://beispiel.invalid/#starterset" },
+  "seller": { "@type": "Organization", "name": "Markenname", "telephone": "+490000000000", "email": "hallo@beispiel.invalid", "address": { "@type": "PostalAddress", "streetAddress": "Musterstraße 1", "postalCode": "00000", "addressLocality": "Musterstadt", "addressCountry": "DE" } }
+}
+</script>
+</head>
+<body id="top">
+<a class="sprunglink" href="#inhalt">Zum Inhalt springen</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-pfeil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-zurueck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+  <symbol id="i-tel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-blatt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V11"/><path d="M12 14c-4.5 0-6.5-2.500-6.500-6.500 4.500 0 6.500 2.500 6.500 6.500zM12 11c0-3.500 1.800-6 6.500-6 0 3.500-1.800 6-6.500 6z"/></symbol>
+  <symbol id="i-tropfen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 6.200 6 10.500a6 6 0 0 1-12 0C6 9.200 12 3 12 3z"/></symbol>
+  <symbol id="i-sonne" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.500 1.500M17.500 17.500 19 19M19 5l-1.500 1.500M6.500 17.500 5 19"/></symbol>
+  <symbol id="i-kreis" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></symbol>
+
+  <!-- Eigene Zeichnungen der Geräte und Pflanzen, Farben über Klassen z-* aus stil.css (Tokens aus marke.css) -->
+  <symbol id="z-stab" viewBox="0 0 200 420">
+    <path class="z-s" d="M84 280 100 396 116 280z"/>
+    <rect class="z-k" x="78" y="28" width="44" height="262" rx="22"/>
+    <rect class="z-s" x="86" y="60" width="28" height="3" rx="1.500"/>
+    <circle class="z-l" cx="100" cy="102" r="12"/>
+    <circle class="z-d" cx="100" cy="102" r="5"/>
+    <rect class="z-s" x="90" y="300" width="20" height="5" rx="2.500"/>
+    <rect class="z-s" x="90" y="318" width="20" height="5" rx="2.500"/>
+  </symbol>
+  <symbol id="z-station" viewBox="0 0 320 420">
+    <rect class="z-k" x="50" y="130" width="190" height="250" rx="34"/>
+    <rect class="z-w" x="64" y="214" width="162" height="152" rx="24"/>
+    <rect class="z-s" x="84" y="92" width="122" height="52" rx="18"/>
+    <path class="z-rohr" d="M196 112c40-8 62 8 62 44v96" fill="none" stroke-width="12" stroke-linecap="round"/>
+    <circle class="z-l" cx="145" cy="118" r="7"/>
+    <rect class="z-s" x="104" y="330" width="82" height="4" rx="2"/>
+    <rect class="z-s" x="104" y="344" width="52" height="4" rx="2"/>
+  </symbol>
+  <symbol id="z-licht" viewBox="0 0 320 420">
+    <path class="z-kegel" d="M64 150 250 118 300 396 20 396z"/>
+    <ellipse class="z-s" cx="112" cy="396" rx="76" ry="12"/>
+    <ellipse class="z-k" cx="112" cy="390" rx="76" ry="12"/>
+    <rect class="z-k" x="106" y="150" width="12" height="244" rx="6"/>
+    <g transform="rotate(-9 112 150)"><rect class="z-k" x="34" y="112" width="216" height="38" rx="19"/><rect class="z-l" x="48" y="140" width="188" height="8" rx="4"/></g>
+    <circle class="z-s" cx="112" cy="152" r="13"/>
+  </symbol>
+  <symbol id="z-monstera" viewBox="0 0 260 360">
+    <path class="z-t" d="M80 250h100l-12 98a8 8 0 0 1-8 7H100a8 8 0 0 1-8-7z"/>
+    <rect class="z-t2" x="74" y="242" width="112" height="16" rx="8"/>
+    <path class="z-st" d="M130 246C128 200 120 160 96 120M130 246C132 190 150 150 176 108M130 246c0-50 0-100 0-150" fill="none" stroke-width="5" stroke-linecap="round"/>
+    <path class="z-b" d="M96 124C58 118 36 92 42 58c36 2 62 26 54 66z"/>
+    <path class="z-bd" d="M176 112c34-8 52-34 44-66-34 4-54 26-44 66z"/>
+    <path class="z-b" d="M130 100c-26-14-30-44-12-70 24 12 32 44 12 70z"/>
+    <path class="z-bd" d="M130 100c24-12 34-40 20-68-24 10-34 42-20 68z" opacity=".85"/>
+  </symbol>
+  <symbol id="z-sukkulente" viewBox="0 0 260 360">
+    <path class="z-t" d="M70 270h120l-10 74a8 8 0 0 1-8 7H88a8 8 0 0 1-8-7z"/>
+    <rect class="z-t2" x="64" y="262" width="132" height="16" rx="8"/>
+    <path class="z-b" d="M130 264C110 230 106 190 130 150c24 40 20 80 0 114z"/>
+    <path class="z-bd" d="M130 264C96 252 70 222 70 184c40 8 62 40 60 80z"/>
+    <path class="z-bd" d="M130 264c34-12 60-42 60-80-40 8-62 40-60 80z"/>
+    <path class="z-b" d="M124 266C84 270 52 252 40 224c38-6 70 8 84 42z"/>
+    <path class="z-b" d="M136 266c40 4 72-14 84-42-38-6-70 8-84 42z"/>
+  </symbol>
+  <symbol id="z-gummibaum" viewBox="0 0 260 420">
+    <path class="z-t" d="M84 320h92l-9 74a8 8 0 0 1-8 7h-58a8 8 0 0 1-8-7z"/>
+    <rect class="z-t2" x="78" y="312" width="104" height="16" rx="8"/>
+    <path class="z-st" d="M130 316V70" fill="none" stroke-width="6" stroke-linecap="round"/>
+    <ellipse class="z-bd" cx="96" cy="268" rx="40" ry="20" transform="rotate(-24 96 268)"/>
+    <ellipse class="z-b" cx="166" cy="222" rx="42" ry="20" transform="rotate(22 166 222)"/>
+    <ellipse class="z-bd" cx="94" cy="172" rx="42" ry="20" transform="rotate(-20 94 172)"/>
+    <ellipse class="z-b" cx="164" cy="120" rx="40" ry="19" transform="rotate(24 164 120)"/>
+    <ellipse class="z-bd" cx="126" cy="58" rx="22" ry="38"/>
+  </symbol>
+</svg>
+
+<header class="kopf" data-abschnitt="kopf">
+  <div class="kopf__leiste">
+    <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite"><svg width="26" height="26" aria-hidden="true" focusable="false"><use href="#i-blatt"/></svg>Markenname</a>
+    <nav class="kopf__nav" id="hauptnav" aria-label="Hauptnavigation" data-menue-ziel>
+      <ul class="kopf__menue">
+        <li><a href="#system">Geräte</a></li>
+        <li><a href="#profil">Pflanzenprofil</a></li>
+        <li><a href="#app">App</a></li>
+        <li><a href="#fragen">Fragen</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+        <li class="kopf__tel"><a href="tel:+490000000000"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-tel"/></svg>0000 000 000</a></li>
+      </ul>
+    </nav>
+    <a class="knopf knopf--hell kopf__knopf" href="#starterset">Starterset ansehen</a>
+    <button class="kopf__burger" type="button" data-menue aria-expanded="false" aria-controls="hauptnav">
+      <span class="sr-nur">Menü öffnen oder schließen</span>
+      <span class="burger" aria-hidden="true"></span>
+    </button>
+  </div>
+</header>
+
+<main id="inhalt">
+
+<!-- 1. Held: bildfüllende Bühne mit Regal voller Pflanzen, Messrahmen um eine Pflanze, Handy mit dem Profil davor -->
+<!-- Heldformel: Menschen mit vielen Zimmerpflanzen (Zielgruppe), jede Pflanze braucht etwas anderes und man weiß es nicht (Problem), ein System aus Geräten und App, das jede einzeln kennt (Lösung), Starterset mit Rückruf statt Kaufdruck (Risiko weg) -->
+<section class="held" aria-labelledby="held-titel" data-abschnitt="held" data-abdunkeln>
+  <div class="held__bild" aria-hidden="true">
+    <svg class="held__szene" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" focusable="false">
+      <defs>
+        <linearGradient id="g-wand" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34513f"/><stop offset="1" stop-color="#1c2a23"/></linearGradient>
+        <linearGradient id="g-fenster" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7f1d6" stop-opacity=".95"/><stop offset="1" stop-color="#cfe6d8" stop-opacity=".55"/></linearGradient>
+        <linearGradient id="g-strahl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7f1d6" stop-opacity=".28"/><stop offset="1" stop-color="#f7f1d6" stop-opacity="0"/></linearGradient>
+      </defs>
+      <rect width="1440" height="900" fill="url(#g-wand)"/>
+      <rect x="900" y="80" width="440" height="340" rx="14" fill="url(#g-fenster)"/>
+      <path d="M1120 80v340M900 250h440" stroke="#1c2a23" stroke-width="10" opacity=".55"/>
+      <polygon points="900,420 1340,420 1200,900 640,900" fill="url(#g-strahl)"/>
+      <rect x="0" y="640" width="1440" height="18" fill="#12201a"/>
+      <rect x="0" y="658" width="1440" height="242" fill="#16231c"/>
+      <use class="z-szene" href="#z-gummibaum" x="640" y="170" width="190" height="508"/>
+      <use class="z-szene" href="#z-monstera" x="860" y="330" width="300" height="415"/>
+      <use class="z-szene" href="#z-sukkulente" x="1170" y="500" width="130" height="180"/>
+      <use class="z-szene" href="#z-stab" x="985" y="598" width="30" height="64"/>
+      <g class="held__rahmen" fill="none" stroke="var(--marke-ton)" stroke-width="4" stroke-linecap="round">
+        <path d="M846 370v-40h40M1134 330h40v40M1174 720v40h-40M886 760h-40v-40"/>
+      </g>
+    </svg>
+  </div>
+  <div class="held__schleier" aria-hidden="true"></div>
+  <div class="wrap held__raster">
+    <div class="held__text">
+      <p class="held__marke">Markenname Pflanzenpflege</p>
+      <h1 id="held-titel">Viele Pflanzen, jede anders: ein System, das jede einzeln kennt</h1>
+      <p class="held__unter">Messstab, Gießstation und Pflanzenlicht sammeln Messwerte, die App legt für jede Pflanze ein eigenes Profil an und erinnert dich zur richtigen Zeit.</p>
+      <div class="held__aktion">
+        <a class="knopf knopf--hell" href="#starterset">Starterset ansehen</a>
+        <a class="held__tel" href="tel:+490000000000"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-tel"/></svg>Beratung 0000 000 000</a>
+      </div>
+      <p class="held__beleg" data-beispiel>Beispielangabe: Rückgabe innerhalb von 30 Tagen, Lieferung in 3 bis 5 Werktagen.</p>
+    </div>
+    <div class="held__handy" data-parallax="0.06" aria-hidden="true">
+      <div class="handy">
+        <div class="handy__schirm">
+          <p class="handy__kopf">Guten Morgen</p>
+          <div class="handy__karte handy__karte--bild"><svg viewBox="0 0 260 360" focusable="false"><use href="#z-monstera"/></svg><span class="handy__marke">Monstera erkannt</span></div>
+          <p class="handy__zeile"><strong>Fensterbank links</strong><span>Beispiel</span></p>
+          <p class="handy__zeile"><span>Bodenfeuchte</span><strong>38 %</strong></p>
+          <p class="handy__zeile"><span>Nächstes Gießen</span><strong>in 2 Tagen</strong></p>
+          <p class="handy__chip">Gießplan öffnen</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. System: drei Geräte als hohe Karten, eine App verbindet sie -->
+<section class="system sektion" id="system" aria-labelledby="system-titel" data-abschnitt="system">
+  <div class="wrap">
+    <h2 id="system-titel" class="system__titel" data-zeig>Drei Geräte, eine App</h2>
+    <p class="system__intro" data-zeig>Jedes Gerät übernimmt eine Aufgabe. Zusammen ergeben sie ein Bild von jeder einzelnen Pflanze.</p>
+    <ul class="system__raster" role="list" data-staffel>
+      <li class="system__karte" data-zeig>
+        <svg class="system__bild" viewBox="0 0 200 420" role="img" aria-label="Zeichnung des Messstabs mit Anzeigering"><use href="#z-stab"/></svg>
+        <h3>Messstab</h3>
+        <p class="system__text">Steckt in der Erde und misst Feuchte und Licht an der Stelle, an der die Pflanze steht.</p>
+        <a class="knopf knopf--glas" href="#starterset">Mehr erfahren<svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-pfeil"/></svg></a>
+      </li>
+      <li class="system__karte" data-zeig>
+        <svg class="system__bild" viewBox="0 0 320 420" role="img" aria-label="Zeichnung der Gießstation mit Wassertank und Schlauch"><use href="#z-station"/></svg>
+        <h3>Gießstation</h3>
+        <p class="system__text">Tank mit Füllstandsfenster und Pumpe. Die App sagt, wie viel Wasser welche Pflanze bekommt.</p>
+        <a class="knopf knopf--glas" href="#starterset">Mehr erfahren<svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-pfeil"/></svg></a>
+      </li>
+      <li class="system__karte" data-zeig>
+        <svg class="system__bild" viewBox="0 0 320 420" role="img" aria-label="Zeichnung des Pflanzenlichts auf dem Standfuß"><use href="#z-licht"/></svg>
+        <h3>Pflanzenlicht</h3>
+        <p class="system__text">Ergänzt Tageslicht dort, wo es fehlt, mit Zeitplan pro Standort und leisem Betrieb.</p>
+        <a class="knopf knopf--glas" href="#starterset">Mehr erfahren<svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-pfeil"/></svg></a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- 3. Profil: eine Aussage, zwei Merkmale, Bühne mit Profilwechsel (die Pflanze wählt, nicht der Durchschnitt) -->
+<section class="profil sektion" id="profil" aria-labelledby="profil-titel" data-abschnitt="profil" data-profil>
+  <div class="wrap">
+    <div class="profil__kopf">
+      <div class="profil__merkmale" data-zeig>
+        <p class="profil__schild"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-blatt"/></svg>Pflanzenprofil</p>
+        <p class="profil__merkmal">Arterkennung</p>
+        <p class="profil__merkmal">Standortprofil</p>
+      </div>
+      <div class="profil__aussage">
+        <h2 id="profil-titel" data-licht>Jede Art hat ihren Bedarf. Jeder Standort hat sein Licht. Jede Pflanze bekommt ihr eigenes Profil.</h2>
+        <p data-zeig>Du fotografierst die Pflanze, die App schlägt eine Art vor und legt ein Profil an. Danach zählen die Messwerte vom Stab, nicht ein Durchschnitt für alle.</p>
+      </div>
+    </div>
+    <div class="profil__buehne" data-zeig="skala">
+      <div class="profil__wahl" role="group" aria-label="Pflanzenprofil wählen">
+        <button type="button" class="profil__knopf" data-profil-wahl="0" aria-pressed="true">Monstera</button>
+        <button type="button" class="profil__knopf" data-profil-wahl="1" aria-pressed="false">Sukkulente</button>
+        <button type="button" class="profil__knopf" data-profil-wahl="2" aria-pressed="false">Gummibaum</button>
+      </div>
+      <div class="profil__tafeln">
+        <article class="profil__tafel" data-profil-tafel="0">
+          <div class="profil__zeichnung" aria-hidden="true"><svg viewBox="0 0 260 360" focusable="false"><use href="#z-monstera"/></svg><span class="profil__erkannt">Monstera erkannt, Beispiel</span></div>
+          <div class="profil__daten">
+            <h3>Monstera, Fensterbank links</h3>
+            <dl>
+              <div><dt>Gießrhythmus</dt><dd>alle 7 bis 9 Tage</dd></div>
+              <div><dt>Licht</dt><dd>hell, ohne pralle Mittagssonne</dd></div>
+              <div><dt>Bodenfeuchte vor dem Gießen</dt><dd>unter 40 %</dd></div>
+            </dl>
+            <p class="profil__hinweis" data-beispiel>Beispielwerte. Die App schlägt vor, du entscheidest.</p>
+          </div>
+        </article>
+        <article class="profil__tafel" data-profil-tafel="1">
+          <div class="profil__zeichnung" aria-hidden="true"><svg viewBox="0 0 260 360" focusable="false"><use href="#z-sukkulente"/></svg><span class="profil__erkannt">Sukkulente erkannt, Beispiel</span></div>
+          <div class="profil__daten">
+            <h3>Sukkulente, Regal Süd</h3>
+            <dl>
+              <div><dt>Gießrhythmus</dt><dd>alle 18 bis 21 Tage</dd></div>
+              <div><dt>Licht</dt><dd>sehr hell, viel Sonne</dd></div>
+              <div><dt>Bodenfeuchte vor dem Gießen</dt><dd>unter 15 %</dd></div>
+            </dl>
+            <p class="profil__hinweis" data-beispiel>Beispielwerte. Die App schlägt vor, du entscheidest.</p>
+          </div>
+        </article>
+        <article class="profil__tafel" data-profil-tafel="2">
+          <div class="profil__zeichnung" aria-hidden="true"><svg viewBox="0 0 260 420" focusable="false"><use href="#z-gummibaum"/></svg><span class="profil__erkannt">Gummibaum erkannt, Beispiel</span></div>
+          <div class="profil__daten">
+            <h3>Gummibaum, Wohnzimmer</h3>
+            <dl>
+              <div><dt>Gießrhythmus</dt><dd>alle 10 bis 12 Tage</dd></div>
+              <div><dt>Licht</dt><dd>hell bis halbschattig</dd></div>
+              <div><dt>Bodenfeuchte vor dem Gießen</dt><dd>unter 30 %</dd></div>
+            </dl>
+            <p class="profil__hinweis" data-beispiel>Beispielwerte. Die App schlägt vor, du entscheidest.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. Intelligenz: eine Überschrift, vier Karten in einer waagerechten Spur -->
+<section class="ki sektion" id="ki" aria-labelledby="ki-titel" data-abschnitt="ki">
+  <div class="wrap">
+    <p class="ki__schild" data-zeig><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-kreis"/></svg>Auswertung in der App</p>
+    <h2 id="ki-titel" class="ki__titel" data-zeig>Eine Auswertung, die zu deiner Pflanze passt</h2>
+    <p class="ki__intro" data-zeig>Die App vergleicht Messwerte mit dem Profil und zeigt, was sich verändert. Sie gibt Hinweise und keine Diagnosen.</p>
+  </div>
+  <div class="ki__feld">
+    <ul class="ki__spur" role="list" data-spur tabindex="0" aria-label="Vier Funktionen der Auswertung, waagerecht scrollbar">
+      <li class="ki__karte">
+        <div class="ki__bild" aria-hidden="true">
+          <svg viewBox="0 0 280 150" focusable="false"><path class="ki__flaeche" d="M0 150V96C30 90 40 60 70 66s40 30 70 20 40-50 70-46 50 22 70 12V150z"/><path class="ki__linie" d="M0 96C30 90 40 60 70 66s40 30 70 20 40-50 70-46 50 22 70 12" fill="none" stroke-width="3" stroke-linecap="round"/><circle class="ki__punkt" cx="210" cy="40" r="6"/></svg>
+          <span class="ki__zahl">9,6 dl</span>
+        </div>
+        <h3>Verlauf</h3>
+        <p>Jede Pflanze hat eine eigene Kurve aus Feuchte, Licht und Gießen. Schwankungen sind auf einen Blick zu sehen.</p>
+      </li>
+      <li class="ki__karte">
+        <div class="ki__bild ki__bild--chat" aria-hidden="true">
+          <p class="ki__blase">Warum hängen die Blätter heute?</p>
+          <p class="ki__blase ki__blase--antwort">Die Erde ist seit 9 Tagen trocken. Beispielantwort.</p>
+        </div>
+        <h3>Fragen stellen</h3>
+        <p>Frag die App, was zur Pflanze und ihren Messwerten passt. Antworten nennen die Werte, auf die sie sich stützen.</p>
+      </li>
+      <li class="ki__karte">
+        <div class="ki__bild ki__bild--plan" aria-hidden="true">
+          <span class="ki__tag">Mo</span><span class="ki__tag ki__tag--an">Di</span><span class="ki__tag">Mi</span><span class="ki__tag">Do</span><span class="ki__tag ki__tag--an">Fr</span><span class="ki__tag">Sa</span><span class="ki__tag">So</span>
+        </div>
+        <h3>Gießplan</h3>
+        <p>Der Plan richtet sich nach Art, Topfgröße und gemessener Feuchte und verschiebt sich, wenn es wärmer oder dunkler wird.</p>
+      </li>
+      <li class="ki__karte">
+        <div class="ki__bild ki__bild--hinweis" aria-hidden="true">
+          <span class="ki__ring"><svg width="26" height="26" focusable="false"><use href="#i-tropfen"/></svg></span>
+          <p class="ki__meldung">Wasser im Tank fast leer</p>
+        </div>
+        <h3>Hinweise</h3>
+        <p>Meldungen kommen nur, wenn sich etwas ändert: Tank leer, Licht zu knapp, Batterie schwach. Ruhige Tage bleiben ruhig.</p>
+      </li>
+    </ul>
+    <div class="wrap ki__steuer">
+      <button class="ki__pfeil" type="button" data-spur-zurueck aria-label="Eine Karte zurück"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-zurueck"/></svg></button>
+      <button class="ki__pfeil" type="button" data-spur-weiter aria-label="Eine Karte weiter"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-pfeil"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<!-- 5. App: eine Zeile mit fünf Handys, die Plattform als Ganzes -->
+<section class="app sektion" id="app" aria-labelledby="app-titel" data-abschnitt="app">
+  <div class="wrap app__kopf">
+    <p class="app__schild" data-zeig>Die App von Markenname</p>
+    <h2 id="app-titel" data-zeig>Eine App. Alle Pflanzen. Ruhe im Kopf.</h2>
+    <p data-zeig>Geräte, Profile, Gießplan und Fragen an einem Ort, für ein Zuhause mit zwei Pflanzen oder mit zwanzig.</p>
+    <a class="knopf" href="#starterset" data-zeig>Starterset ansehen<svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-pfeil"/></svg></a>
+  </div>
+  <div class="app__reihe" data-staffel aria-hidden="true">
+    <div class="handy handy--klein" data-zeig>
+      <div class="handy__schirm"><p class="handy__kopf">Meine Pflanzen</p>
+        <p class="handy__zeile"><strong>Monstera</strong><span class="handy__punkt"></span></p>
+        <p class="handy__zeile"><strong>Gummibaum</strong><span class="handy__punkt handy__punkt--warn"></span></p>
+        <p class="handy__zeile"><strong>Sukkulente</strong><span class="handy__punkt"></span></p>
+        <p class="handy__zeile"><strong>Farn Bad</strong><span class="handy__punkt"></span></p>
+        <p class="handy__chip">Pflanze hinzufügen</p></div></div>
+    <div class="handy handy--klein" data-zeig>
+      <div class="handy__schirm"><p class="handy__kopf">Monstera</p>
+        <div class="handy__karte handy__karte--bild"><svg viewBox="0 0 260 360" focusable="false"><use href="#z-monstera"/></svg></div>
+        <p class="handy__zeile"><span>Licht heute</span><strong>6 Std</strong></p>
+        <p class="handy__zeile"><span>Feuchte</span><strong>38 %</strong></p></div></div>
+    <div class="handy handy--klein" data-zeig>
+      <div class="handy__schirm"><p class="handy__kopf">Gießplan</p>
+        <p class="handy__zeile"><span>Di</span><strong>Monstera</strong></p>
+        <p class="handy__zeile"><span>Fr</span><strong>Gummibaum</strong></p>
+        <p class="handy__zeile"><span>Di</span><strong>Farn Bad</strong></p>
+        <p class="handy__zeile"><span>Mo</span><strong>Tank füllen</strong></p></div></div>
+    <div class="handy handy--klein" data-zeig>
+      <div class="handy__schirm"><p class="handy__kopf">Verlauf</p>
+        <svg class="handy__kurve" viewBox="0 0 120 70" focusable="false"><path d="M0 50C14 46 18 24 34 28s18 22 34 12 20-28 36-24 12 14 16 8" fill="none" stroke-width="3" stroke-linecap="round"/></svg>
+        <p class="handy__zeile"><span>Woche</span><strong>7 Tage</strong></p>
+        <p class="handy__zeile"><span>Gegossen</span><strong>2 mal</strong></p></div></div>
+    <div class="handy handy--klein" data-zeig>
+      <div class="handy__schirm"><p class="handy__kopf">Fragen</p>
+        <p class="handy__blase">Wie viel Licht braucht der Farn im Bad?</p>
+        <p class="handy__blase handy__blase--antwort">Mäßig, Beispielantwort.</p>
+        <p class="handy__chip">Frage stellen</p></div></div>
+  </div>
+</section>
+
+<!-- 6. Vertrauen: Aussage über die Entwicklung, Mosaik der Standorte, Partnerband als Platzhalter -->
+<section class="vertrauen sektion" id="vertrauen" aria-labelledby="vertrauen-titel" data-abschnitt="vertrauen">
+  <div class="wrap vertrauen__raster">
+    <div class="vertrauen__mosaik" aria-hidden="true" data-staffel>
+      <figure class="vertrauen__kachel vertrauen__kachel--a" data-zeig><svg viewBox="0 0 260 360" focusable="false"><use href="#z-monstera"/></svg></figure>
+      <figure class="vertrauen__kachel vertrauen__kachel--b" data-zeig><svg viewBox="0 0 260 360" focusable="false"><use href="#z-sukkulente"/></svg></figure>
+      <figure class="vertrauen__kachel vertrauen__kachel--c" data-zeig><svg viewBox="0 0 260 420" focusable="false"><use href="#z-gummibaum"/></svg></figure>
+      <figure class="vertrauen__kachel vertrauen__kachel--d" data-zeig><svg viewBox="0 0 200 420" focusable="false"><use href="#z-stab"/></svg></figure>
+    </div>
+    <div class="vertrauen__text">
+      <h2 id="vertrauen-titel" data-zeig>Für Wohnungen, Regale und Fensterbänke</h2>
+      <p class="vertrauen__gross" data-zeig data-beispiel>Mitentwickelt mit Gärtnern, Botanikerinnen und Elektronikern, Beispielaussage.</p>
+      <p data-zeig>Ob Altbau mit großen Fenstern oder Büro ohne Tageslicht: Das System passt sich dem Standort an, nicht umgekehrt.</p>
+    </div>
+  </div>
+  <div class="vertrauen__partner">
+    <p class="vertrauen__label wrap">Beispiel: hier stehen echte Partner und Fachstellen, keine Fremdlogos</p>
+    <div class="band" style="--band-abstand:2rem;--band-dauer:40s" aria-hidden="true">
+      <div class="band__spur"><span>Partnername Gärtnerei</span><span>Partnername Fachhandel</span><span>Partnername Hochschule</span><span>Partnername Verband</span><span>Partnername Baumarkt</span><span>Partnername Messe</span></div>
+      <div class="band__spur"><span>Partnername Gärtnerei</span><span>Partnername Fachhandel</span><span>Partnername Hochschule</span><span>Partnername Verband</span><span>Partnername Baumarkt</span><span>Partnername Messe</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. Nachweise: vier Kennzahlen mit Trennlinien, Beispielwerte -->
+<section class="nachweise sektion" id="nachweise" aria-labelledby="nachweise-titel" data-abschnitt="nachweise">
+  <div class="wrap">
+    <h2 id="nachweise-titel" class="sr-nur">Das System in Zahlen</h2>
+    <ul class="nachweise__liste" role="list" data-staffel>
+      <li data-zeig><svg width="40" height="40" aria-hidden="true" focusable="false"><use href="#i-blatt"/></svg><p class="nachweise__zahl"><span data-zaehle="400">400</span></p><p>Pflanzenarten in der Datenbank</p></li>
+      <li data-zeig><svg width="40" height="40" aria-hidden="true" focusable="false"><use href="#i-sonne"/></svg><p class="nachweise__zahl"><span data-zaehle="2">2</span></p><p>Messwerte in einem Stab: Feuchte und Licht</p></li>
+      <li data-zeig><svg width="40" height="40" aria-hidden="true" focusable="false"><use href="#i-tropfen"/></svg><p class="nachweise__zahl"><span data-zaehle="3">3</span></p><p>Geräte, die über eine App laufen</p></li>
+      <li data-zeig><svg width="40" height="40" aria-hidden="true" focusable="false"><use href="#i-kreis"/></svg><p class="nachweise__zahl"><span data-zaehle="30">30</span></p><p>Tage Rückgabe, ohne Angabe von Gründen</p></li>
+    </ul>
+    <p class="nachweise__hinweis" data-beispiel>Alle Zahlen sind Beispielwerte und vor der Auslieferung durch geprüfte Angaben zu ersetzen.</p>
+  </div>
+</section>
+
+<!-- 8. Stimmen: waagerechte Spur mit hohen Karten, Beispieltexte ohne Sterne -->
+<section class="stimmen sektion" id="stimmen" aria-labelledby="stimmen-titel" data-abschnitt="stimmen">
+  <div class="wrap">
+    <h2 id="stimmen-titel" data-zeig>So sieht der Alltag aus</h2>
+    <p class="stimmen__intro" data-zeig data-beispiel>Beispieltexte, keine echten Kundenstimmen. Vor der Auslieferung durch freigegebene Aussagen ersetzen.</p>
+  </div>
+  <div class="stimmen__feld">
+    <ul class="stimmen__spur" role="list" data-spur tabindex="0" aria-label="Sechs Beispielstimmen, waagerecht scrollbar">
+      <li class="stimmen__karte stimmen__karte--mint"><svg viewBox="0 0 260 360" aria-hidden="true" focusable="false"><use href="#z-monstera"/></svg><h3>Gießen ohne Raten</h3><p>Beispiel: Ich weiß morgens, welche Pflanze heute Wasser braucht.</p></li>
+      <li class="stimmen__karte stimmen__karte--pfirsich"><svg viewBox="0 0 260 360" aria-hidden="true" focusable="false"><use href="#z-sukkulente"/></svg><h3>Einfach einrichten</h3><p>Beispiel: Stab in die Erde, App öffnen, Pflanze fotografieren.</p></li>
+      <li class="stimmen__karte stimmen__karte--himmel"><svg viewBox="0 0 320 420" aria-hidden="true" focusable="false"><use href="#z-station"/></svg><h3>Urlaub ohne Sorge</h3><p>Beispiel: Der Tank reicht für meine Reise, die App meldet sich bei Bedarf.</p></li>
+      <li class="stimmen__karte stimmen__karte--mint"><svg viewBox="0 0 260 420" aria-hidden="true" focusable="false"><use href="#z-gummibaum"/></svg><h3>Jede Pflanze anders</h3><p>Beispiel: Der Gummibaum und der Farn bekommen nicht mehr denselben Rhythmus.</p></li>
+      <li class="stimmen__karte stimmen__karte--pfirsich"><svg viewBox="0 0 320 420" aria-hidden="true" focusable="false"><use href="#z-licht"/></svg><h3>Licht im Büro</h3><p>Beispiel: Das Licht geht nach Plan an und stört niemanden.</p></li>
+      <li class="stimmen__karte stimmen__karte--himmel"><svg viewBox="0 0 200 420" aria-hidden="true" focusable="false"><use href="#z-stab"/></svg><h3>Klare Zahlen</h3><p>Beispiel: Ich sehe, ob es am Wasser oder am Licht liegt.</p></li>
+    </ul>
+    <div class="wrap stimmen__steuer">
+      <button class="ki__pfeil" type="button" data-spur-zurueck aria-label="Eine Karte zurück"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-zurueck"/></svg></button>
+      <button class="ki__pfeil" type="button" data-spur-weiter aria-label="Eine Karte weiter"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-pfeil"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<!-- 9. Fragen: Einwände als Akkordeon -->
+<section class="fragen sektion" id="fragen" aria-labelledby="fragen-titel" data-abschnitt="fragen">
+  <div class="wrap fragen__raster">
+    <h2 id="fragen-titel" data-zeig>Was du vor dem Kauf wissen möchtest</h2>
+    <div class="fragen__liste" data-exklusiv data-zeig>
+      <details><summary>Brauche ich alle drei Geräte?</summary><p>Nein. Der Messstab funktioniert allein mit der App. Gießstation und Pflanzenlicht ergänzen ihn. Beispielantwort, je Sortiment anpassen.</p></details>
+      <details><summary>Funktioniert das System ohne ständiges WLAN?</summary><p>Die Geräte speichern Werte und gleichen sie ab, sobald sie wieder verbunden sind. Beispielantwort, technische Details je Gerät prüfen.</p></details>
+      <details><summary>Was passiert mit meinen Daten?</summary><p>Messwerte und Fotos gehören dir und liegen auf Servern in der EU. Du kannst sie jederzeit löschen. Beispielantwort, mit dem Datenschutzkonzept abgleichen.</p></details>
+      <details><summary>Wie viele Pflanzen kann ich anlegen?</summary><p>Beliebig viele. Für jede Pflanze mit Messstab entsteht ein eigenes Profil, andere lassen sich mit Foto und Gießerinnerung anlegen. Beispielantwort.</p></details>
+      <details><summary>Kann ich das Set zurückgeben?</summary><p>Ja, innerhalb von 30 Tagen nach Lieferung ohne Angabe von Gründen. Wir erstatten den Kaufpreis. Beispielantwort, Fristen je Händler prüfen.</p></details>
+      <details><summary>Wie lange dauert die Lieferung?</summary><p>In der Regel drei bis fünf Werktage innerhalb Deutschlands. Beispielantwort, Lieferzeit je Lager prüfen.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- 10. Starterset: bildfüllender Abschluss mit einer Aussage und der Hauptaktion -->
+<section class="starterset" id="starterset" aria-labelledby="starterset-titel" data-abschnitt="starterset">
+  <div class="starterset__grund" aria-hidden="true" data-parallax="0.08">
+    <svg viewBox="0 0 1440 700" preserveAspectRatio="xMidYMid slice" focusable="false">
+      <defs><linearGradient id="g-schluss" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2d4a3a"/><stop offset="1" stop-color="#1c2a23"/></linearGradient></defs>
+      <rect width="1440" height="700" fill="url(#g-schluss)"/>
+      <rect y="560" width="1440" height="140" fill="#16231c"/>
+      <use class="z-szene" href="#z-gummibaum" x="80" y="190" width="200" height="540"/>
+      <use class="z-szene" href="#z-station" x="1020" y="300" width="240" height="320"/>
+      <use class="z-szene" href="#z-monstera" x="1210" y="360" width="220" height="305"/>
+      <use class="z-szene" href="#z-licht" x="760" y="250" width="240" height="320"/>
+    </svg>
+  </div>
+  <div class="wrap starterset__inhalt">
+    <p class="starterset__marke">Markenname Starterset</p>
+    <h2 id="starterset-titel" data-zeig>Starte mit drei Geräten und einer App</h2>
+    <ul class="starterset__liste" role="list" data-zeig>
+      <li><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-kreis"/></svg>Messstab, Gießstation und Pflanzenlicht, Beispielinhalt</li>
+      <li><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-kreis"/></svg>App mit Pflanzenprofilen und Gießplan</li>
+      <li><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-kreis"/></svg>30 Tage Rückgabe, Beispielangabe</li>
+    </ul>
+    <div class="starterset__aktion" data-zeig>
+      <a class="knopf knopf--hell" href="#kontakt">Starterset ansehen</a>
+      <a class="starterset__tel" href="tel:+490000000000"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-tel"/></svg>0000 000 000</a>
+    </div>
+  </div>
+</section>
+
+<!-- 11. Kontakt: Rückruf Formular, fünf Felder, nichts wird gesendet -->
+<section class="kontakt sektion" id="kontakt" aria-labelledby="kontakt-titel" data-abschnitt="kontakt">
+  <div class="wrap kontakt__raster">
+    <div class="kontakt__text">
+      <h2 id="kontakt-titel" data-zeig>Wir beraten dich zum passenden Set</h2>
+      <p data-zeig>Du weißt nicht, wie viele Messstäbe du brauchst? Beschreibe kurz deine Pflanzen, wir rufen zu einem Termin deiner Wahl zurück.</p>
+      <ul class="kontakt__daten" role="list">
+        <li><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-tel"/></svg><a href="tel:+490000000000">0000 000 000</a></li>
+        <li><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg><a href="mailto:hallo@beispiel.invalid">hallo@beispiel.invalid</a></li>
+        <li><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-pin"/></svg><span>Musterstraße 1, 00000 Musterstadt</span></li>
+      </ul>
+    </div>
+    <!-- Cloudflare Turnstile: im Projekt hier <div class="cf-turnstile" data-sitekey="PLATZHALTER"></div> einsetzen und serverseitig prüfen. Kein Schlüssel in der Vorlage -->
+    <form class="formular" data-formular action="#" method="post" novalidate data-zeig>
+      <div class="formular__feld formular__feld--breit"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" placeholder="Vor und Nachname" required></div>
+      <div class="formular__feld"><label for="f-mail">E-Mail</label><input id="f-mail" name="email" type="email" autocomplete="email" placeholder="name@beispiel.invalid" required><small class="feld__hinweis">Dorthin schicken wir die Terminbestätigung.</small></div>
+      <div class="formular__feld"><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" placeholder="0000 000 000"><small class="feld__hinweis">Nur für den Rückruf, freiwillig.</small></div>
+      <div class="formular__feld formular__feld--breit"><label for="f-anzahl">Anzahl deiner Pflanzen</label><select id="f-anzahl" name="anzahl"><option>Bis 5</option><option>6 bis 15</option><option>Mehr als 15</option></select></div>
+      <div class="formular__feld formular__feld--breit"><label for="f-anliegen">Dein Anliegen</label><textarea id="f-anliegen" name="anliegen" rows="3" placeholder="Zum Beispiel: Ich habe 8 Pflanzen an zwei Fenstern."></textarea></div>
+      <p class="formular__recht formular__feld--breit">Mit dem Absenden stimmst du der Verarbeitung deiner Angaben für den Rückruf zu. Mehr dazu in der <a href="#fuss">Datenschutzerklärung</a>.</p>
+      <button class="knopf formular__senden" type="submit">Rückruf anfragen</button>
+      <p class="formular__meldung formular__feld--breit" data-formular-meldung role="status" hidden>Beispielformular: In dieser Vorlage wird nichts gesendet. Turnstile, Bestätigungsmail und Versand baut der Bauablauf.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
+  <div class="wrap fuss__raster">
+    <div class="fuss__marke">
+      <p class="fuss__logo">Markenname</p>
+      <p>Pflanzenpflege mit Geräten und App, entworfen in Musterstadt.</p>
+      <a class="knopf knopf--hell" href="#starterset">Starterset ansehen</a>
+    </div>
+    <nav aria-label="Produkt">
+      <p class="fuss__titel">Produkt</p>
+      <ul role="list"><li><a href="#system">Geräte</a></li><li><a href="#profil">Pflanzenprofil</a></li><li><a href="#app">App</a></li></ul>
+    </nav>
+    <nav aria-label="Hilfe">
+      <p class="fuss__titel">Hilfe</p>
+      <ul role="list"><li><a href="#fragen">Fragen</a></li><li><a href="#kontakt">Kontakt</a></li><li><a href="tel:+490000000000">0000 000 000</a></li></ul>
+    </nav>
+    <div class="fuss__brief">
+      <p class="fuss__titel">Neuigkeiten per E-Mail</p>
+      <form class="fuss__form" data-formular action="#" method="post" novalidate>
+        <label class="sr-nur" for="f-news">E-Mail</label>
+        <input id="f-news" name="email" type="email" autocomplete="email" placeholder="name@beispiel.invalid" required>
+        <button class="knopf knopf--hell" type="submit">Anmelden</button>
+        <p class="fuss__klein feld__hinweis">Pflegetipps und Neuigkeiten, jederzeit abbestellbar. Beispieltext.</p>
+        <p class="fuss__klein" data-formular-meldung role="status" hidden>Beispielformular: Es wird nichts gesendet.</p>
+      </form>
+    </div>
+  </div>
+  <div class="wrap fuss__recht">
+    <p>© Markenname, Musterstadt. Alle Angaben dieser Vorlage sind Beispiele.</p>
+    <ul role="list"><li><a href="#">Impressum</a></li><li><a href="#">Datenschutz</a></li><li><a href="#">Widerruf</a></li></ul>
+  </div>
+</footer>
+
+<script src="../_basis/bewegung.js"></script>
+<script src="stil.js"></script>
+</body>
+</html>

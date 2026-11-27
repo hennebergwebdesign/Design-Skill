@@ -1,0 +1,132 @@
+[
+  {
+    "id": "kopf",
+    "name": "Schwebende Kopfleiste",
+    "kategorie": "navigation",
+    "selektor": "header[data-abschnitt=\"kopf\"]",
+    "prinzip": "Eine abgesetzte dunkle Leiste bleibt über jedem Bild lesbar und hält Hauptaktion und Telefon in Reichweite.",
+    "css": ".kopf, .burger",
+    "js": "bewegung.js (data-menue, Abschnittsanzeige)",
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln des Präfix aus stil.css mitnehmen. Symbole i-tel und i-blatt aus dem SVG Block am Seitenanfang, Burger Regeln (.burger) mitnehmen."
+  },
+  {
+    "id": "held",
+    "name": "Held mit Regal, Messrahmen und Handy",
+    "kategorie": "hero",
+    "selektor": "section[data-abschnitt=\"held\"]",
+    "prinzip": "Ein bildfüllender Raum mit der Aussage links und dem Beweis (Handy mit Profil) rechts zeigt Produkt und Nutzen, bevor gescrollt wird.",
+    "css": ".held, .held__*, .handy, .z-*",
+    "js": "bewegung.js (data-abdunkeln, data-parallax)",
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln des Präfix aus stil.css mitnehmen. Symbole i-tel und die Zeichnungen z-stab, z-monstera, z-sukkulente, z-gummibaum aus dem SVG Block; Klassen .handy, .handy__* und .z-* aus dem Gemeinsamen Teil von stil.css mitnehmen."
+  },
+  {
+    "id": "system",
+    "name": "Drei Geräte, eine App",
+    "kategorie": "product",
+    "selektor": "section[data-abschnitt=\"system\"]",
+    "prinzip": "Drei hohe Karten gleicher Form machen ein Ökosystem lesbar: eine Aufgabe je Gerät, jedes mit eigenem Weg zur Detailseite.",
+    "css": ".system, .system__*",
+    "js": "bewegung.js (data-zeig, data-staffel)",
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln des Präfix aus stil.css mitnehmen. Zeichnungen z-stab, z-station, z-licht und Symbol i-pfeil aus dem SVG Block; .z-* Klassen mitnehmen."
+  },
+  {
+    "id": "profil",
+    "name": "Pflanzenprofil mit Profilwechsel",
+    "kategorie": "interactive",
+    "selektor": "section[data-abschnitt=\"profil\"]",
+    "prinzip": "Die Seite zeigt am Beispiel, dass das Einzelne zählt statt des Durchschnitts: Auswahl wechselt Erkennung, Werte und Bild.",
+    "css": ".profil, .profil__*",
+    "js": "stil.js (Profilwechsel), bewegung.js (data-licht)",
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln des Präfix aus stil.css mitnehmen. Ohne JavaScript stehen alle drei Profile untereinander. Zeichnungen z-monstera, z-sukkulente, z-gummibaum und i-blatt, .z-* Klassen und stil.js (Profilwechsel) mitnehmen."
+  },
+  {
+    "id": "ki",
+    "name": "Auswertung als waagerechte Kartenspur",
+    "kategorie": "features",
+    "selektor": "section[data-abschnitt=\"ki\"]",
+    "prinzip": "Vier gleich große Karten mit je einem Nutzen in einer Spur laden zum Weiterwischen ein und halten die Seite kurz.",
+    "css": ".ki, .ki__*, .stimmen__spur (Spur teilt Regeln)",
+    "js": "stil.js (data-spur, Pfeile)",
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln des Präfix aus stil.css mitnehmen. Symbole i-kreis, i-tropfen, i-pfeil, i-zurueck. Pfeilregeln .ki__pfeil und die Spur (.ki__spur) teilt sich der Abschnitt stimmen. stil.js (Spuren) mitnehmen."
+  },
+  {
+    "id": "app",
+    "name": "App Reihe mit fünf Handys",
+    "kategorie": "product",
+    "selektor": "section[data-abschnitt=\"app\"]",
+    "prinzip": "Eine Reihe versetzter Handys zeigt die ganze Plattform in einem Blick und beantwortet, wie es sich anfühlt, damit zu arbeiten.",
+    "css": ".app, .app__*, .handy",
+    "js": "bewegung.js (data-zeig, data-staffel)",
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln des Präfix aus stil.css mitnehmen. Die Klassen .handy und .handy__* sowie die Zeichnung z-monstera mitnehmen."
+  },
+  {
+    "id": "vertrauen",
+    "name": "Standortmosaik und Partnerband",
+    "kategorie": "trust",
+    "selektor": "section[data-abschnitt=\"vertrauen\"]",
+    "prinzip": "Vier Kacheln zeigen die Wirklichkeit der Zielgruppe (Wohnung, Regal), ein Partnerband trägt Fachbeleg, hier nur als Platzhalter.",
+    "css": ".vertrauen, .vertrauen__*, .band",
+    "js": "bewegung.js (data-zeig, Band aus basis.css)",
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln des Präfix aus stil.css mitnehmen. Partnernamen sind Platzhalter, keine Fremdlogos ohne Freigabe einsetzen. Zeichnungen z-monstera, z-sukkulente, z-gummibaum, z-stab, .z-* Klassen und .band aus basis.css mitnehmen."
+  },
+  {
+    "id": "nachweise",
+    "name": "Vier Kennzahlen mit Trennlinien",
+    "kategorie": "trust",
+    "selektor": "section[data-abschnitt=\"nachweise\"]",
+    "prinzip": "Vier kurze Zahlen mit Beschriftung belegen Umfang und Einfachheit auf einen Blick, hier als gekennzeichnete Beispielwerte.",
+    "css": ".nachweise, .nachweise__*",
+    "js": "bewegung.js (data-zaehle, data-staffel)",
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln des Präfix aus stil.css mitnehmen. Zahlen vor der Auslieferung belegen. Symbole i-blatt, i-sonne, i-tropfen, i-kreis."
+  },
+  {
+    "id": "stimmen",
+    "name": "Beispielstimmen als hohe Karten",
+    "kategorie": "testimonials",
+    "selektor": "section[data-abschnitt=\"stimmen\"]",
+    "prinzip": "Situationen statt Sterne: jede Karte zeigt eine Alltagslage mit Gerät, in einer waagerechten Spur, klar als Beispiel markiert.",
+    "css": ".stimmen, .stimmen__*",
+    "js": "stil.js (data-spur, Pfeile)",
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln des Präfix aus stil.css mitnehmen. Texte durch freigegebene Aussagen ersetzen. Spurregeln (.stimmen__spur) und Pfeilregeln .ki__pfeil mitnehmen, dazu stil.js (Spuren) und die Zeichnungen z-*."
+  },
+  {
+    "id": "fragen",
+    "name": "Einwände als Akkordeon",
+    "kategorie": "faq",
+    "selektor": "section[data-abschnitt=\"fragen\"]",
+    "prinzip": "Sechs Einwände beantworten die Kaufhürden direkt vor der Aktion, ein Eintrag offen hält die Liste ruhig.",
+    "css": ".fragen, .fragen__*",
+    "js": "bewegung.js (data-exklusiv)",
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln des Präfix aus stil.css mitnehmen. Antworten sind Beispiele."
+  },
+  {
+    "id": "starterset",
+    "name": "Bildfüllender Abschluss mit Hauptaktion",
+    "kategorie": "cta",
+    "selektor": "section[data-abschnitt=\"starterset\"]",
+    "prinzip": "Vor dem Formular wiederholt ein ruhiger Bildraum das Angebot in drei Zeilen und die eine Aktion mit Telefon als zweiter Weg.",
+    "css": ".starterset, .starterset__*",
+    "js": "bewegung.js (data-parallax, data-zeig)",
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln des Präfix aus stil.css mitnehmen. Symbole i-kreis, i-tel und die Zeichnungen z-gummibaum, z-station, z-monstera, z-licht mit den .z-* Klassen."
+  },
+  {
+    "id": "kontakt",
+    "name": "Rückruf Formular mit Kontaktdaten",
+    "kategorie": "forms",
+    "selektor": "section[data-abschnitt=\"kontakt\"]",
+    "prinzip": "Fünf Felder mit Hinweisen unter E-Mail und Telefon senken die Hürde, beraten zu lassen, ohne gleich zu kaufen.",
+    "css": ".kontakt, .kontakt__*, .formular, .formular__*",
+    "js": "stil.js (Formular ohne Versand)",
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln des Präfix aus stil.css mitnehmen. Symbole i-tel, i-mail, i-pin. Turnstile und Versand ergänzen, stil.js (Formular ohne Versand) mitnehmen."
+  },
+  {
+    "id": "fuss",
+    "name": "Fuß mit Newsletter",
+    "kategorie": "footer",
+    "selektor": "footer[data-abschnitt=\"fuss\"]",
+    "prinzip": "Ein dunkler Fuß sammelt Navigation, Telefon und eine leise zweite Aktion (Newsletter) ein, ohne die Hauptaktion zu verdrängen.",
+    "css": ".fuss, .fuss__*",
+    "js": "stil.js (Formular ohne Versand)",
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln des Präfix aus stil.css mitnehmen. Rechtstexte je Kunde ergänzen, stil.js (Formular ohne Versand) mitnehmen."
+  }
+]
