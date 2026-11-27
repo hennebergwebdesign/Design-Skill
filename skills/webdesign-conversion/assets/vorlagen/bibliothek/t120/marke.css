@@ -1,0 +1,35 @@
+/* marke.css der Vorlage "Bodentest per Probe": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast (selbst gerechnet, WCAG): Text auf Fläche, Mindestwert 4,5 zu 1, große Schrift und Bedienelemente 3 zu 1. */
+:root{
+  --flaeche:#f3f1ea;            /* Kreide */
+  --flaeche-alt:#dfe6d3;        /* Moosnebel, Band des Ablaufs */
+  --flaeche-dunkel:#211c17;     /* Humus */
+  --text:#211c17;               /* auf Fläche 14,9 zu 1, auf Fläche alt 13,2 zu 1 */
+  --text-leise:#5a574c;         /* auf Fläche 6,4 zu 1, auf Fläche alt 5,6 zu 1 */
+  --linie:#c9cfbb;
+  --akzent:#2c4a36;             /* Hauptaktion: Tannengrün mit hellem Text (8,7 zu 1) */
+  --akzent-text:#f3f1ea;
+  --schrift-titel:'Newsreader',Georgia,serif;
+  --schrift-text:'Instrument Sans',system-ui,sans-serif;
+  --schrift-mono:ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;
+  --radius-knopf:999px;
+  --radius-karte:28px;
+  --radius-bild:22px;
+
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:400;
+  --titel-spur:-0.015em;
+  --ocker:#d99a5b;              /* Lichtfleck und Marker auf Dunkel (auf Humus 7,0 zu 1), nie Textfarbe auf Hell */
+  --terra:#c06a4a;
+  --salbei:#a9c4a0;
+  --tuerkis:#8fc3b8;
+  --karte:#fbfaf6;              /* Karten auf Hell: Text 16,2 zu 1, Leisetext 6,9 zu 1 */
+  --fach-grund:#f6f5f1;         /* Fachpersonenabschnitt: Text 15,5 zu 1, Leisetext 6,6 zu 1 */
+  --humus-warm:#4a3a2c;         /* warmer Fleck im dunklen Verlauf: heller Text darauf 9,6 zu 1 */
+  --text-auf-dunkel:#f3f1ea;    /* auf Humus 14,9 zu 1 */
+  --text-leise-dunkel:#cdc6b8;  /* auf Humus 9,9 zu 1 */
+  --linie-dunkel:#4a4036;
+  --ende-hell:#e3b9a0;          /* hellster Ton des Schlussverlaufs: Text darauf 9,4 zu 1 */
+  --feld-rand:#7a7668;          /* Rand von Bedienelementen auf Fläche 4,0 zu 1 (Mindestwert 3 zu 1) */
+  --weiss:#ffffff;
+}
