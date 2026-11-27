@@ -1,0 +1,32 @@
+/* marke.css der Vorlage "Projektentwickler mit Bewegtbild Held": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast (selbst gerechnet, WCAG): Text auf Fläche mindestens 4,5 zu 1, Bedienelemente mindestens 3 zu 1. */
+:root{
+  --flaeche:#efede8;            /* warmes Hellgrau */
+  --flaeche-alt:#dde3dc;        /* Salbeiband zwischen den Abschnitten */
+  --flaeche-dunkel:#1b1e1d;     /* Fuß, Held Rahmen, dunkle Knöpfe */
+  --text:#1b1e1d;               /* auf Fläche 14,4 zu 1, auf Fläche alt 12,9 zu 1, auf Weiß 16,8 zu 1 */
+  --text-leise:#525853;         /* auf Fläche 6,2 zu 1, auf Fläche alt 5,6 zu 1, auf Weiß 7,3 zu 1 */
+  --linie:#c9cdc6;
+  --akzent:#1b1e1d;             /* Hauptaktion: dunkler Knopf mit hellem Text (15,2 zu 1) */
+  --akzent-text:#f5f3ee;
+  --schrift-titel:'Schibsted Grotesk',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:14px;
+  --radius-bild:12px;
+
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:400;
+  --titel-spur:-0.045em;
+  --schrift-marke:'Lexend',system-ui,sans-serif;   /* nur Wortmarke, breite Grotesk */
+  --signal:#e8873a;             /* Hinweis auf Karten ("Letzte Einheiten"), mit dunklem Text 6,4 zu 1, nie Schriftfarbe */
+  --text-auf-dunkel:#ffffff;    /* auf Fuß 16,8 zu 1 */
+  --text-leise-dunkel:#b4bab5;  /* auf Fuß 8,5 zu 1 */
+  --linie-dunkel:#3a3f3d;
+  --pille-hell:#dde3dc;         /* Sparte auf Bild, Text Tinte 12,9 zu 1 */
+  --pille-dunkel:#1b1e1d;       /* Status auf Bild, Text hell 14,4 zu 1 */
+  --pille-text-hell:#e9efe9;
+  --feld-rand:#6d746e;          /* Rand der Eingabefelder auf Fläche 4,1 zu 1, auf Weiß 4,8 zu 1 (Bedienelement, mindestens 3 zu 1) */
+  --weiss:#ffffff;
+  --bild-schleier:rgba(14,16,15,.78);   /* Verlauf unter Text auf Bildern, sichert Weiß auf hellen Fotos (mindestens 7 zu 1) */
+}
