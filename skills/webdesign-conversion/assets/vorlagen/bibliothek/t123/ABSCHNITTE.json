@@ -1,0 +1,162 @@
+[
+  {
+    "id": "kopf",
+    "name": "Kopfzeile mit Hauptaktion",
+    "kategorie": "navigation",
+    "selektor": "header[data-abschnitt=\"kopf\"]",
+    "prinzip": "Die Kopfzeile hält Orientierung, Telefon und die Hauptaktion in jedem Bildschirm erreichbar.",
+    "css": ".kopf",
+    "js": "bewegung.js (Menü, Abschnittsanzeige)",
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln des Präfixes aus stil.css mitnehmen, Symbole i-tel und i-kugel aus dem SVG Block am Seitenanfang."
+  },
+  {
+    "id": "held",
+    "name": "Eis für jeden Anlass",
+    "kategorie": "hero",
+    "selektor": "section[data-abschnitt=\"held\"]",
+    "prinzip": "Versalien in Riesengröße auf einer Vollfläche und eine gezeichnete Eisgruppe sagen in einem Blick, worum es geht, bevor etwas anderes gelesen wird.",
+    "css": ".held",
+    "js": "bewegung.js über data-parallax",
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln des Präfixes aus stil.css mitnehmen, Symbole p-waffel, p-stiel, p-becher und i-tel, Eisfarben aus marke.css."
+  },
+  {
+    "id": "karte",
+    "name": "Papierkarte auf Bildkarte",
+    "kategorie": "product",
+    "selektor": "section[data-abschnitt=\"karte\"]",
+    "prinzip": "Eine schräg gelegte Papierkarte mit Innenrahmen auf einer Bildfläche macht aus einem Angebot ein Geschenk und trägt die Aktion.",
+    "css": ".karte",
+    "js": "bewegung.js über data-zeig und data-parallax",
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln des Präfixes aus stil.css mitnehmen, Symbol p-torte, Token --schatten-karte und --papier-linie."
+  },
+  {
+    "id": "anlaesse",
+    "name": "Anlässe auf schrägen Laufbändern",
+    "kategorie": "services",
+    "selektor": "section[data-abschnitt=\"anlaesse\"]",
+    "prinzip": "Eine Liste als Typografie auf schräg gesetzten Farbbändern zeigt die Breite des Angebots in Sekunden, ohne Karten, und die Pause macht sie zugänglich.",
+    "css": ".anlaesse",
+    "js": "stil.js (Pause, Block 1)",
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln des Präfixes aus stil.css mitnehmen, Token --schwung, Symbol i-kugel, i-pause und i-start, den Pausenknopf nicht weglassen (WCAG 2.2.2)."
+  },
+  {
+    "id": "sorte-beere",
+    "name": "Sortengruppe Beere",
+    "kategorie": "product",
+    "selektor": "section[data-abschnitt=\"sorte-beere\"]",
+    "prinzip": "Eine ganze Farbfläche mit Riesentitel, einem Produkt und einer Aktion macht jede Gruppe zu einem eigenen Ort, die Farbe trägt die Gliederung.",
+    "css": ".sorte, .sorte--beere",
+    "js": null,
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln des Präfixes aus stil.css mitnehmen. Die Farbvariablen --s-grund, --s-titel, --s-text, --s-knopf stehen am Modifier; Symbol p-stiel und die Eisfarben aus marke.css mitnehmen. Das Übereinanderschieben (Sticky) steht in der Medienabfrage am Ende des Blocks 4 in stil.css."
+  },
+  {
+    "id": "sorte-vanille",
+    "name": "Sortengruppe Vanille",
+    "kategorie": "product",
+    "selektor": "section[data-abschnitt=\"sorte-vanille\"]",
+    "prinzip": "Eine ganze Farbfläche mit Riesentitel, einem Produkt und einer Aktion macht jede Gruppe zu einem eigenen Ort, die Farbe trägt die Gliederung.",
+    "css": ".sorte, .sorte--vanille",
+    "js": null,
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln des Präfixes aus stil.css mitnehmen. Die Farbvariablen --s-grund, --s-titel, --s-text, --s-knopf stehen am Modifier; Symbol p-waffel und die Eisfarben aus marke.css mitnehmen. Das Übereinanderschieben (Sticky) steht in der Medienabfrage am Ende des Blocks 4 in stil.css."
+  },
+  {
+    "id": "sorte-sorbet",
+    "name": "Sortengruppe Sorbet",
+    "kategorie": "product",
+    "selektor": "section[data-abschnitt=\"sorte-sorbet\"]",
+    "prinzip": "Eine ganze Farbfläche mit Riesentitel, einem Produkt und einer Aktion macht jede Gruppe zu einem eigenen Ort, die Farbe trägt die Gliederung.",
+    "css": ".sorte, .sorte--sorbet",
+    "js": null,
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln des Präfixes aus stil.css mitnehmen. Die Farbvariablen --s-grund, --s-titel, --s-text, --s-knopf stehen am Modifier; Symbol p-becher und die Eisfarben aus marke.css mitnehmen. Das Übereinanderschieben (Sticky) steht in der Medienabfrage am Ende des Blocks 4 in stil.css."
+  },
+  {
+    "id": "sorte-pistazie",
+    "name": "Sortengruppe Pistazie",
+    "kategorie": "product",
+    "selektor": "section[data-abschnitt=\"sorte-pistazie\"]",
+    "prinzip": "Eine ganze Farbfläche mit Riesentitel, einem Produkt und einer Aktion macht jede Gruppe zu einem eigenen Ort, die Farbe trägt die Gliederung.",
+    "css": ".sorte, .sorte--pistazie",
+    "js": null,
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln des Präfixes aus stil.css mitnehmen. Die Farbvariablen --s-grund, --s-titel, --s-text, --s-knopf stehen am Modifier; Symbol p-waffel und die Eisfarben aus marke.css mitnehmen. Das Übereinanderschieben (Sticky) steht in der Medienabfrage am Ende des Blocks 4 in stil.css."
+  },
+  {
+    "id": "sorte-saison",
+    "name": "Sortengruppe Saison",
+    "kategorie": "product",
+    "selektor": "section[data-abschnitt=\"sorte-saison\"]",
+    "prinzip": "Eine ganze Farbfläche mit Riesentitel, einem Produkt und einer Aktion macht jede Gruppe zu einem eigenen Ort, die Farbe trägt die Gliederung.",
+    "css": ".sorte, .sorte--saison",
+    "js": null,
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln des Präfixes aus stil.css mitnehmen. Die Farbvariablen --s-grund, --s-titel, --s-text, --s-knopf stehen am Modifier; Symbol p-becher und die Eisfarben aus marke.css mitnehmen. Das Übereinanderschieben (Sticky) steht in der Medienabfrage am Ende des Blocks 4 in stil.css."
+  },
+  {
+    "id": "inspiration",
+    "name": "Eis im Alltag, Hochformatband",
+    "kategorie": "portfolio",
+    "selektor": "section[data-abschnitt=\"inspiration\"]",
+    "prinzip": "Ein seitlich scrollendes Band aus Hochformatkacheln mit Bildunterschrift zeigt das Produkt im Gebrauch und lädt mit Pfeilen zum Weiterschauen ein.",
+    "css": ".inspiration",
+    "js": "stil.js (Pfeile, Block 2)",
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln des Präfixes aus stil.css mitnehmen, Symbole i-pfeil und i-links, Produktsymbole der Kacheln."
+  },
+  {
+    "id": "muster",
+    "name": "Muster und Aufkleber",
+    "kategorie": "cta",
+    "selektor": "section[data-abschnitt=\"muster\"]",
+    "prinzip": "Ein Produktmuster als Tapete mit drei schräg aufgeklebten Aussagen macht den Abschluss spielerisch und führt zur Aktion.",
+    "css": ".muster",
+    "js": null,
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln des Präfixes aus stil.css mitnehmen, das Muster liegt als SVG pattern im Abschnitt selbst und nutzt p-waffel, p-stiel und p-becher."
+  },
+  {
+    "id": "fragen",
+    "name": "Gut zu wissen vor der Bestellung",
+    "kategorie": "faq",
+    "selektor": "section[data-abschnitt=\"fragen\"]",
+    "prinzip": "Einwände stehen als aufklappbare Fragen genau vor dem Formular, jede Antwort bleibt kurz und ist als Beispiel markiert.",
+    "css": ".fragen",
+    "js": "bewegung.js über data-exklusiv",
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln des Präfixes aus stil.css mitnehmen."
+  },
+  {
+    "id": "bestellen",
+    "name": "Vorbestellung in fünf Feldern",
+    "kategorie": "forms",
+    "selektor": "section[data-abschnitt=\"bestellen\"]",
+    "prinzip": "Ein kurzes Formular mit Ablauf in drei Schritten und Telefon als Alternative senkt die Hürde zur Anfrage.",
+    "css": ".bestellen, .formular",
+    "js": "stil.js (Formular ohne Versand, Block 3)",
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln des Präfixes aus stil.css mitnehmen, den Hinweistext zum Datenschutz und die Feldhinweise unter E-Mail und Telefon beibehalten."
+  },
+  {
+    "id": "newsletter",
+    "name": "Neue Sorten zuerst",
+    "kategorie": "forms",
+    "selektor": "section[data-abschnitt=\"newsletter\"]",
+    "prinzip": "Ein einziges Feld und ein klarer Nutzen halten die Anmeldung leicht, der Rest der Seite bleibt davon unberührt.",
+    "css": ".newsletter",
+    "js": "stil.js (Formular ohne Versand, Block 3)",
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln des Präfixes aus stil.css mitnehmen."
+  },
+  {
+    "id": "abschluss",
+    "name": "Kommen Sie vorbei",
+    "kategorie": "cta",
+    "selektor": "section[data-abschnitt=\"abschluss\"]",
+    "prinzip": "Eine letzte ganze Farbfläche mit Adresse, Zeiten, Aktion und Telefon fängt alle ab, die unten angekommen sind.",
+    "css": ".abschluss",
+    "js": null,
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln des Präfixes aus stil.css mitnehmen, Symbole p-waffel, p-stiel und i-tel."
+  },
+  {
+    "id": "fuss",
+    "name": "Fuß in Blau",
+    "kategorie": "footer",
+    "selektor": "footer[data-abschnitt=\"fuss\"]",
+    "prinzip": "Ein Fuß mit Linkspalten und dem Markennamen in groß schließt die Seite ab und führt zu Sorten, Anfahrt und Rechtlichem.",
+    "css": ".fuss, .fuss__",
+    "js": null,
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln des Präfixes aus stil.css mitnehmen, Symbol i-kugel."
+  }
+]

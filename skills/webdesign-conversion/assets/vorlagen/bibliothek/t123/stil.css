@@ -1,0 +1,223 @@
+/* stil.css der Vorlage "Eisdiele in Vollfarbflächen": Aufbau und Bewegung. Werte aus marke.css.
+   Bewegung nur über transform und opacity. Ohne JavaScript und bei reduzierter Bewegung stehen alle Zustände ruhig und vollständig da.
+   Jeder Abschnitt trägt sein eigenes Klassenpräfix und braucht nur marke.css, basis.css und seine Regeln (Knopf und Formular siehe unten). */
+:root{--kopfhoehe:4rem}
+body{background:var(--flaeche)}
+section[id],footer[id],.sorten[id]{scroll-margin-top:calc(var(--kopfhoehe) + .5rem)}
+
+/* Knöpfe dieser Vorlage */
+.knopf{font-family:var(--schrift-titel);font-weight:800;letter-spacing:-.01em;min-height:3rem;border-radius:var(--radius-knopf)}
+.knopf--schoko{background:var(--schoko);color:var(--creme)}
+.knopf--schoko:hover{background:#3d2218}
+
+/* Kopf: Creme, feste Leiste mit Schokokante */
+.kopf{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--flaeche);color:var(--text);border-bottom:3px solid var(--schoko)}
+.kopf__leiste{position:relative;display:flex;align-items:center;gap:.75rem;min-height:var(--kopfhoehe);padding-inline:var(--rand);max-width:calc(var(--breite) + 2*var(--rand));margin-inline:auto}
+.kopf__logo{margin-right:auto;display:inline-flex;align-items:center;gap:.4rem;min-height:2.75rem;font-family:var(--schrift-titel);font-weight:900;font-size:clamp(1.15rem,.8rem + 1.4vw,1.5rem);letter-spacing:-.03em;text-transform:uppercase;color:var(--beere)}
+.kopf__knopf{min-height:2.75rem;padding:.4rem 1.1rem;white-space:nowrap}
+.kopf__menue{display:flex;gap:.25rem}
+.kopf__menue a{display:flex;align-items:center;gap:.5rem;min-height:2.75rem;padding-inline:.75rem;font-weight:700;border-radius:8px}
+.kopf__menue a:hover{color:var(--beere)}
+.kopf__burger{flex:none;display:none;width:2.75rem;height:2.75rem;border-radius:50%;align-items:center;justify-content:center;box-shadow:inset 0 0 0 2px var(--schoko)}
+.js .kopf__burger{display:inline-flex}
+.burger,.burger::before{display:block;width:1.2rem;height:2px;background:currentColor;border-radius:2px;transition:transform var(--dauer-mittel) var(--kurve)}
+.burger{position:relative;transform:translateY(4px)}
+.burger::before{content:"";position:absolute;left:0;top:-8px}
+.kopf__burger[aria-expanded="true"] .burger{transform:rotate(45deg)}
+.kopf__burger[aria-expanded="true"] .burger::before{transform:translateY(8px) rotate(-90deg)}
+.kopf__nav{position:absolute;top:100%;left:0;right:0;padding:.5rem var(--rand) 1rem;background:var(--flaeche);border-bottom:3px solid var(--schoko)}
+.js .kopf__nav:not([data-offen="true"]){display:none}
+.kopf__menue{flex-direction:column}
+.kopf__menue a{min-height:3rem;font-size:1.25rem}
+.kopf__tel svg{flex:none}
+@media (max-width:30rem){.kopf__logo svg{display:none}.kopf__knopf{padding:.4rem .8rem;font-size:.95rem}.kopf__leiste{gap:.5rem}}
+@media (min-width:62rem){
+  .kopf__burger,.js .kopf__burger{display:none}
+  .kopf__nav,.js .kopf__nav,.js .kopf__nav:not([data-offen="true"]){position:static;display:block;padding:0;border:0;margin-inline:auto;background:none}
+  .kopf__menue{flex-direction:row}
+  .kopf__menue a{min-height:2.75rem;font-size:1rem}
+  .kopf__tel{display:none}
+  .kopf__logo{margin-right:0}
+}
+@media (min-width:80rem){.kopf__tel{display:block}}
+
+/* 1. Held: Rosa, riesige Versalien, gezeichnete Eissorten */
+.held{position:relative;background:var(--rosa);color:var(--schoko);overflow:clip}
+.held__innen{display:grid;grid-template-columns:1fr;align-items:center;gap:.5rem;min-height:100svh;padding:calc(var(--kopfhoehe) + 1.5rem) var(--rand) 2rem;max-width:calc(var(--breite) + 2*var(--rand));margin-inline:auto}
+.held__text{position:relative;z-index:2;display:grid;gap:1rem;justify-items:start}
+.held__marke{font-family:var(--schrift-titel);font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:var(--text-s)}
+.held h1{font-size:clamp(3.6rem,.6rem + 8vw,8.75rem);line-height:var(--titel-zeile);text-transform:uppercase;max-width:8ch}
+.held__unter{font-size:var(--text-l);max-width:30rem;color:var(--text)}
+.held__aktion{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;align-items:center}
+.held__tel{display:inline-flex;align-items:center;gap:.5rem;min-height:2.75rem;font-weight:700;text-decoration:underline;text-underline-offset:.25em}
+.held__beleg{font-size:1rem;color:var(--text-leise)}
+.held__bild{position:relative;z-index:1;width:min(100%,34rem);margin-inline:auto}
+.held__bild svg{width:100%;height:auto;overflow:visible}
+@media (min-width:62rem){
+  .held__innen{grid-template-columns:1.15fr .85fr;gap:0}
+  .held__bild{width:min(46vw,40rem);margin-left:-2rem}
+}
+
+/* 2. Bildkarte mit Papierkarte */
+.karte{padding:var(--rand);background:var(--flaeche)}
+.karte__tafel{position:relative;display:grid;grid-template-columns:1fr;align-items:center;gap:1.5rem;min-height:clamp(28rem,72svh,44rem);padding:clamp(1.25rem,4vw,3rem);border-radius:10px;background:var(--rosa);overflow:clip;max-width:calc(var(--breite) + 2*var(--rand));margin-inline:auto}
+.karte__bild{width:min(100%,32rem);margin-inline:auto}
+.karte__bild svg{width:100%;height:auto}
+.karte__papier{position:relative;z-index:1;display:grid;gap:.9rem;justify-items:center;text-align:center;padding:clamp(1.75rem,4vw,3rem);max-width:26rem;background:var(--flaeche);box-shadow:var(--schatten-karte);outline:2px solid var(--papier-linie);outline-offset:-12px;transform:rotate(-1.5deg)}
+.js .karte__papier[data-zeig]{transform:translateY(24px) rotate(-1.5deg)}
+.js .karte__papier[data-zeig].ist-da{transform:rotate(-1.5deg)}
+.karte__kicker{font-family:var(--schrift-titel);font-weight:800;text-transform:uppercase;letter-spacing:.06em;font-size:var(--text-s);color:var(--text-leise)}
+.karte h2{font-size:clamp(2rem,1.2rem + 3vw,3.5rem);text-transform:uppercase;line-height:.92}
+.karte__papier p:not(.karte__kicker){color:var(--text-leise)}
+@media (min-width:62rem){
+  .karte__tafel{grid-template-columns:1fr 1.1fr}
+  .karte__papier{order:-1;justify-self:start}
+}
+
+/* 3. Anlässe: drei schräge Laufbänder, Pause per Knopf, bei reduzierter Bewegung und ohne JavaScript stehen sie still und umbrechen */
+.anlaesse{padding-top:clamp(3rem,8vw,6rem);background:var(--flaeche);overflow:clip}
+.anlaesse__kopf{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:1rem 2rem;padding-inline:var(--rand);max-width:calc(var(--breite) + 2*var(--rand));margin-inline:auto}
+.anlaesse h2{font-size:clamp(2.25rem,1rem + 5vw,5.5rem);text-transform:uppercase;line-height:.92;max-width:14ch}
+.anlaesse__pause{display:inline-flex;align-items:center;gap:.6rem;min-height:2.75rem;padding:.4rem 1.1rem;border-radius:var(--radius-knopf);font-weight:700;box-shadow:inset 0 0 0 2px var(--schoko)}
+.anlaesse__pause[hidden]{display:none}
+.anlaesse__pause:hover{background:var(--flaeche-alt)}
+.anlaesse__baender{display:grid;padding-block:clamp(2.5rem,6vw,4.5rem);overflow:clip}
+.anlaesse__band{--w:var(--schwung);margin-inline:-5vw;margin-block:.5rem;overflow:hidden;transform:rotate(var(--w));font-family:var(--schrift-titel);font-weight:900;text-transform:uppercase;letter-spacing:-.02em;line-height:1;font-size:clamp(1.9rem,1rem + 3.8vw,4.5rem)}
+.anlaesse__band--rosa{background:var(--rosa);color:var(--schoko)}
+.anlaesse__band--gruen{--w:calc(var(--schwung) * -.8);background:var(--pistazie);color:var(--gruen)}
+.anlaesse__band--gelb{--w:calc(var(--schwung) * .6);background:var(--zitrone);color:var(--schoko)}
+.anlaesse__spur{display:flex;width:auto;padding-block:.5em}
+.anlaesse__liste{display:flex;flex-wrap:wrap;justify-content:center;gap:.1em 0;padding-inline:5vw}
+.anlaesse__liste li{display:inline-flex;align-items:center;gap:.5em;padding-right:.9em;white-space:nowrap}
+.anlaesse__liste--kopie{display:none}
+.anlaesse__punkt{flex:none;width:.55em;height:.55em}
+@keyframes anlaesse-lauf{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:no-preference){
+  .js .anlaesse__band{margin-block:-.2rem}
+  .js .anlaesse__spur{padding-block:.5em;width:max-content;animation:anlaesse-lauf var(--dauer-band,46s) linear infinite}
+  .js .anlaesse__band--gruen .anlaesse__spur{animation-direction:reverse;--dauer-band:54s}
+  .js .anlaesse__band--gelb .anlaesse__spur{--dauer-band:60s}
+  .js .anlaesse__liste{flex-wrap:nowrap;flex:none;padding-inline:0}
+  .js .anlaesse__liste--kopie{display:flex}
+  .js .anlaesse__band:hover .anlaesse__spur,.js .anlaesse[data-pausiert="true"] .anlaesse__spur{animation-play-state:paused}
+}
+
+/* 4. Sortengruppen: je eine ganze Farbfläche mit Riesentitel. Auf großen Bildschirmen bleibt jede Fläche stehen und die nächste schiebt sich darüber (Sticky, ohne JavaScript). */
+.sorten{position:relative}
+.sorte{--s-grund:var(--beere);--s-titel:var(--zitrone);--s-text:var(--creme);--s-knopf:var(--zitrone);--s-knopf-text:var(--schoko);--akzent:var(--s-knopf);--akzent-text:var(--s-knopf-text);position:relative;display:grid;align-content:center;min-height:100svh;padding:calc(var(--kopfhoehe) + 1.5rem) var(--rand) 2.5rem;background:var(--s-grund);color:var(--s-text);overflow:clip}
+.sorte--vanille{--s-grund:var(--creme);--s-titel:var(--rosa-tief);--s-text:var(--schoko);--s-knopf:var(--beere);--s-knopf-text:var(--creme)}
+.sorte--sorbet{--s-grund:var(--blau);--s-titel:var(--zitrone);--s-text:var(--creme);--s-knopf:var(--zitrone);--s-knopf-text:var(--schoko)}
+.sorte--pistazie{--s-grund:var(--gruen);--s-titel:var(--pistazie);--s-text:var(--creme);--s-knopf:var(--pistazie);--s-knopf-text:var(--gruen)}
+.sorte--saison{--s-grund:var(--mango);--s-titel:var(--schoko);--s-text:var(--schoko);--s-knopf:var(--schoko);--s-knopf-text:var(--creme)}
+.sorte__innen{container-type:inline-size;display:grid;justify-items:center;gap:.75rem;width:100%;max-width:calc(var(--breite) + 2*var(--rand));margin-inline:auto;text-align:center}
+.sorte__kicker{font-family:var(--schrift-titel);font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:var(--text-s)}
+.sorte__titel{color:var(--s-titel);text-transform:uppercase;line-height:var(--titel-zeile);white-space:nowrap;font-size:calc(100vw / (var(--n) * .9));font-size:min(calc(100cqw / (var(--n) * .8)),14rem,26svh)}
+.sorte__bild svg{width:auto;height:clamp(11rem,32svh,24rem);margin-inline:auto}
+.sorte__text{font-size:var(--text-l);max-width:30rem}
+.sorte__knopf{margin-top:.25rem}
+@media (min-width:56rem) and (min-height:48rem) and (prefers-reduced-motion:no-preference){
+  .sorte{position:sticky;top:0;height:100svh;min-height:0;box-shadow:0 -22px 36px -20px rgba(42,23,16,.45)}
+}
+
+/* 5. Inspirationsband: Hochformatkacheln mit Pfeilen */
+.inspiration{padding-block:clamp(3rem,8vw,6rem);background:var(--flaeche);position:relative}
+.inspiration__kopf{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:1.25rem 2rem;padding-inline:var(--rand);max-width:calc(var(--breite) + 2*var(--rand));margin:0 auto 2rem}
+.inspiration h2{font-size:clamp(2.5rem,1rem + 6vw,6.5rem);text-transform:uppercase;line-height:.9}
+.inspiration__kopf p{margin-top:.75rem;color:var(--text-leise);max-width:28rem}
+.inspiration__feld{position:relative}
+.inspiration__spur{display:flex;gap:1rem;padding:.5rem var(--rand) 1rem;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--rand);scrollbar-color:var(--schoko) var(--flaeche-alt)}
+.inspiration__kachel{position:relative;flex:none;width:clamp(14.5rem,24vw,19rem);aspect-ratio:3/4;overflow:hidden;scroll-snap-align:start;border-radius:var(--radius-bild);background:var(--k-grund)}
+.inspiration__kachel--zitrone{--k-grund:var(--zitrone)}
+.inspiration__kachel--rosa{--k-grund:var(--rosa)}
+.inspiration__kachel--blau{--k-grund:var(--blau)}
+.inspiration__kachel--gruen{--k-grund:var(--gruen)}
+.inspiration__kachel--mango{--k-grund:var(--mango)}
+.inspiration__kachel--beere{--k-grund:var(--beere)}
+.inspiration__bild{position:absolute;left:50%;top:8%;width:92%;height:auto;margin-left:-46%}
+.inspiration__unter{position:absolute;left:.6rem;right:.6rem;bottom:.6rem;padding:.6rem .8rem;background:var(--flaeche);color:var(--text);font-weight:700;font-size:1rem;line-height:1.3;border-radius:2px}
+.inspiration__pfeile{display:flex;justify-content:flex-end;gap:.6rem;padding:.75rem var(--rand) 0;max-width:calc(var(--breite) + 2*var(--rand));margin-inline:auto}
+.inspiration__pfeile[hidden]{display:none}
+.inspiration__pfeile button{display:inline-flex;align-items:center;justify-content:center;width:3.25rem;height:3.25rem;border-radius:50%;background:var(--schoko);color:var(--creme);transition:transform var(--dauer-kurz) var(--kurve)}
+@media (hover:hover) and (pointer:fine){.inspiration__pfeile button:hover:not(:disabled){transform:scale(1.06)}}
+.inspiration__pfeile button:disabled{opacity:.35;cursor:default}
+
+/* 6. Muster: gelbe Fläche mit Produktmuster und drei schräg gesetzten Aufklebern */
+.muster{position:relative;display:grid;place-items:center;min-height:clamp(32rem,92svh,52rem);padding:4rem var(--rand);background:var(--zitrone);overflow:clip}
+.muster__grund{position:absolute;inset:0;width:100%;height:100%}
+.muster__innen{position:relative;display:grid;justify-items:center;gap:.25rem;text-align:center}
+.muster__aufkleber{font-family:var(--schrift-titel);font-weight:900;text-transform:uppercase;letter-spacing:-.02em;line-height:1;font-size:clamp(2.25rem,.8rem + 6.4vw,6.25rem);padding:.12em .3em;border-radius:4px;box-shadow:0 10px 22px -10px rgba(42,23,16,.55)}
+.muster__aufkleber--rosa{background:var(--rosa);color:var(--beere);transform:rotate(-6deg)}
+.muster__aufkleber--gruen{background:var(--pistazie);color:var(--gruen);transform:rotate(4deg);margin-left:clamp(0rem,6vw,5rem)}
+.muster__aufkleber--blau{background:var(--blau);color:var(--zitrone);transform:rotate(-3deg);margin-right:clamp(0rem,6vw,5rem)}
+.muster__knopf{margin-top:1.75rem}
+
+/* 7. Fragen */
+.fragen{padding-block:var(--raum);background:var(--flaeche)}
+.fragen__innen{display:grid;gap:2rem;width:min(100% - 2*var(--rand),var(--breite));margin-inline:auto}
+.fragen h2{font-size:clamp(2.25rem,1rem + 4.4vw,5rem);text-transform:uppercase;line-height:.92}
+.fragen__kopf p{margin-top:1rem;color:var(--text-leise)}
+.fragen details{border-top:2px solid var(--schoko)}
+.fragen details:last-child{border-bottom:2px solid var(--schoko)}
+.fragen summary{display:flex;justify-content:space-between;align-items:center;gap:1rem;min-height:3.5rem;padding-block:.75rem;font-family:var(--schrift-titel);font-weight:800;font-size:var(--text-l);cursor:pointer;list-style:none}
+.fragen summary::-webkit-details-marker{display:none}
+.fragen summary::after{content:"+";flex:none;font-size:2rem;line-height:1;font-weight:400;transition:transform var(--dauer-mittel) var(--kurve)}
+.fragen details[open] summary::after{transform:rotate(45deg)}
+.fragen details p{padding-bottom:1.25rem;color:var(--text-leise);max-width:40rem}
+@media (min-width:62rem){.fragen__innen{grid-template-columns:.8fr 1.2fr;gap:4rem}}
+
+/* 8. Vorbestellung auf Rosa */
+.bestellen{padding-block:var(--raum);background:var(--rosa);color:var(--schoko)}
+.bestellen__innen{display:grid;gap:2rem;align-items:start;width:min(100% - 2*var(--rand),var(--breite));margin-inline:auto}
+.bestellen h2{font-size:clamp(2.25rem,1rem + 4.4vw,5rem);text-transform:uppercase;line-height:.92}
+.bestellen__schritte{display:grid;gap:.5rem;margin-top:1.5rem;counter-reset:s;font-size:var(--text-l)}
+.bestellen__schritte li{counter-increment:s;display:flex;gap:.9rem;align-items:center}
+.bestellen__schritte li::before{content:counter(s);flex:none;display:grid;place-items:center;width:2.25rem;height:2.25rem;border-radius:50%;background:var(--schoko);color:var(--creme);font-family:var(--schrift-titel);font-weight:900}
+.bestellen__tel{margin-top:1.5rem}
+.bestellen__tel a{display:inline-flex;align-items:center;gap:.5rem;min-height:2.75rem;font-weight:700;text-decoration:underline;text-underline-offset:.25em}
+.formular{display:grid;grid-template-columns:1fr;gap:1rem;padding:clamp(1.25rem,3vw,2rem);border-radius:var(--radius-karte);background:var(--weiss);border:2px solid var(--schoko);box-shadow:8px 8px 0 var(--schoko)}
+.formular__feld{display:grid;gap:.4rem;align-content:start}
+.formular .feld__hinweis{font-size:1rem;line-height:1.4;color:var(--text-leise)}
+.formular label{font-weight:700;font-size:1rem}
+.formular input,.formular textarea,.formular select{width:100%;min-height:3rem;padding:.7rem 1rem;border:2px solid var(--feld-rand);border-radius:10px;background:var(--weiss);color:var(--text);font:inherit}
+.formular textarea{resize:vertical}
+.formular input::placeholder,.formular textarea::placeholder{color:var(--text-leise)}
+.formular__recht{font-size:1rem;color:var(--text-leise)}
+.formular__recht a{text-decoration:underline;text-underline-offset:.2em;font-weight:700;color:var(--text)}
+.formular__senden{justify-self:start}
+.formular__meldung{font-size:1rem}
+@media (min-width:40rem){.formular{grid-template-columns:1fr 1fr}.formular__feld--breit{grid-column:1/-1}}
+@media (min-width:62rem){.bestellen__innen{grid-template-columns:.85fr 1.15fr;gap:4rem}}
+
+/* 9. Newsletter auf Creme */
+.newsletter{padding-block:var(--raum);background:var(--flaeche)}
+.newsletter__innen{display:grid;justify-items:center;gap:1rem;text-align:center;width:min(100% - 2*var(--rand),56rem);margin-inline:auto}
+.newsletter h2{font-size:clamp(2.5rem,1rem + 6vw,6.5rem);text-transform:uppercase;line-height:.9}
+.newsletter__innen>p{color:var(--text-leise);max-width:30rem}
+.newsletter__form{display:grid;justify-items:center;gap:.6rem;width:100%;margin-top:.5rem}
+.newsletter__form input{width:100%;min-height:3.5rem;padding:.7rem 1rem;border:2px solid var(--feld-rand);border-radius:6px;background:var(--weiss);color:var(--text);font-family:var(--schrift-titel);font-weight:800;font-size:1.25rem;text-transform:uppercase}
+.newsletter__form input::placeholder{color:var(--text-leise)}
+.newsletter .feld__hinweis{font-size:1rem;color:var(--text-leise)}
+.newsletter__meldung{font-size:1rem}
+
+/* 10. Abschlussfläche in Grün */
+.abschluss{position:relative;background:var(--gruen);color:var(--creme);--akzent:var(--pistazie);--akzent-text:var(--gruen);overflow:clip}
+.abschluss__innen{position:relative;display:grid;justify-items:center;gap:1rem;padding:var(--raum) var(--rand) 0;text-align:center;max-width:calc(var(--breite) + 2*var(--rand));margin-inline:auto}
+.abschluss__kicker{font-family:var(--schrift-titel);font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:var(--text-s)}
+.abschluss h2{color:var(--pistazie);font-size:clamp(3rem,.8rem + 9vw,10rem);text-transform:uppercase;line-height:var(--titel-zeile)}
+.abschluss__text{font-size:var(--text-l);max-width:34rem}
+.abschluss__aktion{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;align-items:center;justify-content:center}
+.abschluss__tel{display:inline-flex;align-items:center;gap:.5rem;min-height:2.75rem;font-weight:700;text-decoration:underline;text-underline-offset:.25em}
+.abschluss__bild{width:min(100%,44rem);margin-top:1rem}
+.abschluss__bild svg{width:100%;height:auto;overflow:visible}
+
+/* 11. Fuß in Blau */
+.fuss{background:var(--blau);color:var(--creme);--akzent:var(--zitrone);--akzent-text:var(--schoko)}
+.fuss__innen{display:grid;gap:2.5rem;padding:clamp(2.5rem,6vw,4.5rem) var(--rand);max-width:calc(var(--breite) + 2*var(--rand));margin-inline:auto}
+.fuss__spalten{display:grid;grid-template-columns:repeat(auto-fit,minmax(10rem,1fr));gap:2rem}
+.fuss h2{font-family:var(--schrift-titel);font-weight:900;font-size:1.25rem;text-transform:uppercase;color:var(--zitrone);margin-bottom:.5rem}
+.fuss li a{display:inline-flex;align-items:center;min-height:2.75rem;font-size:1.0625rem}
+.fuss li a:hover{text-decoration:underline;text-underline-offset:.25em}
+.fuss__logo{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--schrift-titel);font-weight:900;font-size:clamp(2.5rem,1rem + 5vw,5rem);letter-spacing:-.03em;text-transform:uppercase;line-height:1;color:var(--zitrone)}
+.fuss__klein{margin-top:.75rem;font-size:1rem;max-width:34rem}
+@media (min-width:62rem){.fuss__innen{grid-template-columns:1.4fr 1fr;align-items:end}}
+.formular input:focus-visible,.formular textarea:focus-visible,.newsletter__form input:focus-visible{outline:3px solid var(--akzent);outline-offset:2px}

@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eistorten und Partyeis aus Musterstadt | Markenname</title>
+<meta name="description" content="Eis für jeden Anlass: Eistorten, Partyeis und Becher aus der Manufaktur in Musterstadt. Vorbestellen, abholen oder liefern lassen.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../_basis/schriften.css">
+<link rel="stylesheet" href="marke.css">
+<link rel="stylesheet" href="../_basis/basis.css">
+<link rel="stylesheet" href="stil.css">
+<!-- Strukturierte Daten: Beispielwerte, vor der Auslieferung durch echte Angaben ersetzen. Keine Bewertungen erfunden. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "IceCreamShop",
+  "name": "Markenname Eismanufaktur",
+  "description": "Eismanufaktur mit Eistorten, Partyeis und Bechern zum Vorbestellen, Abholen und Liefern.",
+  "url": "https://beispiel.invalid/",
+  "image": "https://beispiel.invalid/bilder/eisdiele.webp",
+  "telephone": "+490000000000",
+  "email": "hallo@beispiel.invalid",
+  "priceRange": "€€",
+  "servesCuisine": "Eis",
+  "address": { "@type": "PostalAddress", "streetAddress": "Musterstraße 1", "postalCode": "00000", "addressLocality": "Musterstadt", "addressCountry": "DE" },
+  "openingHours": "Mo-So 12:00-20:00"
+}
+</script>
+</head>
+<body id="top">
+<a class="sprunglink" href="#inhalt">Zum Inhalt springen</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <clipPath id="cl-tuete"><path d="M112 262h176L200 508z"/></clipPath>
+    <clipPath id="cl-stiel"><path d="M110 330V160a90 90 0 0 1 180 0V330q0 20-20 20H130q-20 0-20-20z"/></clipPath>
+    <clipPath id="cl-becher"><path d="M82 300H318L284 504H116z"/></clipPath>
+  </defs>
+  <symbol id="i-pfeil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-links" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+  <symbol id="i-tel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.500 1.500a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></symbol>
+  <symbol id="i-start" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></symbol>
+  <symbol id="i-kugel" viewBox="0 0 24 24"><circle cx="12" cy="10" r="7" fill="currentColor"/><path d="M6 14h12l-6 9z" fill="currentColor" opacity=".55"/></symbol>
+
+  <!-- Eistüte: --k1 untere Kugel, --k2 obere Kugel -->
+  <symbol id="p-waffel" viewBox="0 0 400 520">
+    <path d="M112 262h176L200 508z" style="fill:var(--waffel)"/>
+    <g clip-path="url(#cl-tuete)" fill="none" style="stroke:var(--waffel-dunkel)" stroke-width="5">
+      <path d="M96 280l150 230M96 340l100 160M130 262l150 250M170 262l130 200M215 262l90 130M255 262l50 70"/>
+      <path d="M304 280l-150 230M304 340l-100 160M270 262l-150 250M230 262l-130 200M185 262l-90 130M145 262l-50 70"/>
+    </g>
+    <path d="M112 262h176L200 508z" fill="none" style="stroke:var(--schoko)" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M100 238a100 100 0 0 1 200 0v14q0 40-30 40q-20 0-26-16q-10 30-44 30q-34 0-42-22q-10 14-28 14q-30 0-30-42z" style="fill:var(--k1);stroke:var(--schoko);paint-order:stroke" stroke-width="16" stroke-linejoin="round"/>
+    <path d="M132 150a68 68 0 0 1 136 0v10q0 30-22 30q-14 0-18-12q-8 22-32 22q-26 0-30-20q-8 10-20 10q-14 0-14-30z" style="fill:var(--k2);stroke:var(--schoko);paint-order:stroke" stroke-width="16" stroke-linejoin="round"/>
+    <ellipse cx="150" cy="215" rx="26" ry="14" transform="rotate(-30 150 215)" fill="#fff" opacity=".4"/>
+    <ellipse cx="170" cy="118" rx="18" ry="10" transform="rotate(-30 170 118)" fill="#fff" opacity=".45"/>
+    <path d="M200 84q4-26 26-34" fill="none" style="stroke:var(--schoko)" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="200" cy="62" r="24" style="fill:var(--beere);stroke:var(--schoko)" stroke-width="7"/>
+    <ellipse cx="192" cy="54" rx="6" ry="4" fill="#fff" opacity=".5"/>
+  </symbol>
+
+  <!-- Stieleis: --k1 Körper, --k2 Streifen -->
+  <symbol id="p-stiel" viewBox="0 0 400 520">
+    <rect x="172" y="330" width="56" height="180" rx="28" style="fill:var(--waffel);stroke:var(--schoko)" stroke-width="8"/>
+    <path d="M110 330V160a90 90 0 0 1 180 0V330q0 20-20 20H130q-20 0-20-20z" style="fill:var(--k1)"/>
+    <g clip-path="url(#cl-stiel)"><rect x="100" y="228" width="200" height="56" style="fill:var(--k2)"/></g>
+    <path d="M110 330V160a90 90 0 0 1 180 0V330q0 20-20 20H130q-20 0-20-20z" fill="none" style="stroke:var(--schoko)" stroke-width="8" stroke-linejoin="round"/>
+    <rect x="132" y="104" width="16" height="96" rx="8" fill="#fff" opacity=".5"/>
+    <g style="fill:var(--schoko)"><rect x="196" y="96" width="22" height="8" rx="4" transform="rotate(28 207 100)"/><rect x="236" y="130" width="22" height="8" rx="4" transform="rotate(-40 247 134)"/><rect x="176" y="150" width="22" height="8" rx="4" transform="rotate(-12 187 154)"/><rect x="222" y="176" width="22" height="8" rx="4" transform="rotate(62 233 180)"/></g>
+  </symbol>
+
+  <!-- Becher: --k1 --k2 --k3 Kugeln, --k4 Streifen am Becher -->
+  <symbol id="p-becher" viewBox="0 0 400 520">
+    <rect x="296" y="60" width="18" height="190" rx="9" transform="rotate(16 305 155)" style="fill:var(--schoko)"/>
+    <ellipse cx="338" cy="78" rx="30" ry="22" transform="rotate(16 338 78)" style="fill:var(--schoko)"/>
+    <circle cx="200" cy="170" r="86" style="fill:var(--k3);stroke:var(--schoko);paint-order:stroke" stroke-width="16"/>
+    <circle cx="128" cy="262" r="80" style="fill:var(--k1);stroke:var(--schoko);paint-order:stroke" stroke-width="16"/>
+    <circle cx="272" cy="262" r="80" style="fill:var(--k2);stroke:var(--schoko);paint-order:stroke" stroke-width="16"/>
+    <ellipse cx="172" cy="130" rx="22" ry="12" transform="rotate(-30 172 130)" fill="#fff" opacity=".45"/>
+    <ellipse cx="104" cy="236" rx="20" ry="11" transform="rotate(-30 104 236)" fill="#fff" opacity=".4"/>
+    <path d="M82 300H318L284 504H116z" style="fill:var(--eis-sahne)"/>
+    <g clip-path="url(#cl-becher)" style="fill:var(--k4)"><rect x="60" y="352" width="280" height="44"/></g>
+    <path d="M82 300H318L284 504H116z" fill="none" style="stroke:var(--schoko)" stroke-width="8" stroke-linejoin="round"/>
+    <rect x="68" y="290" width="264" height="26" rx="13" style="fill:var(--eis-sahne);stroke:var(--schoko)" stroke-width="8"/>
+  </symbol>
+
+  <!-- Eistorte: drei Schichten mit Kerzen -->
+  <symbol id="p-torte" viewBox="0 0 520 460">
+    <ellipse cx="260" cy="428" rx="236" ry="22" style="fill:var(--schoko)" opacity=".28"/>
+    <rect x="50" y="300" width="420" height="116" rx="22" style="fill:var(--beere);stroke:var(--schoko)" stroke-width="8"/>
+    <rect x="86" y="206" width="348" height="110" rx="22" style="fill:var(--eis-sahne);stroke:var(--schoko)" stroke-width="8"/>
+    <rect x="124" y="120" width="272" height="100" rx="22" style="fill:var(--eis-pistazie);stroke:var(--schoko)" stroke-width="8"/>
+    <path d="M94 226q0 34 26 34t26-34M180 226q0 46 26 46t26-46M270 226q0 30 24 30t24-30M350 226q0 40 26 40t26-40" style="fill:var(--eis-erdbeer);stroke:var(--schoko)" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M132 140q0 30 24 30t24-30M232 140q0 40 26 40t26-40M330 140q0 26 22 26t22-26" style="fill:var(--eis-sahne);stroke:var(--schoko)" stroke-width="8" stroke-linejoin="round"/>
+    <g style="stroke:var(--schoko)" stroke-width="7" stroke-linejoin="round"><rect x="168" y="58" width="22" height="66" rx="6" style="fill:var(--zitrone)"/><rect x="249" y="48" width="22" height="76" rx="6" style="fill:var(--blau)"/><rect x="330" y="58" width="22" height="66" rx="6" style="fill:var(--mango)"/></g>
+    <g style="fill:var(--zitrone);stroke:var(--schoko)" stroke-width="6"><path d="M179 52c-14-18 4-30 0-42c18 10 24 28 0 42z"/><path d="M260 42c-14-18 4-30 0-42c18 10 24 28 0 42z"/><path d="M341 52c-14-18 4-30 0-42c18 10 24 28 0 42z"/></g>
+  </symbol>
+</svg>
+
+<header class="kopf" data-abschnitt="kopf" id="kopf">
+  <div class="kopf__leiste">
+    <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite"><svg width="30" height="30" aria-hidden="true" focusable="false"><use href="#i-kugel"/></svg>Markenname</a>
+    <nav class="kopf__nav" id="hauptnav" aria-label="Hauptnavigation" data-menue-ziel>
+      <ul class="kopf__menue">
+        <li><a href="#sorten">Sorten</a></li>
+        <li><a href="#anlaesse">Anlässe</a></li>
+        <li><a href="#inspiration">Eis im Alltag</a></li>
+        <li><a href="#fragen">Fragen</a></li>
+        <li><a href="#abschluss">Eisdiele</a></li>
+        <li class="kopf__tel"><a href="tel:+490000000000"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-tel"/></svg>0000 000 000</a></li>
+      </ul>
+    </nav>
+    <a class="knopf kopf__knopf" href="#bestellen">Eis vorbestellen</a>
+    <button class="kopf__burger" type="button" data-menue aria-expanded="false" aria-controls="hauptnav">
+      <span class="sr-nur">Menü öffnen oder schließen</span>
+      <span class="burger" aria-hidden="true"></span>
+    </button>
+  </div>
+</header>
+
+<main id="inhalt">
+
+  <!-- Heldformel: Familien und Vereine in Musterstadt (Zielgruppe), Dessert für die Feier fehlt oder ist Stress (Problem), Eistorten, Partyeis und Becher aus der Manufaktur (Lösung), Vorbestellung bis zum Vortag mit Abholung oder Lieferung (Risiko weg) -->
+  <section class="held" id="held" aria-labelledby="held-titel" data-abschnitt="held">
+    <div class="held__innen">
+      <div class="held__text">
+        <p class="held__marke">Markenname Eismanufaktur in Musterstadt</p>
+        <h1 id="held-titel">Eis für jeden Anlass</h1>
+        <p class="held__unter">Eistorten, Partyeis und Becher, frisch gemacht und zur Feier abholbereit. Sie bestellen vor, wir packen kühl ein.</p>
+        <div class="held__aktion">
+          <a class="knopf knopf--schoko" href="#bestellen">Eis vorbestellen</a>
+          <a class="held__tel" href="tel:+490000000000"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-tel"/></svg>Beratung 0000 000 000</a>
+        </div>
+        <p class="held__beleg" data-beispiel>Beispielangabe: Vorbestellung bis 12 Uhr, Abholung am selben Tag ab 14 Uhr.</p>
+      </div>
+      <div class="held__bild" data-parallax="0.05" aria-hidden="true">
+        <svg viewBox="0 0 720 720" width="720" height="720" focusable="false">
+          <use href="#p-stiel" x="40" y="250" width="260" height="338" transform="rotate(-14 170 420)" style="--k1:var(--zitrone);--k2:var(--eis-erdbeer)"/>
+          <use href="#p-waffel" x="210" y="20" width="400" height="520" style="--k1:var(--eis-sahne);--k2:var(--eis-pistazie)"/>
+          <use href="#p-waffel" x="360" y="330" width="320" height="416" transform="rotate(12 520 540)" style="--k1:var(--eis-erdbeer);--k2:var(--eis-blau)"/>
+          <use href="#p-becher" x="-10" y="440" width="230" height="299" transform="rotate(-8 100 590)" style="--k1:var(--eis-kuerbis);--k2:var(--eis-sahne);--k3:var(--eis-erdbeer);--k4:var(--blau)"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bildkarte mit Papierkarte -->
+  <section class="karte" id="karte" aria-labelledby="karte-titel" data-abschnitt="karte">
+    <div class="karte__tafel">
+      <div class="karte__bild" aria-hidden="true" data-parallax="0.04">
+        <svg viewBox="0 0 520 460" width="520" height="460" focusable="false"><use href="#p-torte" width="520" height="460"/></svg>
+      </div>
+      <div class="karte__papier" data-zeig>
+        <p class="karte__kicker">Für den Geburtstagstisch</p>
+        <h2 id="karte-titel">Die Eistorte für alle am Tisch</h2>
+        <p>Drei Schichten Eis, auf Wunsch mit Text in Schokolade. Ab sechs Personen, zwei Tage vorher bestellt. Preis ab 24 Euro, Beispielwert.</p>
+        <a class="knopf" href="#bestellen">Eis vorbestellen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Anlässe: drei schräge Laufbänder -->
+  <section class="anlaesse" id="anlaesse" aria-labelledby="anlaesse-titel" data-abschnitt="anlaesse">
+    <div class="anlaesse__kopf">
+      <h2 id="anlaesse-titel">Zu jedem Anlass die passende Kugel.</h2>
+      <button class="anlaesse__pause" type="button" data-pause aria-pressed="false" hidden>
+        <svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-pause"/></svg>
+        <span data-pause-text>Bänder anhalten</span>
+      </button>
+    </div>
+    <div class="anlaesse__baender">
+      <div class="anlaesse__band anlaesse__band--rosa">
+        <div class="anlaesse__spur">
+          <ul class="anlaesse__liste"><li>Kindergeburtstag<svg class="anlaesse__punkt" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-kugel"/></svg></li><li>Hochzeit<svg class="anlaesse__punkt" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-kugel"/></svg></li><li>Vereinsfest<svg class="anlaesse__punkt" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-kugel"/></svg></li><li>Schulfest<svg class="anlaesse__punkt" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-kugel"/></svg></li><li>Firmenfeier<svg class="anlaesse__punkt" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-kugel"/></svg></li><li>Einschulung<svg class="anlaesse__punkt" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-kugel"/></svg></li></ul>
+          <ul class="anlaesse__liste anlaesse__liste--kopie" aria-hidden="true"><li>Kindergeburtstag<svg class="anlaesse__punkt" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-kugel"/></svg></li><li>Hochzeit<svg class="anlaesse__punkt" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-kugel"/></svg></li><li>Vereinsfest<svg class="anlaesse__punkt" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-kugel"/></svg></li><li>Schulfest<svg class="anlaesse__punkt" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-kugel"/></svg></li><li>Firmenfeier<svg class="anlaesse__punkt" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-kugel"/></svg></li><li>Einschulung<svg class="anlaesse__punkt" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-kugel"/></svg></li></ul>
+        </div>
+      </div>
+      <div class="anlaesse__band anlaesse__band--gruen">
+        <div class="anlaesse__spur">
+          <ul class="anlaesse__liste"><li>Gartenparty<svg class="anlaesse__punkt" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-kugel"/></svg></li><li>Taufe<svg class="anlaesse__punkt" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-kugel"/></svg></li><li>Abiball<svg class="anlaesse__punkt" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-kugel"/></svg></li><li>Sommerfest<svg class="anlaesse__punkt" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-kugel"/></svg></li><li>Jubiläum<svg class="anlaesse__punkt" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-kugel"/></svg></li><li>Richtfest<svg class="anlaesse__punkt" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-kugel"/></svg></li></ul>
+          <ul class="anlaesse__liste anlaesse__liste--kopie" aria-hidden="true"><li>Gartenparty<svg class="anlaesse__punkt" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-kugel"/></svg></li><li>Taufe<svg class="anlaesse__punkt" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-kugel"/></svg></li><li>Abiball<svg class="anlaesse__punkt" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-kugel"/></svg></li><li>Sommerfest<svg class="anlaesse__punkt" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-kugel"/></svg></li><li>Jubiläum<svg class="anlaesse__punkt" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-kugel"/></svg></li><li>Richtfest<svg class="anlaesse__punkt" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-kugel"/></svg></li></ul>
+        </div>
+      </div>
+      <div class="anlaesse__band anlaesse__band--gelb">
+        <div class="anlaesse__spur">
+          <ul class="anlaesse__liste"><li>Muttertag<svg class="anlaesse__punkt" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-kugel"/></svg></li><li>Betriebsausflug<svg class="anlaesse__punkt" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-kugel"/></svg></li><li>Hochzeitstag<svg class="anlaesse__punkt" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-kugel"/></svg></li><li>Familienfeier<svg class="anlaesse__punkt" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-kugel"/></svg></li><li>Eisessen nach dem Spiel<svg class="anlaesse__punkt" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-kugel"/></svg></li></ul>
+          <ul class="anlaesse__liste anlaesse__liste--kopie" aria-hidden="true"><li>Muttertag<svg class="anlaesse__punkt" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-kugel"/></svg></li><li>Betriebsausflug<svg class="anlaesse__punkt" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-kugel"/></svg></li><li>Hochzeitstag<svg class="anlaesse__punkt" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-kugel"/></svg></li><li>Familienfeier<svg class="anlaesse__punkt" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-kugel"/></svg></li><li>Eisessen nach dem Spiel<svg class="anlaesse__punkt" width="28" height="28" aria-hidden="true" focusable="false"><use href="#i-kugel"/></svg></li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sortengruppen: jede eine ganze Farbfläche, auf großen Bildschirmen schieben sie sich übereinander -->
+  <div class="sorten" id="sorten">
+  <section class="sorte sorte--beere" id="sorte-beere" aria-labelledby="sorte-beere-titel" data-abschnitt="sorte-beere">
+    <div class="sorte__innen">
+      <p class="sorte__kicker">Sortengruppe</p>
+      <h2 class="sorte__titel" id="sorte-beere-titel" style="--n:5">Beere</h2>
+      <div class="sorte__bild" data-parallax="0.04">
+        <svg viewBox="0 0 400 520" width="400" height="520" role="img" aria-label="Gezeichnetes Stieleis in Rosa mit cremefarbenem Streifen und Schokoladenstreuseln" focusable="false"><use href="#p-stiel" width="400" height="520" style="--k1:var(--eis-erdbeer);--k2:var(--eis-sahne)"/></svg>
+      </div>
+      <p class="sorte__text">Erdbeere, Himbeere, Brombeere. Im Sommer täglich frisch angesetzt.</p>
+      <a class="knopf sorte__knopf" href="#bestellen">Beere vorbestellen</a>
+    </div>
+  </section>
+  <section class="sorte sorte--vanille" id="sorte-vanille" aria-labelledby="sorte-vanille-titel" data-abschnitt="sorte-vanille">
+    <div class="sorte__innen">
+      <p class="sorte__kicker">Sortengruppe</p>
+      <h2 class="sorte__titel" id="sorte-vanille-titel" style="--n:7">Vanille</h2>
+      <div class="sorte__bild" data-parallax="0.04">
+        <svg viewBox="0 0 400 520" width="400" height="520" role="img" aria-label="Gezeichnete Eistüte mit einer rosa und einer cremefarbenen Kugel und einer Kirsche" focusable="false"><use href="#p-waffel" width="400" height="520" style="--k1:var(--eis-erdbeer);--k2:var(--eis-sahne)"/></svg>
+      </div>
+      <p class="sorte__text">Vanille, Sahne, Kirsche. Die Sorten für den Geburtstagstisch.</p>
+      <a class="knopf sorte__knopf" href="#bestellen">Vanille vorbestellen</a>
+    </div>
+  </section>
+  <section class="sorte sorte--sorbet" id="sorte-sorbet" aria-labelledby="sorte-sorbet-titel" data-abschnitt="sorte-sorbet">
+    <div class="sorte__innen">
+      <p class="sorte__kicker">Sortengruppe</p>
+      <h2 class="sorte__titel" id="sorte-sorbet-titel" style="--n:6">Sorbet</h2>
+      <div class="sorte__bild" data-parallax="0.04">
+        <svg viewBox="0 0 400 520" width="400" height="520" role="img" aria-label="Gezeichneter Becher mit drei Sorbetkugeln in Gelb, Rosa und Blau" focusable="false"><use href="#p-becher" width="400" height="520" style="--k1:var(--zitrone);--k2:var(--eis-erdbeer);--k3:var(--eis-blau);--k4:var(--beere)"/></svg>
+      </div>
+      <p class="sorte__text">Zitrone, Himbeere, Blaubeere. Ohne Milch, für heiße Tage.</p>
+      <a class="knopf sorte__knopf" href="#bestellen">Sorbet vorbestellen</a>
+    </div>
+  </section>
+  <section class="sorte sorte--pistazie" id="sorte-pistazie" aria-labelledby="sorte-pistazie-titel" data-abschnitt="sorte-pistazie">
+    <div class="sorte__innen">
+      <p class="sorte__kicker">Sortengruppe</p>
+      <h2 class="sorte__titel" id="sorte-pistazie-titel" style="--n:8">Pistazie</h2>
+      <div class="sorte__bild" data-parallax="0.04">
+        <svg viewBox="0 0 400 520" width="400" height="520" role="img" aria-label="Gezeichnete Eistüte mit zwei grünen Kugeln" focusable="false"><use href="#p-waffel" width="400" height="520" style="--k1:var(--eis-pistazie);--k2:var(--eis-pistazie-dunkel)"/></svg>
+      </div>
+      <p class="sorte__text">Pistazie, Minze, Waldmeister. Grün in drei Abstufungen.</p>
+      <a class="knopf sorte__knopf" href="#bestellen">Pistazie vorbestellen</a>
+    </div>
+  </section>
+  <section class="sorte sorte--saison" id="sorte-saison" aria-labelledby="sorte-saison-titel" data-abschnitt="sorte-saison">
+    <div class="sorte__innen">
+      <p class="sorte__kicker">Sortengruppe</p>
+      <h2 class="sorte__titel" id="sorte-saison-titel" style="--n:6">Saison</h2>
+      <div class="sorte__bild" data-parallax="0.04">
+        <svg viewBox="0 0 400 520" width="400" height="520" role="img" aria-label="Gezeichneter Becher mit Kugeln in Kürbisorange, Zimtbraun und Sahne" focusable="false"><use href="#p-becher" width="400" height="520" style="--k1:var(--eis-kuerbis);--k2:var(--eis-zimt);--k3:var(--eis-sahne);--k4:var(--gruen)"/></svg>
+      </div>
+      <p class="sorte__text">Kürbis, Zimt, Kastanie. Wechselt viermal im Jahr.</p>
+      <a class="knopf sorte__knopf" href="#bestellen">Saison vorbestellen</a>
+    </div>
+  </section>
+  </div>
+
+  <!-- Inspirationsband mit Hochformatkacheln und Pfeilen -->
+  <section class="inspiration" id="inspiration" aria-labelledby="inspiration-titel" data-abschnitt="inspiration">
+    <div class="inspiration__kopf">
+      <div>
+        <h2 id="inspiration-titel" data-zeig>Eis im Alltag</h2>
+        <p data-zeig>Sechs Beispielszenen, wie das Eis auf Feiern und im Alltag landet.</p>
+      </div>
+      <a class="knopf" href="#bestellen">Eis vorbestellen</a>
+    </div>
+    <div class="inspiration__feld">
+      <ul class="inspiration__spur" tabindex="0" role="list" aria-label="Beispielszenen, seitlich scrollbar" data-spur>
+        <li class="inspiration__kachel inspiration__kachel--zitrone">
+          <svg class="inspiration__bild" viewBox="0 0 400 520" width="400" height="520" aria-hidden="true" focusable="false" style="transform:rotate(-8deg)"><use href="#p-stiel" width="400" height="520" style="--k1:var(--eis-erdbeer);--k2:var(--eis-sahne)"/></svg>
+          <p class="inspiration__unter">Geburtstag am Samstag</p>
+        </li>
+        <li class="inspiration__kachel inspiration__kachel--rosa">
+          <svg class="inspiration__bild" viewBox="0 0 400 520" width="400" height="520" aria-hidden="true" focusable="false" style="transform:rotate(6deg)"><use href="#p-waffel" width="400" height="520" style="--k1:var(--eis-sahne);--k2:var(--eis-erdbeer)"/></svg>
+          <p class="inspiration__unter">Dessert nach der Trauung</p>
+        </li>
+        <li class="inspiration__kachel inspiration__kachel--blau">
+          <svg class="inspiration__bild" viewBox="0 0 400 520" width="400" height="520" aria-hidden="true" focusable="false" style="transform:rotate(-5deg)"><use href="#p-becher" width="400" height="520" style="--k1:var(--zitrone);--k2:var(--eis-erdbeer);--k3:var(--eis-blau);--k4:var(--beere)"/></svg>
+          <p class="inspiration__unter">Sorbet für den Sommerabend</p>
+        </li>
+        <li class="inspiration__kachel inspiration__kachel--gruen">
+          <svg class="inspiration__bild" viewBox="0 0 400 520" width="400" height="520" aria-hidden="true" focusable="false" style="transform:rotate(8deg)"><use href="#p-waffel" width="400" height="520" style="--k1:var(--eis-pistazie);--k2:var(--eis-pistazie-dunkel)"/></svg>
+          <p class="inspiration__unter">Pistazie für den Vereinsabend</p>
+        </li>
+        <li class="inspiration__kachel inspiration__kachel--mango">
+          <svg class="inspiration__bild" viewBox="0 0 400 520" width="400" height="520" aria-hidden="true" focusable="false" style="transform:rotate(-6deg)"><use href="#p-becher" width="400" height="520" style="--k1:var(--eis-kuerbis);--k2:var(--eis-zimt);--k3:var(--eis-sahne);--k4:var(--gruen)"/></svg>
+          <p class="inspiration__unter">Kürbiseis zur Herbstfeier</p>
+        </li>
+        <li class="inspiration__kachel inspiration__kachel--beere">
+          <svg class="inspiration__bild" viewBox="0 0 400 520" width="400" height="520" aria-hidden="true" focusable="false" style="transform:rotate(7deg)"><use href="#p-stiel" width="400" height="520" style="--k1:var(--eis-sahne);--k2:var(--eis-blau)"/></svg>
+          <p class="inspiration__unter">Stieleis am Badesee</p>
+        </li>
+      </ul>
+      <div class="inspiration__pfeile" data-pfeile hidden>
+        <button type="button" data-zurueck aria-label="Vorherige Szenen"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-links"/></svg></button>
+        <button type="button" data-weiter aria-label="Nächste Szenen"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-pfeil"/></svg></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gelbe Fläche mit Muster aus Produkten und drei schräg gesetzten Aufklebern -->
+  <section class="muster" id="muster" aria-labelledby="muster-titel" data-abschnitt="muster">
+    <svg class="muster__grund" width="100%" height="100%" aria-hidden="true" focusable="false">
+      <defs>
+        <pattern id="mu-kachel" width="420" height="420" patternUnits="userSpaceOnUse">
+          <use href="#p-waffel" x="10" y="0" width="150" height="195" transform="rotate(-18 85 100)" style="--k1:var(--eis-erdbeer);--k2:var(--eis-sahne)"/>
+          <use href="#p-stiel" x="230" y="20" width="140" height="182" transform="rotate(16 300 110)" style="--k1:var(--eis-blau);--k2:var(--eis-sahne)"/>
+          <use href="#p-becher" x="20" y="225" width="150" height="195" transform="rotate(10 95 320)" style="--k1:var(--eis-pistazie);--k2:var(--eis-sahne);--k3:var(--eis-erdbeer);--k4:var(--beere)"/>
+          <use href="#p-waffel" x="240" y="225" width="150" height="195" transform="rotate(-10 315 320)" style="--k1:var(--eis-sahne);--k2:var(--eis-kuerbis)"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#mu-kachel)"/>
+    </svg>
+    <div class="muster__innen">
+      <h2 class="sr-nur" id="muster-titel">Frisch gemacht, zum Teilen, zum Mitnehmen</h2>
+      <p class="muster__aufkleber muster__aufkleber--rosa" aria-hidden="true">Frisch gemacht</p>
+      <p class="muster__aufkleber muster__aufkleber--gruen" aria-hidden="true">Zum Teilen</p>
+      <p class="muster__aufkleber muster__aufkleber--blau" aria-hidden="true">Zum Mitnehmen</p>
+      <a class="knopf knopf--schoko muster__knopf" href="#bestellen">Eis vorbestellen</a>
+    </div>
+  </section>
+
+  <!-- Einwand FAQ -->
+  <section class="fragen" id="fragen" aria-labelledby="fragen-titel" data-abschnitt="fragen">
+    <div class="fragen__innen">
+      <div class="fragen__kopf">
+        <h2 id="fragen-titel" data-zeig>Gut zu wissen vor der Bestellung</h2>
+        <p data-zeig>Antworten sind Beispiele und je Betrieb anzupassen.</p>
+      </div>
+      <div class="fragen__liste" data-exklusiv><details data-zeig><summary>Wie früh muss ich vorbestellen?</summary><p>Becher und Stieleis bis 12 Uhr für den gleichen Tag, Eistorten und Partyeis mindestens zwei Tage vorher. Beispielantwort, Fristen je Betrieb festlegen.</p></details><details data-zeig><summary>Wie lange hält das Eis unterwegs?</summary><p>In der Kühlbox etwa zwei Stunden, ab Abholung gerechnet. Wir packen es so, dass es zu Hause hart ankommt. Beispielantwort.</p></details><details data-zeig><summary>Gibt es Sorten ohne Milch oder ohne Nüsse?</summary><p>Alle Sorbets sind ohne Milch. Zutaten und Allergene stehen an der Theke und auf dem Etikett. Beispielantwort, Allergenangaben je Betrieb prüfen.</p></details><details data-zeig><summary>Kann die Torte beschriftet werden?</summary><p>Ja, mit einem kurzen Text in Schokolade. Bitte beim Vorbestellen angeben. Beispielantwort.</p></details><details data-zeig><summary>Liefern Sie auch?</summary><p>Im Umkreis von Musterstadt liefern wir gekühlt ab einem Mindestbestellwert. Preise und Gebiet sind Beispielwerte.</p></details><details data-zeig><summary>Wie viel Eis brauche ich für eine Feier?</summary><p>Als Faustregel zwei bis drei Kugeln pro Person. Wir rechnen es gern mit Ihnen durch. Beispielantwort.</p></details></div>
+    </div>
+  </section>
+
+  <!-- Vorbestellung: fünf Felder, auf Rosa -->
+  <section class="bestellen" id="bestellen" aria-labelledby="bestellen-titel" data-abschnitt="bestellen">
+    <div class="bestellen__innen">
+      <div class="bestellen__text" data-zeig>
+        <h2 id="bestellen-titel">Ihr Eis zum Fest, in einer Minute angefragt</h2>
+        <ol class="bestellen__schritte">
+          <li>Wunschtermin und Anlass nennen.</li>
+          <li>Wir bestätigen per E-Mail oder Anruf.</li>
+          <li>Sie holen ab oder lassen liefern.</li>
+        </ol>
+        <p class="bestellen__tel"><a href="tel:+490000000000"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-tel"/></svg>Lieber anrufen: 0000 000 000</a></p>
+      </div>
+      <form class="formular" data-formular action="#" method="post" novalidate data-zeig>
+        <div class="formular__feld formular__feld--breit"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" placeholder="Vor und Nachname" required></div>
+        <div class="formular__feld"><label for="f-mail">E-Mail</label><input id="f-mail" name="email" type="email" autocomplete="email" placeholder="name@beispiel.invalid" required><small class="feld__hinweis">Dorthin schicken wir die Bestätigung.</small></div>
+        <div class="formular__feld"><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" placeholder="0000 000 000"><small class="feld__hinweis">Nur für Rückfragen, freiwillig.</small></div>
+        <div class="formular__feld formular__feld--breit"><label for="f-termin">Wunschtermin</label><input id="f-termin" name="termin" type="date"></div>
+        <div class="formular__feld formular__feld--breit"><label for="f-anliegen">Anlass und Menge</label><textarea id="f-anliegen" name="anliegen" rows="3" placeholder="Zum Beispiel: Kindergeburtstag, 12 Personen, Torte und Sorbet."></textarea></div>
+        <p class="formular__recht formular__feld--breit">Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Angaben für diese Anfrage zu. Mehr dazu in der <a href="#fuss">Datenschutzerklärung</a>.</p>
+        <button class="knopf formular__senden" type="submit">Eis vorbestellen</button>
+        <p class="formular__meldung formular__feld--breit" data-formular-meldung role="status" hidden>Beispielformular: In dieser Vorlage wird nichts gesendet. Schutz vor Spam, Bestätigungsmail und Versand baut der Bauablauf.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Newsletter auf Creme -->
+  <section class="newsletter" id="newsletter" aria-labelledby="newsletter-titel" data-abschnitt="newsletter">
+    <div class="newsletter__innen">
+      <h2 id="newsletter-titel" data-zeig>Neue Sorten zuerst</h2>
+      <p data-zeig>Ein Brief pro Monat: neue Sorten, Saisoneis und Termine. Kein Spam.</p>
+      <form class="newsletter__form" data-formular action="#" method="post" novalidate data-zeig>
+        <label class="sr-nur" for="n-mail">E-Mail</label>
+        <input id="n-mail" name="email" type="email" autocomplete="email" placeholder="E-MAIL ADRESSE" required>
+        <small class="feld__hinweis">Abmelden jederzeit über den Link im Brief.</small>
+        <button class="knopf" type="submit">Anmelden</button>
+        <p class="newsletter__meldung" data-formular-meldung role="status" hidden>Beispielformular: In dieser Vorlage wird nichts gesendet.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Grüne Abschlussfläche -->
+  <section class="abschluss" id="abschluss" aria-labelledby="abschluss-titel" data-abschnitt="abschluss">
+    <div class="abschluss__innen">
+      <p class="abschluss__kicker">Die Eisdiele</p>
+      <h2 id="abschluss-titel">Kommen Sie vorbei</h2>
+      <p class="abschluss__text">Musterstraße 1, 00000 Musterstadt. Täglich von 12 bis 20 Uhr, Beispielzeiten.</p>
+      <div class="abschluss__aktion">
+        <a class="knopf" href="#bestellen">Eis vorbestellen</a>
+        <a class="abschluss__tel" href="tel:+490000000000"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-tel"/></svg>0000 000 000</a>
+      </div>
+      <div class="abschluss__bild" aria-hidden="true">
+        <svg viewBox="0 0 720 300" width="720" height="300" focusable="false">
+          <use href="#p-waffel" x="20" y="-40" width="230" height="299" transform="rotate(-16 135 110)" style="--k1:var(--eis-erdbeer);--k2:var(--eis-sahne)"/>
+          <use href="#p-stiel" x="470" y="-30" width="210" height="273" transform="rotate(14 575 106)" style="--k1:var(--zitrone);--k2:var(--eis-blau)"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
+  <div class="fuss__innen">
+    <nav class="fuss__spalten" aria-label="Fußnavigation">
+      <div>
+        <h2>Sorten</h2>
+        <ul><li><a href="#sorte-beere">Beere</a></li><li><a href="#sorte-vanille">Vanille</a></li><li><a href="#sorte-sorbet">Sorbet</a></li><li><a href="#sorte-pistazie">Pistazie</a></li><li><a href="#sorte-saison">Saison</a></li></ul>
+      </div>
+      <div>
+        <h2>Eisdiele</h2>
+        <ul><li><a href="#abschluss">Anfahrt und Zeiten</a></li><li><a href="#fragen">Fragen</a></li><li><a href="#bestellen">Vorbestellen</a></li><li><a href="tel:+490000000000">0000 000 000</a></li></ul>
+      </div>
+      <div>
+        <h2>Rechtliches</h2>
+        <ul><li><a href="#fuss">Impressum</a></li><li><a href="#fuss">Datenschutz</a></li><li><a href="#fuss">Allergene</a></li></ul>
+      </div>
+    </nav>
+    <div class="fuss__marke">
+      <p class="fuss__logo"><svg width="44" height="44" aria-hidden="true" focusable="false"><use href="#i-kugel"/></svg>Markenname</p>
+      <p class="fuss__klein">Beispielseite einer Vorlage. Impressum, Datenschutz und Allergenangaben je Betrieb ergänzen.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../_basis/bewegung.js"></script>
+<script src="stil.js"></script>
+</body>
+</html>

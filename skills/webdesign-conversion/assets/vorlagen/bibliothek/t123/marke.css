@@ -1,0 +1,51 @@
+/* marke.css der Vorlage "Eisdiele in Vollfarbflächen": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast (selbst gerechnet, WCAG), jeweils Text auf Fläche. Text mindestens 4,5 zu 1, große Schrift und Bedienelemente mindestens 3 zu 1. */
+:root{
+  --flaeche:#fff2dc;            /* Creme, ruhige Grundfläche */
+  --flaeche-alt:#ffe6c2;
+  --flaeche-dunkel:#2a1710;     /* Schoko */
+  --text:#2a1710;               /* auf Creme 15,5 zu 1 */
+  --text-leise:#5a4036;         /* auf Creme 8,6 zu 1, auf Rosa 5,1 zu 1 */
+  --linie:#e8cfae;
+  --akzent:#b3123f;             /* Hauptaktion auf Creme: Beere mit Cremetext (6,2 zu 1) */
+  --akzent-text:#fff2dc;
+  --schrift-titel:'Archivo',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:14px;
+  --radius-karte:6px;
+  --radius-bild:4px;
+
+  /* Die fünf Vollflächen (je eine Sortengruppe) und ihre Gegenfarbe für den Riesentitel */
+  --beere:#b3123f;              /* Titel Zitrone 4,8 zu 1, Cremetext 6,2 zu 1 */
+  --blau:#2037a6;               /* Titel Zitrone 6,8 zu 1, Cremetext 8,8 zu 1 */
+  --gruen:#0f5a3a;              /* Titel Pistazie 6,5 zu 1, Cremetext 7,5 zu 1 */
+  --mango:#f58a1f;              /* Titel Schoko 7,0 zu 1 */
+  --creme:#fff2dc;              /* Titel Rosa Tief 5,3 zu 1 */
+  --rosa:#ffa3c0;               /* Held, Papierkarte, Bestellformular: Schoko 9,2 zu 1 */
+  --rosa-tief:#c2185b;
+  --zitrone:#ffd426;            /* Muster, Titel auf Beere und Blau, Schoko darauf 12,0 zu 1 */
+  --pistazie:#c9f28f;           /* Titel auf Grün, Schoko darauf 13,5 zu 1 */
+  --schoko:#2a1710;
+  --weiss:#ffffff;
+  --feld-rand:#8a6a5c;          /* Rand der Eingabefelder auf Weiß 4,9 zu 1 (Bedienelement, mindestens 3 zu 1) */
+  --text-auf-dunkel:#fff2dc;
+
+  /* Eisfarben der gezeichneten Produkte (nur Zeichnung, nie Textfarbe) */
+  --waffel:#eeb363;
+  --waffel-dunkel:#b9732a;
+  --eis-sahne:#fff8ec;
+  --eis-erdbeer:#ff6f9c;
+  --eis-blau:#8fbcff;
+  --eis-pistazie:#9ad66b;
+  --eis-pistazie-dunkel:#5fae52;
+  --eis-kuerbis:#ff9f3d;
+  --eis-zimt:#a8582c;
+
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:900;
+  --titel-spur:-0.03em;
+  --titel-zeile:.86;
+  --schwung:-2.5deg;            /* Neigung der Laufbänder, wechselt je Band das Vorzeichen */
+  --papier-linie:rgba(42,23,16,.55);
+  --schatten-karte:0 14px 30px -12px rgba(42,23,16,.35);
+}
