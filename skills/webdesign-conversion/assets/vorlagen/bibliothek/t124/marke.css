@@ -1,0 +1,34 @@
+/* marke.css der Vorlage "Geländerad Vorbestellung": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast (selbst gerechnet, WCAG): siehe Zeilen unten, jeweils Text auf Fläche, Mindestwert 4,5 zu 1, großer Text 3 zu 1. */
+:root{
+  --flaeche:#f1efe9;            /* Kalkweiß */
+  --flaeche-alt:#e4e1d8;
+  --flaeche-dunkel:#101713;     /* Waldschwarz */
+  --text:#141a16;               /* auf Fläche 15,4 zu 1, auf Fläche alt 13,5 zu 1 */
+  --text-leise:#4a544d;         /* auf Fläche 6,8 zu 1, auf Fläche alt 6,0 zu 1 */
+  --linie:#cfcbbe;
+  --akzent:#101713;             /* Hauptaktion auf Hell: Waldschwarz mit hellem Text (15,8 zu 1) */
+  --akzent-text:#f1efe9;
+  --schrift-titel:'Schibsted Grotesk',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:20px;
+  --radius-bild:16px;
+
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:500;
+  --titel-spur:-0.03em;
+  --signal:#ff6a1f;             /* Hauptaktion auf Dunkel, Markierungen. Text darauf: Waldschwarz 6,4 zu 1. Auf Waldschwarz als Textfarbe 6,4 zu 1, nie Textfarbe auf Hell */
+  --signal-hell:#ff8240;        /* Hover, Waldschwarz darauf 7,4 zu 1 */
+  --studio:#2a322d;             /* Studiofläche des Helds, Text Kalkweiß darauf 11,5 zu 1, Text leise 6,2 zu 1 */
+  --karte-dunkel:#1a231e;       /* Karten auf Waldschwarz */
+  --text-auf-dunkel:#f1efe9;    /* auf Waldschwarz 15,8 zu 1, auf Karte dunkel 14,0 zu 1 */
+  --text-leise-dunkel:#a9b5ad;  /* auf Waldschwarz 8,6 zu 1, auf Karte dunkel 7,6 zu 1 */
+  --linie-dunkel:#33403a;
+  --feld-rand:#6f7a72;          /* Rand der Eingabefelder auf Fläche 3,9 zu 1 (Bedienelement, mindestens 3 zu 1) */
+  --rahmen-rad:#e9e5da;         /* Rahmenfarbe der gezeichneten Fahrzeuge, nur Fläche */
+  --reifen:#0a0e0c;             /* Zeichnung: Reifen, Motor, Griffe */
+  --felge:#c9c4b5;
+  --speiche:#8d9189;
+  --weiss:#ffffff;
+}

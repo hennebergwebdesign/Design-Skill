@@ -1,0 +1,112 @@
+[
+  {
+    "id": "kopf",
+    "name": "Kopfzeile mit Vorbestellknopf",
+    "kategorie": "navigation",
+    "selektor": "header[data-abschnitt=\"kopf\"]",
+    "prinzip": "Der Hauptknopf steht in jedem Bildschirm erreichbar neben Logo, Menü und Telefon, bleibt über dem Held durchsichtig und wird nach dem Scrollen fest.",
+    "css": ".kopf",
+    "js": "bewegung.js (data-menue, Klasse gescrollt)",
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln des Präfixes aus stil.css mitnehmen. Symbol i-tel aus dem SVG Block am Seitenanfang, Klasse knopf--signal. Vor dem Übernehmen INFO.md lesen."
+  },
+  {
+    "id": "held",
+    "name": "Held: Rad rollt beim Scrollen ins Bild",
+    "kategorie": "hero",
+    "selektor": "section[data-abschnitt=\"held\"]",
+    "prinzip": "Die Bühne bleibt stehen, während das Produkt über den Scrollweg ins Bild rollt: der Besucher fährt die Einführung selbst mit der Scrollbewegung.",
+    "css": ".held, .rad",
+    "js": "bewegung.js über data-fortschritt (setzt --fortschritt)",
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln des Präfixes aus stil.css mitnehmen. Die Zeichnung .rad (inline SVG) und die Tokens --reifen, --felge, --speiche, --signal mitnehmen, Pin 230 svh und Reduced Motion Block am Ende von stil.css. Vor dem Übernehmen INFO.md lesen."
+  },
+  {
+    "id": "wechsel",
+    "name": "Merkmalsliste mit stehender Tafel",
+    "kategorie": "features",
+    "selektor": "section[data-abschnitt=\"wechsel\"]",
+    "prinzip": "Eine lange Merkmalsliste wird lesbar, weil immer nur eines im Fokus ist und die stehende Tafel daneben genau dazu passt.",
+    "css": ".wechsel, .tf-*",
+    "js": "stil.js Teil 1 (Merkmalsliste), IntersectionObserver",
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln des Präfixes aus stil.css mitnehmen. Symbole t-1 bis t-6 aus dem SVG Block, die .tf-* Klassen und die Klasse js (kommt aus bewegung.js). Auf dem Handy zeigt jeder Punkt seine Tafel selbst. Vor dem Übernehmen INFO.md lesen."
+  },
+  {
+    "id": "haltung",
+    "name": "Haltung als Vollbild Aussage",
+    "kategorie": "editorial",
+    "selektor": "section[data-abschnitt=\"haltung\"]",
+    "prinzip": "Eine einzige Aussage auf ruhigem Bild setzt zwischen Produktteil und Beweis den Ton, bevor Zahlen kommen.",
+    "css": ".haltung",
+    "js": "bewegung.js (data-licht, data-parallax, data-zeig)",
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln des Präfixes aus stil.css mitnehmen. Symbol s-wald (oder ein Foto) und das Overlay ::after, das den Text lesbar hält. Vor dem Übernehmen INFO.md lesen."
+  },
+  {
+    "id": "strecke",
+    "name": "Gelände: Route durch verstreute Aufnahmen",
+    "kategorie": "interactive",
+    "selektor": "section[data-abschnitt=\"strecke\"]",
+    "prinzip": "Eine Linie verbindet verstreute Bilder zu einer Strecke, ein wandernder Punkt gibt dem Scrollen ein Ziel und zeigt Weite statt Rastern.",
+    "css": ".strecke",
+    "js": "stil.js Teil 2 (Routenpunkt über getPointAtLength, nur transform)",
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln des Präfixes aus stil.css mitnehmen. Symbole s-wald, s-staub, s-hang oder Fotos. Pfad im viewBox 1000 mal 2000, auf dem Handy dient die Linie als ruhiger Hintergrund. Vor dem Übernehmen INFO.md lesen."
+  },
+  {
+    "id": "zahlen",
+    "name": "Vier Kennzahlen als große Ziffern",
+    "kategorie": "trust",
+    "selektor": "section[data-abschnitt=\"zahlen\"]",
+    "prinzip": "Wenige große Zahlen mit Einheit und klarer Bezeichnung lassen sich vergleichen, ohne dass der Besucher ein Datenblatt lesen muss.",
+    "css": ".zahlen",
+    "js": "bewegung.js (data-zaehle, data-staffel)",
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln des Präfixes aus stil.css mitnehmen. Alle Werte bleiben als Beispiel gekennzeichnet, bis echte Messwerte vorliegen. Vor dem Übernehmen INFO.md lesen."
+  },
+  {
+    "id": "geschichte",
+    "name": "Geschichte mit Dreierreihe",
+    "kategorie": "about",
+    "selektor": "section[data-abschnitt=\"geschichte\"]",
+    "prinzip": "Drei Aufnahmen und ein kurzer Ursprungstext machen aus Technik eine Haltung und geben dem Käufer einen Grund, dem Hersteller zu vertrauen.",
+    "css": ".geschichte",
+    "js": "bewegung.js (data-zeig, data-staffel)",
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln des Präfixes aus stil.css mitnehmen. Symbole s-wald, s-staub, s-hang oder Fotos. Vor dem Übernehmen INFO.md lesen."
+  },
+  {
+    "id": "finale",
+    "name": "Vorbestellung: Skala, Preis, zwei Knöpfe",
+    "kategorie": "cta",
+    "selektor": "section[data-abschnitt=\"finale\"]",
+    "prinzip": "Der Abschluss nennt Preis und Anzahlung offen neben dem Hauptknopf, und die zählende Skala macht den Weg zur Entscheidung körperlich spürbar.",
+    "css": ".finale, .rad",
+    "js": "stil.js Teil 3 (Skala 01 bis 50), bewegung.js über data-fortschritt",
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln des Präfixes aus stil.css mitnehmen. Die Zeichnung .rad, Symbol s-wald, Pin 260 svh und Reduced Motion Block am Ende von stil.css. Preis und Anzahlung sind Beispiel. Vor dem Übernehmen INFO.md lesen."
+  },
+  {
+    "id": "weg",
+    "name": "Vorbestellweg in vier Schritten mit Formular",
+    "kategorie": "process",
+    "selektor": "section[data-abschnitt=\"weg\"]",
+    "prinzip": "Wer weiß, was nach der Anzahlung passiert, zahlt eher: vier kurze Schritte nehmen die Angst vor der Bindung, das Formular daneben hat nur fünf Felder.",
+    "css": ".weg, .formular",
+    "js": "stil.js Teil 4 (Formular ohne Versand), bewegung.js (data-zeig)",
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln des Präfixes aus stil.css mitnehmen. Symbole i-tel und i-mail. Das Formular sendet nichts, Zahlung und Turnstile baut der Bauablauf. Vor dem Übernehmen INFO.md lesen."
+  },
+  {
+    "id": "fragen",
+    "name": "Einwand FAQ vor der Reservierung",
+    "kategorie": "faq",
+    "selektor": "section[data-abschnitt=\"fragen\"]",
+    "prinzip": "Die sechs Einwände vor einer Anzahlung (Geld, Termin, Reichweite, Recht, Service, Probefahrt) werden beantwortet, bevor sie zum Abbruch führen.",
+    "css": ".fragen",
+    "js": "bewegung.js (data-exklusiv)",
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln des Präfixes aus stil.css mitnehmen. Antworten sind Beispiele, rechtlich je Modell prüfen. Vor dem Übernehmen INFO.md lesen."
+  },
+  {
+    "id": "fuss",
+    "name": "Fuß mit großer Schlussaussage",
+    "kategorie": "footer",
+    "selektor": "footer[data-abschnitt=\"fuss\"]",
+    "prinzip": "Der Fuß wiederholt die Hauptaktion unter einer großen Schlusszeile, bevor Navigation, Kontakt und Rechtliches folgen.",
+    "css": ".fuss",
+    "js": null,
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln des Präfixes aus stil.css mitnehmen. Symbol i-pfeil. Rechtstexte je Kunde einsetzen. Vor dem Übernehmen INFO.md lesen."
+  }
+]
