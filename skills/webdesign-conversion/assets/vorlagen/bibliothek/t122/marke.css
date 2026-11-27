@@ -1,0 +1,50 @@
+/* marke.css der Vorlage "Fahrzeugwahl mit Technikbühne": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast (selbst gerechnet, WCAG): jeweils Text auf Fläche, Mindestwert 4,5 zu 1, Bedienelemente 3 zu 1. */
+:root{
+  --flaeche:#f7f3eb;            /* Sandweiß */
+  --flaeche-alt:#eee8dc;
+  --flaeche-dunkel:#141c1a;     /* Tannenschwarz */
+  --text:#1a2220;               /* auf Fläche 14,7 zu 1, auf Fläche alt 13,3 zu 1 */
+  --text-leise:#55605b;         /* auf Fläche 5,9 zu 1, auf Fläche alt 5,4 zu 1 */
+  --linie:#d9d2c3;
+  --akzent:#1a2220;             /* Hauptaktion: Tinte mit hellem Text (14,7 zu 1) */
+  --akzent-text:#f7f3eb;
+  --schrift-titel:'Bricolage Grotesque',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:16px;
+  --radius-karte:26px;
+  --radius-bild:22px;
+
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:700;
+  --titel-spur:-0.03em;
+  --signal:#ee7b3f;             /* Kupfer: Tachoring, Zahlen auf Dunkel (auf Tannenschwarz 6,2 zu 1), Rahmen der Mittelkarte, nie Textfarbe auf Hell (2,5 zu 1) */
+  --signal-weich:#fbe3d2;       /* Symbolkacheln, Text darauf 13,2 zu 1 */
+  --text-auf-signal:#1a2220;    /* auf Signal 5,8 zu 1 */
+  --text-auf-dunkel:#f4efe4;    /* auf Tannenschwarz 15,1 zu 1 */
+  --text-leise-dunkel:#a9b4ae;  /* auf Tannenschwarz 8,1 zu 1, auf Kartendunkel 6,9 zu 1 */
+  --karte-dunkel:#1f2a27;
+  --linie-dunkel:#2e3b37;
+  --feld-rand:#6f7a74;          /* Rand der Eingabefelder auf Weiß 4,5 zu 1 (Bedienelement, mindestens 3 zu 1) */
+  --weiss:#ffffff;
+  --fz-gruen:#2f6b5a;           /* Fahrzeugfarben der Zeichnungen, nur Fläche, nie Textfarbe */
+  --fz-senf:#e0a93e;
+  --fz-dunkel:#1a2220;
+  --foto-text:#ffffff;          /* Text auf Bildkarten, immer über Verlauf Tannenschwarz (Verlauf an der Textzeile mindestens 84 Prozent deckend, selbst über Weiß 10,6 zu 1, über Sand 11,5 zu 1) */
+  --verlauf:rgba(20,28,26,.88);
+}
+:root{
+  /* Zeichenfarben der Fahrzeuge, Fahrer und Szenen: nur Flächen, nie Textfarbe */
+  --fz-rad:#cfc8b8;
+  --fz-glas:#fff3d6;
+  --fz-schatten:rgba(20,28,26,.16);
+  --fahrer-jacke:#b9824f;
+  --fahrer-hose:#3a5575;
+  --fahrer-helm:#efe7d6;
+  --szene-wand:#40594f;
+  --szene-gruen:#5f8a63;
+  --szene-boden:#2a2f2c;
+  --szene-himmel:#d9e5df;
+  --szene-warm:#f3d9b5;
+  --szene-dunkel:#16211e;
+}

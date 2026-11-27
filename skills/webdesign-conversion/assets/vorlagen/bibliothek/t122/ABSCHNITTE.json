@@ -1,0 +1,142 @@
+[
+  {
+    "id": "kopf",
+    "name": "Schwebende Kopfzeile als Pille",
+    "kategorie": "navigation",
+    "selektor": "header[data-abschnitt=\"kopf\"]",
+    "prinzip": "Die Kopfzeile schwebt über jedem Abschnitt und hält Orientierung, Telefon und die Hauptaktion in Reichweite.",
+    "css": ".kopf, .burger",
+    "js": "bewegung.js (data-menue, data-menue-ziel)",
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln .kopf, .burger und .knopf aus stil.css mitnehmen, Symbole i-blitz und i-tel aus dem SVG Block am Seitenanfang, bewegung.js für Menü und Abschnittsanzeige."
+  },
+  {
+    "id": "held",
+    "name": "Held mit gezeichneter Straßenszene in Bewegung",
+    "kategorie": "hero",
+    "selektor": "section[data-abschnitt=\"held\"]",
+    "prinzip": "Ein bewegtes Bild trägt die Aussage, die Hauptaktion steht im ersten Bildschirm und das Fahrzeug zeigt sofort, worum es geht.",
+    "css": ".held, Tokens --szene-*, --fahrer-*",
+    "js": null,
+    "hinweis": "marke.css (Tokens --szene-*, --fahrer-*, --fz-*), ../_basis/basis.css, .held, .z-* und .f-* aus stil.css mitnehmen, dazu Symbol fz-roller, i-pfeil und i-tel. Das Foto ersetzt .held__wand, .held__gruen, .held__strasse und .held__fahrer, die Streifen bleiben als Bewegung."
+  },
+  {
+    "id": "partner",
+    "name": "Partnerleiste mit Beispiellogos",
+    "kategorie": "trust",
+    "selektor": "section[data-abschnitt=\"partner\"]",
+    "prinzip": "Bekannte Namen direkt unter dem ersten Bildschirm geben Vertrauen, bevor die Auswahl beginnt.",
+    "css": ".partner, ../_basis/logos.css",
+    "js": null,
+    "hinweis": "marke.css, basis.css, .partner aus stil.css und ../_basis/logos.css samt Ordner logos mitnehmen. Die Logos sind Beispiele und durch echte zu ersetzen."
+  },
+  {
+    "id": "wahl",
+    "name": "Fahrzeugwahl mit Freisteller, Umschalter und Akkuregler",
+    "kategorie": "interactive",
+    "selektor": "section[data-abschnitt=\"wahl\"]",
+    "prinzip": "Wer Fahrzeug, Akkupaket und Farbe selbst einstellt und die Reichweite sofort sieht, entscheidet sich für ein konkretes Produkt statt für eine Liste.",
+    "css": ".wahl",
+    "js": "stil.js, Block 1 Fahrzeugwahl (data-wahl)",
+    "hinweis": "marke.css, basis.css, .wahl, .z-* und .knopf aus stil.css, stil.js Block 1, Symbole fz-roller, fz-lastenrad, fz-stadtrad und i-pfeil. Ohne JavaScript stehen alle Fahrzeuge untereinander, die Reichweiten stehen als Text (.wahl__statisch)."
+  },
+  {
+    "id": "aussage",
+    "name": "Aussage mit Bild",
+    "kategorie": "editorial",
+    "selektor": "section[data-abschnitt=\"aussage\"]",
+    "prinzip": "Eine große Aussage mit kurzem Erklärtext und breitem Bild setzt zwischen zwei Werkzeugabschnitten die Haltung der Marke.",
+    "css": ".aussage",
+    "js": "bewegung.js (data-zeig)",
+    "hinweis": "marke.css, basis.css (data-zeig), .aussage aus stil.css, Symbol fz-roller. Das Bild ist ein Platzhalter für ein breites Foto."
+  },
+  {
+    "id": "karten",
+    "name": "Kartenband mit hervorgehobener Mittelkarte",
+    "kategorie": "features",
+    "selektor": "section[data-abschnitt=\"karten\"]",
+    "prinzip": "Die Karte in der Mitte ist größer und gerahmt, so führt das Band den Blick auf genau eine Aussage und lädt zum Weiterblättern ein.",
+    "css": ".karten",
+    "js": "stil.js, Block 2 Kartenband (data-karten)",
+    "hinweis": "marke.css, basis.css, .karten, .z-*, .t-* und .knopf aus stil.css, stil.js Block 2, Symbole teil-akku, fz-*, i-stecker, i-sonne, i-pfeil. Die Klasse ist-mitte steht im HTML auf der dritten Karte, damit das Band ohne JavaScript stimmig bleibt."
+  },
+  {
+    "id": "besch",
+    "name": "Beschreibung mit zwei Kennzahlen mit Symbol",
+    "kategorie": "benefits",
+    "selektor": "section[data-abschnitt=\"besch\"]",
+    "prinzip": "Zwei Kennzahlen mit Symbol unter einem Freisteller machen den Nutzen in Sekunden greifbar, ohne Tabelle.",
+    "css": ".besch",
+    "js": "bewegung.js (data-parallax)",
+    "hinweis": "marke.css, basis.css, .besch, .z-* und .knopf aus stil.css, Symbole fz-roller, i-blitz, i-tacho, i-plus. Die Hotspots sind reine Zierpunkte, bei Bedarf als Schaltflächen mit Beschriftung ausbauen."
+  },
+  {
+    "id": "bildk",
+    "name": "Zwei große Bildkarten mit Text auf dem Bild",
+    "kategorie": "features",
+    "selektor": "section[data-abschnitt=\"bildk\"]",
+    "prinzip": "Zwei große Bilder mit je einer Zeile Text geben Stimmung, bevor die Technik folgt, und der dunkle Verlauf sichert die Lesbarkeit.",
+    "css": ".bildk",
+    "js": "bewegung.js (data-zeig)",
+    "hinweis": "marke.css (--foto-text, --verlauf), basis.css, .bildk und .z-* aus stil.css, Symbole fz-roller, fz-stadtrad, i-kreis, i-helm. Mit Foto den Verlauf .bildk__text behalten und den Kontrast prüfen."
+  },
+  {
+    "id": "technik",
+    "name": "Technikbühne mit Tachoring und Zählwerk",
+    "kategorie": "technical",
+    "selektor": "section[data-abschnitt=\"technik\"]",
+    "prinzip": "Ein Tachoring um das Bauteil, flankiert von zwei Kennzahlen, macht Technik als Zahl sichtbar, und der Zähler läuft nur, solange der Betrachter hinsieht.",
+    "css": ".technik, .tz-*",
+    "js": "stil.js, Block 3 Zählwerk (data-zaehlwerk)",
+    "hinweis": "marke.css (Tokens --flaeche-dunkel, --karte-dunkel, --signal, --text-leise-dunkel), basis.css, .technik, .tz-*, .t-* aus stil.css, stil.js Block 3, Symbole teil-akku und i-plus. Nicht gepinnt, Endwert steht im HTML."
+  },
+  {
+    "id": "stimmen",
+    "name": "Stimmen mit drei Bildkarten",
+    "kategorie": "testimonials",
+    "selektor": "section[data-abschnitt=\"stimmen\"]",
+    "prinzip": "Drei Stimmen mit Bild und Namen zeigen echte Menschen mit echten Anlässen, die mittlere Karte ist höher und führt das Auge.",
+    "css": ".stimmen",
+    "js": "bewegung.js (data-zeig)",
+    "hinweis": "marke.css, basis.css, .stimmen und .z-* aus stil.css, Symbole fz-*. Alle Stimmen sind Beispiele, im Projekt durch echte, freigegebene Stimmen ersetzen. Es gibt bewusst keine Sternleiste."
+  },
+  {
+    "id": "fragen",
+    "name": "FAQ als Akkordeon mit Symbol je Frage",
+    "kategorie": "faq",
+    "selektor": "section[data-abschnitt=\"fragen\"]",
+    "prinzip": "Einwände stehen als Fragen mit eigenem Symbol und lassen sich einzeln öffnen, so findet der Besucher seine Frage ohne zu lesen.",
+    "css": ".fragen",
+    "js": "bewegung.js (data-exklusiv)",
+    "hinweis": "marke.css, basis.css, .fragen aus stil.css, Symbole i-karte, i-akku, i-stecker, i-kreis, i-paket, i-euro, i-plus. Die FAQPage Daten stehen im Kopf der Seite und gehören zu den Fragen."
+  },
+  {
+    "id": "probe",
+    "name": "Probefahrt buchen",
+    "kategorie": "cta",
+    "selektor": "section[data-abschnitt=\"probe\"]",
+    "prinzip": "Die Hauptaktion bekommt einen eigenen dunklen Abschnitt mit Telefon, Zusagen und Ort, damit der letzte Schritt ohne Suchen geht.",
+    "css": ".probe",
+    "js": null,
+    "hinweis": "marke.css, basis.css, .probe und .knopf aus stil.css, Symbole i-uhr, i-helm, i-haken, i-tel, i-ort, i-pfeil. Das Ziel #probefahrt ist der Anker aller Primär Knöpfe."
+  },
+  {
+    "id": "news",
+    "name": "Newsletter Karte mit Bild rechts",
+    "kategorie": "forms",
+    "selektor": "section[data-abschnitt=\"news\"]",
+    "prinzip": "Ein kurzes Formular mit Feldhinweisen und Einwilligung steht neben einem Bild, das die Marke zeigt, und fragt nur das Nötigste.",
+    "css": ".news",
+    "js": "stil.js, Block 4 Formular (data-formular)",
+    "hinweis": "marke.css, basis.css, .news und .knopf aus stil.css, stil.js Block 4, Symbole i-mail, i-pfeil, fz-lastenrad. Das Formular sendet nichts, Versand und Double Opt In sind im Projekt zu bauen."
+  },
+  {
+    "id": "fuss",
+    "name": "Dunkler Fuß mit Linkspalten",
+    "kategorie": "footer",
+    "selektor": "footer[data-abschnitt=\"fuss\"]",
+    "prinzip": "Der Fuß wiederholt die Hauptaktion und ordnet Links in wenige Spalten, damit niemand am Seitenende stecken bleibt.",
+    "css": ".fuss",
+    "js": null,
+    "hinweis": "marke.css, basis.css, .fuss und .knopf aus stil.css, Symbole i-blitz, i-pfeil. Rechtliche Links (Impressum, Datenschutz, AGB, Widerruf) sind Platzhalter."
+  }
+]
