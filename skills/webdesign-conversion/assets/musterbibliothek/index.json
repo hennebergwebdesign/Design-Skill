@@ -5,7 +5,7 @@
   ],
   "schema": 1,
   "erzeugt": "2026-11-27",
-  "anzahl": 13,
+  "anzahl": 18,
   "muster": [
     {
       "id": "bewertungen-als-eigene-sektion",
@@ -45,6 +45,38 @@
       "aufgenommen": "2026-09-18"
     },
     {
+      "id": "einwilligungspanel-im-ersten-bildschirm",
+      "name": "Einwilligung als offenes Panel mit gleich gewichteten Wegen",
+      "kategorie": "forms",
+      "sektionstyp": [
+        "forms",
+        "hero"
+      ],
+      "tags": [
+        "einwilligung",
+        "schalter",
+        "panel",
+        "gleichgewicht"
+      ],
+      "stil": [
+        "clean",
+        "material-flat"
+      ],
+      "branchenbezug": [
+        "alle"
+      ],
+      "ux_zweck": "die Wahl über Daten liegt offen im Blick, nicht hinter einem Überlagerungsfenster",
+      "conversion_zweck": "vermeidet das Wegklicken per Reflex und hält die Einwilligung belastbar",
+      "komplexitaet": "mittel",
+      "responsiv": "unbekannt, nur Desktop erfasst",
+      "barrierefreiheit": "Schalter sind echte Bedienelemente mit Namen und Zustand, Ablehnen und Annehmen haben dieselbe Größe und Betonung. Nichts ist vorausgewählt",
+      "konfidenz": "niedrig",
+      "freigabe": "global",
+      "verwandt": [],
+      "quelle_url": "https://www.phunk.com/",
+      "aufgenommen": "2026-11-27"
+    },
+    {
       "id": "fallstudienliste-mit-tags",
       "name": "Fallstudien als Liste mit Bild, Tags und eigenem Weg",
       "kategorie": "cases",
@@ -77,7 +109,8 @@
       "konfidenz": "mittel",
       "freigabe": "global",
       "verwandt": [
-        "bewertungen-als-eigene-sektion"
+        "bewertungen-als-eigene-sektion",
+        "tags-im-bild-projektkarte"
       ],
       "quelle_url": "https://www.phunk.com/",
       "aufgenommen": "2026-11-27"
@@ -300,9 +333,46 @@
       "konfidenz": "hoch",
       "freigabe": "global",
       "verwandt": [
-        "hero-vollbild-pillennavigation"
+        "hero-vollbild-pillennavigation",
+        "schrumpfender-held"
       ],
       "quelle_url": "https://conwest.com/",
+      "aufgenommen": "2026-11-27"
+    },
+    {
+      "id": "manifest-buehne-ein-satz-pro-bildschirm",
+      "name": "Pinnende Bühne, ein Satz oder eine Aussage pro Bildschirm",
+      "kategorie": "interactive",
+      "sektionstyp": [
+        "interactive",
+        "about",
+        "features"
+      ],
+      "tags": [
+        "pinnen",
+        "scrollfortschritt",
+        "manifest",
+        "ein-satz",
+        "bühne"
+      ],
+      "stil": [
+        "expressive",
+        "experimentell"
+      ],
+      "branchenbezug": [
+        "app",
+        "produkt",
+        "marke"
+      ],
+      "ux_zweck": "eine Aussage nach der anderen, gesteuert vom Scrollen, ohne Wischen oder Klicken",
+      "conversion_zweck": "Haltung und Nutzen werden gelesen statt überflogen, bevor die Handlung kommt",
+      "komplexitaet": "mittel",
+      "responsiv": "unbekannt, Verhalten der Referenzen bei 390 Pixel nur teilweise erfasst",
+      "barrierefreiheit": "Grundzustand ist statisch, alle Aussagen stehen im Fluss. Pinnen nur mit JavaScript und ohne reduzierte Bewegung. Unsichtbare Aussagen sind nicht fokussierbar und nicht vorlesbar versteckt, wenn sie inhaltlich nötig sind",
+      "konfidenz": "mittel",
+      "freigabe": "global",
+      "verwandt": [],
+      "quelle_url": "https://pocketchangethe.world/",
       "aufgenommen": "2026-11-27"
     },
     {
@@ -337,7 +407,8 @@
       "freigabe": "bestand",
       "verwandt": [
         "bewertungen-als-eigene-sektion",
-        "hero-foto-mit-textkasten"
+        "hero-foto-mit-textkasten",
+        "vertrauensreihe-vor-dem-angebot"
       ],
       "quelle_url": "https://21st.dev/",
       "aufgenommen": "2026-09-18"
@@ -411,7 +482,8 @@
       "konfidenz": "mittel",
       "freigabe": "global",
       "verwandt": [
-        "schritte-auf-bildgrund"
+        "schritte-auf-bildgrund",
+        "vertrauensreihe-vor-dem-angebot"
       ],
       "quelle_url": "https://www.goodlifemeds.com/",
       "aufgenommen": "2026-11-27"
@@ -453,6 +525,81 @@
       "aufgenommen": "2026-11-27"
     },
     {
+      "id": "schrumpfender-held",
+      "name": "Held, der beim Scrollen von Vollbild zur Karte schrumpft",
+      "kategorie": "hero",
+      "sektionstyp": [
+        "hero"
+      ],
+      "tags": [
+        "pinnen",
+        "skalierung",
+        "vollbild",
+        "bewegtbild",
+        "uebergang"
+      ],
+      "stil": [
+        "luxus",
+        "expressive"
+      ],
+      "branchenbezug": [
+        "bau",
+        "immobilien",
+        "industrie",
+        "tourismus"
+      ],
+      "ux_zweck": "ein weicher Übergang vom Bild in den Inhalt, ohne harte Kante",
+      "conversion_zweck": "das Bild prägt den ersten Eindruck, der Text und die Knöpfe bleiben dabei stehen",
+      "komplexitaet": "mittel",
+      "responsiv": "unbekannt, die Referenz wurde mobil nur am Seitenanfang erfasst, dort Vollbild",
+      "barrierefreiheit": "Ohne Skript und bei reduzierter Bewegung steht die Karte fertig, nichts pinnt. Text und Knöpfe bleiben im Fluss und fokussierbar. Ein Video braucht Poster und Pause",
+      "konfidenz": "mittel",
+      "freigabe": "global",
+      "verwandt": [
+        "hero-wortmarke-angeschnitten"
+      ],
+      "quelle_url": "https://conwest.com/",
+      "aufgenommen": "2026-11-27"
+    },
+    {
+      "id": "tags-im-bild-projektkarte",
+      "name": "Projektkarte mit Tags im Bild und Name auf dem Verlauf",
+      "kategorie": "portfolio",
+      "sektionstyp": [
+        "portfolio",
+        "cases"
+      ],
+      "tags": [
+        "bildkarte",
+        "tags",
+        "verlauf",
+        "gestreckter-link",
+        "sparte"
+      ],
+      "stil": [
+        "refined",
+        "corporate"
+      ],
+      "branchenbezug": [
+        "bau",
+        "immobilien",
+        "architektur",
+        "handwerk"
+      ],
+      "ux_zweck": "Sparte und Status werden vor dem Öffnen erkannt, ohne Text neben dem Bild",
+      "conversion_zweck": "das Projekt wird über Bild und Einordnung angeklickt, die ganze Karte ist die Handlung",
+      "komplexitaet": "niedrig",
+      "responsiv": "unbekannt, nur Desktop erfasst",
+      "barrierefreiheit": "Gestreckter Link über die ganze Karte mit Namen im Linktext, Tags als Liste im Text und nicht nur im Bild. Text auf dem Foto liegt auf einem Verlauf mit gerechnetem Kontrast",
+      "konfidenz": "mittel",
+      "freigabe": "global",
+      "verwandt": [
+        "fallstudienliste-mit-tags"
+      ],
+      "quelle_url": "https://conwest.com/",
+      "aufgenommen": "2026-11-27"
+    },
+    {
       "id": "versuchsuebersicht-mit-transparenz",
       "name": "Laufende Versuche offen zeigen, mit Begründung, warum",
       "kategorie": "trust",
@@ -488,6 +635,44 @@
         "problem-grosse-zahl-mit-quelle"
       ],
       "quelle_url": "https://www.farmminerals.com/",
+      "aufgenommen": "2026-11-27"
+    },
+    {
+      "id": "vertrauensreihe-vor-dem-angebot",
+      "name": "Vier Zusagen in einer Reihe, bevor das Angebot beginnt",
+      "kategorie": "trust",
+      "sektionstyp": [
+        "trust",
+        "benefits"
+      ],
+      "tags": [
+        "vier-spalten",
+        "icon",
+        "kurztitel",
+        "vor-dem-angebot"
+      ],
+      "stil": [
+        "clean",
+        "minimal"
+      ],
+      "branchenbezug": [
+        "onlinehandel",
+        "gesundheit",
+        "beratung",
+        "abo"
+      ],
+      "ux_zweck": "Zweifel an Seriosität und Ablauf werden beantwortet, bevor Produkte gezeigt werden",
+      "conversion_zweck": "senkt die Hürde vor dem ersten Produkt, ohne eine eigene Bewertungssektion zu brauchen",
+      "komplexitaet": "niedrig",
+      "responsiv": "unbekannt, nur Desktop erfasst",
+      "barrierefreiheit": "Icons sind Zierde (aria-hidden), die Aussage steht im Text. Die Reihe ist eine Liste, nicht vier lose Blöcke",
+      "konfidenz": "mittel",
+      "freigabe": "global",
+      "verwandt": [
+        "produktkarten-auf-fotobuehne",
+        "partnerlogos-als-integrationsraster"
+      ],
+      "quelle_url": "https://www.goodlifemeds.com/",
       "aufgenommen": "2026-11-27"
     }
   ]

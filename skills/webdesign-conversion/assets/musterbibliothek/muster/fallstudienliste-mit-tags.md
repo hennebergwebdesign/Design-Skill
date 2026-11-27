@@ -11,7 +11,7 @@ conversion_zweck: führt vom Überblick in genau eine Fallstudie, jede mit eigen
 responsiv: unbekannt, nur Desktop erfasst
 komplexitaet: niedrig
 barrierefreiheit: Die Vorschaubilder haben Alt Texte, der Link "Fallstudie ansehen" nennt im Namen das Projekt (aria-label), nicht sechsmal dasselbe
-verwandt: [bewertungen-als-eigene-sektion]
+verwandt: [bewertungen-als-eigene-sektion, tags-im-bild-projektkarte]
 quelle_url: https://www.phunk.com/
 quelle_erfasst: 2026-11-27
 konfidenz: mittel

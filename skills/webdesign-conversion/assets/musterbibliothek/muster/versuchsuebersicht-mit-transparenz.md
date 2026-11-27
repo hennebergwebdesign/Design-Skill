@@ -51,7 +51,7 @@ Kennzahlenkacheln hält die Werte vergleichbar und nüchtern.
 - Kennzahlen als `table` mit Datum und Herkunft je Zeile, Update Datum sichtbar.
 - Standorte zuerst als Liste im Text, die Karte ist Ergänzung und trägt `role="img"` mit
   Beschreibung. Die Karte darf ohne Skript und ohne Fremdserver auskommen (Consent bei
-  Kartendiensten, siehe `07-recht-datenschutz.md`).
+  Kartendiensten, siehe `07-recht-dsgvo.md`).
 - Der Begründungsblock nennt Zweck und Maßstab des Versuchs in zwei Sätzen.
 
 ## Was nicht übernommen wird

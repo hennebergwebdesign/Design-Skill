@@ -104,7 +104,7 @@ Die Galerien Lapa Ninja, Godly und SiteInspire sind als Entdeckungsquellen in
 `referenzquellen.json` aufgenommen, bisher ohne Erprobung im Projekt. Aufgenommen wurden nur
 Name, Adresse und der Weg der Entdeckung, keine Inhalte.
 
-Die fünf Muster des Erstbestands in `assets/musterbibliothek/muster/` beschreiben Prinzipien
+Die fünf Muster des Erstbestands (die 13 weiteren aus den Referenzseiten vom 27.11.2026 sind in `bibliothek/HERKUNFT.md` belegt) in `assets/musterbibliothek/muster/` beschreiben Prinzipien
 aus den 21st.dev-Referenzkomponenten der Version 3.2. Der Quelltext liegt weiterhin nur in
 `assets/vorlagen/referenzkomponenten/`, die Muster selbst enthalten keinen fremden Code, kein
 fremdes Bildmaterial und keine wörtlichen Zitate.

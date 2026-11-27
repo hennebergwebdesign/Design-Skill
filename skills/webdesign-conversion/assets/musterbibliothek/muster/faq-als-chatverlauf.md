@@ -57,7 +57,7 @@ Quelltext, nicht geprüft.
 - Antworten bleiben unter etwa 60 Wörtern, sonst kippt der Verlauf in einen Textblock.
 - Der Kontaktweg gehört in die Schlusszeile, siehe `faq-zweispaltig-mit-kontaktausweg`.
 - Strukturierte Daten für FAQ nur, wenn die Antworten im sichtbaren Text stehen, siehe
-  `05-seo-geo.md`.
+  `05-seo-sichtbarkeit.md`.
 - Mobil: Blasen auf volle Breite, Rollen über Einzug und Farbe unterscheiden.
 
 ## Was nicht übernommen wird

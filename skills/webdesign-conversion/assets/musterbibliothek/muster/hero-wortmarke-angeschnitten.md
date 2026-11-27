@@ -11,7 +11,7 @@ conversion_zweck: Wiedererkennung und Haltung im ersten Bildschirm, ohne den Pla
 responsiv: unbekannt, nur das Umbrechen der Aussage ist bei 390 Pixel gesehen, die Wortmarke selbst nicht eigens geprüft
 komplexitaet: niedrig
 barrierefreiheit: Die Wortmarke bleibt echter Text oder ein SVG mit Titel, nie ein Bild ohne Alternative. Angeschnittene Schrift braucht Kontrast an der sichtbaren Kante, nicht am ganzen Wort
-verwandt: [hero-vollbild-pillennavigation]
+verwandt: [hero-vollbild-pillennavigation, schrumpfender-held]
 quelle_url: https://conwest.com/
 quelle_erfasst: 2026-11-27
 konfidenz: hoch

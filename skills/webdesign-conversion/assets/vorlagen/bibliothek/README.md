@@ -1,7 +1,7 @@
 # Template-Bibliothek
 
-Hundertelf eigenständige Seitenvorlagen, branchenneutral, ohne Build, ohne Abhängigkeit, ohne Fremdserver. Jede Vorlage ist ein Ordner
-(`t01` bis `t111`, Überblick in `index.html`) mit `index.html`, `marke.css`, `stil.css` und `INFO.md`. Gemeinsam genutzt wird `_basis/`.
+Hundertachtzehn eigenständige Seitenvorlagen, branchenneutral, ohne Build, ohne Abhängigkeit, ohne Fremdserver. Jede Vorlage ist ein Ordner
+(`t01` bis `t118`, Überblick in `index.html`) mit `index.html`, `marke.css`, `stil.css` und `INFO.md`. Gemeinsam genutzt wird `_basis/`.
 
 ## Benutzen
 
@@ -33,7 +33,7 @@ Titel höchstens 60 und Beschreibung höchstens 160 Zeichen, Primär-CTA in der 
 
 ## Vorschaubilder erneuern
 
-Die Galerie lädt keine Seiten, sondern kleine WebP Bilder aus `vorschau/` (333 Dateien). Geladen wird nach Bedarf: die Desktopvorschau beim Scrollen, die Abschnittsübersicht erst beim Überfahren, die Mobilansicht erst nach dem Umschalten (gemessen: 24 Bilder beim Öffnen, 1 beim Überfahren). Nach einer Änderung an einer Vorlage neu erzeugen, aus dem Repository Stamm: `node scripts/bibliothek-vorschau.mjs` (braucht Playwright, startet einen lokalen Server, Bewegung auf reduziert).
+Die Galerie lädt keine Seiten, sondern kleine WebP Bilder aus `vorschau/` (354 Dateien). Geladen wird nach Bedarf: die Desktopvorschau beim Scrollen, die Abschnittsübersicht erst beim Überfahren, die Mobilansicht erst nach dem Umschalten (gemessen: 24 Bilder beim Öffnen, 1 beim Überfahren). Nach einer Änderung an einer Vorlage neu erzeugen, aus dem Repository Stamm: `node scripts/bibliothek-vorschau.mjs` (braucht Playwright, startet einen lokalen Server, Bewegung auf reduziert).
 
 ## Bewegung
 

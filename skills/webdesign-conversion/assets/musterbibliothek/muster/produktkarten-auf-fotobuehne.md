@@ -11,7 +11,7 @@ conversion_zweck: vom Gefühl zur Produktkarte ohne Seitenwechsel, jede Karte mi
 responsiv: unbekannt, nur Desktop erfasst, Karussell bei 390 Pixel nicht geprüft
 komplexitaet: mittel
 barrierefreiheit: Karussell braucht Pfeile als Buttons mit Namen, Wischen allein reicht nicht, und ein Pausenmittel, wenn es sich bewegt. Text auf dem Foto liegt nicht direkt auf dem Bild, sondern auf einer Fläche oder Abdunklung
-verwandt: [schritte-auf-bildgrund]
+verwandt: [schritte-auf-bildgrund, vertrauensreihe-vor-dem-angebot]
 quelle_url: https://www.goodlifemeds.com/
 quelle_erfasst: 2026-11-27
 konfidenz: mittel
