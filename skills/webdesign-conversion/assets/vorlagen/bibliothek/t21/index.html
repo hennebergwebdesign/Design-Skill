@@ -50,7 +50,7 @@
   </div>
 </div>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="wrap kopf__innen">
     <a class="logo" href="#top" aria-label="Mustermarke, zur Startseite"><svg aria-hidden="true" focusable="false"><use href="#i-marke"/></svg>Mustermarke</a>
     <button class="kopf__burger" type="button" data-menue aria-expanded="false" aria-controls="hauptnav">
@@ -72,7 +72,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: zentriert auf einem großen Kreis -->
-  <section class="held" id="top" aria-labelledby="h-held">
+  <section class="held" id="top" aria-labelledby="h-held" data-abschnitt="held">
     <div class="held__grund" aria-hidden="true"><span class="held__kreis"></span></div>
     <div class="wrap held__inhalt" data-weg data-staffel>
       <!-- Bewertung: Platzhalter, mit echter Quelle und echtem Wert ersetzen oder entfernen -->
@@ -91,7 +91,7 @@
   </section>
 
   <!-- 2. Bühne: Bildrahmen liegt auf der Grenze von hell zu dunkel und wächst beim Scrollen -->
-  <section class="buehne" aria-label="Bildbühne">
+  <section class="buehne" aria-label="Bildbühne" data-abschnitt="buehne">
     <div class="wrap">
       <div class="buehne__rahmen" data-zoom>
         <div class="bild bild--a" aria-hidden="true"><img class="bild__foto" src="bilder/techniker-in-gruenem-hemd-am-schaltkasten.webp" width="1600" height="900" alt="Techniker in grünem Hemd arbeitet an einem Schaltkasten" fetchpriority="high" decoding="async"></div>
@@ -104,7 +104,7 @@
   </section>
 
   <!-- 3. Vertrauen: dunkel, Leitsatz füllt sich Wort für Wort, vier Merkmale -->
-  <section class="sektion dunkel vertrauen" id="vertrauen" aria-labelledby="h-vertrauen">
+  <section class="sektion dunkel vertrauen" id="vertrauen" aria-labelledby="h-vertrauen" data-abschnitt="dunkel">
     <div class="wrap">
       <h2 class="vertrauen__satz" id="h-vertrauen" data-licht>Wer klar plant und sauber arbeitet, muss später selten nachbessern. Genau darauf legen wir Wert.</h2>
       <ul class="merkmale" data-staffel>
@@ -134,7 +134,7 @@
   </section>
 
   <!-- 4. Bausteine: Karten fahren beim Scrollen von den Seiten zusammen (Sticky) -->
-  <section class="faecher" id="leistungen" aria-labelledby="h-faecher" data-fortschritt>
+  <section class="faecher" id="leistungen" aria-labelledby="h-faecher" data-fortschritt data-abschnitt="faecher">
     <div class="faecher__buehne">
       <div class="wrap">
         <h2 class="mitte" id="h-faecher">Vier Bausteine, die ineinandergreifen</h2>
@@ -163,7 +163,7 @@
   </section>
 
   <!-- 5. Aus einer Hand: zwei Tafeln schieben sich schräg ein (Sticky), darunter eine breite Tafel -->
-  <section class="paar" id="hand" aria-labelledby="h-paar" data-fortschritt>
+  <section class="paar" id="hand" aria-labelledby="h-paar" data-fortschritt data-abschnitt="paar">
     <div class="paar__buehne">
       <div class="wrap">
         <h2 class="mitte" id="h-paar">Alles aus einer Hand, vom ersten Gespräch bis zur Wartung</h2>
@@ -188,7 +188,7 @@
     </div>
   </section>
 
-  <section class="sektion paar__unten-sektion" aria-labelledby="h-nach">
+  <section class="sektion paar__unten-sektion" aria-labelledby="h-nach" data-abschnitt="paar-unten-sektion">
     <div class="wrap">
       <article class="breit" data-zeig>
         <div class="bild bild--e breit__bild" aria-hidden="true"><img class="bild__foto" src="bilder/elektriker-mit-schutzhelm-an-der-wand.webp" width="1000" height="668" alt="Elektriker mit Schutzhelm arbeitet an einer Wand" loading="lazy" decoding="async"></div>
@@ -207,7 +207,7 @@
   </section>
 
   <!-- 6. Überblick: seitlich blätternde Leistungskarten -->
-  <section class="sektion ueberblick" id="ueberblick" aria-labelledby="h-ueberblick">
+  <section class="sektion ueberblick" id="ueberblick" aria-labelledby="h-ueberblick" data-abschnitt="ueberblick">
     <div data-slider>
       <div class="wrap kopfzeile">
         <h2 id="h-ueberblick" data-zeig>Unsere Leistungen im Überblick</h2>
@@ -270,7 +270,7 @@
   </section>
 
   <!-- 7. Ablauf: vier Karten ziehen nacheinander ein (Sticky) -->
-  <section class="prozess" id="ablauf" aria-labelledby="h-prozess" data-fortschritt>
+  <section class="prozess" id="ablauf" aria-labelledby="h-prozess" data-fortschritt data-abschnitt="prozess">
     <div class="prozess__buehne">
       <div class="wrap">
         <h2 class="mitte" id="h-prozess">So kommen Sie ohne Umwege ans Ziel</h2>
@@ -299,7 +299,7 @@
   </section>
 
   <!-- 8. Zusagen: dunkle Tafel mit Akkordeon -->
-  <section class="sektion zusagen" aria-labelledby="h-zusagen">
+  <section class="sektion zusagen" aria-labelledby="h-zusagen" data-abschnitt="zusagen">
     <div class="wrap">
       <div class="tafel dunkel">
         <div class="tafel__bild">
@@ -332,7 +332,7 @@
   </section>
 
   <!-- 9. Stimmen: dunkel, Leitsatz, Kennzahlen, Partnerlogos, blätternde Karten -->
-  <section class="sektion dunkel stimmen" id="stimmen" aria-labelledby="h-stimmen">
+  <section class="sektion dunkel stimmen" id="stimmen" aria-labelledby="h-stimmen" data-abschnitt="dunkel-2">
     <div class="wrap stimmen__kopf">
       <h2 class="vertrauen__satz" id="h-stimmen" data-licht>Gute Ergebnisse entstehen mit klaren Absprachen und verlässlichen Partnern.</h2>
       <!-- Zahlen sind Beispielwerte, vor Livegang durch echte Angaben ersetzen oder entfernen -->
@@ -393,7 +393,7 @@
   </section>
 
   <!-- 10. Abschluss: ein Kreis wächst zur Bildfläche, dann erscheint die Handlung (Sticky) -->
-  <section class="abschluss" id="anfrage" aria-labelledby="h-abschluss" data-fortschritt>
+  <section class="abschluss" id="anfrage" aria-labelledby="h-abschluss" data-fortschritt data-abschnitt="abschluss">
     <div class="abschluss__buehne">
       <div class="wrap">
         <div class="abschluss__rahmen">
@@ -412,7 +412,7 @@
   </section>
 
   <!-- 11. Einblicke: Laufband aus Bildflächen, pausierbar -->
-  <section class="sektion einblicke" aria-labelledby="h-einblicke">
+  <section class="sektion einblicke" aria-labelledby="h-einblicke" data-abschnitt="einblicke">
     <div class="wrap">
       <h2 class="mitte" id="h-einblicke" data-zeig>Einblicke in unsere Arbeit</h2>
     </div>
@@ -430,7 +430,7 @@
   </section>
 
   <!-- 12. Fragen -->
-  <section class="sektion faq" id="faq" aria-labelledby="h-faq">
+  <section class="sektion faq" id="faq" aria-labelledby="h-faq" data-abschnitt="faq">
     <div class="wrap faq__raster">
       <div class="faq__kopf" data-zeig>
         <h2 id="h-faq">Häufige Fragen</h2>
@@ -448,7 +448,7 @@
   </section>
 </main>
 
-<footer class="fuss dunkel" id="kontakt">
+<footer class="fuss dunkel" id="kontakt" data-abschnitt="fuss">
   <div class="wrap">
     <h2 class="sr-nur">Kontakt und Service</h2>
     <div class="fuss__kopf">

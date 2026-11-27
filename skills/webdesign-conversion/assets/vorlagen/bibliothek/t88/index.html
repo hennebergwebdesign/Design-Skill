@@ -36,7 +36,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: Fotokarte mit Kopfzeile, zentrierter Überschrift und Suchleiste (ein Anfrageformular, fünf Felder) -->
-  <section class="held" id="top" aria-labelledby="h-held">
+  <section class="held" id="top" aria-labelledby="h-held" data-abschnitt="held">
     <div class="held__bild" aria-hidden="true"><img src="bilder/gebirgsruecken-im-warmen-abendhimmel.webp" alt="" width="1600" height="1068" fetchpriority="high"></div>
 
     <header class="kopf">
@@ -86,7 +86,7 @@
   </section>
 
   <!-- 2. Über uns: Leitsatz mit Wortlicht, drei Kennzahlen -->
-  <section class="sektion ueber" id="ueber-uns" aria-labelledby="h-ueber">
+  <section class="sektion ueber" id="ueber-uns" aria-labelledby="h-ueber" data-abschnitt="ueber">
     <div class="wrap ueber__raster">
       <div class="ueber__satz">
         <h2 class="sr-nur" id="h-ueber">Über uns</h2>
@@ -102,7 +102,7 @@
   </section>
 
   <!-- 3. Service: ein großes Hochformatbild, zwei Querbilder, Text über Bild, leichte Parallaxe -->
-  <section class="sektion service" id="service" aria-labelledby="h-service">
+  <section class="sektion service" id="service" aria-labelledby="h-service" data-abschnitt="service">
     <div class="wrap">
       <div class="kopfzeile">
         <h2 id="h-service" data-zeig>Reisen mit Rückhalt, vor und während der Fahrt</h2>
@@ -126,7 +126,7 @@
   </section>
 
   <!-- 4. Bausteine: Band aus eigenen Symbolen, mit Pause -->
-  <section class="bausteine" aria-labelledby="h-bausteine">
+  <section class="bausteine" aria-labelledby="h-bausteine" data-abschnitt="bausteine">
     <h2 class="sr-nur" id="h-bausteine">Bausteine einer Reise</h2>
     <p class="bausteine__kopf" data-zeig>Bausteine, die wir für dich zusammensetzen</p>
     <div class="band bausteine__band" data-band>
@@ -151,7 +151,7 @@
   </section>
 
   <!-- 5. Reisepakete: drei Hochformatkarten -->
-  <section class="sektion pakete" id="reisepakete" aria-labelledby="h-pakete">
+  <section class="sektion pakete" id="reisepakete" aria-labelledby="h-pakete" data-abschnitt="pakete">
     <div class="wrap">
       <div class="kopfzeile kopfzeile--mitte">
         <p class="kicker" data-zeig>Reisepakete</p>
@@ -194,7 +194,7 @@
   </section>
 
   <!-- 6. Fragen: Einwand FAQ als Akkordeon -->
-  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen">
+  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen" data-abschnitt="fragen">
     <div class="wrap fragen__raster">
       <div class="fragen__kopf">
         <h2 id="h-fragen" data-zeig>Häufige Fragen vor der Buchung</h2>
@@ -226,7 +226,7 @@
   </section>
 
   <!-- 7. Stimmen: Wischspur, Ränder blenden aus -->
-  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen">
+  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen" data-abschnitt="stimmen">
     <div class="wrap">
       <div class="kopfzeile kopfzeile--mitte">
         <h2 id="h-stimmen" data-zeig>Gäste erzählen von ihrer Reise</h2>
@@ -252,7 +252,7 @@
   </section>
 
   <!-- 8. Vollbildabschnitt: Foto wächst beim Scrollen, Mailfeld für Reisetipps -->
-  <section class="voll" id="reisetipps" aria-labelledby="h-voll" data-fortschritt>
+  <section class="voll" id="reisetipps" aria-labelledby="h-voll" data-fortschritt data-abschnitt="voll">
     <div class="voll__buehne">
       <div class="voll__rahmen">
         <img src="bilder/schneeberg-unter-sternenhimmel.webp" alt="" width="1600" height="1060" loading="lazy">
@@ -273,7 +273,7 @@
   </section>
 </main>
 
-<footer class="fuss" id="fuss">
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
   <div class="wrap fuss__raster">
     <div class="fuss__marke">
       <a class="kopf__logo" href="#top" aria-label="Markenname, zum Seitenanfang"><svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg><span>Markenname</span></a>

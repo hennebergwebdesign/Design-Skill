@@ -30,7 +30,7 @@
 </svg>
 
 <!-- Kopf: weiße Leiste über die ganze Breite, mobil Logo, Knopf und Burger -->
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__leiste">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
       <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M6 6h4v20H6zM14 6h4v20h-4zM22 6h4v20h-4z" fill="currentColor"/></svg>
@@ -56,7 +56,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: gerahmte Bildkarte, Text links, schwebende Rückrufkarte unten rechts -->
-  <section class="held" id="top" aria-labelledby="h-held">
+  <section class="held" id="top" aria-labelledby="h-held" data-abschnitt="held">
     <div class="held__rahmen">
       <div class="bild held__bild"><img src="bilder/beratung-am-tisch-mit-unterlagen-und-stift.webp" width="1600" height="1067" alt="Zwei Personen gehen am Tisch gemeinsam Unterlagen durch" decoding="async"></div>
       <div class="held__schleier" aria-hidden="true"></div>
@@ -76,7 +76,7 @@
   </section>
 
   <!-- 2. Vertrauen: Satz und sechs weiße Kacheln mit Beispiellogos -->
-  <section class="vertrauen" aria-labelledby="h-vertrauen">
+  <section class="vertrauen" aria-labelledby="h-vertrauen" data-abschnitt="vertrauen">
     <div class="wrap">
       <h2 id="h-vertrauen" class="vertrauen__titel" data-zeig>Mitglied in Berufsverbänden und Netzwerken (Beispiele)</h2>
       <ul class="vertrauen__kacheln" data-staffel data-beispiel>
@@ -91,7 +91,7 @@
   </section>
 
   <!-- 3. Haltung: Bild links, dunkle Textkarte rechts -->
-  <section class="sektion haltung" id="haltung" aria-labelledby="h-haltung">
+  <section class="sektion haltung" id="haltung" aria-labelledby="h-haltung" data-abschnitt="haltung">
     <div class="wrap haltung__paar">
       <div class="bild haltung__bild" data-zeig="links"><img src="bilder/frau-anzug-sonnenbrille-640.webp" width="640" height="960" alt="Frau im dunklen Anzug mit Sonnenbrille" loading="lazy" decoding="async" style="object-position:50% 30%"></div>
       <div class="haltung__karte" data-zeig="rechts">
@@ -107,7 +107,7 @@
   </section>
 
   <!-- 4. Rechtsgebiete: vier Bildkarten, beim Überfahren erscheint die Liste -->
-  <section class="sektion rechtsgebiete" id="rechtsgebiete" aria-labelledby="h-gebiete">
+  <section class="sektion rechtsgebiete" id="rechtsgebiete" aria-labelledby="h-gebiete" data-abschnitt="rechtsgebiete">
     <div class="wrap">
       <h2 id="h-gebiete" class="mitte" data-zeig>Fachwissen für jede rechtliche Frage</h2>
       <ul class="gebiete" data-staffel data-beispiel>
@@ -138,7 +138,7 @@
   </section>
 
   <!-- 5. Warum wir: Text links, Rundbild mit zwei Ringen rechts, dunkle Kennzahlenleiste darunter -->
-  <section class="sektion warum" aria-labelledby="h-warum">
+  <section class="sektion warum" aria-labelledby="h-warum" data-abschnitt="warum">
     <div class="wrap">
       <div class="warum__paar">
         <div class="warum__text" data-staffel>
@@ -160,7 +160,7 @@
   </section>
 
   <!-- 6. Ablauf: dunkle Karte mit Schrittfolge, Bild rechts -->
-  <section class="sektion ablauf" id="ablauf" aria-labelledby="h-ablauf">
+  <section class="sektion ablauf" id="ablauf" aria-labelledby="h-ablauf" data-abschnitt="ablauf">
     <div class="wrap ablauf__paar">
       <div class="ablauf__karte" data-zeig>
         <h2 id="h-ablauf">Dein Weg vom Erstgespräch zur Lösung</h2>
@@ -176,7 +176,7 @@
   </section>
 
   <!-- 7. Stimmen: Kreis aus Porträts links, Zitatkarte mit Pfeilen rechts -->
-  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen">
+  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen" data-abschnitt="stimmen">
     <div class="wrap stimmen__paar">
       <div class="stimmen__kreis" aria-hidden="true">
         <span class="ring ring--1"></span><span class="ring ring--2"></span>
@@ -198,7 +198,7 @@
   </section>
 
   <!-- 8. Fragen: Pillen-Akkordeon, geöffnete Frage färbt sich dunkel -->
-  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen">
+  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen" data-abschnitt="fragen">
     <div class="wrap fragen__huelle">
       <h2 id="h-fragen" class="mitte" data-zeig>Das fragen Mandanten oft</h2>
       <div class="akkordeon" data-exklusiv data-staffel data-beispiel>
@@ -227,7 +227,7 @@
   </section>
 
   <!-- 9. Wissen: dunkle Karte mit Beitragsliste, hohes Bild rechts -->
-  <section class="sektion wissen" id="wissen" aria-labelledby="h-wissen">
+  <section class="sektion wissen" id="wissen" aria-labelledby="h-wissen" data-abschnitt="wissen">
     <div class="wrap wissen__paar">
       <div class="wissen__karte" data-zeig>
         <h2 id="h-wissen">Rechtswissen verständlich erklärt</h2>
@@ -247,7 +247,7 @@
 </main>
 
 <!-- 10. Kontakt und Fuß auf einem Verlauf von Braun nach Schwarz -->
-<footer class="fuss" id="kontakt">
+<footer class="fuss" id="kontakt" data-abschnitt="fuss">
   <div class="wrap fuss__kontakt">
     <div class="fuss__kopf" data-zeig>
       <h2 class="fuss__titel">Kontakt aufnehmen</h2>

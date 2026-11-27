@@ -39,7 +39,7 @@
   <symbol id="i-logo" viewBox="0 0 32 32"><path d="M9 22L23 8M9 10l14 12" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/></symbol>
 </svg>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="wrap kopf__leiste">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
       <span class="kopf__zeichen"><svg width="22" height="22" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-logo"/></svg></span>
@@ -68,7 +68,7 @@
 
 <main id="inhalt">
   <!-- 1. Held geteilt: links dunkle Fläche mit Text, rechts Bild -->
-  <section class="held" id="top" aria-labelledby="h-held">
+  <section class="held" id="top" aria-labelledby="h-held" data-abschnitt="held">
     <div class="held__text-seite">
       <div class="held__text">
         <!-- Held: Zielgruppe Kundschaft, die ihre Frisur nicht dem Zufall überlassen will; Problem Frisuren, die nicht passen oder nicht halten; Lösung Beratung vor dem ersten Schnitt und fester Termin; Beleg Kundenbewertung (Beispielwert). Leistungen und Ort durch die Angaben des Studios ersetzen. -->
@@ -83,7 +83,7 @@
   </section>
 
   <!-- 2. Anspruch mit Bild -->
-  <section class="sektion anspruch" id="ueber" aria-labelledby="h-anspruch">
+  <section class="sektion anspruch" id="ueber" aria-labelledby="h-anspruch" data-abschnitt="anspruch">
     <div class="wrap">
       <h2 id="h-anspruch" class="anspruch__satz" data-zeig>Unser Team ist in den neuesten Verfahren geschult, damit du mit einem guten Gefühl und einem überzeugenden Ergebnis gehst.</h2>
       <div class="anspruch__raster">
@@ -101,7 +101,7 @@
   </section>
 
   <!-- 3. Leistungen als Spur mit Pfeilen -->
-  <section class="sektion leistungen" id="leistungen" aria-labelledby="h-leistungen" data-reiter-gruppe>
+  <section class="sektion leistungen" id="leistungen" aria-labelledby="h-leistungen" data-reiter-gruppe data-abschnitt="leistungen">
     <div class="wrap">
       <header class="leistungen__kopf">
         <h2 id="h-leistungen" data-zeig>Unsere Leistungen</h2>
@@ -120,7 +120,7 @@
   </section>
 
   <!-- 4. Angebote: Sandband mit Bildkarte und dunkler Karte -->
-  <section class="angebote" id="angebote" aria-labelledby="h-angebote">
+  <section class="angebote" id="angebote" aria-labelledby="h-angebote" data-abschnitt="angebote">
     <div class="wrap angebote__raster">
       <div class="bild kerbe angebote__bild" data-zeig><img src="bilder/salon-empfang-regale.webp" width="1600" height="1067" alt="Heller Salon mit Empfangstresen und Regalen voller Haarprodukte" loading="lazy" decoding="async"></div>
       <div class="kerbe angebote__karte" data-zeig>
@@ -137,7 +137,7 @@
   </section>
 
   <!-- 5. So läuft es ab -->
-  <section class="sektion ablauf" id="ablauf" aria-labelledby="h-ablauf">
+  <section class="sektion ablauf" id="ablauf" aria-labelledby="h-ablauf" data-abschnitt="ablauf">
     <div class="wrap">
       <h2 id="h-ablauf" class="mitte-titel" data-zeig>So läuft es ab</h2>
       <ol class="ablauf__raster" data-staffel>
@@ -149,7 +149,7 @@
   </section>
 
   <!-- 6. Über das Studio mit drehendem Siegel -->
-  <section class="sektion studio" aria-labelledby="h-studio">
+  <section class="sektion studio" aria-labelledby="h-studio" data-abschnitt="studio">
     <div class="wrap studio__raster">
       <div class="studio__bildblock">
         <div class="bild kerbe studio__bild" data-zeig="skala"><img src="bilder/salon-stuehle-reihe.webp" width="1600" height="1067" alt="Heller Salonraum mit einer Reihe schwarzer Stühle" loading="lazy" decoding="async"></div>
@@ -174,7 +174,7 @@
   </section>
 
   <!-- 7. Galerie: Mosaik über dunklem Band -->
-  <section class="galerie" id="galerie" aria-label="Eindrücke aus dem Studio">
+  <section class="galerie" id="galerie" aria-label="Eindrücke aus dem Studio" data-abschnitt="galerie">
     <div class="wrap galerie__raster" data-staffel>
       <div class="bild galerie__a" data-zeig><img src="bilder/schere-haarschnitt-sw.webp" width="1000" height="672" alt="Schwarzweißbild einer Hand mit Schere und Kamm beim Schneiden" loading="lazy" decoding="async"></div>
       <div class="bild galerie__b" data-zeig><img src="bilder/rundbuerste-rotes-haar.webp" width="1000" height="667" alt="Rundbürste in rotem Haar" loading="lazy" decoding="async"></div>
@@ -187,7 +187,7 @@
   </section>
 
   <!-- 8. Stimmen als Folie -->
-  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen" data-folien>
+  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen" data-folien data-abschnitt="stimmen">
     <div class="wrap">
       <h2 id="h-stimmen" class="mitte-titel" data-zeig>Was unsere Gäste sagen</h2>
       <div class="folien" data-beispiel>
@@ -224,7 +224,7 @@
   </section>
 
   <!-- 9. Team und Öffnungszeiten -->
-  <section class="sektion team" id="team" aria-label="Team und Öffnungszeiten">
+  <section class="sektion team" id="team" aria-label="Team und Öffnungszeiten" data-abschnitt="team">
     <div class="wrap team__raster">
       <div class="kerbe team__karte" data-zeig>
         <h2>Unser Team</h2>
@@ -254,7 +254,7 @@
   </section>
 
   <!-- 10. Fragen -->
-  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen">
+  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen" data-abschnitt="fragen">
     <div class="wrap fragen__raster">
       <div class="fragen__kopf">
         <h2 id="h-fragen" data-zeig>Häufige Fragen</h2>
@@ -272,7 +272,7 @@
   </section>
 </main>
 
-<section class="kontaktleiste" id="kontakt" aria-labelledby="h-kontakt">
+<section class="kontaktleiste" id="kontakt" aria-labelledby="h-kontakt" data-abschnitt="kontaktleiste">
   <div class="wrap kontaktleiste__innen">
     <h2 id="h-kontakt">Kontakt</h2>
     <ul class="kontaktleiste__liste" data-beispiel>
@@ -282,7 +282,7 @@
     </ul>
   </div>
 </section>
-<footer class="fuss" id="fuss">
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
   <div class="wrap fuss__raster">
     <div class="fuss__marke">
       <a class="kopf__logo" href="#top" aria-label="Markenname, nach oben"><span class="kopf__zeichen"><svg width="22" height="22" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-logo"/></svg></span><span>Markenname</span></a>

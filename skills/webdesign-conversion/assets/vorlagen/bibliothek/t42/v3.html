@@ -80,7 +80,7 @@
   <symbol id="i-zeichen" viewBox="0 0 32 32" fill="currentColor"><path d="M5 22.500 19 6.500h5.500L10.500 22.500Zm2.500 5L21.500 11.500H27L13 27.500Z"/></symbol>
 </svg>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__leiste">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zum Seitenanfang">
       <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg>
@@ -105,7 +105,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: Text links unten, Telefon in der Mitte, rechts drei Karten, von denen eine offen ist (wechselt von selbst) -->
-  <section class="buehne held3" id="top" aria-labelledby="h-held">
+  <section class="buehne held3" id="top" aria-labelledby="h-held" data-abschnitt="buehne">
     <div class="wrap held3__innen">
       <div class="held3__text" data-staffel>
         <!-- Held: Zielgruppe Privatleute, die Anlegen, Kredit und Zahlen bisher getrennt führen; Problem drei Apps und unklare Kosten; Lösung eine App mit Kosten vorab; Beleg Bewertungen (Beispielwert). Pflichtangaben und Risikohinweise je Anbieter ergänzen. -->
@@ -145,7 +145,7 @@
   </section>
 
   <!-- 2. Vertrauen -->
-  <section class="vertrauen" aria-labelledby="h-vertrauen">
+  <section class="vertrauen" aria-labelledby="h-vertrauen" data-abschnitt="vertrauen">
     <div class="wrap">
       <h2 id="h-vertrauen" class="vertrauen__titel" data-zeig>Über 15.000 Betriebe nutzen uns (Beispielwert)</h2>
       <div class="band logos" data-zeig>
@@ -161,7 +161,7 @@
   </section>
 
   <!-- 3. Währungen: Kartenliste links, Text und Akkordeon rechts -->
-  <section class="sektion waehrung" id="produkt" aria-labelledby="h-waehrung">
+  <section class="sektion waehrung" id="produkt" aria-labelledby="h-waehrung" data-abschnitt="waehrung">
     <div class="wrap waehrung__raster">
       <div class="waehrung__liste" aria-hidden="true" data-zeig="links" data-beispiel>
         <span class="punktkarte"></span>
@@ -182,7 +182,7 @@
   </section>
 
   <!-- 4. Geldbörse: Text und zwei Zahlen links, dunkle Bildfläche mit Telefon und Karte rechts -->
-  <section class="sektion boerse" aria-labelledby="h-boerse">
+  <section class="sektion boerse" aria-labelledby="h-boerse" data-abschnitt="boerse">
     <div class="wrap boerse__raster">
       <div class="boerse__text" data-staffel>
         <h2 id="h-boerse" data-zeig>Mach deine Geldbörse klüger mit sicheren Kreditwerkzeugen</h2>
@@ -201,7 +201,7 @@
   </section>
 
   <!-- 5. Drei Karten mit Nummern -->
-  <section class="sektion drei" id="funktionen" aria-labelledby="h-drei">
+  <section class="sektion drei" id="funktionen" aria-labelledby="h-drei" data-abschnitt="drei">
     <div class="wrap">
       <header class="kopfzeile"><h2 id="h-drei" data-zeig>Alles für den Alltag, in drei klaren Schritten</h2></header>
       <ol class="drei__raster" data-staffel data-beispiel>
@@ -228,7 +228,7 @@
   </section>
 
   <!-- 6. Dunkle Karten: zwei nebeneinander, eine breite darunter -->
-  <section class="buehne paneele3" aria-labelledby="h-paneele">
+  <section class="buehne paneele3" aria-labelledby="h-paneele" data-abschnitt="buehne-2">
     <div class="wrap">
       <h2 id="h-paneele" class="sr-nur">Auswertungen und Händleranbindung</h2>
       <div class="paneele3__raster" data-staffel data-beispiel>
@@ -258,7 +258,7 @@
   </section>
 
   <!-- 7. Erlebnis: riesige Laufschrift, Reiter, Laptop, Anbindungen -->
-  <section class="buehne erlebnis" aria-labelledby="h-erlebnis">
+  <section class="buehne erlebnis" aria-labelledby="h-erlebnis" data-abschnitt="buehne-3">
     <p class="sr-nur">Gebühren sparen. Zeit gewinnen.</p>
     <div class="laufschrift laufschrift--dunkel" aria-hidden="true">
       <div class="laufschrift__spur"><span>Gebühren sparen.</span><span>Zeit gewinnen.</span></div>
@@ -282,7 +282,7 @@
   </section>
 
   <!-- 8. Stimmen: Spur mit Pfeilen -->
-  <section class="sektion stimmen3" id="stimmen" aria-labelledby="h-stimmen">
+  <section class="sektion stimmen3" id="stimmen" aria-labelledby="h-stimmen" data-abschnitt="stimmen3">
     <div class="wrap" data-reiter-gruppe>
       <header class="kopfzeile"><h2 id="h-stimmen" data-zeig>So einfach und verlässlich sind unsere Dienste</h2></header>
       <ul class="stimmen3__spur" data-reiter-spur data-beispiel tabindex="0" aria-label="Kundenstimmen, seitlich wischen">
@@ -301,7 +301,7 @@
   </section>
 
   <!-- 9. Preise: Umschalter und drei Tarife -->
-  <section class="sektion preise" id="preise" aria-labelledby="h-preise">
+  <section class="sektion preise" id="preise" aria-labelledby="h-preise" data-abschnitt="preise">
     <div class="wrap">
       <header class="kopfzeile"><h2 id="h-preise" data-zeig>Für jede Größe das passende Paket, ohne versteckte Kosten</h2></header>
       <div class="umschalter" data-zeig>
@@ -336,7 +336,7 @@
   </section>
 
 
-  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen">
+  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen" data-abschnitt="fragen">
     <div class="wrap">
       <header class="kopfzeile"><h2 id="h-fragen" data-zeig>Fragen vor dem Start</h2></header>
       <div class="faq__liste" data-exklusiv data-zeig data-beispiel>
@@ -350,7 +350,7 @@
   </section>
 </main>
 
-<footer class="fuss" id="start" aria-labelledby="h-start">
+<footer class="fuss" id="start" aria-labelledby="h-start" data-abschnitt="fuss">
   <div class="wrap">
     <div class="fuss__aufruf">
       <h2 id="h-start" data-zeig>Eröffne dein Konto in fünf Minuten</h2>

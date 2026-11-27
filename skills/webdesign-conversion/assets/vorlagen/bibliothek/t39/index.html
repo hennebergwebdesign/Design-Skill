@@ -39,7 +39,7 @@
   <symbol id="i-star" viewBox="0 0 256 256" fill="currentColor"><path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"/></symbol>
 </svg>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="wrap kopf__leiste">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite"><span class="kopf__zeichen"><svg width="20" height="20" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-logo"/></svg></span><span>Markenname</span></a>
     <nav class="kopf__nav" id="hauptnav" aria-label="Hauptnavigation" data-menue-ziel>
@@ -61,7 +61,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: Vollbild im Dunkeln, Versalien, schwebende Kontokarte -->
-  <section class="held" id="top" aria-labelledby="h-held">
+  <section class="held" id="top" aria-labelledby="h-held" data-abschnitt="held">
     <div class="bild held__bild" data-parallax="0.07"><img src="bilder/handy-gegen-sonne.webp" width="1600" height="1067" alt="Hand hält ein Smartphone gegen die Morgensonne über Hügeln" loading="lazy" decoding="async"></div>
     <div class="held__schleier" aria-hidden="true"></div>
     <div class="wrap held__innen">
@@ -84,7 +84,7 @@
   </section>
 
   <!-- 2. Logoreihe -->
-  <section class="logos" aria-label="Beispielunternehmen">
+  <section class="logos" aria-label="Beispielunternehmen" data-abschnitt="logos">
     <ul class="wrap logos__liste" data-zeig data-beispiel>
       <li><span class="beispiellogo logo-nordwerk" role="img" aria-label="Nordwerk (Beispiel)"></span></li>
       <li><span class="beispiellogo logo-lichtbau" role="img" aria-label="Lichtbau (Beispiel)"></span></li>
@@ -96,7 +96,7 @@
   </section>
 
   <!-- 3. Finanzzentrale: Bento aus vier Karten -->
-  <section class="sektion hub" id="hub" aria-labelledby="h-hub">
+  <section class="sektion hub" id="hub" aria-labelledby="h-hub" data-abschnitt="hub">
     <div class="wrap">
       <header class="kopfblock">
         <h2 id="h-hub" data-zeig>Deine Finanzzentrale</h2>
@@ -130,7 +130,7 @@
   </section>
 
   <!-- 4. Einfach: Bento aus fünf Karten -->
-  <section class="sektion einfach" id="einfach" aria-labelledby="h-einfach">
+  <section class="sektion einfach" id="einfach" aria-labelledby="h-einfach" data-abschnitt="einfach">
     <div class="wrap">
       <header class="kopfblock kopfblock--links">
         <h2 id="h-einfach" data-zeig>Geld, einfach gemacht</h2>
@@ -158,7 +158,7 @@
   </section>
 
   <!-- 5. Bühne: Himmel und Fenster, Karte steigt beim Scrollen -->
-  <section class="buehne" id="antworten" aria-labelledby="h-buehne" data-fortschritt>
+  <section class="buehne" id="antworten" aria-labelledby="h-buehne" data-fortschritt data-abschnitt="buehne">
     <div class="buehne__rahmen">
       <div class="buehne__himmel" aria-hidden="true"></div>
       <div class="buehne__fenster" aria-hidden="true"></div>
@@ -175,7 +175,7 @@
   </section>
 
   <!-- 6. Meilensteine -->
-  <section class="sektion meilensteine" id="meilensteine" aria-labelledby="h-meilensteine">
+  <section class="sektion meilensteine" id="meilensteine" aria-labelledby="h-meilensteine" data-abschnitt="meilensteine">
     <div class="wrap">
       <header class="kopfblock">
         <h2 id="h-meilensteine" data-zeig>Meilensteine erreicht</h2>
@@ -200,14 +200,14 @@
 
   <div class="stapel">
   <!-- 7. Zahlungen: bleibt stehen, die nächste Fläche schiebt sich darüber -->
-  <section class="zahlung" aria-label="Zahlungen im Alltag">
+  <section class="zahlung" aria-label="Zahlungen im Alltag" data-abschnitt="zahlung">
     <div class="bild zahlung__bild" data-platzhalter="Bild: Hand mit Karte und Handy, Querformat" role="img" aria-label="Platzhalter für ein Foto einer Zahlung mit Handy">
       <div class="telefon" aria-hidden="true"><div class="telefon__schirm"><span class="telefon__kopf"></span><span class="telefon__betrag">3.200 €</span><span class="telefon__tasten"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="telefon__knopf"></span></div></div>
     </div>
   </section>
 
   <!-- 8. Teams -->
-  <section class="power" id="teams" aria-labelledby="h-power">
+  <section class="power" id="teams" aria-labelledby="h-power" data-abschnitt="power">
     <div class="wrap">
       <header class="kopfblock kopfblock--links">
         <h2 id="h-power" data-zeig>Finanzen für moderne Teams</h2>
@@ -228,7 +228,7 @@
   </section>
 
   <!-- 9. Fragen -->
-  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen">
+  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen" data-abschnitt="fragen">
     <div class="wrap">
       <header class="kopfblock">
         <h2 id="h-fragen" data-zeig>Häufig gestellte Fragen</h2>
@@ -248,7 +248,7 @@
   </div>
 
   <!-- 10. Stimmen: Laufband aus Fotokarten -->
-  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen">
+  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen" data-abschnitt="stimmen">
     <div class="wrap">
       <header class="kopfblock kopfblock--links">
         <h2 id="h-stimmen" data-zeig>Stimmen, die uns vertrauen</h2>
@@ -272,7 +272,7 @@
   </section>
 
   <!-- 11. Anbindungen mit Akkordeon -->
-  <section class="sektion anbindung" id="anbindung" aria-labelledby="h-anbindung">
+  <section class="sektion anbindung" id="anbindung" aria-labelledby="h-anbindung" data-abschnitt="anbindung">
     <div class="wrap anbindung__raster">
       <div class="anbindung__text">
         <h2 id="h-anbindung" data-zeig>Nahtlose Anbindungen, viele Möglichkeiten</h2>
@@ -289,7 +289,7 @@
   </section>
 
   <!-- 12. Szene: Bilder wandern zusammen und wachsen zum Vollbild -->
-  <section class="szene" id="start" aria-labelledby="h-szene" data-fortschritt>
+  <section class="szene" id="start" aria-labelledby="h-szene" data-fortschritt data-abschnitt="szene">
     <div class="szene__buehne">
       <div class="szene__kachel szene__kachel--1 bild bild--k1" style="--x:-34;--y:-12;--r:-6"><img src="bilder/laptop-holztisch-lampe.webp" width="600" height="390" alt="Laptop auf Holztisch neben Lampe und Pflanze" loading="lazy" decoding="async"></div>
       <div class="szene__kachel szene__kachel--2 bild bild--k2" style="--x:0;--y:-26;--r:4"><img src="bilder/laptop-holztisch-tasse.webp" width="600" height="400" alt="Laptop auf Holztisch mit weißer Tasse" loading="lazy" decoding="async"></div>
@@ -304,7 +304,7 @@
   </section>
 </main>
 
-<footer class="fuss" id="fuss">
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
   <div class="bild fuss__band" aria-hidden="true"></div>
   <div class="wrap fuss__aufruf">
     <h2 data-zeig>Heute noch Zahlungen annehmen</h2>

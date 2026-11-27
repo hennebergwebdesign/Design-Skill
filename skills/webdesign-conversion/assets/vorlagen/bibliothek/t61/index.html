@@ -39,7 +39,7 @@
 <!--/SPRITE-->
 </svg>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__karte">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
       <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg>
@@ -65,7 +65,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: Pastellfeld mit Kopfleiste darin, Text links, Arzt im Bogen rechts mit schwebenden Karten -->
-  <section class="held" id="top" aria-labelledby="h-held">
+  <section class="held" id="top" aria-labelledby="h-held" data-abschnitt="held">
     <div class="held__kreuz held__kreuz--1" aria-hidden="true"><svg width="48" height="48" focusable="false"><use href="#i-zeichen"/></svg></div>
     <div class="held__kreuz held__kreuz--2" aria-hidden="true"><svg width="32" height="32" focusable="false"><use href="#i-zeichen"/></svg></div>
     <div class="held__raster">
@@ -104,7 +104,7 @@
   </section>
 
   <!-- 2. Partnerleiste: Beispiellogos als Laufband -->
-  <section class="partner" aria-label="Partner und Verbände (Beispiele)">
+  <section class="partner" aria-label="Partner und Verbände (Beispiele)" data-abschnitt="partner">
     <p class="partner__titel" data-beispiel>Verbunden mit Kassen und Fachverbänden</p>
     <div class="band" data-beispiel>
       <ul class="band__spur partner__spur">
@@ -127,7 +127,7 @@
   </section>
 
   <!-- 3. Über uns: Titel links, großer Satz rechts mit Wortlicht, darunter Kennzahlen und zwei Bilder -->
-  <section class="sektion ueber" id="ueber" aria-labelledby="h-ueber">
+  <section class="sektion ueber" id="ueber" aria-labelledby="h-ueber" data-abschnitt="ueber">
     <div class="wrap">
       <div class="ueber__kopf">
         <h2 id="h-ueber" data-zeig>Über uns</h2>
@@ -148,7 +148,7 @@
   </section>
 
   <!-- 4. Fachbereiche: getönte Karten in einer Spur mit Pfeilen -->
-  <section class="sektion fachbereiche" id="fachbereiche" aria-labelledby="h-fach" data-reiter-gruppe>
+  <section class="sektion fachbereiche" id="fachbereiche" aria-labelledby="h-fach" data-reiter-gruppe data-abschnitt="fachbereiche">
     <div class="wrap">
       <header class="mitte">
         <h2 id="h-fach" data-zeig>Fachbereiche in deiner Nähe</h2>
@@ -169,7 +169,7 @@
   </section>
 
   <!-- 5. Gründe: Pastellfeld mit Titel und Zeilen links, hohem Bild und zwei Karten -->
-  <section class="sektion gruende" aria-labelledby="h-gruende">
+  <section class="sektion gruende" aria-labelledby="h-gruende" data-abschnitt="gruende">
     <div class="wrap">
       <div class="gruende__feld">
         <div class="gruende__text">
@@ -191,7 +191,7 @@
   </section>
 
   <!-- 6. Ärzte: Porträtkarten mit Namensschild -->
-  <section class="sektion team" id="team" aria-labelledby="h-team">
+  <section class="sektion team" id="team" aria-labelledby="h-team" data-abschnitt="team">
     <div class="wrap">
       <header class="mitte">
         <h2 id="h-team" data-zeig>Unsere erfahrenen Ärztinnen und Ärzte</h2>
@@ -206,7 +206,7 @@
   </section>
 
   <!-- 7. Stimmen: zweizeiliges Laufband aus Karten -->
-  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen">
+  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen" data-abschnitt="stimmen">
     <div class="wrap stimmen__kopf">
       <h2 id="h-stimmen" data-zeig>Erfahrungen unserer Patienten</h2>
       <p data-zeig>Was Patienten über Betreuung, Verständlichkeit und Termine sagen.</p>
@@ -252,7 +252,7 @@
   </section>
 
   <!-- 8. Gut erreichbar: Bild mit Videoleiste links, getöntes Feld mit zwei Karten rechts -->
-  <section class="sektion erreichbar" id="ablauf" aria-labelledby="h-erreichbar">
+  <section class="sektion erreichbar" id="ablauf" aria-labelledby="h-erreichbar" data-abschnitt="erreichbar">
     <div class="wrap">
       <div class="erreichbar__raster">
         <div class="bild erreichbar__bild bild--b" data-zeig="links"><img src="bilder/zentrum-videosprechstunde.webp" width="1000" height="563" alt="Eine Ärztin in einer Videosprechstunde am Laptop" loading="lazy" decoding="async">
@@ -271,7 +271,7 @@
   </section>
 
   <!-- 9. Fragen: Titel links, Akkordeon rechts -->
-  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen">
+  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen" data-abschnitt="fragen">
     <div class="wrap fragen__raster">
       <div class="fragen__kopf">
         <h2 id="h-fragen" data-zeig>Häufige Fragen</h2>
@@ -289,7 +289,7 @@
   </section>
 
   <!-- 10. Ratgeber: drei Beiträge -->
-  <section class="sektion ratgeber" id="ratgeber" aria-labelledby="h-ratgeber">
+  <section class="sektion ratgeber" id="ratgeber" aria-labelledby="h-ratgeber" data-abschnitt="ratgeber">
     <div class="wrap">
       <header class="mitte">
         <h2 id="h-ratgeber" data-zeig>Gesundheit verständlich erklärt</h2>
@@ -304,7 +304,7 @@
   </section>
 
   <!-- 11. Termin: Titel links, Formularkarte rechts -->
-  <section class="sektion termin" id="termin" aria-labelledby="h-termin">
+  <section class="sektion termin" id="termin" aria-labelledby="h-termin" data-abschnitt="termin">
     <div class="wrap termin__raster">
       <div class="termin__kopf">
         <h2 id="h-termin" data-zeig>Buche heute deinen Termin</h2>
@@ -327,7 +327,7 @@
   </section>
 </main>
 
-<footer class="fuss" id="fuss">
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
   <div class="wrap fuss__raster">
     <div class="fuss__links">
       <a class="kopf__logo" href="#top" aria-label="Markenname, nach oben">

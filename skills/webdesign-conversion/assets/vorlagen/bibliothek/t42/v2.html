@@ -80,7 +80,7 @@
   <symbol id="i-zeichen" viewBox="0 0 32 32" fill="currentColor"><path d="M5 22.500 19 6.500h5.500L10.500 22.500Zm2.500 5L21.500 11.500H27L13 27.500Z"/></symbol>
 </svg>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__leiste">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zum Seitenanfang">
       <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg>
@@ -105,7 +105,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: Text oben mittig, darunter wächst ein Kartenfeld aus dem Dunkel. Bei Scrollen bleibt die Bühne stehen (Sticky), Karten steigen auf, Ringe weiten sich. -->
-  <section class="buehne held2" id="top" aria-labelledby="h-held" data-fortschritt>
+  <section class="buehne held2" id="top" aria-labelledby="h-held" data-fortschritt data-abschnitt="buehne">
     <div class="held2__buehne">
       <div class="held2__ringe" aria-hidden="true"><span></span><span></span><span></span></div>
       <div class="wrap held2__text" data-staffel>
@@ -145,7 +145,7 @@
   </section>
 
   <!-- 2. Vertrauen -->
-  <section class="vertrauen" aria-labelledby="h-vertrauen">
+  <section class="vertrauen" aria-labelledby="h-vertrauen" data-abschnitt="vertrauen">
     <div class="wrap">
       <h2 id="h-vertrauen" class="vertrauen__titel" data-zeig>Über 15.000 Betriebe nutzen uns (Beispielwert)</h2>
       <div class="band logos" data-zeig>
@@ -161,7 +161,7 @@
   </section>
 
   <!-- 3. Produkt: schräges Telefon mit Karte links, Text rechts -->
-  <section class="sektion produkt2" id="produkt" aria-labelledby="h-produkt">
+  <section class="sektion produkt2" id="produkt" aria-labelledby="h-produkt" data-abschnitt="produkt2">
     <div class="wrap produkt2__raster">
       <div class="produkt2__bild" aria-hidden="true" data-zeig="links" data-beispiel>
         <span class="produkt2__licht"></span>
@@ -192,7 +192,7 @@
   </section>
 
   <!-- 4. Überweisung ins Ausland: Text mit Stimmenzeile links, Formularkarte (nur Abbild) rechts, Punktkarte dahinter -->
-  <section class="sektion ueberweisung" aria-labelledby="h-ueber">
+  <section class="sektion ueberweisung" aria-labelledby="h-ueber" data-abschnitt="ueberweisung">
     <div class="wrap ueberweisung__raster">
       <div class="ueberweisung__text" data-staffel>
         <div class="held__beleg" data-zeig data-beispiel>
@@ -219,7 +219,7 @@
   </section>
 
   <!-- 5. Sichere Zahlungen: zwei Karten links, hohe Bildkarte rechts -->
-  <section class="sektion sicher" id="funktionen" aria-labelledby="h-sicher">
+  <section class="sektion sicher" id="funktionen" aria-labelledby="h-sicher" data-abschnitt="sicher">
     <div class="wrap">
       <header class="kopfzeile"><h2 id="h-sicher" data-zeig>Sichere Zahlungen, einfach gemacht für deinen Alltag</h2></header>
       <div class="sicher__raster" data-staffel data-beispiel>
@@ -251,7 +251,7 @@
   </section>
 
   <!-- 6. Anbindungen: Halbkreise mit Punkten, darunter Titel und Knopf -->
-  <section class="orbit" aria-labelledby="h-orbit">
+  <section class="orbit" aria-labelledby="h-orbit" data-abschnitt="orbit">
     <div class="orbit__feld" aria-hidden="true" data-beispiel>
       <span class="orbit__bogen orbit__bogen--3"></span><span class="orbit__bogen orbit__bogen--2"></span><span class="orbit__bogen orbit__bogen--1"></span>
       <span class="orbit__punkt" style="--w:-72deg;--r:min(27rem,60vw)">A</span>
@@ -269,7 +269,7 @@
   </section>
 
   <!-- 7. Video und Aussage: dunkle Bühne -->
-  <section class="buehne dunkel2" aria-labelledby="h-video">
+  <section class="buehne dunkel2" aria-labelledby="h-video" data-abschnitt="buehne-2">
     <div class="wrap">
       <h2 id="h-video" class="sr-nur">Das Produkt im Video</h2>
       <div class="videorahmen bild bild--a" data-zeig role="group"><img src="bilder/laptop-dunkler-tisch.webp" width="1600" height="1067" alt="Laptop auf dunklem Schreibtisch im warmen Licht" loading="lazy" decoding="async">
@@ -309,7 +309,7 @@
   </section>
 
   <!-- 8. Stimmen: kurze Reihe -->
-  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen">
+  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen" data-abschnitt="stimmen">
     <div class="wrap">
       <header class="kopfzeile"><h2 id="h-stimmen" data-zeig>So verändern Kunden ihren Umgang mit Geld</h2></header>
       <div class="stimmen-raster" data-staffel data-beispiel>
@@ -320,7 +320,7 @@
     </div>
   </section>
 
-  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen">
+  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen" data-abschnitt="fragen">
     <div class="wrap">
       <header class="kopfzeile"><h2 id="h-fragen" data-zeig>Gut zu wissen, bevor du startest</h2></header>
       <div class="faq__liste" data-exklusiv data-zeig data-beispiel>
@@ -334,7 +334,7 @@
   </section>
 </main>
 
-<footer class="fuss" id="start" aria-labelledby="h-start">
+<footer class="fuss" id="start" aria-labelledby="h-start" data-abschnitt="fuss">
   <div class="wrap">
     <div class="fuss__aufruf">
       <h2 id="h-start" data-zeig>Eröffne dein Konto in fünf Minuten</h2>

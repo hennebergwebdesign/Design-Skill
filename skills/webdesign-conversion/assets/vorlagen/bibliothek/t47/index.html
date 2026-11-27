@@ -56,7 +56,7 @@
 </svg>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="i-zeichen" viewBox="0 0 32 32"><rect width="32" height="32" rx="9" fill="currentColor"/><path d="M16 5c3.5 3.5 5 7 5 11l3 4h-5l-3 5-3-5H8l3-4c0-4 1.5-7.500 5-11Z" fill="#101626"/></symbol></svg>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__leiste">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite"><svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg><span>Markenname</span></a>
     <nav class="kopf__nav" id="hauptnav" aria-label="Hauptnavigation" data-menue-ziel>
@@ -76,7 +76,7 @@
 </header>
 
 <main id="inhalt">
-  <section class="held" aria-labelledby="h-held">
+  <section class="held" aria-labelledby="h-held" data-abschnitt="held">
     <div class="held__licht" aria-hidden="true"></div>
     <div class="held__innen">
       <p class="kicker kicker--dunkel" data-zeig>Start am Freitag, 30. Juli (Beispiel)</p>
@@ -106,13 +106,13 @@
     </div>
     <button class="pause" type="button" data-pause aria-pressed="false"><svg class="pause__aus" width="16" height="16" aria-hidden="true"><use href="#i-pause"/></svg><svg class="pause__an" width="16" height="16" aria-hidden="true"><use href="#i-play"/></svg><span class="sr-nur">Hintergrundbewegung anhalten</span></button>
   </section>
-  <section class="vertrauen" aria-labelledby="h-vertrauen">
+  <section class="vertrauen" aria-labelledby="h-vertrauen" data-abschnitt="vertrauen">
     <div class="wrap vertrauen__innen">
       <p class="vertrauen__titel" id="h-vertrauen">Vertraut von Gründerinnen und Gründern, die das nächste große Ding bauen</p>
       <div class="vertrauen__logos" data-beispiel><span class="beispiellogo logo-nordwerk" role="img" aria-label="Nordwerk (Beispiel)"></span><span class="beispiellogo logo-lichtbau" role="img" aria-label="Lichtbau (Beispiel)"></span><span class="beispiellogo logo-talgrund" role="img" aria-label="Talgrund (Beispiel)"></span><span class="beispiellogo logo-kronwerk" role="img" aria-label="Kronwerk (Beispiel)"></span><span class="beispiellogo logo-sonnenfeld" role="img" aria-label="Sonnenfeld (Beispiel)"></span></div>
     </div>
   </section>
-  <section class="zaehlerkarte-wrap" aria-labelledby="h-zaehler">
+  <section class="zaehlerkarte-wrap" aria-labelledby="h-zaehler" data-abschnitt="zaehlerkarte-wrap">
     <div class="wrap">
       <div class="zaehlerkarte" data-zeig>
         <h2 id="h-zaehler" class="zaehlerkarte__titel">Start in</h2>
@@ -126,7 +126,7 @@
       </div>
     </div>
   </section>
-  <section class="sektion funktionen" id="funktionen" aria-labelledby="h-funktionen">
+  <section class="sektion funktionen" id="funktionen" aria-labelledby="h-funktionen" data-abschnitt="funktionen">
     <div class="wrap">
       <header class="kopfzeile">
         <div><p class="kicker kicker--hell" data-zeig>Was du bekommst</p><h2 id="h-funktionen" data-zeig>Jede Kennzahl. Ein Bildschirm.</h2></div>
@@ -161,7 +161,7 @@
       </div>
     </div>
   </section>
-  <section class="sektion teil" aria-labelledby="h-glance">
+  <section class="sektion teil" aria-labelledby="h-glance" data-abschnitt="teil">
     <div class="wrap teil__raster">
       <div class="teil__bild buehne buehne--warm" data-zeig="links" data-platzhalter="Bild: Umsatz nach Tarif als Karte auf Dämmerungsverlauf" data-beispiel>
         <div class="karte-ui"><div class="dash__leiste"><i></i><i></i><i></i></div><div class="karte-ui__rumpf"><small>Umsatz nach Tarif</small><strong>42.810 €</strong>
@@ -184,7 +184,7 @@
       </div>
     </div>
   </section>
-  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen">
+  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen" data-abschnitt="stimmen">
     <div class="wrap">
       <header class="mitte">
         <h2 id="h-stimmen" data-zeig>Das sagen unsere Beta Tester</h2>
@@ -204,7 +204,7 @@
       </dl>
     </div>
   </section>
-  <section class="startkarte" aria-labelledby="h-start">
+  <section class="startkarte" aria-labelledby="h-start" data-abschnitt="startkarte">
     <div class="startkarte__karte" data-zeig>
       <h2 id="h-start">Sei zuerst dran. Sichere dir deinen Preis.</h2>
       <p class="startkarte__text">Mit der Warteliste bekommst du frühen Zugang und den Startpreis, dauerhaft.</p>
@@ -227,7 +227,7 @@
         </div></div>
     </div>
   </section>
-  <section class="sektion preise" id="preise" aria-labelledby="h-preise">
+  <section class="sektion preise" id="preise" aria-labelledby="h-preise" data-abschnitt="preise">
     <div class="wrap">
       <header class="mitte">
         <p class="kicker kicker--hell" data-zeig>Preise</p>
@@ -259,7 +259,7 @@
         </article></div>
     </div>
   </section>
-  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen">
+  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen" data-abschnitt="fragen">
     <div class="wrap fragen__innen">
       <header class="mitte">
         <h2 id="h-fragen" data-zeig>Häufige Fragen</h2>
@@ -274,7 +274,7 @@
     </div>
   </section>
 
-  <section class="bekannt" aria-labelledby="h-bekannt">
+  <section class="bekannt" aria-labelledby="h-bekannt" data-abschnitt="bekannt">
     <div class="wrap">
       <h2 class="bekannt__titel" id="h-bekannt">Bekannt aus (Beispiele)</h2>
       <ul class="bekannt__liste" data-beispiel>
@@ -282,7 +282,7 @@
       </ul>
     </div>
   </section>
-  <section class="abschluss" id="abschluss" aria-labelledby="h-abschluss">
+  <section class="abschluss" id="abschluss" aria-labelledby="h-abschluss" data-abschnitt="abschluss">
     <div class="wrap">
       <div class="abschluss__karte" data-zeig>
         <h2 id="h-abschluss">Bereit, alle deine Zahlen zu sehen?</h2>
@@ -298,7 +298,7 @@
   </section>
 </main>
 
-<footer class="fuss" id="fuss">
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
   <div class="wrap fuss__innen">
     <div class="fuss__marke">
       <a class="kopf__logo" href="#top" aria-label="Markenname, nach oben"><svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg><span>Markenname</span></a>

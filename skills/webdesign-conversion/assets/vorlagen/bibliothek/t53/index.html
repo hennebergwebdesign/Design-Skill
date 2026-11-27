@@ -36,7 +36,7 @@
 </svg>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="i-zeichen" viewBox="0 0 32 32"><path d="M5 25 12 7l5 9 5-9 5 18" fill="none" stroke="currentColor" stroke-width="3.200" stroke-linecap="round" stroke-linejoin="round"/></symbol></svg>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__leiste"><div class="kopf__innen">
     <a class="logo" href="#top" aria-label="Markenname, zum Seitenanfang"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg><span>Markenname</span></a>
     <nav class="kopf__nav" id="hauptnav" aria-label="Hauptnavigation" data-menue-ziel>
@@ -60,7 +60,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: zentrierter Text, zwei Knöpfe -->
-  <section class="held1" id="top" aria-labelledby="h-held">
+  <section class="held1" id="top" aria-labelledby="h-held" data-abschnitt="held1">
     <div class="wrap held1__text" data-staffel>
       <!-- Held: Zielgruppe sind Privatkunden, Gründende und kleine Betriebe, Problem sind unklare Gebühren und wechselnde Ansprechpartner, Lösung ist eine Anwendung mit klaren Gebühren und fester Ansprechperson; Beleg: Vertrauensleiste auf der Bühne (Beispiele). Rechtlich heikel, vor dem Einsatz prüfen lassen. -->
 <h1 id="h-held" data-zeig>Dein Geld im Griff, jede Gebühr vorab klar</h1>
@@ -85,7 +85,7 @@
   </section>
 
   <!-- 3. Abgrenzung: Bild links, zwei Aussagen rechts -->
-  <section class="sektion abgrenzung" id="vorteile" aria-labelledby="h-abgrenzung">
+  <section class="sektion abgrenzung" id="vorteile" aria-labelledby="h-abgrenzung" data-abschnitt="abgrenzung">
     <div class="wrap abgrenzung__raster">
       <div class="bild abgrenzung__bild" data-zeig="links"><img src="bilder/besprechung-am-tisch.webp" width="1600" height="1066" alt="Mehrere Personen sitzen und stehen an einem Besprechungstisch" loading="lazy" decoding="async"></div>
       <div class="abgrenzung__text" data-staffel>
@@ -97,7 +97,7 @@
   </section>
 
   <!-- 4. Merkmale: zwei große Karten, eine breite -->
-  <section class="sektion merkmale-sektion" id="funktionen" aria-labelledby="h-merkmale">
+  <section class="sektion merkmale-sektion" id="funktionen" aria-labelledby="h-merkmale" data-abschnitt="merkmale-sektion">
     <div class="wrap">
       <h2 id="h-merkmale" data-zeig style="text-align:center;margin:0 auto clamp(2rem,5vw,3.5rem);max-width:18ch">Die Funktionen, die unseren Dienst ausmachen</h2>
       <div class="merkmale" data-staffel>
@@ -118,7 +118,7 @@
   </section>
 
   <!-- 5. Ablauf: Überschrift, Karte mit Telefon, Akkordeon -->
-  <section class="sektion ablauf" id="ablauf" aria-labelledby="h-ablauf">
+  <section class="sektion ablauf" id="ablauf" aria-labelledby="h-ablauf" data-abschnitt="ablauf">
     <div class="wrap">
       <div class="ablauf__kopf" data-zeig><h2 id="h-ablauf">Noch nie war es so einfach, dein Geld im Blick zu behalten</h2></div>
       <div class="ablauf__raster">
@@ -133,7 +133,7 @@
   </section>
 
   <!-- 6. Zahlen: dunkler Block, Bild links, versetzte Zahlen rechts -->
-  <section class="sektion" aria-labelledby="h-zahlen" style="padding-block:0">
+  <section class="sektion" aria-labelledby="h-zahlen" style="padding-block:0" data-abschnitt="zahlen-im">
     <div class="wrap">
       <div class="zahlenblock">
         <div class="zahlenblock__raster">
@@ -153,7 +153,7 @@
   </section>
 
   <!-- 7. Zielgruppen: Reiter -->
-  <section class="sektion zielgruppen" id="zielgruppen" aria-labelledby="h-zielgruppen">
+  <section class="sektion zielgruppen" id="zielgruppen" aria-labelledby="h-zielgruppen" data-abschnitt="zielgruppen">
     <div class="wrap">
       <div class="zielgruppen__kopf" data-zeig><h2 id="h-zielgruppen">Unser Angebot passt zu vielen Lebenslagen</h2><p>Drei typische Wege, mit denen Menschen und Unternehmen zu uns kommen.</p></div>
       <div class="reiter" role="tablist" aria-label="Zielgruppe wählen" data-reiter>
@@ -170,7 +170,7 @@
   </section>
 
   <!-- 8. Aufruf mit Formular -->
-  <section class="aufruf" id="kontakt" aria-labelledby="h-aufruf">
+  <section class="aufruf" id="kontakt" aria-labelledby="h-aufruf" data-abschnitt="aufruf">
     <div class="aufruf__innen">
       <h2 id="h-aufruf" data-zeig>Behalte dein Geld im Griff. Starte heute.</h2>
       <p data-zeig>Hinterlass deine Mailadresse, wir melden uns innerhalb eines Werktags mit zwei Terminvorschlägen.</p>
@@ -184,7 +184,7 @@
   </section>
 
   <!-- 9. Stimmen: große Karten im Reiter mit Pfeilen -->
-  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen" data-reiter-gruppe>
+  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen" data-reiter-gruppe data-abschnitt="stimmen">
     <div class="wrap">
       <div class="stimmen__kopf" data-zeig><h2 id="h-stimmen">Glaub nicht uns, sondern denen, die schon dabei sind</h2><div class="pfeile" data-reiter-steuerung hidden><button class="pfeil" type="button" data-reiter="zurueck" aria-label="Vorige Stimme"><svg aria-hidden="true" focusable="false"><use href="#i-arrow-left"/></svg></button><button class="pfeil" type="button" data-reiter="weiter" aria-label="Nächste Stimme"><svg aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></button></div></div>
       <ul class="spur" data-reiter-spur tabindex="0" aria-label="Kundenstimmen, seitlich wischbar" data-beispiel data-zeig>
@@ -197,7 +197,7 @@
 
   <!-- 10. Ratgeber: zwei Beiträge -->
   <!-- 8a. Fragen: Einwände vorwegnehmen -->
-  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen" style="padding-top:0">
+  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen" style="padding-top:0" data-abschnitt="fragen">
     <div class="wrap">
       <div class="ablauf__kopf" data-zeig><h2 id="h-fragen">Fragen, bevor du loslegst</h2></div>
       <div class="akkordeon fragen__liste" data-exklusiv data-zeig>
@@ -210,7 +210,7 @@
     </div>
   </section>
 
-  <section class="sektion ratgeber" id="ratgeber" aria-labelledby="h-ratgeber" style="padding-top:0">
+  <section class="sektion ratgeber" id="ratgeber" aria-labelledby="h-ratgeber" style="padding-top:0" data-abschnitt="ratgeber">
     <div class="wrap">
       <div class="beitraege__kopf" data-zeig><h2 id="h-ratgeber">Artikel und Ratgeber für dich</h2><a class="knopf knopf--hell" href="#ratgeber">Alle Artikel<svg aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"/></svg></a></div>
       <div class="beitraege" data-staffel>
@@ -221,7 +221,7 @@
   </section>
 </main>
 
-<footer class="fuss" id="fuss">
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
   <div class="wrap">
     <div class="fuss__kopf">
       <div><a class="logo" href="#top" aria-label="Markenname, zum Seitenanfang"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg><span>Markenname</span></a><p>Beispieltext für die Fußzeile: Hier steht in einem Satz, was ihr für wen tut. Vor dem Einsatz durch den echten Text ersetzen.</p></div>

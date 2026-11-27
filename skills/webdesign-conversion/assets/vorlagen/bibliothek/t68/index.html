@@ -31,7 +31,7 @@
   <symbol id="i-zeichen" viewBox="0 0 32 32" fill="currentColor"><path fill-rule="evenodd" d="M16 3a13 13 0 1 0 0 26 13 13 0 0 0 0-26Zm0 4a9 9 0 1 1 0 18 9 9 0 0 1 0-18Zm0 5a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z"/></symbol>
 </svg>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__leiste">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
       <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg>
@@ -57,7 +57,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: zentrierte Überschrift, danach wächst ein Bild beim Scrollen auf volle Breite -->
-  <section class="held" id="top" aria-labelledby="h-held">
+  <section class="held" id="top" aria-labelledby="h-held" data-abschnitt="held">
     <div class="held__text">
       <p class="kicker" data-zeig>Frisch und herzlich</p>
       <!-- Held: Gäste ohne Lust oder Zeit zum Kochen; Lösung ist ein gedeckter Tisch mit Hausgemachtem, online reserviert; Beleg ist die Gästebewertung unter den Knöpfen (Beispiel), vor dem Einsatz durch echte Angaben ersetzen -->
@@ -78,7 +78,7 @@
   </section>
 
   <!-- 2. Aroma: feststehende Großschrift, gekippte Fotos fahren mit unterschiedlicher Geschwindigkeit darüber -->
-  <section class="aroma" aria-labelledby="h-aroma" data-fortschritt>
+  <section class="aroma" aria-labelledby="h-aroma" data-fortschritt data-abschnitt="aroma">
     <div class="aroma__klemme">
       <h2 id="h-aroma" class="aroma__titel">Frisch, herzlich und mit Leidenschaft</h2>
       <div class="aroma__fotos" aria-hidden="true">
@@ -93,7 +93,7 @@
   </section>
 
   <!-- 3. Geschichte: Zeichen, zwei Absätze, Knopf, zwei kleine gekippte Fotos am Rand -->
-  <section class="sektion geschichte" id="geschichte" aria-labelledby="h-geschichte">
+  <section class="sektion geschichte" id="geschichte" aria-labelledby="h-geschichte" data-abschnitt="geschichte">
     <div class="wrap geschichte__innen">
       <div class="bild geschichte__foto geschichte__foto--l bild--b" data-parallax="0.08"><img src="bilder/restaurant-teller-dunkel.webp" width="1000" height="667" alt="Angerichteter Teller vor dunklem Hintergrund" loading="lazy" decoding="async"></div>
       <div class="bild geschichte__foto geschichte__foto--r bild--e" data-parallax="-0.06"><img src="bilder/restaurant-abend-stimmung.webp" width="1000" height="667" alt="Gäste sitzen abends an einem Tisch mit Gläsern" loading="lazy" decoding="async"></div>
@@ -107,7 +107,7 @@
   </section>
 
   <!-- 4. Vorzüge: Zeile aus Titel und Karten, wandert beim Scrollen nach links (ohne Pinning als Wischspur) -->
-  <section class="vorzuege" id="vorzuege" aria-labelledby="h-vorzuege" data-fortschritt>
+  <section class="vorzuege" id="vorzuege" aria-labelledby="h-vorzuege" data-fortschritt data-abschnitt="vorzuege">
     <div class="vorzuege__klemme">
       <div class="vorzuege__zeile">
         <header class="vorzuege__kopf">
@@ -125,7 +125,7 @@
   </section>
 
   <!-- 5. Speisekarte: Reiter filtern, Karten mit Zutaten zum Aufklappen -->
-  <section class="sektion speisekarte" id="speisekarte" aria-labelledby="h-karte">
+  <section class="sektion speisekarte" id="speisekarte" aria-labelledby="h-karte" data-abschnitt="speisekarte">
     <div class="wrap">
       <header class="mitte" data-zeig>
         <p class="kicker">Speisekarte</p>
@@ -252,7 +252,7 @@
   </section>
 
   <!-- 6. Team: weiße Karte mit zwei Porträts, Namen mit Linie -->
-  <section class="team" id="team" aria-labelledby="h-team">
+  <section class="team" id="team" aria-labelledby="h-team" data-abschnitt="team">
     <div class="wrap">
       <div class="team__karte" data-zeig>
         <div class="team__fotos">
@@ -273,7 +273,7 @@
   </section>
 
   <!-- 7. Galerie: gekipptes Raster, Spalten driften, Raster richtet sich beim Scrollen auf -->
-  <section class="galerie" id="galerie" aria-label="Galerie" data-gerade>
+  <section class="galerie" id="galerie" aria-label="Galerie" data-gerade data-abschnitt="galerie">
     <div class="galerie__raster">
 
         <div class="galerie__spalte" data-parallax="0.1" data-nur-gross>
@@ -305,7 +305,7 @@
   </section>
 
   <!-- 8. Stimmen: dunkle Karte mit Wischspur und Pfeilen -->
-  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen">
+  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen" data-abschnitt="stimmen">
     <div class="wrap">
       <div class="stimmen__karte" data-reiter-gruppe data-zeig>
         <header class="stimmen__kopf">
@@ -330,7 +330,7 @@
   </section>
 
   <!-- 9. Kontakt: Daten links, Formularkarte in der Mitte, Folgen rechts -->
-  <section class="sektion kontakt" id="kontakt" aria-labelledby="h-kontakt">
+  <section class="sektion kontakt" id="kontakt" aria-labelledby="h-kontakt" data-abschnitt="kontakt">
     <div class="wrap kontakt__raster">
       <div class="kontakt__daten" data-zeig>
         <h2 class="kontakt__klein">Kontakt</h2>
@@ -367,7 +367,7 @@
   </section>
 
   <!-- 10. Zwei Angebote auf einem Vollbild: Catering und Lieferung -->
-  <section class="angebote" aria-labelledby="h-catering">
+  <section class="angebote" aria-labelledby="h-catering" data-abschnitt="angebote">
     <div class="bild angebote__bild bild--c"><img src="bilder/restaurant-garten-tisch.webp" width="1000" height="667" alt="Gartentisch mit Stühlen und weißer Tischdecke" loading="lazy" decoding="async"></div>
     <div class="wrap angebote__karten">
       <div class="angebot" data-zeig>
@@ -388,7 +388,7 @@
   </section>
 
   <!-- 11. Fragen -->
-  <section class="sektion fragen" aria-labelledby="h-fragen">
+  <section class="sektion fragen" aria-labelledby="h-fragen" data-abschnitt="fragen">
     <div class="wrap fragen__innen">
       <header class="mitte" data-zeig>
         <p class="kicker">Gut zu wissen</p>
@@ -406,7 +406,7 @@
   </section>
 </main>
 
-<footer class="fuss" id="fuss">
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
   <svg class="fuss__welle" viewBox="0 0 1440 48" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 48V30c60 0 80-24 160-24s100 24 160 24 80-24 160-24 100 24 160 24 80-24 160-24 100 24 160 24 80-24 160-24 100 24 160 24 80-24 160-24 100 24 160 24v18Z" fill="currentColor"/></svg>
   <div class="wrap">
     <h2 class="sr-nur">Standorte, Neuigkeiten und rechtliche Hinweise</h2>

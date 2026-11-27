@@ -29,7 +29,7 @@
   <symbol id="i-halle" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="9" width="24" height="16" rx="2"/><path d="M4 17h24M16 9v16M9 13v8M23 13v8"/></symbol>
 </svg>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__leiste">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
       <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg>
@@ -55,7 +55,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: Foto in großer Karte, das Bild driftet beim Scrollen leicht (Parallaxe) -->
-  <section class="held wrap" id="top" aria-labelledby="h-held">
+  <section class="held wrap" id="top" aria-labelledby="h-held" data-abschnitt="held">
     <div class="held__karte">
       <div class="held__bild" data-parallax="0.12"><img src="bilder/laufgruppe-im-park.webp" width="1000" height="667" alt="Drei Sportlerinnen und Sportler laufen lachend nebeneinander im Park" fetchpriority="high" decoding="async"></div>
       <div class="held__text">
@@ -72,7 +72,7 @@
   </section>
 
   <!-- 2. Über uns: Kicker links, Leitsatz rechts, darunter drei Karten -->
-  <section class="ueber sektion" id="ueber-uns" aria-labelledby="h-ueber">
+  <section class="ueber sektion" id="ueber-uns" aria-labelledby="h-ueber" data-abschnitt="ueber">
     <div class="wrap">
       <div class="ueber__kopf">
         <p class="kicker" data-zeig>Über uns</p>
@@ -119,7 +119,7 @@
   </section>
 
   <!-- 3. Angebote: Text links, zwei Fotokarten rechts, staffeln beim Scrollen ein -->
-  <section class="angebote sektion" id="angebote" aria-labelledby="h-angebote">
+  <section class="angebote sektion" id="angebote" aria-labelledby="h-angebote" data-abschnitt="angebote">
     <div class="wrap angebote__raster">
       <div class="angebote__text" data-zeig>
         <p class="kicker">Angebote</p>
@@ -145,7 +145,7 @@
   </section>
 
   <!-- 4. Mitgliedschaft: blaue Hauptkarte hebt sich beim Scrollen, zwei Zeilenkarten klappen auf -->
-  <section class="mitglied-bereich sektion" id="mitgliedschaft" aria-labelledby="h-mitglied">
+  <section class="mitglied-bereich sektion" id="mitgliedschaft" aria-labelledby="h-mitglied" data-abschnitt="mitglied-bereich">
     <div class="wrap">
       <div class="mitglied">
         <div class="mitglied__kopf" data-zeig>
@@ -174,7 +174,7 @@
   </section>
 
   <!-- 5. Stimmen: Wechsler mit Pfeilen und Zähler, ohne JavaScript stehen alle drei untereinander -->
-  <section class="stimmen sektion" id="stimmen" aria-labelledby="h-stimmen">
+  <section class="stimmen sektion" id="stimmen" aria-labelledby="h-stimmen" data-abschnitt="stimmen">
     <div class="wrap">
       <div class="stimmen__kopf">
         <p class="kicker" data-zeig>Stimmen</p>
@@ -217,7 +217,7 @@
   </section>
 
   <!-- 6. Fragen: Foto links, Einwand-FAQ rechts -->
-  <section class="fragen sektion" id="fragen" aria-labelledby="h-fragen">
+  <section class="fragen sektion" id="fragen" aria-labelledby="h-fragen" data-abschnitt="fragen">
     <div class="wrap fragen__raster">
       <div class="fragen__foto" data-zeig>
         <div class="bild"><img src="bilder/frau-mit-langhantel-am-rack.webp" width="1000" height="563" alt="Frau steht mit der Langhantel am Rack im Fitnessbereich" loading="lazy" decoding="async"></div>
@@ -238,7 +238,7 @@
   </section>
 
   <!-- 7. Probetraining: Formular auf Foto -->
-  <section class="probe sektion" id="probetraining" aria-labelledby="h-probe">
+  <section class="probe sektion" id="probetraining" aria-labelledby="h-probe" data-abschnitt="probe">
     <div class="wrap">
       <div class="probe__karte">
         <div class="probe__bild" aria-hidden="true"><img src="bilder/zwei-boxer-beim-training.webp" width="1000" height="800" alt="" loading="lazy" decoding="async"></div>
@@ -264,7 +264,7 @@
   </section>
 </main>
 
-<footer class="fuss" id="fuss">
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
   <div class="wrap">
     <h2 class="sr-nur">Kontakt, Folgen und rechtliche Hinweise</h2>
     <div class="fuss__oben">

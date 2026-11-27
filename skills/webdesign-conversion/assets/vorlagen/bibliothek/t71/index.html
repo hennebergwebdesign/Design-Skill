@@ -29,7 +29,7 @@
   <symbol id="i-pfeil-l" viewBox="0 0 256 256" fill="currentColor"><path d="M222,128a6,6,0,0,1-6,6H54.490l61.750,61.760a6,6,0,1,1-8.480,8.480l-72-72a6,6,0,0,1,0-8.480l72-72a6,6,0,0,1,8.480,8.480L54.490,122H216A6,6,0,0,1,222,128Z"/></symbol>
 </svg>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__leiste">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
       <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg>
@@ -54,7 +54,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: Vollbild mit Foto, Text unten links, Telefon steigt beim Scrollen -->
-  <section class="held" id="top" aria-labelledby="h-held">
+  <section class="held" id="top" aria-labelledby="h-held" data-abschnitt="held">
     <div class="held__bild" aria-hidden="true"><img src="bilder/held-haende-anrichten.webp" width="1000" height="667" alt="" decoding="async" fetchpriority="high"></div>
     <div class="wrap held__innen">
       <div class="held__text">
@@ -87,7 +87,7 @@
 
   <div class="karten">
   <!-- 2. Weiße Karte: Text links unten, Schleifenvideo rechts (Platzhalter mit Poster und Pause) -->
-  <section class="karte karte--hell video" id="video" aria-labelledby="h-video">
+  <section class="karte karte--hell video" id="video" aria-labelledby="h-video" data-abschnitt="karte">
     <div class="video__text">
       <p class="kicker" data-zeig>Lernen durch Tun</p>
       <h2 id="h-video" data-zeig>Jedes Video läuft in Schleife, bis du bereit bist.</h2>
@@ -111,7 +111,7 @@
   </section>
 
   <!-- 3. Rezepte: Titelkarte, acht Hochformatkacheln fahren gestaffelt hoch -->
-  <section class="karte karte--dunkel rezepte" id="rezepte" aria-labelledby="h-rezepte">
+  <section class="karte karte--dunkel rezepte" id="rezepte" aria-labelledby="h-rezepte" data-abschnitt="karte-2">
     <header class="mitte">
       <p class="kicker" data-zeig><span data-beispiel>Über 1.200 Videorezepte (Beispiel)</span></p>
       <h2 id="h-rezepte" data-zeig>Rezepte für jeden Geschmack und jedes Können</h2>
@@ -130,7 +130,7 @@
   </section>
 
   <!-- 4. Auszeichnungsband: Foto mit Text, das Foto driftet leicht (Beispielband, eigene Auszeichnung eintragen) -->
-  <section class="karte auszeichnung" aria-labelledby="h-auszeichnung">
+  <section class="karte auszeichnung" aria-labelledby="h-auszeichnung" data-abschnitt="karte-3">
     <div class="auszeichnung__bild" aria-hidden="true"><div class="auszeichnung__innen" data-parallax="0.07"><img src="bilder/auszeichnung-teller-haende.webp" width="1000" height="667" alt="" loading="lazy" decoding="async"></div></div>
     <div class="auszeichnung__text">
       <h2 id="h-auszeichnung" class="auszeichnung__titel" data-zeig>Ausgezeichnet für Lernen mit Freude</h2>
@@ -139,7 +139,7 @@
   </section>
 
   <!-- 5. Weiße Karte: Köche, Reihe aus Porträts läuft über den Rand und driftet beim Scrollen -->
-  <section class="karte karte--hell koeche" id="koeche" aria-labelledby="h-koeche">
+  <section class="karte karte--hell koeche" id="koeche" aria-labelledby="h-koeche" data-abschnitt="karte-4">
     <header class="mitte">
       <p class="kicker" data-zeig><span data-beispiel>Köche aus 12 Ländern (Beispiel)</span></p>
       <h2 id="h-koeche" data-zeig>Heimküche mit echten Köchen</h2>
@@ -155,7 +155,7 @@
   </section>
 
   <!-- 6. Vollbild mit Text über Foto, Wörter hellen beim Scrollen auf -->
-  <section class="karte vollbild" aria-labelledby="h-vollbild">
+  <section class="karte vollbild" aria-labelledby="h-vollbild" data-abschnitt="karte-5">
     <div class="vollbild__bild" aria-hidden="true"><img src="bilder/vollbild-koch-am-wok.webp" width="1000" height="667" alt="" loading="lazy" decoding="async"></div>
     <div class="vollbild__text">
       <p class="kicker" data-zeig>Fair geteilt</p>
@@ -165,7 +165,7 @@
   </section>
 
   <!-- 7. Angebotskarte: Foto mit Geschenkkarte, Preis als Beispiel -->
-  <section class="karte karte--dunkel angebot" id="angebot" aria-labelledby="h-angebot">
+  <section class="karte karte--dunkel angebot" id="angebot" aria-labelledby="h-angebot" data-abschnitt="karte-6">
     <div class="angebot__bild bild bild--c" data-zeig="links">
       <img src="bilder/angebot-salat.webp" width="800" height="533" alt="Bunte Salatschüssel mit Avocado und Tomaten auf dunklem Holz" loading="lazy" decoding="async">
       <p class="angebot__karte" aria-hidden="true"><svg width="28" height="28" focusable="false"><use href="#i-zeichen"/></svg><span>Jahreszugang</span></p>
@@ -180,7 +180,7 @@
   </section>
 
   <!-- 8. Zeitgeber: Ring füllt sich beim Einblenden, daneben ein Foto -->
-  <section class="zeit" aria-labelledby="h-zeit">
+  <section class="zeit" aria-labelledby="h-zeit" data-abschnitt="zeit">
     <div class="karte karte--dunkel zeit__karte">
       <div class="ring" data-zeig="skala" role="img" aria-label="Zeitgeber, Beispiel: 16 Minuten und 59 Sekunden, etwa drei Viertel gefüllt" style="--umfang:326.7;--rest:91.5">
         <svg viewBox="0 0 120 120" aria-hidden="true" focusable="false">
@@ -200,7 +200,7 @@
   </section>
 
   <!-- 9. Filter: Chips schalten an und aus und filtern die Vorschläge (ohne JavaScript steht die ganze Liste) -->
-  <section class="filter" aria-labelledby="h-filter">
+  <section class="filter" aria-labelledby="h-filter" data-abschnitt="filter">
     <div class="karte filter__foto bild bild--c" data-zeig>
       <img src="bilder/filter-eintopf.webp" width="1000" height="667" alt="Schale mit dunklem Schmorgericht, von oben fotografiert" loading="lazy" decoding="async">
     </div>
@@ -230,7 +230,7 @@
   </div>
 
   <!-- 10. Kurse: Reihe aus Fotos läuft über beide Ränder und driftet gegenläufig -->
-  <section class="kurse" id="kurse" aria-labelledby="h-kurse">
+  <section class="kurse" id="kurse" aria-labelledby="h-kurse" data-abschnitt="kurse">
     <header class="mitte">
       <p class="kicker" data-zeig>Mehr als nur Rezepte</p>
       <h2 id="h-kurse" data-zeig>Neue Fertigkeiten von Köchen lernen</h2>
@@ -246,7 +246,7 @@
   </section>
 
   <!-- 11. Mehrere Rezepte gleichzeitig -->
-  <section class="karten karten--einzeln">
+  <section class="karten karten--einzeln" data-abschnitt="karten">
     <div class="mehrere">
       <div class="karte mehrere__foto bild bild--a" data-zeig>
         <img src="bilder/mehrere-schmorgericht.webp" width="800" height="533" alt="Geschmortes Gericht in einer Pfanne mit Gewürzen und Paprika" loading="lazy" decoding="async">
@@ -264,7 +264,7 @@
   </section>
 
   <!-- 12. Fragen: Einwände, Antworten sind Beispiele -->
-  <section class="fragen" id="fragen" aria-labelledby="h-fragen">
+  <section class="fragen" id="fragen" aria-labelledby="h-fragen" data-abschnitt="fragen">
     <div class="wrap fragen__innen">
       <header class="fragen__kopf">
         <p class="kicker" data-zeig>Vor dem Download</p>
@@ -281,7 +281,7 @@
   </section>
 </main>
 
-<footer class="fuss" id="download">
+<footer class="fuss" id="download" data-abschnitt="fuss">
   <div class="wrap">
     <h2 class="sr-nur">Download, Newsletter und Kundenservice</h2>
     <div class="fuss__oben">

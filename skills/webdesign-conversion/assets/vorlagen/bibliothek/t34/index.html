@@ -30,7 +30,7 @@
   <symbol id="i-star" viewBox="0 0 256 256" fill="currentColor"><path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"/></symbol>
   <symbol id="i-plus" viewBox="0 0 256 256" fill="currentColor"><path d="M228,128a12,12,0,0,1-12,12H140v76a12,12,0,0,1-24,0V140H40a12,12,0,0,1,0-24h76V40a12,12,0,0,1,24,0v76h76A12,12,0,0,1,228,128Z"/></symbol>
 </svg>
-<header class="kopf kopf--dunkel">
+<header class="kopf kopf--dunkel" data-abschnitt="kopf">
   <div class="wrap">
     <a class="kopf__logo" href="#top" aria-label="Bistro Markenname, zur Startseite"><svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M5 28V15a11 11 0 0 1 22 0v13h-6V15a5 5 0 0 0-10 0v13Z" fill="currentColor"/></svg><span>Markenname</span></a>
     <div class="kopf__zeile">
@@ -53,7 +53,7 @@
   <button type="button" data-schnell-zu aria-label="Schnellleiste schließen"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-x"/></svg></button>
 </div>
 <main id="inhalt">
-<section class="held dunkel" id="top" aria-labelledby="h-held">
+<section class="held dunkel" id="top" aria-labelledby="h-held" data-abschnitt="held">
   <div class="wrap">
     <!-- Held: Zielgruppe Gäste, die abends Zeit statt Hektik suchen; Problem eilige Abende mit Essen nebenbei; Lösung saisonale Küche und ein Tisch, der für den Abend bleibt; Beleg Gästebewertung (Beispielwert). Text, Wert und Küche durch die Angaben des Hauses ersetzen. -->
     <h1 id="h-held" data-zeig>Gut essen ohne Eile</h1>
@@ -79,7 +79,7 @@
   </div>
 </section>
 
-<section class="ueber mitte" id="ueber" aria-labelledby="h-ueber">
+<section class="ueber mitte" id="ueber" aria-labelledby="h-ueber" data-abschnitt="ueber">
   <div class="wrap">
     <p class="kicker" data-zeig>Für schöne Erinnerungen</p>
     <h2 id="h-ueber" data-zeig>Wir kochen, was die Saison hergibt, und decken den Tisch so, dass du gern bleibst.</h2>
@@ -106,7 +106,7 @@
   </div>
 </section>
 
-<section class="karte dunkel dunkel--blau" id="karte" aria-labelledby="h-karte">
+<section class="karte dunkel dunkel--blau" id="karte" aria-labelledby="h-karte" data-abschnitt="karte">
   <div class="wrap">
     <div class="karte__kopf">
       <h2 id="h-karte" data-zeig>Unsere Karte</h2>
@@ -149,7 +149,7 @@
   </div>
 </section>
 
-<section class="tisch" id="tisch" aria-labelledby="h-tisch">
+<section class="tisch" id="tisch" aria-labelledby="h-tisch" data-abschnitt="tisch">
   <div class="wrap">
     <h2 id="h-tisch" data-zeig>Tisch reservieren</h2>
     <div class="tisch__raster">
@@ -175,7 +175,7 @@
   </div>
 </section>
 
-<section class="galerie" id="galerie" aria-labelledby="h-galerie">
+<section class="galerie" id="galerie" aria-labelledby="h-galerie" data-abschnitt="galerie">
   <h2 id="h-galerie" data-zeig>Unsere Galerie</h2>
   <div class="spur-gruppe" data-spur-gruppe>
     <div class="spur" data-spur tabindex="0" role="group" aria-label="Bilder aus dem Haus, horizontal wischbar">
@@ -192,7 +192,7 @@
   </div>
 </section>
 
-<section class="stimmen" aria-labelledby="h-stimmen">
+<section class="stimmen" aria-labelledby="h-stimmen" data-abschnitt="stimmen">
   <div class="wrap stimmen__raster">
     <div class="stimme spur-gruppe" data-spur-gruppe>
       <h2 id="h-stimmen" data-zeig>Was unsere Gäste sagen</h2>
@@ -214,7 +214,7 @@
   </div>
 </section>
 
-<section class="team dunkel mitte" aria-labelledby="h-team">
+<section class="team dunkel mitte" aria-labelledby="h-team" data-abschnitt="team">
   <div class="wrap">
     <h2 id="h-team" data-zeig>Das Team</h2>
     <p class="team__text" data-zeig>Beispieltext von zwei Zeilen: Wer bei dir am Herd steht und wer den Tisch deckt, steht hier mit Namen und Aufgabe.</p>
@@ -226,7 +226,7 @@
     </ul>
   </div>
 </section>
-<section class="faq" id="fragen" aria-labelledby="h-fragen">
+<section class="faq" id="fragen" aria-labelledby="h-fragen" data-abschnitt="faq">
   <div class="wrap">
     <p class="kicker" data-zeig>Gut zu wissen</p>
     <h2 id="h-fragen" data-zeig>Fragen vor dem Besuch</h2>
@@ -240,7 +240,7 @@
   </div>
 </section>
 </main>
-<footer class="fuss" id="kontakt">
+<footer class="fuss" id="kontakt" data-abschnitt="fuss">
   <div class="wrap">
     <div class="fuss__oben">
       <div data-zeig>

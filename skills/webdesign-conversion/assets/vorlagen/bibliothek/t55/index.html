@@ -38,7 +38,7 @@
 </svg>
 
 <!-- Kopf: Logo links, Menü rechts, mobil Knopf mit Panel -->
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__zeile">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
       <svg class="kopf__zeichen" width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-hantel"/></svg>
@@ -63,7 +63,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: Vollbild im Dunkeln, Überschrift oben links, Zackenkante unten -->
-  <section class="held" id="top" aria-labelledby="h-held">
+  <section class="held" id="top" aria-labelledby="h-held" data-abschnitt="held">
     <div class="held__grund">
       <div class="bild held__bild bild--a"><img src="bilder/frau-auf-yogamatte.webp" width="1000" height="1499" alt="Frau dehnt sich auf einer blauen Yogamatte" loading="lazy" decoding="async"></div>
       <div class="held__schleier" aria-hidden="true"></div>
@@ -80,7 +80,7 @@
   </section>
 
   <!-- 2. Anspruch: große Überschrift mit Wortlicht, Text in Klammern, Bild rechts -->
-  <section class="sektion hell anspruch riss" id="anspruch" aria-labelledby="h-anspruch">
+  <section class="sektion hell anspruch riss" id="anspruch" aria-labelledby="h-anspruch" data-abschnitt="hell">
     <div class="wrap">
       <h2 id="h-anspruch" class="gross" data-licht>Ein klarer Weg zu dauerhafter Stärke</h2>
       <div class="anspruch__raster">
@@ -98,7 +98,7 @@
   </section>
 
   <!-- 3. Leistungen: Spur mit hellen Karten auf Raster, Pfeilknöpfe oben rechts -->
-  <section class="sektion dunkel-stein leistungen riss" id="leistungen" aria-labelledby="h-leistungen" data-reiter-gruppe>
+  <section class="sektion dunkel-stein leistungen riss" id="leistungen" aria-labelledby="h-leistungen" data-reiter-gruppe data-abschnitt="dunkel-stein">
     <div class="wrap">
       <div class="leistungen__kopf">
         <h2 id="h-leistungen" class="kicker-titel"><span class="klammer-titel">Leistungen</span></h2>
@@ -124,7 +124,7 @@
   </section>
 
   <!-- 4. Programme: links sticky die Einleitung, rechts nummerierte Liste, der offene Eintrag zeigt Bild und Dauer -->
-  <section class="sektion dunkel programme riss" id="programme" aria-labelledby="h-programme">
+  <section class="sektion dunkel programme riss" id="programme" aria-labelledby="h-programme" data-abschnitt="dunkel">
     <div class="wrap programme__raster">
       <div class="programme__kopf">
         <h2 id="h-programme" class="akz-titel" data-zeig>Fünf Programme</h2>
@@ -172,7 +172,7 @@
   </section>
 
   <!-- 5. Vorteile: Bild links, Überschrift, Zeilen mit Kennzahlen rechts -->
-  <section class="sektion hell vorteile riss" id="vorteile" aria-labelledby="h-vorteile">
+  <section class="sektion hell vorteile riss" id="vorteile" aria-labelledby="h-vorteile" data-abschnitt="hell-2">
     <div class="wrap vorteile__raster">
       <div class="bild bild--a vorteile__bild" data-zeig><img src="bilder/hanteln-sonnenlicht.webp" width="1000" height="563" alt="Reihe von Hanteln im Fitnessstudio mit Sonnenlicht" loading="lazy" decoding="async"></div>
       <div class="vorteile__text">
@@ -189,7 +189,7 @@
   </section>
 
   <!-- 6. Wandel: Raster aus Karten und Bildern im Wechsel -->
-  <section class="sektion dunkel-stein wandel riss" id="wandel" aria-labelledby="h-wandel">
+  <section class="sektion dunkel-stein wandel riss" id="wandel" aria-labelledby="h-wandel" data-abschnitt="dunkel-stein-2">
     <div class="wrap">
       <h2 id="h-wandel" class="akz-titel" data-zeig>Veränderung in Bewegung</h2>
       <div class="wandel__raster" data-beispiel data-staffel>
@@ -215,7 +215,7 @@
   </section>
 
   <!-- 7. Stimmen: Spur mit zweifarbigen Karten -->
-  <section class="sektion dunkel stimmen riss" id="stimmen" aria-labelledby="h-stimmen" data-reiter-gruppe>
+  <section class="sektion dunkel stimmen riss" id="stimmen" aria-labelledby="h-stimmen" data-reiter-gruppe data-abschnitt="dunkel-2">
     <div class="wrap">
       <h2 id="h-stimmen" class="akz-titel" data-zeig>Das sagen unsere Mitglieder</h2>
     </div>
@@ -234,7 +234,7 @@
   </section>
 
   <!-- 8. Preise: Leitsatz mit Wortlicht, Zeilenliste mit Preis, Aktion -->
-  <section class="sektion hell preise riss" id="preise" aria-labelledby="h-preise">
+  <section class="sektion hell preise riss" id="preise" aria-labelledby="h-preise" data-abschnitt="hell-3">
     <div class="wrap">
       <div class="preise__kopf">
         <div class="bild bild--b preise__bild" data-zeig><img src="bilder/trainer-bart-top-640.webp" width="640" height="959" alt="Mann mit Bart im Tanktop im Fitnessstudio" loading="lazy" decoding="async" style="object-position:50% 25%"></div>
@@ -262,7 +262,7 @@
   </section>
 
   <!-- 9. Ratgeber: eine hohe Karte, zwei Beitragskarten -->
-  <section class="sektion dunkel-stein ratgeber riss" id="ratgeber" aria-labelledby="h-ratgeber">
+  <section class="sektion dunkel-stein ratgeber riss" id="ratgeber" aria-labelledby="h-ratgeber" data-abschnitt="dunkel-stein-3">
     <div class="wrap">
       <div class="ratgeber__kopf">
         <h2 id="h-ratgeber" class="akz-titel" data-zeig>Wissen für dein Training</h2>
@@ -293,7 +293,7 @@
 
   <!-- 10. Laufband: großer Aufruf mit kleinen Bildern dazwischen -->
   <!-- 10a. Fragen: Einwände vorwegnehmen -->
-  <section class="sektion hell fragen riss" id="fragen" aria-labelledby="h-fragen">
+  <section class="sektion hell fragen riss" id="fragen" aria-labelledby="h-fragen" data-abschnitt="hell-4">
     <div class="wrap fragen__raster">
       <h2 id="h-fragen" data-licht>Fragen vor dem ersten Training</h2>
       <div class="fragen__liste" data-exklusiv data-zeig>
@@ -306,7 +306,7 @@
     </div>
   </section>
 
-  <section class="laufband" aria-label="Aufruf zum Start">
+  <section class="laufband" aria-label="Aufruf zum Start" data-abschnitt="laufband">
     <div class="band">
       <div class="band__spur">
         <span class="laufband__wort">Probetraining buchen</span><span class="platte" aria-hidden="true"></span><span class="bild laufband__bild bild--b" aria-hidden="true"></span><span class="platte" aria-hidden="true"></span>
@@ -320,7 +320,7 @@
   </section>
 
   <!-- 11. Kontakt: links Überschrift und Verweise, rechts Formular mit Linienfeldern -->
-  <section class="sektion dunkel kontakt" id="kontakt" aria-labelledby="h-kontakt">
+  <section class="sektion dunkel kontakt" id="kontakt" aria-labelledby="h-kontakt" data-abschnitt="dunkel-3">
     <div class="wrap kontakt__raster">
       <div class="kontakt__links">
         <h2 id="h-kontakt" class="akz-titel" data-zeig>Dein Start wartet, schreib uns</h2>
@@ -343,7 +343,7 @@
   </section>
 </main>
 
-<footer class="fuss" id="fuss">
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
   <div class="wrap fuss__innen">
     <nav aria-label="Fußnavigation"><ul class="fuss__menue"><li><a href="#top">Start</a></li><li><a href="#anspruch">Anspruch</a></li><li><a href="#programme">Programme</a></li><li><a href="#preise">Preise</a></li><li><a href="#fuss">Impressum</a></li><li><a href="#fuss">Datenschutz</a></li></ul></nav>
     <p>© Jahr Markenname. Alle Rechte vorbehalten.</p>

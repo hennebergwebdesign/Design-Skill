@@ -33,7 +33,7 @@
 <!--/SPRITE-->
 </svg>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="wrap kopf__leiste">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
       <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg>
@@ -61,7 +61,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: Text links, Bild mit schwebender Terminkarte rechts -->
-  <section class="held" id="top" aria-labelledby="h-held">
+  <section class="held" id="top" aria-labelledby="h-held" data-abschnitt="held">
     <div class="wrap held__raster">
       <div class="held__text" data-staffel>
         <!-- Held: Patienten, die sich in der Sprechstunde abgefertigt fühlen; Lösung ist ein fester Ansprechpartner mit Zeit für Fragen; Beleg ist die Bewertung unter dem Knopf (Beispiel), vor dem Einsatz durch echte Werte ersetzen -->
@@ -92,7 +92,7 @@
   </section>
 
   <!-- 2. Über uns: Wortlicht, danach wächst das Bild beim Scrollen von der Form zum Vollbild -->
-  <section class="ueber" id="ueber" aria-labelledby="h-ueber">
+  <section class="ueber" id="ueber" aria-labelledby="h-ueber" data-abschnitt="ueber">
     <div class="wrap mitte ueber__kopf">
       <p class="kicker" data-zeig>Über uns</p>
       <h2 class="sr-nur" id="h-ueber">Unser Ansatz</h2>
@@ -107,7 +107,7 @@
   </section>
 
   <!-- 3. Leistungen: breite Zeilen, auf dem Handy eine Spur mit Pfeilen -->
-  <section class="sektion leistungen" id="leistungen" aria-labelledby="h-leistungen" data-reiter-gruppe>
+  <section class="sektion leistungen" id="leistungen" aria-labelledby="h-leistungen" data-reiter-gruppe data-abschnitt="leistungen">
     <div class="wrap">
       <header class="mitte">
         <h2 id="h-leistungen" data-zeig>Da, wenn es darauf ankommt</h2>
@@ -150,7 +150,7 @@
   </section>
 
   <!-- 4. Unser Unterschied: vier Karten um die Überschrift, Ringe im Hintergrund -->
-  <section class="sektion unterschied" id="unterschied" aria-labelledby="h-unterschied">
+  <section class="sektion unterschied" id="unterschied" aria-labelledby="h-unterschied" data-abschnitt="unterschied">
     <div class="unterschied__ringe" aria-hidden="true"></div>
     <div class="wrap unterschied__raster">
       <header class="mitte unterschied__kopf">
@@ -164,7 +164,7 @@
   </section>
 
   <!-- 5. Team: drei Porträts, auf dem Handy eine Spur -->
-  <section class="sektion team" id="team" aria-labelledby="h-team" data-reiter-gruppe>
+  <section class="sektion team" id="team" aria-labelledby="h-team" data-reiter-gruppe data-abschnitt="team">
     <div class="wrap">
       <header class="mitte">
         <p class="kicker" data-zeig>Das Team</p>
@@ -184,7 +184,7 @@
   </section>
 
   <!-- 6. Arztporträt: großes Bild links, Text, Liste und Zitat rechts -->
-  <section class="sektion spot" id="spot" aria-labelledby="h-spot">
+  <section class="sektion spot" id="spot" aria-labelledby="h-spot" data-abschnitt="spot">
     <div class="wrap">
       <header class="mitte">
         <h2 id="h-spot" data-zeig>Fachwissen mit menschlicher Seite</h2>
@@ -207,7 +207,7 @@
   </section>
 
   <!-- 7. Praxisprofil: abgesetzte Karte mit Text, Liste und Bild -->
-  <section class="sektion profil" id="profil" aria-labelledby="h-profil">
+  <section class="sektion profil" id="profil" aria-labelledby="h-profil" data-abschnitt="profil">
     <div class="wrap">
       <div class="profil__karte">
         <div class="profil__text" data-staffel>
@@ -227,7 +227,7 @@
   </section>
 
   <!-- 8. Ablauf: vier Schritte um einen Ring -->
-  <section class="sektion ablauf" id="ablauf" aria-labelledby="h-ablauf">
+  <section class="sektion ablauf" id="ablauf" aria-labelledby="h-ablauf" data-abschnitt="ablauf">
     <div class="wrap">
       <header class="mitte">
         <h2 id="h-ablauf" data-zeig>In vier Schritten zu deinem Termin</h2>
@@ -245,7 +245,7 @@
   </section>
 
   <!-- 9. Alles an einem Ort: Kopfzeile mit zwei Spalten, breites Bild mit Tiefenbewegung -->
-  <section class="sektion ort" id="ort" aria-labelledby="h-ort">
+  <section class="sektion ort" id="ort" aria-labelledby="h-ort" data-abschnitt="ort">
     <div class="wrap">
       <div class="ort__kopf">
         <div>
@@ -259,7 +259,7 @@
   </section>
 
   <!-- 10. Stimmen: eine große Karte, Pfeile an den Seiten wechseln die Stimme -->
-  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen">
+  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen" data-abschnitt="stimmen">
     <div class="wrap">
       <header class="mitte">
         <p class="kicker" data-zeig>Patientenstimmen</p>
@@ -290,7 +290,7 @@
   </section>
 
   <!-- 11. Termine: drei Karten, die mittlere hervorgehoben -->
-  <section class="sektion termine" id="termine" aria-labelledby="h-termine">
+  <section class="sektion termine" id="termine" aria-labelledby="h-termine" data-abschnitt="termine">
     <div class="wrap">
       <header class="mitte">
         <h2 id="h-termine" data-zeig>Welcher Termin passt zu dir?</h2>
@@ -343,7 +343,7 @@
   </section>
 
   <!-- 12. Fragen: Karte links, Akkordeon rechts -->
-  <section class="sektion faq" id="faq" aria-labelledby="h-faq">
+  <section class="sektion faq" id="faq" aria-labelledby="h-faq" data-abschnitt="faq">
     <div class="wrap">
       <header class="mitte">
         <h2 id="h-faq" data-zeig>Gut vorbereitet zum Termin</h2>
@@ -368,7 +368,7 @@
   </section>
 
   <!-- 13. Termin: Fächer aus gekippten Bildkarten, Rückrufformular -->
-  <section class="termin" id="termin" aria-labelledby="h-termin">
+  <section class="termin" id="termin" aria-labelledby="h-termin" data-abschnitt="termin">
     <div class="termin__fach" data-zeig aria-hidden="true">
       <div class="bild bild--a"><img src="bilder/praxis-heller-raum.webp" width="1000" height="667" alt="Heller Raum mit Sonnenlicht und Sitzmöbeln" loading="lazy" decoding="async"></div>
       <div class="bild bild--c"><img src="bilder/praxis-wartebereich-gelb.webp" width="1000" height="667" alt="Wartebereich mit gelbem Sofa und Schreibtisch im Hintergrund" loading="lazy" decoding="async"></div>
@@ -394,7 +394,7 @@
   </section>
 </main>
 
-<footer class="fuss" id="fuss">
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
   <div class="wrap">
     <div class="fuss__raster">
       <ul class="fuss__zeilen" aria-label="Weitere Angebote">

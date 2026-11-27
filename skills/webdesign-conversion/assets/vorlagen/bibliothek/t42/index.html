@@ -80,7 +80,7 @@
   <symbol id="i-zeichen" viewBox="0 0 32 32" fill="currentColor"><path d="M5 22.500 19 6.500h5.500L10.500 22.500Zm2.500 5L21.500 11.500H27L13 27.500Z"/></symbol>
 </svg>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__leiste">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zum Seitenanfang">
       <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg>
@@ -105,7 +105,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: dunkle Bühne, Text links, Bankkarte schwebt rechts -->
-  <section class="buehne held held--1" id="top" aria-labelledby="h-held">
+  <section class="buehne held held--1" id="top" aria-labelledby="h-held" data-abschnitt="buehne">
     <div class="wrap held__innen">
       <div class="held__text" data-staffel>
         <!-- Held: Zielgruppe Selbständige und kleine Betriebe; Problem verstreute Zahlungen, privat und geschäftlich vermischt; Lösung ein Konto mit Karte und Überblick in einer App; Beleg Bewertungen (Beispielwert). Pflichtangaben zu Finanzprodukten je Anbieter ergänzen. -->
@@ -132,7 +132,7 @@
   </section>
 
   <!-- 2. Vertrauen: Laufband aus Beispiellogos -->
-  <section class="vertrauen" aria-labelledby="h-vertrauen">
+  <section class="vertrauen" aria-labelledby="h-vertrauen" data-abschnitt="vertrauen">
     <div class="wrap">
       <h2 id="h-vertrauen" class="vertrauen__titel" data-zeig>Über 15.000 Betriebe nutzen uns (Beispielwert)</h2>
       <div class="band logos" data-zeig>
@@ -148,7 +148,7 @@
   </section>
 
   <!-- 3. Produkt: Bildkarte links, Text und zwei Kennzahlen rechts -->
-  <section class="sektion produkt" id="produkt" aria-labelledby="h-produkt">
+  <section class="sektion produkt" id="produkt" aria-labelledby="h-produkt" data-abschnitt="produkt">
     <div class="wrap produkt__raster">
       <div class="produkt__bild bild bild--a" data-zeig="links" data-platzhalter="Bild: Smartphone mit App auf dunklem Untergrund, Hochformat" role="img" aria-label="Platzhalter für ein Foto von einem Smartphone mit geöffneter App">
         <div class="telefon produkt__telefon" aria-hidden="true" data-beispiel>
@@ -181,7 +181,7 @@
   </section>
 
   <!-- 4. Einblicke: vier Karten im Wechsel breit und schmal -->
-  <section class="sektion einblicke" id="funktionen" aria-labelledby="h-einblicke">
+  <section class="sektion einblicke" id="funktionen" aria-labelledby="h-einblicke" data-abschnitt="einblicke">
     <div class="wrap">
       <header class="kopfzeile"><h2 id="h-einblicke" data-zeig>Wöchentliche Einblicke für klügere Geschäfts&shy;entscheidungen</h2></header>
       <div class="einblicke__raster" data-staffel data-beispiel>
@@ -219,7 +219,7 @@
   </section>
 
   <!-- 5. Laufschrift, riesig -->
-  <section class="laufschrift-huelle" aria-label="Aussage">
+  <section class="laufschrift-huelle" aria-label="Aussage" data-abschnitt="laufschrift-huelle">
     <p class="sr-nur">Zahlungen schneller empfangen.</p>
     <div class="laufschrift" aria-hidden="true">
       <div class="laufschrift__spur"><span>Zahlungen schneller empfangen.</span><span>Zahlungen schneller empfangen.</span></div>
@@ -228,7 +228,7 @@
   </section>
 
   <!-- 6. Sammelzahlung: Funktionsliste links, Rahmen mit Auswertung rechts -->
-  <section class="sektion sammel" aria-labelledby="h-sammel">
+  <section class="sektion sammel" aria-labelledby="h-sammel" data-abschnitt="sammel">
     <div class="wrap sammel__raster">
       <div class="sammel__text" data-staffel>
         <h2 id="h-sammel" data-zeig>Sammelzahlungen mit klarer Übersicht</h2>
@@ -259,7 +259,7 @@
   </section>
 
   <!-- 7. Echtzeit-Analyse: dunkle Bühne mit drei Karten -->
-  <section class="buehne analyse" aria-labelledby="h-analyse">
+  <section class="buehne analyse" aria-labelledby="h-analyse" data-abschnitt="buehne-2">
     <div class="wrap">
       <header class="kopfzeile"><h2 id="h-analyse" data-zeig>Entscheide schneller mit Auswertungen in Echtzeit</h2></header>
       <div class="analyse__raster" data-staffel data-beispiel>
@@ -291,7 +291,7 @@
   </section>
 
   <!-- 8. Banking der nächsten Generation: Belegkarte links, Text rechts -->
-  <section class="sektion naechste" aria-labelledby="h-naechste">
+  <section class="sektion naechste" aria-labelledby="h-naechste" data-abschnitt="naechste">
     <div class="wrap naechste__raster">
       <div class="beleg" data-zeig="links" aria-hidden="true" data-beispiel>
         <div class="bankkarte bankkarte--signal beleg__karte schweben--2">
@@ -320,7 +320,7 @@
   </section>
 
   <!-- 9. Werkzeuge: vier Karten im Wechsel breit und schmal -->
-  <section class="sektion werkzeuge" aria-labelledby="h-werkzeuge">
+  <section class="sektion werkzeuge" aria-labelledby="h-werkzeuge" data-abschnitt="werkzeuge">
     <div class="wrap">
       <header class="kopfzeile"><h2 id="h-werkzeuge" data-zeig>Behalte mit smarten Werkzeugen die volle Kontrolle über deine Karten</h2></header>
       <div class="werkzeuge__raster" data-staffel data-beispiel>
@@ -353,7 +353,7 @@
   </section>
 
   <!-- 10. Stimmen: sechs Karten in drei Spalten mit Versatz -->
-  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen">
+  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen" data-abschnitt="stimmen">
     <div class="wrap">
       <header class="kopfzeile"><h2 id="h-stimmen" data-zeig>So verändern Kunden ihren Umgang mit Geld</h2></header>
       <div class="stimmen-raster" data-staffel data-beispiel>
@@ -374,7 +374,7 @@
     </div>
   </section>
 
-  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen">
+  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen" data-abschnitt="fragen">
     <div class="wrap">
       <header class="kopfzeile"><h2 id="h-fragen" data-zeig>Gut zu wissen, bevor du startest</h2></header>
       <div class="faq__liste" data-exklusiv data-zeig data-beispiel>
@@ -388,7 +388,7 @@
   </section>
 </main>
 
-<footer class="fuss" id="start" aria-labelledby="h-start">
+<footer class="fuss" id="start" aria-labelledby="h-start" data-abschnitt="fuss">
   <div class="wrap">
     <div class="fuss__aufruf">
       <h2 id="h-start" data-zeig>Eröffne dein Konto in fünf Minuten</h2>

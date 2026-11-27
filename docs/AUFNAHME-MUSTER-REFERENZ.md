@@ -42,3 +42,5 @@ Der übliche Weg bei genannten Adressen (Tor 1 durch Nennung des Inhabers). Erge
 5. Galerie, Vorschaubilder, `HERKUNFT.md`, README Zähler und Änderungsverlauf nachziehen.
 
 Abschnitt wählen: `node scripts/bibliothek-abschnitte.mjs --kategorie faq` listet alle FAQ Abschnitte aller Vorlagen, `--seite t113 --abschnitt faq` liefert Selektor, CSS, JS und den Hinweis zum Herauslösen.
+
+Ältere Vorlagen ohne `ABSCHNITTE.json` nachziehen: `node scripts/bibliothek-abschnitte-migration.mjs --trocken`, dann ohne `--trocken`. Das Skript ergänzt nur `data-abschnitt` im HTML, überspringt Vorlagen mit vorhandener Datei und kennzeichnet seine Einträge als automatisch.

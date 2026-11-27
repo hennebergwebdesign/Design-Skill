@@ -34,7 +34,7 @@
   <symbol id="rakete" viewBox="0 0 256 256" fill="currentColor"><path d="M223.85,47.12a16,16,0,0,0-15-15c-12.58-.75-44.73.4-71.41,27.07L132.69,64H74.36A15.91,15.91,0,0,0,63,68.68L28.7,103a16,16,0,0,0,9.07,27.16l38.47,5.37,44.21,44.21,5.37,38.49a15.94,15.94,0,0,0,10.78,12.92,16.11,16.11,0,0,0,5.1.83A15.91,15.91,0,0,0,153,227.3L187.32,193A15.91,15.91,0,0,0,192,181.64V123.31l4.77-4.77C223.45,91.86,224.6,59.71,223.85,47.12ZM74.36,80h42.33L77.16,119.52,40,114.34Zm74.41-9.45a76.65,76.65,0,0,1,59.11-22.47,76.46,76.46,0,0,1-22.42,59.16L128,164.68,91.32,128ZM176,181.64,141.67,216l-5.19-37.17L176,139.31Zm-74.16,9.5C97.34,201,82.29,224,40,224a8,8,0,0,1-8-8c0-42.29,23-57.34,32.86-61.85a8,8,0,0,1,6.64,14.56c-6.43,2.93-20.62,12.36-23.12,38.91,26.55-2.5,36-16.69,38.91-23.12a8,8,0,1,1,14.56,6.64Z"/></symbol>
 </svg>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__innen">
     <a class="logo" href="#top" aria-label="Markenname, zur Startseite"><span class="logo__zeichen" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 25V7l9 11 9-11v18"/></svg></span>Markenname</a>
     <nav class="menue" id="menue" aria-label="Hauptmenü" data-menue-ziel data-offen="false">
@@ -56,7 +56,7 @@
 <main id="inhalt">
 
 <!-- 1. Held -->
-<section class="held" id="top" aria-labelledby="h-held">
+<section class="held" id="top" aria-labelledby="h-held" data-abschnitt="held">
   <div class="held__sterne" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
   <div class="wrap held__kopf">
     <!-- Held: Betriebe, in denen Anfragen, Angebote und Rechnungen von Hand weitergereicht werden; Lösung ist ein selbst gebauter Ablauf ohne Code; Beleg ist die Kundenbewertung (Beispielwert) -->
@@ -80,7 +80,7 @@
 </section>
 
 <!-- 2. Vertrauen -->
-<section class="vertrauen" id="vertrauen" aria-labelledby="h-vertrauen">
+<section class="vertrauen" id="vertrauen" aria-labelledby="h-vertrauen" data-abschnitt="vertrauen">
   <div class="wrap">
     <h2 id="h-vertrauen" class="vertrauen__titel">Im Einsatz bei Teams wie diesen <small>(Beispiellogos)</small></h2>
   </div>
@@ -91,7 +91,7 @@
 </section>
 
 <!-- 3. Funktionen -->
-<section class="sektion" id="funktionen" aria-labelledby="h-funktionen">
+<section class="sektion" id="funktionen" aria-labelledby="h-funktionen" data-abschnitt="funktionen">
   <div class="wrap">
     <header class="kopfblock">
       <p class="kicker">Funktionen</p>
@@ -153,7 +153,7 @@
 </section>
 
 <!-- 4. Ablauf mit Wortlicht und Sticky -->
-<section class="ablauf" id="ablauf" aria-labelledby="h-ablauf" data-fortschritt>
+<section class="ablauf" id="ablauf" aria-labelledby="h-ablauf" data-fortschritt data-abschnitt="ablauf">
   <div class="wrap ablauf__raster">
     <div class="ablauf__kopf">
             <h2 id="h-ablauf" data-licht>In drei Schritten vom ersten Gespräch zum laufenden Ablauf, ohne dass Ihr Team ein Handbuch lesen muss.</h2>
@@ -183,7 +183,7 @@
 </section>
 
 <!-- 5. Integrationen -->
-<section class="sektion sektion--alt" id="integrationen" aria-labelledby="h-integr">
+<section class="sektion sektion--alt" id="integrationen" aria-labelledby="h-integr" data-abschnitt="sektion-alt">
   <div class="wrap">
     <header class="kopfblock kopfblock--mitte">
             <h2 id="h-integr" data-zeig>Mit den Werkzeugen verbunden, die Sie schon nutzen</h2>
@@ -223,7 +223,7 @@
 </section>
 
 <!-- 6. Preise -->
-<section class="sektion" id="preise" aria-labelledby="h-preise">
+<section class="sektion" id="preise" aria-labelledby="h-preise" data-abschnitt="preise">
   <div class="wrap">
     <header class="kopfblock kopfblock--mitte">
       <p class="kicker">Preise</p>
@@ -279,7 +279,7 @@
 </section>
 
 <!-- 7. Stimmen -->
-<section class="sektion sektion--alt" id="stimmen" aria-labelledby="h-stimmen">
+<section class="sektion sektion--alt" id="stimmen" aria-labelledby="h-stimmen" data-abschnitt="sektion-alt-2">
   <div class="wrap">
     <header class="kopfblock kopfblock--mitte">
             <h2 id="h-stimmen" data-zeig>Was Anwender sagen werden</h2>
@@ -306,7 +306,7 @@
 </section>
 
 <!-- 8. FAQ -->
-<section class="sektion" id="faq" aria-labelledby="h-faq">
+<section class="sektion" id="faq" aria-labelledby="h-faq" data-abschnitt="faq">
   <div class="wrap faq">
     <header class="kopfblock">
             <h2 id="h-faq" data-zeig>Was Sie vor dem Start wissen möchten</h2>
@@ -339,7 +339,7 @@
 </section>
 
 <!-- 9. Abschluss mit Handlung -->
-<section class="sektion sektion--oben-klein" id="kontakt" aria-labelledby="h-kontakt">
+<section class="sektion sektion--oben-klein" id="kontakt" aria-labelledby="h-kontakt" data-abschnitt="sektion-oben-klein">
   <div class="wrap">
     <div class="abschluss">
       <div class="abschluss__text">
@@ -375,7 +375,7 @@
 
 </main>
 
-<footer class="fuss">
+<footer class="fuss" data-abschnitt="fuss">
   <div class="wrap">
     <div class="fuss__oben">
       <div class="fuss__kontakt">

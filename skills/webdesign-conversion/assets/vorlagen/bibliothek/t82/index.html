@@ -35,7 +35,7 @@
   <symbol id="i-s4" viewBox="0 0 24 24"><path d="M5 5h14v10h-6l-4 4v-4H5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol></defs>
 </svg>
 
-<header class="kopf" id="kopf">
+<header class="kopf" id="kopf" data-abschnitt="kopf">
   <div class="kopf__innen wrap">
     <a class="marke" href="#inhalt" aria-label="Markenname, zum Seitenanfang"><span class="marke__zeichen"><svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M7 21c4-1 6-5 8-8s5-4 9-4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><circle cx="25" cy="9" r="3" fill="currentColor"/></svg></span>Markenname</a>
     <button class="menueknopf" type="button" data-menue aria-expanded="false" aria-controls="menue"><span class="sr-nur">Menü</span><span class="menueknopf__balken" aria-hidden="true"></span></button>
@@ -56,7 +56,7 @@
 <main id="inhalt">
 
 <!-- Heldformel: Zielgruppe = Spieler und Trainer im Verein. Problem = Training ohne Rückmeldung, Fortschritt bleibt Gefühl. Lösung = Video-Analyse per Handy, Auswertung in Minuten. -->
-<section class="held wrap" aria-labelledby="h-held">
+<section class="held wrap" aria-labelledby="h-held" data-abschnitt="held">
   <div class="held__karte">
     <img class="held__bild" data-parallax="0.06" src="bilder/laufgruppe-im-park.webp" alt="Eine Gruppe läuft im Park gemeinsam los" width="1000" height="667" fetchpriority="high">
     <div class="held__schleier" aria-hidden="true"></div>
@@ -83,7 +83,7 @@
   </div>
 </section>
 
-<section class="sektion so" id="so" aria-labelledby="h-so">
+<section class="sektion so" id="so" aria-labelledby="h-so" data-abschnitt="so">
   <div class="wrap">
     <div class="so__raster">
       <div class="so__links" data-zeig>
@@ -108,7 +108,7 @@
   </div>
 </section>
 
-<section class="sektion zielgruppe" id="spieler" aria-labelledby="h-spieler">
+<section class="sektion zielgruppe" id="spieler" aria-labelledby="h-spieler" data-abschnitt="zielgruppe">
   <div class="wrap">
     <div class="kopfzeile" data-zeig><p class="marke-label"><span class="punkt"></span>Für Spieler</p><h2 id="h-spieler">Das bekommst du als Spielerin oder Spieler</h2></div>
     <div class="zg__raster">
@@ -170,7 +170,7 @@
   </div>
 </section>
 
-<section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen">
+<section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen" data-abschnitt="stimmen">
   <div class="wrap stimmen__raster">
     <div class="stimmen__links" data-zeig>
       <p class="marke-label"><span class="punkt"></span>Stimmen</p>
@@ -190,7 +190,7 @@
   </div>
 </section>
 
-<section class="sektion zielgruppe" id="trainer" aria-labelledby="h-trainer">
+<section class="sektion zielgruppe" id="trainer" aria-labelledby="h-trainer" data-abschnitt="zielgruppe-2">
   <div class="wrap">
     <div class="kopfzeile" data-zeig><p class="marke-label"><span class="punkt"></span>Für Trainer</p><h2 id="h-trainer">Das bekommst du als Trainerin oder Trainer</h2></div>
     <div class="zg__raster zg__raster--spiegel">
@@ -242,7 +242,7 @@
   </div>
 </section>
 
-<section class="sektion preise" id="preise" aria-labelledby="h-preise">
+<section class="sektion preise" id="preise" aria-labelledby="h-preise" data-abschnitt="preise">
   <div class="wrap preise__raster">
     <div class="preise__text" data-zeig>
       <p class="marke-label"><span class="punkt"></span>Preise</p>
@@ -271,7 +271,7 @@
   </div>
 </section>
 
-<section class="laden wrap" id="laden" aria-labelledby="h-laden">
+<section class="laden wrap" id="laden" aria-labelledby="h-laden" data-abschnitt="laden">
   <div class="laden__karte" data-zeig>
     <div class="laden__telefon">
       <div class="telefon " data-telefon role="img" aria-label="Beispielansicht der App: Verlauf der Treffsicherheit über sechs Wochen">
@@ -299,7 +299,7 @@
   </div>
 </section>
 
-<section class="sektion verein" id="verein" aria-labelledby="h-verein">
+<section class="sektion verein" id="verein" aria-labelledby="h-verein" data-abschnitt="verein">
   <div class="wrap verein__raster">
     <div class="verein__text" data-zeig>
       <p class="marke-label"><span class="punkt"></span>Für Vereine</p>
@@ -324,7 +324,7 @@
   </div>
 </section>
 
-<section class="sektion fragen" id="fragen" aria-labelledby="h-fragen">
+<section class="sektion fragen" id="fragen" aria-labelledby="h-fragen" data-abschnitt="fragen">
   <div class="wrap fragen__raster">
     <figure class="bild fragen__bild" data-zeig="skala"><img src="bilder/frau-mit-langhantel-am-rack.webp" alt="Sportlerin bereitet sich konzentriert auf ihre Übung vor" width="1000" height="563" loading="lazy"></figure>
     <div class="fragen__inhalt">
@@ -343,7 +343,7 @@
 
 </main>
 
-<footer class="fuss" id="fuss">
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
   <div class="wrap fuss__innen">
     <a class="marke" href="#inhalt"><span class="marke__zeichen"><svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M7 21c4-1 6-5 8-8s5-4 9-4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><circle cx="25" cy="9" r="3" fill="currentColor"/></svg></span>Markenname</a>
     <nav aria-label="Fußnavigation"><ul class="fuss__menue">

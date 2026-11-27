@@ -33,7 +33,7 @@
   <symbol id="i-rueckblick" viewBox="0 0 256 256" fill="currentColor"><path d="M228,208a4,4,0,0,1-4,4H32a4,4,0,0,1-4-4V48a4,4,0,0,1,8,0V166.34l57.17-57.17a4,4,0,0,1,5.66,0L128,138.34,190.34,76H160a4,4,0,0,1,0-8h40a4,4,0,0,1,4,4v40a4,4,0,0,1-8,0V81.66l-65.17,65.17a4,4,0,0,1-5.66,0L96,117.66l-60,60V204H224A4,4,0,0,1,228,208Z"/></symbol>
 </svg>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <a class="marke" href="#top" aria-label="Markenname, zum Seitenanfang"><span class="marke__zeichen" aria-hidden="true"></span><span class="marke__name">Markenname</span></a>
   <div class="kopf__aktionen">
     <a class="knopf knopf--klein kopf__termin" href="#kontakt">Erstgespräch buchen <svg class="pfeil" width="18" height="18" aria-hidden="true"><use href="#i-pfeil"/></svg></a>
@@ -57,7 +57,7 @@
 <main id="inhalt">
 
 <!-- 1. Held: Vollbild, Text links unten -->
-<section class="held" id="top" data-abdunkeln>
+<section class="held" id="top" data-abdunkeln data-abschnitt="held">
   <div class="held__bild bild" aria-hidden="true"><img class="held__tiefe" src="bilder/geschaeftsleute-am-tisch-im-gespraech.webp" width="1600" height="900" alt="" fetchpriority="high" decoding="async" data-parallax="0.08"></div>
   <div class="wrap held__inhalt">
     <p class="kicker" data-zeig>Beratung für Selbstständige und kleine Teams</p>
@@ -73,7 +73,7 @@
 </section>
 
 <!-- 2. Vertrauensband: Laufband mit Beispiellogos (erfunden, einfarbig), beim Kunden durch echte, freigegebene Logos ersetzen. Ohne echte Referenzen Abschnitt entfernen. -->
-<section class="vertrauen" aria-labelledby="vertrauen-t" data-beispiel>
+<section class="vertrauen" aria-labelledby="vertrauen-t" data-beispiel data-abschnitt="vertrauen">
   <div class="wrap">
     <p class="vertrauen__titel" id="vertrauen-t">Mit diesen Teams arbeiten wir</p>
   </div>
@@ -84,7 +84,7 @@
 </section>
 
 <!-- 3. Für wen: zentrierte Einleitung, drei Karten -->
-<section class="sektion mitte" id="fuer-wen" aria-labelledby="fuer-wen-t">
+<section class="sektion mitte" id="fuer-wen" aria-labelledby="fuer-wen-t" data-abschnitt="mitte">
   <div class="wrap">
     <h2 id="fuer-wen-t" data-zeig>Für alle, die ihr Fachwissen sauber anbieten wollen.</h2>
     <p class="einleitung" data-zeig>Ob Einzelpraxis oder kleines Team: Wir klären Angebot und Ablauf und sorgen für einen Auftritt, der Anfragen vorsortiert.</p>
@@ -113,7 +113,7 @@
 </section>
 
 <!-- 4. Ansatz: Bild links, Text und Akkordeon rechts, abgesetzte Fläche -->
-<section class="sektion sektion--alt" id="ansatz" aria-labelledby="ansatz-t">
+<section class="sektion sektion--alt" id="ansatz" aria-labelledby="ansatz-t" data-abschnitt="sektion-alt">
   <div class="wrap zwei">
     <div class="bild zwei__bild" data-zeig="links"><img class="bild__tiefe" src="bilder/beratungsgespraech-am-grossen-tisch.webp" width="1000" height="563" alt="Beratungsgespräch an einem großen Tisch" loading="lazy" decoding="async" data-parallax="0.06"></div>
     <div class="zwei__text">
@@ -139,7 +139,7 @@
 </section>
 
 <!-- 5. Angebote: Reiter wechseln Bild und Text -->
-<section class="sektion mitte" id="angebote" aria-labelledby="angebote-t">
+<section class="sektion mitte" id="angebote" aria-labelledby="angebote-t" data-abschnitt="mitte-2">
   <div class="wrap">
     <h2 id="angebote-t" data-zeig>Das passende Maß an Unterstützung.</h2>
     <p class="einleitung" data-zeig>Drei Formate, vom einzelnen Arbeitstag bis zur fortlaufenden Begleitung. Wählen Sie, was zu Ihrer Lage passt.</p>
@@ -184,7 +184,7 @@
 </section>
 
 <!-- 6. Wirkung: Überschrift links, drei Kennzahlen (Beispielwerte, Endwert im HTML) -->
-<section class="sektion sektion--alt" id="wirkung" aria-labelledby="wirkung-t">
+<section class="sektion sektion--alt" id="wirkung" aria-labelledby="wirkung-t" data-abschnitt="sektion-alt-2">
   <div class="wrap">
     <h2 id="wirkung-t" class="wirkung__titel" data-zeig>Woran Sie merken, dass es läuft.</h2>
     <p data-zeig><a class="knopf" href="#kontakt">Erstgespräch buchen <svg class="pfeil" width="18" height="18" aria-hidden="true"><use href="#i-pfeil"/></svg></a></p>
@@ -197,12 +197,12 @@
 </section>
 
 <!-- 7. Bildband über die volle Breite, Tiefe beim Scrollen -->
-<section class="bildband" aria-hidden="true">
+<section class="bildband" aria-hidden="true" data-abschnitt="bildband">
   <div class="bild bildband__bild"><img class="bildband__tiefe" src="bilder/besprechung-im-hellen-konferenzraum.webp" width="1600" height="1068" alt="" loading="lazy" decoding="async" data-parallax="0.12"></div>
 </section>
 
 <!-- 8. Preise: zwei Karten, die helle ist hervorgehoben -->
-<section class="sektion mitte" id="preise" aria-labelledby="preise-t">
+<section class="sektion mitte" id="preise" aria-labelledby="preise-t" data-abschnitt="mitte-3">
   <div class="wrap">
     <p class="kicker" data-zeig>Preise</p>
     <h2 id="preise-t" data-zeig>Klare Pakete. Kein Kleingedrucktes.</h2>
@@ -230,7 +230,7 @@
 </section>
 
 <!-- 9. Ablauf: vier Schritte, Linien füllen sich beim Scrollen -->
-<section class="sektion sektion--alt" id="ablauf" aria-labelledby="ablauf-t">
+<section class="sektion sektion--alt" id="ablauf" aria-labelledby="ablauf-t" data-abschnitt="sektion-alt-3">
   <div class="wrap">
     <p class="kicker" data-zeig>So arbeiten wir</p>
     <h2 id="ablauf-t" class="ablauf__titel" data-zeig>Kein Rätselraten. Ein klarer Weg.</h2>
@@ -244,7 +244,7 @@
 </section>
 
 <!-- 10. Stimmen: Beispielzitate in einer Spur mit Pfeilen -->
-<section class="sektion mitte" id="stimmen" aria-labelledby="stimmen-t">
+<section class="sektion mitte" id="stimmen" aria-labelledby="stimmen-t" data-abschnitt="mitte-4">
   <div class="wrap">
     <p class="kicker" data-zeig>Stimmen</p>
     <h2 id="stimmen-t" data-zeig>Was Kunden über die Zusammenarbeit sagen.</h2>
@@ -265,7 +265,7 @@
 </section>
 
 <!-- 11. Fragen: Überschrift links, Akkordeon rechts -->
-<section class="sektion sektion--alt" id="fragen" aria-labelledby="fragen-t">
+<section class="sektion sektion--alt" id="fragen" aria-labelledby="fragen-t" data-abschnitt="sektion-alt-4">
   <div class="wrap zwei zwei--eng">
     <div class="zwei__text">
       <p class="kicker" data-zeig>Häufige Fragen</p>
@@ -283,7 +283,7 @@
 </section>
 
 <!-- 12. Kontakt: links Text und Erreichbarkeit, rechts Formular. Formularziel beim Einbau ergänzen. -->
-<section class="sektion" id="kontakt" aria-labelledby="kontakt-t">
+<section class="sektion" id="kontakt" aria-labelledby="kontakt-t" data-abschnitt="kontakt">
   <div class="wrap zwei zwei--eng">
     <div class="zwei__text">
       <p class="kicker" data-zeig>Kontakt</p>
@@ -312,7 +312,7 @@
 </section>
 
 <!-- 13. Newsletter über Bildfläche -->
-<section class="brief" aria-labelledby="brief-t">
+<section class="brief" aria-labelledby="brief-t" data-abschnitt="brief">
   <div class="brief__bild bild" aria-hidden="true"><img class="bild__foto" src="bilder/haende-schuetteln-vor-dunklem-hintergrund.webp" width="1600" height="1067" alt="" loading="lazy" decoding="async"></div>
   <div class="wrap brief__inhalt">
     <div>
@@ -329,7 +329,7 @@
 </section>
 </main>
 
-<footer class="fuss">
+<footer class="fuss" data-abschnitt="fuss">
   <div class="wrap fuss__raster">
     <a class="marke" href="#top" aria-label="Markenname, zum Seitenanfang"><span class="marke__zeichen" aria-hidden="true"></span><span class="marke__name">Markenname</span></a>
     <nav class="fuss__spalte" aria-label="Rechtliches"><p class="fuss__titel">Rechtliches</p><ul><li><a href="#">Impressum</a></li><li><a href="#">Datenschutz</a></li><li><a href="#">Cookie Einstellungen</a></li></ul></nav>

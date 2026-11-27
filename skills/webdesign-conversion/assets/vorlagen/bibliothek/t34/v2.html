@@ -31,7 +31,7 @@
   <symbol id="i-star" viewBox="0 0 256 256" fill="currentColor"><path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"/></symbol>
   <symbol id="i-plus" viewBox="0 0 256 256" fill="currentColor"><path d="M228,128a12,12,0,0,1-12,12H140v76a12,12,0,0,1-24,0V140H40a12,12,0,0,1,0-24h76V40a12,12,0,0,1,24,0v76h76A12,12,0,0,1,228,128Z"/></symbol>
 </svg>
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="wrap">
     <a class="kopf__logo" href="#top" aria-label="Bistro Markenname, zur Startseite"><svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M5 28V15a11 11 0 0 1 22 0v13h-6V15a5 5 0 0 0-10 0v13Z" fill="currentColor"/></svg><span>Markenname</span></a>
     <div class="kopf__zeile">
@@ -54,7 +54,7 @@
   <button type="button" data-schnell-zu aria-label="Schnellleiste schließen"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-x"/></svg></button>
 </div>
 <main id="inhalt">
-<section class="held2" id="top" aria-labelledby="h-held">
+<section class="held2" id="top" aria-labelledby="h-held" data-abschnitt="held2">
   <div class="held2__bilder">
     <div class="bild bogen bild--b"><img src="bilder/gedeckter-tisch-mit-blumen.webp" width="1000" height="667" alt="Gedeckter Tisch mit Blumen und Gläsern" loading="lazy" decoding="async"></div>
     <div class="bild bogen bild--c" data-parallax="0.09"><img src="bilder/frau-isst-lampenlicht.webp" width="1000" height="667" alt="Frau isst in warmem Lampenlicht" loading="lazy" decoding="async"></div>
@@ -68,7 +68,7 @@
   </div>
 </section>
 
-<section class="ueber2 dunkel dunkel--blau" id="ueber" aria-labelledby="h-ueber">
+<section class="ueber2 dunkel dunkel--blau" id="ueber" aria-labelledby="h-ueber" data-abschnitt="ueber2">
   <div class="wrap ueber2__raster">
     <div class="bild ueber2__bild bild--d" aria-hidden="true" data-zeig="links"><img src="bilder/lange-tafel-mit-kerzen.webp" width="1600" height="1067" alt="Lange Tafel mit Tellern, Servietten und Kerzen" loading="lazy" decoding="async"></div>
     <div>
@@ -84,7 +84,7 @@
   </div>
 </section>
 
-<section class="karte2" id="karte" aria-labelledby="h-karte">
+<section class="karte2" id="karte" aria-labelledby="h-karte" data-abschnitt="karte2">
   <div class="wrap">
     <div class="karte__kopf">
       <div><p class="kicker" data-zeig>Auswahl</p><h2 id="h-karte" data-zeig>Die besondere Karte</h2></div>
@@ -101,7 +101,7 @@
   </div>
 </section>
 
-<section class="feier dunkel mitte" id="feier" aria-labelledby="h-feier">
+<section class="feier dunkel mitte" id="feier" aria-labelledby="h-feier" data-abschnitt="feier">
   <div class="wrap">
     <h2 id="h-feier" data-zeig>Unvergessliche Feier</h2>
     <div class="feier__raster" data-beispiel>
@@ -123,7 +123,7 @@
   </div>
 </section>
 
-<section class="veranstaltungen" id="veranstaltungen" aria-labelledby="h-ver">
+<section class="veranstaltungen" id="veranstaltungen" aria-labelledby="h-ver" data-abschnitt="veranstaltungen">
   <div class="wrap mitte">
     <h2 id="h-ver" data-zeig>Geplante Veranstaltungen</h2>
     <p class="veranstaltungen__text" data-zeig>Beispieltext von zwei Zeilen: Was in den nächsten Wochen bei dir im Haus stattfindet, steht hier mit Datum und Zeit.</p>
@@ -147,7 +147,7 @@
   </div>
 </section>
 
-<section class="news2 dunkel dunkel--blau" aria-labelledby="h-news">
+<section class="news2 dunkel dunkel--blau" aria-labelledby="h-news" data-abschnitt="news2">
   <div class="wrap news2__raster">
     <div class="news2__text">
       <h2 id="h-news" data-zeig>Neues aus dem Haus</h2>
@@ -163,7 +163,7 @@
   </div>
 </section>
 
-<section class="insta" id="insta" aria-labelledby="h-insta">
+<section class="insta" id="insta" aria-labelledby="h-insta" data-abschnitt="insta">
   <div class="wrap mitte">
     <h2 id="h-insta" data-zeig>Folge uns</h2>
   </div>
@@ -176,7 +176,7 @@
     <li data-zeig><div class="bild bild--f"><img src="bilder/glas-mit-gurke-und-eis.webp" width="800" height="533" alt="Glas mit Gurke und Eis von oben" loading="lazy" decoding="async"></div></li>
   </ul>
 </section>
-<section class="faq" id="fragen" aria-labelledby="h-fragen">
+<section class="faq" id="fragen" aria-labelledby="h-fragen" data-abschnitt="faq">
   <div class="wrap">
     <p class="kicker" data-zeig>Gut zu wissen</p>
     <h2 id="h-fragen" data-zeig>Fragen vor dem Besuch</h2>
@@ -190,7 +190,7 @@
   </div>
 </section>
 </main>
-<footer class="fuss" id="kontakt">
+<footer class="fuss" id="kontakt" data-abschnitt="fuss">
   <div class="wrap">
     <div class="fuss__oben">
       <div data-zeig>

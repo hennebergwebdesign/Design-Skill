@@ -37,7 +37,7 @@
 </svg>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="i-zeichen" viewBox="0 0 32 32"><path d="M5 25 12 7l5 9 5-9 5 18" fill="none" stroke="currentColor" stroke-width="3.200" stroke-linecap="round" stroke-linejoin="round"/></symbol></svg>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__leiste"><div class="kopf__innen">
     <a class="logo" href="#top" aria-label="Markenname, zum Seitenanfang"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg><span>Markenname</span></a>
     <nav class="kopf__nav" id="hauptnav" aria-label="Hauptnavigation" data-menue-ziel>
@@ -61,7 +61,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: dunkle Fläche, Text links, Telefon rechts -->
-  <section class="held2" id="top" aria-labelledby="h-held">
+  <section class="held2" id="top" aria-labelledby="h-held" data-abschnitt="held2">
     <div class="wrap held2__raster">
       <div class="held2__text" data-staffel>
         <!-- Held: Zielgruppe sind Privatkunden, Gründende und kleine Betriebe, Problem sind unklare Gebühren und wechselnde Ansprechpartner, Lösung ist eine Anwendung mit fester Ansprechperson; Beleg: Zahlen weiter unten (Beispiele). Rechtlich heikel, vor dem Einsatz prüfen lassen. -->
@@ -77,7 +77,7 @@
   </section>
 
   <!-- 2. Merkmale: sechs Karten, die letzte als Aufruf -->
-  <section class="sektion" id="vorteile" aria-labelledby="h-merkmale">
+  <section class="sektion" id="vorteile" aria-labelledby="h-merkmale" data-abschnitt="vorteile">
     <div class="wrap">
       <h2 id="h-merkmale" data-zeig style="text-align:center;margin:0 auto clamp(2rem,5vw,3.5rem);max-width:18ch">Die Funktionen, die unseren Dienst ausmachen</h2>
       <div class="raster-merkmale" data-staffel data-beispiel>
@@ -92,7 +92,7 @@
   </section>
 
   <!-- 3. Abgrenzung: Text und Logoraster links, Bild rechts -->
-  <section class="sektion abgrenz2" aria-labelledby="h-abgrenzung" style="padding-top:0">
+  <section class="sektion abgrenz2" aria-labelledby="h-abgrenzung" style="padding-top:0" data-abschnitt="abgrenz2">
     <div class="wrap abgrenz2__raster">
       <div class="abgrenz2__text" data-staffel>
         <h2 id="h-abgrenzung" data-zeig>Was uns von den anderen unterscheidet</h2>
@@ -104,7 +104,7 @@
   </section>
 
   <!-- 4. Zahlen: Text links, vier Zahlen rechts -->
-  <section class="sektion zahlen2" aria-labelledby="h-zahlen">
+  <section class="sektion zahlen2" aria-labelledby="h-zahlen" data-abschnitt="zahlen2">
     <div class="wrap zahlen2__raster">
       <div class="zahlen2__text" data-staffel><h2 id="h-zahlen" data-zeig>Unsere Kunden bleiben, und das aus Gründen</h2><a class="knopf" href="#kontakt" data-zeig>Beratung anfragen<svg aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"/></svg></a></div>
       <dl class="zahlen2__liste" data-staffel data-beispiel>
@@ -117,7 +117,7 @@
   </section>
 
   <!-- 5. Schritte: dunkle Fläche mit Bild links und Nummernliste -->
-  <section class="schritte" id="ablauf" aria-labelledby="h-ablauf" style="margin-top:0">
+  <section class="schritte" id="ablauf" aria-labelledby="h-ablauf" style="margin-top:0" data-abschnitt="schritte">
     <div class="bild schritte__bild"><img src="bilder/mann-laptop-sofa.webp" width="1000" height="563" alt="Mann mit Brille arbeitet am Laptop auf dem Sofa" loading="lazy" decoding="async"></div>
     <div class="schritte__text">
       <h2 id="h-ablauf" data-zeig>Noch nie war es so einfach, dein Geld im Blick zu behalten</h2>
@@ -130,7 +130,7 @@
   </section>
 
   <!-- 6. Zielgruppen: Bild mit überlappender Karte, Punkte -->
-  <section class="sektion zielgruppen" id="zielgruppen" aria-labelledby="h-zielgruppen">
+  <section class="sektion zielgruppen" id="zielgruppen" aria-labelledby="h-zielgruppen" data-abschnitt="zielgruppen">
     <div class="wrap">
       <div class="zielgruppen__kopf" data-zeig><h2 id="h-zielgruppen">Unser Angebot passt zu vielen Lebenslagen</h2><p>Drei typische Wege, mit denen Menschen und Unternehmen zu uns kommen.</p></div>
       <div data-tafeln>
@@ -147,7 +147,7 @@
   </section>
 
   <!-- 7. Aufruf: Telefon links aus dem Band, Text und Formular rechts -->
-  <section class="aufruf2" id="kontakt" aria-labelledby="h-aufruf">
+  <section class="aufruf2" id="kontakt" aria-labelledby="h-aufruf" data-abschnitt="aufruf2">
     <div class="aufruf2__raster">
       <div class="aufruf2__telefon" aria-hidden="true" data-beispiel><div class="geraet geraet--telefon"><div class="geraet__rahmen"><div class="geraet__schirm"><div class="ui" role="img" aria-label="Platzhalter für eine Ansicht der Anwendung auf dem Telefon"><div class="ui__haupt"><div class="ui__kopf"></div><div class="ui__kachel"></div><div class="ui__zeile"><b></b><i></i><i></i></div><div class="ui__zeile"><b></b><i></i><i></i></div><div class="ui__zeile"><b></b><i></i><i></i></div><div class="ui__zeile"><b></b><i></i><i></i></div><div class="ui__zeile"><b></b><i></i><i></i></div></div></div></div></div></div></div>
       <div class="aufruf2__text">
@@ -164,7 +164,7 @@
   </section>
 
   <!-- 8. Stimmen: drei Karten im Reiter mit Pfeilen -->
-  <section class="sektion stimmen stimmen2" id="stimmen" aria-labelledby="h-stimmen" data-reiter-gruppe>
+  <section class="sektion stimmen stimmen2" id="stimmen" aria-labelledby="h-stimmen" data-reiter-gruppe data-abschnitt="stimmen">
     <div class="wrap">
       <div class="stimmen__kopf" data-zeig><h2 id="h-stimmen">Glaub nicht uns, sondern denen, die schon dabei sind</h2><div class="pfeile" data-reiter-steuerung hidden><button class="pfeil" type="button" data-reiter="zurueck" aria-label="Vorige Stimme"><svg aria-hidden="true" focusable="false"><use href="#i-arrow-left"/></svg></button><button class="pfeil" type="button" data-reiter="weiter" aria-label="Nächste Stimme"><svg aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></button></div></div>
       <ul class="spur" data-reiter-spur tabindex="0" aria-label="Kundenstimmen, seitlich wischbar" data-beispiel data-zeig>
@@ -178,7 +178,7 @@
 
   <!-- 9. Ratgeber: ein großer Beitrag -->
   <!-- 8a. Fragen: Einwände vorwegnehmen -->
-  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen" style="padding-top:0">
+  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen" style="padding-top:0" data-abschnitt="fragen">
     <div class="wrap">
       <div class="ablauf__kopf" data-zeig><h2 id="h-fragen">Fragen, bevor du loslegst</h2></div>
       <div class="akkordeon fragen__liste" data-exklusiv data-zeig>
@@ -191,7 +191,7 @@
     </div>
   </section>
 
-  <section class="sektion ratgeber" id="ratgeber" aria-labelledby="h-ratgeber" style="padding-top:0">
+  <section class="sektion ratgeber" id="ratgeber" aria-labelledby="h-ratgeber" style="padding-top:0" data-abschnitt="ratgeber">
     <div class="wrap">
       <div class="beitraege__kopf" data-zeig><h2 id="h-ratgeber">Artikel und Ratgeber für dich</h2><a class="knopf knopf--hell" href="#ratgeber">Alle Artikel<svg aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"/></svg></a></div>
       <article class="beitrag2" data-zeig><div class="bild beitrag2__bild"><img src="bilder/gespraech-im-cafe.webp" width="1000" height="563" alt="Gruppe im Gespräch an einem langen Tisch in hellem Raum" loading="lazy" decoding="async"></div><div class="beitrag2__text"><p class="beitrag2__meta"><span>Unternehmen</span><span>18. Mai 2026</span></p><h3>Lohnt sich ein Notgroschen, und wie hoch sollte er sein?</h3><p>Ein Beispieltext, der den Beitrag in zwei Zeilen anreißt und neugierig macht, ohne mehr zu versprechen, als der Artikel hält.</p><a class="weiterlink" href="#ratgeber">Weiterlesen<svg aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"/></svg></a></div></article>
@@ -199,7 +199,7 @@
   </section>
 </main>
 
-<footer class="fuss" id="fuss">
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
   <div class="wrap">
     <div class="fuss__kopf">
       <div><a class="logo" href="#top" aria-label="Markenname, zum Seitenanfang"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg><span>Markenname</span></a><p>Beispieltext für die Fußzeile: Hier steht in einem Satz, was ihr für wen tut. Vor dem Einsatz durch den echten Text ersetzen.</p></div>

@@ -15,7 +15,7 @@
 <body>
 <a class="sprunglink" href="#inhalt">Zum Inhalt springen</a>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__leiste">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
       <svg viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 28V15"/><path d="M16 17C16 10 11 6 4 6c0 7 4 11 12 11Z"/><path d="M16 14c0-6 4-9 12-9 0 6-4 9-12 9Z"/></svg>
@@ -44,7 +44,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: Markenwort riesig, Bühne bleibt stehen, Wort rutscht beim Scrollen unter die Kante -->
-  <section class="held" id="top" aria-labelledby="h-held" data-fortschritt>
+  <section class="held" id="top" aria-labelledby="h-held" data-fortschritt data-abschnitt="held">
     <div class="held__buehne">
       <div class="bild held__bild" aria-hidden="true"><img class="bild__foto" src="bilder/garten-von-oben-mit-liege-im-rasen.webp" width="1600" height="1067" alt="Garten von oben, eine Liege steht im Rasen" fetchpriority="high" decoding="async"></div>
       <div class="held__maske">
@@ -78,7 +78,7 @@
   </div>
 
   <!-- 3. Über uns: Leitsatz mit Wortlicht, Stimme mit Kennzahl, Merkmalsreihe -->
-  <section class="sektion ueber" id="ueber-uns" aria-labelledby="h-ueber">
+  <section class="sektion ueber" id="ueber-uns" aria-labelledby="h-ueber" data-abschnitt="ueber">
     <div class="wrap">
       <div class="kopfmitte">
         <p class="kicker" data-zeig><svg viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M219.45,40.31a4,4,0,0,0-3.76-3.76C141.06,32.16,81.46,54.39,56.24,96,39,124.56,39.9,158.37,58.8,191.54L37.17,213.17a4,4,0,0,0,5.66,5.66l21.63-21.64c17.39,9.91,35,14.89,51.83,14.89A83.43,83.43,0,0,0,160,199.76C201.61,174.54,223.84,114.93,219.45,40.31ZM155.82,192.92c-25.37,15.37-55.56,14.75-85.48-1.61l92.5-92.49a4,4,0,0,0-5.66-5.66l-92.49,92.5c-16.36-29.92-17-60.11-1.61-85.48C86.34,61.77,141.72,41,211.66,44.34,215,114.28,194.23,169.66,155.82,192.92Z"/></svg>Wer wir sind</p>
@@ -106,7 +106,7 @@
   </section>
 
   <!-- 4. Leistungen: dunkel, seitlich scrollbare Schiene -->
-  <section class="sektion dunkel leistungen" id="leistungen" aria-labelledby="h-leistungen">
+  <section class="sektion dunkel leistungen" id="leistungen" aria-labelledby="h-leistungen" data-abschnitt="dunkel">
     <div class="wrap">
       <div class="schienenkopf">
         <h2 id="h-leistungen" data-zeig>Natur näher ans Haus bringen</h2>
@@ -144,7 +144,7 @@
   </section>
 
   <!-- 5. Ablauf: Leitsatz mit Wortlicht, Bildpaar mit Streifenöffnung, drei Schritte -->
-  <section class="sektion ablauf" aria-labelledby="h-ablauf">
+  <section class="sektion ablauf" aria-labelledby="h-ablauf" data-abschnitt="ablauf">
     <div class="wrap">
       <div class="kopfmitte kopfmitte--links">
         <p class="kicker" data-zeig><svg viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M219.45,40.31a4,4,0,0,0-3.76-3.76C141.06,32.16,81.46,54.39,56.24,96,39,124.56,39.9,158.37,58.8,191.54L37.17,213.17a4,4,0,0,0,5.66,5.66l21.63-21.64c17.39,9.91,35,14.89,51.83,14.89A83.43,83.43,0,0,0,160,199.76C201.61,174.54,223.84,114.93,219.45,40.31ZM155.82,192.92c-25.37,15.37-55.56,14.75-85.48-1.61l92.5-92.49a4,4,0,0,0-5.66-5.66l-92.49,92.5c-16.36-29.92-17-60.11-1.61-85.48C86.34,61.77,141.72,41,211.66,44.34,215,114.28,194.23,169.66,155.82,192.92Z"/></svg>So arbeiten wir</p>
@@ -172,7 +172,7 @@
   </section>
 
   <!-- 6. Werte: Überschrift links, vier Karten rechts -->
-  <section class="sektion werte" aria-labelledby="h-werte">
+  <section class="sektion werte" aria-labelledby="h-werte" data-abschnitt="werte">
     <div class="wrap werte__raster">
       <div class="werte__kopf">
         <p class="kicker" data-zeig><svg viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M219.45,40.31a4,4,0,0,0-3.76-3.76C141.06,32.16,81.46,54.39,56.24,96,39,124.56,39.9,158.37,58.8,191.54L37.17,213.17a4,4,0,0,0,5.66,5.66l21.63-21.64c17.39,9.91,35,14.89,51.83,14.89A83.43,83.43,0,0,0,160,199.76C201.61,174.54,223.84,114.93,219.45,40.31ZM155.82,192.92c-25.37,15.37-55.56,14.75-85.48-1.61l92.5-92.49a4,4,0,0,0-5.66-5.66l-92.49,92.5c-16.36-29.92-17-60.11-1.61-85.48C86.34,61.77,141.72,41,211.66,44.34,215,114.28,194.23,169.66,155.82,192.92Z"/></svg>Unsere Werte</p>
@@ -200,7 +200,7 @@
   </section>
 
   <!-- 7. Projekte: dunkel, Schiene mit großen Karten -->
-  <section class="sektion dunkel projekte" id="projekte" aria-labelledby="h-projekte">
+  <section class="sektion dunkel projekte" id="projekte" aria-labelledby="h-projekte" data-abschnitt="dunkel-2">
     <div class="wrap">
       <div class="schienenkopf">
         <p class="kicker kicker--dunkel" data-zeig><svg viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M219.45,40.31a4,4,0,0,0-3.76-3.76C141.06,32.16,81.46,54.39,56.24,96,39,124.56,39.9,158.37,58.8,191.54L37.17,213.17a4,4,0,0,0,5.66,5.66l21.63-21.64c17.39,9.91,35,14.89,51.83,14.89A83.43,83.43,0,0,0,160,199.76C201.61,174.54,223.84,114.93,219.45,40.31ZM155.82,192.92c-25.37,15.37-55.56,14.75-85.48-1.61l92.5-92.49a4,4,0,0,0-5.66-5.66l-92.49,92.5c-16.36-29.92-17-60.11-1.61-85.48C86.34,61.77,141.72,41,211.66,44.34,215,114.28,194.23,169.66,155.82,192.92Z"/></svg>Unsere Projekte</p>
@@ -231,7 +231,7 @@
   </section>
 
   <!-- 8. Stimmen -->
-  <section class="sektion stimmen" aria-labelledby="h-stimmen">
+  <section class="sektion stimmen" aria-labelledby="h-stimmen" data-abschnitt="stimmen">
     <div class="wrap">
       <div class="kopfmitte">
         <p class="kicker" data-zeig><svg viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M219.45,40.31a4,4,0,0,0-3.76-3.76C141.06,32.16,81.46,54.39,56.24,96,39,124.56,39.9,158.37,58.8,191.54L37.17,213.17a4,4,0,0,0,5.66,5.66l21.63-21.64c17.39,9.91,35,14.89,51.83,14.89A83.43,83.43,0,0,0,160,199.76C201.61,174.54,223.84,114.93,219.45,40.31ZM155.82,192.92c-25.37,15.37-55.56,14.75-85.48-1.61l92.5-92.49a4,4,0,0,0-5.66-5.66l-92.49,92.5c-16.36-29.92-17-60.11-1.61-85.48C86.34,61.77,141.72,41,211.66,44.34,215,114.28,194.23,169.66,155.82,192.92Z"/></svg>Kundenstimmen</p>
@@ -260,7 +260,7 @@
   </section>
 
   <!-- 9. Warum wir: dunkel, Bild bleibt rechts stehen -->
-  <section class="sektion dunkel warum" aria-labelledby="h-warum">
+  <section class="sektion dunkel warum" aria-labelledby="h-warum" data-abschnitt="dunkel-3">
     <div class="wrap warum__raster">
       <div class="warum__text">
         <p class="kicker kicker--dunkel" data-zeig><svg viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M219.45,40.31a4,4,0,0,0-3.76-3.76C141.06,32.16,81.46,54.39,56.24,96,39,124.56,39.9,158.37,58.8,191.54L37.17,213.17a4,4,0,0,0,5.66,5.66l21.63-21.64c17.39,9.91,35,14.89,51.83,14.89A83.43,83.43,0,0,0,160,199.76C201.61,174.54,223.84,114.93,219.45,40.31ZM155.82,192.92c-25.37,15.37-55.56,14.75-85.48-1.61l92.5-92.49a4,4,0,0,0-5.66-5.66l-92.49,92.5c-16.36-29.92-17-60.11-1.61-85.48C86.34,61.77,141.72,41,211.66,44.34,215,114.28,194.23,169.66,155.82,192.92Z"/></svg>Warum wir</p>
@@ -279,7 +279,7 @@
   </section>
 
   <!-- 10. Tipps -->
-  <section class="sektion tipps" id="tipps" aria-labelledby="h-tipps">
+  <section class="sektion tipps" id="tipps" aria-labelledby="h-tipps" data-abschnitt="tipps">
     <div class="wrap">
       <div class="tippkopf">
         <h2 id="h-tipps" data-licht>Einfache Tipps für einen besseren Garten</h2>
@@ -307,7 +307,7 @@
   </section>
 
   <!-- 11. Häufige Fragen -->
-  <section class="sektion faq" aria-labelledby="h-faq">
+  <section class="sektion faq" aria-labelledby="h-faq" data-abschnitt="faq">
     <div class="wrap faq__raster">
       <div class="faq__kopf" data-zeig>
         <h2 id="h-faq">Häufige Fragen</h2>
@@ -324,7 +324,7 @@
   </section>
 
   <!-- 12. Abschluss mit Handlung -->
-  <section class="abschluss" aria-labelledby="h-abschluss">
+  <section class="abschluss" aria-labelledby="h-abschluss" data-abschnitt="abschluss">
     <div class="bild abschluss__bild" aria-hidden="true"><img class="bild__foto" src="bilder/regentropfen-auf-grossem-blatt.webp" width="1600" height="1067" alt="Wassertropfen auf einem großen grünen Blatt" loading="lazy" decoding="async"></div>
     <div class="wrap abschluss__inhalt">
       <h2 id="h-abschluss" data-licht>Lassen Sie uns Ihren Traumgarten planen</h2>
@@ -336,7 +336,7 @@
   </section>
 </main>
 
-<footer class="fuss" id="kontakt">
+<footer class="fuss" id="kontakt" data-abschnitt="fuss">
   <div class="wrap fuss__raster">
     <div class="fuss__marke">
       <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">

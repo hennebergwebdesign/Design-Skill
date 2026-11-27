@@ -57,7 +57,7 @@
   <symbol id="i-zitat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7H6a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h2v1a3 3 0 0 1-3 3M19 7h-3a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h2v1a3 3 0 0 1-3 3"/></symbol>
 </svg>
 
-<header class="kopf" id="kopf">
+<header class="kopf" id="kopf" data-abschnitt="kopf">
   <div class="kopf__leiste-oben">
     <div class="kopf__oben">
       <p class="kopf__spruch">Unabhängig beraten, Honorar vorab vereinbart</p>
@@ -91,7 +91,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: zentrierte Überschrift, E-Mail Feld mit Knopf, links und rechts gekippte Porträtkarten, Register und Verbände darunter -->
-  <section class="held" id="top" aria-labelledby="h-held" data-held>
+  <section class="held" id="top" aria-labelledby="h-held" data-held data-abschnitt="held">
     <span class="stern stern--gross" style="left:6%;top:8rem" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-stern"/></svg></span>
     <span class="stern stern--mittel" style="right:8%;top:26rem" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-stern"/></svg></span>
 
@@ -141,7 +141,7 @@
   </section>
 
   <!-- 2. Tannengrün: Die Zahlen sprechen, drei Kennzahlen mit Zeichen -->
-  <section class="gruen zahlen" id="zahlen" aria-labelledby="h-zahlen">
+  <section class="gruen zahlen" id="zahlen" aria-labelledby="h-zahlen" data-abschnitt="gruen">
     <span class="stern stern--mittel stern--gelb" style="left:2.5%;top:3rem" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-stern"/></svg></span>
     <span class="stern stern--klein stern--gelb" style="right:3%;bottom:2.5rem" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-stern"/></svg></span>
     <div class="wrap">
@@ -170,7 +170,7 @@
   </section>
 
   <!-- 3. Aufbauen und schützen: drei Karten, die mittlere hervorgehoben und angehoben -->
-  <section class="sektion beratung" id="beratung" aria-labelledby="h-beratung">
+  <section class="sektion beratung" id="beratung" aria-labelledby="h-beratung" data-abschnitt="beratung">
     <span class="stern stern--mittel" style="left:6%;top:3.5rem" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-stern"/></svg></span>
     <div class="wrap">
       <h2 class="beratung__titel" id="h-beratung" data-zeig>Wir helfen dir, Vermögen aufzubauen und abzusichern.</h2>
@@ -198,7 +198,7 @@
   </section>
 
   <!-- 4. Leitfaden: Foto mit überlappender Karte, Text, zwei Zahlen -->
-  <section class="sektion leitfaden" id="leitfaden" aria-labelledby="h-leitfaden">
+  <section class="sektion leitfaden" id="leitfaden" aria-labelledby="h-leitfaden" data-abschnitt="leitfaden">
     <div class="wrap leitfaden__raster">
       <div class="leitfaden__medien">
         <div class="bild leitfaden__foto" data-zeig>
@@ -230,7 +230,7 @@
   </section>
 
   <!-- 5. Leistungen: vier Karten -->
-  <section class="sektion leistungen" id="leistungen" aria-labelledby="h-leistungen">
+  <section class="sektion leistungen" id="leistungen" aria-labelledby="h-leistungen" data-abschnitt="leistungen">
     <div class="wrap">
       <div class="leistungen__kopf">
         <h2 id="h-leistungen" data-zeig>Mit Fachwissen sicher planen.</h2>
@@ -262,7 +262,7 @@
   </section>
 
   <!-- 6. Stimmen: hellgrüner Abschnitt, Wischspur, Fokus wandert zur Karte in der Mitte -->
-  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen">
+  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen" data-abschnitt="stimmen">
     <span class="stern stern--mittel" style="left:6%;top:3.5rem" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-stern"/></svg></span>
     <div class="wrap stimmen__kopf">
       <h2 id="h-stimmen" data-zeig>Mandanten erzählen, was sich geändert hat.</h2>
@@ -301,7 +301,7 @@
   </section>
 
   <!-- 7. Projekte: Akkordeon mit offenem gelben Eintrag, Bild wechselt mit, Videoplatzhalter mit Pause -->
-  <section class="sektion projekte" id="projekte" aria-labelledby="h-projekte">
+  <section class="sektion projekte" id="projekte" aria-labelledby="h-projekte" data-abschnitt="projekte">
     <span class="stern stern--mittel" style="right:12%;top:3.5rem" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-stern"/></svg></span>
     <div class="wrap">
       <div class="projekte__kopf">
@@ -370,7 +370,7 @@
   </section>
 
   <!-- 8. Ratgeber: zwei Karten -->
-  <section class="sektion ratgeber" id="ratgeber" aria-labelledby="h-ratgeber">
+  <section class="sektion ratgeber" id="ratgeber" aria-labelledby="h-ratgeber" data-abschnitt="ratgeber">
     <span class="stern stern--mittel" style="left:6%;top:3.5rem" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-stern"/></svg></span>
     <div class="wrap">
       <div class="ratgeber__kopf">
@@ -397,7 +397,7 @@
   </section>
 
   <!-- 9. Fragen vor dem Erstgespräch -->
-  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen">
+  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen" data-abschnitt="fragen">
     <div class="wrap fragen__raster">
       <div class="fragen__kopf">
         <h2 id="h-fragen" data-zeig>Fragen vor dem Erstgespräch.</h2>
@@ -429,7 +429,7 @@
   </section>
 
   <!-- 10. Tannengrün: Kontakt mit rundem, drehendem Sticker -->
-  <section class="gruen kontakt" id="kontakt" aria-labelledby="h-kontakt">
+  <section class="gruen kontakt" id="kontakt" aria-labelledby="h-kontakt" data-abschnitt="gruen-2">
     <span class="stern stern--mittel stern--gelb" style="left:3%;top:3rem" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-stern"/></svg></span>
     <div class="wrap kontakt__raster">
       <div class="kontakt__text">
@@ -466,7 +466,7 @@
   </section>
 
   <!-- 11. Hinweise und Pflichtangaben -->
-  <section class="hinweise" aria-labelledby="h-hinweise">
+  <section class="hinweise" aria-labelledby="h-hinweise" data-abschnitt="hinweise">
     <div class="wrap">
       <h2 id="h-hinweise">Wichtige Hinweise</h2>
       <p>Diese Seite informiert über unsere Beratung. Sie ist keine Anlageberatung, keine Anlageempfehlung und keine Aufforderung zum Kauf von Finanzprodukten. Eine individuelle Beratung beginnt erst nach einem Gespräch und einer schriftlichen Vereinbarung. Anlagen in Wertpapiere und andere Finanzprodukte sind mit Risiken verbunden, Verluste bis zum Totalverlust des eingesetzten Kapitals sind möglich. Die Wertentwicklung in der Vergangenheit ist kein verlässlicher Indikator für die Zukunft. Alle Angaben auf dieser Seite sind Beispiele.</p>
@@ -475,7 +475,7 @@
   </section>
 </main>
 
-<footer class="fuss" id="fuss">
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
   <div class="wrap fuss__raster">
     <div class="fuss__marke">
       <a class="kopf__logo" href="#top" aria-label="Markenname, nach oben">

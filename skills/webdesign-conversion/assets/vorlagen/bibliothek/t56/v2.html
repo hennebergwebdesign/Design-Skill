@@ -39,7 +39,7 @@
   <symbol id="i-zitat" viewBox="0 0 256 256" fill="currentColor"><path d="M116,72v88a48.05,48.05,0,0,1-48,48,8,8,0,0,1,0-16,32,32,0,0,0,32-32v-8H40a16,16,0,0,1-16-16V72A16,16,0,0,1,40,56h60A16,16,0,0,1,116,72ZM216,56H156a16,16,0,0,0-16,16v64a16,16,0,0,0,16,16h60v8a32,32,0,0,1-32,32,8,8,0,0,0,0,16,48.05,48.05,0,0,0,48-48V72A16,16,0,0,0,216,56Z"/></symbol>
   <symbol id="i-doppel" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"><path d="M56 56l72 72-72 72M136 56l72 72-72 72"/></symbol>
 </svg>
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__zeile">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
       <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="16" fill="currentColor"/><path d="M11 9v14h10" fill="none" stroke="var(--kopf-zeichen,#13141a)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -58,7 +58,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: hell, links Überschrift mit eingebettetem Bild, rechts Hochformat mit zwei Schwebekarten -->
-  <section class="held2" id="top" aria-labelledby="h-held">
+  <section class="held2" id="top" aria-labelledby="h-held" data-abschnitt="held2">
     <div class="wrap held2__raster">
       <div class="held2__text" data-staffel>
         <!-- Held: Zielgruppe sind Menschen mit langer Trainingspause und wenig Zeit, Problem ist der Neustart ohne passenden Plan, Lösung sind Kurse, Personal Training und ein Plan für die eigene Woche; Beleg: Bewertungskarte neben dem Foto (Beispiel). -->
@@ -75,7 +75,7 @@
   </section>
 
   <!-- 2. Über uns: Leitsatz, vier Kennzahlen, zwei Bilder -->
-  <section class="sektion ueber2" id="ueber" aria-labelledby="h-ueber">
+  <section class="sektion ueber2" id="ueber" aria-labelledby="h-ueber" data-abschnitt="ueber2">
     <div class="wrap">
       <header class="mitte"><p class="kicker " data-zeig><span class="kicker__icon" aria-hidden="true"><svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#i-hantel"/></svg></span>Über uns</p><h2 id="h-ueber" data-zeig>Training mit Plan, Team und echtem Rückhalt</h2></header>
       <dl class="stats" data-beispiel data-staffel>
@@ -92,7 +92,7 @@
   </section>
 
   <!-- 3. Leistungen: Liste mit Vorschaubild, großem Titel und Beschreibung -->
-  <section class="sektion leistungen2" id="leistungen" aria-labelledby="h-leistungen">
+  <section class="sektion leistungen2" id="leistungen" aria-labelledby="h-leistungen" data-abschnitt="leistungen2">
     <div class="wrap">
       <div class="kopfzeile">
         <div><p class="kicker " data-zeig><span class="kicker__icon" aria-hidden="true"><svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#i-herz"/></svg></span>Leistungen</p><h2 id="h-leistungen" data-zeig>Wir machen dich Schritt für Schritt stärker</h2></div>
@@ -103,14 +103,14 @@
   </section>
 
   <!-- 4. Galerie: dunkel, breite Bilder in einer Spur -->
-  <section class="sektion dunkel galerie" id="galerie" aria-labelledby="h-galerie" data-reiter-gruppe>
+  <section class="sektion dunkel galerie" id="galerie" aria-labelledby="h-galerie" data-reiter-gruppe data-abschnitt="dunkel">
     <div class="wrap"><header class="mitte"><p class="kicker " data-zeig><span class="kicker__icon" aria-hidden="true"><svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#i-ziel"/></svg></span>Galerie</p><h2 id="h-galerie" data-zeig>Einblicke in unser Studio</h2></header></div>
     <ul class="spur spur--breit" data-reiter-spur tabindex="0" role="region" aria-label="Galerie, seitlich wischen" data-beispiel><li><figure class="gal"><div class="bild bild--c gal__bild"><img src="bilder/frau-lederjacke-640.webp" width="640" height="853" alt="Frau mit langem Haar und Lederjacke" loading="lazy" decoding="async" style="object-position:50% 22%"></div></figure></li><li><figure class="gal"><div class="bild bild--a gal__bild"><img src="bilder/sport-frau-gegenlicht.webp" width="1000" height="600" alt="Frau im Gegenlicht der untergehenden Sonne" loading="lazy" decoding="async"></div></figure></li><li><figure class="gal"><div class="bild bild--d gal__bild"><img src="bilder/kreuzheben-langhantel.webp" width="800" height="533" alt="Frau greift eine Langhantel zum Kreuzheben" loading="lazy" decoding="async"></div></figure></li><li><figure class="gal"><div class="bild bild--b gal__bild"><img src="bilder/sport-gruppe-warmup.webp" width="1000" height="663" alt="Gruppe von Frauen beim Aufwärmen" loading="lazy" decoding="async"></div></figure></li><li><figure class="gal"><div class="bild bild--c gal__bild"><img src="bilder/haende-auf-matte.webp" width="800" height="533" alt="Hände auf einer Trainingsmatte" loading="lazy" decoding="async"></div></figure></li></ul>
     <div class="wrap"><div class="steuerung steuerung--mitte" data-reiter-steuerung><button class="rund" type="button" data-reiter="zurueck" aria-label="Vorheriges Bild"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-links"/></svg></button><button class="rund" type="button" data-reiter="weiter" aria-label="Nächstes Bild"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-pfeil"/></svg></button></div></div>
   </section>
 
   <!-- 5. Stimmen: Kartenstapel links, Bewertung rechts -->
-  <section class="sektion stimmen2" id="stimmen" aria-labelledby="h-stimmen">
+  <section class="sektion stimmen2" id="stimmen" aria-labelledby="h-stimmen" data-abschnitt="stimmen2">
     <div class="wrap">
       <div class="stimmen2__raster">
         <div class="stimmen2__text"><p class="kicker " data-zeig><span class="kicker__icon" aria-hidden="true"><svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#i-hantel"/></svg></span>Stimmen</p><h2 id="h-stimmen" data-zeig>Das sagen unsere Mitglieder</h2>
@@ -127,13 +127,13 @@
   </section>
 
   <!-- 6. Laufbänder: zwei Streifen, gegenläufig -->
-  <section class="baender" aria-label="Schlagworte">
+  <section class="baender" aria-label="Schlagworte" data-abschnitt="baender">
     <div class="band baender__streifen baender__streifen--akzent"><div class="band__spur"><span>Kraft</span><span class="punkt-trenner" aria-hidden="true"></span><span>Energie</span><span class="punkt-trenner" aria-hidden="true"></span><span>Wandel</span><span class="punkt-trenner" aria-hidden="true"></span><span>Ausdauer</span><span class="punkt-trenner" aria-hidden="true"></span></div><div class="band__spur" aria-hidden="true"><span>Kraft</span><span class="punkt-trenner"></span><span>Energie</span><span class="punkt-trenner"></span><span>Wandel</span><span class="punkt-trenner"></span><span>Ausdauer</span><span class="punkt-trenner"></span></div></div>
     <div class="band baender__streifen baender__streifen--dunkel baender__streifen--rueck"><div class="band__spur" aria-hidden="true"><span>Yoga</span><span class="punkt-trenner"></span><span>Kraft</span><span class="punkt-trenner"></span><span>Ruhe</span><span class="punkt-trenner"></span><span>Fokus</span><span class="punkt-trenner"></span></div><div class="band__spur" aria-hidden="true"><span>Yoga</span><span class="punkt-trenner"></span><span>Kraft</span><span class="punkt-trenner"></span><span>Ruhe</span><span class="punkt-trenner"></span><span>Fokus</span><span class="punkt-trenner"></span></div></div>
   </section>
 
   <!-- 7. Vorteile: Bild und drei Merkmale links, Überschrift und Bild rechts -->
-  <section class="sektion vorteile2" id="vorteile" aria-labelledby="h-vorteile">
+  <section class="sektion vorteile2" id="vorteile" aria-labelledby="h-vorteile" data-abschnitt="vorteile2">
     <div class="wrap vorteile2__raster">
       <div class="vorteile2__links">
         <div class="bild bild--a vorteile2__gross" data-zeig><img src="bilder/dehnung-auf-matte.webp" width="1000" height="1499" alt="Frau dehnt sich auf einer Matte, Rückenansicht" loading="lazy" decoding="async"></div>
@@ -146,7 +146,7 @@
     </div>
   </section>
 
-  <section class="cta-wrap" id="beitreten" aria-labelledby="h-cta">
+  <section class="cta-wrap" id="beitreten" aria-labelledby="h-cta" data-abschnitt="cta-wrap">
     <div class="wrap">
       <div class="cta" data-zeig>
         <div class="cta__muster" aria-hidden="true"></div>
@@ -163,14 +163,14 @@
   <div class="bildband" aria-hidden="true"><div class="bild bild--b bildband__bild" data-parallax="0.06"><img src="bilder/plank-am-see.webp" width="1600" height="1070" alt="Frau im Unterarmstütz auf einer Matte am See unter Wolkenhimmel" loading="lazy" decoding="async"></div></div>
 
   <!-- 9. Fragen: Akkordeon, der offene Eintrag ist dunkel und zeigt ein Bild -->
-  <section class="sektion faqs" id="faq" aria-labelledby="h-faq">
+  <section class="sektion faqs" id="faq" aria-labelledby="h-faq" data-abschnitt="faqs">
     <div class="wrap">
       <header class="mitte"><p class="kicker " data-zeig><span class="kicker__icon" aria-hidden="true"><svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#i-blitz"/></svg></span>Fragen</p><h2 id="h-faq" data-zeig>Alles, was du wissen solltest</h2></header>
       <div class="faq-liste" data-exklusiv data-beispiel><details class="faq" open data-zeig><summary><span class="faq__pm" aria-hidden="true"><span class="faq__plus"><svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></span><span class="faq__minus"><svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#i-minus"/></svg></span></span><span class="faq__frage">Welche Mitgliedschaften gibt es und was kosten sie?</span></summary><div class="faq__antwort"><div class="bild bild--b faq__bild"><img src="bilder/sport-beratung-tablet.webp" width="1000" height="563" alt="Trainer und Kundin besprechen den Trainingsplan auf einem Tablet" loading="lazy" decoding="async"></div><p data-beispiel>Beispielantwort: Es gibt zwei Tarife, monatlich oder jährlich zahlbar. Die aktuellen Preise stehen auf der Preisseite. Probetraining ist unverbindlich.</p></div></details><details class="faq" data-zeig><summary><span class="faq__pm" aria-hidden="true"><span class="faq__plus"><svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></span><span class="faq__minus"><svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#i-minus"/></svg></span></span><span class="faq__frage">Gibt es Personal Training?</span></summary><div class="faq__antwort"><p data-beispiel>Beispielantwort: Einzeltraining ist im Premiumtarif einmal im Monat enthalten und kann zugebucht werden.</p></div></details><details class="faq" data-zeig><summary><span class="faq__pm" aria-hidden="true"><span class="faq__plus"><svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></span><span class="faq__minus"><svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#i-minus"/></svg></span></span><span class="faq__frage">Gibt es Ermäßigungen für Schüler, Studierende oder Senioren?</span></summary><div class="faq__antwort"><p data-beispiel>Beispielantwort: Mit gültigem Nachweis ja. Frag beim Probetraining danach, wir rechnen es direkt aus.</p></div></details><details class="faq" data-zeig><summary><span class="faq__pm" aria-hidden="true"><span class="faq__plus"><svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></span><span class="faq__minus"><svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#i-minus"/></svg></span></span><span class="faq__frage">Ich habe wenig Zeit. Bringt das trotzdem etwas?</span></summary><div class="faq__antwort"><p data-beispiel>Beispielantwort: Ja. Der Plan richtet sich nach deiner Woche, auch zwei Einheiten bringen dich weiter. Im Probetraining legen wir fest, was für dich machbar ist.</p></div></details><details class="faq" data-zeig><summary><span class="faq__pm" aria-hidden="true"><span class="faq__plus"><svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></span><span class="faq__minus"><svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#i-minus"/></svg></span></span><span class="faq__frage">Muss ich Kurse vorab buchen?</span></summary><div class="faq__antwort"><p data-beispiel>Beispielantwort: Für beliebte Kurse empfehlen wir eine Buchung, damit du sicher einen Platz bekommst. Die Buchung klappt per App oder am Empfang.</p></div></details><details class="faq" data-zeig><summary><span class="faq__pm" aria-hidden="true"><span class="faq__plus"><svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></span><span class="faq__minus"><svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#i-minus"/></svg></span></span><span class="faq__frage">Ist eine Eingangsberatung dabei?</span></summary><div class="faq__antwort"><p data-beispiel>Beispielantwort: Zum Start besprechen wir dein Ziel, deine Woche und erstellen einen ersten Plan.</p></div></details></div>
     </div>
   </section>
 
-  <section class="sektion blog" id="blog" aria-labelledby="h-blog" data-reiter-gruppe>
+  <section class="sektion blog" id="blog" aria-labelledby="h-blog" data-reiter-gruppe data-abschnitt="blog">
     <div class="wrap">
       <div class="kopfzeile">
         <div><p class="kicker " data-zeig><span class="kicker__icon" aria-hidden="true"><svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#i-feuer"/></svg></span>Blog und Neuigkeiten</p><h2 id="h-blog" data-zeig>Der erste Schritt zur Stärke</h2></div>
@@ -181,7 +181,7 @@
   </section>
 </main>
 
-<footer class="fuss" id="fuss">
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
   <div class="fuss__bildwrap"><div class="bild fuss__bild bild--b" data-parallax="0.05"><img src="bilder/hanteln-sonnenlicht.webp" width="1600" height="901" alt="Reihe von Hanteln im Fitnessstudio mit Sonnenlicht" loading="lazy" decoding="async"></div></div>
   <div class="fuss__karte">
     <div class="wrap">

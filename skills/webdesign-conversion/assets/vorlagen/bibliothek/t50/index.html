@@ -47,7 +47,7 @@
 
 <p class="ansage" data-beispiel>20 % Nachlass bis Ende des Monats, Beispielaktion</p>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__leiste">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite"><svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg><span>Markenname</span></a>
     <nav class="kopf__nav" id="hauptnav" aria-label="Hauptnavigation" data-menue-ziel>
@@ -69,7 +69,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: Raster mit Pillen am Rand, Überschrift mittig, Oberfläche im roten Rahmen -->
-  <section class="held" id="top" aria-labelledby="h-held">
+  <section class="held" id="top" aria-labelledby="h-held" data-abschnitt="held">
     <div class="held__gitter" aria-hidden="true"><span class="held__zelle"></span><span class="held__zelle"></span><span class="held__zelle"></span><span class="held__zelle"></span></div>
     <div class="held__pillen" aria-hidden="true"><span class="pille p1">Schnell anlegen</span><span class="pille p2">Wichtiges hervorheben</span><span class="pille p3">Ein Klick zuweisen</span></div>
     <div class="wrap held__innen" data-staffel>
@@ -93,7 +93,7 @@
   </section>
 
   <!-- 2. Aussage und Werkzeuge -->
-  <section class="sektion" aria-labelledby="h-aussage">
+  <section class="sektion" aria-labelledby="h-aussage" data-abschnitt="zwischen-verstreuter">
     <div class="wrap aussage" data-staffel>
       <span class="pille pille--schwarz aussage__pille" data-zeig>Das Problem</span>
       <h2 class="aussage__satz" id="h-aussage" data-licht>Zwischen verstreuter Arbeit, verlorenen Nachrichten und verpassten Änderungen wird Zusammenarbeit zum Durcheinander.</h2>
@@ -102,7 +102,7 @@
   </section>
 
   <!-- 3. Drei Karten -->
-  <section class="sektion" style="padding-top:0" aria-label="Kernfunktionen">
+  <section class="sektion" style="padding-top:0" aria-label="Kernfunktionen" data-abschnitt="abschnitt">
     <div class="wrap">
       <div class="karten3" data-staffel>
         <article class="karte3" data-zeig data-beispiel>
@@ -122,7 +122,7 @@
   </section>
 
   <!-- 4. Funktionen: drei Zeilen mit Text und Bild im roten Feld -->
-  <section class="sektion" id="funktionen" style="padding-top:0" aria-labelledby="h-fkt">
+  <section class="sektion" id="funktionen" style="padding-top:0" aria-labelledby="h-fkt" data-abschnitt="funktionen">
     <div class="wrap">
       <div class="kopfzeile" data-staffel>
         <p class="kicker" data-zeig>Funktionen im Überblick</p>
@@ -167,7 +167,7 @@
   </section>
 
   <!-- 5. Dunkel: Problemfeld mit Pillen, Lösung in sechs Punkten, Leiste -->
-  <section class="dunkel" aria-labelledby="h-zeit">
+  <section class="dunkel" aria-labelledby="h-zeit" data-abschnitt="dunkel">
     <div class="wrap">
       <div class="pillenfeld" aria-hidden="true"><span class="pille a1">Schnell anlegen</span><span class="pille a2">Ein Klick zuweisen</span><span class="pille a3">Wichtiges hervorheben</span><span class="pille a4">Termine im Blick</span><span class="pille a5">Wiederkehrendes sparen</span><span class="pille a6">Reihenfolge ziehen</span></div>
       <div class="problemsatz" data-staffel>
@@ -182,7 +182,7 @@
   </section>
 
   <!-- 6. Integrationen: Kachelfeld mit Mittelpunkt -->
-  <section class="sektion" aria-labelledby="h-int">
+  <section class="sektion" aria-labelledby="h-int" data-abschnitt="verbinde-deinen">
     <div class="wrap">
       <div class="kopfzeile" data-staffel>
         <h2 id="h-int" data-zeig>Verbinde Deinen Arbeitsablauf nahtlos</h2>
@@ -193,7 +193,7 @@
   </section>
 
   <!-- 7. Beiträge: dunkle Spur mit Pfeilen -->
-  <section class="sektion" style="padding-bottom:0" id="beitraege" aria-labelledby="h-bei" data-reiter-gruppe>
+  <section class="sektion" style="padding-bottom:0" id="beitraege" aria-labelledby="h-bei" data-reiter-gruppe data-abschnitt="beitraege">
     <div class="wrap">
       <div class="kopfzeile" data-staffel>
         <h2 id="h-bei" data-zeig>Einblicke für klügeres Arbeiten</h2>
@@ -212,7 +212,7 @@
   </section>
 
   <!-- 8. Preise -->
-  <section class="sektion" id="preise" aria-labelledby="h-preise">
+  <section class="sektion" id="preise" aria-labelledby="h-preise" data-abschnitt="preise">
     <div class="wrap">
       <div class="kopfzeile" data-staffel>
         <p class="kicker" data-zeig>Preise</p>
@@ -243,7 +243,7 @@
   </section>
 
   <!-- 9. Team -->
-  <section class="sektion" id="team" style="padding-top:0" aria-labelledby="h-team">
+  <section class="sektion" id="team" style="padding-top:0" aria-labelledby="h-team" data-abschnitt="team">
     <div class="wrap">
       <div class="kopfzeile" data-staffel>
         <p class="kicker" data-zeig>Das Team</p>
@@ -268,7 +268,7 @@
   </section>
 
   <!-- 10. Stimmen: Kachelfeld mit Logos -->
-  <section class="sektion" style="padding-top:0" aria-labelledby="h-stim">
+  <section class="sektion" style="padding-top:0" aria-labelledby="h-stim" data-abschnitt="das-sagen">
     <div class="wrap">
       <div class="kopfzeile" data-staffel>
         <p class="kicker" data-zeig>Stimmen</p>
@@ -290,7 +290,7 @@
   </section>
 
   <!-- 11. Fragen -->
-  <section class="sektion" style="padding-top:0" aria-labelledby="h-faq">
+  <section class="sektion" style="padding-top:0" aria-labelledby="h-faq" data-abschnitt="haeufig-gestellte">
     <div class="wrap">
       <div class="kopfzeile" data-staffel>
         <h2 id="h-faq" data-zeig>Häufig gestellte Fragen</h2>
@@ -307,7 +307,7 @@
   </section>
 </main>
 
-<footer class="fuss" id="kontakt">
+<footer class="fuss" id="kontakt" data-abschnitt="fuss">
   <div class="wrap fuss__raster">
     <div class="fuss__aufruf">
       <h2>Bring Ordnung in die Aufgaben Deines Teams.</h2>

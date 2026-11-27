@@ -48,7 +48,7 @@
 
 <p class="ansage" data-beispiel>Neu: Berichte jetzt auch per Mail. <a href="#funktionen">Mehr erfahren</a></p>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__leiste">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite"><svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg><span>Markenname</span></a>
     <nav class="kopf__nav" id="hauptnav" aria-label="Hauptnavigation" data-menue-ziel>
@@ -70,7 +70,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: Text links, Oberfläche aus überlagerten Karten rechts -->
-  <section class="held" id="top" aria-labelledby="h-held">
+  <section class="held" id="top" aria-labelledby="h-held" data-abschnitt="held">
     <span class="held__deko" aria-hidden="true"></span>
     <div class="wrap held__raster">
       <div class="held__text" data-staffel>
@@ -95,7 +95,7 @@
   </section>
 
   <!-- 2. Kennzahlen: drei Spalten mit Trennlinien -->
-  <section class="sektion" aria-labelledby="h-zahlen">
+  <section class="sektion" aria-labelledby="h-zahlen" data-abschnitt="die-zahlen">
     <div class="wrap">
       <div class="kopfzeile kopfzeile--mitte" data-staffel>
         <p class="kicker" data-zeig>Zahlen</p>
@@ -111,7 +111,7 @@
   </section>
 
   <!-- 3. Funktion 1: Bild links, Text rechts -->
-  <section class="sektion" id="funktionen" style="padding-top:0" aria-labelledby="h-f1">
+  <section class="sektion" id="funktionen" style="padding-top:0" aria-labelledby="h-f1" data-abschnitt="funktionen">
     <div class="wrap zeile zeile--rueck">
       <div class="mock mock--b" aria-hidden="true" data-beispiel data-zeig="skala"><div class="mock__innen">
   <div class="mk__grund m2-grund"></div>
@@ -134,7 +134,7 @@
   </section>
 
   <!-- 4. Funktion 2: dunkel, Reiter links, Fläche rechts -->
-  <section class="sektion dunkel" aria-labelledby="h-f2">
+  <section class="sektion dunkel" aria-labelledby="h-f2" data-abschnitt="dunkel">
     <div class="wrap">
       <div class="kopfzeile kopfzeile--mitte" data-staffel>
         <p class="kicker" data-zeig>Funktion 2</p>
@@ -157,7 +157,7 @@
   </section>
 
   <!-- 5. Integrationen: zwei Reihen laufen gegeneinander -->
-  <section class="sektion" id="integrationen" aria-labelledby="h-int">
+  <section class="sektion" id="integrationen" aria-labelledby="h-int" data-abschnitt="integrationen">
     <div class="wrap">
       <div class="kopfzeile kopfzeile--zeile" data-staffel>
         <div>
@@ -230,7 +230,7 @@
   </section>
 
   <!-- 6. Funktion 3: Text links, Bild rechts -->
-  <section class="sektion" style="padding-top:0" aria-labelledby="h-f3">
+  <section class="sektion" style="padding-top:0" aria-labelledby="h-f3" data-abschnitt="erhalte-einblicke">
     <div class="wrap zeile">
       <div class="zeile__text" data-staffel>
         <p class="kicker" data-zeig>Funktion 3</p>
@@ -256,7 +256,7 @@
   </section>
 
   <!-- 7. Akzentband: Überschrift links, sechs Punkte rechts -->
-  <section class="band-akzent" aria-labelledby="h-band">
+  <section class="band-akzent" aria-labelledby="h-band" data-abschnitt="band-akzent">
     <div class="wrap band-akzent__raster">
       <div class="band-akzent__text" data-staffel>
         <p class="kicker" style="color:var(--akzent-text)" data-zeig>Funktion 4</p>
@@ -276,7 +276,7 @@
   </section>
 
   <!-- 8. Stimmen: zwei Reihen laufen gegeneinander -->
-  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-st">
+  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-st" data-abschnitt="stimmen">
     <div class="wrap">
       <div class="kopfzeile kopfzeile--mitte" data-staffel>
         <p class="kicker" data-zeig>Stimmen</p>
@@ -292,7 +292,7 @@
   </section>
 
   <!-- 9. Ratgeber: ein großer, zwei kleine Beiträge -->
-  <section class="sektion" id="blog" style="padding-top:0" aria-labelledby="h-blog">
+  <section class="sektion" id="blog" style="padding-top:0" aria-labelledby="h-blog" data-abschnitt="blog">
     <div class="wrap">
       <div class="kopfzeile kopfzeile--zeile" data-staffel>
         <div>
@@ -328,7 +328,7 @@
   </section>
 
   <!-- 9a. Fragen: Einwände vorwegnehmen -->
-  <section class="sektion" id="fragen" style="padding-top:0" aria-labelledby="h-fragen">
+  <section class="sektion" id="fragen" style="padding-top:0" aria-labelledby="h-fragen" data-abschnitt="fragen">
     <div class="wrap">
       <div class="kopfzeile kopfzeile--mitte" data-staffel>
         <p class="kicker" data-zeig>Gut zu wissen</p>
@@ -345,7 +345,7 @@
   </section>
 
   <!-- 10. Aufruf: Akzentkarte, ragt in den Fuß -->
-  <section class="aufruf-sektion" id="kontakt" aria-labelledby="h-auf">
+  <section class="aufruf-sektion" id="kontakt" aria-labelledby="h-auf" data-abschnitt="aufruf-sektion">
     <div class="wrap">
       <div class="aufruf" data-zeig>
         <h2 id="h-auf">Starte Deine 14 Tage ohne Kosten.</h2>
@@ -368,7 +368,7 @@
   </section>
 </main>
 
-<footer class="fuss">
+<footer class="fuss" data-abschnitt="fuss">
   <div class="wrap">
     <div class="fuss__raster">
       <div>

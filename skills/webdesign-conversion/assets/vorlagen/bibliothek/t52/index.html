@@ -29,7 +29,7 @@
 </svg>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="i-zeichen" viewBox="0 0 32 32"><path d="M16 5l9.500 5.500v11L16 27l-9.500-5.500v-11Z" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linejoin="round"/><circle cx="16" cy="16" r="2.800" fill="currentColor"/></symbol></svg>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__leiste">
     <a class="logo" href="#top" aria-label="Markenname, zum Seitenanfang"><svg aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg><span>Markenname</span></a>
     <nav class="kopf__nav" id="hauptnav" aria-label="Hauptnavigation" data-menue-ziel>
@@ -53,7 +53,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: gerahmtes Vollbild, Text unten links -->
-  <section class="held" id="top" aria-labelledby="h-held" data-abdunkeln>
+  <section class="held" id="top" aria-labelledby="h-held" data-abdunkeln data-abschnitt="held">
     <div class="bild held__bild" data-parallax="0.08"><img src="bilder/konferenzraum-schreibtische.webp" width="1600" height="1067" decoding="async" alt="Moderner Konferenzraum mit langen Reihen leerer Schreibtische"></div>
     <div class="held__schleier" aria-hidden="true"></div>
     <div class="held__dunkel" aria-hidden="true"></div>
@@ -70,7 +70,7 @@
   </section>
 
   <!-- 2. Aussage, Kennzahlen, Partner -->
-  <section class="sektion ueber" id="ueber" aria-labelledby="h-ueber">
+  <section class="sektion ueber" id="ueber" aria-labelledby="h-ueber" data-abschnitt="ueber">
     <div class="wrap">
       <div class="kopf-mitte" data-zeig>
         <p class="kicker">Wer wir sind</p>
@@ -93,7 +93,7 @@
   </section>
 
   <!-- 3. Geschäftsfelder: dunkel, Karten stapeln sich beim Scrollen -->
-  <section class="sektion dunkel leistungen" id="leistungen" aria-labelledby="h-leistungen">
+  <section class="sektion dunkel leistungen" id="leistungen" aria-labelledby="h-leistungen" data-abschnitt="dunkel">
     <div class="wrap">
       <div class="kopf-mitte" data-zeig>
         
@@ -130,7 +130,7 @@
   </section>
 
   <!-- 4. Reichweite: Mosaik aus Kacheln mit Zahlen und Bildern -->
-  <section class="sektion reichweite" id="reichweite" aria-labelledby="h-reichweite">
+  <section class="sektion reichweite" id="reichweite" aria-labelledby="h-reichweite" data-abschnitt="reichweite">
     <div class="wrap">
       <div class="kopf-mitte" data-zeig>
         
@@ -149,7 +149,7 @@
   </section>
 
   <!-- 5. Stimmen: große Karte mit Reiter aus Beispiellogos -->
-  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen">
+  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen" data-abschnitt="stimmen">
     <div class="wrap">
       <div class="kopf-mitte" data-zeig>
         <p class="kicker">Stimmen</p>
@@ -193,7 +193,7 @@
   </section>
 
   <!-- 6. Blog: drei Beiträge, Bild über weißer Karte -->
-  <section class="sektion blog" id="blog" aria-labelledby="h-blog">
+  <section class="sektion blog" id="blog" aria-labelledby="h-blog" data-abschnitt="blog">
     <div class="wrap">
       <div class="blog__kopf" data-zeig><div><h2 id="h-blog">Neue Einblicke und Entwicklungen</h2></div><a class="knopf" href="#blog">Alle Beiträge<svg aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a></div>
       <div class="beitraege" data-staffel>
@@ -204,7 +204,7 @@
     </div>
   </section>
   <!-- 6a. Fragen: Einwände vorwegnehmen -->
-  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen">
+  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen" data-abschnitt="fragen">
     <div class="wrap">
       <div class="blog__kopf" data-zeig><div><span class="kicker">Gut zu wissen</span><h2 id="h-fragen">Häufige Fragen vor der Anfrage</h2></div></div>
       <div class="faq__liste" data-exklusiv data-zeig>
@@ -218,7 +218,7 @@
   </section>
 </main>
 
-<footer class="fuss" id="fuss">
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
   <div class="fuss__rahmen">
     <div class="fuss__zeile fuss__kopf">
       <div class="fuss__logozelle"><a class="logo" href="#top" aria-label="Markenname, zum Seitenanfang"><svg aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg><span>Markenname</span></a></div>

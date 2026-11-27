@@ -44,7 +44,7 @@
 </svg>
 
 <!-- Kopf liegt über dem Held-Rahmen (absolut), scrollt mit -->
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__innen">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
       <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7" fill="currentColor"/><path d="M9 23V9l7 9 7-9v14" fill="none" stroke="var(--flaeche-dunkel)" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -72,7 +72,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: Text links, Bildfläche rechts mit schwebender Karte, die beim Scrollen gegenläuft -->
-  <section class="held" id="top" aria-labelledby="h-held">
+  <section class="held" id="top" aria-labelledby="h-held" data-abschnitt="held">
     <div class="held__text" data-staffel>
       <p class="kicker" data-zeig>Training mit Plan</p>
       <!-- Held: Berufstätige mit wenig Zeit, die regelmäßig trainieren wollen; Lösung ist ein persönlicher Plan, der in die Woche passt, mit Coach und messbarem Fortschritt; Beleg ist die Mitgliederzahl unter den Knöpfen (Beispielwert) -->
@@ -102,7 +102,7 @@
   </section>
 
   <!-- 2. Vertrauen: Laufband mit erfundenen Beispiellogos -->
-  <section class="vertrauen" aria-labelledby="h-vertrauen">
+  <section class="vertrauen" aria-labelledby="h-vertrauen" data-abschnitt="vertrauen">
     <div class="wrap">
       <h2 class="vertrauen__titel" id="h-vertrauen" data-zeig>Beispielzeile: Partner, mit denen wir arbeiten</h2>
       <div class="band logos">
@@ -117,7 +117,7 @@
   </section>
 
   <!-- 3. Vorteile: Überschrift färbt sich Wort für Wort, Bento mit Zählern und Karten, die beim Berühren zum Bild werden -->
-  <section class="sektion warum" id="warum" aria-labelledby="h-warum">
+  <section class="sektion warum" id="warum" aria-labelledby="h-warum" data-abschnitt="warum">
     <div class="wrap">
       <div class="kopfzeile">
         <h2 id="h-warum" data-licht>Warum du bei uns genau richtig trainierst</h2>
@@ -173,7 +173,7 @@
   </section>
 
   <!-- 4. Fortschritt: vier Karten in einer Treppe, die sich beim Scrollen zusammenschiebt -->
-  <section class="sektion fortschritt" id="fortschritt" aria-labelledby="h-fortschritt">
+  <section class="sektion fortschritt" id="fortschritt" aria-labelledby="h-fortschritt" data-abschnitt="fortschritt">
     <div class="wrap">
       <div class="kopfzeile">
         <h2 id="h-fortschritt" data-licht>Dein Fortschritt, klar gemessen</h2>
@@ -237,7 +237,7 @@
   </section>
 
   <!-- 5. Programme: Zeilenliste mit Bild, Beschreibung, Preis und Aktion -->
-  <section class="sektion programme" id="programme" aria-labelledby="h-programme">
+  <section class="sektion programme" id="programme" aria-labelledby="h-programme" data-abschnitt="programme">
     <div class="wrap">
       <div class="kopfzeile kopfzeile--aktion">
         <h2 id="h-programme" data-licht>Finde das Programm, das zu deinem Ziel passt</h2>
@@ -319,7 +319,7 @@
   </section>
 
   <!-- 6. Team: Reiter zum Wischen mit Pfeilknöpfen -->
-  <section class="sektion team" id="team" aria-labelledby="h-team" data-reiter-gruppe>
+  <section class="sektion team" id="team" aria-labelledby="h-team" data-reiter-gruppe data-abschnitt="team">
     <div class="wrap">
       <div class="kopfzeile kopfzeile--aktion">
         <div class="kopfzeile__stapel">
@@ -343,7 +343,7 @@
   </section>
 
   <!-- 7. Kontakt: Verlaufsrahmen mit Wortlicht-Überschrift, Bildfläche und Formular -->
-  <section class="kontakt" id="kontakt" aria-labelledby="h-kontakt">
+  <section class="kontakt" id="kontakt" aria-labelledby="h-kontakt" data-abschnitt="kontakt">
     <div class="wrap">
       <div class="kontakt__rahmen">
         <div class="kopfzeile kopfzeile--dunkel">
@@ -367,7 +367,7 @@
   </section>
 
   <!-- 8. Wissen: drei Beitragskarten, die beim Berühren anheben -->
-  <section class="sektion wissen" id="wissen" aria-labelledby="h-wissen">
+  <section class="sektion wissen" id="wissen" aria-labelledby="h-wissen" data-abschnitt="wissen">
     <div class="wrap">
       <div class="kopfzeile kopfzeile--aktion">
         <h2 id="h-wissen" data-licht>Wissen für dein Training</h2>
@@ -403,7 +403,7 @@
   </section>
 
   <!-- 9. Stimmen: ein Zitat nach dem anderen, Pfeilknöpfe -->
-  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen" data-reiter-gruppe>
+  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen" data-reiter-gruppe data-abschnitt="stimmen">
     <div class="wrap">
       <h2 class="sr-nur" id="h-stimmen">Stimmen von Mitgliedern</h2>
       <p class="hinweis-klein hinweis-klein--oben" data-beispiel>Beispieltexte, keine echten Aussagen. Vor Livegang durch freigegebene Stimmen echter Mitglieder ersetzen.</p>
@@ -441,7 +441,7 @@
   </section>
 
   <!-- 10. Fragen: Überschrift bleibt stehen, rechts ein Akkordeon -->
-  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen">
+  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen" data-abschnitt="fragen">
     <div class="wrap faq__raster">
       <div class="faq__kopf">
         <h2 id="h-fragen" data-zeig>Häufige Fragen vor dem Start</h2>
@@ -474,7 +474,7 @@
 </main>
 
 <!-- 11. Abschluss und Fuß -->
-<footer class="fuss" id="fuss">
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
   <div class="wrap">
     <div class="abschluss">
       <h2 data-zeig>Bereit für dein erstes Training?</h2>

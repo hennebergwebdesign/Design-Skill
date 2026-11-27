@@ -40,7 +40,7 @@
   </defs>
 </svg>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__leiste">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
       <svg class="kopf__zeichen" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="#i-blitz"/></svg>
@@ -67,7 +67,7 @@
 <main id="inhalt">
 
   <!-- 1. Held: Großschrift, das Produkt steigt beim Scrollen vor die Buchstaben -->
-  <section class="held" id="top" aria-labelledby="h-held" data-fortschritt>
+  <section class="held" id="top" aria-labelledby="h-held" data-fortschritt data-abschnitt="held">
     <div class="held__buehne">
       <div class="held__block">
         <!-- Held: Smartwatch Nutzer, deren Uhr schon am Nachmittag leer ist; Problem Akku reicht nicht durch den Tag; Lösung Kraftgehäuse mit Powerbank, lädt unterwegs nach; Beleg Bewertung unten (Beispiel), vor dem Einsatz durch echte Angaben ersetzen -->
@@ -101,7 +101,7 @@
   </section>
 
   <!-- 2. Schwarze Karte: Siegel, Display, Uhr unten angeschnitten -->
-  <section class="stark sektion" id="geraet" aria-labelledby="h-stark">
+  <section class="stark sektion" id="geraet" aria-labelledby="h-stark" data-abschnitt="stark">
     <div class="wrap">
       <div class="stark__karte" data-zeig>
         <div class="siegel" aria-hidden="true">
@@ -130,7 +130,7 @@
   </section>
 
   <!-- 3. Zwei Uhren im Vergleich, Zahlen zählen hoch (Endwert steht im HTML) -->
-  <section class="laufzeit sektion" id="laufzeit" aria-labelledby="h-laufzeit">
+  <section class="laufzeit sektion" id="laufzeit" aria-labelledby="h-laufzeit" data-abschnitt="laufzeit">
     <div class="wrap">
       <h2 id="h-laufzeit" class="gross gross--mitte" data-zeig>Kraftvoll,<span class="balken">aber sie braucht</span>mehr Kraft</h2>
       <div class="laufzeit__paar" data-beispiel>
@@ -166,7 +166,7 @@
   </section>
 
   <!-- Wortband in Limette, mit Pause -->
-  <section class="wortband" aria-label="Vorteile im Überblick">
+  <section class="wortband" aria-label="Vorteile im Überblick" data-abschnitt="wortband">
     <div class="wortband__bahn">
       <div class="band" data-band>
         <ul class="band__spur">
@@ -187,7 +187,7 @@
   </section>
 
   <!-- 4. Ladekabel: Kabel zeichnet sich, Prozentring füllt sich -->
-  <section class="kabel sektion" id="kabel" aria-labelledby="h-kabel">
+  <section class="kabel sektion" id="kabel" aria-labelledby="h-kabel" data-abschnitt="kabel">
     <div class="wrap kabel__raster">
       <div class="kabel__kopf">
         <h2 id="h-kabel" class="gross" data-zeig>Laden ohne<span class="balken">Kabelsalat</span></h2>
@@ -208,7 +208,7 @@
   </section>
 
   <!-- 5. Teile aufsetzen: Liste schaltet den Ausschnitt -->
-  <section class="teile sektion" id="aufsetzen" aria-labelledby="h-teile">
+  <section class="teile sektion" id="aufsetzen" aria-labelledby="h-teile" data-abschnitt="teile">
     <div class="wrap">
       <div class="teile__karte" data-zeig>
         <h2 id="h-teile" class="gross gross--klein gross--mitte">So setzt du die Teile an</h2>
@@ -240,7 +240,7 @@
   </section>
 
   <!-- 6. Konfigurator: Größe und Farbe schaltbar -->
-  <section class="konfig sektion" id="kaufen" aria-labelledby="h-konfig">
+  <section class="konfig sektion" id="kaufen" aria-labelledby="h-konfig" data-abschnitt="konfig">
     <div class="wrap konfig__raster" data-konfig>
       <div class="konfig__info">
         <p class="konfig__ober">Smartwatch Powerbank Gehäuse</p>
@@ -292,7 +292,7 @@
   </section>
 
   <!-- 7. Einwand FAQ -->
-  <section class="fragen sektion" id="fragen" aria-labelledby="h-fragen">
+  <section class="fragen sektion" id="fragen" aria-labelledby="h-fragen" data-abschnitt="fragen">
     <div class="wrap fragen__wrap">
       <h2 id="h-fragen" class="gross gross--klein gross--mitte" data-zeig>Häufige Fragen</h2>
       <div class="fragen__liste" data-exklusiv data-beispiel>
@@ -321,7 +321,7 @@
   </section>
 
   <!-- 8. Vollbild mit Foto, Siegel und Rückruf Formular -->
-  <section class="reise" id="reise" aria-labelledby="h-reise">
+  <section class="reise" id="reise" aria-labelledby="h-reise" data-abschnitt="reise">
     <div class="reise__bild"><img src="bilder/handgelenk-laufen-smartphone.webp" width="1536" height="1024" alt="Handgelenk eines Läufers mit Smartwatch, die andere Hand hält ein Smartphone" loading="lazy" decoding="async"></div>
     <div class="siegel siegel--reise" aria-hidden="true">
       <svg class="siegel__ring" viewBox="0 0 120 120" focusable="false"><use href="#siegel-ring"/></svg>
@@ -351,7 +351,7 @@
 
 </main>
 
-<footer class="fuss" id="fuss">
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
   <div class="wrap">
     <div class="fuss__oben">
       <div class="fuss__marke">

@@ -192,7 +192,7 @@ node scripts/bibliothek-abschnitte.mjs --kategorie faq
 node scripts/bibliothek-abschnitte.mjs --seite t113 --abschnitt faq
 ```
 
-Ein Abschnitt wird als Prinzip in die Marke des Kunden gesetzt, nie mit Text, Bild oder Farbe der Vorlage. Der Index `bibliothek/ABSCHNITTE.md` ist erzeugt, nicht von Hand gepflegt. Ältere Vorlagen (`t01` bis `t111`) haben noch keine `ABSCHNITTE.json`, ihre Sektionsfolge steht in `INFO.md`.
+Ein Abschnitt wird als Prinzip in die Marke des Kunden gesetzt, nie mit Text, Bild oder Farbe der Vorlage. Der Index `bibliothek/ABSCHNITTE.md` ist erzeugt, nicht von Hand gepflegt. Ab `t112` sind Kategorie und Prinzip je Abschnitt von Hand gesetzt. Die älteren Vorlagen (`t01` bis `t111`) hat `scripts/bibliothek-abschnitte-migration.mjs` mechanisch nachgezogen: Kennung aus der CSS Klasse, Kategorie aus einer Wortliste, Prinzip als Standardsatz je Kategorie. Diese Einträge tragen `prinzip_quelle: "kategorie-standard"` und sind Wegweiser, kein Befund. Wer einen Abschnitt übernimmt, liest ihn und die `INFO.md` der Vorlage.
 
 ## Erweiterungspunkte, bewusst noch nicht gebaut
 

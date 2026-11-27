@@ -36,7 +36,7 @@
   </defs>
 </svg>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__leiste">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
       <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg>
@@ -61,7 +61,7 @@
 <main id="inhalt">
 
   <!-- Held -->
-  <section class="held" aria-labelledby="held-titel">
+  <section class="held" aria-labelledby="held-titel" data-abschnitt="held">
     <div class="held__bild bild"><img src="bilder/held-laeufer-wald.webp" width="1000" height="667" alt="Läufer im Sonnenlicht auf einem Waldweg, von hinten gesehen" fetchpriority="high"></div>
     <div class="held__inhalt">
       <!-- Heldformel: Zielgruppe Berufstätige, die Training nicht in den Alltag bekommen. Problem: feste Kurszeiten, kein Plan, niemand, der nachfragt. Lösung: persönlicher Coach in der App, der den Plan an die Woche anpasst. -->
@@ -82,14 +82,14 @@
   </section>
 
   <!-- Einstieg -->
-  <section class="einstieg sektion wrap" aria-labelledby="einstieg-titel">
+  <section class="einstieg sektion wrap" aria-labelledby="einstieg-titel" data-abschnitt="einstieg">
     <h2 id="einstieg-titel" data-zeig>So kommst du an dein Ziel, <span class="leicht">Schritt für Schritt.</span></h2>
     <p class="einstieg__text" data-zeig>Ein Plan, der zu deiner Woche passt, ein Mensch, der Rückmeldung gibt, und eine App, die alles an einem Ort hält.</p>
     <a class="knopf" href="#start" data-zeig>Coach finden</a>
   </section>
 
   <!-- Bento -->
-  <section class="bento-teil wrap" id="funktionen" aria-labelledby="funktionen-titel">
+  <section class="bento-teil wrap" id="funktionen" aria-labelledby="funktionen-titel" data-abschnitt="bento-teil">
     <h2 class="sr-nur" id="funktionen-titel">Funktionen der App</h2>
     <div class="bento" data-staffel>
 
@@ -217,7 +217,7 @@
   </section>
 
   <!-- Verantwortungspartner: wachsendes Telefon -->
-  <section class="coach" id="coach" aria-labelledby="coach-titel" data-fortschritt>
+  <section class="coach" id="coach" aria-labelledby="coach-titel" data-fortschritt data-abschnitt="coach">
     <div class="coach__buehne">
       <div class="coach__karte" data-schritt>
         <h2 id="coach-titel"><span class="leicht">Sag Hallo zu</span> deinem Coach, der dranbleibt.</h2>
@@ -237,7 +237,7 @@
   </section>
 
   <!-- Fahrplan -->
-  <section class="fahrplan sektion wrap" id="fahrplan" aria-labelledby="fahrplan-titel">
+  <section class="fahrplan sektion wrap" id="fahrplan" aria-labelledby="fahrplan-titel" data-abschnitt="fahrplan">
     <div class="mitte">
       <h2 id="fahrplan-titel" data-zeig>Dein Fahrplan, <span class="leicht">der zu dir passt.</span></h2>
       <p data-zeig>Im Erstgespräch lernt dich dein Coach kennen, baut daraus einen Plan und passt ihn laufend an.</p>
@@ -272,7 +272,7 @@
   </section>
 
   <!-- Fragen -->
-  <section class="fragen sektion wrap" id="fragen" aria-labelledby="fragen-titel">
+  <section class="fragen sektion wrap" id="fragen" aria-labelledby="fragen-titel" data-abschnitt="fragen">
     <div class="fragen__kopf">
       <h2 id="fragen-titel" data-zeig>Fragen vor dem Start</h2>
       <p data-zeig>Noch etwas offen? Ruf an unter <a class="textlink" href="tel:+490000000000">0800 000 0000</a> oder schreib uns über das Formular.</p>
@@ -302,7 +302,7 @@
   </section>
 
   <!-- Start / Formular -->
-  <section class="start sektion wrap" id="start" aria-labelledby="start-titel">
+  <section class="start sektion wrap" id="start" aria-labelledby="start-titel" data-abschnitt="start">
     <div class="start__karte" data-zeig>
       <div class="start__text">
         <h2 id="start-titel">Finde deinen Coach.</h2>
@@ -326,7 +326,7 @@
 </main>
 
 <!-- Gelbe Zeile -->
-<section class="gelb" aria-labelledby="gelb-titel">
+<section class="gelb" aria-labelledby="gelb-titel" data-abschnitt="gelb">
   <div class="wrap gelb__innen">
     <h2 id="gelb-titel">Bleib in Bewegung.</h2>
     <form class="gelb__form" data-formular action="#" method="post" novalidate>
@@ -341,7 +341,7 @@
   </div>
 </section>
 
-<footer class="fuss" id="fuss">
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
   <div class="wrap">
     <div class="fuss__oben">
       <div class="fuss__ruf">

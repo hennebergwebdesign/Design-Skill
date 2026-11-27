@@ -32,7 +32,7 @@
   </div>
 </div>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="wrap kopf__innen">
     <a class="logo" href="#top" aria-label="Markenname, zum Seitenanfang">
       <svg class="logo__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7" fill="currentColor"/><path d="M9 23V9l7 9 7-9v14" fill="none" stroke="var(--akzent-text)" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -56,7 +56,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: zentrierte Überschrift, drei Bildflächen -->
-  <section class="held" id="top" aria-labelledby="h-held">
+  <section class="held" id="top" aria-labelledby="h-held" data-abschnitt="held">
     <div class="wrap">
       <div class="held__kopf" data-staffel>
         <p class="kicker" data-zeig>Über uns</p>
@@ -75,7 +75,7 @@
   </section>
 
   <!-- 2. Haltung und Zahlen -->
-  <section class="sektion haltung" id="haltung" aria-labelledby="h-haltung">
+  <section class="sektion haltung" id="haltung" aria-labelledby="h-haltung" data-abschnitt="haltung">
     <div class="wrap">
       <h2 class="haltung__satz" id="h-haltung" data-licht>Wir sind kein Konzern, sondern Handwerker, die erklären, was sie tun. Ehrliche Beratung, saubere Arbeit und Termine, auf die Sie sich verlassen können.</h2>
       <div class="haltung__raster">
@@ -97,7 +97,7 @@
   </section>
 
   <!-- 3. Werte: dunkle Bildfläche, vier Karten steigen beim Scrollen auf -->
-  <section class="werte" id="werte" aria-labelledby="h-werte">
+  <section class="werte" id="werte" aria-labelledby="h-werte" data-abschnitt="werte">
     <div class="bild ton-5 werte__bild" aria-hidden="true"><img class="bild__foto" src="bilder/techniker-in-gruenem-hemd-am-schaltkasten.webp" width="1600" height="900" alt="Techniker in grünem Hemd arbeitet an einem Schaltkasten" loading="lazy" decoding="async"></div>
     <div class="wrap werte__innen">
       <div class="mitte-kopf" data-zeig>
@@ -126,7 +126,7 @@
   </section>
 
   <!-- 4. Unser Weg: Überschrift bleibt stehen, Linie füllt sich -->
-  <section class="sektion weg" id="weg" aria-labelledby="h-weg">
+  <section class="sektion weg" id="weg" aria-labelledby="h-weg" data-abschnitt="weg">
     <div class="wrap weg__raster">
       <div class="weg__links">
         <div data-zeig>
@@ -174,7 +174,7 @@
   </section>
 
   <!-- 5. Team: Karten steigen gestaffelt auf -->
-  <section class="sektion team" id="team" aria-labelledby="h-team">
+  <section class="sektion team" id="team" aria-labelledby="h-team" data-abschnitt="team">
     <div class="wrap">
       <div class="mitte-kopf" data-zeig>
         <p class="kicker">Das Team</p>
@@ -219,7 +219,7 @@
   </section>
 
   <!-- 6. Fragen -->
-  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen">
+  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen" data-abschnitt="fragen">
     <div class="wrap fragen__raster">
       <div class="fragen__kopf" data-zeig>
         <p class="kicker">Fragen</p>
@@ -236,7 +236,7 @@
   </section>
 
   <!-- 7. Abschluss mit Handlung -->
-  <section class="abschluss" id="kontakt" aria-labelledby="h-abschluss">
+  <section class="abschluss" id="kontakt" aria-labelledby="h-abschluss" data-abschnitt="abschluss">
     <div class="bild ton-6 abschluss__bild" aria-hidden="true"><img class="bild__foto" src="bilder/techniker-in-gelber-warnjacke-am-verteiler.webp" width="1600" height="1067" alt="Techniker in gelber Warnjacke arbeitet an einem Verteiler" loading="lazy" decoding="async"></div>
     <div class="wrap abschluss__raster">
       <div class="abschluss__text" data-zeig>
@@ -257,7 +257,7 @@
   </section>
 </main>
 
-<footer class="fuss">
+<footer class="fuss" data-abschnitt="fuss">
   <div class="wrap">
     <h2 class="sr-nur">Fußbereich</h2>
     <div class="fuss__raster">

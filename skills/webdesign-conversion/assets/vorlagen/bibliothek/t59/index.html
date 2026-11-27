@@ -30,7 +30,7 @@
 </svg>
 
 <!-- Kopf: Logo links, rechts Menü Wort mit rundem Knopf, das Menü klappt daneben auf -->
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="wrap kopf__innen">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">Markenname<span class="kopf__punkt" aria-hidden="true">.</span></a>
     <nav class="kopf__nav" id="hauptnav" aria-label="Hauptnavigation" data-menue-ziel>
@@ -54,7 +54,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: Vollbild, Text unten links -->
-  <section class="held" id="top" aria-labelledby="h-held">
+  <section class="held" id="top" aria-labelledby="h-held" data-abschnitt="held">
     <div class="bild held__bild bild--a" data-abdunkeln><img src="bilder/silhouette-sonnenuntergang.webp" width="1600" height="1067" alt="Silhouette eines Mannes vor orangem Sonnenuntergang" loading="lazy" decoding="async"></div>
     <div class="held__schleier" aria-hidden="true"></div>
     <div class="wrap held__innen">
@@ -71,7 +71,7 @@
   </section>
 
   <!-- 2. Studio: Bild links, Text rechts -->
-  <section class="sektion studio" id="studio" aria-labelledby="h-studio">
+  <section class="sektion studio" id="studio" aria-labelledby="h-studio" data-abschnitt="studio">
     <div class="wrap studio__raster">
       <div class="studio__bild bild bild--b" data-zeig="links"><img src="bilder/langhantelscheibe-boden.webp" width="1000" height="667" alt="Langhantel mit Gewichtsscheibe auf dem Hallenboden" loading="lazy" decoding="async"></div>
       <div class="studio__text">
@@ -94,7 +94,7 @@
   </section>
 
   <!-- 3. Kennzahlen -->
-  <section class="zahlen" aria-label="Kennzahlen">
+  <section class="zahlen" aria-label="Kennzahlen" data-abschnitt="zahlen">
     <div class="wrap">
       <dl class="zahlen__reihe" data-beispiel data-staffel>
         <div data-zeig><dt>Aktive Mitglieder</dt><dd class="zahl"><span data-zaehle>850</span>+</dd></div>
@@ -106,7 +106,7 @@
   </section>
 
   <!-- 4. Kurse: Kopf mittig, danach eine Spur mit breiten Karten und Punkten -->
-  <section class="sektion kurse" id="kurse" aria-labelledby="h-kurse">
+  <section class="sektion kurse" id="kurse" aria-labelledby="h-kurse" data-abschnitt="kurse">
     <div class="wrap">
       <header class="mitte">
         <h2 id="h-kurse" data-licht>Deine Ziele. Unsere Begleitung. Echte Ergebnisse.</h2>
@@ -145,7 +145,7 @@
   </section>
 
   <!-- 5. Coaches: Karten stapeln sich beim Scrollen, links wächst eine Leiste -->
-  <section class="sektion team" id="team" aria-labelledby="h-team">
+  <section class="sektion team" id="team" aria-labelledby="h-team" data-abschnitt="team">
     <div class="wrap">
       <header class="mitte">
         <p class="kicker" data-zeig>Lerne die Coaches kennen</p>
@@ -180,7 +180,7 @@
   </section>
 
   <!-- 6. Mitgliedschaft: drei Tarife, der mittlere hervorgehoben, darunter Partnerzeile -->
-  <section class="sektion tarife" id="mitgliedschaft" aria-labelledby="h-tarife">
+  <section class="sektion tarife" id="mitgliedschaft" aria-labelledby="h-tarife" data-abschnitt="tarife">
     <div class="wrap">
       <header class="mitte">
         <h2 id="h-tarife" data-licht>Flexible Optionen für jeden Lebensstil.</h2>
@@ -233,7 +233,7 @@
   </section>
 
   <!-- 7. Ablauf: Zeitleiste, erreichte Schritte färben sich -->
-  <section class="sektion ablauf" id="ablauf" aria-labelledby="h-ablauf">
+  <section class="sektion ablauf" id="ablauf" aria-labelledby="h-ablauf" data-abschnitt="ablauf">
     <div class="wrap">
       <header class="ablauf__kopf">
         <h2 id="h-ablauf" data-licht>Einfache Schritte zu deinem Start, mit Zuversicht.</h2>
@@ -247,7 +247,7 @@
   </section>
 
   <!-- 8. Stimmen: breite Zitate in einer Spur mit Punkten -->
-  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen">
+  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen" data-abschnitt="stimmen">
     <div class="wrap">
       <header class="mitte">
         <p class="auszeichnung" data-zeig data-beispiel><svg class="auszeichnung__zweig" width="22" height="38" aria-hidden="true" focusable="false"><use href="#i-lorbeer"/></svg><span class="auszeichnung__text">Beliebt bei<br>Mitgliedern</span><svg class="auszeichnung__zweig auszeichnung__zweig--r" width="22" height="38" aria-hidden="true" focusable="false"><use href="#i-lorbeer"/></svg><span>4,8 von 5, bewertet von über 16.000 Mitgliedern</span></p>
@@ -267,7 +267,7 @@
   </section>
 
   <!-- 9. Fragen -->
-  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen">
+  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen" data-abschnitt="fragen">
     <div class="wrap fragen__rahmen">
       <header class="mitte">
         <h2 id="h-fragen" data-licht>Häufig gestellte Fragen</h2>
@@ -284,7 +284,7 @@
   </section>
 
   <!-- 10. Kontakt: Bild mit zwei Bändern links, Text und Formular rechts -->
-  <section class="sektion kontakt" id="kontakt" aria-labelledby="h-kontakt">
+  <section class="sektion kontakt" id="kontakt" aria-labelledby="h-kontakt" data-abschnitt="kontakt">
     <div class="wrap kontakt__raster">
       <div class="kontakt__bildspalte">
         <div class="kontakt__bild bild bild--a" data-zeig="links"><img src="bilder/gruppenkurs-arme-seitlich.webp" width="1000" height="563" alt="Zwei Frauen im Kurs, eine mit seitlich ausgestreckten Armen" loading="lazy" decoding="async"></div>
@@ -312,7 +312,7 @@
   </section>
 
   <!-- 11. Aufruf und Newsletter: Band in Akzentfarbe -->
-  <section class="aufruf" aria-labelledby="h-aufruf">
+  <section class="aufruf" aria-labelledby="h-aufruf" data-abschnitt="aufruf">
     <div class="wrap aufruf__raster">
       <div class="aufruf__links">
         <h2 id="h-aufruf" data-licht>Warte nicht auf „irgendwann“.</h2>
@@ -337,7 +337,7 @@
 </main>
 
 <!-- Fuß -->
-<footer class="fuss" id="fuss">
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
   <div class="wrap fuss__raster">
     <div class="fuss__marke">
       <a class="kopf__logo" href="#top" aria-label="Markenname, nach oben">Markenname<span class="kopf__punkt" aria-hidden="true">.</span></a>

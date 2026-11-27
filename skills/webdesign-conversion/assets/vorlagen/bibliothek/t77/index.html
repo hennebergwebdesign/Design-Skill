@@ -30,7 +30,7 @@
   <symbol id="i-schild" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v5.500c0 4.500 3 8 7 9.500 4-1.500 7-5 7-9.500V6l-7-3Z"/><path d="m9 12 2.200 2.200L15.500 10"/></symbol>
 </svg>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__leiste wrap">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
       <span class="kopf__zeichen"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg></span>
@@ -57,7 +57,7 @@
 <main id="inhalt">
 
   <!-- 1. Held: Porträtreihe, die beim Scrollen nach links driftet -->
-  <section class="held" id="top" aria-labelledby="h-held">
+  <section class="held" id="top" aria-labelledby="h-held" data-abschnitt="held">
     <div class="wrap held__kopf">
       <!-- Held: Berufstätige mit Führungsziel und knapper Zeit; Problem ist die Weiterbildung, die neben Job und Familie nicht passt; Lösung ist ein Online Lehrgang im eigenen Tempo mit Praktikern; Beleg sind die Beispielwerte unter den Knöpfen, vor dem Einsatz durch echte Angaben ersetzen -->
       <h1 id="h-held">Führungswissen online lernen, ohne den Job zu pausieren</h1>
@@ -88,7 +88,7 @@
   </section>
 
   <!-- 2. Pressebandleiste: eigene neutrale Symbole statt getippter Logos -->
-  <section class="presse" aria-labelledby="h-presse">
+  <section class="presse" aria-labelledby="h-presse" data-abschnitt="presse">
     <div class="wrap presse__innen">
       <h2 id="h-presse" class="presse__titel">Bekannt aus der Presse <span>(Beispiel, Platz für echte Medienlogos)</span></h2>
       <ul class="presse__symbole" data-beispiel>
@@ -105,7 +105,7 @@
   </section>
 
   <!-- 3. Programmauswahl: Fotokarten, der Fokus wechselt beim Überfahren -->
-  <section class="sektion programme" id="programme" aria-labelledby="h-programme">
+  <section class="sektion programme" id="programme" aria-labelledby="h-programme" data-abschnitt="programme">
     <div class="wrap">
       <header class="mitte" data-zeig>
         <h2 id="h-programme">Wähle das Programm, das zu deinem nächsten Schritt passt</h2>
@@ -143,7 +143,7 @@
   </section>
 
   <!-- 4. Dozenten: Karten in der Wischspur mit Pfeilen -->
-  <section class="sektion dozenten" id="dozenten" aria-labelledby="h-dozenten">
+  <section class="sektion dozenten" id="dozenten" aria-labelledby="h-dozenten" data-abschnitt="dozenten">
     <div class="wrap" data-spur-gruppe>
       <header class="dozenten__kopf" data-zeig>
         <div>
@@ -167,7 +167,7 @@
   </section>
 
   <!-- 5. Das neue Erlebnis: heller Abschnitt mit versetzten Bildern, Telefon, Netzwerk und Stimmen -->
-  <section class="sektion hell erlebnis" id="erlebnis" aria-labelledby="h-erlebnis">
+  <section class="sektion hell erlebnis" id="erlebnis" aria-labelledby="h-erlebnis" data-abschnitt="hell">
     <div class="wrap">
       <header class="mitte" data-zeig>
         <p class="kicker">Das neue Erlebnis</p>
@@ -258,7 +258,7 @@
   </section>
 
   <!-- 6. Zertifikat: dunkel, die Karte kippt leicht beim Scrollen -->
-  <section class="sektion zertifikat" aria-labelledby="h-zertifikat">
+  <section class="sektion zertifikat" aria-labelledby="h-zertifikat" data-abschnitt="zertifikat">
     <div class="wrap zert" data-kipp>
       <div class="zert__text" data-zeig>
         <span class="zert__zeichen" aria-hidden="true"><svg width="30" height="30" focusable="false"><use href="#i-schild"/></svg></span>
@@ -280,7 +280,7 @@
   </section>
 
   <!-- 7. Vergleich: Klassisch gegen unser Modell, Haken blenden gestaffelt ein -->
-  <section class="sektion vergleich" id="vergleich" aria-labelledby="h-vergleich">
+  <section class="sektion vergleich" id="vergleich" aria-labelledby="h-vergleich" data-abschnitt="vergleich">
     <div class="wrap">
       <header class="mitte" data-zeig>
         <h2 id="h-vergleich">Klassische Weiterbildung gegen unser Modell</h2>
@@ -315,7 +315,7 @@
   </section>
 
   <!-- 8. Gespräch mit der Akademieleitung: Video nur als Platzhalter -->
-  <section class="sektion gespraech" aria-labelledby="h-gespraech">
+  <section class="sektion gespraech" aria-labelledby="h-gespraech" data-abschnitt="gespraech">
     <div class="wrap">
       <header class="mitte" data-zeig>
         <h2 id="h-gespraech">Lerne die Akademieleitung kennen <span class="nur-beispiel">(Beispiel)</span></h2>
@@ -337,7 +337,7 @@
   </section>
 
   <!-- 9. Erfolgsgeschichten: Kartenraster, das beim Laden gestaffelt aufbaut -->
-  <section class="sektion erfolge" id="erfolge" aria-labelledby="h-erfolge">
+  <section class="sektion erfolge" id="erfolge" aria-labelledby="h-erfolge" data-abschnitt="erfolge">
     <div class="wrap">
       <header class="mitte" data-zeig>
         <p class="kicker">Erfolgsgeschichten</p>
@@ -358,7 +358,7 @@
   </section>
 
   <!-- 10. Nächster Schritt: drei Programmkarten, der Fokus wechselt -->
-  <section class="sektion naechster" aria-labelledby="h-naechster">
+  <section class="sektion naechster" aria-labelledby="h-naechster" data-abschnitt="naechster">
     <div class="wrap">
       <header class="mitte" data-zeig>
         <h2 id="h-naechster">Bereit für den nächsten Schritt?</h2>
@@ -396,7 +396,7 @@
   </section>
 
   <!-- 11. Anfrage: Infopaket, höchstens fünf Felder -->
-  <section class="sektion anfrage" id="anfragen" aria-labelledby="h-anfragen">
+  <section class="sektion anfrage" id="anfragen" aria-labelledby="h-anfragen" data-abschnitt="anfrage">
     <div class="wrap anfrage__karte">
       <div class="anfrage__text" data-zeig>
         <h2 id="h-anfragen">Infopaket anfordern</h2>
@@ -422,7 +422,7 @@
   </section>
 
   <!-- 12. Fragen -->
-  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen">
+  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen" data-abschnitt="fragen">
     <div class="wrap fragen__innen">
       <header class="mitte" data-zeig>
         <p class="kicker">Gut zu wissen</p>
@@ -439,7 +439,7 @@
   </section>
 </main>
 
-<footer class="fuss" id="fuss">
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
   <div class="wrap">
     <h2 class="sr-nur">Kontakt und rechtliche Hinweise</h2>
     <div class="fuss__oben">

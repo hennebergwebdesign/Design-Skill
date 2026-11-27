@@ -30,7 +30,7 @@
   <symbol id="i-ziel" viewBox="0 0 256 256" fill="currentColor"><path d="M232,208a8,8,0,0,1-8,8H32a8,8,0,0,1-8-8V48a8,8,0,0,1,16,0V156.69l50.34-50.35a8,8,0,0,1,11.32,0L128,132.69,180.69,80H160a8,8,0,0,1,0-16h40a8,8,0,0,1,8,8v40a8,8,0,0,1-16,0V91.31l-58.34,58.35a8,8,0,0,1-11.32,0L96,123.31l-56,56V200H224A8,8,0,0,1,232,208Z"/></symbol>
 </svg>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__innen">
     <a class="marke" href="#inhalt" aria-label="Markenname, zum Seitenanfang">
       <svg class="marke__zeichen" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="3"/><path d="M9 21c0-7 5-11 14-11 0 8-4 13-11 13" fill="currentColor"/></svg>
@@ -55,7 +55,7 @@
 <main id="inhalt">
 
   <!-- 1 Held: Bildfläche mit Rahmen, Text unten links, Kennzahlkarte unten rechts -->
-  <section class="held bild" aria-labelledby="held-titel">
+  <section class="held bild" aria-labelledby="held-titel" data-abschnitt="held">
     <img class="held__tiefe held__foto" src="bilder/person-geht-durch-grosse-helle-halle.webp" width="1600" height="2400" alt="" fetchpriority="high" decoding="async">
     <div class="held__inhalt">
       <div class="held__text">
@@ -93,7 +93,7 @@
   </section>
 
   <!-- 2 Über uns -->
-  <section class="sektion ueber" id="ueber" aria-labelledby="ueber-titel">
+  <section class="sektion ueber" id="ueber" aria-labelledby="ueber-titel" data-abschnitt="ueber">
     <div class="wrap">
       <div class="kopfzeile" data-zeig>
         <p class="kicker">Über uns</p>
@@ -127,7 +127,7 @@
   </section>
 
   <!-- 3 Leistungen: drei Medienkarten -->
-  <section class="sektion technik" id="technik" aria-labelledby="technik-titel">
+  <section class="sektion technik" id="technik" aria-labelledby="technik-titel" data-abschnitt="technik">
     <div class="wrap">
       <div class="kopfzeile kopfzeile--mitte" data-zeig>
         <h2 id="technik-titel">Drei Schwerpunkte im Überblick</h2>
@@ -162,7 +162,7 @@
   </section>
 
   <!-- 4 Ablauf: dunkle Fläche, beim Scrollen wechselt der aktive Schritt, Bilder stapeln sich -->
-  <section class="loesung" id="loesungen" aria-labelledby="loesung-titel" data-loesung>
+  <section class="loesung" id="loesungen" aria-labelledby="loesung-titel" data-loesung data-abschnitt="loesung">
     <div class="loesung__stuhl">
       <div class="loesung__links">
         <h2 id="loesung-titel">Wie wir vorgehen</h2>
@@ -207,7 +207,7 @@
   </section>
 
   <!-- 5 Beiträge: Liste mit Trennlinien -->
-  <section class="sektion blog" id="blog" aria-labelledby="blog-titel">
+  <section class="sektion blog" id="blog" aria-labelledby="blog-titel" data-abschnitt="blog">
     <div class="wrap">
       <div class="kopfzeile" data-zeig>
         <p class="kicker">Beiträge</p>
@@ -235,7 +235,7 @@
   </section>
 
   <!-- 6 FAQ: helle Fläche, links Titel, rechts Karten mit Akkordeon -->
-  <section class="faq rahmen-flaeche" id="faq" aria-labelledby="faq-titel">
+  <section class="faq rahmen-flaeche" id="faq" aria-labelledby="faq-titel" data-abschnitt="faq">
     <div class="faq__innen">
       <div class="faq__kopf" data-zeig>
         <h2 id="faq-titel">Häufige Fragen</h2>
@@ -251,7 +251,7 @@
   </section>
 
   <!-- 7 Kontakt: Zitat, Handlungskarte, Bildkarte -->
-  <section class="sektion kontakt" id="kontakt" aria-labelledby="kontakt-titel">
+  <section class="sektion kontakt" id="kontakt" aria-labelledby="kontakt-titel" data-abschnitt="kontakt">
     <div class="wrap kontakt__raster">
       <div class="kontakt__links">
         <figure class="zitat" data-zeig>
@@ -283,7 +283,7 @@
   </section>
 </main>
 
-<footer class="fuss">
+<footer class="fuss" data-abschnitt="fuss">
   <div class="fuss__innen">
     <div class="fuss__oben">
       <div class="fuss__marke">

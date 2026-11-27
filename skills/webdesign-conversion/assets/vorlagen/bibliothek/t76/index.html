@@ -31,7 +31,7 @@
   <symbol id="i-zeichen" viewBox="0 0 32 32"><rect x="10" y="4" width="12" height="24" rx="4" fill="currentColor"/><path fill="var(--blau)" d="M17 8.500l-4.500 6.500h3.200l-1 5.500 4.800-7h-3.300z"/></symbol>
 </svg>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__leiste">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
       <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg>
@@ -57,7 +57,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: Großschrift, Säule steigt beim Scrollen von hinten nach vorn (Ebenen), Ladeanzeige zählt -->
-  <section class="held" id="top" aria-labelledby="h-held" data-fortschritt>
+  <section class="held" id="top" aria-labelledby="h-held" data-fortschritt data-abschnitt="held">
     <div class="held__buehne">
       <div class="held__text">
         <!-- Held: Betriebe, Hausverwaltungen und Kommunen, die Ladepunkte brauchen, aber keinen klaren Plan für Netzanschluss, Förderung und Einbau haben; Lösung: ein Partner für Planung, Einbau und Störungsdienst; Beleg folgt unter "Warum wir" (Beispiel), vor dem Einsatz durch echte Angaben ersetzen -->
@@ -85,7 +85,7 @@
   </section>
 
   <!-- 2. Über uns: Satz in Versalien, Wörter hellen beim Scrollen auf, darunter fährt ein Auto ein -->
-  <section class="ueber" id="ueber" aria-labelledby="h-ueber">
+  <section class="ueber" id="ueber" aria-labelledby="h-ueber" data-abschnitt="ueber">
     <div class="wrap">
       <p class="kicker" data-zeig>Über uns</p>
       <h2 id="h-ueber" class="ueber__satz" data-licht>Wir planen und bauen Ladeinfrastruktur für Betriebe und Kommunen und betreuen sie danach, damit Laden im Alltag einfach funktioniert und jede Säule sauber abgerechnet wird.</h2>
@@ -96,7 +96,7 @@
   </section>
 
   <!-- 3. Warum wir: drei Hochformatkarten -->
-  <section class="sektion vorteile" id="vorteile" aria-labelledby="h-vorteile">
+  <section class="sektion vorteile" id="vorteile" aria-labelledby="h-vorteile" data-abschnitt="vorteile">
     <div class="wrap">
       <div class="vorteile__kopf">
         <h2 id="h-vorteile">Warum wir</h2>
@@ -126,7 +126,7 @@
   </section>
 
   <!-- 4. Schnell laden: Großschrift, Stecker überlappt, Kapsel mit Foto wächst -->
-  <section class="schnell" aria-labelledby="h-schnell" data-einlauf>
+  <section class="schnell" aria-labelledby="h-schnell" data-einlauf data-abschnitt="schnell">
     <div class="wrap schnell__kopf">
       <h2 id="h-schnell" class="schnell__wort" data-parallax="0.06">Schnell laden</h2>
       <img class="schnell__stecker" src="bilder/ladestecker-spiralkabel-freigestellt.webp" width="445" height="1212" alt="" aria-hidden="true" loading="lazy" decoding="async">
@@ -140,7 +140,7 @@
   </section>
 
   <!-- 5. So geht's: Wortband, darunter sechs Schritte links und rechts um die Säule, bauen sich nacheinander auf -->
-  <section class="ablauf" id="ablauf" aria-labelledby="h-ablauf" data-fortschritt>
+  <section class="ablauf" id="ablauf" aria-labelledby="h-ablauf" data-fortschritt data-abschnitt="ablauf">
     <div class="ablauf__buehne">
       <div class="wortband">
         <div class="band" data-band aria-hidden="true">
@@ -169,7 +169,7 @@
   </section>
 
   <!-- 6. Vollbild: Foto mit Säulenreihe und Angebotskachel -->
-  <section class="vollbild" aria-labelledby="h-voll">
+  <section class="vollbild" aria-labelledby="h-voll" data-abschnitt="vollbild">
     <img class="vollbild__bild" src="bilder/ladesaeulen-reihe-parkplatz.webp" width="1536" height="1024" alt="Reihe von Ladesäulen auf einem Parkplatz" loading="lazy" decoding="async">
     <div class="vollbild__inhalt wrap">
       <h2 id="h-voll" class="vollbild__titel">Elektromobilität einfach erleben</h2>
@@ -182,7 +182,7 @@
   </section>
 
   <!-- 7. Anschlüsse: Foto und Form links, Text rechts -->
-  <section class="anschluss" aria-labelledby="h-anschluss">
+  <section class="anschluss" aria-labelledby="h-anschluss" data-abschnitt="anschluss">
     <figure class="anschluss__links">
       <img src="bilder/ladeanschluss-am-auto.webp" width="1024" height="1280" alt="Ladestecker steckt im Ladeanschluss eines weißen Elektroautos" loading="lazy" decoding="async">
     </figure>
@@ -195,7 +195,7 @@
   </section>
 
   <!-- 8. Fragen -->
-  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen">
+  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen" data-abschnitt="fragen">
     <div class="wrap fragen__raster">
       <div class="fragen__kopf">
         <h2 id="h-fragen">Fragen vor dem Auftrag</h2>
@@ -212,7 +212,7 @@
   </section>
 
   <!-- 9. Anfrage -->
-  <section class="kontakt" id="kontakt" aria-labelledby="h-kontakt">
+  <section class="kontakt" id="kontakt" aria-labelledby="h-kontakt" data-abschnitt="kontakt">
     <div class="wrap kontakt__raster">
       <div class="kontakt__text">
         <h2 id="h-kontakt">Angebot anfragen</h2>
@@ -238,7 +238,7 @@
   </section>
 </main>
 
-<footer class="fuss" id="fuss">
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
   <div class="wrap fuss__raster">
     <p class="fuss__marke">Markenname</p>
     <ul class="fuss__links">

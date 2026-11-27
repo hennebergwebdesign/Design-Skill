@@ -47,7 +47,7 @@
   <symbol id="i-zeichen" viewBox="0 0 32 32"><rect x="11" y="4" width="10" height="24" rx="5" fill="currentColor" fill-opacity=".35"/><path d="M11 16h10v7a5 5 0 0 1-10 0z" fill="currentColor"/></symbol>
 </svg>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__leiste">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
       <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg>
@@ -74,7 +74,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: Text links, Kittelträger rechts im Petrolrahmen, Messwert Skala läuft ein -->
-  <section class="held" id="top" aria-labelledby="h-held">
+  <section class="held" id="top" aria-labelledby="h-held" data-abschnitt="held">
     <div class="wrap held__raster">
       <div class="held__text">
         <p class="kicker" data-zeig>Labor für Praxen und Privatpatienten</p>
@@ -105,7 +105,7 @@
   </section>
 
   <!-- 2. Leistungen: fünf Karten, die letzte hervorgehoben -->
-  <section class="sektion leistungen" id="leistungen" aria-labelledby="h-leistungen">
+  <section class="sektion leistungen" id="leistungen" aria-labelledby="h-leistungen" data-abschnitt="leistungen">
     <div class="wrap">
       <div class="mitte">
         <h2 id="h-leistungen" data-zeig>Was wir für Sie untersuchen</h2>
@@ -147,7 +147,7 @@
   </section>
 
   <!-- 3. Zweispalte: Fortschrittsbalken und Team -->
-  <section class="sektion ueber" id="ueber" aria-labelledby="h-ueber">
+  <section class="sektion ueber" id="ueber" aria-labelledby="h-ueber" data-abschnitt="ueber">
     <div class="wrap ueber__raster">
       <div class="ueber__text">
         <h2 id="h-ueber" data-zeig>Ein Labor, das Ihre Praxis entlastet</h2>
@@ -178,7 +178,7 @@
   </section>
 
   <!-- 4. Pakete mit Umschalter -->
-  <section class="sektion pakete" id="pakete" aria-labelledby="h-pakete">
+  <section class="sektion pakete" id="pakete" aria-labelledby="h-pakete" data-abschnitt="pakete">
     <div class="wrap">
       <div class="mitte">
         <p class="kicker" data-zeig>Pakete</p>
@@ -314,7 +314,7 @@
   </section>
 
   <!-- 5. Kennzahlenband -->
-  <section class="zahlen" aria-labelledby="h-zahlen">
+  <section class="zahlen" aria-labelledby="h-zahlen" data-abschnitt="zahlen">
     <div class="wrap">
       <h2 class="sr-nur" id="h-zahlen">Das Labor in Zahlen, Beispielwerte</h2>
       <ul class="zahlen__reihe" data-staffel data-beispiel role="list">
@@ -328,7 +328,7 @@
   </section>
 
   <!-- 6. Fälle als Wischspur -->
-  <section class="sektion faelle" id="ergebnisse" aria-labelledby="h-faelle">
+  <section class="sektion faelle" id="ergebnisse" aria-labelledby="h-faelle" data-abschnitt="faelle">
     <div class="wrap">
       <div class="faelle__kopf" data-reiter-gruppe>
         <div class="faelle__titel">
@@ -375,7 +375,7 @@
   </section>
 
   <!-- 7. Termin: Formular auf Petrolfläche -->
-  <section class="kontakt" id="kontakt" aria-labelledby="h-kontakt">
+  <section class="kontakt" id="kontakt" aria-labelledby="h-kontakt" data-abschnitt="kontakt">
     <div class="wrap kontakt__raster">
       <div class="kontakt__text">
         <p class="kicker kicker--hell" data-zeig>Termin</p>
@@ -406,7 +406,7 @@
   </section>
 
   <!-- 8. Fragen in zwei Spalten -->
-  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen">
+  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen" data-abschnitt="fragen">
     <div class="wrap">
       <div class="mitte">
         <h2 id="h-fragen" data-zeig>Häufige Fragen vor dem Termin</h2>
@@ -429,7 +429,7 @@
   </section>
 
   <!-- 9. Ratgeber -->
-  <section class="sektion ratgeber" id="ratgeber" aria-labelledby="h-ratgeber">
+  <section class="sektion ratgeber" id="ratgeber" aria-labelledby="h-ratgeber" data-abschnitt="ratgeber">
     <div class="wrap">
       <div class="mitte">
         <h2 id="h-ratgeber" data-zeig>Wissen rund um die Probe</h2>
@@ -464,7 +464,7 @@
   </section>
 
   <!-- 10. Partnerleiste (neutrale Beispielzeichen) -->
-  <section class="partner" aria-labelledby="h-partner">
+  <section class="partner" aria-labelledby="h-partner" data-abschnitt="partner">
     <div class="wrap">
       <h2 class="partner__titel" id="h-partner" data-zeig>Netzwerke und Qualitätszeichen</h2>
       <ul class="partner__reihe" data-staffel data-beispiel role="list" aria-label="Beispielzeichen für Netzwerke und Qualitätszeichen">
@@ -479,7 +479,7 @@
   </section>
 
   <!-- 11. Newsletter -->
-  <section class="rundbrief" aria-labelledby="h-rundbrief">
+  <section class="rundbrief" aria-labelledby="h-rundbrief" data-abschnitt="rundbrief">
     <div class="wrap rundbrief__raster">
       <div>
         <h2 id="h-rundbrief" data-zeig>Neues aus dem Labor</h2>
@@ -494,7 +494,7 @@
   </section>
 </main>
 
-<footer class="fuss" id="fuss">
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
   <div class="wrap fuss__raster">
     <div class="fuss__karte">
       <a class="kopf__logo fuss__logo" href="#top" aria-label="Markenname, nach oben"><svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg><span>Markenname</span></a>

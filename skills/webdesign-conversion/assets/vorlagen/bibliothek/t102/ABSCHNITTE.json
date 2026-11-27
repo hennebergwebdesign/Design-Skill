@@ -1,0 +1,110 @@
+[
+  {
+    "id": "kopf",
+    "name": "kopf",
+    "kategorie": "navigation",
+    "selektor": "header[data-abschnitt=\"kopf\"]",
+    "prinzip": "Die Kopfzeile hält Orientierung und die Hauptaktion in jedem Bildschirm erreichbar.",
+    "prinzip_quelle": "kategorie-standard",
+    "kategorie_quelle": "wortliste",
+    "css": ".kopf",
+    "js": null,
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln der Klasse aus stil.css mitnehmen, Symbole aus dem SVG Block am Seitenanfang nur, wenn der Abschnitt sie nutzt. Vor dem Übernehmen INFO.md der Vorlage lesen."
+  },
+  {
+    "id": "held",
+    "name": "Pflege zu Hause, die zu Ihrem Alltag passt",
+    "kategorie": "hero",
+    "selektor": "section[data-abschnitt=\"held\"]",
+    "prinzip": "Der erste Bildschirm trägt eine Aussage und eine Hauptaktion, bevor etwas anderes gelesen wird.",
+    "prinzip_quelle": "kategorie-standard",
+    "kategorie_quelle": "wortliste",
+    "css": ".held",
+    "js": null,
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln der Klasse aus stil.css mitnehmen, Symbole aus dem SVG Block am Seitenanfang nur, wenn der Abschnitt sie nutzt. Vor dem Übernehmen INFO.md der Vorlage lesen."
+  },
+  {
+    "id": "willkommen",
+    "name": "Gut versorgt, mitten im eigenen Zuhause",
+    "kategorie": "about",
+    "selektor": "section[data-abschnitt=\"willkommen\"]",
+    "prinzip": "Haltung und Herkunft geben dem Anbieter ein Gesicht, bevor Leistungen verglichen werden.",
+    "prinzip_quelle": "kategorie-standard",
+    "kategorie_quelle": "wortliste",
+    "css": ".willkommen",
+    "js": null,
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln der Klasse aus stil.css mitnehmen, Symbole aus dem SVG Block am Seitenanfang nur, wenn der Abschnitt sie nutzt. Vor dem Übernehmen INFO.md der Vorlage lesen."
+  },
+  {
+    "id": "leist",
+    "name": "Unsere Leistungen für Sie",
+    "kategorie": "services",
+    "selektor": "section[data-abschnitt=\"leist\"]",
+    "prinzip": "Leistungen stehen als vergleichbare Einheiten nebeneinander, jede mit eigenem Weg.",
+    "prinzip_quelle": "kategorie-standard",
+    "kategorie_quelle": "wortliste",
+    "css": ".leist",
+    "js": null,
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln der Klasse aus stil.css mitnehmen, Symbole aus dem SVG Block am Seitenanfang nur, wenn der Abschnitt sie nutzt. Vor dem Übernehmen INFO.md der Vorlage lesen."
+  },
+  {
+    "id": "leitbild",
+    "name": "Würde, Ruhe und Selbstbestimmung",
+    "kategorie": "features",
+    "selektor": "section[data-abschnitt=\"leitbild\"]",
+    "prinzip": "Merkmale werden als überschaubare Einheiten gezeigt, jede mit einem Nutzen statt nur einer Eigenschaft.",
+    "prinzip_quelle": "kategorie-standard",
+    "kategorie_quelle": "wortliste",
+    "css": ".leitbild",
+    "js": null,
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln der Klasse aus stil.css mitnehmen, Symbole aus dem SVG Block am Seitenanfang nur, wenn der Abschnitt sie nutzt. Vor dem Übernehmen INFO.md der Vorlage lesen."
+  },
+  {
+    "id": "fragen",
+    "name": "Fragen, die Angehörige oft stellen",
+    "kategorie": "faq",
+    "selektor": "section[data-abschnitt=\"fragen\"]",
+    "prinzip": "Einwände werden vor der Handlung beantwortet, in der Reihenfolge ihres Gewichts.",
+    "prinzip_quelle": "kategorie-standard",
+    "kategorie_quelle": "wortliste",
+    "css": ".fragen",
+    "js": null,
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln der Klasse aus stil.css mitnehmen, Symbole aus dem SVG Block am Seitenanfang nur, wenn der Abschnitt sie nutzt. Vor dem Übernehmen INFO.md der Vorlage lesen."
+  },
+  {
+    "id": "direkt",
+    "name": "Direkt anfragen",
+    "kategorie": "faq",
+    "selektor": "section[data-abschnitt=\"direkt\"]",
+    "prinzip": "Einwände werden vor der Handlung beantwortet, in der Reihenfolge ihres Gewichts.",
+    "prinzip_quelle": "kategorie-standard",
+    "kategorie_quelle": "wortliste",
+    "css": ".direkt",
+    "js": null,
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln der Klasse aus stil.css mitnehmen, Symbole aus dem SVG Block am Seitenanfang nur, wenn der Abschnitt sie nutzt. Vor dem Übernehmen INFO.md der Vorlage lesen."
+  },
+  {
+    "id": "kontakt",
+    "name": "Schreiben Sie uns",
+    "kategorie": "forms",
+    "selektor": "section[data-abschnitt=\"kontakt\"]",
+    "prinzip": "Der Weg zur Anfrage ist kurz, erklärt jedes Feld und nennt, was danach geschieht.",
+    "prinzip_quelle": "kategorie-standard",
+    "kategorie_quelle": "wortliste",
+    "css": ".kontakt",
+    "js": null,
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln der Klasse aus stil.css mitnehmen, Symbole aus dem SVG Block am Seitenanfang nur, wenn der Abschnitt sie nutzt. Vor dem Übernehmen INFO.md der Vorlage lesen."
+  },
+  {
+    "id": "fuss",
+    "name": "Kontaktdaten",
+    "kategorie": "footer",
+    "selektor": "footer[data-abschnitt=\"fuss\"]",
+    "prinzip": "Der Fuß liefert Kontakt, Pflichtseiten und die zweite Chance zur Handlung.",
+    "prinzip_quelle": "kategorie-standard",
+    "kategorie_quelle": "wortliste",
+    "css": ".fuss",
+    "js": null,
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln der Klasse aus stil.css mitnehmen, Symbole aus dem SVG Block am Seitenanfang nur, wenn der Abschnitt sie nutzt. Vor dem Übernehmen INFO.md der Vorlage lesen."
+  }
+]

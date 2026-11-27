@@ -45,7 +45,7 @@
   <symbol id="i-stern" viewBox="0 0 24 24"><path d="M12 2c.8 5.500 4.500 9.200 10 10-5.500.8-9.200 4.500-10 10-.8-5.500-4.500-9.200-10-10 5.500-.8 9.200-4.500 10-10z" fill="none" stroke="currentColor" stroke-width="1"/></symbol>
 </svg>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__leiste">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
       <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect x="4" y="4" width="10" height="24" fill="#ff6a4a"/><rect x="17" y="4" width="11" height="11" fill="#fff7ec"/></svg>
@@ -71,7 +71,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: Koralle links mit riesiger Zeile, Porträt rechts bis an den Rand, darunter vier Linkfelder -->
-  <section class="held" id="top" aria-labelledby="h-held">
+  <section class="held" id="top" aria-labelledby="h-held" data-abschnitt="held">
     <div class="held__raster">
       <div class="held__text">
         <!-- Heldformel: Zielgruppe Angestellte, deren Geld vor dem nächsten Gehalt knapp wird, Problem die Lücke bis zum Zahltag und Angst vor versteckten Kosten, Lösung kleiner Betrag in Raten, alle Kosten vorab in Euro, Eignung vorab prüfbar -->
@@ -98,7 +98,7 @@
   </section>
 
   <!-- 2. Produktbühne: drei Panels schieben sich übereinander (Sticky), links Petrol mit Text, rechts Farbfläche mit Handyoberfläche in HTML und CSS -->
-  <section class="buehne" id="angebote" aria-labelledby="h-buehne">
+  <section class="buehne" id="angebote" aria-labelledby="h-buehne" data-abschnitt="buehne">
     <div class="buehne__kopf wrap">
       <h2 id="h-buehne" data-zeig>Drei Wege durch einen engen Monat</h2>
       <p data-zeig>Alle Beträge und Bedingungen auf dieser Seite sind Beispiele. Maßgeblich sind die Angaben im Antrag.</p>
@@ -208,7 +208,7 @@
   </section>
 
   <!-- 3. Ergebnisse: Ziffernwalze, jede Ziffer in einer Zelle, Endwert steht im HTML -->
-  <section class="ergebnisse" id="ergebnisse" aria-labelledby="h-erg">
+  <section class="ergebnisse" id="ergebnisse" aria-labelledby="h-erg" data-abschnitt="ergebnisse">
     <div class="wrap">
       <p class="kicker">Beispielwert, kein Beleg</p>
       <h2 id="h-erg" data-zeig>Unsere Mitglieder haben bisher gespart</h2>
@@ -238,7 +238,7 @@
   </section>
 
   <!-- 4. Stimmen: Gitter mit Haarlinien, große Zitatzelle, Geschichten Karte, Bewertungsleiste mit neutralen Beispielwerten -->
-  <section class="stimmen" id="stimmen" aria-labelledby="h-stimmen">
+  <section class="stimmen" id="stimmen" aria-labelledby="h-stimmen" data-abschnitt="stimmen">
     <div class="wrap">
       <h2 id="h-stimmen" class="sr-nur">Stimmen von Mitgliedern (Beispiele)</h2>
       <div class="stimmen__gitter" data-staffel>
@@ -271,7 +271,7 @@
   </section>
 
   <!-- 5. Haltung: drei Karten mit Reitern, die sich beim Scrollen übereinanderlegen (Kopfstreifen bleiben stehen) -->
-  <section class="haltung" id="haltung" aria-labelledby="h-haltung">
+  <section class="haltung" id="haltung" aria-labelledby="h-haltung" data-abschnitt="haltung">
     <div class="wrap">
       <h2 id="h-haltung" class="sr-nur">Unsere Haltung in drei Fragen</h2>
       <article class="rkarte" aria-labelledby="h-r1">
@@ -311,7 +311,7 @@
   </section>
 
   <!-- 6. Prüfung: dunkles Band mit Zeichen -->
-  <section class="pruefung" aria-labelledby="h-pruef">
+  <section class="pruefung" aria-labelledby="h-pruef" data-abschnitt="pruefung">
     <div class="wrap pruefung__innen">
       <div class="pruefung__zeichen" aria-hidden="true"><svg viewBox="0 0 24 24" width="64" height="64"><use href="#i-stern"/></svg><svg viewBox="0 0 24 24" width="40" height="40"><use href="#i-stern"/></svg></div>
       <div>
@@ -323,7 +323,7 @@
   </section>
 
   <!-- 7. Fragen: Einwand FAQ, links Zeichen, rechts Akkordeon mit Plus -->
-  <section class="fragen" id="fragen" aria-labelledby="h-fragen">
+  <section class="fragen" id="fragen" aria-labelledby="h-fragen" data-abschnitt="fragen">
     <div class="wrap fragen__raster">
       <div class="fragen__kopf">
         <h2 id="h-fragen" data-zeig>Häufige Fragen</h2>
@@ -341,7 +341,7 @@
   </section>
 
   <!-- 8. Rahmen prüfen: Formular mit vier Feldern -->
-  <section class="kontakt" id="rahmen" aria-labelledby="h-kontakt">
+  <section class="kontakt" id="rahmen" aria-labelledby="h-kontakt" data-abschnitt="kontakt">
     <div class="wrap kontakt__raster">
       <div class="kontakt__text">
         <h2 id="h-kontakt" data-zeig>Prüfe in zwei Minuten, was möglich ist</h2>
@@ -361,7 +361,7 @@
   </section>
 </main>
 
-<footer class="fuss" id="fuss">
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
   <div class="wrap">
     <div class="fuss__oben">
       <div>

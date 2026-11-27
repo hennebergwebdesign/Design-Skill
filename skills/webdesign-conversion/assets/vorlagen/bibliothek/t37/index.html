@@ -42,7 +42,7 @@
   </div>
 </div>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="wrap kopf__leiste">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
       <span class="kopf__zeichen"><svg width="22" height="22" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-logo"/></svg></span>
@@ -67,7 +67,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: Vollbild mit dunklem Schleier, große Serifenüberschrift, zwei Knöpfe, Bewertung -->
-  <section class="held" id="top" aria-labelledby="h-held">
+  <section class="held" id="top" aria-labelledby="h-held" data-abschnitt="held">
     <div class="bild held__bild" data-parallax="0.08"><img src="bilder/nagelstudio-behandlung.webp" width="1600" height="1067" alt="Maniküre im Nagelstudio, Hände bei der Behandlung" loading="lazy" decoding="async"></div>
     <div class="held__schleier" aria-hidden="true"></div>
     <div class="wrap held__innen">
@@ -87,7 +87,7 @@
   </section>
 
   <!-- 2. Merkmalsband -->
-  <section class="merkmale" aria-label="Merkmale der Ausbildung">
+  <section class="merkmale" aria-label="Merkmale der Ausbildung" data-abschnitt="merkmale">
     <ul class="wrap merkmale__liste" data-staffel data-beispiel>
       <li data-zeig><span class="merkmale__kreis" aria-hidden="true"><svg width="26" height="26" focusable="false"><use href="#i-seal-check"/></svg></span><span>Staatlich<br>anerkannt</span></li>
       <li data-zeig><span class="merkmale__kreis" aria-hidden="true"><svg width="26" height="26" focusable="false"><use href="#i-medal"/></svg></span><span>95 Prozent<br>Abschluss</span></li>
@@ -97,7 +97,7 @@
   </section>
 
   <!-- 3. Über uns -->
-  <section class="sektion ueber" id="ueber" aria-labelledby="h-ueber">
+  <section class="sektion ueber" id="ueber" aria-labelledby="h-ueber" data-abschnitt="ueber">
     <div class="wrap ueber__raster">
       <div class="ueber__text">
         <h2 id="h-ueber" data-zeig>Ein Ort, an dem aus Leidenschaft ein Beruf wird</h2>
@@ -112,7 +112,7 @@
   </section>
 
   <!-- 4. Kurse -->
-  <section class="sektion kurse" id="kurse" aria-labelledby="h-kurse">
+  <section class="sektion kurse" id="kurse" aria-labelledby="h-kurse" data-abschnitt="kurse">
     <div class="wrap">
       <header class="kopfblock">
         <h2 id="h-kurse" data-zeig>Unsere beliebtesten Kurse</h2>
@@ -158,7 +158,7 @@
   </section>
 
   <!-- 5. Warum wir -->
-  <section class="sektion warum" id="warum" aria-labelledby="h-warum">
+  <section class="sektion warum" id="warum" aria-labelledby="h-warum" data-abschnitt="warum">
     <div class="wrap">
       <header class="warum__kopf">
         <div>
@@ -185,7 +185,7 @@
   </section>
 
   <!-- 6. Ergebnisse: Vorher und Nachher -->
-  <section class="sektion ergebnisse" id="ergebnisse" aria-labelledby="h-ergebnisse">
+  <section class="sektion ergebnisse" id="ergebnisse" aria-labelledby="h-ergebnisse" data-abschnitt="ergebnisse">
     <div class="wrap">
       <header class="kopfblock">
         <h2 id="h-ergebnisse" data-zeig>Entstanden bei unseren Teilnehmenden</h2>
@@ -212,7 +212,7 @@
   </section>
 
   <!-- 7. Ablauf mit Zeitleiste -->
-  <section class="sektion ablauf" id="ablauf" aria-labelledby="h-ablauf">
+  <section class="sektion ablauf" id="ablauf" aria-labelledby="h-ablauf" data-abschnitt="ablauf">
     <div class="wrap">
       <header class="kopfblock">
         <h2 id="h-ablauf" data-zeig>So beginnt dein Weg</h2>
@@ -236,7 +236,7 @@
   </section>
 
   <!-- 8. Stimmen -->
-  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen">
+  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen" data-abschnitt="stimmen">
     <div class="wrap">
       <header class="kopfblock">
         <h2 id="h-stimmen" data-zeig>Erfolgsgeschichten unserer Teilnehmenden</h2>
@@ -281,7 +281,7 @@
   </section>
 
   <!-- 9. Fragen -->
-  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen">
+  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen" data-abschnitt="fragen">
     <div class="wrap fragen__raster">
       <div class="fragen__kopf">
         <h2 id="h-fragen" data-zeig>Alles, was du wissen musst</h2>
@@ -313,7 +313,7 @@
   </section>
 
   <!-- 10. Aufruf -->
-  <section class="aufruf" id="anmeldung" aria-labelledby="h-aufruf">
+  <section class="aufruf" id="anmeldung" aria-labelledby="h-aufruf" data-abschnitt="aufruf">
     <div class="bild aufruf__bild"><img src="bilder/pinsel-in-hand.webp" width="1600" height="1067" alt="Hand mit Make-up Pinsel" loading="lazy" decoding="async"></div>
     <div class="aufruf__schleier" aria-hidden="true"></div>
     <div class="wrap aufruf__innen">
@@ -324,7 +324,7 @@
   </section>
 </main>
 
-<footer class="fuss" id="fuss">
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
   <div class="wrap fuss__raster">
     <div class="fuss__marke">
       <a class="kopf__logo kopf__logo--dunkelrand" href="#top" aria-label="Markenname, nach oben"><span class="kopf__zeichen"><svg width="22" height="22" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-logo"/></svg></span><span>Markenname</span></a>

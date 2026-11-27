@@ -31,7 +31,7 @@
   <symbol id="i-ort" viewBox="0 0 256 256" fill="currentColor"><path d="M128,66a38,38,0,1,0,38,38A38,38,0,0,0,128,66Zm0,64a26,26,0,1,1,26-26A26,26,0,0,1,128,130Zm0-112a86.1,86.1,0,0,0-86,86c0,30.91,14.34,63.74,41.47,94.94a252.32,252.32,0,0,0,41.09,38,6,6,0,0,0,6.88,0,252.32,252.32,0,0,0,41.09-38c27.13-31.2,41.47-64,41.47-94.94A86.1,86.1,0,0,0,128,18Z"/></symbol>
 </svg>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__leiste">
     <button class="kopf__burger" type="button" data-menue aria-expanded="false" aria-controls="hauptnav">
       <span class="sr-nur">Menü öffnen oder schließen</span>
@@ -57,7 +57,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: weiße Fläche mit großem Radius an der Unterkante, Person im Bogen, Zeichen links, Erfahrung rechts -->
-  <section class="held" id="top" aria-labelledby="h-held" data-hell>
+  <section class="held" id="top" aria-labelledby="h-held" data-hell data-abschnitt="held">
     <!-- Heldformel: Zielgruppe: Unternehmen mit austauschbarem Auftritt. Problem: Marke fällt nicht auf, die Website bringt keine Anfragen. Lösung: Branding und Webdesign aus einer Hand. -->
     <h1 id="h-held" data-zeig>Marken, die auffallen. Websites, die Anfragen bringen.</h1>
     <div class="held__buehne">
@@ -83,7 +83,7 @@
   </section>
 
   <!-- 2. Kennzahlenleiste in dunkler Kapsel -->
-  <section class="zahlen wrap" aria-label="Agentur in Zahlen (Beispielwerte)">
+  <section class="zahlen wrap" aria-label="Agentur in Zahlen (Beispielwerte)" data-abschnitt="zahlen">
     <ul class="zahlen__leiste" data-beispiel data-zeig>
       <li><strong><span data-zaehle="120">120</span>+</strong><span>Projekte</span></li>
       <li><strong><span data-zaehle="10">10</span>+</strong><span>Jahre am Markt</span></li>
@@ -93,7 +93,7 @@
   </section>
 
   <!-- 3. Meisterwerke: zwei Schwarzweißfotos, limettefarbenes Etikett, Farbe beim Überfahren und Scrollen -->
-  <section class="meister wrap" id="ueber" aria-labelledby="h-ueber">
+  <section class="meister wrap" id="ueber" aria-labelledby="h-ueber" data-abschnitt="meister">
     <div class="meister__kopf">
       <h2 id="h-ueber" data-zeig>Aus Ideen werden Marken, die man wiedererkennt</h2>
       <p data-zeig>Wir sind eine kleine Agentur mit kurzen Wegen. Wer plant und gestaltet, sitzt bei uns mit den Entwicklern am selben Tisch, deshalb bleibt aus der ersten Idee am Ende auch das stehen, was Sie gesehen haben.</p>
@@ -113,7 +113,7 @@
   </section>
 
   <!-- 4. Leistungen: dunkle Karte, Liste mit aktiver Zeile und Bildwechsel, Text kreist auf einer Ellipse, zwei Kacheln -->
-  <section class="leist wrap" id="leistungen" aria-labelledby="h-leist">
+  <section class="leist wrap" id="leistungen" aria-labelledby="h-leist" data-abschnitt="leist">
     <div class="leist__karte">
       <p class="leist__tab" aria-hidden="true">Was wir tun</p>
       <div class="leist__links">
@@ -168,7 +168,7 @@
   </section>
 
   <!-- 5. Wortband groß, mit Linie und Vierstern -->
-  <section class="wortband wrap" aria-label="Unser Anspruch">
+  <section class="wortband wrap" aria-label="Unser Anspruch" data-abschnitt="wortband">
     <div class="band band--gross" data-band>
       <ul class="band__spur">
         <li>Innovieren</li><li class="band__vier" aria-hidden="true"><svg width="40" height="40" focusable="false"><use href="#i-vier"/></svg></li>
@@ -186,7 +186,7 @@
   </section>
 
   <!-- 6. Team: dunkle Karte, sechs weiße Teamkarten gestaffelt -->
-  <section class="team wrap" id="team" aria-labelledby="h-team">
+  <section class="team wrap" id="team" aria-labelledby="h-team" data-abschnitt="team">
     <div class="team__karte">
       <div class="team__kopf">
         <h2 id="h-team" data-zeig>Team</h2>
@@ -205,7 +205,7 @@
   </section>
 
   <!-- 7. Stimmen: Wischspur -->
-  <section class="stimmen" id="stimmen" aria-labelledby="h-stimmen" data-reiter-gruppe>
+  <section class="stimmen" id="stimmen" aria-labelledby="h-stimmen" data-reiter-gruppe data-abschnitt="stimmen">
     <div class="wrap stimmen__kopf">
       <h2 id="h-stimmen" data-zeig>Was Kundinnen und Kunden sagen</h2>
       <div class="stimmen__pfeile" data-reiter-steuerung hidden>
@@ -222,7 +222,7 @@
   </section>
 
   <!-- 8. Wortband schräg über der Seite -->
-  <section class="schraeg" aria-label="Unsere Schwerpunkte">
+  <section class="schraeg" aria-label="Unsere Schwerpunkte" data-abschnitt="schraeg">
     <div class="schraeg__rahmen">
       <div class="band band--schraeg" data-band>
         <ul class="band__spur">
@@ -237,7 +237,7 @@
   </section>
 
   <!-- 9. Fragen -->
-  <section class="fragen wrap" aria-labelledby="h-fragen">
+  <section class="fragen wrap" aria-labelledby="h-fragen" data-abschnitt="fragen">
     <h2 id="h-fragen" data-zeig>Häufige Fragen vor dem ersten Gespräch</h2>
     <div class="fragen__liste" data-exklusiv data-beispiel data-zeig>
       <details><summary>Was kostet ein Projekt bei Ihnen?<svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-vier"/></svg></summary><p>Das hängt vom Umfang ab. Nach dem Erstgespräch erhalten Sie ein Festpreisangebot, in dem Leistungen und Korrekturrunden einzeln stehen. (Beispielantwort)</p></details>
@@ -249,7 +249,7 @@
   </section>
 
   <!-- 10. Kontakt -->
-  <section class="kontakt wrap" id="kontakt" aria-labelledby="h-kontakt">
+  <section class="kontakt wrap" id="kontakt" aria-labelledby="h-kontakt" data-abschnitt="kontakt">
     <div class="kontakt__karte">
       <div class="kontakt__text">
         <h2 id="h-kontakt" data-zeig>Erzählen Sie uns von Ihrem Projekt</h2>
@@ -280,7 +280,7 @@
   </section>
 </main>
 
-<footer class="fuss" id="fuss">
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
   <div class="wrap">
     <div class="fuss__karte">
       <div class="fuss__kopf">

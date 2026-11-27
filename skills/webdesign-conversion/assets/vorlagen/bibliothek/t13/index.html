@@ -37,7 +37,7 @@
   </defs>
 </svg>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__leiste wrap">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
       <svg class="kopf__marke" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8"/><path d="M9 23V9l7 9 7-9v14"/></svg>
@@ -63,7 +63,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: dunkel, mittig, Lichtwelle. Beim Scrollen verblasst der Inhalt, die helle Fläche schiebt sich darüber -->
-  <section class="held" id="top" aria-labelledby="h-held" data-abdunkeln>
+  <section class="held" id="top" aria-labelledby="h-held" data-abdunkeln data-abschnitt="held">
     <div class="held__licht" aria-hidden="true">
       <svg class="held__welle" viewBox="0 0 1440 320" preserveAspectRatio="none" focusable="false">
         <g class="welle welle--a">
@@ -97,7 +97,7 @@
 
   <div class="folge">
     <!-- 2. Vertrauen: Logoleiste als Laufband, Platzhalter -->
-    <section class="logos sektion" aria-labelledby="h-logos">
+    <section class="logos sektion" aria-labelledby="h-logos" data-abschnitt="logos">
       <div class="wrap">
         <h2 class="logos__titel" id="h-logos">Hier stehen freigegebene Kundenlogos</h2>
         <div class="band logos__band" aria-hidden="true">
@@ -112,7 +112,7 @@
     </section>
 
     <!-- 3. Idee: Abo statt Einzelauftrag -->
-    <section class="sektion idee" id="idee" aria-labelledby="h-idee">
+    <section class="sektion idee" id="idee" aria-labelledby="h-idee" data-abschnitt="idee">
       <div class="wrap idee__raster">
         <div class="idee__text" data-staffel>
           <h2 id="h-idee" data-zeig>Ein Abo statt Einzelaufträge: planbar im Aufwand, sichtbar im Ergebnis</h2>
@@ -131,7 +131,7 @@
     </section>
 
     <!-- 4. Leistungen: Bild bleibt stehen, Akkordeon rechts, Diagrammkarte wächst beim Scrollen -->
-    <section class="sektion leistungen" id="leistungen" aria-labelledby="h-leistungen">
+    <section class="sektion leistungen" id="leistungen" aria-labelledby="h-leistungen" data-abschnitt="leistungen">
       <div class="wrap">
         <div class="kopfblock" data-staffel>
           <h2 id="h-leistungen" data-zeig>Unsere Leistungen</h2>
@@ -168,7 +168,7 @@
     </section>
 
     <!-- 5. Referenzen: Reiter mit Pfeilen und Punkten -->
-    <section class="sektion referenzen" id="referenzen" aria-labelledby="h-referenzen">
+    <section class="sektion referenzen" id="referenzen" aria-labelledby="h-referenzen" data-abschnitt="referenzen">
       <div class="wrap">
         <div class="kopfblock" data-staffel>
           <h2 id="h-referenzen" data-zeig>So sieht Erfolg im Abo aus</h2>
@@ -238,7 +238,7 @@
     </section>
 
     <!-- 6. Warum das Abo: dunkle Tafel mit laufenden Reihen, vier Karten -->
-    <section class="sektion warum" id="abo" aria-labelledby="h-warum">
+    <section class="sektion warum" id="abo" aria-labelledby="h-warum" data-abschnitt="warum">
       <div class="wrap">
         <div class="kopfblock" data-staffel>
           <h2 id="h-warum" data-zeig>Warum ein Abo für Betriebe wie Ihren funktioniert</h2>
@@ -277,7 +277,7 @@
     </section>
 
     <!-- 7. Preise: Schalter monatlich oder jährlich, drei Pakete -->
-    <section class="sektion preise" id="preise" aria-labelledby="h-preise">
+    <section class="sektion preise" id="preise" aria-labelledby="h-preise" data-abschnitt="preise">
       <div class="wrap">
         <div class="kopfblock" data-staffel>
           <h2 id="h-preise" data-zeig>Preise ohne Überraschung</h2>
@@ -335,7 +335,7 @@
     </section>
 
     <!-- 8. Ablauf: dunkel, drei Schritte leuchten beim Scrollen nacheinander auf -->
-    <section class="ablauf" id="ablauf" aria-labelledby="h-ablauf" data-fortschritt>
+    <section class="ablauf" id="ablauf" aria-labelledby="h-ablauf" data-fortschritt data-abschnitt="ablauf">
       <div class="ablauf__bahn">
         <div class="wrap ablauf__innen">
           <div class="kopfblock kopfblock--hell" data-staffel>
@@ -365,7 +365,7 @@
     </section>
 
     <!-- 9. Stimmen: große Zitate im Reiter -->
-    <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen">
+    <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen" data-abschnitt="stimmen">
       <div class="wrap">
         <div class="kopfblock" data-staffel>
           <h2 id="h-stimmen" data-zeig>Das sagen Kunden über die Zusammenarbeit</h2>
@@ -405,7 +405,7 @@
     </section>
 
     <!-- 10. Kontakt: Daten links, Formular rechts, ohne Versand -->
-    <section class="sektion kontakt" id="kontakt" aria-labelledby="h-kontakt">
+    <section class="sektion kontakt" id="kontakt" aria-labelledby="h-kontakt" data-abschnitt="kontakt">
       <div class="wrap">
         <div class="kopfblock" data-staffel>
           <h2 id="h-kontakt" data-zeig>Sprechen wir über Ihr Vorhaben</h2>
@@ -445,7 +445,7 @@
     </section>
 
     <!-- 11. FAQ -->
-    <section class="sektion faq" id="faq" aria-labelledby="h-faq">
+    <section class="sektion faq" id="faq" aria-labelledby="h-faq" data-abschnitt="faq">
       <div class="wrap faq__raster">
         <div class="faq__kopf" data-staffel>
           <h2 id="h-faq" data-zeig>Antworten auf die häufigsten Fragen</h2>
@@ -479,7 +479,7 @@
   </div>
 </main>
 
-<footer class="fuss" id="fuss">
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
   <div class="wrap fuss__oben">
     <form class="fuss__news" action="#fuss" method="post" data-beispielformular>
       <h2 class="fuss__titel" id="h-news">Neuigkeiten per E-Mail</h2>

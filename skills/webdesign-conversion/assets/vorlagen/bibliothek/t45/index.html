@@ -51,7 +51,7 @@
 </svg>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="i-zeichen" viewBox="0 0 32 32"><rect width="32" height="32" rx="9" fill="currentColor"/><path d="M8 11h9a4 4 0 0 1 0 8H12" fill="none" stroke="#04140f" stroke-width="3" stroke-linecap="round"/><circle cx="23" cy="21" r="3" fill="#04140f"/></symbol></svg>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="wrap kopf__leiste">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
       <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg>
@@ -77,7 +77,7 @@
 <main id="inhalt">
 
   <!-- 1. Held: dunkel, mittig, drei Karten ragen in den hellen Teil -->
-  <section class="held" aria-labelledby="h-held">
+  <section class="held" aria-labelledby="h-held" data-abschnitt="held">
     <div class="held__licht" aria-hidden="true"></div>
     <div class="wrap held__innen">
       <p class="kicker" data-zeig>Routine abgeben, Zeit zurückholen</p>
@@ -118,7 +118,7 @@
   </section>
 
   <!-- 2. Anspruch: ein Satz, darunter das Laufband mit Beispiellogos -->
-  <section class="sektion anspruch" aria-labelledby="h-anspruch">
+  <section class="sektion anspruch" aria-labelledby="h-anspruch" data-abschnitt="anspruch">
     <div class="wrap anspruch__innen">
       <h2 class="sr-nur" id="h-anspruch">Unser Anspruch</h2>
       <p class="anspruch__satz" data-zeig>Wir haben einen Baukasten entwickelt, mit dem Teams und Betriebe ihre wiederkehrenden Aufgaben selbst abgeben. Programme verbinden, Abläufe ziehen, Aufgaben erledigen lassen, ohne dass jemand programmiert.</p>
@@ -134,7 +134,7 @@
   </section>
 
   <!-- 3. Funktionen: Raster 7 zu 5 und 5 zu 7 -->
-  <section class="sektion funktionen" id="funktionen" aria-labelledby="h-funktionen">
+  <section class="sektion funktionen" id="funktionen" aria-labelledby="h-funktionen" data-abschnitt="funktionen">
     <div class="wrap">
       <header class="mitte">
         <h2 id="h-funktionen" data-zeig>Intelligente Abläufe für mühelose Arbeit</h2>
@@ -161,7 +161,7 @@
   </section>
 
   <!-- 4. Ablauf: Titel bleibt stehen, drei Schritte stapeln sich nach und nach -->
-  <section class="ablauf" id="ablauf" aria-labelledby="h-ablauf">
+  <section class="ablauf" id="ablauf" aria-labelledby="h-ablauf" data-abschnitt="ablauf">
     <div class="wrap">
       <header class="mitte ablauf__kopf">
         <h2 id="h-ablauf">So läuft es in drei einfachen Schritten</h2>
@@ -190,7 +190,7 @@
   </section>
 
   <!-- 5. Warum wir: dunkel, geneigtes Produktbild, Zitat, vier Vorteile -->
-  <section class="sektion warum" aria-labelledby="h-warum">
+  <section class="sektion warum" aria-labelledby="h-warum" data-abschnitt="warum">
     <div class="warum__licht" aria-hidden="true"></div>
     <div class="wrap warum__innen">
       <div class="warum__kopf">
@@ -227,7 +227,7 @@
   </section>
 
   <!-- 6. Stimmen: Zitat mit Pfeilen, Bildkarte, drei Kennzahlkacheln -->
-  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen">
+  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen" data-abschnitt="stimmen">
     <div class="wrap">
       <header class="mitte">
         <h2 id="h-stimmen" data-zeig>Das sagen unsere Kundinnen und Kunden</h2>
@@ -264,7 +264,7 @@
   </section>
 
   <!-- 7. Preise: links Überschrift und Basis, rechts dunkle Hauptkarte mit Jahresschalter -->
-  <section class="sektion preise" id="preise" aria-labelledby="h-preise">
+  <section class="sektion preise" id="preise" aria-labelledby="h-preise" data-abschnitt="preise">
     <div class="wrap preise__raster">
       <div class="preise__links">
         <p class="kicker kicker--hell" data-zeig>Einfach und klar</p>
@@ -290,7 +290,7 @@
   </section>
 
   <!-- 8. Daten: Bild links, Text rechts -->
-  <section class="sektion daten" aria-labelledby="h-daten">
+  <section class="sektion daten" aria-labelledby="h-daten" data-abschnitt="daten">
     <div class="wrap daten__raster">
       <div class="daten__bild bild bild--i" data-zeig="links" data-platzhalter="Bild: Tabelle mit Ergebnissen der Abläufe" data-beispiel>
         <div class="fenster fenster--tabelle">
@@ -323,7 +323,7 @@
   </section>
 
   <!-- 8a. Fragen: Einwände vorwegnehmen -->
-  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen">
+  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen" data-abschnitt="fragen">
     <div class="wrap">
       <header class="mitte" data-zeig>
         <p class="kicker kicker--hell">Gut zu wissen</p>
@@ -340,7 +340,7 @@
   </section>
 
   <!-- 9. Abschluss: dunkle Karte, ragt in den Fuß -->
-  <section class="abschluss" id="abschluss" aria-labelledby="h-abschluss">
+  <section class="abschluss" id="abschluss" aria-labelledby="h-abschluss" data-abschnitt="abschluss">
     <div class="wrap">
       <div class="abschluss__karte" data-zeig>
         <div class="abschluss__text">
@@ -359,7 +359,7 @@
   </section>
 </main>
 
-<footer class="fuss" id="fuss">
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
   <div class="wrap fuss__innen">
     <div class="fuss__marke">
       <a class="kopf__logo" href="#top" aria-label="Markenname, nach oben">

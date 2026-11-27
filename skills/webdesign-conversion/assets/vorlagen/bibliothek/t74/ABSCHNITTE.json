@@ -1,0 +1,122 @@
+[
+  {
+    "id": "kopf",
+    "name": "kopf",
+    "kategorie": "navigation",
+    "selektor": "header[data-abschnitt=\"kopf\"]",
+    "prinzip": "Die Kopfzeile hält Orientierung und die Hauptaktion in jedem Bildschirm erreichbar.",
+    "prinzip_quelle": "kategorie-standard",
+    "kategorie_quelle": "wortliste",
+    "css": ".kopf",
+    "js": null,
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln der Klasse aus stil.css mitnehmen, Symbole aus dem SVG Block am Seitenanfang nur, wenn der Abschnitt sie nutzt. Vor dem Übernehmen INFO.md der Vorlage lesen."
+  },
+  {
+    "id": "held",
+    "name": "Wohin ging dein Geld? Ab jetzt weißt du es",
+    "kategorie": "hero",
+    "selektor": "section[data-abschnitt=\"held\"]",
+    "prinzip": "Der erste Bildschirm trägt eine Aussage und eine Hauptaktion, bevor etwas anderes gelesen wird.",
+    "prinzip_quelle": "kategorie-standard",
+    "kategorie_quelle": "wortliste",
+    "css": ".held",
+    "js": null,
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln der Klasse aus stil.css mitnehmen, Symbole aus dem SVG Block am Seitenanfang nur, wenn der Abschnitt sie nutzt. Vor dem Übernehmen INFO.md der Vorlage lesen."
+  },
+  {
+    "id": "band-bew",
+    "name": "Von Nutzerinnen und Nutzern bewertet (Beispielwerte)",
+    "kategorie": "benefits",
+    "selektor": "section[data-abschnitt=\"band-bew\"]",
+    "prinzip": "Der Nutzen wird aus Sicht der Zielgruppe benannt, nicht aus Sicht des Anbieters.",
+    "prinzip_quelle": "kategorie-standard",
+    "kategorie_quelle": "wortliste",
+    "css": ".band-bew",
+    "js": "bewegung.js oder stil.js über data-beispiel",
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln der Klasse aus stil.css mitnehmen, Symbole aus dem SVG Block am Seitenanfang nur, wenn der Abschnitt sie nutzt. Vor dem Übernehmen INFO.md der Vorlage lesen."
+  },
+  {
+    "id": "funktionen",
+    "name": "Alles für deine Finanzen an einem Ort",
+    "kategorie": "features",
+    "selektor": "section[data-abschnitt=\"funktionen\"]",
+    "prinzip": "Merkmale werden als überschaubare Einheiten gezeigt, jede mit einem Nutzen statt nur einer Eigenschaft.",
+    "prinzip_quelle": "kategorie-standard",
+    "kategorie_quelle": "wortliste",
+    "css": ".funktionen",
+    "js": null,
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln der Klasse aus stil.css mitnehmen, Symbole aus dem SVG Block am Seitenanfang nur, wenn der Abschnitt sie nutzt. Vor dem Übernehmen INFO.md der Vorlage lesen."
+  },
+  {
+    "id": "senden",
+    "name": "Geld senden, wohin du willst",
+    "kategorie": "features",
+    "selektor": "section[data-abschnitt=\"senden\"]",
+    "prinzip": "Merkmale werden als überschaubare Einheiten gezeigt, jede mit einem Nutzen statt nur einer Eigenschaft.",
+    "prinzip_quelle": "kategorie-standard",
+    "kategorie_quelle": "wortliste",
+    "css": ".senden",
+    "js": null,
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln der Klasse aus stil.css mitnehmen, Symbole aus dem SVG Block am Seitenanfang nur, wenn der Abschnitt sie nutzt. Vor dem Übernehmen INFO.md der Vorlage lesen."
+  },
+  {
+    "id": "karte",
+    "name": "Mehr als ein Haushaltsbuch",
+    "kategorie": "features",
+    "selektor": "section[data-abschnitt=\"karte\"]",
+    "prinzip": "Merkmale werden als überschaubare Einheiten gezeigt, jede mit einem Nutzen statt nur einer Eigenschaft.",
+    "prinzip_quelle": "kategorie-standard",
+    "kategorie_quelle": "wortliste",
+    "css": ".karte",
+    "js": null,
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln der Klasse aus stil.css mitnehmen, Symbole aus dem SVG Block am Seitenanfang nur, wenn der Abschnitt sie nutzt. Vor dem Übernehmen INFO.md der Vorlage lesen."
+  },
+  {
+    "id": "fragen",
+    "name": "Häufige Fragen",
+    "kategorie": "faq",
+    "selektor": "section[data-abschnitt=\"fragen\"]",
+    "prinzip": "Einwände werden vor der Handlung beantwortet, in der Reihenfolge ihres Gewichts.",
+    "prinzip_quelle": "kategorie-standard",
+    "kategorie_quelle": "wortliste",
+    "css": ".fragen",
+    "js": null,
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln der Klasse aus stil.css mitnehmen, Symbole aus dem SVG Block am Seitenanfang nur, wenn der Abschnitt sie nutzt. Vor dem Übernehmen INFO.md der Vorlage lesen."
+  },
+  {
+    "id": "banner-sek",
+    "name": "Bereit, deine Finanzen in Ordnung zu bringen?",
+    "kategorie": "cta",
+    "selektor": "section[data-abschnitt=\"banner-sek\"]",
+    "prinzip": "Die Handlung steht als eigener Abschnitt, mit einem Grund, jetzt zu handeln.",
+    "prinzip_quelle": "kategorie-standard",
+    "kategorie_quelle": "wortliste",
+    "css": ".banner-sek",
+    "js": null,
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln der Klasse aus stil.css mitnehmen, Symbole aus dem SVG Block am Seitenanfang nur, wenn der Abschnitt sie nutzt. Vor dem Übernehmen INFO.md der Vorlage lesen."
+  },
+  {
+    "id": "kontakt",
+    "name": "Kurzes Gespräch vereinbaren",
+    "kategorie": "forms",
+    "selektor": "section[data-abschnitt=\"kontakt\"]",
+    "prinzip": "Der Weg zur Anfrage ist kurz, erklärt jedes Feld und nennt, was danach geschieht.",
+    "prinzip_quelle": "kategorie-standard",
+    "kategorie_quelle": "wortliste",
+    "css": ".kontakt",
+    "js": null,
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln der Klasse aus stil.css mitnehmen, Symbole aus dem SVG Block am Seitenanfang nur, wenn der Abschnitt sie nutzt. Vor dem Übernehmen INFO.md der Vorlage lesen."
+  },
+  {
+    "id": "fuss",
+    "name": "Unternehmen",
+    "kategorie": "footer",
+    "selektor": "footer[data-abschnitt=\"fuss\"]",
+    "prinzip": "Der Fuß liefert Kontakt, Pflichtseiten und die zweite Chance zur Handlung.",
+    "prinzip_quelle": "kategorie-standard",
+    "kategorie_quelle": "wortliste",
+    "css": ".fuss",
+    "js": null,
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln der Klasse aus stil.css mitnehmen, Symbole aus dem SVG Block am Seitenanfang nur, wenn der Abschnitt sie nutzt. Vor dem Übernehmen INFO.md der Vorlage lesen."
+  }
+]

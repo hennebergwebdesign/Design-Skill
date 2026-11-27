@@ -1,0 +1,122 @@
+[
+  {
+    "id": "kopf",
+    "name": "kopf",
+    "kategorie": "navigation",
+    "selektor": "header[data-abschnitt=\"kopf\"]",
+    "prinzip": "Die Kopfzeile hält Orientierung und die Hauptaktion in jedem Bildschirm erreichbar.",
+    "prinzip_quelle": "kategorie-standard",
+    "kategorie_quelle": "wortliste",
+    "css": ".kopf",
+    "js": "bewegung.js oder stil.js über data-kopf",
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln der Klasse aus stil.css mitnehmen, Symbole aus dem SVG Block am Seitenanfang nur, wenn der Abschnitt sie nutzt. Vor dem Übernehmen INFO.md der Vorlage lesen."
+  },
+  {
+    "id": "start",
+    "name": "Ihre Marke fällt auf, statt unterzugehen.",
+    "kategorie": "features",
+    "selektor": "section[data-abschnitt=\"start\"]",
+    "prinzip": "Merkmale werden als überschaubare Einheiten gezeigt, jede mit einem Nutzen statt nur einer Eigenschaft.",
+    "prinzip_quelle": "kategorie-standard",
+    "kategorie_quelle": "wortliste",
+    "css": ".start",
+    "js": null,
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln der Klasse aus stil.css mitnehmen, Symbole aus dem SVG Block am Seitenanfang nur, wenn der Abschnitt sie nutzt. Vor dem Übernehmen INFO.md der Vorlage lesen."
+  },
+  {
+    "id": "ueber",
+    "name": "Über uns",
+    "kategorie": "about",
+    "selektor": "section[data-abschnitt=\"ueber\"]",
+    "prinzip": "Haltung und Herkunft geben dem Anbieter ein Gesicht, bevor Leistungen verglichen werden.",
+    "prinzip_quelle": "kategorie-standard",
+    "kategorie_quelle": "wortliste",
+    "css": ".ueber",
+    "js": null,
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln der Klasse aus stil.css mitnehmen, Symbole aus dem SVG Block am Seitenanfang nur, wenn der Abschnitt sie nutzt. Vor dem Übernehmen INFO.md der Vorlage lesen."
+  },
+  {
+    "id": "arbeiten",
+    "name": "Ausgewählte Arbeiten.",
+    "kategorie": "cases",
+    "selektor": "section[data-abschnitt=\"arbeiten\"]",
+    "prinzip": "Konkrete Arbeiten belegen die Aussage besser als eine Behauptung, jede mit eigenem Weg.",
+    "prinzip_quelle": "kategorie-standard",
+    "kategorie_quelle": "wortliste",
+    "css": ".arbeiten",
+    "js": null,
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln der Klasse aus stil.css mitnehmen, Symbole aus dem SVG Block am Seitenanfang nur, wenn der Abschnitt sie nutzt. Vor dem Übernehmen INFO.md der Vorlage lesen."
+  },
+  {
+    "id": "stimmen",
+    "name": "Kundenstimmen",
+    "kategorie": "testimonials",
+    "selektor": "section[data-abschnitt=\"stimmen\"]",
+    "prinzip": "Fremde Stimmen belegen, was der Anbieter selbst nur behaupten könnte.",
+    "prinzip_quelle": "kategorie-standard",
+    "kategorie_quelle": "wortliste",
+    "css": ".stimmen",
+    "js": null,
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln der Klasse aus stil.css mitnehmen, Symbole aus dem SVG Block am Seitenanfang nur, wenn der Abschnitt sie nutzt. Vor dem Übernehmen INFO.md der Vorlage lesen."
+  },
+  {
+    "id": "leistungen",
+    "name": "Leistungen, die wir bieten.",
+    "kategorie": "services",
+    "selektor": "section[data-abschnitt=\"leistungen\"]",
+    "prinzip": "Leistungen stehen als vergleichbare Einheiten nebeneinander, jede mit eigenem Weg.",
+    "prinzip_quelle": "kategorie-standard",
+    "kategorie_quelle": "wortliste",
+    "css": ".leistungen",
+    "js": null,
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln der Klasse aus stil.css mitnehmen, Symbole aus dem SVG Block am Seitenanfang nur, wenn der Abschnitt sie nutzt. Vor dem Übernehmen INFO.md der Vorlage lesen."
+  },
+  {
+    "id": "werdegang",
+    "name": "Werdegang, unsere Geschichte.",
+    "kategorie": "about",
+    "selektor": "section[data-abschnitt=\"werdegang\"]",
+    "prinzip": "Haltung und Herkunft geben dem Anbieter ein Gesicht, bevor Leistungen verglichen werden.",
+    "prinzip_quelle": "kategorie-standard",
+    "kategorie_quelle": "wortliste",
+    "css": ".werdegang",
+    "js": null,
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln der Klasse aus stil.css mitnehmen, Symbole aus dem SVG Block am Seitenanfang nur, wenn der Abschnitt sie nutzt. Vor dem Übernehmen INFO.md der Vorlage lesen."
+  },
+  {
+    "id": "fragen",
+    "name": "Häufige Fragen",
+    "kategorie": "faq",
+    "selektor": "section[data-abschnitt=\"fragen\"]",
+    "prinzip": "Einwände werden vor der Handlung beantwortet, in der Reihenfolge ihres Gewichts.",
+    "prinzip_quelle": "kategorie-standard",
+    "kategorie_quelle": "wortliste",
+    "css": ".fragen",
+    "js": null,
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln der Klasse aus stil.css mitnehmen, Symbole aus dem SVG Block am Seitenanfang nur, wenn der Abschnitt sie nutzt. Vor dem Übernehmen INFO.md der Vorlage lesen."
+  },
+  {
+    "id": "kontakt",
+    "name": "Lassen Sie uns zusammenarbeiten.",
+    "kategorie": "forms",
+    "selektor": "section[data-abschnitt=\"kontakt\"]",
+    "prinzip": "Der Weg zur Anfrage ist kurz, erklärt jedes Feld und nennt, was danach geschieht.",
+    "prinzip_quelle": "kategorie-standard",
+    "kategorie_quelle": "wortliste",
+    "css": ".kontakt",
+    "js": null,
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln der Klasse aus stil.css mitnehmen, Symbole aus dem SVG Block am Seitenanfang nur, wenn der Abschnitt sie nutzt. Vor dem Übernehmen INFO.md der Vorlage lesen."
+  },
+  {
+    "id": "fuss",
+    "name": "fuss",
+    "kategorie": "footer",
+    "selektor": "footer[data-abschnitt=\"fuss\"]",
+    "prinzip": "Der Fuß liefert Kontakt, Pflichtseiten und die zweite Chance zur Handlung.",
+    "prinzip_quelle": "kategorie-standard",
+    "kategorie_quelle": "wortliste",
+    "css": ".fuss",
+    "js": null,
+    "hinweis": "marke.css, ../_basis/basis.css und die Regeln der Klasse aus stil.css mitnehmen, Symbole aus dem SVG Block am Seitenanfang nur, wenn der Abschnitt sie nutzt. Vor dem Übernehmen INFO.md der Vorlage lesen."
+  }
+]

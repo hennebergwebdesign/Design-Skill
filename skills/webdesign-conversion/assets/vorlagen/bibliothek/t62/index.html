@@ -31,7 +31,7 @@
 <!--/SPRITE-->
 </svg>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="wrap kopf__leiste">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
       <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg>
@@ -61,7 +61,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: dunkles Vollbild, riesige Versalschrift, Zeile mit Text, Merkmalen und Bildausschnitt -->
-  <section class="held" id="top" aria-labelledby="h-held" data-abdunkeln>
+  <section class="held" id="top" aria-labelledby="h-held" data-abdunkeln data-abschnitt="held">
     <div class="bild held__bild bild--a"><img src="bilder/fa-blutdruck-messen.webp" width="1600" height="900" alt="Eine Ärztin misst den Blutdruck eines älteren Patienten" loading="lazy" decoding="async"></div>
     <div class="held__schleier" aria-hidden="true"></div>
     <div class="wrap held__innen">
@@ -86,7 +86,7 @@
   </section>
 
   <!-- 2. Laufband mit Beispielwerten je Fachbereich -->
-  <section class="kennzahlband" aria-label="Zufriedenheit nach Fachbereich (Beispielwerte)">
+  <section class="kennzahlband" aria-label="Zufriedenheit nach Fachbereich (Beispielwerte)" data-abschnitt="kennzahlband">
     <div class="band" data-beispiel>
       <ul class="band__spur kz__spur">
         <li class="kz"><p class="kz__kopf"><span>Hautmedizin</span><span class="kz__sterne" aria-hidden="true">★★★★★</span></p><svg class="kz__icon" width="44" height="44" aria-hidden="true" focusable="false"><use href="#i-sun"/></svg><p class="kz__fuss"><span>Beratung</span><strong>95 %</strong></p></li>
@@ -109,7 +109,7 @@
   </section>
 
   <!-- 3. Über uns: Treppe aus Kennzahlkarten links, Aussage und Vertrauen rechts -->
-  <section class="sektion ueber" id="ueber" aria-labelledby="h-ueber">
+  <section class="sektion ueber" id="ueber" aria-labelledby="h-ueber" data-abschnitt="ueber">
     <div class="wrap ueber__raster">
       <ul class="treppe" data-staffel data-beispiel>
         <li class="treppe__karte treppe__karte--dunkel" data-zeig="rechts"><p class="zahl"><span data-zaehle="9">9</span>/10</p><p>Gesamtzufriedenheit</p></li>
@@ -130,7 +130,7 @@
   </section>
 
   <!-- 4. Leistungen: hohes Bild bleibt stehen, Karten rechts -->
-  <section class="sektion leistungen" id="leistungen" aria-labelledby="h-leistungen" data-reiter-gruppe>
+  <section class="sektion leistungen" id="leistungen" aria-labelledby="h-leistungen" data-reiter-gruppe data-abschnitt="leistungen">
     <div class="wrap leistungen__raster">
       <div class="bild leistungen__bild bild--d"><img src="bilder/fa-aerztin-patient.webp" width="800" height="450" alt="Eine Ärztin im Gespräch mit einem Patienten am Schreibtisch" loading="lazy" decoding="async"></div>
       <div class="leistungen__inhalt">
@@ -154,7 +154,7 @@
   </section>
 
   <!-- 5. Ablauf: auf großen Bildschirmen bleibt die Bühne stehen, drei Schritte wechseln beim Scrollen -->
-  <section class="ablauf" id="ablauf" aria-labelledby="h-ablauf" data-fortschritt data-ablauf>
+  <section class="ablauf" id="ablauf" aria-labelledby="h-ablauf" data-fortschritt data-ablauf data-abschnitt="ablauf">
     <div class="ablauf__haftet">
       <h2 class="sr-nur" id="h-ablauf">So läuft ein Besuch ab</h2>
       <div class="lauftext" aria-hidden="true">
@@ -186,7 +186,7 @@
   </section>
 
   <!-- 6. Termin: dunkles Vollbild mit Öffnungszeiten -->
-  <section class="buchung" id="termin" aria-labelledby="h-buchung">
+  <section class="buchung" id="termin" aria-labelledby="h-buchung" data-abschnitt="buchung">
     <div class="bild buchung__bild bild--e"><img src="bilder/fa-stift-klemmbrett-blau.webp" width="1000" height="667" alt="Eine Hand hält einen Stift über einem blauen Klemmbrett" loading="lazy" decoding="async"></div>
     <div class="buchung__schleier" aria-hidden="true"></div>
     <div class="wrap buchung__innen">
@@ -208,7 +208,7 @@
   </section>
 
   <!-- 7. Preise: helle Karte mit Liste links, hohes Bild rechts -->
-  <section class="preise" id="preise" aria-labelledby="h-preise">
+  <section class="preise" id="preise" aria-labelledby="h-preise" data-abschnitt="preise">
     <div class="preise__raster">
       <div class="preise__karte">
         <p class="ueber__kicker" data-zeig><span class="punkt" aria-hidden="true"></span>Faire Preise</p>
@@ -228,7 +228,7 @@
   </section>
 
   <!-- 8. Team: sieben Porträts in zwei Reihen -->
-  <section class="sektion team" id="team" aria-labelledby="h-team">
+  <section class="sektion team" id="team" aria-labelledby="h-team" data-abschnitt="team">
     <div class="wrap">
       <header class="team__kopf">
         <p class="ueber__kicker" data-zeig><span class="punkt" aria-hidden="true"></span>Unser Team</p>
@@ -250,7 +250,7 @@
     </div>
   </section>
   <!-- 9. Fragen: Einwände vor dem Termin, Akkordeon mit Pluszeichen -->
-  <section class="sektion faq" id="fragen" aria-labelledby="h-faq">
+  <section class="sektion faq" id="fragen" aria-labelledby="h-faq" data-abschnitt="faq">
     <div class="wrap">
       <header class="faq__kopf">
         <p class="ueber__kicker" data-zeig><span class="punkt" aria-hidden="true"></span>Fragen</p>
@@ -268,7 +268,7 @@
 </main>
 
 <!-- Fuß mit Kontaktformular -->
-<footer class="fuss" id="kontakt">
+<footer class="fuss" id="kontakt" data-abschnitt="fuss">
   <div class="wrap fuss__raster">
     <div class="fuss__links">
       <nav class="fuss__spalten" aria-label="Fußnavigation">

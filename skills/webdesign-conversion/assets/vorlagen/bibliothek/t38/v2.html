@@ -40,7 +40,7 @@
   <symbol id="i-logo" viewBox="0 0 32 32"><path d="M9 22L23 8M9 10l14 12" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/></symbol>
 </svg>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="wrap kopf__leiste">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
       <span class="kopf__zeichen"><svg width="22" height="22" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-logo"/></svg></span>
@@ -69,7 +69,7 @@
 
 <main id="inhalt">
   <!-- 1. Held Vollbild mit Verlauf von links -->
-  <section class="held2" id="top" aria-labelledby="h-held">
+  <section class="held2" id="top" aria-labelledby="h-held" data-abschnitt="held2">
     <div class="bild held2__bild" data-parallax="0.06"><img src="bilder/herrenschnitt-nacken.webp" width="1600" height="1067" alt="Friseur schneidet Haare am Nacken eines Kunden" loading="lazy" decoding="async"></div>
     <div class="held2__schleier" aria-hidden="true"></div>
     <div class="wrap held2__innen">
@@ -82,7 +82,7 @@
   </section>
 
   <!-- 2. Laufband mit Hinweisen -->
-  <section class="laufband" aria-label="Hinweise">
+  <section class="laufband" aria-label="Hinweise" data-abschnitt="laufband">
     <div class="band" data-beispiel>
       <ul class="band__spur" style="--band-dauer:40s;--band-abstand:3rem">
         <li><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-sparkle"/></svg>20 Prozent Nachlass auf den ersten Termin</li>
@@ -98,7 +98,7 @@
   </section>
 
   <!-- 3. Über uns mit Aufzählung -->
-  <section class="sektion ueber2" id="ueber" aria-labelledby="h-ueber">
+  <section class="sektion ueber2" id="ueber" aria-labelledby="h-ueber" data-abschnitt="ueber2">
     <div class="wrap ueber2__raster">
       <div class="ueber2__text">
         <h2 id="h-ueber" data-zeig>Wo Stil auf Sorgfalt trifft</h2>
@@ -114,7 +114,7 @@
   </section>
 
   <!-- 4. Kennzahlen -->
-  <section class="zahlen2" aria-label="Zahlen im Überblick">
+  <section class="zahlen2" aria-label="Zahlen im Überblick" data-abschnitt="zahlen2">
     <dl class="wrap zahlen2__liste" data-staffel data-beispiel>
       <div data-zeig><dt>Zufriedene Gäste</dt><dd><span data-zaehle="10">10</span><b>K</b></dd></div>
       <div data-zeig><dt>Jahre Erfahrung</dt><dd><span data-zaehle="15">15</span><b>+</b></dd></div>
@@ -124,7 +124,7 @@
   </section>
 
   <!-- 5. Hauptleistungen im dunklen Feld -->
-  <section class="leistungen2" id="leistungen2" aria-labelledby="h-leistungen2">
+  <section class="leistungen2" id="leistungen2" aria-labelledby="h-leistungen2" data-abschnitt="leistungen2">
     <div class="wrap">
       <div class="leistungen2__feld">
         <h2 id="h-leistungen2" data-zeig>Unsere Hauptleistungen</h2>
@@ -140,7 +140,7 @@
   </section>
 
   <!-- 6. Ablauf und Terminformular -->
-  <section class="sektion termin2" id="termin" aria-labelledby="h-ablauf">
+  <section class="sektion termin2" id="termin" aria-labelledby="h-ablauf" data-abschnitt="termin2">
     <div class="wrap termin2__raster">
       <div class="termin2__schritte">
         <h2 id="h-ablauf" data-zeig>So läuft es ab</h2>
@@ -174,7 +174,7 @@
   </section>
 
   <!-- 7. Willkommensangebot im dunklen Feld mit zwei Bildern -->
-  <section class="willkommen" aria-labelledby="h-willkommen">
+  <section class="willkommen" aria-labelledby="h-willkommen" data-abschnitt="willkommen">
     <div class="wrap willkommen__feld">
       <div class="bild willkommen__bild willkommen__bild--a" data-zeig="links"><img src="bilder/farbpinsel-nahaufnahme.webp" width="800" height="450" alt="Nahaufnahme von Pinseln mit roten und braunen Borsten" loading="lazy" decoding="async"></div>
       <div class="willkommen__text" data-zeig>
@@ -187,7 +187,7 @@
   </section>
 
   <!-- 8. Preisliste mit Reitern -->
-  <section class="sektion preise" id="preise" aria-labelledby="h-preise">
+  <section class="sektion preise" id="preise" aria-labelledby="h-preise" data-abschnitt="preise">
     <div class="wrap">
       <h2 id="h-preise" class="mitte-titel" data-zeig>Preisliste</h2>
       <div class="reiterliste" role="tablist" aria-label="Leistungsgruppen" data-reiter-liste hidden>
@@ -256,7 +256,7 @@
   </section>
 
   <!-- 9. Aufruf in Sand mit Personenbild -->
-  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen">
+  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen" data-abschnitt="fragen">
     <div class="wrap fragen__raster">
       <div class="fragen__kopf">
         <h2 id="h-fragen" data-zeig>Häufige Fragen</h2>
@@ -272,7 +272,7 @@
     </div>
   </section>
 
-  <section class="aufruf2" aria-labelledby="h-aufruf">
+  <section class="aufruf2" aria-labelledby="h-aufruf" data-abschnitt="aufruf2">
     <div class="wrap aufruf2__feld">
       <div class="aufruf2__text">
         <h2 id="h-aufruf" data-zeig>Verändere deinen Look noch heute</h2>
@@ -284,7 +284,7 @@
   </section>
 
   <!-- 10. Ratgeber -->
-  <section class="sektion ratgeber" id="ratgeber" aria-labelledby="h-ratgeber">
+  <section class="sektion ratgeber" id="ratgeber" aria-labelledby="h-ratgeber" data-abschnitt="ratgeber">
     <div class="wrap">
       <header class="ratgeber__kopf"><h2 id="h-ratgeber" data-zeig>Aus unserem Ratgeber</h2><a class="knopf" href="#ratgeber">Alle Beiträge</a></header>
       <ul class="ratgeber__raster" data-staffel data-beispiel>
@@ -295,7 +295,7 @@
   </section>
 </main>
 
-<section class="kontaktleiste" id="kontakt" aria-labelledby="h-kontakt">
+<section class="kontaktleiste" id="kontakt" aria-labelledby="h-kontakt" data-abschnitt="kontaktleiste">
   <div class="wrap kontaktleiste__innen">
     <h2 id="h-kontakt">Kontakt</h2>
     <ul class="kontaktleiste__liste" data-beispiel>
@@ -305,7 +305,7 @@
     </ul>
   </div>
 </section>
-<footer class="fuss" id="fuss">
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
   <div class="wrap fuss__raster">
     <div class="fuss__marke">
       <a class="kopf__logo" href="#top" aria-label="Markenname, nach oben"><span class="kopf__zeichen"><svg width="22" height="22" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-logo"/></svg></span><span>Markenname</span></a>

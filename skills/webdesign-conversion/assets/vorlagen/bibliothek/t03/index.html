@@ -31,7 +31,7 @@
 <!-- Alle Zahlen, Preise, Namen und Stimmen in dieser Vorlage sind Beispiele (data-beispiel) und müssen ersetzt werden. -->
 <p class="leiste">Neukunden sparen beim ersten Termin 15 Prozent <span data-beispiel>(Beispielangebot)</span></p>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__pille">
     <a class="logo" href="#top" aria-label="Markenname, zum Seitenanfang">
       <svg class="logo__zeichen" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="12" cy="12" r="4" fill="currentColor"/></svg>
@@ -55,7 +55,7 @@
 <main id="inhalt">
 
 <!-- 1 Hero: Vollbild, Text unten links, Bewertungskarte unten rechts -->
-<section class="held" id="top" aria-labelledby="held-titel">
+<section class="held" id="top" aria-labelledby="held-titel" data-abschnitt="held">
   <div class="held__bild bild" data-parallax="0.1"><img class="bild__foto" src="bilder/dunkle-limousine-im-schwarzen-raum.webp" width="1600" height="1000" alt="" fetchpriority="high" decoding="async"></div>
   <div class="wrap held__inhalt">
     <div class="held__text">
@@ -74,7 +74,7 @@
 </section>
 
 <!-- 2 Über uns: Aussage mit Wort für Wort Aufhellung, drei Kacheln -->
-<section class="sektion hell-alt ueber" aria-labelledby="ueber-titel">
+<section class="sektion hell-alt ueber" aria-labelledby="ueber-titel" data-abschnitt="hell-alt">
   <div class="wrap">
     <div class="ueber__kopf">
       <p class="kicker">Über uns</p>
@@ -95,7 +95,7 @@
 </section>
 
 <!-- 3 Leistungen: Tabs links, Karte rechts (Desktop), gestapelt (mobil) -->
-<section class="sektion dunkel leistungen" id="leistungen" aria-labelledby="leistungen-titel">
+<section class="sektion dunkel leistungen" id="leistungen" aria-labelledby="leistungen-titel" data-abschnitt="dunkel">
   <div class="wrap">
     <header class="mitte">
       <p class="kicker kicker--hell">Leistungen</p>
@@ -182,7 +182,7 @@
 </section>
 
 <!-- 4 Einsatzorte: Raster aus sechs Motiven -->
-<section class="sektion hell-alt orte" aria-labelledby="orte-titel">
+<section class="sektion hell-alt orte" aria-labelledby="orte-titel" data-abschnitt="hell-alt-2">
   <div class="wrap">
     <header class="mitte">
       <p class="kicker">Einsatzorte</p>
@@ -200,7 +200,7 @@
 </section>
 
 <!-- 5 Ablauf: links klebt Bildfläche mit Titel, rechts laufen drei Karten -->
-<section class="ablauf hell" id="ablauf" aria-labelledby="ablauf-titel" data-fortschritt>
+<section class="ablauf hell" id="ablauf" aria-labelledby="ablauf-titel" data-fortschritt data-abschnitt="ablauf">
   <div class="ablauf__links">
     <div class="ablauf__bild bild bild--c"><img class="bild__foto" src="bilder/mann-polert-fahrzeug-von-hand.webp" width="1000" height="1510" alt="Mann poliert mit einer Maschine die Oberfläche eines Fahrzeugs" loading="lazy" decoding="async"></div>
     <div class="ablauf__text">
@@ -229,7 +229,7 @@
 </section>
 
 <!-- 6 Vorher und Nachher: Schieberegler, Pfeile wechseln die Paare -->
-<section class="sektion dunkel vergleich" id="ergebnisse" aria-labelledby="vergleich-titel">
+<section class="sektion dunkel vergleich" id="ergebnisse" aria-labelledby="vergleich-titel" data-abschnitt="dunkel-2">
   <div class="wrap">
     <header class="mitte">
       <p class="kicker kicker--hell">Vorher und Nachher</p>
@@ -261,7 +261,7 @@
 </section>
 
 <!-- 7 Arbeiten: versetztes Raster mit Parallax -->
-<section class="sektion dunkel arbeiten" aria-labelledby="arbeiten-titel">
+<section class="sektion dunkel arbeiten" aria-labelledby="arbeiten-titel" data-abschnitt="dunkel-3">
   <div class="wrap">
     <header class="mitte">
       <p class="kicker kicker--hell">Referenzen</p>
@@ -278,7 +278,7 @@
 </section>
 
 <!-- 8 Vergleich: Tabelle mit hervorgehobener Spalte -->
-<section class="sektion hell unterschied" aria-labelledby="unterschied-titel">
+<section class="sektion hell unterschied" aria-labelledby="unterschied-titel" data-abschnitt="hell">
   <div class="wrap">
     <header class="mitte">
       <p class="kicker">Warum wir</p>
@@ -304,7 +304,7 @@
 </section>
 
 <!-- 9 Stimmen: waagerechter Slider mit Scroll Snap -->
-<section class="sektion dunkel stimmen" id="stimmen" aria-labelledby="stimmen-titel" data-beispiel>
+<section class="sektion dunkel stimmen" id="stimmen" aria-labelledby="stimmen-titel" data-beispiel data-abschnitt="dunkel-4">
   <div class="wrap">
     <header class="stimmen__kopf">
       <div>
@@ -327,7 +327,7 @@
 </section>
 
 <!-- 10 Fragen: zwei Spalten Akkordeon -->
-<section class="sektion hell-alt fragen" id="fragen" aria-labelledby="fragen-titel">
+<section class="sektion hell-alt fragen" id="fragen" aria-labelledby="fragen-titel" data-abschnitt="hell-alt-3">
   <div class="wrap">
     <header class="mitte">
       <p class="kicker">Fragen</p>
@@ -351,7 +351,7 @@
 </section>
 
 <!-- 11 Termin: Hintergrundfläche, links Titel und Kontakt, rechts Formular -->
-<section class="termin dunkel" id="termin" aria-labelledby="termin-titel">
+<section class="termin dunkel" id="termin" aria-labelledby="termin-titel" data-abschnitt="termin">
   <div class="termin__bild bild bild--d" aria-hidden="true"><img class="bild__foto" src="bilder/blaues-auto-wird-mit-poliermaschine-poliert.webp" width="1280" height="600" alt="" loading="lazy" decoding="async"></div>
   <div class="wrap termin__raster">
     <div class="termin__links">
@@ -384,7 +384,7 @@
 </main>
 
 <!-- 12 Fuß: Kacheln -->
-<footer class="fuss dunkel">
+<footer class="fuss dunkel" data-abschnitt="fuss">
   <div class="wrap fuss__raster">
     <div class="bild bild--a fuss__team"><img class="bild__foto" src="bilder/arbeiter-reinigt-foerderband-mit-schlauch.webp" width="1000" height="1500" alt="Arbeiter reinigt ein Förderband mit einem Schlauch" loading="lazy" decoding="async"></div>
     <div class="fuss__karte fuss__nav">

@@ -46,7 +46,7 @@
   <symbol id="i-zeichen" viewBox="0 0 32 32"><rect width="32" height="32" rx="9" fill="currentColor"/><path d="M7 21 16 8l9 13z" fill="var(--akzent)"/><rect x="7" y="23" width="18" height="2.500" rx="1.200" fill="var(--salbei)"/></symbol>
 </svg>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__leiste">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
       <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg>
@@ -72,7 +72,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: Satz links, rechts eine Bühne aus drei gekippten Oberflächenkarten (Warenkorb, Bankwahl, Bestätigung), die dem Zeiger folgen; darunter die Bankzeile -->
-  <section class="held" id="top" aria-labelledby="h-held">
+  <section class="held" id="top" aria-labelledby="h-held" data-abschnitt="held">
     <div class="held__innen">
       <div class="held__text">
         <!-- Heldformel: Zielgruppe Onlinehändler und Zahlungsverantwortliche im Mittelstand, Problem hohe Kartengebühren, Rückbuchungen und Abbrüche beim Bezahlen, Lösung Zahlung per Banklogin (Open Banking) über eine Schnittstelle, Demo -->
@@ -127,7 +127,7 @@
   </section>
 
   <!-- 2. Vorteile: dunkle Tafel, links drei Karten, die sich beim Scrollen stapeln, rechts der Satz bleibt stehen -->
-  <section class="vorteile" id="vorteile" aria-labelledby="h-vorteile">
+  <section class="vorteile" id="vorteile" aria-labelledby="h-vorteile" data-abschnitt="vorteile">
     <div class="vorteile__tafel">
       <div class="vorteile__karten">
         <article class="vkarte" style="--n:0">
@@ -155,7 +155,7 @@
   </section>
 
   <!-- 3. Anschluss: Überschrift in der Mitte, darunter ein Diagramm aus Bankkarten, Knoten und Ziel -->
-  <section class="netz" aria-labelledby="h-netz">
+  <section class="netz" aria-labelledby="h-netz" data-abschnitt="netz">
     <div class="wrap">
       <h2 id="h-netz" class="mitte" data-zeig>Ein Anschluss für viele Banken</h2>
       <p class="mitte mitte--text" data-zeig>Sie binden einmal an. Wir kümmern uns um die einzelnen Bankanbindungen und melden Ihnen jede Zahlung in einem Format.</p>
@@ -183,7 +183,7 @@
   </section>
 
   <!-- 4. Kontodaten: sandfarbene Tafel mit drei gekippten Karten, die sich beim Überfahren aufrichten -->
-  <section class="daten" aria-labelledby="h-daten">
+  <section class="daten" aria-labelledby="h-daten" data-abschnitt="daten">
     <div class="daten__tafel" data-zeig="skala">
       <div class="daten__text">
         <h2 id="h-daten">Kontodaten nutzen, mit Zustimmung des Kunden</h2>
@@ -199,7 +199,7 @@
   </section>
 
   <!-- 5. Zahlungsformular: Telefon mit Formular in Markenfarbe, Farbwahl per Auswahlfeld (ohne JavaScript) -->
-  <section class="formular-bereich" id="ablauf" aria-labelledby="h-form">
+  <section class="formular-bereich" id="ablauf" aria-labelledby="h-form" data-abschnitt="formular-bereich">
     <div class="wrap formular-bereich__raster" data-staffel>
       <div class="telefonbuehne" data-zeig>
         <div class="telefon" aria-hidden="true">
@@ -227,7 +227,7 @@
   </section>
 
   <!-- 6. Zahlweg im Vergleich: Umschalter Bankzahlung gegen Karte, je drei Schritte (reines CSS) -->
-  <section class="weg" aria-labelledby="h-weg">
+  <section class="weg" aria-labelledby="h-weg" data-abschnitt="weg">
     <div class="wrap">
       <h2 id="h-weg" class="mitte" data-zeig>Der Zahlweg im Vergleich</h2>
       <div class="weg__schalter" data-zeig>
@@ -253,7 +253,7 @@
   </section>
 
   <!-- 7. Schnittstelle: Bühne mit Wechsel der Oberfläche beim Scrollen (Code, Umsatzliste, Auswertung) -->
-  <section class="stufen" id="schnittstelle" aria-labelledby="h-stufen" data-stufen>
+  <section class="stufen" id="schnittstelle" aria-labelledby="h-stufen" data-stufen data-abschnitt="stufen">
     <div class="stufen__buehne">
       <div class="stufen__tafel">
         <h2 id="h-stufen" class="stufen__titel">Eine Schnittstelle, ein Abgleich, ein Bericht</h2>
@@ -300,7 +300,7 @@ curl -X POST https://api.beispiel.invalid/zahlungen \
   </section>
 
   <!-- 8. Branchen: sechs Spalten mit Zeichen, Überschrift und Satz -->
-  <section class="branchen" id="branchen" aria-labelledby="h-branchen">
+  <section class="branchen" id="branchen" aria-labelledby="h-branchen" data-abschnitt="branchen">
     <div class="wrap">
       <h2 id="h-branchen" class="mitte" data-zeig>Zahlung per Bank für jede Branche</h2>
       <ul class="branchen__liste" data-staffel role="list">
@@ -316,7 +316,7 @@ curl -X POST https://api.beispiel.invalid/zahlungen \
   </section>
 
   <!-- 9. Einwände: Akkordeon, Antworten sind Beispiele -->
-  <section class="fragen" id="fragen" aria-labelledby="h-fragen">
+  <section class="fragen" id="fragen" aria-labelledby="h-fragen" data-abschnitt="fragen">
     <div class="wrap fragen__raster">
       <div class="fragen__kopf" data-zeig>
         <h2 id="h-fragen">Häufige Fragen vor der Demo</h2>
@@ -334,7 +334,7 @@ curl -X POST https://api.beispiel.invalid/zahlungen \
   </section>
 
   <!-- 10. Kontakt: dunkle Tafel mit Ringen, Satz und Formular -->
-  <section class="kontakt" id="kontakt" aria-labelledby="h-kontakt">
+  <section class="kontakt" id="kontakt" aria-labelledby="h-kontakt" data-abschnitt="kontakt">
     <div class="kontakt__tafel">
       <span class="ring ring--1" aria-hidden="true" data-zeig="skala"></span>
       <span class="ring ring--2" aria-hidden="true" data-zeig="skala"></span>
@@ -365,7 +365,7 @@ curl -X POST https://api.beispiel.invalid/zahlungen \
   </section>
 </main>
 
-<footer class="fuss" id="fuss">
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
   <div class="wrap fuss__raster">
     <div class="fuss__marke">
       <a class="kopf__logo" href="#top" aria-label="Markenname, nach oben"><svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg><span>Markenname</span></a>

@@ -49,7 +49,7 @@
 </div>
 
 <!-- Kopf: bleibt oben stehen, über dem Held transparent, danach dunkel -->
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="wrap kopf__innen">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
       <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg>
@@ -74,7 +74,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: Vollbild, Text unten links, zwei Merkmale unten rechts -->
-  <section class="held" id="top" aria-labelledby="h-held">
+  <section class="held" id="top" aria-labelledby="h-held" data-abschnitt="held">
     <div class="bild held__bild bild--a"><img src="bilder/silhouette-abendhimmel.webp" width="1600" height="1067" alt="Silhouette einer Person vor violettem Abendhimmel" loading="lazy" decoding="async"></div>
     <div class="held__schleier" aria-hidden="true"></div>
     <div class="wrap held__innen">
@@ -96,7 +96,7 @@
   </section>
 
   <!-- 2. Partnerzeile -->
-  <section class="partner" aria-labelledby="h-partner">
+  <section class="partner" aria-labelledby="h-partner" data-abschnitt="partner">
     <div class="wrap">
       <h2 id="h-partner" class="sr-nur">Partner des Studios (Beispiele)</h2>
       <ul class="partner__reihe" data-zeig>
@@ -109,7 +109,7 @@
   </section>
 
   <!-- 3. Studio: Aussage, Kennzahlenpille, Bildcollage mit Gesichtern und Stimmen -->
-  <section class="sektion studio" id="studio" aria-labelledby="h-studio">
+  <section class="sektion studio" id="studio" aria-labelledby="h-studio" data-abschnitt="studio">
     <div class="wrap">
       <header class="mitte">
         <h2 id="h-studio" class="titel" data-zeig><span class="t-hell">Mehr als ein Studio.</span> <span class="t-fett">Ein Ort zum Ankommen.</span></h2>
@@ -134,7 +134,7 @@
   </section>
 
   <!-- 4. Leistungen: links bleibt der Kopf stehen, rechts die nummerierte Liste -->
-  <section class="sektion leistungen" id="leistungen" aria-labelledby="h-leistungen">
+  <section class="sektion leistungen" id="leistungen" aria-labelledby="h-leistungen" data-abschnitt="leistungen">
     <div class="wrap leistungen__raster">
       <div class="leistungen__kopf">
         <p class="kicker" data-zeig>Unsere Leistungen</p>
@@ -155,7 +155,7 @@
   </section>
 
   <!-- 5. Trainer: drei hohe Porträtkarten -->
-  <section class="sektion trainer" id="trainer" aria-labelledby="h-trainer">
+  <section class="sektion trainer" id="trainer" aria-labelledby="h-trainer" data-abschnitt="trainer">
     <div class="wrap">
       <header class="mitte">
         <h2 id="h-trainer" class="titel" data-zeig><span class="t-hell">Lerne das Team kennen.</span> <span class="t-fett">Betreuung, der du vertraust.</span></h2>
@@ -175,7 +175,7 @@
   </section>
 
   <!-- 6. Warum: Mittelbild mit beschrifteten Linien -->
-  <section class="sektion warum" id="warum" aria-labelledby="h-warum">
+  <section class="sektion warum" id="warum" aria-labelledby="h-warum" data-abschnitt="warum">
     <div class="wrap">
       <header class="mitte">
         <h2 id="h-warum" class="titel" data-zeig><span class="t-hell">Training sollte sich</span> <span class="t-fett">richtig anfühlen.</span></h2>
@@ -195,7 +195,7 @@
   </section>
 
   <!-- 7. Ablauf: fünf Karten, drei und zwei -->
-  <section class="sektion ablauf" id="ablauf" aria-labelledby="h-ablauf">
+  <section class="sektion ablauf" id="ablauf" aria-labelledby="h-ablauf" data-abschnitt="ablauf">
     <div class="wrap">
       <header class="mitte">
         <p class="kicker" data-zeig>So läuft es ab</p>
@@ -213,7 +213,7 @@
   </section>
 
   <!-- 8. Preise: Umschalter Monat oder Jahr, drei Tarife, der mittlere hervorgehoben -->
-  <section class="sektion preise" id="preise" aria-labelledby="h-preise">
+  <section class="sektion preise" id="preise" aria-labelledby="h-preise" data-abschnitt="preise">
     <div class="wrap">
       <header class="mitte">
         <h2 id="h-preise" class="titel" data-zeig><span class="t-hell">Wähle den Tarif,</span> <span class="t-fett">der zu dir passt.</span></h2>
@@ -254,7 +254,7 @@
   </section>
 
   <!-- 9. Stimmen: Karte mit Text links und Bild rechts, Pfeile -->
-  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen">
+  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen" data-abschnitt="stimmen">
     <div class="wrap">
       <header class="mitte">
         <h2 id="h-stimmen" class="titel" data-zeig><span class="t-hell">Fit bleiben soll</span> <span class="t-fett">sich gut anfühlen.</span></h2>
@@ -305,7 +305,7 @@
   </section>
 
   <!-- 10. Fragen: Akkordeon -->
-  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen">
+  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen" data-abschnitt="fragen">
     <div class="wrap fragen__rahmen">
       <header class="mitte">
         <h2 id="h-fragen" class="titel" data-zeig><span class="t-hell">Häufig</span> <span class="t-fett">gestellte Fragen</span></h2>
@@ -322,7 +322,7 @@
   </section>
 
   <!-- 11. Kontakt: Angaben links, Formular mit Linienfeldern rechts -->
-  <section class="sektion kontakt" id="kontakt" aria-labelledby="h-kontakt">
+  <section class="sektion kontakt" id="kontakt" aria-labelledby="h-kontakt" data-abschnitt="kontakt">
     <div class="wrap kontakt__raster">
       <div class="kontakt__links">
         <h2 id="h-kontakt" class="titel" data-zeig><span class="t-hell">Melde dich</span> <span class="t-fett">bei uns</span></h2>
@@ -356,7 +356,7 @@
   </section>
 
   <!-- 12. App: Band in Akzentfarbe, Handy ragt nach oben heraus -->
-  <section class="app" aria-labelledby="h-app">
+  <section class="app" aria-labelledby="h-app" data-abschnitt="app">
     <div class="wrap">
       <div class="app__band">
         <div class="app__text">
@@ -377,7 +377,7 @@
 </main>
 
 <!-- Fuß -->
-<footer class="fuss" id="fuss">
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
   <div class="wrap fuss__zeile">
     <a class="kopf__logo" href="#top" aria-label="Markenname, nach oben">
       <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg>

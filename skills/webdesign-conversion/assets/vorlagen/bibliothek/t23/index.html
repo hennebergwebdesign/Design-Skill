@@ -35,7 +35,7 @@
 
 <p class="hinweis" data-beispiel>Beispieltext: Im Frühjahr sind noch Wartungstermine frei. <a href="#pakete">Platz sichern</a></p>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="wrap kopf__innen">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
       <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7" fill="currentColor"/><path d="M9 23V9l7 9 7-9v14" fill="none" stroke="var(--flaeche-dunkel)" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -63,7 +63,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: dunkle Fläche, Überschrift links, Text und Aktion rechts, darunter wächst die Bildtafel beim Scrollen -->
-  <section class="held" id="top" aria-labelledby="h-held">
+  <section class="held" id="top" aria-labelledby="h-held" data-abschnitt="held">
     <div class="wrap held__kopf">
       <div class="held__titel" data-staffel>
         <p class="kicker" data-zeig>Mitgliedschaft</p>
@@ -86,7 +86,7 @@
   </section>
 
   <!-- 2. Vertrauen: Laufband mit erfundenen Beispiellogos -->
-  <section class="vertrauen" aria-labelledby="h-vertrauen">
+  <section class="vertrauen" aria-labelledby="h-vertrauen" data-abschnitt="vertrauen">
     <div class="wrap">
       <h2 class="vertrauen__titel" id="h-vertrauen" data-zeig>Beispielzeile: Hersteller und Partner, mit denen wir arbeiten</h2>
       <div class="band logos">
@@ -101,7 +101,7 @@
   </section>
 
   <!-- 3. Pakete: dunkler Rahmen mit zwei Karten -->
-  <section class="sektion pakete" id="pakete" aria-labelledby="h-pakete">
+  <section class="sektion pakete" id="pakete" aria-labelledby="h-pakete" data-abschnitt="pakete">
     <div class="wrap">
       <div class="kopfblock mitte">
         <h2 id="h-pakete" data-zeig>Das passende Paket für Ihr Zuhause</h2>
@@ -147,7 +147,7 @@
   </section>
 
   <!-- 4. Vorteile: Überschrift färbt sich Wort für Wort, darunter ein Reiter zum Wischen -->
-  <section class="sektion vorteile" id="vorteile" aria-labelledby="h-vorteile">
+  <section class="sektion vorteile" id="vorteile" aria-labelledby="h-vorteile" data-abschnitt="vorteile">
     <div class="wrap vorteile__kopf">
       <div>
         <h2 id="h-vorteile" data-licht>Mehr Fürsorge. Weniger Sorgen. Mehr Wert.</h2>
@@ -182,7 +182,7 @@
   </section>
 
   <!-- 5. Vergleich: helle Karte auf Akzentfläche, Kopfzeile bleibt beim Scrollen stehen -->
-  <section class="sektion vergleich" id="vergleich" aria-labelledby="h-vergleich">
+  <section class="sektion vergleich" id="vergleich" aria-labelledby="h-vergleich" data-abschnitt="vergleich">
     <div class="wrap">
       <div class="vergleich__kopf">
         <h2 id="h-vergleich" data-zeig>Alles Wichtige, Seite an Seite</h2>
@@ -215,7 +215,7 @@
   </section>
 
   <!-- 6. Prüfumfang: Bildtafel und Liste -->
-  <section class="sektion umfang" id="umfang" aria-labelledby="h-umfang">
+  <section class="sektion umfang" id="umfang" aria-labelledby="h-umfang" data-abschnitt="umfang">
     <div class="wrap umfang__raster">
       <div class="bild umfang__bild" aria-hidden="true" data-zeig="links"><img class="bild__foto" src="bilder/haende-mit-klemmbrett-und-stift.webp" width="1000" height="667" alt="Hände halten ein Klemmbrett und einen Stift" loading="lazy" decoding="async"></div>
       <div class="umfang__text" data-staffel>
@@ -236,7 +236,7 @@
   </section>
 
   <!-- 7. Ablauf: drei Schritte -->
-  <section class="sektion ablauf" id="ablauf" aria-labelledby="h-ablauf">
+  <section class="sektion ablauf" id="ablauf" aria-labelledby="h-ablauf" data-abschnitt="ablauf">
     <div class="wrap">
       <div class="kopfblock mitte">
         <p class="kicker" data-zeig>Ablauf</p>
@@ -266,7 +266,7 @@
   </section>
 
   <!-- 8. Stimmen: Beispielzitate, klar gekennzeichnet -->
-  <section class="sektion stimmen" aria-labelledby="h-stimmen">
+  <section class="sektion stimmen" aria-labelledby="h-stimmen" data-abschnitt="stimmen">
     <div class="wrap">
       <h2 class="mitte" id="h-stimmen" data-zeig>Das sagen Mitglieder</h2>
       <ul class="stimmen__raster" data-staffel>
@@ -285,7 +285,7 @@
   </section>
 
   <!-- 9. Häufige Fragen -->
-  <section class="sektion faq" id="fragen" aria-labelledby="h-faq">
+  <section class="sektion faq" id="fragen" aria-labelledby="h-faq" data-abschnitt="faq">
     <div class="wrap faq__raster">
       <div class="faq__kopf" data-zeig>
         <h2 id="h-faq">Fragen und Antworten</h2>
@@ -302,7 +302,7 @@
   </section>
 
   <!-- 10. Abschluss mit Handlung -->
-  <section class="abschluss" id="kontakt" aria-labelledby="h-abschluss">
+  <section class="abschluss" id="kontakt" aria-labelledby="h-abschluss" data-abschnitt="abschluss">
     <div class="bild abschluss__bild" aria-hidden="true"><img class="bild__foto" src="bilder/techniker-mit-warnjacke-am-sicherungskasten.webp" width="1600" height="1067" alt="Techniker in gelber Warnjacke lächelt neben einem geöffneten Sicherungskasten" loading="lazy" decoding="async"></div>
     <div class="wrap abschluss__inhalt" data-staffel>
       <h2 id="h-abschluss" data-zeig>Sprechen wir über Ihre Mitgliedschaft</h2>
@@ -315,7 +315,7 @@
   </section>
 </main>
 
-<footer class="fuss">
+<footer class="fuss" data-abschnitt="fuss">
   <div class="wrap fuss__raster">
     <div class="fuss__links">
       <p class="fuss__logo">Markenname</p>

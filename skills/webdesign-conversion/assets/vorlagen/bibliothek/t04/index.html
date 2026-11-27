@@ -27,7 +27,7 @@
   <symbol id="i-chat" viewBox="0 0 256 256" fill="currentColor"><path d="M128,26A102,102,0,0,0,38.35,176.69L26.73,211.56a14,14,0,0,0,17.71,17.71l34.87-11.62A102,102,0,1,0,128,26Zm0,192a90,90,0,0,1-45.06-12.08,6.09,6.09,0,0,0-3-.81,6.2,6.2,0,0,0-1.9.31L40.65,217.88a2,2,0,0,1-2.53-2.53L50.58,178a6,6,0,0,0-.5-4.91A90,90,0,1,1,128,218Z"/></symbol>
 </svg>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="wrap kopf__innen">
     <a class="kopf__logo" href="#top" aria-label="Kontor, zum Seitenanfang">Kontor</a>
     <nav class="kopf__nav" id="hauptnav" aria-label="Hauptnavigation" data-menue-ziel data-offen="false">
@@ -47,7 +47,7 @@
 <main id="inhalt">
 
 <!-- 1. Hero: Großwort, Lead, schwebende Karte -->
-<section class="held" id="top" data-held aria-label="Einstieg">
+<section class="held" id="top" data-held aria-label="Einstieg" data-abschnitt="held">
   <div class="bild held__bild"><img class="bild__foto" src="bilder/weisses-gebaeude-mit-kantigen-vorspruengen-unter-himmel.webp" width="1600" height="1067" alt="" fetchpriority="high" decoding="async"></div>
   <div class="wrap held__innen">
     <!-- Held: Zielgruppe Auftraggeber größerer Vorhaben, Problem verlorener Überblick über Termine und Kosten, Lösung Steuerung in festen Schritten mit sichtbaren Zwischenständen, Beleg folgt über die Karte Erstgespräch (kein Zahlenbeleg im ersten Bildschirm) -->
@@ -69,7 +69,7 @@
 </section>
 
 <!-- 2. Einleitung mit Wortlicht und zwei versetzten Bildern -->
-<section class="sektion intro" aria-label="Über uns">
+<section class="sektion intro" aria-label="Über uns" data-abschnitt="intro">
   <div class="wrap intro__raster">
     <div class="intro__bild intro__bild--1" data-parallax="0.06"><div class="bild b1" data-zeig="skala"><img class="bild__foto" src="bilder/heller-flur-mit-rundbogen-und-sessel.webp" width="1000" height="1500" alt="Heller Raum mit Rundbogen und einem Sessel" loading="lazy" decoding="async"></div></div>
     <div class="intro__text">
@@ -81,7 +81,7 @@
 </section>
 
 <!-- 3. Kennzahlen (Beispielwerte, vor Livegang durch echte ersetzen) -->
-<section class="zahlen" aria-label="Kennzahlen">
+<section class="zahlen" aria-label="Kennzahlen" data-abschnitt="zahlen">
   <ul class="wrap zahlen__raster" data-staffel>
     <li class="zahl" data-zeig data-beispiel>
       <span class="zahl__icon" aria-hidden="true"><svg class="ico"><use href="#i-haken"/></svg></span>
@@ -102,7 +102,7 @@
 </section>
 
 <!-- 4. Projekte: Stapelkarten mit fester Überschrift und Fortschrittsliste -->
-<section class="projekte" id="projekte" aria-labelledby="projekte-titel">
+<section class="projekte" id="projekte" aria-labelledby="projekte-titel" data-abschnitt="projekte">
   <div class="wrap projekte__raster" data-stapelgruppe>
     <div class="projekte__kopf">
       <div class="projekte__kopf-innen">
@@ -150,7 +150,7 @@
 </section>
 
 <!-- 5. Pakete, dunkler Abschnitt (Preise und Laufzeiten sind Beispiele) -->
-<section class="sektion pakete dunkel" id="pakete" aria-labelledby="pakete-titel">
+<section class="sektion pakete dunkel" id="pakete" aria-labelledby="pakete-titel" data-abschnitt="pakete">
   <div class="wrap">
     <div class="kopfblock">
       <p class="kicker" data-zeig>Pakete</p>
@@ -180,7 +180,7 @@
 </section>
 
 <!-- 6. Leistungen als nummerierte Akkordeonzeilen -->
-<section class="sektion leistungen" id="leistungen" aria-labelledby="leistungen-titel">
+<section class="sektion leistungen" id="leistungen" aria-labelledby="leistungen-titel" data-abschnitt="leistungen">
   <div class="wrap">
     <div class="kopfblock">
       <h2 id="leistungen-titel" data-zeig>Unterstützung für jede Phase Ihres Vorhabens.</h2>
@@ -195,7 +195,7 @@
 </section>
 
 <!-- 7. Einsatzbereiche, sechs Karten mit Bild oben rechts -->
-<section class="sektion einsatz" aria-labelledby="einsatz-titel">
+<section class="sektion einsatz" aria-labelledby="einsatz-titel" data-abschnitt="einsatz">
   <div class="wrap">
     <div class="einsatz__kopf">
       <h2 id="einsatz-titel" data-zeig>Finden Sie den Zugang, der zu Ihnen passt.</h2>
@@ -213,7 +213,7 @@
 </section>
 
 <!-- 8. Warum wir: getönter Abschnitt, feste Überschrift links, Stapelkarten rechts -->
-<section class="warum" aria-labelledby="warum-titel">
+<section class="warum" aria-labelledby="warum-titel" data-abschnitt="warum">
   <div class="wrap warum__raster" data-stapelgruppe>
     <div class="warum__kopf">
       <div class="warum__kopf-innen">
@@ -232,7 +232,7 @@
 </section>
 
 <!-- 9. Galerie: Lauf mit Mittenvergrößerung (Pause per Knopf) -->
-<section class="sektion galerie" aria-labelledby="galerie-titel">
+<section class="sektion galerie" aria-labelledby="galerie-titel" data-abschnitt="galerie">
   <div class="wrap kopfblock">
     <h2 id="galerie-titel" data-zeig>Eindrücke aus unserer Arbeit.</h2>
   </div>
@@ -258,7 +258,7 @@
 </section>
 
 <!-- 10. Stimmen: eine Karte mit Bild, Zitat, Name und Blätterknöpfen (Beispieltexte) -->
-<section class="sektion stimmen" aria-labelledby="stimmen-titel">
+<section class="sektion stimmen" aria-labelledby="stimmen-titel" data-abschnitt="stimmen">
   <div class="wrap">
     <div class="kopfblock">
       <h2 id="stimmen-titel" data-zeig>Rückmeldungen von Auftraggebern.</h2>
@@ -290,7 +290,7 @@
 </section>
 
 <!-- 11. Fragen -->
-<section class="sektion fragen" aria-labelledby="fragen-titel">
+<section class="sektion fragen" aria-labelledby="fragen-titel" data-abschnitt="fragen">
   <div class="wrap">
     <div class="kopfblock">
       <p class="kicker" data-zeig>Fragen</p>
@@ -307,7 +307,7 @@
 </section>
 
 <!-- 12. Abschluss mit Vollbild -->
-<section class="cta" aria-labelledby="cta-titel">
+<section class="cta" aria-labelledby="cta-titel" data-abschnitt="cta">
   <div class="bild cta__bild"><img class="bild__foto" src="bilder/schwarzweisse-gebaeudefassade-mit-geschwungenen-linien.webp" width="1600" height="2000" alt="" loading="lazy" decoding="async"></div>
   <div class="wrap cta__innen">
     <h2 id="cta-titel" data-zeig>Wann ist Ihr Projekt dran?</h2>
@@ -318,7 +318,7 @@
 
 </main>
 
-<footer class="fuss dunkel" id="kontakt">
+<footer class="fuss dunkel" id="kontakt" data-abschnitt="fuss">
   <div class="wrap fuss__innen">
     <nav class="fuss__nav" aria-label="Fußnavigation">
       <ul>

@@ -37,7 +37,7 @@
   <symbol id="i-zeichen" viewBox="0 0 32 32" fill="currentColor"><path d="M6 26V12h5v14zM13.500 26V6h5v20zM21 26V15h5v11z"/></symbol>
 </svg>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="wrap kopf__leiste">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
       <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg>
@@ -63,7 +63,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: dunkel, Überschrift links, Text und Knopf rechts, breites Bild halb auf Hell, Wortmarke im Bild ausgestanzt -->
-  <section class="held" id="top" aria-labelledby="h-held">
+  <section class="held" id="top" aria-labelledby="h-held" data-abschnitt="held">
     <div class="wrap held__kopf">
       <!-- Held: Privatpersonen, Gründerinnen und Unternehmen mit einer Rechtsfrage, die sie nicht einordnen können; Lösung ist das Erstgespräch mit Optionen, Zeitrahmen und Kosten; ein Beleg steht bewusst nicht im Held (Berufsrecht klären), die Kennzahlen folgen darunter -->
       <h1 id="h-held" data-zeig>Rechtsfrage im Alltag oder Betrieb? Wir ordnen sie</h1>
@@ -83,7 +83,7 @@
   </section>
 
   <!-- 2. Über uns: Leitsatz, Bildkarte mit Kennzahl, Text und Vorzugszeilen -->
-  <section class="sektion ueber" id="ueber-uns" aria-labelledby="h-ueber">
+  <section class="sektion ueber" id="ueber-uns" aria-labelledby="h-ueber" data-abschnitt="ueber">
     <div class="wrap">
       <header class="kopfzeile" data-zeig>
         <p class="kicker">Über uns</p>
@@ -111,7 +111,7 @@
   </section>
 
   <!-- 3. Leistungen: Zeilen mit Linie, beim Überfahren erscheint rechts ein Bild -->
-  <section class="sektion leistungen" id="leistungen" aria-labelledby="h-leistungen">
+  <section class="sektion leistungen" id="leistungen" aria-labelledby="h-leistungen" data-abschnitt="leistungen">
     <div class="wrap">
       <header class="kopfzeile" data-zeig>
         <p class="kicker">Leistungen</p>
@@ -164,7 +164,7 @@
   </section>
 
   <!-- 4. Kennzahlen und Logolaufband, dunkel -->
-  <section class="zahlen" aria-labelledby="h-zahlen">
+  <section class="zahlen" aria-labelledby="h-zahlen" data-abschnitt="zahlen">
     <div class="wrap">
       <h2 class="sr-nur" id="h-zahlen">Kennzahlen</h2>
       <ul class="zahlen__raster" data-beispiel data-staffel>
@@ -186,7 +186,7 @@
   </section>
 
   <!-- 5. Anspruch: links Text, Avatare, Zeilen mit Linie, rechts hohes Bild -->
-  <section class="sektion anspruch" id="anspruch" aria-labelledby="h-anspruch">
+  <section class="sektion anspruch" id="anspruch" aria-labelledby="h-anspruch" data-abschnitt="anspruch">
     <div class="wrap anspruch__raster">
       <div class="anspruch__links">
         <header data-zeig>
@@ -208,7 +208,7 @@
   </section>
 
   <!-- 6. Stimmen: Faktenkarte und dunkle Karte mit Wechsler -->
-  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen">
+  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen" data-abschnitt="stimmen">
     <div class="wrap">
       <header class="kopfzeile" data-zeig>
         <p class="kicker">Stimmen</p>
@@ -262,7 +262,7 @@
   </section>
 
   <!-- 7. Beiträge: drei Karten, beim Überfahren dunkel -->
-  <section class="sektion beitraege" id="beitraege" aria-labelledby="h-beitraege">
+  <section class="sektion beitraege" id="beitraege" aria-labelledby="h-beitraege" data-abschnitt="beitraege">
     <div class="wrap">
       <header class="kopfzeile" data-zeig>
         <p class="kicker">Beiträge</p>
@@ -300,7 +300,7 @@
 
   <!-- 8. Aufruf: Text und zwei Zahlenkarten -->
   <!-- Fragen: Einwände vor dem Erstgespräch, Akkordeon mit Plus im Quadrat -->
-  <section class="sektion faq" id="fragen" aria-labelledby="h-faq">
+  <section class="sektion faq" id="fragen" aria-labelledby="h-faq" data-abschnitt="faq">
     <div class="wrap">
       <header class="kopfzeile" data-zeig>
         <p class="kicker">Fragen</p>
@@ -316,7 +316,7 @@
     </div>
   </section>
 
-  <section class="sektion aufruf" aria-labelledby="h-aufruf">
+  <section class="sektion aufruf" aria-labelledby="h-aufruf" data-abschnitt="aufruf">
     <div class="wrap aufruf__raster">
       <div data-zeig>
         <h2 id="h-aufruf">Klare Beratung, wenn du sie brauchst</h2>
@@ -331,7 +331,7 @@
   </section>
 </main>
 
-<footer class="fuss" id="kontakt" aria-labelledby="h-fuss">
+<footer class="fuss" id="kontakt" aria-labelledby="h-fuss" data-abschnitt="fuss">
   <div class="wrap">
     <h2 class="sr-nur" id="h-fuss">Kontakt und weitere Seiten</h2>
     <div class="fuss__oben">

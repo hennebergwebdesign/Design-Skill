@@ -29,7 +29,7 @@
   <symbol id="brief" viewBox="0 0 256 256" fill="currentColor"><path d="M224,44H32A12,12,0,0,0,20,56V192a20,20,0,0,0,20,20H216a20,20,0,0,0,20-20V56A12,12,0,0,0,224,44Zm-96,83.72L62.85,68h130.3ZM92.79,128,44,172.72V83.28Zm17.76,16.28,9.34,8.57a12,12,0,0,0,16.22,0l9.34-8.57L193.15,188H62.85ZM163.21,128,212,83.28v89.44Z"/></symbol>
 </svg>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__leiste">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite"><svg width="32" height="32" aria-hidden="true"><use href="#marke"/></svg><span>Markenname</span></a>
     <button class="kopf__burger" type="button" data-menue aria-expanded="false" aria-controls="hauptnav">
@@ -51,7 +51,7 @@
 <main id="inhalt">
 
   <!-- 1. Held: Text mittig, darunter die Bildreihe. Beim Scrollen zieht sich das Mittelbild auf Vollbild auf, die Seitenspalten fahren hinaus. -->
-  <section class="held" id="top" aria-labelledby="h-held">
+  <section class="held" id="top" aria-labelledby="h-held" data-abschnitt="held">
     <div class="wrap held__kopf" data-staffel>
       <p class="kicker" data-zeig>Orientierungscheck in 15 Minuten</p>
       <!-- Held: Gründerinnen und Gründer, die nicht wissen, was zuerst zählt; Lösung ist der Orientierungscheck mit drei nächsten Schritten; Beleg ist die Kennzahlenkarte darunter (Beispielwerte) -->
@@ -92,7 +92,7 @@
   </section>
 
   <!-- 2. Kennzahlen: Karte mit vier Werten, Zahlen zählen beim Sichtbarwerden hoch, Endwert steht im HTML -->
-  <section class="kennzahlen" aria-labelledby="h-zahlen">
+  <section class="kennzahlen" aria-labelledby="h-zahlen" data-abschnitt="kennzahlen">
     <div class="wrap">
       <div class="kennzahlen__karte" data-zeig data-beispiel>
         <div class="kennzahlen__kopf">
@@ -110,7 +110,7 @@
   </section>
 
   <!-- 3. Leistungen: drei Bildkarten -->
-  <section class="sektion leistungen" id="leistungen" aria-labelledby="h-leistungen">
+  <section class="sektion leistungen" id="leistungen" aria-labelledby="h-leistungen" data-abschnitt="leistungen">
     <div class="wrap">
       <div class="kopfblock" data-zeig>
         <p class="kicker">Leistungen</p>
@@ -157,7 +157,7 @@
 
   <!-- 4. Einblick: Bildfläche beginnt als Vollbild und schrumpft beim Scrollen, danach erscheint der Text darunter.
           Hier später ein Video einbetten, das erst nach Klick lädt (Kapitel 38). -->
-  <section class="video" id="einblick" aria-labelledby="h-video">
+  <section class="video" id="einblick" aria-labelledby="h-video" data-abschnitt="video">
     <div class="video__buehne" data-fortschritt>
       <div class="video__rahmen">
         <div class="video__kachel">
@@ -172,7 +172,7 @@
   </section>
 
   <!-- 5. Ablauf: große Ziffer bleibt je Schritt stehen, bis der nächste Schritt sie ablöst -->
-  <section class="sektion ablauf" id="ablauf" aria-labelledby="h-ablauf">
+  <section class="sektion ablauf" id="ablauf" aria-labelledby="h-ablauf" data-abschnitt="ablauf">
     <div class="wrap">
       <div class="kopfblock" data-zeig>
         <p class="kicker">Ablauf</p>
@@ -211,7 +211,7 @@
   </section>
 
   <!-- 6. Stimme: Bild als Grund mit leichter Tiefenverschiebung, Karte darüber. Text und Name sind Beispiele, kein echtes Zitat. -->
-  <section class="stimme" id="stimme" aria-labelledby="h-stimme">
+  <section class="stimme" id="stimme" aria-labelledby="h-stimme" data-abschnitt="stimme">
     <div class="bild stimme__grund bild--c" data-parallax="0.06" aria-hidden="true"></div>
     <div class="wrap stimme__innen">
       <h2 class="sr-nur" id="h-stimme">Stimme aus der Praxis (Beispiel)</h2>
@@ -227,7 +227,7 @@
   </section>
 
   <!-- 7. Preise: drei Karten, die mittlere dunkel und angehoben. Alle Preise sind Beispiele. -->
-  <section class="sektion preise" id="preise" aria-labelledby="h-preise">
+  <section class="sektion preise" id="preise" aria-labelledby="h-preise" data-abschnitt="preise">
     <div class="wrap">
       <div class="kopfblock kopfblock--mitte" data-zeig>
         <p class="kicker">Preise</p>
@@ -279,7 +279,7 @@
   </section>
 
   <!-- 8. FAQ als Akkordeon -->
-  <section class="sektion faq" id="faq" aria-labelledby="h-faq">
+  <section class="sektion faq" id="faq" aria-labelledby="h-faq" data-abschnitt="faq">
     <div class="wrap faq__raster">
       <div class="faq__kopf" data-zeig>
         <h2 id="h-faq">Noch Fragen?</h2>
@@ -296,7 +296,7 @@
   </section>
 
   <!-- 9. Abschluss mit Handlung: Bildgrund, dunkle Karte, Feld und Knopf. Das Formular sendet in der Vorlage nichts. -->
-  <section class="start" id="start" aria-labelledby="h-start">
+  <section class="start" id="start" aria-labelledby="h-start" data-abschnitt="start">
     <div class="bild start__grund bild--e" data-parallax="0.06" aria-hidden="true"></div>
     <div class="wrap start__innen">
       <div class="start__karte" data-zeig>
@@ -313,7 +313,7 @@
   </section>
 
   <!-- 10. Kontakt: Formular links, Bild rechts mit schwebender Beispielkarte -->
-  <section class="sektion kontakt" id="kontakt" aria-labelledby="h-kontakt">
+  <section class="sektion kontakt" id="kontakt" aria-labelledby="h-kontakt" data-abschnitt="kontakt">
     <div class="wrap kontakt__raster">
       <div class="kontakt__links">
         <div class="kopfblock" data-zeig>
@@ -350,7 +350,7 @@
 
 </main>
 
-<footer class="fuss">
+<footer class="fuss" data-abschnitt="fuss">
   <div class="wrap">
     <div class="fuss__karte">
       <div class="fuss__links">

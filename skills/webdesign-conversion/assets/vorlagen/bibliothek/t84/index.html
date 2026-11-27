@@ -29,7 +29,7 @@
   <symbol id="i-star" viewBox="0 0 256 256" fill="currentColor"><path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"/></symbol>
 </svg>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__leiste">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
       <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg>
@@ -55,7 +55,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: Foto mit Parallaxe und langsamem Zoom, Überschrift unten links, Knopf, Beleg -->
-  <section class="held" id="top" aria-labelledby="h-held">
+  <section class="held" id="top" aria-labelledby="h-held" data-abschnitt="held">
     <div class="held__bild" data-parallax="0.14"><img src="bilder/held-feld-mit-scheune.webp" width="1000" height="667" alt="Gemähtes Feld mit Holzscheune und blühendem Rapsfeld unter hellem Himmel" fetchpriority="high" decoding="async"></div>
     <div class="wrap held__innen">
       <!-- Held: Zielgruppe Landwirte und Betriebsleiter, Problem Arbeitsspitzen und fehlende Technik, Lösung Lohnunternehmen mit Terminzusage und GPS gesteuerten Maschinen; Beleg ist die Bewertungszeile (Beispiel), vor dem Einsatz durch echte Angaben ersetzen -->
@@ -72,7 +72,7 @@
   </section>
 
   <!-- 2. Intro: große Aussage, drei Bildkarten mit Beschriftung -->
-  <section class="sektion intro" id="leistungen" aria-labelledby="h-intro">
+  <section class="sektion intro" id="leistungen" aria-labelledby="h-intro" data-abschnitt="intro">
     <div class="wrap">
       <h2 class="intro__satz" id="h-intro" data-zeig>Wir bringen Maschinen und Erfahrung auf Ihre Flächen, dazu feste Termine. <span class="leise">So bleibt Ihre Zeit für den Betrieb.</span></h2>
       <p class="kicker" data-zeig>Unsere Leistungen</p>
@@ -103,7 +103,7 @@
   </section>
 
   <!-- 3. Vorzüge: Liste 01 bis 03, der aktive Punkt in Limette wechselt beim Überfahren, ohne JavaScript steht 03 aktiv -->
-  <section class="sektion vorteile" id="vorteile" aria-labelledby="h-vorteile">
+  <section class="sektion vorteile" id="vorteile" aria-labelledby="h-vorteile" data-abschnitt="vorteile">
     <div class="wrap vorteile__raster">
       <div class="vorteile__kopf" data-zeig>
         <h2 id="h-vorteile">Gute Gründe, mit uns zu planen</h2>
@@ -118,7 +118,7 @@
   </section>
 
   <!-- 4. Vollbildband: der Bildausschnitt wächst beim Scrollen auf volle Breite, Text bleibt gleich groß -->
-  <section class="vollband" id="netzwerk" aria-labelledby="h-netz" data-fortschritt>
+  <section class="vollband" id="netzwerk" aria-labelledby="h-netz" data-fortschritt data-abschnitt="vollband">
     <div class="vollband__buehne">
       <div class="vollband__ausschnitt">
         <img src="bilder/wiese-mit-weg-und-bank.webp" width="1000" height="667" alt="Blühende Wiese mit Weg und einer grünen Bank" loading="lazy" decoding="async">
@@ -131,7 +131,7 @@
   </section>
 
   <!-- 5. Netzwerk: Text rechts, zwei Fotos, die gegenläufig driften -->
-  <section class="sektion netz" aria-labelledby="h-netz2">
+  <section class="sektion netz" aria-labelledby="h-netz2" data-abschnitt="netz">
     <div class="wrap">
       <div class="netz__kopf">
         <div data-zeig>
@@ -147,7 +147,7 @@
   </section>
 
   <!-- 6. Dunkel: drei Hochformatfotos, große Aussage mit Wortlicht, versetzte Fotos -->
-  <section class="sektion dunkel" id="technik" aria-labelledby="h-technik">
+  <section class="sektion dunkel" id="technik" aria-labelledby="h-technik" data-abschnitt="dunkel">
     <div class="wrap">
       <header class="dunkel__kopf" data-zeig>
         <h2 id="h-technik">Moderne Technik für gesunde Bestände und ruhige Planung</h2>
@@ -182,7 +182,7 @@
   </section>
 
   <!-- 7. Neue Ideen: Text mit zwei Kennzahlen, Foto mit Hand und Pflanze -->
-  <section class="sektion ideen" aria-labelledby="h-ideen">
+  <section class="sektion ideen" aria-labelledby="h-ideen" data-abschnitt="ideen">
     <div class="wrap ideen__raster">
       <div class="ideen__text">
         <h2 id="h-ideen" data-zeig>Neue Ideen für Fläche und Pflege</h2>
@@ -205,7 +205,7 @@
   </section>
 
   <!-- 8. Fragen -->
-  <section class="sektion fragen" aria-labelledby="h-fragen">
+  <section class="sektion fragen" aria-labelledby="h-fragen" data-abschnitt="fragen">
     <div class="wrap fragen__raster">
       <header data-zeig>
         <h2 id="h-fragen">Häufige Fragen</h2>
@@ -221,7 +221,7 @@
   </section>
 
   <!-- 9. Kontakt: Beratung anfragen, vier Felder -->
-  <section class="sektion kontakt" id="kontakt" aria-labelledby="h-kontakt">
+  <section class="sektion kontakt" id="kontakt" aria-labelledby="h-kontakt" data-abschnitt="kontakt">
     <div class="wrap kontakt__raster">
       <div class="kontakt__text" data-zeig>
         <p class="kicker">Kontakt</p>
@@ -249,7 +249,7 @@
   </section>
 
   <!-- 10. Newsletter, dunkel -->
-  <section class="newsletter" aria-labelledby="h-news">
+  <section class="newsletter" aria-labelledby="h-news" data-abschnitt="newsletter">
     <div class="wrap newsletter__innen">
       <h2 id="h-news" data-zeig>Feldtermine und Technikhinweise direkt per E-Mail</h2>
       <form class="news" data-formular action="#" method="post" novalidate data-zeig>
@@ -264,7 +264,7 @@
   </section>
 </main>
 
-<footer class="fuss" id="fuss">
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
   <div class="wrap">
     <h2 class="sr-nur">Markenname, Navigation und Hinweise</h2>
     <div class="fuss__raster">

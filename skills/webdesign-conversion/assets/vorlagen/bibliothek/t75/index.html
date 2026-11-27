@@ -46,7 +46,7 @@
   </div>
 </div>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__leiste">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
       <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg>
@@ -71,7 +71,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: Bildwechsler mit Pfeilen und Pause, Leiste mit Kontakt, Standort und roter Kachel überlappt unten -->
-  <section class="held" id="top" aria-roledescription="Bildwechsler" aria-label="Aktuelles" data-wechsler>
+  <section class="held" id="top" aria-roledescription="Bildwechsler" aria-label="Aktuelles" data-wechsler data-abschnitt="held">
     <div class="held__buehne">
       <div class="held__bild ist-aktiv" data-folie><img src="bilder/halle-arbeiter-westen.webp" width="1000" height="667" alt="Zwei Mitarbeitende in Warnwesten gehen durch eine große, helle Lagerhalle" decoding="async"></div>
       <div class="held__bild" data-folie><img src="bilder/werkhalle-gross.webp" width="600" height="399" alt="Weite, dunkle Industriehalle mit Stahlträgern und Lichtband im Dach" loading="lazy" decoding="async"></div>
@@ -119,7 +119,7 @@
   </div>
 
   <!-- 2. Über uns: Text, zwei Vorzüge, Unterschrift; Hochformatfoto mit roter Kennzahlenkarte -->
-  <section class="ueber sektion" id="ueberuns" aria-labelledby="h-ueber">
+  <section class="ueber sektion" id="ueberuns" aria-labelledby="h-ueber" data-abschnitt="ueber">
     <div class="wrap ueber__raster">
       <div class="ueber__text">
         <h2 id="h-ueber" data-zeig>Verlässlich liefern, ohne dass Sie nachfragen müssen</h2>
@@ -146,7 +146,7 @@
   </section>
 
   <!-- 3. Leistungen: drei Fotokarten -->
-  <section class="dienste sektion" id="leistungen" aria-labelledby="h-dienste">
+  <section class="dienste sektion" id="leistungen" aria-labelledby="h-dienste" data-abschnitt="dienste">
     <div class="wrap">
       <div class="kopf-mitte">
         <h2 id="h-dienste" data-zeig>Straße, Wasser, Lager: Ihre Ware auf dem passenden Weg</h2>
@@ -202,7 +202,7 @@
   </section>
 
   <!-- 4. Roter Vollflächenabschnitt: Text, Haken, Formularkarte mit Reitern schiebt über die untere Kante -->
-  <section class="rot anfrage" id="anfrage" aria-labelledby="h-rot">
+  <section class="rot anfrage" id="anfrage" aria-labelledby="h-rot" data-abschnitt="rot">
     <div class="wrap rot__kopf">
       <div data-zeig>
         <h2 id="h-rot">Ihr Angebot in wenigen Angaben, Ihre Sendung mit einer Nummer</h2>
@@ -255,7 +255,7 @@
   </section>
 
   <!-- 5. Stimmen -->
-  <section class="stimmen sektion" id="stimmen" aria-labelledby="h-stimmen">
+  <section class="stimmen sektion" id="stimmen" aria-labelledby="h-stimmen" data-abschnitt="stimmen">
     <div class="wrap">
       <h2 id="h-stimmen" class="sr-nur">Stimmen von Kunden (Beispiele)</h2>
       <ul class="stimmen__raster" data-staffel data-beispiel>
@@ -274,7 +274,7 @@
   </section>
 
   <!-- 6. Partnerband aus echten Elementen mit Pause -->
-  <section class="partner" aria-labelledby="h-partner">
+  <section class="partner" aria-labelledby="h-partner" data-abschnitt="partner">
     <div class="wrap partner__kopf">
       <h2 id="h-partner" class="partner__titel">Beispielpartner, die wir bedienen</h2>
       <button class="partner__pause" type="button" data-band-pause aria-pressed="false"><svg class="ic-pause" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-pause"/></svg><svg class="ic-play" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-play"/></svg><span data-band-text>Band anhalten</span></button>
@@ -290,7 +290,7 @@
   </section>
 
   <!-- 7. Roter Abschnitt: Ablauf in drei Schritten, großes Foto mit Wiedergabeknopf läuft über den rechten Rand -->
-  <section class="rot ablauf" id="ablauf" aria-labelledby="h-ablauf">
+  <section class="rot ablauf" id="ablauf" aria-labelledby="h-ablauf" data-abschnitt="rot-2">
     <div class="ablauf__raster">
       <div class="ablauf__text wrap-links">
         <h2 id="h-ablauf" data-zeig>Von der Anfrage bis zur Zustellung in drei Schritten</h2>
@@ -311,7 +311,7 @@
   </section>
 
   <!-- 8. Wissen: drei Artikelkarten -->
-  <section class="wissen sektion" id="wissen" aria-labelledby="h-wissen">
+  <section class="wissen sektion" id="wissen" aria-labelledby="h-wissen" data-abschnitt="wissen">
     <div class="wrap">
       <div class="kopf-mitte">
         <h2 id="h-wissen" data-zeig>Neues aus Spedition und Lager</h2>
@@ -335,7 +335,7 @@
   </section>
 
   <!-- 9. Einwand FAQ -->
-  <section class="fragen sektion" id="fragen" aria-labelledby="h-fragen">
+  <section class="fragen sektion" id="fragen" aria-labelledby="h-fragen" data-abschnitt="fragen">
     <div class="wrap fragen__raster">
       <div data-zeig>
         <h2 id="h-fragen">Was Sie vor der Anfrage wissen wollen</h2>
@@ -353,7 +353,7 @@
 </main>
 
 <!-- 10. Newsletterstreifen und Fuß -->
-<footer class="fuss" id="fuss">
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
   <div class="news">
     <div class="wrap news__innen">
       <div class="news__logo"><svg width="40" height="40" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg><span>Markenname</span></div>

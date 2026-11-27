@@ -26,7 +26,7 @@
 </svg>
 
 <!-- Hauptrahmen: weicher Verlauf, Kopf als dunkler Reiter oben mittig -->
-<header class="kopf" id="top">
+<header class="kopf" id="top" data-abschnitt="kopf">
   <div class="kopf__reiter">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
       <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M5 9l5.5 14L16 14l5.5 9L27 9" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -51,7 +51,7 @@
 <main id="inhalt">
 
   <!-- 1. Held: Verlaufsrahmen, Ringe, Telefonbild mit Parallax -->
-  <section class="held" aria-labelledby="h-held">
+  <section class="held" aria-labelledby="h-held" data-abschnitt="held">
     <div class="held__ringe" aria-hidden="true"><span class="ring ring--a"></span><span class="ring ring--b"></span></div>
     <div class="held__text">
       <p class="held__beleg" data-zeig><span class="sterne" aria-hidden="true"><svg><use href="#i-stern"/></svg><svg><use href="#i-stern"/></svg><svg><use href="#i-stern"/></svg><svg><use href="#i-stern"/></svg><svg><use href="#i-stern"/></svg></span><span data-beispiel>4,9 von 5, von 320 Kunden bewertet</span></p>
@@ -83,7 +83,7 @@
   </section>
 
   <!-- 2. Vorteile: Überschrift bleibt stehen, Karten stapeln sich schräg wie ein Fächer aus Zetteln -->
-  <section class="vorteile" id="vorteile" aria-labelledby="h-vorteile">
+  <section class="vorteile" id="vorteile" aria-labelledby="h-vorteile" data-abschnitt="vorteile">
     <div class="wrap vorteile__raster">
       <div class="vorteile__kopf">
         <p class="kicker" data-zeig>Vorteile</p>
@@ -110,7 +110,7 @@
   </section>
 
   <!-- 3. Leistungen: Überschrift mit Farbwörtern, Bento aus Pastellkarten -->
-  <section class="leistungen" id="leistungen" aria-labelledby="h-leistungen">
+  <section class="leistungen" id="leistungen" aria-labelledby="h-leistungen" data-abschnitt="leistungen">
     <div class="wrap">
       <header class="leistungen__kopf">
         <p class="kicker" data-zeig>Leistungen</p>
@@ -147,7 +147,7 @@
   </section>
 
   <!-- 4. Preise: Überschrift links, drei Pastellpakete rechts -->
-  <section class="preise" id="preise" aria-labelledby="h-preise">
+  <section class="preise" id="preise" aria-labelledby="h-preise" data-abschnitt="preise">
     <div class="wrap preise__raster">
       <div class="preise__kopf">
         <p class="kicker" data-zeig>Preise</p>
@@ -181,7 +181,7 @@
   </section>
 
   <!-- 5. Stimmen: drei Zettel, die sich beim Scrollen zum Fächer öffnen -->
-  <section class="stimmen" aria-labelledby="h-stimmen" data-faecher>
+  <section class="stimmen" aria-labelledby="h-stimmen" data-faecher data-abschnitt="stimmen">
     <div class="wrap">
       <header class="stimmen__kopf">
         <p class="kicker" data-zeig>Stimmen</p>
@@ -208,7 +208,7 @@
   </section>
 
   <!-- 5a. Fragen: Überschrift links, Pastellzettel mit Akkordeon rechts -->
-  <section class="fragen" id="fragen" aria-labelledby="h-fragen">
+  <section class="fragen" id="fragen" aria-labelledby="h-fragen" data-abschnitt="fragen">
     <div class="wrap fragen__raster">
       <div class="fragen__kopf">
         <p class="kicker" data-zeig>Fragen</p>
@@ -226,7 +226,7 @@
   </section>
 
   <!-- 6. Kontakt: Blauverlauf, Formularzeile, dunkle Fußkarte -->
-  <section class="abschluss" id="kontakt" aria-labelledby="h-kontakt">
+  <section class="abschluss" id="kontakt" aria-labelledby="h-kontakt" data-abschnitt="abschluss">
     <div class="abschluss__kopf wrap">
       <h2 id="h-kontakt" data-zeig>Melde dich, wir sagen dir, wie wir helfen</h2>
       <form class="mailzeile" data-formular data-zeig action="#" method="post" novalidate>
@@ -242,7 +242,7 @@
   </section>
 </main>
 
-<footer class="fuss" id="fuss">
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
   <div class="fuss__karte">
     <div class="fuss__marke">
       <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M5 9l5.5 14L16 14l5.5 9L27 9" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>

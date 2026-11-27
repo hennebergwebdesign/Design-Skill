@@ -40,7 +40,7 @@
   <symbol id="i-zeichen" viewBox="0 0 32 32"><path d="M3 16 16 4l13 12v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" fill="currentColor"/><circle cx="16" cy="19.500" r="4.500" fill="var(--honig)"/></symbol>
 </svg>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__leiste wrap">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
       <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg>
@@ -78,7 +78,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: Vollbild Foto (zoomt langsam), Farbkarte schiebt sich von links ein -->
-  <section class="held" id="top" aria-labelledby="h-held">
+  <section class="held" id="top" aria-labelledby="h-held" data-abschnitt="held">
     <div class="held__foto"><img src="bilder/fachkraft-misst-blutdruck-bei-aelterem-mann.webp" width="1600" height="900" alt="Eine Fachkraft im weißen Kittel misst am Tisch den Blutdruck eines älteren Mannes" fetchpriority="high" decoding="async"></div>
     <div class="held__innen wrap">
       <div class="held__karte">
@@ -95,7 +95,7 @@
   </section>
 
   <!-- 2. Willkommen: Zweispalte, Foto mit Begrüßungstext, drei Beispielkennzahlen -->
-  <section class="willkommen sektion" id="ueber" aria-labelledby="h-willkommen">
+  <section class="willkommen sektion" id="ueber" aria-labelledby="h-willkommen" data-abschnitt="willkommen">
     <div class="wrap willkommen__raster">
       <div class="willkommen__foto" data-zeig="links">
         <span class="willkommen__kreis" aria-hidden="true"></span>
@@ -119,7 +119,7 @@
   </section>
 
   <!-- 3. Leistungen: große Farbfläche, vier Karten mit Foto, die vierte hervorgehoben -->
-  <section class="leist" id="leistungen" aria-labelledby="h-leist">
+  <section class="leist" id="leistungen" aria-labelledby="h-leist" data-abschnitt="leist">
     <div class="wrap">
       <div class="leist__kopf" data-staffel>
         <h2 id="h-leist" data-zeig>Unsere Leistungen für Sie</h2>
@@ -163,7 +163,7 @@
   </section>
 
   <!-- 4. Leitbild: Textzeile links, Foto im Bogen über Kreiswellen rechts -->
-  <section class="leitbild sektion" id="leitbild" aria-labelledby="h-leitbild">
+  <section class="leitbild sektion" id="leitbild" aria-labelledby="h-leitbild" data-abschnitt="leitbild">
     <div class="leitbild__raster">
       <div class="leitbild__text" data-staffel>
         <h2 id="h-leitbild" data-zeig>Würde, Ruhe und Selbstbestimmung</h2>
@@ -179,7 +179,7 @@
   </section>
 
   <!-- 5. Fragen -->
-  <section class="fragen sektion" id="fragen" aria-labelledby="h-fragen">
+  <section class="fragen sektion" id="fragen" aria-labelledby="h-fragen" data-abschnitt="fragen">
     <div class="wrap fragen__raster">
       <div class="fragen__kopf">
         <h2 id="h-fragen">Fragen, die Angehörige oft stellen</h2>
@@ -196,7 +196,7 @@
   </section>
 
   <!-- 6. Direktkarten: zwei kleine Wege für Fachstellen, ragen in den Kontaktbereich -->
-  <section class="direkt" aria-labelledby="h-direkt">
+  <section class="direkt" aria-labelledby="h-direkt" data-abschnitt="direkt">
     <div class="wrap">
       <h2 class="sr-nur" id="h-direkt">Direkt anfragen</h2>
       <ul class="direkt__raster" role="list" data-staffel>
@@ -219,7 +219,7 @@
   </section>
 
   <!-- 7. Kontakt: Vollbild Foto, hochgesetzte Karte mit Formular und Rundknopf -->
-  <section class="kontakt" id="kontakt" aria-labelledby="h-kontakt">
+  <section class="kontakt" id="kontakt" aria-labelledby="h-kontakt" data-abschnitt="kontakt">
     <div class="kontakt__foto"><img src="bilder/gespraech-auf-dem-sofa.webp" width="1000" height="563" alt="Zwei Frauen sitzen auf einem Sofa in einem hellen Raum und sprechen miteinander" loading="lazy" decoding="async"></div>
     <div class="wrap kontakt__innen">
       <div class="kontakt__karte" data-zeig="skala">
@@ -242,7 +242,7 @@
 </main>
 
 <!-- 8. Fuß: Pflaumenfläche, Kontaktdaten, große Wortmarke -->
-<footer class="fuss" id="fuss">
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
   <div class="wrap fuss__raster">
     <div class="fuss__kontakt">
       <h2>Kontaktdaten</h2>

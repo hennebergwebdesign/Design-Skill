@@ -52,7 +52,7 @@
   <symbol id="i-bau" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 42V16l18-10 18 10v26zM18 42V28h12v14M6 16l18 10 18-10"/></symbol>
 </svg>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__leiste">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
       <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M4 4h24v4H8v20H4zM12 12h16v16h-4V16h-8z"/></svg>
@@ -78,7 +78,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: dunkles Foto mit Parallaxe, Überschrift, Bewertungskachel, Pünktchen als Weiterweiser -->
-  <section class="held" id="top" aria-labelledby="h-held">
+  <section class="held" id="top" aria-labelledby="h-held" data-abschnitt="held">
     <div class="held__bild">
       <img src="bilder/held-wohnzimmer-grau.webp" width="1000" height="625" alt="Ruhiges Wohnzimmer in Grautönen mit niedrigem Sofa und großer Fensterfront" data-parallax="0.1" decoding="async">
     </div>
@@ -105,7 +105,7 @@
   </section>
 
   <!-- 2. Vier Leistungskarten -->
-  <section class="sektion leistungen" id="leistungen" aria-labelledby="h-leistungen">
+  <section class="sektion leistungen" id="leistungen" aria-labelledby="h-leistungen" data-abschnitt="leistungen">
     <div class="wrap">
       <div class="kopfzeile">
         <div>
@@ -144,7 +144,7 @@
   </section>
 
   <!-- 3. Dunkler Abschnitt: Text, großes Raumfoto, Wasserzeichen Wort driftet -->
-  <section class="dunkel" id="konzept" aria-labelledby="h-konzept">
+  <section class="dunkel" id="konzept" aria-labelledby="h-konzept" data-abschnitt="dunkel">
     <span class="wz wz--dunkel" aria-hidden="true" data-parallax="0.18">Raum</span>
     <div class="wrap dunkel__innen">
       <div class="dunkel__text">
@@ -164,7 +164,7 @@
   </section>
 
   <!-- 4. Leistungsliste: Foto wechselt mit der aktiven Zeile, ohne JavaScript steht Zeile 1 -->
-  <section class="sektion liste" id="leistungsliste" aria-labelledby="h-liste">
+  <section class="sektion liste" id="leistungsliste" aria-labelledby="h-liste" data-abschnitt="liste">
     <div class="wrap">
       <div class="mitte">
         <h2 id="h-liste" data-zeig>Was wir für Ihren Raum übernehmen</h2>
@@ -205,7 +205,7 @@
   </section>
 
   <!-- 5. Kennzahlen (Beispielwerte) -->
-  <section class="zahlen" aria-labelledby="h-zahlen" data-beispiel>
+  <section class="zahlen" aria-labelledby="h-zahlen" data-beispiel data-abschnitt="zahlen">
     <div class="wrap">
       <h2 class="sr-nur" id="h-zahlen">Das Büro in Zahlen (Beispielwerte)</h2>
       <ul class="zahlen__reihe" data-staffel>
@@ -219,7 +219,7 @@
   </section>
 
   <!-- 6. Ablauf: Isometrie baut sich Schicht für Schicht auf, vier Schritte mit Foto -->
-  <section class="sektion ablauf" id="ablauf" aria-labelledby="h-ablauf">
+  <section class="sektion ablauf" id="ablauf" aria-labelledby="h-ablauf" data-abschnitt="ablauf">
     <span class="wz" aria-hidden="true" data-parallax="0.15">Ablauf</span>
     <div class="wrap">
       <div class="kopfzeile">
@@ -264,7 +264,7 @@
   </section>
 
   <!-- 7. Projekte: Slider mit Hochformatfotos, Pfeilen und Wischspur; darunter ein Panoramaband, das seitlich driftet -->
-  <section class="projekte" id="projekte" aria-labelledby="h-projekte">
+  <section class="projekte" id="projekte" aria-labelledby="h-projekte" data-abschnitt="projekte">
     <span class="wz" aria-hidden="true" data-parallax="0.12">Interieur</span>
     <div class="wrap">
       <div class="kopfzeile">
@@ -292,7 +292,7 @@
   </section>
 
   <!-- 8. Stimmen mit Raumfoto und Wertung (Beispiel), darunter neutrale Partnersymbole -->
-  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen">
+  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen" data-abschnitt="stimmen">
     <div class="wrap">
       <div class="stimmen__raster">
         <figure class="stimmen__bild bild" data-zeig="links">
@@ -329,7 +329,7 @@
   </section>
 
   <!-- 9. Rundblick: breites Raumfoto zum Verschieben. Für eine echte 360 Grad Ansicht hier einen Viewer oder ein Equirectangular-Foto des Projekts einsetzen -->
-  <section class="rund" id="rundblick" aria-labelledby="h-rund">
+  <section class="rund" id="rundblick" aria-labelledby="h-rund" data-abschnitt="rund">
     <div class="wrap">
       <div class="mitte">
         <h2 id="h-rund" data-zeig>Den Raum erleben, bevor er gebaut ist</h2>
@@ -345,7 +345,7 @@
   </section>
 
   <!-- 10. Team: Porträt wechselt mit der aktiven Zeile (Namen und Rollen sind Beispiele) -->
-  <section class="sektion team" id="team" aria-labelledby="h-team">
+  <section class="sektion team" id="team" aria-labelledby="h-team" data-abschnitt="team">
     <div class="wrap">
       <div class="team__raster" data-umschalter>
         <div class="team__fotos">
@@ -372,7 +372,7 @@
   </section>
 
   <!-- 11. Vollbild: wachsender Ausschnitt. Das Poster steht für ein Video. Ein echtes Video braucht Untertitel oder Transkript, kein Autoplay mit Ton und den Pause Knopf (WCAG 2.2.2) -->
-  <section class="video" id="video" aria-labelledby="h-video" data-fortschritt>
+  <section class="video" id="video" aria-labelledby="h-video" data-fortschritt data-abschnitt="video">
     <div class="video__klemme">
       <div class="video__rahmen">
         <div class="video__bild"><img src="bilder/video-poster.webp" width="1000" height="667" alt="Helles Wohnzimmer mit großem Fenster und hellem Sofa" loading="lazy" decoding="async"></div>
@@ -387,7 +387,7 @@
   </section>
 
   <!-- 12. Journal: drei Karten (Beispiele) -->
-  <section class="sektion journal" id="journal" aria-labelledby="h-journal">
+  <section class="sektion journal" id="journal" aria-labelledby="h-journal" data-abschnitt="journal">
     <div class="wrap">
       <div class="kopfzeile">
         <div>
@@ -413,7 +413,7 @@
   </section>
 
   <!-- 13. Galerie: Raster mit Wasserzeichen Wort, Spalten driften gegenläufig -->
-  <section class="galerie" id="galerie" aria-labelledby="h-galerie">
+  <section class="galerie" id="galerie" aria-labelledby="h-galerie" data-abschnitt="galerie">
     <span class="wz" aria-hidden="true" data-parallax="0.2">Galerie</span>
     <div class="wrap">
       <div class="mitte">
@@ -441,7 +441,7 @@
   </section>
 
   <!-- 14. Fragen (Antworten sind Beispiele) -->
-  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen">
+  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen" data-abschnitt="fragen">
     <div class="wrap fragen__innen">
       <div class="fragen__kopf">
         <h2 id="h-fragen" data-zeig>Bevor Sie anfragen</h2>
@@ -458,7 +458,7 @@
   </section>
 
   <!-- 15. Kontakt -->
-  <section class="kontakt" id="kontakt" aria-labelledby="h-kontakt">
+  <section class="kontakt" id="kontakt" aria-labelledby="h-kontakt" data-abschnitt="kontakt">
     <div class="wrap kontakt__innen">
       <div class="kontakt__text">
         <p class="kicker kicker--dunkel" data-zeig>Kontakt</p>
@@ -485,7 +485,7 @@
   </section>
 
   <!-- 16. Newsletter -->
-  <section class="news" aria-labelledby="h-news">
+  <section class="news" aria-labelledby="h-news" data-abschnitt="news">
     <div class="wrap news__innen">
       <div>
         <h2 id="h-news" data-zeig>Ideen für Ihre Räume, einmal im Monat</h2>
@@ -501,7 +501,7 @@
   </section>
 </main>
 
-<footer class="fuss" id="fuss">
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
   <div class="wrap">
     <div class="fuss__oben">
       <div class="fuss__marke-kopf">

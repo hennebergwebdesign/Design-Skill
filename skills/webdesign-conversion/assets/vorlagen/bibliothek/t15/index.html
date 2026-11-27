@@ -44,7 +44,7 @@
   </defs>
 </svg>
 
-<header class="kopf" id="top">
+<header class="kopf" id="top" data-abschnitt="kopf">
   <div class="kopf__zeile">
     <a class="kopf__logo" href="#top" aria-label="Marke Muster, nach oben"><span class="kopf__zeichen" aria-hidden="true"><svg viewBox="0 0 32 32" width="28" height="28" focusable="false"><path d="M7 24V8l9 10 9-10v16" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Marke Muster</a>
     <button class="kopf__burger" type="button" data-menue aria-expanded="false" aria-controls="hauptnav">
@@ -66,7 +66,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: Produktreihe läuft beim Scrollen durch, Preis erscheint am Ende -->
-  <section class="held" data-fortschritt aria-labelledby="h-held">
+  <section class="held" data-fortschritt aria-labelledby="h-held" data-abschnitt="held">
     <div class="held__buehne">
       <div class="held__kopf">
         <p class="held__marke">Marke Muster Modell Eins</p>
@@ -91,7 +91,7 @@
   </section>
 
   <!-- 2. Höhepunkte: dunkle Tafel wächst, vier Folien wechseln beim Scrollen -->
-  <section class="schritte schritte--hell" id="hoehepunkte" data-schritte data-fortschritt aria-labelledby="h-hoehe">
+  <section class="schritte schritte--hell" id="hoehepunkte" data-schritte data-fortschritt aria-labelledby="h-hoehe" data-abschnitt="schritte">
     <div class="schritte__buehne">
       <div class="wrap schritte__kopf">
         <h2 id="h-hoehe" data-zeig>Die Höhepunkte im Überblick</h2>
@@ -138,7 +138,7 @@
   </section>
 
   <!-- 3. Die Idee: Wortlicht, zwei Bilder, Absatz -->
-  <section class="sektion idee" aria-labelledby="h-idee">
+  <section class="sektion idee" aria-labelledby="h-idee" data-abschnitt="idee">
     <div class="wrap idee__kopf">
       <p class="kicker" data-zeig>Die Idee dahinter</p>
       <h2 id="h-idee" data-licht>Gebaut, um zu bleiben, gemacht, um Freude zu bereiten.</h2>
@@ -154,7 +154,7 @@
   </section>
 
   <!-- 4. Farbabschnitt: Detailtext, großes Bild, drei Servicepunkte -->
-  <section class="farbflaeche" aria-labelledby="h-detail">
+  <section class="farbflaeche" aria-labelledby="h-detail" data-abschnitt="farbflaeche">
     <div class="wrap farbflaeche__kopf">
       <h2 id="h-detail" data-zeig>Alles bis ins Detail</h2>
       <p data-zeig>Das Modell Eins liefert einen präzisen, kräftigen Klang. Jede Komponente ist auf die anderen abgestimmt, damit Sie jeden Ton klar hören, ohne Verzerrung. Alle Angaben sind Beispieltexte.</p>
@@ -170,7 +170,7 @@
   </section>
 
   <!-- 5. Technik: sechs Karten, Plus öffnet ein Fenster -->
-  <section class="sektion technik" id="technik" aria-labelledby="h-technik">
+  <section class="sektion technik" id="technik" aria-labelledby="h-technik" data-abschnitt="technik">
     <div class="wrap">
       <p class="kicker" data-zeig>Technik</p>
       <h2 id="h-technik" data-zeig>Die Technik, die den Unterschied macht</h2>
@@ -246,7 +246,7 @@
   </section>
 
   <!-- 6. Galerie: dunkel, Liste links, Panel rechts wechselt beim Scrollen -->
-  <section class="schritte galerie" id="galerie" data-schritte data-fortschritt aria-labelledby="h-galerie">
+  <section class="schritte galerie" id="galerie" data-schritte data-fortschritt aria-labelledby="h-galerie" data-abschnitt="schritte-2">
     <div class="schritte__buehne">
       <div class="wrap galerie__raster">
         <div class="galerie__kopf">
@@ -316,7 +316,7 @@
   </section>
 
   <!-- 7. Alltag: Bildreihe läuft quer durch, Sticky -->
-  <section class="reise" data-fortschritt aria-labelledby="h-reise">
+  <section class="reise" data-fortschritt aria-labelledby="h-reise" data-abschnitt="reise">
     <div class="reise__buehne">
       <div class="wrap reise__kopf">
         <div><p class="kicker" data-zeig>Im Alltag</p><h2 id="h-reise" data-zeig>Das Modell Eins, wo Sie es brauchen</h2></div>
@@ -337,7 +337,7 @@
   </section>
 
   <!-- 8. Stimmen: dunkel, quer scrollbar -->
-  <section class="sektion stimmen" aria-labelledby="h-stimmen">
+  <section class="sektion stimmen" aria-labelledby="h-stimmen" data-abschnitt="stimmen">
     <div class="wrap">
       <p class="kicker" data-zeig>Stimmen</p>
       <h2 id="h-stimmen" data-zeig>Das sagen Käufer über Modell Eins</h2>
@@ -358,7 +358,7 @@
   </section>
 
   <!-- 9. Kaufen: Farbwahl, Preis, Lieferumfang -->
-  <section class="sektion kauf" id="kaufen" aria-labelledby="h-kauf">
+  <section class="sektion kauf" id="kaufen" aria-labelledby="h-kauf" data-abschnitt="kauf">
     <div class="wrap">
       <p class="kicker kicker--mitte" data-zeig>Bestellung</p>
       <h2 class="kauf__titel" id="h-kauf" data-zeig>Ihr Modell Eins: Farbe wählen und bestellen</h2>
@@ -409,7 +409,7 @@
   </section>
 
   <!-- 10. FAQ -->
-  <section class="sektion faq" id="faq" aria-labelledby="h-faq">
+  <section class="sektion faq" id="faq" aria-labelledby="h-faq" data-abschnitt="faq">
     <div class="wrap faq__raster">
       <div>
         <p class="kicker" data-zeig>Fragen</p>
@@ -427,7 +427,7 @@
   </section>
 
   <!-- 11. Abschluss mit Handlung -->
-  <section class="abschluss" id="kontakt" aria-labelledby="h-abschluss">
+  <section class="abschluss" id="kontakt" aria-labelledby="h-abschluss" data-abschnitt="abschluss">
     <div class="wrap">
       <div class="abschluss__tafel bild"><img class="bild__foto" src="bilder/see-bei-sonnenuntergang-mit-ruderboot.webp" width="1600" height="900" alt="See bei Sonnenuntergang mit einem Ruderboot am Ufer" loading="lazy" decoding="async">
         <div class="abschluss__inhalt">
@@ -444,7 +444,7 @@
   </section>
 </main>
 
-<footer class="fuss">
+<footer class="fuss" data-abschnitt="fuss">
   <div class="wrap fuss__raster">
     <div>
       <p class="fuss__marke">Marke Muster</p>

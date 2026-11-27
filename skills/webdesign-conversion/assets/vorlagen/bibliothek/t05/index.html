@@ -27,7 +27,7 @@
   <symbol id="i-funke" viewBox="0 0 256 256" fill="currentColor"><path d="M197.58,129.06,146,110l-19-51.62a15.92,15.92,0,0,0-29.88,0L78,110l-51.62,19a15.92,15.92,0,0,0,0,29.88L78,178l19,51.62a15.92,15.92,0,0,0,29.88,0L146,178l51.62-19a15.92,15.92,0,0,0,0-29.88ZM137,164.22a8,8,0,0,0-4.74,4.74L112,223.85,91.78,169A8,8,0,0,0,87,164.22L32.15,144,87,123.78A8,8,0,0,0,91.78,119L112,64.15,132.22,119a8,8,0,0,0,4.74,4.74L191.85,144ZM144,40a8,8,0,0,1,8-8h16V16a8,8,0,0,1,16,0V32h16a8,8,0,0,1,0,16H184V64a8,8,0,0,1-16,0V48H152A8,8,0,0,1,144,40ZM248,88a8,8,0,0,1-8,8h-8v8a8,8,0,0,1-16,0V96h-8a8,8,0,0,1,0-16h8V72a8,8,0,0,1,16,0v8h8A8,8,0,0,1,248,88Z"/></symbol>
 </svg>
 
-<header class="kopf" data-kopf>
+<header class="kopf" data-kopf data-abschnitt="kopf">
   <div class="kopf__zeile">
     <a class="logo" href="#start" aria-label="Atelier Beispiel, zum Seitenanfang">
       <svg class="logo__zeichen" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="10" fill="var(--akzent)"/><circle cx="16" cy="16" r="7" fill="var(--text)"/><circle cx="19" cy="13" r="3" fill="var(--akzent)"/></svg>
@@ -53,7 +53,7 @@
 
 <main id="inhalt">
 
-<section class="sektion start" id="start" aria-labelledby="h-start">
+<section class="sektion start" id="start" aria-labelledby="h-start" data-abschnitt="start">
   <div class="raster" aria-hidden="true"><div class="raster__lage raster__lage--a" data-parallax="-0.25"></div><div class="raster__lage raster__lage--b" data-parallax="0.12"></div></div>
   <div class="wrap">
     <!-- Held: Zielgruppe kleine und mittlere Unternehmen mit Marke oder Produkt, Problem austauschbarer Auftritt, Lösung Gestaltung vom Logo bis zur Verpackung, Beleg die Zeile mit Projektzahl (Beispielwert, ersetzen) -->
@@ -70,7 +70,7 @@
   </div>
 </section>
 
-<section class="sektion ueber" aria-labelledby="h-ueber">
+<section class="sektion ueber" aria-labelledby="h-ueber" data-abschnitt="ueber">
   <div class="wrap wrap--schmal zentriert">
     <h2 id="h-ueber" class="kleinkopf" data-zeig>Über uns</h2>
     <p class="aussage" data-zeig data-licht>Beispieltext: Eine Aussage in zwei, drei Sätzen, wer Sie sind und wie Sie arbeiten. Groß gesetzt, mittig, ohne Aufzählung.</p>
@@ -80,7 +80,7 @@
   </div>
 </section>
 
-<section class="sektion arbeiten" id="arbeiten" aria-labelledby="h-arbeiten">
+<section class="sektion arbeiten" id="arbeiten" aria-labelledby="h-arbeiten" data-abschnitt="arbeiten">
   <div class="wrap">
     <div class="kopfzeile">
       <h2 id="h-arbeiten" class="gross" data-zeig>Ausgewählte<br>Arbeiten.</h2>
@@ -133,7 +133,7 @@
   </div>
 </section>
 
-<section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen">
+<section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen" data-abschnitt="stimmen">
   <div class="wrap">
     <div class="sektionskopf zentriert">
       <h2 id="h-stimmen" class="gross gross--mitte" data-zeig>Kundenstimmen</h2>
@@ -165,7 +165,7 @@
   </div>
 </section>
 
-<section class="sektion leistungen" id="leistungen" aria-labelledby="h-leistungen">
+<section class="sektion leistungen" id="leistungen" aria-labelledby="h-leistungen" data-abschnitt="leistungen">
   <div class="wrap">
     <div class="kopfzeile">
       <h2 id="h-leistungen" class="gross" data-zeig>Leistungen,<br>die wir bieten.</h2>
@@ -207,7 +207,7 @@
   </div>
 </section>
 
-<section class="sektion werdegang" id="werdegang" aria-labelledby="h-werdegang">
+<section class="sektion werdegang" id="werdegang" aria-labelledby="h-werdegang" data-abschnitt="werdegang">
   <div class="wrap werdegang__raster">
     <div class="werdegang__links">
       <div class="klebt">
@@ -244,7 +244,7 @@
   </div>
 </section>
 
-<section class="sektion fragen" id="fragen" aria-labelledby="h-fragen">
+<section class="sektion fragen" id="fragen" aria-labelledby="h-fragen" data-abschnitt="fragen">
   <div class="wrap wrap--mittel">
     <div class="sektionskopf zentriert">
       <h2 id="h-fragen" class="gross gross--mitte" data-zeig>Häufige<br>Fragen</h2>
@@ -276,7 +276,7 @@
   </div>
 </section>
 
-<section class="sektion kontakt" id="kontakt" aria-labelledby="h-kontakt">
+<section class="sektion kontakt" id="kontakt" aria-labelledby="h-kontakt" data-abschnitt="kontakt">
   <div class="wrap">
     <div class="kontakt__raster">
       <div class="panel panel--gross" data-zeig>
@@ -307,7 +307,7 @@
 </section>
 </main>
 
-<footer class="fuss">
+<footer class="fuss" data-abschnitt="fuss">
   <div class="wrap">
     <div class="fuss__leiste">
       <ul class="fuss__links"><li><a href="tel:+490000000000" data-beispiel>Telefon 0000 0000000</a></li><li><a href="#">Impressum</a></li><li><a href="#">Datenschutz</a></li></ul>

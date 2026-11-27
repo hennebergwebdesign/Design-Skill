@@ -31,7 +31,7 @@
   <symbol id="i-zitat" viewBox="0 0 256 256" fill="currentColor"><path d="M100,58H40A14,14,0,0,0,26,72v64a14,14,0,0,0,14,14h62v10a34,34,0,0,1-34,34,6,6,0,0,0,0,12,46.06,46.06,0,0,0,46-46V72A14,14,0,0,0,100,58Zm2,80H40a2,2,0,0,1-2-2V72a2,2,0,0,1,2-2h60a2,2,0,0,1,2,2ZM216,58H156a14,14,0,0,0-14,14v64a14,14,0,0,0,14,14h62v10a34,34,0,0,1-34,34,6,6,0,0,0,0,12,46.06,46.06,0,0,0,46-46V72A14,14,0,0,0,216,58Zm2,80H156a2,2,0,0,1-2-2V72a2,2,0,0,1,2-2h60a2,2,0,0,1,2,2Z"/></symbol>
 </svg>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__innen wrap">
     <a class="kopf__marke" href="#oben">Beispielname</a>
     <button class="kopf__burger" type="button" data-menue aria-expanded="false" aria-controls="menue">
@@ -53,7 +53,7 @@
 
 <main id="inhalt">
 
-  <section class="hero" id="oben" aria-labelledby="titel">
+  <section class="hero" id="oben" aria-labelledby="titel" data-abschnitt="hero">
     <div class="hero__medium" aria-hidden="true" data-parallax="0.1">
       <div class="bild hero__bild"><img class="bild__foto" src="bilder/zwei-frauen-im-gespraech-am-fenstertisch.webp" width="1600" height="1067" alt="Zwei Frauen sitzen an einem kleinen Tisch am Fenster im Gespräch" fetchpriority="high" decoding="async"></div>
     </div>
@@ -79,7 +79,7 @@
     </div>
   </section>
 
-  <section class="sektion ueber" id="ueber" aria-labelledby="ueber-titel">
+  <section class="sektion ueber" id="ueber" aria-labelledby="ueber-titel" data-abschnitt="ueber">
     <div class="wrap">
       <div class="kopfzeile">
         <p class="kicker">Über uns</p>
@@ -97,7 +97,7 @@
 
   <div class="dienste">
 
-    <section class="dienst dienst--1" id="leistung-1" aria-labelledby="l1">
+    <section class="dienst dienst--1" id="leistung-1" aria-labelledby="l1" data-abschnitt="dienst">
       <div class="dienst__innen wrap">
         <div class="dienst__meta"><p>Leistung 001</p><p>Analyse</p></div>
         <div class="dienst__kopf">
@@ -115,7 +115,7 @@
       </div>
     </section>
 
-    <section class="dienst dienst--2" id="leistung-2" aria-labelledby="l2">
+    <section class="dienst dienst--2" id="leistung-2" aria-labelledby="l2" data-abschnitt="dienst-2">
       <div class="dienst__innen wrap">
         <div class="dienst__meta"><p>Leistung 002</p><p>Konzept</p></div>
         <div class="dienst__kopf">
@@ -133,7 +133,7 @@
       </div>
     </section>
 
-    <section class="dienst dienst--3" id="leistung-3" aria-labelledby="l3">
+    <section class="dienst dienst--3" id="leistung-3" aria-labelledby="l3" data-abschnitt="dienst-3">
       <div class="dienst__innen wrap">
         <div class="dienst__meta"><p>Leistung 003</p><p>Umsetzung</p></div>
         <div class="dienst__kopf">
@@ -153,7 +153,7 @@
 
   </div>
 
-  <section class="sektion vorgehen" id="vorgehen" aria-labelledby="vorgehen-titel">
+  <section class="sektion vorgehen" id="vorgehen" aria-labelledby="vorgehen-titel" data-abschnitt="vorgehen">
     <div class="wrap">
       <div class="kopfzeile">
         <h2 class="aussage" id="vorgehen-titel" data-zeig>Wir arbeiten in klaren Schritten, damit jeder Schritt nachvollziehbar bleibt.</h2>
@@ -182,7 +182,7 @@
     </div>
   </section>
 
-  <section class="sektion team" id="team" aria-labelledby="team-titel">
+  <section class="sektion team" id="team" aria-labelledby="team-titel" data-abschnitt="team">
     <div class="wrap">
       <div class="kopfzeile">
         <p class="kicker">Team</p>
@@ -204,7 +204,7 @@
     </div>
   </section>
 
-  <section class="sektion stimmen" id="stimmen" aria-labelledby="stimmen-titel">
+  <section class="sektion stimmen" id="stimmen" aria-labelledby="stimmen-titel" data-abschnitt="stimmen">
     <div class="wrap">
       <div class="kopfzeile">
         <h2 class="aussage" id="stimmen-titel" data-zeig>Was Kundinnen und Kunden über die Zusammenarbeit sagen.</h2>
@@ -223,7 +223,7 @@
     </div>
   </section>
 
-  <section class="sektion fragen" id="fragen" aria-labelledby="fragen-titel">
+  <section class="sektion fragen" id="fragen" aria-labelledby="fragen-titel" data-abschnitt="fragen">
     <div class="wrap">
       <div class="kopfzeile">
         <h2 class="aussage" id="fragen-titel" data-zeig>Häufige Fragen vor dem ersten Gespräch.</h2>
@@ -239,7 +239,7 @@
     </div>
   </section>
 
-  <section class="sektion abschluss" id="kontakt" aria-labelledby="kontakt-titel">
+  <section class="sektion abschluss" id="kontakt" aria-labelledby="kontakt-titel" data-abschnitt="abschluss">
     <div class="wrap">
       <h2 class="abschluss__titel" id="kontakt-titel" data-zeig>Welche Entscheidung steht bei Ihnen an? Sprechen wir darüber.</h2>
       <p class="abschluss__aktion" data-zeig><a class="knopf" href="mailto:kontakt@beispiel.de?subject=Erstgespr%C3%A4ch">Erstgespräch anfragen</a></p>
@@ -249,7 +249,7 @@
 
 </main>
 
-<footer class="fuss">
+<footer class="fuss" data-abschnitt="fuss">
   <div class="wrap fuss__innen">
     <div class="fuss__marke">
       <p class="fuss__name">Beispielname</p>

@@ -51,7 +51,7 @@
   <symbol id="i-zeichen" viewBox="0 0 32 32"><path d="M6 25V12l10-6.500L26 12v13l-10-6.500Z" fill="currentColor"/></symbol>
 </svg>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__leiste">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
       <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg>
@@ -78,7 +78,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: dunkle Bühne mit Lichtvorhang, zentrierter Titel, Oberfläche steigt aus dem Glühen -->
-  <section class="held" id="top" aria-labelledby="h-held">
+  <section class="held" id="top" aria-labelledby="h-held" data-abschnitt="held">
     <div class="held__vorhang" aria-hidden="true"></div>
     <div class="wrap held__innen">
       <p class="kicker" data-zeig>Für Analyse- und Strategieteams</p>
@@ -105,7 +105,7 @@
   </section>
 
   <!-- 2. Vertrauen -->
-  <section class="vertrauen" aria-labelledby="h-vertrauen" data-beispiel>
+  <section class="vertrauen" aria-labelledby="h-vertrauen" data-beispiel data-abschnitt="vertrauen">
     <p id="h-vertrauen" class="vertrauen__titel">Vertraut von Analysten, Teams und Finanzabteilungen</p>
     <div class="band logoband">
       <div class="band__spur">
@@ -125,7 +125,7 @@
   </section>
 
   <!-- 3. Vorteile: drei Spalten, mittig eine hohe Akzentkarte mit Anzeige, seitlich je zwei Kacheln -->
-  <section class="sektion vorteile" id="vorteile" aria-labelledby="h-vorteile">
+  <section class="sektion vorteile" id="vorteile" aria-labelledby="h-vorteile" data-abschnitt="vorteile">
     <div class="wrap">
       <header class="kopfblock">
         <p class="kicker" data-zeig>Warum wir</p>
@@ -156,7 +156,7 @@
   </section>
 
   <!-- 4. Funktionen: Raster aus großen Karten mit Oberflächen -->
-  <section class="sektion funktionen" id="funktionen" aria-labelledby="h-funktionen">
+  <section class="sektion funktionen" id="funktionen" aria-labelledby="h-funktionen" data-abschnitt="funktionen">
     <div class="wrap">
       <header class="kopfblock">
         <p class="kicker" data-zeig>Funktionen</p>
@@ -197,7 +197,7 @@
   </section>
 
   <!-- 5. Prinzipien: drei Karten mit Symbolkreis -->
-  <section class="sektion prinzipien" aria-labelledby="h-prinzipien">
+  <section class="sektion prinzipien" aria-labelledby="h-prinzipien" data-abschnitt="prinzipien">
     <div class="wrap">
       <header class="kopfblock">
         <p class="kicker" data-zeig>Unsere Werte</p>
@@ -216,7 +216,7 @@
   </section>
 
   <!-- 6. Ablauf: links bleibt die Aufrufkarte stehen, rechts laufen drei Schritte vorbei -->
-  <section class="sektion ablauf" id="ablauf" aria-labelledby="h-ablauf">
+  <section class="sektion ablauf" id="ablauf" aria-labelledby="h-ablauf" data-abschnitt="ablauf">
     <div class="wrap ablauf__raster">
       <aside class="ablauf__fest">
         <div class="aufrufkarte">
@@ -254,7 +254,7 @@
   </section>
 
   <!-- 7. Anbindungen: zwei gegenläufige Bänder mit Kacheln, mittig ein Ring -->
-  <section class="sektion anbindungen" aria-labelledby="h-anbindungen">
+  <section class="sektion anbindungen" aria-labelledby="h-anbindungen" data-abschnitt="anbindungen">
     <div class="wrap">
       <header class="kopfblock">
         <p class="kicker" data-zeig>Anbindungen</p>
@@ -270,7 +270,7 @@
   </section>
 
   <!-- 8. Preise -->
-  <section class="sektion preise" id="preise" aria-labelledby="h-preise">
+  <section class="sektion preise" id="preise" aria-labelledby="h-preise" data-abschnitt="preise">
     <div class="wrap">
       <header class="kopfblock">
         <p class="kicker" data-zeig>Preise</p>
@@ -309,7 +309,7 @@
   </section>
 
   <!-- 9. Stimmen: zwei gegenläufige Bänder -->
-  <section class="sektion stimmen" aria-labelledby="h-stimmen">
+  <section class="sektion stimmen" aria-labelledby="h-stimmen" data-abschnitt="stimmen">
     <div class="wrap">
       <header class="kopfblock">
         <p class="kicker" data-zeig>Stimmen</p>
@@ -324,7 +324,7 @@
   </section>
 
   <!-- 10. Fragen -->
-  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen">
+  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen" data-abschnitt="fragen">
     <div class="wrap">
       <header class="kopfblock">
         <p class="kicker" data-zeig>Fragen</p>
@@ -342,7 +342,7 @@
   </section>
 
   <!-- 11. Journal: links bleibt der Titel stehen, rechts laufen die Beiträge -->
-  <section class="sektion journal" id="journal" aria-labelledby="h-journal">
+  <section class="sektion journal" id="journal" aria-labelledby="h-journal" data-abschnitt="journal">
     <div class="wrap journal__raster">
       <div class="journal__fest">
         <p class="kicker" data-zeig>Journal</p>
@@ -360,7 +360,7 @@
   </section>
 
   <!-- 12. Aufruf -->
-  <section class="aufruf" id="kontakt" aria-labelledby="h-aufruf">
+  <section class="aufruf" id="kontakt" aria-labelledby="h-aufruf" data-abschnitt="aufruf">
     <div class="aufruf__glut" aria-hidden="true"></div>
     <div class="wrap aufruf__innen">
       <p class="kicker" data-zeig>Klüger entscheiden</p>
@@ -381,7 +381,7 @@
   </section>
 </main>
 
-<footer class="fuss" id="fuss">
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
   <div class="wrap fuss__raster">
     <div class="fuss__marke">
       <a class="kopf__logo" href="#top" aria-label="Markenname, nach oben"><svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg><span>Markenname</span></a>

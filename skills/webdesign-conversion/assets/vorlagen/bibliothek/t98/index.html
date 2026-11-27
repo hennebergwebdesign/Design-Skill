@@ -48,7 +48,7 @@
   <clipPath id="welle" clipPathUnits="objectBoundingBox"><path d="M0.04,0.20 C0.04,0.09 0.12,0.03 0.22,0.05 C0.34,0.08 0.40,0.18 0.52,0.16 C0.64,0.14 0.70,0.03 0.82,0.04 C0.92,0.05 0.97,0.11 0.97,0.23 L0.97,0.78 C0.97,0.91 0.90,0.97 0.80,0.96 C0.68,0.95 0.62,0.85 0.50,0.87 C0.38,0.89 0.32,0.98 0.20,0.97 C0.10,0.96 0.04,0.91 0.04,0.78 Z"/></clipPath>
 </svg>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__leiste">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
       <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg>
@@ -74,7 +74,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: Foto in gerundetem Rahmen mit Verlauf, Satz mit zwei Bildchips, zwei Knöpfe, Filmplatzhalter rechts -->
-  <section class="held" id="top" aria-labelledby="h-held">
+  <section class="held" id="top" aria-labelledby="h-held" data-abschnitt="held">
     <img class="held__bild" src="bilder/gruppe-im-sonnigen-buero-beim-meeting.webp" width="1000" height="667" alt="Ein Team steht und sitzt in einem hellen Büro um eine Pinnwand und einen Laptop" fetchpriority="high" decoding="async">
     <div class="held__innen">
       <div class="held__text">
@@ -99,7 +99,7 @@
   </section>
 
   <!-- 2. Partnerleiste: neutrale Beispielzeichen, keine Firmennamen -->
-  <section class="partner" aria-labelledby="h-partner">
+  <section class="partner" aria-labelledby="h-partner" data-abschnitt="partner">
     <div class="wrap">
       <h2 class="partner__titel" id="h-partner" data-zeig>Wir arbeiten mit Systemen, die im Mittelstand laufen</h2>
       <ul class="partner__reihe" data-staffel data-beispiel role="list" aria-label="Beispielzeichen für Partnersysteme">
@@ -113,7 +113,7 @@
   </section>
 
   <!-- 3. Leistungen: Wischspur mit farbigen Karten -->
-  <section class="sektion leistungen" id="leistungen" aria-labelledby="h-leistungen" data-reiter-gruppe>
+  <section class="sektion leistungen" id="leistungen" aria-labelledby="h-leistungen" data-reiter-gruppe data-abschnitt="leistungen">
     <div class="wrap leistungen__kopf">
       <h2 id="h-leistungen" data-zeig>Flexible Leistungen für Ihren Betrieb</h2>
       <div class="pfeile" data-reiter-steuerung hidden>
@@ -158,7 +158,7 @@
   </section>
 
   <!-- 4. Zweispalte weiß: Text links, großes Porträt rechts -->
-  <section class="zwei zwei--weiss" id="ueber" aria-labelledby="h-ueber">
+  <section class="zwei zwei--weiss" id="ueber" aria-labelledby="h-ueber" data-abschnitt="zwei">
     <div class="zwei__text">
       <h2 id="h-ueber" data-zeig>Weniger Handarbeit in jedem Teil der Verwaltung</h2>
       <hr class="zwei__linie" aria-hidden="true">
@@ -170,7 +170,7 @@
   </section>
 
   <!-- 5. Textband mit Pause -->
-  <section class="textband" aria-label="Unsere Schwerpunkte">
+  <section class="textband" aria-label="Unsere Schwerpunkte" data-abschnitt="textband">
     <div class="textband__rahmen">
       <input class="textband__schalter" type="checkbox" id="band-pause" aria-label="Textband anhalten">
       <label class="textband__pause" for="band-pause"><svg class="pause-ein" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-pause"/></svg><svg class="pause-aus" width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-play"/></svg><span class="sr-nur">Textband anhalten oder fortsetzen</span></label>
@@ -186,7 +186,7 @@
   </section>
 
   <!-- 6. Zweispalte: Foto links, Text rechts -->
-  <section class="zwei zwei--foto-links" aria-labelledby="h-komplett">
+  <section class="zwei zwei--foto-links" aria-labelledby="h-komplett" data-abschnitt="zwei-2">
     <div class="zwei__foto bild" data-zeig="skala"><img src="bilder/besprechungsraum-mit-grossem-tisch-und-teams.webp" width="1000" height="668" alt="Besprechung in einem Raum mit großem Tisch, mehrere Personen mit Laptops" loading="lazy" decoding="async"></div>
     <div class="zwei__text">
       <h2 id="h-komplett" data-zeig>Die komplette Lösung für saubere Zahlen im Betrieb</h2>
@@ -197,7 +197,7 @@
   </section>
 
   <!-- 7. Ergebnisse: Foto in Wellenform über driftenden Farbflächen, Kennzahlen -->
-  <section class="sektion erzaehlen" id="ergebnisse" aria-labelledby="h-erzaehlen">
+  <section class="sektion erzaehlen" id="ergebnisse" aria-labelledby="h-erzaehlen" data-abschnitt="erzaehlen">
     <div class="wrap">
       <h2 class="mitte" id="h-erzaehlen" data-zeig>Gute Software ist die, die Ihr Team gern benutzt</h2>
       <div class="buehne">
@@ -217,7 +217,7 @@
   </section>
 
   <!-- 8. Stimmen: Zitatkarten als Wischspur -->
-  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen" data-reiter-gruppe>
+  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen" data-reiter-gruppe data-abschnitt="stimmen">
     <div class="wrap leistungen__kopf">
       <h2 id="h-stimmen" data-zeig>Was Kunden über unsere Arbeit sagen</h2>
       <div class="pfeile" data-reiter-steuerung hidden>
@@ -235,7 +235,7 @@
   </section>
 
   <!-- 9. Ratgeber: drei farbige Artikelkarten, gestaffelt -->
-  <section class="sektion ratgeber" id="ratgeber" aria-labelledby="h-ratgeber">
+  <section class="sektion ratgeber" id="ratgeber" aria-labelledby="h-ratgeber" data-abschnitt="ratgeber">
     <div class="wrap">
       <h2 class="mitte" id="h-ratgeber" data-zeig>Ratgeber, die beim Entscheiden helfen</h2>
       <ul class="ratgeber__reihe" data-staffel role="list">
@@ -262,7 +262,7 @@
   </section>
 
   <!-- 10. Einwand FAQ -->
-  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen">
+  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen" data-abschnitt="fragen">
     <div class="wrap fragen__raster">
       <h2 id="h-fragen" data-zeig>Häufige Fragen vor dem ersten Gespräch</h2>
       <div class="fragen__liste" data-exklusiv data-beispiel>
@@ -276,7 +276,7 @@
   </section>
 
   <!-- 11. Kontakt: Erstgespräch, höchstens fünf Felder -->
-  <section class="sektion kontakt" id="kontakt" aria-labelledby="h-kontakt">
+  <section class="sektion kontakt" id="kontakt" aria-labelledby="h-kontakt" data-abschnitt="kontakt">
     <div class="wrap">
       <div class="kontakt__karte" data-zeig="skala">
         <div class="kontakt__text">
@@ -306,7 +306,7 @@
 </main>
 
 <!-- 12. Fuß: schwarz, Knopf, Linkspalten, Social Kapsel, Wortmarke -->
-<footer class="fuss" id="fuss">
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
   <div class="wrap fuss__raster">
     <div class="fuss__karte">
       <a class="kopf__logo fuss__logo" href="#top" aria-label="Markenname, nach oben"><svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg><span>Markenname</span></a>

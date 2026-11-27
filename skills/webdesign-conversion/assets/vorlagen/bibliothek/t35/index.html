@@ -25,7 +25,7 @@
   <symbol id="i-envelope" viewBox="0 0 256 256" fill="currentColor"><path d="M224,44H32A12,12,0,0,0,20,56V192a20,20,0,0,0,20,20H216a20,20,0,0,0,20-20V56A12,12,0,0,0,224,44Zm-96,83.72L62.85,68h130.3ZM92.79,128,44,172.72V83.28Zm17.76,16.28,9.34,8.57a12,12,0,0,0,16.22,0l9.34-8.57L193.15,188H62.85ZM163.21,128,212,83.28v89.44Z"/></symbol>
   <symbol id="i-plus" viewBox="0 0 256 256" fill="currentColor"><path d="M228,128a12,12,0,0,1-12,12H140v76a12,12,0,0,1-24,0V140H40a12,12,0,0,1,0-24h76V40a12,12,0,0,1,24,0v76h76A12,12,0,0,1,228,128Z"/></symbol>
 </svg>
-<header class="kopf" id="top">
+<header class="kopf" id="top" data-abschnitt="kopf">
   <div class="wrap kopf__leiste">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite"><svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M9 5v9a3 3 0 0 0 6 0V5M12 5v22M22 27V5c-3 2-5 6-5 11h5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></svg><span>Markenname</span></a>
     <nav class="kopf__nav" id="hauptnav" aria-label="Hauptnavigation" data-menue-ziel>
@@ -43,7 +43,7 @@
 </header>
 
 <main id="inhalt">
-<section class="held" aria-labelledby="h-held">
+<section class="held" aria-labelledby="h-held" data-abschnitt="held">
   <div class="held__text dunkel">
     <div>
       <!-- Held: Zielgruppe Gäste für Abend, Mittag und Feier; Problem laute, gehetzte Lokale; Lösung frische Küche in ruhigem Raum mit Tisch in zwei Minuten; Beleg Gästezahl (Beispielwert). Anlässe und Zahl durch die Angaben des Hauses ersetzen. -->
@@ -59,7 +59,7 @@
   <div class="bild held__bild bild--b"><img src="bilder/gespraech-sofa-lokal.webp" width="1000" height="667" alt="Zwei Frauen im Gespräch auf einem Sofa im Lokal" loading="lazy" decoding="async"></div>
 </section>
 
-<section class="ueber" id="ueber" aria-labelledby="h-ueber">
+<section class="ueber" id="ueber" aria-labelledby="h-ueber" data-abschnitt="ueber">
   <div class="wrap">
     <header class="kopfzeile">
       <p class="kicker" data-zeig>Wer wir sind</p>
@@ -77,7 +77,7 @@
   </div>
 </section>
 
-<section class="menue" id="karte" aria-labelledby="h-karte">
+<section class="menue" id="karte" aria-labelledby="h-karte" data-abschnitt="menue">
   <div class="wrap">
     <header class="kopfzeile">
       <p class="kicker" data-zeig>Unsere Spezialitäten</p>
@@ -95,7 +95,7 @@
   </div>
 </section>
 
-<section class="spezial" aria-labelledby="h-spezial">
+<section class="spezial" aria-labelledby="h-spezial" data-abschnitt="spezial">
   <div class="wrap">
     <header class="kopfzeile">
       <p class="kicker" data-zeig>Auswahl der Woche</p>
@@ -113,7 +113,7 @@
   </div>
 </section>
 
-<section class="galerie dunkel" id="galerie" aria-labelledby="h-galerie">
+<section class="galerie dunkel" id="galerie" aria-labelledby="h-galerie" data-abschnitt="galerie">
   <header class="kopfzeile">
     <p class="kicker" data-zeig>Galerie</p>
     <h2 id="h-galerie" data-zeig>Wo Handwerk und Geschmack einen Abend prägen</h2>
@@ -138,7 +138,7 @@
   </div>
 </section>
 
-<section class="ereignis" aria-labelledby="h-ereignis">
+<section class="ereignis" aria-labelledby="h-ereignis" data-abschnitt="ereignis">
   <div class="wrap">
     <header class="kopfzeile">
       <p class="kicker" data-zeig>Nächste Veranstaltung</p>
@@ -165,7 +165,7 @@
   </div>
 </section>
 
-<section class="stimmen" id="stimmen" aria-labelledby="h-stimmen">
+<section class="stimmen" id="stimmen" aria-labelledby="h-stimmen" data-abschnitt="stimmen">
   <div class="wrap">
     <header class="kopfzeile">
       <p class="kicker" data-zeig>Stimmen</p>
@@ -185,7 +185,7 @@
   </div>
 </section>
 
-<section class="faq" id="fragen" aria-labelledby="h-fragen">
+<section class="faq" id="fragen" aria-labelledby="h-fragen" data-abschnitt="faq">
   <div class="wrap">
     <header class="kopfzeile">
       <p class="kicker" data-zeig>Häufige Fragen</p>
@@ -201,7 +201,7 @@
   </div>
 </section>
 
-<section class="tisch" id="tisch" aria-labelledby="h-tisch">
+<section class="tisch" id="tisch" aria-labelledby="h-tisch" data-abschnitt="tisch">
   <div class="wrap">
     <header class="kopfzeile">
       <p class="kicker" data-zeig>Tischreservierung</p>
@@ -227,7 +227,7 @@
 </section>
 </main>
 
-<footer class="fuss dunkel" id="fuss">
+<footer class="fuss dunkel" id="fuss" data-abschnitt="fuss">
   <div class="wrap">
     <div class="fuss__raster">
       <nav aria-label="Seiten"><h3>Seiten</h3><ul><li><a href="#ueber">Über uns</a></li><li><a href="#karte">Karte</a></li><li><a href="#tisch">Reservierung</a></li><li><a href="#galerie">Galerie</a></li><li><a href="#stimmen">Stimmen</a></li></ul></nav>

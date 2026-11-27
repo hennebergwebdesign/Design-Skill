@@ -30,7 +30,7 @@
   <symbol id="i-kopf" viewBox="0 0 256 256" fill="currentColor"><path d="M204.73,51.85A108.07,108.07,0,0,0,20,128v56a28,28,0,0,0,28,28H64a28,28,0,0,0,28-28V144a28,28,0,0,0-28-28H44.84A84.05,84.05,0,0,1,128,44h.64a83.7,83.7,0,0,1,82.52,72H192a28,28,0,0,0-28,28v40a28,28,0,0,0,28,28h16a28,28,0,0,0,28-28V128A107.34,107.34,0,0,0,204.73,51.85ZM64,140a4,4,0,0,1,4,4v40a4,4,0,0,1-4,4H48a4,4,0,0,1-4-4V140Zm148,44a4,4,0,0,1-4,4H192a4,4,0,0,1-4-4V144a4,4,0,0,1,4-4h20Z"/></symbol>
 </svg>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__innen">
     <button class="kopf__burger" type="button" data-menue aria-expanded="false" aria-controls="hauptmenue" aria-label="Menü öffnen">
       <span class="burger" aria-hidden="true"><i></i><i></i></span>
@@ -55,7 +55,7 @@
 <main id="inhalt">
 
 <!-- 1. Hero: dunkel, riesige H1, gebogene Bilderleiste, die beim Scrollen flach und groß wird -->
-<section class="hero" id="top" data-fortschritt aria-labelledby="hero-titel">
+<section class="hero" id="top" data-fortschritt aria-labelledby="hero-titel" data-abschnitt="hero">
   <div class="hero__sticky">
     <div class="hero__linien" aria-hidden="true"></div>
     <div class="hero__kopf">
@@ -87,7 +87,7 @@
 </section>
 
 <!-- 2. Überblick: Überschrift füllt sich Wort für Wort, drei Spalten -->
-<section class="sektion ueberblick" id="ueberblick" aria-labelledby="ueberblick-titel">
+<section class="sektion ueberblick" id="ueberblick" aria-labelledby="ueberblick-titel" data-abschnitt="ueberblick">
   <div class="wrap ueberblick__raster">
     <div class="ueberblick__links">
       <p class="kicker">Überblick</p>
@@ -111,7 +111,7 @@
 </section>
 
 <!-- 3. Programm: Tage als Reiter, helle Karten in einem Tint-Panel -->
-<section class="sektion programm" id="programm" aria-labelledby="programm-titel">
+<section class="sektion programm" id="programm" aria-labelledby="programm-titel" data-abschnitt="programm">
   <div class="wrap">
     <div class="programm__kopf">
       <div>
@@ -147,7 +147,7 @@
 </section>
 
 <!-- 4. Countdown: Vollbild-Platzhalter, Ortschip, Zählkästen -->
-<section class="countdown" aria-labelledby="countdown-titel">
+<section class="countdown" aria-labelledby="countdown-titel" data-abschnitt="countdown">
   <div class="bild countdown__bild" data-parallax="0.06"><img class="bild__foto" src="bilder/gut-besuchter-saal-mit-holzwaenden.webp" width="1600" height="1067" alt="" loading="lazy" decoding="async"></div>
   <div class="wrap countdown__innen">
     <p class="ortschip"><span>Live in</span><strong data-beispiel><svg class="ico" aria-hidden="true"><use href="#i-ort"/></svg>Musterstadt</strong></p>
@@ -168,7 +168,7 @@
 </section>
 
 <!-- 5. Referenten: Karussell mit Scroll Snap und Punkten -->
-<section class="sektion referenten" id="referenten" aria-labelledby="referenten-titel">
+<section class="sektion referenten" id="referenten" aria-labelledby="referenten-titel" data-abschnitt="referenten">
   <div class="wrap">
     <p class="kicker">Auf der Bühne</p>
     <h2 id="referenten-titel" data-wortfuell>Wer zu uns spricht</h2>
@@ -188,7 +188,7 @@
 </section>
 
 <!-- 6. Partner: großes Tint-Panel, links Text, rechts drei Karten mit Logolauf -->
-<section class="partner" id="partner" aria-labelledby="partner-titel">
+<section class="partner" id="partner" aria-labelledby="partner-titel" data-abschnitt="partner">
   <div class="wrap">
     <div class="partner__panel">
       <div class="partner__text">
@@ -220,7 +220,7 @@
 </section>
 
 <!-- 7. Preise: dunkel, drei Karten, mittlere hervorgehoben -->
-<section class="sektion preise" id="preise" aria-labelledby="preise-titel">
+<section class="sektion preise" id="preise" aria-labelledby="preise-titel" data-abschnitt="preise">
   <div class="wrap">
     <div class="mitte-kopf">
       <p class="kicker">Tickets</p>
@@ -268,7 +268,7 @@
 </section>
 
 <!-- 8. Stimmen: gekippte, überlappende Karten, die sich beim Scrollen aufrichten -->
-<section class="sektion stimmen" aria-labelledby="stimmen-titel">
+<section class="sektion stimmen" aria-labelledby="stimmen-titel" data-abschnitt="stimmen">
   <div class="wrap">
     <div class="mitte-kopf">
       <p class="kicker">Stimmen</p>
@@ -285,7 +285,7 @@
 </section>
 
 <!-- 9. Laufband in zwei Reihen, gegenläufig -->
-<section class="lauf" aria-label="Schlagworte der Veranstaltung">
+<section class="lauf" aria-label="Schlagworte der Veranstaltung" data-abschnitt="lauf">
   <div class="band lauf__reihe" aria-hidden="true">
     <div class="band__spur"><span>Tickets</span><svg class="stern" aria-hidden="true"><use href="#i-funke"/></svg><span>Programm</span><svg class="stern" aria-hidden="true"><use href="#i-funke"/></svg><span>Partner</span><svg class="stern" aria-hidden="true"><use href="#i-funke"/></svg><span>Lounge</span><svg class="stern" aria-hidden="true"><use href="#i-funke"/></svg></div>
     <div class="band__spur"><span>Tickets</span><svg class="stern" aria-hidden="true"><use href="#i-funke"/></svg><span>Programm</span><svg class="stern" aria-hidden="true"><use href="#i-funke"/></svg><span>Partner</span><svg class="stern" aria-hidden="true"><use href="#i-funke"/></svg><span>Lounge</span><svg class="stern" aria-hidden="true"><use href="#i-funke"/></svg></div>
@@ -297,7 +297,7 @@
 </section>
 
 <!-- 10. Fragen -->
-<section class="sektion fragen" id="fragen" aria-labelledby="fragen-titel">
+<section class="sektion fragen" id="fragen" aria-labelledby="fragen-titel" data-abschnitt="fragen">
   <div class="wrap">
     <div class="mitte-kopf">
       <p class="kicker">Fragen und Antworten</p>
@@ -315,7 +315,7 @@
 </section>
 
 <!-- 11. Abschluss-CTA -->
-<section class="abschluss" id="kontakt" aria-labelledby="abschluss-titel">
+<section class="abschluss" id="kontakt" aria-labelledby="abschluss-titel" data-abschnitt="abschluss">
   <div class="wrap">
     <div class="abschluss__panel">
       <div class="bild abschluss__bild" data-parallax="0.05"><img class="bild__foto" src="bilder/haende-im-publikum-vor-dunkler-buehne.webp" width="1600" height="1268" alt="" loading="lazy" decoding="async"></div>
@@ -329,7 +329,7 @@
 </section>
 
 <!-- 12. Neuigkeiten -->
-<section class="sektion neues" aria-labelledby="neues-titel">
+<section class="sektion neues" aria-labelledby="neues-titel" data-abschnitt="neues">
   <div class="wrap">
     <div class="neues__kopf">
       <div>
@@ -363,7 +363,7 @@
 
 </main>
 
-<footer class="fuss">
+<footer class="fuss" data-abschnitt="fuss">
   <div class="fuss__linien" aria-hidden="true"></div>
   <div class="wrap fuss__raster">
     <div class="fuss__marke">

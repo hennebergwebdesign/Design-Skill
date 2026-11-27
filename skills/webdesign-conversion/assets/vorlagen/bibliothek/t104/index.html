@@ -59,7 +59,7 @@
   <symbol id="z6" viewBox="0 0 120 40"><rect x="6" y="10" width="40" height="20" rx="10" fill="currentColor"/><circle cx="64" cy="20" r="10" fill="currentColor" opacity=".4"/><rect x="82" y="15" width="26" height="10" rx="5" fill="currentColor" opacity=".4"/></symbol>
 </svg>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__leiste">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
       <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg>
@@ -86,7 +86,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: dunkle Tafel mit großem Radius, links Satz und zwei Wegekarten, rechts Oberfläche aus HTML (Beleg läuft durch) -->
-  <section class="held" id="top" aria-labelledby="h-held">
+  <section class="held" id="top" aria-labelledby="h-held" data-abschnitt="held">
     <div class="held__innen">
       <div class="held__text">
         <!-- Heldformel: Zielgruppe Finanzleitung und Buchhaltung im Mittelstand, Problem Rechnungsstapel, Freigaben per Mail und Auslandszahlungen von Hand, Lösung ein automatischer Ablauf von der Rechnung bis zur Zahlung mit selbst gesetzten Freigabegrenzen -->
@@ -137,7 +137,7 @@
   </section>
 
   <!-- 2. Funktionen: Wischspur mit Oberflächen auf Rasterfläche -->
-  <section class="sektion funktionen" id="funktionen" aria-labelledby="h-funktionen" data-reiter-gruppe>
+  <section class="sektion funktionen" id="funktionen" aria-labelledby="h-funktionen" data-reiter-gruppe data-abschnitt="funktionen">
     <div class="wrap funktionen__kopf">
       <div>
         <p class="kicker" data-zeig>Funktionen</p>
@@ -210,7 +210,7 @@
   </section>
 
   <!-- 3. Zahlungen: drei weiße Karten mit Oberfläche oben -->
-  <section class="sektion zahlungen" id="zahlungen" aria-labelledby="h-zahlungen">
+  <section class="sektion zahlungen" id="zahlungen" aria-labelledby="h-zahlungen" data-abschnitt="zahlungen">
     <div class="wrap">
       <h2 id="h-zahlungen" data-zeig>Wachsen, ohne dass der Aufwand mitwächst</h2>
       <p class="zahlungen__lead" data-zeig>Mehrere Gesellschaften, Währungen und Länder laufen in einem Bestand zusammen, mit einheitlichen Regeln und einem gemeinsamen Bericht.</p>
@@ -255,7 +255,7 @@
   </section>
 
   <!-- 4. Anbindungen: dunkle Tafel, Datenfluss und Zeichenband -->
-  <section class="tafel anbindungen" id="anbindungen" aria-labelledby="h-anbindungen">
+  <section class="tafel anbindungen" id="anbindungen" aria-labelledby="h-anbindungen" data-abschnitt="tafel">
     <div class="tafel__innen">
       <div class="anbindungen__text">
         <h2 id="h-anbindungen" data-zeig>Schnittstellen zu den Systemen, die Sie schon haben</h2>
@@ -285,7 +285,7 @@
   </section>
 
   <!-- 5. Fälle: Wischspur mit Fotokarte und Zitat, alle Beispiele -->
-  <section class="sektion faelle" id="faelle" aria-labelledby="h-faelle" data-reiter-gruppe>
+  <section class="sektion faelle" id="faelle" aria-labelledby="h-faelle" data-reiter-gruppe data-abschnitt="faelle">
     <div class="wrap funktionen__kopf">
       <div>
         <p class="kicker" data-zeig>Kundenfälle</p>
@@ -334,7 +334,7 @@
   </section>
 
   <!-- 6. Wirkung: dunkle Tafel mit drei Kennzahlen, alles Beispiele -->
-  <section class="tafel wirkung" id="wirkung" aria-labelledby="h-wirkung">
+  <section class="tafel wirkung" id="wirkung" aria-labelledby="h-wirkung" data-abschnitt="tafel-2">
     <div class="tafel__innen tafel__innen--eng">
       <h2 id="h-wirkung" data-zeig>Wirkung im Alltag eines Finanzteams</h2>
       <ul class="zahlen" data-staffel data-beispiel role="list">
@@ -347,7 +347,7 @@
   </section>
 
   <!-- 7. Preise: helles Band -->
-  <section class="band-preise" id="preise" aria-labelledby="h-preise">
+  <section class="band-preise" id="preise" aria-labelledby="h-preise" data-abschnitt="band-preise">
     <div class="band-preise__innen">
       <div>
         <h2 id="h-preise" data-zeig>Pakete nach Belegvolumen</h2>
@@ -358,7 +358,7 @@
   </section>
 
   <!-- 8. Einwand FAQ -->
-  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen">
+  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen" data-abschnitt="fragen">
     <div class="wrap fragen__raster">
       <div>
         <h2 id="h-fragen" data-zeig>Häufige Fragen vor der Demo</h2>
@@ -375,7 +375,7 @@
   </section>
 
   <!-- 9. Kontakt: Demo, höchstens fünf Felder -->
-  <section class="tafel kontakt" id="kontakt" aria-labelledby="h-kontakt">
+  <section class="tafel kontakt" id="kontakt" aria-labelledby="h-kontakt" data-abschnitt="tafel-3">
     <div class="tafel__innen kontakt__innen">
       <div class="kontakt__text">
         <h2 id="h-kontakt" data-zeig>Bereit, Zeit und Nerven zu sparen?</h2>
@@ -404,7 +404,7 @@
 </main>
 
 <!-- Fuß: hell, große Aussage, Linkspalten -->
-<footer class="fuss" id="fuss">
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
   <div class="wrap fuss__raster">
     <div class="fuss__links">
       <a class="kopf__logo fuss__logo" href="#top" aria-label="Markenname, nach oben"><svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg><span>Markenname</span></a>

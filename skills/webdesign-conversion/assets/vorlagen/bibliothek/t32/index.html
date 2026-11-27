@@ -46,7 +46,7 @@
   <symbol id="i-liste" viewBox="0 0 256 256" fill="currentColor"><path d="M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM192,184H64a8,8,0,0,1,0-16H192a8,8,0,0,1,0,16Zm0-48H64a8,8,0,0,1,0-16H192a8,8,0,0,1,0,16Zm0-48H64a8,8,0,0,1,0-16H192a8,8,0,0,1,0,16Z"/></symbol>
 </svg>
 
-<header class="kopf" id="kopf">
+<header class="kopf" id="kopf" data-abschnitt="kopf">
   <div class="kopf__leiste">
     <div class="wrap kopf__leiste-innen" data-beispiel>
       <p><svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#i-blitz"/></svg>Notdienst rund um die Uhr</p>
@@ -78,7 +78,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: Vollbild, Bildfläche läuft beim Scrollen langsamer, dunkelt ab -->
-  <section class="held" id="top" aria-labelledby="h-held" data-abdunkeln>
+  <section class="held" id="top" aria-labelledby="h-held" data-abdunkeln data-abschnitt="held">
     <div class="held__bild bild" data-platzhalter="Foto: Dachdecker bei der Arbeit auf dem Dach" aria-hidden="true"><span class="held__muster"></span></div>
     <div class="held__schleier" aria-hidden="true"></div>
     <div class="wrap held__innen" data-staffel>
@@ -99,7 +99,7 @@
   </section>
 
   <!-- 2. Vertrauensleiste: Bewertung und Siegel -->
-  <section class="beleg" aria-label="Bewertung und Auszeichnungen">
+  <section class="beleg" aria-label="Bewertung und Auszeichnungen" data-abschnitt="beleg">
     <div class="wrap beleg__innen">
       <div class="bewertung" data-zeig data-beispiel>
         <p class="bewertung__zahl">4,9</p>
@@ -120,7 +120,7 @@
   </section>
 
   <!-- 3. Über uns auf Ziegelfläche: Satz, Kennzahlen, großes Bild -->
-  <section class="ueber" id="ueber" aria-labelledby="h-ueber">
+  <section class="ueber" id="ueber" aria-labelledby="h-ueber" data-abschnitt="ueber">
     <div class="wrap">
       <div class="ueber__kopf">
         <div>
@@ -140,7 +140,7 @@
   </section>
 
   <!-- 4. Stimmen als Laufband, Karten laufen langsam durch -->
-  <section class="lauf" aria-label="Kurze Kundenstimmen">
+  <section class="lauf" aria-label="Kurze Kundenstimmen" data-abschnitt="lauf">
     <div class="band" style="--band-abstand:1.25rem;--band-dauer:60s" data-beispiel>
       <ul class="band__spur">
         <li class="kurz"><p class="sterne" role="img" aria-label="Fünf Sterne"><svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#i-stern"/></svg><svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#i-stern"/></svg><svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#i-stern"/></svg><svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#i-stern"/></svg><svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#i-stern"/></svg></p><blockquote>Nach dem Sturm war der Schaden binnen zwei Tagen gesichert. Auch die Versicherung wurde ohne Streit abgewickelt.</blockquote><p class="kurz__name">Familie Beispiel, Eigenheim</p></li>
@@ -160,7 +160,7 @@
   </section>
 
   <!-- 5. Leistungen: sechs Karten -->
-  <section class="sektion leist" id="leistungen" aria-labelledby="h-leist">
+  <section class="sektion leist" id="leistungen" aria-labelledby="h-leist" data-abschnitt="leist">
     <div class="wrap">
       <header class="kopfzeile">
         <p class="kicker" data-zeig>Leistungen</p>
@@ -208,7 +208,7 @@
   </section>
 
   <!-- 6. Qualität: Bild bleibt stehen, Liste rechts mit mitlaufendem Punkt -->
-  <section class="qual" aria-labelledby="h-qual">
+  <section class="qual" aria-labelledby="h-qual" data-abschnitt="qual">
     <div class="wrap qual__raster">
       <div class="qual__links">
         <header class="kopfzeile kopfzeile--links">
@@ -242,7 +242,7 @@
   </section>
 
   <!-- 7. Ablauf: drei Schritte -->
-  <section class="sektion ablauf" id="ablauf" aria-labelledby="h-ablauf">
+  <section class="sektion ablauf" id="ablauf" aria-labelledby="h-ablauf" data-abschnitt="ablauf">
     <div class="wrap">
       <header class="kopfzeile">
         <p class="kicker" data-zeig>So läuft es ab</p>
@@ -269,7 +269,7 @@
   </section>
 
   <!-- 8. Ruhe fürs Haus: Text, zwei Vorteile, versetzte Bilder, schwebende Karte -->
-  <section class="ruhe" aria-labelledby="h-ruhe">
+  <section class="ruhe" aria-labelledby="h-ruhe" data-abschnitt="ruhe">
     <div class="wrap ruhe__raster">
       <div class="ruhe__text">
         <p class="kicker" data-zeig>Ihr Vorteil</p>
@@ -294,7 +294,7 @@
   </section>
 
   <!-- 9. Stimmen: Mauerwerk aus Karten auf Ziegelfläche -->
-  <section class="stimmen" id="stimmen" aria-labelledby="h-stimmen">
+  <section class="stimmen" id="stimmen" aria-labelledby="h-stimmen" data-abschnitt="stimmen">
     <div class="wrap">
       <header class="kopfzeile kopfzeile--hell">
         <p class="kicker kicker--hell" data-zeig>Kundenstimmen</p>
@@ -312,7 +312,7 @@
   </section>
 
   <!-- 9a. Fragen: Überschrift mittig, Akkordeon aus Karten -->
-  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen">
+  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen" data-abschnitt="fragen">
     <div class="wrap">
       <header class="kopfzeile">
         <p class="kicker" data-zeig>Fragen</p>
@@ -329,7 +329,7 @@
   </section>
 
   <!-- 10. Termin: Formular in Karte auf geteiltem Grund -->
-  <section class="termin" id="termin" aria-labelledby="h-termin">
+  <section class="termin" id="termin" aria-labelledby="h-termin" data-abschnitt="termin">
     <div class="wrap">
       <div class="termin__karte" data-zeig>
         <div class="termin__text">
@@ -361,7 +361,7 @@
   </section>
 
   <!-- 11. Ratgeber: zwei Karten -->
-  <section class="sektion rat" aria-labelledby="h-rat">
+  <section class="sektion rat" aria-labelledby="h-rat" data-abschnitt="rat">
     <div class="wrap">
       <header class="kopfzeile">
         <p class="kicker" data-zeig>Ratgeber</p>
@@ -381,7 +381,7 @@
   </section>
 </main>
 
-<footer class="fuss" id="fuss">
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
   <div class="wrap">
     <div class="abschluss">
       <h2 data-zeig>Ein sicheres Dach beginnt mit einem Gespräch</h2>

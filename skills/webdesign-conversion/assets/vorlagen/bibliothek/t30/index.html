@@ -33,7 +33,7 @@
 
 <p class="ansage" data-beispiel>Frühbucher: bis Ende des Monats 15 Prozent auf ausgewählte Reisen. <a href="#pakete">Reisen ansehen</a></p>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="wrap kopf__innen">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
       <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle cx="16" cy="13" r="5" fill="currentColor"/><path d="M4 26c4-7 8-9 12-9s8 2 12 9z" fill="currentColor"/></svg>
@@ -57,7 +57,7 @@
 <main id="inhalt">
 
   <!-- 1. Held: Vollbild, Bild dunkelt beim Scrollen ab -->
-  <section class="held" id="top" aria-labelledby="h-held" data-abdunkeln>
+  <section class="held" id="top" aria-labelledby="h-held" data-abdunkeln data-abschnitt="held">
     <div class="held__bild"><img src="bilder/gebirgsruecken-im-warmen-abendhimmel.webp" width="1600" height="1068" alt="Bergrücken im warmen Abendlicht" decoding="async"></div>
     <div class="held__schleier" aria-hidden="true"></div>
     <div class="wrap held__inhalt" data-staffel>
@@ -83,7 +83,7 @@
   </section>
 
   <!-- 2. Einstieg: Text, Bildcollage, Kennzahlen -->
-  <section class="sektion einstieg" aria-labelledby="h-einstieg">
+  <section class="sektion einstieg" aria-labelledby="h-einstieg" data-abschnitt="einstieg">
     <div class="wrap">
       <div class="einstieg__raster">
         <div class="einstieg__text" data-staffel>
@@ -112,7 +112,7 @@
   </section>
 
   <!-- 3. Ziele: Karussell mit angedeuteten Nachbarn -->
-  <section class="sektion ziele" id="ziele" aria-labelledby="h-ziele" data-reiter-gruppe>
+  <section class="sektion ziele" id="ziele" aria-labelledby="h-ziele" data-reiter-gruppe data-abschnitt="ziele">
     <div class="wrap kopfzeile">
       <p class="kicker" data-zeig>Beliebte Ziele</p>
       <h2 id="h-ziele" data-licht>Unsere beliebtesten Reiseziele</h2>
@@ -171,7 +171,7 @@
   </section>
 
   <!-- 4. Warum wir: dunkle Bildfläche, vier Vorteile -->
-  <section class="sektion warum" aria-labelledby="h-warum">
+  <section class="sektion warum" aria-labelledby="h-warum" data-abschnitt="warum">
     <div class="warum__bild" aria-hidden="true" data-parallax="0.08"><img src="bilder/schneeberg-unter-sternenhimmel.webp" width="1600" height="1060" alt="" loading="lazy" decoding="async"></div>
     <div class="wrap">
       <div class="kopfzeile kopfzeile--hell">
@@ -188,7 +188,7 @@
   </section>
 
   <!-- 5. Pakete -->
-  <section class="sektion pakete" id="pakete" aria-labelledby="h-pakete">
+  <section class="sektion pakete" id="pakete" aria-labelledby="h-pakete" data-abschnitt="pakete">
     <div class="wrap">
       <div class="kopfzeile">
         <p class="kicker" data-zeig>Reisepakete</p>
@@ -238,7 +238,7 @@
   </section>
 
   <!-- 6. Stimmen: Zitatreiter -->
-  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen" data-reiter-gruppe>
+  <section class="sektion stimmen" id="stimmen" aria-labelledby="h-stimmen" data-reiter-gruppe data-abschnitt="stimmen">
     <div class="wrap">
       <div class="kopfzeile">
         <p class="bewertung" data-zeig data-beispiel><span class="sterne" aria-hidden="true"><svg width="16" height="16"><use href="#i-stern"/></svg><svg width="16" height="16"><use href="#i-stern"/></svg><svg width="16" height="16"><use href="#i-stern"/></svg><svg width="16" height="16"><use href="#i-stern"/></svg><svg width="16" height="16"><use href="#i-stern"/></svg></span>4,8 aus 1.240 Bewertungen</p>
@@ -258,7 +258,7 @@
   </section>
 
   <!-- 7. Kacheln -->
-  <section class="sektion kacheln" aria-labelledby="h-kacheln">
+  <section class="sektion kacheln" aria-labelledby="h-kacheln" data-abschnitt="kacheln">
     <div class="wrap">
       <div class="kopfzeile">
         <h2 id="h-kacheln" data-licht>Reisen nach Art entdecken</h2>
@@ -276,7 +276,7 @@
   </section>
 
   <!-- 7a. Fragen: Überschrift mittig, Liste mit Linien -->
-  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen">
+  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen" data-abschnitt="fragen">
     <div class="wrap fragen__wrap">
       <div class="kopfzeile">
         <p class="kicker" data-zeig>Fragen</p>
@@ -294,7 +294,7 @@
   </section>
 
   <!-- 8. Kontakt -->
-  <section class="sektion kontakt" id="kontakt" aria-labelledby="h-kontakt">
+  <section class="sektion kontakt" id="kontakt" aria-labelledby="h-kontakt" data-abschnitt="kontakt">
     <div class="wrap kontakt__wrap">
       <div class="kopfzeile">
         <p class="kicker" data-zeig>Kontakt</p>
@@ -315,7 +315,7 @@
   </section>
 
   <!-- 9. Abschluss mit Newsletter -->
-  <section class="abschluss" aria-labelledby="h-abschluss">
+  <section class="abschluss" aria-labelledby="h-abschluss" data-abschnitt="abschluss">
     <div class="abschluss__bild" aria-hidden="true"><img src="bilder/tempel-auf-felsbogen-bei-sonnenuntergang.webp" width="1600" height="1200" alt="" loading="lazy" decoding="async"></div>
     <div class="wrap abschluss__raster">
       <div data-staffel>
@@ -336,7 +336,7 @@
   </section>
 </main>
 
-<footer class="fuss" id="fuss">
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
   <div class="wrap fuss__raster">
     <div class="fuss__marke">
       <a class="kopf__logo" href="#top" aria-label="Markenname, nach oben">

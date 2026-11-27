@@ -47,7 +47,7 @@
 <!-- Hinweisleiste: Beispieltext, Aktion nur eintragen, wenn es sie gibt -->
 <p class="hinweis" data-beispiel>Beispiel: Diese Woche sind noch Termine frei. <a href="#kontakt">Termin sichern<svg class="ic" width="16" height="16" aria-hidden="true" focusable="false"><use href="#i-pfeil"/></svg></a></p>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__innen">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">Markenname</a>
     <button class="kopf__burger" type="button" data-menue aria-expanded="false" aria-controls="hauptnav">
@@ -70,7 +70,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: bleibt beim Scrollen stehen, die nächste Fläche schiebt sich darüber und dunkelt ihn ab -->
-  <section class="held" id="top" aria-labelledby="h-held" data-abdunkeln>
+  <section class="held" id="top" aria-labelledby="h-held" data-abdunkeln data-abschnitt="held">
     <div class="bild held__bild" aria-hidden="true"><img class="bild__foto" src="bilder/techniker-mit-kappe-am-stromzaehler.webp" width="1600" height="900" alt="Techniker mit Kappe arbeitet an einem Stromzähler" fetchpriority="high" decoding="async">
     </div>
     <div class="held__schleier" aria-hidden="true"></div>
@@ -98,7 +98,7 @@
   </section>
 
   <!-- 2. Leitsatz mit Wortlicht, Kontaktwege, Logoleiste -->
-  <section class="sektion leitsatz" aria-labelledby="h-leitsatz">
+  <section class="sektion leitsatz" aria-labelledby="h-leitsatz" data-abschnitt="leitsatz">
     <div class="wrap">
       <h2 class="leitsatz__satz" id="h-leitsatz" data-licht>Wir bringen Fachleute, ordentliche Ausrüstung und klare Aussagen zusammen. Vergessen Sie unklare Angebote und Anfahrten, die das Problem nicht lösen.</h2>
     </div>
@@ -123,7 +123,7 @@
   </section>
 
   <!-- 3. Leistungen: Akzentband mit Karussell, die Beschreibung öffnet sich beim Überfahren -->
-  <section class="band-akzent leistungen" id="leistungen" aria-labelledby="h-leistungen" data-karussell>
+  <section class="band-akzent leistungen" id="leistungen" aria-labelledby="h-leistungen" data-karussell data-abschnitt="band-akzent">
     <div class="wrap leistungen__kopf">
       <p class="kicker" data-zeig>Was wir tun</p>
       <h2 id="h-leistungen" data-zeig>Leistungen, passend zu Ihrem Vorhaben.</h2>
@@ -182,7 +182,7 @@
   </section>
 
   <!-- 4. Vorteile: Wortlicht-Überschrift, Bild, vier Vorteile, Siegelkarte -->
-  <section class="sektion vorteile" id="vorteile" aria-labelledby="h-vorteile">
+  <section class="sektion vorteile" id="vorteile" aria-labelledby="h-vorteile" data-abschnitt="vorteile">
     <div class="wrap vorteile__raster">
       <div class="vorteile__text">
         <p class="kicker" data-zeig>Warum wir</p>
@@ -205,7 +205,7 @@
   </section>
 
   <!-- 5. Ablauf: Bild bleibt stehen, rechts öffnen sich die Schritte -->
-  <section class="sektion ablauf" id="ablauf" aria-labelledby="h-ablauf">
+  <section class="sektion ablauf" id="ablauf" aria-labelledby="h-ablauf" data-abschnitt="ablauf">
     <div class="wrap">
       <div class="ablauf__kopf">
         <div><p class="kicker" data-zeig>So läuft es</p><h2 id="h-ablauf" data-zeig>Vom ersten Anruf bis zum fertigen Auftrag.</h2></div>
@@ -250,7 +250,7 @@
   </section>
 
   <!-- 6. Fallbeispiele: Vollbild, Bild wechselt per Überblendung -->
-  <section class="sektion faelle" aria-labelledby="h-faelle">
+  <section class="sektion faelle" aria-labelledby="h-faelle" data-abschnitt="faelle">
     <div class="wrap">
       <h2 class="sr-nur" id="h-faelle">Fallbeispiele</h2>
       <div class="faelle__rahmen" data-folien aria-roledescription="Karussell" aria-label="Fallbeispiele">
@@ -283,7 +283,7 @@
   </section>
 
   <!-- 7. Pakete: eine helle, eine dunkle Karte -->
-  <section class="sektion pakete" id="pakete" aria-labelledby="h-pakete">
+  <section class="sektion pakete" id="pakete" aria-labelledby="h-pakete" data-abschnitt="pakete">
     <div class="wrap">
       <div class="pakete__kopf">
         <p class="kicker" data-zeig>Wartungspakete</p>
@@ -312,7 +312,7 @@
   </section>
 
   <!-- 8. Einsatzgebiet und Kennzahlen -->
-  <section class="sektion gebiet" id="gebiet" aria-labelledby="h-gebiet">
+  <section class="sektion gebiet" id="gebiet" aria-labelledby="h-gebiet" data-abschnitt="gebiet">
     <div class="wrap gebiet__raster">
       <div class="gebiet__text">
         <p class="kicker" data-zeig>Einsatzgebiet</p>
@@ -345,7 +345,7 @@
   </section>
 
   <!-- 9. Stimmen: Akzentband mit Karussell -->
-  <section class="band-akzent stimmen" aria-labelledby="h-stimmen" data-karussell>
+  <section class="band-akzent stimmen" aria-labelledby="h-stimmen" data-karussell data-abschnitt="band-akzent-2">
     <div class="wrap stimmen__kopf">
       <h2 id="h-stimmen" data-zeig>Zufriedene Privat- und Gewerbekunden.</h2>
       <p data-zeig>Beispielstimmen, vor Livegang durch echte, freigegebene Rückmeldungen ersetzen.</p>
@@ -366,7 +366,7 @@
   </section>
 
   <!-- 10. Tipps -->
-  <section class="sektion tipps" aria-labelledby="h-tipps">
+  <section class="sektion tipps" aria-labelledby="h-tipps" data-abschnitt="tipps">
     <div class="wrap">
       <div class="tipps__kopf">
         <div><p class="kicker" data-zeig>Ratgeber</p><h2 id="h-tipps" data-zeig>Tipps für ein gesundes Zuhause.</h2></div>
@@ -390,7 +390,7 @@
   </section>
 
   <!-- 11. Häufige Fragen -->
-  <section class="sektion faq" aria-labelledby="h-faq">
+  <section class="sektion faq" aria-labelledby="h-faq" data-abschnitt="faq">
     <div class="wrap faq__raster">
       <div class="faq__kopf" data-zeig>
         <h2 id="h-faq">Häufige Fragen</h2>
@@ -407,7 +407,7 @@
   </section>
 
   <!-- 12. Anfrageformular, ohne Versand -->
-  <section class="sektion anfrage" id="anfrage" aria-labelledby="h-anfrage">
+  <section class="sektion anfrage" id="anfrage" aria-labelledby="h-anfrage" data-abschnitt="anfrage">
     <div class="wrap anfrage__raster">
       <div class="anfrage__text">
         <h2 id="h-anfrage" data-licht>Sagen Sie uns, was los ist.</h2>
@@ -437,7 +437,7 @@
   </section>
 
   <!-- 13. Abschluss mit Handlung -->
-  <section class="abschluss" aria-labelledby="h-abschluss">
+  <section class="abschluss" aria-labelledby="h-abschluss" data-abschnitt="abschluss">
     <div class="bild abschluss__bild bild--a" aria-hidden="true"><img class="bild__foto" src="bilder/techniker-in-gelber-warnjacke-am-verteiler.webp" width="1600" height="1067" alt="Techniker in gelber Warnjacke arbeitet an einem Verteiler" loading="lazy" decoding="async"></div>
     <div class="wrap abschluss__inhalt">
       <h2 id="h-abschluss" data-zeig>Melden Sie sich, wir klären den Rest.</h2>
@@ -450,7 +450,7 @@
   </section>
 </main>
 
-<footer class="fuss" id="kontakt">
+<footer class="fuss" id="kontakt" data-abschnitt="fuss">
   <div class="wrap fuss__raster">
     <div class="fuss__marke">
       <p class="fuss__logo">Markenname</p>

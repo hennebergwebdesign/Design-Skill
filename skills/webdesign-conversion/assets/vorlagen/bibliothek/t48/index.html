@@ -36,7 +36,7 @@
   <symbol id="i-trophy" viewBox="0 0 256 256" fill="currentColor"><path d="M232,64H208V48a8,8,0,0,0-8-8H56a8,8,0,0,0-8,8V64H24A16,16,0,0,0,8,80V96a40,40,0,0,0,40,40h3.65A80.13,80.13,0,0,0,120,191.61V216H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16H136V191.58c31.94-3.23,58.44-25.64,68.08-55.58H208a40,40,0,0,0,40-40V80A16,16,0,0,0,232,64ZM48,120A24,24,0,0,1,24,96V80H48v32q0,4,.39,8ZM232,96a24,24,0,0,1-24,24h-.5a81.81,81.81,0,0,0,.5-8.9V80h24Z"/></symbol>
 </svg>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__leiste">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
       <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg>
@@ -60,7 +60,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: mittig, darunter fünf gegenläufige Bildspalten und das App Fenster -->
-  <section class="held" id="top" aria-labelledby="h-held">
+  <section class="held" id="top" aria-labelledby="h-held" data-abschnitt="held">
     <div class="bild held__grund" aria-hidden="true"><img src="bilder/schreibtisch-abendlicht.webp" width="1600" height="1067" alt="" decoding="async"></div>
     <div class="wrap held__innen">
       <div class="held__kopf" data-staffel>
@@ -107,7 +107,7 @@
   </section>
 
   <!-- 2. Funktionen: vier Karten, jede zweite tiefer -->
-  <section class="sektion funktionen" id="funktionen" aria-labelledby="h-funktionen">
+  <section class="sektion funktionen" id="funktionen" aria-labelledby="h-funktionen" data-abschnitt="funktionen">
     <div class="wrap">
       <div class="kopfzeile" data-staffel>
         <p class="kicker" data-zeig>Funktionen</p>
@@ -136,7 +136,7 @@
   </section>
 
   <!-- 3. Galerie: Mosaik -->
-  <section class="sektion" id="galerie" aria-labelledby="h-galerie">
+  <section class="sektion" id="galerie" aria-labelledby="h-galerie" data-abschnitt="galerie">
     <div class="wrap">
       <div class="kopfzeile" data-staffel>
         <p class="kicker" data-zeig>Galerie</p>
@@ -154,7 +154,7 @@
   </section>
 
   <!-- 4. Einsatz: sechs nummerierte Karten -->
-  <section class="sektion" id="einsatz" aria-labelledby="h-einsatz">
+  <section class="sektion" id="einsatz" aria-labelledby="h-einsatz" data-abschnitt="einsatz">
     <div class="wrap">
       <div class="kopfzeile" data-staffel>
         <p class="kicker" data-zeig>Einsatz</p>
@@ -197,7 +197,7 @@
   </section>
 
   <!-- 5. Stimmen: eine große Karte, wischbar, mit Pfeilen -->
-  <section class="sektion" id="stimmen" aria-labelledby="h-stimmen">
+  <section class="sektion" id="stimmen" aria-labelledby="h-stimmen" data-abschnitt="stimmen">
     <div class="wrap" data-reiter-gruppe>
       <div class="kopfzeile" data-staffel>
         <p class="kicker" data-zeig>Stimmen</p>
@@ -237,7 +237,7 @@
   </section>
 
   <!-- 6. Preise: Umschalter, drei Karten, die mittlere hervorgehoben -->
-  <section class="sektion" id="preise" aria-labelledby="h-preise">
+  <section class="sektion" id="preise" aria-labelledby="h-preise" data-abschnitt="preise">
     <div class="wrap">
       <div class="kopfzeile" data-staffel>
         <p class="kicker" data-zeig>Preise</p>
@@ -285,7 +285,7 @@
   </section>
 
   <!-- 7. FAQ -->
-  <section class="sektion" id="faq" aria-labelledby="h-faq">
+  <section class="sektion" id="faq" aria-labelledby="h-faq" data-abschnitt="faq">
     <div class="wrap">
       <div class="kopfzeile" data-staffel>
         <p class="kicker" data-zeig>Fragen</p>
@@ -303,7 +303,7 @@
   </section>
 
   <!-- 8. Aufruf: Akzentkarte mit E-Mail Feld -->
-  <section class="sektion" id="kontakt" aria-labelledby="h-kontakt" style="padding-bottom:0">
+  <section class="sektion" id="kontakt" aria-labelledby="h-kontakt" style="padding-bottom:0" data-abschnitt="kontakt">
     <div class="wrap">
       <div class="aufruf" data-zeig>
         <span class="schwebt schwebt--1 bild bild--a" aria-hidden="true"></span>
@@ -324,7 +324,7 @@
   </section>
 </main>
 
-<footer class="fuss">
+<footer class="fuss" data-abschnitt="fuss">
   <div class="bild fuss__grund" aria-hidden="true"><img src="bilder/schreibtisch-stifte-kaffee.webp" width="1600" height="1067" alt="" loading="lazy" decoding="async"></div>
   <div class="wrap fuss__innen">
     <div class="fuss__raster">

@@ -15,7 +15,7 @@
 <body>
 <a class="sprunglink" href="#inhalt">Zum Inhalt springen</a>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__innen">
     <a class="logo" href="#top" aria-label="Kontor, zum Seitenanfang">
       <svg class="logo__marke" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true"><rect width="32" height="32" rx="7"/><path d="M9 23V9l7 9 7-9v14" fill="none" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -41,7 +41,7 @@
 <main id="inhalt">
 
 <!-- 1. Held: bleibt stehen, die nächste Fläche schiebt sich darüber, der Held dunkelt dabei ab -->
-<section class="hero" id="top" data-abdunkeln aria-labelledby="hero-titel">
+<section class="hero" id="top" data-abdunkeln aria-labelledby="hero-titel" data-abschnitt="hero">
   <div class="bild bild--dunkel hero__bild" role="img" aria-label="Platzhalter für ein Vollbild"><img class="bild__foto" src="bilder/beratungsgespraech-an-dunklem-schreibtisch.webp" width="1600" height="1067" alt="Zwei Männer sitzen an einem Schreibtisch im Beratungsgespräch" fetchpriority="high" decoding="async"></div>
   <div class="hero__schutz" aria-hidden="true"></div>
   <div class="hero__abdunkeln" aria-hidden="true"></div>
@@ -68,7 +68,7 @@
 <div class="deckend">
 
 <!-- 2. Über uns: Leitsatz erhellt sich Wort für Wort, Bild mit Kennzahlen, Laufband -->
-<section class="sektion ueber" id="ueber" aria-labelledby="ueber-titel">
+<section class="sektion ueber" id="ueber" aria-labelledby="ueber-titel" data-abschnitt="ueber">
   <div class="wrap">
     <div class="ueber__kopf">
       <div class="ueber__satz">
@@ -112,7 +112,7 @@
 </section>
 
 <!-- 3. Leistungen: Überschrift mit Knopf, drei Bildkarten -->
-<section class="sektion leistungen" id="leistungen" aria-labelledby="leistungen-titel">
+<section class="sektion leistungen" id="leistungen" aria-labelledby="leistungen-titel" data-abschnitt="leistungen">
   <div class="wrap">
     <div class="kopfzeile" data-zeig>
       <div>
@@ -157,7 +157,7 @@
 </section>
 
 <!-- 4. Vorteile: ein hohes Bild, vier Karten -->
-<section class="sektion vorteile" id="vorteile" aria-labelledby="vorteile-titel">
+<section class="sektion vorteile" id="vorteile" aria-labelledby="vorteile-titel" data-abschnitt="vorteile">
   <div class="wrap">
     <div class="mitte-kopf" data-zeig>
       <p class="kicker">Warum Kontor</p>
@@ -192,7 +192,7 @@
 </section>
 
 <!-- 5. Fallbeispiele: drei Rahmen stapeln sich beim Scrollen -->
-<section class="sektion faelle" id="faelle" aria-labelledby="faelle-titel">
+<section class="sektion faelle" id="faelle" aria-labelledby="faelle-titel" data-abschnitt="faelle">
   <div class="wrap">
     <div class="mitte-kopf" data-zeig>
       <p class="kicker">Fallbeispiele</p>
@@ -238,7 +238,7 @@
 </section>
 
 <!-- 6. Stimmen: eine Aussage je Ansicht, Pfeile -->
-<section class="sektion stimmen" id="stimmen" aria-labelledby="stimmen-titel">
+<section class="sektion stimmen" id="stimmen" aria-labelledby="stimmen-titel" data-abschnitt="stimmen">
   <div class="wrap">
     <p class="kicker" id="stimmen-titel">Stimmen unserer Kunden, als Beispiel</p>
     <div class="stimmen__bahn" data-karussell>
@@ -271,7 +271,7 @@
 </section>
 
 <!-- 7. Aufruf: Bildfläche, die beim Scrollen herunterzoomt -->
-<section class="cta" aria-labelledby="cta-titel">
+<section class="cta" aria-labelledby="cta-titel" data-abschnitt="cta">
   <div class="wrap">
     <div class="cta__rahmen" data-zoom>
       <div class="bild bild--dunkel cta__bild" role="img" aria-label="Platzhalter für ein Breitbild"><img class="bild__foto" src="bilder/menschen-gehen-durch-eine-staedtische-fussgaengerzone.webp" width="1600" height="1067" alt="Menschen gehen durch eine städtische Fußgängerzone" loading="lazy" decoding="async"></div>
@@ -290,7 +290,7 @@
 </section>
 
 <!-- 8. Zitat auf Bildfläche -->
-<section class="sektion zitat" aria-labelledby="zitat-titel">
+<section class="sektion zitat" aria-labelledby="zitat-titel" data-abschnitt="zitat">
   <div class="wrap">
     <figure class="zitat__rahmen" data-zeig="skala">
       <div class="bild bild--dunkel zitat__bild" style="--ton:20%"><img src="bilder/frau-blond-lachend-640.webp" width="640" height="960" alt="Lachende junge Frau mit lockigem blondem Haar" loading="lazy" decoding="async" style="object-position:50% 25%"></div>
@@ -304,7 +304,7 @@
 </section>
 
 <!-- 9. Fragen: Überschrift links, Akkordeon rechts -->
-<section class="sektion fragen" id="fragen" aria-labelledby="fragen-titel">
+<section class="sektion fragen" id="fragen" aria-labelledby="fragen-titel" data-abschnitt="fragen">
   <div class="wrap fragen__raster">
     <div class="fragen__kopf" data-zeig>
       <p class="kicker">Fragen und Antworten</p>
@@ -322,7 +322,7 @@
 </section>
 
 <!-- 10. Kontakt: dunkle Karte mit heller Formularkarte -->
-<section class="sektion kontakt" id="kontakt" aria-labelledby="kontakt-titel">
+<section class="sektion kontakt" id="kontakt" aria-labelledby="kontakt-titel" data-abschnitt="kontakt">
   <div class="wrap">
     <div class="kontakt__karte">
       <div class="kontakt__text" data-zeig>
@@ -351,7 +351,7 @@
 </div>
 </main>
 
-<footer class="fuss" data-enthuellen>
+<footer class="fuss" data-enthuellen data-abschnitt="fuss">
   <div class="wrap">
     <div class="fuss__oben">
       <div class="fuss__marke">

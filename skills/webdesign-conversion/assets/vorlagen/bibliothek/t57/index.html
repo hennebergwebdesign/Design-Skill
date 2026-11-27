@@ -35,7 +35,7 @@
 </svg>
 
 <!-- Kopf: weiße Pille, Logo in der Mitte, Menü links und rechts, mobil Logo und Knopf -->
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__pille">
     <nav class="kopf__nav" id="hauptnav" aria-label="Hauptnavigation" data-menue-ziel>
       <ul class="kopf__links"><li><a href="#top">Start</a></li><li><a href="#ueber">Über uns</a></li></ul>
@@ -49,7 +49,7 @@
 
 <main id="inhalt">
   <!-- 1. Held: eingerückte Bildkarte, Überschrift unten links, Text und Knopf unten rechts -->
-  <section class="held" id="top" aria-labelledby="h-held">
+  <section class="held" id="top" aria-labelledby="h-held" data-abschnitt="held">
     <div class="held__karte">
       <div class="bild held__bild bild--a" id="held-bild"><img src="bilder/hantelrack-fitnessstudio.webp" width="1600" height="1067" decoding="async" alt="Hantelrack mit Scheiben in einem dunklen Fitnessstudio, im Hintergrund eine sitzende Person"></div>
       <div class="held__schleier" aria-hidden="true"></div>
@@ -69,7 +69,7 @@
   </section>
 
   <!-- 2. Über uns: Überschrift links, Text rechts, versetzte Karten -->
-  <section class="sektion ueber" id="ueber" aria-labelledby="h-ueber">
+  <section class="sektion ueber" id="ueber" aria-labelledby="h-ueber" data-abschnitt="ueber">
     <div class="wrap">
       <div class="ueber__kopf">
         <div><p class="kicker" data-zeig>Über uns</p><h2 id="h-ueber" data-zeig>Mehr als Wiederholungen, eine Lebensweise</h2></div>
@@ -94,7 +94,7 @@
   </section>
 
   <!-- 3. Kurse: graue Zeilen mit Stufe, Text und rundem Pfeil -->
-  <section class="sektion kurse" id="kurse" aria-labelledby="h-kurse">
+  <section class="sektion kurse" id="kurse" aria-labelledby="h-kurse" data-abschnitt="kurse">
     <div class="wrap">
       <div class="kopfzeile">
         <div><p class="kicker" data-zeig>Kurse</p><h2 id="h-kurse" data-zeig>Finde deinen Kurs, auf deine Art</h2></div>
@@ -105,7 +105,7 @@
   </section>
 
   <!-- 4. Film: das Bild wächst beim Scrollen von der Mitte auf volle Breite -->
-  <section class="film" id="film" aria-label="Ein Blick ins Studio" data-fortschritt>
+  <section class="film" id="film" aria-label="Ein Blick ins Studio" data-fortschritt data-abschnitt="film">
     <div class="film__buehne">
       <div class="film__rahmen">
         <div class="bild film__bild bild--b"><img src="bilder/studio-hell-geraete.webp" width="1600" height="1067" loading="lazy" decoding="async" alt="Heller Trainingsraum mit Laufbändern und Rädern"></div>
@@ -115,7 +115,7 @@
   </section>
 
   <!-- 5. Trainer: Porträts schweben in versetzten Spuren um die Überschrift -->
-  <section class="trainer" id="trainer" aria-labelledby="h-trainer">
+  <section class="trainer" id="trainer" aria-labelledby="h-trainer" data-abschnitt="trainer">
     <div class="wrap trainer__feld">
       <div class="trainer__kopf"><p class="kicker" data-zeig>Team</p><h2 id="h-trainer" data-zeig>Lerne unsere Coaches kennen</h2><p data-zeig>Ausgebildet, erfahren und bereit, dich zu deinem Ziel zu begleiten.</p></div>
       <ul class="trainer__liste" data-beispiel><li class="coach" style="left:4%;top:3%" data-parallax="0.07"><article><div class="bild bild--a coach__bild"><img src="bilder/trainer-poloshirt-640.webp" width="640" height="853" alt="Lächelnder Mann im grauen Poloshirt" loading="lazy" decoding="async" style="object-position:50% 25%"></div><div class="coach__tag"><h3>Jordan Beispiel</h3><p>Kardio und Intervalle</p></div></article></li><li class="coach" style="left:74%;top:8%" data-parallax="-0.1"><article><div class="bild bild--c coach__bild"><img src="bilder/frau-blond-lachend-640.webp" width="640" height="960" alt="Lachende junge Frau mit lockigem blondem Haar" loading="lazy" decoding="async" style="object-position:50% 25%"></div><div class="coach__tag"><h3>Mia Beispiel</h3><p>Kraft und Athletik</p></div></article></li><li class="coach" style="left:15%;top:27%" data-parallax="0.14"><article><div class="bild bild--d coach__bild"><img src="bilder/trainer-bart-top-640.webp" width="640" height="959" alt="Mann mit Bart im Tanktop im Fitnessstudio" loading="lazy" decoding="async" style="object-position:50% 25%"></div><div class="coach__tag"><h3>Mark Beispiel</h3><p>Funktionelles Training</p></div></article></li><li class="coach" style="left:68%;top:42%" data-parallax="-0.06"><article><div class="bild bild--b coach__bild"><img src="bilder/frau-locken-lachend-640.webp" width="640" height="800" alt="Lächelnde Frau mit dunklen Locken" loading="lazy" decoding="async" style="object-position:50% 25%"></div><div class="coach__tag"><h3>Ethan Beispiel</h3><p>Boxen und Selbstverteidigung</p></div></article></li><li class="coach" style="left:4%;top:56%" data-parallax="0.1"><article><div class="bild bild--a coach__bild"><img src="bilder/trainer-studio-gruppe-640.webp" width="640" height="960" alt="Lächelnder Mann im Trainingsstudio" loading="lazy" decoding="async" style="object-position:50% 40%"></div><div class="coach__tag"><h3>Jennie Beispiel</h3><p>Beweglichkeit und Balance</p></div></article></li><li class="coach" style="left:76%;top:70%" data-parallax="-0.12"><article><div class="bild bild--c coach__bild"><img src="bilder/frau-braun-lachend-640.webp" width="640" height="960" alt="Lächelnde Frau in heller Strickjacke" loading="lazy" decoding="async" style="object-position:50% 25%"></div><div class="coach__tag"><h3>Nancy Beispiel</h3><p>Yoga und Achtsamkeit</p></div></article></li></ul>
@@ -123,7 +123,7 @@
   </section>
 
   <!-- 6. Mitgliedschaft: drei Karten, die mittlere in Gelb und höher -->
-  <section class="sektion mitgliedschaft" id="mitgliedschaft" aria-labelledby="h-mit" data-reiter-gruppe>
+  <section class="sektion mitgliedschaft" id="mitgliedschaft" aria-labelledby="h-mit" data-reiter-gruppe data-abschnitt="mitgliedschaft">
     <div class="wrap">
       <header class="mitte"><p class="kicker" data-zeig>Mitgliedschaft</p><h2 id="h-mit" data-zeig>Tarife, die zu dir passen</h2></header>
     </div>
@@ -132,7 +132,7 @@
   </section>
 
   <!-- 7. Banner: dunkle Karte mit Bild rechts -->
-  <section class="banner-wrap" aria-labelledby="h-banner">
+  <section class="banner-wrap" aria-labelledby="h-banner" data-abschnitt="banner-wrap">
     <div class="wrap">
       <div class="banner" data-zeig>
         <div class="bild banner__bild bild--a"><img src="bilder/seilzug-rueckansicht.webp" width="800" height="1200" loading="lazy" decoding="async" alt=""></div>
@@ -147,7 +147,7 @@
   </section>
 
   <!-- 8. Fragen -->
-  <section class="sektion faq" id="faq" aria-labelledby="h-faq">
+  <section class="sektion faq" id="faq" aria-labelledby="h-faq" data-abschnitt="faq">
     <div class="wrap">
       <header class="mitte"><p class="kicker" data-zeig>Fragen</p><h2 id="h-faq" data-zeig>Fragen zu Training und Mitgliedschaft?</h2><p data-zeig>Alles, was du vor der ersten Einheit wissen willst.</p></header>
       <div class="faq__liste" data-exklusiv data-beispiel><details class="frage" data-zeig open><summary><span>Was soll ich zur Probestunde mitbringen?</span><span class="frage__pfeil" aria-hidden="true"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-runter"/></svg></span></summary><p>Bequeme Sportkleidung, ein Handtuch und eine Trinkflasche. Matten und Geräte stellen wir.</p></details><details class="frage" data-zeig><summary><span>Ich war lange nicht aktiv. Bin ich im Kurs falsch?</span><span class="frage__pfeil" aria-hidden="true"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-runter"/></svg></span></summary><p>Nein. Jeder Kurs hat eine Einstiegsstufe, und die Trainer zeigen dir, wie du in deinem Tempo startest. Niemand zählt mit, wer wie viele Wiederholungen schafft.</p></details><details class="frage" data-zeig><summary><span>Ist Personal Training enthalten?</span><span class="frage__pfeil" aria-hidden="true"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-runter"/></svg></span></summary><p>In den Tarifen Pro und Elite sind Einheiten enthalten. Im Basistarif kannst du sie zubuchen.</p></details><details class="frage" data-zeig><summary><span>Lohnt sich die Mitgliedschaft, wenn ich nur einmal pro Woche komme?</span><span class="frage__pfeil" aria-hidden="true"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-runter"/></svg></span></summary><p>Beispielantwort: Das hängt vom Tarif ab. In der Probestunde rechnen wir mit dir durch, was zu deiner Häufigkeit passt, und du kannst später wechseln. Kündigung und Fristen stehen im Vertrag.</p></details><details class="frage" data-zeig><summary><span>Wie buche ich einen Kurs oder eine Einheit?</span><span class="frage__pfeil" aria-hidden="true"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-runter"/></svg></span></summary><p>Am Empfang, per Telefon oder online. Beliebte Kurse sind früh voll, plane ein paar Tage Vorlauf ein.</p></details></div>
@@ -155,7 +155,7 @@
   </section>
 
   <!-- 9. Stimmen: Bildkarte links, zwei gegenläufige Reihen rechts -->
-  <section class="sektion stimmen3" id="stimmen" aria-labelledby="h-stimmen">
+  <section class="sektion stimmen3" id="stimmen" aria-labelledby="h-stimmen" data-abschnitt="stimmen3">
     <div class="wrap stimmen3__raster">
       <div class="stimmen3__karte bild bild--c" data-platzhalter="Bild: Paar beim gemeinsamen Training, Hochformat" role="img" aria-label="Platzhalter für ein Foto eines Paars beim gemeinsamen Training" data-zeig>
         <div class="stimmen3__text"><h2 id="h-stimmen">Dein stärkeres Ich wartet</h2><a class="knopf knopf--gelb" href="#mitgliedschaft">Probestunde buchen<svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-pfeil"/></svg></a></div>
@@ -169,7 +169,7 @@
 </main>
 
 <!-- Fuß: dunkle Karte mit Marke, Menü und Newsletter -->
-<footer class="fuss" id="kontakt">
+<footer class="fuss" id="kontakt" data-abschnitt="fuss">
   <div class="fuss__karte">
     <div class="wrap">
       <div class="fuss__oben">

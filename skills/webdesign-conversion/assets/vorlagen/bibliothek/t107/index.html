@@ -51,7 +51,7 @@
   <clipPath id="welle" clipPathUnits="objectBoundingBox"><path d="M0.03,0.30 C0.03,0.12 0.14,0.04 0.30,0.04 L0.70,0.04 C0.86,0.04 0.97,0.12 0.97,0.30 L0.97,0.70 C0.97,0.88 0.86,0.96 0.70,0.96 L0.30,0.96 C0.14,0.96 0.03,0.88 0.03,0.70 Z"/></clipPath>
 </svg>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__leiste">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
       <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg>
@@ -78,7 +78,7 @@
 <main id="inhalt">
 <div class="buehne">
   <!-- 1. Held: Text links, Orbit Szene rechts (HTML und CSS, kein Bild) -->
-  <section class="held" id="top" aria-labelledby="h-held">
+  <section class="held" id="top" aria-labelledby="h-held" data-abschnitt="held">
     <div class="wrap held__innen">
       <div class="held__text">
         <!-- Heldformel: Zielgruppe B2B Software Unternehmen mit kleinem oder ohne Marketingteam, Problem zu wenige qualifizierte Demoanfragen und zu wenig Kapazität, Lösung Marketingagentur, die als Verstärkung oder Abteilung auf Zeit Strategie, Anzeigen und Landingpages liefert, Beleg Fallbeispiele (Beispiel) -->
@@ -112,7 +112,7 @@
   </section>
 
   <!-- 2. Problem: drei Spalten mit gestrichelten Rasterlinien -->
-  <section class="problem" aria-labelledby="h-problem">
+  <section class="problem" aria-labelledby="h-problem" data-abschnitt="problem">
     <div class="wrap">
       <h2 class="mitte" id="h-problem" data-zeig>Marketing im Team zu klein oder gar nicht vorhanden?</h2>
       <ul class="spalten spalten--3" data-staffel role="list">
@@ -124,7 +124,7 @@
   </section>
 
   <!-- 3. Einstieg: Leistungen in fünf Spalten, großer Ring als Deko -->
-  <section class="einstieg" id="leistungen" aria-labelledby="h-einstieg">
+  <section class="einstieg" id="leistungen" aria-labelledby="h-einstieg" data-abschnitt="einstieg">
     <div class="wrap einstieg__kopf">
       <h2 id="h-einstieg" data-zeig>Wir steigen ein, als Verstärkung oder als Ihre Marketingabteilung</h2>
       <p data-zeig>Ob Ihr Team schon da ist oder niemand für Marketing zuständig ist: Wir arbeiten in Ihren Werkzeugen und liefern in Wochen, nicht in Quartalen.</p>
@@ -143,7 +143,7 @@
 </div>
 
   <!-- 4. Team: vier Porträtkarten mit hellem Rahmen -->
-  <section class="sektion team" aria-labelledby="h-team">
+  <section class="sektion team" aria-labelledby="h-team" data-abschnitt="team">
     <div class="wrap">
       <h2 class="mitte" id="h-team" data-zeig>Ein festes Team, das Ihr Produkt versteht</h2>
       <ul class="team__raster" data-staffel role="list">
@@ -157,7 +157,7 @@
   </section>
 
   <!-- 5. Zielgruppen: zwei große Karten mit Zeichnung aus SVG -->
-  <section class="sektion zielgruppen" id="zielgruppen" aria-labelledby="h-ziel">
+  <section class="sektion zielgruppen" id="zielgruppen" aria-labelledby="h-ziel" data-abschnitt="zielgruppen">
     <div class="wrap">
       <h2 class="mitte" id="h-ziel" data-zeig>Für wen wir arbeiten</h2>
       <div class="ziel__raster" data-staffel>
@@ -174,7 +174,7 @@
   </section>
 
   <!-- 6. Über uns: Foto in Rundform, gestrichelte Linien, Text rechts -->
-  <section class="ueber" id="ueber" aria-labelledby="h-ueber">
+  <section class="ueber" id="ueber" aria-labelledby="h-ueber" data-abschnitt="ueber">
     <div class="wrap ueber__innen">
       <div class="ueber__foto" data-zeig="links">
         <span class="ueber__planet" aria-hidden="true" data-parallax="0.12"></span>
@@ -189,7 +189,7 @@
   </section>
 
   <!-- 7. Einzelzitat: Beispiel, Name und Firma Platzhalter -->
-  <section class="sektion zitat" aria-label="Kundenstimme, Beispiel">
+  <section class="sektion zitat" aria-label="Kundenstimme, Beispiel" data-abschnitt="zitat">
     <div class="wrap">
       <figure data-zeig>
         <blockquote><p>Seit der Zusammenarbeit kommen die Demoanfragen planbar, und der Vertrieb weiß, woher sie stammen.</p></blockquote>
@@ -199,7 +199,7 @@
   </section>
 
   <!-- 8. Werkzeugband: neutrale Beispielzeichen, mit Pause -->
-  <section class="werkzeuge" aria-labelledby="h-werkzeuge">
+  <section class="werkzeuge" aria-labelledby="h-werkzeuge" data-abschnitt="werkzeuge">
     <div class="wrap mitte">
       <h2 id="h-werkzeuge" data-zeig>Ihre Werkzeuge bleiben, wie sie sind</h2>
       <p data-zeig>Wir arbeiten in Ihrem CRM, Ihrer Analyse und Ihrem Mailsystem, damit niemand umlernen muss.</p>
@@ -215,7 +215,7 @@
   </section>
 
   <!-- 9. Fallbeispiele: zwei Karten mit gekippter Oberfläche aus HTML und CSS -->
-  <section class="sektion fall" id="fallbeispiele" aria-labelledby="h-fall">
+  <section class="sektion fall" id="fallbeispiele" aria-labelledby="h-fall" data-abschnitt="fall">
     <div class="wrap">
       <h2 class="mitte" id="h-fall" data-zeig>Fallbeispiele</h2>
       <p class="beispielhinweis fall__hinweis">Alle Fälle, Werte und Zitate sind Beispiele, keine Belege.</p>
@@ -243,7 +243,7 @@
   </section>
 
   <!-- 10. Preise: drei Pakete, Beispielwerte -->
-  <section class="sektion preise" id="preise" aria-labelledby="h-preise">
+  <section class="sektion preise" id="preise" aria-labelledby="h-preise" data-abschnitt="preise">
     <div class="wrap">
       <h2 class="mitte" id="h-preise" data-zeig>Pakete, die zu Ihrer Lage passen</h2>
       <ul class="paket__raster" data-staffel role="list">
@@ -256,7 +256,7 @@
   </section>
 
   <!-- 11. Fragen: Einwand FAQ -->
-  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen">
+  <section class="sektion fragen" id="fragen" aria-labelledby="h-fragen" data-abschnitt="fragen">
     <div class="wrap fragen__raster">
       <h2 id="h-fragen" data-zeig>Fragen, die vor dem ersten Gespräch kommen</h2>
       <div class="fragen__liste" data-exklusiv data-zeig>
@@ -271,7 +271,7 @@
   </section>
 
   <!-- 12. Kontakt: dunkle Fläche in der Fläche, höchstens fünf Felder -->
-  <section class="kontakt" id="kontakt" aria-labelledby="h-kontakt">
+  <section class="kontakt" id="kontakt" aria-labelledby="h-kontakt" data-abschnitt="kontakt">
     <div class="wrap">
       <div class="kontakt__aussen" data-zeig="skala">
         <div class="kontakt__karte">
@@ -308,7 +308,7 @@
   </section>
 </main>
 
-<footer class="fuss" id="fuss">
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
   <div class="wrap fuss__raster">
     <div class="fuss__links">
       <a class="kopf__logo fuss__logo" href="#top" aria-label="Markenname, nach oben"><svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg><span>Markenname</span></a>

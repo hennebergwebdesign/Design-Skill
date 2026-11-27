@@ -62,13 +62,16 @@ export function pruefen(seiten, kategorien, bib = BIB) {
     if (s.fehler) { befunde.push(`${s.seite}: ${s.fehler}`); continue; }
     if (!Array.isArray(s.abschnitte) || s.abschnitte.length === 0) befunde.push(`${s.seite}: keine Abschnitte`);
     const ids = new Set();
-    const html = existsSync(join(bib, s.seite, 'index.html')) ? readFileSync(join(bib, s.seite, 'index.html'), 'utf8') : '';
+    const htmls = {};
+    const laden = (datei) => (htmls[datei] ??= existsSync(join(bib, s.seite, datei)) ? readFileSync(join(bib, s.seite, datei), 'utf8') : '');
     for (const a of s.abschnitte) {
+      const html = laden(a.datei ?? 'index.html');
       for (const f of PFLICHT) if (!a[f]) befunde.push(`${s.seite}/${a.id ?? '?'}: Feld ${f} fehlt`);
-      if (ids.has(a.id)) befunde.push(`${s.seite}: Kennung ${a.id} doppelt`);
-      ids.add(a.id);
+      const schluessel = `${a.datei ?? 'index.html'}#${a.id}`;
+      if (ids.has(schluessel)) befunde.push(`${s.seite}: Kennung ${a.id} doppelt`);
+      ids.add(schluessel);
       if (kategorien && a.kategorie && !kategorien.includes(a.kategorie)) befunde.push(`${s.seite}/${a.id}: Kategorie ${a.kategorie} nicht in taxonomie.json`);
-      if (html && a.id && !html.includes(`data-abschnitt="${a.id}"`)) befunde.push(`${s.seite}/${a.id}: data-abschnitt="${a.id}" steht nicht in index.html`);
+      if (html && a.id && !html.includes(`data-abschnitt="${a.id}"`)) befunde.push(`${s.seite}/${a.id}: data-abschnitt="${a.id}" steht nicht in ${a.datei ?? 'index.html'}`);
     }
   }
   return befunde;
@@ -100,7 +103,7 @@ export function uebersicht(seiten) {
     z.push(`### ${s.seite} ${s.name}`);
     z.push('');
     if (s.referenz) z.push(`Referenz: ${s.referenz}`, '');
-    z.push(s.abschnitte.map((a) => `\`${a.id}\` (${a.kategorie})`).join(', '));
+    z.push(s.abschnitte.map((a) => `\`${a.id}\` (${a.kategorie})${a.datei ? ` in ${a.datei}` : ''}`).join(', '));
     z.push('');
   }
   return z.join('\n');
@@ -135,8 +138,8 @@ function main() {
       if (kat && a.kategorie !== kat) continue;
       if (abschnitt && a.id !== abschnitt) continue;
       treffer++;
-      console.log(`${s.seite} ${s.name}  ·  ${a.id}  (${a.kategorie})`);
-      console.log(`  Prinzip:  ${a.prinzip}`);
+      console.log(`${s.seite} ${s.name}  ·  ${a.id}  (${a.kategorie})${a.datei ? '  in ' + a.datei : ''}`);
+      console.log(`  Prinzip:  ${a.prinzip}${a.prinzip_quelle === 'kategorie-standard' ? '  [Standardsatz, keine Analyse dieses Abschnitts]' : ''}`);
       if (abschnitt || seite) {
         console.log(`  Selektor: ${a.selektor}`);
         console.log(`  CSS:      ${a.css}`);

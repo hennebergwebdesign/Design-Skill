@@ -54,7 +54,7 @@
   <symbol id="i-erweiterung" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4a2 2 0 1 1 4 0v2h4a1 1 0 0 1 1 1v4h-2a2 2 0 1 0 0 4h2v4a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-4h2a2 2 0 1 0 0-4H4V7a1 1 0 0 1 1-1h5z"/></symbol>
 </svg>
 
-<header class="kopf">
+<header class="kopf" data-abschnitt="kopf">
   <div class="kopf__leiste wrap">
     <a class="kopf__logo" href="#top" aria-label="Markenname, zur Startseite">
       <svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg>
@@ -78,7 +78,7 @@
 
 <main id="inhalt">
 
-<section class="held" aria-labelledby="held-titel">
+<section class="held" aria-labelledby="held-titel" data-abschnitt="held">
   <div class="wrap held__kopf">
     <!-- Heldformel: Onlinehändler am Anfang, Problem Produkte nach Bauchgefühl wählen, Lösung Umsätze und Anzeigen anderer Shops sehen, Ergebnis weniger Fehlkäufe, Handlung kostenlos testen -->
     <p class="held__meldung" data-zeig><span class="punkt" aria-hidden="true"></span>Neu: Version 2 ist online</p>
@@ -97,7 +97,7 @@
   </div>
 </section>
 
-<section class="bogen" id="werkzeuge" aria-labelledby="werkzeuge-titel">
+<section class="bogen" id="werkzeuge" aria-labelledby="werkzeuge-titel" data-abschnitt="bogen">
   <div class="bogen__kuppe">
     <div class="wrap bogen__kopf">
       <h2 id="werkzeuge-titel" data-zeig>Alle Werkzeuge in einem Konto</h2>
@@ -229,7 +229,7 @@
   </div>
 </section>
 
-<section class="sektion zwei" aria-label="Weitere Funktionen">
+<section class="sektion zwei" aria-label="Weitere Funktionen" data-abschnitt="zwei">
   <div class="wrap zwei__raster">
     <article class="karte karte--eins" data-zeig>
       <h2>Millionen Produkte</h2>
@@ -253,7 +253,7 @@
   </div>
 </section>
 
-<section class="ki" id="ki" aria-labelledby="ki-titel">
+<section class="ki" id="ki" aria-labelledby="ki-titel" data-abschnitt="ki">
   <div class="ki__strahlen" aria-hidden="true"></div>
   <div class="wrap ki__innen">
     <h2 id="ki-titel" data-zeig>Neu: KI Suche</h2>
@@ -272,7 +272,7 @@
   </div>
 </section>
 
-<section class="sektion vorteile" id="vorteile" aria-labelledby="vorteile-titel">
+<section class="sektion vorteile" id="vorteile" aria-labelledby="vorteile-titel" data-abschnitt="vorteile">
   <div class="wrap">
     <div class="vorteile__kopf" data-zeig>
       <h2 id="vorteile-titel">Das bringt Dir Markenname</h2>
@@ -289,7 +289,7 @@
   </div>
 </section>
 
-<section class="erweiterung" id="erweiterung" aria-labelledby="erw-titel">
+<section class="erweiterung" id="erweiterung" aria-labelledby="erw-titel" data-abschnitt="erweiterung">
   <div class="wrap erweiterung__kopf">
     <p class="erweiterung__zeile" data-zeig>Kostenlos für Chrome (Beispiel)</p>
     <h2 id="erw-titel" data-zeig>Die Browser Erweiterung</h2>
@@ -308,7 +308,7 @@
   </div>
 </section>
 
-<section class="sektion ratgeber" id="ratgeber" aria-labelledby="ratgeber-titel">
+<section class="sektion ratgeber" id="ratgeber" aria-labelledby="ratgeber-titel" data-abschnitt="ratgeber">
   <div class="wrap">
     <h2 id="ratgeber-titel" data-zeig>Aktuelle Artikel</h2>
     <div class="ratgeber__raster">
@@ -329,7 +329,7 @@
   </div>
 </section>
 
-<section class="sektion fragen" id="fragen" aria-labelledby="fragen-titel">
+<section class="sektion fragen" id="fragen" aria-labelledby="fragen-titel" data-abschnitt="fragen">
   <div class="wrap fragen__raster">
     <div class="fragen__kopf" data-zeig>
       <h2 id="fragen-titel">Häufige Fragen</h2>
@@ -346,7 +346,7 @@
   </div>
 </section>
 
-<section class="schluss" id="kontakt" aria-labelledby="schluss-titel">
+<section class="schluss" id="kontakt" aria-labelledby="schluss-titel" data-abschnitt="schluss">
   <div class="faecher" aria-hidden="true"><i style="--k:#d9482f"></i><i style="--k:#0c5f4c"></i><i style="--k:#12708a"></i><i style="--k:#e08a1e"></i><i style="--k:#2b2f33"></i><i style="--k:#b0457a"></i></div>
   <div class="wrap schluss__raster">
     <div class="schluss__text" data-zeig>
@@ -368,7 +368,7 @@
 
 </main>
 
-<footer class="fuss" id="fuss">
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
   <div class="wrap fuss__raster">
     <div class="fuss__marke">
       <a class="kopf__logo" href="#top" aria-label="Markenname, nach oben"><svg class="kopf__zeichen" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#i-zeichen"/></svg><span>Markenname</span></a>
