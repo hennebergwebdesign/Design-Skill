@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kaffeeabo mit Beratung, frisch geröstet | Markenname</title>
+<meta name="description" content="Kaffee im Abo, frisch geröstet und persönlich beraten: Sorte und Röstung finden Sie in einem kurzen Gespräch. Jederzeit pausieren, Lieferung nach Musterstadt.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../_basis/schriften.css">
+<link rel="stylesheet" href="marke.css">
+<link rel="stylesheet" href="../_basis/basis.css">
+<link rel="stylesheet" href="stil.css">
+<!-- Strukturierte Daten: Beispielwerte, vor der Auslieferung durch echte Angaben ersetzen. Keine Bewertungen erfunden. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Markenname Kaffeeabo",
+  "description": "Kaffee im Abo mit persönlicher Beratung: frisch geröstet, Espresso und Filterkaffee, jederzeit pausierbar.",
+  "url": "https://beispiel.invalid/",
+  "image": "https://beispiel.invalid/bilder/kaffee.webp",
+  "telephone": "+490000000000",
+  "email": "hallo@beispiel.invalid",
+  "address": { "@type": "PostalAddress", "streetAddress": "Musterstraße 1", "postalCode": "00000", "addressLocality": "Musterstadt", "addressCountry": "DE" }
+}
+</script>
+</head>
+<body id="top">
+<a class="sprunglink" href="#inhalt">Zum Inhalt springen</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-pfeil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8v4a3 3 0 0 0 3 3h10M14 10l4 5-4 5"/></symbol>
+  <symbol id="i-links" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></symbol>
+  <symbol id="i-rechts" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></symbol>
+  <symbol id="i-tel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.500 1.500a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></symbol>
+  <symbol id="i-person" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.500"/><path d="M5 20c0-4 3-6 7-6s7 2 7 6"/></symbol>
+  <symbol id="i-bohne" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="16" cy="16" rx="8" ry="11" transform="rotate(30 16 16)"/><path d="M13 26c5-3 6-10 7-17"/></symbol>
+  <symbol id="i-gespraech" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7h22v14H15l-6 5v-5H5z"/><path d="M10 12h12M10 16h7"/></symbol>
+  <symbol id="i-paket" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10l12-6 12 6v13l-12 6-12-6z"/><path d="M4 10l12 6 12-6M16 16v13M10 7l12 6"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="12"/><path d="M13 11v10M19 11v10"/></symbol>
+  <symbol id="i-beutel" viewBox="0 0 120 170"><path d="M20 16h80l8 14v124a8 8 0 0 1-8 8H20a8 8 0 0 1-8-8V30z" fill="var(--beutel,#9c4a32)"/><path d="M20 16h80l8 14H12z" fill="#000" opacity=".16"/><rect x="26" y="62" width="68" height="70" rx="4" fill="#f8f4ea"/><ellipse cx="60" cy="86" rx="8" ry="11" transform="rotate(30 60 86)" fill="var(--beutel,#9c4a32)"/><rect x="36" y="108" width="48" height="4" rx="2" fill="#2a2520" opacity=".7"/><rect x="42" y="117" width="36" height="3" rx="1.500" fill="#2a2520" opacity=".4"/></symbol>
+</svg>
+
+<!-- 1. Ankündigungsleiste -->
+<aside class="ank" id="ankuendigung" data-abschnitt="ankuendigung" aria-label="Ankündigung">
+  <p class="ank__text"><span class="ank__punkt" aria-hidden="true"></span><strong>Frühlingsaktion:</strong> Probierset mit drei Sorten, Beispielangebot</p>
+  <a class="knopf knopf--rand ank__knopf" href="#espresso">Probierset ansehen</a>
+</aside>
+
+<!-- 2. Kopf: schwebende Leiste über dem Held (sticky, Höhe 0) -->
+<header class="kopf" id="kopf" data-abschnitt="kopf">
+  <div class="kopf__leiste">
+    <a class="kopf__logo" href="#top" aria-label="Markenname Kaffeeabo, zur Startseite">Markenname</a>
+    <nav class="kopf__nav" id="hauptnav" aria-label="Hauptnavigation" data-menue-ziel>
+      <ul class="kopf__menue">
+        <li><a href="#espresso">Espresso</a></li>
+        <li><a href="#filterkaffee">Filterkaffee</a></li>
+        <li><a href="#beratung">Beratung</a></li>
+        <li><a href="#ratgeber">Ratgeber</a></li>
+        <li><a href="#fragen">Fragen</a></li>
+        <li class="kopf__tel"><a href="tel:+490000000000"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-tel"/></svg>0000 000 000</a></li>
+      </ul>
+    </nav>
+    <div class="kopf__rechts">
+      <a class="kopf__login" href="#"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-person"/></svg>Anmelden</a>
+      <a class="knopf knopf--hell kopf__knopf" href="#beratung">Abo starten</a>
+      <button class="kopf__burger" type="button" data-menue aria-expanded="false" aria-controls="hauptnav">
+        <span class="sr-nur">Menü öffnen oder schließen</span>
+        <span class="burger" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="inhalt">
+
+<!-- 3. Held: ganze Fläche Foto, Aussage in der Mitte, Produktkarte unten links -->
+<!-- Heldformel: Kaffeetrinker zu Hause und im Büro (Zielgruppe), zu viele Sorten und Bohnen, die alt werden (Problem), Abo mit persönlicher Beratung und frischer Röstung (Lösung), jederzeit pausieren (Risiko weg) -->
+<section class="hero" id="start" data-abschnitt="hero" data-abdunkeln aria-labelledby="hero-titel">
+  <img class="hero__foto" src="bilder/hero-kaffee-latte-art.webp" width="800" height="533" alt="Eine Tasse Cappuccino mit Milchschaum auf einer Untertasse, schräges Licht auf einem Holztisch" fetchpriority="high">
+  <div class="hero__schleier" aria-hidden="true"></div>
+  <div class="hero__mitte wrap">
+    <h1 id="hero-titel">Der richtige Kaffee, ohne ihn lange zu suchen</h1>
+    <p class="hero__unter">In zehn Minuten beraten, frisch geröstet, im Abo geliefert. Pausieren Sie jederzeit.</p>
+    <div class="hero__aktion">
+      <a class="knopf knopf--hell" href="#beratung">Abo starten</a>
+      <a class="hero__tel" href="tel:+490000000000"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-tel"/></svg>0000 000 000</a>
+    </div>
+  </div>
+  <aside class="hero__karte" aria-label="Beliebte Sorte, Beispiel">
+    <p class="hero__marke" data-beispiel>BELIEBT, BEISPIEL</p>
+    <div class="hero__beutel"><svg class="beutel" style="--beutel:var(--salbei)" width="120" height="170" viewBox="0 0 120 170" role="img" aria-label="Zeichnung: Kaffeebeutel Hausmischung Mild" focusable="false"><use href="#i-beutel"/></svg></div>
+    <div class="hero__kartetext">
+      <p class="hero__kenn">FILTER, MITTLERE RÖSTUNG</p>
+      <p class="hero__name">Hausmischung Mild</p>
+      <div class="hero__knoepfe">
+        <a class="knopf knopf--rand" href="#filterkaffee"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-pfeil"/></svg>Details</a>
+        <a class="knopf" href="#beratung">Abo starten</a>
+      </div>
+    </div>
+  </aside>
+</section>
+
+<!-- 4. Einstieg: Bildfläche links, Aussage und Knopf rechts -->
+<section class="intro sektion" id="einstieg" data-abschnitt="einstieg" aria-labelledby="intro-titel">
+  <div class="wrap intro__raster">
+    <div class="intro__bild" data-zeig="links">
+      <svg viewBox="0 0 520 420" role="img" aria-label="Zeichnung: drei Kaffeebeutel in Terrakotta, Salbei und Sand, davor eine Tasse mit Dampf" focusable="false">
+        <rect width="520" height="420" fill="var(--sand)"/>
+        <ellipse cx="260" cy="378" rx="210" ry="22" fill="#2a2520" opacity=".14"/>
+        <g transform="translate(60 80) scale(1.6)"><use href="#i-beutel" style="--beutel:var(--terrakotta)" width="120" height="170"/></g>
+        <g transform="translate(176 40) scale(1.9)"><use href="#i-beutel" style="--beutel:var(--salbei)" width="120" height="170"/></g>
+        <g transform="translate(316 100) scale(1.5)"><use href="#i-beutel" style="--beutel:#4a423b" width="120" height="170"/></g>
+        <path d="M228 300h64l-6 42a10 10 0 0 1-10 8h-32a10 10 0 0 1-10-8z" fill="#fffcf5"/><path d="M292 312h10a10 10 0 0 1 0 20h-12" fill="none" stroke="#fffcf5" stroke-width="6"/>
+      </svg>
+    </div>
+    <div class="intro__text">
+      <h2 id="intro-titel" data-zeig>Kaffee aussuchen soll einfach sein</h2>
+      <p data-zeig>Wir fragen nach Maschine, Geschmack und Alltag, empfehlen eine Sorte und rösten sie für Ihre nächste Lieferung frisch. Sie müssen keine Röstungen vergleichen.</p>
+      <a class="knopf" href="#beratung" data-zeig>Abo starten</a>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Vertrauensreihe vor dem Angebot -->
+<section class="vertrauen sektion" id="vertrauen" data-abschnitt="vertrauen" aria-labelledby="vertrauen-titel">
+  <div class="wrap">
+    <h2 id="vertrauen-titel" data-zeig>Frischer Kaffee, persönlich begleitet</h2>
+    <ul class="vertrauen__reihe" data-staffel>
+      <li data-zeig>
+        <svg width="32" height="32" aria-hidden="true" focusable="false"><use href="#i-bohne"/></svg>
+        <h3>Frisch geröstet</h3>
+        <p>Das Röstdatum steht auf jedem Beutel. Wir rösten erst, wenn Ihre Bestellung feststeht. Beispielangabe.</p>
+      </li>
+      <li data-zeig>
+        <svg width="32" height="32" aria-hidden="true" focusable="false"><use href="#i-gespraech"/></svg>
+        <h3>Persönliche Beratung</h3>
+        <p>Ein Gespräch per Telefon oder Video, in dem wir Sorte und Röstung mit Ihnen abstimmen.</p>
+      </li>
+      <li data-zeig>
+        <svg width="32" height="32" aria-hidden="true" focusable="false"><use href="#i-paket"/></svg>
+        <h3>Pünktlich im Briefkasten</h3>
+        <p>Der Karton passt durch den Briefkastenschlitz. Sie wählen den Rhythmus, alle zwei oder vier Wochen.</p>
+      </li>
+      <li data-zeig>
+        <svg width="32" height="32" aria-hidden="true" focusable="false"><use href="#i-pause"/></svg>
+        <h3>Jederzeit pausieren</h3>
+        <p>Keine Mindestlaufzeit. Überspringen, pausieren oder beenden Sie das Abo mit einem Klick. Beispielangabe.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- 6. Kategorie Espresso: Fotobühne, Produktkarten im Karussell darüber -->
+<section class="kat" id="espresso" data-abschnitt="kat-espresso" aria-labelledby="espresso-titel">
+  <div class="kat__buehne">
+    <img class="kat__foto" src="bilder/buehne-espresso-tablett.webp" width="800" height="640" alt="Cappuccino mit Milchschaum, ein Gebäckstück und ein Espressotässchen auf einem Tablett aus Papier" loading="lazy" data-parallax="0.06">
+    <div class="kat__schleier" aria-hidden="true"></div>
+    <div class="kat__kopf">
+      <p class="kat__nr">01</p>
+      <h2 id="espresso-titel">Espresso</h2>
+      <p class="kat__text">Kräftige Röstungen für Siebträger und Vollautomat, mit Crema und wenig Säure. Wählen Sie eine Sorte oder lassen Sie sich beraten.</p>
+    </div>
+    <div class="kat__karussell" data-karussell>
+      <ul class="kat__spur" data-karussell-spur tabindex="0" aria-label="Espresso Sorten, seitlich blättern">
+
+          <li class="karte">
+            <article class="karte__inhalt" aria-label="Crema Klassik">
+              <p class="karte__kenn">ESPRESSO, DUNKLE RÖSTUNG</p>
+              <h3 class="karte__name">Crema Klassik</h3>
+              <div class="karte__bild"><svg class="beutel" style="--beutel:var(--terrakotta)" width="120" height="170" viewBox="0 0 120 170" role="img" aria-label="Zeichnung: Kaffeebeutel Crema Klassik" focusable="false"><use href="#i-beutel"/></svg></div>
+              <div class="karte__knoepfe">
+                <a class="knopf" href="#beratung">Abo starten</a>
+                <a class="knopf knopf--rand" href="#ratgeber"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-pfeil"/></svg>Details<span class="sr-nur">: Crema Klassik</span></a>
+              </div>
+            </article>
+          </li>
+          <li class="karte">
+            <article class="karte__inhalt" aria-label="Rund und mild">
+              <p class="karte__kenn">ESPRESSO, MITTLERE RÖSTUNG</p>
+              <h3 class="karte__name">Rund und mild</h3>
+              <div class="karte__bild"><svg class="beutel" style="--beutel:var(--sand)" width="120" height="170" viewBox="0 0 120 170" role="img" aria-label="Zeichnung: Kaffeebeutel Rund und mild" focusable="false"><use href="#i-beutel"/></svg></div>
+              <div class="karte__knoepfe">
+                <a class="knopf" href="#beratung">Abo starten</a>
+                <a class="knopf knopf--rand" href="#ratgeber"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-pfeil"/></svg>Details<span class="sr-nur">: Rund und mild</span></a>
+              </div>
+            </article>
+          </li>
+          <li class="karte">
+            <article class="karte__inhalt" aria-label="Schokonote">
+              <p class="karte__kenn">ESPRESSO, MITTLERE RÖSTUNG</p>
+              <h3 class="karte__name">Schokonote</h3>
+              <div class="karte__bild"><svg class="beutel" style="--beutel:#4a423b" width="120" height="170" viewBox="0 0 120 170" role="img" aria-label="Zeichnung: Kaffeebeutel Schokonote" focusable="false"><use href="#i-beutel"/></svg></div>
+              <div class="karte__knoepfe">
+                <a class="knopf" href="#beratung">Abo starten</a>
+                <a class="knopf knopf--rand" href="#ratgeber"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-pfeil"/></svg>Details<span class="sr-nur">: Schokonote</span></a>
+              </div>
+            </article>
+          </li>
+          <li class="karte">
+            <article class="karte__inhalt" aria-label="Koffeinfrei Espresso">
+              <p class="karte__kenn">ESPRESSO, ENTKOFFEINIERT</p>
+              <h3 class="karte__name">Koffeinfrei Espresso</h3>
+              <div class="karte__bild"><svg class="beutel" style="--beutel:var(--salbei)" width="120" height="170" viewBox="0 0 120 170" role="img" aria-label="Zeichnung: Kaffeebeutel Koffeinfrei Espresso" focusable="false"><use href="#i-beutel"/></svg></div>
+              <div class="karte__knoepfe">
+                <a class="knopf" href="#beratung">Abo starten</a>
+                <a class="knopf knopf--rand" href="#ratgeber"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-pfeil"/></svg>Details<span class="sr-nur">: Koffeinfrei Espresso</span></a>
+              </div>
+            </article>
+          </li>
+      </ul>
+      <div class="kat__steuerung">
+        <div class="kat__strich" aria-hidden="true"><span data-karussell-strich></span></div>
+        <button class="kat__pfeil" type="button" data-karussell-zurueck aria-label="Vorherige Sorte"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-links"/></svg></button>
+        <button class="kat__pfeil" type="button" data-karussell-vor aria-label="Nächste Sorte"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-rechts"/></svg></button>
+      </div>
+    </div>
+  </div>
+  <div class="wrap kat__fuss">
+    <h3 data-zeig>Espresso, der zu Hause gelingt</h3>
+    <div class="kat__fusstext" data-zeig>
+      <p>Wir nennen Mahlgrad, Menge und Brühzeit für Ihre Maschine. Das erste Päckchen enthält eine Einstellhilfe auf Papier.</p>
+      <a class="knopf" href="#beratung">Abo starten</a>
+    </div>
+  </div>
+</section>
+
+<!-- 7. Kategorie Filterkaffee: gleiche Bauart, andere Bühne -->
+<section class="kat" id="filterkaffee" data-abschnitt="kat-filter" aria-labelledby="filter-titel">
+  <div class="kat__buehne">
+    <img class="kat__foto" src="bilder/buehne-filter-becher-und-uhr.webp" width="1600" height="1067" alt="Weißer Becher mit Kaffee neben Armbanduhr und Notizbuch auf hellem Holztisch" loading="lazy" data-parallax="0.06">
+    <div class="kat__schleier" aria-hidden="true"></div>
+    <div class="kat__kopf">
+      <p class="kat__nr">02</p>
+      <h2 id="filter-titel">Filterkaffee</h2>
+      <p class="kat__text">Milde und fruchtige Röstungen für Handfilter, Maschine und Stempelkanne. Für lange Morgen und volle Kannen.</p>
+    </div>
+    <div class="kat__karussell" data-karussell>
+      <ul class="kat__spur" data-karussell-spur tabindex="0" aria-label="Filterkaffee Sorten, seitlich blättern">
+
+          <li class="karte">
+            <article class="karte__inhalt" aria-label="Morgenfilter">
+              <p class="karte__kenn">FILTER, MITTLERE RÖSTUNG</p>
+              <h3 class="karte__name">Morgenfilter</h3>
+              <div class="karte__bild"><svg class="beutel" style="--beutel:var(--salbei)" width="120" height="170" viewBox="0 0 120 170" role="img" aria-label="Zeichnung: Kaffeebeutel Morgenfilter" focusable="false"><use href="#i-beutel"/></svg></div>
+              <div class="karte__knoepfe">
+                <a class="knopf" href="#beratung">Abo starten</a>
+                <a class="knopf knopf--rand" href="#ratgeber"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-pfeil"/></svg>Details<span class="sr-nur">: Morgenfilter</span></a>
+              </div>
+            </article>
+          </li>
+          <li class="karte">
+            <article class="karte__inhalt" aria-label="Hell und fruchtig">
+              <p class="karte__kenn">FILTER, HELLE RÖSTUNG</p>
+              <h3 class="karte__name">Hell und fruchtig</h3>
+              <div class="karte__bild"><svg class="beutel" style="--beutel:var(--sand)" width="120" height="170" viewBox="0 0 120 170" role="img" aria-label="Zeichnung: Kaffeebeutel Hell und fruchtig" focusable="false"><use href="#i-beutel"/></svg></div>
+              <div class="karte__knoepfe">
+                <a class="knopf" href="#beratung">Abo starten</a>
+                <a class="knopf knopf--rand" href="#ratgeber"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-pfeil"/></svg>Details<span class="sr-nur">: Hell und fruchtig</span></a>
+              </div>
+            </article>
+          </li>
+          <li class="karte">
+            <article class="karte__inhalt" aria-label="Nussig und weich">
+              <p class="karte__kenn">FILTER, MITTLERE RÖSTUNG</p>
+              <h3 class="karte__name">Nussig und weich</h3>
+              <div class="karte__bild"><svg class="beutel" style="--beutel:var(--terrakotta)" width="120" height="170" viewBox="0 0 120 170" role="img" aria-label="Zeichnung: Kaffeebeutel Nussig und weich" focusable="false"><use href="#i-beutel"/></svg></div>
+              <div class="karte__knoepfe">
+                <a class="knopf" href="#beratung">Abo starten</a>
+                <a class="knopf knopf--rand" href="#ratgeber"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-pfeil"/></svg>Details<span class="sr-nur">: Nussig und weich</span></a>
+              </div>
+            </article>
+          </li>
+          <li class="karte">
+            <article class="karte__inhalt" aria-label="Koffeinfrei Filter">
+              <p class="karte__kenn">FILTER, ENTKOFFEINIERT</p>
+              <h3 class="karte__name">Koffeinfrei Filter</h3>
+              <div class="karte__bild"><svg class="beutel" style="--beutel:#4a423b" width="120" height="170" viewBox="0 0 120 170" role="img" aria-label="Zeichnung: Kaffeebeutel Koffeinfrei Filter" focusable="false"><use href="#i-beutel"/></svg></div>
+              <div class="karte__knoepfe">
+                <a class="knopf" href="#beratung">Abo starten</a>
+                <a class="knopf knopf--rand" href="#ratgeber"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-pfeil"/></svg>Details<span class="sr-nur">: Koffeinfrei Filter</span></a>
+              </div>
+            </article>
+          </li>
+      </ul>
+      <div class="kat__steuerung">
+        <div class="kat__strich" aria-hidden="true"><span data-karussell-strich></span></div>
+        <button class="kat__pfeil" type="button" data-karussell-zurueck aria-label="Vorherige Sorte"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-links"/></svg></button>
+        <button class="kat__pfeil" type="button" data-karussell-vor aria-label="Nächste Sorte"><svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#i-rechts"/></svg></button>
+      </div>
+    </div>
+  </div>
+  <div class="wrap kat__fuss">
+    <h3 data-zeig>Filterkaffee für jeden Morgen</h3>
+    <div class="kat__fusstext" data-zeig>
+      <p>Von hell bis mittel, auf Wunsch gemahlen für Ihren Filter. Wir passen Menge und Rhythmus an Ihren Verbrauch an.</p>
+      <a class="knopf" href="#beratung">Abo starten</a>
+    </div>
+  </div>
+</section>
+
+<!-- 8. Stimmen: hochformatige Bildkacheln mit Zitat (Beispiel) -->
+<section class="stimmen sektion" id="stimmen" data-abschnitt="stimmen" aria-labelledby="stimmen-titel">
+  <div class="wrap stimmen__raster">
+    <div class="stimmen__kopf">
+      <h2 id="stimmen-titel" data-zeig>Das sagen Menschen, die ihren Kaffee gefunden haben</h2>
+      <p class="stimmen__hinweis" data-beispiel>Beispielstimmen, keine echten Bewertungen</p>
+    </div>
+    <ul class="stimmen__kacheln" data-staffel>
+      <li class="stimme" data-zeig>
+        <figure><div class="stimme__bild"><img src="bilder/stimme-haende-mit-tassen.webp" width="800" height="1200" alt="Zwei Paar Hände halten Tassen mit Kaffee an einem weißen Tisch" loading="lazy"></div>
+        <figcaption><blockquote>„Ich wusste nie, welche Röstung zu meiner Maschine passt. Nach dem Gespräch war es klar.“</blockquote><span>Beispielperson, Büroleitung</span></figcaption></figure>
+      </li>
+      <li class="stimme" data-zeig>
+        <figure><div class="stimme__bild"><img src="bilder/stimme-gespraech-im-cafe.webp" width="1000" height="563" alt="Eine Gruppe sitzt an einem langen Holztisch in einem Café und unterhält sich" loading="lazy"></div>
+        <figcaption><blockquote>„Im Team trinken wir zwei Sorten. Die Lieferung kommt, bevor der Beutel leer ist.“</blockquote><span>Beispielperson, Teamleiter</span></figcaption></figure>
+      </li>
+      <li class="stimme" data-zeig>
+        <figure><div class="stimme__bild"><img src="bilder/stimme-handyfoto-vom-kaffee.webp" width="1000" height="563" alt="Eine Hand fotografiert mit dem Smartphone zwei Kaffeegläser auf einem runden Tisch" loading="lazy"></div>
+        <figcaption><blockquote>„Pausieren im Urlaub ging in zwei Klicks. Das hat mich überzeugt.“</blockquote><span>Beispielperson, Abonnentin</span></figcaption></figure>
+      </li>
+      <li class="stimme" data-zeig>
+        <figure><div class="stimme__bild"><img src="bilder/stimme-fruehstueck-von-oben.webp" width="800" height="530" alt="Frühstückstisch von oben mit Obstschale, Croissant, Buch und einer Tasse Espresso" loading="lazy"></div>
+        <figcaption><blockquote>„Der Kaffee riecht, wie er riechen soll. Das Röstdatum hilft mir beim Einschätzen.“</blockquote><span>Beispielperson, Abonnent</span></figcaption></figure>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- 9. Beratung: Foto, Aussage und Rückrufformular -->
+<section class="beratung sektion" id="beratung" data-abschnitt="beratung" aria-labelledby="beratung-titel">
+  <div class="wrap beratung__raster">
+    <div class="beratung__bild" data-zeig="links">
+      <img src="bilder/beratung-frau-mit-tasse-am-laptop.webp" width="1000" height="667" alt="Eine lächelnde Frau mit Tasse in der Hand spricht am Laptop in einem Videogespräch" loading="lazy">
+    </div>
+    <div class="beratung__text">
+      <p class="beratung__kenn" data-beispiel>BERATUNG, KOSTENLOS, BEISPIEL</p>
+      <h2 id="beratung-titel" data-zeig>Beratung nach Ihrem Geschmack</h2>
+      <p data-zeig>Erzählen Sie uns, wie Sie Ihren Kaffee zubereiten. Wir rufen Sie an, empfehlen eine Sorte und richten Ihr Abo ein. Das Gespräch dauert etwa zehn Minuten und bindet Sie zu nichts.</p>
+      <form class="formular" data-formular action="#" method="post" novalidate data-zeig>
+        <div class="formular__feld formular__feld--breit"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" placeholder="Vor und Nachname" required></div>
+        <div class="formular__feld"><label for="f-mail">E-Mail</label><input id="f-mail" name="email" type="email" autocomplete="email" placeholder="name@beispiel.invalid" required><small class="feld__hinweis">Dorthin schicken wir die Terminbestätigung.</small></div>
+        <div class="formular__feld"><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" placeholder="0000 000 000"><small class="feld__hinweis">Nur für den Rückruf, freiwillig.</small></div>
+        <div class="formular__feld formular__feld--breit"><label for="f-zubereitung">Wie bereiten Sie Kaffee zu?</label><select id="f-zubereitung" name="zubereitung"><option>Vollautomat</option><option>Siebträger</option><option>Filtermaschine oder Handfilter</option><option>Stempelkanne</option><option>Noch offen</option></select></div>
+        <p class="formular__recht formular__feld--breit">Mit dem Absenden stimmen Sie der <a href="#">Datenschutzerklärung</a> zu. Wir nutzen Ihre Angaben nur für den Rückruf.</p>
+        <button class="knopf formular__senden" type="submit">Abo starten</button>
+        <p class="formular__meldung formular__feld--breit" data-formular-meldung hidden role="status">Dies ist eine Vorlage, es wird nichts gesendet.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- 10. Ablauf: dunkle Fotobühne, große Überschrift, drei Schritte auf dem Bild -->
+<section class="ablauf" id="ablauf" data-abschnitt="ablauf" aria-labelledby="ablauf-titel">
+  <div class="ablauf__buehne">
+    <img class="ablauf__foto" src="bilder/ablauf-tasse-mit-bohnen.webp" width="800" height="552" alt="Weiße Tasse voller gerösteter Kaffeebohnen auf einer Untertasse, umgeben von Bohnen" loading="lazy" data-parallax="0.05">
+    <div class="ablauf__schleier" aria-hidden="true"></div>
+    <div class="ablauf__inhalt">
+      <p class="ablauf__text">Drei Schritte vom ersten Klick bis zur Tasse. Sie behalten jederzeit die Hand am Hahn.</p>
+      <h2 id="ablauf-titel" data-zeig>So funktioniert es</h2>
+      <ol class="ablauf__schritte" data-staffel>
+        <li class="schritt" data-zeig>
+          <p class="schritt__nr">[01]</p>
+          <h3>Kurze Fragen</h3>
+          <p>Sie beantworten fünf Fragen zu Maschine, Geschmack und Verbrauch. Das dauert etwa drei Minuten.</p>
+        </li>
+        <li class="schritt" data-zeig>
+          <p class="schritt__nr">[02]</p>
+          <h3>Persönliche Beratung</h3>
+          <p>Wir rufen zum Wunschtermin an und stimmen Sorte, Röstung und Rhythmus mit Ihnen ab.</p>
+        </li>
+        <li class="schritt" data-zeig>
+          <p class="schritt__nr">[03]</p>
+          <h3>Frisch geliefert</h3>
+          <p>Wir rösten für Ihre Bestellung und liefern in der Regel in zwei bis vier Werktagen. Beispielangabe.</p>
+        </li>
+      </ol>
+      <a class="knopf knopf--hell ablauf__knopf" href="#beratung" data-zeig>Abo starten</a>
+    </div>
+  </div>
+</section>
+
+<!-- 11. Ratgeber: Textspalte und fünf Karten mit eigenen Zeichnungen -->
+<section class="ratgeber sektion" id="ratgeber" data-abschnitt="ratgeber" aria-labelledby="ratgeber-titel">
+  <div class="wrap">
+    <h2 class="ratgeber__titel" id="ratgeber-titel" data-zeig>Ratgeber</h2>
+    <div class="ratgeber__raster">
+      <div class="ratgeber__intro" data-zeig>
+        <h3>Wissen rund um Kaffee und Zubereitung</h3>
+        <p>Praktische Beiträge zu Mahlgrad, Röstung, Wasser und Lagerung, kurz und mit Beispielen.</p>
+        <a class="knopf knopf--rand" href="#">Alle Beiträge</a>
+      </div>
+      <ul class="ratgeber__karten" data-staffel>
+        <li class="artikel" data-zeig>
+          <a href="#"><span class="artikel__bild artikel__bild--terra"><svg viewBox="0 0 160 160" aria-hidden="true" focusable="false"><use href="#i-bohne" width="160" height="160"/></svg></span><span class="artikel__titel">Espresso oder Filter: was passt zu Ihrer Maschine?</span><span class="artikel__mehr"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-pfeil"/></svg>Beitrag lesen</span></a>
+        </li>
+        <li class="artikel" data-zeig>
+          <a href="#"><span class="artikel__bild artikel__bild--salbei"><svg viewBox="0 0 160 160" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round"><circle cx="80" cy="80" r="46"/><circle cx="80" cy="80" r="26"/><circle cx="80" cy="80" r="6"/></svg></span><span class="artikel__titel">Mahlgrad einstellen in fünf Schritten</span><span class="artikel__mehr"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-pfeil"/></svg>Beitrag lesen</span></a>
+        </li>
+        <li class="artikel" data-zeig>
+          <a href="#"><span class="artikel__bild artikel__bild--sand"><svg viewBox="0 0 160 160" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><circle cx="80" cy="80" r="46"/><path d="M80 48v32l22 14"/></svg></span><span class="artikel__titel">Röstung verstehen: hell, mittel oder dunkel</span><span class="artikel__mehr"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-pfeil"/></svg>Beitrag lesen</span></a>
+        </li>
+        <li class="artikel" data-zeig>
+          <a href="#"><span class="artikel__bild artikel__bild--kohle"><svg viewBox="0 0 160 160" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"><path d="M80 34c20 28 32 44 32 62a32 32 0 0 1-64 0c0-18 12-34 32-62z"/></svg></span><span class="artikel__titel">Wasser und Kaffee: warum die Härte zählt</span><span class="artikel__mehr"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-pfeil"/></svg>Beitrag lesen</span></a>
+        </li>
+        <li class="artikel" data-zeig>
+          <a href="#"><span class="artikel__bild artikel__bild--terra"><svg viewBox="0 0 160 160" aria-hidden="true" focusable="false"><use href="#i-paket" width="160" height="160"/></svg></span><span class="artikel__titel">Kaffee richtig lagern, damit er frisch bleibt</span><span class="artikel__mehr"><svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#i-pfeil"/></svg>Beitrag lesen</span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 12. Fragen: Titel links, Akkordeon rechts -->
+<section class="fragen sektion" id="fragen" data-abschnitt="fragen" aria-labelledby="fragen-titel">
+  <div class="wrap fragen__raster">
+    <div class="fragen__kopf">
+      <h2 id="fragen-titel" data-zeig>Häufige Fragen</h2>
+      <p data-zeig>Antworten zu Abo, Lieferung und Beratung. Weitere Fragen beantworten wir gern am Telefon.</p>
+      <a class="fragen__tel" href="tel:+490000000000"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-tel"/></svg>0000 000 000</a>
+    </div>
+    <div class="fragen__liste" data-exklusiv>
+      <details><summary>Wer steckt hinter Markenname?</summary><p>Eine kleine Rösterei mit Beratung am Telefon. Beispielantwort, je Betrieb anpassen.</p></details>
+      <details><summary>Wie lange läuft ein Abo, und wie kündige ich?</summary><p>Es gibt keine Mindestlaufzeit. Sie pausieren, überspringen oder beenden das Abo im Kundenkonto oder per Anruf. Beispielantwort, Fristen je Betrieb prüfen.</p></details>
+      <details><summary>Was kostet das Abo?</summary><p>Der Preis steht bei jeder Sorte, Versand ist im Beispiel ab einer Mindestmenge enthalten. Beispielantwort, Preisangaben je Shop rechtlich prüfen.</p></details>
+      <details><summary>Wie schnell kommt die erste Lieferung?</summary><p>In der Regel zwei bis vier Werktage nach dem Beratungsgespräch innerhalb Deutschlands. Beispielantwort.</p></details>
+      <details><summary>Was, wenn mir die Sorte nicht schmeckt?</summary><p>Rufen Sie uns an, dann tauschen wir die Sorte für die nächste Lieferung. Beispielantwort, Kulanz je Betrieb festlegen.</p></details>
+      <details><summary>Mahlen Sie den Kaffee für mich?</summary><p>Ja, auf Wunsch für Ihre Zubereitung, zum Beispiel Espresso, Filter oder Stempelkanne. Ganze Bohnen halten länger frisch. Beispielantwort.</p></details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- 13. Fuß: dunkle Bühne mit Aussage, Knopf und Verzeichnis -->
+<footer class="fuss" id="fuss" data-abschnitt="fuss">
+  <div class="fuss__buehne">
+    <div class="fuss__kopf wrap">
+      <h2 data-zeig>Starten Sie mit einem Beutel, der zu Ihnen passt</h2>
+      <a class="knopf knopf--hell" href="#beratung" data-zeig>Abo starten</a>
+    </div>
+    <div class="wrap fuss__raster">
+      <div class="fuss__spalte fuss__marke">
+        <a class="fuss__logo" href="#top">Markenname</a>
+        <p>Kaffee im Abo, frisch geröstet und persönlich beraten. Beispieltext.</p>
+      </div>
+      <nav class="fuss__spalte" aria-label="Kategorien">
+        <h3 class="fuss__titel">Kategorien</h3>
+        <ul><li><a href="#espresso">Espresso</a></li><li><a href="#filterkaffee">Filterkaffee</a></li><li><a href="#ablauf">So funktioniert es</a></li></ul>
+      </nav>
+      <nav class="fuss__spalte" aria-label="Beliebt">
+        <h3 class="fuss__titel">Beliebt</h3>
+        <ul><li><a href="#espresso">Crema Klassik</a></li><li><a href="#filterkaffee">Hausmischung Mild</a></li><li><a href="#espresso">Probierset</a></li></ul>
+      </nav>
+      <nav class="fuss__spalte" aria-label="Wissen">
+        <h3 class="fuss__titel">Wissen</h3>
+        <ul><li><a href="#ratgeber">Ratgeber</a></li><li><a href="#fragen">Häufige Fragen</a></li><li><a href="#beratung">Beratung</a></li></ul>
+      </nav>
+      <div class="fuss__spalte">
+        <h3 class="fuss__titel">Kontakt</h3>
+        <ul>
+          <li><a href="tel:+490000000000"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-tel"/></svg>&nbsp;0000 000 000</a></li>
+          <li><a href="mailto:hallo@beispiel.invalid"><svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg>&nbsp;hallo@beispiel.invalid</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap fuss__recht">
+      <p>© Markenname, Musterstraße 1, 00000 Musterstadt. Beispielanschrift.</p>
+      <ul><li><a href="#">Impressum</a></li><li><a href="#">Datenschutz</a></li><li><a href="#">Widerruf</a></li></ul>
+    </div>
+  </div>
+</footer>
+
+<script src="../_basis/bewegung.js" defer></script>
+<script src="stil.js" defer></script>
+</body>
+</html>

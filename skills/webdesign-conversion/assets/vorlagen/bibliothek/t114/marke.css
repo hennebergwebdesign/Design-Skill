@@ -1,0 +1,35 @@
+/* marke.css der Vorlage "Kaffeeabo mit Karten über Fotobühne": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast (selbst gerechnet, WCAG): jeweils Text auf Fläche, Mindestwert 4,5 zu 1, großer Text 3 zu 1, Bedienelemente 3 zu 1. */
+:root{
+  --flaeche:#f8f4ea;            /* Creme */
+  --flaeche-alt:#efe8d8;        /* Sand hell */
+  --flaeche-karte:#fffcf5;      /* Karten und Felder */
+  --flaeche-dunkel:#2b2521;     /* Kohle, Kopfleiste, Fuß, Ankündigung */
+  --text:#2a2520;               /* auf Fläche 13,8 zu 1, auf Fläche alt 12,4 zu 1 */
+  --text-leise:#5e574c;         /* auf Fläche 6,5 zu 1, auf Fläche alt 5,8 zu 1, auf Karte 7,0 zu 1 */
+  --linie:#d8cfbb;
+  --akzent:#4a6542;             /* Hauptaktion: Salbei tief mit hellem Text (6,4 zu 1), auf Fläche als Fokusring 5,9 zu 1 */
+  --akzent-text:#fffdf6;
+  --schrift-titel:'Schibsted Grotesk',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --schrift-kenn:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace;  /* kleine Kennzeichen, Systemschrift, nichts geladen */
+  --radius-knopf:8px;
+  --radius-karte:12px;
+  --radius-bild:12px;
+
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:400;
+  --titel-spur:-0.04em;
+  --radius-buehne:14px;         /* Fotobühnen, abgerundet, mit Rand zum Bildschirm */
+  --buehne-rand:.75rem;
+  --terrakotta:#9c4a32;         /* Kennzeichen und Zahlen auf Hell (auf Fläche 5,6 zu 1, auf Karte 6,0 zu 1), Beutelfarbe */
+  --terrakotta-hell:#e8a384;    /* Kennzeichen auf Kohle und Foto (auf Kohle 7,2 zu 1) */
+  --salbei:#7d9774;             /* Beutelfarbe und Flächen, nie Textfarbe */
+  --sand:#d9b99a;               /* Beutelfarbe, Deko */
+  --text-auf-dunkel:#f8f4ea;    /* auf Kohle 13,8 zu 1 */
+  --text-leise-dunkel:#cfc6b5;  /* auf Kohle 8,9 zu 1 */
+  --linie-dunkel:#4a423b;
+  --schleier:30,22,16;          /* RGB des Fotoschleiers, Text auf Foto liegt auf mindestens 70 Prozent davon */
+  --feld-rand:#7a7064;          /* Rand der Eingabefelder auf Karte 4,7 zu 1 (Bedienelement, mindestens 3 zu 1) */
+  --weiss:#ffffff;
+}
