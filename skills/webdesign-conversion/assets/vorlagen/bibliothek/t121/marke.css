@@ -1,0 +1,33 @@
+/* marke.css der Vorlage "Quellwasser Dosen Bühne": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Die ganze Seite steht auf dunklem Grund. Kontrast (selbst gerechnet, WCAG), Text mindestens 4,5 zu 1. */
+:root{
+  --flaeche:#0c1a20;            /* Tiefwasser, Seitengrund */
+  --flaeche-alt:#12252d;        /* Karten und abgesetzte Abschnitte */
+  --flaeche-dunkel:#0a1317;     /* Kopfpille, Fuß, Schatten */
+  --text:#e9f3f0;               /* auf Fläche 15,7 zu 1, auf Fläche alt 14,0 zu 1, auf Fläche dunkel 16,6 zu 1 */
+  --text-leise:#a3b9b5;         /* auf Fläche 8,6 zu 1, auf Fläche alt 7,7 zu 1, auf Fläche dunkel 9,1 zu 1 */
+  --linie:#27404a;              /* nur Zierlinie, kein Bedienelement */
+  --akzent:#d3efe8;             /* Hauptaktion: Eisblau mit dunklem Text (14,6 zu 1), auch Fokusring */
+  --akzent-text:#0c1a20;
+  --schrift-titel:'Outfit',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:20px;
+  --radius-bild:16px;
+
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:300;
+  --titel-spur:-0.03em;
+  --quelle:#4fc3bd;             /* Wasserfarbe für Flächen, Linien und Ziffern auf Fläche (8,3 zu 1), kein Fließtext */
+  --tiefe:#0a3d4a;
+  --moos:#1d4a3f;
+  --nebel:#cfe9e4;
+  --kachel:#1a3540;             /* Textkarten über Szenen: Text 11,4 zu 1, leiser Text 6,2 zu 1 */
+  --feld-rand:#7f9a96;          /* Rand der Eingabefelder auf Fläche alt 5,2 zu 1 (Bedienelement, mindestens 3 zu 1) */
+  --dose-hell:#eef3f4;          /* Aluminium der gezeichneten Dose */
+  --dose-mittel:#9fb1b8;
+  --dose-dunkel:#5f7078;
+  --dose-still:#0f7a95;         /* Banderole Sorte Still */
+  --dose-medium:#2d8a64;        /* Banderole Sorte Medium */
+  --weiss:#ffffff;
+}

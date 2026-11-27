@@ -1,0 +1,152 @@
+[
+  {
+    "id": "kopf",
+    "name": "Kopfpille mit Menü",
+    "kategorie": "navigation",
+    "selektor": "header[data-abschnitt=\"kopf\"]",
+    "prinzip": "Menü, Telefon und Hauptaktion bleiben auf jedem Bildschirm erreichbar, die Pille hält sie zusammen, ohne Bild zu verdecken.",
+    "css": ".kopf",
+    "js": "bewegung.js (data-menue, Abschnittsanzeige)",
+    "hinweis": "Symbole i-tel aus dem SVG Block, Burger Regeln, .knopf--hell und :focus-visible aus dem Block Gemeinsam. marke.css und ../_basis/basis.css mitnehmen. Vor dem Übernehmen INFO.md lesen."
+  },
+  {
+    "id": "held",
+    "name": "Quellwasser aus dem Harz, in der Dose dabei",
+    "kategorie": "hero",
+    "selektor": "section[data-abschnitt=\"held\"]",
+    "prinzip": "Das Produkt steht allein auf dunkler Bühne in der Mitte, Aussage links, Nebenzeile rechts: ein Blick, ein Gegenstand, eine Aussage.",
+    "css": ".held",
+    "js": "bewegung.js über data-fortschritt",
+    "hinweis": "Symbol s-dose und Verläufe g-alu, g-band-still aus dem SVG Block, .knopf--hell, i-pfeil. Pinnen nur ab 62rem. marke.css und ../_basis/basis.css mitnehmen. Vor dem Übernehmen INFO.md lesen."
+  },
+  {
+    "id": "oeffnen",
+    "name": "Ein Zug am Ring, und der Harz öffnet sich",
+    "kategorie": "product",
+    "selektor": "section[data-abschnitt=\"oeffnen\"]",
+    "prinzip": "Eine Perspektive auf das Produkt wechselt (Dose von oben) und macht aus dem Öffnen den Übergang in die Geschichte.",
+    "css": ".oeffnen",
+    "js": "bewegung.js über data-fortschritt",
+    "hinweis": "Verläufe g-ring, g-deckel, Symbol s-berg aus dem SVG Block. Der Deckel ist reine SVG Zeichnung im Abschnitt. marke.css und ../_basis/basis.css mitnehmen. Vor dem Übernehmen INFO.md lesen."
+  },
+  {
+    "id": "szenen",
+    "name": "Drei Stationen, ein Weg ins Glas",
+    "kategorie": "editorial",
+    "selektor": "section[data-abschnitt=\"szenen\"]",
+    "prinzip": "Eine Bühne bleibt stehen, der Ort wechselt hinter dem Text: Herkunft wird erlebt statt behauptet.",
+    "css": ".szenen",
+    "js": "stil.js (Szenen)",
+    "hinweis": "Symbole s-wald, s-bach, s-quelle und g-himmel, g-wasser, g-stollen, s-wald Bäume aus dem SVG Block. Ohne Skript stehen die kleinen Zeichnungen im Text. marke.css und ../_basis/basis.css mitnehmen. Vor dem Übernehmen INFO.md lesen."
+  },
+  {
+    "id": "lage",
+    "name": "Wo die Quelle liegt",
+    "kategorie": "interactive",
+    "selektor": "section[data-abschnitt=\"lage\"]",
+    "prinzip": "Ein Ort wird mit einer einfachen Karte und drei wählbaren Punkten verortet, der Besucher entscheidet, was er liest.",
+    "css": ".lage",
+    "js": "stil.js (Ortswahl)",
+    "hinweis": "Karte ist reine SVG im Abschnitt, keine Symbole nötig. Ohne Skript stehen alle drei Texte da. marke.css und ../_basis/basis.css mitnehmen. Vor dem Übernehmen INFO.md lesen."
+  },
+  {
+    "id": "weg",
+    "name": "Der lange Weg durch den Berg",
+    "kategorie": "editorial",
+    "selektor": "section[data-abschnitt=\"weg\"]",
+    "prinzip": "Ein einziges bewegtes Bild (Tropfen durch Schichten) erklärt den Prozess, Beschriftungen steigen mit dem Scrollweg mit.",
+    "css": ".weg",
+    "js": "bewegung.js über data-fortschritt",
+    "hinweis": "Querschnitt ist reine SVG im Abschnitt. Pinnen nur ab 62rem, darunter steht der Endzustand. marke.css und ../_basis/basis.css mitnehmen. Vor dem Übernehmen INFO.md lesen."
+  },
+  {
+    "id": "mineralien",
+    "name": "Was im Wasser gelöst ist",
+    "kategorie": "features",
+    "selektor": "section[data-abschnitt=\"mineralien\"]",
+    "prinzip": "Vier gleich aufgebaute Einträge (Zeichen, Name, Zahl, ein Satz) machen Zusammensetzung vergleichbar und überprüfbar.",
+    "css": ".mineralien",
+    "js": "bewegung.js (data-zaehle, data-staffel)",
+    "hinweis": "Nur Tokens. Werte sind Beispiele und müssen aus der amtlichen Analyse kommen. marke.css und ../_basis/basis.css mitnehmen. Vor dem Übernehmen INFO.md lesen."
+  },
+  {
+    "id": "anlaesse",
+    "name": "Leicht genug für den Gipfel, kalt genug für den Schreibtisch",
+    "kategorie": "benefits",
+    "selektor": "section[data-abschnitt=\"anlaesse\"]",
+    "prinzip": "Eine große Aussage über einer ruhigen Landschaft, darunter drei Situationen: Nutzen als Alltagsbild.",
+    "css": ".anlaesse",
+    "js": "bewegung.js (data-licht, data-parallax)",
+    "hinweis": "Symbol s-berg und g-dusk aus dem SVG Block, .knopf--hell. marke.css und ../_basis/basis.css mitnehmen. Vor dem Übernehmen INFO.md lesen."
+  },
+  {
+    "id": "dosen",
+    "name": "Still oder medium, immer aus dem Harz",
+    "kategorie": "product",
+    "selektor": "section[data-abschnitt=\"dosen\"]",
+    "prinzip": "Zwei Varianten stehen gleichwertig nebeneinander mit denselben Datenzeilen: Vergleich ohne Tabelle, Kauf in einem Schritt.",
+    "css": ".dosen",
+    "js": "bewegung.js (data-staffel)",
+    "hinweis": "Symbol s-dose, g-alu, g-band-still, g-band-medium. Banderole über --dose-band. marke.css und ../_basis/basis.css mitnehmen. Vor dem Übernehmen INFO.md lesen."
+  },
+  {
+    "id": "bildband",
+    "name": "Orte, an denen die Dose schon war",
+    "kategorie": "portfolio",
+    "selektor": "section[data-abschnitt=\"bildband\"]",
+    "prinzip": "Ein waagerechtes Band mit Kacheln zeigt Fülle auf kleinem Raum, Pfeile und Wischen machen es bedienbar.",
+    "css": ".bildband",
+    "js": "stil.js (Bildband)",
+    "hinweis": "Symbole s-wald, s-bach, s-berg, s-quelle, s-dosenkachel, i-pfeil, i-pfeil-l. Bilder später durch Fotos ersetzen. marke.css und ../_basis/basis.css mitnehmen. Vor dem Übernehmen INFO.md lesen."
+  },
+  {
+    "id": "abschluss",
+    "name": "Aus dem Berg in deine Hand",
+    "kategorie": "cta",
+    "selektor": "section[data-abschnitt=\"abschluss\"]",
+    "prinzip": "Eine übergroße Schlusszeile mit einer Hauptaktion und einer Linkliste fängt jeden Besucher, der bis hier scrollt.",
+    "css": ".abschluss",
+    "js": "bewegung.js (data-zeig)",
+    "hinweis": "Symbol i-pfeil, .knopf--hell. marke.css und ../_basis/basis.css mitnehmen. Vor dem Übernehmen INFO.md lesen."
+  },
+  {
+    "id": "fragen",
+    "name": "Was du vor dem ersten Kasten wissen willst",
+    "kategorie": "faq",
+    "selektor": "section[data-abschnitt=\"fragen\"]",
+    "prinzip": "Die sechs typischen Kaufeinwände stehen als aufklappbare Antworten, ohne die Seite zu verlängern.",
+    "css": ".fragen und details",
+    "js": "bewegung.js (data-exklusiv)",
+    "hinweis": "Regeln für details und summary aus dem Block Fragen. Antworten sind Beispiele. marke.css und ../_basis/basis.css mitnehmen. Vor dem Übernehmen INFO.md lesen."
+  },
+  {
+    "id": "anfrage",
+    "name": "Für Gastro, Handel und Büros",
+    "kategorie": "forms",
+    "selektor": "section[data-abschnitt=\"anfrage\"]",
+    "prinzip": "Fünf Felder mit Hinweis unter E-Mail und Telefon senken die Hürde für Großabnehmer.",
+    "css": ".anfrage und .formular",
+    "js": "stil.js (Formular ohne Versand)",
+    "hinweis": "Symbole i-tel, i-mail, i-pin, Regeln .formular. Turnstile und Versand im Projekt. marke.css und ../_basis/basis.css mitnehmen. Vor dem Übernehmen INFO.md lesen."
+  },
+  {
+    "id": "journal",
+    "name": "Bleib im Fluss",
+    "kategorie": "forms",
+    "selektor": "section[data-abschnitt=\"journal\"]",
+    "prinzip": "Ein einziges Feld und ein klarer Hinweis auf die Bestätigungsmail halten die Anmeldung leicht.",
+    "css": ".journal",
+    "js": "stil.js (Formular ohne Versand)",
+    "hinweis": "Doppelte Bestätigung (Double Opt in) im Projekt bauen. marke.css und ../_basis/basis.css mitnehmen. Vor dem Übernehmen INFO.md lesen."
+  },
+  {
+    "id": "fuss",
+    "name": "Fuß",
+    "kategorie": "footer",
+    "selektor": "footer[data-abschnitt=\"fuss\"]",
+    "prinzip": "Der Fuß wiederholt Hauptaktion, Kontakt und Pflichtlinks an der Stelle, an der man Orientierung sucht.",
+    "css": ".fuss",
+    "js": null,
+    "hinweis": "Tokens. Impressum, Datenschutz und Widerruf im Projekt verlinken. marke.css und ../_basis/basis.css mitnehmen. Vor dem Übernehmen INFO.md lesen."
+  }
+]
