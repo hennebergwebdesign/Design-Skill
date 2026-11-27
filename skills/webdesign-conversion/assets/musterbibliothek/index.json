@@ -5,7 +5,7 @@
   ],
   "schema": 1,
   "erzeugt": "2026-11-27",
-  "anzahl": 18,
+  "anzahl": 30,
   "muster": [
     {
       "id": "bewertungen-als-eigene-sektion",
@@ -74,6 +74,43 @@
       "freigabe": "global",
       "verwandt": [],
       "quelle_url": "https://www.phunk.com/",
+      "aufgenommen": "2026-11-27"
+    },
+    {
+      "id": "fahrzeugwahl-mit-freisteller-und-regler",
+      "name": "Produktwahl mit Freisteller, Umschalter und Regler",
+      "kategorie": "product",
+      "sektionstyp": [
+        "product",
+        "interactive"
+      ],
+      "tags": [
+        "freisteller",
+        "umschalter",
+        "regler",
+        "kennzahl-live"
+      ],
+      "stil": [
+        "clean",
+        "material-flat"
+      ],
+      "branchenbezug": [
+        "fahrzeug",
+        "technik",
+        "handel"
+      ],
+      "ux_zweck": "Variante, Paket und Farbe selbst einstellen und die Kennzahl sofort sehen",
+      "conversion_zweck": "der Besucher entscheidet sich für ein konkretes Produkt statt für eine Liste",
+      "komplexitaet": "mittel",
+      "responsiv": "unbekannt, nur Desktop erfasst",
+      "barrierefreiheit": "Umschalter und Regler sind echte Bedienelemente mit Namen und Zustand, ohne JavaScript stehen alle Varianten untereinander mit Werten als Text",
+      "konfidenz": "mittel",
+      "freigabe": "global",
+      "verwandt": [
+        "technikbuehne-mit-zaehlwerk",
+        "finder-statt-katalog"
+      ],
+      "quelle_url": "https://second-ride.de/en/fahrzeuge",
       "aufgenommen": "2026-11-27"
     },
     {
@@ -186,6 +223,41 @@
       ],
       "quelle_url": "https://21st.dev/",
       "aufgenommen": "2026-09-18"
+    },
+    {
+      "id": "finder-statt-katalog",
+      "name": "Finder mit vier Feldern statt Katalog",
+      "kategorie": "interactive",
+      "sektionstyp": [
+        "interactive",
+        "product"
+      ],
+      "tags": [
+        "finder",
+        "auswahlfelder",
+        "vorschlag",
+        "einstieg"
+      ],
+      "stil": [
+        "clean"
+      ],
+      "branchenbezug": [
+        "handel",
+        "abo",
+        "beratung"
+      ],
+      "ux_zweck": "vier Fragen führen zu einem Vorschlag, bevor jemand Karten vergleicht",
+      "conversion_zweck": "senkt die Wahlhürde, bevor der Katalog beginnt",
+      "komplexitaet": "mittel",
+      "responsiv": "unbekannt, nur Desktop erfasst",
+      "barrierefreiheit": "Felder sind echte Auswahlelemente mit Beschriftung. Das Ergebnis steht im Text, ohne JavaScript ist der Katalog darunter erreichbar",
+      "konfidenz": "niedrig",
+      "freigabe": "global",
+      "verwandt": [
+        "fahrzeugwahl-mit-freisteller-und-regler"
+      ],
+      "quelle_url": "https://www.voldogfood.com/",
+      "aufgenommen": "2026-11-27"
     },
     {
       "id": "hero-foto-mit-textkasten",
@@ -340,6 +412,76 @@
       "aufgenommen": "2026-11-27"
     },
     {
+      "id": "kartenband-mit-hervorgehobener-mitte",
+      "name": "Kartenband mit hervorgehobener Mittelkarte",
+      "kategorie": "features",
+      "sektionstyp": [
+        "features",
+        "portfolio"
+      ],
+      "tags": [
+        "kartenband",
+        "mittelkarte",
+        "nachbarkarten",
+        "pfeile"
+      ],
+      "stil": [
+        "refined",
+        "clean"
+      ],
+      "branchenbezug": [
+        "produkt",
+        "tourismus",
+        "handel"
+      ],
+      "ux_zweck": "ein Band zeigt viele Karten, eine ist die Aussage",
+      "conversion_zweck": "lenkt den Blick auf eine Karte, ohne die anderen zu verstecken",
+      "komplexitaet": "mittel",
+      "responsiv": "unbekannt, nur Desktop erfasst",
+      "barrierefreiheit": "Pfeile als Buttons mit Namen, Band per Tastatur und Wischen scrollbar. Unscharfe Nachbarn sind Dekoration und tragen keinen Inhalt, der nur dort steht",
+      "konfidenz": "hoch",
+      "freigabe": "global",
+      "verwandt": [],
+      "quelle_url": "https://traced.life/",
+      "aufgenommen": "2026-11-27"
+    },
+    {
+      "id": "kennzahl-mit-eigenem-diagramm",
+      "name": "Jede Kennzahl mit ihrem eigenen kleinen Diagramm",
+      "kategorie": "cases",
+      "sektionstyp": [
+        "cases",
+        "trust"
+      ],
+      "tags": [
+        "kennzahl",
+        "diagramm",
+        "beleg-je-aussage",
+        "fallstudie"
+      ],
+      "stil": [
+        "editorial",
+        "clean"
+      ],
+      "branchenbezug": [
+        "agentur",
+        "beratung",
+        "software"
+      ],
+      "ux_zweck": "eine Zahl wird nie allein behauptet, das Diagramm daneben zeigt ihren Verlauf",
+      "conversion_zweck": "die Fallstudie überzeugt über Belege je Aussage statt über eine Wand aus Prozentwerten",
+      "komplexitaet": "mittel",
+      "responsiv": "unbekannt, nur Desktop erfasst (Seitenhöhe mobil gemessen, Verhalten der Diagramme nicht)",
+      "barrierefreiheit": "Diagramm hat eine Textalternative mit den Werten (Tabelle oder Beschreibung), die Zahl steht als Text, nicht nur im SVG",
+      "konfidenz": "mittel",
+      "freigabe": "global",
+      "verwandt": [
+        "nummerierter-kapitelkopf"
+      ],
+      "quelle_url": "https://doemedia.com/cymbiotika/",
+      "aufgenommen": "2026-11-27"
+    },
+    {
       "id": "manifest-buehne-ein-satz-pro-bildschirm",
       "name": "Pinnende Bühne, ein Satz oder eine Aussage pro Bildschirm",
       "kategorie": "interactive",
@@ -373,6 +515,112 @@
       "freigabe": "global",
       "verwandt": [],
       "quelle_url": "https://pocketchangethe.world/",
+      "aufgenommen": "2026-11-27"
+    },
+    {
+      "id": "merkmalsliste-mit-stehender-tafel",
+      "name": "Lange Merkmalsliste mit stehender Tafel daneben",
+      "kategorie": "features",
+      "sektionstyp": [
+        "features",
+        "product"
+      ],
+      "tags": [
+        "sticky",
+        "merkmale",
+        "aktiver-punkt",
+        "zweispaltig"
+      ],
+      "stil": [
+        "refined",
+        "material-flat"
+      ],
+      "branchenbezug": [
+        "produkt",
+        "fahrzeug",
+        "technik"
+      ],
+      "ux_zweck": "sieben Merkmale lesen, ohne das Bild zu wechseln, nur der aktuelle Punkt ist voll sichtbar",
+      "conversion_zweck": "jedes Merkmal bekommt sein Bild, ohne dass die Liste gekürzt wird",
+      "komplexitaet": "mittel",
+      "responsiv": "unbekannt, die Referenz wurde mobil nur am Seitenanfang erfasst",
+      "barrierefreiheit": "Alle Merkmale sind lesbar, auch inaktive (Kontrast), keine Information steht nur auf der Tafel. Mobil bringt jedes Merkmal sein Bild mit",
+      "konfidenz": "mittel",
+      "freigabe": "global",
+      "verwandt": [
+        "zeitachse-mit-stehendem-bild"
+      ],
+      "quelle_url": "https://www.rideradian.com/",
+      "aufgenommen": "2026-11-27"
+    },
+    {
+      "id": "nummerierter-kapitelkopf",
+      "name": "Nummerierter Kapitelkopf auf einer Rasterlinie",
+      "kategorie": "editorial",
+      "sektionstyp": [
+        "editorial",
+        "about"
+      ],
+      "tags": [
+        "nummerierung",
+        "rasterlinie",
+        "kapitel",
+        "kopfzeile"
+      ],
+      "stil": [
+        "editorial",
+        "technical-mono"
+      ],
+      "branchenbezug": [
+        "agentur",
+        "beratung",
+        "software"
+      ],
+      "ux_zweck": "ein langer Text bekommt Kapitel, jedes mit Nummer, Thema und Kontext in einer festen Kopfzeile",
+      "conversion_zweck": "der Besucher weiß in einer langen Seite, wo er ist und was noch kommt",
+      "komplexitaet": "niedrig",
+      "responsiv": "unbekannt, nur Desktop erfasst",
+      "barrierefreiheit": "Die Nummer ist Text und Teil der Überschrift oder deren Beschriftung, nicht nur Dekoration. Kleine Mono Schrift braucht 4,5 zu 1",
+      "konfidenz": "mittel",
+      "freigabe": "global",
+      "verwandt": [
+        "kennzahl-mit-eigenem-diagramm"
+      ],
+      "quelle_url": "https://doemedia.com/cymbiotika/",
+      "aufgenommen": "2026-11-27"
+    },
+    {
+      "id": "oekosystem-karten-plus-plattform",
+      "name": "Drei Gerätekarten und danach das, was sie verbindet",
+      "kategorie": "product",
+      "sektionstyp": [
+        "product",
+        "features"
+      ],
+      "tags": [
+        "oekosystem",
+        "gerätekarten",
+        "plattform",
+        "app"
+      ],
+      "stil": [
+        "clean",
+        "refined"
+      ],
+      "branchenbezug": [
+        "hardware",
+        "haushalt",
+        "tier"
+      ],
+      "ux_zweck": "das Gesamtsystem wird lesbar, bevor Details kommen",
+      "conversion_zweck": "der Besucher versteht zuerst das System, dann das einzelne Gerät und kauft eher mehrere",
+      "komplexitaet": "mittel",
+      "responsiv": "unbekannt, mobil wurde die Seitenlänge, nicht das Verhalten der Spuren erfasst",
+      "barrierefreiheit": "Waagerechte Spuren sind per Tastatur und Wischen bedienbar, Pfeile erscheinen nur mit JavaScript. Karten sind Text, nicht nur Bild",
+      "konfidenz": "mittel",
+      "freigabe": "global",
+      "verwandt": [],
+      "quelle_url": "https://www.mypifi.com/",
       "aufgenommen": "2026-11-27"
     },
     {
@@ -489,6 +737,76 @@
       "aufgenommen": "2026-11-27"
     },
     {
+      "id": "route-als-scroll-ziel",
+      "name": "Eine Route verbindet verstreute Bilder und gibt dem Scrollen ein Ziel",
+      "kategorie": "interactive",
+      "sektionstyp": [
+        "interactive",
+        "portfolio"
+      ],
+      "tags": [
+        "route",
+        "svg-pfad",
+        "verstreute-bilder",
+        "scroll-ziel"
+      ],
+      "stil": [
+        "experimentell",
+        "expressive"
+      ],
+      "branchenbezug": [
+        "tourismus",
+        "fahrzeug",
+        "outdoor"
+      ],
+      "ux_zweck": "Weite statt Raster, das Scrollen folgt einem Weg",
+      "conversion_zweck": "die Aufnahmen werden als Strecke erlebt, nicht als Galerie",
+      "komplexitaet": "hoch",
+      "responsiv": "unbekannt, nur Desktop erfasst",
+      "barrierefreiheit": "Die Bilder haben Alt Texte, die Route ist `aria-hidden`, der Weg ist keine Information, die nur dort steht. Bei reduzierter Bewegung steht der Punkt am Ziel",
+      "konfidenz": "niedrig",
+      "freigabe": "global",
+      "verwandt": [],
+      "quelle_url": "https://www.rideradian.com/",
+      "aufgenommen": "2026-11-27"
+    },
+    {
+      "id": "schraege-laufbaender-anlassliste",
+      "name": "Schräge Laufbänder als Anlassliste mit Pause",
+      "kategorie": "features",
+      "sektionstyp": [
+        "features",
+        "editorial"
+      ],
+      "tags": [
+        "laufband",
+        "schraeg",
+        "anlaesse",
+        "pause"
+      ],
+      "stil": [
+        "expressive",
+        "retro"
+      ],
+      "branchenbezug": [
+        "lebensmittel",
+        "event",
+        "handel"
+      ],
+      "ux_zweck": "die Breite des Angebots wird in einem Blick spürbar, ohne eine Liste zu lesen",
+      "conversion_zweck": "jeder Besucher findet seinen Anlass im Band wieder",
+      "komplexitaet": "niedrig",
+      "responsiv": "unbekannt, nur Desktop erfasst",
+      "barrierefreiheit": "Laufende Bewegung braucht ein Pausenmittel (WCAG 2.2.2), bei reduzierter Bewegung stehen die Bänder still und die Wörter umbrechen lesbar. Der Lauf ist kein Informationsträger",
+      "konfidenz": "mittel",
+      "freigabe": "global",
+      "verwandt": [
+        "vollfarbflaechen-als-gliederung"
+      ],
+      "quelle_url": "https://ringpopcandy.com/",
+      "aufgenommen": "2026-11-27"
+    },
+    {
       "id": "schritte-auf-bildgrund",
       "name": "Drei Schritte auf ruhigem Bildgrund mit großer Überschrift",
       "kategorie": "process",
@@ -553,7 +871,7 @@
       "komplexitaet": "mittel",
       "responsiv": "unbekannt, die Referenz wurde mobil nur am Seitenanfang erfasst, dort Vollbild",
       "barrierefreiheit": "Ohne Skript und bei reduzierter Bewegung steht die Karte fertig, nichts pinnt. Text und Knöpfe bleiben im Fluss und fokussierbar. Ein Video braucht Poster und Pause",
-      "konfidenz": "mittel",
+      "konfidenz": "hoch",
       "freigabe": "global",
       "verwandt": [
         "hero-wortmarke-angeschnitten"
@@ -597,6 +915,42 @@
         "fallstudienliste-mit-tags"
       ],
       "quelle_url": "https://conwest.com/",
+      "aufgenommen": "2026-11-27"
+    },
+    {
+      "id": "technikbuehne-mit-zaehlwerk",
+      "name": "Technikbühne mit Zählwerk zwischen zwei Kennzahlen",
+      "kategorie": "technical",
+      "sektionstyp": [
+        "technical",
+        "interactive"
+      ],
+      "tags": [
+        "tachoring",
+        "zaehlwerk",
+        "bauteil",
+        "dunkel"
+      ],
+      "stil": [
+        "industriell",
+        "refined"
+      ],
+      "branchenbezug": [
+        "technik",
+        "fahrzeug",
+        "energie"
+      ],
+      "ux_zweck": "Technik als zwei große Zahlen und ein Bauteil in der Mitte statt als Datenblatt",
+      "conversion_zweck": "die Besonderheit wird in zwei Zahlen verstanden, bevor das Datenblatt kommt",
+      "komplexitaet": "mittel",
+      "responsiv": "unbekannt, nur Desktop erfasst",
+      "barrierefreiheit": "Endwerte stehen als Text im HTML, das Zählwerk ist Zierde. Der Ring ist `aria-hidden`, die Zahlen sind lesbar",
+      "konfidenz": "mittel",
+      "freigabe": "global",
+      "verwandt": [
+        "fahrzeugwahl-mit-freisteller-und-regler"
+      ],
+      "quelle_url": "https://second-ride.de/en/fahrzeuge",
       "aufgenommen": "2026-11-27"
     },
     {
@@ -673,6 +1027,77 @@
         "partnerlogos-als-integrationsraster"
       ],
       "quelle_url": "https://www.goodlifemeds.com/",
+      "aufgenommen": "2026-11-27"
+    },
+    {
+      "id": "vollfarbflaechen-als-gliederung",
+      "name": "Jede Produktgruppe als ganze Farbfläche mit Riesentitel",
+      "kategorie": "services",
+      "sektionstyp": [
+        "services",
+        "product"
+      ],
+      "tags": [
+        "vollfarbflaeche",
+        "versalien",
+        "grosstitel",
+        "stapeln"
+      ],
+      "stil": [
+        "expressive",
+        "experimentell"
+      ],
+      "branchenbezug": [
+        "lebensmittel",
+        "event",
+        "handel"
+      ],
+      "ux_zweck": "die Farbe gliedert die Seite, der Titel nennt die Gruppe, das Produkt steht allein",
+      "conversion_zweck": "jede Gruppe bekommt einen eigenen Bildschirm und einen eigenen Weg",
+      "komplexitaet": "mittel",
+      "responsiv": "Referenz bricht auf 390 Pixel Wörter Buchstabe für Buchstabe um, das ist kein Vorbild",
+      "barrierefreiheit": "Kontrast je Flächenpaar rechnen, Gegenfarbe zur Fläche. Der Titel ist echter Text, das Stapeln nur mit Fallback in den normalen Fluss",
+      "konfidenz": "mittel",
+      "freigabe": "global",
+      "verwandt": [
+        "schraege-laufbaender-anlassliste"
+      ],
+      "quelle_url": "https://ringpopcandy.com/",
+      "aufgenommen": "2026-11-27"
+    },
+    {
+      "id": "zeitachse-mit-stehendem-bild",
+      "name": "Ablauf als Zeitachse mit stehendem Bild",
+      "kategorie": "process",
+      "sektionstyp": [
+        "process"
+      ],
+      "tags": [
+        "zeitachse",
+        "sticky-bild",
+        "schritte",
+        "produktbild"
+      ],
+      "stil": [
+        "refined",
+        "clean"
+      ],
+      "branchenbezug": [
+        "produkt",
+        "beratung",
+        "labor"
+      ],
+      "ux_zweck": "fünf Schritte lang lesen, ohne das Produkt aus dem Blick zu verlieren",
+      "conversion_zweck": "der Ablauf wirkt kurz, weil jeder Schritt einen Satz hat und das Bild den Ort hält",
+      "komplexitaet": "mittel",
+      "responsiv": "Referenz entfällt die stehende Bühne mobil nicht erfasst, nur Desktop gemessen",
+      "barrierefreiheit": "Die Schrittfolge ist eine nummerierte Liste im Quelltext, das stehende Bild ist Zierde und trägt keine Information, die nur dort steht",
+      "konfidenz": "mittel",
+      "freigabe": "global",
+      "verwandt": [
+        "merkmalsliste-mit-stehender-tafel"
+      ],
+      "quelle_url": "https://traced.life/",
       "aufgenommen": "2026-11-27"
     }
   ]

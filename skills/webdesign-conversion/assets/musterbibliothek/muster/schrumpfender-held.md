@@ -14,7 +14,7 @@ barrierefreiheit: Ohne Skript und bei reduzierter Bewegung steht die Karte ferti
 verwandt: [hero-wortmarke-angeschnitten]
 quelle_url: https://conwest.com/
 quelle_erfasst: 2026-11-27
-konfidenz: mittel
+konfidenz: hoch
 freigabe: global
 aufgenommen: 2026-11-27
 ---
@@ -40,8 +40,13 @@ das Bild nachwirken, ohne dass es Platz kostet.
 | gepinnte Bühne, Abschnitt 1638 px bei 900 px Fensterhöhe | beobachtet, berechnete Stile, conwest.com |
 | Rahmen schrumpft auf 1401 mal 764 px mit 20 px Rand und 12 px Radius | beobachtet, ebenda |
 | Bewegtbild läuft stumm, in Schleife, 30 Sekunden | beobachtet, ebenda |
+| Rahmen mit abgerundeten Ecken schrumpft von 1440 auf 1080 px Breite über die ersten 800 px Scroll, Radius 88 bis 120 px | beobachtet, berechnete Stile, voldogfood.com (laut Erfassung für t125) |
 | Verhalten mobil beim Scrollen | unbekannt |
 | Zeitverlauf und Easing | unbekannt |
+
+## Ausprägungen
+
+Vollbild schrumpft zur Karte mit Rand (conwest.com), oder eine abgerundete Fläche mit riesiger Wortmarke schrumpft, während ein freigestelltes Motiv die Buchstaben überlappt (voldogfood.com).
 
 ## Umsetzung
 

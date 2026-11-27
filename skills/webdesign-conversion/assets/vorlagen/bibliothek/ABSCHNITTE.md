@@ -29,7 +29,10 @@ Ein Abschnitt wird als Prinzip übernommen und in die Marke des Kunden gesetzt (
 | t110 Produktagentur Graphit und Bernstein | `liefern` | Haltung und Herkunft geben dem Anbieter ein Gesicht, bevor Leistungen verglichen werden. |
 | t114 Kaffeeabo mit Karten über Fotobühne | `einstieg` | Eine ruhige Zweispalte erklärt in einem Satz, was der Dienst dem Besucher abnimmt, bevor das Angebot beginnt. |
 | t117 Studiobühne mit Fallstudienliste | `intro` | Eine kleine Figur und drei Sätze geben dem Studio ein Gesicht, bevor die Leistungen kommen. |
+| t119 Fallstudie als Kennzahlen Erzählung | `betrieb` | Die Fallstudie beginnt beim Kunden, damit jede spätere Zahl einen Zusammenhang hat. |
 | t12 t12 | `ueber` | Haltung und Herkunft geben dem Anbieter ein Gesicht, bevor Leistungen verglichen werden. |
+| t120 Bodentest per Probe mit Zeitachse | `fachperson` | Eine benannte Person mit Fachgebiet und Unterschrift macht aus dem Versprechen eine Zuständigkeit, die Methodenkarte führt zur Quelle. |
+| t124 Geländerad Vorbestellung | `geschichte` | Drei Aufnahmen und ein kurzer Ursprungstext machen aus Technik eine Haltung und geben dem Käufer einen Grund, dem Hersteller zu vertrauen. |
 | t16 t16 | `ueber` | Haltung und Herkunft geben dem Anbieter ein Gesicht, bevor Leistungen verglichen werden. |
 | t17 t17 | `ueber` | Haltung und Herkunft geben dem Anbieter ein Gesicht, bevor Leistungen verglichen werden. |
 | t18 t18 | `erleben` | Haltung und Herkunft geben dem Anbieter ein Gesicht, bevor Leistungen verglichen werden. |
@@ -115,7 +118,11 @@ Ein Abschnitt wird als Prinzip übernommen und in die Marke des Kunden gesetzt (
 | t110 Produktagentur Graphit und Bernstein | `werte` | Der Nutzen wird aus Sicht der Zielgruppe benannt, nicht aus Sicht des Anbieters. |
 | t113 Nachunternehmerprüfung im Bau | `wortlicht` | Der Absatz fasst den Nutzen in zwei Sätzen und wird beim Scrollen Wort für Wort gelesen, statt überflogen zu werden. |
 | t117 Studiobühne mit Fallstudienliste | `werte` | Vier gleich große Karten mit Nummer und Symbol machen Haltung in Sekunden erfassbar, Scroll Snap und Pfeile lassen den Rest zu. |
+| t119 Fallstudie als Kennzahlen Erzählung | `neun` | Ein Raster mit einer hervorgehobenen Zelle fasst das Ergebnis zusammen und lenkt den Blick auf die wichtigste Zahl. |
 | t12 t12 | `warum` | Der Nutzen wird aus Sicht der Zielgruppe benannt, nicht aus Sicht des Anbieters. |
+| t121 Quellwasser Dosen Bühne | `anlaesse` | Eine große Aussage über einer ruhigen Landschaft, darunter drei Situationen: Nutzen als Alltagsbild. |
+| t122 Fahrzeugwahl mit Technikbühne | `besch` | Zwei Kennzahlen mit Symbol unter einem Freisteller machen den Nutzen in Sekunden greifbar, ohne Tabelle. |
+| t126 Notizclip, Produktseite mit Bühnen | `einsatz` | Drei Orte mit je einem Satz machen den Alltagsnutzen greifbar und führen mit einer Aktion zur Bestellung. |
 | t16 t16 | `werte` | Der Nutzen wird aus Sicht der Zielgruppe benannt, nicht aus Sicht des Anbieters. |
 | t16 t16 | `dunkel-3` | Der Nutzen wird aus Sicht der Zielgruppe benannt, nicht aus Sicht des Anbieters. |
 | t17 t17 | `vorteile` | Der Nutzen wird aus Sicht der Zielgruppe benannt, nicht aus Sicht des Anbieters. |
@@ -171,6 +178,8 @@ Ein Abschnitt wird als Prinzip übernommen und in die Marke des Kunden gesetzt (
 | t116 Produktfamilie im Feldversuch | `transparenz` | Wer offen zeigt, was noch läuft, und begründet, warum, gewinnt mehr Vertrauen als mit fertigen Erfolgsmeldungen. |
 | t117 Studiobühne mit Fallstudienliste | `projekte` | Jede Zeile gibt Bild, Branche, Titel, Kurztext und genau eine Handlung, die Überschrift bleibt oben stehen und gibt Orientierung. |
 | t118 Projektentwickler mit Bewegtbild Held | `projekt-gross` | Ein Projekt in voller Breite nach dem Raster gibt dem Besten mehr Gewicht und beendet die Liste mit einem Bild, an das man sich erinnert. |
+| t119 Fallstudie als Kennzahlen Erzählung | `verlauf` | Eine klebende Anzeigetafel folgt der gelesenen Phase und macht aus Text eine Entwicklung mit Zahlen. |
+| t119 Fallstudie als Kennzahlen Erzählung | `ergebnis` | Neben jeder Kennzahl steht ihr Diagramm, so wird die Aussage nachprüfbar statt behauptet. |
 | t13 t13 | `referenzen` | Konkrete Arbeiten belegen die Aussage besser als eine Behauptung, jede mit eigenem Weg. |
 | t16 t16 | `dunkel-2` | Konkrete Arbeiten belegen die Aussage besser als eine Behauptung, jede mit eigenem Weg. |
 | t17 t17 | `faelle` | Konkrete Arbeiten belegen die Aussage besser als eine Behauptung, jede mit eigenem Weg. |
@@ -213,6 +222,14 @@ Ein Abschnitt wird als Prinzip übernommen und in die Marke des Kunden gesetzt (
 | t115 Strandgut mit Wortmarke | `leiste` | Eine schmale feste Leiste hält den Weg zur Anfrage offen, sobald der Held verlassen ist, und weicht, wo sie Eingaben verdecken würde. |
 | t117 Studiobühne mit Fallstudienliste | `abschluss` | Ein Lichtverlauf von unten schließt die dunkle Bühne, die Karte bündelt Aussage, vier Felder und einen Knopf. |
 | t118 Projektentwickler mit Bewegtbild Held | `abschluss` | Eine ruhige weiße Karte mit einem Satz, zwei Wegen (Projekt, Stellen) und einem Bild schließt die Seite menschlich ab. |
+| t120 Bodentest per Probe mit Zeitachse | `abschluss` | Am Ende steht eine Aussage, ein Knopf und sonst nichts, auf einem ruhigen Verlauf, der Zeit zum Entscheiden lässt. |
+| t121 Quellwasser Dosen Bühne | `abschluss` | Eine übergroße Schlusszeile mit einer Hauptaktion und einer Linkliste fängt jeden Besucher, der bis hier scrollt. |
+| t122 Fahrzeugwahl mit Technikbühne | `probe` | Die Hauptaktion bekommt einen eigenen dunklen Abschnitt mit Telefon, Zusagen und Ort, damit der letzte Schritt ohne Suchen geht. |
+| t123 Eisdiele in Vollfarbflächen | `muster` | Ein Produktmuster als Tapete mit drei schräg aufgeklebten Aussagen macht den Abschluss spielerisch und führt zur Aktion. |
+| t123 Eisdiele in Vollfarbflächen | `abschluss` | Eine letzte ganze Farbfläche mit Adresse, Zeiten, Aktion und Telefon fängt alle ab, die unten angekommen sind. |
+| t124 Geländerad Vorbestellung | `finale` | Der Abschluss nennt Preis und Anzahlung offen neben dem Hauptknopf, und die zählende Skala macht den Weg zur Entscheidung körperlich spürbar. |
+| t125 Frischfutter Abo mit schrumpfendem Heldrahmen | `starter` | Eine dunkle, gewölbte Fläche mit einer klaren Hauptaktion und drei Zusagen setzt am Ende einen starken Kontrast und senkt die Hürde mit einem kleinen Einstieg. |
+| t127 Ökosystem aus Geräten und App | `starterset` | Vor dem Formular wiederholt ein ruhiger Bildraum das Angebot in drei Zeilen und die eine Aktion mit Telefon als zweiter Weg. |
 | t14 t14 | `start` | Die Handlung steht als eigener Abschnitt, mit einem Grund, jetzt zu handeln. |
 | t15 t15 | `idee` | Die Handlung steht als eigener Abschnitt, mit einem Grund, jetzt zu handeln. |
 | t16 t16 | `abschluss` | Die Handlung steht als eigener Abschnitt, mit einem Grund, jetzt zu handeln. |
@@ -241,6 +258,13 @@ Ein Abschnitt wird als Prinzip übernommen und in die Marke des Kunden gesetzt (
 | t76 Ladeinfrastruktur kühl | `anschluss` | Die Handlung steht als eigener Abschnitt, mit einem Grund, jetzt zu handeln. |
 | t77 Weiterbildung Schwarz Limette | `naechster` | Die Handlung steht als eigener Abschnitt, mit einem Grund, jetzt zu handeln. |
 
+### ecommerce
+
+| Vorlage | Kennung | Prinzip |
+|---|---|---|
+| t120 Bodentest per Probe mit Zeitachse | `bestellkarte` | Die Hauptaktion mit Produkt und Preis bleibt in Daumenreichweite, ohne den Inhalt zu überdecken. |
+| t125 Frischfutter Abo mit schrumpfendem Heldrahmen | `sortiment` | Gleich gebaute Karten mit Packung, Größen, Preis und einer Aktion machen Auswahl und Vergleich leicht, der Filter verkürzt die Liste ohne Seitenwechsel. |
+
 ### editorial
 
 | Vorlage | Kennung | Prinzip |
@@ -257,6 +281,12 @@ Ein Abschnitt wird als Prinzip übernommen und in die Marke des Kunden gesetzt (
 | t116 Produktfamilie im Feldversuch | `name` | Der Produktname als Fläche prägt sich ein und trennt die Erklärung vom Beleg, die langsame Drift gibt Tiefe. |
 | t116 Produktfamilie im Feldversuch | `beitraege` | Eine seitlich blätterbare Reihe zeigt Lebendigkeit und lässt Platz für mehr, ohne die Seite zu verlängern. |
 | t118 Projektentwickler mit Bewegtbild Held | `aussage` | Eine einzige Zeile in Plakatgröße, vor die sich Menschen auf Fotos schieben, gibt der Marke ein Gesicht, bevor Zahlen oder Leistungen kommen. |
+| t120 Bodentest per Probe mit Zeitachse | `manifest` | Ein Gedanke in zwei Absätzen wird Wort für Wort heller, damit er gelesen statt überflogen wird. |
+| t121 Quellwasser Dosen Bühne | `szenen` | Eine Bühne bleibt stehen, der Ort wechselt hinter dem Text: Herkunft wird erlebt statt behauptet. |
+| t121 Quellwasser Dosen Bühne | `weg` | Ein einziges bewegtes Bild (Tropfen durch Schichten) erklärt den Prozess, Beschriftungen steigen mit dem Scrollweg mit. |
+| t122 Fahrzeugwahl mit Technikbühne | `aussage` | Eine große Aussage mit kurzem Erklärtext und breitem Bild setzt zwischen zwei Werkzeugabschnitten die Haltung der Marke. |
+| t124 Geländerad Vorbestellung | `haltung` | Eine einzige Aussage auf ruhigem Bild setzt zwischen Produktteil und Beweis den Ton, bevor Zahlen kommen. |
+| t125 Frischfutter Abo mit schrumpfendem Heldrahmen | `schleife` | Ein schräges, laufendes Band mit vier Zusagen trennt zwei Bereiche mit Bewegung und wiederholt die Kernaussagen, ohne Platz für Text zu brauchen. |
 | t19 t19 | `ratgeber` | Inhalte zeigen Fachwissen und halten die Seite für Suche und Wiederkehr lebendig. |
 | t24 t24 | `ratgeber` | Inhalte zeigen Fachwissen und halten die Seite für Suche und Wiederkehr lebendig. |
 | t26 t26 | `ratgeber` | Inhalte zeigen Fachwissen und halten die Seite für Suche und Wiederkehr lebendig. |
@@ -340,7 +370,16 @@ Ein Abschnitt wird als Prinzip übernommen und in die Marke des Kunden gesetzt (
 | t116 Produktfamilie im Feldversuch | `fragen` | Die sechs Einwände vor der Anfrage stehen im Akkordeon, die Antworten nehmen Risiko weg. |
 | t117 Studiobühne mit Fallstudienliste | `faq` | Die sechs häufigsten Einwände stehen vor dem Gespräch, jeweils eine Antwort offen, die anderen zu. |
 | t118 Projektentwickler mit Bewegtbild Held | `faq` | Die sechs Fragen, die vor einer Anfrage bremsen, stehen beantwortet vor dem Formular und nehmen ihm die Hürde. |
+| t119 Fallstudie als Kennzahlen Erzählung | `faq` | Die häufigsten Einwände werden vor dem Kontakt beantwortet, ein Eintrag ist offen. |
 | t12 t12 | `fragen` | Einwände werden vor der Handlung beantwortet, in der Reihenfolge ihres Gewichts. |
+| t120 Bodentest per Probe mit Zeitachse | `fragen` | Die Einwände vor dem Kauf werden an der Stelle beantwortet, an der sie auftauchen. |
+| t121 Quellwasser Dosen Bühne | `fragen` | Die sechs typischen Kaufeinwände stehen als aufklappbare Antworten, ohne die Seite zu verlängern. |
+| t122 Fahrzeugwahl mit Technikbühne | `fragen` | Einwände stehen als Fragen mit eigenem Symbol und lassen sich einzeln öffnen, so findet der Besucher seine Frage ohne zu lesen. |
+| t123 Eisdiele in Vollfarbflächen | `fragen` | Einwände stehen als aufklappbare Fragen genau vor dem Formular, jede Antwort bleibt kurz und ist als Beispiel markiert. |
+| t124 Geländerad Vorbestellung | `fragen` | Die sechs Einwände vor einer Anzahlung (Geld, Termin, Reichweite, Recht, Service, Probefahrt) werden beantwortet, bevor sie zum Abbruch führen. |
+| t125 Frischfutter Abo mit schrumpfendem Heldrahmen | `faq` | Sechs Einwände mit kurzer Antwort, links erklärende Überschrift und Hilfe, rechts das Akkordeon, nehmen Zweifel vor der Bestellung, ohne die Seite zu verlängern. |
+| t126 Notizclip, Produktseite mit Bühnen | `faq` | Einwände stehen nach Themen gruppiert hinter Reitern, jede Antwort aufklappbar, und ein Kasten daneben holt Unentschiedene ans Telefon. |
+| t127 Ökosystem aus Geräten und App | `fragen` | Sechs Einwände beantworten die Kaufhürden direkt vor der Aktion, ein Eintrag offen hält die Liste ruhig. |
 | t13 t13 | `faq` | Einwände werden vor der Handlung beantwortet, in der Reihenfolge ihres Gewichts. |
 | t14 t14 | `faq` | Einwände werden vor der Handlung beantwortet, in der Reihenfolge ihres Gewichts. |
 | t15 t15 | `faq` | Einwände werden vor der Handlung beantwortet, in der Reihenfolge ihres Gewichts. |
@@ -487,6 +526,15 @@ Ein Abschnitt wird als Prinzip übernommen und in die Marke des Kunden gesetzt (
 | t113 Nachunternehmerprüfung im Bau | `karten` | Jede Funktion wird als echte Oberfläche gezeigt statt beschrieben, drei Kartenformate halten das Auge in Bewegung. |
 | t115 Strandgut mit Wortmarke | `bildstapel` | Vollflächige Fotos schieben sich übereinander und tragen ihre Beschreibung selbst, so wird jede Rubrik ein Ort statt einer Kachel. |
 | t116 Produktfamilie im Feldversuch | `merkmale` | Drei kurze Karten mit versetzter Höhe tragen die Kernmerkmale, der Versatz bricht das Raster auf, ohne zu unterhalten. |
+| t119 Fallstudie als Kennzahlen Erzählung | `zuege` | Jede Maßnahme trägt ihre Kennzahl und ein eigenes Diagramm, die klebende Übersicht zeigt, wo man in der Reihe steht. |
+| t120 Bodentest per Probe mit Zeitachse | `unterschied` | Nur eine Karte steht scharf, die Nachbarn deuten an, dass es weitergeht, und das Merkmal wird als Warum erklärt statt als Eigenschaft gelistet. |
+| t121 Quellwasser Dosen Bühne | `mineralien` | Vier gleich aufgebaute Einträge (Zeichen, Name, Zahl, ein Satz) machen Zusammensetzung vergleichbar und überprüfbar. |
+| t122 Fahrzeugwahl mit Technikbühne | `karten` | Die Karte in der Mitte ist größer und gerahmt, so führt das Band den Blick auf genau eine Aussage und lädt zum Weiterblättern ein. |
+| t122 Fahrzeugwahl mit Technikbühne | `bildk` | Zwei große Bilder mit je einer Zeile Text geben Stimmung, bevor die Technik folgt, und der dunkle Verlauf sichert die Lesbarkeit. |
+| t124 Geländerad Vorbestellung | `wechsel` | Eine lange Merkmalsliste wird lesbar, weil immer nur eines im Fokus ist und die stehende Tafel daneben genau dazu passt. |
+| t125 Frischfutter Abo mit schrumpfendem Heldrahmen | `warum` | Ein großes Bild des Produkts im Gebrauch, um das vier kurze Zusagen schweben, verbindet Nutzen und Beleg an einer Stelle statt in einer Liste. |
+| t126 Notizclip, Produktseite mit Bühnen | `verben` | Eine stehende Bühne führt durch vier einzeln benannte Schritte, Ziffernchips zeigen den Stand, und ohne Pinnen liest sich jeder Schritt als eigene Karte. |
+| t127 Ökosystem aus Geräten und App | `ki` | Vier gleich große Karten mit je einem Nutzen in einer Spur laden zum Weiterwischen ein und halten die Seite kurz. |
 | t14 t14 | `video` | Merkmale werden als überschaubare Einheiten gezeigt, jede mit einem Nutzen statt nur einer Eigenschaft. |
 | t15 t15 | `farbflaeche` | Merkmale werden als überschaubare Einheiten gezeigt, jede mit einem Nutzen statt nur einer Eigenschaft. |
 | t15 t15 | `technik` | Merkmale werden als überschaubare Einheiten gezeigt, jede mit einem Nutzen statt nur einer Eigenschaft. |
@@ -710,7 +758,16 @@ Ein Abschnitt wird als Prinzip übernommen und in die Marke des Kunden gesetzt (
 | t116 Produktfamilie im Feldversuch | `fuss` | Die Fußzeile wiederholt Knopf und Kontakt und verlinkt auf die Inhalte, statt Rechtliches zu verstecken. |
 | t117 Studiobühne mit Fallstudienliste | `fuss` | Kontakt, Seiten und Pflichtangaben stehen ruhig an einer Stelle, der Knopf wiederholt die Handlung. |
 | t118 Projektentwickler mit Bewegtbild Held | `fuss` | Ein dunkler Fuß mit Adresse, Übersicht, Telefon und Wortmarke gibt der hellen Seite einen festen Abschluss. |
+| t119 Fallstudie als Kennzahlen Erzählung | `abschluss` | Die riesige Wortmarke schließt die Geschichte als Signatur ab, darunter stehen Hauptaktion und Linkspalten. |
 | t12 t12 | `fuss` | Der Fuß liefert Kontakt, Pflichtseiten und die zweite Chance zur Handlung. |
+| t120 Bodentest per Probe mit Zeitachse | `fusskarte` | Die Linkspalten stehen auf einer Karte über dem Verlauf, so bleibt der Seitenschluss Teil der Geschichte statt eines Fremdkörpers. |
+| t121 Quellwasser Dosen Bühne | `fuss` | Der Fuß wiederholt Hauptaktion, Kontakt und Pflichtlinks an der Stelle, an der man Orientierung sucht. |
+| t122 Fahrzeugwahl mit Technikbühne | `fuss` | Der Fuß wiederholt die Hauptaktion und ordnet Links in wenige Spalten, damit niemand am Seitenende stecken bleibt. |
+| t123 Eisdiele in Vollfarbflächen | `fuss` | Ein Fuß mit Linkspalten und dem Markennamen in groß schließt die Seite ab und führt zu Sorten, Anfahrt und Rechtlichem. |
+| t124 Geländerad Vorbestellung | `fuss` | Der Fuß wiederholt die Hauptaktion unter einer großen Schlusszeile, bevor Navigation, Kontakt und Rechtliches folgen. |
+| t125 Frischfutter Abo mit schrumpfendem Heldrahmen | `fuss` | Ein vollständiger Fuß mit Kontakt, Wegweisern, Zeiten und Rechtslinks fängt alle ab, die unten nach Vertrauen und Hilfe suchen. |
+| t126 Notizclip, Produktseite mit Bühnen | `fuss` | Eine volle Akzentfläche zum Schluss setzt einen deutlichen Schlusspunkt und bietet Verweise, Kontakt und die letzte Aktion. |
+| t127 Ökosystem aus Geräten und App | `fuss` | Ein dunkler Fuß sammelt Navigation, Telefon und eine leise zweite Aktion (Newsletter) ein, ohne die Hauptaktion zu verdrängen. |
 | t13 t13 | `fuss` | Der Fuß liefert Kontakt, Pflichtseiten und die zweite Chance zur Handlung. |
 | t14 t14 | `fuss` | Der Fuß liefert Kontakt, Pflichtseiten und die zweite Chance zur Handlung. |
 | t15 t15 | `fuss` | Der Fuß liefert Kontakt, Pflichtseiten und die zweite Chance zur Handlung. |
@@ -842,7 +899,17 @@ Ein Abschnitt wird als Prinzip übernommen und in die Marke des Kunden gesetzt (
 | t116 Produktfamilie im Feldversuch | `anfrage` | Der Abschluss wiederholt die Kernaktion auf ruhigem Grün mit fünf Feldern und sichtbarem Telefon, die Kacheln geben Fläche ohne Ablenkung. |
 | t117 Studiobühne mit Fallstudienliste | `einwilligung` | Datenschutzwahl liegt offen im ersten Bildschirm, nichts vorausgewählt, Ablehnen und Annehmen gleich gewichtet. |
 | t118 Projektentwickler mit Bewegtbild Held | `anfrage` | Fünf Felder mit Hinweisen und sichtbarem Telefon senken die Hürde und zeigen, was nach dem Absenden passiert. |
+| t119 Fallstudie als Kennzahlen Erzählung | `formular` | Fünf Felder und ein Telefon als Alternative halten die Hürde niedrig. |
 | t12 t12 | `kontakt` | Der Weg zur Anfrage ist kurz, erklärt jedes Feld und nennt, was danach geschieht. |
+| t120 Bodentest per Probe mit Zeitachse | `beratung` | Ein kurzes Formular mit Feldhinweisen senkt die Hürde für Besucher, die noch eine Frage haben. |
+| t121 Quellwasser Dosen Bühne | `anfrage` | Fünf Felder mit Hinweis unter E-Mail und Telefon senken die Hürde für Großabnehmer. |
+| t121 Quellwasser Dosen Bühne | `journal` | Ein einziges Feld und ein klarer Hinweis auf die Bestätigungsmail halten die Anmeldung leicht. |
+| t122 Fahrzeugwahl mit Technikbühne | `news` | Ein kurzes Formular mit Feldhinweisen und Einwilligung steht neben einem Bild, das die Marke zeigt, und fragt nur das Nötigste. |
+| t123 Eisdiele in Vollfarbflächen | `bestellen` | Ein kurzes Formular mit Ablauf in drei Schritten und Telefon als Alternative senkt die Hürde zur Anfrage. |
+| t123 Eisdiele in Vollfarbflächen | `newsletter` | Ein einziges Feld und ein klarer Nutzen halten die Anmeldung leicht, der Rest der Seite bleibt davon unberührt. |
+| t125 Frischfutter Abo mit schrumpfendem Heldrahmen | `kontakt` | Ein kurzes Formular mit fünf Feldern, Feldhinweisen und sichtbarer Telefonnummer bietet einen zweiten Weg für Menschen, die vor dem Kauf sprechen wollen. |
+| t126 Notizclip, Produktseite mit Bühnen | `kontakt` | Wenige Felder mit Hinweis, wofür jede Angabe gebraucht wird, senken die Hürde zur Kontaktaufnahme. |
+| t127 Ökosystem aus Geräten und App | `kontakt` | Fünf Felder mit Hinweisen unter E-Mail und Telefon senken die Hürde, beraten zu lassen, ohne gleich zu kaufen. |
 | t13 t13 | `kontakt` | Der Weg zur Anfrage ist kurz, erklärt jedes Feld und nennt, was danach geschieht. |
 | t14 t14 | `kontakt` | Der Weg zur Anfrage ist kurz, erklärt jedes Feld und nennt, was danach geschieht. |
 | t15 t15 | `abschluss` | Der Weg zur Anfrage ist kurz, erklärt jedes Feld und nennt, was danach geschieht. |
@@ -944,7 +1011,16 @@ Ein Abschnitt wird als Prinzip übernommen und in die Marke des Kunden gesetzt (
 | t116 Produktfamilie im Feldversuch | `held` | Ein gezeichnetes Produkt auf einer ruhigen Bühne gibt dem Auge einen Mittelpunkt, die Überschrift steht oben links, die Aktion unten rechts, Presse und Partner am Rand schaffen Vertrauen ohne Raum zu nehmen. |
 | t117 Studiobühne mit Fallstudienliste | `held` | Zentrierte Aussage mit Zielgruppe, Problem und Lösung auf ruhiger Bühne, der Lichtverlauf führt den Blick zur Überschrift und zu zwei Handlungen. |
 | t118 Projektentwickler mit Bewegtbild Held | `held` | Das Bild füllt zuerst alles und tritt beim Scrollen zurück, sodass der Besucher vom Eindruck in die Seite geführt wird, während Aussage und zwei Knöpfe stehen bleiben. |
+| t119 Fallstudie als Kennzahlen Erzählung | `held` | Aussage, Hauptaktion und drei Kennzahlen stehen im ersten Bildschirm, bevor etwas gescrollt wird. |
 | t12 t12 | `held` | Der erste Bildschirm trägt eine Aussage und eine Hauptaktion, bevor etwas anderes gelesen wird. |
+| t120 Bodentest per Probe mit Zeitachse | `held` | Der erste Bildschirm trägt eine Aussage und eine Hauptaktion; die dünne Zeitlinie zeigt, dass hier etwas über Zeit gelesen wird, und läuft beim Scrollen weiter. |
+| t121 Quellwasser Dosen Bühne | `held` | Das Produkt steht allein auf dunkler Bühne in der Mitte, Aussage links, Nebenzeile rechts: ein Blick, ein Gegenstand, eine Aussage. |
+| t122 Fahrzeugwahl mit Technikbühne | `held` | Ein bewegtes Bild trägt die Aussage, die Hauptaktion steht im ersten Bildschirm und das Fahrzeug zeigt sofort, worum es geht. |
+| t123 Eisdiele in Vollfarbflächen | `held` | Versalien in Riesengröße auf einer Vollfläche und eine gezeichnete Eisgruppe sagen in einem Blick, worum es geht, bevor etwas anderes gelesen wird. |
+| t124 Geländerad Vorbestellung | `held` | Die Bühne bleibt stehen, während das Produkt über den Scrollweg ins Bild rollt: der Besucher fährt die Einführung selbst mit der Scrollbewegung. |
+| t125 Frischfutter Abo mit schrumpfendem Heldrahmen | `held` | Eine abgerundete Fläche mit riesiger Wortmarke, überlappender Figur und einer Hauptaktion macht Marke und Angebot in einem Bildschirm greifbar, und das Schrumpfen des Rahmens leitet ins Scrollen über. |
+| t126 Notizclip, Produktseite mit Bühnen | `held` | Das Produkt selbst ist der erste Eindruck: groß, mittig, mit einer Aussage davor, und es wächst beim Scrollen weiter ins Bild. |
+| t127 Ökosystem aus Geräten und App | `held` | Ein bildfüllender Raum mit der Aussage links und dem Beweis (Handy mit Profil) rechts zeigt Produkt und Nutzen, bevor gescrollt wird. |
 | t13 t13 | `held` | Der erste Bildschirm trägt eine Aussage und eine Hauptaktion, bevor etwas anderes gelesen wird. |
 | t14 t14 | `held` | Der erste Bildschirm trägt eine Aussage und eine Hauptaktion, bevor etwas anderes gelesen wird. |
 | t15 t15 | `held` | Der erste Bildschirm trägt eine Aussage und eine Hauptaktion, bevor etwas anderes gelesen wird. |
@@ -1051,6 +1127,11 @@ Ein Abschnitt wird als Prinzip übernommen und in die Marke des Kunden gesetzt (
 | t116 Produktfamilie im Feldversuch | `loesung` | Die Frage aus dem Problem wird auf derselben Bühne beantwortet, während das Produkt kleiner wird; der Wechsel erzählt die Wende ohne Seitenwechsel. |
 | t116 Produktfamilie im Feldversuch | `einsatz` | Das Produkt wandert durch eine gezeichnete Bodenschicht, vier Beschriftungen erklären jeden Schritt genau dort, wo er passiert. |
 | t116 Produktfamilie im Feldversuch | `standorte` | Liste und Karte hängen zusammen: wer einen Eintrag wählt, sieht den Ort, wer den Punkt wählt, liest die Kultur. |
+| t121 Quellwasser Dosen Bühne | `lage` | Ein Ort wird mit einer einfachen Karte und drei wählbaren Punkten verortet, der Besucher entscheidet, was er liest. |
+| t122 Fahrzeugwahl mit Technikbühne | `wahl` | Wer Fahrzeug, Akkupaket und Farbe selbst einstellt und die Reichweite sofort sieht, entscheidet sich für ein konkretes Produkt statt für eine Liste. |
+| t124 Geländerad Vorbestellung | `strecke` | Eine Linie verbindet verstreute Bilder zu einer Strecke, ein wandernder Punkt gibt dem Scrollen ein Ziel und zeigt Weite statt Rastern. |
+| t125 Frischfutter Abo mit schrumpfendem Heldrahmen | `finder` | Wenige Auswahlfelder in einer Leiste führen vom allgemeinen Sortiment zu einem konkreten Vorschlag, bevor jemand 20 Produkte vergleichen muss. |
+| t127 Ökosystem aus Geräten und App | `profil` | Die Seite zeigt am Beispiel, dass das Einzelne zählt statt des Durchschnitts: Auswahl wechselt Erkennung, Werte und Bild. |
 
 ### navigation
 
@@ -1087,7 +1168,16 @@ Ein Abschnitt wird als Prinzip übernommen und in die Marke des Kunden gesetzt (
 | t116 Produktfamilie im Feldversuch | `kopf` | Die Leiste stört das Heldbild nicht und wird erst fest, wenn sie über Inhalt liegt; der Primärknopf bleibt immer erreichbar. |
 | t117 Studiobühne mit Fallstudienliste | `kopf` | Menü in der Mitte, Primärknopf rechts bleiben beim Scrollen erreichbar und tragen Telefon und Handlung. |
 | t118 Projektentwickler mit Bewegtbild Held | `kopf` | Eine abgesetzte Leiste bleibt über jedem Abschnitt erreichbar und trägt Menü, Telefon und Primär CTA, ohne den Bildschirm zu teilen. |
+| t119 Fallstudie als Kennzahlen Erzählung | `kopf` | Nummerierte Menüpunkte zeigen die Kapitelfolge, Telefon und Hauptaktion bleiben immer erreichbar. |
 | t12 t12 | `kopf` | Die Kopfzeile hält Orientierung und die Hauptaktion in jedem Bildschirm erreichbar. |
+| t120 Bodentest per Probe mit Zeitachse | `kopf` | Eine kleine schwebende Leiste hält Menü, Telefon und Hauptaktion erreichbar, ohne wie ein Balken Fläche zu verbrauchen. |
+| t121 Quellwasser Dosen Bühne | `kopf` | Menü, Telefon und Hauptaktion bleiben auf jedem Bildschirm erreichbar, die Pille hält sie zusammen, ohne Bild zu verdecken. |
+| t122 Fahrzeugwahl mit Technikbühne | `kopf` | Die Kopfzeile schwebt über jedem Abschnitt und hält Orientierung, Telefon und die Hauptaktion in Reichweite. |
+| t123 Eisdiele in Vollfarbflächen | `kopf` | Die Kopfzeile hält Orientierung, Telefon und die Hauptaktion in jedem Bildschirm erreichbar. |
+| t124 Geländerad Vorbestellung | `kopf` | Der Hauptknopf steht in jedem Bildschirm erreichbar neben Logo, Menü und Telefon, bleibt über dem Held durchsichtig und wird nach dem Scrollen fest. |
+| t125 Frischfutter Abo mit schrumpfendem Heldrahmen | `kopf` | Die Kopfzeile ist am Seitenanfang durchsichtig über der Heldfläche und wird nach dem Scrollen hell, so bleibt die Hauptaktion immer erreichbar, ohne den ersten Eindruck zu stören. |
+| t126 Notizclip, Produktseite mit Bühnen | `kopf` | Die Kopfzeile hält Orientierung, Telefon und die Hauptaktion in jedem Bildschirm erreichbar. |
+| t127 Ökosystem aus Geräten und App | `kopf` | Eine abgesetzte dunkle Leiste bleibt über jedem Bild lesbar und hält Hauptaktion und Telefon in Reichweite. |
 | t13 t13 | `kopf` | Die Kopfzeile hält Orientierung und die Hauptaktion in jedem Bildschirm erreichbar. |
 | t14 t14 | `kopf` | Die Kopfzeile hält Orientierung und die Hauptaktion in jedem Bildschirm erreichbar. |
 | t15 t15 | `kopf` | Die Kopfzeile hält Orientierung und die Hauptaktion in jedem Bildschirm erreichbar. |
@@ -1193,6 +1283,9 @@ Ein Abschnitt wird als Prinzip übernommen und in die Marke des Kunden gesetzt (
 | t04 t04 | `galerie` | Bilder zeigen das Ergebnis, die Auswahl ist überschaubar und vergleichbar. |
 | t115 Strandgut mit Wortmarke | `abzuege` | Weiße Rahmen mit Bildunterschrift und leichte Drehung erinnern an Abzüge aus dem Urlaubsalbum und geben dem Raster Wärme. |
 | t118 Projektentwickler mit Bewegtbild Held | `projekte` | Große Bildkarten tragen Sparte und Status als Pillen direkt im Bild, sodass der Besucher ohne Klick einordnet, was fertig, im Bau oder frei ist. |
+| t119 Fallstudie als Kennzahlen Erzählung | `persona` | Eine Reihe gleich gebauter Handy Anzeigen zeigt, dass jede Zielgruppe ihr eigenes Argument bekommt. |
+| t121 Quellwasser Dosen Bühne | `bildband` | Ein waagerechtes Band mit Kacheln zeigt Fülle auf kleinem Raum, Pfeile und Wischen machen es bedienbar. |
+| t123 Eisdiele in Vollfarbflächen | `inspiration` | Ein seitlich scrollendes Band aus Hochformatkacheln mit Bildunterschrift zeigt das Produkt im Gebrauch und lädt mit Pfeilen zum Weiterschauen ein. |
 | t26 t26 | `film` | Bilder zeigen das Ergebnis, die Auswahl ist überschaubar und vergleichbar. |
 | t34 Bistro mit Bogenbildern | `galerie` | Bilder zeigen das Ergebnis, die Auswahl ist überschaubar und vergleichbar. |
 | t35 Restaurant ruhig und eckig | `galerie` | Bilder zeigen das Ergebnis, die Auswahl ist überschaubar und vergleichbar. |
@@ -1218,6 +1311,7 @@ Ein Abschnitt wird als Prinzip übernommen und in die Marke des Kunden gesetzt (
 | t107 SaaS Agentur Nachtgrün | `preise` | Preise oder Pakete werden offen und vergleichbar gezeigt, damit die Entscheidung ohne Anruf möglich ist. |
 | t110 Produktagentur Graphit und Bernstein | `preise` | Preise oder Pakete werden offen und vergleichbar gezeigt, damit die Entscheidung ohne Anruf möglich ist. |
 | t12 t12 | `preise` | Preise oder Pakete werden offen und vergleichbar gezeigt, damit die Entscheidung ohne Anruf möglich ist. |
+| t126 Notizclip, Produktseite mit Bühnen | `bestellen` | Zwei Pakete mit Preis, Umfang und Rückgabe nebeneinander nehmen die Entscheidung ab, und der Hinweis auf Zahlung erst beim Versand senkt das Risiko. |
 | t13 t13 | `idee` | Preise oder Pakete werden offen und vergleichbar gezeigt, damit die Entscheidung ohne Anruf möglich ist. |
 | t13 t13 | `warum` | Preise oder Pakete werden offen und vergleichbar gezeigt, damit die Entscheidung ohne Anruf möglich ist. |
 | t13 t13 | `preise` | Preise oder Pakete werden offen und vergleichbar gezeigt, damit die Entscheidung ohne Anruf möglich ist. |
@@ -1265,6 +1359,7 @@ Ein Abschnitt wird als Prinzip übernommen und in die Marke des Kunden gesetzt (
 |---|---|---|
 | t107 SaaS Agentur Nachtgrün | `problem` | Die Ausgangslage wird benannt, damit die Lösung als Antwort und nicht als Behauptung gelesen wird. |
 | t116 Produktfamilie im Feldversuch | `problem` | Eine einzige große Zahl mit Quelle macht den Schmerz greifbar und glaubwürdig, das Foto bleibt Stimmung. |
+| t119 Fallstudie als Kennzahlen Erzählung | `problem` | Große Aussage links, Erklärung rechts, dann je Problem eine Zeile mit Beschriftung: erst der Mangel, dann die Lösung. |
 
 ### process
 
@@ -1282,6 +1377,9 @@ Ein Abschnitt wird als Prinzip übernommen und in die Marke des Kunden gesetzt (
 | t112 Wertegemeinschaft App mit Manifest | `ablauf` | Vier Schritte, von denen einer offen steht, beantworten die Frage nach dem Download in drei Minuten Lesezeit und nehmen die Scheu vor dem Anfangen. |
 | t114 Kaffeeabo mit Karten über Fotobühne | `ablauf` | Eine riesige Überschrift auf dunklem Bild und drei versetzte Schritt Tafeln machen den Ablauf überschaubar und merkbar. |
 | t12 t12 | `ablauf` | Ein überschaubarer Ablauf nimmt die Angst vor dem Aufwand, bevor die Handlung verlangt wird. |
+| t120 Bodentest per Probe mit Zeitachse | `ablauf` | Ein Bild bleibt stehen und wechselt mit dem Schritt in der Mitte, so folgt das Auge dem Ablauf ohne Orientierungsverlust. |
+| t124 Geländerad Vorbestellung | `weg` | Wer weiß, was nach der Anzahlung passiert, zahlt eher: vier kurze Schritte nehmen die Angst vor der Bindung, das Formular daneben hat nur fünf Felder. |
+| t125 Frischfutter Abo mit schrumpfendem Heldrahmen | `ablauf` | Drei nummerierte Schritte nehmen die Angst vor einem Abo, indem sie zeigen, wie klein der erste Schritt ist und wie leicht der Ausstieg. |
 | t13 t13 | `ablauf` | Ein überschaubarer Ablauf nimmt die Angst vor dem Aufwand, bevor die Handlung verlangt wird. |
 | t14 t14 | `ablauf` | Ein überschaubarer Ablauf nimmt die Angst vor dem Aufwand, bevor die Handlung verlangt wird. |
 | t15 t15 | `schritte` | Ein überschaubarer Ablauf nimmt die Angst vor dem Aufwand, bevor die Handlung verlangt wird. |
@@ -1352,6 +1450,18 @@ Ein Abschnitt wird als Prinzip übernommen und in die Marke des Kunden gesetzt (
 | t114 Kaffeeabo mit Karten über Fotobühne | `kat-filter` | Dieselbe Bauart mit anderem Foto macht jede Kategorie zu einer eigenen Bühne, ohne neues Muster lernen zu müssen. |
 | t115 Strandgut mit Wortmarke | `wohnen` | Ein einziges farbiges Band im sonst cremigen Seitenverlauf hebt das wichtigste Angebot hervor, Bildpaare zeigen Raum und Detail zusammen. |
 | t116 Produktfamilie im Feldversuch | `produkte` | Drei gleich gebaute grüne Kacheln zeigen die Familie auf einen Blick, der Höhenversatz führt das Auge von links nach rechts. |
+| t121 Quellwasser Dosen Bühne | `oeffnen` | Eine Perspektive auf das Produkt wechselt (Dose von oben) und macht aus dem Öffnen den Übergang in die Geschichte. |
+| t121 Quellwasser Dosen Bühne | `dosen` | Zwei Varianten stehen gleichwertig nebeneinander mit denselben Datenzeilen: Vergleich ohne Tabelle, Kauf in einem Schritt. |
+| t123 Eisdiele in Vollfarbflächen | `karte` | Eine schräg gelegte Papierkarte mit Innenrahmen auf einer Bildfläche macht aus einem Angebot ein Geschenk und trägt die Aktion. |
+| t123 Eisdiele in Vollfarbflächen | `sorte-beere` | Eine ganze Farbfläche mit Riesentitel, einem Produkt und einer Aktion macht jede Gruppe zu einem eigenen Ort, die Farbe trägt die Gliederung. |
+| t123 Eisdiele in Vollfarbflächen | `sorte-vanille` | Eine ganze Farbfläche mit Riesentitel, einem Produkt und einer Aktion macht jede Gruppe zu einem eigenen Ort, die Farbe trägt die Gliederung. |
+| t123 Eisdiele in Vollfarbflächen | `sorte-sorbet` | Eine ganze Farbfläche mit Riesentitel, einem Produkt und einer Aktion macht jede Gruppe zu einem eigenen Ort, die Farbe trägt die Gliederung. |
+| t123 Eisdiele in Vollfarbflächen | `sorte-pistazie` | Eine ganze Farbfläche mit Riesentitel, einem Produkt und einer Aktion macht jede Gruppe zu einem eigenen Ort, die Farbe trägt die Gliederung. |
+| t123 Eisdiele in Vollfarbflächen | `sorte-saison` | Eine ganze Farbfläche mit Riesentitel, einem Produkt und einer Aktion macht jede Gruppe zu einem eigenen Ort, die Farbe trägt die Gliederung. |
+| t125 Frischfutter Abo mit schrumpfendem Heldrahmen | `extras` | Ein seitlich scrollbares Band mit Pfeilen zeigt zusätzliche Produkte, ohne die Seite zu verlängern. |
+| t126 Notizclip, Produktseite mit Bühnen | `bauteile` | Eine Linienzeichnung mit markierter Stelle und Beschriftung erklärt ein Bauteil schneller als ein Foto, und der klebende Index zeigt, wo man im Produkt ist. |
+| t127 Ökosystem aus Geräten und App | `system` | Drei hohe Karten gleicher Form machen ein Ökosystem lesbar: eine Aufgabe je Gerät, jedes mit eigenem Weg zur Detailseite. |
+| t127 Ökosystem aus Geräten und App | `app` | Eine Reihe versetzter Handys zeigt die ganze Plattform in einem Blick und beantwortet, wie es sich anfühlt, damit zu arbeiten. |
 | t19 t19 | `fachgebiete` | Das Angebot wird konkret gezeigt, mit Auswahl und einem klaren nächsten Schritt. |
 | t35 Restaurant ruhig und eckig | `menue` | Das Angebot wird konkret gezeigt, mit Auswahl und einem klaren nächsten Schritt. |
 | t38 Studio mit Terminbuchung | `angebote` | Das Angebot wird konkret gezeigt, mit Auswahl und einem klaren nächsten Schritt. |
@@ -1401,6 +1511,7 @@ Ein Abschnitt wird als Prinzip übernommen und in die Marke des Kunden gesetzt (
 | t115 Strandgut mit Wortmarke | `saison` | Hohe Papierkarten mit Datum über dem Foto machen Termine greifbar und lassen Gäste ihren Zeitraum selbst finden. |
 | t117 Studiobühne mit Fallstudienliste | `leistungen` | Zwei große, nummerierte Karten mit gezeigter Oberfläche oben erklären das Angebot, bevor man liest. |
 | t12 t12 | `leistungen` | Leistungen stehen als vergleichbare Einheiten nebeneinander, jede mit eigenem Weg. |
+| t123 Eisdiele in Vollfarbflächen | `anlaesse` | Eine Liste als Typografie auf schräg gesetzten Farbbändern zeigt die Breite des Angebots in Sekunden, ohne Karten, und die Pause macht sie zugänglich. |
 | t13 t13 | `leistungen` | Leistungen stehen als vergleichbare Einheiten nebeneinander, jede mit eigenem Weg. |
 | t14 t14 | `leistungen` | Leistungen stehen als vergleichbare Einheiten nebeneinander, jede mit eigenem Weg. |
 | t16 t16 | `dunkel` | Leistungen stehen als vergleichbare Einheiten nebeneinander, jede mit eigenem Weg. |
@@ -1470,6 +1581,7 @@ Ein Abschnitt wird als Prinzip übernommen und in die Marke des Kunden gesetzt (
 | t110 Produktagentur Graphit und Bernstein | `zeichen` | Namen und Gesichter machen Ansprechpartner greifbar und senken die Hürde zum Kontakt. |
 | t111 Produktleuchte im Tagesverlauf | `buero` | Namen und Gesichter machen Ansprechpartner greifbar und senken die Hürde zum Kontakt. |
 | t118 Projektentwickler mit Bewegtbild Held | `team` | Ein farbiges Band mit hohem Bild und einem Satz, der beim Lesen aufhellt, setzt einen Atemzug zwischen Haltung und Projekte. |
+| t119 Fallstudie als Kennzahlen Erzählung | `team` | Personen als Liste mit Film daneben: die Auswahl macht Menschen vor dem ersten Gespräch greifbar. |
 | t19 t19 | `team` | Namen und Gesichter machen Ansprechpartner greifbar und senken die Hürde zum Kontakt. |
 | t25 t25 | `team` | Namen und Gesichter machen Ansprechpartner greifbar und senken die Hürde zum Kontakt. |
 | t28 t28 | `team` | Namen und Gesichter machen Ansprechpartner greifbar und senken die Hürde zum Kontakt. |
@@ -1504,6 +1616,7 @@ Ein Abschnitt wird als Prinzip übernommen und in die Marke des Kunden gesetzt (
 | Vorlage | Kennung | Prinzip |
 |---|---|---|
 | t116 Produktfamilie im Feldversuch | `feld` | Eine Tabelle mit Wert, Bedeutung und Stand ist ehrlicher als Kacheln, weil sie Unfertiges sichtbar lässt. |
+| t122 Fahrzeugwahl mit Technikbühne | `technik` | Ein Tachoring um das Bauteil, flankiert von zwei Kennzahlen, macht Technik als Zahl sichtbar, und der Zähler läuft nur, solange der Betrachter hinsieht. |
 
 ### testimonials
 
@@ -1530,6 +1643,10 @@ Ein Abschnitt wird als Prinzip übernommen und in die Marke des Kunden gesetzt (
 | t115 Strandgut mit Wortmarke | `stimmen` | Eine leicht gekippte Papierkarte über einem Foto wirkt wie eine hingelegte Postkarte, eine Stimme je Blick hält den Text lesbar. |
 | t117 Studiobühne mit Fallstudienliste | `stimmen` | Kurze Zitate mit Person und Betrieb auf Karten, seitlich blätterbar, als Beispiel gekennzeichnet. |
 | t12 t12 | `stimmen` | Fremde Stimmen belegen, was der Anbieter selbst nur behaupten könnte. |
+| t122 Fahrzeugwahl mit Technikbühne | `stimmen` | Drei Stimmen mit Bild und Namen zeigen echte Menschen mit echten Anlässen, die mittlere Karte ist höher und führt das Auge. |
+| t125 Frischfutter Abo mit schrumpfendem Heldrahmen | `stimmen` | Kurze Zitate mit konkreten, unspektakulären Details wirken glaubwürdiger als Superlative und beantworten Einwände aus Kundensicht. |
+| t126 Notizclip, Produktseite mit Bühnen | `stimmen` | Kurze Zitate in einer einrastenden Leiste zeigen Nutzung in eigenen Worten, ohne Platz zu fressen, und sind ehrlich als Beispiel gekennzeichnet. |
+| t127 Ökosystem aus Geräten und App | `stimmen` | Situationen statt Sterne: jede Karte zeigt eine Alltagslage mit Gerät, in einer waagerechten Spur, klar als Beispiel markiert. |
 | t13 t13 | `stimmen` | Fremde Stimmen belegen, was der Anbieter selbst nur behaupten könnte. |
 | t14 t14 | `stimme` | Fremde Stimmen belegen, was der Anbieter selbst nur behaupten könnte. |
 | t15 t15 | `stimmen` | Fremde Stimmen belegen, was der Anbieter selbst nur behaupten könnte. |
@@ -1624,7 +1741,12 @@ Ein Abschnitt wird als Prinzip übernommen und in die Marke des Kunden gesetzt (
 | t11 t11 | `logos` | Ein unmittelbarer Beleg beantwortet die Frage nach Seriosität, bevor sie gestellt wird. |
 | t114 Kaffeeabo mit Karten über Fotobühne | `vertrauen` | Vier kurze Zusagen mit Icon stehen vor dem Angebot und räumen Zweifel aus, bevor Produkte gezeigt werden. |
 | t117 Studiobühne mit Fallstudienliste | `logos` | Eine ruhige Reihe gleich großer Felder zeigt Größenordnung der Kundschaft ohne Behauptung. |
+| t119 Fallstudie als Kennzahlen Erzählung | `band` | Ein durchlaufendes Band trägt die Kernzahlen weiter, auch wenn der Held verlassen ist. |
 | t12 t12 | `logos` | Ein unmittelbarer Beleg beantwortet die Frage nach Seriosität, bevor sie gestellt wird. |
+| t122 Fahrzeugwahl mit Technikbühne | `partner` | Bekannte Namen direkt unter dem ersten Bildschirm geben Vertrauen, bevor die Auswahl beginnt. |
+| t124 Geländerad Vorbestellung | `zahlen` | Wenige große Zahlen mit Einheit und klarer Bezeichnung lassen sich vergleichen, ohne dass der Besucher ein Datenblatt lesen muss. |
+| t127 Ökosystem aus Geräten und App | `vertrauen` | Vier Kacheln zeigen die Wirklichkeit der Zielgruppe (Wohnung, Regal), ein Partnerband trägt Fachbeleg, hier nur als Platzhalter. |
+| t127 Ökosystem aus Geräten und App | `nachweise` | Vier kurze Zahlen mit Beschriftung belegen Umfang und Einfachheit auf einen Blick, hier als gekennzeichnete Beispielwerte. |
 | t13 t13 | `logos` | Ein unmittelbarer Beleg beantwortet die Frage nach Seriosität, bevor sie gestellt wird. |
 | t14 t14 | `kennzahlen` | Ein unmittelbarer Beleg beantwortet die Frage nach Seriosität, bevor sie gestellt wird. |
 | t18 t18 | `logos` | Ein unmittelbarer Beleg beantwortet die Frage nach Seriosität, bevor sie gestellt wird. |
@@ -1847,9 +1969,63 @@ Referenz: https://conwest.com/ Startseite, eigene Aufnahme
 
 `kopf` (navigation), `held` (hero), `aussage` (editorial), `team` (team), `projekte` (portfolio), `projekt-gross` (cases), `faq` (faq), `abschluss` (cta), `anfrage` (forms), `fuss` (footer)
 
+### t119 Fallstudie als Kennzahlen Erzählung
+
+Referenz: https://doemedia.com/cymbiotika/ Fallstudie, eigene Aufnahme
+
+`kopf` (navigation), `held` (hero), `band` (trust), `betrieb` (about), `problem` (problem), `zuege` (features), `verlauf` (cases), `persona` (portfolio), `ergebnis` (cases), `neun` (benefits), `team` (team), `faq` (faq), `formular` (forms), `abschluss` (footer)
+
 ### t12 t12
 
 `kopf` (navigation), `held` (hero), `logos` (trust), `ueber` (about), `warum` (benefits), `leistungen` (services), `ablauf` (process), `preise` (pricing), `stimmen` (testimonials), `fragen` (faq), `kontakt` (forms), `fuss` (footer)
+
+### t120 Bodentest per Probe mit Zeitachse
+
+Referenz: https://traced.life/ Produktseite, eigene Aufnahme
+
+`kopf` (navigation), `held` (hero), `manifest` (editorial), `unterschied` (features), `ablauf` (process), `fachperson` (about), `fragen` (faq), `beratung` (forms), `abschluss` (cta), `fusskarte` (footer), `bestellkarte` (ecommerce)
+
+### t121 Quellwasser Dosen Bühne
+
+Referenz: https://morphowater.com/ Startseite, eigene Aufnahme
+
+`kopf` (navigation), `held` (hero), `oeffnen` (product), `szenen` (editorial), `lage` (interactive), `weg` (editorial), `mineralien` (features), `anlaesse` (benefits), `dosen` (product), `bildband` (portfolio), `abschluss` (cta), `fragen` (faq), `anfrage` (forms), `journal` (forms), `fuss` (footer)
+
+### t122 Fahrzeugwahl mit Technikbühne
+
+Referenz: https://second-ride.de/en/fahrzeuge Fahrzeugseite, eigene Aufnahme
+
+`kopf` (navigation), `held` (hero), `partner` (trust), `wahl` (interactive), `aussage` (editorial), `karten` (features), `besch` (benefits), `bildk` (features), `technik` (technical), `stimmen` (testimonials), `fragen` (faq), `probe` (cta), `news` (forms), `fuss` (footer)
+
+### t123 Eisdiele in Vollfarbflächen
+
+Referenz: https://ringpopcandy.com/ Startseite, eigene Aufnahme
+
+`kopf` (navigation), `held` (hero), `karte` (product), `anlaesse` (services), `sorte-beere` (product), `sorte-vanille` (product), `sorte-sorbet` (product), `sorte-pistazie` (product), `sorte-saison` (product), `inspiration` (portfolio), `muster` (cta), `fragen` (faq), `bestellen` (forms), `newsletter` (forms), `abschluss` (cta), `fuss` (footer)
+
+### t124 Geländerad Vorbestellung
+
+Referenz: https://www.rideradian.com/ Startseite, eigene Aufnahme
+
+`kopf` (navigation), `held` (hero), `wechsel` (features), `haltung` (editorial), `strecke` (interactive), `zahlen` (trust), `geschichte` (about), `finale` (cta), `weg` (process), `fragen` (faq), `fuss` (footer)
+
+### t125 Frischfutter Abo mit schrumpfendem Heldrahmen
+
+Referenz: https://www.voldogfood.com/ Startseite, eigene Aufnahme
+
+`kopf` (navigation), `held` (hero), `finder` (interactive), `sortiment` (ecommerce), `ablauf` (process), `warum` (features), `extras` (product), `schleife` (editorial), `stimmen` (testimonials), `faq` (faq), `starter` (cta), `kontakt` (forms), `fuss` (footer)
+
+### t126 Notizclip, Produktseite mit Bühnen
+
+Referenz: https://trymira.com/ Startseite, eigene Aufnahme
+
+`kopf` (navigation), `held` (hero), `verben` (features), `bauteile` (product), `stimmen` (testimonials), `einsatz` (benefits), `bestellen` (pricing), `faq` (faq), `kontakt` (forms), `fuss` (footer)
+
+### t127 Ökosystem aus Geräten und App
+
+Referenz: https://www.mypifi.com/ Startseite, eigene Aufnahme
+
+`kopf` (navigation), `held` (hero), `system` (product), `profil` (interactive), `ki` (features), `app` (product), `vertrauen` (trust), `nachweise` (trust), `stimmen` (testimonials), `fragen` (faq), `starterset` (cta), `kontakt` (forms), `fuss` (footer)
 
 ### t13 t13
 
