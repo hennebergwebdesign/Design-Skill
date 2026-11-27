@@ -1,0 +1,132 @@
+[
+  {
+    "id": "kopf",
+    "name": "Kopfzeile mit Menü, Telefon und Probierpaket",
+    "kategorie": "navigation",
+    "selektor": "header[data-abschnitt=\"kopf\"]",
+    "prinzip": "Die Kopfzeile ist am Seitenanfang durchsichtig über der Heldfläche und wird nach dem Scrollen hell, so bleibt die Hauptaktion immer erreichbar, ohne den ersten Eindruck zu stören.",
+    "css": ".kopf",
+    "js": "bewegung.js (data-menue, Klasse gescrollt)",
+    "hinweis": "marke.css und ../_basis/basis.css mitnehmen; Zustand .js:not(.gescrollt) färbt den Kopf über dem Heldrahmen um (braucht den Rahmen darunter, sonst Regel entfernen); Symbol i-tel aus dem SVG Block."
+  },
+  {
+    "id": "held",
+    "name": "Heldrahmen mit Wortmarke, Hund und Aussage",
+    "kategorie": "hero",
+    "selektor": "section[data-abschnitt=\"held\"]",
+    "prinzip": "Eine abgerundete Fläche mit riesiger Wortmarke, überlappender Figur und einer Hauptaktion macht Marke und Angebot in einem Bildschirm greifbar, und das Schrumpfen des Rahmens leitet ins Scrollen über.",
+    "css": ".held",
+    "js": "stil.js, Abschnitt 1 (data-schrumpf, --schrumpf)",
+    "hinweis": "marke.css und ../_basis/basis.css mitnehmen; Tokens --rahmen, --text-auf-rahmen, --hund-*, --radius-rahmen, --schrift-marke; Hund als Inline SVG im Abschnitt, Symbole i-pfeil und i-tel."
+  },
+  {
+    "id": "finder",
+    "name": "Rezeptfinder mit vier Angaben",
+    "kategorie": "interactive",
+    "selektor": "section[data-abschnitt=\"finder\"]",
+    "prinzip": "Wenige Auswahlfelder in einer Leiste führen vom allgemeinen Sortiment zu einem konkreten Vorschlag, bevor jemand 20 Produkte vergleichen muss.",
+    "css": ".finder",
+    "js": "stil.js, Abschnitt 2 (data-finder)",
+    "hinweis": "marke.css und ../_basis/basis.css mitnehmen; der Vorschlag verweist auf Karten des Sortiments (data-rezept), ohne Sortiment nur den Text zeigen; Beispiellogik, keine Fütterungsberatung."
+  },
+  {
+    "id": "sortiment",
+    "name": "Produktkarten mit Filter",
+    "kategorie": "ecommerce",
+    "selektor": "section[data-abschnitt=\"sortiment\"]",
+    "prinzip": "Gleich gebaute Karten mit Packung, Größen, Preis und einer Aktion machen Auswahl und Vergleich leicht, der Filter verkürzt die Liste ohne Seitenwechsel.",
+    "css": ".sortiment, .karte, .packung",
+    "js": "stil.js, Abschnitt 3 (data-filter)",
+    "hinweis": "marke.css und ../_basis/basis.css mitnehmen; Tokens --karte, --preis, --sorte-*; Symbol i-beutel; Grundpreis je Kilogramm im Projekt ergänzen."
+  },
+  {
+    "id": "ablauf",
+    "name": "Ablauf in drei Schritten",
+    "kategorie": "process",
+    "selektor": "section[data-abschnitt=\"ablauf\"]",
+    "prinzip": "Drei nummerierte Schritte nehmen die Angst vor einem Abo, indem sie zeigen, wie klein der erste Schritt ist und wie leicht der Ausstieg.",
+    "css": ".ablauf",
+    "js": null,
+    "hinweis": "marke.css und ../_basis/basis.css mitnehmen; Token --rahmen für die Ziffern; keine Symbole nötig."
+  },
+  {
+    "id": "warum",
+    "name": "Napf mit schwebenden Zusagen",
+    "kategorie": "features",
+    "selektor": "section[data-abschnitt=\"warum\"]",
+    "prinzip": "Ein großes Bild des Produkts im Gebrauch, um das vier kurze Zusagen schweben, verbindet Nutzen und Beleg an einer Stelle statt in einer Liste.",
+    "css": ".warum, .napf",
+    "js": "bewegung.js (data-parallax, data-staffel)",
+    "hinweis": "marke.css und ../_basis/basis.css mitnehmen; Tokens --flaeche-alt, --napf-*, --zutat-*, --akzent; Symbol i-haken; die gewölbte Kante braucht die Klasse bogen und --bogen-farbe."
+  },
+  {
+    "id": "extras",
+    "name": "Zubehör im Querlauf",
+    "kategorie": "product",
+    "selektor": "section[data-abschnitt=\"extras\"]",
+    "prinzip": "Ein seitlich scrollbares Band mit Pfeilen zeigt zusätzliche Produkte, ohne die Seite zu verlängern.",
+    "css": ".extras, .karte--tuete",
+    "js": "stil.js, Abschnitt 4 (data-bahn)",
+    "hinweis": "marke.css und ../_basis/basis.css mitnehmen; Tokens --karte, --kraft, --sorte-*; Symbole i-tuete, i-links, i-rechts; .karte aus dem Abschnitt Sortiment mitnehmen."
+  },
+  {
+    "id": "schleife",
+    "name": "Schräges laufendes Band",
+    "kategorie": "editorial",
+    "selektor": "section[data-abschnitt=\"schleife\"]",
+    "prinzip": "Ein schräges, laufendes Band mit vier Zusagen trennt zwei Bereiche mit Bewegung und wiederholt die Kernaussagen, ohne Platz für Text zu brauchen.",
+    "css": ".schleife, .band (basis.css)",
+    "js": "CSS Animation .band__spur aus basis.css",
+    "hinweis": "marke.css und ../_basis/basis.css mitnehmen; Token --akzent; Text doppelt (zweite Spur aria-hidden) für nahtlosen Lauf."
+  },
+  {
+    "id": "stimmen",
+    "name": "Drei Kundenstimmen (Beispiel)",
+    "kategorie": "testimonials",
+    "selektor": "section[data-abschnitt=\"stimmen\"]",
+    "prinzip": "Kurze Zitate mit konkreten, unspektakulären Details wirken glaubwürdiger als Superlative und beantworten Einwände aus Kundensicht.",
+    "css": ".stimmen",
+    "js": null,
+    "hinweis": "marke.css und ../_basis/basis.css mitnehmen; Beispieltexte klar als Beispiel gekennzeichnet, im Projekt echte Stimmen mit Einwilligung."
+  },
+  {
+    "id": "faq",
+    "name": "Einwand FAQ im Akkordeon",
+    "kategorie": "faq",
+    "selektor": "section[data-abschnitt=\"faq\"]",
+    "prinzip": "Sechs Einwände mit kurzer Antwort, links erklärende Überschrift und Hilfe, rechts das Akkordeon, nehmen Zweifel vor der Bestellung, ohne die Seite zu verlängern.",
+    "css": ".faq",
+    "js": "bewegung.js (data-exklusiv)",
+    "hinweis": "marke.css und ../_basis/basis.css mitnehmen; Token --karte für das Plus; Antworten als Beispiel markiert, rechtliche Aussagen prüfen."
+  },
+  {
+    "id": "starter",
+    "name": "Probierpaket mit Packungen auf dunkler Fläche",
+    "kategorie": "cta",
+    "selektor": "section[data-abschnitt=\"starter\"]",
+    "prinzip": "Eine dunkle, gewölbte Fläche mit einer klaren Hauptaktion und drei Zusagen setzt am Ende einen starken Kontrast und senkt die Hürde mit einem kleinen Einstieg.",
+    "css": ".starter",
+    "js": "bewegung.js (data-zeig)",
+    "hinweis": "marke.css und ../_basis/basis.css mitnehmen; Tokens --flaeche-dunkel, --text-auf-dunkel, --akzent; Symbole i-beutel, i-pfeil; Klasse bogen für die Kante."
+  },
+  {
+    "id": "kontakt",
+    "name": "Rückruf Formular",
+    "kategorie": "forms",
+    "selektor": "section[data-abschnitt=\"kontakt\"]",
+    "prinzip": "Ein kurzes Formular mit fünf Feldern, Feldhinweisen und sichtbarer Telefonnummer bietet einen zweiten Weg für Menschen, die vor dem Kauf sprechen wollen.",
+    "css": ".kontakt, .formular",
+    "js": "stil.js, Abschnitt 5 (data-formular)",
+    "hinweis": "marke.css und ../_basis/basis.css mitnehmen; Token --feld-rand; Symbole i-tel, i-mail, i-pin; Formular sendet nichts, im Projekt Turnstile, Versand und Einwilligung ergänzen."
+  },
+  {
+    "id": "fuss",
+    "name": "Fuß mit Kontakt, Sortiment, Service und Zeiten",
+    "kategorie": "footer",
+    "selektor": "footer[data-abschnitt=\"fuss\"]",
+    "prinzip": "Ein vollständiger Fuß mit Kontakt, Wegweisern, Zeiten und Rechtslinks fängt alle ab, die unten nach Vertrauen und Hilfe suchen.",
+    "css": ".fuss",
+    "js": null,
+    "hinweis": "marke.css und ../_basis/basis.css mitnehmen; Tokens --flaeche-dunkel, --text-leise-dunkel, --linie-dunkel."
+  }
+]

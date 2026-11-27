@@ -1,0 +1,56 @@
+/* marke.css der Vorlage "Frischfutter im Abo": Ausgangswerte. Marke wechseln = diese Werte ändern, sonst nichts.
+   Kontrast (selbst gerechnet, WCAG): siehe Zeilen unten, jeweils Text auf Fläche, Mindestwert 4,5 zu 1. */
+:root{
+  --flaeche:#fbf6ec;            /* Hafer */
+  --flaeche-alt:#f1e8d8;
+  --flaeche-dunkel:#1e3a3f;     /* Petrol */
+  --text:#24302b;               /* auf Fläche 12,7 zu 1, auf Fläche alt 11,3 zu 1 */
+  --text-leise:#55605a;         /* auf Fläche 6,1 zu 1, auf Fläche alt 5,4 zu 1, auf Karte 5,3 zu 1 */
+  --linie:#e2d8c4;
+  --akzent:#f2b33d;             /* Senf: Hauptaktion, immer mit dunklem Text (8,1 zu 1) */
+  --akzent-text:#22281f;
+  --schrift-titel:'Bricolage Grotesque',system-ui,sans-serif;
+  --schrift-text:'Hanken Grotesk',system-ui,sans-serif;
+  --radius-knopf:999px;
+  --radius-karte:28px;
+  --radius-bild:24px;
+
+  /* Zusatztokens dieser Vorlage */
+  --titel-gewicht:700;
+  --titel-spur:-0.03em;
+  --schrift-marke:'Archivo',system-ui,sans-serif;
+  --radius-rahmen:4.5rem;       /* Heldrahmen und gewölbte Abschnittskanten */
+  --rahmen:#b9472f;             /* Heldrahmen Ziegel: heller Text 4,9 zu 1, Weiß 5,2 zu 1 */
+  --text-auf-rahmen:#fbf6ec;
+  --karte:#efe7d9;              /* Produktkarten, Text 11,2 zu 1 */
+  --weiss:#ffffff;
+  --preis:#a63a24;              /* Preis auf Karte 5,3 zu 1 */
+  --akzent-tief:#e09a1f;        /* Hover des Senfknopfs, Text darauf 6,3 zu 1 */
+  --text-auf-dunkel:#fbf6ec;    /* auf Petrol 11,3 zu 1 */
+  --text-leise-dunkel:#b9c9c4;  /* auf Petrol 7,1 zu 1 */
+  --linie-dunkel:#35545a;
+  --feld-rand:#7a766b;          /* Rand der Eingabefelder, auf Fläche 4,2 zu 1, auf Weiß 4,5 zu 1 (Bedienelement, mindestens 3 zu 1) */
+
+  /* Packungsfarben der Sorten: reine Farbflächen, nie Textfarbe */
+  --sorte-huhn:#e8b93a;
+  --sorte-gemuese:#4f8a4b;
+  --sorte-kartoffel:#8a5aa0;
+  --sorte-rind:#c0392b;
+  --sorte-lamm:#2f6b56;
+  --sorte-pute:#e07b35;
+  --kraft:#c9a272;              /* Papierbeutel der Leckerli */
+
+  /* Zeichnung Hund und Napf (eigene Illustration) */
+  --hund-fell:#c98b52;
+  --hund-dunkel:#4a2f22;
+  --hund-weiss:#f6efe2;
+  --hund-zunge:#e9707a;
+  --zutat-fleisch:#d98b84;
+  --zutat-fleisch-dunkel:#b8564f;
+  --zutat-huhn:#f1cdb8;
+  --zutat-karotte:#e88a3c;
+  --zutat-erbse:#6fa24a;
+  --zutat-kartoffel:#ecd89c;
+  --napf-rand:#f4efe6;
+  --napf-innen:#e6dccb;
+}
